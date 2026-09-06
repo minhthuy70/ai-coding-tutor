@@ -1,0 +1,43 @@
+node_modules/
+.next/
+dist/
+build/
+
+.env
+.env.*
+!.env.example
+
+*.log
+
+coverage/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+__pycache__/
+*.py[cod]
+
+.venv/
+venv/
+
+.pytest_cache/
+
+# Docker
+docker-data/
+
+# Large datasets
+datasets/raw/*
+datasets/processed/*
+
+# Model files
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+
+# Experiment outputs
+experiments/results/*
