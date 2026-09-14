@@ -303,11 +303,63 @@ Integration với external tools (linters, metrics calculators) = tích hợp v�
 
 ## 4. PHẦN NGHIÊN CỨU
 
-- Evaluation metrics cho LLM feedback quality
-- Ablation study để xác định contribution của từng component
-- Human evaluation protocol cho feedback quality
-- Comparative study giữa các baseline approaches
-- Empirical analysis trên student code dataset
+**4.1. Evaluation metrics cho LLM feedback quality** 
+| Từ                 | Nghĩa đơn giản                                                       |
+| ------------------ | -------------------------------------------------------------------- |
+| **Evaluation metrics** | Các chỉ số dùng để đánh giá chất lượng                                 |
+| **LLM feedback quality** | Chất lượng feedback được tạo ra bởi LLM                               |
+
+Evaluation metrics cho LLM feedback quality = các chỉ số dùng để đánh giá chất lượng feedback được tạo ra bởi LLM.
+
+### Một số tiêu chí có thể đo lường chất lượng feedback của LLM:
+
+| Tiêu chí                | Tiếng Việt         | Giải thích đơn giản                                            | Ví dụ                                                            |
+| ----------------------- | ------------------ | -------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Correctness**         | Tính đúng đắn      | Feedback có xác định **đúng lỗi/vấn đề của code** không?       | Code lỗi ở mảng rỗng → LLM cũng chỉ ra lỗi mảng rỗng             |
+| **Relevance**           | Tính liên quan     | Feedback có **đúng với code và yêu cầu bài toán** không?       | Bài yêu cầu tìm max → feedback tập trung vào thuật toán tìm max  |
+| **Helpfulness**         | Tính hữu ích       | Feedback có **giúp sinh viên hiểu và sửa lỗi** không?          | Chỉ ra nguyên nhân lỗi và hướng cải thiện                        |
+| **Actionability**       | Khả năng hành động | Feedback có cho sinh viên biết **nên làm gì tiếp theo** không? | “Kiểm tra trường hợp input rỗng trước khi truy cập phần tử”      |
+| **Clarity**             | Tính rõ ràng       | Feedback có **dễ hiểu, dễ đọc** không?                         | Giải thích ngắn gọn, không dùng thuật ngữ khó hiểu               |
+| **Pedagogical Quality** | Chất lượng sư phạm | Feedback có **giúp sinh viên học và hiểu bản chất** không?     | Đặt câu hỏi gợi mở thay vì đưa ngay đáp án                       |
+| **Specificity**         | Tính cụ thể        | Feedback có chỉ rõ **đoạn code/vấn đề cụ thể** không?          | “Vòng lặp ở dòng 15 bỏ qua phần tử cuối” thay vì “Code chưa tốt” |
+| **Completeness**        | Tính đầy đủ        | Feedback có đề cập **đầy đủ các vấn đề quan trọng** không?     | Phát hiện cả lỗi logic và lỗi xử lý edge case                    |
+
+
+**4.2. Ablation study để xác định contribution của từng component**
+| Từ                 | Nghĩa                                                                     |
+| ------------------ | ------------------------------------------------------------------------- |
+| **Ablation**       | Loại bỏ/bỏ đi một thành phần                                              |
+| **Study**          | Nghiên cứu/thử nghiệm                                                     |
+| **Component**      | Thành phần                                                                |
+| **Contribution**   | Mức đóng góp                                                              |
+| **Ablation study** | Nghiên cứu bằng cách loại bỏ từng thành phần để xem nó đóng góp bao nhiêu |
+
+Ablation study = nghiên cứu loại bỏ từng thành phần để đánh giá contribution của từng component.
+
+**4.3. Human evaluation protocol cho feedback quality**
+| Từ                 | Nghĩa đơn giản                                                       |
+| ------------------ | -------------------------------------------------------------------- |
+| **Human evaluation** | Đánh giá bởi con người                                                 |
+| **Protocol**       | Quy trình, phương pháp đánh giá                                     |
+| **Feedback quality** | Chất lượng feedback                                                    |
+
+Human evaluation protocol = quy trình đánh giá chất lượng feedback bởi con người.
+
+**4.4. Comparative study giữa các baseline approaches**
+| Từ                 | Nghĩa đơn giản                                                        |
+| ------------------ | ---------------------------------------------------------------------- |
+| **Comparative study** | Nghiên cứu so sánh                                                     |
+| **Baseline approaches** | Các phương pháp cơ sở, nền tảng                                       |
+
+Comparative study = nghiên cứu so sánh giữa các baseline approaches.
+
+**4.5. Empirical analysis trên student code dataset**
+| Từ                 | Nghĩa đơn giản                                          |
+| ------------------ | ------------------------------------------------------ |
+| **Empirical analysis** | Phân tích dựa trên thực nghiệm                         |
+| **Student code dataset** | Tập dữ liệu chứa code của sinh viên                  |
+
+Empirical analysis trên student code dataset = phân tích dựa trên thực nghiệm trên tập dữ liệu chứa code của sinh viên.
 
 ## 5. PHẦN AI
 
