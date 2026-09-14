@@ -20,7 +20,31 @@
 ## 1. BÀI TOÁN NGHIÊN CỨU THỰC SỰ LÀ GÌ?
 
 **Bài toán nghiên cứu:** Đánh giá và cung cấp feedback cho bài lập trình của sinh viên bằng cách kết hợp evidence từ execution (test cases), static analysis (code metrics), và LLM-based semantic analysis để tạo ra hệ thống assessment đáng tin cậy hơn phương pháp chỉ dùng LLM.
+| Evidence                           | Hệ thống kiểm tra gì?                             | Ví dụ                                               |
+| ---------------------------------- | ------------------------------------------------- | --------------------------------------------------- |
+| **Execution / Test cases**         | Code **chạy đúng không**                          | 8/10 test case đúng, edge case bị fail              |
+| **Static analysis / Code metrics** | Code **có vấn đề về chất lượng không**            | Complexity cao, code smell, duplicated code         |
+| **LLM semantic analysis**          | Code **có đúng ý tưởng/yêu cầu và dễ hiểu không** | Đúng thuật toán, thiếu validation, giải thích logic |
 
+                 Bài làm sinh viên
+                        │
+          ┌─────────────┼─────────────┐
+          ↓             ↓             ↓
+    Test Cases      Static Analysis   LLM
+          │             │             │
+          ↓             ↓             ↓
+    Code chạy       Chất lượng      Ý nghĩa /
+    đúng không?     code ra sao?    logic ra sao?
+          │             │             │
+          └─────────────┼─────────────┘
+                        ↓
+               Evidence Aggregation
+                        ↓
+                Final Assessment
+                        ↓
+       ┌────────────────┼────────────────┐
+       ↓                ↓                ↓
+     Score            Feedback       Confidence
 ## 2. PHÂN LOẠI BÀI TOÁN
 
 **Kết hợp 4 lĩnh vực:**
