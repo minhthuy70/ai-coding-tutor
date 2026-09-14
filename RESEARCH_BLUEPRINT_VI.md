@@ -489,8 +489,22 @@ Student engagement analytics = phân tích sự tương tác của sinh viên.
 ## 7. ĐÓNG GÓP CÓ THỂ TUYÊN BỐ
 
 1. **Evidence-grounded code assessment framework:** Kết hợp execution evidence, static analysis, và LLM semantic analysis để tăng reliability và giảm hallucination
-2. **Empirical evaluation methodology:** Ablation study so sánh traditional auto-grader, static analysis, LLM-only, và hybrid approach
+2. **Empirical evaluation methodology:** Ablation study so sánh traditional auto-grader, static analysis, LLM-only, và hybrid approach (4 phương pháp)
+   - Traditional Auto-grader: Code → Test Cases → Score (chủ yếu đánh giá correctness)
+   - Static Analysis: Code → Static Analysis → Quality / Complexity / Security (không dùng LLM để đánh giá semantic)
+   - LLM-only: Code → LLM → Assessment + Feedback (LLM tự phân tích code)
+   - Hybrid approach: Code → Execution + Static Analysis + LLM → Evidence Aggregation → Assessment
 3. **Pedagogical feedback system:** Socratic tutoring framework với progressive hint escalation cho programming education
+- Socratic tutoring: Dạy kèm thông qua câu hỏi gợi mở, khơi gợi suy nghĩ cho sinh viên thay vì đưa ra câu trả lời trực tiếp.
+- Progressive hint escalation: Tăng cấp độ gợi ý dần dần theo mức độ khó của lỗi.
+- Learning-oriented feedback: Phản hồi định hướng học tập, tập trung vào việc giúp sinh viên hiểu bài hơn.
+
+| Contribution                                    | Hiểu đơn giản                               | Đề tài của bạn làm gì?                                      | Mục đích |
+| ----------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- | -------- |
+| **Evidence-grounded code assessment framework** | Framework đánh giá code dựa trên bằng chứng | Kết hợp **Execution + Static Analysis + LLM**               | Tăng độ tin cậy và giảm thiểu lỗi |
+| **Empirical evaluation methodology**            | Phương pháp đánh giá bằng thực nghiệm       | So sánh nhiều cách đánh giá và dùng **ablation study**      | So sánh hiệu quả các phương pháp khác nhau |
+| **Pedagogical feedback system**                 | Hệ thống feedback hướng đến việc học        | Kết hợp **Socratic Tutoring + Progressive Hint Escalation** | Tăng cường khả năng học tập cho sinh viên |
+
 
 ## 8. KHÔNG PHẢI RESEARCH CONTRIBUTION
 
