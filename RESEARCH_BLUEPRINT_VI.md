@@ -435,14 +435,56 @@ Socratic hint generation cho tutoring = tạo gợi ý theo phương pháp Socra
 ## 6. PHẦN GIÁO DỤC CNTT
 
 **6.1. Pedagogical feedback design**
+| Từ                 | Nghĩa đơn giản                              |
+| ------------------ | ------------------------------------------- |
+| **Pedagogical**    | Liên quan đến giáo dục, giảng dạy         |
+| **Feedback**       | Phản hồi, góp ý                           |
+| **Design**         | Thiết kế                                    |
+
+Pedagogical feedback design = thiết kế phản hồi theo hướng giáo dục.
 
 **6.2. Socratic tutoring principles**
+| Từ                  | Nghĩa đơn giản                           |
+| ------------------- | ----------------------------------------- |
+| **Socratic**        | Theo phương pháp Socrates (đặt câu hỏi)    |
+| **Tutoring**        | Huấn luyện/Dạy kèm                       |
+| **Principles**      | Nguyên tắc                              |
+
+Socratic tutoring principles = nguyên tắc dạy kèm theo phương pháp Socrates.
+| Nguyên tắc              | Ý nghĩa                                    |
+| ----------------------- | ------------------------------------------ |
+| **Ask before telling**  | Hỏi trước khi đưa đáp án                   |
+| **Guide, don't solve**  | Hướng dẫn thay vì làm bài hộ               |
+| **Use student context** | Gợi ý dựa trên lỗi/code thực tế            |
+| **Encourage reasoning** | Khuyến khích sinh viên giải thích suy nghĩ |
+| **Reveal gradually**    | Chỉ đưa thêm thông tin khi cần             |
 
 **6.3. Learning-oriented feedback rubrics**
+| Từ                  | Nghĩa đơn giản                                          |
+| ------------------- | ------------------------------------------------------ |
+| **Learning-oriented** | Định hướng học tập                                      |
+| **Feedback**        | Phản hồi, góp ý                                       |
+| **Rubrics**         | Thang điểm, tiêu chí đánh giá                          |
+
+Learning-oriented feedback rubrics = thang điểm đánh giá phản hồi theo hướng học tập.
 
 **6.4. Progressive hint escalation**
+| Từ                 | Nghĩa đơn giản                                                 |
+| ------------------ | ------------------------------------------------------------- |
+| **Progressive**    | Tăng dần, dần dần                                          |
+| **Hint**           | Gợi ý                                                         |
+| **Escalation**     | Leo thang, tăng cấp                                            |
+
+Progressive hint escalation = tăng cấp độ gợi ý dần dần.
 
 **6.5. Student engagement analytics**
+| Từ                 | Nghĩa đơn giản                           |
+| ------------------ | ----------------------------------------- |
+| **Student**        | Sinh viên                                 |
+| **Engagement**     | Sự tham gia, tương tác                    |
+| **Analytics**      | Phân tích                                  |
+
+Student engagement analytics = phân tích sự tương tác của sinh viên.
 
 ## 7. ĐÓNG GÓP CÓ THỂ TUYÊN BỐ
 
