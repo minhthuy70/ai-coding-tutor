@@ -26,6 +26,80 @@
 | **Static analysis / Code metrics** | Code **có vấn đề về chất lượng không**            | Complexity cao, code smell, duplicated code         |
 | **LLM semantic analysis**          | Code **có đúng ý tưởng/yêu cầu và dễ hiểu không** | Đúng thuật toán, thiếu validation, giải thích logic |
 
+**Evidence:** Bằng chứng. Những thông tin mà hệ thống thu thập được để làm căn cứ đánh giá bài code của sinh viên.
+```text
+Code sinh viên
+     │
+     ├── Evidence 1: Chạy thử code
+     │                 ↓
+     │              Có đúng không?
+     │
+     ├── Evidence 2: Phân tích code
+     │                 ↓
+     │              Code có tốt không?
+     │
+     └── Evidence 3: AI đọc code
+                       ↓
+                    Có hiểu đúng yêu cầu không?
+```
+### Evidence 1
+
+**Execution** = đem code ra chạy thật để xem nó hoạt động như thế nào
+
+**Test case** = trường hợp kiểm thử. Đây là một bộ dữ liệu được đưa vào chương trình để kiểm tra xem chương trình có hoạt động đúng không.
+
+### Evidence 2
+**Static Analysis** = phân tích tĩnh mã nguồn. đọc và phân tích code mà không cần chạy code
+
+**Code Metrics** = các chỉ số đo lường code. Những con số này giúp hệ thống đánh giá chất lượng và độ phức tạp của code.
+
+**Complexity** = độ phức tạp. Đây là một chỉ số đo lường mức độ phức tạp của code. 
+
+Cyclomatic Complexity = độ phức tạp theo số nhánh của chương trình. 
+
+Code càng có nhiều if, else, for, while, các nhánh rẽ khác nhau → càng có nhiều đường đi → càng khó kiểm tra và bảo trì.
+
+**Code Smell** = dấu hiệu cho thấy code có thể có vấn đề về chất lượng, cấu trúc hoặc thiết kế dù code vẫn chạy đúng.
+
+Ví dụ: Code quá dài, lặp lại nhiều chỗ, khó đọc, khó hiểu → không phải lỗi nhưng là dấu hiệu code có vấn đề.
+
+| Code smell thường gặp              | Nghĩa dễ hiểu                     |
+| ----------------------- | --------------------------------- |
+| **Long Method**         | Hàm quá dài                       |
+| **Long Parameter List** | Hàm có quá nhiều tham số          |
+| **Duplicate Code**      | Code bị lặp                       |
+| **Dead Code**           | Code không bao giờ được sử dụng   |
+| **Large Class**         | Class quá lớn, làm quá nhiều việc |
+| **Deep Nesting**        | `if/for` lồng nhau quá sâu        |
+
+**Duplicated Code** = code bị trùng lặp.
+
+```
+Evidence 2:
+Static Analysis
+       ↓
+ ┌─────┼─────────┐
+ ↓     ↓         ↓
+Complexity   Code Smell   Duplicate Code
+ ↓             ↓             ↓
+Độ phức tạp   Dấu hiệu       Code
+cao           code có vấn đề  bị lặp
+```
+
+### Evidence 3
+**LLM** = Large Language Model. Mô hình ngôn ngữ lớn.Ở đây LLM sẽ được dùng để phân tích ý nghĩa của code.
+**Semantic** = ngữ nghĩa. Tức là ý nghĩa của code. LLM sẽ đọc code và hiểu ý nghĩa của code trong ngữ cảnh bài toán.
+```
+Code có hiểu đúng yêu cầu không?
+Code có thiếu yêu cầu nào không?
+Thuật toán có phù hợp không?
+Có xử lý edge case không?
+Tên biến có dễ hiểu không?
+Logic có dễ hiểu không?
+```
+**Edge Case** = trường hợp biên / trường hợp đặc biệt. Ví dụ như: nhập số âm, số 0, số lớn, số nhỏ, chuỗi rỗng, ký tự đặc biệt, số nguyên tố, số chính phương...
+
+
                  Bài làm sinh viên
                         │
           ┌─────────────┼─────────────┐
