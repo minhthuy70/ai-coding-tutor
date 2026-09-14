@@ -363,19 +363,86 @@ Empirical analysis trên student code dataset = phân tích dựa trên thực n
 
 ## 5. PHẦN AI
 
-- LLM-based code understanding và semantic analysis
-- Prompt engineering cho rubric-based grading
-- Evidence-grounded reasoning để giảm hallucination
-- Chain-of-thought (hoặc alternatives) cho multi-criteria evaluation
-- Socratic hint generation cho tutoring
+**5.1. LLM-based code understanding và semantic analysis**
+| Từ                | Nghĩa                |
+| ----------------- | -------------------- |
+| **LLM**           | Large Language Model |
+| **Based**         | Dựa trên             |
+| **Code**          | Mã nguồn             |
+| **Understanding** | Hiểu                 |
+| **Semantic**      | Ngữ nghĩa/ý nghĩa    |
+| **Analysis**      | Phân tích            |
+
+LLM-based code understanding và semantic analysis = phân tích ngữ nghĩa code dựa trên LLM.
+| Code Understanding    | Semantic Analysis                                  |
+| --------------------- | -------------------------------------------------- |
+| Hiểu code đang làm gì | Phân tích ý nghĩa của code trong ngữ cảnh bài toán |
+| “Đoạn này làm gì?”    | “Đoạn này có thực hiện đúng yêu cầu không?”        |
+
+
+**5.2. Prompt engineering cho rubric-based grading**
+| Từ                 | Nghĩa đơn giản                                    |
+| ------------------ | -------------------------------------------------- |
+| **Prompt**         | Lời nhắc/Câu lệnh đầu vào                         |
+| **Engineering**    | Thiết kế/Xây dựng                                |
+| **Rubric-based**   | Dựa trên thang điểm/tiêu chí đánh giá             |
+| **Grading**        | Chấm điểm                                         |
+
+Prompt engineering cho rubric-based grading = thiết kế câu lệnh để chấm điểm dựa trên thang điểm.
+
+**5.3. Evidence-grounded reasoning để giảm hallucination**
+
+| Từ                 | Nghĩa đơn giản                                 |
+| ------------------ | ----------------------------------------------- |
+| **Evidence-grounded** | Dựa trên bằng chứng/cơ sở thực tế               |
+| **Reasoning**      | Lập luận/Suy luận                               |
+| **Hallucination**  | Sự bịa đặt/Tạo ra thông tin không có thật        |
+| **Reduce**         | Giảm bớt                                        |
+
+Evidence-grounded reasoning để giảm hallucination = lập luận dựa trên bằng chứng để giảm sự bịa đặt (thông tin không có thật).
+
+**5.4. Chain-of-thought (hoặc alternatives) cho multi-criteria evaluation**
+| Từ                     | Nghĩa đơn giản                                               |
+| ---------------------- | ------------------------------------------------------------ |
+| **Chain-of-thought**   | Chuỗi suy nghĩ                                               |
+| **Alternatives**       | Các phương án thay thế                                       |
+| **Multi-criteria**     | Nhiều tiêu chí                                               |
+| **Evaluation**         | Đánh giá                                                    |
+
+Chain-of-thought (hoặc alternatives) cho multi-criteria evaluation = chuỗi suy nghĩ (hoặc các phương án thay thế) cho việc đánh giá nhiều tiêu chí.
+
+Trong hệ thống thực tế, không nhất thiết phải yêu cầu LLM xuất toàn bộ chain-of-thought nội bộ, có thể dùng cách an toàn và dễ triển khai hơn là: 
+- structured reasoning (lập luận có cấu trúc): để LLM xuất ra những điểm chính, không cần hiển thị toàn bộ quá trình suy luận.
+- rubric-based reasoning (lập luận dựa trên thang điểm): để LLM đánh giá dựa trên thang điểm.
+
+Alternatives có thể là:
+- Rubric-based structured reasoning: đánh giá dựa trên thang điểm có cấu trúc
+- Step-by-step evaluation: đánh giá từng bước
+- Self-consistency: tự nhất quán
+- Multi-pass evaluation: đánh giá nhiều lần
+- Critic/reviewer pass: đánh giá bởi người đánh giá
+
+**5.5. Socratic hint generation cho tutoring**
+| Từ                  | Nghĩa đơn giản                            |
+| ------------------- | ------------------------------------------ |
+| **Socratic**        | Theo phương pháp Socrates (đặt câu hỏi)    |
+| **Hint**            | Gợi ý                                     |
+| **Generation**      | Tạo ra                                    |
+| **Tutoring**        | Huấn luyện/Dạy kèm                        |
+
+Socratic hint generation cho tutoring = tạo gợi ý theo phương pháp Socrates cho việc dạy kèm.
 
 ## 6. PHẦN GIÁO DỤC CNTT
 
-- Pedagogical feedback design
-- Socratic tutoring principles
-- Learning-oriented feedback rubrics
-- Progressive hint escalation
-- Student engagement analytics
+**6.1. Pedagogical feedback design**
+
+**6.2. Socratic tutoring principles**
+
+**6.3. Learning-oriented feedback rubrics**
+
+**6.4. Progressive hint escalation**
+
+**6.5. Student engagement analytics**
 
 ## 7. ĐÓNG GÓP CÓ THỂ TUYÊN BỐ
 
