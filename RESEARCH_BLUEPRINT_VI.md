@@ -122,10 +122,68 @@ Logic có dễ hiểu không?
 ## 2. PHÂN LOẠI BÀI TOÁN
 
 **Kết hợp 4 lĩnh vực:**
-- **Software Engineering:** Đánh giá code quality, static analysis, secure execution
+- **Software Engineering:** Đây là lĩnh vực nghiên cứu và thực hành cách xây dựng phần mềm một cách có tổ chức, chất lượng, an toàn và dễ bảo trì.
+    + **Đánh giá code quality** (chất lượng của mã nguồn), 
+    + **static analysis** (phân tích code mà không cần chạy code), 
+    + **secure execution** chạy code một cách an toàn. **Sandbox** = môi trường chạy biệt lập/cách ly. Cho code sinh viên chạy trong một "căn phòng riêng", không cho nó tùy tiện đụng vào hệ thống chính.
+   ```
+              SERVER
+                 │
+          ┌──────┴──────┐
+          │   Sandbox   │
+          │             │
+          │ Student     │
+          │ Code        │
+          │             │
+          └─────────────┘
+          Trong sandbox có thể giới hạn:
+          thời gian chạy
+          CPU
+          RAM
+          file system
+          network
+          quyền truy cập hệ điều hành
+   ```
+
+
 - **AI/LLM:** Code understanding, semantic analysis, feedback generation
-- **AI in Education:** Pedagogical feedback, Socratic tutoring, learning analytics
-- **Computer Science Education:** Programming assessment, automated grading
+   + **Code understanding:** = hiểu mã nguồn. LLM có khả năng đọc và hiểu code. LLM có thể hiểu ý nghĩa của code, logic của code, thuật toán của code, và cách code hoạt động.
+   + **Semantic analysis:** = phân tích ý nghĩa. LLM có thể phân tích ý nghĩa của code trong ngữ cảnh bài toán.
+   + **Feedback generation:** = tạo ra phản hồi/ nhận xét.
+
+- **AI in Education:** ứng dụng AI vào giáo dục. Pedagogical feedback, Socratic tutoring, learning analytics
+   + **Pedagogical feedback:** = phản hồi giáo dục, phản hồi mang tính sư phạm. LLM có thể tạo ra feedback cho code, tức là feedback cho code sinh viên. Giúp sinh viên hiểu sai ở đâu, cần sửa gì. (Chỉ ra vẫn đề, giải thích nguuyeen nhân, gợi ý hướng suy nghĩ)
+   + **Socratic tutoring:** = gia sư Socrate. dạy bằng cách đặt câu hỏi, thay vì đưa ngay đáp án. Giúp sinh viên tự suy nghĩ, tự tìm ra lời giải. Không đưa ra lời giải ngay lập tức, nhưng sẽ gợi ý, đặt câu hỏi để sinh viên tự tìm ra lời giải.
+   + **Learning analytics:** = phân tích học tập. LLM có thể tạo ra feedback cho code, tức là feedback cho code sinh viên. Learning Analytics không nhất thiết phải có ngay ở phiên bản đầu tiên của project. (tính năng mở rộng)
+- **Computer Science Education:** giáo dục Khoa học máy tính. Đây là lĩnh vực nghiên cứu cách dạy và học các môn liên quan đến máy tính, trong đó có lập trình.
+   + **Programming assessment** = đánh giá năng lực lập trình. Đánh giá bài lập trình của sinh viên. Xem code của sinh viên có đúng yêu cầu không, code có chất lượng không, code có an toàn không.
+   + **automated grading** = chấm điểm tự động. Tự động chấm điểm bài lập trình của sinh viên.
+
+```
+             AI-Powered Coding Tutor
+                       │
+        ┌──────────────┼──────────────┐
+        │              │              │
+        ↓              ↓              ↓
+ Software           AI/LLM       Education
+ Engineering
+        │              │              │
+        │              │              │
+        ↓              ↓              ↓
+ Static Analysis   Code Understanding  Pedagogical
+ Secure Execution  Semantic Analysis   Feedback
+ Code Quality      Feedback Generation Socratic Tutoring
+        │              │              │
+        └──────────────┼──────────────┘
+                       ↓
+          Computer Science Education
+                       │
+                       ↓
+           Programming Assessment
+                       │
+                       ↓
+             Automated Grading
+```
 
 ## 3. PHẦN KỸ THUẬT (ENGINEERING)
 
