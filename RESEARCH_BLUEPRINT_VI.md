@@ -234,12 +234,72 @@ Logic có dễ hiểu không?
 
 ## 3. PHẦN KỸ THUẬT (ENGINEERING)
 
-- Docker sandbox security cho untrusted code execution
-- Auto-grader pipeline với test cases và execution limits
-- Static analysis integration (complexity, code smells, security)
-- Web-based submission và feedback interface
-- Database schema cho submissions, results, feedback
-- Integration với external tools (linters, metrics calculators)
+**3.1. Docker sandbox security cho untrusted code execution**
+
+| Từ                 | Nghĩa đơn giản                                        |
+| ------------------ | ----------------------------------------------------- |
+| **Docker**         | Công cụ tạo và chạy container                         |
+| **Sandbox**        | Môi trường chạy code bị giới hạn/cách ly              |
+| **Security**       | Bảo mật                                               |
+| **Untrusted code** | Code không đáng tin cậy, ví dụ code sinh viên nộp lên |
+| **Code execution** | Quá trình chạy/thực thi code                          |
+
+Docker sandbox security = sử dụng Docker để tạo môi trường cách ly và giới hạn quyền khi chạy code của sinh viên (code không đáng tin cậy).
+
+**3.2. Auto-grader pipeline với test cases và execution limits**
+
+| Từ                 | Nghĩa đơn giản                                       |
+| ------------------ | ---------------------------------------------------- |
+| **Auto-grader**    | Hệ thống tự động chấm điểm                          |
+| **Pipeline**       | Quy trình/chuỗi các bước xử lý                        |
+| **Test cases**     | Các bộ dữ liệu dùng để kiểm tra code                  |
+| **Execution limits** | Giới hạn về thời gian, bộ nhớ khi chạy code         |
+
+Auto-grader pipeline = thiết kế một quy trình tự động để chấm điểm bài lập trình của sinh viên thông qua việc sử dụng các bộ test cases và giới hạn về thời gian, bộ nhớ.
+
+**3.3. Static analysis integration** (complexity, code smells, security)
+
+| Từ                 | Nghĩa đơn giản                                                       |
+| ------------------ | -------------------------------------------------------------------- |
+| **Static analysis** | Phân tích code mà không chạy nó, tìm lỗi, độ phức tạp, code smells |
+| **Complexity**     | Độ phức tạp của code                                                 |
+| **Code smells**    | Những dấu hiệu cho thấy code có vấn đề về cấu trúc, khó bảo trì      |
+| **Security**       | Vấn đề bảo mật trong code                                             |
+
+Static analysis integration = tích hợp các công cụ phân tích code để đánh giá độ phức tạp, code smells, và vấn đề bảo mật.
+
+**3.4. Web-based submission và feedback interface**
+
+| Từ                 | Nghĩa đơn giản                                                         |
+| ------------------ | ----------------------------------------------------------------------- |
+| **Web-based**      | Dựa trên nền tảng web, có thể truy cập qua trình duyệt                    |
+| **Submission**     | Việc nộp bài/code của sinh viên                                           |
+| **Interface**      | Giao diện tương tác giữa người dùng và hệ thống                        |
+| **Feedback**       | Phản hồi, nhận xét, gợi ý cho sinh viên                                  |
+
+Web-based submission và feedback interface = giao diện web cho phép sinh viên nộp code và nhận feedback từ hệ thống.
+
+**3.5. Database schema cho submissions, results, feedback**
+
+| Từ                 | Nghĩa đơn giản                                       |
+| ------------------ | ---------------------------------------------------- |
+| **Database schema** | Thiết kế cấu trúc cơ sở dữ liệu                     |
+| **Submissions**    | Các bài code đã nộp                                  |
+| **Results**        | Kết quả chạy code, test cases, metrics              |
+| **Feedback**       | Các nhận xét, gợi ý cho sinh viên                 |
+
+Database schema cho submissions, results, feedback = thiết kế cấu trúc cơ sở dữ liệu để lưu trữ thông tin về bài nộp, kết quả, và feedback.
+
+**3.6. Integration với external tools (linters, metrics calculators)**
+
+| Từ                 | Nghĩa đơn giản                                                  |
+| ------------------ | -------------------------------------------------------------- |
+| **Integration**    | Việc kết hợp/tích hợp các thành phần                          |
+| **External tools** | Các công cụ bên ngoài, không phải do hệ thống tự phát triển   |
+| **Linters**        | Công cụ phân tích code để tìm lỗi và vi phạm quy tắc style    |
+| **Metrics calculators**| Công cụ tính toán các chỉ số/metrics của code                |
+
+Integration với external tools (linters, metrics calculators) = tích hợp với các công cụ bên ngoài như linters và metrics calculators để hỗ trợ quá trình chấm điểm.
 
 ## 4. PHẦN NGHIÊN CỨU
 
