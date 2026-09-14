@@ -87,7 +87,7 @@ cao           code có vấn đề  bị lặp
 ```
 
 ### Evidence 3
-**LLM** = Large Language Model. Mô hình ngôn ngữ lớn.Ở đây LLM sẽ được dùng để phân tích ý nghĩa của code.
+**LLM** = Large Language Model. Mô hình ngôn ngữ lớn. Ở đây LLM sẽ được dùng để phân tích ý nghĩa của code.
 **Semantic** = ngữ nghĩa. Tức là ý nghĩa của code. LLM sẽ đọc code và hiểu ý nghĩa của code trong ngữ cảnh bài toán.
 ```
 Code có hiểu đúng yêu cầu không?
@@ -119,6 +119,19 @@ Logic có dễ hiểu không?
        ┌────────────────┼────────────────┐
        ↓                ↓                ↓
      Score            Feedback       Confidence
+
+**Evidence Aggregation** nghĩa là: Tổng hợp các bằng chứng này lại để đưa ra một đánh giá thống nhất.
+
+**Final Assessment** nghĩa là: Đánh giá cuối cùng. Sau khi Evidence Aggregation tổng hợp evidence, hệ thống phải đưa ra: “Cuối cùng bài làm này được đánh giá như thế nào?”
+
+**Nói ngắn:**
+
+*Evidence Aggregation* = gom bằng chứng.
+
+*Final Assessment* = kết luận cuối cùng dựa trên bằng chứng đó.
+   - Score = điểm số.
+   - Feedback = phản hồi / nhận xét.
+   - Confidence = độ tin cậy.
 ## 2. PHÂN LOẠI BÀI TOÁN
 
 **Kết hợp 4 lĩnh vực:**
