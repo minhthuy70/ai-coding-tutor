@@ -165,7 +165,7 @@ Logic có dễ hiểu không?
    + **Feedback generation:** = tạo ra phản hồi/ nhận xét.
 
 - **AI in Education:** ứng dụng AI vào giáo dục. Pedagogical feedback, Socratic tutoring, learning analytics
-   + **Pedagogical feedback:** = phản hồi giáo dục, phản hồi mang tính sư phạm. LLM có thể tạo ra feedback cho code, tức là feedback cho code sinh viên. Giúp sinh viên hiểu sai ở đâu, cần sửa gì. (Chỉ ra vẫn đề, giải thích nguuyeen nhân, gợi ý hướng suy nghĩ)
+   + **Pedagogical feedback:** = phản hồi giáo dục, phản hồi mang tính sư phạm. LLM có thể tạo ra feedback cho code, tức là feedback cho code sinh viên. Giúp sinh viên hiểu sai ở đâu, cần sửa gì. (Chỉ ra vẫn đề, giải thích nguyên nhân, gợi ý hướng suy nghĩ)
    + **Socratic tutoring:** = gia sư Socrate. dạy bằng cách đặt câu hỏi, thay vì đưa ngay đáp án. Giúp sinh viên tự suy nghĩ, tự tìm ra lời giải. Không đưa ra lời giải ngay lập tức, nhưng sẽ gợi ý, đặt câu hỏi để sinh viên tự tìm ra lời giải.
    + **Learning analytics:** = phân tích học tập. LLM có thể tạo ra feedback cho code, tức là feedback cho code sinh viên. Learning Analytics không nhất thiết phải có ngay ở phiên bản đầu tiên của project. (tính năng mở rộng)
 - **Computer Science Education:** giáo dục Khoa học máy tính. Đây là lĩnh vực nghiên cứu cách dạy và học các môn liên quan đến máy tính, trong đó có lập trình.
@@ -197,6 +197,40 @@ Logic có dễ hiểu không?
                        ↓
              Automated Grading
 ```
+                    AI-POWERED CODING TUTOR
+                              │
+                              ↓
+                    👨‍🎓 Sinh viên nộp CODE
+                              │
+          ┌───────────────────┼───────────────────┐
+          ↓                   ↓                   ↓
+    SOFTWARE            AI / LLM         AI IN EDUCATION
+    ENGINEERING         
+          │                   │                   │
+          ↓                   ↓                   ↓
+      Code có tốt không?    Code có ý nghĩa gì?   Feedback giúp
+      Code có an toàn?      Logic có đúng?        sinh viên học
+          │                   │                   │
+      • Static Analysis     • Code Understanding   • Pedagogical
+      • Code Quality        • Semantic Analysis      Feedback
+      • Secure Execution    • Feedback Generation  • Socratic Tutoring
+          │                   │                   │
+          └───────────────────┼───────────────────┘
+                              ↓
+                  🎓 COMPUTER SCIENCE EDUCATION
+                              │
+                              ↓
+                   Programming Assessment
+                   (Đánh giá bài lập trình)
+                              │
+                              ↓
+                     Automated Grading
+                     (Chấm điểm tự động)
+                              │
+                    ┌─────────┴─────────┐
+                    ↓                   ↓
+                 📊 SCORE            💬 FEEDBACK
+                 Điểm số          Nhận xét / Gợi ý
 
 ## 3. PHẦN KỸ THUẬT (ENGINEERING)
 
