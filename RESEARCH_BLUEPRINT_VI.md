@@ -595,13 +595,52 @@ Student engagement analytics = phân tích sự tương tác của sinh viên.
 
 ## RQ1: LLM có thể đánh giá code chính xác đến mức nào khi được grounding trong execution evidence và static analysis?
 
-**Giả thuyết:** LLM với execution evidence và static analysis sẽ đạt correlation cao hơn với human grading so với LLM-only approach.
+## Giải thích câu hỏi này:
+Câu hỏi này muốn biết liệu khi mình "ground" LLM với execution evidence và static analysis thì LLM có thể đánh giá code chính xác hơn không.
+- **ground** trong ngữ cảnh này có nghĩa là "neo", "nền", tức là cung cấp cho LLM "bằng chứng" từ execution và static analysis để LLM có thể đánh giá code dựa trên bằng chứng đó.
+- **Execution evidence** là bằng chứng từ việc chạy code, ví dụ như test case results, error logs, coverage metrics.
+   - test case results: kết quả test case
+   - error logs: log lỗi
+   - coverage metrics: metrics độ bao phủ (nghĩa là : số % code được test)
+   - metrics: chỉ số đo lường
+   
+- **Static analysis** là phân tích code mà không chạy code, ví dụ như complexity metrics, code quality metrics, security metrics.
+   - complexity metrics: metrics độ phức tạp 
+   - code quality metrics: metrics chất lượng code 
+   - security metrics: metrics an toàn code 
+   
+- **Human grading** là điểm số được chấm bởi con người.
+
+Câu hỏi này muốn biết liệu khi mình cung cấp cho LLM "evidence" từ execution và static analysis thì LLM có thể đánh giá code chính xác hơn không, so với khi chỉ cung cấp cho LLM code mà không có "evidence".
+
+**Giả thuyết:** LLM với execution evidence và static analysis sẽ đạt correlation cao hơn với human grading so với LLM-only approach
+(so với LLM-only approach nghĩa là: chỉ cung cấp cho LLM code mà không có "evidence")
 
 **Thí nghiệm:** So sánh LLM-only vs LLM+evidence vs LLM+evidence+static analysis về grading accuracy.
 
+Thiết kế 3 experimental conditions (điều kiện thử nghiệm):
+
+| Approach                                | Input cho LLM                                  | Mục đích                                     |
+| --------------------------------------- | ---------------------------------------------- | -------------------------------------------- |
+| **A. LLM-only**                         | Code + đề bài                                  | Baseline (đánh giá code chỉ dựa vào LLM)    |
+| **B. LLM + Execution Evidence**         | Code + đề bài + test results                   | Xem runtime evidence (bằng chứng từ việc chạy code) có giúp cải thiện không |
+| **C. LLM + Evidence + Static Analysis** | Code + đề bài + test results + static analysis | Phương pháp hybrid (đánh giá code kết hợp LLM, evidence và static analysis) đề xuất                   |
+
+
 **Metrics:** Spearman correlation, Cohen's Kappa, Mean Absolute Error (MAE) so với human grades.
+| Metric                       | Ý nghĩa                                                          | Mong muốn              |
+| ---------------------------- | ---------------------------------------------------------------- | ---------------------- |
+| **Spearman correlation (ρ)** | Mức độ tương quan thứ hạng giữa AI grade và human grade          | **Càng cao càng tốt**  |
+| **Cohen's Kappa (κ)**        | Mức độ đồng thuận giữa AI và human khi chia thành các mức/cấp độ | **Càng cao càng tốt**  |
+| **MAE**                      | Sai lệch tuyệt đối trung bình giữa AI grade và human grade       | **Càng thấp càng tốt** |
+
 
 **Kết quả mong đợi:** Hybrid approach sẽ có correlation >0.7 với human grading, LLM-only <0.5.
+| Approach                         |      Expected/Target |
+| -------------------------------- | -------------------: |
+| LLM-only                         |              ρ < 0.5 |
+| LLM + Execution Evidence         |         ρ > LLM-only |
+| LLM + Evidence + Static Analysis | **ρ > 0.7 (target)** |
 
 ## RQ2: Execution evidence có giúp giảm hallucination trong LLM code feedback không?
 
