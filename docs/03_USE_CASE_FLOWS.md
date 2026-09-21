@@ -161,101 +161,273 @@
 ## II. PHÂN HỆ STUDENT (NGƯỜI HỌC)
 
 ### UC-ST07 — Xem Danh Sách Bài Tập
-- **Luồng chính**:
-  1. Sinh viên truy cập trang `/student/problems`.
-  2. Hệ thống truy vấn danh sách lớp mà sinh viên đã tham gia.
-  3. Hệ thống lấy danh sách bài tập được giao cho các lớp đó.
-  4. Hệ thống hiển thị danh sách dạng bảng/card với các thông tin: Tên bài, Độ khó, Deadline, Trạng thái làm bài (*Chưa làm*, *Đạt*, *Chưa đạt*), Điểm cao nhất.
-  5. Sinh viên có thể tìm kiếm theo tên hoặc lọc theo Lớp/Chủ đề/Trạng thái.
+- **Mô tả**: Cho phép Student xem và tra cứu danh sách các bài tập được giao cho những lớp mà mình tham gia.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**: Student đã đăng nhập và có phiên xác thực hợp lệ.
+- **Hậu điều kiện**: Danh sách bài tập phù hợp được hiển thị; dữ liệu bài tập không bị thay đổi.
+- **Luồng tương tác chính**:
+  1. Student truy cập mục **"Bài tập"** tại `/student/problems`.
+  2. Hệ thống xác thực phiên đăng nhập và quyền truy cập của Student.
+  3. Hệ thống lấy danh sách lớp, môn học hoặc chủ đề mà Student đang tham gia.
+  4. Hệ thống truy vấn các bài tập được giao cho Student theo những lớp hoặc môn học đó.
+  5. Hệ thống hiển thị danh sách với các thông tin: Tên bài, lớp/chủ đề, độ khó, thời hạn nộp, trạng thái làm bài và điểm cao nhất nếu đã có kết quả.
+  6. Student tìm kiếm hoặc lọc danh sách theo lớp, chủ đề hoặc trạng thái.
+- **Luồng tương tác thay thế**:
+  - **6a. Student không chọn bộ lọc**: Hệ thống hiển thị toàn bộ bài tập mà Student được phép xem.
+  - **6b. Không có bài tập phù hợp**: Hệ thống hiển thị danh sách rỗng và thông báo phù hợp.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn**: Hệ thống yêu cầu Student đăng nhập lại.
+  - **E2 - Lỗi truy vấn dữ liệu**: Hệ thống thông báo **"Không thể tải danh sách bài tập, vui lòng thử lại sau."**
 
 ---
 
 ### UC-ST08 — Xem Chi Tiết Bài Tập
-- **Luồng chính**:
-  1. Sinh viên click chọn một bài tập từ danh sách.
-  2. Hệ thống kiểm tra quyền: Sinh viên phải thuộc lớp được giao bài tập này và bài tập đang trong thời gian mở.
-  3. Hệ thống tải và hiển thị:
-     - Đề bài chi tiết (hỗ trợ định dạng Markdown và công thức toán học LaTeX).
-     - Quy cách Input / Output chuẩn.
-     - Các ràng buộc thuật toán (Constraints), Giới hạn Thời gian (Time limit) và Bộ nhớ (Memory limit).
-     - Bộ Sample Test Cases công khai (Input mẫu, Output mẫu, Giải thích).
-     - Rubric chấm điểm (nếu giảng viên công khai).
-  4. Sinh viên bấm nút **"Làm bài"** để chuyển sang giao diện IDE.
+- **Mô tả**: Cho phép Student xem nội dung và yêu cầu chi tiết của một bài tập được giao.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**:
+  - Student đã đăng nhập và có phiên xác thực hợp lệ.
+  - Bài tập tồn tại trong hệ thống.
+- **Hậu điều kiện**:
+  - Thông tin bài tập được hiển thị nếu Student có quyền truy cập.
+  - Nếu Student chọn làm bài, hệ thống chuyển đến giao diện soạn thảo tương ứng.
+- **Luồng tương tác chính**:
+  1. Student chọn một bài tập từ danh sách.
+  2. Hệ thống kiểm tra Student có thuộc lớp được giao bài tập và bài tập có được phép truy cập hay không.
+  3. Hệ thống lấy thông tin bài tập từ cơ sở dữ liệu.
+  4. Hệ thống hiển thị đề bài, hỗ trợ Markdown và công thức toán học LaTeX nếu có.
+  5. Hệ thống hiển thị yêu cầu Input/Output, ràng buộc, giới hạn thời gian, giới hạn bộ nhớ, Sample Test Cases và Rubric được công khai.
+  6. Student chọn **"Làm bài"**.
+  7. Hệ thống chuyển Student đến giao diện làm bài và tải cấu hình cần thiết.
+- **Luồng tương tác thay thế**:
+  - **6a. Student quay lại danh sách**: Hệ thống không tạo hoặc thay đổi bài làm và đưa Student về danh sách bài tập.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Bài tập không tồn tại**: Hệ thống thông báo **"Không tìm thấy bài tập."**
+  - **E2 - Student không có quyền truy cập**: Hệ thống thông báo **"Bạn không có quyền truy cập bài tập này."**
+  - **E3 - Bài tập chưa mở hoặc đã đóng**: Hệ thống thông báo **"Bài tập hiện không khả dụng."**
+  - **E4 - Lỗi tải dữ liệu**: Hệ thống thông báo **"Không thể tải chi tiết bài tập, vui lòng thử lại sau."**
 
 ---
 
 ### UC-ST09 — Viết & Chỉnh Sửa Code (Monaco Editor)
-- **Luồng chính**:
-  1. Sinh viên mở giao diện IDE làm bài (`/student/problems/{id}/solve`).
-  2. Hệ thống khởi tạo trình soạn thảo **Monaco Editor** với template code khởi tạo theo ngôn ngữ đã chọn (Python/C++/Java).
-  3. Sinh viên trực tiếp soạn thảo mã nguồn trên editor (hỗ trợ phím tắt, tự động thụt đầu dòng, cú pháp màu).
-  4. Hệ thống tự động lưu bản nháp code (Auto-save) vào LocalStorage hoặc DB sau mỗi khoảng thời gian nhất định để tránh mất code khi reload trang.
+- **Mô tả**: Cho phép Student viết và chỉnh sửa mã nguồn trực tiếp trong trình soạn thảo của hệ thống.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**:
+  - Student đã đăng nhập và có quyền truy cập bài tập.
+  - Bài tập có cấu hình ngôn ngữ lập trình được phép sử dụng.
+- **Hậu điều kiện**:
+  - Mã nguồn của Student được hiển thị và bản nháp gần nhất được lưu theo cơ chế autosave.
+  - Bài làm chưa được xem là submission chính thức cho đến khi Student chọn **"Nộp bài"**.
+- **Luồng tương tác chính**:
+  1. Student chọn **"Làm bài"** từ trang chi tiết bài tập.
+  2. Hệ thống tải đề bài, ngôn ngữ và cấu hình bài tập.
+  3. Hệ thống mở **Monaco Editor** với template code phù hợp.
+  4. Student nhập hoặc chỉnh sửa mã nguồn.
+  5. Hệ thống kiểm tra cơ bản nội dung editor và tự động lưu bản nháp theo khoảng thời gian được cấu hình.
+  6. Student tiếp tục chỉnh sửa, chạy thử hoặc chuyển sang nộp bài.
+- **Luồng tương tác thay thế**:
+  - **5a. Student tải lại trang**: Hệ thống khôi phục bản nháp gần nhất nếu bản nháp tồn tại.
+  - **6a. Student rời khỏi trang**: Hệ thống lưu bản nháp trước khi rời trang nếu kết nối còn hoạt động.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không tải được cấu hình bài tập**: Hệ thống thông báo **"Không thể mở trình soạn thảo cho bài tập này."**
+  - **E2 - Mã nguồn không hợp lệ hoặc vượt giới hạn**: Hệ thống thông báo lỗi và yêu cầu Student chỉnh sửa mã nguồn.
+  - **E3 - Lỗi lưu bản nháp**: Hệ thống thông báo **"Không thể lưu bản nháp, vui lòng kiểm tra kết nối mạng."**
 
 ---
 
 ### UC-ST10 — Upload File Bài Làm
-- **Luồng chính**:
-  1. Tại màn hình IDE, sinh viên chọn tính năng **"Upload File"**.
-  2. Hệ thống mở hộp thoại chọn file từ máy tính cá nhân.
-  3. Sinh viên chọn file mã nguồn (chỉ chấp nhận phần mở rộng hợp lệ: `.py`, `.cpp`, `.c`, `.java`).
-  4. Hệ thống đọc nội dung file và điền trực tiếp vào khung soạn thảo Monaco Editor.
-  5. Sinh viên kiểm tra lại nội dung và tiếp tục chỉnh sửa hoặc nộp bài.
+- **Mô tả**: Cho phép Student tải mã nguồn từ máy tính vào bài làm đang mở.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**:
+  - Student đã mở giao diện làm bài và có quyền truy cập bài tập.
+  - File mã nguồn có phần mở rộng thuộc danh sách ngôn ngữ được bài tập cho phép.
+- **Hậu điều kiện**:
+  - Nội dung file hợp lệ được nạp vào Monaco Editor và có thể được chỉnh sửa tiếp.
+  - File upload không được xem là submission chính thức cho đến khi Student nộp bài.
+- **Luồng tương tác chính**:
+  1. Student chọn **"Upload File"** tại màn hình làm bài.
+  2. Hệ thống hiển thị giao diện chọn file.
+  3. Student chọn file mã nguồn từ máy tính.
+  4. Hệ thống kiểm tra phần mở rộng, kích thước và nội dung cơ bản của file.
+  5. Hệ thống đọc file và nạp nội dung vào Monaco Editor.
+  6. Hệ thống lưu bản nháp của nội dung đã nạp.
+  7. Hệ thống thông báo **"Tải file lên thành công."**
+- **Luồng tương tác thay thế**:
+  - **3a. Student hủy chọn file**: Hệ thống đóng hộp thoại và giữ nguyên nội dung đang có trong editor.
+  - **5a. Student tiếp tục chỉnh sửa**: Hệ thống cập nhật nội dung editor và lưu theo cơ chế autosave.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Định dạng file không được hỗ trợ**: Hệ thống thông báo **"Định dạng file không được hỗ trợ."**
+  - **E2 - File vượt quá kích thước cho phép**: Hệ thống thông báo **"Kích thước file vượt quá giới hạn cho phép."**
+  - **E3 - Không thể đọc file**: Hệ thống thông báo **"Không thể tải file, vui lòng chọn file khác."**
 
 ---
 
 ### UC-ST11 — Chạy Thử Chương Trình (Run Code trên Sample Tests)
-- **Tiền điều kiện**: Sinh viên đã nhập mã nguồn vào editor.
-- **Luồng chính**:
-  1. Sinh viên bấm nút **"Chạy thử" (Run Code)** hoặc dùng phím tắt `Ctrl + Enter`.
-  2. Web Client gửi mã nguồn cùng dữ liệu các **Sample Test Cases** lên API `POST /api/v1/submissions/run`.
-  3. Hệ thống gọi nhanh container Docker Sandbox để thực thi code với Sample Test Cases.
-  4. Sandbox trả về: Standard Output (`stdout`), Standard Error (`stderr`), Thời gian chạy và Trạng thái (Passed / Failed từng test mẫu).
-  5. Hệ thống hiển thị kết quả so sánh giữa *Output thực tế* của sinh viên và *Output mong đợi* tại tab "Kết quả Chạy thử".
+- **Mô tả**: Cho phép Student chạy thử mã nguồn trên các Sample Test Cases trước khi nộp bài chính thức.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**: Student đã mở bài tập và có mã nguồn trong editor.
+- **Hậu điều kiện**: Kết quả chạy thử được hiển thị cho Student; kết quả này không tạo submission chính thức và không tính vào điểm.
+- **Luồng tương tác chính**:
+  1. Student chọn **"Chạy thử"** hoặc dùng phím tắt `Ctrl + Enter`.
+  2. Hệ thống kiểm tra mã nguồn, ngôn ngữ và Sample Test Cases của bài tập.
+  3. Web Client gửi mã nguồn và dữ liệu test đến API chạy thử.
+  4. Hệ thống tạo môi trường thực thi tạm thời trong Docker Sandbox với giới hạn tài nguyên.
+  5. Docker Sandbox biên dịch nếu cần và chạy mã nguồn trên từng Sample Test Case.
+  6. Hệ thống thu thập `stdout`, `stderr`, thời gian chạy, mức sử dụng bộ nhớ và trạng thái từng test.
+  7. Hệ thống hiển thị kết quả so sánh giữa output thực tế và output mong đợi.
+- **Luồng tương tác thay thế**:
+  - **1a. Student sửa mã nguồn sau khi xem kết quả**: Student chạy thử lại với nội dung mới.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Mã nguồn rỗng hoặc không hợp lệ**: Hệ thống yêu cầu Student nhập mã nguồn hợp lệ.
+  - **E2 - Lỗi biên dịch, lỗi chạy hoặc vượt giới hạn tài nguyên**: Hệ thống hiển thị trạng thái tương ứng và thông tin lỗi.
+  - **E3 - Sandbox không khả dụng**: Hệ thống thông báo **"Không thể chạy thử lúc này, vui lòng thử lại sau."**
 
 ---
 
 ### UC-ST12 — Nộp Bài Chính Thức (Submit Code)
-- **Tiền điều kiện**: Sinh viên hoàn thành bài làm và bài tập chưa hết hạn nộp (hoặc cho phép nộp muộn).
-- **Luồng chính**:
-  1. Sinh viên bấm nút **"Nộp bài" (Submit Code)**.
-  2. Web Client gửi mã nguồn lên `POST /api/v1/submissions`.
-  3. Backend tạo bản ghi Submission với trạng thái `PENDING` và đẩy Job vào **Redis Queue**.
-  4. Backend trả về `submission_id` ngay lập tức cho Client và chuyển giao diện sang trạng thái *"Đang chấm bài..."*.
-  5. **Grader Worker (Celery)** nhận Job từ Queue:
-     - Gửi code và toàn bộ **Hidden Test Cases** vào **Docker Sandbox**.
-     - Sandbox biên dịch (nếu cần) và chạy code cách ly với từng test case.
-     - Thu thập kết quả: Điểm số pass test, Memory, Time Limit.
-     - Chạy phân tích tĩnh (**Static Code Analyzer**) đo Cyclomatic Complexity, AST, Code Smells.
-     - Gửi dữ liệu (Đề bài + Code + Test Results + Rubric) tới **AI Engine (LLM)** để tạo nhận xét và phân tích lỗi.
-     - Tổng hợp điểm cuối cùng theo Rubric và lưu toàn bộ kết quả vào CSDL.
-  6. Backend thông báo cho Client thông qua **WebSocket** hoặc kết nối Polling: Trạng thái chuyển thành `COMPLETED`.
-  7. Client tự động tải và hiển thị kết quả bài nộp hoàn chỉnh.
+- **Mô tả**: Cho phép Student gửi mã nguồn để hệ thống chấm chính thức và lưu kết quả bài làm.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**:
+  - Student đã đăng nhập và có quyền làm bài.
+  - Bài tập còn hạn nộp hoặc cho phép nộp muộn.
+  - Student đã nhập mã nguồn.
+- **Hậu điều kiện**:
+  - Một submission được tạo và lưu với trạng thái xử lý tương ứng.
+  - Kết quả Auto-Grader và AI feedback được lưu khi quá trình chấm hoàn tất.
+  - Nếu không thể tiếp nhận bài, hệ thống không tạo submission không đầy đủ.
+- **Luồng tương tác chính**:
+  1. Student kiểm tra mã nguồn và chọn **"Nộp bài"**.
+  2. Hệ thống kiểm tra quyền nộp, thời hạn, ngôn ngữ và dữ liệu bài nộp.
+  3. Web Client gửi mã nguồn cùng thông tin bài tập đến API nộp bài.
+  4. Backend tạo submission với trạng thái `PENDING` và đưa tác vụ vào hàng đợi xử lý.
+  5. Hệ thống trả về mã submission và hiển thị trạng thái **"Đang chấm bài..."**.
+  6. Grader Worker lấy tác vụ, gửi mã nguồn và toàn bộ Hidden Test Cases đến Docker Sandbox.
+  7. Docker Sandbox biên dịch nếu cần, thực thi code cách ly và trả về execution evidence gồm output, lỗi, thời gian chạy, bộ nhớ và trạng thái từng test.
+  8. Hệ thống thực hiện Auto-Grading, phân tích tĩnh nếu được cấu hình và tính điểm theo Rubric.
+  9. Hệ thống lưu kết quả chấm vào cơ sở dữ liệu.
+  10. AI Engine tạo feedback dựa trên đề bài, mã nguồn và kết quả chấm; hệ thống lưu feedback nếu tác vụ thành công.
+  11. Hệ thống cập nhật trạng thái submission thành `COMPLETED` hoặc trạng thái lỗi tương ứng.
+  12. Hệ thống thông báo trạng thái cho Student qua WebSocket hoặc polling.
+- **Luồng tương tác thay thế**:
+  - **1a. Student xác nhận nộp bài muộn**: Hệ thống tiếp nhận submission và áp dụng quy định phạt điểm nếu bài tập cho phép nộp muộn.
+  - **12a. Student rời khỏi trang**: Hệ thống tiếp tục xử lý submission; Student có thể xem trạng thái từ lịch sử làm bài.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Hết hạn nộp bài**: Hệ thống thông báo **"Đã hết hạn nộp bài."**
+  - **E2 - Mã nguồn không hợp lệ**: Hệ thống thông báo **"Bài nộp không hợp lệ."**
+  - **E3 - Không thể đưa tác vụ vào hàng đợi**: Hệ thống thông báo **"Không thể tiếp nhận bài nộp, vui lòng thử lại sau."**
+  - **E4 - Lỗi khi chấm bài**: Hệ thống cập nhật submission ở trạng thái lỗi và thông báo **"Chấm bài thất bại, vui lòng thử lại sau."**
 
 ---
 
-### UC-ST13 & UC-ST14 — Xem Kết Quả Auto-Grader & Nhận Xét AI
-- **Luồng chính**:
-  1. Sau khi bài nộp hoàn tất chấm, giao diện hiển thị 2 bảng thông tin:
-     - **Bảng Auto-Grader**: Tổng điểm đạt được (ví dụ: `80/100`), thời gian chạy trung bình, trạng thái từng test case (Ví dụ: `Test 1: Passed`, `Test 2: Passed`, `Test 3: Wrong Answer`).
-     - **Bảng AI Reviewer**: Nhận xét chi tiết của AI về độ phức tạp thuật toán (Ví dụ: *"Thuật toán hiện tại có độ phức tạp O(n^2), có thể tối ưu về O(n log n) bằng cách dùng Hash Map"*), cảnh báo các biến chưa sử dụng hoặc vòng lặp lồng nhau sâu.
+### UC-ST13 — Xem Kết Quả Auto-Grader
+- **Mô tả**: Cho phép Student xem kết quả chấm tự động của một submission.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**: Student đã đăng nhập và submission thuộc về Student.
+- **Hậu điều kiện**: Kết quả Auto-Grader được hiển thị; dữ liệu chấm không bị thay đổi.
+- **Luồng tương tác chính**:
+  1. Student mở một submission từ lịch sử làm bài hoặc trang kết quả.
+  2. Hệ thống kiểm tra quyền truy cập submission.
+  3. Hệ thống lấy kết quả Auto-Grader.
+  4. Hệ thống hiển thị điểm số, trạng thái tổng quát và thời gian chấm.
+  5. Hệ thống hiển thị trạng thái từng test case và các lỗi biên dịch, lỗi chạy hoặc giới hạn tài nguyên nếu có.
+  6. Student xem chi tiết kết quả chấm bài.
+- **Luồng tương tác thay thế**:
+  - **4a. Submission đang được xử lý**: Hệ thống hiển thị trạng thái `PENDING` hoặc `RUNNING` và cho phép Student tải lại kết quả.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Submission không tồn tại**: Hệ thống thông báo **"Không tìm thấy bài nộp."**
+  - **E2 - Student không có quyền truy cập**: Hệ thống từ chối yêu cầu và không hiển thị dữ liệu submission.
+  - **E3 - Chưa có kết quả chấm**: Hệ thống thông báo **"Kết quả chấm bài chưa sẵn sàng."**
+
+---
+
+### UC-ST14 — Xem Nhận Xét AI
+- **Mô tả**: Cho phép Student xem nhận xét do AI tạo ra dựa trên bài làm và kết quả chấm.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**:
+  - Student đã đăng nhập và submission thuộc về Student.
+  - Submission đã có kết quả chấm hoặc đủ dữ liệu để tạo feedback.
+- **Hậu điều kiện**: Nhận xét AI được hiển thị nếu đã được tạo; dữ liệu bài nộp không bị thay đổi.
+- **Luồng tương tác chính**:
+  1. Student mở trang kết quả của một submission.
+  2. Hệ thống kiểm tra quyền truy cập và trạng thái AI feedback.
+  3. Hệ thống lấy nhận xét AI đã lưu.
+  4. Hệ thống hiển thị nhận xét về lỗi, chất lượng mã nguồn, độ phức tạp và đề xuất cải thiện nếu có.
+  5. Student xem và sử dụng nhận xét để cải thiện bài làm.
+- **Luồng tương tác thay thế**:
+  - **3a. AI feedback đang được tạo**: Hệ thống hiển thị trạng thái chờ và cập nhật khi feedback sẵn sàng.
+  - **3b. AI feedback chưa được bật cho bài tập**: Hệ thống thông báo tính năng không khả dụng cho submission này.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không tìm thấy submission**: Hệ thống thông báo **"Không tìm thấy bài nộp."**
+  - **E2 - Student không có quyền truy cập**: Hệ thống từ chối yêu cầu xem feedback.
+  - **E3 - AI Service gặp lỗi**: Hệ thống thông báo **"Chưa thể tạo nhận xét AI, vui lòng thử lại sau."**
 
 ---
 
 ### UC-ST15 — Tương Tác Với AI Tutor (Socratic Hinting)
-- **Luồng chính**:
-  1. Tại màn hình xem kết quả hoặc màn hình IDE, sinh viên mở khung chat **"Trợ giảng AI"**.
-  2. Hệ thống tự động đính kèm Context: Đề bài, Mã nguồn hiện tại của sinh viên, Test case bị lỗi gần nhất.
-  3. Sinh viên nhập câu hỏi (Ví dụ: *"Tại sao test case số 3 của em bị Wrong Answer?"* hoặc *"Làm sao để xử lý trường hợp mảng rỗng?"*).
-  4. Backend gửi prompt kèm Guardrails sư phạm tới LLM.
-  5. AI phân tích và trả về câu trả lời mang tính gợi mở tư duy (đặt câu hỏi ngược, chỉ ra logic thiếu sót, không đưa ra code lời giải).
-  6. Sinh viên tiếp tục hội thoại nhiều lượt (Multi-turn conversation) cho đến khi hiểu ra vấn đề.
+- **Mô tả**: Cho phép Student trao đổi với AI Tutor để nhận gợi ý định hướng giải quyết bài tập theo phương pháp Socratic.
+- **Tác nhân**: Student; AI Tutor là hệ thống phụ trợ.
+- **Tiền điều kiện**:
+  - Student đã đăng nhập.
+  - Student đang xem bài tập, bài làm hoặc kết quả bài nộp.
+- **Hậu điều kiện**:
+  - Câu hỏi và câu trả lời được hiển thị trong phiên hội thoại.
+  - Lịch sử hội thoại được lưu theo chính sách của hệ thống nếu chức năng lưu được bật.
+- **Luồng tương tác chính**:
+  1. Student mở **"AI Tutor"** tại màn hình bài tập, IDE hoặc kết quả bài nộp.
+  2. Hệ thống lấy context cần thiết gồm đề bài, mã nguồn, kết quả test và câu hỏi trước đó trong hội thoại.
+  3. Student nhập câu hỏi và chọn **"Gửi"**.
+  4. Hệ thống kiểm tra câu hỏi, quyền truy cập context và giới hạn sử dụng.
+  5. Backend gửi prompt kèm guardrails sư phạm đến AI Engine.
+  6. AI Tutor phân tích context và tạo câu trả lời mang tính gợi mở, không cung cấp ngay toàn bộ lời giải nếu chính sách không cho phép.
+  7. Hệ thống hiển thị câu trả lời trong khung hội thoại.
+  8. Student tiếp tục đặt câu hỏi trong cùng phiên.
+- **Luồng tương tác thay thế**:
+  - **2a. Student không chọn bài làm hoặc submission**: Hệ thống chỉ gửi context của đề bài và các thông tin được phép xem.
+  - **8a. Student bắt đầu hội thoại mới**: Hệ thống xóa context hội thoại trước khỏi phiên hiện tại và khởi tạo phiên mới.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Câu hỏi rỗng hoặc vượt giới hạn**: Hệ thống yêu cầu Student nhập câu hỏi hợp lệ.
+  - **E2 - AI Service không khả dụng**: Hệ thống thông báo **"AI Tutor hiện không khả dụng, vui lòng thử lại sau."**
+  - **E3 - Nội dung yêu cầu không phù hợp chính sách**: Hệ thống từ chối yêu cầu và hiển thị thông báo phù hợp.
 
 ---
 
-### UC-ST16 & UC-ST17 — Xem Lịch Sử Làm Bài & Bảng Điểm Cá Nhân
-- **Luồng chính**:
-  1. Sinh viên truy cập tab **"Lịch sử nộp bài"** của bài tập để xem lại toàn bộ các lần submit trong quá khứ, so sánh diff giữa các phiên bản code.
-  2. Sinh viên truy cập trang `/student/grades` để xem bảng điểm tổng hợp tất cả các môn học và bài tập đã hoàn thành.
+### UC-ST16 — Xem Lịch Sử Làm Bài
+- **Mô tả**: Cho phép Student tra cứu các submission của mình và xem chi tiết từng lần nộp bài.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**: Student đã đăng nhập và có phiên xác thực hợp lệ.
+- **Hậu điều kiện**: Lịch sử submission của Student được hiển thị; dữ liệu bài nộp không bị thay đổi.
+- **Luồng tương tác chính**:
+  1. Student truy cập mục **"Lịch sử làm bài"** hoặc lịch sử nộp bài của một bài tập.
+  2. Hệ thống xác thực phiên đăng nhập.
+  3. Hệ thống truy vấn các submission thuộc về Student.
+  4. Hệ thống sắp xếp lịch sử theo thời gian và hiển thị bài tập, thời điểm nộp, trạng thái, điểm và ngôn ngữ.
+  5. Student chọn một submission để xem mã nguồn, kết quả test và feedback được phép xem.
+- **Luồng tương tác thay thế**:
+  - **4a. Student lọc lịch sử**: Hệ thống lọc theo bài tập, lớp, trạng thái hoặc khoảng thời gian.
+  - **5a. Student chọn hai submission**: Hệ thống hiển thị phần khác nhau giữa các phiên bản nếu chức năng so sánh được hỗ trợ.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không có lịch sử submission**: Hệ thống hiển thị danh sách rỗng và thông báo **"Chưa có bài nộp nào."**
+  - **E2 - Lỗi truy vấn dữ liệu**: Hệ thống thông báo **"Không thể tải lịch sử làm bài, vui lòng thử lại sau."**
+
+---
+
+### UC-ST17 — Xem Bảng Điểm Cá Nhân
+- **Mô tả**: Cho phép Student xem tổng hợp điểm các bài tập và lớp học mà mình tham gia.
+- **Tác nhân**: Student.
+- **Tiền điều kiện**: Student đã đăng nhập và có phiên xác thực hợp lệ.
+- **Hậu điều kiện**: Bảng điểm cá nhân được hiển thị theo dữ liệu kết quả đã được chấm; dữ liệu điểm không bị thay đổi.
+- **Luồng tương tác chính**:
+  1. Student truy cập trang **"Bảng điểm"** tại `/student/grades`.
+  2. Hệ thống xác thực phiên đăng nhập.
+  3. Hệ thống truy vấn các kết quả đã được chấm thuộc về Student.
+  4. Hệ thống tổng hợp điểm theo bài tập và lớp học theo quy tắc đã cấu hình.
+  5. Hệ thống hiển thị bảng điểm gồm bài tập, lớp, điểm, trạng thái và thời gian cập nhật.
+  6. Student xem hoặc lọc điểm theo bài tập, lớp hoặc khoảng thời gian.
+- **Luồng tương tác thay thế**:
+  - **6a. Student không chọn bộ lọc**: Hệ thống hiển thị toàn bộ bảng điểm mà Student được phép xem.
+  - **6b. Một số bài chưa có điểm cuối**: Hệ thống hiển thị trạng thái đang chờ chấm hoặc chưa có kết quả thay vì tự động coi là điểm 0.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không có kết quả đã chấm**: Hệ thống hiển thị bảng điểm rỗng và thông báo **"Chưa có kết quả được chấm."**
+  - **E2 - Lỗi tổng hợp điểm**: Hệ thống thông báo **"Không thể tải bảng điểm, vui lòng thử lại sau."**
 
 ---
 
