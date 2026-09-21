@@ -5,61 +5,160 @@
 ## I. CÁC USE CASE XÁC THỰC & QUẢN TRỊ TÀI KHOẢN CHUNG
 
 ### UC-01 — Đăng Nhập
-- **Tiền điều kiện**: Người dùng đã có tài khoản hoạt động trong hệ thống.
-- **Luồng chính (Main Flow)**:
-  1. Người dùng truy cập trang `/login`.
-  2. Hệ thống hiển thị form nhập Email và Mật khẩu.
-  3. Người dùng nhập thông tin xác thực và bấm **"Đăng nhập"**.
-  4. Hệ thống kiểm tra: Email tồn tại, Mật khẩu khớp (kiểm tra hash bcrypt), tài khoản không bị khóa (`is_active = true`).
-  5. Hệ thống tạo cặp JWT Tokens: `access_token` (ngắn hạn) và `refresh_token` (dài hạn).
-  6. Hệ thống phân tích vai trò (Role) và chuyển hướng người dùng đến Dashboard tương ứng (`/student`, `/teacher`, `/admin`, hoặc `/superadmin`).
-- **Luồng ngoại lệ (Alternative Flow)**:
-  - *4a. Sai thông tin hoặc tài khoản bị khóa*: Hệ thống hiển thị thông báo lỗi cụ thể và giữ nguyên form.
+- **Mô tả**: Cho phép người dùng xác thực tài khoản để bắt đầu phiên làm việc trên hệ thống.
+- **Tác nhân**: Student, Teacher, Admin, Super Admin.
+- **Tiền điều kiện**:
+  - Người dùng đã có tài khoản trong hệ thống.
+  - Tài khoản chưa bị khóa hoặc vô hiệu hóa.
+- **Hậu điều kiện**:
+  - Phiên đăng nhập được tạo thành công.
+  - Hệ thống cấp token xác thực và chuyển người dùng đến trang chính phù hợp với vai trò.
+  - Nếu đăng nhập thất bại, phiên đăng nhập không được tạo và dữ liệu biểu mẫu vẫn được giữ để người dùng thử lại.
+- **Luồng tương tác chính**:
+  1. Người dùng truy cập trang đăng nhập `/login`.
+  2. Hệ thống hiển thị biểu mẫu yêu cầu Email và Mật khẩu.
+  3. Người dùng nhập thông tin tài khoản và chọn **"Đăng nhập"**.
+  4. Hệ thống kiểm tra định dạng dữ liệu và tìm tài khoản tương ứng.
+  5. Hệ thống đối chiếu mật khẩu với mật khẩu đã được băm trong cơ sở dữ liệu, đồng thời kiểm tra trạng thái tài khoản.
+  6. Hệ thống tạo phiên đăng nhập và cấp `access_token` cùng `refresh_token`.
+  7. Hệ thống chuyển người dùng đến trang chính tương ứng với vai trò: `/student`, `/teacher`, `/admin` hoặc `/superadmin`.
+- **Luồng tương tác thay thế**:
+  - **7a. Người dùng đã truy cập một trang yêu cầu đăng nhập trước đó**: Hệ thống chuyển người dùng về trang được yêu cầu ban đầu thay vì trang chính.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Thông tin đăng nhập không hợp lệ**: Hệ thống thông báo **"Email hoặc mật khẩu không chính xác."** và giữ nguyên biểu mẫu.
+  - **E2 - Tài khoản bị khóa hoặc vô hiệu hóa**: Hệ thống thông báo **"Tài khoản đã bị khóa hoặc vô hiệu hóa."**
+  - **E3 - Lỗi hệ thống**: Hệ thống thông báo **"Đăng nhập thất bại, vui lòng thử lại sau."**
 
 ---
 
 ### UC-02 — Đăng Xuất
-- **Luồng chính**:
-  1. Người dùng bấm chọn **"Đăng xuất"** trên thanh điều hướng.
-  2. Hệ thống hủy token lưu trữ tại LocalStorage/Cookies trên trình duyệt.
-  3. Hệ thống đưa Refresh Token vào danh sách Blacklist (Redis) nếu có cấu hình.
-  4. Chuyển hướng người dùng về trang `/login`.
+- **Mô tả**: Cho phép người dùng kết thúc phiên làm việc hiện tại trên hệ thống.
+- **Tác nhân**: Student, Teacher, Admin, Super Admin.
+- **Tiền điều kiện**: Người dùng đang có phiên đăng nhập hợp lệ.
+- **Hậu điều kiện**:
+  - Phiên đăng nhập của người dùng được kết thúc.
+  - Các thông tin xác thực cục bộ được xóa và người dùng được chuyển về trang đăng nhập.
+- **Luồng tương tác chính**:
+  1. Người dùng chọn **"Đăng xuất"** trên thanh điều hướng.
+  2. Hệ thống hiển thị yêu cầu xác nhận đăng xuất.
+  3. Người dùng xác nhận yêu cầu.
+  4. Hệ thống thu hồi hoặc đưa `refresh_token` vào danh sách vô hiệu hóa nếu cơ chế này được cấu hình.
+  5. Hệ thống xóa token xác thực được lưu trên trình duyệt.
+  6. Hệ thống kết thúc phiên đăng nhập và chuyển người dùng về trang `/login`.
+- **Luồng tương tác thay thế**:
+  - **3a. Người dùng hủy xác nhận**: Hệ thống đóng hộp thoại và giữ nguyên phiên đăng nhập.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Phiên đăng nhập đã hết hạn**: Hệ thống xóa thông tin xác thực cục bộ và chuyển người dùng về trang `/login`.
 
 ---
 
 ### UC-03 — Quên Mật Khẩu
-- **Luồng chính**:
-  1. Người dùng bấm **"Quên mật khẩu"** tại màn hình đăng nhập.
-  2. Hệ thống hiển thị form yêu cầu nhập Email tài khoản.
-  3. Người dùng nhập Email và gửi yêu cầu.
-  4. Hệ thống kiểm tra tài khoản, tạo mã OTP/Reset Token có thời hạn (15 phút) và gửi email hướng dẫn.
-  5. Người dùng click vào link xác thực trong email, hệ thống hiển thị form nhập mật khẩu mới.
-  6. Người dùng nhập mật khẩu mới và xác nhận mật khẩu.
-  7. Hệ thống cập nhật mật khẩu đã được hash vào CSDL và thông báo thành công.
+- **Mô tả**: Cho phép người dùng xác thực quyền sở hữu tài khoản và đặt lại mật khẩu khi không nhớ mật khẩu hiện tại.
+- **Tác nhân**: Student, Teacher, Admin, Super Admin.
+- **Tiền điều kiện**: Người dùng đang ở trang đăng nhập và có quyền truy cập địa chỉ email đã đăng ký.
+- **Hậu điều kiện**:
+  - Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu.
+  - Các mã hoặc liên kết khôi phục đã sử dụng bị vô hiệu hóa.
+  - Nếu khôi phục thất bại, mật khẩu hiện tại vẫn được giữ nguyên.
+- **Luồng tương tác chính**:
+  1. Người dùng chọn **"Quên mật khẩu"** tại trang đăng nhập.
+  2. Hệ thống hiển thị biểu mẫu yêu cầu nhập email tài khoản.
+  3. Người dùng nhập email và chọn **"Gửi yêu cầu"**.
+  4. Hệ thống kiểm tra định dạng email và tạo mã OTP hoặc liên kết đặt lại mật khẩu có thời hạn.
+  5. Hệ thống gửi mã hoặc liên kết xác thực đến email của người dùng và thông báo đã gửi yêu cầu.
+  6. Người dùng sử dụng mã hoặc liên kết nhận được để mở biểu mẫu đặt lại mật khẩu.
+  7. Người dùng nhập mật khẩu mới, xác nhận mật khẩu và chọn **"Cập nhật mật khẩu"**.
+  8. Hệ thống kiểm tra mã hoặc liên kết còn hợp lệ, đồng thời kiểm tra mật khẩu mới.
+  9. Hệ thống băm mật khẩu mới, cập nhật vào cơ sở dữ liệu và vô hiệu hóa mã hoặc liên kết đã sử dụng.
+  10. Hệ thống thông báo **"Khôi phục mật khẩu thành công."** và chuyển người dùng về trang đăng nhập.
+- **Luồng tương tác thay thế**:
+  - **5a. Người dùng không nhận được email**: Người dùng yêu cầu gửi lại mã hoặc liên kết khi thời gian chờ cho phép; hệ thống cấp thông tin xác thực mới.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Email không tồn tại hoặc không hợp lệ**: Hệ thống thông báo yêu cầu không thể thực hiện và không tiết lộ thông tin tài khoản tồn tại.
+  - **E2 - Mã hoặc liên kết hết hạn hoặc không hợp lệ**: Hệ thống thông báo **"Mã hoặc liên kết khôi phục không hợp lệ hoặc đã hết hạn."**
+  - **E3 - Mật khẩu mới không đạt yêu cầu**: Hệ thống thông báo **"Mật khẩu mới không hợp lệ hoặc không trùng khớp."**
+  - **E4 - Lỗi gửi email hoặc lỗi lưu dữ liệu**: Hệ thống thông báo **"Không thể khôi phục mật khẩu, vui lòng thử lại sau."**
 
 ---
 
-### UC-04 & UC-05 — Xem & Cập Nhật Thông Tin Cá Nhân
-- **Luồng chính**:
-  1. Người dùng truy cập trang `/profile`.
-  2. Hệ thống truy vấn thông tin cá nhân hiện tại từ DB và hiển thị lên giao diện.
-  3. Người dùng chọn **"Chỉnh sửa"**, sửa đổi các trường cho phép (Họ và tên, Số điện thoại, Avatar URL).
-  4. Người dùng bấm **"Lưu thay đổi"**.
-  5. Hệ thống validate dữ liệu, cập nhật DB và hiển thị thông báo thành công.
+### UC-04 — Xem Thông Tin Cá Nhân
+- **Mô tả**: Cho phép người dùng xem thông tin cá nhân đã lưu trong hệ thống.
+- **Tác nhân**: Student, Teacher, Admin, Super Admin.
+- **Tiền điều kiện**: Người dùng đã đăng nhập và có phiên xác thực hợp lệ.
+- **Hậu điều kiện**: Thông tin cá nhân hiện tại của người dùng được hiển thị; dữ liệu trong cơ sở dữ liệu không bị thay đổi.
+- **Luồng tương tác chính**:
+  1. Người dùng truy cập trang cá nhân `/profile`.
+  2. Hệ thống xác thực phiên đăng nhập và quyền truy cập của người dùng.
+  3. Hệ thống truy vấn thông tin cá nhân từ cơ sở dữ liệu.
+  4. Hệ thống hiển thị các thông tin được phép xem, như họ tên, email, số điện thoại, ảnh đại diện và vai trò của người dùng.
+- **Luồng tương tác thay thế**:
+  - **3a. Người dùng tải lại trang**: Hệ thống truy vấn lại dữ liệu mới nhất từ cơ sở dữ liệu và hiển thị thông tin cập nhật.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn**: Hệ thống thông báo yêu cầu đăng nhập và chuyển người dùng về trang `/login`.
+  - **E2 - Không tìm thấy thông tin cá nhân**: Hệ thống thông báo **"Không tìm thấy thông tin cá nhân."**
+  - **E3 - Lỗi truy vấn dữ liệu**: Hệ thống thông báo **"Không thể tải thông tin cá nhân, vui lòng thử lại sau."**
+
+---
+
+### UC-05 — Cập Nhật Thông Tin Cá Nhân
+- **Mô tả**: Cho phép người dùng chỉnh sửa và lưu các thông tin cá nhân được hệ thống cho phép cập nhật.
+- **Tác nhân**: Student, Teacher, Admin, Super Admin.
+- **Tiền điều kiện**:
+  - Người dùng đã đăng nhập và có phiên xác thực hợp lệ.
+  - Thông tin cá nhân của người dùng đã tồn tại trong hệ thống.
+- **Hậu điều kiện**:
+  - Thông tin hợp lệ được cập nhật và lưu vào cơ sở dữ liệu.
+  - Nếu cập nhật thất bại, thông tin cũ được giữ nguyên và hệ thống hiển thị thông báo lỗi.
+- **Luồng tương tác chính**:
+  1. Người dùng truy cập trang cá nhân `/profile`.
+  2. Hệ thống xác thực phiên đăng nhập và hiển thị thông tin hiện tại.
+  3. Người dùng chọn **"Chỉnh sửa"**.
+  4. Hệ thống hiển thị biểu mẫu với các trường được phép cập nhật, như họ tên, số điện thoại và ảnh đại diện.
+  5. Người dùng chỉnh sửa thông tin và chọn **"Lưu thay đổi"**.
+  6. Hệ thống kiểm tra tính hợp lệ của dữ liệu.
+  7. Hệ thống cập nhật thông tin vào cơ sở dữ liệu.
+  8. Hệ thống thông báo **"Cập nhật thông tin cá nhân thành công."** và hiển thị dữ liệu mới.
+- **Luồng tương tác thay thế**:
+  - **5a. Người dùng chọn "Hủy"**: Hệ thống hủy thao tác chỉnh sửa và giữ nguyên thông tin hiện tại.
+  - **5b. Người dùng không thay đổi thông tin**: Hệ thống không thực hiện cập nhật và giữ nguyên dữ liệu hiện tại.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn**: Hệ thống thông báo yêu cầu đăng nhập và chuyển người dùng về trang `/login`.
+  - **E2 - Thông tin không hợp lệ**: Hệ thống thông báo **"Thông tin cá nhân không hợp lệ."** và giữ lại dữ liệu người dùng đã nhập để chỉnh sửa.
+  - **E3 - Dữ liệu đã được cập nhật ở nơi khác**: Hệ thống thông báo **"Thông tin đã được cập nhật, vui lòng tải lại dữ liệu."** và không ghi đè dữ liệu mới.
+  - **E4 - Lỗi khi lưu dữ liệu**: Hệ thống thông báo **"Cập nhật thông tin cá nhân thất bại."**
+
+---
+
+### UC-06 — Đổi Mật Khẩu
+- **Mô tả**: Cho phép người dùng thay đổi mật khẩu hiện tại sau khi xác thực mật khẩu cũ.
+- **Tác nhân**: Student, Teacher, Admin, Super Admin.
+- **Tiền điều kiện**:
+  - Người dùng đã đăng nhập và có phiên xác thực hợp lệ.
+  - Người dùng biết mật khẩu hiện tại.
+- **Hậu điều kiện**:
+  - Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu.
+  - Các phiên hoặc token cũ được xử lý theo chính sách bảo mật của hệ thống.
+  - Nếu đổi mật khẩu thất bại, mật khẩu cũ vẫn được giữ nguyên.
+- **Luồng tương tác chính**:
+  1. Người dùng truy cập chức năng **"Đổi mật khẩu"** trong trang cá nhân.
+  2. Hệ thống hiển thị biểu mẫu gồm Mật khẩu hiện tại, Mật khẩu mới và Xác nhận mật khẩu mới.
+  3. Người dùng nhập đầy đủ thông tin và chọn **"Đổi mật khẩu"**.
+  4. Hệ thống xác thực phiên đăng nhập và đối chiếu mật khẩu hiện tại.
+  5. Hệ thống kiểm tra mật khẩu mới đạt chính sách bảo mật và trùng với phần xác nhận.
+  6. Hệ thống băm mật khẩu mới và lưu vào cơ sở dữ liệu.
+  7. Hệ thống thông báo **"Đổi mật khẩu thành công."**
+- **Luồng tương tác thay thế**:
+  - **3a. Người dùng chọn "Hủy"**: Hệ thống hủy thao tác và giữ nguyên mật khẩu hiện tại.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn**: Hệ thống yêu cầu người dùng đăng nhập lại.
+  - **E2 - Mật khẩu hiện tại không chính xác**: Hệ thống thông báo **"Mật khẩu hiện tại không chính xác."**
+  - **E3 - Mật khẩu mới không hợp lệ**: Hệ thống thông báo **"Mật khẩu mới không đáp ứng yêu cầu bảo mật hoặc không trùng khớp."**
+  - **E4 - Mật khẩu mới trùng mật khẩu hiện tại**: Hệ thống thông báo **"Mật khẩu mới phải khác mật khẩu hiện tại."**
+  - **E5 - Lỗi khi lưu dữ liệu**: Hệ thống thông báo **"Đổi mật khẩu thất bại."**
 
 ---
 
 ## II. PHÂN HỆ STUDENT (NGƯỜI HỌC)
-
-### UC-ST06 — Đổi Mật Khẩu
-- **Luồng chính**:
-  1. Sinh viên truy cập mục **Đổi mật khẩu** trong trang cá nhân.
-  2. Hệ thống hiển thị form: Mật khẩu hiện tại, Mật khẩu mới, Xác nhận mật khẩu mới.
-  3. Sinh viên nhập đầy đủ thông tin và bấm **"Cập nhật"**.
-  4. Hệ thống kiểm tra mật khẩu hiện tại có chính xác không, mật khẩu mới có đạt độ mạnh quy định không (tối thiểu 8 ký tự).
-  5. Hệ thống băm (hash) mật khẩu mới và lưu vào DB.
-
----
 
 ### UC-ST07 — Xem Danh Sách Bài Tập
 - **Luồng chính**:
