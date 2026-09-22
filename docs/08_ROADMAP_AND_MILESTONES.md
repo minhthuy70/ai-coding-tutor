@@ -33,7 +33,7 @@
 - [ ] Dựng `docker-compose.yml` (PostgreSQL 15 + Redis 7).
 - [ ] Xây dựng Dockerfile Sandbox Runner cho Python với cơ chế giới hạn tài nguyên và ngắt kết nối mạng an toàn.
 - [ ] Viết script `runner.py` đo thời gian thực thi, bộ nhớ và bắt lỗi (TLE, MLE, RE, AC, WA).
-- **Kết quả nghiệm thu (Milestone 1)**: Chạy thử nghiệm thành công một file `solution.py` trong Docker Sandbox và xuất ra JSON kết quả test cases.
+- **Kết quả nghiệm thu (Milestone 1)**: Kiểm thử thành công việc thực thi một file `solution.py` trong Docker Sandbox và xuất ra JSON kết quả test cases.
 
 #### Tuần 2: Backend API Quản Lý Bài Tập & Hàng Đợi Chấm Bài (Async Grader)
 - [ ] Xây dựng Database Schema cơ bản (Users, Problems, TestCases, Submissions) bằng SQLAlchemy + Alembic.
@@ -44,7 +44,7 @@
 
 #### Tuần 3: Web IDE (Monaco Editor) & Tích Hợp AI Tutor Cơ Bản
 - [ ] Dựng giao diện Web Next.js: Màn hình xem đề bài & Trình soạn thảo **Monaco Editor**.
-- [ ] Nút "Chạy thử" (Run Sample Tests) và nút "Nộp bài" (Submit).
+- [ ] Nút "Nộp bài" (Submit) và trạng thái xử lý submission.
 - [ ] Tích hợp **Google Gemini API** (hoặc OpenAI): Phân tích mã nguồn sinh viên, chỉ ra lỗi logic và sinh câu hỏi Socratic.
 - [ ] Giao diện xem kết quả Auto-Grader và Chat Box tương tác với AI Tutor.
 - **Kết quả nghiệm thu (Milestone 3 - MVP Core Release)**: Một sinh viên có thể làm bài trên web từ đầu đến cuối, nộp bài, nhận điểm số từ Sandbox và nhận lời khuyên từ AI.

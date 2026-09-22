@@ -48,7 +48,7 @@ Hệ thống MVP chỉ cần tập trung hoàn thiện chính xác **4 màn hìn
   - Soạn thảo đề bài (tiêu đề, mô tả bài toán, định dạng Input/Output chuẩn, ví dụ minh họa).
   - Thiết lập giới hạn tài nguyên: **Time Limit** (ví dụ: 1.0s - 3.0s) và **Memory Limit** (ví dụ: 128MB - 256MB).
   - Quản lý bộ **Test Cases**:
-    - *Sample Test Cases*: Test công khai, sinh viên thấy được input/output để tự debug.
+    - *Sample Test Cases*: Ví dụ công khai trong đề bài để sinh viên tham khảo.
     - *Hidden Test Cases*: Test ẩn dùng để chấm điểm chính thức (bao gồm các Edge Cases: số 0, số âm, mảng rỗng, dữ liệu cực đại).
   - Thiết lập **Rubric tiêu chí chấm**: Phân bổ trọng số (ví dụ: 70% Test Cases, 20% Code Quality/Static Analysis, 10% Algorithm Complexity).
 
@@ -60,8 +60,7 @@ Hệ thống MVP chỉ cần tập trung hoàn thiện chính xác **4 màn hìn
   - Giao diện chia đôi màn hình (Split View): Bên trái hiển thị Đề bài + Ví dụ, bên phải là **Monaco Editor** (trình soạn thảo lõi của VS Code).
   - Hỗ trợ chọn ngôn ngữ (Python, C/C++, Java), cú pháp highlight, gợi ý code (IntelliSense cơ bản).
   - Tính năng **Upload File Source Code**: Tự động load nội dung file vào editor.
-  - Hai nút hành động cốt lõi:
-    - **Nút "Chạy thử" (Run Code)**: Chạy nhanh trên Sample Tests, phản hồi tức thì `stdout`/`stderr`.
+  - Nút hành động cốt lõi:
     - **Nút "Nộp bài" (Submit)**: Đẩy code vào hàng đợi chấm điểm chính thức.
 
 ---

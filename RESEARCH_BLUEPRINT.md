@@ -1014,7 +1014,7 @@ GOOD: "Your code fails test case 3 (input: [5, 2, 8], expected: 15,
 ### Verification Steps
 1. **Self-consistency:** Ask LLM to verify its own claims
 2. **Evidence check:** Ensure every claim has evidence
-3. **Execution verification:** Run code to verify claims if possible
+3. **Execution verification:** Execute code during submission grading to verify claims if possible
 4. **Confidence scoring:** LLM provides confidence for each claim
 
 ### Example Verification

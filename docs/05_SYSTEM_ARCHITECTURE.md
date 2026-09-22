@@ -156,7 +156,6 @@ erDiagram
 - `POST /api/v1/problems/{id}/rubrics`: Cấu hình Rubric đánh giá.
 
 ### 3.3. Submissions & Grading (`/api/v1/submissions`)
-- `POST /api/v1/submissions/run`: **Chạy thử code trên Sample Tests** (Đồng bộ, phản hồi nhanh).
 - `POST /api/v1/submissions`: **Nộp bài chính thức** (Đẩy vào Queue, trả về submission ID).
 - `GET /api/v1/submissions/{id}`: Tra cứu trạng thái và kết quả chi tiết của bài nộp.
 - `GET /api/v1/submissions/history`: Xem lịch sử nộp bài của sinh viên.

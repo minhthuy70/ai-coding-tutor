@@ -30,7 +30,7 @@
 ```text
 Code sinh viên
      │
-     ├── Evidence 1: Chạy thử code
+   ├── Evidence 1: Chấm thực thi code khi nộp bài
      │                 ↓
      │              Có đúng không?
      │
@@ -1366,7 +1366,7 @@ GOOD: "Code của bạn fail test case 3 (input: [5, 2, 8], expected: 15,
 ### Verification Steps
 1. **Self-consistency:** Ask LLM verify claims của chính nó
 2. **Evidence check:** Đảm bảo mỗi claim có evidence
-3. **Execution verification:** Run code để verify claims nếu có thể
+3. **Execution verification:** Thực thi code trong quy trình chấm bài để verify claims nếu có thể
 4. **Confidence scoring:** LLM provides confidence cho mỗi claim
 
 ---

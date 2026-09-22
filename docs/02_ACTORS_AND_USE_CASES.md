@@ -21,7 +21,7 @@ Hệ thống được thiết kế theo mô hình **Role-Based Access Control (R
 | :--- | :---: | :---: | :---: | :---: |
 | Đăng nhập / Đăng xuất / Quên & Đổi mật khẩu | ✅ | ✅ | ✅ | ✅ |
 | Xem & Cập nhật thông tin cá nhân | ✅ | ✅ | ✅ | ✅ |
-| Viết code, Chạy thử & Nộp bài (Monaco Editor) | ✅ | ❌ | ❌ | ❌ |
+| Viết code & Nộp bài (Monaco Editor) | ✅ | ❌ | ❌ | ❌ |
 | Tương tác AI Tutor & Xem gợi ý Socratic | ✅ | ❌ | ❌ | ❌ |
 | Xem lịch sử làm bài & Bảng điểm cá nhân | ✅ | ❌ | ❌ | ❌ |
 | Tạo, sửa, xóa bài tập & Thiết lập Test cases / Rubric | ❌ | ✅ | ❌ | ❌ |
@@ -49,68 +49,67 @@ Hệ thống được thiết kế theo mô hình **Role-Based Access Control (R
 
 ---
 
-### 3.2. Phân Hệ Student (12 Use Cases)
+### 3.2. Phân Hệ Student (11 Use Cases)
 | Mã UC | Tên Use Case | Mô tả vắn tắt |
 | :--- | :--- | :--- |
-| **UC-ST06** | Đổi mật khẩu | Thay đổi mật khẩu tài khoản (yêu cầu xác thực mật khẩu hiện tại). |
-| **UC-ST07** | Xem danh sách bài tập | Xem danh sách bài tập được giao theo từng lớp/chủ đề, lọc theo trạng thái. |
-| **UC-ST08** | Xem chi tiết bài tập | Xem mô tả bài toán, giới hạn thời gian/bộ nhớ, ví dụ mẫu và rubric. |
-| **UC-ST09** | Viết / chỉnh sửa code | Soạn thảo mã nguồn trực tiếp trên giao diện tích hợp Monaco Editor. |
-| **UC-ST10** | Upload file bài làm | Tải file mã nguồn từ máy tính (`.py`, `.cpp`, `.java`) đưa vào editor. |
-| **UC-ST11** | Chạy thử chương trình | Thực thi code trên các Sample Test Cases công khai để debug nhanh. |
-| **UC-ST12** | Nộp bài chính thức | Gửi bài làm vào hàng đợi để Docker Sandbox chấm full Hidden Tests và kích hoạt AI. |
-| **UC-ST13** | Xem kết quả Auto-Grader | Xem chi tiết điểm số, trạng thái từng test case (AC, WA, TLE, MLE, CE, RE). |
-| **UC-ST14** | Xem nhận xét AI | Xem đánh giá tổng quan về chất lượng mã, độ phức tạp $O(n)$ và code smells. |
-| **UC-ST15** | Tương tác với AI Tutor | Chat với AI để nhận gợi ý logic sửa lỗi theo phương pháp Socratic. |
-| **UC-ST16** | Xem lịch sử làm bài | Tra cứu các lần nộp trước đó, xem lại mã nguồn đã nộp và sự thay đổi qua từng lần. |
-| **UC-ST17** | Xem bảng điểm cá nhân | Bảng tổng hợp điểm số các bài tập đã nộp theo môn học/lớp học. |
+| **UC-06** | Đổi mật khẩu | Thay đổi mật khẩu tài khoản (yêu cầu xác thực mật khẩu hiện tại). |
+| **UC-07** | Xem danh sách bài tập | Xem danh sách bài tập được giao theo từng lớp/chủ đề, lọc theo trạng thái. |
+| **UC-08** | Xem chi tiết bài tập | Xem mô tả bài toán, giới hạn thời gian/bộ nhớ, ví dụ mẫu và rubric. |
+| **UC-09** | Viết / chỉnh sửa code | Soạn thảo mã nguồn trực tiếp trên giao diện tích hợp Monaco Editor. |
+| **UC-10** | Upload file bài làm | Tải file mã nguồn từ máy tính (`.py`, `.cpp`, `.java`) đưa vào editor. |
+| **UC-11** | Nộp bài chính thức | Gửi bài làm vào hàng đợi để Docker Sandbox chấm full Hidden Tests và kích hoạt AI. |
+| **UC-12** | Xem kết quả Auto-Grader | Xem chi tiết điểm số, trạng thái từng test case (AC, WA, TLE, MLE, CE, RE). |
+| **UC-13** | Xem nhận xét AI | Xem đánh giá tổng quan về chất lượng mã, độ phức tạp $O(n)$ và code smells. |
+| **UC-14** | Tương tác với AI Tutor | Chat với AI để nhận gợi ý logic sửa lỗi theo phương pháp Socratic. |
+| **UC-15** | Xem lịch sử làm bài | Tra cứu các lần nộp trước đó, xem lại mã nguồn đã nộp và sự thay đổi qua từng lần. |
+| **UC-16** | Xem bảng điểm cá nhân | Bảng tổng hợp điểm số các bài tập đã nộp theo môn học/lớp học. |
 
 ---
 
 ### 3.3. Phân Hệ Teacher (15 Use Cases)
 | Mã UC | Tên Use Case | Mô tả vắn tắt |
 | :--- | :--- | :--- |
-| **UC-TE03** | Tạo lớp học | Khởi tạo lớp học mới do mình phụ trách. |
-| **UC-TE04** | Chỉnh sửa lớp học | Cập nhật tên lớp, mô tả, niên khóa. |
-| **UC-TE05** | Xóa / đóng lớp học | Đóng lớp khi kết thúc học kỳ hoặc xóa lớp rỗng. |
-| **UC-TE06** | Quản lý sinh viên trong lớp | Thêm/Xóa sinh viên vào danh sách lớp thông qua mã SV hoặc email. |
-| **UC-TE07** | Tạo bài tập | Soạn thảo tiêu đề, nội dung, chọn ngôn ngữ lập trình cho phép. |
-| **UC-TE08** | Chỉnh sửa bài tập | Cập nhật đề bài hoặc các cấu hình liên quan. |
-| **UC-TE09** | Xóa bài tập | Xóa hoặc ẩn bài tập khỏi danh sách bài được giao. |
-| **UC-TE10** | Thiết lập deadline | Cài đặt thời gian mở đề và thời hạn nộp bài (cho phép/chặn nộp muộn). |
-| **UC-TE11** | Thiết lập test case | Nhập dữ liệu Input/Output, đánh dấu Sample/Hidden, thiết lập trọng số điểm. |
-| **UC-TE12** | Thiết lập rubric | Thiết lập bảng tiêu chí chấm: Execution (Pass tests), Static Quality, Complexity. |
-| **UC-TE13** | Giao bài tập cho lớp | Chỉ định một hoặc nhiều lớp nhận bài tập đã tạo. |
-| **UC-TE14** | Xem submissions | Xem toàn bộ bài làm đã nộp của các sinh viên trong lớp. |
-| **UC-TE15** | Xem bảng điểm lớp | Xem và xuất bảng điểm bài tập của toàn bộ sinh viên trong lớp. |
-| **UC-TE16** | Xem AI đánh giá | Xem phân tích và báo cáo của AI đối với bài làm của từng sinh viên. |
-| **UC-TE17** | Đánh giá / chấm bài thủ công | Chấm đè điểm số hoặc nhập nhận xét cá nhân của giảng viên cho sinh viên. |
+| **UC-17** | Tạo lớp học | Khởi tạo lớp học mới do mình phụ trách. |
+| **UC-18** | Chỉnh sửa lớp học | Cập nhật tên lớp, mô tả, niên khóa. |
+| **UC-19** | Xóa / đóng lớp học | Đóng lớp khi kết thúc học kỳ hoặc xóa lớp rỗng. |
+| **UC-20** | Quản lý sinh viên trong lớp | Thêm/Xóa sinh viên vào danh sách lớp thông qua mã SV hoặc email. |
+| **UC-21** | Tạo bài tập | Soạn thảo tiêu đề, nội dung, chọn ngôn ngữ lập trình cho phép. |
+| **UC-22** | Chỉnh sửa bài tập | Cập nhật đề bài hoặc các cấu hình liên quan. |
+| **UC-23** | Xóa bài tập | Xóa hoặc ẩn bài tập khỏi danh sách bài được giao. |
+| **UC-24** | Thiết lập deadline | Cài đặt thời gian mở đề và thời hạn nộp bài (cho phép/chặn nộp muộn). |
+| **UC-25** | Thiết lập test case | Nhập dữ liệu Input/Output, đánh dấu Sample/Hidden, thiết lập trọng số điểm. |
+| **UC-26** | Thiết lập rubric | Thiết lập bảng tiêu chí chấm: Execution (Pass tests), Static Quality, Complexity. |
+| **UC-27** | Giao bài tập cho lớp | Chỉ định một hoặc nhiều lớp nhận bài tập đã tạo. |
+| **UC-28** | Xem bài nộp (Submissions) | Xem toàn bộ bài làm đã nộp của các sinh viên trong lớp. |
+| **UC-29** | Xem bảng điểm lớp | Xem và xuất bảng điểm bài tập của toàn bộ sinh viên trong lớp. |
+| **UC-30** | Xem AI đánh giá | Xem phân tích và báo cáo của AI đối với bài làm của từng sinh viên. |
+| **UC-31** | Đánh giá / chấm bài thủ công | Chấm đè điểm số hoặc nhập nhận xét cá nhân của giảng viên cho sinh viên. |
 
 ---
 
 ### 3.4. Phân Hệ Admin (11 Use Cases)
 | Mã UC | Tên Use Case | Mô tả vắn tắt |
 | :--- | :--- | :--- |
-| **UC-AD01** | Tạo tài khoản | Tạo thủ công tài khoản cho Student hoặc Teacher mới. |
-| **UC-AD02** | Khóa / mở tài khoản | Tạm ngưng hoặc kích hoạt lại quyền đăng nhập của người dùng. |
-| **UC-AD03** | Xóa tài khoản | Xóa bỏ tài khoản khỏi cơ sở dữ liệu (kèm cơ chế soft-delete). |
-| **UC-AD04** | Phân quyền người dùng | Thay đổi vai trò (Role) của người dùng giữa Student, Teacher, Admin. |
-| **UC-AD05** | Reset mật khẩu | Đặt lại mật khẩu tạm thời cho người dùng khi được yêu cầu. |
-| **UC-AD06** | Import Excel / CSV | Tạo tài khoản hoặc ghi danh sinh viên vào lớp hàng loạt từ file Excel. |
-| **UC-AD07** | Tạo lớp (Cấp quản trị) | Khởi tạo lớp học mới trong phạm vi tổ chức/khoa. |
-| **UC-AD08** | Chỉnh sửa lớp | Cập nhật thông tin bất kỳ lớp học nào thuộc tổ chức. |
-| **UC-AD09** | Xóa / đóng lớp | Đóng hoặc xóa lớp học ở cấp quản trị tổ chức. |
-| **UC-AD10** | Quản lý sinh viên trong lớp | Thêm/Xóa sinh viên trong bất kỳ lớp học nào. |
-| **UC-AD11** | Phân công giảng viên | Chỉ định hoặc thay đổi giảng viên phụ trách cho lớp học. |
+| **UC-32** | Tạo tài khoản | Tạo thủ công tài khoản cho Student hoặc Teacher mới. |
+| **UC-33** | Khóa / mở tài khoản | Tạm ngưng hoặc kích hoạt lại quyền đăng nhập của người dùng. |
+| **UC-34** | Xóa tài khoản | Xóa bỏ tài khoản khỏi cơ sở dữ liệu (kèm cơ chế soft-delete). |
+| **UC-35** | Phân quyền người dùng | Thay đổi vai trò (Role) của người dùng giữa Student, Teacher, Admin. |
+| **UC-36** | Reset mật khẩu | Đặt lại mật khẩu tạm thời cho người dùng khi được yêu cầu. |
+| **UC-37** | Import Excel / CSV | Tạo tài khoản hoặc ghi danh sinh viên vào lớp hàng loạt từ file Excel. |
+| **UC-38** | Tạo lớp (Cấp quản trị) | Khởi tạo lớp học mới trong phạm vi tổ chức/khoa. |
+| **UC-39** | Chỉnh sửa lớp | Cập nhật thông tin bất kỳ lớp học nào thuộc tổ chức. |
+| **UC-40** | Xóa / đóng lớp | Đóng hoặc xóa lớp học ở cấp quản trị tổ chức. |
+| **UC-41** | Quản lý sinh viên trong lớp | Thêm/Xóa sinh viên trong bất kỳ lớp học nào. |
+| **UC-42** | Phân công giảng viên | Chỉ định hoặc thay đổi giảng viên phụ trách cho lớp học. |
 
 ---
 
 ### 3.5. Phân Hệ Super Admin (6 Use Cases Đặc Thù)
 | Mã UC | Tên Use Case | Mô tả vắn tắt |
 | :--- | :--- | :--- |
-| **UC-SA06** | Đổi mật khẩu Super Admin | Đổi mật khẩu tài khoản quản trị tối cao. |
-| **UC-SA07** | Quản lý cấu hình AI | Nhập/Đổi API Key (Gemini, OpenAI), cấu hình Model, Temperature, Prompts. |
-| **UC-SA08** | Cấu hình Docker Sandbox | Cấu hình RAM Limit, CPU Limit, Execution Timeout, Base Images. |
-| **UC-SA09** | Giám sát Docker Sandbox | Giám sát trạng thái hoạt động của sandbox containers, CPU/RAM usage realtime. |
-| **UC-SA10** | Quản lý tổ chức | Quản lý các trường học / trung tâm trong hệ thống đa tổ chức (Multi-tenant). |
-| **UC-SA11** | Quản lý System Logs | Tra cứu lịch sử lỗi, nhật ký chấm bài, audit logs của toàn bộ hệ thống. |
+| **UC-43** | Đổi mật khẩu Super Admin | Đổi mật khẩu tài khoản quản trị tối cao. |
+| **UC-44** | Quản lý cấu hình AI | Nhập/Đổi API Key (Gemini, OpenAI), cấu hình Model, Temperature, Prompts. |
+| **UC-45** | Cấu hình Docker Sandbox | Cấu hình RAM Limit, CPU Limit, Execution Timeout, Base Images. |
+| **UC-46** | Giám sát Docker Sandbox | Giám sát trạng thái hoạt động của sandbox containers, CPU/RAM usage realtime. |
+| **UC-47** | Quản lý tổ chức | Quản lý các trường học / trung tâm trong hệ thống đa tổ chức (Multi-tenant). |
+| **UC-48** | Quản lý System Logs | Tra cứu lịch sử lỗi, nhật ký chấm bài, audit logs của toàn bộ hệ thống. |
