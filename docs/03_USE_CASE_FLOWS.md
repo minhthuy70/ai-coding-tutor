@@ -411,30 +411,159 @@
 
 ## III. PHÂN HỆ TEACHER (GIẢNG VIÊN)
 
-### UC-17 $\rightarrow$ UC-20 — Quản Lý Lớp Học & Sinh Viên
-- **Luồng chính**:
-  1. Giảng viên truy cập `/teacher/classes` $\rightarrow$ Chọn **"Tạo lớp mới"**.
-  2. Nhập: Tên lớp (ví dụ: *CS101 - Lập trình Python K18*), Mô tả, Học kỳ.
-  3. Giảng viên mở chi tiết lớp $\rightarrow$ Thêm sinh viên vào lớp bằng cách nhập Email/Mã sinh viên hoặc chia sẻ Mã tham gia lớp (Class Code).
-  4. Giảng viên có quyền xóa sinh viên khỏi lớp hoặc đóng lớp khi hết kỳ học.
+### UC-17 — Tạo Lớp Học
+- **Mô tả**: Cho phép Teacher khởi tạo một lớp học mới do mình phụ trách.
+- **Tác nhân**: Teacher.
+- **Tiền điều kiện**: Teacher đã đăng nhập và có quyền quản lý lớp trong tổ chức tương ứng.
+- **Hậu điều kiện**: Lớp học hợp lệ được tạo và gắn với Teacher; hệ thống sinh mã tham gia nếu cần.
+- **Luồng tương tác chính**:
+  1. Teacher truy cập `/teacher/classes` và chọn **"Tạo lớp"**.
+  2. Hệ thống hiển thị biểu mẫu gồm tên lớp, mã lớp, mô tả, học kỳ hoặc niên khóa.
+  3. Teacher nhập thông tin và chọn **"Tạo lớp"**.
+  4. Hệ thống kiểm tra quyền, định dạng dữ liệu và tính duy nhất của mã lớp.
+  5. Hệ thống tạo lớp, gắn Teacher làm người phụ trách và sinh mã tham gia nếu cần.
+  6. Hệ thống thông báo **"Tạo lớp thành công."** và hiển thị chi tiết lớp.
+- **Luồng tương tác thay thế**:
+  - **3a. Teacher chọn "Hủy"**: Hệ thống đóng biểu mẫu và không tạo lớp.
+  - **3b. Teacher không nhập mã lớp**: Hệ thống tự sinh mã theo cấu hình.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Dữ liệu không hợp lệ**: Hệ thống thông báo **"Thông tin lớp học không hợp lệ."**
+  - **E2 - Mã lớp đã tồn tại**: Hệ thống thông báo **"Mã lớp đã tồn tại, vui lòng chọn mã khác."**
+  - **E3 - Lỗi khi tạo lớp**: Hệ thống thông báo **"Không thể tạo lớp, vui lòng thử lại sau."**
+
+### UC-18 — Chỉnh Sửa Lớp Học
+- **Mô tả**: Cho phép Teacher cập nhật thông tin của lớp học do mình phụ trách.
+- **Tác nhân**: Teacher.
+- **Tiền điều kiện**: Teacher đã đăng nhập; lớp tồn tại và chưa bị xóa.
+- **Hậu điều kiện**: Thông tin hợp lệ của lớp được cập nhật; nếu thất bại, dữ liệu cũ được giữ nguyên.
+- **Luồng tương tác chính**:
+  1. Teacher truy cập `/teacher/classes` và chọn lớp cần chỉnh sửa.
+  2. Hệ thống kiểm tra quyền và hiển thị thông tin hiện tại.
+  3. Teacher chỉnh sửa tên lớp, mô tả, học kỳ hoặc niên khóa.
+  4. Teacher chọn **"Lưu"**.
+  5. Hệ thống kiểm tra dữ liệu và phiên bản hiện tại của lớp.
+  6. Hệ thống cập nhật thông tin và thông báo **"Cập nhật lớp thành công."**
+- **Luồng tương tác thay thế**:
+  - **4a. Teacher chọn "Hủy"**: Hệ thống bỏ các thay đổi chưa lưu.
+  - **4b. Teacher không thay đổi dữ liệu**: Hệ thống không tạo bản cập nhật mới.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không tìm thấy lớp**: Hệ thống thông báo **"Không tìm thấy lớp học."**
+  - **E2 - Teacher không có quyền**: Hệ thống từ chối yêu cầu và không hiển thị dữ liệu lớp.
+  - **E3 - Dữ liệu đã thay đổi ở nơi khác**: Hệ thống thông báo **"Thông tin lớp đã thay đổi, vui lòng tải lại."**
+
+### UC-19 — Xóa / Đóng Lớp Học
+- **Mô tả**: Cho phép Teacher đóng lớp khi kết thúc hoạt động hoặc xóa lớp chưa sử dụng theo chính sách.
+- **Tác nhân**: Teacher.
+- **Tiền điều kiện**: Teacher đã đăng nhập, có quyền quản lý và lớp học tồn tại.
+- **Hậu điều kiện**: Lớp được đóng hoặc xóa mềm; lớp đóng không còn nhận thành viên hoặc bài tập mới.
+- **Luồng tương tác chính**:
+  1. Teacher mở chi tiết lớp cần xử lý.
+  2. Teacher chọn **"Đóng lớp"** hoặc **"Xóa lớp"**.
+  3. Hệ thống hiển thị hộp thoại xác nhận và nêu ảnh hưởng đến dữ liệu liên quan.
+  4. Teacher xác nhận thao tác.
+  5. Hệ thống kiểm tra trạng thái lớp và thực hiện đóng hoặc xóa theo chính sách.
+  6. Hệ thống thông báo **"Xử lý lớp thành công."** và cập nhật danh sách.
+- **Luồng tương tác thay thế**:
+  - **2a. Teacher hủy xác nhận**: Hệ thống đóng hộp thoại và giữ nguyên lớp.
+  - **5a. Lớp có dữ liệu đang hoạt động**: Hệ thống chuyển lớp sang trạng thái đóng hoặc lưu trữ thay vì xóa vật lý.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Lớp đã đóng hoặc đã xóa**: Hệ thống thông báo **"Lớp học không còn ở trạng thái có thể xử lý."**
+  - **E2 - Lỗi cập nhật trạng thái**: Hệ thống thông báo **"Không thể cập nhật trạng thái lớp, vui lòng thử lại sau."**
+
+### UC-20 — Quản Lý Sinh Viên Trong Lớp
+- **Mô tả**: Cho phép Teacher thêm hoặc xóa sinh viên khỏi lớp mình phụ trách.
+- **Tác nhân**: Teacher.
+- **Tiền điều kiện**: Teacher đã đăng nhập, có quyền quản lý và lớp đang mở.
+- **Hậu điều kiện**: Danh sách thành viên được cập nhật theo yêu cầu hợp lệ.
+- **Luồng tương tác chính**:
+  1. Teacher mở chi tiết lớp.
+  2. Hệ thống hiển thị danh sách sinh viên hiện tại.
+  3. Teacher chọn **"Thêm sinh viên"** hoặc chọn sinh viên và chọn **"Xóa khỏi lớp"**.
+  4. Với thao tác thêm, Teacher nhập email, mã sinh viên hoặc sử dụng mã tham gia lớp.
+  5. Hệ thống kiểm tra tài khoản, tư cách thành viên và trạng thái lớp.
+  6. Hệ thống cập nhật danh sách thành viên và hiển thị danh sách mới.
+- **Luồng tương tác thay thế**:
+  - **3a. Teacher thêm nhiều sinh viên**: Hệ thống xử lý danh sách và trả kết quả theo từng bản ghi.
+  - **3b. Teacher hủy thao tác xóa**: Hệ thống đóng hộp thoại và giữ nguyên thành viên.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không tìm thấy sinh viên**: Hệ thống thông báo **"Không tìm thấy tài khoản sinh viên."**
+  - **E2 - Sinh viên đã là thành viên**: Hệ thống bỏ qua bản ghi trùng và thông báo kết quả.
+  - **E3 - Không thể xóa sinh viên**: Hệ thống thông báo **"Không thể xóa sinh viên khỏi lớp."**
 
 ---
 
-### UC-21 $\rightarrow$ UC-26 — Tạo & Cấu Hình Bài Tập
+### UC-21 — Tạo Bài Tập
+- **Mô tả**: Cho phép Teacher tạo bài tập mới với đề bài và cấu hình phục vụ chấm tự động.
+- **Tác nhân**: Teacher.
+- **Tiền điều kiện**: Teacher đã đăng nhập và có quyền quản lý bài tập.
+- **Hậu điều kiện**: Bài tập hợp lệ được tạo ở trạng thái bản nháp hoặc sẵn sàng giao; test case, deadline và rubric được lưu cùng cấu hình.
+- **Luồng tương tác chính**:
+  1. Teacher truy cập trang quản lý bài tập và chọn **"Tạo bài tập"** tại `/teacher/problems/create`.
+  2. Hệ thống hiển thị biểu mẫu tạo bài tập.
+  3. Teacher nhập tiêu đề, mô tả bài toán bằng Markdown, yêu cầu Input/Output và ngôn ngữ được phép.
+  4. Teacher cấu hình time limit, memory limit, thời gian mở đề, deadline và chính sách nộp muộn.
+  5. Teacher thêm test case gồm Input, Expected Output, trạng thái sample/hidden và trọng số điểm.
+  6. Teacher thiết lập rubric cho Correctness, Code Quality và Complexity.
+  7. Teacher chọn **"Lưu bài tập"**.
+  8. Hệ thống kiểm tra dữ liệu và tính nhất quán của cấu hình.
+  9. Hệ thống tạo bài tập và thông báo **"Tạo bài tập thành công."**
+- **Luồng tương tác thay thế**:
+  - **7a. Teacher chọn lưu bản nháp**: Hệ thống lưu bài tập ở trạng thái `DRAFT` và chưa cho sinh viên truy cập.
+  - **7b. Teacher rời biểu mẫu**: Hệ thống cảnh báo khi có thay đổi chưa lưu.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Thiếu thông tin bắt buộc**: Hệ thống thông báo **"Vui lòng hoàn thiện các trường bắt buộc."**
+  - **E2 - Test case hoặc rubric không hợp lệ**: Hệ thống thông báo **"Cấu hình test case hoặc rubric không hợp lệ."**
+  - **E3 - Deadline không hợp lệ**: Hệ thống thông báo **"Thời gian mở đề và hạn nộp bài không hợp lệ."**
+  - **E4 - Lỗi khi tạo bài tập**: Hệ thống thông báo **"Không thể tạo bài tập, vui lòng thử lại sau."**
+
+### UC-22 — Chỉnh Sửa Bài Tập
+- **Mô tả**: Cho phép Teacher cập nhật nội dung hoặc cấu hình của bài tập do mình quản lý.
+- **Tác nhân**: Teacher.
+- **Tiền điều kiện**: Teacher đã đăng nhập; bài tập tồn tại và đang ở trạng thái cho phép chỉnh sửa.
+- **Hậu điều kiện**: Nội dung và cấu hình hợp lệ được cập nhật; các bài nộp đã có không bị thay đổi ngoài chính sách phiên bản.
+- **Luồng tương tác chính**:
+  1. Teacher mở danh sách bài tập và chọn bài cần chỉnh sửa.
+  2. Hệ thống kiểm tra quyền truy cập và hiển thị thông tin bài tập.
+  3. Teacher chỉnh sửa đề bài, ngôn ngữ, giới hạn, deadline, test case hoặc rubric.
+  4. Teacher chọn **"Lưu"**.
+  5. Hệ thống kiểm tra dữ liệu, trạng thái bài tập và tính tương thích với bài nộp hiện có.
+  6. Hệ thống cập nhật bài tập hoặc tạo phiên bản mới theo chính sách.
+  7. Hệ thống thông báo **"Cập nhật bài tập thành công."**
+- **Luồng tương tác thay thế**:
+  - **4a. Teacher chọn "Hủy"**: Hệ thống bỏ thay đổi chưa lưu.
+  - **5a. Bài tập đã được giao hoặc có bài nộp**: Hệ thống giới hạn trường được sửa hoặc yêu cầu xác nhận tạo phiên bản mới.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không tìm thấy bài tập**: Hệ thống thông báo **"Không tìm thấy bài tập."**
+  - **E2 - Teacher không có quyền**: Hệ thống từ chối yêu cầu và không cho phép chỉnh sửa.
+  - **E3 - Dữ liệu không hợp lệ**: Hệ thống thông báo **"Thông tin bài tập không hợp lệ."**
+  - **E4 - Lỗi khi lưu**: Hệ thống thông báo **"Không thể cập nhật bài tập, vui lòng thử lại sau."**
+
+### UC-23 — Xóa Bài Tập
+- **Mô tả**: Cho phép Teacher xóa hoặc vô hiệu hóa bài tập theo trạng thái và chính sách lưu trữ dữ liệu.
+- **Tác nhân**: Teacher.
+- **Tiền điều kiện**: Teacher đã đăng nhập, có quyền quản lý bài tập và bài tập tồn tại.
+- **Hậu điều kiện**: Bài tập được xóa mềm, vô hiệu hóa hoặc xóa theo chính sách; bài nộp, điểm và lịch sử liên quan được giữ lại khi cần.
+- **Luồng tương tác chính**:
+  1. Teacher mở danh sách bài tập và chọn bài cần xóa.
+  2. Teacher chọn **"Xóa"**.
+  3. Hệ thống hiển thị yêu cầu xác nhận và thông tin về dữ liệu bị ảnh hưởng.
+  4. Teacher xác nhận thao tác.
+  5. Hệ thống kiểm tra trạng thái bài tập, quyền truy cập và dữ liệu liên quan.
+  6. Hệ thống xóa hoặc vô hiệu hóa bài tập theo chính sách.
+  7. Hệ thống thông báo **"Xử lý bài tập thành công."** và cập nhật danh sách.
+- **Luồng tương tác thay thế**:
+  - **2a. Teacher hủy thao tác**: Hệ thống đóng hộp thoại và giữ nguyên bài tập.
+  - **5a. Bài tập đã có bài nộp**: Hệ thống vô hiệu hóa hoặc xóa mềm thay vì xóa dữ liệu vật lý.
+- **Luồng tương tác ngoại lệ**:
+  - **E1 - Không tìm thấy bài tập**: Hệ thống thông báo **"Bài tập không tồn tại hoặc đã được xử lý."**
+  - **E2 - Bài tập đang được sử dụng**: Hệ thống thông báo **"Bài tập đang có dữ liệu liên quan và không thể xóa trực tiếp."**
+  - **E3 - Lỗi xử lý**: Hệ thống thông báo **"Không thể xóa hoặc vô hiệu hóa bài tập, vui lòng thử lại sau."**
+
+### UC-24 $\rightarrow$ UC-26 — Cấu Hình Deadline, Test Case & Rubric
 - **Luồng chính**:
-  1. Giảng viên chọn **"Tạo bài tập mới"** (`/teacher/problems/create`).
-  2. **Nhập thông tin chung**: Tiêu đề, Mô tả bài toán (Markdown), Ngôn ngữ cho phép nộp (Python, C++, Java).
-  3. **Thiết lập giới hạn**: Time Limit (giây), Memory Limit (MB).
-  4. **Cấu hình Test Cases**:
-     - Thêm từng cặp `Input` và `Expected Output`.
-    - Tích chọn `is_sample` (Công khai trong đề bài) hoặc `is_hidden` (Chấm điểm chính thức).
-     - Thiết lập điểm cho từng testcase.
-  5. **Cấu hình Rubric**:
-     - Tiêu chí 1: *Correctness / Test cases pass rate* (Trọng số 70%).
-     - Tiêu chí 2: *Code Quality & Cleanliness* (Trọng số 20%).
-     - Tiêu chí 3: *Optimal Time Complexity* (Trọng số 10%).
-  6. **Thiết lập Deadline**: Thời gian mở đề, Hạn chót nộp bài, Cho phép nộp muộn hay không (kèm mức phạt % điểm nếu có).
-  7. Bấm **"Lưu bài tập"**.
+  1. Teacher mở bài tập cần cấu hình.
+  2. Teacher thiết lập deadline, test case và rubric theo các chức năng tương ứng.
+  3. Hệ thống kiểm tra và lưu cấu hình.
 
 ---
 
