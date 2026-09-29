@@ -1,0 +1,278 @@
+Milestones
+----------
+1. **M1 - Documentation Freeze** (31/09/2026)
+   - All docs (RULES, USE CASE diagrams, MVP strategy, System Architecture) finalized and peer‑reviewed.
+
+2. **M2 - Core MVP Development Complete** (07/10/2026)
+   - Problem Management, Web IDE, Auto‑Grader, AI Tutor core features implemented.
+
+3. **M3 - Integration & Testing Complete** (14/10/2026)
+   - Docker sandbox, API endpoints, RBAC, end‑to‑end tests passed.
+
+4. **M4 - Deployment & Monitoring Ready** (21/10/2026)
+   - CI/CD pipeline, production Docker images, logging & alerting set up.
+
+5. **M5 - Final Review & Handover** (30/10/2026)
+   - Full QA sign‑off, documentation update, knowledge transfer.
+
+Weekly Checkpoints
+------------------
+- **CP1** – End of Week 1 (07/10/2026): Review docs & MVP scaffold.
+- **CP2** – End of Week 2 (14/10/2026): Demo core features, integration tests.
+- **CP3** – End of Week 3 (21/10/2026): Staging deployment, performance checks.
+- **CP4** – End of Week 4 (28/10/2026): User‑acceptance testing, bug‑fix freeze.
+- **CP5** – Final day (30/10/2026): Project sign‑off.
+
+Daily Action Plan (29/09/2026 – 30/10/2026)
+-----------------------------------------
+
+[ ] [Người A] 29/09 – Setup & Planning
+   - Init local repo, add remote origin, ensure .gitignore is up‑to‑date.
+   - Create project board (Kanban) with columns: Backlog, In‑Progress, Review, Done.
+   - Draft detailed task breakdown in the board (link to Milestones).
+
+[ ] [Người B] 29/09 – Environment Prep
+   - Install/verify Python 3.11, Node 18, Docker 24 on workstation.
+   - Create virtualenv `.venv/`, install dependencies from `requirements.txt`.
+   - Verify Docker daemon runs, pull base images (python:3.11‑slim, node:18‑alpine).
+
+[ ] [Người A] 30/09 – Documentation Review
+   - Peer‑review `RULES.md` against `DOAN4.md` for missing actors/UC.
+   - Update `02_ACTORS_AND_USE_CASES.md` table if discrepancies found.
+   - Confirm `USE_CASE_DIAGRAMS.md` reflects new `STAFF` actor.
+
+[ ] [Người B] 30/09 – CI/CD Scaffold
+   - Add GitHub Actions workflow: lint, test, build Docker image.
+   - Configure caching for `pip` and `npm` layers.
+   - Commit `.github/workflows/ci.yml`.
+
+[ ] [Người A] 01/10 – MVP Core – Problem Management
+   - Implement DB schema for `PROBLEM`, `TEST_CASE`, `RUBRIC_CRITERIA`.
+   - Write API endpoints: `GET /problems`, `POST /problems`, `PUT /problems/{id}`.
+   - Add unit tests for CRUD operations (pytest).
+
+[ ] [Người B] 01/10 – MVP Core – Web IDE
+   - Integrate Monaco editor in Next.js front‑end (if using Vite, adjust).
+   - Implement file upload (UC‑10) UI component.
+   - Write e2e test (Cypress) for code entry + upload flow.
+
+[ ] [Người A] 02/10 – MVP Core – Auto‑Grader Backend
+   - Set up Celery worker with Redis broker.
+   - Implement Docker sandbox runner (pull `gvisort/sandbox` image).
+   - Create `run_grader` task that executes test cases and stores results.
+
+[ ] [Người B] 02/10 – MVP Core – AI Tutor Stub
+   - Add placeholder service `ai_tutor_proxy.py` that returns mock feedback.
+   - Expose `POST /tutor/chat` endpoint.
+   - Write integration test that calls AI stub after successful grading.
+
+[ ] [Người A] 03/10 – RBAC & Auth
+   - Implement JWT auth (login, refresh) per RULES §2.
+   - Define role‑based permissions: STUDENT, TEACHER, STAFF, ADMIN, SUPER_ADMIN.
+   - Write middleware to enforce scope checks (Rule 09).
+
+[ ] [Người B] 03/10 – Front‑end Auth Flow
+   - Build login page, token storage, role‑based navigation guards.
+   - Add UI test for login → dashboard redirection.
+
+[ ] [Người A] 04/10 – UC‑38/UC‑39 (Class Create/Edit)
+   - API: `POST /classes`, `PUT /classes/{id}` with validation of scope.
+   - Unit tests for permission matrix (Teacher vs Staff vs Admin).
+   - Update OpenAPI spec.
+
+[ ] [Người B] 04/10 – UC‑40 (Close/Reopen Class)
+   - Implement state transitions in DB (`status` enum now ACTIVE|CLOSED|ARCHIVED).
+   - Add endpoint `POST /classes/{id}/close` and `/reopen`.
+   - Write tests for illegal transitions (e.g., close already closed).
+
+[ ] [Người A] 05/10 – UC‑41 (Archive/Hard Delete)
+   - Implement hard‑delete guard: `student_count==0 && assignment_count==0 && schedule_count==0`.
+   - Add soft‑delete flag for archival.
+   - Write tests for each branch (archive vs hard‑delete).
+
+[ ] [Người B] 05/10 – UC‑42 (Student Management)
+   - API: add/remove students to class, enforce scope (Staff vs Admin).
+   - UI: class roster management page.
+
+[ ] [Người A] 06/10 – UC‑43 (Assign Teacher)
+   - Endpoint `POST /classes/{id}/assign-teacher`.
+   - Validate teacher belongs to same department (Khoa/Bộ môn) for Staff.
+
+[ ] [Người B] 06/10 – Review & Merge Sprint 1
+   - Conduct PR reviews for all code merged Mon‑Fri.
+   - Run full test suite, fix failing tests.
+   - Update CHANGELOG with completed features.
+
+[ ] [Người A] 07/10 – **Checkpoint 1 Review** (M1 frozen)
+   - Verify all docs are version‑controlled, tag release `v0.1-docs`.
+   - Checklist: ✅ Docs matched RULES, ✅ Diagrams updated, ✅ No pending doc bugs.
+
+[ ] [Người B] 07/10 – Prepare Test Data
+   - Populate DB with sample organizations, departments, users, classes.
+   - Seed 5 problems with test cases and rubrics.
+
+[ ] [Người A] 08/10 – End‑to‑End Flow: Student Submission
+   - Implement submission API (`POST /submissions`) that queues grader.
+   - Add WebSocket events for progress updates (UC‑11 flow).
+
+[ ] [Người B] 08/10 – Front‑end Submission UI
+   - Build submission page, integrate draft autosave.
+   - Show real‑time progress bar using WS events.
+
+[ ] [Người A] 09/10 – Submission State Machine
+   - Implement `PENDING`, `RUNNING`, `COMPLETED`, `INTERRUPTED` states.
+   - Add logic per RULES §15‑§16 (no auto‑regrade on interruption).
+
+[ ] [Người B] 09/10 – Logging & Auditing
+   - Add audit log table for every `Submit` click (Rule 14).
+   - Ensure log entries include user_id, UC id, timestamp, outcome.
+
+[ ] [Người A] 10/10 – Scoring Engine
+   - Compute auto‑score from test case results, apply rubric weight.
+   - Apply policy: Highest Score vs Latest Score (configurable).
+
+[ ] [Người B] 10/10 – AI Feedback Integration
+   - Call real Gemini/OpenAI model (if credentials available) after grading.
+   - Store AI feedback in `AI_FEEDBACK` table, protect from exposure per RULES §19.
+
+[ ] [Người A] 11/10 – Hardening & Security Review
+   - Pen‑test login flow, enforce rate‑limit on password reset (Rule 2.4).
+   - Verify password hashing algorithm (bcrypt) and never store plain passwords.
+
+[ ] [Người B] 11/10 – Performance Benchmarks
+   - Run load test: 100 concurrent submissions, measure queue latency.
+   - Optimize Celery worker concurrency, adjust Docker resource limits.
+
+[ ] [Người A] 12/10 – Documentation Sync – API Docs
+   - Generate OpenAPI spec, render Swagger UI.
+   - Add API usage examples for each UC (UC‑01…UC‑48).
+
+[ ] [Người B] 12/10 – User Acceptance Test (UAT) Prep
+   - Write UAT test cases covering all actor scopes.
+   - Prepare test user accounts (Student, Teacher, Staff, Admin, Super Admin).
+
+[ ] [Người A] 13/10 – Bug‑Fix Sprint (post‑UAT feedback)
+   - Resolve any permission mismatches found in UAT.
+   - Fix edge‑case for hard delete when schedule count > 0.
+
+[ ] [Người B] 13/10 – CI/CD Enhancements
+   - Add stage to push Docker image to registry on `main` merge.
+   - Configure automatic deployment to staging env.
+
+[ ] [Người A] 14/10 – **Checkpoint 2 Review** (M3 integration complete)
+   - Verify all core UC flows pass end‑to‑end tests.
+   - Demo grading + AI feedback cycle to stakeholder.
+
+[ ] [Người B] 14/10 – Staging Deployment
+   - Deploy latest image to `staging` Kubernetes namespace.
+   - Run smoke tests against staging endpoint.
+
+[ ] [Người A] 15/10 – Monitoring Setup
+   - Set up Prometheus metrics for job queue length, grader latency.
+   - Configure Grafana dashboards, alert on `INTERRUPTED` spikes.
+
+[ ] [Người B] 15/10 – Backup & Disaster Recovery
+   - Implement daily DB dump, store in secure bucket.
+   - Test restore script, ensure no data loss.
+
+[ ] [Người A] 16/10 – Feature Freeze Prep
+   - Freeze new feature branches, open only hot‑fix PRs.
+   - Tag release candidate `v0.2-rc`.
+
+[ ] [Người B] 16/10 – Final QA Run
+   - Execute full regression suite, capture coverage report (> 85 %).
+   - Log any remaining defects, assign to owners.
+
+[ ] [Người A] 17/10 – Documentation Finalization
+   - Update README with deployment steps, env variables.
+   - Add “Known Issues” section reflecting resolved bugs.
+
+[ ] [Người B] 17/10 – Training Materials
+   - Create short video walkthrough for each actor role.
+   - Upload to internal wiki.
+
+[ ] [Người A] 18/10 – **Checkpoint 3 Review** (M4 ready for production)
+   - Verify CI passes on main, Docker image builds cleanly.
+   - Confirm monitoring alerts are active.
+
+[ ] [Người B] 18/10 – Production Deploy Prep
+   - Review production infra (VPC, IAM roles) for least‑privilege.
+   - Prepare rollback plan and run‑book.
+
+[ ] [Người A] 19/10 – Production Deployment
+   - Deploy to `prod` namespace, run health‑check endpoint.
+   - Validate RBAC enforcement with real user accounts.
+
+[ ] [Người B] 19/10 – Post‑Deploy Verification
+   - Smoke test all UC endpoints in prod.
+   - Confirm logs are ingested into central logging system.
+
+[ ] [Người A] 20/10 – Support Handoff Checklist
+   - Hand over run‑book to ops team.
+   - Verify on‑call rotation includes both engineers.
+
+[ ] [Người B] 20/10 – Stakeholder Demo
+   - Present end‑to‑end workflow to product owner.
+   - Capture final feedback, note any non‑critical tweaks.
+
+[ ] [Người A] 21/10 – **Checkpoint 4 Review** (M5 sign‑off ready)
+   - Ensure all Milestones M1‑M4 are marked DONE.
+   - Confirm all audit logs are GDPR‑compliant.
+
+[ ] [Người B] 21/10 – Final Bug Triage
+   - Close any low‑priority bugs, label remaining as “won’t fix”.
+
+[ ] [Người A] 22/10 – Project Closure Documentation
+   - Compile final project report (scope, timeline, lessons learned).
+   - Archive all design artefacts in `docs/archive/`.
+
+[ ] [Người B] 22/10 – Archive Repository
+   - Tag final commit `v1.0.0`.
+   - Create GitHub release with changelog PDF.
+
+[ ] [Người A] 23/10 – Knowledge Transfer Session
+   - Conduct live walkthrough for new team members (30‑min).
+   - Record session and store in `docs/knowledge/`.
+
+[ ] [Người B] 23/10 – Backup Verification
+   - Perform a fresh backup, restore to test environment to confirm integrity.
+
+[ ] [Người A] 24/10 – Optional Enhancements (if time permits)
+   - Add pagination to `GET /problems`.
+   - Refactor UI to lazy‑load Monaco editor.
+
+[ ] [Người B] 24/10 – Optional Enhancements
+   - Implement “Export Submission Report” CSV endpoint.
+   - Add unit tests for new pagination logic.
+
+[ ] [Người A] 25/10 – Review Optional Work
+   - Code‑review enhancements, merge if approved.
+
+[ ] [Người B] 25/10 – Documentation Update for Enhancements
+   - Add API docs for new endpoints.
+
+[ ] [Người A] 26/10 – Final Sign‑off Meeting
+   - Obtain written approval from product owner.
+
+[ ] [Người B] 26/10 – Archive Meeting Minutes
+   - Store meeting notes in `docs/meeting/`.
+
+[ ] [Người A] 27/10 – Buffer Day / Contingency
+   - Resolve any remaining minor issues.
+
+[ ] [Người B] 27/10 – Buffer Day / Contingency
+   - Verify all CI/CD pipelines are green for at least 48 h.
+
+[ ] [Người A] 28/10 – **Checkpoint 5 Review** (Pre‑final)
+
+[ ] [Người B] 28/10 – Final QA Sign‑off
+
+[ ] [Người A] 29/10 – Prepare Final Release Package
+   - Zip source, docs, and release assets.
+
+[ ] [Người B] 29/10 – Publish Release on GitHub
+   - Attach binaries, changelog, and release notes.
+
+[ ] [Người A] 30/10 – Project Closure
+   - Archive sprint boards, close all open issues.
+   - Celebrate! 🎉
