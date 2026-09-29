@@ -110,7 +110,7 @@ Hệ thống được thiết kế theo mô hình **Role-Based Access Control (R
 | **UC-38** | Tạo lớp | QTV, Giáo vụ | QTV tạo lớp toàn hệ thống; Giáo vụ tạo lớp trong phạm vi Khoa/Bộ môn phụ trách. |
 | **UC-39** | Chỉnh sửa lớp | QTV, Giáo vụ | QTV chỉnh sửa mọi lớp; Giáo vụ chỉnh sửa lớp thuộc Khoa/Bộ môn phụ trách. Lớp phải đang Hoạt động. |
 | **UC-40** | Đóng/Mở lại lớp học | GV, QTV, Giáo vụ | GV đóng/mở lại lớp phụ trách; QTV/Giáo vụ trong phạm vi quản lý. Lớp đóng ngăn hoạt động học tập; dữ liệu được bảo toàn. |
-| **UC-41** | Quản lý Lưu trữ & Xóa lớp học | QTV, Giáo vụ | Lưu trữ/Khôi phục/Xóa lớp. Hard Delete chỉ khi 0 SV + 0 bài tập. Có dữ liệu thì chuyển Lưu trữ. Khôi phục về "Đã đóng". |
+| **UC-41** | Quản lý Lưu trữ & Xóa lớp học | QTV, Giáo vụ | Lưu trữ/Khôi phục/Xóa lớp. Hard Delete chỉ khi 0 SV + 0 bài tập + 0 lịch học. Có dữ liệu thì chuyển Lưu trữ. Khôi phục về "Đã đóng". |
 | **UC-42** | Quản lý sinh viên trong lớp | QTV, Giáo vụ | Thêm/Xóa/Xem sinh viên trong lớp theo phạm vi quyền. Lớp phải đang Hoạt động. |
 | **UC-43** | Phân công Giáo viên vào lớp | QTV, Giáo vụ | Phân công/Hủy phân công GV cho lớp; hỗ trợ phân công nhiều GV. Giáo vụ chỉ thao tác lớp thuộc Khoa/Bộ môn phụ trách. |
 

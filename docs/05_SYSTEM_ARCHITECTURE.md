@@ -96,7 +96,7 @@ erDiagram
         string name
         string code UK
         string description
-        string status "ACTIVE | ARCHIVED"
+        string status "ACTIVE | CLOSED | ARCHIVED"
     }
 
     PROBLEM {
@@ -126,7 +126,7 @@ erDiagram
         uuid class_id FK
         text source_code
         string language "PYTHON | CPP | JAVA"
-        string status "PENDING | RUNNING | COMPLETED | FAILED"
+        string status "PENDING | RUNNING | COMPLETED | INTERRUPTED"
         float auto_score
         float final_score
         float execution_time_sec
