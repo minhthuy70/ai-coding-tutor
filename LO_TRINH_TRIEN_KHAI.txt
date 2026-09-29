@@ -1,0 +1,544 @@
+====================================================================================================
+LỘ TRÌNH TRIỂN KHAI AI-POWERED CODING TUTOR & AUTO-GRADER
+Deadline: 30/10/2026 | Team size: 2 người
+====================================================================================================
+
+I. TỔNG QUAN DỰ ÁN
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Mục tiêu: Xây dựng nền tảng chấm bài lập trình tự động có tích hợp AI tutor để đánh giá code và
+cung cấp phản hồi sư phạm cho sinh viên.
+
+Scope: 48 Use Cases chia thành 5 nhóm Actor:
+- Sinh viên (10 UC): Làm bài, nộp bài, xem kết quả, tương tác AI Tutor
+- Giáo viên (15 UC): Quản lý lớp, bài tập, chấm điểm thủ công
+- Quản trị viên (12 UC): Quản lý tài khoản, lớp học cấp trường
+- Giáo vụ (12 UC): Quản lý lớp học cấp Khoa/Bộ môn
+- Quản trị viên hệ thống (5 UC): Cấu hình AI, Docker Sandbox, System Logs
+
+4 Trụ cột MVP Core:
+1. Quản lý bài tập (Problem Management)
+2. Web IDE & Nộp bài (Monaco Editor)
+3. Chấm tự động (Docker Sandbox Auto-Grader)
+4. Trợ giảng AI (AI Tutor & Code Reviewer)
+
+
+II. LỘ TRÌNH THEO GIAI ĐOẠN (8 TUẦN)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+GIAI ĐOẠN 1: MVP CORE SYSTEM (Tuần 1-3) | 29/09 - 19/10
+- Mục tiêu: Hoàn thiện 4 trụ cột cốt lõi có thể demo sinh viên làm bài từ đầu đến cuối
+- Người A: Backend & Infrastructure
+- Người B: Frontend & AI Integration
+
+
+GIAI ĐOẠN 2: RBAC & QUẢN TRỊ LỚP HỌC (Tuần 4-6) | 20/10 - 09/11 (Gấp rút để kịp 30/10)
+- Mục tiêu: Xác thực JWT, phân quyền 4 Roles, quản lý lớp học, giao bài
+- Người A: Authentication & Class Management Backend
+- Người B: Auth UI & Teacher Portal
+
+
+GIAI ĐOẠN 3: QUẢN TRỊ HỆ THỐNG & TỐI ƯU (Tuần 7-8) | 10/10 - 30/10 (Cắt giảm scope)
+- Mục tiêu: Import Excel, Monitoring, Testing, Deployment
+- Cắt giảm: Focus features quan trọng nhất, bỏ qua nice-to-have
+
+
+III. KẾ HOẠCH CHI TIẾT TUẦN 1-4 (FOCUS DEADLINE 30/10)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+TUẦN 1: 29/09 - 05/10 | Dựng hạ tầng & Docker Sandbox
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Người A (Backend & Infrastructure):
+- [ ] Setup project structure: backend/, frontend/, sandbox/, docs/
+- [ ] Docker Compose: PostgreSQL 15 + Redis 7
+- [ ] Dockerfile Sandbox Runner cho Python (gVisor/non-root)
+- [ ] Script runner.py: giới hạn CPU/RAM, ngắt mạng, thu execution evidence
+- [ ] Test: Thực thi solution.py trong Docker, xuất JSON kết quả
+- [ ] Setup FastAPI scaffold với cấu trúc modular
+
+Người B (Frontend & AI Stub):
+- [ ] Setup Next.js 14 project với App Router
+- [ ] Cấu hình Tailwind CSS
+- [ ] Tích hợp Monaco Editor cơ bản
+- [ ] UI Layout: Navigation, Split view (Đề bài + Editor)
+- [ ] AI Stub service: placeholder trả mock feedback
+- [ ] Test: Render Monaco Editor, nhập code
+
+
+TUẦN 2: 06/10 - 12/10 | Backend API & Database
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Người A (Backend API):
+- [ ] Database Schema với SQLAlchemy: Users, Problems, TestCases, Submissions
+- [ ] Alembic migrations
+- [ ] REST API CRUD Problems: GET/POST/PUT /problems
+- [ ] REST API Test Cases: POST /problems/{id}/testcases
+- [ ] Celery Worker + Redis Queue setup
+- [ ] Grader Worker: Queue → Docker Sandbox → Save results
+- [ ] Test: API → Queue → Worker → Sandbox → DB
+
+Người B (Frontend UI):
+- [ ] Problem List UI: Xem danh sách bài tập
+- [ ] Problem Detail UI: Xem đề bài, sample test cases
+- [ ] Submit Button UI & Progress bar
+- [ ] File Upload component (UC-10)
+- [ ] Autosave draft implementation
+- [ ] E2E test: Xem bài → Viết code → Nộp bài
+
+
+TUẦN 3: 13/10 - 19/10 | AI Integration & Submission Flow
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Người A (AI & Grading):
+- [ ] AI Service integration (Gemini/OpenAI)
+- [ ] Prompt engineering cho Socratic Tutor
+- [ ] AI Feedback generation sau Auto-Grading
+- [ ] Submission API: POST /submissions (queue job)
+- [ ] WebSocket events: SUBMISSION_QUEUED, RUNNING_TESTS, COMPLETED
+- [ ] Scoring Engine: Tính điểm từ test cases + rubric
+- [ ] Test: Full flow submit → grade → AI feedback
+
+Người B (Frontend Complete):
+- [ ] WebSocket client cho real-time updates
+- [ ] Result UI: Điểm, test case status, execution time/memory
+- [ ] AI Feedback UI: Hiển thị nhận xét AI
+- [ ] AI Tutor Chat UI: Giao diện chat Socratic
+- [ ] History UI: Xem lịch sử nộp bài
+- [ ] Gradebook UI: Bảng điểm cá nhân
+
+Milestone 1 (19/10): MVP Core Complete - Sinh viên có thể làm bài từ đầu đến cuối
+
+
+TUẦN 4: 20/10 - 26/10 | Authentication & RBAC (Critical)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Người A (Auth Backend):
+- [ ] JWT Auth: Login, Refresh Token (Access + Refresh)
+- [ ] Password hashing với bcrypt
+- [ ] Forgot Password: OTP/Link via email
+- [ ] Reset Password flow
+- [ ] RBAC Middleware: 5 Roles (Student, Teacher, Admin, Staff, Super Admin)
+- [ ] Scope checking middleware (role + scope + resource)
+- [ ] User CRUD API (Admin only)
+- [ ] Test: Auth flow cho từng role
+
+Người B (Auth Frontend):
+- [ ] Login/Register pages
+- [ ] Token storage (localStorage/cookie)
+- [ ] Auth guards & protected routes
+- [ ] Role-based navigation
+- [ ] Password reset UI
+- [ ] Profile management UI
+- [ ] Test: Login → Redirect theo role
+
+
+TUẦN 5: 27/10 - 30/10 | Teacher Portal & Class Management (Critical, Compressed)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Người A (Class Management Backend):
+- [ ] Class CRUD API: Teacher scope (lớp phụ trách)
+- [ ] Class Member API: Thêm/Xóa sinh viên
+- [ ] Assignment API: Giao bài cho lớp
+- [ ] Class Assignment config: Deadline, max submissions, late policy
+- [ ] Manual Grading API: Giáo viên chấm đè điểm
+- [ ] Grade aggregation: Highest/Latest Score policy
+- [ ] Test: Teacher tạo lớp → giao bài → xem nộp → chấm thủ công
+
+Người B (Teacher Portal Frontend):
+- [ ] Class List UI (Teacher scope)
+- [ ] Class Detail & Roster UI
+- [ ] Assignment Management UI
+- [ ] Deadline configuration UI
+- [ ] Submission Review UI (xem code, test results)
+- [ ] Manual Grading UI (Rubric-based)
+- [ ] Gradebook UI (Teacher view)
+
+Milestone 2 (30/10): Deadline - Teacher & Student flows complete
+
+
+IV. PHÂN CÔNG CHI TIẾT THEO NGƯỜI
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+NGƯỜI A: BACKEND LEAD
+Focus: Infrastructure, Database, API, Grading System, Auth, Class Management
+
+Week 1 (29/09-05/10):
+- Docker setup (PostgreSQL, Redis, Sandbox)
+- FastAPI scaffold
+- Docker Sandbox Runner (runner.py)
+- Test sandbox execution
+
+Week 2 (06/10-12/10):
+- Database Schema (SQLAlchemy)
+- CRUD Problems & Test Cases API
+- Celery + Redis Queue
+- Grader Worker implementation
+
+Week 3 (13/10-19/10):
+- AI Service integration
+- Submission API & WebSocket
+- Scoring Engine
+- Full grading pipeline test
+
+Week 4 (20/10-26/10):
+- JWT Auth implementation
+- RBAC Middleware
+- User Management API
+- Auth testing
+
+Week 5 (27/10-30/10):
+- Class Management API
+- Assignment API
+- Manual Grading API
+- Teacher scope enforcement
+
+
+NGƯỜI B: FRONTEND LEAD
+Focus: UI/UX, Monaco Editor, AI Chat, Auth UI, Teacher Portal
+
+Week 1 (29/09-05/10):
+- Next.js + Tailwind setup
+- Monaco Editor integration
+- Basic Layout & Navigation
+- AI Stub service
+
+Week 2 (06/10-12/10):
+- Problem List & Detail UI
+- Submit Button & Progress
+- File Upload component
+- Autosave draft
+
+Week 3 (13/10-19/10):
+- WebSocket real-time updates
+- Result UI (test status, metrics)
+- AI Feedback UI
+- AI Tutor Chat UI
+- History & Gradebook UI
+
+Week 4 (20/10-26/10):
+- Login/Register pages
+- Auth guards & navigation
+- Role-based UI
+- Password reset flow
+- Profile management
+
+Week 5 (27/10-30/10):
+- Teacher Portal UI
+- Class Management UI
+- Assignment Configuration UI
+- Submission Review UI
+- Manual Grading UI
+
+
+V. FEATURES SCOPE (PRIORITY P0 - P2)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+P0 (Must have - Deadline 30/10):
+- [x] Problem Management (CRUD bài tập, test cases)
+- [x] Monaco Editor Web IDE
+- [x] Docker Sandbox Auto-Grader
+- [x] AI Tutor (basic feedback)
+- [x] Student: Xem bài, viết code, nộp bài, xem kết quả
+- [x] Authentication (JWT, 5 roles)
+- [x] RBAC (Role-based access control)
+- [x] Teacher: Tạo lớp, giao bài, xem nộp, chấm thủ công
+- [x] Submission: Queue, grading, AI feedback
+- [x] WebSocket real-time updates
+
+P1 (Should have - Post deadline):
+- [ ] Quản trị viên: User CRUD, Import Excel
+- [ ] Giáo vụ: Class management cấp Khoa/Bộ môn
+- [ ] Admin Portal: System overview
+- [ ] Sandbox Monitoring dashboard
+- [ ] AI Configuration UI
+- [ ] System Logs viewer
+- [ ] Class Archive/Restore
+- [ ] Advanced Rubric configuration
+- [ ] Export reports (CSV/PDF)
+
+P2 (Nice to have - Future):
+- [ ] Video lecture integration
+- [ ] Discussion forum
+- [ ] Attendance tracking
+- [ ] Payment system
+- [ ] Mobile app
+- [ ] Plagiarism detection
+- [ ] Code version comparison
+- [ ] Leaderboard
+
+
+VI. TECH STACK
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Backend:
+- Language: Python 3.11
+- Framework: FastAPI
+- Database: PostgreSQL 15
+- Queue: Redis 7
+- Task Queue: Celery
+- ORM: SQLAlchemy
+- Auth: JWT (PyJWT)
+- Password: bcrypt
+
+Frontend:
+- Framework: Next.js 14 (App Router)
+- Styling: Tailwind CSS
+- Editor: Monaco Editor
+- State: React Context/Zustand
+- Real-time: WebSocket (Socket.io)
+- HTTP: Axios/Fetch
+
+Infrastructure:
+- Container: Docker 24
+- Sandbox: gVisor/non-root container
+- Reverse Proxy: Nginx (production)
+- CI/CD: GitHub Actions
+
+AI:
+- Primary: Google Gemini API
+- Fallback: OpenAI GPT-4o
+- Local: Ollama (optional)
+
+
+VII. DATABASE SCHEMA SUMMARY
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Core Tables:
+- users: id, email, hashed_password, full_name, role, organization_id, is_active
+- organizations: id, name, code
+- departments: id, name, code, organization_id
+- classes: id, name, code, status, organization_id, department_id, teacher_id
+- class_members: id, class_id, user_id, role
+- problems: id, title, description, allowed_languages, time_limit, memory_limit, author_id
+- test_cases: id, problem_id, input_data, expected_output, is_sample, score_weight
+- rubric_criteria: id, problem_id, criteria, description, max_score, weight
+- class_assignments: id, class_id, problem_id, deadline, max_submissions, scoring_policy
+- submissions: id, user_id, problem_id, class_id, source_code, language, status
+- test_results: id, submission_id, test_case_id, status, execution_time, memory_used
+- ai_feedback: id, submission_id, quality_score, complexity_score, logic_analysis, hints
+- manual_grades: id, submission_id, grader_id, score, comments
+
+
+VIII. API ENDPOINTS SUMMARY
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Auth (/api/v1/auth):
+- POST /login
+- POST /refresh
+- POST /forgot-password
+- POST /reset-password
+
+Users (/api/v1/users):
+- GET /me
+- PUT /me
+- POST /import (Admin)
+
+Problems (/api/v1/problems):
+- GET /problems
+- GET /problems/{id}
+- POST /problems (Teacher/Admin)
+- PUT /problems/{id}
+- POST /problems/{id}/testcases
+- POST /problems/{id}/rubrics
+
+Submissions (/api/v1/submissions):
+- POST /submissions
+- GET /submissions/{id}
+- GET /submissions/history
+- PUT /submissions/{id}/manual-grade
+
+Classes (/api/v1/classes):
+- GET /classes
+- POST /classes (Teacher/Admin/Staff)
+- PUT /classes/{id}
+- POST /classes/{id}/members
+- DELETE /classes/{id}/members
+- POST /classes/{id}/assignments
+- PUT /classes/{id}/assignments/{id}
+
+AI Tutor (/api/v1/tutor):
+- POST /chat
+- GET /conversations/{submission_id}
+
+
+IX. TESTING STRATEGY
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Unit Tests (pytest):
+- API endpoints
+- Business logic (scoring, validation)
+- RBAC middleware
+
+Integration Tests:
+- Full submission flow
+- Auth flow
+- Grading pipeline
+
+E2E Tests (Cypress/Playwright):
+- Student: Login → View problem → Write code → Submit → View results
+- Teacher: Login → Create class → Add students → Assign problem → Grade
+
+Load Tests (Locust):
+- Concurrent submissions
+- Queue performance
+- Sandbox isolation
+
+
+X. RISK MITIGATION
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Risk 1: Docker Sandbox security
+- Mitigation: Use gVisor, non-root user, network isolation, resource limits
+
+Risk 2: AI API cost/latency
+- Mitigation: Cache feedback, batch processing, fallback to local model
+
+Risk 3: Deadline pressure (8 weeks → 4 weeks compressed)
+- Mitigation: Cut P1/P2 features, focus on P0 only, reduce test coverage
+
+Risk 4: 2-person team bandwidth
+- Mitigation: Parallel work, clear separation, daily sync, code review
+
+Risk 5: Complex RBAC implementation
+- Mitigation: Use middleware pattern, document scope rules clearly
+
+
+XI. DAILY CHECKPOINTS (29/09 - 30/10)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Week 1 (29/09-05/10):
+- Day 1 (29/09): Project setup, Docker compose
+- Day 2 (30/09): Sandbox runner prototype
+- Day 3 (01/10): FastAPI scaffold + DB schema
+- Day 4 (02/10): Problems CRUD API
+- Day 5 (03/10): Celery + Redis setup
+- Day 6 (04/10): Grader Worker implementation
+- Day 7 (05/10): Integration test: API → Queue → Sandbox
+
+Week 2 (06/10-12/10):
+- Day 8 (06/10): Next.js + Monaco Editor
+- Day 9 (07/10): Problem List/Detail UI
+- Day 10 (08/10): Submit Button + Progress
+- Day 11 (09/10): File Upload + Autosave
+- Day 12 (10/10): Test Cases API
+- Day 13 (11/10): Full backend API test
+- Day 14 (12/10): E2E test: Student flow
+
+Week 3 (13/10-19/10):
+- Day 15 (13/10): AI Service integration
+- Day 16 (14/10): Submission API + WebSocket
+- Day 17 (15/10): Scoring Engine
+- Day 18 (16/10): WebSocket client
+- Day 19 (17/10): Result UI + AI Feedback UI
+- Day 20 (18/10): AI Tutor Chat UI
+- Day 21 (19/10): MVP Demo & Testing
+
+Week 4 (20/10-26/10):
+- Day 22 (20/10): JWT Auth implementation
+- Day 23 (21/10): RBAC Middleware
+- Day 24 (22/10): User Management API
+- Day 25 (23/10): Login/Register UI
+- Day 26 (24/10): Auth guards & navigation
+- Day 27 (25/10): Password reset flow
+- Day 28 (26/10): Auth flow testing
+
+Week 5 (27/10-30/10):
+- Day 29 (27/10): Class Management API
+- Day 30 (28/10): Assignment API
+- Day 31 (29/10): Teacher Portal UI
+- Day 32 (30/10): Manual Grading + Final Testing
+
+
+XII. SUCCESS METRICS
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Functional:
+- [ ] Student can submit code and receive Auto-Grader results in <10s
+- [ ] Docker Sandbox survives infinite loops and malicious code
+- [ ] AI provides relevant Socratic hints without revealing solution
+- [ ] 5 RBAC roles work correctly with proper scope enforcement
+- [ ] Teacher can create class, assign problem, grade submissions
+
+Technical:
+- [ ] 95%+ test coverage for core business logic
+- [ ] Sandbox isolation: No network, no file system access
+- [ ] WebSocket real-time updates work reliably
+- [ ] Database schema supports all UC requirements
+- [ ] API response time <200ms (p95)
+
+Quality:
+- [ ] No security vulnerabilities (SQL injection, XSS, etc.)
+- [ ] Code follows Python/JS best practices
+- [ ] Documentation complete (API docs, deployment guide)
+- [ ] Git commits follow conventional commits
+
+
+XIII. POST-DEADLINE ROADMAP (Optional)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Phase 4 (Week 6-8): Admin Portal & Monitoring
+- Admin Portal UI
+- Import Excel/CSV
+- Sandbox Monitoring dashboard
+- System Logs viewer
+- AI Configuration UI
+- Performance optimization
+
+Phase 5 (Week 9-10): Advanced Features
+- Class Archive/Restore
+- Advanced Rubric configuration
+- Export reports
+- Notification system
+- Email templates
+
+Phase 6 (Week 11-12): Polish & Launch
+- Comprehensive testing
+- Security audit
+- User documentation
+- Training materials
+- Production deployment
+
+
+XIV. COMMUNICATION & COLLABORATION
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Daily Standup (15 min):
+- Yesterday's progress
+- Today's plan
+- Blockers
+
+Weekly Review (1 hr):
+- Demo completed features
+- Plan next week
+- Adjust timeline if needed
+
+Code Review:
+- All PRs must be reviewed before merge
+- Focus on: security, performance, code quality
+
+Documentation:
+- Update README weekly
+- API docs kept in sync
+- RULES.md updated if business rules change
+
+
+XV. CONTACT & ESCALATION
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Technical Issues:
+- Docker/Sandbox problems → Person A
+- Frontend/UI issues → Person B
+- AI integration → Both
+
+Blockers:
+- If stuck >2 hours → Ask for help
+- If scope creep → Re-prioritize with team
+- If deadline risk → Cut P1/P2 features
+
+
+====================================================================================================
+END OF ROADMAP DOCUMENT
+Last Updated: 29/09/2026
+Version: 1.0
+====================================================================================================

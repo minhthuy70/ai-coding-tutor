@@ -1,0 +1,668 @@
+====================================================================================================
+HƯỚNG DẪN TÍCH HỢP AI TUTOR - KHÔNG CẦN THU THẬP DỮ LIỆU
+====================================================================================================
+
+CÂU HỎI: Nếu là AI trợ giảng thì nó có cần làm thu thập dữ liệu AI gì không hay chỉ khúc cấu hình thôi 
+(mình muốn free)?
+
+TRẢ LỜI: Bạn KHÔNG cần thu thập dữ liệu AI để train model từ đầu! Đây là kiến trúc thực tế:
+
+====================================================================================================
+TÙY CHỌN AI MIỄN PHÍ (FREE OPTIONS)
+====================================================================================================
+
+1. LOCAL MODELS VỚI OLLAMA (Hoàn toàn FREE - Khuyên dùng)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cài đặt:
+```bash
+# Cài Ollama từ https://ollama.ai
+ollama pull codellama:7b
+ollama pull deepseek-coder:6.7b
+```
+
+Ưu điểm:
+- Miễn phí 100%
+- Không cần API key
+- Không gửi code ra ngoài (privacy)
+- Chạy local, có thể offline
+
+Nhược điểm:
+- Cần máy có GPU/NVRAM tốt (tối thiểu 8GB RAM)
+- Chậm hơn API cloud
+- Model nhỏ hơn nên chất lượng có thể kém hơn
+
+
+2. GOOGLE GEMINI FREE TIER
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+- Miễn phí: 15 requests/phút, 1.000 requests/ngày
+- Đăng ký API key free tại: https://aistudio.google.com/app/apikey
+- Model: Gemini 1.5 Flash (nhanh, rẻ) hoặc Pro (chất lượng cao hơn)
+
+Ưu điểm:
+- Free tier khá hào phóng
+- Chất lượng tốt
+- Dễ tích hợp
+
+Nhược điểm:
+- Có rate limit
+- Gửi code ra cloud (privacy concern)
+
+
+3. OPENAI API FREE CREDITS
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+- Tài khoản mới: $5 free credits
+- Sau đó: Phí theo usage (~$0.002/1K tokens)
+- Model: GPT-4o-mini (rẻ, đủ tốt cho chấm code)
+
+Ưu điểm:
+- Chất lượng cao nhất
+- Dễ dùng
+
+Nhược điểm:
+- Free credits có hạn
+- Sau đó phải trả tiền
+
+
+4. HUGGING FACE INFERENCE API (FREE TIER)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+- Miễn phí: 1.000 requests/tháng
+- Models: CodeLlama, StarCoder, v.v.
+
+Ưu điểm:
+- Nhiều model code chuyên dụng
+- Free tier
+
+Nhược điểm:
+- Rate limit thấp
+- Chậm hơn API lớn
+
+
+====================================================================================================
+KIẾN TRÚC AI TUTOR (KHÔNG CẦN TRAINING)
+====================================================================================================
+
+┌─────────────────────────────────────────────────────────┐
+│  INPUT DATA (Không cần training)                        │
+│  - Đề bài (problem description)                         │
+│  - Mã nguồn sinh viên (source code)                     │
+│  - Kết quả test cases (execution evidence)             │
+│  - Rubric (tiêu chí chấm)                               │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│  PROMPT ENGINEERING (Chỉ cần làm này)                   │
+│  - Template prompt cho Socratic Tutor                    │
+│  - System prompt cho Code Reviewer                       │
+│  - Guardrails (không cho phép AI viết code giải hộ)      │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│  PRE-TRAINED MODEL (Dùng có sẵn)                        │
+│  - Gemini 1.5 Flash/Pro (Google)                       │
+│  - GPT-4o-mini (OpenAI)                                 │
+│  - CodeLlama/DeepSeek-Coder (Local Ollama)              │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│  OUTPUT                                                  │
+│  - Phân tích lỗi logic                                   │
+│  - Gợi ý cải thiện code                                  │
+│  - Câu hỏi Socratic                                      │
+│  - Đánh giá theo Rubric                                  │
+└─────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+RECOMMENDATION CHO DỰ ÁN CỦA BẠN
+====================================================================================================
+
+PHASE 1 (MVP - Deadline 30/10):
+------------------------------------------------------------------------------------------------------------------------------------------------
+Dùng Ollama local (FREE)
+
+```python
+AI_CONFIG = {
+    "provider": "ollama",
+    "model": "deepseek-coder:6.7b",  # Hoặc codellama:7b
+    "endpoint": "http://localhost:11434"
+}
+```
+
+
+PHASE 2 (Sau deadline - nếu cần chất lượng cao hơn):
+------------------------------------------------------------------------------------------------------------------------------------------------
+Upgrade sang Gemini Free Tier
+
+```python
+AI_CONFIG = {
+    "provider": "gemini",
+    "api_key": os.getenv("GEMINI_API_KEY"),
+    "model": "gemini-1.5-flash"
+}
+```
+
+
+====================================================================================================
+CHỈ CẦN LÀM VIỆC NÀY
+====================================================================================================
+
+1. PROMPT ENGINEERING (Quan trọng nhất)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+```python
+SYSTEM_PROMPT = """
+Bạn là trợ giảng lập trình theo phương pháp Socratic.
+NHIỆM VỤ:
+- Phân tích lỗi logic trong code sinh viên
+- Giải thích nguyên nhân lỗi
+- Đặt câu hỏi gợi mở (KHÔNG cung cấp lời giải)
+- Gợi ý cải thiện code quality
+
+NGUYÊN TẮC:
+- KHÔNG viết code giải hộ sinh viên
+- KHÔNG tiết lộ test case ẩn
+- Chỉ gợi ý hướng đi, để sinh viên tự nghĩ
+- Giọng điệu khuyến khích, sư phạm
+"""
+
+def build_socratic_prompt(problem, code, test_results):
+    return f"""
+Đề bài: {problem['description']}
+
+Code sinh viên:
+```python
+{code}
+```
+
+Kết quả test cases:
+{format_test_results(test_results)}
+
+Hãy phân tích và đưa ra gợi ý Socratic.
+"""
+```
+
+
+2. AI SERVICE ABSTRACTION (Dễ switch provider)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+```python
+class AIService:
+    def __init__(self, provider="ollama"):
+        self.provider = provider
+        
+    def generate_feedback(self, prompt):
+        if self.provider == "ollama":
+            return self._call_ollama(prompt)
+        elif self.provider == "gemini":
+            return self._call_gemini(prompt)
+        elif self.provider == "openai":
+            return self._call_openai(prompt)
+    
+    def _call_ollama(self, prompt):
+        # Gọi Ollama local API
+        import requests
+        response = requests.post(
+            "http://localhost:11434/api/generate",
+            json={
+                "model": self.model,
+                "prompt": prompt,
+                "stream": False
+            }
+        )
+        return response.json()["response"]
+    
+    def _call_gemini(self, prompt):
+        # Gọi Gemini API
+        import google.generativeai as genai
+        genai.configure(api_key=self.api_key)
+        model = genai.GenerativeModel(self.model)
+        response = model.generate_content(prompt)
+        return response.text
+    
+    def _call_openai(self, prompt):
+        # Gọi OpenAI API
+        from openai import OpenAI
+        client = OpenAI(api_key=self.api_key)
+        response = client.chat.completions.create(
+            model=self.model,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content
+```
+
+
+3. CONFIG MANAGEMENT
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+```python
+# config/ai_config.py
+AI_CONFIG = {
+    "provider": "ollama",  # hoặc "gemini", "openai"
+    "model": "deepseek-coder:6.7b",
+    "temperature": 0.7,
+    "max_tokens": 1000,
+    "timeout": 30,
+    
+    # Ollama specific
+    "ollama_endpoint": "http://localhost:11434",
+    
+    # Gemini specific
+    "gemini_api_key": "",  # Set từ environment variable
+    
+    # OpenAI specific
+    "openai_api_key": "",  # Set từ environment variable
+}
+```
+
+
+====================================================================================================
+KẾT LUẬN
+====================================================================================================
+
+BẠN KHÔNG CẦN:
+❌ Thu thập dataset để train model
+❌ Fine-tune model (optional, sau này)
+❌ Machine learning pipeline
+
+BẠN CHỈ CẦN:
+✅ Chọn pre-trained model (Ollama local cho free)
+✅ Prompt engineering tốt
+✅ AI service abstraction để dễ switch provider
+✅ Config management
+
+
+KHUYẾN DÙNG:
+Bắt đầu với Ollama + DeepSeek-Coder (hoàn toàn free), sau này upgrade sang Gemini/OpenAI 
+nếu cần chất lượng cao hơn.
+
+
+====================================================================================================
+VÍ DỤ TÍCH HỢP THỰC TẾ
+====================================================================================================
+
+FILE STRUCTURE:
+```
+backend/
+├── services/
+│   ├── ai_service.py          # AI Service abstraction
+│   └── prompt_templates.py     # Prompt templates
+├── config/
+│   └── ai_config.py           # AI configuration
+└── main.py                     # FastAPI app
+```
+
+
+BACKEND IMPLEMENTATION EXAMPLE:
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# services/ai_service.py
+import os
+import requests
+from typing import Optional
+from config.ai_config import AI_CONFIG
+
+class AIService:
+    def __init__(self):
+        self.provider = AI_CONFIG["provider"]
+        self.model = AI_CONFIG["model"]
+        self.temperature = AI_CONFIG["temperature"]
+        self.max_tokens = AI_CONFIG["max_tokens"]
+        
+        if self.provider == "ollama":
+            self.endpoint = AI_CONFIG["ollama_endpoint"]
+        elif self.provider == "gemini":
+            self.api_key = os.getenv("GEMINI_API_KEY")
+        elif self.provider == "openai":
+            self.api_key = os.getenv("OPENAI_API_KEY")
+    
+    def generate_feedback(self, problem: dict, code: str, test_results: list) -> str:
+        """Generate AI feedback for student submission"""
+        from services.prompt_templates import build_socratic_prompt
+        
+        prompt = build_socratic_prompt(problem, code, test_results)
+        
+        if self.provider == "ollama":
+            return self._call_ollama(prompt)
+        elif self.provider == "gemini":
+            return self._call_gemini(prompt)
+        elif self.provider == "openai":
+            return self._call_openai(prompt)
+        else:
+            raise ValueError(f"Unsupported provider: {self.provider}")
+    
+    def _call_ollama(self, prompt: str) -> str:
+        try:
+            response = requests.post(
+                f"{self.endpoint}/api/generate",
+                json={
+                    "model": self.model,
+                    "prompt": prompt,
+                    "stream": False,
+                    "options": {
+                        "temperature": self.temperature,
+                        "num_predict": self.max_tokens
+                    }
+                },
+                timeout=AI_CONFIG["timeout"]
+            )
+            response.raise_for_status()
+            return response.json()["response"]
+        except Exception as e:
+            raise Exception(f"Ollama API error: {str(e)}")
+    
+    def _call_gemini(self, prompt: str) -> str:
+        try:
+            import google.generativeai as genai
+            genai.configure(api_key=self.api_key)
+            model = genai.GenerativeModel(
+                self.model,
+                generation_config={
+                    "temperature": self.temperature,
+                    "max_output_tokens": self.max_tokens
+                }
+            )
+            response = model.generate_content(prompt)
+            return response.text
+        except Exception as e:
+            raise Exception(f"Gemini API error: {str(e)}")
+    
+    def _call_openai(self, prompt: str) -> str:
+        try:
+            from openai import OpenAI
+            client = OpenAI(api_key=self.api_key)
+            response = client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": "Bạn là trợ giảng lập trình."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=self.temperature,
+                max_tokens=self.max_tokens,
+                timeout=AI_CONFIG["timeout"]
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            raise Exception(f"OpenAI API error: {str(e)}")
+
+
+# services/prompt_templates.py
+def build_socratic_prompt(problem: dict, code: str, test_results: list) -> str:
+    """Build prompt for Socratic AI Tutor"""
+    
+    # Format test results
+    test_summary = []
+    for result in test_results:
+        status_icon = "✓" if result["status"] == "AC" else "✗"
+        test_summary.append(
+            f"Test {result['test_case_id']}: {status_icon} "
+            f"({result['execution_time']:.2f}s, {result['memory_used']}KB)"
+        )
+    
+    prompt = f"""
+Bạn là trợ giảng lập trình theo phương pháp Socratic. Nhiệm vụ của bạn là giúp sinh viên 
+hiểu và sửa lỗi code của mình thông qua câu hỏi gợi mở, KHÔNG cung cấp lời giải trực tiếp.
+
+ĐỀ BÀI:
+{problem['title']}
+{problem['description']}
+
+YÊU CẦU:
+- Input: {problem.get('input_format', 'Chưa quy định')}
+- Output: {problem.get('output_format', 'Chưa quy định')}
+- Giới hạn: {problem.get('time_limit', 'N/A')}s, {problem.get('memory_limit', 'N/A')}MB
+
+CODE SINH VIÊN:
+```python
+{code}
+```
+
+KẾT QUẢ TEST CASES:
+{chr(10).join(test_summary)}
+
+Hãy:
+1. Phân tích lỗi logic (nếu có)
+2. Giải thích nguyên nhân lỗi một cách dễ hiểu
+3. Đặt 2-3 câu hỏi gợi mở để sinh viên tự tìm ra lời giải
+4. Gợi ý cải thiện code quality (nếu cần)
+
+QUAN TRỌNG:
+- KHÔNG viết code giải hộ
+- KHÔNG tiết lộ test case ẩn
+- Chỉ gợi ý hướng đi
+- Giọng điệu khuyến khích, sư phạm
+"""
+    return prompt
+
+
+# config/ai_config.py
+AI_CONFIG = {
+    # Provider selection: "ollama", "gemini", "openai"
+    "provider": "ollama",
+    
+    # Model configuration
+    "model": "deepseek-coder:6.7b",  # Ollama: codellama:7b, deepseek-coder:6.7b
+                                      # Gemini: gemini-1.5-flash, gemini-1.5-pro
+                                      # OpenAI: gpt-4o-mini, gpt-4o
+    
+    # Generation parameters
+    "temperature": 0.7,
+    "max_tokens": 1000,
+    "timeout": 30,
+    
+    # Provider-specific settings
+    "ollama_endpoint": "http://localhost:11434",
+    
+    # API keys (set via environment variables)
+    # gemini_api_key: set GEMINI_API_KEY env var
+    # openai_api_key: set OPENAI_API_KEY env var
+}
+
+
+# main.py (FastAPI integration)
+from fastapi import FastAPI, Depends, HTTPException
+from services.ai_service import AIService
+
+app = FastAPI()
+ai_service = AIService()
+
+@app.post("/api/v1/tutor/chat")
+async def tutor_chat(
+    submission_id: str,
+    question: str,
+    current_user = Depends(get_current_user)
+):
+    """AI Tutor chat endpoint"""
+    
+    # Get submission data
+    submission = get_submission(submission_id)
+    problem = get_problem(submission.problem_id)
+    test_results = get_test_results(submission_id)
+    
+    # Generate AI feedback
+    try:
+        feedback = ai_service.generate_feedback(
+            problem=problem,
+            code=submission.source_code,
+            test_results=test_results
+        )
+        
+        return {
+            "submission_id": submission_id,
+            "feedback": feedback,
+            "provider": ai_service.provider,
+            "model": ai_service.model
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+====================================================================================================
+ENVIRONMENT SETUP
+====================================================================================================
+
+.ENV FILE:
+------------------------------------------------------------------------------------------------------------------------------------------------
+# AI Configuration
+AI_PROVIDER=ollama
+AI_MODEL=deepseek-coder:6.7b
+
+# Gemini (if using)
+GEMINI_API_KEY=your_gemini_api_key_here
+
+# OpenAI (if using)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Ollama
+OLLAMA_ENDPOINT=http://localhost:11434
+
+
+REQUIREMENTS.TXT:
+------------------------------------------------------------------------------------------------------------------------------------------------
+# AI Providers (install based on chosen provider)
+google-generativeai>=0.3.0  # For Gemini
+openai>=1.0.0               # For OpenAI
+requests>=2.31.0            # For Ollama HTTP calls
+
+
+====================================================================================================
+TESTING AI INTEGRATION
+====================================================================================================
+
+TEST_AI_SERVICE.PY:
+------------------------------------------------------------------------------------------------------------------------------------------------
+```python
+import pytest
+from services.ai_service import AIService
+
+def test_ollama_integration():
+    """Test Ollama local integration"""
+    service = AIService()
+    
+    problem = {
+        "title": "Sum Two Numbers",
+        "description": "Write a function to sum two numbers",
+        "input_format": "Two integers a and b",
+        "output_format": "Sum of a and b"
+    }
+    
+    code = """
+def sum_two(a, b):
+    return a - b  # Bug: should be a + b
+"""
+    
+    test_results = [
+        {"test_case_id": 1, "status": "WA", "execution_time": 0.1, "memory_used": 1024}
+    ]
+    
+    feedback = service.generate_feedback(problem, code, test_results)
+    
+    assert feedback is not None
+    assert len(feedback) > 0
+    print("AI Feedback:", feedback)
+
+if __name__ == "__main__":
+    test_ollama_integration()
+```
+
+
+====================================================================================================
+PERFORMANCE CONSIDERATIONS
+====================================================================================================
+
+OLLAMA (LOCAL):
+- Latency: 2-5s per request (depends on hardware)
+- Throughput: 1-2 requests/second
+- Cost: $0 (but hardware cost)
+- Privacy: 100% local
+
+GEMINI FREE TIER:
+- Latency: 0.5-2s per request
+- Throughput: 15 requests/minute (rate limited)
+- Cost: $0 (1.000 requests/day)
+- Privacy: Code sent to Google
+
+OPENAI:
+- Latency: 0.5-1.5s per request
+- Throughput: No rate limit (paid)
+- Cost: ~$0.002/1K tokens
+- Privacy: Code sent to OpenAI
+
+
+====================================================================================================
+DECISION MATRIX
+====================================================================================================
+
+| Factor          | Ollama (Local) | Gemini Free | OpenAI      |
+|-----------------|----------------|-------------|-------------|
+| Cost            | FREE           | FREE        | Paid        |
+| Privacy         | 100%           | Cloud       | Cloud       |
+| Latency         | Slow (2-5s)    | Fast (1-2s)  | Fast (1s)   |
+| Quality         | Medium         | High        | Very High   |
+| Setup           | Complex        | Easy        | Easy        |
+| Rate Limit      | None           | 15 req/min  | None        |
+| Hardware        | Needs GPU      | Any         | Any         |
+| Offline         | Yes            | No          | No          |
+
+RECOMMENDATION: Ollama for MVP (free + privacy), upgrade to Gemini/OpenAI later for quality.
+
+
+====================================================================================================
+TROUBLESHOOTING
+====================================================================================================
+
+OLLAMA NOT RESPONDING:
+```bash
+# Check if Ollama is running
+ollama list
+
+# Restart Ollama
+# Windows: Restart Ollama application
+# Linux/Mac: systemctl restart ollama
+
+# Test connection
+curl http://localhost:11434/api/generate -d '{"model":"deepseek-coder:6.7b","prompt":"test"}'
+```
+
+GEMINI API KEY INVALID:
+- Go to https://aistudio.google.com/app/apikey
+- Create new API key
+- Update environment variable
+
+OPENAI RATE LIMIT:
+- Upgrade to paid tier
+- Implement retry logic with exponential backoff
+- Cache common responses
+
+
+====================================================================================================
+FUTURE ENHANCEMENTS
+====================================================================================================
+
+OPTIONAL: FINE-TUNING (Phase 3+)
+- Collect successful AI feedback examples
+- Fine-tune model on domain-specific data
+- Requires: dataset, GPU resources, ML expertise
+
+OPTIONAL: RAG (Retrieval Augmented Generation)
+- Index past submissions and feedback
+- Retrieve similar cases for better context
+- Requires: Vector database (Pinecone, Weaviate)
+
+OPTIONAL: MULTI-MODEL ENSEMBLE
+- Combine outputs from multiple models
+- Vote/rank for best response
+- Requires: More API calls, higher cost
+
+
+====================================================================================================
+END OF DOCUMENT
+Last Updated: 29/09/2026
+Version: 1.0
+====================================================================================================
