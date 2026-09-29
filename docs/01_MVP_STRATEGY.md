@@ -43,7 +43,7 @@ Hệ thống MVP chỉ cần tập trung hoàn thiện chính xác **4 màn hìn
 ---
 
 ### Trụ Cột 1: Quản Lý Bài Tập (Problem Management)
-- **Đối tượng sử dụng**: Giảng viên (`Teacher`) hoặc Quản trị viên (`Admin`).
+- **Đối tượng sử dụng**: Giảng viên (`Teacher`).
 - **Nhiệm vụ trọng tâm**:
   - Soạn thảo đề bài (tiêu đề, mô tả bài toán, định dạng Input/Output chuẩn, ví dụ minh họa).
   - Thiết lập giới hạn tài nguyên: **Time Limit** (ví dụ: 1.0s - 3.0s) và **Memory Limit** (ví dụ: 128MB - 256MB).

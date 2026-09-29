@@ -52,6 +52,9 @@ Hệ thống được thiết kế theo kiến trúc **Modular Monolith / Micros
 
 ```mermaid
 erDiagram
+    ORGANIZATION ||--o{ DEPARTMENT : contains
+    DEPARTMENT ||--o{ USER : "staffed by"
+    DEPARTMENT ||--o{ CLASS : owns
     ORGANIZATION ||--o{ USER : contains
     ORGANIZATION ||--o{ CLASS : owns
     USER ||--o{ CLASS_MEMBER : participates
@@ -73,14 +76,22 @@ erDiagram
         string email UK
         string hashed_password
         string full_name
-        string role "STUDENT | TEACHER | ADMIN | SUPER_ADMIN"
+        string role "STUDENT | TEACHER | ADMIN | STAFF | SUPER_ADMIN"
         boolean is_active
         timestamp created_at
+    }
+
+    DEPARTMENT {
+        uuid id PK
+        uuid organization_id FK
+        string name
+        string code UK
     }
 
     CLASS {
         uuid id PK
         uuid organization_id FK
+        uuid department_id FK
         uuid teacher_id FK
         string name
         string code UK
