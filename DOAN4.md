@@ -4,7 +4,7 @@
 | :---- | :---- |
 | **Tên usecase** | Đăng nhập |
 | **Mô tả** | Cho phép người dùng xác thực tài khoản để bắt đầu phiên làm việc trên hệ thống. |
-| **Tác nhân** | Sinh viên, Giáo viên, Quản trị viên, Quản trị viên hệ thống, Giáo vụ, Người dùng. |
+| **Tác nhân** | Người dùng. |
 | **Tiền điều kiện** | Người dùng đã có tài khoản trong hệ thống. |
 | **Hậu điều kiện** | Phiên đăng nhập được tạo thành công. Hệ thống cấp token xác thực và chuyển người dùng đến trang chính phù hợp với vai trò. Nếu đăng nhập thất bại, phiên đăng nhập không được tạo và dữ liệu biểu mẫu vẫn được giữ để người dùng thử lại. |
 | **Luồng tương tác chính** | Người dùng truy cập trang đăng nhập. Hệ thống hiển thị biểu mẫu yêu cầu Email và Mật khẩu. Người dùng nhập thông tin tài khoản và chọn "Đăng nhập". Hệ thống kiểm tra định dạng dữ liệu và tìm tài khoản tương ứng. Hệ thống đối chiếu mật khẩu với mật khẩu đã được băm trong cơ sở dữ liệu, đồng thời kiểm tra trạng thái tài khoản. Hệ thống tạo phiên đăng nhập và cấp access\_token cùng refresh\_token. Nếu đăng nhập thành công, hệ thống chuyển người dùng đến giao diện tương ứng với vai trò: Sinh viên, Giáo viên, Giáo vụ, Quản trị viên hoặc Quản trị viên hệ thống  |
@@ -15,7 +15,7 @@
 | :---- | :---- |
 | **Tên usecase** | Đăng xuất |
 | **Mô tả** | Cho phép người dùng kết thúc phiên làm việc hiện tại trên hệ thống. |
-| **Tác nhân** | Sinh viên, Giáo viên, Quản trị viên, Quản trị viên hệ thống, Giáo vụ, Người dùng. |
+| **Tác nhân** | Người dùng. |
 | **Tiền điều kiện** | Người dùng đang có phiên đăng nhập hợp lệ. |
 | **Hậu điều kiện** | Phiên đăng nhập của người dùng được kết thúc. Các thông tin xác thực cục bộ được xóa và người dùng được chuyển về trang đăng nhập. |
 | **Luồng tương tác chính** | Người dùng chọn "Đăng xuất" trên thanh điều hướng. Hệ thống hiển thị yêu cầu xác nhận đăng xuất. Người dùng xác nhận yêu cầu. Hệ thống thu hồi hoặc đưa refresh\_token vào danh sách vô hiệu hóa nếu cơ chế này được cấu hình. Hệ thống xóa token xác thực được lưu trên trình duyệt. Hệ thống kết thúc phiên đăng nhập và chuyển người dùng về trang login. |
@@ -26,7 +26,7 @@
 | :---- | :---- |
 | **Tên usecase** | Quên mật khẩu |
 | **Mô tả** | Cho phép người dùng xác thực quyền sở hữu tài khoản và đặt lại mật khẩu khi không nhớ mật khẩu hiện tại. |
-| **Tác nhân** | Sinh viên, Giáo viên, Quản trị viên, Quản trị viên hệ thống, Giáo vụ, Người dùng. |
+| **Tác nhân** | Người dùng. |
 | **Tiền điều kiện** | Người dùng đang ở trang đăng nhập và có quyền truy cập địa chỉ email đã đăng ký. |
 | **Hậu điều kiện** | Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu. Các mã hoặc liên kết khôi phục đã sử dụng bị vô hiệu hóa. Nếu khôi phục thất bại, mật khẩu hiện tại vẫn được giữ nguyên. |
 | **Luồng tương tác chính** | Người dùng chọn "Quên mật khẩu" tại trang đăng nhập. Hệ thống hiển thị biểu mẫu yêu cầu nhập email tài khoản. Người dùng nhập email và chọn "Gửi yêu cầu". Hệ thống kiểm tra định dạng email và tạo mã OTP hoặc liên kết đặt lại mật khẩu có thời hạn. Hệ thống gửi mã hoặc liên kết xác thực đến email của người dùng và thông báo đã gửi yêu cầu. Người dùng sử dụng mã hoặc liên kết nhận được để mở biểu mẫu đặt lại mật khẩu. Người dùng nhập mật khẩu mới, xác nhận mật khẩu và chọn "Cập nhật mật khẩu". Hệ thống kiểm tra mã hoặc liên kết còn hợp lệ, đồng thời kiểm tra mật khẩu mới. Hệ thống băm mật khẩu mới, cập nhật vào cơ sở dữ liệu và vô hiệu hóa mã hoặc liên kết đã sử dụng. Hệ thống thông báo "Khôi phục mật khẩu thành công." và chuyển người dùng về trang đăng nhập. |
@@ -37,7 +37,7 @@
 | :---- | :---- |
 | **Tên usecase** | Xem thông tin cá nhân |
 | **Mô tả** | Cho phép người dùng xem thông tin cá nhân đã lưu trong hệ thống. |
-| **Tác nhân** | Sinh viên, Giáo viên, Quản trị viên, Quản trị viên hệ thống, Giáo vụ, Người dùng. |
+| **Tác nhân** | Người dùng. |
 | **Tiền điều kiện** | Người dùng đã đăng nhập và có phiên xác thực hợp lệ. |
 | **Hậu điều kiện** | Thông tin cá nhân hiện tại của người dùng được hiển thị; dữ liệu trong cơ sở dữ liệu không bị thay đổi. |
 | **Luồng tương tác chính** | Người dùng truy cập trang cá nhân. Hệ thống xác thực phiên đăng nhập và quyền truy cập của người dùng. Hệ thống truy vấn thông tin cá nhân từ cơ sở dữ liệu. Hệ thống hiển thị các thông tin được phép xem, như họ tên, email, số điện thoại, ảnh đại diện và vai trò của người dùng. |
@@ -48,7 +48,7 @@
 | :---- | :---- |
 | **Tên usecase** | Cập nhật thông tin cá nhân |
 | **Mô tả** | Cho phép người dùng chỉnh sửa và lưu các thông tin cá nhân được hệ thống cho phép cập nhật. |
-| **Tác nhân** | Sinh viên, Giáo viên, Quản trị viên, Quản trị viên hệ thống, Giáo vụ, Người dùng. |
+| **Tác nhân** | Người dùng. |
 | **Tiền điều kiện** | Người dùng đã đăng nhập và có phiên xác thực hợp lệ. Thông tin cá nhân của người dùng đã tồn tại trong hệ thống. |
 | **Hậu điều kiện** | Thông tin hợp lệ được cập nhật và lưu vào cơ sở dữ liệu. Nếu cập nhật thất bại, thông tin cũ được giữ nguyên và hệ thống hiển thị thông báo lỗi. |
 | **Luồng tương tác chính** | Người dùng truy cập trang cá nhân. Hệ thống xác thực phiên đăng nhập và hiển thị thông tin hiện tại. Người dùng chọn "Chỉnh sửa". Hệ thống hiển thị biểu mẫu với các trường được phép cập nhật, như họ tên, số điện thoại và ảnh đại diện. Người dùng chỉnh sửa thông tin và chọn "Lưu thay đổi". Hệ thống kiểm tra tính hợp lệ của dữ liệu. Hệ thống cập nhật thông tin vào cơ sở dữ liệu. Hệ thống thông báo "Cập nhật thông tin cá nhân thành công." và hiển thị dữ liệu mới. |
@@ -59,7 +59,7 @@
 | :---- | :---- |
 | **Tên usecase** | Đổi mật khẩu |
 | **Mô tả** | Cho phép người dùng thay đổi mật khẩu hiện tại sau khi xác thực mật khẩu cũ. |
-| **Tác nhân** | Sinh viên, Giáo viên, Quản trị viên, Quản trị viên hệ thống, Giáo vụ, Người dùng. |
+| **Tác nhân** | Người dùng. |
 | **Tiền điều kiện** | Người dùng đã đăng nhập và có phiên xác thực hợp lệ. Người dùng biết mật khẩu hiện tại. |
 | **Hậu điều kiện** | Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu. Các phiên hoặc token cũ được xử lý theo chính sách bảo mật của hệ thống. Nếu đổi mật khẩu thất bại, mật khẩu cũ vẫn được giữ nguyên. |
 | **Luồng tương tác chính** | Người dùng truy cập chức năng "Đổi mật khẩu" trong trang cá nhân. Hệ thống hiển thị biểu mẫu gồm Mật khẩu hiện tại, Mật khẩu mới và Xác nhận mật khẩu mới. Người dùng nhập đầy đủ thông tin và chọn "Đổi mật khẩu". Hệ thống xác thực phiên đăng nhập và đối chiếu mật khẩu hiện tại. Hệ thống kiểm tra mật khẩu mới đạt chính sách bảo mật và trùng với phần xác nhận. Hệ thống băm mật khẩu mới và lưu vào cơ sở dữ liệu. Hệ thống thông báo "Đổi mật khẩu thành công." |
