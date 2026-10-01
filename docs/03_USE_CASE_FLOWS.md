@@ -840,7 +840,7 @@
 - **Mô tả**: Quản trị viên (toàn trường) và Giáo vụ (Khoa/Bộ môn) thực hiện Archive (Lưu trữ), Restore (Khôi phục) và Hard Delete (Xóa vĩnh viễn) lớp học theo quy tắc nghiệp vụ nghiêm ngặt.
 - **Tác nhân**: Quản trị viên, Giáo vụ. *(Không có Quản trị viên hệ thống).*
 - **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên hoặc Giáo vụ trong phạm vi phụ trách.
-- **Hậu điều kiện**: Lớp được chuyển sang trạng thái "Lưu trữ" (khi Archive); lớp được khôi phục về trạng thái "Đã đóng" (khi Restore); hoặc lớp bị xóa hoàn toàn khỏi cơ sở dữ liệu nếu thỏa mãn đủ 3 điều kiện Hard Delete (0 Sinh viên, 0 bài tập, 0 lịch học).
+- **Hậu điều kiện**: Lớp được chuyển sang trạng thái "Lưu trữ" (khi Archive); lớp được khôi phục về trạng thái "Đã đóng" (khi Restore); hoặc lớp bị xóa hoàn toàn khỏi cơ sở dữ liệu nếu thỏa mãn điều kiện Hard Delete (0 Sinh viên và 0 bài tập).
 - **Luồng tương tác chính**:
   1. Người dùng chọn chức năng quản lý vòng đời lớp học.
   2. Hệ thống hiển thị danh sách lớp theo phạm vi quyền.
@@ -851,7 +851,7 @@
   7. Hệ thống thực hiện xử lý theo quy tắc nghiệp vụ:
      - Archive: Chuyển lớp từ "Đã đóng" sang "Lưu trữ", ẩn khỏi danh sách vận hành thông thường.
      - Restore: Chuyển lớp từ "Lưu trữ" về "Đã đóng" (không tự động mở thành Hoạt động).
-     - Hard Delete: Kiểm tra đồng thời student_count = 0 AND assignment_count = 0 AND schedule_count = 0. Nếu đủ điều kiện, hệ thống xóa hoàn toàn bản ghi lớp. Nếu không đủ điều kiện, hệ thống chặn Hard Delete và tự động chuyển sang Archive.
+     - Hard Delete: Kiểm tra đồng thời student_count = 0 AND assignment_count = 0. Nếu đủ điều kiện, hệ thống xóa hoàn toàn bản ghi lớp. Nếu không đủ điều kiện, hệ thống chặn Hard Delete và tự động chuyển sang Archive.
   8. Hệ thống thông báo kết quả xử lý thành công.
 - **Luồng tương tác thay thế**:
   - 6a. Người dùng chọn "Hủy": Hệ thống đóng hộp thoại và giữ nguyên trạng thái lớp.

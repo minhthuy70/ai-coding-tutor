@@ -187,11 +187,9 @@ Lưu trữ
   student_count = 0
   AND
   assignment_count = 0
-  AND
-  schedule_count = 0
   ```
-  *(Tức là: 0 Sinh viên, 0 bài tập, 0 lịch học).*
-- Nếu chỉ cần 1 trong 3 điều kiện không đạt: **Hard Delete bị chặn $\rightarrow$ chuyển sang Archive (Lưu trữ).**
+  *(Tức là: 0 Sinh viên và 0 bài tập).*
+- Nếu chỉ cần 1 trong 2 điều kiện không đạt: **Hard Delete bị chặn $\rightarrow$ chuyển sang Archive (Lưu trữ).**
 - Rule này áp dụng cho Giáo vụ và Quản trị viên. Quản trị viên hệ thống không tham gia lifecycle lớp.
 
 ---

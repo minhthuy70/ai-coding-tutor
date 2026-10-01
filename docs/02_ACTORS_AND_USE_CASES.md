@@ -108,7 +108,7 @@ Hệ thống được thiết kế theo mô hình **Role-Based Access Control (R
 | **UC-38** | Tạo lớp | Quản trị viên, Giáo vụ | Quản trị viên tạo lớp toàn trường; Giáo vụ tạo lớp trong phạm vi Khoa/Bộ môn phụ trách. |
 | **UC-39** | Chỉnh sửa lớp | Quản trị viên, Giáo vụ | Quản trị viên chỉnh sửa mọi lớp; Giáo vụ chỉnh sửa lớp thuộc Khoa/Bộ môn phụ trách (lớp đang Hoạt động). |
 | **UC-40** | Đóng/Mở lại lớp học | Giáo viên, Quản trị viên, Giáo vụ | Chuyển đổi trạng thái giữa Hoạt động và Đã đóng theo phạm vi quyền. |
-| **UC-41** | Quản lý Lưu trữ & Xóa lớp học | Quản trị viên, Giáo vụ | Archive (Đã đóng $\rightarrow$ Lưu trữ), Restore (Lưu trữ $\rightarrow$ Đã đóng), Hard Delete (chỉ khi 0 SV + 0 bài + 0 lịch học; không đạt $\rightarrow$ chuyển Archive). |
+| **UC-41** | Quản lý Lưu trữ & Xóa lớp học | Quản trị viên, Giáo vụ | Archive (Đã đóng $\rightarrow$ Lưu trữ), Restore (Lưu trữ $\rightarrow$ Đã đóng), Hard Delete (chỉ khi 0 SV + 0 bài; không đạt $\rightarrow$ chuyển Archive). |
 | **UC-42** | Quản lý sinh viên trong lớp | Quản trị viên, Giáo vụ | Thêm/Xóa/Xem sinh viên trong lớp cấp quản trị theo phạm vi quyền. Lớp phải đang Hoạt động. |
 | **UC-43** | Phân công Giáo viên vào lớp | Quản trị viên, Giáo vụ | Phân công/Hủy phân công GV cho lớp. Giáo vụ chỉ thao tác trong Khoa/Bộ môn phụ trách. |
 | **UC-47** | Quản lý tổ chức | Quản trị viên | Quản lý tổ chức, Khoa/Bộ môn trực thuộc; phân công Giáo vụ phụ trách. |
