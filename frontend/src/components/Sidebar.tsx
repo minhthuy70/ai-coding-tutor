@@ -68,7 +68,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
           <Server className="h-4 w-4 shrink-0 text-slate-500" />
           {isOpen && (
             <div className="flex flex-col overflow-hidden">
-              <span className="font-semibold text-slate-800">Stack: Microservices</span>
+              <span className="font-semibold text-slate-800">Architecture: Modular Monolith</span>
               <span className="truncate text-slate-500">FastAPI + Postgres + Redis</span>
             </div>
           )}

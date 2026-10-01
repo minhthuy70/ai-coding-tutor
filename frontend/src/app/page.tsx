@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Header } from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
+import { Breadcrumb } from '../components/Breadcrumb';
 import { SystemStatus } from '../components/SystemStatus';
 import { 
   Rocket, 
@@ -25,6 +26,9 @@ export default function HomePage() {
         <Sidebar isOpen={sidebarOpen} />
 
         <main className="flex-1 p-6 md:p-8 max-w-7xl mx-auto w-full transition-all">
+          {/* Breadcrumb Navigation */}
+          <Breadcrumb />
+
           {/* Welcome Banner */}
           <div className="mb-8 rounded-xl bg-gradient-to-r from-indigo-700 via-indigo-600 to-blue-600 p-6 md:p-8 text-white shadow-md">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
