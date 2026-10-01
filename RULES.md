@@ -1,1422 +1,395 @@
-# RULES.md
-# SRS & Business Rules — AI-Powered Coding Tutor & Auto-Grader
+# RULES.md — BỘ QUY TẮC NGHIỆP VỤ MASTER
+# Nền tảng AI-Powered Coding Tutor & Auto-Grader
 
-> **Source of Truth** cho các quyết định nghiệp vụ, business rules, ràng buộc logic và các lưu ý khi phát triển hệ thống.
+> **Source of Truth duy nhất** cho các quyết định nghiệp vụ, business rules, ràng buộc logic và các tài liệu liên quan (Use Case, Activity Diagram, Sequence Diagram, Database, API, UI và Test).
 >
-> Khi sửa SRS, Use Case, ERD, API, UI hoặc test, phải đối chiếu tài liệu này. Nếu business rule thay đổi, cập nhật RULES.md và đồng bộ các UC liên quan.
+> **Nguyên tắc ưu tiên:** Rule được chốt sau cùng trong tài liệu này sẽ ưu tiên và thay thế rule cũ nếu có mâu thuẫn.
 
 ---
 
-# 1. ACTOR & PHẠM VI
+# I. TỔNG QUAN HỆ THỐNG
 
-| Actor | Phạm vi |
+Hệ thống là nền tảng hỗ trợ đào tạo lập trình, cho phép:
+- Sinh viên làm bài lập trình trực tiếp trên hệ thống.
+- Sinh viên viết/chỉnh sửa/upload mã nguồn.
+- Autosave và lưu bản nháp (Draft).
+- Nộp bài chính thức.
+- Tự động khóa bài khi Sinh viên nộp hoặc khi hết deadline.
+- Auto-submit bản code cuối cùng khi Sinh viên chưa chủ động nộp.
+- Chấm bài theo đợt (Batch Grading) sau deadline.
+- Thực thi mã nguồn bằng Docker Sandbox.
+- Auto-Grader chấm dựa trên Hidden Test Cases.
+- Phân tích chất lượng/độ tối ưu mã nguồn.
+- AI Review tạo phản hồi dựa trên evidence.
+- Đối soát trùng lặp mã nguồn/đạo văn (Plagiarism Check).
+- Giáo viên xem kết quả và chấm thủ công.
+- Giáo viên xác nhận điểm chính thức.
+- Sinh viên xem kết quả và sử dụng AI Tutor để hậu kiểm sau đánh giá.
+
+### Quy tắc thực thi mã nguồn của Sinh viên:
+- **Sinh viên không được chạy thử mã nguồn trên các Sample Test Cases.**
+- **Hệ thống không cung cấp chức năng cho Sinh viên chủ động thực thi code trên Sample Test Cases trong thời gian làm bài.**
+- Việc thực thi mã nguồn được thực hiện bởi hệ thống trong quy trình Batch Grading sau Deadline thông qua Docker Sandbox.
+- Hệ thống không theo hướng LLM-only. AI phải sử dụng context/evidence từ:
+  - Mã nguồn.
+  - Kết quả thực thi.
+  - Test Cases.
+  - Phân tích mã nguồn.
+  - Rubric/thông tin bài tập.
+
+---
+
+# II. TÁC NHÂN (ACTORS) & PHẠM VI
+
+Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
+1. **Sinh viên**
+2. **Giáo viên**
+3. **Quản trị viên** (Phòng Đào tạo)
+4. **Giáo vụ** (Khoa / Bộ môn)
+5. **Quản trị viên hệ thống** (IT Vận hành nền tảng)
+
+---
+
+## 1. Sinh viên
+- **Quyền hạn:**
+  - Đăng nhập / đăng xuất / quên mật khẩu / đổi mật khẩu / xem và cập nhật thông tin cá nhân.
+  - Xem lớp mình tham gia.
+  - Xem bài tập được giao (UC-07, UC-08).
+  - Làm bài: viết/chỉnh sửa code (UC-09), Upload file bài làm (UC-10), lưu bản nháp, autosave.
+  - Nộp bài chính thức (UC-11 - Explicit Submit hoặc Auto-submit khi hết giờ).
+  - Xem bài đã nộp (UC-15 - bản nộp duy nhất).
+  - Xem kết quả Auto-Grader được phép công bố (UC-12).
+  - Xem AI Review được phép công bố (UC-13).
+  - Xem bảng điểm cá nhân & điểm chính thức sau khi Giáo viên xác nhận (UC-16).
+  - Tương tác với AI Tutor sau đánh giá để hậu kiểm (UC-14).
+- **Ràng buộc:**
+  - Sinh viên không được chạy thử mã nguồn trên Sample Test Cases.
+  - Sinh viên chỉ được truy cập dữ liệu thuộc quyền của mình.
+
+---
+
+# III. GIÁO VIÊN
+
+- **Phạm vi:** Các lớp / bài tập do Giáo viên được phân công phụ trách.
+- **Quyền hạn:**
+  - Đóng / mở lại lớp do mình phụ trách (UC-40).
+  - Tạo bài tập và cấu hình ban đầu (UC-21).
+  - Chỉnh sửa thông tin chung bài tập (UC-22).
+  - Xóa / vô hiệu hóa bài tập (UC-23).
+  - Thiết lập Deadline (UC-24).
+  - Thiết lập Test Cases (UC-25).
+  - Thiết lập Rubric (UC-26).
+  - Giao bài tập cho lớp (UC-27).
+  - Xem bài nộp (UC-28).
+  - Xem điểm (UC-29).
+  - Xem AI đánh giá & kết quả đối soát trùng lặp (UC-30).
+  - Chấm thủ công và xác nhận điểm chính thức (UC-31).
+  - Xem kết quả / bảng điểm của lớp mình phụ trách.
+- **Lưu ý đặc tả:**
+  - *Đã bỏ UC-17 (Tạo lớp học của Giáo viên), UC-18 (Chỉnh sửa lớp của Giáo viên), UC-20 (Quản lý sinh viên của Giáo viên)*. Việc tạo lớp, sửa lớp và quản lý sinh viên trong lớp được tập trung quản lý tại cấp Quản trị viên / Giáo vụ (UC-38, UC-39, UC-42).
+
+---
+
+# IV. QUẢN TRỊ VIÊN
+
+- **Định danh:** Quản trị viên = Phòng Đào tạo / Người quản lý nghiệp vụ đào tạo.
+- **Phạm vi:** Toàn trường về nghiệp vụ đào tạo.
+- **Quyền hạn:**
+  - Tạo tài khoản Sinh viên, Giáo viên, Giáo vụ (UC-32).
+  - Khóa / mở khóa tài khoản (UC-33).
+  - Xóa tài khoản (UC-34 - Soft Delete nếu có dữ liệu học tập).
+  - Phân quyền người dùng trong phạm vi nghiệp vụ đào tạo (UC-35).
+  - Đặt lại mật khẩu (UC-36).
+  - Nhập danh sách từ Excel/CSV (UC-37 - 5 cột: Mã người dùng, Họ tên, Email, Vai trò, Lớp).
+  - Quản lý lớp toàn trường: Tạo lớp (UC-38), Chỉnh sửa lớp (UC-39), Đóng / mở lại lớp (UC-40), Archive / Restore / Hard Delete lớp nếu đủ điều kiện (UC-41).
+  - Quản lý Sinh viên trong lớp cấp toàn trường (UC-42).
+  - Phân công Giáo viên vào lớp cấp toàn trường (UC-43).
+  - Quản lý cơ cấu tổ chức, Khoa / Bộ môn và phân công Giáo vụ (UC-47).
+
+---
+
+# V. GIÁO VỤ
+
+- **Định danh:** Giáo vụ là actor riêng biệt, không gộp vào Quản trị viên.
+- **Phạm vi:** Khoa / Bộ môn được phân công phụ trách.
+- **Quyền hạn:**
+  - Tạo lớp trong phạm vi Khoa/Bộ môn (UC-38).
+  - Chỉnh sửa lớp trong phạm vi Khoa/Bộ môn (UC-39).
+  - Đóng / mở lại lớp trong phạm vi Khoa/Bộ môn (UC-40).
+  - Archive / Restore / Hard Delete lớp trong phạm vi Khoa/Bộ môn nếu đủ điều kiện (UC-41).
+  - Quản lý Sinh viên trong lớp thuộc Khoa/Bộ môn (UC-42).
+  - Phân công Giáo viên vào lớp thuộc Khoa/Bộ môn (UC-43).
+- **Ràng buộc:** Giáo vụ không được thao tác ngoài Khoa/Bộ môn được phân công.
+
+---
+
+# VI. QUẢN TRỊ VIÊN HỆ THỐNG
+
+- **Định danh:** Quản trị viên hệ thống = IT / Người vận hành kỹ thuật nền tảng.
+- **Phụ trách:**
+  - Quản lý cấu hình AI, API Key, tham số mô hình AI (UC-44).
+  - Cấu hình Docker Sandbox (UC-45).
+  - Giám sát Docker Sandbox, theo dõi execution (UC-46).
+  - Quản lý System Logs (UC-48).
+  - Phân quyền cấp hệ thống (UC-35: cấp vai trò Quản trị viên / Quản trị viên hệ thống).
+- **Đặc biệt (Ràng buộc nghiêm ngặt):**
+  - Quản trị viên hệ thống **không** quản lý nghiệp vụ lớp học hay đào tạo.
+  - **Không được:** Tạo lớp, chỉnh sửa lớp, đóng lớp, mở lớp, archive lớp, restore lớp, hard delete lớp, quản lý Sinh viên trong lớp, phân công Giáo viên, quản lý tổ chức / Khoa / Bộ môn (không tham gia UC-38, UC-39, UC-40, UC-41, UC-42, UC-43, UC-47).
+
+---
+
+# VII. PHẠM VI QUẢN LÝ LỚP
+
+| Tác nhân (Actor) | Phạm vi |
 |---|---|
-| **Sinh viên** | Làm bài, nộp bài, xem kết quả và điểm của bản thân. |
-| **Giáo viên** | Quản lý lớp, bài tập, chấm điểm trong phạm vi lớp mình phụ trách. |
-| **Giáo vụ** | Quản lý nghiệp vụ lớp học trong phạm vi Khoa/Bộ môn được phân công. |
-| **Quản trị viên** | Quản lý nghiệp vụ đào tạo toàn trường/toàn hệ thống. |
-| **Quản trị viên hệ thống** | Quản trị kỹ thuật nền tảng: AI, Docker Sandbox, System Logs và cấu hình hệ thống. |
-
-## Scope
-
-```text
-Giáo viên
-→ lớp mình phụ trách
-
-Giáo vụ
-→ Khoa/Bộ môn được phân công
-
-Quản trị viên
-→ toàn trường
-
-Quản trị viên hệ thống
-→ kỹ thuật nền tảng, KHÔNG quản lý nghiệp vụ lớp
-```
-
-## Business Admin ≠ System Admin
-
-**Quản trị viên** phụ trách nghiệp vụ đào tạo: tài khoản, lớp, sinh viên trong lớp, phân công Giáo viên, tổ chức/Khoa/Bộ môn và phân công Giáo vụ.
-
-**Quản trị viên hệ thống** phụ trách: Docker Sandbox, AI configuration, AI Key, System Logs và các cấu hình kỹ thuật.
-
-System Admin **không**:
-- tạo/chỉnh sửa lớp;
-- đóng/mở lớp;
-- Archive/Restore/Delete lớp;
-- quản lý sinh viên trong lớp;
-- phân công Giáo viên.
+| **Giáo viên** | Đóng / mở lớp mình được phân công phụ trách (UC-40) |
+| **Giáo vụ** | Khoa/Bộ môn được phân công (UC-38 $\rightarrow$ UC-43) |
+| **Quản trị viên** | Toàn trường (UC-38 $\rightarrow$ UC-43, UC-47) |
+| **Quản trị viên hệ thống** | Không quản lý nghiệp vụ lớp |
 
 ---
 
-# 2. AUTHENTICATION & SECURITY
-
-## 2.1 Đăng nhập
-
-Cả 5 actor đều dùng nhóm UC-01 → UC-06.
-
-Luồng chuẩn:
-
-```text
-Email + Password
-→ kiểm tra tài khoản
-→ kiểm tra trạng thái
-→ tạo phiên
-→ Access Token + Refresh Token
-→ điều hướng theo Role
-```
-
-Nếu tài khoản đang dùng mật khẩu tạm:
-
-```text
-Login
-→ bắt buộc đổi mật khẩu
-→ đổi thành công
-→ vào hệ thống
-```
-
-## 2.2 Mật khẩu
-
-- Mật khẩu phải được lưu dưới dạng băm.
-- Tạo tài khoản mới: hệ thống tự sinh mật khẩu tạm.
-- Reset mật khẩu: hệ thống tự sinh mật khẩu tạm hoặc cơ chế reset tương ứng.
-- Admin không tự nhập mật khẩu người dùng.
-- Mật khẩu tạm gửi tới email đã đăng ký.
-- Tài khoản có mật khẩu tạm phải đổi ở lần đăng nhập đầu tiên.
-- Reset mật khẩu phải xử lý/thu hồi các phiên đăng nhập hiện tại theo chính sách bảo mật.
-
-## 2.3 Quên mật khẩu
-
-- Dùng OTP hoặc reset link có thời hạn.
-- OTP/link đã dùng phải bị vô hiệu hóa.
-- Không tiết lộ email có tồn tại hay không.
-- Gửi lại OTP/link phải tuân thủ cooldown/rate limit.
-
-## 2.4 Đăng xuất
-
-- Kết thúc phiên.
-- Xóa thông tin xác thực cục bộ.
-- Refresh token được thu hồi hoặc vô hiệu hóa theo cơ chế hệ thống.
-- Phiên hết hạn → yêu cầu đăng nhập lại.
-
----
-
-# 3. ACCOUNT MANAGEMENT
-
-## 3.1 Tạo tài khoản
-
-Quản trị viên có thể tạo:
-- Sinh viên;
-- Giáo viên;
-- Giáo vụ.
-
-Luồng:
-
-```text
-QTV tạo tài khoản
-→ kiểm tra dữ liệu
-→ tạo tài khoản
-→ sinh mật khẩu tạm
-→ gửi email
-→ bắt buộc đổi mật khẩu lần đầu
-```
-
-## 3.2 Khóa/Mở khóa
-
-- Tài khoản bị khóa/vô hiệu hóa không được đăng nhập.
-- Khóa tài khoản không đồng nghĩa xóa dữ liệu học tập.
-
-## 3.3 Xóa tài khoản
-
-- Phải kiểm tra dữ liệu liên quan.
-- Nếu có dữ liệu học tập cần bảo toàn, dùng Soft Delete/vô hiệu hóa.
-- Không làm mất lịch sử Submission, điểm và đánh giá chỉ vì xóa tài khoản.
-
-## 3.4 Reset mật khẩu
-
-- QTV chọn tài khoản.
-- Hệ thống tạo mật khẩu tạm/cơ chế reset.
-- Người dùng phải đổi mật khẩu theo chính sách.
-- Các phiên hiện tại được xử lý theo chính sách bảo mật.
-
-## 3.5 Import Excel/CSV
-
-File có đúng 5 cột:
-
-```text
-Mã sinh viên
-Họ tên
-Email
-Vai trò
-Lớp
-```
-
-**Không có cột mật khẩu.**
-
-Thứ tự:
-
-```text
-Upload
-→ kiểm tra cấu trúc
-→ kiểm tra từng bản ghi
-→ hiển thị kết quả + lỗi
-→ QTV xác nhận
-→ Import
-```
-
-Nếu cập nhật tài khoản đã tồn tại:
-- chỉ đổi **họ tên**;
-- không đổi email;
-- không đổi vai trò;
-- không nhập mật khẩu qua import.
-
----
-
-# 4. AUTHORIZATION
-
-Mọi nghiệp vụ phải kiểm tra:
-
-```text
-Authentication
-+ Role
-+ Scope
-+ Resource
-+ Resource Status
-```
-
-Không chỉ kiểm tra `role`.
-
-## Không tự nâng quyền
-
-Người thực hiện chỉ được cấp quyền nằm trong phạm vi quyền của mình.
-
-```text
-QTV
-→ không tự cấp QTV hệ thống
-→ không tự nâng quyền vượt phạm vi
-
-System Admin
-→ quản lý vai trò/quyền quản trị cấp hệ thống
-```
-
----
-
-# 5. CLASS MANAGEMENT
-
-## 5.1 Trạng thái lớp
+# VIII. LIFECYCLE LỚP HỌC
 
 ```text
 Hoạt động
-   ↓ Đóng
+    ↓ Đóng (UC-40)
 Đã đóng
-   ↓ Lưu trữ
+    ↓ Lưu trữ (UC-41)
 Lưu trữ
 ```
 
-Mở lại:
+### 1. Đóng lớp (UC-40)
+- **Tác nhân:** Giáo viên (lớp phụ trách), Giáo vụ (Khoa/Bộ môn), Quản trị viên (toàn trường).
+- Chuyển trạng thái: `Hoạt động` $\rightarrow$ `Đã đóng`.
+- Lớp đã đóng: Ngăn các hoạt động học tập bình thường; dữ liệu vẫn được bảo toàn; có thể mở lại theo quyền.
 
-```text
-Đã đóng
-   ↓ Mở lại
-Hoạt động
-```
+### 2. Mở lại lớp (UC-40)
+- **Tác nhân:** Giáo viên, Giáo vụ, Quản trị viên.
+- Chuyển trạng thái: `Đã đóng` $\rightarrow$ `Hoạt động`.
 
-Restore:
+### 3. Archive (Lưu trữ lớp - UC-41)
+- **Tác nhân:** Giáo vụ (trong phạm vi Khoa/Bộ môn), Quản trị viên (trên toàn trường).
+- Chuyển trạng thái: `Đã đóng` $\rightarrow$ `Lưu trữ`.
+- Lớp lưu trữ: Không xuất hiện trong danh sách vận hành thông thường; dữ liệu vẫn được bảo lưu.
 
-```text
-Lưu trữ
-   ↓ Restore
-Đã đóng
-```
+### 4. Restore (Khôi phục lớp - UC-41)
+- **Tác nhân:** Giáo vụ, Quản trị viên.
+- Chuyển trạng thái: `Lưu trữ` $\rightarrow$ `Đã đóng`.
+- **Restore không tự động đưa lớp về Hoạt động.** Muốn hoạt động lại:
+  ```text
+  Lưu trữ ──(Restore UC-41)──> Đã đóng ──(Mở lại UC-40)──> Hoạt động
+  ```
 
-**Restore không tự động đưa lớp về Hoạt động.**
-
-## 5.2 Hoạt động
-
-Lớp Hoạt động cho phép các nghiệp vụ học tập hợp lệ theo quyền.
-
-Ví dụ:
-- giao bài;
-- quản lý sinh viên;
-- phân công Giáo viên;
-- đóng lớp.
-
-## 5.3 Đã đóng
-
-- Ngăn các hoạt động học tập/tương tác không còn được phép.
-- Không giao bài mới.
-- Dữ liệu vẫn được bảo toàn.
-- Có thể mở lại.
-- Có thể Archive.
-
-## 5.4 Lưu trữ
-
-- Không hoạt động.
-- Không xuất hiện trong danh sách vận hành thông thường.
-- Dữ liệu được bảo toàn.
-- Có thể Restore.
-- Restore → Đã đóng.
+### 5. Hard Delete (Xóa vĩnh viễn - UC-41)
+- Chỉ được Hard Delete khi thỏa mãn đồng thời:
+  ```text
+  student_count = 0
+  AND
+  assignment_count = 0
+  AND
+  schedule_count = 0
+  ```
+  *(Tức là: 0 Sinh viên, 0 bài tập, 0 lịch học).*
+- Nếu chỉ cần 1 trong 3 điều kiện không đạt: **Hard Delete bị chặn $\rightarrow$ chuyển sang Archive (Lưu trữ).**
+- Rule này áp dụng cho Giáo vụ và Quản trị viên. Quản trị viên hệ thống không tham gia lifecycle lớp.
 
 ---
 
-# 6. CLASS LIFECYCLE
+# IX. UC ĐÃ BỊ HỦY BỎ (UC-17, UC-18, UC-19, UC-20)
 
-## 6.1 UC-40 — Đóng/Mở lại
-
-Actor:
-- Giáo viên;
-- Giáo vụ;
-- Quản trị viên.
-
-Không có System Admin.
-
-```text
-Hoạt động
-   ↓ Close
-Đã đóng
-   ↓ Reopen
-Hoạt động
-```
-
-Phải kiểm tra:
-- lớp tồn tại;
-- trạng thái phù hợp;
-- người thực hiện có quyền.
-
-## 6.2 UC-41 — Archive/Restore/Hard Delete
-
-Actor:
-- Giáo vụ;
-- Quản trị viên.
-
-Scope:
-
-```text
-Giáo vụ → Khoa/Bộ môn
-QTV → toàn trường
-```
-
-## 6.3 Hard Delete
-
-Chỉ được Hard Delete khi **đồng thời**:
-
-```text
-student_count = 0
-AND
-assignment_count = 0
-AND
-schedule_count = 0
-```
-
-Nếu bất kỳ điều kiện nào không thỏa:
-
-```text
-Hard Delete = BLOCKED
-→ Archive
-```
-
-Không Hard Delete lớp đã phát sinh dữ liệu học vụ.
+- **UC-17 (Tạo lớp học của Giáo viên):** Đã bỏ. Chức năng tạo lớp tập trung ở cấp Quản trị viên / Giáo vụ (UC-38).
+- **UC-18 (Chỉnh sửa lớp của Giáo viên):** Đã bỏ. Chức năng chỉnh sửa lớp tập trung ở cấp Quản trị viên / Giáo vụ (UC-39).
+- **UC-19 (Đóng/Mở lớp của Giáo viên):** Đã bỏ hoàn toàn để tránh trùng lặp với UC-40.
+- **UC-20 (Quản lý sinh viên của Giáo viên):** Đã bỏ. Chức năng quản lý sinh viên trong lớp tập trung ở cấp Quản trị viên / Giáo vụ (UC-42).
 
 ---
 
-# 7. ASSIGNMENT CONFIGURATION
+# X. CẤU HÌNH BÀI TẬP
 
-## 7.1 Ranh giới UC
-
-```text
-UC-21 → tạo/cấu hình bài tập lần đầu
-UC-22 → thông tin chung
-UC-24 → Deadline
-UC-25 → Test Cases
-UC-26 → Rubric
-```
-
-Không để các UC này chồng lấn trách nhiệm.
-
-## 7.2 UC-21
-
-Tạo bài tập mới và cấu hình lần đầu:
-- tên;
-- đề bài;
-- ngôn ngữ;
-- độ khó;
-- giới hạn tài nguyên;
-- deadline;
-- Max Submissions;
-- Highest/Latest Score;
-- chính sách nộp muộn;
-- test cases;
-- rubric.
-
-UC-21 không thay thế các UC chỉnh sửa độc lập sau khi bài tập đã tồn tại.
-
-## 7.3 UC-22
-
-Chỉ chỉnh sửa:
-- tên;
-- đề bài;
-- ngôn ngữ;
-- độ khó;
-- giới hạn tài nguyên.
-
-Không chỉnh:
-- Deadline;
-- Test Cases;
-- Rubric.
-
-Không tự thêm versioning nếu hệ thống chưa định nghĩa chính sách quản lý phiên bản.
-
-## 7.4 UC-24
-
-- Thiết lập Deadline.
-- Cập nhật/gia hạn Deadline.
-- Không bắt buộc bài tập phải đã giao mới được cấu hình Deadline; bài tập tồn tại + có quyền là điều kiện chính.
-
-## 7.5 UC-25
-
-Test Case gồm:
-- Input;
-- Expected Output;
-- Sample/Hidden;
-- trọng số.
-
-Có thể:
-- thêm;
-- sửa;
-- xóa.
-
-Hidden Test Case không được lộ dữ liệu bí mật cho Sinh viên.
-
-## 7.6 UC-26
-
-Rubric gồm:
-- tiêu chí;
-- mô tả;
-- mức điểm;
-- trọng số.
-
-`Correctness` được tính từ Test Cases.
-
-Tổng trọng số phải hợp lệ.
+Một bài tập bao gồm các nhóm thông tin:
+1. **Thông tin chung:** Tên bài, đề bài / mô tả, ngôn ngữ lập trình, độ khó, giới hạn thời gian chạy, giới hạn bộ nhớ / tài nguyên.
+2. **Deadline:** Có một thời điểm kết thúc nhận bài. Sau thời điểm này hệ thống đóng hoàn toàn, không nhận bài mới.
+3. **Test Cases:** Gồm Sample Test Cases và Hidden Test Cases (Input, Expected Output, Trọng số điểm).
+   - *Quy tắc Sample Test Cases:* Sample Test Cases không phải chức năng chạy thử dành cho Sinh viên. Sinh viên không được chủ động thực thi mã nguồn trên Sample Test Cases.
+4. **Rubric:** Tiêu chí, mô tả, mức điểm / trọng số. Tiêu chí `Correctness` được tính tự động dựa trên kết quả Hidden Test Cases.
 
 ---
 
-# 8. GIAO BÀI
+# XI. RANH GIỚI CÁC USE CASE CẤU HÌNH BÀI TẬP
 
-UC-27:
-
-```text
-Chọn bài tập
-→ chọn lớp
-→ xác nhận giao
-```
-
-Chỉ được giao vào lớp mà Giáo viên có quyền quản lý.
-
-Lớp không Hoạt động:
-
-```text
-Không được giao bài.
-```
+- **UC-21 – Tạo bài tập:** Dùng để tạo bài tập và thiết lập cấu hình ban đầu (thông tin chung, ngôn ngữ, độ khó, giới hạn tài nguyên, deadline ban đầu, cấu hình ban đầu cần thiết cho Test Case/Rubric).
+- **UC-22 – Chỉnh sửa thông tin chung:** Chỉ xử lý Tên, Đề bài, Ngôn ngữ, Độ khó, Giới hạn tài nguyên. **Không** xử lý Deadline, Test Cases, Rubric.
+- **UC-24 – Thiết lập hạn nộp:** Chỉ xử lý Deadline.
+- **UC-25 – Thiết lập Test Case:** Chỉ xử lý Test Cases (Thêm, Sửa, Xóa, Sample/Hidden, Input, Output, Trọng số). Việc cấu hình Sample Test Cases không đồng nghĩa với việc cung cấp chức năng chạy thử cho Sinh viên.
+- **UC-26 – Thiết lập Rubric:** Chỉ xử lý Rubric (Tiêu chí, Mô tả, Trọng số, Mức điểm).
+- **UC-27 – Giao bài tập cho lớp:** Chỉ xử lý việc giao bài tập cho một hoặc nhiều lớp. **Không** đưa logic Max Submission / Scoring Policy / Late Submission vào UC-27.
 
 ---
 
-# 9. STUDENT CODE WORKSPACE
+# XII. QUY TẮC NỘP BÀI — BẢN MỚI NHẤT
 
-## 9.1 Draft
+### 1. Không còn Max Submissions
+- Đã loại bỏ hoàn toàn: Max Submissions, Attempt limit, Unlimited attempts, `submission_count` dùng để giới hạn số lần nộp.
 
-- Autosave.
-- Có thể khôi phục bản nháp gần nhất.
-- Draft chưa phải Submission.
+### 2. Không còn Highest Score / Latest Score
+- Đã loại bỏ hoàn toàn: Highest Score, Latest Score, chính sách chọn điểm giữa nhiều Submission.
+- Lý do: Mỗi Sinh viên chỉ có một bản nộp chính thức hiện tại cho một bài tập.
 
-## 9.2 Upload source
-
-Upload:
-- kiểm tra extension;
-- kiểm tra kích thước;
-- kiểm tra khả năng đọc;
-- nạp vào editor;
-- lưu draft.
-
-**Upload code không tạo Submission.**
-
----
-
-# 10. SUBMISSION — CORE BUSINESS RULE
-
-## 10.1 Mỗi Submit hợp lệ = một Submission
-
-```text
-Source A
-→ Submit
-→ Submission #1
-
-Source A chỉnh sửa
-→ Submit
-→ Submission #2
-```
-
-Submission cũ không bị ghi đè.
-
-## 10.2 Không sửa trực tiếp Submission cũ
-
-Muốn nộp phiên bản mới:
-
-```text
-Submission cũ
-→ Reuse source
-→ Edit
-→ Submit
-→ Submission mới
-```
-
-## 10.3 submission_count
-
-Chỉ Submission hợp lệ mới tăng:
-
-```text
-submission_count
-```
-
-Các trường hợp không tăng:
-- System failure;
-- Execution interruption;
-- Teacher-authorized failure/exemption.
-
-## 10.4 Submit history
-
-Mọi click `Submit` phải được lưu log để:
-- Audit;
-- Debug;
-- theo dõi Submission;
-- điều tra lỗi.
-
-Nhưng:
-
-```text
-Submit click log ≠ valid Submission
-```
+### 3. Không còn Late Submission (Strict No-Late Submission)
+- Sau Deadline:
+  - Không nhận Submission mới.
+  - Không nhận chỉnh sửa code.
+  - Không nhận Upload file bài làm.
+  - Không nhận Save / Autosave.
+  - Không nhận bất kỳ request gửi code mới nào.
+- Backend phải chặn request sau Deadline (trả về lỗi `403 Forbidden` / `Assignment Closed`).
+- Frontend: Hiển thị "Bài tập đã đóng", vô hiệu hóa Editor, ẩn/vô hiệu hóa nút Nộp bài.
 
 ---
 
-# 11. SUBMISSION LIMIT
+# XIII. TRẠNG THÁI BÀI LÀM
 
-## 11.1 Max Submissions
-
-```text
-N > 0
-→ tối đa N Submission hợp lệ
-
-N = 0 hoặc blank
-→ Unlimited
-```
-
-Khi:
+Hệ thống sử dụng 4 trạng thái nghiệp vụ chính:
 
 ```text
-submission_count >= Max Submissions
+DRAFT ──> SUBMITTED ──> GRADING ──> COMPLETED
 ```
 
-→ không tạo Submission mới.
-
-Không dùng số lượng click Submit để tính attempt.
+1. **`DRAFT` (Bản nháp):**
+   - Sinh viên đang làm bài trong thời gian mở bài tập ($T < T_{\text{deadline}}$).
+   - Cho phép: Viết/sửa code, Upload file bài làm, Save thủ công, Autosave tự động.
+   - **Không có chức năng Chạy thử mã nguồn trên Sample Test Cases cho Sinh viên.**
+   - Chưa phải bài nộp chính thức.
+2. **`SUBMITTED` (Đã nộp bài):**
+   - Bài đã được chốt (Read-only).
+   - Không sửa code, không Upload, không Save, không Submit lại.
+   - Bản Submit được giữ nguyên cho đến khi Batch Grading bắt đầu sau Deadline.
+3. **`GRADING` (Đang chấm gom sau Deadline):**
+   - Bài được đưa vào quy trình chấm theo đợt sau Deadline: Message Queue $\rightarrow$ Docker Sandbox execution $\rightarrow$ Hidden Test Cases $\rightarrow$ Auto-Grader $\rightarrow$ AI Review $\rightarrow$ Anti-cheat / Plagiarism Check.
+4. **`COMPLETED` (Đã đánh giá tự động hoàn tất):**
+   - Đã có đầy đủ: Kết quả Test Cases, điểm Auto-Grader, AI feedback, kết quả đối soát trùng lặp/đạo văn.
+   - Giáo viên sử dụng các kết quả này để hỗ trợ chấm thủ công và xác nhận điểm chính thức.
 
 ---
 
-# 12. DEADLINE & LATE SUBMISSION
+# XIV. DRAFT & AUTOSAVE
 
-## Đúng hạn
-
-Submission hợp lệ khi:
-
-```text
-Current Time <= Deadline
-AND
-còn lượt nộp
-AND
-bài/lớp cho phép nộp
-```
-
-## Nộp muộn
-
-Chỉ nhận nếu bài tập cho phép và còn trong late window:
-
-```text
-Current Time <= Late Deadline
-AND
-còn lượt nộp
-```
-
-Nếu được phép:
-- áp dụng Late Penalty theo cấu hình.
-
-Hết late window:
-
-```text
-Reject
-→ không tạo Submission
-```
+- Trong thời gian làm bài ($T < T_{\text{deadline}}$):
+  ```text
+  Viết / sửa / upload code ──> Autosave / Save thủ công ──> DRAFT
+  ```
+- Hệ thống hỗ trợ:
+  - Autosave tự động (theo chu kỳ cấu hình, ví dụ 5–10s hoặc sau 2s ngừng gõ).
+  - Save thủ công ("Lưu bài làm").
 
 ---
 
-# 13. SUBMISSION PROCESSING
+# XV. QUY TẮC CHẠY THỬ MÃ NGUỒN
 
-Luồng chuẩn:
-
-```text
-Student writes code
-→ Submit
-→ check permission
-→ check deadline
-→ check attempt
-→ check source/language
-→ create Submission(PENDING)
-→ queue
-→ Grader Worker
-→ Docker Sandbox
-→ Execution Evidence
-→ Auto-Grader
-→ Static Analysis (nếu cấu hình)
-→ AI Analysis
-→ save results
-→ COMPLETED
-```
-
-## Trạng thái
-
-```text
-PENDING
-RUNNING
-COMPLETED
-Bị gián đoạn
-```
+- **Sinh viên không được Chạy thử mã nguồn trên các Sample Test Cases.**
+- Không có nút / chức năng Run Code dành cho Sinh viên.
+- Sinh viên chỉ viết, chỉnh sửa, Upload file bài làm, Save và Autosave code trong thời gian `DRAFT`.
+- Việc thực thi mã nguồn thuộc quy trình đánh giá của hệ thống sau Deadline trong Docker Sandbox.
 
 ---
 
-# 14. DOCKER SANDBOX
+# XVI. UPLOAD FILE BÀI LÀM (UC-10)
 
-Mã nguồn phải được thực thi trong môi trường cách ly.
-
-Docker Sandbox:
-- compile nếu cần;
-- execute;
-- giới hạn tài nguyên;
-- thu execution evidence.
-
-Execution Evidence có thể gồm:
-- output;
-- error;
-- execution time;
-- memory;
-- trạng thái từng test.
-
-Hidden Test Case được dùng để chấm nhưng không lộ Input/Output bí mật.
+```text
+File mã nguồn ──> Editor ──> DRAFT
+```
+- Upload không phải Submission.
+- Sinh viên vẫn có thể tiếp tục chỉnh sửa sau Upload nếu Deadline chưa đến và bài vẫn ở trạng thái `DRAFT`.
 
 ---
 
-# 15. INTERRUPTION / SYSTEM FAILURE
+# XVII. EXPLICIT SUBMIT (NỘP BÀI THỦ CÔNG)
 
-Nếu execution bị dừng/gián đoạn:
-
-```text
-Submission
-→ Bị gián đoạn
-```
-
-Bắt buộc:
-
-- Không auto regrade.
-- Không tự tạo Submission mới.
-- Không tăng `submission_count`.
-- Sinh viên phải **Submit lại**.
-- Submission cũ vẫn được giữ.
-- Sự kiện phải được ghi nhận phù hợp trong log.
-
-Trạng thái chuẩn là:
-
-```text
-Bị gián đoạn
-```
-
-Không dùng cách ghi mơ hồ kiểu `lỗi/bị gián đoạn`.
-
-Rule này phải đồng bộ giữa UC-11, UC-12 và UC-46.
+Quy trình nộp bài chủ động của Sinh viên:
+1. Sinh viên chọn "Nộp bài".
+2. Hệ thống kiểm tra bài còn trong thời gian nhận bài ($T < T_{\text{deadline}}$).
+3. Hệ thống hiển thị popup xác nhận cảnh báo:
+   > *"Sau khi nộp, bài làm sẽ bị khóa và không thể chỉnh sửa hoặc nộp lại."*
+4. Sinh viên xác nhận.
+5. Hệ thống lấy code `DRAFT` hiện tại.
+6. Hệ thống tạo bản nộp chính thức: Chuyển `DRAFT` $\rightarrow$ `SUBMITTED`, ghi `trigger_type = MANUAL`.
+7. Editor chuyển sang chế độ Read-only. Sinh viên bị khóa hoàn toàn, không được chỉnh sửa hay nộp lại.
 
 ---
 
-# 16. AUTO-GRADER
+# XVIII. KHÔNG CHỈNH SỬA SAU SUBMIT
 
-Auto-Grader dựa trên:
-- Execution Evidence;
-- Test Cases;
-- Rubric.
-
-`Correctness` được tính từ kết quả Test Cases theo trọng số.
-
-Nếu có Static Analysis:
-- dùng để cung cấp evidence cho Code Quality/Complexity;
-- điểm tổng hợp theo Rubric.
-
-AI không được trở thành nguồn duy nhất của Auto-Grader.
+- Rule này là **tuyệt đối**.
+- Không có setting "Cho phép chỉnh sửa sau khi nộp = Có/Không".
+- Sau khi Submit: `SUBMITTED` $\rightarrow$ `LOCKED` (Không Edit, Không Upload, Không Save, Không Submit lần 2).
 
 ---
 
-# 17. AI ANALYSIS & FEEDBACK
+# XIX. AUTO-SUBMIT KHI HẾT DEADLINE
 
-AI có thể:
-- phân tích source code;
-- phân tích execution/test evidence;
-- đánh giá theo Rubric;
-- tạo feedback;
-- giải thích lỗi;
-- gợi ý cải thiện.
-
-Luồng:
-
-```text
-Source Code
-+ Execution Evidence
-+ Rubric
-→ AI
-→ Feedback / AI Assessment
-```
-
-AI phải dựa trên evidence liên quan.
-
-## AI Score
-
-```text
-AI Score ≠ Official Score
-```
-
-AI Score chỉ:
-
-```text
-Tham khảo
-```
-
-trừ khi sau này có business rule mới được chốt rõ ràng.
+Dành cho trường hợp Sinh viên chưa chủ động bấm "Nộp bài" trước thời điểm kết thúc:
+- **Cơ chế:** Xử lý bằng Backend Worker / Cron Job / Scheduled Worker độc lập (không phụ thuộc vào Browser, kết nối mạng hay thiết bị của Sinh viên).
+- **Quy trình:**
+  1. Backend quét các bài vẫn ở trạng thái `DRAFT` của bài tập vừa hết hạn.
+  2. Lấy bản Autosave / Save mới nhất được lưu trên Database / Cache.
+  3. Tạo bản Submission chính thức: Chuyển `DRAFT` $\rightarrow$ `SUBMITTED`, ghi `trigger_type = AUTO_EXPIRED`.
+  4. Khóa Editor trên giao diện người dùng.
 
 ---
 
-# 18. SCORING
+# XX. CHỈ GIỮ MỘT BẢN NỘP DUY NHẤT
 
-## 18.1 Có Manual Score
-
-```text
-Manual Score
-→ Official Score
-```
-
-Auto-Grader và AI giữ lại để tham khảo.
-
-## 18.2 Chưa có Manual Score
-
-Dùng Auto-Grader theo policy của bài:
-
-```text
-Highest Score
-hoặc
-Latest Score
-```
-
-Hiển thị:
-
-```text
-Tạm tính
-```
-
-## 18.3 Highest Score
-
-Ví dụ:
-
-```text
-#1 → 50
-#2 → 70
-#3 → 60
-```
-
-Policy = Highest Score:
-
-```text
-Tạm tính = 70
-```
-
-## 18.4 Latest Score
-
-Nếu Submission cuối = 60:
-
-```text
-Policy = Latest Score
-→ Tạm tính = 60
-```
-
-## 18.5 Không tự gán 0
-
-```text
-Chưa có kết quả ≠ 0 điểm
-```
-
-Dùng trạng thái như:
-- Đang chờ chấm;
-- Chưa có kết quả.
+- Mỗi cặp **(Sinh viên + Bài tập)** chỉ có **1 bản nộp chính thức hiện tại**.
+- Không lưu Submission #1, Submission #2, Submission #3.
+- Không có lịch sử nhiều phiên bản Submission trong phạm vi bài tập.
 
 ---
 
-# 19. MANUAL GRADING
-
-Giáo viên:
-
-```text
-Chọn bài tập
-→ chọn Sinh viên
-→ xem Submission
-→ xem source
-→ đánh giá theo Rubric
-→ nhập điểm
-→ nhập nhận xét
-→ lưu
-```
-
-Khi lưu hợp lệ:
-
-```text
-Manual Score → Official Score
-```
-
-Nếu chỉ lưu tạm:
-
-```text
-Chưa áp dụng điểm thủ công
-```
-
----
-
-# 20. STUDENT VISIBILITY
-
-Sinh viên chỉ xem dữ liệu thuộc quyền của mình.
-
-Được xem:
-- bài tập được giao;
-- Submission của bản thân;
-- Auto-Grader result;
-- điểm được phép hiển thị;
-- AI feedback được phép hiển thị.
-
-Không được xem:
-- Submission của người khác;
-- Hidden Test Case Input/Output;
-- dữ liệu nội bộ Grader;
-- AI Key;
-- System Logs;
-- cấu hình kỹ thuật nhạy cảm.
-
----
-
-# 21. CLASS ACTOR MATRIX
-
-| Chức năng | Giáo viên | Giáo vụ | QTV | System Admin |
-|---|:---:|:---:|:---:|:---:|
-| Tạo lớp | ✓ | ✓ | ✓ | ✗ |
-| Chỉnh sửa lớp | ✓ | ✓ | ✓ | ✗ |
-| Đóng/Mở lớp | ✓ | ✓ | ✓ | ✗ |
-| Archive | ✗ | ✓ | ✓ | ✗ |
-| Restore | ✗ | ✓ | ✓ | ✗ |
-| Hard Delete | ✗ | ✓ | ✓ | ✗ |
-| Quản lý SV trong lớp | ✓ | ✓ | ✓ | ✗ |
-| Phân công GV | ✗ | ✓ | ✓ | ✗ |
-
-Scope:
-- Giáo viên → lớp mình phụ trách.
-- Giáo vụ → Khoa/Bộ môn được phân công.
-- QTV → toàn trường.
-- System Admin → không có scope nghiệp vụ lớp.
-
----
-
-# 22. ORGANIZATION / KHOA / BỘ MÔN / GIÁO VỤ
-
-Quản trị viên quản lý:
-- Tổ chức;
-- Khoa/Bộ môn;
-- cơ cấu trực thuộc;
-- phân công Giáo vụ.
-
-Một Giáo vụ có thể phụ trách một hoặc nhiều Khoa/Bộ môn.
-
-Giáo vụ không được thao tác trên lớp ngoài phạm vi được phân công.
-
----
-
-# 23. SYSTEM ADMINISTRATION
-
-## AI
-- AI configuration.
-- AI Key.
-- Thông số AI.
-
-## Docker
-- Cấu hình Docker Sandbox.
-- Giám sát Docker.
-- Theo dõi execution.
-- Dừng execution nếu được phân quyền.
-
-## System Logs
-- Xem.
-- Tìm kiếm.
-- Lọc.
-- Xem chi tiết.
-- Theo dõi lỗi/vận hành.
-
-Dừng execution:
-
-```text
-Execution stopped
-→ Bị gián đoạn
-→ không auto regrade
-→ không tăng submission_count
-→ Sinh viên Submit lại
-```
-
----
-
-# 24. DATA INTEGRITY
-
-Không làm mất liên kết:
-
-```text
-Student
-→ Class
-→ Assignment
-→ Submission
-→ Auto-Grader
-→ AI Feedback
-→ Manual Score
-```
-
-Submission là lịch sử độc lập.
-
-Không ghi đè Submission cũ bằng Submission mới.
-
-Điểm phải phân biệt nguồn:
-
-```text
-Manual
-Auto-Grader
-AI
-```
-
-và trạng thái:
-
-```text
-Official
-Tạm tính
-Tham khảo
-```
-
----
-
-# 25. STATUS VOCABULARY
-
-## Class
-
-```text
-Hoạt động
-Đã đóng
-Lưu trữ
-```
-
-## Submission
-
-```text
-PENDING
-RUNNING
-COMPLETED
-Bị gián đoạn
-```
-
-## Score
-
-```text
-Official Score
-Tạm tính
-Tham khảo
-```
-
-Thuật ngữ phải thống nhất giữa SRS, UI, DB, API và test.
-
----
-
-# 26. UC BOUNDARY MAP
-
-## Authentication
-
-```text
-UC-01 → Đăng nhập
-UC-02 → Đăng xuất
-UC-03 → Quên mật khẩu
-UC-04 → Xem thông tin cá nhân
-UC-05 → Cập nhật thông tin cá nhân
-UC-06 → Đổi mật khẩu
-```
-
-## Student
-
-```text
-UC-07 → Xem danh sách bài tập
-UC-08 → Xem chi tiết bài tập
-UC-09 → Viết code
-UC-10 → Tải tệp bài làm
-UC-11 → Nộp bài
-UC-12 → Xem kết quả Auto-Grader
-```
-
-## Assignment
-
-```text
-UC-21 → Tạo/cấu hình lần đầu
-UC-22 → Thông tin chung
-UC-24 → Deadline
-UC-25 → Test Cases
-UC-26 → Rubric
-UC-27 → Giao bài
-```
-
-## Administration
-
-```text
-UC-32 → Tạo tài khoản
-UC-33 → Khóa/Mở khóa
-UC-34 → Xóa tài khoản
-UC-35 → Phân quyền
-UC-36 → Reset mật khẩu
-UC-37 → Import Excel/CSV
-```
-
-## Class
-
-```text
-UC-17 → UC-20
-→ cấp Giáo viên
-
-UC-38 → UC-43
-→ cấp Giáo vụ/QTV
-```
-
-**UC-19 không sử dụng.**
-
-## System
-
-Các UC kỹ thuật từ nhóm UC-44 trở đi phải giữ đúng ranh giới System Admin và không kéo sang nghiệp vụ lớp.
-
----
-
-# 27. QUY TẮC KHÔNG DUPLICATE UC
-
-Nếu một UC chuyên trách một cấu hình/chức năng thì UC khác không mô tả lại nó như chức năng chính.
-
-Ví dụ:
-
-```text
-Deadline → UC-24
-Test Cases → UC-25
-Rubric → UC-26
-Close/Open → UC-40
-Archive/Restore/Delete → UC-41
-```
-
-Không tạo thêm UC hoặc flow chính trùng các chức năng trên.
-
----
-
-# 28. CHECK LOGIC CHO MỖI UC
-
-Trước khi chốt một UC, kiểm tra:
-
-### Actor
-- đúng actor;
-- đúng scope;
-- System Admin không bị lẫn với QTV nghiệp vụ.
-
-### Precondition
-- thực sự cần;
-- không mâu thuẫn flow;
-- không thêm điều kiện nghiệp vụ thừa.
-
-### Main Flow
-- đúng actor;
-- không chứa nghiệp vụ thuộc UC khác;
-- không duplicate.
-
-### Alternative Flow
-- là nhánh thực sự;
-- không lặp Main Flow.
-
-### Exception
-- nguyên nhân rõ;
-- không làm mất dữ liệu;
-- trạng thái sau lỗi rõ.
-
-### Postcondition
-- biết dữ liệu nào được tạo/sửa;
-- biết status sau thao tác;
-- biết count có thay đổi hay không.
-
----
-
-# 29. GOLDEN RULES
-
-## Rule 01 — Scope trước Action
-
-Có quyền thực hiện Action không đồng nghĩa có quyền trên mọi Resource.
-
-```text
-Role + Scope + Resource
-```
-
-## Rule 02 — Business Admin ≠ System Admin
-
-```text
-QTV = nghiệp vụ đào tạo
-System Admin = kỹ thuật nền tảng
-```
-
-## Rule 03 — Submission hợp lệ mới tính lượt
-
-```text
-Valid Submission → count
-System Failure → no count
-Interrupted → no count
-```
-
-## Rule 04 — Interrupted không auto regrade
-
-```text
-Bị gián đoạn
-→ không auto regrade
-→ không tạo Submission mới
-→ Student Submit lại
-```
-
-## Rule 05 — Submission không overwrite
-
-```text
-Submit mới → Submission mới
-```
-
-## Rule 06 — Chưa có điểm ≠ 0
-
-```text
-No Result ≠ 0
-```
-
-## Rule 07 — Manual Score ưu tiên
-
-```text
-Manual → Official
-```
-
-## Rule 08 — Auto-Grader khi chưa có Manual
-
-```text
-No Manual
-→ Highest/Latest
-→ Tạm tính
-```
-
-## Rule 09 — AI không tự thành Official
-
-```text
-AI → Tham khảo
-```
-
-## Rule 10 — Hard Delete bảo vệ dữ liệu
-
-```text
-0 Student
-AND
-0 Assignment
-AND
-0 Schedule
-→ Hard Delete allowed
-```
-
-Nếu không → Block → Archive.
-
-## Rule 11 — Restore không tự mở lớp
-
-```text
-Archive → Restore → Đã đóng
-```
-
-## Rule 12 — Hidden Test Case không lộ dữ liệu
-
-Sinh viên chỉ thấy kết quả cần thiết, không thấy dữ liệu bí mật.
-
-## Rule 13 — Upload ≠ Submit
-
-```text
-Upload → Draft
-Submit → Submission
-```
-
-## Rule 14 — Submit log ≠ Submission count
-
-```text
-Submit click → Audit Log
-Valid Submission → submission_count + 1
-```
-
-## Rule 15 — Không tự suy diễn business rule mới
-
-Nếu logic mới chưa được chốt:
-- không tự thêm vào UC;
-- xác định business rule trước;
-- sau đó cập nhật RULES.md và UC liên quan.
-
----
-
-# 30. NOTE CHO DATABASE / API
-
-## Submission
-
-Phải phân biệt Submission theo từng lần nộp.
-
-Không dùng một record duy nhất cho toàn bộ lịch sử.
-
-## Score
-
-Nên phân biệt:
-
-```text
-manual_score
-auto_grader_score
-ai_score
-```
-
-và nguồn/trạng thái tương ứng.
-
-## Count
-
-Không tính:
-
-```text
-COUNT(Submit logs)
-```
-
-để ra số lần nộp.
-
-Chỉ tính Submission hợp lệ.
-
-## Class
-
-Phải kiểm soát transition:
-
-```text
-ACTIVE ↔ CLOSED
-CLOSED → ARCHIVED
-ARCHIVED → CLOSED
-```
-
-Không cho transition tùy ý.
-
-## Authorization
-
-Không chỉ kiểm tra:
-
-```text
-user.role
-```
-
-mà phải kiểm tra cả:
-
-```text
-user.role
-+ scope
-+ resource
-```
-
----
-
-# 31. NOTE CHO USE CASE DIAGRAM
-
-Không biến mọi bước kỹ thuật thành một Use Case riêng.
-
-Các bước nội bộ như:
-- kiểm tra quyền;
-- kiểm tra deadline;
-- tính điểm;
-- lưu kết quả;
-- chạy Docker;
-- gọi AI;
-
-không tự động trở thành Actor/UC độc lập.
-
-Các thành phần:
-
-```text
-Docker Sandbox
-AI Engine
-Database
-Queue
-WebSocket
-```
-
-là thành phần hệ thống, không mặc nhiên là Actor của Use Case Diagram.
-
-Actor phải nối đúng phạm vi:
-
-```text
-Giáo viên → nghiệp vụ lớp/bài tập của mình
-Giáo vụ → nghiệp vụ Khoa/Bộ môn
-QTV → nghiệp vụ toàn trường
-System Admin → kỹ thuật hệ thống
-```
-
----
-
-# 32. QUY TRÌNH KHI THAY ĐỔI SRS
-
-Khi thay đổi một business rule:
-
-```text
-RULES.md
-→ Use Case
-→ Use Case Diagram
-→ ERD / Database
-→ API
-→ UI
-→ Test Case
-```
-
-Các rule có tính lan truyền cao:
-1. Max Submissions.
-2. Highest/Latest Score.
-3. Late Submission.
-4. Manual Score.
-5. AI Score.
-6. Class Lifecycle.
-7. Role Scope.
-8. Hard Delete.
-9. Interrupted Execution.
-10. Account Lifecycle.
-
----
-
-# 33. FINAL CHECKLIST
-
-- [ ] Actor đúng.
-- [ ] Scope đúng.
-- [ ] QTV và System Admin không bị trộn.
-- [ ] Giáo vụ có scope Khoa/Bộ môn.
-- [ ] Giáo viên chỉ quản lý lớp phụ trách.
-- [ ] QTV có phạm vi toàn trường.
-- [ ] Class có 3 trạng thái chính.
-- [ ] Close/Open tách khỏi Archive/Delete.
-- [ ] Hard Delete có đủ 3 điều kiện 0 Student + 0 Assignment + 0 Schedule.
-- [ ] Restore → Đã đóng.
-- [ ] UC-21 chỉ tạo/cấu hình lần đầu.
-- [ ] UC-22 chỉ thông tin chung.
-- [ ] UC-24 chỉ Deadline.
-- [ ] UC-25 chỉ Test Cases.
-- [ ] UC-26 chỉ Rubric.
-- [ ] Upload code không tạo Submission.
-- [ ] Mỗi Submission hợp lệ là một record riêng.
-- [ ] Có Max Submissions.
-- [ ] 0/blank = Unlimited.
-- [ ] Chỉ Submission hợp lệ tăng count.
-- [ ] Late Submission có window + penalty.
-- [ ] Interrupted = Bị gián đoạn.
-- [ ] Interrupted không auto regrade.
-- [ ] Interrupted không tăng count.
-- [ ] Sinh viên phải Submit lại.
-- [ ] Highest/Latest áp dụng đúng policy.
-- [ ] Manual Score = Official.
-- [ ] Auto-Grader khi chưa có Manual = Tạm tính.
-- [ ] AI = Tham khảo.
-- [ ] Chưa có kết quả ≠ 0.
-- [ ] Hidden Test Cases không lộ dữ liệu.
-- [ ] Submit log tách khỏi Submission count.
-- [ ] System Admin chỉ xử lý kỹ thuật.
-- [ ] Không tạo UC trùng chức năng.
-- [ ] Không tự thêm business rule chưa được chốt.
-
----
-
-# 34. GOLDEN FLOW
-
-```text
-ACCOUNT
-   ↓
-Login
-   ↓
-Role + Scope
-   │
-   ├── Student
-   │      ↓
-   │   Assignment
-   │      ↓
-   │   Write Code
-   │      ↓
-   │   Draft
-   │      ↓
-   │   Submit
-   │      ↓
-   │   Permission + Deadline + Attempt
-   │      ↓
-   │   Valid?
-   │    ┌─┴─┐
-   │   NO  YES
-   │    │    ↓
-   │ Reject Submission
-   │         ↓
-   │       Queue
-   │         ↓
-   │       Docker
-   │         ↓
-   │ Execution Evidence
-   │         ↓
-   │ Auto-Grader
-   │         ↓
-   │ AI Analysis
-   │         ↓
-   │ Save Results
-   │         ↓
-   │ Score Policy
-   │      ┌──┴──┐
-   │ Manual   No Manual
-   │   ↓          ↓
-   │ Official  Highest/Latest
-   │              ↓
-   │           Tạm tính
-   │
-   └── Staff/Admin
+# XXI. BATCH GRADING (CHẤM THEO ĐỢT SAU DEADLINE)
+
+- Auto-Grader **không** chạy ngay khi Sinh viên bấm Submit.
+- Toàn bộ bài nộp ở trạng thái `SUBMITTED` sẽ chờ đến khi Deadline đóng hoàn toàn.
+- Trình tự:
+  ```text
+  Sinh viên Submit / Auto-submit
           ↓
-       nghiệp vụ
-       theo Role + Scope
-```
-
-Nếu execution bị dừng:
-
-```text
-Execution
-→ Bị gián đoạn
-→ không auto regrade
-→ không tăng submission_count
-→ Sinh viên Submit lại
-```
+      SUBMITTED
+          ↓
+     Chờ Deadline
+          ↓
+  Deadline đóng hoàn toàn
+          ↓
+  Chốt danh sách SUBMITTED
+          ↓
+    Message Queue
+          ↓
+       GRADING
+  ```
 
 ---
 
-# 35. SOURCE OF TRUTH PRIORITY
+# XXII. MANUAL GRADING & ĐIỂM CHÍNH THỨC
 
-Khi có mâu thuẫn tài liệu:
+- Sau khi Batch Grading hoàn tất (`COMPLETED`):
+  1. Giáo viên xem mã nguồn bản nộp cuối cùng, kết quả Auto-Grader, AI Review, Rubric, kết quả đối soát trùng lặp.
+  2. Giáo viên đánh giá theo Rubric, nhập/chỉnh điểm, nhập nhận xét.
+  3. Giáo viên xác nhận kết quả $\rightarrow$ Điểm chính thức (Official Score).
+- `Teacher Score` $\rightarrow$ `Official Score`. Auto-Grader và AI chỉ là kết quả hỗ trợ.
 
-1. Business Rule đã được chốt là ưu tiên.
-2. Cập nhật RULES.md theo quyết định mới nhất.
-3. Đồng bộ tất cả UC liên quan.
-4. Đồng bộ Use Case Diagram.
-5. Đồng bộ Database/API/UI/Test.
+---
 
-> **Không dùng một câu riêng lẻ trong một UC để tự ý thay đổi business rule chung của hệ thống.**
+# XXIII. AI TUTOR (HẬU KIỂM SOCRATIC)
 
-# END
+- **AI Tutor là chức năng hậu kiểm sau đánh giá** (sau khi đã có kết quả đánh giá / công bố điểm).
+- **AI Tutor không được dùng để hỗ trợ Sinh viên trong lúc đang làm bài (giai đoạn `DRAFT`).**
+- Tiếp cận theo phương pháp Socratic (gợi mở, đặt câu hỏi định hướng, không đưa ngay đáp án). Context: Đề bài, code nộp cuối, Auto-Grader, AI Review, nhận xét GV, điểm chính thức.
+
+---
+
+# XXIV. SYSTEM ADMINISTRATION (QUẢN TRỊ HỆ THỐNG)
+
+- **UC-44:** Quản lý cấu hình AI (Tác nhân: Quản trị viên hệ thống).
+- **UC-45:** Cấu hình Docker Sandbox (Tác nhân: Quản trị viên hệ thống).
+- **UC-46:** Giám sát Docker Sandbox (Tác nhân: Quản trị viên hệ thống).
+- **UC-48:** Quản lý System Logs (Tác nhân: Quản trị viên hệ thống).
