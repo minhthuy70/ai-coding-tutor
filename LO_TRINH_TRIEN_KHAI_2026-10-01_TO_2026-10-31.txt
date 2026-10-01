@@ -772,7 +772,7 @@ NGÀY 5: 05/10/2026 (Thứ Hai) - [MILESTONE 1 CHECKPOINT]
 ----------------------------------------------------------------------------------------------------
 
 NGÀY 6: 06/10/2026 (Thứ Ba)
-- Mục tiêu: Xây dựng Docker Sandbox Runner Engine cách ly an toàn tuyệt đối.
+- Mục tiêu: Xây dựng Docker Sandbox Runner Engine cách ly và giới hạn tài nguyên theo thiết kế.
 - Task Người A:
   + Xây dựng Dockerfile Sandbox: Base `python:3.11-slim`, cài đặt compiler GCC/G++ cho C++, OpenJDK cho Java.
   + Cấu hình User không đặc quyền `sandbox_user` (UID 1001, không có quyền sudo).
@@ -787,7 +787,7 @@ NGÀY 6: 06/10/2026 (Thứ Ba)
   + Chuẩn bị bộ 15 kịch bản mã nguồn mẫu phục vụ kiểm thử Sandbox (AC, WA, TLE, MLE, RE, CE, File traversal, Network ping).
 - Deliverable: Container Sandbox độc lập có thể nhận code, thực thi cách ly và in ra kết quả JSON an toàn.
 - Dependency: Cài đặt Docker trên môi trường phát triển.
-- Verification/Test: Chạy thử script runner trực tiếp với 15 kịch bản mẫu -> Bắt đúng 100% các trạng thái lỗi.
+- Verification/Test: Chạy thử script runner trực tiếp với 15 kịch bản mẫu -> Bắt đúng các trạng thái lỗi theo bộ kiểm thử định nghĩa.
 - Definition of Done: Code lặp vô hạn bị ngắt sau đúng 2s mà không làm treo Docker daemon của máy chủ.
 
 ----------------------------------------------------------------------------------------------------
@@ -869,7 +869,7 @@ NGÀY 10: 10/10/2026 (Thứ Bảy) - [AUTO-GRADER CHỐT OFFICIAL SCORE]
   + Xây dựng UI Result View (UC-12): Hiển thị điểm số chính thức, thời gian chạy, RAM, trạng thái từng test case
     (Pass/Fail - ẩn hoàn toàn Input/Output của hidden tests).
   + WebSocket Client hook: Lắng nghe realtime, hiển thị tiến độ chạy từng test case mượt mà.
-- Deliverable: Auto-Grader tính toán và chốt Official Score độc lập, đẩy kết quả lên màn hình trong < 10s.
+- Deliverable: Auto-Grader tính toán và chốt Official Score độc lập, đẩy kết quả lên màn hình (mục tiêu kiểm thử thời gian phản hồi < 10s trong điều kiện tải tiêu chuẩn).
 - Dependency: Execution Evidence và Static Analysis từ Ngày 9.
 - Verification/Test: Nộp code giải đúng 8/10 test -> Nhận đúng 8.0 điểm chính thức và hiển thị ngay trên UI.
 - Definition of Done: Chấm thi tự động hoàn tất 100% bằng Sandbox và Auto-Grader, không hề có sự can thiệp của LLM.
@@ -1250,7 +1250,7 @@ NGÀY 27: 27/10/2026 (Thứ Ba)
 - Deliverable: Báo cáo kết quả Pen-testing chứng minh Docker Sandbox và AI Prompt an toàn trước mã độc và injection.
 - Dependency: Docker Sandbox Engine, ContextBuilder và System Admin API.
 - Verification/Test: Chạy toàn bộ bộ test mã độc và injection -> Không có bất kỳ kịch bản nào làm tổn hại máy chủ host.
-- Definition of Done: Hệ thống đạt chứng nhận an toàn nội bộ về thực thi mã nguồn cách ly và an toàn AI.
+- Definition of Done: Hệ thống hoàn thành kiểm thử bảo mật nội bộ về thực thi mã nguồn cách ly và an toàn AI.
 
 ----------------------------------------------------------------------------------------------------
 
@@ -1341,7 +1341,7 @@ NGÀY 31: 31/10/2026 (Thứ Bảy) - [FINAL MILESTONE 6 & HANDOVER]
 - Deliverable: Bộ mã nguồn hoàn chỉnh v1.0.0, tài liệu hướng dẫn đầy đủ, hệ thống chạy live sẵn sàng báo cáo.
 - Dependency: Toàn bộ kết quả từ Ngày 1 đến Ngày 30.
 - Verification/Test: Chạy kiểm tra đối chiếu từng mục trong Bảng nghiệm thu cuối cùng (Mục XII bên dưới) đạt 100%.
-- Definition of Done: **FINAL MILESTONE 6 HOÀN THÀNH XUẤT SẮC** - Đồ án đạt trạng thái hoàn thiện cao nhất!
+- Definition of Done: **FINAL MILESTONE 6 HOÀN THÀNH** - Hệ thống hoàn tất nghiệm thu và bàn giao v1.0.0!
 
 
 XII. FINAL ACCEPTANCE TEST CHECKLIST (NGHIỆM THU NGÀY 31/10/2026)
