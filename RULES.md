@@ -1,5 +1,6 @@
 # RULES.md — BỘ QUY TẮC NGHIỆP VỤ MASTER
 # Nền tảng AI-Powered Coding Tutor & Auto-Grader
+# (ĐỒNG BỘ 100% THEO CHUẨN ĐẶC TẢ DOAN4.MD — 44 USE CASES)
 
 > **Source of Truth duy nhất** cho các quyết định nghiệp vụ, business rules, ràng buộc logic và các tài liệu liên quan (Use Case, Activity Diagram, Sequence Diagram, Database, API, UI và Test).
 >
@@ -52,7 +53,7 @@ Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
 
 ## 1. Sinh viên
 - **Quyền hạn:**
-  - Đăng nhập / đăng xuất / quên mật khẩu / đổi mật khẩu / xem và cập nhật thông tin cá nhân.
+  - Đăng nhập / đăng xuất / quên mật khẩu / đổi mật khẩu / xem và cập nhật thông tin cá nhân (UC-01..06).
   - Xem lớp mình tham gia.
   - Xem bài tập được giao (UC-07, UC-08).
   - Làm bài: viết/chỉnh sửa code (UC-09), Upload file bài làm (UC-10), lưu bản nháp, autosave.
@@ -72,21 +73,21 @@ Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
 
 - **Phạm vi:** Các lớp / bài tập do Giáo viên được phân công phụ trách.
 - **Quyền hạn:**
-  - Đóng / mở lại lớp do mình phụ trách (UC-40).
-  - Tạo bài tập và cấu hình ban đầu (UC-21).
-  - Chỉnh sửa thông tin chung bài tập (UC-22).
-  - Xóa / vô hiệu hóa bài tập (UC-23).
-  - Thiết lập Deadline (UC-24).
-  - Thiết lập Test Cases (UC-25).
-  - Thiết lập Rubric (UC-26).
-  - Giao bài tập cho lớp (UC-27).
-  - Xem bài nộp (UC-28).
-  - Xem điểm (UC-29).
-  - Xem AI đánh giá & kết quả đối soát trùng lặp (UC-30).
-  - Chấm thủ công và xác nhận điểm chính thức (UC-31).
+  - Đóng / mở lại lớp do mình phụ trách (UC-36).
+  - Tạo bài tập và cấu hình ban đầu (UC-17).
+  - Chỉnh sửa thông tin chung bài tập (UC-18).
+  - Xóa / vô hiệu hóa bài tập (UC-19).
+  - Thiết lập Deadline (UC-20).
+  - Thiết lập Test Cases (UC-21).
+  - Thiết lập Rubric (UC-22).
+  - Giao bài tập cho lớp (UC-23).
+  - Xem bài nộp (UC-24).
+  - Xem điểm (UC-25).
+  - Xem AI đánh giá & kết quả đối soát trùng lặp (UC-26).
+  - Chấm thủ công và xác nhận điểm chính thức (UC-27).
   - Xem kết quả / bảng điểm của lớp mình phụ trách.
 - **Lưu ý đặc tả:**
-  - *Đã bỏ UC-17 (Tạo lớp học của Giáo viên), UC-18 (Chỉnh sửa lớp của Giáo viên), UC-20 (Quản lý sinh viên của Giáo viên)*. Việc tạo lớp, sửa lớp và quản lý sinh viên trong lớp được tập trung quản lý tại cấp Quản trị viên / Giáo vụ (UC-38, UC-39, UC-42).
+  - Việc tạo lớp, sửa lớp và quản lý sinh viên trong lớp được tập trung quản lý tại cấp Quản trị viên / Giáo vụ (UC-34, UC-35, UC-38). Giáo viên chỉ đóng/mở lớp mình phụ trách (UC-36).
 
 ---
 
@@ -95,16 +96,16 @@ Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
 - **Định danh:** Quản trị viên = Phòng Đào tạo / Người quản lý nghiệp vụ đào tạo.
 - **Phạm vi:** Toàn trường về nghiệp vụ đào tạo.
 - **Quyền hạn:**
-  - Tạo tài khoản Sinh viên, Giáo viên, Giáo vụ (UC-32).
-  - Khóa / mở khóa tài khoản (UC-33).
-  - Xóa tài khoản (UC-34 - Soft Delete nếu có dữ liệu học tập).
-  - Phân quyền người dùng trong phạm vi nghiệp vụ đào tạo (UC-35).
-  - Đặt lại mật khẩu (UC-36).
-  - Nhập danh sách từ Excel/CSV (UC-37 - 5 cột: Mã người dùng, Họ tên, Email, Vai trò, Lớp).
-  - Quản lý lớp toàn trường: Tạo lớp (UC-38), Chỉnh sửa lớp (UC-39), Đóng / mở lại lớp (UC-40), Archive / Restore / Hard Delete lớp nếu đủ điều kiện (UC-41).
-  - Quản lý Sinh viên trong lớp cấp toàn trường (UC-42).
-  - Phân công Giáo viên vào lớp cấp toàn trường (UC-43).
-  - Quản lý cơ cấu tổ chức, Khoa / Bộ môn và phân công Giáo vụ (UC-47).
+  - Tạo tài khoản Sinh viên, Giáo viên, Giáo vụ (UC-28).
+  - Khóa / mở khóa tài khoản (UC-29).
+  - Xóa tài khoản (UC-30 - Soft Delete nếu có dữ liệu học tập).
+  - Phân quyền người dùng trong phạm vi nghiệp vụ đào tạo (UC-31).
+  - Đặt lại mật khẩu (UC-32).
+  - Nhập danh sách từ Excel/CSV (UC-33 - 5 cột: Mã người dùng, Họ tên, Email, Vai trò, Lớp).
+  - Quản lý lớp toàn trường: Tạo lớp (UC-34), Chỉnh sửa lớp (UC-35), Đóng / mở lại lớp (UC-36), Archive / Restore / Hard Delete lớp nếu đủ điều kiện (UC-37).
+  - Quản lý Sinh viên trong lớp cấp toàn trường (UC-38).
+  - Phân công Giáo viên vào lớp cấp toàn trường (UC-39).
+  - Quản lý cơ cấu tổ chức, Khoa / Bộ môn và phân công Giáo vụ (UC-43).
 
 ---
 
@@ -113,12 +114,12 @@ Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
 - **Định danh:** Giáo vụ là actor riêng biệt, không gộp vào Quản trị viên.
 - **Phạm vi:** Khoa / Bộ môn được phân công phụ trách.
 - **Quyền hạn:**
-  - Tạo lớp trong phạm vi Khoa/Bộ môn (UC-38).
-  - Chỉnh sửa lớp trong phạm vi Khoa/Bộ môn (UC-39).
-  - Đóng / mở lại lớp trong phạm vi Khoa/Bộ môn (UC-40).
-  - Archive / Restore / Hard Delete lớp trong phạm vi Khoa/Bộ môn nếu đủ điều kiện (UC-41).
-  - Quản lý Sinh viên trong lớp thuộc Khoa/Bộ môn (UC-42).
-  - Phân công Giáo viên vào lớp thuộc Khoa/Bộ môn (UC-43).
+  - Tạo lớp trong phạm vi Khoa/Bộ môn (UC-34).
+  - Chỉnh sửa lớp trong phạm vi Khoa/Bộ môn (UC-35).
+  - Đóng / mở lại lớp trong phạm vi Khoa/Bộ môn (UC-36).
+  - Archive / Restore / Hard Delete lớp trong phạm vi Khoa/Bộ môn nếu đủ điều kiện (UC-37).
+  - Quản lý Sinh viên trong lớp thuộc Khoa/Bộ môn (UC-38).
+  - Phân công Giáo viên vào lớp thuộc Khoa/Bộ môn (UC-39).
 - **Ràng buộc:** Giáo vụ không được thao tác ngoài Khoa/Bộ môn được phân công.
 
 ---
@@ -127,14 +128,14 @@ Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
 
 - **Định danh:** Quản trị viên hệ thống = IT / Người vận hành kỹ thuật nền tảng.
 - **Phụ trách:**
-  - Quản lý cấu hình AI, API Key, tham số mô hình AI (UC-44).
-  - Cấu hình Docker Sandbox (UC-45).
-  - Giám sát Docker Sandbox, theo dõi execution (UC-46).
-  - Quản lý System Logs (UC-48).
-  - Phân quyền cấp hệ thống (UC-35: cấp vai trò Quản trị viên / Quản trị viên hệ thống).
+  - Quản lý cấu hình AI, API Key, tham số mô hình AI (UC-40).
+  - Cấu hình Docker Sandbox (UC-41).
+  - Giám sát Docker Sandbox, theo dõi execution (UC-42).
+  - Quản lý System Logs (UC-44).
+  - Phân quyền cấp hệ thống (UC-31: cấp vai trò Quản trị viên / Quản trị viên hệ thống).
 - **Đặc biệt (Ràng buộc nghiêm ngặt):**
   - Quản trị viên hệ thống **không** quản lý nghiệp vụ lớp học hay đào tạo.
-  - **Không được:** Tạo lớp, chỉnh sửa lớp, đóng lớp, mở lớp, archive lớp, restore lớp, hard delete lớp, quản lý Sinh viên trong lớp, phân công Giáo viên, quản lý tổ chức / Khoa / Bộ môn (không tham gia UC-38, UC-39, UC-40, UC-41, UC-42, UC-43, UC-47).
+  - **Không được:** Tạo lớp, chỉnh sửa lớp, đóng lớp, mở lớp, archive lớp, restore lớp, hard delete lớp, quản lý Sinh viên trong lớp, phân công Giáo viên, quản lý tổ chức / Khoa / Bộ môn (không tham gia UC-34..39, UC-43).
 
 ---
 
@@ -142,9 +143,9 @@ Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
 
 | Tác nhân (Actor) | Phạm vi |
 |---|---|
-| **Giáo viên** | Đóng / mở lớp mình được phân công phụ trách (UC-40) |
-| **Giáo vụ** | Khoa/Bộ môn được phân công (UC-38 $\rightarrow$ UC-43) |
-| **Quản trị viên** | Toàn trường (UC-38 $\rightarrow$ UC-43, UC-47) |
+| **Giáo viên** | Đóng / mở lớp mình được phân công phụ trách (UC-36) |
+| **Giáo vụ** | Khoa/Bộ môn được phân công (UC-34 $\rightarrow$ UC-39) |
+| **Quản trị viên** | Toàn trường (UC-34 $\rightarrow$ UC-39, UC-43) |
 | **Quản trị viên hệ thống** | Không quản lý nghiệp vụ lớp |
 
 ---
@@ -153,35 +154,35 @@ Tất cả tác nhân được định danh chuẩn bằng Tiếng Việt:
 
 ```text
 Hoạt động
-    ↓ Đóng (UC-40)
+    ↓ Đóng (UC-36)
 Đã đóng
-    ↓ Lưu trữ (UC-41)
+    ↓ Lưu trữ (UC-37)
 Lưu trữ
 ```
 
-### 1. Đóng lớp (UC-40)
+### 1. Đóng lớp (UC-36)
 - **Tác nhân:** Giáo viên (lớp phụ trách), Giáo vụ (Khoa/Bộ môn), Quản trị viên (toàn trường).
 - Chuyển trạng thái: `Hoạt động` $\rightarrow$ `Đã đóng`.
 - Lớp đã đóng: Ngăn các hoạt động học tập bình thường; dữ liệu vẫn được bảo toàn; có thể mở lại theo quyền.
 
-### 2. Mở lại lớp (UC-40)
+### 2. Mở lại lớp (UC-36)
 - **Tác nhân:** Giáo viên, Giáo vụ, Quản trị viên.
 - Chuyển trạng thái: `Đã đóng` $\rightarrow$ `Hoạt động`.
 
-### 3. Archive (Lưu trữ lớp - UC-41)
+### 3. Archive (Lưu trữ lớp - UC-37)
 - **Tác nhân:** Giáo vụ (trong phạm vi Khoa/Bộ môn), Quản trị viên (trên toàn trường).
 - Chuyển trạng thái: `Đã đóng` $\rightarrow$ `Lưu trữ`.
 - Lớp lưu trữ: Không xuất hiện trong danh sách vận hành thông thường; dữ liệu vẫn được bảo lưu.
 
-### 4. Restore (Khôi phục lớp - UC-41)
+### 4. Restore (Khôi phục lớp - UC-37)
 - **Tác nhân:** Giáo vụ, Quản trị viên.
 - Chuyển trạng thái: `Lưu trữ` $\rightarrow$ `Đã đóng`.
 - **Restore không tự động đưa lớp về Hoạt động.** Muốn hoạt động lại:
   ```text
-  Lưu trữ ──(Restore UC-41)──> Đã đóng ──(Mở lại UC-40)──> Hoạt động
+  Lưu trữ ──(Restore UC-37)──> Đã đóng ──(Mở lại UC-36)──> Hoạt động
   ```
 
-### 5. Hard Delete (Xóa vĩnh viễn - UC-41)
+### 5. Hard Delete (Xóa vĩnh viễn - UC-37)
 - Chỉ được Hard Delete khi thỏa mãn đồng thời:
   ```text
   student_count = 0
@@ -194,16 +195,7 @@ Lưu trữ
 
 ---
 
-# IX. UC ĐÃ BỊ HỦY BỎ (UC-17, UC-18, UC-19, UC-20)
-
-- **UC-17 (Tạo lớp học của Giáo viên):** Đã bỏ. Chức năng tạo lớp tập trung ở cấp Quản trị viên / Giáo vụ (UC-38).
-- **UC-18 (Chỉnh sửa lớp của Giáo viên):** Đã bỏ. Chức năng chỉnh sửa lớp tập trung ở cấp Quản trị viên / Giáo vụ (UC-39).
-- **UC-19 (Đóng/Mở lớp của Giáo viên):** Đã bỏ hoàn toàn để tránh trùng lặp với UC-40.
-- **UC-20 (Quản lý sinh viên của Giáo viên):** Đã bỏ. Chức năng quản lý sinh viên trong lớp tập trung ở cấp Quản trị viên / Giáo vụ (UC-42).
-
----
-
-# X. CẤU HÌNH BÀI TẬP
+# IX. CẤU HÌNH BÀI TẬP
 
 Một bài tập bao gồm các nhóm thông tin:
 1. **Thông tin chung:** Tên bài, đề bài / mô tả, ngôn ngữ lập trình, độ khó, giới hạn thời gian chạy, giới hạn bộ nhớ / tài nguyên.
@@ -214,18 +206,19 @@ Một bài tập bao gồm các nhóm thông tin:
 
 ---
 
-# XI. RANH GIỚI CÁC USE CASE CẤU HÌNH BÀI TẬP
+# X. RANH GIỚI CÁC USE CASE CẤU HÌNH BÀI TẬP
 
-- **UC-21 – Tạo bài tập:** Dùng để tạo bài tập và thiết lập cấu hình ban đầu (thông tin chung, ngôn ngữ, độ khó, giới hạn tài nguyên, deadline ban đầu, cấu hình ban đầu cần thiết cho Test Case/Rubric).
-- **UC-22 – Chỉnh sửa thông tin chung:** Chỉ xử lý Tên, Đề bài, Ngôn ngữ, Độ khó, Giới hạn tài nguyên. **Không** xử lý Deadline, Test Cases, Rubric.
-- **UC-24 – Thiết lập hạn nộp:** Chỉ xử lý Deadline.
-- **UC-25 – Thiết lập Test Case:** Chỉ xử lý Test Cases (Thêm, Sửa, Xóa, Sample/Hidden, Input, Output, Trọng số). Việc cấu hình Sample Test Cases không đồng nghĩa với việc cung cấp chức năng chạy thử cho Sinh viên.
-- **UC-26 – Thiết lập Rubric:** Chỉ xử lý Rubric (Tiêu chí, Mô tả, Trọng số, Mức điểm).
-- **UC-27 – Giao bài tập cho lớp:** Chỉ xử lý việc giao bài tập cho một hoặc nhiều lớp. **Không** đưa logic Max Submission / Scoring Policy / Late Submission vào UC-27.
+- **UC-17 – Tạo bài tập:** Dùng để tạo bài tập và thiết lập cấu hình ban đầu (thông tin chung, ngôn ngữ, độ khó, giới hạn tài nguyên, deadline ban đầu, cấu hình ban đầu cần thiết cho Test Case/Rubric).
+- **UC-18 – Chỉnh sửa thông tin chung:** Chỉ xử lý Tên, Đề bài, Ngôn ngữ, Độ khó, Giới hạn tài nguyên. **Không** xử lý Deadline, Test Cases, Rubric.
+- **UC-19 – Xóa bài tập:** Xóa mềm / vô hiệu hóa bài tập.
+- **UC-20 – Thiết lập hạn nộp:** Chỉ xử lý Deadline.
+- **UC-21 – Thiết lập Test Case:** Chỉ xử lý Test Cases (Thêm, Sửa, Xóa, Sample/Hidden, Input, Output, Trọng số). Việc cấu hình Sample Test Cases không đồng nghĩa với việc cung cấp chức năng chạy thử cho Sinh viên.
+- **UC-22 – Thiết lập Rubric:** Chỉ xử lý Rubric (Tiêu chí, Mô tả, Trọng số, Mức điểm).
+- **UC-23 – Giao bài tập cho lớp:** Chỉ xử lý việc giao bài tập cho một hoặc nhiều lớp.
 
 ---
 
-# XII. QUY TẮC NỘP BÀI — BẢN MỚI NHẤT
+# XI. QUY TẮC NỘP BÀI — BẢN MỚI NHẤT
 
 ### 1. Không còn Max Submissions
 - Đã loại bỏ hoàn toàn: Max Submissions, Attempt limit, Unlimited attempts, `submission_count` dùng để giới hạn số lần nộp.
@@ -246,7 +239,7 @@ Một bài tập bao gồm các nhóm thông tin:
 
 ---
 
-# XIII. TRẠNG THÁI BÀI LÀM
+# XII. TRẠNG THÁI BÀI LÀM
 
 Hệ thống sử dụng 4 trạng thái nghiệp vụ chính:
 
@@ -256,7 +249,7 @@ DRAFT ──> SUBMITTED ──> GRADING ──> COMPLETED
 
 1. **`DRAFT` (Bản nháp):**
    - Sinh viên đang làm bài trong thời gian mở bài tập ($T < T_{\text{deadline}}$).
-   - Cho phép: Viết/sửa code, Upload file bài làm, Save thủ công, Autosave tự động.
+   - Cho phép: Viết/sửa code, Upload file bài làm (UC-10), Save thủ công, Autosave tự động.
    - **Không có chức năng Chạy thử mã nguồn trên Sample Test Cases cho Sinh viên.**
    - Chưa phải bài nộp chính thức.
 2. **`SUBMITTED` (Đã nộp bài):**
@@ -271,7 +264,7 @@ DRAFT ──> SUBMITTED ──> GRADING ──> COMPLETED
 
 ---
 
-# XIV. DRAFT & AUTOSAVE
+# XIII. DRAFT & AUTOSAVE
 
 - Trong thời gian làm bài ($T < T_{\text{deadline}}$):
   ```text
@@ -283,7 +276,7 @@ DRAFT ──> SUBMITTED ──> GRADING ──> COMPLETED
 
 ---
 
-# XV. QUY TẮC CHẠY THỬ MÃ NGUỒN
+# XIV. QUY TẮC CHẠY THỬ MÃ NGUỒN
 
 - **Sinh viên không được Chạy thử mã nguồn trên các Sample Test Cases.**
 - Không có nút / chức năng Run Code dành cho Sinh viên.
@@ -292,7 +285,7 @@ DRAFT ──> SUBMITTED ──> GRADING ──> COMPLETED
 
 ---
 
-# XVI. UPLOAD FILE BÀI LÀM (UC-10)
+# XV. UPLOAD FILE BÀI LÀM (UC-10)
 
 ```text
 File mã nguồn ──> Editor ──> DRAFT
@@ -302,7 +295,7 @@ File mã nguồn ──> Editor ──> DRAFT
 
 ---
 
-# XVII. EXPLICIT SUBMIT (NỘP BÀI THỦ CÔNG)
+# XVI. EXPLICIT SUBMIT (NỘP BÀI THỦ CÔNG - UC-11)
 
 Quy trình nộp bài chủ động của Sinh viên:
 1. Sinh viên chọn "Nộp bài".
@@ -316,7 +309,7 @@ Quy trình nộp bài chủ động của Sinh viên:
 
 ---
 
-# XVIII. KHÔNG CHỈNH SỬA SAU SUBMIT
+# XVII. KHÔNG CHỈNH SỬA SAU SUBMIT
 
 - Rule này là **tuyệt đối**.
 - Không có setting "Cho phép chỉnh sửa sau khi nộp = Có/Không".
@@ -324,7 +317,7 @@ Quy trình nộp bài chủ động của Sinh viên:
 
 ---
 
-# XIX. AUTO-SUBMIT KHI HẾT DEADLINE
+# XVIII. AUTO-SUBMIT KHI HẾT DEADLINE
 
 Dành cho trường hợp Sinh viên chưa chủ động bấm "Nộp bài" trước thời điểm kết thúc:
 - **Cơ chế:** Xử lý bằng Backend Worker / Cron Job / Scheduled Worker độc lập (không phụ thuộc vào Browser, kết nối mạng hay thiết bị của Sinh viên).
@@ -336,7 +329,7 @@ Dành cho trường hợp Sinh viên chưa chủ động bấm "Nộp bài" trư
 
 ---
 
-# XX. CHỈ GIỮ MỘT BẢN NỘP DUY NHẤT
+# XIX. CHỈ GIỮ MỘT BẢN NỘP DUY NHẤT
 
 - Mỗi cặp **(Sinh viên + Bài tập)** chỉ có **1 bản nộp chính thức hiện tại**.
 - Không lưu Submission #1, Submission #2, Submission #3.
@@ -344,7 +337,7 @@ Dành cho trường hợp Sinh viên chưa chủ động bấm "Nộp bài" trư
 
 ---
 
-# XXI. BATCH GRADING (CHẤM THEO ĐỢT SAU DEADLINE)
+# XX. BATCH GRADING (CHẤM THEO ĐỢT SAU DEADLINE)
 
 - Auto-Grader **không** chạy ngay khi Sinh viên bấm Submit.
 - Toàn bộ bài nộp ở trạng thái `SUBMITTED` sẽ chờ đến khi Deadline đóng hoàn toàn.
@@ -367,17 +360,17 @@ Dành cho trường hợp Sinh viên chưa chủ động bấm "Nộp bài" trư
 
 ---
 
-# XXII. MANUAL GRADING & ĐIỂM CHÍNH THỨC
+# XXI. MANUAL GRADING & ĐIỂM CHÍNH THỨC (UC-27)
 
 - Sau khi Batch Grading hoàn tất (`COMPLETED`):
-  1. Giáo viên xem mã nguồn bản nộp cuối cùng, kết quả Auto-Grader, AI Review, Rubric, kết quả đối soát trùng lặp.
+  1. Giáo viên xem mã nguồn bản nộp cuối cùng (UC-24), kết quả Auto-Grader, AI Review (UC-26), Rubric, kết quả đối soát trùng lặp.
   2. Giáo viên đánh giá theo Rubric, nhập/chỉnh điểm, nhập nhận xét.
   3. Giáo viên xác nhận kết quả $\rightarrow$ Điểm chính thức (Official Score).
 - `Teacher Score` $\rightarrow$ `Official Score`. Auto-Grader và AI chỉ là kết quả hỗ trợ.
 
 ---
 
-# XXIII. AI TUTOR (HẬU KIỂM SOCRATIC)
+# XXII. AI TUTOR (HẬU KIỂM SOCRATIC - UC-14)
 
 - **AI Tutor là chức năng hậu kiểm sau đánh giá** (sau khi đã có kết quả đánh giá / công bố điểm).
 - **AI Tutor không được dùng để hỗ trợ Sinh viên trong lúc đang làm bài (giai đoạn `DRAFT`).**
@@ -385,9 +378,10 @@ Dành cho trường hợp Sinh viên chưa chủ động bấm "Nộp bài" trư
 
 ---
 
-# XXIV. SYSTEM ADMINISTRATION (QUẢN TRỊ HỆ THỐNG)
+# XXIII. SYSTEM ADMINISTRATION & ORGANIZATIONAL MANAGEMENT
 
-- **UC-44:** Quản lý cấu hình AI (Tác nhân: Quản trị viên hệ thống).
-- **UC-45:** Cấu hình Docker Sandbox (Tác nhân: Quản trị viên hệ thống).
-- **UC-46:** Giám sát Docker Sandbox (Tác nhân: Quản trị viên hệ thống).
-- **UC-48:** Quản lý System Logs (Tác nhân: Quản trị viên hệ thống).
+- **UC-40:** Quản lý cấu hình AI (Tác nhân: Quản trị viên hệ thống).
+- **UC-41:** Cấu hình Docker Sandbox (Tác nhân: Quản trị viên hệ thống).
+- **UC-42:** Giám sát Docker Sandbox (Tác nhân: Quản trị viên hệ thống).
+- **UC-43:** Quản lý tổ chức, Khoa/Bộ môn & Phân công Giáo vụ (Tác nhân: Quản trị viên).
+- **UC-44:** Quản lý System Logs (Tác nhân: Quản trị viên hệ thống).

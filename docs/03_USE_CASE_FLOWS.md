@@ -1,12 +1,18 @@
 # 03. LUỒNG THỰC HIỆN CHI TIẾT CỦA CÁC USE CASE (USE CASE FLOWS)
+# NỀN TẢNG AI-POWERED CODING TUTOR & AUTO-GRADER
+# (ĐỒNG BỘ 100% THEO CHUẨN ĐẶC TẢ DOAN4.MD — 44 USE CASES)
+
+---
+
+## PHẦN I. CÁC USE CASE XÁC THỰC & HỒ SƠ CÁ NHÂN (UC-01 ĐẾN UC-06)
 
 ---
 
 ### UC-01 — Đăng nhập
 - **Mô tả**: Cho phép người dùng xác thực tài khoản để bắt đầu phiên làm việc trên hệ thống.
-- **Tác nhân**: Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, Quản trị viên hệ thống.
+- **Tác nhân**: Người dùng (Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, Quản trị viên hệ thống).
 - **Tiền điều kiện**: Người dùng đã có tài khoản trong hệ thống.
-- **Hậu điều kiện**: Phiên đăng nhập được tạo thành công. Hệ thống cấp access_token cùng refresh_token và chuyển người dùng đến trang chính phù hợp với vai trò. Nếu đăng nhập thất bại, phiên không được tạo.
+- **Hậu điều kiện**: Phiên đăng nhập được tạo thành công. Hệ thống cấp token xác thực (access_token, refresh_token) và chuyển người dùng đến trang chính phù hợp với vai trò. Nếu đăng nhập thất bại, phiên không được tạo và dữ liệu biểu mẫu vẫn được giữ để thử lại.
 - **Luồng tương tác chính**:
   1. Người dùng truy cập trang đăng nhập.
   2. Hệ thống hiển thị biểu mẫu yêu cầu Email và Mật khẩu.
@@ -14,12 +20,12 @@
   4. Hệ thống kiểm tra định dạng dữ liệu và tìm tài khoản tương ứng.
   5. Hệ thống đối chiếu mật khẩu với mật khẩu đã được băm trong cơ sở dữ liệu, đồng thời kiểm tra trạng thái tài khoản.
   6. Hệ thống tạo phiên đăng nhập và cấp access_token cùng refresh_token.
-  7. Hệ thống chuyển người dùng đến giao diện tương ứng với vai trò (Sinh viên, Giáo viên, Giáo vụ, Quản trị viên, Quản trị viên hệ thống).
+  7. Hệ thống chuyển người dùng đến giao diện tương ứng với vai trò: Sinh viên, Giáo viên, Giáo vụ, Quản trị viên hoặc Quản trị viên hệ thống.
 - **Luồng tương tác thay thế**:
-  - 7a. Người dùng truy cập trang yêu cầu đăng nhập trước đó: Hệ thống chuyển người dùng về trang yêu cầu ban đầu.
+  - 7a. Người dùng đã truy cập một trang yêu cầu đăng nhập trước đó: Hệ thống chuyển người dùng về trang được yêu cầu ban đầu thay vì trang chính.
   - 7b. Tài khoản đang dùng mật khẩu tạm: Hệ thống chuyển người dùng đến biểu mẫu đổi mật khẩu bắt buộc; đổi thành công mới vào trang chính.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Thông tin đăng nhập không hợp lệ: Hệ thống thông báo "Email hoặc mật khẩu không chính xác."
+  - E1 - Thông tin đăng nhập không hợp lệ: Hệ thống thông báo "Email hoặc mật khẩu không chính xác." và giữ nguyên biểu mẫu.
   - E2 - Tài khoản bị khóa hoặc vô hiệu hóa: Hệ thống thông báo "Tài khoản đã bị khóa hoặc vô hiệu hóa."
   - E3 - Lỗi hệ thống: Hệ thống thông báo "Đăng nhập thất bại, vui lòng thử lại sau."
 
@@ -27,16 +33,16 @@
 
 ### UC-02 — Đăng xuất
 - **Mô tả**: Cho phép người dùng kết thúc phiên làm việc hiện tại trên hệ thống.
-- **Tác nhân**: Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, Quản trị viên hệ thống.
+- **Tác nhân**: Người dùng.
 - **Tiền điều kiện**: Người dùng đang có phiên đăng nhập hợp lệ.
 - **Hậu điều kiện**: Phiên đăng nhập của người dùng được kết thúc. Các thông tin xác thực cục bộ được xóa và người dùng được chuyển về trang đăng nhập.
 - **Luồng tương tác chính**:
   1. Người dùng chọn "Đăng xuất" trên thanh điều hướng.
   2. Hệ thống hiển thị yêu cầu xác nhận đăng xuất.
   3. Người dùng xác nhận yêu cầu.
-  4. Hệ thống thu hồi hoặc đưa refresh_token vào danh sách vô hiệu hóa.
+  4. Hệ thống thu hồi hoặc đưa refresh_token vào danh sách vô hiệu hóa nếu cơ chế này được cấu hình.
   5. Hệ thống xóa token xác thực được lưu trên trình duyệt.
-  6. Hệ thống kết thúc phiên đăng nhập và chuyển người dùng về trang đăng nhập.
+  6. Hệ thống kết thúc phiên đăng nhập và chuyển người dùng về trang login.
 - **Luồng tương tác thay thế**:
   - 3a. Người dùng hủy xác nhận: Hệ thống đóng hộp thoại và giữ nguyên phiên đăng nhập.
 - **Luồng tương tác ngoại lệ**:
@@ -46,44 +52,44 @@
 
 ### UC-03 — Quên mật khẩu
 - **Mô tả**: Cho phép người dùng xác thực quyền sở hữu tài khoản và đặt lại mật khẩu khi không nhớ mật khẩu hiện tại.
-- **Tác nhân**: Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, Quản trị viên hệ thống.
+- **Tác nhân**: Người dùng.
 - **Tiền điều kiện**: Người dùng đang ở trang đăng nhập và có quyền truy cập địa chỉ email đã đăng ký.
-- **Hậu điều kiện**: Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu. Mã/liên kết khôi phục đã sử dụng bị vô hiệu hóa.
+- **Hậu điều kiện**: Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu. Các mã hoặc liên kết khôi phục đã sử dụng bị vô hiệu hóa. Nếu khôi phục thất bại, mật khẩu hiện tại vẫn được giữ nguyên.
 - **Luồng tương tác chính**:
   1. Người dùng chọn "Quên mật khẩu" tại trang đăng nhập.
   2. Hệ thống hiển thị biểu mẫu yêu cầu nhập email tài khoản.
   3. Người dùng nhập email và chọn "Gửi yêu cầu".
   4. Hệ thống kiểm tra định dạng email và tạo mã OTP hoặc liên kết đặt lại mật khẩu có thời hạn.
-  5. Hệ thống gửi mã hoặc liên kết xác thực đến email của người dùng.
+  5. Hệ thống gửi mã hoặc liên kết xác thực đến email của người dùng và thông báo đã gửi yêu cầu.
   6. Người dùng sử dụng mã hoặc liên kết nhận được để mở biểu mẫu đặt lại mật khẩu.
   7. Người dùng nhập mật khẩu mới, xác nhận mật khẩu và chọn "Cập nhật mật khẩu".
-  8. Hệ thống kiểm tra mã/liên kết còn hợp lệ, kiểm tra chính sách mật khẩu mới.
-  9. Hệ thống băm mật khẩu mới, cập nhật vào cơ sở dữ liệu và vô hiệu hóa mã/liên kết đã sử dụng.
+  8. Hệ thống kiểm tra mã hoặc liên kết còn hợp lệ, đồng thời kiểm tra mật khẩu mới.
+  9. Hệ thống băm mật khẩu mới, cập nhật vào cơ sở dữ liệu và vô hiệu hóa mã hoặc liên kết đã sử dụng.
   10. Hệ thống thông báo "Khôi phục mật khẩu thành công." và chuyển người dùng về trang đăng nhập.
 - **Luồng tương tác thay thế**:
-  - 5a. Người dùng không nhận được email: Người dùng yêu cầu gửi lại sau khi hết thời gian chờ rate limit; hệ thống cấp mã/liên kết mới.
+  - 5a. Người dùng không nhận được email: Người dùng yêu cầu gửi lại mã hoặc liên kết khi thời gian chờ cho phép; hệ thống cấp thông tin xác thực mới.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Email không tồn tại hoặc không hợp lệ: Hệ thống thông báo yêu cầu đã được tiếp nhận mà không tiết lộ tài khoản có tồn tại hay không.
-  - E2 - Mã hoặc liên kết hết hạn/không hợp lệ: Hệ thống thông báo "Mã hoặc liên kết khôi phục không hợp lệ hoặc đã hết hạn."
-  - E3 - Mật khẩu mới không đạt yêu cầu: Hệ thống thông báo "Mật khẩu mới không đáp ứng yêu cầu bảo mật hoặc không trùng khớp."
-  - E4 - Lỗi hệ thống: Hệ thống thông báo "Không thể khôi phục mật khẩu, vui lòng thử lại sau."
+  - E1 - Email không tồn tại hoặc không hợp lệ: Hệ thống thông báo yêu cầu không thể thực hiện và không tiết lộ thông tin tài khoản tồn tại.
+  - E2 - Mã hoặc liên kết hết hạn hoặc không hợp lệ: Hệ thống thông báo "Mã hoặc liên kết khôi phục không hợp lệ hoặc đã hết hạn."
+  - E3 - Mật khẩu mới không đạt yêu cầu: Hệ thống thông báo "Mật khẩu mới không hợp lệ hoặc không trùng khớp."
+  - E4 - Lỗi gửi email hoặc lỗi lưu dữ liệu: Hệ thống thông báo "Không thể khôi phục mật khẩu, vui lòng thử lại sau."
 
 ---
 
 ### UC-04 — Xem thông tin cá nhân
 - **Mô tả**: Cho phép người dùng xem thông tin cá nhân đã lưu trong hệ thống.
-- **Tác nhân**: Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, Quản trị viên hệ thống.
+- **Tác nhân**: Người dùng.
 - **Tiền điều kiện**: Người dùng đã đăng nhập và có phiên xác thực hợp lệ.
 - **Hậu điều kiện**: Thông tin cá nhân hiện tại của người dùng được hiển thị; dữ liệu trong cơ sở dữ liệu không bị thay đổi.
 - **Luồng tương tác chính**:
   1. Người dùng truy cập trang cá nhân.
   2. Hệ thống xác thực phiên đăng nhập và quyền truy cập của người dùng.
   3. Hệ thống truy vấn thông tin cá nhân từ cơ sở dữ liệu.
-  4. Hệ thống hiển thị các thông tin được phép xem gồm họ tên, email, số điện thoại, ảnh đại diện và vai trò.
+  4. Hệ thống hiển thị các thông tin được phép xem, như họ tên, email, số điện thoại, ảnh đại diện và vai trò của người dùng.
 - **Luồng tương tác thay thế**:
   - 3a. Người dùng tải lại trang: Hệ thống truy vấn lại dữ liệu mới nhất từ cơ sở dữ liệu và hiển thị thông tin cập nhật.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn: Hệ thống yêu cầu đăng nhập lại.
+  - E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn: Hệ thống thông báo yêu cầu đăng nhập và chuyển người dùng về trang /login.
   - E2 - Không tìm thấy thông tin cá nhân: Hệ thống thông báo "Không tìm thấy thông tin cá nhân."
   - E3 - Lỗi truy vấn dữ liệu: Hệ thống thông báo "Không thể tải thông tin cá nhân, vui lòng thử lại sau."
 
@@ -91,49 +97,54 @@
 
 ### UC-05 — Cập nhật thông tin cá nhân
 - **Mô tả**: Cho phép người dùng chỉnh sửa và lưu các thông tin cá nhân được hệ thống cho phép cập nhật.
-- **Tác nhân**: Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, Quản trị viên hệ thống.
-- **Tiền điều kiện**: Người dùng đã đăng nhập và có phiên xác thực hợp lệ. Thông tin cá nhân đã tồn tại trong hệ thống.
-- **Hậu điều kiện**: Thông tin hợp lệ được cập nhật và lưu vào cơ sở dữ liệu. Nếu cập nhật thất bại, thông tin cũ được giữ nguyên.
+- **Tác nhân**: Người dùng.
+- **Tiền điều kiện**: Người dùng đã đăng nhập và có phiên xác thực hợp lệ. Thông tin cá nhân của người dùng đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Thông tin hợp lệ được cập nhật và lưu vào cơ sở dữ liệu. Nếu cập nhật thất bại, thông tin cũ được giữ nguyên và hệ thống hiển thị thông báo lỗi.
 - **Luồng tương tác chính**:
   1. Người dùng truy cập trang cá nhân.
   2. Hệ thống xác thực phiên đăng nhập và hiển thị thông tin hiện tại.
   3. Người dùng chọn "Chỉnh sửa".
-  4. Hệ thống hiển thị biểu mẫu với các trường được phép cập nhật (họ tên, số điện thoại, ảnh đại diện).
+  4. Hệ thống hiển thị biểu mẫu với các trường được phép cập nhật, như họ tên, số điện thoại và ảnh đại diện.
   5. Người dùng chỉnh sửa thông tin và chọn "Lưu thay đổi".
   6. Hệ thống kiểm tra tính hợp lệ của dữ liệu.
   7. Hệ thống cập nhật thông tin vào cơ sở dữ liệu.
   8. Hệ thống thông báo "Cập nhật thông tin cá nhân thành công." và hiển thị dữ liệu mới.
 - **Luồng tương tác thay thế**:
   - 5a. Người dùng chọn "Hủy": Hệ thống hủy thao tác chỉnh sửa và giữ nguyên thông tin hiện tại.
-  - 5b. Người dùng không thay đổi thông tin: Hệ thống giữ nguyên dữ liệu hiện tại.
+  - 5b. Người dùng không thay đổi thông tin: Hệ thống không thực hiện cập nhật và giữ nguyên dữ liệu hiện tại.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn: Hệ thống chuyển người dùng về trang đăng nhập.
-  - E2 - Thông tin không hợp lệ: Hệ thống thông báo "Thông tin cá nhân không hợp lệ."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Cập nhật thông tin cá nhân thất bại."
+  - E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn: Hệ thống thông báo yêu cầu đăng nhập và chuyển người dùng về trang đăng nhập.
+  - E2 - Thông tin không hợp lệ: Hệ thống thông báo "Thông tin cá nhân không hợp lệ." và giữ lại dữ liệu người dùng đã nhập để chỉnh sửa.
+  - E3 - Dữ liệu đã được cập nhật ở nơi khác: Hệ thống thông báo "Thông tin đã được cập nhật, vui lòng tải lại dữ liệu." và không ghi đè dữ liệu mới.
+  - E4 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Cập nhật thông tin cá nhân thất bại."
 
 ---
 
 ### UC-06 — Đổi mật khẩu
 - **Mô tả**: Cho phép người dùng thay đổi mật khẩu hiện tại sau khi xác thực mật khẩu cũ.
-- **Tác nhân**: Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, Quản trị viên hệ thống.
+- **Tác nhân**: Người dùng.
 - **Tiền điều kiện**: Người dùng đã đăng nhập và có phiên xác thực hợp lệ. Người dùng biết mật khẩu hiện tại.
-- **Hậu điều kiện**: Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu. Mật khẩu cũ không còn hiệu lực.
+- **Hậu điều kiện**: Mật khẩu mới được kiểm tra, băm và lưu vào cơ sở dữ liệu. Các phiên hoặc token cũ được xử lý theo chính sách bảo mật của hệ thống. Nếu đổi mật khẩu thất bại, mật khẩu cũ vẫn được giữ nguyên.
 - **Luồng tương tác chính**:
   1. Người dùng truy cập chức năng "Đổi mật khẩu" trong trang cá nhân.
   2. Hệ thống hiển thị biểu mẫu gồm Mật khẩu hiện tại, Mật khẩu mới và Xác nhận mật khẩu mới.
   3. Người dùng nhập đầy đủ thông tin và chọn "Đổi mật khẩu".
   4. Hệ thống xác thực phiên đăng nhập và đối chiếu mật khẩu hiện tại.
-  5. Hệ thống kiểm tra mật khẩu mới đáp ứng chính sách bảo mật và trùng khớp với phần xác nhận.
+  5. Hệ thống kiểm tra mật khẩu mới đạt chính sách bảo mật và trùng với phần xác nhận.
   6. Hệ thống băm mật khẩu mới và lưu vào cơ sở dữ liệu.
   7. Hệ thống thông báo "Đổi mật khẩu thành công."
 - **Luồng tương tác thay thế**:
   - 3a. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên mật khẩu hiện tại.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Phiên đăng nhập không hợp lệ: Hệ thống yêu cầu đăng nhập lại.
+  - E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn: Hệ thống yêu cầu người dùng đăng nhập lại.
   - E2 - Mật khẩu hiện tại không chính xác: Hệ thống thông báo "Mật khẩu hiện tại không chính xác."
   - E3 - Mật khẩu mới không hợp lệ: Hệ thống thông báo "Mật khẩu mới không đáp ứng yêu cầu bảo mật hoặc không trùng khớp."
   - E4 - Mật khẩu mới trùng mật khẩu hiện tại: Hệ thống thông báo "Mật khẩu mới phải khác mật khẩu hiện tại."
-  - E5 - Lỗi lưu dữ liệu: Hệ thống thông báo "Đổi mật khẩu thất bại."
+  - E5 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Đổi mật khẩu thất bại."
+
+---
+
+## PHẦN II. PHÂN HỆ SINH VIÊN (UC-07 ĐẾN UC-16)
 
 ---
 
@@ -145,15 +156,15 @@
 - **Luồng tương tác chính**:
   1. Sinh viên truy cập mục "Bài tập".
   2. Hệ thống xác thực phiên đăng nhập và quyền truy cập của Sinh viên.
-  3. Hệ thống lấy danh sách lớp mà Sinh viên đang tham gia.
-  4. Hệ thống truy vấn các bài tập được giao cho các lớp đó.
-  5. Hệ thống hiển thị danh sách với các thông tin: Tên bài, lớp, độ khó, thời hạn nộp (Deadline), trạng thái bài làm (DRAFT, SUBMITTED, GRADING, COMPLETED) và điểm chính thức nếu đã được Giáo viên xác nhận.
-  6. Sinh viên tìm kiếm hoặc lọc danh sách theo lớp hoặc trạng thái.
+  3. Hệ thống lấy danh sách lớp, môn học hoặc chủ đề mà Sinh viên đang tham gia.
+  4. Hệ thống truy vấn các bài tập được giao cho Sinh viên theo những lớp hoặc môn học đó.
+  5. Hệ thống hiển thị danh sách với các thông tin: Tên bài, lớp/chủ đề, độ khó, thời hạn nộp, trạng thái làm bài và điểm hiện có (chính thức hoặc tạm tính) nếu đã có kết quả.
+  6. Sinh viên tìm kiếm hoặc lọc danh sách theo lớp, chủ đề hoặc trạng thái.
 - **Luồng tương tác thay thế**:
-  - 6a. Sinh viên không chọn bộ lọc: Hệ thống hiển thị toàn bộ bài tập được giao.
+  - 6a. Sinh viên không chọn bộ lọc: Hệ thống hiển thị toàn bộ bài tập mà Sinh viên được phép xem.
   - 6b. Không có bài tập phù hợp: Hệ thống hiển thị danh sách rỗng và thông báo phù hợp.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Phiên đăng nhập hết hạn: Hệ thống yêu cầu Sinh viên đăng nhập lại.
+  - E1 - Phiên đăng nhập không hợp lệ hoặc đã hết hạn: Hệ thống yêu cầu Sinh viên đăng nhập lại.
   - E2 - Lỗi truy vấn dữ liệu: Hệ thống thông báo "Không thể tải danh sách bài tập, vui lòng thử lại sau."
 
 ---
@@ -161,866 +172,989 @@
 ### UC-08 — Xem chi tiết bài tập
 - **Mô tả**: Cho phép Sinh viên xem nội dung và yêu cầu chi tiết của một bài tập được giao.
 - **Tác nhân**: Sinh viên.
-- **Tiền điều kiện**: Sinh viên đã đăng nhập và bài tập được giao cho lớp mà Sinh viên tham gia.
-- **Hậu điều kiện**: Thông tin chi tiết bài tập được hiển thị. Nếu Sinh viên chọn "Làm bài", hệ thống chuyển đến không gian soạn thảo mã nguồn.
+- **Tiền điều kiện**: Sinh viên đã đăng nhập và có phiên xác thực hợp lệ. Bài tập tồn tại và Sinh viên được phép truy cập bài tập.
+- **Hậu điều kiện**: Thông tin bài tập được hiển thị nếu Sinh viên có quyền truy cập. Nếu Sinh viên chọn làm bài, hệ thống chuyển đến giao diện soạn thảo tương ứng.
 - **Luồng tương tác chính**:
   1. Sinh viên chọn một bài tập từ danh sách.
-  2. Hệ thống kiểm tra quyền truy cập của Sinh viên với bài tập.
+  2. Hệ thống kiểm tra Sinh viên có thuộc lớp được giao bài tập và bài tập có được phép truy cập hay không.
   3. Hệ thống lấy thông tin bài tập từ cơ sở dữ liệu.
-  4. Hệ thống hiển thị đề bài (hỗ trợ Markdown, LaTeX), yêu cầu Input/Output, ràng buộc kỹ thuật, giới hạn thời gian (Time Limit), giới hạn bộ nhớ (Memory Limit), Sample Test Cases và Rubric đánh giá.
-  5. Sinh viên chọn "Làm bài".
-  6. Hệ thống chuyển Sinh viên đến không gian làm bài (Monaco Editor) với trạng thái DRAFT.
+  4. Hệ thống hiển thị đề bài, hỗ trợ Markdown và công thức toán học LaTeX nếu có.
+  5. Hệ thống hiển thị yêu cầu Input/Output, ràng buộc, giới hạn thời gian, giới hạn bộ nhớ, Sample Test Cases và Rubric được công khai.
+  6. Sinh viên chọn "Làm bài".
+  7. Hệ thống kiểm tra trạng thái bài tập và thời hạn nộp trước khi mở giao diện làm bài.
 - **Luồng tương tác thay thế**:
-  - 5a. Sinh viên quay lại danh sách: Hệ thống đưa Sinh viên về trang danh sách bài tập.
-  - 5b. Bài tập đã qua Deadline: Hệ thống hiển thị thông báo "Bài tập đã đóng" và không cho phép làm bài mới.
+  - 6a. Sinh viên quay lại danh sách: Hệ thống không tạo hoặc thay đổi bài làm và đưa Sinh viên về danh sách bài tập.
+  - 6b. Bài tập đã hết thời hạn: Hệ thống cho phép Sinh viên xem thông tin bài tập và kết quả nếu đã được công bố, nhưng không cho phép tiếp tục chỉnh sửa hoặc nộp bài.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
   - E2 - Sinh viên không có quyền truy cập: Hệ thống thông báo "Bạn không có quyền truy cập bài tập này."
-  - E3 - Bài tập đã đóng hoàn toàn: Hệ thống thông báo "Bài tập hiện không khả dụng."
+  - E3 - Bài tập đã đóng: Hệ thống thông báo "Bài tập đã đóng, không thể tiếp tục làm bài."
   - E4 - Lỗi tải dữ liệu: Hệ thống thông báo "Không thể tải chi tiết bài tập, vui lòng thử lại sau."
 
 ---
 
 ### UC-09 — Viết code
-- **Mô tả**: Cho phép Sinh viên viết, chỉnh sửa mã nguồn trực tiếp trong trình soạn thảo của hệ thống với cơ chế lưu nháp và Autosave.
+- **Mô tả**: Cho phép Sinh viên viết, chỉnh sửa mã nguồn trực tiếp và lưu bản nháp trong trình soạn thảo của hệ thống.
 - **Tác nhân**: Sinh viên.
-- **Tiền điều kiện**: Sinh viên đã đăng nhập, bài tập đang mở (chưa qua Deadline), trạng thái bài làm chưa ở SUBMITTED.
-- **Hậu điều kiện**: Mã nguồn được cập nhật trong Editor và lưu vào bản nháp DRAFT (thông qua Autosave hoặc nút Save). Bài làm chưa trở thành Submission chính thức cho đến khi được Submit hoặc Auto-submit tại Deadline.
+- **Tiền điều kiện**: Sinh viên đã đăng nhập và có quyền truy cập bài tập. Bài tập vẫn còn trong thời gian làm bài. Bài tập có cấu hình ngôn ngữ lập trình được phép sử dụng.
+- **Hậu điều kiện**: Mã nguồn của Sinh viên được hiển thị và bản nháp gần nhất được lưu theo cơ chế autosave. Sinh viên có thể tiếp tục chỉnh sửa cho đến khi xác nhận nộp bài hoặc hết hạn.
 - **Luồng tương tác chính**:
-  1. Sinh viên mở không gian làm bài từ chi tiết bài tập.
-  2. Hệ thống tải đề bài, cấu hình ngôn ngữ và nạp mã nguồn bản nháp DRAFT gần nhất (nếu có).
-  3. Hệ thống mở Monaco Editor.
+  1. Sinh viên chọn "Làm bài" từ trang chi tiết bài tập.
+  2. Hệ thống tải đề bài, ngôn ngữ và cấu hình bài tập.
+  3. Hệ thống mở Monaco Editor với template code phù hợp.
   4. Sinh viên nhập hoặc chỉnh sửa mã nguồn.
-  5. Hệ thống tự động kích hoạt Autosave theo chu kỳ cấu hình (hoặc sau khi ngừng gõ) để lưu mã nguồn vào bản nháp DRAFT trên server/cache.
-  6. Sinh viên có thể chủ động chọn "Lưu bài làm" để lưu thủ công bản nháp DRAFT.
-  7. Sinh viên tiếp tục chỉnh sửa cho đến khi sẵn sàng nộp bài.
+  5. Hệ thống tự động lưu bản nháp theo chu kỳ.
+  6. Sinh viên tiếp tục chỉnh sửa để hoàn thiện bài làm hoặc chuyển đến bước "Nộp bài".
 - **Luồng tương tác thay thế**:
-  - 4a. Sinh viên tải lại trang: Hệ thống tự động khôi phục mã nguồn từ bản nháp DRAFT mới nhất được lưu trên server.
-  - 6a. Sinh viên rời khỏi trang: Hệ thống thực hiện lưu bản nháp DRAFT trước khi thoát.
+  - 4a. Sinh viên tải lại trang: Hệ thống khôi phục bản nháp gần nhất nếu có.
+  - 4b. Sinh viên rời khỏi trang: Hệ thống lưu bản nháp trước khi rời trang nếu kết nối còn hoạt động.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Bài tập đã hết hạn Deadline: Hệ thống khóa Editor (Read-only) và thông báo "Bài tập đã đóng, không thể tiếp tục chỉnh sửa."
-  - E2 - Mã nguồn vượt quá dung lượng cho phép: Hệ thống thông báo lỗi và yêu cầu điều chỉnh.
-  - E3 - Lỗi lưu bản nháp: Hệ thống hiển thị cảnh báo mất kết nối và khuyến nghị kiểm tra mạng.
+  - E1 - Không tải được cấu hình bài tập: Hệ thống thông báo "Không thể mở trình soạn thảo cho bài tập này."
+  - E2 - Lỗi lưu bản nháp: Hệ thống thông báo "Không thể lưu bản nháp, vui lòng kiểm tra kết nối mạng."
+  - E3 - Bài làm đã ở trạng thái đã nộp hoặc bài tập đã hết hạn: Hệ thống khóa Editor và từ chối mọi thao tác chỉnh sửa.
 
 ---
 
 ### UC-10 — Upload file bài làm
-- **Mô tả**: Cho phép Sinh viên tải tệp mã nguồn từ máy tính cá nhân vào trình soạn thảo đang mở để tiếp tục chỉnh sửa.
+- **Mô tả**: Cho phép Sinh viên tải mã nguồn từ máy tính vào bài làm đang mở để tiếp tục chỉnh sửa.
 - **Tác nhân**: Sinh viên.
-- **Tiền điều kiện**: Sinh viên đang mở không gian làm bài của bài tập chưa hết hạn và bài làm đang ở trạng thái DRAFT.
-- **Hậu điều kiện**: Nội dung file hợp lệ được nạp vào Monaco Editor và lưu vào bản nháp DRAFT. Thao tác Upload không tạo ra Submission chính thức.
+- **Tiền điều kiện**: Sinh viên đã mở giao diện làm bài và có quyền truy cập bài tập. File mã nguồn có phần mở rộng thuộc danh sách ngôn ngữ được bài tập cho phép. Bài tập chưa xác nhận nộp hoặc hết hạn.
+- **Hậu điều kiện**: Nội dung file hợp lệ được nạp vào Monaco Editor và có thể được chỉnh sửa tiếp. File upload không được xem là bài nộp chính thức cho đến khi Sinh viên nộp bài hoặc hết thời hạn.
 - **Luồng tương tác chính**:
-  1. Sinh viên chọn "Upload File" tại màn hình làm bài.
-  2. Hệ thống hiển thị hộp thoại chọn tệp.
-  3. Sinh viên chọn tệp mã nguồn từ máy tính.
-  4. Hệ thống kiểm tra phần mở rộng (extension) phù hợp với ngôn ngữ bài tập và kích thước tệp trong giới hạn cho phép.
-  5. Hệ thống đọc nội dung tệp và nạp vào Monaco Editor.
-  6. Hệ thống lưu nội dung vừa nạp vào bản nháp DRAFT.
-  7. Hệ thống thông báo "Tải tệp lên thành công."
+  1. Sinh viên chọn "Tải tệp lên" tại màn hình làm bài.
+  2. Hệ thống hiển thị giao diện chọn file.
+  3. Sinh viên chọn file mã nguồn từ máy tính.
+  4. Hệ thống kiểm tra phần mở rộng, kích thước và nội dung cơ bản của file.
+  5. Hệ thống đọc file và nạp nội dung vào Monaco Editor.
+  6. Hệ thống lưu bản nháp của nội dung đã nạp.
+  7. Hệ thống thông báo "Tải file lên thành công."
 - **Luồng tương tác thay thế**:
-  - 3a. Sinh viên hủy chọn tệp: Hệ thống đóng hộp thoại và giữ nguyên nội dung hiện tại trong Editor.
-  - 5a. Sinh viên tiếp tục chỉnh sửa code sau khi upload: Hệ thống tiếp tục lưu nháp theo cơ chế Autosave.
+  - 3a. Sinh viên hủy chọn file: Hệ thống đóng hộp thoại và giữ nguyên nội dung đang có trong editor.
+  - 5a. Sinh viên tiếp tục chỉnh sửa: Hệ thống cập nhật nội dung editor và lưu theo cơ chế autosave.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Định dạng tệp không được hỗ trợ: Hệ thống thông báo "Định dạng tệp không khớp với ngôn ngữ lập trình của bài tập."
-  - E2 - Tệp vượt quá kích thước cho phép: Hệ thống thông báo "Kích thước tệp vượt quá giới hạn quy định."
-  - E3 - Không thể đọc tệp: Hệ thống thông báo "Không thể đọc nội dung tệp, vui lòng thử lại."
+  - E1 - Định dạng file không được hỗ trợ: Hệ thống thông báo "Định dạng file không được hỗ trợ."
+  - E2 - File vượt quá kích thước cho phép: Hệ thống thông báo "Kích thước file vượt quá giới hạn cho phép."
+  - E3 - Không thể đọc file: Hệ thống thông báo "Không thể tải file, vui lòng chọn file khác."
+  - E4 - Bài làm đã nộp hoặc bài tập đã hết hạn: Hệ thống từ chối tải file và thông báo "Bài làm đã được khóa."
 
 ---
 
 ### UC-11 — Nộp bài
-- **Mô tả**: Cho phép Sinh viên chủ động nộp bài làm chính thức hoặc hệ thống tự động nộp khi hết Deadline. Sau khi nộp, bài làm chuyển sang trạng thái SUBMITTED và bị khóa vĩnh viễn (Read-only) để chờ quy trình Batch Grading sau Deadline.
-- **Tác nhân**: Sinh viên, Hệ thống (Backend Worker).
-- **Tiền điều kiện**: Sinh viên đang làm bài tập chưa qua Deadline (đối với nộp thủ công) hoặc đã đến thời điểm Deadline (đối với Auto-submit). Bài làm đang ở trạng thái DRAFT.
-- **Hậu điều kiện**: Bản nộp duy nhất của Sinh viên được ghi nhận ở trạng thái SUBMITTED với trigger_type tương ứng (MANUAL hoặc AUTO_EXPIRED). Editor bị khóa Read-only. Sinh viên không thể sửa, upload hay nộp lại. Bài nộp được giữ nguyên chờ đến sau Deadline để tham gia Batch Grading.
+- **Mô tả**: Cho phép Sinh viên gửi mã nguồn hiện tại để tạo một bài nộp chính thức của bài tập. Bài nộp chỉ được đưa vào quy trình chấm sau khi bài tập hết thời hạn nhận bài.
+- **Tác nhân**: Sinh viên.
+- **Tiền điều kiện**: Sinh viên đã đăng nhập và có quyền làm bài. Bài tập chưa hết hạn. Lớp của bài tập đang ở trạng thái Hoạt động. Sinh viên đã có mã nguồn hợp lệ trong bản nháp.
+- **Hậu điều kiện**: Mã nguồn hiện tại được lưu thành một bài nộp duy nhất, trạng thái Đã nộp. Editor của Sinh viên chuyển sang Read-only và Sinh viên không thể chỉnh sửa hoặc nộp lại. Auto-Grader và AI Review chưa được thực hiện tại thời điểm nộp.
 - **Luồng tương tác chính**:
-  1. Sinh viên chọn "Nộp bài" trên giao diện làm bài.
-  2. Hệ thống kiểm tra thời gian hiện tại còn trước Deadline ($T < T_{\text{deadline}}$).
-  3. Hệ thống hiển thị popup xác nhận cảnh báo: "Sau khi nộp, bài làm sẽ bị khóa và không thể chỉnh sửa hoặc nộp lại."
-  4. Sinh viên chọn "Xác nhận nộp".
-  5. Hệ thống lấy mã nguồn bản nháp DRAFT hiện tại.
-  6. Hệ thống tạo bản nộp chính thức, chuyển trạng thái từ DRAFT sang SUBMITTED và ghi nhận trigger_type = MANUAL.
-  7. Hệ thống khóa Editor sang chế độ Read-only.
-  8. Hệ thống thông báo "Nộp bài thành công. Bài làm đã được khóa và sẽ được chấm sau khi hết thời hạn nộp bài."
+  1. Sinh viên kiểm tra mã nguồn và chọn "Nộp bài".
+  2. Hệ thống kiểm tra trạng thái bài làm, quyền nộp và thời hạn.
+  3. Hệ thống hiển thị popup xác nhận với cảnh báo rằng sau khi xác nhận, bài làm sẽ bị khóa và không thể chỉnh sửa hoặc nộp lại.
+  4. Sinh viên chọn "Xác nhận".
+  5. Hệ thống lưu bản mã nguồn nháp hiện tại thành bài nộp chính thức.
+  6. Hệ thống chuyển trạng thái từ DRAFT sang SUBMITTED và ghi nhận trigger_type = MANUAL.
+  7. Hệ thống khóa Editor ở chế độ Read-only.
+  8. Hệ thống thông báo: "Nộp bài thành công. Bài làm sẽ được chấm sau khi hết thời hạn nộp bài."
+  9. Hệ thống giữ bài nộp ở trạng thái SUBMITTED cho đến khi hết thời hạn nhận bài.
 - **Luồng tương tác thay thế**:
-  - 1a. Đến thời điểm hết hạn Deadline mà Sinh viên chưa chủ động nộp bài (Auto-submit):
-    - 1a.1. Backend Scheduled Worker quét các bài làm còn ở trạng thái DRAFT.
-    - 1a.2. Backend lấy mã nguồn bản nháp DRAFT (Autosave/Save) mới nhất được lưu trên server/cache.
-    - 1a.3. Hệ thống tạo bản nộp chính thức, chuyển trạng thái DRAFT sang SUBMITTED và ghi nhận trigger_type = AUTO_EXPIRED.
-    - 1a.4. Hệ thống khóa toàn bộ Editor của các bài làm này trên giao diện người dùng.
-  - 3a. Sinh viên chọn "Hủy" trong popup xác nhận: Hệ thống đóng popup và giữ nguyên trạng thái DRAFT để Sinh viên tiếp tục chỉnh sửa.
+  - 3a. Sinh viên hủy xác nhận: Hệ thống đóng popup và giữ nguyên bài làm ở trạng thái DRAFT.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Quá hạn nộp bài (Strict No-Late): Hệ thống từ chối nhận bài, trả về mã lỗi 403 Forbidden / Assignment Closed, hiển thị "Bài tập đã đóng" và vô hiệu hóa nút nộp bài.
-  - E2 - Mã nguồn không hợp lệ: Hệ thống thông báo "Mã nguồn không hợp lệ hoặc bị lỗi định dạng."
-  - E3 - Lỗi kết nối hệ thống: Hệ thống thông báo "Không thể nộp bài, vui lòng kiểm tra kết nối mạng và thử lại."
+  - E1 - Hết hạn trước khi Sinh viên xác nhận: Hệ thống khóa bài làm và không tiếp nhận thao tác nộp thủ công.
+  - E2 - Không tìm thấy bản DRAFT hoặc bản mã nguồn không hợp lệ: Hệ thống thông báo "Không thể tạo bài nộp từ bản làm hiện tại."
+  - E3 - Lỗi khi lưu bài nộp: Hệ thống giữ nguyên DRAFT và thông báo "Không thể nộp bài."
+  - E4 - Bài làm đã ở trạng thái SUBMITTED: Hệ thống từ chối thao tác và thông báo "Bài làm đã được nộp và đã bị khóa."
 
 ---
 
 ### UC-12 — Xem kết quả Auto-Grader
-- **Mô tả**: Cho phép Sinh viên xem kết quả chấm tự động của bài nộp sau khi hệ thống đã hoàn tất quy trình Batch Grading sau Deadline.
+- **Mô tả**: Cho phép Sinh viên xem kết quả chấm tự động của một bài nộp thuộc về mình sau khi quá trình chấm hoàn tất.
 - **Tác nhân**: Sinh viên.
-- **Tiền điều kiện**: Sinh viên đã đăng nhập, bài nộp thuộc về Sinh viên và hệ thống đã hoàn tất chấm bài (trạng thái COMPLETED).
-- **Hậu điều kiện**: Kết quả Auto-Grader được hiển thị; dữ liệu chấm không bị thay đổi. Dữ liệu Input/Output của Hidden Test Cases được bảo mật và ẩn khỏi Sinh viên.
+- **Tiền điều kiện**: Sinh viên đã đăng nhập và bài nộp thuộc về Sinh viên.
+- **Hậu điều kiện**: Kết quả Auto-Grader được hiển thị; dữ liệu chấm không bị thay đổi. Nếu chưa có điểm chấm thủ công, điểm Auto-Grader của bản nộp duy nhất được hiển thị ở trạng thái "Tạm tính".
 - **Luồng tương tác chính**:
-  1. Sinh viên mở bài tập đã có kết quả.
-  2. Hệ thống kiểm tra quyền truy cập và trạng thái bài làm (COMPLETED).
-  3. Hệ thống truy vấn kết quả Auto-Grader từ cơ sở dữ liệu.
-  4. Hệ thống hiển thị điểm số Auto-Grader, trạng thái tổng quát, thời gian chấm.
-  5. Hệ thống hiển thị danh sách các test case với trạng thái đạt/không đạt, thời gian thực thi, mức sử dụng bộ nhớ (ẩn dữ liệu Input/Output của Hidden Test Cases).
-  6. Sinh viên xem chi tiết kết quả kiểm thử.
+  1. Sinh viên mở một bài nộp từ lịch sử làm bài hoặc trang kết quả.
+  2. Hệ thống kiểm tra quyền truy cập bài nộp.
+  3. Hệ thống lấy kết quả Auto-Grader.
+  4. Hệ thống hiển thị điểm số, trạng thái tổng quát và thời gian chấm.
+  5. Hệ thống hiển thị trạng thái từng test case, thời gian thực thi, mức sử dụng bộ nhớ và lỗi nếu có (dữ liệu Input/Output của Hidden Test Cases được bảo mật và ẩn khỏi Sinh viên).
+  6. Sinh viên xem chi tiết kết quả chấm bài.
 - **Luồng tương tác thay thế**:
-  - 2a. Bài nộp đang trong quy trình chấm gom (GRADING): Hệ thống hiển thị thông báo "Bài tập đang trong quá trình chấm tự động, vui lòng quay lại sau."
+  - 4a. Bài nộp đang ở trạng thái SUBMITTED (chờ đến hạn) hoặc GRADING (đang chấm gom): Hệ thống hiển thị trạng thái tương ứng và cho phép Sinh viên tải lại khi có kết quả.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài nộp không tồn tại: Hệ thống thông báo "Không tìm thấy bài nộp."
-  - E2 - Sinh viên không có quyền truy cập: Hệ thống từ chối truy cập.
+  - E2 - Sinh viên không có quyền truy cập: Hệ thống từ chối yêu cầu và không hiển thị dữ liệu bài nộp.
   - E3 - Chưa có kết quả chấm: Hệ thống thông báo "Kết quả chấm bài chưa sẵn sàng."
 
 ---
 
 ### UC-13 — Xem nhận xét AI
-- **Mô tả**: Cho phép Sinh viên xem phản hồi và đánh giá chi tiết do AI Review tạo ra dựa trên evidence từ mã nguồn và kết quả thực thi sau Deadline.
+- **Mô tả**: Cho phép Sinh viên xem nhận xét do AI tạo ra dựa trên bài làm và kết quả chấm.
 - **Tác nhân**: Sinh viên.
-- **Tiền điều kiện**: Sinh viên đã đăng nhập, bài nộp thuộc về Sinh viên và đã hoàn tất quy trình Batch Grading (COMPLETED).
-- **Hậu điều kiện**: Phản hồi AI Review được hiển thị; dữ liệu bài nộp không bị thay đổi.
+- **Tiền điều kiện**: Sinh viên đã đăng nhập và bài nộp thuộc về Sinh viên. Bài nộp đã có kết quả chấm hoặc đủ dữ liệu để tạo feedback.
+- **Hậu điều kiện**: Nhận xét AI được hiển thị nếu đã được tạo; dữ liệu bài nộp không bị thay đổi.
 - **Luồng tương tác chính**:
-  1. Sinh viên mở trang kết quả bài làm.
-  2. Hệ thống kiểm tra quyền truy cập và trạng thái bài nộp.
-  3. Hệ thống truy vấn nội dung AI Review đã được lưu.
-  4. Hệ thống hiển thị nhận xét của AI về chất lượng mã nguồn (Code Quality), độ phức tạp (Complexity), Code Style, phân tích lỗi và các gợi ý cải thiện.
-  5. Sinh viên đọc nhận xét để rút kinh nghiệm học tập.
+  1. Sinh viên mở trang kết quả của một bài nộp.
+  2. Hệ thống kiểm tra quyền truy cập và trạng thái AI feedback.
+  3. Hệ thống lấy nhận xét AI đã lưu.
+  4. Hệ thống hiển thị nhận xét về lỗi, chất lượng mã nguồn, độ phức tạp và đề xuất cải thiện nếu có.
+  5. Sinh viên xem và sử dụng nhận xét để cải thiện bài làm.
 - **Luồng tương tác thay thế**:
-  - 4a. Phản hồi AI chưa được bật hoặc chưa công bố cho bài tập: Hệ thống thông báo nhận xét AI chưa khả dụng.
+  - 3a. AI feedback đang được tạo: Hệ thống hiển thị trạng thái chờ và cập nhật khi feedback sẵn sàng.
+  - 3b. AI feedback chưa được bật cho bài tập: Hệ thống thông báo tính năng không khả dụng cho bài nộp này.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Không tìm thấy bài nộp: Hệ thống thông báo "Không tìm thấy bài nộp."
-  - E2 - Sinh viên không có quyền truy cập: Hệ thống từ chối yêu cầu.
-  - E3 - Lỗi tải dữ liệu: Hệ thống thông báo "Không thể tải nhận xét AI, vui lòng thử lại sau."
+  - E2 - Sinh viên không có quyền truy cập: Hệ thống từ chối yêu cầu xem feedback.
+  - E3 - AI Service gặp lỗi: Hệ thống thông báo "Chưa thể tạo nhận xét AI, vui lòng thử lại sau."
 
 ---
 
 ### UC-14 — Tương tác với AI Tutor
-- **Mô tả**: Cho phép Sinh viên tương tác với AI Tutor sau khi đã có kết quả đánh giá (hậu kiểm) để nhận giải thích, gợi mở tư duy theo phương pháp Socratic nhằm nâng cao kỹ năng lập trình.
+- **Mô tả**: Cho phép Sinh viên trao đổi với AI Tutor để nhận gợi ý định hướng giải quyết bài tập theo phương pháp Socratic.
 - **Tác nhân**: Sinh viên.
-- **Tiền điều kiện**: Sinh viên đã đăng nhập, bài tập đã hoàn tất đánh giá và công bố kết quả (COMPLETED / có điểm chính thức).
-- **Hậu điều kiện**: Phiên hội thoại hậu kiểm được thực hiện. AI Tutor chỉ giải thích gợi mở, không đưa đáp án trực tiếp và không làm thay đổi bài nộp, điểm số hay Rubric.
+- **Tiền điều kiện**: Sinh viên đã đăng nhập. Sinh viên đã có kết quả đánh giá/điểm được công bố cho bài nộp.
+- **Hậu điều kiện**: Câu hỏi và câu trả lời được hiển thị trong phiên hội thoại. Lịch sử hội thoại được lưu theo chính sách của hệ thống nếu chức năng lưu được bật.
 - **Luồng tương tác chính**:
-  1. Sinh viên mở chức năng "AI Tutor" từ màn hình kết quả bài làm.
-  2. Hệ thống thu thập context hậu kiểm gồm: Đề bài, mã nguồn bản nộp cuối cùng, kết quả Auto-Grader, AI Review, nhận xét của Giáo viên và điểm chính thức.
-  3. Sinh viên nhập câu hỏi thắc mắc về lỗi hoặc thuật toán và chọn "Gửi".
-  4. Hệ thống kiểm tra tính hợp lệ của câu hỏi và quyền truy cập context.
-  5. Backend gửi prompt kèm guardrails sư phạm Socratic đến AI Engine.
-  6. AI Tutor phân tích context và phản hồi theo phương pháp Socratic: đặt câu hỏi định hướng, gợi ý từng bước tư duy, không đưa code giải sẵn.
+  1. Sinh viên mở "AI Tutor" tại màn hình kết quả bài nộp (sau khi đã có đánh giá).
+  2. Hệ thống lấy context cần thiết gồm đề bài, mã nguồn, kết quả test và câu hỏi trước đó trong hội thoại.
+  3. Sinh viên nhập câu hỏi và chọn "Gửi".
+  4. Hệ thống kiểm tra câu hỏi, quyền truy cập context và giới hạn sử dụng.
+  5. Backend gửi prompt kèm guardrails sư phạm đến AI Engine.
+  6. AI Tutor phân tích context và tạo câu trả lời mang tính gợi mở, không cung cấp ngay toàn bộ lời giải nếu chính sách không cho phép.
   7. Hệ thống hiển thị câu trả lời trong khung hội thoại.
-  8. Sinh viên tiếp tục tương tác trong phiên làm việc.
+  8. Sinh viên tiếp tục đặt câu hỏi trong cùng phiên.
 - **Luồng tương tác thay thế**:
-  - 8a. Sinh viên làm mới phiên hội thoại: Hệ thống xóa lịch sử hội thoại tạm thời và bắt đầu phiên hỏi đáp mới.
+  - 2a. Sinh viên không chọn bài làm hoặc bài nộp: Hệ thống chỉ gửi context của đề bài và các thông tin được phép xem.
+  - 8a. Sinh viên bắt đầu hội thoại mới: Hệ thống xóa context hội thoại trước khỏi phiên hiện tại và khởi tạo phiên mới.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Bài tập chưa có kết quả (đang DRAFT hoặc đang GRADING): Hệ thống từ chối mở AI Tutor và thông báo "AI Tutor chỉ khả dụng sau khi bài làm đã có kết quả đánh giá."
-  - E2 - Câu hỏi rỗng hoặc vượt giới hạn: Hệ thống yêu cầu nhập lại câu hỏi hợp lệ.<br>  - E3 - Dịch vụ AI không khả dụng: Hệ thống thông báo "AI Tutor hiện không khả dụng, vui lòng thử lại sau."
+  - E1 - Câu hỏi rỗng hoặc vượt giới hạn: Hệ thống yêu cầu Sinh viên nhập câu hỏi hợp lệ.
+  - E2 - AI Service không khả dụng: Hệ thống thông báo "AI Tutor hiện không khả dụng, vui lòng thử lại sau."
+  - E3 - Nội dung yêu cầu không phù hợp chính sách: Hệ thống từ chối yêu cầu và hiển thị thông báo phù hợp.
 
 ---
 
 ### UC-15 — Xem bài đã nộp
-- **Mô tả**: Cho phép Sinh viên xem lại bản nộp chính thức duy nhất của mình cho một bài tập, bao gồm mã nguồn đã nộp, thời gian nộp và trạng thái xử lý.
+- **Mô tả**: Cho phép Sinh viên xem lại bản nộp chính thức của mình đối với từng bài tập.
 - **Tác nhân**: Sinh viên.
-- **Tiền điều kiện**: Sinh viên đã đăng nhập và bài tập đã có bản nộp chính thức (SUBMITTED, GRADING, hoặc COMPLETED).
-- **Hậu điều kiện**: Thông tin bản nộp duy nhất được hiển thị ở chế độ chỉ đọc (Read-only); không có dữ liệu nào bị thay đổi.
+- **Tiền điều kiện**: Sinh viên đã đăng nhập và có phiên xác thực hợp lệ.
+- **Hậu điều kiện**: Bài nộp chính thức (duy nhất) của Sinh viên cho từng bài tập được hiển thị; dữ liệu bài nộp không bị thay đổi.
 - **Luồng tương tác chính**:
-  1. Sinh viên truy cập mục "Bài đã nộp" của một bài tập.
-  2. Hệ thống xác thực phiên đăng nhập và quyền truy cập của Sinh viên.
-  3. Hệ thống truy vấn bản nộp chính thức duy nhất của Sinh viên đối với bài tập đó.
-  4. Hệ thống hiển thị thông tin chi tiết: Mã nguồn đã nộp, thời điểm nộp, hình thức nộp (MANUAL hoặc AUTO_EXPIRED), trạng thái hiện tại (SUBMITTED / GRADING / COMPLETED) và kết quả nếu đã chấm xong.
-  5. Sinh viên xem lại mã nguồn và thông tin nộp bài.
+  1. Sinh viên truy cập mục "Lịch sử làm bài" hoặc lịch sử nộp bài của một bài tập.
+  2. Hệ thống xác thực phiên đăng nhập.
+  3. Hệ thống truy vấn bài nộp chính thức (duy nhất) thuộc về Sinh viên theo từng bài tập.
+  4. Hệ thống sắp xếp danh sách theo thời gian nộp và hiển thị bài tập, thời điểm nộp, trigger_type (MANUAL/ AUTO_EXPIRED), trạng thái, điểm và ngôn ngữ.
+  5. Sinh viên chọn một bài tập để xem mã nguồn, kết quả test và feedback được phép xem của bài nộp tương ứng.
 - **Luồng tương tác thay thế**:
-  - 4a. Sinh viên chưa nộp bài (vẫn ở DRAFT): Hệ thống hiển thị thông báo "Bạn chưa có bản nộp chính thức cho bài tập này."
+  - 4a. Sinh viên lọc lịch sử: Hệ thống lọc theo bài tập, lớp, trạng thái hoặc khoảng thời gian.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Phiên đăng nhập hết hạn: Hệ thống yêu cầu đăng nhập lại.
-  - E2 - Lỗi truy vấn dữ liệu: Hệ thống thông báo "Không thể tải thông tin bài nộp, vui lòng thử lại sau."
+  - E1 - Không có lịch sử bài nộp: Hệ thống hiển thị danh sách rỗng và thông báo "Chưa có bài nộp nào."
+  - E2 - Lỗi truy vấn dữ liệu: Hệ thống thông báo "Không thể tải lịch sử làm bài, vui lòng thử lại sau."
 
 ---
 
 ### UC-16 — Xem bảng điểm cá nhân
-- **Mô tả**: Cho phép Sinh viên xem bảng tổng hợp điểm các bài tập và các lớp học mà mình tham gia.
+- **Mô tả**: Cho phép Sinh viên xem tổng hợp điểm các bài tập và lớp học mà mình tham gia.
 - **Tác nhân**: Sinh viên.
 - **Tiền điều kiện**: Sinh viên đã đăng nhập và có phiên xác thực hợp lệ.
-- **Hậu điều kiện**: Bảng điểm cá nhân được hiển thị; dữ liệu điểm không bị thay đổi.
+- **Hậu điều kiện**: Bảng điểm cá nhân được hiển thị theo dữ liệu kết quả đã được chấm; dữ liệu điểm không bị thay đổi.
 - **Luồng tương tác chính**:
   1. Sinh viên truy cập trang "Bảng điểm".
   2. Hệ thống xác thực phiên đăng nhập.
-  3. Hệ thống truy vấn danh sách kết quả học tập của Sinh viên theo từng lớp và bài tập.
-  4. Hệ thống hiển thị bảng điểm gồm: Tên bài tập, lớp học, điểm chính thức (do Giáo viên xác nhận kèm nhận xét), hoặc điểm Auto-Grader (với nhãn 'Tạm tính' nếu Giáo viên chưa xác nhận chính thức), trạng thái bài làm và thời gian cập nhật.
-  5. Sinh viên tìm kiếm hoặc lọc bảng điểm theo lớp hoặc học kỳ.
+  3. Hệ thống truy vấn các kết quả đã được chấm thuộc về Sinh viên.
+  4. Hệ thống tổng hợp điểm theo bài tập và lớp học theo quy tắc đã cấu hình.
+  5. Hệ thống hiển thị bảng điểm gồm bài tập, lớp, điểm, trạng thái và thời gian cập nhật.
+  6. Sinh viên xem hoặc lọc điểm theo bài tập, lớp hoặc khoảng thời gian.
 - **Luồng tương tác thay thế**:
-  - 4a. Bài tập đang trong quá trình chấm hoặc chưa tới hạn: Hệ thống hiển thị trạng thái "Đang chấm" hoặc "Chưa có kết quả", không hiển thị điểm 0.
+  - 5a. Sinh viên không chọn bộ lọc: Hệ thống hiển thị toàn bộ bảng điểm mà Sinh viên được phép xem.
+  - 5b. Một số bài chưa có điểm cuối: Hệ thống hiển thị trạng thái đang chờ chấm hoặc chưa có kết quả thay vì tự động coi là điểm 0.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Không có kết quả: Hệ thống hiển thị bảng điểm trống và thông báo "Chưa có kết quả học tập."
-  - E2 - Lỗi hệ thống: Hệ thống thông báo "Không thể tải bảng điểm, vui lòng thử lại sau."
+  - E1 - Không có kết quả đã chấm: Hệ thống hiển thị bảng điểm rỗng và thông báo "Chưa có kết quả được chấm."
+  - E2 - Lỗi tổng hợp điểm: Hệ thống thông báo "Không thể tải bảng điểm, vui lòng thử lại sau."
 
 ---
 
-### UC-17 — *(ĐÃ BỊ HỦY BỎ)*
-- **Mô tả**: Đã bỏ chức năng tạo lớp ở cấp Giáo viên. Việc tạo lớp được quản lý tập trung ở cấp Quản trị viên / Giáo vụ trong UC-38.
-- **Tác nhân**: Không áp dụng.
+## PHẦN III. PHÂN HỆ GIÁO VIÊN (UC-17 ĐẾN UC-27)
 
 ---
 
-### UC-18 — *(ĐÃ BỊ HỦY BỎ)*
-- **Mô tả**: Đã bỏ chức năng chỉnh sửa lớp ở cấp Giáo viên. Việc chỉnh sửa lớp được quản lý tập trung ở cấp Quản trị viên / Giáo vụ trong UC-39.
-- **Tác nhân**: Không áp dụng.
-
----
-
-### UC-19 — *(ĐÃ BỊ HỦY BỎ)*
-- **Mô tả**: Chức năng Đóng/Mở lớp đã được chuyển sang UC-40. Chức năng Lưu trữ/Khôi phục/Xóa lớp đã được chuyển sang UC-41. Không sử dụng UC-19.
-- **Tác nhân**: Không áp dụng.
-
----
-
-### UC-20 — *(ĐÃ BỊ HỦY BỎ)*
-- **Mô tả**: Đã bỏ chức năng quản lý sinh viên ở cấp Giáo viên. Việc quản lý sinh viên trong lớp được quản lý tập trung ở cấp Quản trị viên / Giáo vụ trong UC-42.
-- **Tác nhân**: Không áp dụng.
-
----
-
-### UC-21 — Tạo bài tập
-- **Mô tả**: Cho phép Giáo viên tạo bài tập mới và thiết lập cấu hình ban đầu cần thiết cho bài tập.
+### UC-17 — Tạo bài tập
+- **Mô tả**: Cho phép Giáo viên tạo bài tập và thiết lập cấu hình ban đầu gồm: thông tin chung, thời hạn nộp bài (một mốc duy nhất, không gia hạn) và tiêu chí chấm điểm.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập và có quyền quản lý bài tập trong hệ thống.
-- **Hậu điều kiện**: Bài tập mới được tạo thành công với cấu hình ban đầu và lưu vào cơ sở dữ liệu.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập vào hệ thống. Giáo viên có quyền quản lý bài tập trong lớp phụ trách. Lớp đang ở trạng thái Hoạt động.
+- **Hậu điều kiện**: Bài tập được tạo thành công.
 - **Luồng tương tác chính**:
-  1. Giáo viên chọn chức năng "Tạo bài tập".
-  2. Hệ thống hiển thị biểu mẫu tạo bài tập gồm: Tên bài, đề bài/mô tả, ngôn ngữ lập trình cho phép, mức độ khó, giới hạn thời gian thực thi (Time Limit), giới hạn bộ nhớ (Memory Limit) và Deadline ban đầu.
-  3. Giáo viên nhập đầy đủ thông tin cấu hình ban đầu.
-  4. Giáo viên chọn "Lưu bài tập".
-  5. Hệ thống kiểm tra tính hợp lệ của dữ liệu (tên bài, hạn nộp phải trong tương lai, giới hạn tài nguyên hợp lệ).
-  6. Hệ thống lưu bài tập vào cơ sở dữ liệu.
-  7. Hệ thống thông báo "Tạo bài tập thành công." và chuyển đến trang chi tiết bài tập để thiết lập Test Cases (UC-25) và Rubric (UC-26).
-- **Luồng tương tác thay thế**:
-  - 4a. Giáo viên chọn "Hủy": Hệ thống hủy thao tác và quay lại danh sách bài tập.
+  1. Giáo viên chọn chức năng Tạo bài tập.
+  2. Hệ thống hiển thị biểu mẫu thông tin bài tập.
+  3. Giáo viên nhập các thông tin của bài tập như tên bài tập, mô tả, thời hạn và các yêu cầu liên quan.
+  4. Giáo viên cấu hình các tiêu chí chấm điểm và trọng số tương ứng.
+  5. Hệ thống kiểm tra tính hợp lệ của các thông tin cấu hình.
+  6. Hệ thống lưu thông tin bài tập và các chính sách đã cấu hình.
+  7. Hệ thống thông báo cấu hình bài tập thành công.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Thông tin bài tập không hợp lệ: Hệ thống thông báo lỗi các trường chưa đúng quy định.
-  - E2 - Deadline không hợp lệ: Hệ thống thông báo "Hạn nộp phải lớn hơn thời điểm hiện tại."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Tạo bài tập thất bại, vui lòng thử lại sau."
+  - E1 - Thông tin bài tập không hợp lệ: Hệ thống thông báo lỗi và yêu cầu Giáo viên kiểm tra, cập nhật lại thông tin.
+  - E2 - Thời hạn không hợp lệ: Hệ thống thông báo lỗi và yêu cầu Giáo viên kiểm tra lại thời gian cấu hình.
+  - E3 - Không thể lưu cấu hình bài tập: Hệ thống thông báo lỗi và không tạo bài tập mới.
 
 ---
 
-### UC-22 — Chỉnh sửa thông tin chung bài tập
-- **Mô tả**: Cho phép Giáo viên cập nhật các thông tin chung của bài tập (Tên bài, Đề bài, Ngôn ngữ hỗ trợ, Mức độ khó, Giới hạn tài nguyên). Không bao gồm Deadline, Test Cases hay Rubric.
+### UC-18 — Chỉnh sửa thông tin chung bài tập
+- **Mô tả**: Cho phép Giáo viên cập nhật các thông tin chung của bài tập do mình quản lý, gồm Tên bài tập, Đề bài, Ngôn ngữ hỗ trợ, Mức độ khó và Giới hạn tài nguyên. Chức năng này không bao gồm việc thay đổi Hạn nộp, Bộ Test Case hoặc Tiêu chí chấm điểm.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập và bài tập tồn tại trong hệ thống.
-- **Hậu điều kiện**: Thông tin chung của bài tập được cập nhật; các cấu hình Deadline, Test Cases, Rubric không bị ảnh hưởng.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập. Bài tập tồn tại và đang ở trạng thái cho phép chỉnh sửa.
+- **Hậu điều kiện**: Thông tin chung của bài tập được cập nhật thành công. Các bài nộp đã tồn tại không bị thay đổi bởi thao tác cập nhật thông tin chung.
 - **Luồng tương tác chính**:
-  1. Giáo viên mở danh sách bài tập và chọn bài tập cần chỉnh sửa.
-  2. Hệ thống hiển thị thông tin chung hiện tại của bài tập.
-  3. Giáo viên chỉnh sửa các trường thông tin chung (Tên bài, đề bài, ngôn ngữ, độ khó, Time/Memory Limit).
-  4. Giáo viên chọn "Lưu thay đổi".
-  5. Hệ thống kiểm tra tính hợp lệ của dữ liệu.
-  6. Hệ thống cập nhật thông tin chung vào cơ sở dữ liệu.
-  7. Hệ thống thông báo "Cập nhật thông tin chung bài tập thành công."
+  1. Giáo viên mở danh sách bài tập và chọn bài cần chỉnh sửa.
+  2. Hệ thống kiểm tra quyền truy cập và hiển thị thông tin bài tập hiện tại.
+  3. Giáo viên chỉnh sửa thông tin chung của bài tập.
+  4. Giáo viên chọn "Lưu".
+  5. Hệ thống kiểm tra tính hợp lệ của dữ liệu và tính tương thích với bài nộp hiện có.
+  6. Hệ thống cập nhật bài tập hoặc lưu phiên bản mới theo quy định.
+  7. Hệ thống thông báo "Cập nhật bài tập thành công."
 - **Luồng tương tác thay thế**:
-  - 4a. Giáo viên chọn "Hủy": Hệ thống hủy bỏ thay đổi và giữ nguyên thông tin hiện tại.
+  - 5a. Bài tập đã được giao hoặc có bài nộp: Hệ thống giới hạn các trường được phép sửa (chỉ cho sửa mô tả/đề bài) hoặc yêu cầu xác nhận tạo phiên bản mới trước khi lưu.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Không tìm thấy bài tập: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Giáo viên không có quyền: Hệ thống từ chối truy cập.
+  - E2 - Giáo viên không có quyền: Hệ thống từ chối yêu cầu và không cho phép chỉnh sửa.
   - E3 - Dữ liệu không hợp lệ: Hệ thống thông báo "Thông tin bài tập không hợp lệ."
-  - E4 - Lỗi lưu dữ liệu: Hệ thống thông báo "Cập nhật bài tập thất bại."
+  - E4 - Lỗi khi lưu: Hệ thống thông báo "Không thể cập nhật bài tập, vui lòng thử lại sau."
 
 ---
 
-### UC-23 — Xóa bài tập
-- **Mô tả**: Cho phép Giáo viên xóa hoặc vô hiệu hóa bài tập theo chính sách bảo toàn dữ liệu.
+### UC-19 — Xóa bài tập
+- **Mô tả**: Cho phép Giáo viên xóa hoặc vô hiệu hóa bài tập theo trạng thái và chính sách lưu trữ dữ liệu.
 - **Tác nhân**: Giáo viên.
 - **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập và bài tập tồn tại.
-- **Hậu điều kiện**: Bài tập được xóa hoặc vô hiệu hóa (xóa mềm) để bảo toàn dữ liệu bài nộp và điểm đã có.
+- **Hậu điều kiện**: Bài tập được xóa mềm, vô hiệu hóa hoặc xóa theo chính sách; bài nộp, điểm và lịch sử liên quan được lưu theo chính sách.
 - **Luồng tương tác chính**:
   1. Giáo viên mở danh sách bài tập và chọn bài cần xóa.
-  2. Giáo viên chọn "Xóa bài tập".
-  3. Hệ thống hiển thị hộp thoại xác nhận cảnh báo về dữ liệu liên quan.
-  4. Giáo viên xác nhận xóa.
-  5. Hệ thống kiểm tra trạng thái bài tập và dữ liệu bài nộp liên quan.
-  6. Hệ thống thực hiện xóa mềm (Soft Delete) hoặc vô hiệu hóa bài tập.
+  2. Giáo viên chọn "Xóa".
+  3. Hệ thống hiển thị hộp thoại xác nhận và thông tin về dữ liệu bị ảnh hưởng.
+  4. Giáo viên xác nhận thao tác.
+  5. Hệ thống kiểm tra trạng thái bài tập, quyền truy cập và dữ liệu liên quan.
+  6. Hệ thống thực hiện xóa mềm hoặc vô hiệu hóa bài tập theo quy tắc nghiệp vụ.
   7. Hệ thống thông báo "Xử lý bài tập thành công." và cập nhật lại danh sách.
 - **Luồng tương tác thay thế**:
-  - 4a. Giáo viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên bài tập.
-  - 6a. Bài tập chưa giao và chưa có bài nộp nào: Hệ thống thực hiện xóa bản ghi bài tập.
+  - 5a. Bài tập đã có bài nộp: Hệ thống chuyển bài tập sang trạng thái vô hiệu hóa / xóa mềm thay vì xóa dữ liệu vật lý.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy bài tập: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Giáo viên không có quyền: Hệ thống từ chối yêu cầu.
-  - E3 - Lỗi hệ thống: Hệ thống thông báo "Không thể xóa bài tập, vui lòng thử lại sau."
+  - E1 - Không tìm thấy bài tập: Hệ thống thông báo "Bài tập không tồn tại hoặc đã được xử lý."
+  - E2 - Bài tập đang được sử dụng: Hệ thống thông báo "Bài tập đang có dữ liệu liên quan và không thể xóa trực tiếp."
+  - E3 - Lỗi xử lý: Hệ thống thông báo "Không thể xóa hoặc vô hiệu hóa bài tập, vui lòng thử lại sau."
 
 ---
 
-### UC-24 — Thiết lập hạn nộp bài
-- **Mô tả**: Cho phép Giáo viên thiết lập và điều chỉnh thời hạn kết thúc nộp bài (Deadline) cho bài tập.
+### UC-20 — Thiết lập hạn nộp bài
+- **Mô tả**: Chức năng này cho phép Giáo viên thiết lập và điều chỉnh thời hạn nộp bài cho một bài tập đã được tạo.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập và bài tập tồn tại.
-- **Hậu điều kiện**: Thời hạn nộp bài (Deadline) mới được cập nhật và áp dụng cho toàn bộ sinh viên được giao bài.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập của lớp. Bài tập đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Hạn nộp bài mới được cập nhật thành công và áp dụng cho tất cả sinh viên thuộc các lớp được giao bài tập này. Nếu thất bại, giữ nguyên hạn nộp cũ.
 - **Luồng tương tác chính**:
-  1. Giáo viên truy cập danh sách bài tập và chọn bài tập cần cấu hình Deadline.
-  2. Hệ thống hiển thị thông tin bài tập và Deadline hiện tại.
-  3. Giáo viên chọn/nhập ngày và giờ hạn nộp bài mới.
-  4. Giáo viên chọn "Lưu hạn nộp".
+  1. Giáo viên truy cập danh sách bài tập và chọn bài tập cần thiết lập hạn nộp.
+  2. Hệ thống hiển thị thông tin bài tập và hạn nộp hiện tại (nếu có).
+  3. Giáo viên nhập/chọn ngày và giờ hạn nộp bài mới.
+  4. Giáo viên chọn "Lưu".
   5. Hệ thống kiểm tra tính hợp lệ của thời gian (phải lớn hơn thời điểm hiện tại).
-  6. Hệ thống cập nhật Deadline mới vào cơ sở dữ liệu.
-  7. Hệ thống thông báo "Thiết lập hạn nộp bài thành công."
+  6. Hệ thống cập nhật hạn nộp bài mới vào CSDL.
+  7. Hệ thống thông báo "Thiết lập hạn nộp bài thành công." và hiển thị hạn nộp mới.
 - **Luồng tương tác thay thế**:
-  - 4a. Giáo viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên Deadline cũ.
+  - 3a. Bài tập chưa từng thiết lập hạn nộp: Hệ thống tạo mới bản ghi hạn nộp bài và lưu vào CSDL.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Deadline không hợp lệ: Hệ thống thông báo "Hạn nộp bài phải lớn hơn thời điểm hiện tại."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Thiết lập hạn nộp bài thất bại."
+  - E2 - Hạn nộp không hợp lệ: Hệ thống thông báo "Hạn nộp bài không hợp lệ hoặc phải lớn hơn thời điểm hiện tại."
+  - E3 - Bài tập đã kết thúc/Đã đóng: Hệ thống thông báo "Không thể thay đổi hạn nộp bài của bài tập đã đóng."
+  - E4 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Thiết lập hạn nộp bài thất bại."
 
 ---
 
-### UC-25 — Thiết lập test case
-- **Mô tả**: Cho phép Giáo viên quản lý bộ Test Cases (thêm, sửa, xóa) phục vụ quy trình chấm điểm tự động. Việc cấu hình Sample Test Cases không cung cấp chức năng chạy thử cho Sinh viên.
+### UC-21 — Thiết lập test case
+- **Mô tả**: Cho phép Giáo viên quản lý bộ Test Case (thêm, sửa, xóa) của một bài tập phục vụ chấm điểm tự động.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập và bài tập tồn tại trên hệ thống.
-- **Hậu điều kiện**: Bộ Test Cases được cập nhật và lưu trữ làm cơ sở chấm tự động trong Docker Sandbox sau Deadline.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập; có quyền quản lý bài tập; bài tập đã tồn tại trên hệ thống.
+- **Hậu điều kiện**: Bộ Test Case được cập nhật thành công và sẵn sàng sử dụng cho lượt nộp của sinh viên.
 - **Luồng tương tác chính**:
-  1. Giáo viên mở chi tiết bài tập và chọn mục "Thiết lập Test Case".
-  2. Hệ thống hiển thị danh sách Test Cases hiện có của bài tập.
-  3. Giáo viên thực hiện Thêm mới, Chỉnh sửa hoặc Xóa Test Case.
-  4. Với mỗi Test Case, Giáo viên nhập: Input, Expected Output, Phân loại (Sample Test Case hoặc Hidden Test Case) và Trọng số điểm.
-  5. Giáo viên chọn "Lưu bộ Test Case".
-  6. Hệ thống kiểm tra tính hợp lệ của bộ Test Cases (Input, Output không rỗng, trọng số hợp lệ).
-  7. Hệ thống lưu bộ Test Cases vào cơ sở dữ liệu và thông báo "Thiết lập Test Case thành công."
+  1. Giáo viên truy cập danh sách bài tập và chọn bài tập cần thiết lập Test Case.
+  2. Hệ thống hiển thị thông tin bài tập và danh sách Test Case hiện có.
+  3. Giáo viên thực hiện cấu hình bộ Test Case (Thêm mới, Chỉnh sửa, hoặc Xóa các Test Case).
+  4. Đối với mỗi Test Case, Giáo viên nhập: Input, Output mong đợi, Phân loại (Sample/Hidden) và Trọng số điểm.
+  5. Giáo viên chọn "Lưu".
+  6. Hệ thống kiểm tra tính hợp lệ của bộ Test Case.
+  7. Hệ thống lưu bộ Test Case vào CSDL và hiển thị thông báo "Thiết lập Test Case thành công."
 - **Luồng tương tác thay thế**:
-  - 3a. Xóa Test Case: Giáo viên chọn xóa một test case, xác nhận trong hộp thoại và hệ thống cập nhật danh sách tạm trước khi Lưu.
+  - 3a. Xóa Test Case: Giáo viên chọn xóa một Test Case. Hệ thống yêu cầu xác nhận. Giáo viên xác nhận. Hệ thống xoá khỏi danh sách tạm trước khi Lưu.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Dữ liệu Test Case không hợp lệ: Hệ thống thông báo "Dữ liệu đầu vào hoặc kết quả mong đợi không được để trống."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Thiết lập Test Case thất bại."
+  - E2 - Thông tin Test Case không hợp lệ: Hệ thống thông báo "Dữ liệu đầu vào hoặc kết quả đầu ra của Test Case không được để trống."
+  - E3 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Thiết lập Test Case thất bại."
 
 ---
 
-### UC-26 — Thiết lập rubric
-- **Mô tả**: Cho phép Giáo viên thiết lập bộ tiêu chí đánh giá và trọng số điểm (Rubric) cho bài tập.
+### UC-22 — Thiết lập rubric
+- **Mô tả**: Cho phép Giáo viên quản lý bộ tiêu chí và mức điểm đánh giá (Rubric) cho bài tập.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập và bài tập tồn tại trên hệ thống.
-- **Hậu điều kiện**: Rubric được lưu thành công làm căn cứ đánh giá tổng hợp cho bài tập.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập; có quyền quản lý bài tập; bài tập đã tồn tại trên hệ thống.
+- **Hậu điều kiện**: Rubric được lưu thành công làm cơ sở tính điểm tổng hợp cho bài nộp của sinh viên.
 - **Luồng tương tác chính**:
-  1. Giáo viên mở chi tiết bài tập và chọn mục "Thiết lập Rubric".
-  2. Hệ thống hiển thị danh sách tiêu chí đánh giá hiện tại.
-  3. Giáo viên cấu hình danh sách tiêu chí (Tên tiêu chí, Mô tả, Mức điểm/Trọng số). Tiêu chí Correctness do hệ thống tự động tính từ kết quả Hidden Test Cases.
-  4. Giáo viên chọn "Lưu Rubric".
-  5. Hệ thống kiểm tra tổng trọng số các tiêu chí (phải bằng 100% hoặc tổng thang điểm quy định).
-  6. Hệ thống lưu Rubric vào cơ sở dữ liệu.
-  7. Hệ thống thông báo "Thiết lập Rubric thành công."
+  1. Giáo viên truy cập danh sách bài tập và chọn bài tập cần thiết lập Rubric.
+  2. Hệ thống hiển thị danh sách các tiêu chí đánh giá hiện tại.
+  3. Giáo viên cấu hình danh sách tiêu chí (Tên tiêu chí, Mô tả, Mức điểm/Trọng số). Lưu ý: Tiêu chí Correctness do hệ thống tự động tính từ Test Case.
+  4. Giáo viên chọn "Lưu".
+  5. Hệ thống kiểm tra tổng trọng số/điểm các tiêu chí và tính hợp lệ của Rubric.
+  6. Hệ thống lưu thông tin Rubric vào CSDL và hiển thị thông báo "Thiết lập Rubric thành công."
 - **Luồng tương tác thay thế**:
-  - 3a. Xóa tiêu chí: Giáo viên chọn xóa một tiêu chí (khác tiêu chí Correctness bắt buộc), xác nhận và lưu lại.
+  - 3a. Xóa tiêu chí: Giáo viên chọn xóa một tiêu chí (khác Correctness). Hệ thống yêu cầu xác nhận. Giáo viên xác nhận. Xóa khỏi danh sách tạm.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Trùng lặp tiêu chí: Hệ thống thông báo "Tên tiêu chí đánh giá bị trùng lặp."
-  - E3 - Tổng trọng số không hợp lệ: Hệ thống thông báo "Tổng trọng số của các tiêu chí phải bằng 100%."
-  - E4 - Lỗi lưu dữ liệu: Hệ thống thông báo "Thiết lập Rubric thất bại."
+  - E2 - Trùng tiêu chí: Hệ thống thông báo "Tên tiêu chí đánh giá bị trùng lặp."
+  - E3 - Tổng trọng số không hợp lệ: Hệ thống thông báo "Tổng trọng số của các tiêu chí phải bằng 100% (hoặc tổng thang điểm quy định)."
+  - E4 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Thiết lập Rubric thất bại."
 
 ---
 
-### UC-27 — Giao bài tập cho lớp
-- **Mô tả**: Cho phép Giáo viên giao một bài tập đã cấu hình cho một hoặc nhiều lớp học do mình phụ trách để sinh viên thực hiện.
+### UC-23 — Giao bài tập cho lớp
+- **Mô tả**: Giáo viên giao một bài tập đã có trong hệ thống cho một hoặc nhiều lớp học để sinh viên thực hiện.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập, bài tập tồn tại và lớp học cần giao đang ở trạng thái Hoạt động.
-- **Hậu điều kiện**: Bài tập được giao thành công cho các lớp đã chọn. Sinh viên trong các lớp này có thể xem đề bài và làm bài.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập hệ thống. Giáo viên có quyền quản lý và giao bài tập. Bài tập cần giao đã tồn tại trong hệ thống. Lớp học cần giao bài đã tồn tại và Giáo viên có quyền quản lý lớp.
+- **Hậu điều kiện**: Bài tập được giao thành công cho lớp đã chọn. Thông tin giao bài được lưu vào cơ sở dữ liệu. Sinh viên thuộc lớp được giao bài có thể xem và thực hiện bài tập. Nếu giao bài không thành công, hệ thống giữ nguyên thông tin hiện tại và hiển thị thông báo lỗi.
 - **Luồng tương tác chính**:
-  1. Giáo viên mở danh sách bài tập và chọn bài tập cần giao.
-  2. Giáo viên chọn chức năng "Giao bài tập cho lớp".
-  3. Hệ thống hiển thị danh sách các lớp học mà Giáo viên có quyền phụ trách và đang Hoạt động.
-  4. Giáo viên chọn một hoặc nhiều lớp cần giao.
-  5. Giáo viên chọn "Xác nhận giao bài".
-  6. Hệ thống kiểm tra tính hợp lệ của các lớp được chọn.
-  7. Hệ thống lưu thông tin giao bài vào cơ sở dữ liệu.
-  8. Hệ thống thông báo "Giao bài tập thành công."
+  1. Giáo viên chọn chức năng "Quản lý bài tập".
+  2. Hệ thống hiển thị danh sách bài tập.
+  3. Giáo viên chọn bài tập cần giao.
+  4. Hệ thống hiển thị thông tin chi tiết của bài tập.
+  5. Giáo viên chọn chức năng "Giao bài tập".
+  6. Hệ thống hiển thị danh sách các lớp mà Giáo viên có quyền quản lý.
+  7. Giáo viên chọn lớp cần giao bài tập.
+  8. Giáo viên thiết lập các thông tin giao bài nếu cần.
+  9. Giáo viên chọn "Giao bài".
+  10. Hệ thống kiểm tra tính hợp lệ của thông tin giao bài.
+  11. Hệ thống lưu thông tin giao bài vào cơ sở dữ liệu.
+  12. Hệ thống thông báo "Giao bài tập thành công."
 - **Luồng tương tác thay thế**:
-  - 4a. Giáo viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên trạng thái hiện tại.
+  - 7a. Giáo viên chọn nhiều lớp: Hệ thống cho phép Giáo viên chọn nhiều lớp để giao cùng một bài tập. Giáo viên xác nhận giao bài. Hệ thống tạo thông tin giao bài cho các lớp đã chọn.
+  - 7b. Giáo viên giao bài đã từng giao cho lớp: Hệ thống hiển thị thông tin bài tập đã được giao cho lớp. Giáo viên xác nhận giao lại bài tập hoặc cập nhật cấu hình giao bài. Hệ thống cập nhật thông tin giao bài theo lựa chọn của Giáo viên.
+  - 9a. Giáo viên chọn "Hủy": Hệ thống hủy thao tác giao bài và giữ nguyên thông tin hiện tại.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Lớp học không còn hoạt động: Hệ thống thông báo "Không thể giao bài cho lớp không ở trạng thái Hoạt động."
-  - E3 - Giáo viên không có quyền quản lý lớp: Hệ thống từ chối yêu cầu.
-  - E4 - Lỗi lưu dữ liệu: Hệ thống thông báo "Giao bài tập thất bại."
+  - E2 - Không tìm thấy lớp học hoặc lớp không còn hoạt động: Hệ thống thông báo "Không tìm thấy lớp học hoặc lớp không còn hoạt động."
+  - E3 - Giáo viên không có quyền quản lý lớp: Hệ thống thông báo "Bạn không có quyền giao bài tập cho lớp này."
+  - E4 - Thông tin giao bài không hợp lệ: Hệ thống thông báo "Thông tin giao bài không hợp lệ."
+  - E5 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Giao bài tập thất bại."
 
 ---
 
-### UC-28 — Xem bài nộp
-- **Mô tả**: Cho phép Giáo viên xem danh sách và chi tiết bản nộp chính thức duy nhất của từng sinh viên đối với bài tập đã giao.
+### UC-24 — Xem bài nộp
+- **Mô tả**: Giáo viên xem thông tin và kết quả bài nộp của sinh viên đối với một bài tập đã được giao.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền phụ trách lớp/bài tập và bài tập đã được giao.
-- **Hậu điều kiện**: Thông tin bản nộp duy nhất của sinh viên được hiển thị gồm mã nguồn, thời gian nộp, trigger_type, trạng thái và kết quả chấm; không có dữ liệu nào bị thay đổi.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập hệ thống. Giáo viên có quyền quản lý bài tập. Bài tập đã được giao cho lớp. Sinh viên đã thực hiện và nộp bài tập.
+- **Hậu điều kiện**: Giáo viên xem được thông tin bài nộp của sinh viên. Hệ thống hiển thị mã bài nộp, thời gian nộp, mã nguồn, kết quả kiểm thử và điểm số nếu đã được chấm. Không có dữ liệu nào bị thay đổi trong hệ thống.
 - **Luồng tương tác chính**:
-  1. Giáo viên mở bài tập cần kiểm tra.
-  2. Hệ thống hiển thị danh sách sinh viên trong lớp cùng trạng thái bài làm (DRAFT, SUBMITTED, GRADING, COMPLETED).
-  3. Giáo viên chọn một sinh viên có bài nộp.
-  4. Hệ thống truy vấn và hiển thị bản nộp chính thức duy nhất của sinh viên đó.
-  5. Hệ thống hiển thị mã nguồn đã nộp, thời điểm nộp, trigger_type (MANUAL hoặc AUTO_EXPIRED), kết quả Auto-Grader, AI Review và kết quả đối soát trùng lặp nếu đã chấm xong.
-  6. Giáo viên xem xét bài nộp của sinh viên.
-- **Luồng tương tác thay thế**:
-  - 3a. Sinh viên chưa có bản nộp chính thức: Hệ thống hiển thị trạng thái sinh viên chưa nộp bài.
+  1. Giáo viên chọn chức năng "Quản lý bài tập".
+  2. Hệ thống hiển thị danh sách bài tập.
+  3. Giáo viên chọn bài tập cần xem bài nộp.
+  4. Hệ thống hiển thị danh sách sinh viên và trạng thái nộp bài.
+  5. Giáo viên chọn sinh viên cần xem bài nộp.
+  6. Hệ thống hiển thị bài nộp của sinh viên.
+  7. Giáo viên chọn một bài nộp.
+  8. Hệ thống hiển thị thông tin chi tiết bài nộp gồm mã nguồn, thời gian nộp, kết quả kiểm thử, kết quả phân tích và điểm số nếu có.
+  9. Giáo viên xem thông tin bài nộp.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
   - E2 - Sinh viên không tồn tại: Hệ thống thông báo "Không tìm thấy sinh viên."
-  - E3 - Lỗi tải dữ liệu: Hệ thống thông báo "Không thể tải thông tin bài nộp."
+  - E3 - Không tìm thấy bài nộp: Hệ thống thông báo "Không tìm thấy bài nộp."
+  - E4 - Bài nộp không có mã nguồn: Hệ thống thông báo "Không có mã nguồn trong bài nộp."
+  - E5 - Kết quả chấm chưa có: Hệ thống thông báo "Bài nộp chưa có kết quả chấm."
+  - E6 - Lỗi khi tải dữ liệu: Hệ thống thông báo "Không thể tải thông tin bài nộp."
 
 ---
 
-### UC-29 — Xem điểm
-- **Mô tả**: Cho phép Giáo viên xem bảng điểm và kết quả đánh giá của sinh viên trong lớp đối với các bài tập đã giao.
+### UC-25 — Xem điểm
+- **Mô tả**: Giáo viên xem điểm và kết quả đánh giá bài làm của sinh viên đối với các bài tập đã được giao.
 - **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập và có quyền phụ trách lớp học.
-- **Hậu điều kiện**: Bảng điểm của lớp được hiển thị; dữ liệu trong hệ thống không bị thay đổi.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập hệ thống. Giáo viên có quyền xem kết quả bài tập. Bài tập đã được giao cho lớp.
+- **Hậu điều kiện**: Giáo viên xem được điểm và kết quả đánh giá của sinh viên. Thông tin trong hệ thống không bị thay đổi.
 - **Luồng tương tác chính**:
   1. Giáo viên chọn chức năng "Xem điểm".
-  2. Hệ thống hiển thị danh sách các bài tập đã giao trong lớp phụ trách.
+  2. Hệ thống hiển thị danh sách các bài tập đã giao.
   3. Giáo viên chọn bài tập cần xem điểm.
-  4. Hệ thống hiển thị danh sách sinh viên trong lớp kèm điểm số: Điểm chính thức (sau khi Giáo viên xác nhận), điểm Auto-Grader tạm tính và trạng thái chấm bài.
-  5. Giáo viên xem chi tiết điểm của từng sinh viên theo tiêu chí Rubric.
+  4. Hệ thống hiển thị danh sách sinh viên trong lớp và điểm tương ứng.
+  5. Giáo viên chọn sinh viên cần xem chi tiết.
+  6. Hệ thống hiển thị điểm và kết quả đánh giá bài làm của sinh viên.
+  7. Giáo viên xem thông tin điểm và kết quả đánh giá.
 - **Luồng tương tác thay thế**:
-  - 4a. Giáo viên lọc hoặc xuất bảng điểm: Hệ thống lọc theo tiêu chí hoặc xuất dữ liệu bảng điểm ra tệp.
-- **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy bài tập: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Chưa có kết quả chấm: Hệ thống hiển thị trạng thái đang chờ chấm.
-  - E3 - Lỗi tải dữ liệu: Hệ thống thông báo "Không thể tải thông tin bảng điểm."
-
----
-
-### UC-30 — Xem AI đánh giá
-- **Mô tả**: Cho phép Giáo viên xem kết quả đánh giá tự động do AI Review thực hiện (phân tích lỗi, chất lượng code, độ phức tạp, đề xuất cải thiện) và kết quả đối soát trùng lặp mã nguồn để hỗ trợ chấm bài.
-- **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền quản lý bài tập và hệ thống đã hoàn tất Batch Grading (COMPLETED).
-- **Hậu điều kiện**: Toàn bộ kết quả AI Review và thông tin đối soát trùng lặp được hiển thị để Giáo viên tham khảo; dữ liệu không bị thay đổi.
-- **Luồng tương tác chính**:
-  1. Giáo viên mở danh sách bài nộp của bài tập.
-  2. Giáo viên chọn sinh viên cần xem đánh giá AI.
-  3. Hệ thống hiển thị kết quả AI Review gồm: Đánh giá Code Quality, Code Style, độ phức tạp thuật toán (Complexity), phân tích lỗi test case và thông tin đối soát trùng lặp mã nguồn.
-  4. Giáo viên xem xét thông tin đánh giá để chuẩn bị cho bước chấm thủ công.
-- **Luồng tương tác thay thế**:
-  - 3a. Giáo viên chuyển sang xem bài làm của sinh viên khác: Hệ thống tải dữ liệu đánh giá AI của sinh viên được chọn tiếp theo.
-- **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy bài nộp: Hệ thống thông báo "Không tìm thấy bài nộp."
-  - E2 - Bài nộp chưa hoàn tất đánh giá: Hệ thống thông báo "Bài nộp chưa có kết quả đánh giá AI."
-  - E3 - Lỗi tải dữ liệu: Hệ thống thông báo "Không thể tải kết quả đánh giá AI."
-
----
-
-### UC-31 — Đánh giá / chấm bài thủ công
-- **Mô tả**: Cho phép Giáo viên đánh giá mã nguồn theo Rubric, điều chỉnh điểm, nhập nhận xét và xác nhận điểm chính thức (Official Score) cho bài làm của sinh viên.
-- **Tác nhân**: Giáo viên.
-- **Tiền điều kiện**: Giáo viên đã đăng nhập, có quyền phụ trách lớp và bài nộp đã hoàn tất đánh giá tự động (COMPLETED).
-- **Hậu điều kiện**: Điểm số và nhận xét của Giáo viên được lưu; điểm do Giáo viên xác nhận trở thành Điểm chính thức (Official Score) của bài tập. Kết quả Auto-Grader và AI được lưu giữ làm tài liệu tham khảo.
-- **Luồng tương tác chính**:
-  1. Giáo viên mở bài nộp của sinh viên cần chấm.
-  2. Hệ thống hiển thị mã nguồn bản nộp cuối, kết quả Auto-Grader, AI Review, Rubric và thông tin đối soát trùng lặp.
-  3. Giáo viên xem xét mã nguồn và đánh giá điểm theo từng tiêu chí trong Rubric.
-  4. Giáo viên nhập/điều chỉnh điểm số cho từng tiêu chí.
-  5. Giáo viên nhập nhận xét đánh giá dành cho sinh viên.
-  6. Giáo viên chọn "Xác nhận điểm chính thức".
-  7. Hệ thống kiểm tra tính hợp lệ của điểm số (nằm trong thang điểm quy định).
-  8. Hệ thống lưu kết quả chấm, ghi nhận điểm Giáo viên thành Điểm chính thức (Official Score).
-  9. Hệ thống thông báo "Chấm bài và xác nhận điểm chính thức thành công."
-- **Luồng tương tác thay thế**:
-  - 6a. Giáo viên chọn "Lưu tạm thời": Hệ thống lưu bản nháp kết quả chấm của Giáo viên nhưng chưa công bố thành Điểm chính thức.
+  - 5a. Giáo viên chọn lớp khác: Hệ thống hiển thị danh sách sinh viên và điểm của lớp được chọn.
+  - 5b. Giáo viên chọn sinh viên khác: Hệ thống hiển thị điểm và kết quả đánh giá của sinh viên được chọn.
+  - 5c. Giáo viên chọn xem chi tiết điểm: Hệ thống hiển thị điểm theo từng tiêu chí đánh giá và kết quả kiểm thử của bài làm.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
-  - E2 - Điểm đánh giá không hợp lệ: Hệ thống thông báo "Điểm nhập vào vượt quá thang điểm quy định của tiêu chí."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Lưu kết quả chấm bài thất bại."
+  - E2 - Không tìm thấy sinh viên: Hệ thống thông báo "Không tìm thấy sinh viên."
+  - E3 - Chưa có kết quả chấm: Hệ thống thông báo "Bài tập chưa có kết quả chấm."
+  - E4 - Không có điểm: Hệ thống thông báo "Sinh viên chưa có điểm."
+  - E5 - Lỗi khi tải dữ liệu: Hệ thống thông báo "Không thể tải thông tin điểm."
 
 ---
 
-### UC-32 — Tạo tài khoản người dùng
-- **Mô tả**: Cho phép Quản trị viên tạo tài khoản cho Sinh viên, Giáo viên hoặc Giáo vụ để sử dụng hệ thống.
+### UC-26 — Xem AI đánh giá
+- **Mô tả**: Giáo viên xem kết quả phân tích và đánh giá bài nộp do hệ thống AI thực hiện nhằm hỗ trợ quá trình chấm bài. Kết quả đánh giá AI được tạo dựa trên kết quả kiểm thử, phân tích mã nguồn và các tiêu chí đánh giá/rubric của bài tập. Kết quả do AI cung cấp chỉ mang tính tham khảo và không tự động trở thành điểm chính thức của sinh viên.
+- **Tác nhân**: Giáo viên.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập hệ thống. Giáo viên có quyền xem kết quả đánh giá. Bài tập đã được giao cho lớp.
+- **Hậu điều kiện**: Giáo viên xem được kết quả đánh giá của AI. Hệ thống hiển thị điểm AI, kết quả kiểm thử, kết quả phân tích mã nguồn và nhận xét đánh giá. Không có dữ liệu nào bị thay đổi trong hệ thống.
+- **Luồng tương tác chính**:
+  1. Giáo viên chọn chức năng "Xem AI đánh giá".
+  2. Hệ thống hiển thị danh sách bài tập đã được giao.
+  3. Giáo viên chọn bài tập cần xem kết quả đánh giá AI.
+  4. Hệ thống hiển thị danh sách sinh viên và trạng thái đánh giá AI.
+  5. Giáo viên chọn sinh viên cần xem.
+  6. Hệ thống hiển thị danh sách bài nộp của sinh viên.
+  7. Giáo viên chọn bài nộp cần xem đánh giá AI.
+  8. Hệ thống hiển thị kết quả đánh giá AI gồm điểm đánh giá, kết quả Test Case, kết quả phân tích mã nguồn và nhận xét.
+  9. Giáo viên xem kết quả đánh giá AI.
+- **Luồng tương tác thay thế**:
+  - 7a. Giáo viên chọn sinh viên khác: Hệ thống hiển thị danh sách bài nộp của sinh viên được chọn.
+  - 7b. Giáo viên chọn bài nộp khác: Hệ thống hiển thị kết quả đánh giá AI của bài nộp được chọn.
+  - 7c. Giáo viên chọn xem chi tiết đánh giá: Hệ thống hiển thị chi tiết điểm đánh giá theo từng tiêu chí. Hệ thống hiển thị kết quả từng Test Case và kết quả phân tích mã nguồn tương ứng.
+- **Luồng tương tác ngoại lệ**:
+  - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
+  - E2 - Sinh viên không tồn tại: Hệ thống thông báo "Không tìm thấy sinh viên."
+  - E3 - Không tìm thấy bài nộp: Hệ thống thông báo "Không tìm thấy bài nộp."
+  - E4 - AI chưa đánh giá bài nộp: Hệ thống thông báo "Bài nộp chưa có kết quả đánh giá AI."
+  - E5 - Kết quả đánh giá AI không đầy đủ: Hệ thống thông báo "Kết quả đánh giá AI chưa đầy đủ."
+  - E6 - Lỗi khi tải kết quả đánh giá: Hệ thống thông báo "Không thể tải kết quả đánh giá AI."
+
+---
+
+### UC-27 — Đánh giá/chấm bài thủ công
+- **Mô tả**: Giáo viên đánh giá và chấm điểm bài làm của sinh viên theo Rubric đã thiết lập cho bài tập.
+- **Tác nhân**: Giáo viên.
+- **Tiền điều kiện**: Giáo viên đã đăng nhập hệ thống. Giáo viên có quyền chấm bài. Bài tập đã được giao cho lớp. Sinh viên đã nộp bài.
+- **Hậu điều kiện**: Điểm và nhận xét của Giáo viên được lưu cho bài nộp. Điểm chỉ trở thành điểm chính thức (Official Score) sau khi Giáo viên thực hiện bước "Xác nhận điểm chính thức"; trước đó chỉ là bản lưu tạm. Điểm Auto-Grader và AI được giữ lại để tham khảo, không bị xóa.
+- **Luồng tương tác chính**:
+  1. Giáo viên chọn chức năng "Chấm bài".
+  2. Hệ thống hiển thị danh sách bài tập đã được giao.
+  3. Giáo viên chọn bài tập cần chấm.
+  4. Hệ thống hiển thị danh sách sinh viên và trạng thái chấm bài.
+  5. Giáo viên chọn sinh viên cần chấm.
+  6. Hệ thống hiển thị bài nộp của sinh viên gồm mã nguồn và các thông tin liên quan.
+  7. Giáo viên xem và đánh giá bài làm theo từng tiêu chí trong Rubric.
+  8. Giáo viên nhập điểm và nhận xét cho bài làm.
+  9. Giáo viên chọn "Lưu kết quả".
+  10. Hệ thống kiểm tra tính hợp lệ của điểm và thông tin đánh giá.
+  11. Hệ thống lưu kết quả chấm bài vào cơ sở dữ liệu (chưa phải điểm chính thức).
+  12. Giáo viên chọn "Xác nhận điểm chính thức".
+  13. Hệ thống ghi nhận điểm đã lưu thành Official Score và thông báo "Xác nhận điểm chính thức thành công."
+- **Luồng tương tác thay thế**:
+  - 7a. Giáo viên chỉnh sửa điểm: Hệ thống hiển thị điểm hiện tại. Giáo viên điều chỉnh điểm theo từng tiêu chí trong Rubric. Hệ thống cập nhật tổng điểm theo điểm đã điều chỉnh.
+  - 7b. Giáo viên lưu bài chấm tạm thời: Hệ thống lưu các thông tin đánh giá hiện tại nhưng chưa hoàn tất chấm bài. Giáo viên có thể tiếp tục chấm bài sau.
+  - 9a. Giáo viên chọn "Lưu kết quả" nhưng chưa xác nhận: Hệ thống lưu bản chấm ở trạng thái chờ xác nhận, Giáo viên có thể quay lại xác nhận sau.
+- **Luồng tương tác ngoại lệ**:
+  - E1 - Bài tập không tồn tại: Hệ thống thông báo "Không tìm thấy bài tập."
+  - E2 - Không tìm thấy bài nộp: Hệ thống thông báo "Không tìm thấy bài nộp."
+  - E3 - Bài tập chưa có Rubric: Hệ thống thông báo "Bài tập chưa được thiết lập Rubric."
+  - E4 - Điểm không hợp lệ: Hệ thống thông báo "Điểm đánh giá không hợp lệ."
+  - E5 - Tổng điểm vượt quá mức quy định: Hệ thống thông báo "Tổng điểm không hợp lệ."
+  - E6 - Lỗi khi lưu kết quả: Hệ thống thông báo "Chấm bài thất bại."
+
+---
+
+## PHẦN IV. PHÂN HỆ QUẢN TRỊ VIÊN & GIÁO VỤ (UC-28 ĐẾN UC-39)
+
+---
+
+### UC-28 — Tạo tài khoản người dùng
+- **Mô tả**: Quản trị viên tạo tài khoản cho Sinh viên, Giáo viên hoặc Giáo vụ để người dùng có thể đăng nhập và sử dụng hệ thống theo vai trò được cấp.
 - **Tác nhân**: Quản trị viên.
-- **Tiền điều kiện**: Quản trị viên đã đăng nhập và có quyền quản lý tài khoản người dùng.
-- **Hậu điều kiện**: Tài khoản được tạo thành công, gán đúng vai trò, mật khẩu tạm được sinh và gửi qua email, đánh dấu bắt buộc đổi mật khẩu ở lần đăng nhập đầu tiên.
+- **Tiền điều kiện**: Quản trị viên đã đăng nhập, có quyền quản lý tài khoản người dùng.
+- **Hậu điều kiện**: Tài khoản Sinh viên, Giáo viên hoặc Giáo vụ được tạo thành công. Thông tin tài khoản được lưu vào cơ sở dữ liệu. Tài khoản được gán đúng vai trò và trạng thái hoạt động. Người dùng phải đổi mật khẩu ở lần đăng nhập đầu tiên.
 - **Luồng tương tác chính**:
   1. Quản trị viên chọn chức năng "Quản lý tài khoản".
   2. Hệ thống hiển thị danh sách tài khoản người dùng.
   3. Quản trị viên chọn "Tạo tài khoản".
-  4. Hệ thống hiển thị biểu mẫu yêu cầu: Họ tên, Email, Vai trò (Sinh viên, Giáo viên, Giáo vụ).
-  5. Quản trị viên nhập thông tin và chọn vai trò phù hợp.
-  6. Quản trị viên chọn "Tạo tài khoản".
-  7. Hệ thống kiểm tra tính hợp lệ của dữ liệu và tính duy nhất của Email.
-  8. Hệ thống tạo tài khoản, sinh mật khẩu tạm ngẫu nhiên, đánh dấu bắt buộc đổi mật khẩu và gửi email thông báo.
-  9. Hệ thống lưu tài khoản vào cơ sở dữ liệu và thông báo "Tạo tài khoản thành công."
+  4. Hệ thống hiển thị biểu mẫu tạo tài khoản.
+  5. Quản trị viên nhập thông tin tài khoản gồm họ tên, email.
+  6. Quản trị viên chọn vai trò "Sinh viên", "Giáo viên" hoặc "Giáo vụ".
+  7. Quản trị viên chọn "Tạo tài khoản".
+  8. Hệ thống kiểm tra tính hợp lệ của thông tin tài khoản.
+  9. Hệ thống sinh mật khẩu tạm, đánh dấu bắt buộc đổi và gửi email.
+  10. Hệ thống tạo và lưu tài khoản vào cơ sở dữ liệu.
+  11. Hệ thống thông báo "Tạo tài khoản thành công."
 - **Luồng tương tác thay thế**:
-  - 6a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác và quay lại danh sách tài khoản.
+  - 4a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác tạo tài khoản và quay lại danh sách tài khoản.
+  - 5a. Quản trị viên tạo tài khoản với trạng thái không hoạt động: Quản trị viên chọn trạng thái tài khoản không hoạt động. Hệ thống tạo tài khoản với trạng thái không hoạt động.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Dữ liệu không hợp lệ: Hệ thống thông báo "Thông tin tài khoản không hợp lệ."
-  - E2 - Email đã tồn tại: Hệ thống thông báo "Địa chỉ email đã được sử dụng."
-  - E3 - Lỗi tạo tài khoản: Hệ thống thông báo "Tạo tài khoản thất bại, vui lòng thử lại sau."
+  - E1 - Thông tin tài khoản không hợp lệ: Hệ thống thông báo "Thông tin tài khoản không hợp lệ."
+  - E2 - Email đã tồn tại: Hệ thống thông báo "Email đã được sử dụng."
+  - E3 - Chưa chọn vai trò: Hệ thống thông báo "Vui lòng chọn vai trò cho tài khoản."
+  - E4 - Lỗi khi tạo tài khoản: Hệ thống thông báo "Tạo tài khoản thất bại."
 
 ---
 
-### UC-33 — Khóa / mở tài khoản
-- **Mô tả**: Cho phép Quản trị viên khóa hoặc mở khóa tài khoản Sinh viên, Giáo viên, Giáo vụ. Khi khóa, hệ thống thu hồi toàn bộ phiên đăng nhập hiện tại.
+### UC-29 — Khóa/mở tài khoản
+- **Mô tả**: Quản trị viên khóa hoặc mở khóa tài khoản Sinh viên, Giáo viên hoặc Giáo vụ nhằm quản lý trạng thái hoạt động của tài khoản trong hệ thống.
 - **Tác nhân**: Quản trị viên.
-- **Tiền điều kiện**: Quản trị viên đã đăng nhập và có quyền quản lý tài khoản người dùng.
-- **Hậu điều kiện**: Trạng thái tài khoản được cập nhật. Tài khoản bị khóa sẽ bị vô hiệu hóa phiên đăng nhập hiện tại và không thể đăng nhập tiếp.
+- **Tiền điều kiện**: Quản trị viên đã đăng nhập hệ thống. Quản trị viên có quyền quản lý tài khoản người dùng. Tài khoản cần khóa hoặc mở khóa đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Trạng thái tài khoản được cập nhật thành công. Tài khoản bị khóa không thể đăng nhập và sử dụng hệ thống. Khi khóa tài khoản, hệ thống thu hồi các phiên đăng nhập hiện tại. Tài khoản được mở khóa có thể đăng nhập và sử dụng hệ thống.
 - **Luồng tương tác chính**:
   1. Quản trị viên chọn chức năng "Quản lý tài khoản".
-  2. Hệ thống hiển thị danh sách người dùng.
-  3. Quản trị viên chọn tài khoản cần thay đổi trạng thái.
-  4. Quản trị viên chọn "Khóa tài khoản" hoặc "Mở khóa tài khoản".
-  5. Hệ thống hiển thị hộp thoại xác nhận thao tác.
-  6. Quản trị viên xác nhận.
-  7. Hệ thống cập nhật trạng thái tài khoản trong cơ sở dữ liệu.
-  8. Nếu là thao tác Khóa, hệ thống lập tức thu hồi và vô hiệu hóa các active sessions/token của tài khoản.
-  9. Hệ thống thông báo "Cập nhật trạng thái tài khoản thành công."
+  2. Hệ thống hiển thị danh sách tài khoản người dùng.
+  3. Quản trị viên chọn tài khoản cần khóa hoặc mở khóa.
+  4. Hệ thống hiển thị thông tin và trạng thái hiện tại của tài khoản.
+  5. Quản trị viên chọn "Khóa tài khoản" hoặc "Mở khóa tài khoản".
+  6. Hệ thống hiển thị yêu cầu xác nhận thao tác.
+  7. Quản trị viên xác nhận thao tác.
+  8. Hệ thống cập nhật trạng thái tài khoản.
+  9. Hệ thống thông báo thao tác thành công.
 - **Luồng tương tác thay thế**:
-  - 6a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên trạng thái tài khoản.
+  - 5a. Quản trị viên chọn "Khóa tài khoản": Hệ thống hiển thị thông tin tài khoản và yêu cầu xác nhận khóa. Quản trị viên xác nhận khóa tài khoản. Hệ thống chuyển trạng thái tài khoản sang "Đã khóa".
+  - 5b. Quản trị viên chọn "Mở khóa tài khoản": Hệ thống hiển thị thông tin tài khoản và yêu cầu xác nhận mở khóa. Quản trị viên xác nhận mở khóa tài khoản. Hệ thống chuyển trạng thái tài khoản sang "Hoạt động".
+  - 7a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên trạng thái tài khoản.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy tài khoản: Hệ thống thông báo "Không tìm thấy tài khoản."
-  - E2 - Lỗi cập nhật dữ liệu: Hệ thống thông báo "Cập nhật trạng thái thất bại."
+  - E1 - Tài khoản không tồn tại: Hệ thống thông báo "Không tìm thấy tài khoản."
+  - E2 - Tài khoản đã ở trạng thái được chọn: Hệ thống thông báo "Trạng thái tài khoản không cần thay đổi."
+  - E3 - Tài khoản không thể khóa: Hệ thống thông báo "Không thể khóa tài khoản này."
+  - E4 - Lỗi khi cập nhật trạng thái: Hệ thống thông báo "Cập nhật trạng thái tài khoản thất bại."
 
 ---
 
-### UC-34 — Xóa tài khoản
-- **Mô tả**: Cho phép Quản trị viên xóa tài khoản người dùng; áp dụng cơ chế Soft Delete nếu tài khoản đã có dữ liệu học tập liên quan.
+### UC-30 — Xóa tài khoản
+- **Mô tả**: Quản trị viên xóa tài khoản Sinh viên, Giáo viên hoặc Giáo vụ khỏi hệ thống.
 - **Tác nhân**: Quản trị viên.
-- **Tiền điều kiện**: Quản trị viên đã đăng nhập và tài khoản cần xóa tồn tại trong hệ thống.
-- **Hậu điều kiện**: Tài khoản bị vô hiệu hóa hoặc xóa mềm (Soft Delete) để bảo toàn tính toàn vẹn dữ liệu học tập (bài nộp, điểm số, lịch sử).
+- **Tiền điều kiện**: Quản trị viên đã đăng nhập hệ thống. Quản trị viên có quyền quản lý tài khoản người dùng. Tài khoản cần xóa đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Tài khoản được xóa khỏi hệ thống. Tài khoản không thể đăng nhập và sử dụng hệ thống. Thông tin tài khoản được cập nhật hoặc xóa theo chính sách lưu trữ dữ liệu của hệ thống.
 - **Luồng tương tác chính**:
-  1. Quản trị viên chọn tài khoản cần xóa từ danh sách người dùng.
-  2. Quản trị viên chọn "Xóa tài khoản".
-  3. Hệ thống hiển thị cảnh báo về việc xóa và dữ liệu liên quan.
-  4. Quản trị viên xác nhận xóa.
-  5. Hệ thống kiểm tra dữ liệu học tập liên quan (bài nộp, điểm, lớp học).
-  6. Hệ thống thực hiện Soft Delete (vô hiệu hóa tài khoản, bảo lưu dữ liệu học tập).
-  7. Hệ thống thu hồi phiên làm việc hiện tại của tài khoản.
-  8. Hệ thống thông báo "Xóa tài khoản thành công."
+  1. Quản trị viên chọn chức năng "Quản lý tài khoản".
+  2. Hệ thống hiển thị danh sách tài khoản người dùng.
+  3. Quản trị viên chọn tài khoản cần xóa.
+  4. Hệ thống hiển thị thông tin tài khoản được chọn.
+  5. Quản trị viên chọn "Xóa tài khoản".
+  6. Hệ thống hiển thị yêu cầu xác nhận thao tác xóa.
+  7. Quản trị viên xác nhận xóa tài khoản.
+  8. Hệ thống kiểm tra điều kiện xóa tài khoản.
+  9. Hệ thống xóa tài khoản khỏi hệ thống.
+  10. Hệ thống thông báo "Xóa tài khoản thành công."
 - **Luồng tương tác thay thế**:
-  - 4a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác xóa.
+  - 7a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác xóa và giữ nguyên tài khoản.
+  - 8a. Tài khoản đang có dữ liệu bài nộp hoặc lịch sử điểm số: Hệ thống chuyển sang cơ chế xóa mềm (Soft Delete) để bảo toàn tính toàn vẹn dữ liệu học tập.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy tài khoản: Hệ thống thông báo "Không tìm thấy tài khoản."
-  - E2 - Lỗi hệ thống: Hệ thống thông báo "Không thể xóa tài khoản, vui lòng thử lại sau."
+  - E1 - Tài khoản không tồn tại: Hệ thống thông báo "Không tìm thấy tài khoản."
+  - E2 - Tài khoản không thể xóa: Hệ thống thông báo "Không thể xóa tài khoản này."
+  - E3 - Lỗi khi xóa tài khoản: Hệ thống thông báo "Xóa tài khoản thất bại."
 
 ---
 
-### UC-35 — Phân quyền người dùng
-- **Mô tả**: Quản trị viên phân quyền các vai trò nghiệp vụ (Sinh viên, Giáo viên, Giáo vụ). Quản trị viên hệ thống quản lý các vai trò quản trị cấp hệ thống (Quản trị viên, Quản trị viên hệ thống).
-- **Tác nhân**: Quản trị viên, Quản trị viên hệ thống.
-- **Tiền điều kiện**: Người dùng đã đăng nhập và có quyền phân quyền trong phạm vi của mình. Người thực hiện không được tự cấp quyền vượt quá phạm vi được giao.
-- **Hậu điều kiện**: Vai trò và quyền hạn của tài khoản được cập nhật và lưu vào cơ sở dữ liệu.
-- **Luồng tương tác chính**:
-  1. Người dùng truy cập chức năng "Phân quyền người dùng".
-  2. Hệ thống hiển thị danh sách tài khoản.
-  3. Người dùng chọn tài khoản cần phân quyền.
-  4. Hệ thống hiển thị danh sách các vai trò/quyền mà người thực hiện được phép cấp.
-  5. Người dùng chọn vai trò hoặc quyền cần cập nhật.
-  6. Người dùng chọn "Lưu phân quyền".
-  7. Hệ thống kiểm tra quyền của người thực hiện và tính hợp lệ của phân quyền.
-  8. Hệ thống cập nhật quyền của tài khoản vào cơ sở dữ liệu.
-  9. Hệ thống thông báo "Phân quyền người dùng thành công."
-- **Luồng tương tác thay thế**:
-  - 6a. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên quyền hiện tại.
-- **Luồng tương tác ngoại lệ**:
-  - E1 - Cấp quyền vượt quá phạm vi cho phép: Hệ thống thông báo "Bạn không có quyền cấp vai trò hoặc quyền này."
-  - E2 - Không tìm thấy tài khoản: Hệ thống thông báo "Không tìm thấy tài khoản."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Phân quyền thất bại."
-
----
-
-### UC-36 — Đặt lại mật khẩu
-- **Mô tả**: Cho phép Quản trị viên reset mật khẩu cho tài khoản người dùng khi có yêu cầu hỗ trợ.
+### UC-31 — Phân quyền người dùng
+- **Mô tả**: Cho phép Quản trị viên phân công hoặc thay đổi vai trò và quyền nghiệp vụ của người dùng trong phạm vi quản lý toàn trường. Chức năng này áp dụng cho các vai trò Sinh viên, Giáo viên và Giáo vụ.
 - **Tác nhân**: Quản trị viên.
-- **Tiền điều kiện**: Quản trị viên đã đăng nhập và có quyền quản lý tài khoản người dùng.
-- **Hậu điều kiện**: Hệ thống tự sinh mật khẩu tạm mới, lưu dưới dạng băm, gửi email cho người dùng, đánh dấu bắt buộc đổi mật khẩu và thu hồi các phiên đăng nhập hiện tại.
+- **Tiền điều kiện**: Quản trị viên đã đăng nhập hệ thống. Quản trị viên có quyền quản lý tài khoản và phân quyền người dùng. Tài khoản cần phân quyền đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Vai trò hoặc quyền nghiệp vụ của người dùng được cập nhật thành công. Người dùng có thể thực hiện các chức năng tương ứng với vai trò và quyền mới được cấp. Thông tin phân quyền được lưu vào cơ sở dữ liệu. Các vai trò quản trị cấp hệ thống không bị thay đổi bởi chức năng này.
 - **Luồng tương tác chính**:
-  1. Quản trị viên chọn tài khoản cần reset mật khẩu.
-  2. Quản trị viên chọn "Đặt lại mật khẩu".
-  3. Hệ thống hiển thị hộp thoại xác nhận.
-  4. Quản trị viên xác nhận thao tác.
-  5. Hệ thống tự động sinh mật khẩu tạm thời ngẫu nhiên.
-  6. Hệ thống băm mật khẩu tạm và cập nhật vào cơ sở dữ liệu.
-  7. Hệ thống đánh dấu tài khoản bắt buộc phải đổi mật khẩu ở lần đăng nhập tới.
-  8. Hệ thống gửi email chứa mật khẩu tạm đến địa chỉ email của người dùng.
-  9. Hệ thống thu hồi toàn bộ active sessions hiện tại của tài khoản.
-  10. Hệ thống thông báo "Đặt lại mật khẩu thành công."
+  1. Quản trị viên chọn chức năng "Phân quyền người dùng".
+  2. Hệ thống hiển thị danh sách tài khoản người dùng thuộc phạm vi quản lý.
+  3. Quản trị viên chọn tài khoản cần phân quyền.
+  4. Hệ thống hiển thị thông tin tài khoản, vai trò và các quyền nghiệp vụ hiện tại.
+  5. Hệ thống hiển thị các vai trò và quyền nghiệp vụ mà Quản trị viên được phép cấp hoặc thay đổi.
+  6. Quản trị viên chọn vai trò hoặc điều chỉnh các quyền nghiệp vụ của người dùng.
+  7. Quản trị viên xác nhận thao tác phân quyền.
+  8. Hệ thống kiểm tra tính hợp lệ của vai trò và quyền được chọn.
+  9. Hệ thống cập nhật vai trò và quyền của người dùng vào cơ sở dữ liệu.
+  10. Hệ thống thông báo "Phân quyền người dùng thành công."
 - **Luồng tương tác thay thế**:
-  - 4a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên mật khẩu cũ.
+  - 6a. Thay đổi vai trò: Quản trị viên chọn vai trò mới. Hệ thống hiển thị các quyền nghiệp vụ tương ứng với vai trò mới. Quản trị viên xác nhận thay đổi. Hệ thống cập nhật vai trò và quyền tương ứng.
+  - 6b. Cấp thêm quyền nghiệp vụ: Quản trị viên chọn các quyền cần cấp thêm. Hệ thống cập nhật danh sách quyền được chọn sau khi xác nhận.
+  - 6c. Thu hồi quyền nghiệp vụ: Quản trị viên chọn quyền cần thu hồi. Hệ thống hiển thị yêu cầu xác nhận. Quản trị viên xác nhận và hệ thống cập nhật lại quyền của người dùng.
+  - 7a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác phân quyền và giữ nguyên vai trò, quyền hiện tại của người dùng.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy tài khoản: Hệ thống thông báo "Không tìm thấy tài khoản."
-  - E2 - Lỗi gửi email: Hệ thống thông báo "Không thể gửi email mật khẩu tạm, vui lòng thử lại sau."
-  - E3 - Lỗi cập nhật: Hệ thống thông báo "Đặt lại mật khẩu thất bại."
+  - E1 - Tài khoản không tồn tại: Hệ thống thông báo "Không tìm thấy tài khoản."
+  - E2 - Vai trò không hợp lệ: Hệ thống thông báo "Vai trò được chọn không hợp lệ."
+  - E3 - Quyền không hợp lệ: Hệ thống thông báo "Quyền được chọn không hợp lệ."
+  - E4 - Cấp quyền vượt phạm vi: Hệ thống từ chối thao tác và thông báo "Bạn không có quyền cấp vai trò hoặc quyền này."
+  - E5 - Cố gắng cấp vai trò quản trị cấp hệ thống: Hệ thống từ chối thao tác và thông báo "Không thể cấp vai trò quản trị cấp hệ thống tại chức năng này."
+  - E6 - Lỗi cập nhật dữ liệu: Hệ thống thông báo "Phân quyền người dùng thất bại."
 
 ---
 
-### UC-37 — Nhập danh sách từ Excel/CSV
-- **Mô tả**: Cho phép Quản trị viên nhập danh sách người dùng hàng loạt từ tệp Excel hoặc CSV với đúng 5 cột quy định.
+### UC-32 — Đặt lại mật khẩu
+- **Mô tả**: Cho phép Quản trị viên đặt lại mật khẩu cho tài khoản người dùng khi người dùng yêu cầu hoặc gặp vấn đề khi đăng nhập. Hệ thống luôn tự sinh mật khẩu tạm và gửi đến email đã đăng ký của người dùng.
 - **Tác nhân**: Quản trị viên.
-- **Tiền điều kiện**: Quản trị viên đã đăng nhập và tệp dữ liệu đã được chuẩn bị đúng cấu trúc 5 cột (Mã người dùng, Họ tên, Email, Vai trò, Lớp). Không có cột mật khẩu.
-- **Hậu điều kiện**: Các bản ghi hợp lệ được tạo tài khoản trong hệ thống; hệ thống hiển thị chi tiết kết quả và danh sách lỗi cho các bản ghi không hợp lệ.
+- **Tiền điều kiện**: Quản trị viên đã đăng nhập hệ thống. Quản trị viên có quyền quản lý tài khoản người dùng. Tài khoản cần đặt lại mật khẩu đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Hệ thống tạo mật khẩu tạm mới cho tài khoản. Mật khẩu tạm được băm và lưu an toàn trong cơ sở dữ liệu. Tài khoản được đánh dấu bắt buộc đổi mật khẩu ở lần đăng nhập tiếp theo. Các phiên đăng nhập hiện tại của người dùng được thu hồi. Mật khẩu tạm được gửi đến email đã đăng ký của người dùng. Mật khẩu hiện tại không còn được sử dụng để đăng nhập.
 - **Luồng tương tác chính**:
-  1. Quản trị viên chọn chức năng "Nhập danh sách từ Excel/CSV".
-  2. Hệ thống hiển thị giao diện tải tệp kèm mô tả cấu trúc mẫu 5 cột.
-  3. Quản trị viên chọn và tải lên tệp Excel/CSV.
-  4. Hệ thống kiểm tra định dạng và cấu trúc cột của tệp.
-  5. Hệ thống đọc và kiểm tra tính hợp lệ của từng dòng dữ liệu (định dạng email, vai trò hợp lệ, trùng lặp).
-  6. Hệ thống hiển thị bảng xem trước (preview) gồm số bản ghi hợp lệ và danh sách bản ghi lỗi kèm lý do.
-  7. Quản trị viên xác nhận thực hiện Import.
-  8. Hệ thống tạo tài khoản cho các bản ghi hợp lệ, sinh mật khẩu tạm và gửi email thông báo.
-  9. Hệ thống thông báo kết quả nhập dữ liệu thành công.
+  1. Quản trị viên chọn chức năng "Quản lý tài khoản".
+  2. Hệ thống hiển thị danh sách tài khoản người dùng.
+  3. Quản trị viên chọn tài khoản cần đặt lại mật khẩu.
+  4. Hệ thống hiển thị thông tin tài khoản.
+  5. Quản trị viên chọn "Đặt lại mật khẩu".
+  6. Hệ thống hiển thị yêu cầu xác nhận đặt lại mật khẩu.
+  7. Quản trị viên xác nhận "Đặt lại mật khẩu".
+  8. Hệ thống tự sinh mật khẩu tạm mới.
+  9. Hệ thống băm mật khẩu tạm và lưu vào cơ sở dữ liệu.
+  10. Hệ thống đánh dấu tài khoản bắt buộc đổi mật khẩu ở lần đăng nhập tiếp theo.
+  11. Hệ thống thu hồi các phiên đăng nhập hiện tại của người dùng.
+  12. Hệ thống gửi mật khẩu tạm đến email đã đăng ký của người dùng.
+  13. Hệ thống thông báo "Đặt lại mật khẩu thành công."
 - **Luồng tương tác thay thế**:
-  - 7a. Tệp có tài khoản đã tồn tại: Hệ thống cập nhật họ tên; giữ nguyên email, vai trò và không đổi mật khẩu qua file import.
-  - 7b. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác và không lưu dữ liệu.
+  - 3a. Quản trị viên chọn tài khoản khác: Hệ thống hiển thị thông tin của tài khoản được chọn và Quản trị viên tiếp tục thao tác đặt lại mật khẩu.
+  - 6a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác đặt lại mật khẩu và giữ nguyên mật khẩu hiện tại.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Tệp sai định dạng/cấu trúc cột: Hệ thống thông báo "Cấu trúc tệp không hợp lệ, yêu cầu đúng 5 cột quy định."
-  - E2 - Tệp rỗng: Hệ thống thông báo "Tệp không chứa dữ liệu."
-  - E3 - Không có bản ghi nào hợp lệ: Hệ thống thông báo "Không có dữ liệu hợp lệ để nhập."
+  - E1 - Tài khoản không tồn tại: Hệ thống thông báo "Không tìm thấy tài khoản."
+  - E2 - Tài khoản không thể đặt lại mật khẩu: Hệ thống thông báo "Không thể đặt lại mật khẩu cho tài khoản này."
+  - E3 - Không thể tạo mật khẩu tạm: Hệ thống thông báo "Không thể tạo mật khẩu tạm, vui lòng thử lại sau."
+  - E4 - Lỗi cập nhật mật khẩu: Hệ thống thông báo "Đặt lại mật khẩu thất bại."
+  - E5 - Lỗi gửi email: Hệ thống thông báo "Không thể gửi mật khẩu tạm đến email của người dùng."
 
 ---
 
-### UC-38 — Tạo lớp (Cấp Quản trị viên / Giáo vụ)
-- **Mô tả**: Quản trị viên tạo lớp học trong phạm vi toàn trường; Giáo vụ tạo lớp học trong phạm vi Khoa/Bộ môn được phân công phụ trách.
+### UC-33 — Nhập danh sách từ Excel/CSV
+- **Mô tả**: Cho phép Quản trị viên nhập danh sách người dùng từ tệp Excel hoặc CSV vào hệ thống để tạo tài khoản mới hoặc cập nhật thông tin được phép của các tài khoản đã tồn tại theo quy tắc nghiệp vụ.
+- **Tác nhân**: Quản trị viên.
+- **Tiền điều kiện**: Quản trị viên đã đăng nhập hệ thống và có quyền quản lý và nhập dữ liệu người dùng. Tệp Excel hoặc CSV đã được chuẩn bị theo đúng cấu trúc gồm 5 cột bắt buộc.
+- **Hậu điều kiện**: Các bản ghi hợp lệ được nhập thành công vào hệ thống. Tài khoản mới được tạo và lưu vào cơ sở dữ liệu. Với tài khoản đã tồn tại, chỉ thông tin họ tên được cập nhật nếu Quản trị viên chọn cập nhật. Email và vai trò của tài khoản đã tồn tại không bị thay đổi thông qua chức năng này. Hệ thống hiển thị kết quả nhập dữ liệu và danh sách các bản ghi không hợp lệ nếu có.
+- **Luồng tương tác chính**:
+  1. Quản trị viên chọn chức năng "Nhập danh sách người dùng từ Excel/CSV".
+  2. Hệ thống hiển thị giao diện nhập dữ liệu và hướng dẫn định dạng tệp.
+  3. Quản trị viên chọn và tải lên tệp Excel hoặc CSV.
+  4. Hệ thống kiểm tra định dạng và cấu trúc tệp.
+  5. Hệ thống đọc và kiểm tra tính hợp lệ của từng bản ghi.
+  6. Hệ thống xác định các bản ghi hợp lệ, không hợp lệ và các tài khoản đã tồn tại; đối với từng lỗi, hệ thống ghi nhận lý do tương ứng.
+  7. Hệ thống hiển thị dữ liệu xem trước cùng kết quả kiểm tra để Quản trị viên kiểm tra trước khi nhập.
+  8. Quản trị viên xác nhận nhập các bản ghi hợp lệ và lựa chọn cách xử lý đối với tài khoản đã tồn tại.
+  9. Hệ thống tạo các tài khoản mới từ các bản ghi hợp lệ. Đối với tài khoản đã tồn tại, hệ thống chỉ cập nhật họ tên nếu Quản trị viên đã chọn cập nhật; email và vai trò được giữ nguyên.
+  10. Hệ thống lưu kết quả vào cơ sở dữ liệu.
+  11. Hệ thống thông báo kết quả nhập dữ liệu.
+- **Luồng tương tác thay thế**:
+  - 4a. Tệp không đúng cấu trúc: Hệ thống thông báo lỗi và yêu cầu Quản trị viên chọn tệp khác.
+  - 7a. Tệp chứa cả bản ghi hợp lệ và không hợp lệ: Hệ thống hiển thị các bản ghi không hợp lệ cùng lý do lỗi. Quản trị viên có thể tiếp tục nhập các bản ghi hợp lệ.
+  - 8a. Tệp chứa tài khoản đã tồn tại: Hệ thống hiển thị danh sách tài khoản đã tồn tại. Quản trị viên chọn bỏ qua hoặc cập nhật họ tên. Email và vai trò không được thay đổi qua chức năng này.
+  - 3a. Quản trị viên tải lên tệp khác: Hệ thống loại bỏ dữ liệu xem trước của tệp hiện tại và thực hiện kiểm tra tệp mới.
+  - 7b. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác nhập dữ liệu và không thay đổi dữ liệu hiện tại.
+- **Luồng tương tác ngoại lệ**:
+  - E1 - Tệp không đúng định dạng: Hệ thống thông báo "Tệp không đúng định dạng Excel hoặc CSV."
+  - E2 - Tệp không đúng cấu trúc: Hệ thống thông báo "Cấu trúc tệp không hợp lệ."
+  - E3 - Tệp không có dữ liệu: Hệ thống thông báo "Tệp không chứa dữ liệu."
+  - E4 - Không có bản ghi hợp lệ: Hệ thống thông báo "Không có dữ liệu hợp lệ để nhập." và không thực hiện nhập dữ liệu.
+  - E5 - Lỗi khi đọc hoặc xử lý tệp: Hệ thống thông báo "Không thể đọc hoặc xử lý tệp."
+  - E6 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Nhập dữ liệu thất bại."
+
+---
+
+### UC-34 — Tạo lớp
+- **Mô tả**: Quản trị viên có thể tạo lớp trong toàn hệ thống; Giáo vụ có thể tạo lớp trong phạm vi Khoa/Bộ môn được phân công.
 - **Tác nhân**: Quản trị viên, Giáo vụ.
-- **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên (toàn trường) hoặc Giáo vụ (trong phạm vi Khoa/Bộ môn được phân công).
-- **Hậu điều kiện**: Lớp học mới được tạo thành công ở trạng thái Hoạt động và lưu vào cơ sở dữ liệu.
+- **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên (quyền toàn hệ thống) hoặc Giáo vụ (quyền trong phạm vi Khoa/Bộ môn được phân công).
+- **Hậu điều kiện**: Lớp học được tạo thành công. Thông tin lớp được lưu vào cơ sở dữ liệu. Lớp có thể được sử dụng để quản lý Sinh viên và Giáo viên.
 - **Luồng tương tác chính**:
   1. Người dùng chọn chức năng "Quản lý lớp".
-  2. Hệ thống hiển thị danh sách lớp theo phạm vi quyền (Quản trị viên thấy toàn trường; Giáo vụ chỉ thấy lớp thuộc Khoa/Bộ môn phụ trách).
+  2. Hệ thống hiển thị danh sách các lớp học mà Người dùng có quyền xem: Quản trị viên thấy toàn bộ lớp trong trường; Giáo vụ chỉ thấy lớp thuộc Khoa/Bộ môn mình phụ trách.
   3. Người dùng chọn "Tạo lớp".
-  4. Hệ thống hiển thị biểu mẫu tạo lớp: Tên lớp, mã lớp, mô tả, niên khóa, Khoa/Bộ môn (nếu là Giáo vụ thì tự động gán Khoa/Bộ môn phụ trách).
-  5. Người dùng nhập thông tin và chọn "Lưu lớp".
-  6. Hệ thống kiểm tra tính hợp lệ của thông tin, tính duy nhất của mã lớp và phạm vi quyền.
-  7. Hệ thống tạo lớp mới ở trạng thái "Hoạt động".
-  8. Hệ thống thông báo "Tạo lớp thành công."
+  4. Hệ thống hiển thị biểu mẫu tạo lớp học gồm tên lớp, mã lớp, mô tả, niên khóa và Khoa/Bộ môn; nếu Người dùng là Giáo vụ, hệ thống tự động gán Khoa/Bộ môn theo phạm vi phụ trách và không cho chọn Khoa/Bộ môn khác.
+  5. Người dùng nhập thông tin lớp học và chọn "Tạo lớp".
+  6. Hệ thống kiểm tra tính hợp lệ của thông tin lớp học, tính duy nhất của mã lớp và phạm vi Khoa/Bộ môn (nếu là Giáo vụ).
+  7. Hệ thống tạo lớp và lưu thông tin vào cơ sở dữ liệu.
+  8. Hệ thống thông báo "Tạo lớp thành công." và hiển thị lớp mới trong danh sách.
 - **Luồng tương tác thay thế**:
-  - 5a. Người dùng chọn "Hủy": Hệ thống hủy thao tác tạo lớp.
+  - 4a. Giáo vụ không cần chọn Khoa/Bộ môn: Hệ thống tự động sử dụng Khoa/Bộ môn thuộc phạm vi phụ trách của Giáo vụ.
+  - 5a. Người dùng chọn "Hủy": Hệ thống hủy thao tác tạo lớp và quay lại danh sách lớp.
+  - 5b. Người dùng chỉnh sửa thông tin trước khi xác nhận: Hệ thống cho phép tiếp tục chỉnh sửa dữ liệu trước khi tạo lớp.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Dữ liệu không hợp lệ: Hệ thống thông báo "Thông tin lớp học không hợp lệ."
+  - E1 - Thông tin lớp không hợp lệ: Hệ thống thông báo "Thông tin lớp không hợp lệ."
   - E2 - Mã lớp đã tồn tại: Hệ thống thông báo "Mã lớp đã tồn tại."
-  - E3 - Giáo vụ thao tác ngoài phạm vi: Hệ thống thông báo "Bạn không có quyền tạo lớp ngoài Khoa/Bộ môn được phân công."
-  - E4 - Lỗi lưu dữ liệu: Hệ thống thông báo "Tạo lớp thất bại."
+  - E3 - Lỗi khi lưu thông tin lớp: Hệ thống thông báo "Tạo lớp thất bại."
+  - E4 - Giáo vụ chọn Khoa/Bộ môn ngoài phạm vi phụ trách: Hệ thống thông báo "Bạn không có quyền tạo lớp trong Khoa/Bộ môn này."
 
 ---
 
-### UC-39 — Chỉnh sửa lớp (Cấp Quản trị viên / Giáo vụ)
-- **Mô tả**: Quản trị viên chỉnh sửa lớp trên toàn trường; Giáo vụ chỉnh sửa lớp thuộc Khoa/Bộ môn được phân công phụ trách (lớp đang ở trạng thái Hoạt động).
+### UC-35 — Chỉnh sửa lớp
+- **Mô tả**: Quản trị viên có thể chỉnh sửa lớp trong toàn hệ thống; Giáo vụ có thể chỉnh sửa lớp trong phạm vi Khoa/Bộ môn được phân công.
 - **Tác nhân**: Quản trị viên, Giáo vụ.
-- **Tiền điều kiện**: Người dùng đã đăng nhập đúng phạm vi quyền và lớp đang ở trạng thái Hoạt động.
-- **Hậu điều kiện**: Thông tin lớp học được cập nhật thành công trong cơ sở dữ liệu.
+- **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên (quyền toàn hệ thống) hoặc Giáo vụ (quyền trong phạm vi Khoa/Bộ môn được phân công). Lớp cần chỉnh sửa đã tồn tại và đang ở trạng thái Hoạt động.
+- **Hậu điều kiện**: Thông tin lớp được cập nhật thành công. Thông tin mới được lưu vào cơ sở dữ liệu. Các thành viên của lớp tiếp tục được quản lý theo thông tin đã cập nhật.
 - **Luồng tương tác chính**:
-  1. Người dùng chọn lớp cần chỉnh sửa trong danh sách quản lý.
-  2. Hệ thống kiểm tra phạm vi quyền và hiển thị thông tin hiện tại của lớp.
-  3. Người dùng chỉnh sửa tên lớp, mô tả, niên khóa.
-  4. Người dùng chọn "Lưu thay đổi".
-  5. Hệ thống kiểm tra tính hợp lệ của dữ liệu.
-  6. Hệ thống cập nhật thông tin lớp vào cơ sở dữ liệu.
-  7. Hệ thống thông báo "Chỉnh sửa lớp thành công."
+  1. Người dùng chọn chức năng "Quản lý lớp".
+  2. Hệ thống hiển thị danh sách các lớp mà Người dùng có quyền quản lý: Quản trị viên thấy toàn bộ lớp trong trường; Giáo vụ chỉ thấy lớp thuộc Khoa/Bộ môn mình phụ trách.
+  3. Người dùng chọn lớp cần chỉnh sửa.
+  4. Hệ thống hiển thị thông tin hiện tại của lớp.
+  5. Người dùng chỉnh sửa thông tin lớp.
+  6. Người dùng chọn "Lưu thay đổi".
+  7. Hệ thống kiểm tra tính hợp lệ của thông tin mới.
+  8. Hệ thống cập nhật thông tin lớp vào cơ sở dữ liệu.
+  9. Hệ thống thông báo "Chỉnh sửa lớp thành công."
 - **Luồng tương tác thay thế**:
-  - 4a. Người dùng chọn "Hủy": Hệ thống hủy thay đổi và giữ nguyên dữ liệu lớp.
+  - 5a. Người dùng chọn "Hủy": Hệ thống hủy thao tác chỉnh sửa và giữ nguyên thông tin lớp.
+  - 5b. Người dùng thay đổi tên lớp: Người dùng nhập tên lớp mới. Hệ thống kiểm tra tên lớp. Hệ thống cập nhật tên lớp mới.
+  - 5c. Người dùng thay đổi thông tin khác của lớp: Người dùng chỉnh sửa thông tin cần thay đổi. Hệ thống cập nhật thông tin lớp theo dữ liệu mới.
+  - 6a. Người dùng tiếp tục chỉnh sửa: Hệ thống giữ nguyên dữ liệu đang chỉnh sửa và cho phép Người dùng tiếp tục cập nhật trước khi lưu.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Lớp không tồn tại: Hệ thống thông báo "Không tìm thấy lớp học."
-  - E2 - Lớp không ở trạng thái Hoạt động: Hệ thống thông báo "Chỉ chỉnh sửa được lớp đang ở trạng thái Hoạt động."
-  - E3 - Giáo vụ thao tác ngoài phạm vi: Hệ thống thông báo "Bạn không có quyền chỉnh sửa lớp thuộc Khoa/Bộ môn khác."
-  - E4 - Lỗi lưu dữ liệu: Hệ thống thông báo "Chỉnh sửa lớp thất bại."
+  - E1 - Lớp không tồn tại: Hệ thống thông báo "Không tìm thấy lớp."
+  - E2 - Thông tin lớp không hợp lệ: Hệ thống thông báo "Thông tin lớp không hợp lệ."
+  - E3 - Lỗi khi cập nhật thông tin: Hệ thống thông báo "Chỉnh sửa lớp thất bại."
+  - E4 - Giáo vụ thao tác ngoài phạm vi phụ trách: Hệ thống thông báo "Bạn không có quyền chỉnh sửa lớp thuộc Khoa/Bộ môn khác."
 
 ---
 
-### UC-40 — Đóng / Mở lại lớp học
-- **Mô tả**: Cho phép Giáo viên (lớp phụ trách), Giáo vụ (Khoa/Bộ môn phụ trách), Quản trị viên (toàn trường) chuyển đổi trạng thái lớp giữa Hoạt động và Đã đóng.
-- **Tác nhân**: Giáo viên, Giáo vụ, Quản trị viên. *(Không có Quản trị viên hệ thống).*
-- **Tiền điều kiện**: Người dùng đã đăng nhập và có quyền đối với lớp học. Lớp tồn tại trong hệ thống.
-- **Hậu điều kiện**: Trạng thái lớp chuyển thành "Đã đóng" (khi đóng lớp) hoặc "Hoạt động" (khi mở lại). Khi lớp đã đóng, sinh viên bị ngăn các hoạt động học tập mới nhưng dữ liệu được bảo toàn.
+### UC-36 — Đóng/ Mở lại lớp học
+- **Mô tả**: Đây là chức năng quản lý trạng thái hoạt động của lớp học. Giáo viên thực hiện đóng hoặc mở lại lớp thuộc phạm vi lớp mình phụ trách. Giáo vụ thực hiện đóng hoặc mở lại lớp trong phạm vi Khoa/Bộ môn được phân công. Quản trị viên có quyền đóng hoặc mở lại lớp trong toàn trường.
+- **Tác nhân**: Giáo viên, Quản trị viên, Giáo vụ.
+- **Tiền điều kiện**: Người dùng đã đăng nhập vào hệ thống. Người dùng có quyền quản lý lớp tương ứng với phạm vi được phân công. Lớp học tồn tại trong hệ thống.
+- **Hậu điều kiện**: Nếu thực hiện "Đóng lớp", lớp được chuyển từ Hoạt động sang Đã đóng. Nếu thực hiện "Mở lại lớp", lớp được chuyển từ Đã đóng sang Hoạt động. Dữ liệu của lớp vẫn được bảo toàn. Lớp Đã đóng không còn hoạt động bình thường cho đến khi được mở lại.
 - **Luồng tương tác chính**:
-  1. Người dùng chọn lớp cần thay đổi trạng thái từ danh sách quản lý.
-  2. Hệ thống hiển thị thông tin và trạng thái hiện tại của lớp (Hoạt động hoặc Đã đóng).
-  3. Người dùng chọn thao tác "Đóng lớp" (nếu lớp đang Hoạt động) hoặc "Mở lại lớp" (nếu lớp đang Đã đóng).
-  4. Hệ thống hiển thị hộp thoại yêu cầu xác nhận.
-  5. Người dùng xác nhận thao tác.
-  6. Hệ thống kiểm tra phạm vi quyền và cập nhật trạng thái lớp (Hoạt động $\leftrightarrow$ Đã đóng).
-  7. Hệ thống thông báo "Cập nhật trạng thái lớp thành công."
+  1. Người dùng chọn chức năng "Quản lý lớp".
+  2. Hệ thống hiển thị các lớp mà Người dùng được phép quản lý theo phạm vi quyền: Giáo viên (lớp phụ trách), Giáo vụ (lớp thuộc Khoa/Bộ môn phụ trách), Quản trị viên (toàn bộ lớp).
+  3. Người dùng chọn lớp cần thay đổi trạng thái.
+  4. Hệ thống hiển thị thông tin và trạng thái hiện tại của lớp.
+  5. Hệ thống hiển thị thao tác phù hợp với trạng thái hiện tại: "Đóng lớp" nếu lớp đang Hoạt động; "Mở lại lớp" nếu lớp đang Đã đóng.
+  6. Người dùng chọn thao tác.
+  7. Hệ thống hiển thị yêu cầu xác nhận thao tác.
+  8. Người dùng xác nhận thao tác.
+  9. Hệ thống kiểm tra trạng thái hiện tại của lớp và phạm vi quyền của Người dùng.
+  10. Hệ thống cập nhật trạng thái lớp theo thao tác đã chọn.
+  11. Hệ thống thông báo "Cập nhật trạng thái lớp thành công."
 - **Luồng tương tác thay thế**:
-  - 5a. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên trạng thái hiện tại của lớp.
+  - 7a. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên trạng thái hiện tại của lớp.
+  - 5a. Lớp đang ở trạng thái Hoạt động: Hệ thống chỉ cho phép thực hiện thao tác "Đóng lớp".
+  - 5b. Lớp đang ở trạng thái Đã đóng: Hệ thống chỉ cho phép thực hiện thao tác "Mở lại lớp".
 - **Luồng tương tác ngoại lệ**:
   - E1 - Lớp không tồn tại: Hệ thống thông báo "Không tìm thấy lớp học."
   - E2 - Lớp không ở trạng thái phù hợp: Hệ thống thông báo "Lớp không ở trạng thái phù hợp để thực hiện thao tác này."
-  - E3 - Người dùng không có quyền: Hệ thống từ chối yêu cầu.
-  - E4 - Lỗi cập nhật: Hệ thống thông báo "Không thể cập nhật trạng thái lớp, vui lòng thử lại sau."
+  - E3 - Người dùng không có quyền thao tác trên lớp: Hệ thống thông báo "Bạn không có quyền thực hiện thao tác trên lớp này."
+  - E4 - Giáo vụ thao tác ngoài phạm vi phụ trách: Hệ thống thông báo "Bạn không có quyền thao tác trên lớp thuộc Khoa/Bộ môn khác."
+  - E5 - Không thể cập nhật trạng thái lớp: Hệ thống thông báo "Không thể cập nhật trạng thái lớp, vui lòng thử lại sau."
 
 ---
 
-### UC-41 — Quản lý Lưu trữ & Xóa lớp học
-- **Mô tả**: Quản trị viên (toàn trường) và Giáo vụ (Khoa/Bộ môn) thực hiện Archive (Lưu trữ), Restore (Khôi phục) và Hard Delete (Xóa vĩnh viễn) lớp học theo quy tắc nghiệp vụ nghiêm ngặt.
-- **Tác nhân**: Quản trị viên, Giáo vụ. *(Không có Quản trị viên hệ thống).*
-- **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên hoặc Giáo vụ trong phạm vi phụ trách.
-- **Hậu điều kiện**: Lớp được chuyển sang trạng thái "Lưu trữ" (khi Archive); lớp được khôi phục về trạng thái "Đã đóng" (khi Restore); hoặc lớp bị xóa hoàn toàn khỏi cơ sở dữ liệu nếu thỏa mãn điều kiện Hard Delete (0 Sinh viên và 0 bài tập).
+### UC-37 — Quản lý Lưu trữ, Khôi phục & Xóa lớp học
+- **Mô tả**: Đây là chức năng quản lý vòng đời dữ liệu lớp học sau khi lớp được đóng. Quản trị viên thực hiện trong toàn hệ thống; Giáo vụ thực hiện trong phạm vi Khoa/Bộ môn được phân công. Chức năng bao gồm Lưu trữ lớp, Khôi phục lớp và Hard Delete lớp theo điều kiện nghiệp vụ.
+- **Tác nhân**: Quản trị viên, Giáo vụ.
+- **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên hoặc Giáo vụ. Quản trị viên có quyền quản lý lớp trên toàn trường. Giáo vụ có quyền quản lý lớp trong phạm vi Khoa/Bộ môn được phân công. Lớp cần xử lý đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Lớp được chuyển từ "Đã đóng" sang "Lưu trữ" khi thực hiện Lưu trữ. Lớp được khôi phục từ "Lưu trữ" về "Đã đóng" khi thực hiện Khôi phục. Lớp chỉ được Hard Delete khi có 0 Sinh viên, 0 bài tập. Nếu không đủ điều kiện Hard Delete, lớp không bị xóa vật lý và được chuyển sang "Lưu trữ" theo chính sách. Dữ liệu của lớp được bảo lưu khi lớp ở trạng thái "Lưu trữ". Khôi phục lớp không tự động chuyển lớp về "Hoạt động".
 - **Luồng tương tác chính**:
-  1. Người dùng chọn chức năng quản lý vòng đời lớp học.
-  2. Hệ thống hiển thị danh sách lớp theo phạm vi quyền.
-  3. Người dùng chọn lớp cần xử lý.
-  4. Người dùng chọn một trong các thao tác: "Lưu trữ lớp" (Archive), "Khôi phục lớp" (Restore), hoặc "Xóa vĩnh viễn" (Hard Delete).
-  5. Hệ thống hiển thị hộp thoại xác nhận và kiểm tra điều kiện.
-  6. Người dùng xác nhận thao tác.
-  7. Hệ thống thực hiện xử lý theo quy tắc nghiệp vụ:
-     - Archive: Chuyển lớp từ "Đã đóng" sang "Lưu trữ", ẩn khỏi danh sách vận hành thông thường.
-     - Restore: Chuyển lớp từ "Lưu trữ" về "Đã đóng" (không tự động mở thành Hoạt động).
-     - Hard Delete: Kiểm tra đồng thời student_count = 0 AND assignment_count = 0. Nếu đủ điều kiện, hệ thống xóa hoàn toàn bản ghi lớp. Nếu không đủ điều kiện, hệ thống chặn Hard Delete và tự động chuyển sang Archive.
-  8. Hệ thống thông báo kết quả xử lý thành công.
+  1. Người dùng chọn chức năng "Quản lý lớp".
+  2. Hệ thống hiển thị danh sách các lớp mà Người dùng có quyền quản lý và trạng thái tương ứng: Quản trị viên thấy toàn bộ lớp trong trường; Giáo vụ chỉ thấy lớp thuộc Khoa/Bộ môn mình phụ trách.
+  3. Người dùng chọn lớp cần quản lý vòng đời.
+  4. Hệ thống hiển thị thông tin và trạng thái hiện tại của lớp.
+  5. Hệ thống hiển thị thao tác phù hợp với trạng thái hiện tại của lớp.
+  6. Người dùng chọn thao tác "Lưu trữ lớp", "Xóa lớp" hoặc "Khôi phục lớp".
+  7. Hệ thống kiểm tra trạng thái lớp và điều kiện thực hiện thao tác.
+  8. Hệ thống hiển thị yêu cầu xác nhận thao tác.
+  9. Người dùng xác nhận thao tác.
+  10. Hệ thống thực hiện thao tác theo chính sách quản lý vòng đời lớp.
+  11. Hệ thống thông báo "Thao tác thành công."
 - **Luồng tương tác thay thế**:
-  - 6a. Người dùng chọn "Hủy": Hệ thống đóng hộp thoại và giữ nguyên trạng thái lớp.
-  - 7a. Thao tác Hard Delete bị chặn do có dữ liệu: Hệ thống thông báo "Lớp đã phát sinh dữ liệu học vụ, hệ thống chuyển lớp sang trạng thái Lưu trữ để bảo toàn dữ liệu." và thực hiện Archive.
+  - 6a. Người dùng chọn "Lưu trữ lớp": Hệ thống kiểm tra dữ liệu liên quan của lớp. Hệ thống chuyển lớp sang trạng thái "Lưu trữ". Hệ thống ẩn lớp khỏi danh sách lớp học vận hành thông thường.
+  - 6b. Người dùng chọn "Xóa lớp": Hệ thống kiểm tra số lượng Sinh viên và bài tập của lớp. Nếu không có cả 2 (0 Sinh viên và 0 bài tập), hệ thống Hard Delete xóa lớp hoàn toàn. Nếu có ít nhất 1 trong 2 (có Sinh viên hoặc có bài tập), hệ thống không xóa vật lý mà chuyển lớp sang trạng thái "Lưu trữ".
+  - 6c. Người dùng chọn "Khôi phục lớp": Hệ thống kiểm tra lớp đang ở trạng thái "Lưu trữ". Hệ thống khôi phục lớp về trạng thái "Đã đóng" và giữ nguyên dữ liệu liên quan.
+  - 9a. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên trạng thái hiện tại của lớp.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Lớp không tồn tại: Hệ thống thông báo "Không tìm thấy lớp học."
-  - E2 - Thao tác không hợp lệ với trạng thái lớp: Hệ thống thông báo lỗi trạng thái.
-  - E3 - Giáo vụ thao tác ngoài phạm vi: Hệ thống thông báo "Bạn không có quyền thao tác trên lớp thuộc Khoa/Bộ môn khác."
-  - E4 - Lỗi hệ thống: Hệ thống thông báo "Thao tác thất bại, vui lòng thử lại sau."
+  - E2 - Lớp không ở trạng thái phù hợp để thực hiện thao tác này: Hệ thống thông báo "Lớp không ở trạng thái phù hợp để thực hiện thao tác này."
+  - E3 - Không thể lưu trữ hoặc khôi phục lớp: Hệ thống thông báo "Không thể cập nhật trạng thái lớp, vui lòng thử lại sau."
+  - E4 - Không thể xóa lớp: Hệ thống thông báo "Không thể xóa lớp, vui lòng thử lại sau."
+  - E5 - Giáo vụ thao tác ngoài phạm vi phụ trách: Hệ thống thông báo "Bạn không có quyền thao tác trên lớp thuộc Khoa/Bộ môn khác."
 
 ---
 
-### UC-42 — Quản lý sinh viên trong lớp (Cấp Quản trị viên / Giáo vụ)
-- **Mô tả**: Quản trị viên (toàn trường) và Giáo vụ (Khoa/Bộ môn) quản lý danh sách sinh viên trong lớp (thêm, xóa, thêm/xóa hàng loạt, xem thông tin sinh viên).
+### UC-38 — Quản lý sinh viên trong lớp
+- **Mô tả**: Đây là chức năng quản lý sinh viên trong lớp. Quản trị viên áp dụng cho toàn hệ thống; Giáo vụ áp dụng cho các lớp thuộc Khoa/Bộ môn được phân công. Người dùng quản lý danh sách sinh viên thuộc một lớp, bao gồm thêm, xóa và xem thông tin sinh viên trong lớp.
 - **Tác nhân**: Quản trị viên, Giáo vụ.
-- **Tiền điều kiện**: Người dùng đã đăng nhập đúng phạm vi quyền và lớp đang ở trạng thái Hoạt động.
-- **Hậu điều kiện**: Danh sách sinh viên thuộc lớp được cập nhật chính xác trong cơ sở dữ liệu.
+- **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên (quyền toàn hệ thống) hoặc Giáo vụ (quyền trong phạm vi Khoa/Bộ môn được phân công). Lớp cần quản lý đã tồn tại và đang ở trạng thái Hoạt động.
+- **Hậu điều kiện**: Danh sách sinh viên trong lớp được cập nhật thành công. Thông tin phân lớp của sinh viên được lưu vào cơ sở dữ liệu. Danh sách sinh viên trong lớp phản ánh đúng các thay đổi đã thực hiện.
 - **Luồng tương tác chính**:
-  1. Người dùng chọn lớp cần quản lý sinh viên từ danh sách lớp.
-  2. Hệ thống hiển thị danh sách sinh viên hiện tại của lớp.
-  3. Người dùng chọn chức năng "Thêm sinh viên" hoặc "Xóa sinh viên".
-  4. Người dùng chọn hoặc nhập thông tin sinh viên (hỗ trợ chọn một hoặc nhiều sinh viên).
-  5. Người dùng xác nhận thao tác.
-  6. Hệ thống kiểm tra tài khoản sinh viên tồn tại, trạng thái thuộc lớp và quyền của người thực hiện.
-  7. Hệ thống cập nhật danh sách sinh viên trong lớp.
-  8. Hệ thống thông báo "Cập nhật danh sách sinh viên thành công."
+  1. Người dùng chọn chức năng "Quản lý lớp".
+  2. Hệ thống hiển thị danh sách các lớp mà Người dùng có quyền quản lý: Quản trị viên thấy toàn bộ lớp trong trường; Giáo vụ chỉ thấy lớp thuộc Khoa/Bộ môn mình phụ trách.
+  3. Người dùng chọn lớp cần quản lý sinh viên.
+  4. Hệ thống hiển thị danh sách sinh viên hiện tại của lớp.
+  5. Người dùng chọn thao tác quản lý sinh viên.
+  6. Hệ thống hiển thị các chức năng thêm, xóa và xem thông tin sinh viên.
+  7. Người dùng thực hiện thao tác thêm, xóa hoặc xem thông tin sinh viên.
+  8. Hệ thống kiểm tra tính hợp lệ của thao tác.
+  9. Hệ thống cập nhật danh sách sinh viên trong lớp.
+  10. Hệ thống thông báo "Cập nhật danh sách sinh viên thành công."
 - **Luồng tương tác thay thế**:
-  - 5a. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên danh sách sinh viên.
+  - 5a. Người dùng chọn "Thêm sinh viên": Hệ thống hiển thị danh sách sinh viên chưa thuộc lớp. Người dùng chọn sinh viên cần thêm. Người dùng xác nhận thêm sinh viên vào lớp. Hệ thống cập nhật danh sách sinh viên của lớp.
+  - 5b. Người dùng chọn "Xóa sinh viên": Người dùng chọn sinh viên cần xóa khỏi lớp. Hệ thống yêu cầu xác nhận thao tác. Người dùng xác nhận xóa sinh viên khỏi lớp. Hệ thống cập nhật danh sách sinh viên của lớp.
+  - 5c. Người dùng chọn "Xem thông tin sinh viên": Hệ thống hiển thị thông tin của sinh viên được chọn.
+  - 5d. Người dùng chọn nhiều sinh viên: Hệ thống cho phép Người dùng chọn nhiều sinh viên để thêm hoặc xóa khỏi lớp. Người dùng xác nhận thao tác. Hệ thống cập nhật danh sách sinh viên theo lựa chọn.
+  - 5e. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên danh sách sinh viên của lớp.
 - **Luồng tương tác ngoại lệ**:
   - E1 - Lớp không tồn tại: Hệ thống thông báo "Không tìm thấy lớp."
   - E2 - Sinh viên không tồn tại: Hệ thống thông báo "Không tìm thấy sinh viên."
-  - E3 - Sinh viên đã có trong lớp: Hệ thống thông báo "Sinh viên đã thuộc lớp này."
-  - E4 - Lớp không ở trạng thái Hoạt động: Hệ thống thông báo "Không thể thay đổi thành viên của lớp không hoạt động."
-  - E5 - Giáo vụ thao tác ngoài phạm vi: Hệ thống thông báo "Bạn không có quyền quản lý sinh viên của lớp thuộc Khoa/Bộ môn khác."
+  - E3 - Sinh viên đã thuộc lớp: Hệ thống thông báo "Sinh viên đã thuộc lớp này."
+  - E4 - Sinh viên chưa thuộc lớp: Hệ thống thông báo "Sinh viên không thuộc lớp này."
+  - E5 - Không thể thêm hoặc xóa sinh viên: Hệ thống thông báo "Không thể cập nhật sinh viên trong lớp."
+  - E6 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Cập nhật danh sách sinh viên thất bại."
+  - E7 - Giáo vụ thao tác ngoài phạm vi phụ trách: Hệ thống thông báo "Bạn không có quyền quản lý sinh viên của lớp thuộc Khoa/Bộ môn khác."
 
 ---
 
-### UC-43 — Phân công Giáo viên vào lớp
-- **Mô tả**: Quản trị viên (toàn trường) và Giáo vụ (Khoa/Bộ môn) phân công một hoặc nhiều Giáo viên phụ trách giảng dạy cho lớp học.
-- **Tác nhân**: Quản trị viên, Giáo vụ. *(Không có Quản trị viên hệ thống).*
-- **Tiền điều kiện**: Người dùng đã đăng nhập đúng phạm vi quyền, lớp học đang ở trạng thái Hoạt động và Giáo viên tồn tại trong hệ thống.
-- **Hậu điều kiện**: Thông tin phân công Giáo viên phụ trách lớp được lưu thành công trong cơ sở dữ liệu.
+### UC-39 — Phân công Giáo viên vào lớp
+- **Mô tả**: Cho phép Quản trị viên phân công một hoặc nhiều Giáo viên phụ trách giảng dạy cho lớp trong phạm vi toàn trường; Giáo vụ thực hiện phân công trong phạm vi Khoa/Bộ môn được phân công.
+- **Tác nhân**: Quản trị viên, Giáo vụ.
+- **Tiền điều kiện**: Người dùng đã đăng nhập với vai trò Quản trị viên hoặc Giáo vụ. Quản trị viên có quyền quản lý lớp trong toàn trường. Giáo vụ có quyền quản lý lớp trong phạm vi Khoa/Bộ môn được phân công. Lớp cần phân công đã tồn tại và đang ở trạng thái Hoạt động. Giáo viên cần phân công đã tồn tại trong hệ thống.
+- **Hậu điều kiện**: Một hoặc nhiều Giáo viên được phân công thành công vào lớp. Thông tin phân công được lưu vào cơ sở dữ liệu. Giáo viên được phân công có thể quản lý và giảng dạy lớp theo quyền được cấp.
 - **Luồng tương tác chính**:
-  1. Người dùng chọn lớp cần phân công Giáo viên.
-  2. Hệ thống hiển thị thông tin lớp và danh sách Giáo viên đang phụ trách hiện tại.
-  3. Người dùng chọn chức năng "Phân công Giáo viên".
-  4. Hệ thống hiển thị danh sách Giáo viên có thể phân công.
-  5. Người dùng chọn một hoặc nhiều Giáo viên và chọn "Xác nhận phân công".
-  6. Hệ thống kiểm tra tính hợp lệ của thông tin và phạm vi quyền của người thực hiện.
-  7. Hệ thống lưu thông tin phân công Giáo viên vào cơ sở dữ liệu.
-  8. Hệ thống thông báo "Phân công Giáo viên thành công."
+  1. Người dùng chọn chức năng "Quản lý lớp".
+  2. Hệ thống hiển thị danh sách các lớp mà Người dùng có quyền quản lý: Quản trị viên thấy toàn bộ lớp trong trường; Giáo vụ chỉ thấy lớp thuộc Khoa/Bộ môn mình phụ trách.
+  3. Người dùng chọn lớp cần phân công Giáo viên.
+  4. Hệ thống hiển thị thông tin và danh sách Giáo viên đang phụ trách lớp.
+  5. Người dùng chọn chức năng "Phân công Giáo viên".
+  6. Hệ thống hiển thị danh sách Giáo viên có thể phân công.
+  7. Người dùng chọn Giáo viên cần phân công.
+  8. Người dùng xác nhận phân công.
+  9. Hệ thống kiểm tra tính hợp lệ của thông tin phân công.
+  10. Hệ thống lưu thông tin phân công vào cơ sở dữ liệu.
+  11. Hệ thống thông báo "Phân công Giáo viên thành công."
 - **Luồng tương tác thay thế**:
-  - 5a. Người dùng hủy phân công Giáo viên hiện tại: Người dùng chọn Giáo viên cần hủy, xác nhận và hệ thống cập nhật gỡ bỏ phân công.
-  - 5b. Người dùng chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên danh sách hiện tại.
+  - 7a. Người dùng phân công nhiều Giáo viên: Hệ thống cho phép Người dùng chọn nhiều Giáo viên. Người dùng xác nhận phân công. Hệ thống lưu thông tin phân công của các Giáo viên được chọn.
+  - 7b. Người dùng thay đổi Giáo viên đang phụ trách: Hệ thống hiển thị danh sách Giáo viên đang được phân công. Người dùng chọn Giáo viên cần thay đổi và Giáo viên mới. Người dùng xác nhận thay đổi. Hệ thống cập nhật thông tin phân công.
+  - 7c. Người dùng hủy phân công Giáo viên: Người dùng chọn Giáo viên cần hủy phân công. Hệ thống yêu cầu xác nhận. Người dùng xác nhận hủy phân công. Hệ thống xóa thông tin phân công của Giáo viên khỏi lớp.
+  - 8a. Người dùng chọn "Hủy" tại bước xác nhận: Hệ thống hủy thao tác phân công và giữ nguyên danh sách Giáo viên của lớp.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy lớp: Hệ thống thông báo "Không tìm thấy lớp học."
-  - E2 - Không tìm thấy Giáo viên: Hệ thống thông báo "Không tìm thấy Giáo viên."
-  - E3 - Giáo vụ thao tác ngoài phạm vi: Hệ thống thông báo "Bạn không có quyền phân công Giáo viên cho lớp thuộc Khoa/Bộ môn khác."
-  - E4 - Lỗi lưu dữ liệu: Hệ thống thông báo "Phân công Giáo viên thất bại."
+  - E1 - Lớp không tồn tại: Hệ thống thông báo "Không tìm thấy lớp."
+  - E2 - Giáo viên không tồn tại: Hệ thống thông báo "Không tìm thấy Giáo viên."
+  - E3 - Giáo viên đã được phân công: Hệ thống thông báo "Giáo viên đã được phân công vào lớp này."
+  - E4 - Lỗi khi lưu thông tin phân công: Hệ thống thông báo "Phân công Giáo viên thất bại."
+  - E5 - Giáo vụ thao tác ngoài phạm vi phụ trách: Hệ thống thông báo "Bạn không có quyền phân công Giáo viên cho lớp thuộc Khoa/Bộ môn khác."
+  - E6 - Lỗi khi lưu thông tin phân công: Hệ thống thông báo "Phân công Giáo viên thất bại."
 
 ---
 
-### UC-44 — Quản lý cấu hình AI
-- **Mô tả**: Cho phép Quản trị viên hệ thống quản lý cấu hình các mô hình AI, API Key, endpoint và các tham số kỹ thuật phục vụ AI Review và AI Tutor.
+## PHẦN V. PHÂN HỆ QUẢN TRỊ HỆ THỐNG & TỔ CHỨC (UC-40 ĐẾN UC-44)
+
+---
+
+### UC-40 — Quản lý cấu hình AI
+- **Mô tả**: Quản trị viên hệ thống quản lý các cấu hình AI được sử dụng trong hệ thống, bao gồm thiết lập, cập nhật và kích hoạt hoặc vô hiệu hóa cấu hình.
 - **Tác nhân**: Quản trị viên hệ thống.
-- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập và có quyền quản trị kỹ thuật hệ thống.
-- **Hậu điều kiện**: Cấu hình AI được cập nhật và kích hoạt an toàn trong hệ thống.
+- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập, có quyền quản lý cấu hình AI. Các thành phần AI cần cấu hình đã được tích hợp vào hệ thống.
+- **Hậu điều kiện**: Cấu hình AI được tạo hoặc cập nhật thành công. Thông tin cấu hình được lưu vào hệ thống. Hệ thống sử dụng cấu hình đang được kích hoạt cho các chức năng AI tương ứng.
 - **Luồng tương tác chính**:
   1. Quản trị viên hệ thống chọn chức năng "Quản lý cấu hình AI".
   2. Hệ thống hiển thị danh sách các cấu hình AI hiện có.
-  3. Quản trị viên hệ thống chọn cấu hình cần chỉnh sửa hoặc tạo cấu hình mới.
-  4. Quản trị viên hệ thống nhập/điều chỉnh các thông số: API Key, Provider, Model, Temperature, Max Tokens, Timeout.
-  5. Quản trị viên hệ thống chọn chức năng "Kiểm tra kết nối" (Test Connection).
-  6. Hệ thống thực hiện kiểm tra kết nối đến AI Service và hiển thị kết quả kiểm tra.
-  7. Quản trị viên hệ thống chọn "Lưu cấu hình".
-  8. Hệ thống lưu và kích hoạt cấu hình AI vào cơ sở dữ liệu.
+  3. Quản trị viên hệ thống chọn cấu hình cần thiết lập hoặc chỉnh sửa.
+  4. Hệ thống hiển thị thông tin cấu hình hiện tại.
+  5. Quản trị viên hệ thống nhập hoặc chỉnh sửa các thông số cấu hình AI.
+  6. Quản trị viên hệ thống chọn "Lưu cấu hình".
+  7. Hệ thống kiểm tra tính hợp lệ của các thông số.
+  8. Hệ thống lưu cấu hình vào cơ sở dữ liệu.
   9. Hệ thống thông báo "Cập nhật cấu hình AI thành công."
 - **Luồng tương tác thay thế**:
   - 4a. Quản trị viên hệ thống chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên cấu hình hiện tại.
-  - 7a. Kích hoạt/Vô hiệu hóa cấu hình: Quản trị viên hệ thống chuyển đổi trạng thái hoạt động của cấu hình.
+  - 4b. Quản trị viên hệ thống tạo cấu hình AI mới: Hệ thống hiển thị biểu mẫu tạo cấu hình. Quản trị viên hệ thống nhập các thông số cấu hình. Quản trị viên hệ thống xác nhận tạo cấu hình. Hệ thống lưu cấu hình AI mới.
+  - 4c. Quản trị viên hệ thống kích hoạt cấu hình: Quản trị viên hệ thống chọn cấu hình cần kích hoạt. Hệ thống yêu cầu xác nhận. Quản trị viên hệ thống xác nhận kích hoạt. Hệ thống chuyển cấu hình sang trạng thái hoạt động.
+  - 4d. Quản trị viên hệ thống vô hiệu hóa cấu hình: Quản trị viên hệ thống chọn cấu hình cần vô hiệu hóa. Hệ thống yêu cầu xác nhận. Quản trị viên hệ thống xác nhận vô hiệu hóa. Hệ thống chuyển cấu hình sang trạng thái không hoạt động.
+  - 4e. Quản trị viên hệ thống kiểm tra cấu hình: Quản trị viên hệ thống chọn chức năng kiểm tra cấu hình. Hệ thống thực hiện kiểm tra kết nối và tính hợp lệ của cấu hình. Hệ thống hiển thị kết quả kiểm tra.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Thông số cấu hình không hợp lệ: Hệ thống thông báo "Thông số cấu hình AI không hợp lệ."
-  - E2 - Kết nối đến dịch vụ AI thất bại: Hệ thống thông báo "Kiểm tra kết nối thất bại, vui lòng kiểm tra lại API Key hoặc endpoint."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Cập nhật cấu hình AI thất bại."
+  - E1 - Cấu hình không hợp lệ: Hệ thống thông báo "Thông tin cấu hình AI không hợp lệ."
+  - E2 - Thiếu thông số bắt buộc: Hệ thống thông báo "Vui lòng nhập đầy đủ các thông số bắt buộc."
+  - E3 - Cấu hình đã tồn tại: Hệ thống thông báo "Cấu hình AI đã tồn tại."
+  - E4 - Kết nối dịch vụ AI thất bại: Hệ thống thông báo "Không thể kết nối đến dịch vụ AI."
+  - E5 - Không thể kích hoạt cấu hình: Hệ thống thông báo "Không thể kích hoạt cấu hình AI."
+  - E6 - Lỗi khi lưu cấu hình: Hệ thống thông báo "Cập nhật cấu hình AI thất bại."
 
 ---
 
-### UC-45 — Cấu hình Docker Sandbox
-- **Mô tả**: Cho phép Quản trị viên hệ thống thiết lập và điều chỉnh các thông số môi trường Docker Sandbox dùng để thực thi mã nguồn cách ly an toàn.
+### UC-41 — Cấu hình Docker Sandbox
+- **Mô tả**: Quản trị viên hệ thống cấu hình môi trường Docker Sandbox để thực thi và kiểm tra mã nguồn của sinh viên một cách an toàn.
 - **Tác nhân**: Quản trị viên hệ thống.
-- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập và dịch vụ Docker Sandbox đã tích hợp vào hệ thống.
-- **Hậu điều kiện**: Các thông số cấu hình Docker Sandbox (giới hạn CPU, RAM, Execution Timeout, Base Images) được lưu và áp dụng cho các phiên thực thi mới.
+- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập hệ thống. Quản trị viên hệ thống có quyền quản lý cấu hình Docker Sandbox. Dịch vụ Docker Sandbox đã được tích hợp vào hệ thống.
+- **Hậu điều kiện**: Cấu hình Docker Sandbox được lưu thành công. Docker Sandbox sử dụng cấu hình mới cho quá trình thực thi mã nguồn. Các thông số cấu hình được áp dụng cho các phiên thực thi mới.
 - **Luồng tương tác chính**:
   1. Quản trị viên hệ thống chọn chức năng "Cấu hình Docker Sandbox".
-  2. Hệ thống hiển thị các thông số cấu hình hiện tại: Base Images theo ngôn ngữ, CPU Limit, Memory Limit mặc định, Network Isolation, Execution Timeout.
+  2. Hệ thống hiển thị các thông số cấu hình hiện tại.
   3. Quản trị viên hệ thống nhập hoặc chỉnh sửa các thông số cấu hình.
-  4. Quản trị viên hệ thống chọn chức năng "Kiểm tra cấu hình".
-  5. Hệ thống kiểm tra kết nối Docker daemon và khả năng khởi tạo container mẫu.
-  6. Quản trị viên hệ thống chọn "Lưu cấu hình".
-  7. Hệ thống lưu cấu hình vào cơ sở dữ liệu và áp dụng cho Docker Sandbox.
+  4. Quản trị viên hệ thống chọn "Lưu cấu hình".
+  5. Hệ thống kiểm tra tính hợp lệ của các thông số.
+  6. Hệ thống lưu cấu hình vào cơ sở dữ liệu.
+  7. Hệ thống áp dụng cấu hình cho Docker Sandbox.
   8. Hệ thống thông báo "Cấu hình Docker Sandbox thành công."
 - **Luồng tương tác thay thế**:
-  - 3a. Quản trị viên hệ thống chọn "Khôi phục mặc định": Hệ thống nạp lại các thông số mặc định an toàn.
-  - 6a. Quản trị viên hệ thống chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên cấu hình hiện tại.
+  - 3a. Quản trị viên hệ thống chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên cấu hình hiện tại.
+  - 3b. Quản trị viên hệ thống khôi phục cấu hình mặc định: Quản trị viên hệ thống chọn "Khôi phục mặc định". Hệ thống hiển thị các thông số cấu hình mặc định. Quản trị viên hệ thống xác nhận khôi phục. Hệ thống cập nhật cấu hình Docker Sandbox về giá trị mặc định.
+  - 3c. Quản trị viên hệ thống kiểm tra cấu hình: Quản trị viên hệ thống chọn chức năng "Kiểm tra cấu hình". Hệ thống kiểm tra kết nối và khả năng khởi tạo Docker Sandbox. Hệ thống hiển thị kết quả kiểm tra.
+  - 3d. Quản trị viên hệ thống cập nhật giới hạn thực thi: Quản trị viên hệ thống điều chỉnh thời gian chạy, bộ nhớ và tài nguyên được cấp cho Docker Sandbox. Hệ thống kiểm tra và lưu các giới hạn mới.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Thông số vượt quá giới hạn an toàn: Hệ thống thông báo "Thông số cấu hình vượt quá giới hạn cho phép."
-  - E2 - Không thể kết nối Docker daemon: Hệ thống thông báo "Không thể kết nối đến Docker service."
-  - E3 - Lỗi lưu cấu hình: Hệ thống thông báo "Cấu hình Docker Sandbox thất bại."
+  - E1 - Thông số cấu hình không hợp lệ: Hệ thống thông báo "Thông số cấu hình Docker Sandbox không hợp lệ."
+  - E2 - Thiếu thông số bắt buộc: Hệ thống thông báo "Vui lòng nhập đầy đủ các thông số bắt buộc."
+  - E3 - Docker Sandbox không khả dụng: Hệ thống thông báo "Docker Sandbox hiện không khả dụng."
+  - E4 - Không thể kết nối Docker: Hệ thống thông báo "Không thể kết nối đến Docker."
+  - E5 - Cấu hình vượt quá giới hạn cho phép: Hệ thống thông báo "Thông số cấu hình vượt quá giới hạn cho phép."
+  - E6 - Lỗi khi lưu cấu hình: Hệ thống thông báo "Cấu hình Docker Sandbox thất bại."
 
 ---
 
-### UC-46 — Giám sát Docker Sandbox
-- **Mô tả**: Cho phép Quản trị viên hệ thống giám sát trạng thái hoạt động, mức sử dụng tài nguyên (CPU, RAM) và theo dõi các container thực thi trong quá trình Batch Grading.
+### UC-42 — Giám sát Docker Sandbox
+- **Mô tả**: Quản trị viên hệ thống giám sát trạng thái và hoạt động của Docker Sandbox để theo dõi tình trạng thực thi mã nguồn và phát hiện các vấn đề trong quá trình vận hành.
 - **Tác nhân**: Quản trị viên hệ thống.
-- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập và có quyền giám sát hệ thống.
-- **Hậu điều kiện**: Trạng thái và thông số hoạt động của Docker Sandbox được hiển thị realtime; các sự cố hoặc lỗi được ghi nhận vào nhật ký.
+- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập hệ thống. Quản trị viên hệ thống có quyền giám sát Docker Sandbox. Dịch vụ Docker Sandbox đã được tích hợp vào hệ thống.
+- **Hậu điều kiện**: Quản trị viên hệ thống xem được trạng thái và thông tin hoạt động của Docker Sandbox. Hệ thống ghi nhận các sự kiện và lỗi phát sinh trong quá trình thực thi. Không có dữ liệu cấu hình bị thay đổi. Nếu Quản trị viên hệ thống dừng một phiên thực thi, phiên đó được kết thúc; hệ thống lưu trạng thái và kết quả đã thực hiện đến thời điểm dừng, đồng thời cập nhật bài nộp liên quan sang trạng thái "Bị gián đoạn".
 - **Luồng tương tác chính**:
   1. Quản trị viên hệ thống chọn chức năng "Giám sát Docker Sandbox".
-  2. Hệ thống kiểm tra và hiển thị trạng thái hoạt động của Docker Sandbox.
-  3. Hệ thống hiển thị danh sách các container đang thực thi, hàng đợi Message Queue và mức sử dụng tài nguyên (CPU, RAM, số container active).
-  4. Quản trị viên hệ thống theo dõi realtime tình trạng thực thi mã nguồn.
-  5. Quản trị viên hệ thống xem chi tiết một phiên thực thi hoặc nhật ký lỗi phát sinh.
+  2. Hệ thống kiểm tra trạng thái của Docker Sandbox.
+  3. Hệ thống hiển thị trạng thái hoạt động của Docker Sandbox.
+  4. Hệ thống hiển thị thông tin các phiên thực thi đang hoạt động và đã hoàn thành.
+  5. Quản trị viên hệ thống xem mức sử dụng tài nguyên của Docker Sandbox.
+  6. Quản trị viên hệ thống xem các lỗi hoặc sự kiện phát sinh trong quá trình thực thi.
 - **Luồng tương tác thay thế**:
-  - 5a. Dừng khẩn cấp phiên thực thi bị kẹt: Quản trị viên hệ thống chọn dừng container bị treo, hệ thống giải phóng tài nguyên và ghi nhận sự kiện vào System Logs.
+  - 4a. Quản trị viên hệ thống chọn một phiên thực thi: Hệ thống hiển thị thông tin chi tiết của phiên thực thi gồm thời gian, trạng thái và kết quả.
+  - 4b. Quản trị viên hệ thống xem nhật ký hoạt động: Hệ thống hiển thị nhật ký hoạt động của Docker Sandbox để xem các sự kiện và lỗi phát sinh.
+  - 4c. Quản trị viên hệ thống làm mới thông tin giám sát: Hệ thống cập nhật trạng thái và thông tin tài nguyên mới nhất.
+  - 4d. Quản trị viên hệ thống dừng phiên thực thi: Quản trị viên hệ thống chọn phiên thực thi cần dừng. Hệ thống yêu cầu xác nhận thao tác. Quản trị viên hệ thống xác nhận dừng phiên. Hệ thống dừng phiên thực thi được chọn, ghi nhận thao tác vào System Logs và cập nhật trạng thái bài nộp liên quan.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Docker Sandbox không khả dụng: Hệ thống thông báo "Dịch vụ Docker Sandbox hiện không phản hồi."
-  - E2 - Lỗi tải dữ liệu giám sát: Hệ thống thông báo "Không thể tải thông tin giám sát, vui lòng thử lại sau."
+  - E1 - Docker Sandbox không khả dụng: Hệ thống thông báo "Docker Sandbox hiện không khả dụng."
+  - E2 - Không thể lấy trạng thái Docker Sandbox: Hệ thống thông báo "Không thể lấy trạng thái Docker Sandbox."
+  - E3 - Không thể lấy thông tin tài nguyên: Hệ thống thông báo "Không thể lấy thông tin tài nguyên."
+  - E4 - Không tìm thấy phiên thực thi: Hệ thống thông báo "Không tìm thấy phiên thực thi."
+  - E5 - Không thể dừng phiên thực thi: Hệ thống thông báo "Không thể dừng phiên thực thi."
+  - E6 - Lỗi khi tải nhật ký: Hệ thống thông báo "Không thể tải nhật ký hoạt động."
 
 ---
 
-### UC-47 — Quản lý tổ chức
-- **Mô tả**: Cho phép Quản trị viên quản lý thông tin tổ chức, cơ cấu Khoa/Bộ môn trực thuộc và phân công Giáo vụ phụ trách từng Khoa/Bộ môn.
-- **Tác nhân**: Quản trị viên. *(Quản trị viên hệ thống KHÔNG tham gia).*
-- **Tiền điều kiện**: Quản trị viên đã đăng nhập và có quyền quản lý cơ cấu tổ chức đào tạo.
-- **Hậu điều kiện**: Thông tin tổ chức, Khoa/Bộ môn được cập nhật và Giáo vụ được gán đúng Khoa/Bộ môn phụ trách (1 Giáo vụ có thể phụ trách một hoặc nhiều Khoa/Bộ môn).
+### UC-43 — Quản lý tổ chức, Khoa/Bộ môn & Phân công Giáo vụ
+- **Mô tả**: Quản trị viên quản lý thông tin tổ chức và cơ cấu Khoa/Bộ môn trực thuộc, đồng thời gán tài khoản Giáo vụ phụ trách từng Khoa/Bộ môn.
+- **Tác nhân**: Quản trị viên.
+- **Tiền điều kiện**: Quản trị viên đã đăng nhập hệ thống. Quản trị viên có quyền quản lý tổ chức và Khoa/Bộ môn.
+- **Hậu điều kiện**: Thông tin tổ chức hoặc Khoa/Bộ môn được tạo, cập nhật hoặc thay đổi trạng thái thành công. Tài khoản Giáo vụ được gán đúng Khoa/Bộ môn phụ trách. Thông tin được lưu vào cơ sở dữ liệu.
 - **Luồng tương tác chính**:
   1. Quản trị viên chọn chức năng "Quản lý tổ chức".
   2. Hệ thống hiển thị danh sách tổ chức và cơ cấu Khoa/Bộ môn trực thuộc.
-  3. Quản trị viên chọn thao tác: Tạo mới tổ chức, Tạo Khoa/Bộ môn, Chỉnh sửa, Khóa/mở khóa, Xóa, hoặc Phân công Giáo vụ.
+  3. Quản trị viên chọn một thao tác: Tạo tổ chức, Tạo Khoa/Bộ môn, Chỉnh sửa, Khóa/mở khóa, Xóa, hoặc Phân công Giáo vụ.
   4. Hệ thống hiển thị biểu mẫu hoặc yêu cầu xác nhận tương ứng.
-  5. Quản trị viên nhập thông tin hoặc phân công Giáo vụ phụ trách Khoa/Bộ môn.
-  6. Quản trị viên chọn "Lưu thay đổi".
-  7. Hệ thống kiểm tra tính hợp lệ của dữ liệu và lưu vào cơ sở dữ liệu.
-  8. Hệ thống thông báo "Thao tác quản lý tổ chức thành công."
+  5. Quản trị viên nhập thông tin hoặc xác nhận thao tác.
+  6. Hệ thống kiểm tra tính hợp lệ của dữ liệu.
+  7. Hệ thống cập nhật thông tin, trạng thái hoặc thông tin phân công tương ứng.
+  8. Hệ thống thông báo thao tác thành công.
 - **Luồng tương tác thay thế**:
-  - 3a. Quản trị viên phân công Giáo vụ phụ trách: Quản trị viên chọn tài khoản Giáo vụ và gán vào một hoặc nhiều Khoa/Bộ môn phụ trách; hệ thống lưu thông tin phân công.
-  - 6a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên dữ liệu hiện tại.
+  - 3a. Quản trị viên chọn "Tạo tổ chức": Hệ thống hiển thị biểu mẫu tạo tổ chức mới.
+  - 3b. Quản trị viên chọn "Tạo Khoa/Bộ môn": Quản trị viên chọn tổ chức trực thuộc và nhập tên Khoa/Bộ môn. Hệ thống tạo Khoa/Bộ môn mới.
+  - 3c. Quản trị viên chọn "Chỉnh sửa": Hệ thống hiển thị thông tin hiện tại của tổ chức hoặc Khoa/Bộ môn được chọn để cập nhật.
+  - 3d. Quản trị viên chọn "Khóa/mở khóa tổ chức": Hệ thống cập nhật trạng thái tổ chức.
+  - 3e. Quản trị viên chọn "Xóa": Hệ thống kiểm tra dữ liệu liên quan trước khi xóa tổ chức hoặc Khoa/Bộ môn.
+  - 3f. Quản trị viên chọn "Phân công Giáo vụ": Quản trị viên chọn tài khoản Giáo vụ và Khoa/Bộ môn cần phụ trách. Quản trị viên xác nhận. Hệ thống lưu thông tin phân công (một Giáo vụ có thể phụ trách một hoặc nhiều Khoa/Bộ môn).
+  - 7a. Quản trị viên chọn "Hủy": Hệ thống hủy thao tác và giữ nguyên dữ liệu hiện tại.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Tên tổ chức hoặc Khoa/Bộ môn đã tồn tại: Hệ thống thông báo "Tên đã tồn tại."
-  - E2 - Có dữ liệu liên quan khi xóa: Hệ thống thông báo "Đang có dữ liệu lớp/người dùng liên quan, không thể xóa trực tiếp."
-  - E3 - Lỗi lưu dữ liệu: Hệ thống thông báo "Thao tác quản lý tổ chức thất bại."
+  - E1 - Tổ chức hoặc Khoa/Bộ môn không tồn tại: Hệ thống thông báo "Không tìm thấy tổ chức hoặc Khoa/Bộ môn."
+  - E2 - Thông tin không hợp lệ: Hệ thống thông báo "Thông tin không hợp lệ."
+  - E3 - Tổ chức hoặc Khoa/Bộ môn đã tồn tại: Hệ thống thông báo "Tên đã tồn tại."
+  - E4 - Đang có dữ liệu liên quan: Hệ thống thông báo "Đang có dữ liệu liên quan và không thể xóa."
+  - E5 - Giáo vụ đã được phân công Khoa/Bộ môn này: Hệ thống thông báo "Giáo vụ đã phụ trách Khoa/Bộ môn này."
+  - E6 - Lỗi khi lưu dữ liệu: Hệ thống thông báo "Thao tác thất bại."
 
 ---
 
-### UC-48 — Quản lý System Logs
-- **Mô tả**: Cho phép Quản trị viên hệ thống xem, tìm kiếm, lọc và xuất nhật ký hoạt động của toàn hệ thống (System Logs) nhằm phục vụ giám sát, audit và xử lý sự cố.
+### UC-44 — Quản lý System Logs
+- **Mô tả**: Quản trị viên hệ thống xem, tìm kiếm và theo dõi các System Logs được ghi nhận trong quá trình hoạt động của hệ thống nhằm hỗ trợ giám sát và kiểm tra sự cố.
 - **Tác nhân**: Quản trị viên hệ thống.
-- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập và có quyền quản trị hệ thống.
-- **Hậu điều kiện**: Nhật ký hệ thống được hiển thị và trích xuất theo nhu cầu; dữ liệu log không bị thay đổi.
+- **Tiền điều kiện**: Quản trị viên hệ thống đã đăng nhập hệ thống. Quản trị viên hệ thống có quyền quản lý System Logs. Hệ thống đã ghi nhận System Logs.
+- **Hậu điều kiện**: Quản trị viên hệ thống xem được các System Logs theo nhu cầu. Thông tin nhật ký không bị thay đổi trong quá trình xem và tra cứu. Các thao tác quản lý System Logs được ghi nhận nếu hệ thống có hỗ trợ.
 - **Luồng tương tác chính**:
   1. Quản trị viên hệ thống chọn chức năng "Quản lý System Logs".
-  2. Hệ thống hiển thị danh sách System Logs gồm: Thời gian, Actor/User, Action, Loại sự kiện (Info/Warn/Error), Module và Trạng thái.
-  3. Quản trị viên hệ thống tìm kiếm hoặc lọc log theo khoảng thời gian, loại sự kiện hoặc từ khóa.
-  4. Hệ thống hiển thị danh sách System Logs phù hợp với bộ lọc.
-  5. Quản trị viên hệ thống chọn một bản ghi log để xem chi tiết thông tin.
-  6. Quản trị viên hệ thống có thể chọn chức năng "Xuất Logs" để tải tệp nhật ký về máy.
+  2. Hệ thống hiển thị danh sách System Logs.
+  3. Quản trị viên hệ thống xem thông tin nhật ký gồm thời gian, người dùng, hành động, loại sự kiện và trạng thái.
+  4. Quản trị viên hệ thống chọn điều kiện tìm kiếm hoặc lọc System Logs.
+  5. Hệ thống xử lý điều kiện tìm kiếm hoặc lọc.
+  6. Hệ thống hiển thị các System Logs phù hợp.
+  7. Quản trị viên hệ thống chọn một System Log để xem chi tiết.
+  8. Hệ thống hiển thị thông tin chi tiết của System Log được chọn.
 - **Luồng tương tác thay thế**:
-  - 6a. Quản trị viên hệ thống xuất dữ liệu: Hệ thống tạo tệp log theo khoảng thời gian được chọn và tải về máy.
+  - 4a. Quản trị viên hệ thống tìm kiếm System Logs: Quản trị viên hệ thống nhập từ khóa tìm kiếm. Hệ thống hiển thị các System Logs phù hợp.
+  - 4b. Quản trị viên hệ thống lọc System Logs: Quản trị viên hệ thống chọn khoảng thời gian, loại sự kiện hoặc trạng thái. Hệ thống hiển thị các System Logs theo điều kiện đã chọn.
+  - 4c. Quản trị viên hệ thống xem chi tiết System Log: Quản trị viên hệ thống chọn một System Log. Hệ thống hiển thị toàn bộ thông tin chi tiết của System Log.
+  - 4d. Quản trị viên hệ thống xuất System Logs: Quản trị viên hệ thống chọn khoảng dữ liệu cần xuất. Hệ thống tạo tệp chứa các System Logs được chọn. Hệ thống cung cấp tệp cho quản trị viên hệ thống.
 - **Luồng tương tác ngoại lệ**:
-  - E1 - Không tìm thấy log phù hợp: Hệ thống hiển thị danh sách trống.
-  - E2 - Lỗi truy vấn dữ liệu: Hệ thống thông báo "Không thể tải System Logs, vui lòng thử lại sau."
-  - E3 - Lỗi xuất tệp: Hệ thống thông báo "Xuất System Logs thất bại."
+  - E1 - Không tìm thấy System Logs: Hệ thống thông báo "Không tìm thấy System Logs phù hợp."
+  - E2 - Điều kiện tìm kiếm không hợp lệ: Hệ thống thông báo "Điều kiện tìm kiếm không hợp lệ."
+  - E3 - System Log không tồn tại: Hệ thống thông báo "Không tìm thấy System Log."
+  - E4 - Không thể tải System Logs: Hệ thống thông báo "Không thể tải System Logs."
+  - E5 - Lỗi khi xuất System Logs: Hệ thống thông báo "Không thể xuất System Logs."

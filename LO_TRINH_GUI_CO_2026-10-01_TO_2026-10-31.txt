@@ -30,11 +30,11 @@ I. THÔNG TIN DỰ ÁN
      + Phụ trách xây dựng bộ kiểm thử (Unit, Integration, E2E), UI/UX và tài liệu bàn giao.
 
 4. Các nhóm người dùng mục tiêu (5 Actors theo đặc tả DOAN4.md):
-   - 1. Sinh viên (Student): Luyện tập giải bài tập, làm bài kiểm tra/assignment, nộp bài nhận kết quả chấm tự động, tương tác hỏi đáp với Trợ giảng AI (Socratic Hint).
-   - 2. Giảng viên (Teacher): Quản lý ngân hàng câu hỏi, thiết lập bộ test case (công khai và ẩn), quản lý lớp học, giao bài tập/kỳ thi, theo dõi tiến độ và can thiệp điều chỉnh điểm (override grade).
-   - 3. Trợ giảng (Teaching Assistant - TA): Hỗ trợ chấm bài thủ công, giải đáp thắc mắc của sinh viên, xem thống kê nộp bài của các lớp được phân công.
-   - 4. Quản trị học vụ (Academic Manager / Admin): Quản lý người dùng, phân quyền hệ thống, phê duyệt ngân hàng bài tập, cấu hình học kỳ và giám sát báo cáo tổng quan.
-   - 5. Quản trị kỹ thuật (System Admin / DevOps): Giám sát hệ thống, theo dõi tài nguyên container sandbox, quản lý hạn mức API token LLM, cấu hình bảo mật và sao lưu dữ liệu.
+   - 1. Sinh viên (Student): Luyện tập giải bài tập, làm bài lập trình, nộp bài nhận kết quả chấm tự động, tương tác hỏi đáp với Trợ giảng AI hậu kiểm sau đánh giá (UC-07..16).
+   - 2. Giáo viên (Teacher): Quản lý cấu hình bài tập, thiết lập test cases & rubric, giao bài tập cho lớp, đóng/mở lớp phụ trách, xem bài nộp, chấm thủ công và xác nhận điểm chính thức (UC-17..27, UC-36).
+   - 3. Quản trị viên (Phòng Đào tạo / Academic Admin): Quản lý người dùng, phân quyền đào tạo, import danh sách Excel/CSV, quản lý lớp học toàn trường, quản lý cơ cấu tổ chức/Khoa/Bộ môn và phân công Giáo vụ (UC-28..39, UC-43).
+   - 4. Giáo vụ (Hành chính Khoa / Bộ môn / Staff): Quản lý lớp học, quản lý sinh viên trong lớp và phân công giảng viên trong phạm vi Khoa/Bộ môn được phân công phụ trách (UC-34..39).
+   - 5. Quản trị viên hệ thống (System Admin / IT Platform): Quản lý cấu hình AI Engine, cấu hình & giám sát Docker Sandbox, quản lý System Logs và phân quyền cấp hệ thống (UC-40..42, UC-44, UC-31).
 
 --------------------------------------------------------------------------------
 II. TỔNG QUAN HỆ THỐNG VÀ NGUYÊN TẮC CỐT LÕI
@@ -119,47 +119,32 @@ III. KIẾN TRÚC VÀ CÁC THÀNH PHẦN AI
 --------------------------------------------------------------------------------
 IV. CÁC MODULE CHỨC NĂNG CHÍNH (BẢNG TỔNG HỢP THEO ĐẶC TẢ DOAN4.MD)
 --------------------------------------------------------------------------------
-Hệ thống bao phủ đầy đủ 48 Use Cases (từ UC-01 đến UC-48) được tổ chức thành 12 nhóm module chức năng nghiệp vụ:
+Hệ thống bao phủ đầy đủ 44 Use Cases (từ UC-01 đến UC-44) được tổ chức thành 5 phân hệ chức năng nghiệp vụ chính:
 
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| STT| Tên Phân Hệ / Module        | Chức Năng Chính                                    | Đối Tượng Sử Dụng     | Kết Quả Đầu Ra Dự Kiến                   |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 01 | Quản lý Xác thực & Tài khoản| Đăng ký, đăng nhập JWT, đổi mật khẩu, quản lý      | Tất cả 5 Actors       | Token bảo mật, phân quyền RBAC chặt chẽ, |
-|    | (Auth & RBAC - UC-01..04)   | hồ sơ cá nhân và phân quyền theo vai trò.          |                       | bảo vệ phiên làm việc người dùng.        |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 02 | Quản lý Bài tập Lập trình   | CRUD bài tập, cấu hình mức độ khó, chủ đề,         | Teacher, Admin,       | Ngân hàng bài tập chuẩn hóa, hỗ trợ đa   |
-|    | (Problem Mgmt - UC-05..09)  | ngôn ngữ lập trình cho phép và mô tả chi tiết.     | Student (chế độ xem)  | ngôn ngữ (Python, C++, Java, JS).        |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 03 | Quản lý Bộ Test Case        | Thiết lập test case công khai (Public Sample) và   | Teacher, Admin        | Bộ dữ liệu kiểm thử an toàn, phân loại   |
-|    | (Test Case - UC-10..13)     | test case ẩn (Hidden Evaluation), giới hạn CPU/RAM.|                       | rõ ràng giữa test mẫu và test chấm điểm. |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 04 | Quản lý Lớp học & Khóa học  | Tạo lớp học, cấp mã tham gia (Enrollment Code),    | Teacher, TA,          | Môi trường học tập nhóm có tổ chức, danh |
-|    | (Class Mgmt - UC-14..18)    | duyệt sinh viên vào lớp, phân công trợ giảng.      | Student, Admin        | sách sinh viên theo từng lớp học phần.   |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 05 | Quản lý Bài tập & Kỳ thi    | Giao bài tập về nhà, thiết lập bài thi có giới hạn | Teacher, TA,          | Danh sách Assignment có thời hạn nộp bài,|
-|    | (Assignment - UC-20..24)    | thời gian làm bài, cấu hình số lần nộp tối đa.     | Student               | cơ chế đóng nhận bài tự động khi hết giờ.|
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 06 | Thực thi Sandbox An toàn    | Khởi tạo container Docker cách ly, giới hạn CPU,   | Hệ thống nội bộ,      | Môi trường sandbox chạy code an toàn, cô |
-|    | (Docker Sandbox - UC-25..28)| RAM, chặn truy cập mạng, cô lập filesystem.       | Student (gián tiếp)   | lập triệt để nguy cơ phá hoại hệ thống.  |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 07 | Động cơ Chấm điểm Tự động   | So khớp kết quả thực tế với đáp án mong muốn, tính | Hệ thống nội bộ,      | Phán quyết chấm chuẩn xác (AC, WA, TLE,  |
-|    | (Auto-Grader - UC-29)       | điểm theo trọng số test case, đo lường thời gian.  | Student, Teacher      | MLE, CE, RE) và điểm số chính thức.      |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 08 | Lịch sử Nộp & Can thiệp Điểm| Xem lịch sử các lần submit, chi tiết lỗi thực thi, | Student, Teacher,     | Bảng lịch sử nộp bài minh bạch; Giảng    |
-|    | (Submissions - UC-30..32)   | Giảng viên can thiệp ghi đè điểm số thủ công.      | TA                    | viên có quyền can thiệp phúc khảo điểm.  |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 09 | Động cơ Phân tích & Gợi ý AI| Tạo gợi ý thông minh dựa trên Execution Evidence,  | Student, Teacher      | Phản hồi sư phạm hỗ trợ tư duy, không đưa|
-|    | (AI Hint Engine - UC-33..35)| giải thích lỗi biên dịch/runtime, tính điểm style. |                       | code giải sẵn, giúp sinh viên tự sửa lỗi.|
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 10 | Trợ giảng Ảo Tương tác      | Khung chat hỏi đáp thuật toán theo phong cách      | Student               | Trợ giảng ảo tương tác thời gian thực,   |
-|    | (AI Chat Tutor - UC-36..38) | Socratic, kiểm soát ngữ cảnh và chống lộ code mẫu. |                       | đồng hành hỗ trợ học tập 24/7.           |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 11 | Bảng điều khiển & Thống kê  | Dashboard trực quan tiến độ học tập của sinh viên, | Student, Teacher,     | Báo cáo thống kê trực quan, biểu đồ tỷ lệ|
-|    | (Analytics - UC-39..43)     | phân tích tỷ lệ đạt của lớp học, bài tập khó.      | Admin, TA             | đạt, hỗ trợ giảng viên nắm bắt học lực.  |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
-| 12 | Quản trị Hệ thống & DevOps  | Giám sát container, quản lý token API LLM, kiểm    | System Admin,         | Hệ thống vận hành ổn định, kiểm soát chi |
-|    | (System Admin - UC-44..48)  | toán nhật ký (Audit Log) và cấu hình tham số mạng. | Academic Manager      | phí token AI và đảm bảo an toàn dữ liệu. |
-+----+-----------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
++----+--------------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
+| STT| Phân Hệ / Nhóm Use Cases       | Chức Năng Chính                                    | Đối Tượng Sử Dụng     | Phạm Vi Nghiệp Vụ Chuẩn DOAN4.md         |
++----+--------------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
+| 01 | Xác thực & Hồ sơ Cá nhân       | Đăng nhập, đăng xuất, quên mật khẩu, xem và cập    | Tất cả 5 Actors       | UC-01 đến UC-06: Bảo mật JWT, quản lý    |
+|    | (Auth & Profile - UC-01..06)   | nhật hồ sơ cá nhân, đổi mật khẩu.                  |                       | thông tin tài khoản và đổi MK lần đầu.   |
++----+--------------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
+| 02 | Phân hệ Sinh viên              | Xem bài tập, chi tiết đề bài, soạn thảo code Monaco| Sinh viên             | UC-07 đến UC-16: Autosave nháp, nộp 1 bản|
+|    | (Student Subsystem - UC-07..16)| Upload file, nộp bài, xem kết quả chấm Auto-Grader,|                       | duy nhất (không chạy thử), xem nhận xét  |
+|    |                                | xem nhận xét AI, AI Tutor hậu kiểm, xem bảng điểm. |                       | AI Review, hỏi đáp Socratic sau đánh giá.|
++----+--------------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
+| 03 | Phân hệ Giáo viên              | Tạo/sửa/xóa bài tập, thiết lập deadline, test case | Giáo viên             | UC-17 đến UC-27, UC-36: Quản lý bài tập, |
+|    | (Teacher Subsystem - UC-17..27)| (Sample/Hidden), rubric, giao bài, xem bài nộp,    |                       | đóng/mở lớp phụ trách, chấm theo rubric  |
+|    |                                | xem điểm, xem AI đánh giá, chấm bài thủ công & xác |                       | và xác nhận Điểm chính thức (Official).  |
+|    |                                | nhận điểm chính thức, đóng/mở lớp phụ trách (UC-36)|                       |                                          |
++----+--------------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
+| 04 | Phân hệ Quản trị viên & Giáo vụ| Tạo/khóa/xóa/phân quyền tài khoản, reset mật khẩu, | Quản trị viên,        | UC-28 đến UC-39, UC-43: QTV quản lý toàn |
+|    | (Admin & Staff - UC-28..39, 43)| import Excel/CSV 5 cột, tạo/sửa lớp, đóng/mở lớp,  | Giáo vụ               | trường & tổ chức/Khoa; Giáo vụ quản lý   |
+|    |                                | Archive/Restore/Hard Delete lớp, QL sinh viên trong|                       | lớp/SV/GV trong phạm vi Khoa/Bộ môn.     |
+|    |                                | lớp, phân công GV, QL tổ chức/Khoa/Bộ môn (UC-43). |                       |                                          |
++----+--------------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
+| 05 | Phân hệ Quản trị Kỹ thuật      | Quản lý cấu hình AI Engine (API Key, Model, timeout| Quản trị viên hệ thống| UC-40 đến UC-42, UC-44: Hạ tầng Sandbox, |
+|    | (Technical Admin - UC-40..44)  | Cấu hình Docker Sandbox, giám sát container thực thi|                       | tài nguyên CPU/RAM, nhật ký System Logs. |
+|    |                                | dừng phiên kẹt, phân quyền hệ thống, QL System Logs|                       | (Không can thiệp nghiệp vụ đào tạo/lớp). |
++----+--------------------------------+----------------------------------------------------+-----------------------+------------------------------------------+
 
 --------------------------------------------------------------------------------
 V. LỘ TRÌNH TRIỂN KHAI THEO GIAI ĐOẠN (01/10/2026 - 31/10/2026)

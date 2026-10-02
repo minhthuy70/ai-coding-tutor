@@ -11,10 +11,10 @@
 │   Docker Sandbox Auto-Grader -> Tích hợp AI Reviewer / Socratic Prompt. │
 ├─────────────────────────────────────────────────────────────────────────┤
 │ GIAI ĐOẠN 2: PHÂN QUYỀN RBAC & QUẢN TRỊ LỚP HỌC (Tuần 4 - Tuần 6)       │
-│ • Xác thực JWT, hoàn thiện phân quyền 4 Roles (Student, Teacher,        │
-│   Admin, Super Admin).                                                  │
+│ • Xác thực JWT, hoàn thiện phân quyền 5 Roles (Sinh viên, Giáo viên,    │
+│   Quản trị viên, Giáo vụ, Quản trị viên hệ thống).                      │
 │ • Quản lý Lớp học, giao bài theo lớp, cấu hình Rubric điểm số.          │
-│ • Giảng viên xem bài nộp & can thiệp chấm đè thủ công.                  │
+│ • Giáo viên xem bài nộp & chấm bài thủ công, xác nhận điểm chính thức.  │
 ├─────────────────────────────────────────────────────────────────────────┤
 │ GIAI ĐOẠN 3: HOÀN THIỆN QUẢN TRỊ, GIÁM SÁT & TỐI ƯU (Tuần 7 - Tuần 8)   │
 │ • Import danh sách Excel/CSV, Cấu hình API Key & Giám sát Sandbox.      │
@@ -55,32 +55,33 @@
 
 #### Tuần 4: Xác Thực & Phân Quyền Người Dùng (JWT & RBAC)
 - [ ] Xây dựng hệ thống Đăng ký, Đăng nhập, Đổi/Quên mật khẩu với JWT (Access + Refresh Token).
-- [ ] Middleware phân quyền 4 vai trò: `Student`, `Teacher`, `Admin`, `Super Admin`.
+- [ ] Middleware phân quyền 5 vai trò: `Sinh viên`, `Giáo viên`, `Quản trị viên`, `Giáo vụ`, `Quản trị viên hệ thống`.
 - [ ] Phân luồng điều hướng UI theo quyền của từng Actor.
 
-#### Tuần 5: Phân Hệ Giảng Viên (Teacher Portal)
-- [ ] Chức năng Tạo lớp học, mời/quản lý sinh viên trong lớp.
-- [ ] Chức năng Giao bài tập cho lớp, thiết lập Deadline và cho phép nộp muộn.
+#### Tuần 5: Phân Hệ Giáo Viên & Giáo Vụ (Teacher & Staff Portal)
+- [ ] Chức năng Tạo lớp học, quản lý sinh viên trong lớp (cấp Quản trị viên/Giáo vụ).
+- [ ] Chức năng Giao bài tập cho lớp, thiết lập Deadline một mốc duy nhất.
 - [ ] Cấu hình Rubric đánh giá đa tiêu chí (Test cases, Code Quality, Complexity).
-- **Kết quả nghiệm thu (Milestone 4)**: Giảng viên có thể tạo lớp và giao bài tập riêng cho từng lớp học.
+- **Kết quả nghiệm thu (Milestone 4)**: Giáo viên có thể giao bài tập riêng cho từng lớp học phụ trách.
 
 #### Tuần 6: Bảng Điểm, Submission Review & Chấm Thủ Công
-- [ ] Giao diện cho Giảng viên xem danh sách toàn bộ bài nộp của sinh viên.
+- [ ] Giao diện cho Giáo viên xem danh sách toàn bộ bài nộp của sinh viên.
 - [ ] Xem chi tiết mã nguồn, kết quả test cases và đánh giá của AI đối với từng sinh viên.
-- [ ] Tính năng Giảng viên chấm đè điểm số (Override Grade) và gửi phản hồi cá nhân.
+- [ ] Tính năng Giáo viên chấm theo rubric, nhập nhận xét và xác nhận Điểm chính thức (Official Score).
 - [ ] Bảng điểm tổng hợp theo lớp và xuất báo cáo điểm.
 
 ---
 
 ### GIAI ĐOẠN 3: SUITE QUẢN TRỊ HỆ THỐNG & TỐI ƯU HÓA (TUẦN 7 - 8)
 
-#### Tuần 7: Phân Hệ Quản Trị (Admin & Super Admin)
-- [ ] Chức năng Import danh sách sinh viên / giảng viên từ file Excel (`.xlsx`, `.csv`).
-- [ ] Super Admin Dashboard: Cấu hình API Key AI, Model Parameters (Temperature, Max Tokens).
+#### Tuần 7: Phân Hệ Quản Trị (Admin & Technical Admin)
+- [ ] Chức năng Import danh sách người dùng từ file Excel/CSV 5 cột chuẩn.
+- [ ] Quản trị cơ cấu tổ chức, Khoa/Bộ môn và phân công Giáo vụ.
+- [ ] Quản trị viên hệ thống Dashboard: Cấu hình API Key AI, Model Parameters (Temperature, Max Tokens).
 - [ ] Giao diện Giám sát trạng thái Docker Sandbox & Quản lý System Logs.
 
 #### Tuần 8: Tối Ưu Hiệu Năng, Kiểm Thử Toàn Diện & Đóng Gói
 - [ ] Kiểm thử tải (Load Testing / Concurrency Test) khi nhiều bài nộp gửi đến cùng lúc.
 - [ ] Tối ưu hóa bộ nhớ đệm (Redis Caching) và tối ưu độ dài Prompt AI.
 - [ ] Hoàn thiện tài liệu hướng dẫn sử dụng (User Manual) và mã nguồn hoàn chỉnh.
-- **Kết quả nghiệm thu (Final Milestone)**: Hệ thống hoàn chỉnh 48 Use Cases sẵn sàng bàn giao / báo cáo đề tài.
+- **Kết quả nghiệm thu (Final Milestone)**: Hệ thống hoàn chỉnh 44 Use Cases sẵn sàng bàn giao / báo cáo đề tài.
