@@ -92,22 +92,13 @@ NGUYÊN TẮC 7: Phòng chống Prompt Injection (Prompt Injection Defense)
    System Prompt có chỉ thị bất khả xâm phạm: Bỏ qua mọi yêu cầu của người dùng đòi in ra prompt gốc,
    đòi tiết lộ test case ẩn, hoặc đòi sinh mã nguồn giải hộ hoàn chỉnh.
 
-4. Phạm vi 48 Use Cases chia thành 5 nhóm Actor:
-- Sinh viên (10 UC: UC-07 → UC-16): Xem bài, viết code Monaco, upload file, nộp bài, xem kết quả sandbox,
-  xem nhận xét AI, tương tác AI Tutor Socratic, xem lịch sử làm bài, xem bảng điểm cá nhân.
-- Giáo viên (15 UC: UC-17 → UC-31): Quản lý lớp, quản lý/cấu hình bài tập, deadline, test case, rubric,
-  giao bài cho lớp, xem bài nộp, xem điểm, xem AI đánh giá, chấm bài thủ công theo Rubric (override score).
-- Quản trị viên (6 UC: UC-32 → UC-37): Quản lý tài khoản (tạo, khóa/mở, xóa mềm), phân quyền, reset mật khẩu,
-  import danh sách người dùng từ Excel/CSV chuẩn 5 cột.
-- Quản lý lớp cấp cao (Quản trị viên & Giáo vụ) (6 UC: UC-38 → UC-43): Tạo/sửa lớp theo phạm vi, đóng/mở lớp,
-  quản lý vòng đời lưu trữ & xóa lớp (Hard-delete guard: SV=0 && Bài=0 && Lịch=0; Archive/Restore -> Đã đóng),
-  quản lý sinh viên trong lớp, phân công Giáo viên vào lớp theo Khoa/Bộ môn.
-- Quản trị viên hệ thống (5 UC: UC-44 → UC-48): Cấu hình tham số AI (API Key, model, temperature), cấu hình
-  Docker Sandbox, giám sát Docker Sandbox (dừng execution -> cập nhật bài nộp sang "Bị gián đoạn", không tăng
-  submission_count, không auto-regrade), quản lý tổ chức / Khoa / Bộ môn / gán Giáo vụ (UC-47), quản lý System Logs
-  và audit trail mọi lượt submit (UC-48).
-- Nhóm dùng chung (6 UC: UC-01 → UC-06): Đăng nhập, Đăng xuất, Quên mật khẩu, Xem thông tin cá nhân,
-  Cập nhật thông tin cá nhân, Đổi mật khẩu.
+4. Phạm vi 44 Use Cases chia thành 5 nhóm Actor (chuẩn hóa DOAN4.md):
+- Sinh viên (10 UC: UC-07 → UC-16): Xem bài tập, chi tiết đề bài, viết code Monaco, upload file, nộp 1 bản chính thức duy nhất, xem kết quả sandbox, xem nhận xét AI, tương tác AI Tutor Socratic, xem bài đã nộp, xem bảng điểm cá nhân.
+- Giáo viên (11 UC: UC-17 → UC-27 & UC-36): Quản lý/cấu hình bài tập, deadline, test case, rubric, giao bài cho lớp, xem bài nộp, xem điểm, xem AI đánh giá, chấm bài thủ công theo Rubric & xác nhận điểm chính thức, đóng/mở lớp phụ trách (UC-36).
+- Quản trị viên (7 UC: UC-28 → UC-33 & UC-43): Quản lý tài khoản (tạo, khóa/mở, xóa), phân quyền người dùng, đặt lại mật khẩu, import Excel/CSV 5 cột, quản lý tổ chức/Khoa/Bộ môn & phân công Giáo vụ (UC-43).
+- Quản lý lớp cấp quản trị (Quản trị viên & Giáo vụ) (6 UC: UC-34 → UC-39): Tạo/sửa lớp theo phạm vi, đóng/mở lớp (UC-36), quản lý vòng đời lưu trữ & xóa lớp (UC-37: Hard delete guard), quản lý sinh viên trong lớp (UC-38), phân công Giáo viên vào lớp (UC-39).
+- Quản trị viên hệ thống (4 UC: UC-40 → UC-42 & UC-44): Cấu hình tham số AI (UC-40), cấu hình Docker Sandbox (UC-41), giám sát Docker Sandbox (UC-42: dừng execution -> cập nhật bài nộp sang "Bị gián đoạn", không tăng submission_count, không auto-regrade), quản lý System Logs (UC-44).
+- Nhóm dùng chung (6 UC: UC-01 → UC-06): Đăng nhập, Đăng xuất, Quên mật khẩu, Xem thông tin cá nhân, Cập nhật thông tin cá nhân, Đổi mật khẩu.
 
 
 II. LỘ TRÌNH THEO GIAI ĐOẠN (5 PHASES & 6 MILESTONES)
@@ -136,7 +127,7 @@ GIAI ĐOẠN 3: CONTEXTBUILDER, LLM API REASONING & AI CODING TUTOR (12/10 → 1
 
 GIAI ĐOẠN 4: RBAC PHẠM VI, QUẢN TRỊ LỚP HỌC & TEACHER PORTAL (16/10 → 21/10 | 6 ngày)
 - Mục tiêu: Phân quyền đa cấp (Role + Scope + Resource Status). Quản lý lớp học cấp Giáo viên, giao bài
-  cho lớp, cấu hình Deadline, Late Policy, Max Submissions, Chấm điểm thủ công đè lên Auto-Grader.
+  cho lớp, cấu hình Deadline (một mốc duy nhất, Strict No-Late), 1 bản nộp duy nhất, Chấm điểm thủ công và xác nhận điểm chính thức.
 - Deliverable: Giáo viên tạo lớp -> Giao bài -> Sinh viên làm bài -> Giáo viên xem toàn bộ bài nộp,
   xem AI đánh giá, chấm thủ công theo Rubric -> Bảng điểm cập nhật điểm chính thức.
 - Milestone 4 (21/10): Full Teacher & Student Academic Lifecycle Complete.
@@ -144,7 +135,7 @@ GIAI ĐOẠN 4: RBAC PHẠM VI, QUẢN TRỊ LỚP HỌC & TEACHER PORTAL (16/10
 GIAI ĐOẠN 5: ADMIN, GIÁO VỤ, SYSTEM ADMIN & CHUẨN HÓA RELEASE (22/10 → 31/10 | 10 ngày)
 - 22/10 → 26/10: Phân hệ Quản trị viên (Tài khoản, Import Excel 5 cột, Tổ chức), Giáo vụ (Lớp Khoa/Bộ môn,
   Hard Delete guard, Archive/Restore), Quản trị viên hệ thống (AI Config UC-44, Sandbox Monitor, System Logs).
-  -> Milestone 5 (26/10): All 48 Use Cases & 5 Actors Fully Implemented.
+  -> Milestone 5 (26/10): All 44 Use Cases & 5 Actors Fully Implemented.
 - 27/10 → 31/10: Pen-test bảo mật Sandbox & Prompt Injection, Load test 100 concurrent submissions,
   đóng gói Production Docker Compose, Backup DB, UAT và Final Acceptance Testing (bao gồm test LLM API down).
   -> Milestone 6 (31/10): Production-Ready AI-Powered Coding Tutor & Auto-Grader Signed Off.
@@ -235,8 +226,7 @@ Người A (AI Engine, Context Engineering & Backend Lead):
             - Socratic Guardrails: Chỉ giải thích khái niệm, chỉ ra vị trí lỗi logic, đặt câu hỏi gợi mở, không viết code hộ.
 - [ ] 16/10: Triển khai Middleware kiểm tra Scope nâng cao (Rule 04 / Rule 09): Role + Scope + Resource + Status.
 - [ ] 17/10: Class Management API (Giáo viên scope): POST/PUT /classes (UC-17, UC-18), thêm/xóa SV trong lớp (UC-20).
-- [ ] 18/10: Assignment API: Giao bài tập cho lớp (UC-27), cấu hình Deadline (UC-24), Late penalty,
-            Max Submissions limit (Rule 11), Scoring policy (Highest vs Latest Score - Rule 18).
+- [ ] 18/10: Assignment API: Giao bài tập cho lớp (UC-27), cấu hình Deadline một mốc duy nhất (UC-20), thiết lập Test Cases (UC-21), thiết lập Rubric (UC-22), quy tắc 1 bản nộp duy nhất & Strict No-Late.
 
 Người B (AI UI & Teacher Portal Lead):
 - [ ] 12/10: Thiết kế giao diện AI Feedback UI (UC-13): Hiển thị thẻ phân tích chất lượng code, độ phức tạp thuật toán,
@@ -248,7 +238,7 @@ Người B (AI UI & Teacher Portal Lead):
             và điểm Auto-Grader "Tạm tính".
 - [ ] 16/10: Teacher Portal Navigation & Dashboard layout: Phân tách rõ ràng giao diện cho Giáo viên.
 - [ ] 17/10: Teacher Class List & Detail UI: Tạo lớp học mới, xem danh sách lớp mình phụ trách, quản lý SV.
-- [ ] 18/10: Assignment Distribution UI: Giao bài tập cho lớp, form cấu hình Deadline, nộp muộn, số lần nộp.
+- [ ] 18/10: Assignment Distribution UI: Giao bài tập cho lớp, form cấu hình Deadline một mốc duy nhất (Strict No-Late).
 
 Deliverable Tuần 3 (Milestone 3 & 4a): Hybrid AI Tutor & Feedback Socratic hoàn thành xuất sắc dựa trên evidence;
 Giáo viên quản lý lớp và giao bài tập.
@@ -258,35 +248,35 @@ TUẦN 4: 19/10 - 25/10 (7 ngày) | Teacher Grading, Admin/Staff Suite & System 
 ----------------------------------------------------------------------------------------------------
 
 Người A (Class, Admin & System Backend):
-- [ ] 19/10: Submission Review API (UC-28, UC-29, UC-30): Cho phép Giáo viên xem danh sách bài nộp của lớp,
+- [ ] 19/10: Submission Review API (UC-24, UC-25, UC-26): Cho phép Giáo viên xem danh sách bài nộp của lớp,
             xem source code, test results, và AI feedback của sinh viên.
-- [ ] 20/10: Manual Grading API (UC-31): Giáo viên chấm đè điểm theo Rubric. Lưu trạng thái "Lưu tạm" vs
+- [ ] 20/10: Manual Grading API (UC-27): Giáo viên chấm đè điểm theo Rubric. Lưu trạng thái "Lưu tạm" vs
             "Chấm hoàn tất". Khi chấm hoàn tất -> Manual Score trở thành Official Score (RULES §18-§19).
-- [ ] 21/10: State Machine Vòng đời lớp học (UC-40, UC-41): Đóng/mở lớp (ACTIVE <-> CLOSED). Archive lớp.
+- [ ] 21/10: State Machine Vòng đời lớp học (UC-36, UC-37): Đóng/mở lớp (ACTIVE <-> CLOSED). Archive lớp.
             Hard-delete guard: Chỉ cho phép xóa khi student_count==0 && assignment_count==0 && schedule_count==0.
             Restore lớp từ Archive -> Đã đóng (không tự ý về ACTIVE).
-- [ ] 22/10: User Management API (Admin scope): CRUD tài khoản (UC-32, UC-33, UC-34, UC-35, UC-36).
+- [ ] 22/10: User Management API (Admin scope): CRUD tài khoản (UC-28, UC-29, UC-30, UC-31, UC-32).
             Soft-delete tài khoản khi đã có submission. Tự sinh mật khẩu tạm, bắt buộc đổi mật khẩu lần đầu.
-- [ ] 23/10: Import Excel/CSV API (UC-37): Xử lý tệp đúng 5 cột (Mã SV, Họ tên, Email, Vai trò, Lớp).
+- [ ] 23/10: Import Excel/CSV API (UC-33): Xử lý tệp đúng 5 cột (Mã SV, Họ tên, Email, Vai trò, Lớp).
             Validate từng dòng, chỉ cập nhật họ tên nếu email đã tồn tại, không import mật khẩu.
-- [ ] 24/10: Organization & Department Hierarchy API (UC-47) và Phân công Giáo viên (UC-43), phân công
+- [ ] 24/10: Organization & Department Hierarchy API (UC-43) và Phân công Giáo viên (UC-39), phân công
             Giáo vụ phụ trách Khoa/Bộ môn. Kiểm tra phạm vi giáo vụ chỉ thao tác lớp thuộc Khoa mình.
 - [ ] 25/10: System Administration API (Quản trị viên hệ thống): Cấu hình AI parameters (UC-44 - API Key, Model,
-            Temperature, Max Tokens), Cấu hình Docker Sandbox (UC-45), Giám sát Sandbox & Kill execution (UC-46)
+            Temperature, Max Tokens), Cấu hình Docker Sandbox (UC-41), Giám sát Sandbox & Kill execution (UC-38)
             -> chuyển bài nộp sang "Bị gián đoạn" (không auto-regrade, không tăng submission_count).
 
 Người B (Teacher Grading & Admin/System UI):
 - [ ] 19/10: Teacher Submission Review UI (UC-28): Bảng danh sách bài nộp của cả lớp, bộ lọc theo bài tập,
             trạng thái chấm, sinh viên.
-- [ ] 20/10: Teacher Manual Grading Modal (UC-31): Giao diện chấm điểm theo Rubric từng tiêu chí, nhập nhận xét,
+- [ ] 20/10: Teacher Manual Grading Modal (UC-27): Giao diện chấm điểm theo Rubric từng tiêu chí, nhập nhận xét,
             nút Lưu tạm và Lưu chính thức.
-- [ ] 21/10: Class Lifecycle UI (UC-40, UC-41): Nút Đóng lớp, Mở lại lớp, Lưu trữ lớp và Khôi phục lớp
+- [ ] 21/10: Class Lifecycle UI (UC-36, UC-37): Nút Đóng lớp, Mở lại lớp, Lưu trữ lớp và Khôi phục lớp
             theo đúng ma trận quyền của Giáo viên, Giáo vụ, Quản trị viên.
 - [ ] 22/10: Admin User Management Portal: Bảng danh sách tài khoản, nút Khóa/Mở, Phân quyền vai trò,
             Đặt lại mật khẩu tạm.
-- [ ] 23/10: Excel/CSV Import UI Component (UC-37): Kéo thả file, xem trước dữ liệu parse, thông báo lỗi từng dòng.
+- [ ] 23/10: Excel/CSV Import UI Component (UC-33): Kéo thả file, xem trước dữ liệu parse, thông báo lỗi từng dòng.
 - [ ] 24/10: Organization & Class Management UI cấp Khoa/Trường (Giáo vụ & Admin): Phân công GV, quản lý Khoa.
-- [ ] 25/10: System Admin Portal: Form cấu hình AI Key & Model (UC-44), Dashboard giám sát Sandbox (CPU/RAM/Active jobs),
+- [ ] 25/10: System Admin Portal: Form cấu hình AI Key & Model (UC-40), Dashboard giám sát Sandbox (CPU/RAM/Active jobs),
             nút khẩn cấp Dừng phiên chấm.
 
 Deliverable Tuần 4 (Milestone 4b & 5a): Toàn bộ luồng Giảng viên chấm bài và Phân hệ Quản trị viên/Giáo vụ hoàn tất.
@@ -296,7 +286,7 @@ TUẦN 5: 26/10 - 31/10 (6 ngày) | System Logs, Pen-testing, Concurrency Load, 
 ----------------------------------------------------------------------------------------------------
 
 Người A (Security, Performance & Deployment Lead):
-- [ ] 26/10: System Logs API (UC-48): Ghi nhận toàn bộ event submit, sandbox error, auth failure.
+- [ ] 26/10: System Logs API (UC-44): Ghi nhận toàn bộ event submit, sandbox error, auth failure.
             API tìm kiếm, lọc theo thời gian/actor/mức độ lỗi, export log file.
 - [ ] 27/10: Comprehensive Security & Sandbox Pen-testing:
             + Fork bomb, Cạn kiệt RAM 2GB, Vòng lặp vô hạn `while True` (Timeout kill chính xác sau 2.0s).
@@ -310,10 +300,10 @@ Người A (Security, Performance & Deployment Lead):
 - [ ] 30/10: Staging Deployment, Buffer Day & Decoupled Fault-Tolerance Test:
             - Kiểm thử kịch bản: Tắt mạng Internet / Cố tình làm sai API Key AI -> Kiểm tra Official Score vẫn chấm
               thành công 100%, bài nộp hiển thị điểm bình thường, thẻ AI Feedback hiển thị thông báo "Tạm thời không khả dụng".
-- [ ] 31/10: Final System Verification, Code Freeze, Tag release v1.0.0, nghiệm thu toàn bộ 48 Use Cases.
+- [ ] 31/10: Final System Verification, Code Freeze, Tag release v1.0.0, nghiệm thu toàn bộ 44 Use Cases.
 
 Người B (Logs UI, End-to-End Testing & Handover Lead):
-- [ ] 26/10: System Logs Viewer UI (UC-48): Bảng xem log hệ thống, bộ lọc sự kiện, export CSV logs.
+- [ ] 26/10: System Logs Viewer UI (UC-44): Bảng xem log hệ thống, bộ lọc sự kiện, export CSV logs.
 - [ ] 27/10: Viết bộ kiểm thử tự động E2E (Playwright) cho kịch bản toàn diện khép kín 14 bước:
             Login -> Open Problem -> Write Code -> Submit -> Docker Execute -> Test Cases -> Auto-Grader ->
             Official Score -> Execution Evidence -> Static Analysis -> ContextBuilder -> LLM API -> AI Feedback -> AI Tutor Chat.
@@ -352,7 +342,7 @@ Trách nhiệm chính:
 - Xây dựng giao diện tương tác Socratic AI Tutor Chat và thẻ AI Feedback (xử lý state khi AI fail).
 - Xây dựng Portal cho Giảng viên: Quản lý lớp, giao bài, review submission, chấm thủ công.
 - Xây dựng Portal cho Quản trị viên và Giáo vụ: Quản lý tài khoản, Import Excel, Quản lý lớp.
-- Xây dựng Portal cho Quản trị viên hệ thống: AI Config (UC-44), Sandbox Monitoring, System Logs.
+- Xây dựng Portal cho Quản trị viên hệ thống: AI Config (UC-40), Sandbox Monitoring, System Logs.
 - Viết kịch bản kiểm thử E2E (Playwright), kiểm thử UAT cho cả 5 vai trò.
 - Hoàn thiện tài liệu hướng dẫn sử dụng (User Manual) và hỗ trợ nghiệm thu.
 
@@ -373,19 +363,19 @@ MUST HAVE — BẮT BUỘC ĐỂ CHỨNG MINH ĐỀ TÀI CHẠY END-TO-END (Hoà
 - [x] Cơ chế Decoupled: Sự cố AI API không làm hỏng tiến trình chấm điểm chính thức.
 - [x] Xác thực JWT (Access + Refresh token), băm mật khẩu bcrypt, Quên/Đổi mật khẩu an toàn.
 - [x] Phân quyền RBAC 5 vai trò (Student, Teacher, Staff, Admin, Super Admin) với Scope checking.
-- [x] Quản lý lớp học cấp Giáo viên, giao bài tập, thiết lập Deadline, Late penalty, Max Submissions.
+- [x] Quản lý bài tập, giao bài cho lớp, thiết lập Deadline một mốc duy nhất (Strict No-Late), quy tắc 1 bản nộp duy nhất.
 - [x] Giảng viên xem bài nộp, xem AI đánh giá và Chấm bài thủ công theo Rubric (Override score).
-- [x] Bảng điểm cá nhân sinh viên và Bảng điểm tổng hợp của lớp (Highest/Latest policy, Tạm tính).
+- [x] Bảng điểm cá nhân sinh viên và Bảng điểm tổng hợp của lớp (Điểm chính thức do GV xác nhận, Điểm Auto-Grader tạm tính).
 
 SHOULD HAVE — TÍNH NĂNG QUẢN TRỊ & HỆ THỐNG QUAN TRỌNG (Hoàn thành trong Tuần 4 & Tuần 5):
 - [x] Quản trị viên: Quản lý tài khoản (tạo, khóa/mở, soft-delete), Đặt lại mật khẩu tạm.
 - [x] Quản trị viên: Import danh sách người dùng từ Excel/CSV đúng chuẩn 5 cột quy định.
-- [x] Giáo vụ & Quản trị viên: Quản lý lớp cấp Khoa/Trường, Hard-delete guard (SV=0 && Bài=0 && Lịch=0),
+- [x] Giáo vụ & Quản trị viên: Quản lý lớp cấp Khoa/Trường, Hard-delete guard (student_count == 0 && assignment_count == 0),
       Archive / Restore về trạng thái "Đã đóng", Phân công Giáo viên vào lớp.
 - [x] Quản trị viên: Quản lý tổ chức, Khoa/Bộ môn và phân công Giáo vụ phụ trách.
 - [x] Quản trị viên hệ thống: Cấu hình tham số AI (API Key, model, temperature, max tokens - UC-44).
 - [x] Quản trị viên hệ thống: Cấu hình và Giám sát Docker Sandbox, dừng phiên thực thi khẩn cấp
-      (chuyển trạng thái bài nộp sang "Bị gián đoạn", không tăng attempt, không auto-regrade).
+      (chuyển trạng thái bài nộp sang "Bị gián đoạn", không tăng số lần nộp, không auto-regrade).
 - [x] Quản trị viên hệ thống: Quản lý System Logs, ghi nhận audit trail cho mọi click Submit (Rule 14).
 - [x] Kiểm thử tải đồng thời (Concurrency load test) và Pen-test mã độc Sandbox + Prompt Injection.
 - [x] Đóng gói Docker Compose production hoàn chỉnh và kịch bản Backup database.
@@ -480,7 +470,7 @@ VII. DATABASE SCHEMA SUMMARY (CHUẨN HÓA THEO DOAN4.MD & RULES.MD)
 9. `class_assignments`:
    - id (UUID, PK), class_id (UUID, FK), problem_id (UUID, FK), deadline (TIMESTAMP),
    - allow_late_submission (BOOLEAN), late_deadline (TIMESTAMP, NULLABLE), late_penalty_percent (FLOAT),
-   - max_submissions (INT - 0 là unlimited), scoring_policy (ENUM: HIGHEST_SCORE, LATEST_SCORE),
+   - is_active (BOOLEAN), deadline (TIMESTAMP - một mốc duy nhất, Strict No-Late),
    - is_active (BOOLEAN), created_at (TIMESTAMP).
 10. `submissions` (Thiết kế Decoupled giữa Grading và AI):
     - id (UUID, PK), user_id (UUID, FK), problem_id (UUID, FK), class_id (UUID, FK, NULLABLE),
@@ -513,7 +503,7 @@ VII. DATABASE SCHEMA SUMMARY (CHUẨN HÓA THEO DOAN4.MD & RULES.MD)
     - ip_address (VARCHAR), created_at (TIMESTAMP).
 
 
-VIII. API ENDPOINTS SUMMARY (MAPPING 48 USE CASES)
+VIII. API ENDPOINTS SUMMARY (MAPPING 44 USE CASES)
 ----------------------------------------------------------------------------------------------------
 
 Auth & Profile (UC-01 → UC-06):
@@ -540,7 +530,7 @@ Student Workspace & Learning (UC-07 → UC-16):
 - `GET    /api/v1/student/submissions/history`: Xem lịch sử tất cả các lần nộp bài của bản thân (UC-15)
 - `GET    /api/v1/student/gradebook`          : Xem bảng điểm cá nhân tổng hợp theo bài và lớp (UC-16)
 
-Teacher Management & Grading (UC-17 → UC-31):
+Teacher Management & Grading (UC-17 → UC-27):
 - `POST   /api/v1/teacher/classes`            : Tạo lớp học mới do GV phụ trách (UC-17)
 - `PUT    /api/v1/teacher/classes/{id}`       : Chỉnh sửa thông tin lớp học phụ trách (UC-18)
 - `POST   /api/v1/teacher/classes/{id}/students`: Thêm sinh viên vào lớp học (UC-20)
@@ -554,31 +544,31 @@ Teacher Management & Grading (UC-17 → UC-31):
 - `POST   /api/v1/teacher/assignments`        : Giao bài tập cho một hoặc nhiều lớp học (UC-27)
 - `GET    /api/v1/teacher/assignments/{id}/submissions`: Xem danh sách bài nộp của lớp (UC-28)
 - `GET    /api/v1/teacher/classes/{id}/grades`: Xem bảng điểm tổng hợp của toàn bộ sinh viên (UC-29)
-- `GET    /api/v1/teacher/submissions/{id}/ai-evaluation`: Xem kết quả AI đánh giá chi tiết (UC-30)
-- `POST   /api/v1/teacher/submissions/{id}/manual-grade`: Chấm điểm thủ công đè lên Auto-Grader (UC-31)
+- `GET    /api/v1/teacher/submissions/{id}/ai-evaluation`: Xem kết quả AI đánh giá chi tiết (UC-26)
+- `POST   /api/v1/teacher/submissions/{id}/manual-grade`: Chấm điểm thủ công đè lên Auto-Grader (UC-27)
 
-Admin & Staff Operations (UC-32 → UC-43):
-- `POST   /api/v1/admin/users`                : Tạo tài khoản SV, GV hoặc Giáo vụ (UC-32)
-- `PUT    /api/v1/admin/users/{id}/status`    : Khóa hoặc mở khóa tài khoản người dùng (UC-33)
-- `DELETE /api/v1/admin/users/{id}`           : Xóa hoặc soft-delete tài khoản (UC-34)
-- `PUT    /api/v1/admin/users/{id}/role`      : Phân quyền vai trò cho tài khoản (UC-35)
-- `POST   /api/v1/admin/users/{id}/reset-password`: Đặt lại mật khẩu tạm cho người dùng (UC-36)
-- `POST   /api/v1/admin/users/import-excel`   : Nhập danh sách tài khoản từ file Excel/CSV 5 cột (UC-37)
-- `POST   /api/v1/classes`                    : QTV/Giáo vụ tạo lớp học theo phạm vi (UC-38)
-- `PUT    /api/v1/classes/{id}`               : QTV/Giáo vụ chỉnh sửa lớp theo phạm vi (UC-39)
-- `PUT    /api/v1/classes/{id}/state`         : Đóng lớp hoặc mở lại lớp học (ACTIVE <-> CLOSED) (UC-40)
-- `PUT    /api/v1/classes/{id}/lifecycle`     : Lưu trữ, khôi phục hoặc xóa lớp (Hard delete guard) (UC-41)
-- `POST   /api/v1/classes/{id}/members`       : QTV/Giáo vụ quản lý sinh viên trong lớp (UC-42)
-- `POST   /api/v1/classes/{id}/teachers`      : Phân công Giáo viên phụ trách lớp theo Bộ môn (UC-43)
+Admin & Staff Operations (UC-28 → UC-39, UC-43):
+- `POST   /api/v1/admin/users`                : Tạo tài khoản SV, GV hoặc Giáo vụ (UC-28)
+- `PUT    /api/v1/admin/users/{id}/status`    : Khóa hoặc mở khóa tài khoản người dùng (UC-29)
+- `DELETE /api/v1/admin/users/{id}`           : Xóa hoặc soft-delete tài khoản (UC-26)
+- `PUT    /api/v1/admin/users/{id}/role`      : Phân quyền vai trò cho tài khoản (UC-27)
+- `POST   /api/v1/admin/users/{id}/reset-password`: Đặt lại mật khẩu tạm cho người dùng (UC-32)
+- `POST   /api/v1/admin/users/import-excel`   : Nhập danh sách tài khoản từ file Excel/CSV 5 cột (UC-29)
+- `POST   /api/v1/classes`                    : QTV/Giáo vụ tạo lớp học theo phạm vi (UC-34)
+- `PUT    /api/v1/classes/{id}`               : QTV/Giáo vụ chỉnh sửa lớp theo phạm vi (UC-35)
+- `PUT    /api/v1/classes/{id}/state`         : Đóng lớp hoặc mở lại lớp học (ACTIVE <-> CLOSED) (UC-36)
+- `PUT    /api/v1/classes/{id}/lifecycle`     : Lưu trữ, khôi phục hoặc xóa lớp (Hard delete guard) (UC-37)
+- `POST   /api/v1/classes/{id}/members`       : QTV/Giáo vụ quản lý sinh viên trong lớp (UC-38)
+- `POST   /api/v1/classes/{id}/teachers`      : Phân công Giáo viên phụ trách lớp theo Bộ môn (UC-39)
 
-System Administration & Infrastructure (UC-44 → UC-48):
-- `GET/PUT/POST /api/v1/system/ai-config`     : Quản lý cấu hình AI, API Key, Model, Temperature (UC-44)
-- `GET/PUT /api/v1/system/sandbox-config`     : Cấu hình tài nguyên Docker Sandbox (CPU, RAM, Time) (UC-45)
-- `GET    /api/v1/system/sandbox/metrics`     : Giám sát trạng thái hoạt động của Docker Sandbox (UC-46)
-- `POST   /api/v1/system/sandbox/kill/{id}`   : Dừng khẩn cấp phiên thực thi -> Đổi trạng thái 'Bị gián đoạn' (UC-46)
-- `GET/POST/PUT/DELETE /api/v1/system/organizations`: Quản lý Tổ chức, Khoa/Bộ môn, gán Giáo vụ (UC-47)
-- `GET    /api/v1/system/logs`                : Tra cứu, tìm kiếm, lọc System Logs và Audit Trail (UC-48)
-- `GET    /api/v1/system/logs/export`         : Xuất file nhật ký hệ thống phục vụ thanh tra (UC-48)
+System Administration & Infrastructure (UC-40 → UC-42, UC-44):
+- `GET/PUT/POST /api/v1/system/ai-config`     : Quản lý cấu hình AI, API Key, Model, Temperature (UC-36)
+- `GET/PUT /api/v1/system/sandbox-config`     : Cấu hình tài nguyên Docker Sandbox (CPU, RAM, Time) (UC-37)
+- `GET    /api/v1/system/sandbox/metrics`     : Giám sát trạng thái hoạt động của Docker Sandbox (UC-38)
+- `POST   /api/v1/system/sandbox/kill/{id}`   : Dừng khẩn cấp phiên thực thi -> Đổi trạng thái 'Bị gián đoạn' (UC-38)
+- `GET/POST/PUT/DELETE /api/v1/system/organizations`: Quản lý Tổ chức, Khoa/Bộ môn, gán Giáo vụ (UC-39)
+- `GET    /api/v1/system/logs`                : Tra cứu, tìm kiếm, lọc System Logs và Audit Trail (UC-44)
+- `GET    /api/v1/system/logs/export`         : Xuất file nhật ký hệ thống phục vụ thanh tra (UC-44)
 
 WebSockets Endpoints & Event State Machine:
 - `WS /ws/submissions/{submission_id}`:
@@ -817,16 +807,17 @@ NGÀY 8: 08/10/2026 (Thứ Năm)
 - Mục tiêu: Xây dựng Submission API và State Machine quản lý trạng thái bài nộp.
 - Task Người A:
   + Viết API `POST /api/v1/submissions` (UC-11):
-    - Kiểm tra tính hợp lệ: Token SV, ID bài tập, độ dài source code, ngôn ngữ hợp lệ.
-    - Kiểm tra Deadline và quy định nộp muộn (RULES §12).
-    - Kiểm tra số lần nộp `submission_count` so với `max_submissions` (RULES §11).
-    - Ghi nhận Audit Log: Ghi nhận sự kiện click Submit vào bảng `system_logs` (Rule 14).
-    - Tạo bản ghi trong table `submissions` với trạng thái `PENDING`, `grading_status=PENDING`, `ai_status=PENDING`.
-    - Đẩy task vào hàng đợi Celery, trả về `submission_id` với HTTP 202 Accepted.
+    - Kiểm tra tính hợp lệ: Token SV, ID bài tập, độ dài source code, ngôn ngữ được phép.
+    - Kiểm tra Deadline: Nghiêm cấm nộp sau giờ deadline (Strict No-Late Submission, trả về 403 Forbidden).
+    - Kiểm tra trạng thái bài nộp: Mỗi sinh viên chỉ có 1 bản nộp duy nhất. Nếu đã ở trạng thái SUBMITTED thì từ chối nộp lại.
+    - Ghi nhận Audit Log: Ghi nhận sự kiện click Submit vào bảng `system_logs` (UC-44).
+    - Lưu bản mã nguồn nháp thành bản nộp chính thức: Trạng thái chuyển từ `DRAFT` -> `SUBMITTED`, `trigger_type=MANUAL`.
+    - Chuyển Editor sang chế độ Read-only. Bài nộp được giữ ở trạng thái `SUBMITTED` chờ đến giờ Deadline để đưa vào tiến trình Batch Grading.
 - Task Người B:
-  + Kết nối Nút "Nộp bài" trên Web IDE với API `POST /api/v1/submissions`.
-  + Xử lý các trường hợp ngoại lệ từ API: Hết hạn nộp bài, Đã hết số lần nộp bài cho phép, Lỗi mạng.
-  + Lưu trữ `current_submission_id` vào state để chuẩn bị lắng nghe realtime.
+  + Kết nối Nút "Nộp bài" trên Web IDE với API `POST /api/v1/submissions` (UC-11):
+    - Hiển thị Popup cảnh báo xác nhận: Sau khi nộp bài làm sẽ bị khóa và KHÔNG THỂ chỉnh sửa hoặc nộp lại.
+    - Sau khi xác nhận: Khóa Editor sang Read-only, hiển thị thông báo "Nộp bài thành công. Bài làm sẽ được chấm sau khi hết thời hạn nộp bài."
+  + Xử lý các trường hợp ngoại lệ: Bài tập đã đóng/hết hạn nộp, Bài làm đã nộp từ trước, Lỗi mạng.
 - Deliverable: Bấm Submit trên web -> Bản ghi PENDING tạo trong DB -> Celery Worker nhận task chấm bài.
 - Dependency: Celery Task từ Ngày 7.
 - Verification/Test: Submit bài hợp lệ -> nhận HTTP 202 kèm UUID; submit khi đã quá số lần cho phép -> nhận lỗi 400.
@@ -860,8 +851,7 @@ NGÀY 10: 10/10/2026 (Thứ Bảy) - [AUTO-GRADER CHỐT OFFICIAL SCORE]
     - So khớp chuỗi Expected Output vs Actual Output của các Hidden Test Cases (trim whitespace, chuẩn hóa CRLF).
     - Tính điểm Correctness theo trọng số từng test case đạt chuẩn.
     - Tính điểm Code Quality từ Static Analysis dựa trên Rubric cấu hình.
-    - Áp dụng Late Penalty (trừ điểm nộp muộn nếu có).
-    - Chốt điểm chính thức: Cập nhật `auto_score` vào `submissions`, cập nhật `grading_status=COMPLETED`.
+    - Chốt điểm Auto-Grader tạm tính: Cập nhật `auto_score` vào `submissions`, cập nhật trạng thái `COMPLETED`.
     - TUÂN THỦ NGUYÊN TẮC: Chốt điểm chính thức xong trước, không phụ thuộc vào AI.
   + Cấu hình WebSocket Server (FastAPI): Phát broadcast các event:
     `SUBMISSION_QUEUED` -> `RUNNING_TESTS` -> `GRADING` -> `OFFICIAL_GRADED`.
@@ -1033,23 +1023,20 @@ NGÀY 17: 17/10/2026 (Thứ Bảy)
 ----------------------------------------------------------------------------------------------------
 
 NGÀY 18: 18/10/2026 (Chủ Nhật)
-- Mục tiêu: Xây dựng chức năng Giao bài tập cho lớp và Cấu hình chính sách nộp bài / tính điểm.
+- Mục tiêu: Xây dựng chức năng Giao bài tập cho lớp và Cấu hình Deadline nộp bài (UC-20, UC-23).
 - Task Người A:
-  + Viết API Giao bài tập và cấu hình chính sách (UC-21, UC-24, UC-27):
-    - `POST /api/v1/teacher/assignments`: Giao một bài tập cho một hoặc nhiều lớp học.
-    - Cấu hình Deadline: Ngày giờ hết hạn nộp bài chính thức.
-    - Cấu hình Nộp muộn (Late Policy): Cho phép nộp muộn, thời hạn nộp muộn, tỷ lệ trừ điểm (ví dụ: trừ 20%).
-    - Cấu hình Số lần nộp tối đa (`max_submissions`): Giới hạn N lần hoặc 0 là Không giới hạn (Rule 11).
-    - Cấu hình Chính sách tính điểm (`scoring_policy`): `HIGHEST_SCORE` hoặc `LATEST_SCORE` (Rule 18).
+  + Viết API Giao bài tập cho lớp (UC-20, UC-23):
+    - `POST /api/v1/teacher/assignments`: Giao một bài tập cho một hoặc nhiều lớp học phụ trách.
+    - `PUT /api/v1/teacher/problems/{id}/deadline`: Thiết lập/điều chỉnh Deadline nộp bài (một mốc thời gian duy nhất, lớn hơn thời điểm hiện tại).
+    - Cài đặt Worker tự động nộp bài Server-side Auto-submit khi đến hạn Deadline ($T = T_{	ext{deadline}}$) cho các tài khoản còn ở trạng thái DRAFT (`trigger_type=AUTO_EXPIRED`).
 - Task Người B:
-  + Xây dựng UI Giao bài tập cho lớp (Assignment Distribution UI):
-    - Form chọn bài tập từ kho bài tập -> Chọn lớp học cần giao.
-    - Bộ chọn thời gian: Deadline chính thức, Bật/Tắt nộp muộn, Thời hạn nộp muộn, % điểm phạt.
-    - Bộ chọn chính sách: Giới hạn số lần nộp (input số), Chọn Lấy điểm cao nhất hay Lấy điểm lần cuối.
-- Deliverable: Giáo viên thiết lập đầy đủ quy chế nộp bài cho từng lớp học cụ thể.
+  + Xây dựng UI Giao bài tập cho lớp (Assignment Distribution UI - UC-23) & Thiết lập Deadline (UC-20):
+    - Form chọn bài tập từ danh sách -> Chọn một hoặc nhiều lớp học phụ trách cần giao.
+    - Bộ chọn ngày giờ Deadline chính thức duy nhất, kèm thông báo quy chế khóa bài khi đến hạn.
+- Deliverable: Giáo viên giao bài tập thành công cho các lớp phụ trách và thiết lập thời hạn nộp bài chuẩn xác.
 - Dependency: Problem API từ Ngày 4 và Class API từ Ngày 17.
-- Verification/Test: Giao bài tập với max_submissions=2 -> Sinh viên nộp lần thứ 3 bị từ chối chính xác.
-- Definition of Done: Bản ghi `class_assignments` lưu đầy đủ các chính sách nộp bài và thời hạn quy định.
+- Verification/Test: Giao bài tập cho lớp A -> Sinh viên lớp A thấy bài tập; hết giờ deadline -> Editor tự động khóa.
+- Definition of Done: Bản ghi `class_assignments` lưu đầy đủ liên kết bài tập - lớp học và mốc thời gian deadline.
 
 ----------------------------------------------------------------------------------------------------
 
@@ -1060,9 +1047,8 @@ NGÀY 19: 19/10/2026 (Thứ Hai)
     mà sinh viên đó đang là thành viên hợp lệ.
   + Viết API `GET /api/v1/student/gradebook` (UC-16):
     - Tổng hợp điểm theo từng bài tập và lớp học.
-    - Áp dụng chính sách tính điểm đã cấu hình (`HIGHEST_SCORE` hoặc `LATEST_SCORE`).
-    - Ưu tiên điểm chấm thủ công (Manual Score) làm điểm chính thức. Nếu chưa có, lấy điểm Auto-Grader
-      kèm nhãn `Tạm tính` (RULES §18.2). Tuyệt đối không tự động gán điểm 0 nếu chưa có kết quả.
+    - Lấy kết quả bài nộp chính thức duy nhất của sinh viên cho từng bài tập.
+    - Hiển thị Điểm chính thức (Official Score) sau khi Giáo viên xác nhận; hiển thị Điểm Auto-Grader kèm nhãn `Tạm tính` nếu Giáo viên chưa xác nhận. Tuyệt đối không tự động gán điểm 0 nếu đang chờ chấm.
 - Task Người B:
   + Cập nhật trang Danh sách bài tập của Sinh viên: Hiển thị theo lớp học, có nhãn hạn nộp Deadline.
   + Xây dựng UI Bảng điểm cá nhân (UC-16):
@@ -1070,7 +1056,7 @@ NGÀY 19: 19/10/2026 (Thứ Hai)
     - Bộ lọc theo lớp học và khoảng thời gian.
 - Deliverable: Sinh viên chỉ nhìn thấy bài tập của lớp mình và theo dõi được bảng điểm cá nhân minh bạch.
 - Dependency: Class Assignments từ Ngày 18.
-- Verification/Test: SV nộp 2 bài (50đ và 80đ) với policy Highest -> Bảng điểm hiển thị 80đ (Tạm tính).
+- Verification/Test: SV nộp 1 bài đạt 80đ Auto-Grader -> Bảng điểm hiển thị 80đ (Tạm tính); sau khi GV xác nhận -> Bảng điểm hiển thị 80đ (Chính thức).
 - Definition of Done: Sinh viên thuộc lớp A không thấy bài tập được giao riêng cho lớp B.
 
 ----------------------------------------------------------------------------------------------------
@@ -1078,14 +1064,14 @@ NGÀY 19: 19/10/2026 (Thứ Hai)
 NGÀY 20: 20/10/2026 (Thứ Ba)
 - Mục tiêu: Xây dựng giao diện cho Giảng viên xem toàn bộ bài nộp của lớp và xem AI đánh giá.
 - Task Người A:
-  + Viết API Submission Review dành cho Giảng viên (UC-28, UC-29, UC-30):
+  + Viết API Submission Review dành cho Giảng viên (UC-24, UC-25, UC-26):
     - `GET /api/v1/teacher/assignments/{id}/submissions`: Danh sách bài nộp của cả lớp, phân trang,
       lọc theo sinh viên, trạng thái chấm, thời gian nộp.
     - `GET /api/v1/teacher/submissions/{id}`: Xem chi tiết mã nguồn, kết quả từng test case, thời gian, RAM.
     - `GET /api/v1/teacher/submissions/{id}/ai-evaluation`: Xem toàn bộ đánh giá của AI đối với bài nộp.
 - Task Người B:
   + Xây dựng Teacher Portal - Trang Quản lý Bài nộp (Submission Review UI):
-    - Bảng danh sách sinh viên trong lớp kèm trạng thái nộp bài (Đã nộp / Chưa nộp / Nộp muộn).
+    - Bảng danh sách sinh viên trong lớp kèm trạng thái nộp bài (Chưa nộp / Đã nộp / Đang chấm / Đã chấm).
     - Màn hình xem bài nộp chi tiết: Split view hiển thị mã nguồn sinh viên bên cạnh kết quả test cases.
     - Tab "Đánh giá của AI" (UC-30): Hiển thị nhận xét chất lượng, phát hiện code smell và gợi ý của AI.
 - Deliverable: Giảng viên theo dõi được tiến độ nộp bài của cả lớp và xem chi tiết code của từng sinh viên.
@@ -1098,7 +1084,7 @@ NGÀY 20: 20/10/2026 (Thứ Ba)
 NGÀY 21: 21/10/2026 (Thứ Tư) - [MILESTONE 4 CHECKPOINT]
 - Mục tiêu: Xây dựng chức năng Giảng viên Chấm bài thủ công theo Rubric (Manual Grading Override).
 - Task Người A:
-  + Viết API Chấm bài thủ công (UC-31):
+  + Viết API Chấm bài thủ công (UC-27):
     - `POST /api/v1/teacher/submissions/{id}/manual-grade`: Nhập điểm chi tiết theo từng tiêu chí Rubric,
       nhập nhận xét cá nhân của giáo viên, chọn cờ `is_draft` (True: Lưu tạm, False: Lưu chính thức).
     - Logic ưu tiên điểm số (RULES §18 & §19): Khi `is_draft=False` -> `manual_score` trở thành `final_score`
@@ -1106,7 +1092,7 @@ NGÀY 21: 21/10/2026 (Thứ Tư) - [MILESTONE 4 CHECKPOINT]
     - Nếu `is_draft=True`: Chỉ lưu bản nháp, chưa áp dụng điểm thủ công vào bảng điểm chính thức.
   + Rà soát và nghiệm thu Milestone 4: Quản lý lớp, giao bài, review submission, chấm thủ công.
 - Task Người B:
-  + Xây dựng Modal Chấm bài thủ công theo Rubric (UC-31):
+  + Xây dựng Modal Chấm bài thủ công theo Rubric (UC-27):
     - Danh sách các tiêu chí Rubric kèm thanh trượt hoặc ô nhập điểm cho từng tiêu chí.
     - Khung nhập nhận xét, phản hồi sư phạm của giáo viên dành cho sinh viên.
     - Nút "Lưu bản nháp" và Nút "Xác nhận chấm hoàn tất".
@@ -1121,7 +1107,7 @@ NGÀY 21: 21/10/2026 (Thứ Tư) - [MILESTONE 4 CHECKPOINT]
 NGÀY 22: 22/10/2026 (Thứ Năm)
 - Mục tiêu: Xây dựng phân hệ Quản lý tài khoản người dùng dành cho Quản trị viên (User Management).
 - Task Người A:
-  + Viết REST API Quản trị tài khoản (UC-32, UC-33, UC-34, UC-35, UC-36):
+  + Viết REST API Quản trị tài khoản (UC-28, UC-29, UC-30, UC-31, UC-32):
     - `POST /api/v1/admin/users`: Tạo tài khoản SV, GV, Giáo vụ; tự sinh mật khẩu tạm, gửi email (UC-32).
     - `PUT /api/v1/admin/users/{id}/status`: Khóa hoặc mở khóa tài khoản (thu hồi token nếu khóa) (UC-33).
     - `DELETE /api/v1/admin/users/{id}`: Xóa tài khoản (bắt buộc dùng Soft Delete nếu đã có bài nộp) (UC-34).
@@ -1142,7 +1128,7 @@ NGÀY 22: 22/10/2026 (Thứ Năm)
 NGÀY 23: 23/10/2026 (Thứ Sáu)
 - Mục tiêu: Xây dựng chức năng Nhập danh sách tài khoản từ file Excel/CSV chuẩn 5 cột.
 - Task Người A:
-  + Viết API `POST /api/v1/admin/users/import-excel` (UC-37):
+  + Viết API `POST /api/v1/admin/users/import-excel` (UC-33):
     - Đọc file `.xlsx` hoặc `.csv` bằng thư viện `openpyxl` / `pandas`.
     - Kiểm tra cấu trúc bắt buộc đúng 5 cột: `Mã sinh viên`, `Họ tên`, `Email`, `Vai trò`, `Lớp`.
     - Kiểm tra tính hợp lệ từng dòng: Email đúng định dạng, vai trò hợp lệ.
@@ -1151,7 +1137,7 @@ NGÀY 23: 23/10/2026 (Thứ Sáu)
     - Tự động sinh mật khẩu tạm cho tài khoản mới và gán vào lớp tương ứng.
     - Trả về báo cáo kết quả chi tiết: Số bản ghi thành công, danh sách các dòng lỗi kèm lý do.
 - Task Người B:
-  + Xây dựng UI Nhập danh sách từ Excel/CSV (UC-37):
+  + Xây dựng UI Nhập danh sách từ Excel/CSV (UC-33):
     - Khung kéo thả file Excel/CSV, nút tải về file template mẫu chuẩn 5 cột.
     - Bảng xem trước dữ liệu (Preview Table) trước khi xác nhận lưu vào hệ thống.
     - Hiển thị danh sách các bản ghi không hợp lệ (nếu có) để người dùng điều chỉnh.
@@ -1165,16 +1151,16 @@ NGÀY 23: 23/10/2026 (Thứ Sáu)
 NGÀY 24: 24/10/2026 (Thứ Bảy)
 - Mục tiêu: Quản lý Tổ chức, Khoa/Bộ môn và Vòng đời lớp học cấp Khoa/Trường (Giáo vụ & QTV).
 - Task Người A:
-  + Viết API Quản lý Tổ chức & Khoa/Bộ môn (UC-47): CRUD cơ cấu, phân công Giáo vụ phụ trách Khoa/Bộ môn.
-  + Viết API Quản lý lớp cấp Khoa/Trường (UC-38, UC-39, UC-42, UC-43): Phân công GV theo Bộ môn.
-  + Hiện thực hóa State Machine Vòng đời lớp học (UC-40, UC-41):
+  + Viết API Quản lý Tổ chức & Khoa/Bộ môn (UC-43): CRUD cơ cấu, phân công Giáo vụ phụ trách Khoa/Bộ môn.
+  + Viết API Quản lý lớp cấp Khoa/Trường (UC-34, UC-35, UC-38, UC-39): Phân công GV theo Bộ môn.
+  + Hiện thực hóa State Machine Vòng đời lớp học (UC-36, UC-37):
     - Đóng/Mở lớp: `ACTIVE` <-> `CLOSED`.
     - Quản lý Lưu trữ (Archive): Chuyển lớp sang `ARCHIVED`. Khôi phục (Restore): `ARCHIVED` -> `CLOSED`.
     - Hard Delete Guard (RULES §6.3): Chỉ cho phép xóa vĩnh viễn khi đồng thời thỏa mãn:
       `student_count == 0 AND assignment_count == 0 AND schedule_count == 0`.
       Nếu vi phạm bất kỳ điều kiện nào -> Chặn xóa và chuyển sang Lưu trữ (Archive).
 - Task Người B:
-  + Xây dựng UI Quản lý Tổ chức & Cơ cấu Khoa/Bộ môn dành cho Quản trị viên (UC-47).
+  + Xây dựng UI Quản lý Tổ chức & Cơ cấu Khoa/Bộ môn dành cho Quản trị viên (UC-43).
   + Xây dựng UI Quản lý Lớp học cấp Khoa dành cho Giáo vụ: Chỉ thấy và thao tác lớp thuộc Khoa phụ trách.
   + Xây dựng Modal Quản lý vòng đời lớp: Nút Đóng lớp, Mở lại, Lưu trữ, Khôi phục và Xóa vĩnh viễn
     kèm hộp thoại xác nhận điều kiện xóa nghiêm ngặt.
@@ -1188,37 +1174,37 @@ NGÀY 24: 24/10/2026 (Thứ Bảy)
 NGÀY 25: 25/10/2026 (Chủ Nhật) - [MILESTONE 5 CHECKPOINT]
 - Mục tiêu: Xây dựng phân hệ Quản trị hệ thống - Cấu hình AI & Giám sát Docker Sandbox (Super Admin).
 - Task Người A:
-  + Viết API Cấu hình AI (UC-44): Lưu/cập nhật API Key, chọn Primary Model, điều chỉnh Temperature, Max Tokens.
-  + Viết API Cấu hình Docker Sandbox (UC-45): Điều chỉnh CPU limit, RAM limit, Default Timeout per problem.
-  + Viết API Giám sát Docker Sandbox (UC-46):
+  + Viết API Cấu hình AI (UC-40): Lưu/cập nhật API Key, chọn Primary Model, điều chỉnh Temperature, Max Tokens.
+  + Viết API Cấu hình Docker Sandbox (UC-41): Điều chỉnh CPU limit, RAM limit, Default Timeout per problem.
+  + Viết API Giám sát Docker Sandbox (UC-42):
     - Trả về danh sách container đang chạy, mức sử dụng CPU/RAM của server.
     - Endpoint Dừng khẩn cấp: `POST /api/v1/system/sandbox/kill/{container_id}`.
     - Xử lý khi bị dừng: Cập nhật bài nộp liên quan sang trạng thái "Bị gián đoạn", ghi log,
       tuyệt đối không tăng `submission_count`, không tự chấm lại (RULES §15 & §23).
-  + Rà soát và nghiệm thu Milestone 5: Đầy đủ 48 Use Cases của 5 Actors đã được cài đặt phía backend.
+  + Rà soát và nghiệm thu Milestone 5: Đầy đủ 44 Use Cases của 5 Actors đã được cài đặt phía backend.
 - Task Người B:
-  + Xây dựng Super Admin Portal - Trang Cấu hình AI (UC-44): Form nhập key, test connection đến AI Service.
-  + Xây dựng Trang Giám sát Docker Sandbox (UC-46):
+  + Xây dựng Super Admin Portal - Trang Cấu hình AI (UC-40): Form nhập key, test connection đến AI Service.
+  + Xây dựng Trang Giám sát Docker Sandbox (UC-42):
     - Widget theo dõi tài nguyên server (RAM, CPU, Active Sandbox Jobs).
     - Bảng các phiên thực thi đang chạy kèm nút "Dừng phiên" khẩn cấp.
 - Deliverable: Quản trị viên hệ thống có công cụ cấu hình và kiểm soát toàn bộ hạ tầng kỹ thuật nền tảng.
 - Dependency: Sandbox Engine và AI Engine từ Tuần 2 & 3.
 - Verification/Test: Bấm nút Dừng phiên một container đang chạy code lặp vô hạn -> Bài nộp chuyển sang "Bị gián đoạn".
-- Definition of Done: **MILESTONE 5 HOÀN TẤT** - Toàn bộ 48 Use Cases của cả 5 nhóm Actor đã hoàn thành chức năng.
+- Definition of Done: **MILESTONE 5 HOÀN TẤT** - Toàn bộ 44 Use Cases của cả 5 nhóm Actor đã hoàn thành chức năng.
 
 ----------------------------------------------------------------------------------------------------
 
 NGÀY 26: 26/10/2026 (Thứ Hai)
 - Mục tiêu: Xây dựng Quản lý Nhật ký hệ thống (System Logs & Audit Trail) toàn diện.
 - Task Người A:
-  + Hoàn thiện module ghi nhận Audit Trail tập trung (UC-48):
+  + Hoàn thiện module ghi nhận Audit Trail tập trung (UC-44):
     - Tự động bắt và ghi nhận mọi hành động: Đăng nhập/Đăng xuất, Click Submit (Rule 14), Chấm điểm thủ công,
       Tạo/Xóa người dùng, Thay đổi trạng thái lớp, Lỗi Sandbox, Thay đổi cấu hình AI.
     - Lưu chi tiết: `user_id`, `action`, `event_type`, `resource_id`, `details` (JSONB), `ip_address`.
   + Viết API `GET /api/v1/system/logs`: Tìm kiếm từ khóa, lọc theo khoảng thời gian, loại sự kiện, vai trò.
   + Viết API `GET /api/v1/system/logs/export`: Xuất dữ liệu log ra định dạng file CSV phục vụ kiểm toán.
 - Task Người B:
-  + Xây dựng Super Admin Portal - Trang Quản lý System Logs (UC-48):
+  + Xây dựng Super Admin Portal - Trang Quản lý System Logs (UC-44):
     - Bảng hiển thị nhật ký hệ thống trực quan, tô màu theo mức độ (INFO, WARNING, ERROR, CRITICAL).
     - Bộ lọc nâng cao: Thời gian (Từ ngày - Đến ngày), Loại sự kiện, Người thực hiện.
     - Modal xem chi tiết payload JSON của từng dòng log. Nút "Xuất CSV".
@@ -1381,8 +1367,8 @@ Hệ thống chỉ được coi là hoàn thành khi đáp ứng đồng thời 
 
 5. Nghiệp vụ Giảng viên & Lớp học:
 [ ] Giáo viên tạo được lớp học, thêm/xóa sinh viên trong lớp mình phụ trách.
-[ ] Giáo viên giao được bài tập cho lớp, thiết lập Deadline, Late penalty, Max Submissions.
-[ ] Chính sách tính điểm (Highest Score vs Latest Score) được áp dụng chuẩn xác vào bảng điểm.
+[ ] Giáo viên giao được bài tập cho lớp, thiết lập Deadline một mốc duy nhất (Strict No-Late), quy tắc 1 bản nộp duy nhất.
+[ ] Điểm chính thức (Official Score do GV xác nhận) và Điểm Auto-Grader tạm tính được hiển thị chuẩn xác vào bảng điểm.
 [ ] Giáo viên xem được toàn bộ danh sách bài nộp của lớp, xem code, kết quả test và nhận xét AI.
 [ ] Giáo viên Chấm bài thủ công theo Rubric thành công -> Điểm thủ công trở thành điểm chính thức.
 

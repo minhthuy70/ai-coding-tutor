@@ -9,12 +9,12 @@ I. TỔNG QUAN DỰ ÁN
 Mục tiêu: Xây dựng nền tảng chấm bài lập trình tự động có tích hợp AI tutor để đánh giá code và
 cung cấp phản hồi sư phạm cho sinh viên.
 
-Scope: 48 Use Cases chia thành 5 nhóm Actor:
+Scope: 44 Use Cases (chuẩn hóa DOAN4.md) chia thành 5 nhóm Actor:
 - Sinh viên (10 UC): Làm bài, nộp bài, xem kết quả, tương tác AI Tutor
-- Giáo viên (15 UC): Quản lý lớp, bài tập, chấm điểm thủ công
-- Quản trị viên (12 UC): Quản lý tài khoản, lớp học cấp trường
-- Giáo vụ (12 UC): Quản lý lớp học cấp Khoa/Bộ môn
-- Quản trị viên hệ thống (5 UC): Cấu hình AI, Docker Sandbox, System Logs
+- Giáo viên (11 UC): Quản lý bài tập, chấm điểm thủ công, đóng/mở lớp phụ trách, bài tập, chấm điểm thủ công
+- Quản trị viên (7 UC): Quản lý tài khoản, lớp học cấp trường
+- Giáo vụ (6 UC): Quản lý lớp học cấp Khoa/Bộ môn
+- Quản trị viên hệ thống (4 UC): Cấu hình AI, Docker Sandbox, System Logs
 
 4 Trụ cột MVP Core:
 1. Quản lý bài tập (Problem Management)
@@ -140,9 +140,9 @@ Người A (Class Management Backend):
 - [ ] Class CRUD API: Teacher scope (lớp phụ trách)
 - [ ] Class Member API: Thêm/Xóa sinh viên
 - [ ] Assignment API: Giao bài cho lớp
-- [ ] Class Assignment config: Deadline, max submissions, late policy
+- [ ] Class Assignment config: Deadline (một mốc duy nhất, Strict No-Late), 1 bản nộp duy nhất
 - [ ] Manual Grading API: Giáo viên chấm đè điểm
-- [ ] Grade aggregation: Highest/Latest Score policy
+- [ ] Grade aggregation: Official Score do GV xác nhận, Điểm Auto-Grader tạm tính
 - [ ] Test: Teacher tạo lớp → giao bài → xem nộp → chấm thủ công
 
 Người B (Teacher Portal Frontend):
@@ -313,7 +313,7 @@ Core Tables:
 - problems: id, title, description, allowed_languages, time_limit, memory_limit, author_id
 - test_cases: id, problem_id, input_data, expected_output, is_sample, score_weight
 - rubric_criteria: id, problem_id, criteria, description, max_score, weight
-- class_assignments: id, class_id, problem_id, deadline, max_submissions, scoring_policy
+- class_assignments: id, class_id, problem_id, deadline, is_active
 - submissions: id, user_id, problem_id, class_id, source_code, language, status
 - test_results: id, submission_id, test_case_id, status, execution_time, memory_used
 - ai_feedback: id, submission_id, quality_score, complexity_score, logic_analysis, hints
