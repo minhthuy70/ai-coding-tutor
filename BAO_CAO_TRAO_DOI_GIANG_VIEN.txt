@@ -1,0 +1,445 @@
+BÁO CÁO TOÀN DIỆN ĐỊNH HƯỚNG, LỘ TRÌNH VÀ MỤC TIÊU DỰ ÁN
+ĐỀ TÀI: NỀN TẢNG ĐÁNH GIÁ MÃ NGUỒN TỰ ĐỘNG VÀ TRỢ GIẢNG LẬP TRÌNH THÔNG MINH TÍCH HỢP AI
+(AI-POWERED CODING TUTOR & AUTO-GRADER PLATFORM)
+
+--------------------------------------------------------------------------------
+THÔNG TIN CHUNG:
+- Mục đích: Báo cáo định hướng, trao đổi chuyên môn và xin ý kiến Giảng viên Hướng dẫn (GVHD).
+- Thời gian thực hiện: 01/10/2026 – 31/10/2026 (Tổng cộng: 4 tuần / 31 ngày).
+- Quy mô nhóm: 02 thành viên.
+- Phiên bản: v2.0 (Chuẩn hóa 4 Giai đoạn & Bước thực hiện).
+--------------------------------------------------------------------------------
+
+MỤC LỤC BÁO CÁO:
+I. THÔNG TIN CHUNG VÀ BỐI CẢNH ĐỀ TÀI
+II. MỤC TIÊU CỐT LÕI VÀ TÍNH ĐỘT PHÁ CỦA ĐỀ TÀI
+III. PHÂN TÍCH TIẾP THU VÀ ĐỐI CHIẾU GỢI Ý CỦA GIẢNG VIÊN
+IV. KIẾN TRÚC KỸ THUẬT VÀ CÔNG NGHỆ SỬ DỤNG (TECH STACK)
+V. MÔ HÌNH KHO TRI THỨC RAG SƯ PHẠM 2 CHIỀU
+VI. QUY MÔ NGHIỆP VỤ VÀ 44 USE CASES (5 NHÓM PHÂN QUYỀN)
+VII. CHI TIẾT 4 GIAI ĐOẠN CHÍNH VÀ CÁC BƯỚC THỰC HIỆN TUẦN TỰ (01/10 - 31/10/2026)
+VIII. PHÂN CÔNG TRÁCH NHIỆM CHI TIẾT (2 THÀNH VIÊN)
+IX. MỤC TIÊU CẦN ĐẠT VÀ TIÊU CHÍ NGHIỆM THU (KPIS & DELIVERABLES)
+X. CÁC CÂU HỎI TRỌNG TÂM XIN Ý KIẾN ĐỊNH HƯỚNG TỪ GIẢNG VIÊN
+
+
+================================================================================
+I. THÔNG TIN CHUNG VÀ BỐI CẢNH ĐỀ TÀI
+================================================================================
+
+1. Thông tin Đề tài:
+- Tên tiếng Việt: Nền tảng Đánh giá Mã nguồn Tự động và Trợ giảng Lập trình Thông minh Tích hợp Trí tuệ Nhân tạo.
+- Tên tiếng Anh: AI-Powered Coding Tutor & Automated Source Code Assessment Platform.
+- Môi trường áp dụng: Các phòng thực hành máy tính, hệ thống bài tập lớn và kỳ thi thực hành lập trình tại Khoa/Viện CNTT.
+
+2. Bối cảnh và Tính cấp thiết:
+a) Hạn chế của hệ thống chấm code truyền thống (như VNOJ, HackerRank, LeetCode):
+- Chỉ trả về phán quyết đúng/sai thô sơ: Accepted (AC), Wrong Answer (WA), Time Limit Exceeded (TLE), Runtime Error (RTE).
+- Thiếu tính sư phạm: Sinh viên không hiểu vì sao sai ở ca kiểm thử cụ thể, không biết cách khắc phục lỗi logic và không biết code có bị nghẽn độ phức tạp hay không.
+- Không đánh giá được chất lượng viết code (Clean Code, PEP 8, Code Smells) và không quét được lỗi bảo mật.
+
+b) Thực trạng sinh viên dùng AI thương mại (ChatGPT / GitHub Copilot):
+- Sinh viên có thói quen copy toàn bộ đề bài vào ChatGPT để xin code giải sẵn, làm mất đi tư duy tự giải quyết vấn đề.
+- AI thương mại dễ mắc lỗi "ảo giác" (hallucination) và không bám sát giáo trình của trường.
+
+c) Áp lực của Giảng viên và Trợ giảng:
+- Lớp học lập trình thường có hàng trăm sinh viên, giảng viên không thể đọc chi tiết từng dòng code để sửa lỗi phong cách và hướng dẫn từng em.
+
+
+================================================================================
+II. MỤC TIÊU CỐT LÕI VÀ TÍNH ĐỘT PHÁ CỦA ĐỀ TÀI
+================================================================================
+
+Hệ thống được thiết kế theo mô hình "Hybrid Evidence-Grounded AI" (Đánh giá dựa trên bằng chứng thực thi kết hợp Trí tuệ Nhân tạo Sư phạm), xoay quanh 4 TRỤ CỘT CỐT LÕI:
+
+1. Trụ cột 1 - Web IDE Chuyên dụng:
+- Tích hợp Monaco Editor (trình soạn thảo của VS Code) chạy trực tiếp trên nền web.
+- Hỗ trợ đa ngôn ngữ (Python, C++, Java, JS), tự động lưu nháp (Autosave) và khóa chỉ đọc (Read-only) ngay khi nộp bài.
+
+2. Trụ cột 2 - Docker Sandbox Cô lập An toàn:
+- Chạy code sinh viên trong container cô lập: không có mạng (--network none), chạy quyền user: nobody (non-root).
+- Giới hạn cứng tài nguyên: RAM 256MB, CPU 1 core, timeout 2.0s để chặn triệt để mã độc hoặc treo hệ thống (fork bomb).
+
+3. Trụ cột 3 - Auto-Grader và Thu thập Bằng chứng Thực thi (Evidence Engine):
+- Chạy tự động bộ Test Cases, thu thập đầy đủ bằng chứng thực tế: RAM đỉnh, thời gian chạy, mã lỗi.
+- Phân tích tĩnh (Static Analysis): Đo độ phức tạp Cyclomatic, ước lượng Big-O và quét chuẩn phong cách Flake8.
+
+4. Trụ cột 4 - Socratic AI Tutor & Code Reviewer:
+- Trợ giảng AI định hướng tư duy theo phương pháp Socratic: chỉ ra dòng code nghi vấn, đặt câu hỏi gợi ý để sinh viên tự sửa lỗi, tuyệt đối không đưa code giải sẵn.
+- Tích hợp RAG để trích dẫn chuẩn giáo trình và quét cảnh báo lỗ hổng bảo mật theo danh mục CWE Top 25 / OWASP.
+
+Bốn Điểm Đột Phá Khác Biệt:
+- Đột phá 1 (Tính Sư phạm Socratic): AI gợi mở tư duy, không giải hộ mã nguồn.
+- Đột phá 2 (AI có Bằng chứng Thực thi): AI chỉ nhận xét khi đã có dữ liệu chạy thực tế từ Sandbox, loại bỏ phán đoán vô căn cứ.
+- Đột phá 3 (Minh bạch Điểm số): Điểm số chính thức do Test Cases và Giảng viên quyết định; nhận xét của AI chỉ mang tính chất tham khảo sư phạm.
+- Đột phá 4 (Chi phí 0 Đồng): Vận hành hoàn toàn miễn phí nhờ Google Gemini Flash Free Tier kết hợp Local LLM (Ollama/Llama 3) và ChromaDB.
+
+
+================================================================================
+III. PHÂN TÍCH TIẾP THU VÀ ĐỐI CHIẾU GỢI Ý CỦA GIẢNG VIÊN
+================================================================================
+
+Nhóm đã đối chiếu và tiếp thu 100% các ý kiến gợi ý của Giảng viên Hướng dẫn:
+
+1. Yêu cầu: Nộp mã nguồn trực tiếp trên Web.
+- Giải pháp của Nhóm: Web IDE tích hợp Monaco Editor trên Next.js 14, có định dạng code, highlight cú pháp và khóa Read-only sau khi nộp.
+- Đánh giá: 100% Hoàn toàn phù hợp.
+
+2. Yêu cầu: Docker Sandbox để chạy mã nguồn an toàn.
+- Giải pháp của Nhóm: Container cô lập an toàn với cờ ngắt mạng (--network none), non-root user, giới hạn 256MB RAM và 1 core CPU.
+- Đánh giá: 100% Hoàn toàn phù hợp.
+
+3. Yêu cầu: AI đọc hiểu code (tích hợp LLMs).
+- Giải pháp của Nhóm: Tích hợp Google Gemini 1.5 Flash + OpenAI GPT-4o-mini fallback kết hợp phân tích cú pháp AST.
+- Đánh giá: 100% Hoàn toàn phù hợp.
+
+4. Yêu cầu: Phân tích độ phức tạp thuật toán.
+- Giải pháp của Nhóm: Kết hợp phân tích tĩnh (radon, AST) và LLM để đo Cyclomatic Complexity cùng Big-O thời gian và không gian.
+- Đánh giá: 100% Hoàn toàn phù hợp.
+
+5. Yêu cầu: Chấm điểm Clean Code và phong cách lập trình.
+- Giải pháp của Nhóm: Bộ kiểm tra Flake8 / PEP 8 kết hợp AI Review chấm điểm phong cách và chỉ ra các Code Smells.
+- Đánh giá: 100% Hoàn toàn phù hợp.
+
+6. Yêu cầu: Đưa ra gợi ý tối ưu hóa chi tiết như Trợ giảng.
+- Giải pháp của Nhóm: Khung chat Socratic AI Tutor: giải thích nguyên nhân lỗi và đặt câu hỏi định hướng tối ưu hóa cấu trúc dữ liệu.
+- Đánh giá: 100% Hoàn toàn phù hợp.
+
+7. Yêu cầu: Phát hiện các lỗi bảo mật tiềm ẩn.
+- Giải pháp của Nhóm: Bổ sung module AI Security Analyzer quét và cảnh báo các lỗi kinh điển theo danh mục CWE Top 25 / OWASP.
+- Đánh giá: 100% Đã tích hợp nâng cấp.
+
+8. Yêu cầu: Khung tích hợp LangChain.
+- Giải pháp của Nhóm: Tích hợp LangChain điều phối Prompt Templates, Output Parsers (Pydantic Schema) và Vector Store.
+- Đánh giá: 100% Đã tích hợp.
+
+9. Yêu cầu: Mô hình mã nguồn mở cục bộ (Llama/Mistral).
+- Giải pháp của Nhóm: Thiết kế kiến trúc Multi-Provider: hỗ trợ chuyển đổi linh hoạt giữa Cloud API (Gemini/OpenAI) và Local LLM (Ollama).
+- Đánh giá: 100% Đã tích hợp.
+
+
+================================================================================
+IV. KIẾN TRÚC KỸ THUẬT VÀ CÔNG NGHỆ SỬ DỤNG (TECH STACK)
+================================================================================
+
+1. Luồng Hoạt động Dữ liệu:
+- Bước 1: Sinh viên viết code trên Web IDE Monaco và bấm "Nộp Bài".
+- Bước 2: FastAPI Server tiếp nhận và đẩy bài nộp vào Hàng đợi Redis / Celery.
+- Bước 3: Worker kích hoạt Docker Sandbox chạy Test Cases trong môi trường cô lập, đồng thời Static Analyzer đo độ phức tạp Big-O và Flake8.
+- Bước 4: Hệ thống RAG tra cứu cẩm nang môn học từ Vector DB (ChromaDB) theo lỗi thực tế.
+- Bước 5: AI Engine tổng hợp Bằng chứng Thực thi + Tri thức RAG để trả về Thẻ Đánh Giá (Clean code, Big-O, CWE) và khung chat Socratic AI Tutor.
+
+2. Bảng Công nghệ Lựa chọn:
+- Giao diện Web (Frontend): Next.js 14 (App Router) + TypeScript + Tailwind CSS.
+- Trình soạn thảo Code: Monaco Editor (nhúng từ VS Code, hỗ trợ Autosave và Read-only).
+- Máy chủ API (Backend): Python FastAPI (xử lý bất đồng bộ ASGI, tự sinh tài liệu Swagger).
+- Cơ sở dữ liệu: PostgreSQL 15 (quản lý người dùng, bài tập, lớp học, bài nộp).
+- Hàng đợi & Cache: Redis 7 + Celery (chấm bài bất đồng bộ, chống nghẽn khi nhiều người cùng nộp).
+- Sandbox thực thi: Docker Container cô lập (--network none, RAM 256MB, CPU 1 core).
+- Vector Database: ChromaDB Local (tra cứu tri thức RAG dưới 30ms, không tốn chi phí).
+- Trí tuệ Nhân tạo: Google Gemini 1.5 Flash (Cloud Free) / Ollama Llama 3 (Local Offline).
+
+3. Bảng Chi phí Vận hành (Hoàn toàn 0 Đồng):
+- Google Gemini 1.5 Flash API: 0 VNĐ (Gói Free Tier 1.500 requests/ngày vĩnh viễn).
+- Local LLM (Llama 3 / Mistral): 0 VNĐ (Ollama mã nguồn mở chạy offline).
+- ChromaDB Vector Store: 0 VNĐ (Chạy container local).
+- Text Embeddings: 0 VNĐ (Mô hình Sentence-Transformers chạy CPU local).
+- PostgreSQL & Redis: 0 VNĐ (Mã nguồn mở cài đặt cục bộ).
+- Docker Engine: 0 VNĐ (Đóng gói 1 file docker-compose.yml chạy trên mọi máy).
+
+
+================================================================================
+V. MÔ HÌNH KHO TRI THỨC RAG SƯ PHẠM 2 CHIỀU
+================================================================================
+
+1. Bản chất của RAG trong Đề tài:
+- RAG (Retrieval-Augmented Generation) đóng vai trò "Số hóa cẩm nang sư phạm của trường để AI tra cứu trước khi trả lời":
+  + Khi sinh viên gặp lỗi (ví dụ: Maximum recursion depth), hệ thống trích xuất đúng bài học "Đệ quy và Điều kiện dừng".
+  + AI dùng đúng thuật ngữ thầy cô dạy trên lớp để hướng dẫn, tránh dùng từ ngữ xa lạ gây bối rối cho sinh viên.
+
+2. Ma trận Tri thức 2 Chiều:
+- Chiều 1: Phân loại theo 4 Ngôn ngữ Lập trình:
+  + Python: Chuẩn PEP 8, Đệ quy, AST, 100+ mẫu lỗi cú pháp và logic điển hình.
+  + C++: Quản lý con trỏ và bộ nhớ, STL Containers, Templates, 100+ lỗi crash thường gặp.
+  + Java: Hướng đối tượng OOP, Collections Framework, Exception Handling, 80+ lỗi.
+  + JavaScript: ES6+, Bất đồng bộ Async/Await, Scope và Closures, 80+ lỗi.
+
+- Chiều 2: Sáu Trụ cột Chuyên môn Dùng chung:
+  + Trụ cột 1: Cấu trúc Dữ liệu & Giải thuật (Mảng, Stack, Queue, Cây, Đồ thị, DP).
+  + Trụ cột 2: Phân tích Độ phức tạp Thuật toán (Big-O thời gian và bộ nhớ).
+  + Trụ cột 3: Bộ quy tắc Clean Code & Nhận diện Code Smells.
+  + Trụ cột 4: An toàn Lập trình & Phòng chống Lỗ hổng Bảo mật (CWE Top 25 / OWASP).
+  + Trụ cột 5: Cẩm nang Chẩn đoán & Gỡ lỗi Thực thi (Debugging Patterns).
+  + Trụ cột 6: Ngân hàng Câu hỏi Gợi mở Sư phạm theo phương pháp Socratic.
+
+
+================================================================================
+VI. QUY MÔ NGHIỆP VỤ VÀ 44 USE CASES (5 NHÓM PHÂN QUYỀN)
+================================================================================
+
+Hệ thống bao gồm 44 Use Cases, chia thành 5 nhóm vai trò (RBAC):
+
+1. Nhóm Xác thực và Hồ sơ chung (6 Use Cases):
+- UC-01: Đăng nhập hệ thống (JWT Token).
+- UC-02: Đăng xuất hệ thống.
+- UC-03: Đổi mật khẩu.
+- UC-04: Quên mật khẩu / Khôi phục tài khoản.
+- UC-05: Xem hồ sơ cá nhân.
+- UC-06: Cập nhật thông tin hồ sơ.
+
+2. Nhóm Sinh viên - Student (10 Use Cases):
+- UC-07: Xem danh sách bài tập được giao theo lớp.
+- UC-08: Xem chi tiết đề bài, ràng buộc thời gian/bộ nhớ và ví dụ mẫu.
+- UC-09: Soạn thảo mã nguồn trên Monaco IDE (Tự động lưu nháp Autosave).
+- UC-10: Nộp bài chính thức (Tải tệp code lên hoặc nộp trực tiếp; khóa Read-only).
+- UC-11: Theo dõi trạng thái hàng đợi và tiến độ chấm bài theo thời gian thực.
+- UC-12: Xem kết quả chấm tự động chi tiết từng Test Case (AC, WA, TLE, RTE).
+- UC-13: Xem Thẻ Đánh Giá AI (Clean Code, Ước lượng Big-O, Cảnh báo Bảo mật CWE).
+- UC-14: Tương tác hỏi đáp với Trợ giảng AI Socratic Tutor.
+- UC-15: Xem lịch sử và chi tiết các lần nộp bài trước.
+- UC-16: Xem bảng tổng hợp điểm cá nhân theo môn học.
+
+3. Nhóm Giáo viên - Teacher (11 Use Cases):
+- UC-17: Quản lý ngân hàng bài tập (Thêm, Sửa, Xóa, Xem danh mục bài).
+- UC-18: Quản lý Test Cases (Ẩn/Hiện, Input/Output, Trọng số điểm).
+- UC-19: Thiết lập Rubric tiêu chí chấm điểm.
+- UC-20: Giao bài tập cho lớp học (Cài đặt 1 mốc Deadline cứng duy nhất).
+- UC-21: Đóng / Mở trạng thái lớp học phụ trách.
+- UC-22: Xem danh sách sinh viên trong lớp học.
+- UC-23: Thống kê tiến độ làm bài và tỷ lệ nộp bài của lớp.
+- UC-24: Xem chi tiết bài nộp và mã nguồn của từng sinh viên.
+- UC-25: Xem kết quả Auto-Grader kết hợp gợi ý phân tích từ AI.
+- UC-26: Chấm bài thủ công theo Rubric, ghi chú nhận xét và chỉnh sửa điểm.
+- UC-27: XÁC NHẬN VÀ CÔNG BỐ ĐIỂM CHÍNH THỨC (Official Score).
+
+4. Nhóm Quản trị viên Trường - Admin (7 Use Cases):
+- UC-28: Quản lý tài khoản toàn hệ thống (Tạo, Khóa, Mở khóa, Reset mật khẩu).
+- UC-29: Phân quyền vai trò tài khoản người dùng.
+- UC-30: IMPORT DANH SÁCH NGƯỜI DÙNG TỪ EXCEL/CSV CHUẨN 5 CỘT.
+- UC-31: Quản lý danh mục Môn học / Học phần.
+- UC-32: Quản lý danh mục Khoa / Viện / Bộ môn.
+- UC-33: Tạo lớp học và phân công Giảng viên phụ trách.
+- UC-34: Xem báo cáo thống kê hoạt động toàn hệ thống.
+
+5. Nhóm Giáo vụ Khoa - Academic Officer (6 Use Cases):
+- UC-35: Quản lý danh sách lớp học thuộc Khoa/Bộ môn phụ trách.
+- UC-36: Gán sinh viên vào lớp / Chuyển lớp cho sinh viên.
+- UC-37: Khóa sổ điểm học phần cuối kỳ.
+- UC-38: Xuất bảng điểm tổng kết lớp ra tệp Excel.
+- UC-39: Lưu trữ (Archive) và Phục hồi lớp học cũ.
+- UC-40: Xem báo cáo chất lượng học tập theo học kỳ.
+
+6. Nhóm Quản trị Hệ thống - SysAdmin (4 Use Cases):
+- UC-41: CẤU HÌNH THAM SỐ AI (Đổi Provider Gemini/OpenAI/Ollama, Prompt, Model).
+- UC-42: CẤU HÌNH VÀ GIÁM SÁT DOCKER SANDBOX (RAM, CPU limit, Timeout, Dọn container).
+- UC-43: Quản lý Vector DB và nạp dữ liệu tri thức RAG.
+- UC-44: XEM NHẬT KÝ HỆ THỐNG (System Logs & Audit Trail).
+
+Ba Nguyên Tắc Nghiệp Vụ Bất Biến:
+- Nguyên tắc 1: Một mốc Deadline Cứng (Không nhận nộp muộn; hết giờ máy chủ tự động thu bản nháp gần nhất).
+- Nguyên tắc 2: Nộp 1 Bản Duy Nhất (Nộp bài xong thì khóa Read-only để rèn tính cẩn trọng).
+- Nguyên tắc 3: Điểm Chính thức thuộc về Giảng viên (Chỉ giảng viên mới có quyền bấm nút duyệt điểm chính thức).
+
+
+================================================================================
+VII. CHI TIẾT 4 GIAI ĐOẠN CHÍNH VÀ CÁC BƯỚC THỰC HIỆN TUẦN TỰ
+(Thời gian thực hiện: 01/10/2026 – 31/10/2026 / Tổng: 4 tuần)
+================================================================================
+
+--------------------------------------------------------------------------------
+GIAI ĐOẠN 1: HẠ TẦNG NỀN TẢNG & LÕI CHẤM BÀI TỰ ĐỘNG (01/10 – 07/10/2026)
+--------------------------------------------------------------------------------
+* Mục tiêu: Xây dựng hoàn chỉnh kiến trúc cơ sở dữ liệu, môi trường thực thi cô lập an toàn Docker Sandbox và luồng nộp bài - chấm điểm test case cơ bản.
+
+* Các bước thực hiện:
+- Bước 1.1 (01/10 - 02/10): Thiết kế Cơ sở Dữ liệu & Cấu hình Backend.
+  + Thiết kế ERD và Database Models (SQLAlchemy): Users, Problems, TestCases, Submissions, Classes.
+  + Cấu hình Alembic Migrations kết nối PostgreSQL 15.
+  + Xây dựng Module Authentication JWT (Login, Logout, Refresh Token, Password Hashing).
+  + Đầu ra: Cơ sở dữ liệu hoàn chỉnh, API Auth đạt 100% unit tests.
+
+- Bước 1.2 (03/10 - 04/10): Xây dựng Docker Sandbox Runner Cô lập Bảo mật.
+  + Viết Dockerfile.sandbox cho Python và C++ chạy dưới quyền user: nobody (non-root).
+  + Viết script runner.py với các cờ bảo vệ cứng: --network none (ngắt mạng), RAM 256MB, CPU 1 core, Timeout 2.0s.
+  + Xây dựng bộ thu thập bằng chứng thực thi (Execution Evidence): RAM đỉnh, thời gian chạy, bắt lỗi TLE/MLE/RTE/CE.
+  + Đầu ra: Sandbox thực thi code độc lập, ngăn chặn hoàn toàn mã độc và fork bomb.
+
+- Bước 1.3 (05/10): Tích hợp Hàng đợi Bất đồng bộ Redis & Celery.
+  + Cấu hình Redis 7 làm Message Broker & Result Backend.
+  + Viết Grader Worker tiếp nhận submission -> gọi Sandbox -> so khớp Output -> tính điểm auto_score.
+  + Đầu ra: Pipeline chấm bài bất đồng bộ, không gây block API chính.
+
+- Bước 1.4 (05/10 - 07/10): Xây dựng Web IDE Monaco Editor & Giao diện Nộp bài.
+  + Khởi tạo ứng dụng Next.js 14 (App Router, Tailwind CSS, Dark Mode).
+  + Tích hợp Monaco Editor (chọn ngôn ngữ, phím tắt, autosave lưu nháp tự động).
+  + Xây dựng màn hình Xem đề bài, Form nộp bài (upload file/submit trực tiếp), khóa Read-only khi nộp.
+  + Xây dựng Result View hiển thị kết quả kiểm thử (Bảng test case AC, WA, TLE, RTE).
+  + Đầu ra: Giao diện Web IDE hoàn chỉnh cho sinh viên làm bài và nộp bài.
+
+* 🎯 Nghiệm thu Milestone 1 (07/10/2026):
+Sinh viên đăng nhập -> Làm bài trên Web IDE -> Nộp bài -> Docker Sandbox chạy thực tế -> Trả về kết quả chấm điểm Test Case tự động.
+
+
+--------------------------------------------------------------------------------
+GIAI ĐOẠN 2: TRÍ TUỆ NHÂN TẠO SOCRATIC & KHO TRI THỨC RAG (08/10 – 15/10/2026)
+--------------------------------------------------------------------------------
+* Mục tiêu: Lắp ráp "Bộ não" AI có căn cứ thực thi, số hóa kho tri thức sư phạm vào Vector Database và xây dựng Trợ giảng AI định hướng tư duy theo phương pháp Socratic.
+
+* Các bước thực hiện:
+- Bước 2.1 (08/10 - 09/10): Xây dựng Bộ Phân Tích Tĩnh (Static Analysis Engine).
+  + Tích hợp thư viện ast và radon để đo độ phức tạp thời gian/không gian (Big-O) và Cyclomatic Complexity.
+  + Tích hợp flake8 kiểm tra chuẩn Clean Code (PEP 8, đặt tên biến, cấu trúc hàm, phát hiện Code Smells).
+  + Đầu ra: Module trích xuất chỉ số chất lượng code tự động từ mã nguồn.
+
+- Bước 2.2 (10/10 - 11/10): Xây dựng Kho Tri Thức RAG & Vector Database ChromaDB.
+  + Cài đặt ChromaDB container local, cấu hình mô hình nhúng Text Embeddings.
+  + Chuẩn bị và số hóa 300+ tài liệu chuyên môn: DSA, 100+ mẫu lỗi phổ biến (Py/C++), Clean Code, CWE Security.
+  + Viết script ingest_knowledge.py tự động chunking và nạp tài liệu kèm Metadata Tagging 2 chiều.
+  + Đầu ra: Vector Store ChromaDB hoạt động, truy vấn đoạn tri thức chính xác dưới 30ms.
+
+- Bước 2.3 (12/10 - 13/10): Xây dựng ContextBuilder & Tích hợp LLM Đa Nguồn.
+  + Viết ContextBuilder tổng hợp: Đề bài + Code sinh viên + Evidence Sandbox + Kết quả Static Analysis + Tài liệu RAG.
+  + Thiết kế System Prompt Socratic (Guardrails chống giải hộ bài) và Pydantic Schema cho JSON Structured Output.
+  + Tích hợp Google Gemini 1.5 Flash API (kèm fallback sang Local LLM Ollama / Llama 3).
+  + Xây dựng Module AI Security Analyzer quét các lỗi bảo mật theo danh mục CWE Top 25 / OWASP.
+  + Đầu ra: AI Engine trả về phân tích Clean Code, Big-O, CWE Security và gợi ý Socratic chuẩn cấu trúc.
+
+- Bước 2.4 (13/10 - 15/10): Phát triển Giao diện Trợ giảng AI & Thẻ Đánh giá.
+  + Xây dựng Socratic AI Tutor Drawer gắn cạnh Monaco Editor (hỗ trợ Markdown, code highlight, hỏi đáp liên tục).
+  + Xây dựng Thẻ Đánh Giá AI hiển thị 3 mảng: Clean Code, Ước lượng Big-O và Cảnh báo Lỗ hổng Bảo mật CWE.
+  + Đầu ra: Trải nghiệm tương tác AI trực quan, sinh viên vừa code vừa được trợ giảng định hướng.
+
+* 🎯 Nghiệm thu Milestone 2 (15/10/2026):
+AI đọc hiểu code, trích dẫn đúng bài học giáo trình từ RAG, cảnh báo lỗ hổng bảo mật CWE và hướng dẫn sinh viên tự sửa lỗi bằng các câu hỏi gợi mở logic.
+
+
+--------------------------------------------------------------------------------
+GIAI ĐOẠN 3: PHÂN QUYỀN RBAC & CỔNG QUẢN LÝ ĐÀO TẠO GIÁO VIÊN (16/10 – 23/10/2026)
+--------------------------------------------------------------------------------
+* Mục tiêu: Hoàn thiện toàn bộ quy trình nghiệp vụ đào tạo và chấm thi thực tế: quản lý lớp học, phân quyền 5 vai trò, giao bài tập, chốt deadline cứng và giáo viên chấm bài theo Rubric.
+
+* Các bước thực hiện:
+- Bước 3.1 (16/10 - 17/10): Hoàn thiện Phân quyền Đa Vai trò RBAC.
+  + Xây dựng Middleware RBAC bảo vệ API theo 5 vai trò: Sinh viên, Giáo viên, Quản trị viên, Giáo vụ, SysAdmin.
+  + Thiết lập các Policy kiểm tra quyền truy cập theo từng Lớp học, Môn học và Khoa/Bộ môn.
+  + Đầu ra: Hệ thống phân quyền chặt chẽ, ngăn chặn truy cập chéo trái phép.
+
+- Bước 3.2 (18/10 - 19/10): Xây dựng Cổng Quản lý Bài tập & Giao bài cho Lớp.
+  + API & UI Quản lý Ngân hàng Bài tập (Tạo, Sửa, Xóa, thiết lập Test Cases ẩn/hiện, trọng số điểm).
+  + API & UI Giao bài cho lớp học: Cài đặt 1 mốc Deadline cứng duy nhất, chọn danh sách sinh viên được làm.
+  + Xây dựng Background Cron Job: Tự động khóa nộp bài và thu bản nháp gần nhất (Auto-Submit Draft) khi hết giờ.
+  + Đầu ra: Giáo viên giao bài thuận tiện, hệ thống tự động chốt deadline chuẩn xác từng giây.
+
+- Bước 3.3 (20/10 - 22/10): Xây dựng Cổng Chấm Bài & Xác nhận Điểm cho Giáo viên.
+  + Giao diện Giáo viên theo dõi tiến độ nộp bài của toàn lớp (tỷ lệ nộp, danh sách bài nộp).
+  + Màn hình So sánh & Chấm bài: Xem song song Mã nguồn SV + Kết quả Sandbox + Nhận xét của AI.
+  + Module Chấm bài theo Rubric tiêu chí (cho phép giáo viên lưu tạm và chỉnh sửa điểm thủ công).
+  + Chức năng "Xác nhận và Công bố Điểm chính thức (Official Score)" ghi nhận điểm vào sổ cái học phần.
+  + Đầu ra: Giáo viên chấm bài nhanh chóng với sự hỗ trợ của AI và làm chủ 100% điểm số chính thức.
+
+- Bước 3.4 (22/10 - 23/10): Xây dựng Bảng Điểm & Báo Cáo Học Phần.
+  + Bảng tổng hợp điểm cá nhân của sinh viên theo môn học (UC-16).
+  + Bảng điểm tổng kết lớp học của giáo vụ và giáo viên (UC-25, UC-38).
+  + Đầu ra: Sinh viên và giáo viên dễ dàng theo dõi kết quả học tập toàn diện.
+
+* 🎯 Nghiệm thu Milestone 3 (23/10/2026):
+Quy trình đào tạo khép kín: Giáo viên giao bài -> Sinh viên làm bài -> Server tự động chốt deadline -> Giáo viên chấm theo Rubric -> Công bố điểm chính thức thành công.
+
+
+--------------------------------------------------------------------------------
+GIAI ĐOẠN 4: QUẢN TRỊ NỀN TẢNG, KIỂM THỬ TẢI & BÀN GIAO ĐỒ ÁN (24/10 – 31/10/2026)
+--------------------------------------------------------------------------------
+* Mục tiêu: Hoàn thiện các phân hệ quản trị cấp trường, tối ưu hiệu năng chịu tải, đóng gói sản phẩm hoàn chỉnh và chuẩn bị hồ sơ bảo vệ đồ án đạt kết quả xuất sắc nhất.
+
+* Các bước thực hiện:
+- Bước 4.1 (24/10 - 25/10): Phát triển Phân Hệ Quản Trị Cấp Trường & Giáo Vụ.
+  + Xây dựng Module Import danh sách người dùng từ file Excel/CSV chuẩn 5 cột (Mã SV, Họ tên, Email, Lớp, Vai trò).
+  + Xây dựng Module Quản lý Khoa / Viện / Bộ môn, Môn học, và vòng đời lớp học (Đóng/Mở/Archive/Restore).
+  + Đầu ra: Quản trị viên dễ dàng khởi tạo hàng trăm tài khoản sinh viên chỉ bằng 1 file Excel.
+
+- Bước 4.2 (26/10 - 27/10): Xây dựng Phân Hệ Quản Trị Hệ Thống (SysAdmin Tools).
+  + Giao diện Cấu hình Tham số AI (đổi Provider Gemini/OpenAI/Ollama, điều chỉnh Prompt, Temperature).
+  + Dashboard Giám sát & Quản trị Docker Sandbox (giám sát CPU/RAM thực tế, dọn container rác, cấu hình limit).
+  + Giao diện Tra cứu Nhật ký Hệ thống (System Logs & Audit Trail).
+  + Đầu ra: Quản trị viên hệ thống toàn quyền kiểm soát hạ tầng và tham số AI mà không cần sửa code.
+
+- Bước 4.3 (28/10 - 29/10): Kiểm Thử Bảo Mật Sandbox & Kiểm Thử Tải.
+  + Security Pentest Sandbox: Chạy thử các đoạn mã nguy hiểm (fork bomb, ghi đè file hệ thống, mở socket mạng) -> Xác nhận Sandbox chặn 100%.
+  + Load Testing: Giả lập 50-100 sinh viên nộp bài đồng thời vào Redis Queue -> Đo độ trễ và độ ổn định.
+  + Đầu ra: Báo cáo kết quả kiểm thử hiệu năng và chứng chỉ an toàn Sandbox.
+
+- Bước 4.4 (30/10 - 31/10): Đóng Gói Sản Phẩm, Viết Báo Cáo & Chuẩn Bị Bảo Vệ.
+  + Đóng gói toàn bộ hệ sinh thái bằng Docker Compose 1-lệnh (docker compose up -d --build).
+  + Hoàn thiện tài liệu kỹ thuật, bộ dữ liệu RAG và sổ tay hướng dẫn cài đặt/sử dụng.
+  + Hoàn thiện Cuốn Báo Cáo Đồ Án, Slide thuyết trình và Video clip demo tổng duyệt.
+  + Đầu ra: Bộ hồ sơ nghiệm thu đồ án hoàn chỉnh 100% (44 Use Cases).
+
+* 🎯 Nghiệm thu Milestone 4 (31/10/2026):
+Nghiệm thu toàn diện 44 Use Cases, sản phẩm vận hành mượt mà, sẵn sàng bàn giao và bảo vệ đồ án trước Hội đồng.
+
+
+================================================================================
+VIII. PHÂN CÔNG TRÁCH NHIỆM CHI TIẾT (2 THÀNH VIÊN)
+================================================================================
+
+1. Thành viên A (Phụ trách Backend, Sandbox, AI Pipelines & Hạ tầng):
+- Giai đoạn 1: Thiết kế Database PostgreSQL 15, Migration Alembic, Docker Sandbox Runner cô lập, Redis Celery Queue.
+- Giai đoạn 2: Static Analyzer đo Cyclomatic Complexity, AST, Flake8; Hệ thống RAG ChromaDB; Gemini/Ollama API; AI Security CWE.
+- Giai đoạn 3: Middleware RBAC 5 vai trò, API Quản lý Lớp học, Cron Job chốt deadline, API Chấm điểm Rubric & Official Score.
+- Giai đoạn 4: API Import Excel, SysAdmin Tools (Cấu hình AI, Giám sát Sandbox, System Logs), Load Testing và Đóng gói Docker Compose.
+
+2. Thành viên B (Phụ trách Frontend, Web IDE, Giao diện AI & Portal Đào tạo):
+- Giai đoạn 1: Cấu trúc Next.js 14 App Router, Layout Auth, Monaco Web IDE, Autosave lưu nháp, Màn hình Nộp bài & Result View.
+- Giai đoạn 2: Socratic AI Tutor Drawer tương tác thời gian thực, Thẻ hiển thị Đánh giá Clean Code, Big-O, Lỗ hổng CWE.
+- Giai đoạn 3: Cổng Giáo viên: Quản lý bài tập, Form Giao bài cho lớp, Màn hình Chấm bài theo Rubric, Bảng điểm học phần.
+- Giai đoạn 4: Cổng Quản trị viên: Giao diện Import Excel 5 cột, Dashboard giám sát hệ thống, Slide thuyết trình, Video demo & Báo cáo.
+
+
+================================================================================
+IX. MỤC TIÊU CẦN ĐẠT VÀ TIÊU CHÍ NGHIỆM THU (KPIS & DELIVERABLES)
+================================================================================
+
+1. Chỉ số Kỹ thuật & Hiệu năng (KPIs):
+- Độ an toàn Sandbox: 100% ngăn chặn mã độc, fork bomb, xâm nhập filesystem (/etc/passwd) và truy cập mạng.
+- Thời gian phản hồi:
+  + Chấm bài Docker Sandbox: < 2.0 giây / bài nộp chuẩn.
+  + Phản hồi từ AI Socratic Tutor: < 2.5 giây.
+  + Tra cứu vector RAG trong ChromaDB: < 30 mili-giây.
+- Độ chịu tải: Chịu tải tối thiểu 50 – 100 bài nộp đồng thời thông qua cơ chế đệm Redis Queue.
+- Chi phí vận hành: 0 VNĐ (100% Free).
+
+2. Danh mục Sản phẩm Bàn giao (Deliverables):
+- Mã nguồn hoàn chỉnh (Full Source Code) Frontend và Backend trên GitHub.
+- File docker-compose.yml khởi chạy toàn bộ hệ thống bằng 1 lệnh duy nhất.
+- Kho tri thức RAG với 300+ tài liệu số hóa (DSA, Lỗi mẫu, Clean Code, CWE).
+- Bộ tài liệu đặc tả kỹ thuật 44 Use Cases (DOAN4.md) và sơ đồ kiến trúc.
+- Cuốn Báo Cáo Đồ Án hoàn chỉnh và Slide thuyết trình bảo vệ.
+
+
+================================================================================
+X. CÁC CÂU HỎI TRỌNG TÂM XIN Ý KIẾN ĐỊNH HƯỚNG TỪ GIẢNG VIÊN
+================================================================================
+
+1. Câu hỏi 1: Về Lựa chọn AI Framework (LangChain vs Direct SDK API)
+- Thực trạng: Nhóm có thể gọi trực tiếp SDK chính hãng của Google Gemini / OpenAI kết hợp Pydantic Schema (nhẹ, nhanh, dễ debug) hoặc bọc qua framework LangChain.
+- Xin ý kiến Cô: "Kính thưa Cô, trong phạm vi đồ án, việc gọi trực tiếp qua SDK kết hợp ContextBuilder tự viết có đáp ứng tốt tiêu chí đánh giá kỹ thuật không, hay bắt buộc phải bọc qua toàn bộ chuỗi Chain của thư viện LangChain ạ?"
+
+2. Câu hỏi 2: Về Mô hình LLM ưu tiên khi Báo cáo / Demo (Cloud LLM vs Local LLM)
+- Thực trạng: 
+  + Cloud LLM (Gemini Flash Free): Phản hồi siêu nhanh (1-2s), câu từ sư phạm trau chuốt, nhưng cần có mạng Internet khi demo.
+  + Local LLM (Ollama + Llama 3 8B): Chạy hoàn toàn offline, nhưng cần máy trạm có GPU mạnh (tối thiểu 6GB VRAM) và tốc độ sinh từ chậm hơn (4-6s).
+- Xin ý kiến Cô: "Nhóm dự kiến ưu tiên chạy Cloud Gemini Flash để demo mượt mà, đồng thời có nút chuyển đổi sang Local Ollama để chứng minh khả năng chạy offline. Hướng tiếp cận này đã tối ưu cho buổi bảo vệ chưa ạ?"
+
+3. Câu hỏi 3: Về Mức độ Chi tiết của Module Quét Lỗ hổng Bảo mật (AI Security)
+- Thực trạng: Hệ thống hiện quét các lỗi theo danh mục CWE Top 25 (SQL Injection, Buffer Overflow, Hardcoded Secrets, Command Injection...).
+- Xin ý kiến Cô: "Cô có yêu cầu nhóm tập trung sâu vào nhóm lỗi bảo mật cụ thể nào (ví dụ: An toàn bộ nhớ C++ hay An toàn dữ liệu web) để phù hợp nhất với định hướng của Bộ môn không ạ?"
+
+4. Câu hỏi 4: Về Kế hoạch Thử nghiệm Thực tế với Sinh viên (Pilot Testing)
+- Đề xuất: Trong Tuần 4 (sau ngày 25/10), nhóm xin phép Cô cho triển khai thử nghiệm một bài tập thực tế trên một nhóm 15-20 sinh viên để thu thập số liệu đánh giá độ hài lòng về phản hồi của AI Tutor làm dữ liệu thực nghiệm cho Báo cáo Đồ án.
+
+--------------------------------------------------------------------------------
+KẾT LUẬN & CAM KẾT:
+Nhóm cam kết tuân thủ nghiêm ngặt tiến độ 4 giai đoạn (hoàn thành đúng ngày 31/10/2026),
+đảm bảo chất lượng hệ thống vận hành mượt mà, an toàn, bảo mật cao và sẵn sàng bảo vệ
+đồ án đạt kết quả xuất sắc nhất!
+--------------------------------------------------------------------------------
