@@ -16,6 +16,7 @@ export interface ChatMessage {
   attachments?: ChatAttachment[];
   timestamp: string; // ISO string for safe serialization
   isDemoNotice?: boolean;
+  reaction?: 'like' | 'dislike' | null;
 }
 
 export interface ChatConversation {

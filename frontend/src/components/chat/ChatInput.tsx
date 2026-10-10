@@ -8,20 +8,23 @@ import {
   AlertCircle, 
   X, 
   FileUp, 
-  Image as ImageIcon 
+  Sparkles,
+  ClipboardCheck,
+  CheckCircle2
 } from 'lucide-react';
 import { ChatAttachment, FileValidationError } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
 
 interface ChatInputProps {
   onSendMessage: (text: string, attachments: ChatAttachment[]) => void;
+  onViewImage?: (url: string, name: string) => void;
   disabled?: boolean;
 }
 
 const MAX_IMAGE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB
 const MAX_DOC_SIZE_BYTES = 20 * 1024 * 1024;   // 20MB
 
-const ALLOWED_IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'webp'];
+const ALLOWED_IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'webp', 'bmp', 'gif'];
 const ALLOWED_DOC_EXTS = [
   'pdf', 'txt', 'md', 'docx', 'doc', 
   'py', 'cpp', 'c', 'h', 'java', 'js', 'ts', 'jsx', 'tsx', 
@@ -30,6 +33,7 @@ const ALLOWED_DOC_EXTS = [
 
 export const ChatInput: React.FC<ChatInputProps> = ({
   onSendMessage,
+  onViewImage,
   disabled = false,
 }) => {
   const [inputText, setInputText] = useState('');
@@ -37,6 +41,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   const [validationErrors, setValidationErrors] = useState<FileValidationError[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [pasteNotification, setPasteNotification] = useState<string | null>(null);
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -47,8 +52,8 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     if (textarea) {
       textarea.style.height = 'auto';
       const scrollHeight = textarea.scrollHeight;
-      // Cap height between 44px and 180px
-      textarea.style.height = `${Math.min(Math.max(scrollHeight, 44), 180)}px`;
+      // Cap height between 46px and 180px
+      textarea.style.height = `${Math.min(Math.max(scrollHeight, 46), 180)}px`;
     }
   }, []);
 
@@ -67,7 +72,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     };
   }, [stagedAttachments]);
 
-  const processFiles = (files: FileList | File[]) => {
+  const processFiles = useCallback((files: FileList | File[]) => {
     const errors: FileValidationError[] = [];
     const validAttachments: ChatAttachment[] = [];
 
@@ -124,7 +129,73 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
-  };
+  }, []);
+
+  // Handle Clipboard Paste (Ctrl + V for screenshots and files)
+  const handlePaste = useCallback((e: React.ClipboardEvent<HTMLTextAreaElement>) => {
+    const items = e.clipboardData?.items;
+    if (!items) return;
+
+    const filesFromClipboard: File[] = [];
+
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      if (item.type.startsWith('image/')) {
+        const file = item.getAsFile();
+        if (file) {
+          // Name the screenshot with a clean readable timestamp
+          const now = new Date();
+          const pad = (n: number) => n.toString().padStart(2, '0');
+          const timeStr = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+          const ext = file.type.split('/')[1]?.replace('jpeg', 'jpg') || 'png';
+          const namedFile = new File([file], `screenshot_${timeStr}.${ext}`, { type: file.type });
+          filesFromClipboard.push(namedFile);
+        }
+      }
+    }
+
+    if (filesFromClipboard.length > 0) {
+      processFiles(filesFromClipboard);
+      setPasteNotification(`📸 Đã dán ${filesFromClipboard.length} ảnh chụp màn hình từ Clipboard!`);
+      setTimeout(() => setPasteNotification(null), 3500);
+    }
+  }, [processFiles]);
+
+  // Window-level paste listener: allows pressing Ctrl+V anywhere on the page
+  useEffect(() => {
+    const handleGlobalPaste = (e: ClipboardEvent) => {
+      // Don't duplicate if already focused in textarea
+      if (document.activeElement === textareaRef.current) return;
+
+      const items = e.clipboardData?.items;
+      if (!items) return;
+
+      const filesFromClipboard: File[] = [];
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.type.startsWith('image/')) {
+          const file = item.getAsFile();
+          if (file) {
+            const now = new Date();
+            const pad = (n: number) => n.toString().padStart(2, '0');
+            const timeStr = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+            const ext = file.type.split('/')[1]?.replace('jpeg', 'jpg') || 'png';
+            const namedFile = new File([file], `screenshot_${timeStr}.${ext}`, { type: file.type });
+            filesFromClipboard.push(namedFile);
+          }
+        }
+      }
+
+      if (filesFromClipboard.length > 0) {
+        processFiles(filesFromClipboard);
+        setPasteNotification(`📸 Đã dán ${filesFromClipboard.length} ảnh chụp màn hình từ Clipboard!`);
+        setTimeout(() => setPasteNotification(null), 3500);
+      }
+    };
+
+    window.addEventListener('paste', handleGlobalPaste);
+    return () => window.removeEventListener('paste', handleGlobalPaste);
+  }, [processFiles]);
 
   const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -159,7 +230,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
     // Reset textarea height
     if (textareaRef.current) {
-      textareaRef.current.style.height = '44px';
+      textareaRef.current.style.height = '46px';
     }
   };
 
@@ -196,9 +267,26 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 pb-4">
+      {/* Clipboard Paste Toast Banner */}
+      {pasteNotification && (
+        <div className="mb-3 flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-3.5 py-2 text-xs font-semibold text-emerald-800 shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-200">
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+            <span>{pasteNotification}</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setPasteNotification(null)}
+            className="rounded p-0.5 text-emerald-600 hover:bg-emerald-100 transition"
+          >
+            <X className="h-3.5 w-3.5" />
+          </button>
+        </div>
+      )}
+
       {/* Validation Errors Alert Banner */}
       {validationErrors.length > 0 && (
-        <div className="mb-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800">
+        <div className="mb-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 shadow-sm animate-in fade-in duration-200">
           <div className="flex items-center justify-between pb-1 font-semibold">
             <div className="flex items-center gap-1.5">
               <AlertCircle className="h-4 w-4 text-amber-600 shrink-0" />
@@ -228,15 +316,15 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        className={`relative flex flex-col rounded-2xl border bg-white shadow-sm transition-all ${
+        className={`relative flex flex-col rounded-2xl border bg-white shadow-sm transition-all duration-200 ${
           isDragging 
-            ? 'border-blue-500 bg-blue-50/30 ring-2 ring-blue-500/20' 
-            : 'border-slate-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'
+            ? 'border-blue-500 bg-blue-50/40 ring-4 ring-blue-500/15 scale-[1.005]' 
+            : 'border-slate-300 focus-within:border-blue-600 focus-within:ring-3 focus-within:ring-blue-600/15 focus-within:shadow-md'
         }`}
       >
         {/* Drag overlay notice */}
         {isDragging && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-blue-50/90 text-blue-700 text-sm font-medium backdrop-blur-xs">
+          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-blue-50/95 text-blue-700 text-sm font-semibold backdrop-blur-xs">
             <FileUp className="h-6 w-6 mr-2 animate-bounce" />
             Thả hình ảnh hoặc tài liệu vào đây...
           </div>
@@ -244,12 +332,13 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
         {/* Staged Attachments Preview Strip */}
         {stagedAttachments.length > 0 && (
-          <div className="flex flex-wrap gap-2 p-3 border-b border-slate-100 bg-slate-50/50 rounded-t-2xl max-h-48 overflow-y-auto">
+          <div className="flex flex-wrap gap-2.5 p-3 border-b border-slate-100 bg-slate-50/70 rounded-t-2xl max-h-48 overflow-y-auto">
             {stagedAttachments.map((att) => (
               <AttachmentBadge
                 key={att.id}
                 attachment={att}
                 onRemove={handleRemoveAttachment}
+                onViewImage={onViewImage}
               />
             ))}
           </div>
@@ -262,9 +351,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             type="button"
             onClick={() => fileInputRef.current?.click()}
             disabled={disabled}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-slate-500 hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition disabled:opacity-50"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-slate-500 hover:bg-slate-100 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition disabled:opacity-50"
             aria-label="Đính kèm hình ảnh hoặc tài liệu"
-            title="Đính kèm ảnh (.png, .jpg, .webp) hoặc tài liệu (.pdf, .docx, .txt, .py,...)"
+            title="Đính kèm tệp hoặc chụp ảnh màn hình rồi nhấn Ctrl + V"
           >
             <Paperclip className="h-5 w-5" />
           </button>
@@ -279,16 +368,17 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             className="hidden"
           />
 
-          {/* Text input */}
+          {/* Text input with Ctrl+V support */}
           <textarea
             ref={textareaRef}
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             onKeyDown={handleKeyDown}
+            onPaste={handlePaste}
             disabled={disabled}
-            placeholder="Gửi tin nhắn, câu hỏi lập trình, hoặc đính kèm ảnh/tài liệu... (Nhấn Enter để gửi, Shift + Enter để xuống dòng)"
+            placeholder="Hỏi về code, dán ảnh màn hình (Ctrl + V), hoặc kéo thả tệp... (Enter để gửi, Shift + Enter xuống dòng)"
             rows={1}
-            className="flex-1 resize-none bg-transparent py-2 px-1 text-sm text-[#202123] placeholder-slate-400 focus:outline-none leading-relaxed max-h-[180px]"
+            className="flex-1 resize-none bg-transparent py-2.5 px-1 text-sm text-[#202123] placeholder-slate-400 focus:outline-none leading-relaxed max-h-[180px]"
           />
 
           {/* Send Button */}
@@ -296,9 +386,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             type="button"
             onClick={handleSubmit}
             disabled={!hasContent || disabled || isSubmitting}
-            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition ${
+            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition duration-150 ${
               hasContent && !disabled && !isSubmitting
-                ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+                ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500/40'
                 : 'bg-slate-100 text-slate-300 cursor-not-allowed'
             }`}
             aria-label="Gửi tin nhắn"
@@ -313,10 +403,14 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         </div>
       </div>
 
-      {/* Mandatory Disclaimer Note */}
-      <p className="mt-2 text-center text-[11px] text-slate-400 select-none">
-        Phiên bản thử nghiệm — chức năng AI và phân tích tài liệu chưa được tích hợp.
-      </p>
+      {/* Helper & Hint Row */}
+      <div className="mt-2 flex items-center justify-between px-1 text-[11px] text-slate-400 select-none">
+        <span className="flex items-center gap-1 text-slate-500">
+          <ClipboardCheck className="h-3.5 w-3.5 text-blue-500" />
+          <span>Mẹo: Bạn có thể chụp màn hình và nhấn <b>Ctrl + V</b> để dán ảnh ngay lập tức</span>
+        </span>
+        <span>Phiên bản thử nghiệm UI</span>
+      </div>
     </div>
   );
 };
