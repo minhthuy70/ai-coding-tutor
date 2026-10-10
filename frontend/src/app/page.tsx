@@ -1,114 +1,229 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Header } from '../components/Header';
-import { Sidebar } from '../components/Sidebar';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { SystemStatus } from '../components/SystemStatus';
+import React, { useState, useCallback, useMemo } from 'react';
 import { 
-  Rocket, 
-  CheckCircle, 
-  Terminal, 
-  Server, 
-  Layers, 
-  GitBranch,
-  ShieldAlert
+  Menu, 
+  PanelLeftClose, 
+  PanelLeftOpen, 
+  Plus, 
+  Sparkles, 
+  Terminal
 } from 'lucide-react';
+import { ChatConversation, ChatMessage, ChatAttachment } from '@/types/chat';
+import { ChatSidebar } from '@/components/chat/ChatSidebar';
+import { ChatMessageList } from '@/components/chat/ChatMessageList';
+import { ChatInput } from '@/components/chat/ChatInput';
 
 export default function HomePage() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [conversations, setConversations] = useState<ChatConversation[]>(() => [
+    {
+      id: 'conv-initial',
+      title: 'Cuộc trò chuyện mới',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      messages: [],
+    },
+  ]);
+
+  const [activeConversationId, setActiveConversationId] = useState<string>('conv-initial');
+  const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState<boolean>(true);
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
+
+  // Active conversation getter
+  const activeConversation = useMemo(() => {
+    return (
+      conversations.find((c) => c.id === activeConversationId) || conversations[0]
+    );
+  }, [conversations, activeConversationId]);
+
+  // Create a new conversation
+  const handleNewConversation = useCallback(() => {
+    const newId = `conv-${Date.now()}`;
+    const newConv: ChatConversation = {
+      id: newId,
+      title: 'Cuộc trò chuyện mới',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      messages: [],
+    };
+    setConversations((prev) => [newConv, ...prev]);
+    setActiveConversationId(newId);
+  }, []);
+
+  // Delete a conversation
+  const handleDeleteConversation = useCallback((id: string) => {
+    setConversations((prev) => {
+      const remaining = prev.filter((c) => c.id !== id);
+      if (remaining.length === 0) {
+        const freshId = `conv-${Date.now()}`;
+        return [
+          {
+            id: freshId,
+            title: 'Cuộc trò chuyện mới',
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+            messages: [],
+          },
+        ];
+      }
+      return remaining;
+    });
+
+    if (activeConversationId === id) {
+      setConversations((prev) => {
+        setActiveConversationId(prev[0]?.id || '');
+        return prev;
+      });
+    }
+  }, [activeConversationId]);
+
+  // Handle message sending (User -> Assistant demo reply)
+  const handleSendMessage = useCallback((text: string, attachments: ChatAttachment[]) => {
+    const userMsg: ChatMessage = {
+      id: `msg-user-${Date.now()}`,
+      role: 'user',
+      content: text,
+      attachments: attachments.length > 0 ? attachments : undefined,
+      timestamp: new Date().toISOString(),
+    };
+
+    setConversations((prev) =>
+      prev.map((conv) => {
+        if (conv.id === activeConversationId) {
+          // Update title if it's the first message and currently has default title
+          let newTitle = conv.title;
+          if (conv.messages.length === 0 && conv.title === 'Cuộc trò chuyện mới') {
+            if (text.trim()) {
+              newTitle = text.trim().slice(0, 32) + (text.trim().length > 32 ? '...' : '');
+            } else if (attachments.length > 0) {
+              newTitle = `Đính kèm: ${attachments[0].name}`;
+            }
+          }
+
+          return {
+            ...conv,
+            title: newTitle,
+            updatedAt: new Date().toISOString(),
+            messages: [...conv.messages, userMsg],
+          };
+        }
+        return conv;
+      })
+    );
+
+    // Generate Demo Assistant Response after a brief simulated delay
+    setTimeout(() => {
+      const fileCountText = attachments.length > 0 
+        ? ` cùng ${attachments.length} tệp đính kèm (${attachments.map(a => a.name).join(', ')})`
+        : '';
+
+      const assistantMsg: ChatMessage = {
+        id: `msg-ai-${Date.now()}`,
+        role: 'assistant',
+        content: `Hệ thống đã tiếp nhận nội dung văn bản${fileCountText}.\n\nHiện tại, tính năng LLM & RAG đang trong giai đoạn chuẩn bị tích hợp. Yêu cầu của bạn đã được ghi nhận trong danh sách hội thoại demo.`,
+        timestamp: new Date().toISOString(),
+        isDemoNotice: true,
+      };
+
+      setConversations((prev) =>
+        prev.map((conv) => {
+          if (conv.id === activeConversationId) {
+            return {
+              ...conv,
+              updatedAt: new Date().toISOString(),
+              messages: [...conv.messages, assistantMsg],
+            };
+          }
+          return conv;
+        })
+      );
+    }, 400);
+  }, [activeConversationId]);
+
+  const handleSelectSuggestion = useCallback((query: string) => {
+    handleSendMessage(query, []);
+  }, [handleSendMessage]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
-      <Header onToggleSidebar={() => setSidebarOpen((prev) => !prev)} />
+    <div className="flex h-screen w-full overflow-hidden bg-white text-[#202123]">
+      {/* Left Sidebar */}
+      <ChatSidebar
+        conversations={conversations}
+        activeConversationId={activeConversation?.id || ''}
+        onSelectConversation={setActiveConversationId}
+        onNewConversation={handleNewConversation}
+        onDeleteConversation={handleDeleteConversation}
+        isOpen={isDesktopSidebarOpen}
+        onToggle={() => setIsDesktopSidebarOpen((prev) => !prev)}
+        isMobileOpen={isMobileSidebarOpen}
+        onCloseMobile={() => setIsMobileSidebarOpen(false)}
+      />
 
-      <div className="flex flex-1">
-        <Sidebar isOpen={sidebarOpen} />
+      {/* Main Chat Interface */}
+      <div className="flex-1 flex flex-col h-full min-w-0 bg-white">
+        {/* Top Navbar */}
+        <header className="h-14 border-b border-[#E5E7EB] bg-white flex items-center justify-between px-4 shrink-0 z-10">
+          <div className="flex items-center gap-2 min-w-0">
+            {/* Mobile menu trigger */}
+            <button
+              type="button"
+              onClick={() => setIsMobileSidebarOpen(true)}
+              className="md:hidden rounded-lg p-2 text-slate-500 hover:bg-slate-100 focus:outline-none transition"
+              aria-label="Mở danh sách cuộc trò chuyện"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
 
-        <main className="flex-1 p-6 md:p-8 max-w-7xl mx-auto w-full transition-all">
-          {/* Breadcrumb Navigation */}
-          <Breadcrumb />
+            {/* Desktop collapse toggle */}
+            <button
+              type="button"
+              onClick={() => setIsDesktopSidebarOpen((prev) => !prev)}
+              className="hidden md:flex rounded-lg p-2 text-slate-500 hover:bg-slate-100 focus:outline-none transition"
+              title={isDesktopSidebarOpen ? 'Thu gọn thanh bên' : 'Mở rộng thanh bên'}
+              aria-label="Thu gọn hoặc mở rộng thanh bên"
+            >
+              {isDesktopSidebarOpen ? (
+                <PanelLeftClose className="h-5 w-5" />
+              ) : (
+                <PanelLeftOpen className="h-5 w-5" />
+              )}
+            </button>
 
-          {/* Welcome Banner */}
-          <div className="mb-8 rounded-xl bg-gradient-to-r from-indigo-700 via-indigo-600 to-blue-600 p-6 md:p-8 text-white shadow-md">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-2 text-indigo-100 text-sm font-medium mb-1">
-                  <Rocket className="h-4 w-4" />
-                  <span>Day 1 Implementation: Monorepo Foundation & Core Infrastructure</span>
-                </div>
-                <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                  AI-Powered Coding Tutor & Auto-Grader
-                </h1>
-                <p className="mt-2 text-indigo-100 text-sm md:text-base max-w-2xl">
-                  Automated code assessment, execution evidence-grounded analysis, and intelligent Socratic tutoring platform.
-                </p>
-              </div>
-
-              <div className="flex items-center gap-2 self-start md:self-auto rounded-lg bg-white/10 px-4 py-2 backdrop-blur-xs border border-white/20">
-                <GitBranch className="h-4 w-4 text-emerald-300" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">
-                  Sprint Day 1 (01/10/2026)
-                </span>
-              </div>
+            {/* Active Conversation Title */}
+            <div className="flex items-center gap-2 truncate pl-1">
+              <span className="font-semibold text-sm text-slate-900 truncate">
+                {activeConversation?.title || 'Cuộc trò chuyện'}
+              </span>
+              <span className="hidden sm:inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 border border-blue-200">
+                Thử nghiệm UI
+              </span>
             </div>
           </div>
 
-          {/* System Status Dashboard Widget */}
-          <div className="mb-8">
-            <SystemStatus />
+          <div className="flex items-center gap-2">
+            {/* New Chat quick button */}
+            <button
+              type="button"
+              onClick={handleNewConversation}
+              className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition"
+              title="Tạo cuộc trò chuyện mới"
+            >
+              <Plus className="h-3.5 w-3.5 text-blue-600" />
+              <span>Đoạn chat mới</span>
+            </button>
           </div>
+        </header>
 
-          {/* Architecture Overview & Day 1 Scope */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-              <div className="flex items-center gap-2 text-indigo-600 font-semibold text-base mb-3">
-                <Layers className="h-5 w-5" />
-                <h3>Day 1 Foundation Scope</h3>
-              </div>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
-                  <span>Monorepo workspace setup (backend, frontend, sandbox, docs)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
-                  <span>Docker Compose orchestration with healthchecks</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
-                  <span>FastAPI modular backend with CORS &amp; async connection pools</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
-                  <span>Next.js 14 App Router with Tailwind CSS &amp; dynamic health checker</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 shrink-0" />
-                  <span>End-to-end communication via <code className="bg-slate-100 px-1 py-0.5 rounded text-indigo-600">/api/health</code></span>
-                </li>
-              </ul>
-            </div>
+        {/* Message Thread Area */}
+        <ChatMessageList
+          messages={activeConversation?.messages || []}
+          onSelectSuggestion={handleSelectSuggestion}
+        />
 
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-              <div className="flex items-center gap-2 text-indigo-600 font-semibold text-base mb-3">
-                <ShieldAlert className="h-5 w-5 text-amber-500" />
-                <h3>Scope Constraints (Day 2+ Ahead)</h3>
-              </div>
-              <p className="text-sm text-slate-500 mb-3">
-                Per project plan, the following complex business modules are strictly reserved for subsequent days:
-              </p>
-              <div className="grid grid-cols-2 gap-2 text-xs text-slate-500">
-                <span className="rounded bg-slate-100 px-2 py-1">Day 2: Full DB Schema &amp; Alembic</span>
-                <span className="rounded bg-slate-100 px-2 py-1">Day 3: JWT Auth &amp; RBAC</span>
-                <span className="rounded bg-slate-100 px-2 py-1">Day 4: Problem Management</span>
-                <span className="rounded bg-slate-100 px-2 py-1">Day 5: Monaco Web IDE &amp; Drafts</span>
-                <span className="rounded bg-slate-100 px-2 py-1">Week 2: Docker Sandbox Runner</span>
-                <span className="rounded bg-slate-100 px-2 py-1">Week 3: Evidence ContextBuilder</span>
-              </div>
-            </div>
-          </div>
-        </main>
+        {/* Bottom Composer Box */}
+        <ChatInput
+          onSendMessage={handleSendMessage}
+        />
       </div>
     </div>
   );

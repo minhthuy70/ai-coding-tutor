@@ -1,17 +1,14 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { 
   Plus, 
   MessageSquare, 
   Trash2, 
-  LayoutDashboard, 
   X, 
-  ChevronLeft, 
-  ChevronRight,
   Terminal,
-  Clock
+  Sparkles,
+  Info
 } from 'lucide-react';
 import { ChatConversation } from '@/types/chat';
 
@@ -40,7 +37,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
 }) => {
   const sidebarContent = (
     <div className="flex flex-col h-full bg-[#F7F7F8] border-r border-[#E5E7EB] text-[#202123]">
-      {/* Top Header: Branding + Close button (Mobile) or Collapse (Desktop) */}
+      {/* Top Header: Branding + Close button (Mobile) */}
       <div className="p-3 border-b border-[#E5E7EB] flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white shadow-xs">
@@ -136,15 +133,15 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
 
       {/* Bottom Footer Section */}
       <div className="p-3 border-t border-[#E5E7EB] bg-slate-100/50 space-y-2">
-        <Link
-          href="/"
-          className="flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-xs font-medium text-slate-600 hover:bg-white hover:text-slate-900 transition"
-        >
-          <LayoutDashboard className="h-4 w-4 text-slate-500" />
-          <span>Về Dashboard chính (Ngày 1)</span>
-        </Link>
-        <div className="px-2.5 text-[11px] text-slate-400">
-          Chế độ: UI Demo (Client State)
+        <div className="flex items-center gap-2 rounded-lg bg-white p-2 border border-slate-200 text-xs text-slate-600 shadow-2xs">
+          <Sparkles className="h-4 w-4 text-blue-600 shrink-0" />
+          <div className="flex flex-col min-w-0">
+            <span className="font-semibold text-slate-800 text-[11px]">Giao diện Thử nghiệm</span>
+            <span className="text-[10px] text-slate-400 truncate">Hỗ trợ nhập text, ảnh &amp; tài liệu</span>
+          </div>
+        </div>
+        <div className="px-2 text-[10px] text-slate-400 text-center">
+          Sẵn sàng kết nối LLM &amp; RAG ở bước sau
         </div>
       </div>
     </div>
