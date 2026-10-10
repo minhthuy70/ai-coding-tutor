@@ -331,6 +331,9 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
             message.content && (
               <div className="text-sm text-[#202123] break-words font-normal">
                 {renderFormattedContent(message.content)}
+                {message.isStreaming && (
+                  <span className="inline-block w-2 h-4 ml-1 bg-blue-600 animate-pulse rounded-xs align-middle" />
+                )}
               </div>
             )
           )}
@@ -357,7 +360,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
           )}
 
           {/* Assistant Action Bar & Demo Banner */}
-          {!isUser && (
+          {!isUser && !message.isStreaming && (
             <div className="rounded-xl border border-blue-200/80 bg-blue-50/70 p-3.5 text-xs text-blue-900 shadow-2xs space-y-2.5 mt-2">
               <div className="flex items-start gap-2.5">
                 <Info className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />

@@ -20,6 +20,7 @@ export interface ChatMessage {
   reaction?: 'like' | 'dislike' | null;
   modelUsed?: string;
   suggestedFollowUps?: string[];
+  isStreaming?: boolean;
 }
 
 export interface ChatConversation {
