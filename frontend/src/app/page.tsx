@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { 
   Menu, 
   PanelLeftClose, 
@@ -8,8 +8,11 @@ import {
   Plus, 
   Sparkles, 
   Terminal,
-  Share2,
-  Trash2
+  Edit3,
+  Check,
+  X,
+  ChevronDown,
+  Cpu
 } from 'lucide-react';
 import { ChatConversation, ChatMessage, ChatAttachment } from '@/types/chat';
 import { ChatSidebar } from '@/components/chat/ChatSidebar';
@@ -17,22 +20,66 @@ import { ChatMessageList } from '@/components/chat/ChatMessageList';
 import { ChatInput } from '@/components/chat/ChatInput';
 import { ImageLightbox } from '@/components/chat/ImageLightbox';
 
-export default function HomePage() {
-  const [conversations, setConversations] = useState<ChatConversation[]>(() => [
-    {
-      id: 'conv-initial',
-      title: 'Cuộc trò chuyện mới',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-      messages: [],
-    },
-  ]);
+const LOCAL_STORAGE_KEY = 'ai_coding_tutor_chat_sessions_v1';
+const LOCAL_STORAGE_ACTIVE_KEY = 'ai_coding_tutor_active_chat_id';
 
-  const [activeConversationId, setActiveConversationId] = useState<string>('conv-initial');
+const AI_MODELS = [
+  { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash', badge: 'Cloud Free' },
+  { id: 'gpt-4o-mini', name: 'GPT-4o-mini', badge: 'Fallback' },
+  { id: 'ollama-llama3', name: 'Ollama Llama 3', badge: 'Local Offline' },
+];
+
+export default function HomePage() {
+  const [conversations, setConversations] = useState<ChatConversation[]>(() => {
+    // Attempt to load from localStorage on client side
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            return parsed;
+          }
+        }
+      } catch {
+        // Fallback to default
+      }
+    }
+    return [
+      {
+        id: 'conv-initial',
+        title: 'Cuộc trò chuyện mới',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        messages: [],
+      },
+    ];
+  });
+
+  const [activeConversationId, setActiveConversationId] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        const savedActive = localStorage.getItem(LOCAL_STORAGE_ACTIVE_KEY);
+        if (savedActive) return savedActive;
+      } catch {
+        // Fallback
+      }
+    }
+    return 'conv-initial';
+  });
+
   const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState<boolean>(true);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [lightboxData, setLightboxData] = useState<{ url: string; name: string } | null>(null);
+  
+  // Header inline renaming state
+  const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);
+  const [headerTitleInput, setHeaderTitleInput] = useState<string>('');
+
+  // Selected AI Model state
+  const [selectedModel, setSelectedModel] = useState(AI_MODELS[0]);
+  const [isModelDropdownOpen, setIsModelDropdownOpen] = useState(false);
 
   // Active conversation getter
   const activeConversation = useMemo(() => {
@@ -40,6 +87,39 @@ export default function HomePage() {
       conversations.find((c) => c.id === activeConversationId) || conversations[0]
     );
   }, [conversations, activeConversationId]);
+
+  // Persist conversations to localStorage whenever changed
+  useEffect(() => {
+    try {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(conversations));
+      localStorage.setItem(LOCAL_STORAGE_ACTIVE_KEY, activeConversationId);
+    } catch {
+      // Storage quota or private mode
+    }
+  }, [conversations, activeConversationId]);
+
+  // Rename a conversation
+  const handleRenameConversation = useCallback((id: string, newTitle: string) => {
+    setConversations((prev) =>
+      prev.map((c) => (c.id === id ? { ...c, title: newTitle, updatedAt: new Date().toISOString() } : c))
+    );
+  }, []);
+
+  // Start Header renaming
+  const handleStartHeaderRename = () => {
+    if (activeConversation) {
+      setHeaderTitleInput(activeConversation.title);
+      setIsEditingHeaderTitle(true);
+    }
+  };
+
+  const handleSaveHeaderRename = () => {
+    const trimmed = headerTitleInput.trim();
+    if (trimmed && activeConversation) {
+      handleRenameConversation(activeConversation.id, trimmed);
+    }
+    setIsEditingHeaderTitle(false);
+  };
 
   // Create a new conversation
   const handleNewConversation = useCallback(() => {
@@ -104,7 +184,7 @@ export default function HomePage() {
     setLightboxData({ url, name });
   }, []);
 
-  // Handle message sending (User -> Assistant demo reply with typing indicator)
+  // Handle message sending
   const handleSendMessage = useCallback((text: string, attachments: ChatAttachment[]) => {
     const userMsg: ChatMessage = {
       id: `msg-user-${Date.now()}`,
@@ -117,7 +197,7 @@ export default function HomePage() {
     setConversations((prev) =>
       prev.map((conv) => {
         if (conv.id === activeConversationId) {
-          // Update title if it's the first message and currently has default title
+          // Auto update title if first message
           let newTitle = conv.title;
           if (conv.messages.length === 0 && conv.title === 'Cuộc trò chuyện mới') {
             if (text.trim()) {
@@ -141,7 +221,7 @@ export default function HomePage() {
     // Turn on generating state
     setIsGenerating(true);
 
-    // Generate Demo Assistant Response after a simulated thinking delay
+    // Simulate AI response
     setTimeout(() => {
       const fileCountText = attachments.length > 0 
         ? ` cùng **${attachments.length} tệp đính kèm** (${attachments.map(a => a.name).join(', ')})`
@@ -154,7 +234,7 @@ export default function HomePage() {
       const assistantMsg: ChatMessage = {
         id: `msg-ai-${Date.now()}`,
         role: 'assistant',
-        content: `Hệ thống đã tiếp nhận dữ liệu văn bản${fileCountText}.${sampleCodeDemo}\n\nHiện tại, tính năng LLM (Gemini / OpenAI / Ollama) và RAG (ChromaDB) đang trong giai đoạn sẵn sàng kết nối. Yêu cầu và tệp tin của bạn đã được ghi nhận trong danh sách hội thoại giao diện thử nghiệm.`,
+        content: `[Mô hình: ${selectedModel.name}]\nHệ thống đã tiếp nhận dữ liệu văn bản${fileCountText}.${sampleCodeDemo}\n\nHiện tại, tính năng LLM và RAG (ChromaDB) đang trong giai đoạn sẵn sàng kết nối. Yêu cầu và tệp tin của bạn đã được ghi nhận trong danh sách hội thoại giao diện thử nghiệm.`,
         timestamp: new Date().toISOString(),
         isDemoNotice: true,
       };
@@ -173,7 +253,42 @@ export default function HomePage() {
       );
       setIsGenerating(false);
     }, 600);
-  }, [activeConversationId]);
+  }, [activeConversationId, selectedModel]);
+
+  // Handle Regenerate Response
+  const handleRegenerateResponse = useCallback(() => {
+    if (!activeConversation || activeConversation.messages.length === 0) return;
+
+    // Find the last user message
+    const lastUserMsg = [...activeConversation.messages].reverse().find((m) => m.role === 'user');
+    if (!lastUserMsg) return;
+
+    setIsGenerating(true);
+
+    setTimeout(() => {
+      const regeneratedMsg: ChatMessage = {
+        id: `msg-ai-regen-${Date.now()}`,
+        role: 'assistant',
+        content: `[Mô hình: ${selectedModel.name} - Tạo lại]\nĐã tạo lại câu trả lời phản hồi cho yêu cầu: "${lastUserMsg.content.slice(0, 50)}...".\n\nGiao diện đã sẵn sàng kết nối pipeline LLM & RAG khi backend kích hoạt.`,
+        timestamp: new Date().toISOString(),
+        isDemoNotice: true,
+      };
+
+      setConversations((prev) =>
+        prev.map((conv) => {
+          if (conv.id === activeConversationId) {
+            return {
+              ...conv,
+              updatedAt: new Date().toISOString(),
+              messages: [...conv.messages, regeneratedMsg],
+            };
+          }
+          return conv;
+        })
+      );
+      setIsGenerating(false);
+    }, 600);
+  }, [activeConversation, activeConversationId, selectedModel]);
 
   const handleSelectSuggestion = useCallback((query: string) => {
     handleSendMessage(query, []);
@@ -195,6 +310,7 @@ export default function HomePage() {
         onSelectConversation={setActiveConversationId}
         onNewConversation={handleNewConversation}
         onDeleteConversation={handleDeleteConversation}
+        onRenameConversation={handleRenameConversation}
         onClearAll={handleClearAll}
         isOpen={isDesktopSidebarOpen}
         onToggle={() => setIsDesktopSidebarOpen((prev) => !prev)}
@@ -232,23 +348,108 @@ export default function HomePage() {
               )}
             </button>
 
-            {/* Active Conversation Title */}
+            {/* Active Conversation Title with Quick Rename */}
             <div className="flex items-center gap-2 truncate pl-1">
-              <span className="font-bold text-sm text-slate-900 truncate">
-                {activeConversation?.title || 'Cuộc trò chuyện'}
-              </span>
-              <span className="hidden sm:inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-semibold text-blue-700 border border-blue-200">
-                Studio UI
-              </span>
+              {isEditingHeaderTitle ? (
+                <div className="flex items-center gap-1.5">
+                  <input
+                    type="text"
+                    value={headerTitleInput}
+                    onChange={(e) => setHeaderTitleInput(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleSaveHeaderRename();
+                      if (e.key === 'Escape') setIsEditingHeaderTitle(false);
+                    }}
+                    autoFocus
+                    className="rounded-md border border-blue-400 bg-white px-2 py-0.5 text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleSaveHeaderRename}
+                    className="rounded p-1 text-emerald-600 hover:bg-emerald-50 transition"
+                    title="Lưu (Enter)"
+                  >
+                    <Check className="h-4 w-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIsEditingHeaderTitle(false)}
+                    className="rounded p-1 text-slate-400 hover:bg-slate-100 transition"
+                    title="Hủy (Esc)"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              ) : (
+                <div className="group/title flex items-center gap-1.5 truncate">
+                  <span className="font-extrabold text-sm text-slate-900 truncate">
+                    {activeConversation?.title || 'Cuộc trò chuyện'}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={handleStartHeaderRename}
+                    className="opacity-0 group-hover/title:opacity-100 rounded p-1 text-slate-400 hover:text-blue-600 hover:bg-slate-100 transition"
+                    title="Đổi tên cuộc trò chuyện này"
+                  >
+                    <Edit3 className="h-3.5 w-3.5" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
 
+          {/* Right Header: Model Selector & New Chat */}
           <div className="flex items-center gap-2">
+            {/* Model Selector Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
+                className="flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50/80 px-2.5 py-1.5 text-xs font-semibold text-slate-700 hover:bg-white hover:border-slate-300 transition"
+                title="Chọn mô hình AI thử nghiệm"
+              >
+                <Cpu className="h-3.5 w-3.5 text-blue-600" />
+                <span className="hidden sm:inline">{selectedModel.name}</span>
+                <span className="rounded bg-blue-100 px-1 py-0.2 text-[9px] font-bold text-blue-700">
+                  {selectedModel.badge}
+                </span>
+                <ChevronDown className="h-3 w-3 text-slate-400" />
+              </button>
+
+              {isModelDropdownOpen && (
+                <div 
+                  className="absolute right-0 mt-1.5 w-56 rounded-xl border border-slate-200 bg-white p-1.5 shadow-lg z-20 animate-in fade-in zoom-in-95 duration-150"
+                  onClick={() => setIsModelDropdownOpen(false)}
+                >
+                  <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    Mô hình AI dự kiến
+                  </div>
+                  {AI_MODELS.map((model) => (
+                    <button
+                      key={model.id}
+                      type="button"
+                      onClick={() => setSelectedModel(model)}
+                      className={`flex w-full items-center justify-between rounded-lg px-2.5 py-2 text-xs font-medium transition ${
+                        selectedModel.id === model.id
+                          ? 'bg-blue-50 text-blue-700 font-bold'
+                          : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                      }`}
+                    >
+                      <span>{model.name}</span>
+                      <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[9px] font-medium text-slate-600">
+                        {model.badge}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* New Chat quick button */}
             <button
               type="button"
               onClick={handleNewConversation}
-              className="flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:border-slate-300 shadow-2xs transition"
+              className="flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 shadow-2xs transition active:scale-95"
               title="Tạo cuộc trò chuyện mới"
             >
               <Plus className="h-3.5 w-3.5 text-blue-600" />
@@ -263,6 +464,7 @@ export default function HomePage() {
           isGenerating={isGenerating}
           onSelectSuggestion={handleSelectSuggestion}
           onViewImage={handleViewImage}
+          onRegenerate={handleRegenerateResponse}
         />
 
         {/* Bottom Composer Box */}

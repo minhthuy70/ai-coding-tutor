@@ -1,15 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   Plus, 
   MessageSquare, 
   Trash2, 
   X, 
-  Terminal,
-  Sparkles,
-  Search,
-  Download,
+  Terminal, 
+  Sparkles, 
+  Search, 
+  Download, 
+  Edit3, 
+  Check,
   RotateCcw
 } from 'lucide-react';
 import { ChatConversation } from '@/types/chat';
@@ -20,6 +22,7 @@ interface ChatSidebarProps {
   onSelectConversation: (id: string) => void;
   onNewConversation: () => void;
   onDeleteConversation: (id: string) => void;
+  onRenameConversation: (id: string, newTitle: string) => void;
   onClearAll?: () => void;
   isOpen: boolean;
   onToggle: () => void;
@@ -33,6 +36,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   onSelectConversation,
   onNewConversation,
   onDeleteConversation,
+  onRenameConversation,
   onClearAll,
   isOpen,
   onToggle,
@@ -40,6 +44,43 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   onCloseMobile,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editTitleInput, setEditTitleInput] = useState('');
+  const editInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (editingId && editInputRef.current) {
+      editInputRef.current.focus();
+      editInputRef.current.select();
+    }
+  }, [editingId]);
+
+  const handleStartRename = (conv: ChatConversation) => {
+    setEditingId(conv.id);
+    setEditTitleInput(conv.title);
+  };
+
+  const handleSaveRename = (id: string) => {
+    const trimmed = editTitleInput.trim();
+    if (trimmed) {
+      onRenameConversation(id, trimmed);
+    }
+    setEditingId(null);
+  };
+
+  const handleCancelRename = () => {
+    setEditingId(null);
+  };
+
+  const handleKeyDownRename = (e: React.KeyboardEvent, id: string) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSaveRename(id);
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      handleCancelRename();
+    }
+  };
 
   const filteredConversations = conversations.filter((c) =>
     c.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -66,7 +107,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
 
   const sidebarContent = (
     <div className="flex flex-col h-full bg-[#F7F7F8] border-r border-[#E5E7EB] text-[#202123]">
-      {/* Top Header: Branding + Close button (Mobile) */}
+      {/* Top Header */}
       <div className="p-3.5 border-b border-[#E5E7EB] flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-xs">
@@ -109,7 +150,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
       </div>
 
       {/* Search Bar */}
-      {conversations.length > 2 && (
+      {conversations.length > 1 && (
         <div className="px-3 pb-2">
           <div className="relative flex items-center">
             <Search className="absolute left-2.5 h-3.5 w-3.5 text-slate-400" />
@@ -147,54 +188,107 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
         ) : (
           filteredConversations.map((conv) => {
             const isActive = conv.id === activeConversationId;
+            const isEditing = editingId === conv.id;
+
             return (
               <div
                 key={conv.id}
-                className={`group relative flex items-center justify-between rounded-xl px-3 py-2.5 text-xs font-medium transition cursor-pointer ${
+                className={`group relative flex items-center justify-between rounded-xl px-2.5 py-2 text-xs font-medium transition cursor-pointer ${
                   isActive
                     ? 'bg-white text-blue-700 shadow-2xs border border-slate-200 font-semibold'
                     : 'text-slate-600 hover:bg-slate-200/50 hover:text-slate-900'
                 }`}
                 onClick={() => {
-                  onSelectConversation(conv.id);
-                  onCloseMobile();
+                  if (!isEditing) {
+                    onSelectConversation(conv.id);
+                    onCloseMobile();
+                  }
                 }}
               >
-                <div className="flex items-center gap-2.5 min-w-0 pr-12">
-                  <MessageSquare className={`h-4 w-4 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
-                  <span className="truncate" title={conv.title}>
-                    {conv.title}
-                  </span>
-                </div>
-
-                {/* Quick actions (visible on hover or active) */}
-                <div className="opacity-0 group-hover:opacity-100 flex items-center gap-1 transition absolute right-2">
-                  {conv.messages.length > 0 && (
+                {/* Editing Inline Mode */}
+                {isEditing ? (
+                  <div className="flex items-center gap-1.5 w-full" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      ref={editInputRef}
+                      type="text"
+                      value={editTitleInput}
+                      onChange={(e) => setEditTitleInput(e.target.value)}
+                      onKeyDown={(e) => handleKeyDownRename(e, conv.id)}
+                      className="flex-1 rounded-md border border-blue-400 bg-white px-2 py-1 text-xs text-slate-900 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    />
                     <button
                       type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleExportChat(conv);
-                      }}
-                      className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-blue-600 focus:opacity-100 transition"
-                      title="Xuất nội dung chat (.txt)"
+                      onClick={() => handleSaveRename(conv.id)}
+                      className="rounded p-1 text-emerald-600 hover:bg-emerald-50 transition"
+                      title="Lưu tên (Enter)"
                     >
-                      <Download className="h-3.5 w-3.5" />
+                      <Check className="h-3.5 w-3.5" />
                     </button>
-                  )}
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onDeleteConversation(conv.id);
-                    }}
-                    className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-rose-600 focus:opacity-100 transition"
-                    title="Xóa cuộc trò chuyện này"
-                    aria-label={`Xóa ${conv.title}`}
-                  >
-                    <Trash2 className="h-3.5 w-3.5" />
-                  </button>
-                </div>
+                    <button
+                      type="button"
+                      onClick={handleCancelRename}
+                      className="rounded p-1 text-slate-400 hover:bg-slate-100 transition"
+                      title="Hủy (Esc)"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  </div>
+                ) : (
+                  <>
+                    <div className="flex items-center gap-2.5 min-w-0 pr-16">
+                      <MessageSquare className={`h-4 w-4 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
+                      <span className="truncate" title={conv.title}>
+                        {conv.title}
+                      </span>
+                    </div>
+
+                    {/* Quick actions row */}
+                    <div className="opacity-0 group-hover:opacity-100 flex items-center gap-0.5 transition absolute right-1.5 bg-gradient-to-l from-white via-white to-transparent pl-2">
+                      {/* Rename Button */}
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleStartRename(conv);
+                        }}
+                        className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-blue-600 focus:opacity-100 transition"
+                        title="Đổi tên cuộc trò chuyện"
+                        aria-label={`Đổi tên ${conv.title}`}
+                      >
+                        <Edit3 className="h-3.5 w-3.5" />
+                      </button>
+
+                      {/* Export Button */}
+                      {conv.messages.length > 0 && (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleExportChat(conv);
+                          }}
+                          className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-blue-600 focus:opacity-100 transition"
+                          title="Xuất nội dung chat (.txt)"
+                        >
+                          <Download className="h-3.5 w-3.5" />
+                        </button>
+                      )}
+
+                      {/* Delete Button */}
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onDeleteConversation(conv.id);
+                        }}
+                        className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-rose-600 focus:opacity-100 transition"
+                        title="Xóa cuộc trò chuyện"
+                        aria-label={`Xóa ${conv.title}`}
+                      >
+                        <Trash2 className="h-3.5 w-3.5" />
+                      </button>
+                    </div>
+                  </>
+                )}
               </div>
             );
           })

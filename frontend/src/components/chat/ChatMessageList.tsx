@@ -17,6 +17,7 @@ interface ChatMessageListProps {
   isGenerating?: boolean;
   onSelectSuggestion?: (text: string) => void;
   onViewImage?: (url: string, name: string) => void;
+  onRegenerate?: () => void;
 }
 
 export const ChatMessageList: React.FC<ChatMessageListProps> = ({
@@ -24,12 +25,16 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
   isGenerating = false,
   onSelectSuggestion,
   onViewImage,
+  onRegenerate,
 }) => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isGenerating]);
+
+  // Find index of the last assistant message
+  const lastAssistantIndex = messages.map((m) => m.role).lastIndexOf('assistant');
 
   if (messages.length === 0) {
     const suggestions = [
@@ -113,11 +118,13 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
   return (
     <div className="flex-1 overflow-y-auto">
       <div className="flex flex-col">
-        {messages.map((msg) => (
+        {messages.map((msg, idx) => (
           <ChatMessageItem 
             key={msg.id} 
             message={msg} 
+            isLastAssistantMessage={idx === lastAssistantIndex}
             onViewImage={onViewImage}
+            onRegenerate={onRegenerate}
           />
         ))}
 
@@ -132,7 +139,7 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '0ms' }} />
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '150ms' }} />
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '300ms' }} />
-                <span className="text-xs text-slate-400 ml-2 font-medium">Đang phản hồi...</span>
+                <span className="text-xs text-slate-400 ml-2 font-medium">Đang xử lý câu trả lời...</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   User, 
   Bot, 
@@ -11,27 +11,44 @@ import {
   FileCheck,
   ThumbsUp,
   ThumbsDown,
-  Terminal
+  Terminal,
+  Volume2,
+  VolumeX,
+  RotateCcw
 } from 'lucide-react';
 import { ChatMessage } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
 
 interface ChatMessageItemProps {
   message: ChatMessage;
+  isLastAssistantMessage?: boolean;
   onViewImage?: (url: string, name: string) => void;
   onReaction?: (messageId: string, reaction: 'like' | 'dislike') => void;
+  onRegenerate?: () => void;
 }
 
 export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({ 
   message, 
+  isLastAssistantMessage = false,
   onViewImage,
-  onReaction 
+  onReaction,
+  onRegenerate
 }) => {
   const [copied, setCopied] = useState(false);
   const [copiedCodeBlockIdx, setCopiedCodeBlockIdx] = useState<number | null>(null);
   const [reaction, setReaction] = useState<'like' | 'dislike' | null>(message.reaction || null);
+  const [isSpeaking, setIsSpeaking] = useState(false);
 
   const isUser = message.role === 'user';
+
+  // Cleanup speech synthesis on unmount
+  useEffect(() => {
+    return () => {
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
 
   const handleCopyMessage = () => {
     navigator.clipboard.writeText(message.content);
@@ -53,19 +70,41 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
     }
   };
 
+  // Text-to-Speech (Web Speech API)
+  const handleToggleSpeak = () => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+
+    if (isSpeaking) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    // Clean markdown code blocks from speech text
+    const cleanText = message.content.replace(/```[\s\S]*?```/g, 'Đoạn mã lập trình.').replace(/[*_#]/g, '');
+    const utterance = new SpeechSynthesisUtterance(cleanText);
+    utterance.lang = 'vi-VN';
+    utterance.rate = 1.0;
+
+    utterance.onend = () => setIsSpeaking(false);
+    utterance.onerror = () => setIsSpeaking(false);
+
+    window.speechSynthesis.speak(utterance);
+    setIsSpeaking(true);
+  };
+
   const formattedTime = new Date(message.timestamp).toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
   });
 
-  // Render markdown-like text with code blocks formatted cleanly
+  // Render markdown-like text with syntax-highlighted code blocks
   const renderFormattedContent = (content: string) => {
-    // Check if contains code blocks ```...```
     const parts = content.split(/(```[\s\S]*?```)/g);
 
     return parts.map((part, index) => {
       if (part.startsWith('```') && part.endsWith('```')) {
-        // Extract language and code
         const lines = part.slice(3, -3).trim().split('\n');
         const firstLine = lines[0].trim();
         const hasLang = /^[a-zA-Z0-9_-]+$/.test(firstLine);
@@ -104,10 +143,17 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
         );
       }
 
-      // Regular text
+      // Format bold text **text**
+      const boldFormatted = part.split(/(\*\*[\s\S]*?\*\*)/g).map((subPart, subIdx) => {
+        if (subPart.startsWith('**') && subPart.endsWith('**')) {
+          return <strong key={subIdx} className="font-semibold text-slate-900">{subPart.slice(2, -2)}</strong>;
+        }
+        return subPart;
+      });
+
       return (
         <span key={index} className="whitespace-pre-wrap leading-relaxed">
-          {part}
+          {boldFormatted}
         </span>
       );
     });
@@ -144,23 +190,21 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
               </span>
             </div>
 
-            {/* Quick action copy button */}
+            {/* Top Right Quick Copy */}
             {message.content && (
-              <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition">
-                <button
-                  type="button"
-                  onClick={handleCopyMessage}
-                  className="rounded-md p-1.5 text-slate-400 hover:bg-slate-200/60 hover:text-slate-700 transition"
-                  title="Sao chép toàn bộ nội dung"
-                  aria-label="Sao chép nội dung tin nhắn"
-                >
-                  {copied ? (
-                    <Check className="h-3.5 w-3.5 text-emerald-600" />
-                  ) : (
-                    <Copy className="h-3.5 w-3.5" />
-                  )}
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={handleCopyMessage}
+                className="opacity-0 group-hover:opacity-100 rounded-md p-1.5 text-slate-400 hover:bg-slate-200/60 hover:text-slate-700 transition"
+                title="Sao chép nội dung"
+                aria-label="Sao chép nội dung tin nhắn"
+              >
+                {copied ? (
+                  <Check className="h-3.5 w-3.5 text-emerald-600" />
+                ) : (
+                  <Copy className="h-3.5 w-3.5" />
+                )}
+              </button>
             )}
           </div>
 
@@ -191,9 +235,9 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
             </div>
           )}
 
-          {/* Assistant Demo Status Banner (Mandatory Notice) */}
+          {/* Assistant Action Bar & Demo Banner */}
           {!isUser && (
-            <div className="rounded-xl border border-blue-200/80 bg-blue-50/70 p-3.5 text-xs text-blue-900 shadow-2xs space-y-2 mt-2">
+            <div className="rounded-xl border border-blue-200/80 bg-blue-50/70 p-3.5 text-xs text-blue-900 shadow-2xs space-y-2.5 mt-2">
               <div className="flex items-start gap-2.5">
                 <Info className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
                 <div className="space-y-1 text-slate-700">
@@ -206,35 +250,95 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                 </div>
               </div>
 
-              {/* Feedback reaction buttons */}
-              <div className="flex items-center gap-2 pt-1 border-t border-blue-100">
-                <span className="text-[11px] text-slate-400">Phản hồi giao diện:</span>
-                <button
-                  type="button"
-                  onClick={() => handleReactionClick('like')}
-                  className={`flex items-center gap-1 rounded-md px-2 py-0.5 text-[11px] font-medium transition ${
-                    reaction === 'like'
-                      ? 'bg-blue-600 text-white'
-                      : 'text-slate-500 hover:bg-blue-100/60 hover:text-slate-700'
-                  }`}
-                  title="Hữu ích"
-                >
-                  <ThumbsUp className="h-3 w-3" />
-                  <span>Tốt</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleReactionClick('dislike')}
-                  className={`flex items-center gap-1 rounded-md px-2 py-0.5 text-[11px] font-medium transition ${
-                    reaction === 'dislike'
-                      ? 'bg-rose-600 text-white'
-                      : 'text-slate-500 hover:bg-rose-100/60 hover:text-slate-700'
-                  }`}
-                  title="Chưa tốt"
-                >
-                  <ThumbsDown className="h-3 w-3" />
-                  <span>Cần cải thiện</span>
-                </button>
+              {/* Action Toolbar for AI Answer: COPY, SPEAK, REGENERATE, LIKE/DISLIKE */}
+              <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-blue-100">
+                <div className="flex items-center gap-1.5">
+                  {/* Dedicated Copy Button with text */}
+                  <button
+                    type="button"
+                    onClick={handleCopyMessage}
+                    className="flex items-center gap-1.5 rounded-lg border border-blue-200 bg-white px-2.5 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-50 hover:border-blue-300 shadow-2xs transition active:scale-95"
+                    title="Sao chép toàn bộ câu trả lời của AI"
+                  >
+                    {copied ? (
+                      <>
+                        <Check className="h-3.5 w-3.5 text-emerald-600" />
+                        <span className="text-emerald-700 font-bold">Đã sao chép!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="h-3.5 w-3.5 text-blue-600" />
+                        <span>Sao chép câu trả lời</span>
+                      </>
+                    )}
+                  </button>
+
+                  {/* Text-to-Speech Button */}
+                  <button
+                    type="button"
+                    onClick={handleToggleSpeak}
+                    className={`flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium transition ${
+                      isSpeaking
+                        ? 'bg-blue-600 text-white font-semibold'
+                        : 'text-slate-600 hover:bg-blue-100/60'
+                    }`}
+                    title={isSpeaking ? 'Dừng đọc' : 'Đọc to câu trả lời'}
+                  >
+                    {isSpeaking ? (
+                      <>
+                        <VolumeX className="h-3.5 w-3.5 animate-pulse" />
+                        <span>Đang đọc...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Volume2 className="h-3.5 w-3.5 text-slate-500" />
+                        <span className="hidden sm:inline">Đọc to</span>
+                      </>
+                    )}
+                  </button>
+
+                  {/* Regenerate Button (if available) */}
+                  {isLastAssistantMessage && onRegenerate && (
+                    <button
+                      type="button"
+                      onClick={onRegenerate}
+                      className="flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium text-slate-600 hover:bg-blue-100/60 transition"
+                      title="Tạo lại câu trả lời mới"
+                    >
+                      <RotateCcw className="h-3.5 w-3.5 text-slate-500" />
+                      <span className="hidden sm:inline">Thử lại</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Reaction buttons */}
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[11px] text-slate-400 hidden sm:inline">Đánh giá:</span>
+                  <button
+                    type="button"
+                    onClick={() => handleReactionClick('like')}
+                    className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium transition ${
+                      reaction === 'like'
+                        ? 'bg-blue-600 text-white shadow-2xs'
+                        : 'text-slate-500 hover:bg-blue-100/60 hover:text-slate-700'
+                    }`}
+                    title="Hữu ích"
+                  >
+                    <ThumbsUp className="h-3 w-3" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleReactionClick('dislike')}
+                    className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium transition ${
+                      reaction === 'dislike'
+                        ? 'bg-rose-600 text-white shadow-2xs'
+                        : 'text-slate-500 hover:bg-rose-100/60 hover:text-slate-700'
+                    }`}
+                    title="Cần cải thiện"
+                  >
+                    <ThumbsDown className="h-3 w-3" />
+                  </button>
+                </div>
               </div>
             </div>
           )}
