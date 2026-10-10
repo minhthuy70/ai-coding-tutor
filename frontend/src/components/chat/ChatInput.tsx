@@ -10,7 +10,8 @@ import {
   FileUp, 
   Sparkles,
   ClipboardCheck,
-  CheckCircle2
+  CheckCircle2,
+  Square
 } from 'lucide-react';
 import { ChatAttachment, FileValidationError } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
@@ -18,6 +19,9 @@ import { AttachmentBadge } from './AttachmentBadge';
 interface ChatInputProps {
   onSendMessage: (text: string, attachments: ChatAttachment[]) => void;
   onViewImage?: (url: string, name: string) => void;
+  onViewDocument?: (attachment: ChatAttachment) => void;
+  isGenerating?: boolean;
+  onStopGenerating?: () => void;
   disabled?: boolean;
 }
 
@@ -34,6 +38,9 @@ const ALLOWED_DOC_EXTS = [
 export const ChatInput: React.FC<ChatInputProps> = ({
   onSendMessage,
   onViewImage,
+  onViewDocument,
+  isGenerating = false,
+  onStopGenerating,
   disabled = false,
 }) => {
   const [inputText, setInputText] = useState('');
@@ -52,7 +59,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     if (textarea) {
       textarea.style.height = 'auto';
       const scrollHeight = textarea.scrollHeight;
-      // Cap height between 46px and 180px
       textarea.style.height = `${Math.min(Math.max(scrollHeight, 46), 180)}px`;
     }
   }, []);
@@ -105,16 +111,32 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         return;
       }
 
-      // Valid file
       const previewUrl = isImg ? URL.createObjectURL(file) : undefined;
-      validAttachments.push({
-        id: `att-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`,
+      const attId = `att-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
+
+      const newAtt: ChatAttachment = {
+        id: attId,
         name: file.name,
         size: file.size,
         type: file.type || `application/${ext}`,
         category: isImg ? 'image' : 'document',
         previewUrl,
-      });
+      };
+
+      // Read text/code content for preview if it's a code/text document
+      if (!isImg && file.size < 2 * 1024 * 1024 && ['py', 'cpp', 'c', 'h', 'java', 'js', 'ts', 'jsx', 'tsx', 'txt', 'md', 'json', 'sql', 'xml', 'yaml', 'yml'].includes(ext)) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          if (typeof reader.result === 'string') {
+            setStagedAttachments((prev) =>
+              prev.map((a) => (a.id === attId ? { ...a, fileContent: reader.result as string } : a))
+            );
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      validAttachments.push(newAtt);
     });
 
     if (errors.length > 0) {
@@ -125,13 +147,12 @@ export const ChatInput: React.FC<ChatInputProps> = ({
       setStagedAttachments((prev) => [...prev, ...validAttachments]);
     }
 
-    // Reset native input to allow selecting same file again if desired
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
   }, []);
 
-  // Handle Clipboard Paste (Ctrl + V for screenshots and files)
+  // Handle Clipboard Paste (Ctrl + V)
   const handlePaste = useCallback((e: React.ClipboardEvent<HTMLTextAreaElement>) => {
     const items = e.clipboardData?.items;
     if (!items) return;
@@ -143,7 +164,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({
       if (item.type.startsWith('image/')) {
         const file = item.getAsFile();
         if (file) {
-          // Name the screenshot with a clean readable timestamp
           const now = new Date();
           const pad = (n: number) => n.toString().padStart(2, '0');
           const timeStr = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
@@ -161,10 +181,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     }
   }, [processFiles]);
 
-  // Window-level paste listener: allows pressing Ctrl+V anywhere on the page
+  // Window-level paste listener
   useEffect(() => {
     const handleGlobalPaste = (e: ClipboardEvent) => {
-      // Don't duplicate if already focused in textarea
       if (document.activeElement === textareaRef.current) return;
 
       const items = e.clipboardData?.items;
@@ -222,13 +241,11 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     setIsSubmitting(true);
     onSendMessage(trimmed, stagedAttachments);
 
-    // Reset input state
     setInputText('');
     setStagedAttachments([]);
     setValidationErrors([]);
     setIsSubmitting(false);
 
-    // Reset textarea height
     if (textareaRef.current) {
       textareaRef.current.style.height = '46px';
     }
@@ -241,7 +258,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     }
   };
 
-  // Drag and drop handlers
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -264,6 +280,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   };
 
   const hasContent = inputText.trim().length > 0 || stagedAttachments.length > 0;
+  const wordCount = inputText.trim() ? inputText.trim().split(/\s+/).length : 0;
+  const charCount = inputText.length;
+  const estimatedTokens = Math.ceil(charCount / 4);
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 pb-4">
@@ -284,7 +303,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         </div>
       )}
 
-      {/* Validation Errors Alert Banner */}
+      {/* Validation Errors Alert */}
       {validationErrors.length > 0 && (
         <div className="mb-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 shadow-sm animate-in fade-in duration-200">
           <div className="flex items-center justify-between pb-1 font-semibold">
@@ -322,7 +341,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             : 'border-slate-300 focus-within:border-blue-600 focus-within:ring-3 focus-within:ring-blue-600/15 focus-within:shadow-md'
         }`}
       >
-        {/* Drag overlay notice */}
         {isDragging && (
           <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-blue-50/95 text-blue-700 text-sm font-semibold backdrop-blur-xs">
             <FileUp className="h-6 w-6 mr-2 animate-bounce" />
@@ -339,6 +357,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
                 attachment={att}
                 onRemove={handleRemoveAttachment}
                 onViewImage={onViewImage}
+                onViewDocument={onViewDocument}
               />
             ))}
           </div>
@@ -346,7 +365,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
         {/* Textarea & Actions Row */}
         <div className="flex items-end gap-2 p-3">
-          {/* File Picker Trigger Button */}
+          {/* File Picker Trigger */}
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
@@ -358,7 +377,6 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             <Paperclip className="h-5 w-5" />
           </button>
 
-          {/* Hidden file input */}
           <input
             ref={fileInputRef}
             type="file"
@@ -381,35 +399,53 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             className="flex-1 resize-none bg-transparent py-2.5 px-1 text-sm text-[#202123] placeholder-slate-400 focus:outline-none leading-relaxed max-h-[180px]"
           />
 
-          {/* Send Button */}
-          <button
-            type="button"
-            onClick={handleSubmit}
-            disabled={!hasContent || disabled || isSubmitting}
-            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition duration-150 ${
-              hasContent && !disabled && !isSubmitting
-                ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500/40'
-                : 'bg-slate-100 text-slate-300 cursor-not-allowed'
-            }`}
-            aria-label="Gửi tin nhắn"
-            title="Gửi tin nhắn"
-          >
-            {isSubmitting ? (
-              <Loader2 className="h-4 w-4 animate-spin text-white" />
-            ) : (
-              <Send className="h-4 w-4" />
-            )}
-          </button>
+          {/* Stop Generating Button or Send Button */}
+          {isGenerating ? (
+            <button
+              type="button"
+              onClick={onStopGenerating}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-600 text-white hover:bg-rose-700 shadow-md transition active:scale-95"
+              title="Dừng tạo phản hồi"
+            >
+              <Square className="h-4 w-4 fill-white" />
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={handleSubmit}
+              disabled={!hasContent || disabled || isSubmitting}
+              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition duration-150 ${
+                hasContent && !disabled && !isSubmitting
+                  ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+                  : 'bg-slate-100 text-slate-300 cursor-not-allowed'
+              }`}
+              aria-label="Gửi tin nhắn"
+              title="Gửi tin nhắn"
+            >
+              {isSubmitting ? (
+                <Loader2 className="h-4 w-4 animate-spin text-white" />
+              ) : (
+                <Send className="h-4 w-4" />
+              )}
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Helper & Hint Row */}
+      {/* Helper & Word/Token Stats Row */}
       <div className="mt-2 flex items-center justify-between px-1 text-[11px] text-slate-400 select-none">
         <span className="flex items-center gap-1 text-slate-500">
           <ClipboardCheck className="h-3.5 w-3.5 text-blue-500" />
-          <span>Mẹo: Bạn có thể chụp màn hình và nhấn <b>Ctrl + V</b> để dán ảnh ngay lập tức</span>
+          <span>Mẹo: Chụp màn hình rồi nhấn <b>Ctrl + V</b> để tải ảnh lên tức thì</span>
         </span>
-        <span>Phiên bản thử nghiệm UI</span>
+
+        {charCount > 0 ? (
+          <span className="font-mono text-slate-500 text-[10px]">
+            {wordCount} từ • {charCount} ký tự • ~{estimatedTokens} tokens
+          </span>
+        ) : (
+          <span>Phiên bản thử nghiệm UI</span>
+        )}
       </div>
     </div>
   );

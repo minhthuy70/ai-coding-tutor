@@ -12,7 +12,9 @@ import {
   Download, 
   Edit3, 
   Check,
-  RotateCcw
+  Pin,
+  Sliders,
+  Keyboard
 } from 'lucide-react';
 import { ChatConversation } from '@/types/chat';
 
@@ -23,7 +25,10 @@ interface ChatSidebarProps {
   onNewConversation: () => void;
   onDeleteConversation: (id: string) => void;
   onRenameConversation: (id: string, newTitle: string) => void;
+  onTogglePinConversation: (id: string) => void;
   onClearAll?: () => void;
+  onOpenShortcuts: () => void;
+  onOpenSettings: () => void;
   isOpen: boolean;
   onToggle: () => void;
   isMobileOpen: boolean;
@@ -37,7 +42,10 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   onNewConversation,
   onDeleteConversation,
   onRenameConversation,
+  onTogglePinConversation,
   onClearAll,
+  onOpenShortcuts,
+  onOpenSettings,
   isOpen,
   onToggle,
   isMobileOpen,
@@ -82,7 +90,14 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
     }
   };
 
-  const filteredConversations = conversations.filter((c) =>
+  // Sort pinned conversations to the top
+  const sortedConversations = [...conversations].sort((a, b) => {
+    if (a.isPinned && !b.isPinned) return -1;
+    if (!a.isPinned && b.isPinned) return 1;
+    return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
+  });
+
+  const filteredConversations = sortedConversations.filter((c) =>
     c.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -158,7 +173,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Tìm cuộc trò chuyện..."
+              placeholder="Tìm kiếm..."
               className="w-full rounded-lg border border-slate-200 bg-white pl-8 pr-2.5 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition"
             />
           </div>
@@ -174,7 +189,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
               type="button"
               onClick={onClearAll}
               className="text-[10px] text-slate-400 hover:text-rose-600 transition"
-              title="Xóa tất cả các cuộc trò chuyện"
+              title="Xóa tất cả"
             >
               Xóa tất cả
             </button>
@@ -183,7 +198,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
 
         {filteredConversations.length === 0 ? (
           <div className="px-3 py-6 text-center text-xs text-slate-400">
-            {searchQuery ? 'Không tìm thấy cuộc trò chuyện phù hợp' : 'Chưa có cuộc trò chuyện nào'}
+            {searchQuery ? 'Không tìm thấy cuộc trò chuyện' : 'Chưa có cuộc trò chuyện nào'}
           </div>
         ) : (
           filteredConversations.map((conv) => {
@@ -235,8 +250,12 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                   </div>
                 ) : (
                   <>
-                    <div className="flex items-center gap-2.5 min-w-0 pr-16">
-                      <MessageSquare className={`h-4 w-4 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
+                    <div className="flex items-center gap-2 min-w-0 pr-20">
+                      {conv.isPinned ? (
+                        <Pin className="h-3.5 w-3.5 shrink-0 text-amber-500 fill-amber-500" />
+                      ) : (
+                        <MessageSquare className={`h-3.5 w-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
+                      )}
                       <span className="truncate" title={conv.title}>
                         {conv.title}
                       </span>
@@ -244,6 +263,21 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
 
                     {/* Quick actions row */}
                     <div className="opacity-0 group-hover:opacity-100 flex items-center gap-0.5 transition absolute right-1.5 bg-gradient-to-l from-white via-white to-transparent pl-2">
+                      {/* Pin Button */}
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onTogglePinConversation(conv.id);
+                        }}
+                        className={`rounded p-1 transition ${
+                          conv.isPinned ? 'text-amber-500' : 'text-slate-400 hover:text-amber-500 hover:bg-slate-100'
+                        }`}
+                        title={conv.isPinned ? 'Bỏ ghim' : 'Ghim lên đầu'}
+                      >
+                        <Pin className="h-3 w-3" />
+                      </button>
+
                       {/* Rename Button */}
                       <button
                         type="button"
@@ -251,11 +285,10 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                           e.stopPropagation();
                           handleStartRename(conv);
                         }}
-                        className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-blue-600 focus:opacity-100 transition"
-                        title="Đổi tên cuộc trò chuyện"
-                        aria-label={`Đổi tên ${conv.title}`}
+                        className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-blue-600 transition"
+                        title="Đổi tên"
                       >
-                        <Edit3 className="h-3.5 w-3.5" />
+                        <Edit3 className="h-3 w-3" />
                       </button>
 
                       {/* Export Button */}
@@ -266,10 +299,10 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                             e.stopPropagation();
                             handleExportChat(conv);
                           }}
-                          className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-blue-600 focus:opacity-100 transition"
-                          title="Xuất nội dung chat (.txt)"
+                          className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-blue-600 transition"
+                          title="Xuất .txt"
                         >
-                          <Download className="h-3.5 w-3.5" />
+                          <Download className="h-3 w-3" />
                         </button>
                       )}
 
@@ -280,11 +313,10 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                           e.stopPropagation();
                           onDeleteConversation(conv.id);
                         }}
-                        className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-rose-600 focus:opacity-100 transition"
-                        title="Xóa cuộc trò chuyện"
-                        aria-label={`Xóa ${conv.title}`}
+                        className="rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-rose-600 transition"
+                        title="Xóa"
                       >
-                        <Trash2 className="h-3.5 w-3.5" />
+                        <Trash2 className="h-3 w-3" />
                       </button>
                     </div>
                   </>
@@ -295,14 +327,28 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
         )}
       </div>
 
-      {/* Bottom Footer Section */}
-      <div className="p-3 border-t border-[#E5E7EB] bg-slate-100/60 space-y-2">
-        <div className="flex items-center gap-2 rounded-xl bg-white p-2.5 border border-slate-200 text-xs text-slate-600 shadow-2xs">
-          <Sparkles className="h-4 w-4 text-blue-600 shrink-0" />
-          <div className="flex flex-col min-w-0">
-            <span className="font-bold text-slate-800 text-[11px]">Đa phương thức</span>
-            <span className="text-[10px] text-slate-400 truncate">Text + Ảnh (Ctrl+V) + File</span>
-          </div>
+      {/* Bottom Footer Section: Settings & Shortcuts */}
+      <div className="p-3 border-t border-[#E5E7EB] bg-slate-100/60 space-y-1.5">
+        <div className="flex items-center justify-between px-1">
+          <button
+            type="button"
+            onClick={onOpenSettings}
+            className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-semibold text-slate-600 hover:bg-white hover:text-slate-900 transition"
+            title="Cài đặt thông số AI và giao diện"
+          >
+            <Sliders className="h-3.5 w-3.5 text-blue-600" />
+            <span>Cài đặt AI</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={onOpenShortcuts}
+            className="flex items-center gap-1 rounded-lg px-2 py-1.5 text-xs font-semibold text-slate-500 hover:bg-white hover:text-slate-800 transition"
+            title="Xem danh sách phím tắt"
+          >
+            <Keyboard className="h-3.5 w-3.5" />
+            <span>Phím tắt</span>
+          </button>
         </div>
       </div>
     </div>

@@ -16,6 +16,7 @@ interface AttachmentBadgeProps {
   attachment: ChatAttachment;
   onRemove?: (id: string) => void;
   onViewImage?: (url: string, name: string) => void;
+  onViewDocument?: (attachment: ChatAttachment) => void;
   readOnly?: boolean;
 }
 
@@ -31,6 +32,7 @@ export const AttachmentBadge: React.FC<AttachmentBadgeProps> = ({
   attachment,
   onRemove,
   onViewImage,
+  onViewDocument,
   readOnly = false,
 }) => {
   const isImage = attachment.category === 'image' && attachment.previewUrl;
@@ -120,22 +122,32 @@ export const AttachmentBadge: React.FC<AttachmentBadgeProps> = ({
   }
 
   return (
-    <div className="group relative flex items-center gap-2.5 rounded-xl border border-slate-200/90 bg-white px-3 py-2 shadow-2xs hover:shadow-xs hover:border-slate-300 transition-all max-w-[250px]">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-50 border border-slate-100">
+    <div 
+      onClick={() => onViewDocument && onViewDocument(attachment)}
+      className={`group relative flex items-center gap-2.5 rounded-xl border border-slate-200/90 bg-white px-3 py-2 shadow-2xs hover:shadow-xs hover:border-blue-300 transition-all max-w-[250px] ${
+        onViewDocument ? 'cursor-pointer' : ''
+      }`}
+      title={onViewDocument ? 'Nhấn để xem nội dung tệp' : attachment.name}
+    >
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-50 border border-slate-100 group-hover:bg-blue-50 transition">
         {getDocIcon()}
       </div>
-      <div className="flex-1 min-w-0">
-        <p className="truncate text-xs font-semibold text-slate-800" title={attachment.name}>
+      <div className="flex-1 min-w-0 pr-2">
+        <p className="truncate text-xs font-semibold text-slate-800 group-hover:text-blue-600 transition" title={attachment.name}>
           {attachment.name}
         </p>
         <p className="text-[11px] text-slate-400 mt-0.5">
           {formatFileSize(attachment.size)}
         </p>
       </div>
+
       {!readOnly && onRemove && (
         <button
           type="button"
-          onClick={() => onRemove(attachment.id)}
+          onClick={(e) => {
+            e.stopPropagation();
+            onRemove(attachment.id);
+          }}
           className="flex h-6 w-6 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-rose-600 focus:outline-none focus:ring-1 focus:ring-slate-300 transition"
           aria-label={`Xóa tệp ${attachment.name}`}
           title="Xóa tệp đính kèm này"

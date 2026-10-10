@@ -7,6 +7,7 @@ export interface ChatAttachment {
   type: string;
   category: AttachmentCategory;
   previewUrl?: string; // Blob URL for images
+  fileContent?: string; // Text content for code/document preview
 }
 
 export interface ChatMessage {
@@ -14,9 +15,11 @@ export interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
   attachments?: ChatAttachment[];
-  timestamp: string; // ISO string for safe serialization
+  timestamp: string; // ISO string
   isDemoNotice?: boolean;
   reaction?: 'like' | 'dislike' | null;
+  modelUsed?: string;
+  suggestedFollowUps?: string[];
 }
 
 export interface ChatConversation {
@@ -24,10 +27,17 @@ export interface ChatConversation {
   title: string;
   createdAt: string;
   updatedAt: string;
+  isPinned?: boolean;
   messages: ChatMessage[];
 }
 
 export interface FileValidationError {
   fileName: string;
   reason: string;
+}
+
+export interface ModelSettings {
+  temperature: number; // 0.0 - 1.0
+  maxTokens: number;   // 512 - 4096
+  persona: 'socratic' | 'strict_reviewer' | 'algorithm_expert' | 'casual';
 }

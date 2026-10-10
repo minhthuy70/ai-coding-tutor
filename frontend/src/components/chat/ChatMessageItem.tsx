@@ -8,36 +8,50 @@ import {
   Copy, 
   Info, 
   Clock, 
-  FileCheck,
-  ThumbsUp,
-  ThumbsDown,
-  Terminal,
-  Volume2,
-  VolumeX,
-  RotateCcw
+  FileCheck, 
+  ThumbsUp, 
+  ThumbsDown, 
+  Terminal, 
+  Volume2, 
+  VolumeX, 
+  RotateCcw,
+  Edit2,
+  Trash2,
+  CornerDownRight,
+  Sparkles
 } from 'lucide-react';
-import { ChatMessage } from '@/types/chat';
+import { ChatMessage, ChatAttachment } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
 
 interface ChatMessageItemProps {
   message: ChatMessage;
   isLastAssistantMessage?: boolean;
   onViewImage?: (url: string, name: string) => void;
+  onViewDocument?: (attachment: ChatAttachment) => void;
   onReaction?: (messageId: string, reaction: 'like' | 'dislike') => void;
   onRegenerate?: () => void;
+  onDeleteMessage?: (id: string) => void;
+  onEditUserMessage?: (id: string, newContent: string) => void;
+  onSelectFollowUp?: (query: string) => void;
 }
 
 export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({ 
   message, 
   isLastAssistantMessage = false,
   onViewImage,
+  onViewDocument,
   onReaction,
-  onRegenerate
+  onRegenerate,
+  onDeleteMessage,
+  onEditUserMessage,
+  onSelectFollowUp,
 }) => {
   const [copied, setCopied] = useState(false);
   const [copiedCodeBlockIdx, setCopiedCodeBlockIdx] = useState<number | null>(null);
   const [reaction, setReaction] = useState<'like' | 'dislike' | null>(message.reaction || null);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isEditingUser, setIsEditingUser] = useState(false);
+  const [editUserText, setEditUserText] = useState(message.content);
 
   const isUser = message.role === 'user';
 
@@ -81,7 +95,6 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
     }
 
     window.speechSynthesis.cancel();
-    // Clean markdown code blocks from speech text
     const cleanText = message.content.replace(/```[\s\S]*?```/g, 'Đoạn mã lập trình.').replace(/[*_#]/g, '');
     const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.lang = 'vi-VN';
@@ -94,25 +107,32 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
     setIsSpeaking(true);
   };
 
+  const handleSaveUserEdit = () => {
+    if (editUserText.trim() && onEditUserMessage) {
+      onEditUserMessage(message.id, editUserText.trim());
+      setIsEditingUser(false);
+    }
+  };
+
   const formattedTime = new Date(message.timestamp).toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
   });
 
-  // Render markdown-like text with syntax-highlighted code blocks
+  // Rich markdown parser for assistant and user text
   const renderFormattedContent = (content: string) => {
-    const parts = content.split(/(```[\s\S]*?```)/g);
+    const codeBlocks = content.split(/(```[\s\S]*?```)/g);
 
-    return parts.map((part, index) => {
-      if (part.startsWith('```') && part.endsWith('```')) {
-        const lines = part.slice(3, -3).trim().split('\n');
+    return codeBlocks.map((block, bIdx) => {
+      if (block.startsWith('```') && block.endsWith('```')) {
+        const lines = block.slice(3, -3).trim().split('\n');
         const firstLine = lines[0].trim();
         const hasLang = /^[a-zA-Z0-9_-]+$/.test(firstLine);
         const language = hasLang ? firstLine : 'code';
         const codeText = hasLang ? lines.slice(1).join('\n') : lines.join('\n');
 
         return (
-          <div key={index} className="my-3 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md">
+          <div key={bIdx} className="my-3 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md">
             <div className="flex items-center justify-between px-3.5 py-1.5 bg-slate-950 text-slate-400 text-xs font-mono border-b border-slate-800">
               <div className="flex items-center gap-1.5">
                 <Terminal className="h-3.5 w-3.5 text-blue-400" />
@@ -120,10 +140,10 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
               </div>
               <button
                 type="button"
-                onClick={() => handleCopyCode(codeText, index)}
+                onClick={() => handleCopyCode(codeText, bIdx)}
                 className="flex items-center gap-1 rounded px-2 py-0.5 text-[11px] text-slate-400 hover:text-white hover:bg-slate-800 transition"
               >
-                {copiedCodeBlockIdx === index ? (
+                {copiedCodeBlockIdx === bIdx ? (
                   <>
                     <Check className="h-3 w-3 text-emerald-400" />
                     <span className="text-emerald-400">Đã chép</span>
@@ -143,19 +163,71 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
         );
       }
 
-      // Format bold text **text**
-      const boldFormatted = part.split(/(\*\*[\s\S]*?\*\*)/g).map((subPart, subIdx) => {
-        if (subPart.startsWith('**') && subPart.endsWith('**')) {
-          return <strong key={subIdx} className="font-semibold text-slate-900">{subPart.slice(2, -2)}</strong>;
-        }
-        return subPart;
-      });
-
+      // Parse lines for headers, bullet lists, blockquotes
+      const lines = block.split('\n');
       return (
-        <span key={index} className="whitespace-pre-wrap leading-relaxed">
-          {boldFormatted}
-        </span>
+        <div key={bIdx} className="space-y-1.5">
+          {lines.map((line, lIdx) => {
+            // Header 3
+            if (line.startsWith('### ')) {
+              return <h3 key={lIdx} className="text-sm font-bold text-slate-900 mt-2">{line.slice(4)}</h3>;
+            }
+            // Header 2
+            if (line.startsWith('## ')) {
+              return <h2 key={lIdx} className="text-base font-bold text-slate-900 mt-2.5">{line.slice(3)}</h2>;
+            }
+            // Header 1
+            if (line.startsWith('# ')) {
+              return <h1 key={lIdx} className="text-lg font-extrabold text-slate-900 mt-3">{line.slice(2)}</h1>;
+            }
+            // Bullet list item
+            if (line.startsWith('- ') || line.startsWith('* ')) {
+              return (
+                <div key={lIdx} className="flex items-start gap-2 pl-2">
+                  <span className="text-blue-500 font-bold">•</span>
+                  <span>{formatInlineMarkdown(line.slice(2))}</span>
+                </div>
+              );
+            }
+            // Blockquote
+            if (line.startsWith('> ')) {
+              return (
+                <blockquote key={lIdx} className="border-l-3 border-blue-500 pl-3 py-0.5 text-slate-600 italic bg-blue-50/30 rounded-r-lg">
+                  {formatInlineMarkdown(line.slice(2))}
+                </blockquote>
+              );
+            }
+            // Normal paragraph
+            return (
+              <p key={lIdx} className="leading-relaxed">
+                {formatInlineMarkdown(line)}
+              </p>
+            );
+          })}
+        </div>
       );
+    });
+  };
+
+  // Inline formatting: bold **text**, inline code `code`
+  const formatInlineMarkdown = (text: string) => {
+    const parts = text.split(/(`[^`]+`|\*\*[^*]+\*\*)/g);
+    return parts.map((part, idx) => {
+      if (part.startsWith('`') && part.endsWith('`')) {
+        return (
+          <code key={idx} className="rounded bg-slate-100 border border-slate-250 px-1 py-0.2 font-mono text-[12px] text-blue-700">
+            {part.slice(1, -1)}
+          </code>
+        );
+      }
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return (
+          <strong key={idx} className="font-semibold text-slate-900">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      return part;
     });
   };
 
@@ -190,29 +262,77 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
               </span>
             </div>
 
-            {/* Top Right Quick Copy */}
-            {message.content && (
+            {/* Top Right Quick Actions (Copy, Edit, Delete) */}
+            <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition">
+              {isUser && onEditUserMessage && !isEditingUser && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEditUserText(message.content);
+                    setIsEditingUser(true);
+                  }}
+                  className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-blue-600 transition"
+                  title="Chỉnh sửa câu hỏi này"
+                >
+                  <Edit2 className="h-3.5 w-3.5" />
+                </button>
+              )}
+
+              {onDeleteMessage && (
+                <button
+                  type="button"
+                  onClick={() => onDeleteMessage(message.id)}
+                  className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-rose-600 transition"
+                  title="Xóa tin nhắn này"
+                >
+                  <Trash2 className="h-3.5 w-3.5" />
+                </button>
+              )}
+
               <button
                 type="button"
                 onClick={handleCopyMessage}
-                className="opacity-0 group-hover:opacity-100 rounded-md p-1.5 text-slate-400 hover:bg-slate-200/60 hover:text-slate-700 transition"
+                className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-700 transition"
                 title="Sao chép nội dung"
-                aria-label="Sao chép nội dung tin nhắn"
               >
-                {copied ? (
-                  <Check className="h-3.5 w-3.5 text-emerald-600" />
-                ) : (
-                  <Copy className="h-3.5 w-3.5" />
-                )}
+                {copied ? <Check className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
               </button>
-            )}
+            </div>
           </div>
 
-          {/* Text Content */}
-          {message.content && (
-            <div className="text-sm text-[#202123] break-words font-normal">
-              {renderFormattedContent(message.content)}
+          {/* User Message Editing Mode */}
+          {isUser && isEditingUser ? (
+            <div className="space-y-2 pt-1">
+              <textarea
+                value={editUserText}
+                onChange={(e) => setEditUserText(e.target.value)}
+                rows={3}
+                className="w-full rounded-xl border border-blue-400 bg-white p-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+              />
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handleSaveUserEdit}
+                  className="rounded-lg bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-700 transition"
+                >
+                  Cập nhật &amp; Gửi lại
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setIsEditingUser(false)}
+                  className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50 transition"
+                >
+                  Hủy
+                </button>
+              </div>
             </div>
+          ) : (
+            /* Regular Message Text */
+            message.content && (
+              <div className="text-sm text-[#202123] break-words font-normal">
+                {renderFormattedContent(message.content)}
+              </div>
+            )
           )}
 
           {/* Attachments Section */}
@@ -228,6 +348,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     key={att.id}
                     attachment={att}
                     onViewImage={onViewImage}
+                    onViewDocument={onViewDocument}
                     readOnly
                   />
                 ))}
@@ -250,10 +371,10 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                 </div>
               </div>
 
-              {/* Action Toolbar for AI Answer: COPY, SPEAK, REGENERATE, LIKE/DISLIKE */}
+              {/* Action Toolbar for AI Answer */}
               <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-blue-100">
                 <div className="flex items-center gap-1.5">
-                  {/* Dedicated Copy Button with text */}
+                  {/* Copy Button */}
                   <button
                     type="button"
                     onClick={handleCopyMessage}
@@ -297,7 +418,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     )}
                   </button>
 
-                  {/* Regenerate Button (if available) */}
+                  {/* Regenerate Button */}
                   {isLastAssistantMessage && onRegenerate && (
                     <button
                       type="button"
@@ -339,6 +460,29 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     <ThumbsDown className="h-3 w-3" />
                   </button>
                 </div>
+              </div>
+            </div>
+          )}
+
+          {/* Follow-up Suggestion Prompt Chips */}
+          {!isUser && message.suggestedFollowUps && message.suggestedFollowUps.length > 0 && onSelectFollowUp && (
+            <div className="pt-2">
+              <div className="flex items-center gap-1 text-[11px] font-semibold text-slate-400 mb-1.5">
+                <CornerDownRight className="h-3 w-3 text-blue-500" />
+                <span>Gợi ý câu hỏi tiếp theo:</span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {message.suggestedFollowUps.map((chip, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => onSelectFollowUp(chip)}
+                    className="flex items-center gap-1 rounded-xl border border-blue-200 bg-white hover:bg-blue-50 hover:border-blue-400 px-3 py-1.5 text-xs font-medium text-blue-700 shadow-2xs transition active:scale-95 text-left"
+                  >
+                    <Sparkles className="h-3 w-3 text-blue-500 shrink-0" />
+                    <span>{chip}</span>
+                  </button>
+                ))}
               </div>
             </div>
           )}

@@ -9,7 +9,7 @@ import {
   Code2,
   Bot
 } from 'lucide-react';
-import { ChatMessage } from '@/types/chat';
+import { ChatMessage, ChatAttachment } from '@/types/chat';
 import { ChatMessageItem } from './ChatMessageItem';
 
 interface ChatMessageListProps {
@@ -17,7 +17,10 @@ interface ChatMessageListProps {
   isGenerating?: boolean;
   onSelectSuggestion?: (text: string) => void;
   onViewImage?: (url: string, name: string) => void;
+  onViewDocument?: (attachment: ChatAttachment) => void;
   onRegenerate?: () => void;
+  onDeleteMessage?: (id: string) => void;
+  onEditUserMessage?: (id: string, newContent: string) => void;
 }
 
 export const ChatMessageList: React.FC<ChatMessageListProps> = ({
@@ -25,7 +28,10 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
   isGenerating = false,
   onSelectSuggestion,
   onViewImage,
+  onViewDocument,
   onRegenerate,
+  onDeleteMessage,
+  onEditUserMessage,
 }) => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -33,7 +39,6 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isGenerating]);
 
-  // Find index of the last assistant message
   const lastAssistantIndex = messages.map((m) => m.role).lastIndexOf('assistant');
 
   if (messages.length === 0) {
@@ -124,7 +129,11 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
             message={msg} 
             isLastAssistantMessage={idx === lastAssistantIndex}
             onViewImage={onViewImage}
+            onViewDocument={onViewDocument}
             onRegenerate={onRegenerate}
+            onDeleteMessage={onDeleteMessage}
+            onEditUserMessage={onEditUserMessage}
+            onSelectFollowUp={onSelectSuggestion}
           />
         ))}
 
@@ -139,7 +148,7 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '0ms' }} />
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '150ms' }} />
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '300ms' }} />
-                <span className="text-xs text-slate-400 ml-2 font-medium">Đang xử lý câu trả lời...</span>
+                <span className="text-xs text-slate-400 ml-2 font-medium">Đang phản hồi...</span>
               </div>
             </div>
           </div>
