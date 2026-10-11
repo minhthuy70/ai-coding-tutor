@@ -6,8 +6,6 @@ import {
   PanelLeftClose, 
   PanelLeftOpen, 
   Plus, 
-  Sparkles, 
-  Terminal,
   Edit3,
   Check,
   X,
@@ -15,8 +13,7 @@ import {
   Cpu,
   Moon,
   Sun,
-  Keyboard,
-  Sliders
+  Search
 } from 'lucide-react';
 import { ChatConversation, ChatMessage, ChatAttachment, ModelSettings } from '@/types/chat';
 import { ChatSidebar } from '@/components/chat/ChatSidebar';
@@ -26,6 +23,7 @@ import { ImageLightbox } from '@/components/chat/ImageLightbox';
 import { DocumentViewerModal } from '@/components/chat/DocumentViewerModal';
 import { ShortcutsModal } from '@/components/chat/ShortcutsModal';
 import { SettingsModal } from '@/components/chat/SettingsModal';
+import { ToastProvider, useToast } from '@/components/chat/ToastNotification';
 
 const LOCAL_STORAGE_KEY = 'ai_coding_tutor_chat_sessions_v2';
 const LOCAL_STORAGE_ACTIVE_KEY = 'ai_coding_tutor_active_chat_id_v2';
@@ -39,6 +37,15 @@ const AI_MODELS = [
 ];
 
 export default function HomePage() {
+  return (
+    <ToastProvider>
+      <HomePageInner />
+    </ToastProvider>
+  );
+}
+
+function HomePageInner() {
+  const { showToast, confirm } = useToast();
   const [conversations, setConversations] = useState<ChatConversation[]>(() => {
     if (typeof window !== 'undefined') {
       try {
@@ -87,7 +94,11 @@ export default function HomePage() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     if (typeof window !== 'undefined') {
       try {
-        return localStorage.getItem(LOCAL_STORAGE_THEME_KEY) === 'dark';
+        const saved = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
+        if (saved) return saved === 'dark';
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return true;
+        }
       } catch {}
     }
     return false;
@@ -111,7 +122,13 @@ export default function HomePage() {
   const [selectedModel, setSelectedModel] = useState(AI_MODELS[0]);
   const [isModelDropdownOpen, setIsModelDropdownOpen] = useState(false);
 
+  // In-chat message search
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   const generationTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const streamIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Active conversation getter
   const activeConversation = useMemo(() => {
@@ -135,10 +152,15 @@ export default function HomePage() {
     } catch {}
   }, [modelSettings]);
 
-  // Persist theme
+  // Persist theme & sync documentElement dark class
   useEffect(() => {
     try {
       localStorage.setItem(LOCAL_STORAGE_THEME_KEY, isDarkMode ? 'dark' : 'light');
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     } catch {}
   }, [isDarkMode]);
 
@@ -254,20 +276,24 @@ export default function HomePage() {
 
   // Clear all conversations
   const handleClearAll = useCallback(() => {
-    if (window.confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử các cuộc trò chuyện?')) {
-      const freshId = `conv-${Date.now()}`;
-      setConversations([
-        {
-          id: freshId,
-          title: 'Cuộc trò chuyện mới',
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          messages: [],
-        },
-      ]);
-      setActiveConversationId(freshId);
-    }
-  }, []);
+    confirm(
+      'Bạn có chắc chắn muốn xóa toàn bộ lịch sử các cuộc trò chuyện? Hành động này không thể hoàn tác.',
+      () => {
+        const freshId = `conv-${Date.now()}`;
+        setConversations([
+          {
+            id: freshId,
+            title: 'Cuộc trò chuyện mới',
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+            messages: [],
+          },
+        ]);
+        setActiveConversationId(freshId);
+        showToast({ type: 'success', title: 'Đã xóa tất cả', message: 'Lịch sử hội thoại đã được xóa sạch.' });
+      }
+    );
+  }, [confirm, showToast]);
 
   // Stop Generating
   const handleStopGenerating = useCallback(() => {
@@ -275,10 +301,24 @@ export default function HomePage() {
       clearTimeout(generationTimerRef.current);
       generationTimerRef.current = null;
     }
+    if (streamIntervalRef.current) {
+      clearInterval(streamIntervalRef.current);
+      streamIntervalRef.current = null;
+    }
+    // Finalize any streaming message
+    setConversations((prev) =>
+      prev.map((conv) => ({
+        ...conv,
+        messages: conv.messages.map((m) =>
+          m.isStreaming ? { ...m, isStreaming: false } : m
+        ),
+      }))
+    );
     setIsGenerating(false);
-  }, []);
+    showToast({ type: 'info', title: 'Đã dừng phản hồi', duration: 2000 });
+  }, [showToast]);
 
-  // Handle message sending
+  // Handle message sending with typewriter streaming effect
   const handleSendMessage = useCallback((text: string, attachments: ChatAttachment[]) => {
     const userMsg: ChatMessage = {
       id: `msg-user-${Date.now()}`,
@@ -288,18 +328,19 @@ export default function HomePage() {
       timestamp: new Date().toISOString(),
     };
 
+    let convTitle = '';
     setConversations((prev) =>
       prev.map((conv) => {
         if (conv.id === activeConversationId) {
           let newTitle = conv.title;
           if (conv.messages.length === 0 && conv.title === 'Cuộc trò chuyện mới') {
             if (text.trim()) {
-              newTitle = text.trim().slice(0, 32) + (text.trim().length > 32 ? '...' : '');
+              newTitle = text.trim().slice(0, 40) + (text.trim().length > 40 ? '...' : '');
             } else if (attachments.length > 0) {
               newTitle = `Đính kèm: ${attachments[0].name}`;
             }
           }
-
+          convTitle = newTitle;
           return {
             ...conv,
             title: newTitle,
@@ -313,7 +354,7 @@ export default function HomePage() {
 
     setIsGenerating(true);
 
-    // Prepare contextual follow-ups
+    // Contextual follow-ups
     const followUps: string[] = [];
     if (text.toLowerCase().includes('sort') || text.toLowerCase().includes('thuật toán')) {
       followUps.push('Đi sâu vào phân tích Time Complexity O(n log n)', 'Cách viết bằng ngôn ngữ C++', 'Tối ưu hóa bộ nhớ phụ');
@@ -323,45 +364,87 @@ export default function HomePage() {
       followUps.push('Giải thích chi tiết hơn về phần này', 'Đưa ra ví dụ minh họa bằng Python', 'Kiểm tra lỗi tiềm ẩn theo CWE');
     }
 
+    // Delay before AI starts "typing"
     generationTimerRef.current = setTimeout(() => {
-      const fileCountText = attachments.length > 0 
-        ? ` cùng **${attachments.length} tệp đính kèm** (${attachments.map(a => a.name).join(', ')})`
+      const fileCountText = attachments.length > 0
+        ? ` cùng **${attachments.length} tệp đính kèm** (${attachments.map((a) => a.name).join(', ')})`
         : '';
 
-      const sampleCodeDemo = text.toLowerCase().includes('sort') || text.toLowerCase().includes('thuật toán')
-        ? `\n\n### Đoạn mã tham khảo thuật toán:\n\`\`\`python\ndef quick_sort(arr):\n    """Thuật toán phân hoạch QuickSort - Độ phức tạp trung bình O(n log n)"""\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)\n\`\`\``
-        : '';
+      const sampleCodeDemo =
+        text.toLowerCase().includes('sort') || text.toLowerCase().includes('thuật toán')
+          ? `\n\n### Đoạn mã tham khảo thuật toán:\n\`\`\`python\ndef quick_sort(arr):\n    """Thuật toán phân hoạch QuickSort - O(n log n)"""\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)\n\`\`\``
+          : '';
 
-      const personaLabel = modelSettings.persona === 'socratic' 
-        ? 'Trợ giảng Socratic' 
-        : modelSettings.persona === 'algorithm_expert' 
-        ? 'Chuyên gia Giải thuật' 
-        : 'Rà soát Clean Code';
+      const personaLabel =
+        modelSettings.persona === 'socratic'
+          ? 'Trợ giảng Socratic'
+          : modelSettings.persona === 'algorithm_expert'
+          ? 'Chuyên gia Giải thuật'
+          : 'Rà soát Clean Code';
 
-      const assistantMsg: ChatMessage = {
-        id: `msg-ai-${Date.now()}`,
-        role: 'assistant',
-        content: `**[Mô hình: ${selectedModel.name} | Phong cách: ${personaLabel}]**\n\nHệ thống đã tiếp nhận dữ liệu văn bản${fileCountText}.${sampleCodeDemo}\n\n> Lưu ý: Tính năng LLM và RAG (ChromaDB) đang sẵn sàng kết nối. Yêu cầu của bạn đã được ghi nhận trong phiên làm việc.`,
-        timestamp: new Date().toISOString(),
-        isDemoNotice: true,
-        suggestedFollowUps: followUps,
-      };
+      const fullContent = `**[Mô hình: ${selectedModel.name} | Phong cách: ${personaLabel}]**\n\nHệ thống đã tiếp nhận dữ liệu văn bản${fileCountText}.${sampleCodeDemo}\n\n> Lưu ý: Tính năng LLM và RAG (ChromaDB) đang sẵn sàng kết nối. Yêu cầu của bạn đã được ghi nhận trong phiên làm việc.`;
 
+      const aiMsgId = `msg-ai-${Date.now()}`;
+
+      // Insert empty streaming placeholder
       setConversations((prev) =>
         prev.map((conv) => {
           if (conv.id === activeConversationId) {
             return {
               ...conv,
               updatedAt: new Date().toISOString(),
-              messages: [...conv.messages, assistantMsg],
+              messages: [
+                ...conv.messages,
+                {
+                  id: aiMsgId,
+                  role: 'assistant' as const,
+                  content: '',
+                  timestamp: new Date().toISOString(),
+                  isDemoNotice: true,
+                  isStreaming: true,
+                  suggestedFollowUps: followUps,
+                },
+              ],
             };
           }
           return conv;
         })
       );
-      setIsGenerating(false);
-      generationTimerRef.current = null;
-    }, 600);
+
+      // Typewriter character-by-character streaming
+      let charIdx = 0;
+      const CHUNK = 4; // characters per tick
+      const SPEED = 18; // ms per tick
+
+      if (streamIntervalRef.current) clearInterval(streamIntervalRef.current);
+
+      streamIntervalRef.current = setInterval(() => {
+        charIdx += CHUNK;
+        const slicedContent = fullContent.slice(0, charIdx);
+        const done = charIdx >= fullContent.length;
+
+        setConversations((prev) =>
+          prev.map((conv) => {
+            if (conv.id !== activeConversationId) return conv;
+            return {
+              ...conv,
+              messages: conv.messages.map((m) =>
+                m.id === aiMsgId
+                  ? { ...m, content: slicedContent, isStreaming: !done }
+                  : m
+              ),
+            };
+          })
+        );
+
+        if (done) {
+          clearInterval(streamIntervalRef.current!);
+          streamIntervalRef.current = null;
+          generationTimerRef.current = null;
+          setIsGenerating(false);
+        }
+      }, SPEED);
+    }, 400);
   }, [activeConversationId, selectedModel, modelSettings]);
 
   // Edit user message and regenerate from that point
@@ -392,41 +475,98 @@ export default function HomePage() {
     }, 50);
   }, [activeConversation, activeConversationId, handleSendMessage]);
 
-  // Regenerate Response
+  // Regenerate Response with typewriter effect
   const handleRegenerateResponse = useCallback(() => {
     if (!activeConversation || activeConversation.messages.length === 0) return;
-
     const lastUserMsg = [...activeConversation.messages].reverse().find((m) => m.role === 'user');
     if (!lastUserMsg) return;
 
+    showToast({ type: 'info', title: 'Đang tạo lại câu trả lời...', duration: 2500 });
     setIsGenerating(true);
 
     generationTimerRef.current = setTimeout(() => {
-      const regeneratedMsg: ChatMessage = {
-        id: `msg-ai-regen-${Date.now()}`,
-        role: 'assistant',
-        content: `**[Mô hình: ${selectedModel.name} | Tạo lại]**\n\nĐã tạo lại phản hồi mới cho yêu cầu của bạn.\n\n> Hệ thống phản hồi theo phong cách ${modelSettings.persona === 'socratic' ? 'Socratic' : 'Chuyên gia'}. Khi backend kích hoạt, nội dung sẽ được xử lý qua RAG.`,
-        timestamp: new Date().toISOString(),
-        isDemoNotice: true,
-        suggestedFollowUps: ['Đi sâu vào phân tích Time Complexity O(n log n)', 'Cách viết bằng ngôn ngữ C++', 'Tối ưu hóa bộ nhớ phụ'],
-      };
+      const fullContent = `**[Mô hình: ${selectedModel.name} | Tạo lại]**\n\nĐã tạo lại phản hồi mới cho yêu cầu của bạn.\n\n> Hệ thống phản hồi theo phong cách ${
+        modelSettings.persona === 'socratic' ? 'Socratic' : 'Chuyên gia'
+      }. Khi backend kích hoạt, nội dung sẽ được xử lý qua RAG.`;
+
+      const aiMsgId = `msg-ai-regen-${Date.now()}`;
 
       setConversations((prev) =>
         prev.map((conv) => {
-          if (conv.id === activeConversationId) {
-            return {
-              ...conv,
-              updatedAt: new Date().toISOString(),
-              messages: [...conv.messages, regeneratedMsg],
-            };
-          }
-          return conv;
+          if (conv.id !== activeConversationId) return conv;
+          return {
+            ...conv,
+            updatedAt: new Date().toISOString(),
+            messages: [
+              ...conv.messages,
+              {
+                id: aiMsgId,
+                role: 'assistant' as const,
+                content: '',
+                timestamp: new Date().toISOString(),
+                isDemoNotice: true,
+                isStreaming: true,
+                suggestedFollowUps: ['Đi sâu vào phân tích Time Complexity O(n log n)', 'Cách viết bằng ngôn ngữ C++', 'Tối ưu hóa bộ nhớ phụ'],
+              },
+            ],
+          };
         })
       );
-      setIsGenerating(false);
-      generationTimerRef.current = null;
-    }, 600);
-  }, [activeConversation, activeConversationId, selectedModel, modelSettings]);
+
+      let charIdx = 0;
+      const CHUNK = 4;
+      const SPEED = 18;
+      if (streamIntervalRef.current) clearInterval(streamIntervalRef.current);
+
+      streamIntervalRef.current = setInterval(() => {
+        charIdx += CHUNK;
+        const slicedContent = fullContent.slice(0, charIdx);
+        const done = charIdx >= fullContent.length;
+        setConversations((prev) =>
+          prev.map((conv) => {
+            if (conv.id !== activeConversationId) return conv;
+            return {
+              ...conv,
+              messages: conv.messages.map((m) =>
+                m.id === aiMsgId ? { ...m, content: slicedContent, isStreaming: !done } : m
+              ),
+            };
+          })
+        );
+        if (done) {
+          clearInterval(streamIntervalRef.current!);
+          streamIntervalRef.current = null;
+          generationTimerRef.current = null;
+          setIsGenerating(false);
+        }
+      }, SPEED);
+    }, 400);
+  }, [activeConversation, activeConversationId, selectedModel, modelSettings, showToast]);
+
+  // Filtered messages for in-chat search
+  const filteredMessages = useMemo(() => {
+    const msgs = activeConversation?.messages || [];
+    if (!searchQuery.trim()) return msgs;
+    const q = searchQuery.toLowerCase();
+    return msgs.filter((m) => m.content.toLowerCase().includes(q));
+  }, [activeConversation?.messages, searchQuery]);
+
+  // Open search with keyboard shortcut Ctrl+F inside chat
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.key.toLowerCase() === 'f') {
+        e.preventDefault();
+        setIsSearchOpen((prev) => !prev);
+        setTimeout(() => searchInputRef.current?.focus(), 50);
+      }
+      if (e.key === 'Escape' && isSearchOpen) {
+        setIsSearchOpen(false);
+        setSearchQuery('');
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isSearchOpen]);
 
   return (
     <div className={`flex h-screen w-full overflow-hidden transition-colors ${isDarkMode ? 'dark bg-slate-950 text-slate-100' : 'bg-white text-[#202123]'}`}>
@@ -614,6 +754,20 @@ export default function HomePage() {
               )}
             </div>
 
+            {/* In-chat search toggle */}
+            <button
+              type="button"
+              onClick={() => { setIsSearchOpen((v) => !v); setTimeout(() => searchInputRef.current?.focus(), 50); }}
+              className={`rounded-xl border p-2 transition ${
+                isSearchOpen
+                  ? 'border-blue-400 bg-blue-50 dark:bg-blue-950 text-blue-600'
+                  : 'border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700'
+              }`}
+              title="Tìm kiếm trong hội thoại (Ctrl + F)"
+            >
+              <Search className="h-4 w-4" />
+            </button>
+
             {/* New Chat quick button */}
             <button
               type="button"
@@ -627,10 +781,37 @@ export default function HomePage() {
           </div>
         </header>
 
+        {/* In-chat search bar */}
+        {isSearchOpen && (
+          <div className="flex items-center gap-2 px-4 py-2 border-b border-slate-200 dark:border-slate-700 bg-slate-50/90 dark:bg-slate-800/90 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
+            <Search className="h-3.5 w-3.5 text-slate-400 shrink-0" />
+            <input
+              ref={searchInputRef}
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Tìm kiếm tin nhắn trong cuộc hội thoại..."
+              className="flex-1 bg-transparent text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none"
+            />
+            {searchQuery && (
+              <span className="text-[11px] text-slate-400 font-medium">
+                {filteredMessages.length} kết quả
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }}
+              className="rounded-md p-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </div>
+        )}
+
         {/* Message Thread Area */}
         <ChatMessageList
-          messages={activeConversation?.messages || []}
-          isGenerating={isGenerating}
+          messages={searchQuery.trim() ? filteredMessages : (activeConversation?.messages || [])}
+          isGenerating={isGenerating && !searchQuery}
           onSelectSuggestion={(q) => handleSendMessage(q, [])}
           onViewImage={(url, name) => setLightboxData({ url, name })}
           onViewDocument={(att) => setViewingDocAttachment(att)}
@@ -646,6 +827,7 @@ export default function HomePage() {
           onViewDocument={(att) => setViewingDocAttachment(att)}
           isGenerating={isGenerating}
           onStopGenerating={handleStopGenerating}
+          disabled={isSearchOpen && !!searchQuery}
         />
       </div>
     </div>

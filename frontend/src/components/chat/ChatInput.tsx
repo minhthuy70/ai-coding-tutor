@@ -305,25 +305,25 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
       {/* Validation Errors Alert */}
       {validationErrors.length > 0 && (
-        <div className="mb-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 shadow-sm animate-in fade-in duration-200">
+        <div className="mb-3 rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/60 p-3 text-xs text-amber-800 dark:text-amber-200 shadow-sm animate-in fade-in duration-200">
           <div className="flex items-center justify-between pb-1 font-semibold">
             <div className="flex items-center gap-1.5">
-              <AlertCircle className="h-4 w-4 text-amber-600 shrink-0" />
+              <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0" />
               <span>Một số tệp không thể đính kèm:</span>
             </div>
             <button
               type="button"
               onClick={() => setValidationErrors([])}
-              className="rounded p-0.5 text-amber-600 hover:bg-amber-100 transition"
+              className="rounded p-0.5 text-amber-600 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900 transition"
               aria-label="Đóng thông báo lỗi tệp"
             >
               <X className="h-3.5 w-3.5" />
             </button>
           </div>
-          <ul className="list-disc pl-5 space-y-0.5 mt-1 text-slate-700">
+          <ul className="list-disc pl-5 space-y-0.5 mt-1 text-slate-700 dark:text-slate-300">
             {validationErrors.map((err, idx) => (
               <li key={idx}>
-                <span className="font-medium text-slate-900">{err.fileName}:</span> {err.reason}
+                <span className="font-medium text-slate-900 dark:text-slate-100">{err.fileName}:</span> {err.reason}
               </li>
             ))}
           </ul>
@@ -335,14 +335,14 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        className={`relative flex flex-col rounded-2xl border bg-white shadow-sm transition-all duration-200 ${
+        className={`relative flex flex-col rounded-2xl border bg-white dark:bg-slate-900 shadow-sm transition-all duration-200 ${
           isDragging 
-            ? 'border-blue-500 bg-blue-50/40 ring-4 ring-blue-500/15 scale-[1.005]' 
-            : 'border-slate-300 focus-within:border-blue-600 focus-within:ring-3 focus-within:ring-blue-600/15 focus-within:shadow-md'
+            ? 'border-blue-500 bg-blue-50/40 dark:bg-blue-950/40 ring-4 ring-blue-500/15 scale-[1.005]' 
+            : 'border-slate-300 dark:border-slate-700 focus-within:border-blue-600 focus-within:ring-3 focus-within:ring-blue-600/15 focus-within:shadow-md'
         }`}
       >
         {isDragging && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-blue-50/95 text-blue-700 text-sm font-semibold backdrop-blur-xs">
+          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-blue-50/95 dark:bg-slate-900/95 text-blue-700 dark:text-blue-400 text-sm font-semibold backdrop-blur-xs">
             <FileUp className="h-6 w-6 mr-2 animate-bounce" />
             Thả hình ảnh hoặc tài liệu vào đây...
           </div>
@@ -350,7 +350,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
         {/* Staged Attachments Preview Strip */}
         {stagedAttachments.length > 0 && (
-          <div className="flex flex-wrap gap-2.5 p-3 border-b border-slate-100 bg-slate-50/70 rounded-t-2xl max-h-48 overflow-y-auto">
+          <div className="flex flex-wrap gap-2.5 p-3 border-b border-slate-100 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/60 rounded-t-2xl max-h-48 overflow-y-auto">
             {stagedAttachments.map((att) => (
               <AttachmentBadge
                 key={att.id}
@@ -370,7 +370,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             type="button"
             onClick={() => fileInputRef.current?.click()}
             disabled={disabled}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-slate-500 hover:bg-slate-100 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition disabled:opacity-50"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-800 dark:hover:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition disabled:opacity-50"
             aria-label="Đính kèm hình ảnh hoặc tài liệu"
             title="Đính kèm tệp hoặc chụp ảnh màn hình rồi nhấn Ctrl + V"
           >
@@ -396,7 +396,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             disabled={disabled}
             placeholder="Hỏi về code, dán ảnh màn hình (Ctrl + V), hoặc kéo thả tệp... (Enter để gửi, Shift + Enter xuống dòng)"
             rows={1}
-            className="flex-1 resize-none bg-transparent py-2.5 px-1 text-sm text-[#202123] placeholder-slate-400 focus:outline-none leading-relaxed max-h-[180px]"
+            className="flex-1 resize-none bg-transparent py-2.5 px-1 text-sm text-[#202123] dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none leading-relaxed max-h-[180px]"
           />
 
           {/* Stop Generating Button or Send Button */}
@@ -417,7 +417,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
               className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition duration-150 ${
                 hasContent && !disabled && !isSubmitting
                   ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500/40'
-                  : 'bg-slate-100 text-slate-300 cursor-not-allowed'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-300 dark:text-slate-600 cursor-not-allowed'
               }`}
               aria-label="Gửi tin nhắn"
               title="Gửi tin nhắn"
@@ -434,17 +434,17 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
       {/* Helper & Word/Token Stats Row */}
       <div className="mt-2 flex items-center justify-between px-1 text-[11px] text-slate-400 select-none">
-        <span className="flex items-center gap-1 text-slate-500">
+        <span className="flex items-center gap-1 text-slate-500 dark:text-slate-400">
           <ClipboardCheck className="h-3.5 w-3.5 text-blue-500" />
-          <span>Mẹo: Chụp màn hình rồi nhấn <b>Ctrl + V</b> để tải ảnh lên tức thì</span>
+          <span>Mẹo: Chụp màn hình rồi nhấn <b className="font-bold text-slate-700 dark:text-slate-300">Ctrl + V</b> để tải ảnh lên tức thì</span>
         </span>
 
         {charCount > 0 ? (
-          <span className="font-mono text-slate-500 text-[10px]">
+          <span className="font-mono text-slate-500 dark:text-slate-400 text-[10px]">
             {wordCount} từ • {charCount} ký tự • ~{estimatedTokens} tokens
           </span>
         ) : (
-          <span>Phiên bản thử nghiệm UI</span>
+          <span className="text-slate-400 dark:text-slate-500">Phiên bản thử nghiệm UI</span>
         )}
       </div>
     </div>

@@ -76,16 +76,16 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-6 md:p-10 max-w-4xl mx-auto w-full text-center select-none">
         {/* Welcome Icon with radiant glow */}
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-tr from-blue-600 to-indigo-500 text-white mb-5 shadow-lg shadow-blue-500/20 ring-4 ring-blue-50">
+        <div className="relative flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-tr from-blue-600 to-indigo-500 text-white mb-5 shadow-lg shadow-blue-500/20 ring-4 ring-blue-50 dark:ring-blue-950/60">
           <Sparkles className="h-8 w-8 animate-pulse" />
         </div>
 
         {/* Heading */}
-        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">
+        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">
           Bạn muốn tìm hiểu điều gì hôm nay?
         </h1>
-        <p className="mt-2.5 text-sm text-slate-500 max-w-lg leading-relaxed">
-          Giao diện tiếp nhận đa phương thức thế hệ mới. Nhập câu hỏi, <span className="font-semibold text-blue-600">chụp màn hình dán ảnh (Ctrl + V)</span> hoặc kéo thả tài liệu để bắt đầu.
+        <p className="mt-2.5 text-sm text-slate-500 dark:text-slate-400 max-w-lg leading-relaxed">
+          Giao diện tiếp nhận đa phương thức thế hệ mới. Nhập câu hỏi, <span className="font-semibold text-blue-600 dark:text-blue-400">chụp màn hình dán ảnh (Ctrl + V)</span> hoặc kéo thả tài liệu để bắt đầu.
         </p>
 
         {/* Suggestion Cards Grid */}
@@ -97,18 +97,18 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
                 key={idx}
                 type="button"
                 onClick={() => onSelectSuggestion && onSelectSuggestion(item.query)}
-                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-4.5 text-left shadow-2xs transition-all duration-200 hover:border-blue-400 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-slate-700/80 bg-white dark:bg-slate-800/90 p-4.5 text-left shadow-2xs transition-all duration-200 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-slate-50/50 dark:hover:bg-slate-700/80 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               >
                 <div>
                   <div className="flex items-center gap-2.5 mb-2">
                     <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr ${item.gradient} text-white shadow-xs`}>
                       <Icon className="h-4 w-4" />
                     </div>
-                    <span className="text-xs font-bold text-slate-800 group-hover:text-blue-600 transition">
+                    <span className="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
                       {item.title}
                     </span>
                   </div>
-                  <p className="text-[12px] text-slate-500 line-clamp-2 leading-relaxed">
+                  <p className="text-[12px] text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -139,16 +139,16 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
 
         {/* Typing indicator */}
         {isGenerating && (
-          <div className="w-full py-4 px-4 md:px-6 bg-[#F9FAFB] border-y border-slate-100 animate-in fade-in duration-200">
+          <div className="w-full py-4 px-4 md:px-6 bg-[#F9FAFB] dark:bg-slate-900/70 border-y border-slate-100 dark:border-slate-800/80 animate-in fade-in duration-200">
             <div className="max-w-4xl mx-auto flex items-center gap-3">
               <div className="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white shrink-0 shadow-xs">
                 <Bot className="h-4 w-4" />
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-slate-200 shadow-2xs">
+              <div className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xs">
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '0ms' }} />
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '150ms' }} />
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" style={{ animationDelay: '300ms' }} />
-                <span className="text-xs text-slate-400 ml-2 font-medium">Đang phản hồi...</span>
+                <span className="text-xs text-slate-400 dark:text-slate-400 ml-2 font-medium">Đang phản hồi...</span>
               </div>
             </div>
           </div>

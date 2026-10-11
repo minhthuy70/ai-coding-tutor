@@ -118,6 +118,15 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
     hour: '2-digit',
     minute: '2-digit',
   });
+  const formattedFullDate = new Date(message.timestamp).toLocaleString('vi-VN', {
+    weekday: 'short',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  });
 
   // Rich markdown parser for assistant and user text
   const renderFormattedContent = (content: string) => {
@@ -163,22 +172,32 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
         );
       }
 
-      // Parse lines for headers, bullet lists, blockquotes
+      // Parse lines for headers, bullet lists, blockquotes, numbered lists
       const lines = block.split('\n');
       return (
         <div key={bIdx} className="space-y-1.5">
           {lines.map((line, lIdx) => {
             // Header 3
             if (line.startsWith('### ')) {
-              return <h3 key={lIdx} className="text-sm font-bold text-slate-900 mt-2">{line.slice(4)}</h3>;
+              return <h3 key={lIdx} className="text-sm font-bold text-slate-900 dark:text-slate-100 mt-2">{line.slice(4)}</h3>;
             }
             // Header 2
             if (line.startsWith('## ')) {
-              return <h2 key={lIdx} className="text-base font-bold text-slate-900 mt-2.5">{line.slice(3)}</h2>;
+              return <h2 key={lIdx} className="text-base font-bold text-slate-900 dark:text-slate-100 mt-2.5">{line.slice(3)}</h2>;
             }
             // Header 1
             if (line.startsWith('# ')) {
-              return <h1 key={lIdx} className="text-lg font-extrabold text-slate-900 mt-3">{line.slice(2)}</h1>;
+              return <h1 key={lIdx} className="text-lg font-extrabold text-slate-900 dark:text-slate-100 mt-3">{line.slice(2)}</h1>;
+            }
+            // Numbered list (1. 2. 3. ...)
+            const numberedMatch = line.match(/^(\d+)\. (.+)/);
+            if (numberedMatch) {
+              return (
+                <div key={lIdx} className="flex items-start gap-2 pl-2">
+                  <span className="text-blue-600 dark:text-blue-400 font-bold text-xs mt-px shrink-0">{numberedMatch[1]}.</span>
+                  <span>{formatInlineMarkdown(numberedMatch[2])}</span>
+                </div>
+              );
             }
             // Bullet list item
             if (line.startsWith('- ') || line.startsWith('* ')) {
@@ -192,10 +211,18 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
             // Blockquote
             if (line.startsWith('> ')) {
               return (
-                <blockquote key={lIdx} className="border-l-3 border-blue-500 pl-3 py-0.5 text-slate-600 italic bg-blue-50/30 rounded-r-lg">
+                <blockquote key={lIdx} className="border-l-3 border-blue-500 pl-3 py-0.5 text-slate-600 dark:text-slate-300 italic bg-blue-50/30 dark:bg-blue-950/40 rounded-r-lg">
                   {formatInlineMarkdown(line.slice(2))}
                 </blockquote>
               );
+            }
+            // Horizontal rule
+            if (line.trim() === '---' || line.trim() === '***') {
+              return <hr key={lIdx} className="my-2 border-t border-slate-200 dark:border-slate-800" />;
+            }
+            // Empty line becomes spacer
+            if (line.trim() === '') {
+              return <div key={lIdx} className="h-1" />;
             }
             // Normal paragraph
             return (
@@ -209,22 +236,29 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
     });
   };
 
-  // Inline formatting: bold **text**, inline code `code`
+  // Inline formatting: bold **text**, inline code `code`, italic _text_
   const formatInlineMarkdown = (text: string) => {
-    const parts = text.split(/(`[^`]+`|\*\*[^*]+\*\*)/g);
+    const parts = text.split(/(`[^`]+`|\*\*[^*]+\*\*|_[^_]+_)/g);
     return parts.map((part, idx) => {
       if (part.startsWith('`') && part.endsWith('`')) {
         return (
-          <code key={idx} className="rounded bg-slate-100 border border-slate-250 px-1 py-0.2 font-mono text-[12px] text-blue-700">
+          <code key={idx} className="rounded bg-slate-100 dark:bg-slate-800 border border-slate-250 dark:border-slate-700 px-1 py-0.2 font-mono text-[12px] text-blue-700 dark:text-blue-300">
             {part.slice(1, -1)}
           </code>
         );
       }
       if (part.startsWith('**') && part.endsWith('**')) {
         return (
-          <strong key={idx} className="font-semibold text-slate-900">
+          <strong key={idx} className="font-semibold text-slate-900 dark:text-slate-100">
             {part.slice(2, -2)}
           </strong>
+        );
+      }
+      if (part.startsWith('_') && part.endsWith('_') && part.length > 2) {
+        return (
+          <em key={idx} className="italic text-slate-700 dark:text-slate-300">
+            {part.slice(1, -1)}
+          </em>
         );
       }
       return part;
@@ -234,14 +268,14 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
   return (
     <div
       className={`group w-full py-5 px-4 md:px-6 transition-colors animate-in fade-in duration-200 ${
-        isUser ? 'bg-white' : 'bg-[#F9FAFB] border-y border-slate-100'
+        isUser ? 'bg-white dark:bg-slate-950' : 'bg-[#F9FAFB] dark:bg-slate-900/60 border-y border-slate-100 dark:border-slate-800/80'
       }`}
     >
       <div className="max-w-4xl mx-auto flex gap-4 items-start">
         {/* Avatar */}
         <div
           className={`h-8 w-8 rounded-full flex items-center justify-center shrink-0 text-white font-medium shadow-xs ${
-            isUser ? 'bg-slate-800 ring-2 ring-slate-200' : 'bg-blue-600 ring-2 ring-blue-100'
+            isUser ? 'bg-slate-800 dark:bg-slate-700 ring-2 ring-slate-200 dark:ring-slate-700' : 'bg-blue-600 ring-2 ring-blue-100 dark:ring-blue-950'
           }`}
           aria-hidden="true"
         >
@@ -253,10 +287,10 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
           {/* Header Row */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-xs font-bold text-slate-900">
+              <span className="text-xs font-bold text-slate-900 dark:text-slate-100">
                 {isUser ? 'Bạn' : 'Trợ lý AI (Chế độ Thử nghiệm)'}
               </span>
-              <span className="text-[11px] text-slate-400 flex items-center gap-1">
+              <span className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1" title={formattedFullDate}>
                 <Clock className="h-3 w-3" />
                 {formattedTime}
               </span>
@@ -271,7 +305,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     setEditUserText(message.content);
                     setIsEditingUser(true);
                   }}
-                  className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-blue-600 transition"
+                  className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition"
                   title="Chỉnh sửa câu hỏi này"
                 >
                   <Edit2 className="h-3.5 w-3.5" />
@@ -282,7 +316,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                 <button
                   type="button"
                   onClick={() => onDeleteMessage(message.id)}
-                  className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-rose-600 transition"
+                  className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-rose-600 dark:hover:text-rose-400 transition"
                   title="Xóa tin nhắn này"
                 >
                   <Trash2 className="h-3.5 w-3.5" />
@@ -292,10 +326,10 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
               <button
                 type="button"
                 onClick={handleCopyMessage}
-                className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-700 transition"
+                className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-700 dark:hover:text-slate-200 transition"
                 title="Sao chép nội dung"
               >
-                {copied ? <Check className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
+                {copied ? <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
               </button>
             </div>
           </div>
@@ -307,7 +341,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                 value={editUserText}
                 onChange={(e) => setEditUserText(e.target.value)}
                 rows={3}
-                className="w-full rounded-xl border border-blue-400 bg-white p-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full rounded-xl border border-blue-400 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               />
               <div className="flex items-center gap-2">
                 <button
@@ -320,7 +354,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                 <button
                   type="button"
                   onClick={() => setIsEditingUser(false)}
-                  className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50 transition"
+                  className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition"
                 >
                   Hủy
                 </button>
@@ -329,7 +363,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
           ) : (
             /* Regular Message Text */
             message.content && (
-              <div className="text-sm text-[#202123] break-words font-normal">
+              <div className="text-sm text-[#202123] dark:text-slate-200 break-words font-normal">
                 {renderFormattedContent(message.content)}
                 {message.isStreaming && (
                   <span className="inline-block w-2 h-4 ml-1 bg-blue-600 animate-pulse rounded-xs align-middle" />
@@ -341,8 +375,8 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
           {/* Attachments Section */}
           {message.attachments && message.attachments.length > 0 && (
             <div className="space-y-1.5 pt-1">
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-600">
-                <FileCheck className="h-3.5 w-3.5 text-blue-600" />
+              <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-400">
+                <FileCheck className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
                 <span>Tệp đính kèm ({message.attachments.length}):</span>
               </div>
               <div className="flex flex-wrap gap-2.5 pt-1">
@@ -361,37 +395,37 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
 
           {/* Assistant Action Bar & Demo Banner */}
           {!isUser && !message.isStreaming && (
-            <div className="rounded-xl border border-blue-200/80 bg-blue-50/70 p-3.5 text-xs text-blue-900 shadow-2xs space-y-2.5 mt-2">
+            <div className="rounded-xl border border-blue-200/80 dark:border-blue-900/50 bg-blue-50/70 dark:bg-blue-950/40 p-3.5 text-xs text-blue-900 dark:text-blue-200 shadow-2xs space-y-2.5 mt-2">
               <div className="flex items-start gap-2.5">
-                <Info className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
-                <div className="space-y-1 text-slate-700">
-                  <p className="font-semibold text-blue-900 text-xs">
+                <Info className="h-4 w-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <div className="space-y-1 text-slate-700 dark:text-slate-300">
+                  <p className="font-semibold text-blue-900 dark:text-blue-300 text-xs">
                     Tin nhắn đã được ghi nhận trong giao diện thử nghiệm.
                   </p>
-                  <p className="text-[12px] leading-relaxed text-slate-600">
+                  <p className="text-[12px] leading-relaxed text-slate-600 dark:text-slate-400">
                     Hệ thống hiện tại chưa tích hợp LLM hoặc RAG để phân tích nội dung hay đọc hiểu tài liệu. Sau khi nhóm hoàn tất thiết kế giao diện, tính năng kết nối mô hình ngôn ngữ lớn (Gemini / OpenAI / Ollama) và kho tri thức Vector DB sẽ được bổ sung độc lập ở giai đoạn tiếp theo.
                   </p>
                 </div>
               </div>
 
               {/* Action Toolbar for AI Answer */}
-              <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-blue-100">
+              <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-blue-100 dark:border-blue-900/50">
                 <div className="flex items-center gap-1.5">
                   {/* Copy Button */}
                   <button
                     type="button"
                     onClick={handleCopyMessage}
-                    className="flex items-center gap-1.5 rounded-lg border border-blue-200 bg-white px-2.5 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-50 hover:border-blue-300 shadow-2xs transition active:scale-95"
+                    className="flex items-center gap-1.5 rounded-lg border border-blue-200 dark:border-blue-800 bg-white dark:bg-slate-800 px-2.5 py-1 text-xs font-semibold text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-slate-700 shadow-2xs transition active:scale-95"
                     title="Sao chép toàn bộ câu trả lời của AI"
                   >
                     {copied ? (
                       <>
-                        <Check className="h-3.5 w-3.5 text-emerald-600" />
-                        <span className="text-emerald-700 font-bold">Đã sao chép!</span>
+                        <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                        <span className="text-emerald-700 dark:text-emerald-400 font-bold">Đã sao chép!</span>
                       </>
                     ) : (
                       <>
-                        <Copy className="h-3.5 w-3.5 text-blue-600" />
+                        <Copy className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
                         <span>Sao chép câu trả lời</span>
                       </>
                     )}
@@ -404,7 +438,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     className={`flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium transition ${
                       isSpeaking
                         ? 'bg-blue-600 text-white font-semibold'
-                        : 'text-slate-600 hover:bg-blue-100/60'
+                        : 'text-slate-600 dark:text-slate-400 hover:bg-blue-100/60 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200'
                     }`}
                     title={isSpeaking ? 'Dừng đọc' : 'Đọc to câu trả lời'}
                   >
@@ -415,7 +449,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                       </>
                     ) : (
                       <>
-                        <Volume2 className="h-3.5 w-3.5 text-slate-500" />
+                        <Volume2 className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400" />
                         <span className="hidden sm:inline">Đọc to</span>
                       </>
                     )}
@@ -426,10 +460,10 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     <button
                       type="button"
                       onClick={onRegenerate}
-                      className="flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium text-slate-600 hover:bg-blue-100/60 transition"
+                      className="flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-400 hover:bg-blue-100/60 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 transition"
                       title="Tạo lại câu trả lời mới"
                     >
-                      <RotateCcw className="h-3.5 w-3.5 text-slate-500" />
+                      <RotateCcw className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400" />
                       <span className="hidden sm:inline">Thử lại</span>
                     </button>
                   )}
@@ -437,14 +471,14 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
 
                 {/* Reaction buttons */}
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[11px] text-slate-400 hidden sm:inline">Đánh giá:</span>
+                  <span className="text-[11px] text-slate-400 dark:text-slate-500 hidden sm:inline">Đánh giá:</span>
                   <button
                     type="button"
                     onClick={() => handleReactionClick('like')}
                     className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium transition ${
                       reaction === 'like'
                         ? 'bg-blue-600 text-white shadow-2xs'
-                        : 'text-slate-500 hover:bg-blue-100/60 hover:text-slate-700'
+                        : 'text-slate-500 dark:text-slate-400 hover:bg-blue-100/60 dark:hover:bg-slate-800 hover:text-slate-700 dark:hover:text-slate-200'
                     }`}
                     title="Hữu ích"
                   >
@@ -456,7 +490,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium transition ${
                       reaction === 'dislike'
                         ? 'bg-rose-600 text-white shadow-2xs'
-                        : 'text-slate-500 hover:bg-rose-100/60 hover:text-slate-700'
+                        : 'text-slate-500 dark:text-slate-400 hover:bg-rose-100/60 dark:hover:bg-slate-800 hover:text-slate-700 dark:hover:text-slate-200'
                     }`}
                     title="Cần cải thiện"
                   >
@@ -470,7 +504,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
           {/* Follow-up Suggestion Prompt Chips */}
           {!isUser && message.suggestedFollowUps && message.suggestedFollowUps.length > 0 && onSelectFollowUp && (
             <div className="pt-2">
-              <div className="flex items-center gap-1 text-[11px] font-semibold text-slate-400 mb-1.5">
+              <div className="flex items-center gap-1 text-[11px] font-semibold text-slate-400 dark:text-slate-500 mb-1.5">
                 <CornerDownRight className="h-3 w-3 text-blue-500" />
                 <span>Gợi ý câu hỏi tiếp theo:</span>
               </div>
@@ -480,7 +514,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                     key={idx}
                     type="button"
                     onClick={() => onSelectFollowUp(chip)}
-                    className="flex items-center gap-1 rounded-xl border border-blue-200 bg-white hover:bg-blue-50 hover:border-blue-400 px-3 py-1.5 text-xs font-medium text-blue-700 shadow-2xs transition active:scale-95 text-left"
+                    className="flex items-center gap-1 rounded-xl border border-blue-200 dark:border-blue-800/80 bg-white dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-slate-700 hover:border-blue-400 dark:hover:border-blue-500 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300 shadow-2xs transition active:scale-95 text-left"
                   >
                     <Sparkles className="h-3 w-3 text-blue-500 shrink-0" />
                     <span>{chip}</span>

@@ -68,11 +68,11 @@ export const AttachmentBadge: React.FC<AttachmentBadgeProps> = ({
 
   if (isImage) {
     return (
-      <div className="group relative flex items-center gap-2.5 rounded-xl border border-slate-200/90 bg-white p-2 shadow-2xs hover:shadow-xs hover:border-blue-300 transition-all max-w-[240px]">
+      <div className="group relative flex items-center gap-2.5 rounded-xl border border-slate-200/90 dark:border-slate-700 bg-white dark:bg-slate-800 p-2 shadow-2xs hover:shadow-xs hover:border-blue-300 dark:hover:border-blue-500 transition-all max-w-[240px]">
         {/* Thumbnail with click-to-preview */}
         <div 
           onClick={() => onViewImage && attachment.previewUrl && onViewImage(attachment.previewUrl, attachment.name)}
-          className={`relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-slate-100 border border-slate-150 ${
+          className={`relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-150 dark:border-slate-700 ${
             onViewImage ? 'cursor-pointer' : ''
           }`}
           title="Nhấn để phóng to ảnh"
@@ -92,14 +92,14 @@ export const AttachmentBadge: React.FC<AttachmentBadgeProps> = ({
 
         {/* Info */}
         <div className="flex-1 min-w-0 pr-1">
-          <p className="truncate text-xs font-semibold text-slate-800" title={attachment.name}>
+          <p className="truncate text-xs font-semibold text-slate-800 dark:text-slate-100" title={attachment.name}>
             {attachment.name}
           </p>
           <div className="flex items-center gap-1.5 mt-0.5">
-            <span className="rounded bg-blue-50 px-1 py-0.2 text-[9px] font-medium text-blue-600">
+            <span className="rounded bg-blue-50 dark:bg-blue-950 px-1 py-0.2 text-[9px] font-medium text-blue-600 dark:text-blue-400">
               ẢNH
             </span>
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-slate-400 dark:text-slate-500">
               {formatFileSize(attachment.size)}
             </span>
           </div>
@@ -110,7 +110,7 @@ export const AttachmentBadge: React.FC<AttachmentBadgeProps> = ({
           <button
             type="button"
             onClick={() => onRemove(attachment.id)}
-            className="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-white shadow-sm hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 transition scale-90 hover:scale-100"
+            className="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 dark:bg-slate-600 text-white shadow-sm hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 transition scale-90 hover:scale-100"
             aria-label={`Xóa tệp ${attachment.name}`}
             title="Xóa tệp đính kèm này"
           >
@@ -124,19 +124,19 @@ export const AttachmentBadge: React.FC<AttachmentBadgeProps> = ({
   return (
     <div 
       onClick={() => onViewDocument && onViewDocument(attachment)}
-      className={`group relative flex items-center gap-2.5 rounded-xl border border-slate-200/90 bg-white px-3 py-2 shadow-2xs hover:shadow-xs hover:border-blue-300 transition-all max-w-[250px] ${
+      className={`group relative flex items-center gap-2.5 rounded-xl border border-slate-200/90 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 shadow-2xs hover:shadow-xs hover:border-blue-300 dark:hover:border-blue-500 transition-all max-w-[250px] ${
         onViewDocument ? 'cursor-pointer' : ''
       }`}
       title={onViewDocument ? 'Nhấn để xem nội dung tệp' : attachment.name}
     >
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-50 border border-slate-100 group-hover:bg-blue-50 transition">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-700 group-hover:bg-blue-50 dark:group-hover:bg-blue-950/60 transition">
         {getDocIcon()}
       </div>
       <div className="flex-1 min-w-0 pr-2">
-        <p className="truncate text-xs font-semibold text-slate-800 group-hover:text-blue-600 transition" title={attachment.name}>
+        <p className="truncate text-xs font-semibold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition" title={attachment.name}>
           {attachment.name}
         </p>
-        <p className="text-[11px] text-slate-400 mt-0.5">
+        <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">
           {formatFileSize(attachment.size)}
         </p>
       </div>
@@ -148,7 +148,7 @@ export const AttachmentBadge: React.FC<AttachmentBadgeProps> = ({
             e.stopPropagation();
             onRemove(attachment.id);
           }}
-          className="flex h-6 w-6 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 hover:text-rose-600 focus:outline-none focus:ring-1 focus:ring-slate-300 transition"
+          className="flex h-6 w-6 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-rose-600 focus:outline-none focus:ring-1 focus:ring-slate-300 transition"
           aria-label={`Xóa tệp ${attachment.name}`}
           title="Xóa tệp đính kèm này"
         >

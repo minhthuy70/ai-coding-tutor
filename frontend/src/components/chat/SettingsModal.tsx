@@ -60,31 +60,31 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-lg rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-          <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-            <Sliders className="h-4.5 w-4.5 text-blue-600" />
+        <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <div className="flex items-center gap-2 text-slate-900 dark:text-slate-100 font-bold text-sm">
+            <Sliders className="h-4.5 w-4.5 text-blue-600 dark:text-blue-400" />
             <span>Cài đặt &amp; Tùy chỉnh AI</span>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-700 transition"
+            className="rounded-lg p-1 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-700 dark:hover:text-slate-200 transition"
           >
             <X className="h-4 w-4" />
           </button>
         </div>
 
         {/* Theme Setting */}
-        <div className="flex items-center justify-between rounded-xl border border-slate-150 bg-slate-50/80 p-3">
+        <div className="flex items-center justify-between rounded-xl border border-slate-150 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/60 p-3">
           <div className="flex items-center gap-2.5">
-            {isDarkMode ? <Moon className="h-4 w-4 text-blue-600" /> : <Sun className="h-4 w-4 text-amber-500" />}
+            {isDarkMode ? <Moon className="h-4 w-4 text-blue-500" /> : <Sun className="h-4 w-4 text-amber-500" />}
             <div>
-              <p className="text-xs font-bold text-slate-800">Chế độ hiển thị</p>
-              <p className="text-[11px] text-slate-500">Chuyển đổi giao diện Sáng / Tối</p>
+              <p className="text-xs font-bold text-slate-800 dark:text-slate-200">Chế độ hiển thị</p>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400">Chuyển đổi giao diện Sáng / Tối</p>
             </div>
           </div>
           <button
@@ -92,8 +92,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             onClick={onToggleDarkMode}
             className={`flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${
               isDarkMode
-                ? 'border-slate-700 bg-slate-900 text-white'
-                : 'border-slate-200 bg-white text-slate-700'
+                ? 'border-blue-600 bg-blue-600/20 text-blue-400 hover:bg-blue-600/30'
+                : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
             {isDarkMode ? 'Đang bật Tối' : 'Đang bật Sáng'}
@@ -102,7 +102,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
         {/* Persona Presets */}
         <div className="space-y-2">
-          <label className="text-xs font-bold text-slate-800 block">
+          <label className="text-xs font-bold text-slate-800 dark:text-slate-200 block">
             Phong cách sư phạm của Trợ giảng AI:
           </label>
           <div className="space-y-2">
@@ -115,16 +115,16 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   onClick={() => onUpdateSettings({ ...settings, persona: p.id as any })}
                   className={`flex items-start gap-3 rounded-xl border p-3 cursor-pointer transition ${
                     isSelected
-                      ? 'border-blue-500 bg-blue-50/40 ring-1 ring-blue-500/20'
-                      : 'border-slate-200 hover:bg-slate-50'
+                      ? 'border-blue-500 bg-blue-50/40 dark:bg-blue-950/40 ring-1 ring-blue-500/20'
+                      : 'border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50'
                   }`}
                 >
-                  <div className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'}`}>
+                  <div className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}>
                     <Icon className="h-4 w-4" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs font-bold text-slate-900">{p.title}</p>
-                    <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">{p.desc}</p>
+                    <p className="text-xs font-bold text-slate-900 dark:text-slate-100">{p.title}</p>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">{p.desc}</p>
                   </div>
                 </div>
               );
@@ -133,10 +133,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         </div>
 
         {/* Temperature slider */}
-        <div className="space-y-2 rounded-xl border border-slate-150 p-3 bg-slate-50/50">
-          <div className="flex items-center justify-between text-xs font-semibold text-slate-800">
+        <div className="space-y-2 rounded-xl border border-slate-150 dark:border-slate-800 p-3 bg-slate-50/50 dark:bg-slate-800/40">
+          <div className="flex items-center justify-between text-xs font-semibold text-slate-800 dark:text-slate-200">
             <span>Độ sáng tạo (Temperature):</span>
-            <span className="font-mono text-blue-600 font-bold">{settings.temperature.toFixed(2)}</span>
+            <span className="font-mono text-blue-600 dark:text-blue-400 font-bold">{settings.temperature.toFixed(2)}</span>
           </div>
           <input
             type="range"
@@ -145,9 +145,9 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             step="0.05"
             value={settings.temperature}
             onChange={(e) => onUpdateSettings({ ...settings, temperature: parseFloat(e.target.value) })}
-            className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+            className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
           />
-          <div className="flex justify-between text-[10px] text-slate-400">
+          <div className="flex justify-between text-[10px] text-slate-400 dark:text-slate-500">
             <span>Chính xác &amp; Logic (0.0)</span>
             <span>Cân bằng (0.7)</span>
             <span>Sáng tạo (1.0)</span>
@@ -155,10 +155,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         </div>
 
         {/* Max Tokens slider */}
-        <div className="space-y-2 rounded-xl border border-slate-150 p-3 bg-slate-50/50">
-          <div className="flex items-center justify-between text-xs font-semibold text-slate-800">
+        <div className="space-y-2 rounded-xl border border-slate-150 dark:border-slate-800 p-3 bg-slate-50/50 dark:bg-slate-800/40">
+          <div className="flex items-center justify-between text-xs font-semibold text-slate-800 dark:text-slate-200">
             <span>Độ dài phản hồi tối đa (Max Tokens):</span>
-            <span className="font-mono text-blue-600 font-bold">{settings.maxTokens}</span>
+            <span className="font-mono text-blue-600 dark:text-blue-400 font-bold">{settings.maxTokens}</span>
           </div>
           <input
             type="range"
@@ -167,9 +167,9 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             step="256"
             value={settings.maxTokens}
             onChange={(e) => onUpdateSettings({ ...settings, maxTokens: parseInt(e.target.value) })}
-            className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+            className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
           />
-          <div className="flex justify-between text-[10px] text-slate-400">
+          <div className="flex justify-between text-[10px] text-slate-400 dark:text-slate-500">
             <span>Ngắn gọn (512)</span>
             <span>Mặc định (2048)</span>
             <span>Chi tiết (4096)</span>
@@ -177,7 +177,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="pt-2 border-t border-slate-100 flex justify-end">
+        <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end">
           <button
             type="button"
             onClick={onClose}
