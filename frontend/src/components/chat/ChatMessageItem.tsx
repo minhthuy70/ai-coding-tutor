@@ -18,7 +18,8 @@ import {
   Edit2,
   Trash2,
   CornerDownRight,
-  Sparkles
+  Sparkles,
+  Play
 } from 'lucide-react';
 import { ChatMessage, ChatAttachment } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
@@ -33,6 +34,7 @@ interface ChatMessageItemProps {
   onDeleteMessage?: (id: string) => void;
   onEditUserMessage?: (id: string, newContent: string) => void;
   onSelectFollowUp?: (query: string) => void;
+  onRunCode?: (code: string, language: string) => void;
 }
 
 export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({ 
@@ -45,6 +47,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
   onDeleteMessage,
   onEditUserMessage,
   onSelectFollowUp,
+  onRunCode,
 }) => {
   const [copied, setCopied] = useState(false);
   const [copiedCodeBlockIdx, setCopiedCodeBlockIdx] = useState<number | null>(null);
@@ -147,23 +150,34 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                 <Terminal className="h-3.5 w-3.5 text-blue-400" />
                 <span className="uppercase font-semibold tracking-wider text-[11px] text-slate-300">{language}</span>
               </div>
-              <button
-                type="button"
-                onClick={() => handleCopyCode(codeText, bIdx)}
-                className="flex items-center gap-1 rounded px-2 py-0.5 text-[11px] text-slate-400 hover:text-white hover:bg-slate-800 transition"
-              >
-                {copiedCodeBlockIdx === bIdx ? (
-                  <>
-                    <Check className="h-3 w-3 text-emerald-400" />
-                    <span className="text-emerald-400">Đã chép</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="h-3 w-3" />
-                    <span>Sao chép</span>
-                  </>
-                )}
-              </button>
+              <div className="flex items-center gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => onRunCode?.(codeText, language)}
+                  className="flex items-center gap-1 rounded bg-emerald-950/80 hover:bg-emerald-850 border border-emerald-800/80 px-2 py-0.5 text-[11px] text-emerald-400 hover:text-emerald-200 transition font-sans font-semibold"
+                  title="Mở Interactive Code Sandbox & Chạy thử mã nguồn này"
+                >
+                  <Play className="h-3 w-3 fill-emerald-400" />
+                  <span>Chạy code</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleCopyCode(codeText, bIdx)}
+                  className="flex items-center gap-1 rounded px-2 py-0.5 text-[11px] text-slate-400 hover:text-white hover:bg-slate-800 transition"
+                >
+                  {copiedCodeBlockIdx === bIdx ? (
+                    <>
+                      <Check className="h-3 w-3 text-emerald-400" />
+                      <span className="text-emerald-400">Đã chép</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-3 w-3" />
+                      <span>Sao chép</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
             <pre className="p-3.5 overflow-x-auto text-xs font-mono text-emerald-300 leading-relaxed">
               <code>{codeText}</code>
