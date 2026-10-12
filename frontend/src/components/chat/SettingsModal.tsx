@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { X, Sliders, Moon, Sun, Sparkles, Shield, Cpu, Zap } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { X, Sliders, Moon, Sun, Sparkles, Shield, Cpu, Zap, Volume2, VolumeX } from 'lucide-react';
 import { ModelSettings } from '@/types/chat';
+import { isSoundEnabled, setSoundEnabled } from '@/lib/soundEffects';
 
 interface SettingsModalProps {
   isOpen: boolean;
@@ -21,6 +22,13 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   isDarkMode,
   onToggleDarkMode,
 }) => {
+  const [soundOn, setSoundOn] = useState<boolean>(() => isSoundEnabled());
+
+  const handleToggleSound = () => {
+    const next = !soundOn;
+    setSoundOn(next);
+    setSoundEnabled(next);
+  };
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -97,6 +105,28 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             }`}
           >
             {isDarkMode ? 'Đang bật Tối' : 'Đang bật Sáng'}
+          </button>
+        </div>
+
+        {/* Sound Effects Setting */}
+        <div className="flex items-center justify-between rounded-xl border border-slate-150 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/60 p-3">
+          <div className="flex items-center gap-2.5">
+            {soundOn ? <Volume2 className="h-4 w-4 text-emerald-500" /> : <VolumeX className="h-4 w-4 text-slate-400" />}
+            <div>
+              <p className="text-xs font-bold text-slate-800 dark:text-slate-200">Hiệu ứng âm thanh</p>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400">Âm thanh phản hồi khi gửi tin và sinh code</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={handleToggleSound}
+            className={`flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${
+              soundOn
+                ? 'border-emerald-600 bg-emerald-600/20 text-emerald-500 dark:text-emerald-400 hover:bg-emerald-600/30'
+                : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 hover:bg-slate-50'
+            }`}
+          >
+            {soundOn ? 'Đang bật' : 'Đã tắt'}
           </button>
         </div>
 

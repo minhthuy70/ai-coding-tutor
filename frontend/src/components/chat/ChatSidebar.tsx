@@ -14,7 +14,12 @@ import {
   Check,
   Pin,
   Sliders,
-  Keyboard
+  Keyboard,
+  BarChart3,
+  Upload,
+  Printer,
+  FileCode,
+  FileText
 } from 'lucide-react';
 import { ChatConversation } from '@/types/chat';
 
@@ -29,6 +34,8 @@ interface ChatSidebarProps {
   onClearAll?: () => void;
   onOpenShortcuts: () => void;
   onOpenSettings: () => void;
+  onOpenAnalytics?: () => void;
+  onImportConversation?: (imported: ChatConversation) => void;
   isOpen: boolean;
   onToggle: () => void;
   isMobileOpen: boolean;
@@ -46,6 +53,8 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   onClearAll,
   onOpenShortcuts,
   onOpenSettings,
+  onOpenAnalytics,
+  onImportConversation,
   isOpen,
   onToggle,
   isMobileOpen,
@@ -54,7 +63,9 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editTitleInput, setEditTitleInput] = useState('');
+  const [exportingConv, setExportingConv] = useState<ChatConversation | null>(null);
   const editInputRef = useRef<HTMLInputElement>(null);
+  const importInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (editingId && editInputRef.current) {
@@ -101,10 +112,11 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
     c.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const handleExportChat = (conv: ChatConversation) => {
+  // Export handlers
+  const handleExportText = (conv: ChatConversation) => {
     const textContent = conv.messages
       .map((m) => {
-        const time = new Date(m.timestamp).toLocaleString();
+        const time = new Date(m.timestamp).toLocaleString('vi-VN');
         const role = m.role === 'user' ? 'BẠN' : 'TRỢ LÝ AI';
         const files = m.attachments?.length ? `\n[Tệp đính kèm: ${m.attachments.map(a => a.name).join(', ')}]` : '';
         return `[${time}] ${role}:\n${m.content}${files}\n----------------------------------------`;
@@ -118,6 +130,77 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
     a.download = `${conv.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_export.txt`;
     a.click();
     URL.revokeObjectURL(url);
+    setExportingConv(null);
+  };
+
+  const handleExportMarkdown = (conv: ChatConversation) => {
+    let md = `# ${conv.title}\n\n`;
+    md += `> **Nền tảng AI Coding Tutor & Auto-Grader**  \n`;
+    md += `> Ngày tạo: ${new Date(conv.createdAt).toLocaleString('vi-VN')}  \n`;
+    md += `> Lần cập nhật: ${new Date(conv.updatedAt).toLocaleString('vi-VN')}  \n\n---\n\n`;
+
+    conv.messages.forEach((m) => {
+      const role = m.role === 'user' ? '🧑 **Sinh viên (Bạn)**' : '🤖 **Trợ lý AI Coding Tutor**';
+      const time = new Date(m.timestamp).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+      md += `### ${role} *(${time})*\n\n${m.content}\n\n`;
+      if (m.attachments?.length) {
+        md += `**Tệp đính kèm:**\n`;
+        m.attachments.forEach(a => {
+          md += `- \`${a.name}\` (${(a.size / 1024).toFixed(1)} KB)\n`;
+        });
+        md += `\n`;
+      }
+      md += `---\n\n`;
+    });
+
+    const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${conv.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setExportingConv(null);
+  };
+
+  const handleExportJSON = (conv: ChatConversation) => {
+    const jsonStr = JSON.stringify(conv, null, 2);
+    const blob = new Blob([jsonStr], { type: 'application/json;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${conv.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_backup.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setExportingConv(null);
+  };
+
+  const handlePrint = () => {
+    window.print();
+    setExportingConv(null);
+  };
+
+  const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const parsed = JSON.parse(reader.result as string);
+        if (parsed && parsed.id && parsed.title && Array.isArray(parsed.messages)) {
+          if (onImportConversation) {
+            onImportConversation(parsed);
+          }
+        }
+      } catch (err) {
+        console.error('Lỗi tệp JSON:', err);
+      }
+    };
+    reader.readAsText(file);
+    if (importInputRef.current) {
+      importInputRef.current.value = '';
+    }
   };
 
   const sidebarContent = (
@@ -297,10 +380,10 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                           type="button"
                           onClick={(e) => {
                             e.stopPropagation();
-                            handleExportChat(conv);
+                            setExportingConv(conv);
                           }}
                           className="rounded p-1 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition"
-                          title="Xuất .txt"
+                          title="Tùy chọn xuất (Markdown, JSON, TXT, PDF)"
                         >
                           <Download className="h-3 w-3" />
                         </button>
@@ -327,8 +410,8 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
         )}
       </div>
 
-      {/* Bottom Footer Section: Settings & Shortcuts */}
-      <div className="p-3 border-t border-[#E5E7EB] dark:border-slate-800 bg-slate-100/60 dark:bg-slate-900/60 space-y-1.5">
+      {/* Bottom Footer Section: Settings, Shortcuts, Analytics, Import */}
+      <div className="p-3 border-t border-[#E5E7EB] dark:border-slate-800 bg-slate-100/60 dark:bg-slate-900/60 space-y-2">
         <div className="flex items-center justify-between px-1">
           <button
             type="button"
@@ -349,6 +432,41 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
             <Keyboard className="h-3.5 w-3.5" />
             <span>Phím tắt</span>
           </button>
+        </div>
+
+        <div className="flex items-center justify-between px-1 border-t border-slate-200/60 dark:border-slate-800/60 pt-1.5">
+          {onOpenAnalytics && (
+            <button
+              type="button"
+              onClick={onOpenAnalytics}
+              className="flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+              title="Xem thống kê hội thoại và ước lượng token"
+            >
+              <BarChart3 className="h-3.5 w-3.5 text-emerald-500" />
+              <span>Thống kê & Token</span>
+            </button>
+          )}
+
+          {onImportConversation && (
+            <>
+              <button
+                type="button"
+                onClick={() => importInputRef.current?.click()}
+                className="flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                title="Khôi phục cuộc trò chuyện từ tệp .json"
+              >
+                <Upload className="h-3.5 w-3.5" />
+                <span>Nạp .json</span>
+              </button>
+              <input
+                ref={importInputRef}
+                type="file"
+                accept=".json"
+                onChange={handleImportFile}
+                className="hidden"
+              />
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -384,6 +502,125 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
           {sidebarContent}
         </div>
       </aside>
+
+      {/* Export Options Modal */}
+      {exportingConv && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
+          onClick={() => setExportingConv(null)}
+        >
+          <div
+            className="w-full max-w-md rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-2xl space-y-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-2">
+                <Download className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                <h3 className="font-bold text-sm text-slate-900 dark:text-slate-100">
+                  Xuất cuộc trò chuyện: &ldquo;{exportingConv.title}&rdquo;
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setExportingConv(null)}
+                className="rounded-lg p-1 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              Lựa chọn định dạng xuất phù hợp với mục đích lưu trữ hoặc nộp báo cáo:
+            </p>
+
+            <div className="grid grid-cols-1 gap-2 text-xs">
+              <button
+                type="button"
+                onClick={() => handleExportMarkdown(exportingConv)}
+                className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-950/30 transition text-left group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-400">
+                    <FileCode className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      Tệp Markdown (.md)
+                    </div>
+                    <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                      Giữ nguyên tiêu đề, in đậm, danh sách và các khối mã nguồn
+                    </div>
+                  </div>
+                </div>
+                <Download className="h-4 w-4 text-slate-400 group-hover:text-blue-600" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleExportJSON(exportingConv)}
+                className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-purple-500 hover:bg-purple-50/50 dark:hover:bg-purple-950/30 transition text-left group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400">
+                    <Download className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-purple-600 dark:group-hover:text-purple-400">
+                      Tệp JSON Sao lưu (.json)
+                    </div>
+                    <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                      Đầy đủ cấu trúc tin nhắn để khôi phục hoặc chuyển đổi thiết bị
+                    </div>
+                  </div>
+                </div>
+                <Download className="h-4 w-4 text-slate-400 group-hover:text-purple-600" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleExportText(exportingConv)}
+                className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition text-left group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                    <FileText className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-slate-800 dark:group-hover:text-white">
+                      Văn bản thô (.txt)
+                    </div>
+                    <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                      Văn bản thuần túy có ghi rõ mốc thời gian từng tin nhắn
+                    </div>
+                  </div>
+                </div>
+                <Download className="h-4 w-4 text-slate-400 group-hover:text-slate-700" />
+              </button>
+
+              <button
+                type="button"
+                onClick={handlePrint}
+                className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:bg-emerald-50/50 dark:hover:bg-emerald-950/30 transition text-left group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400">
+                    <Printer className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                      In / Lưu thành PDF
+                    </div>
+                    <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                      Mở hộp thoại in của trình duyệt để lưu dạng PDF
+                    </div>
+                  </div>
+                </div>
+                <Printer className="h-4 w-4 text-slate-400 group-hover:text-emerald-600" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

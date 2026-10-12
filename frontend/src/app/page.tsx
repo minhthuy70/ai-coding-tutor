@@ -13,7 +13,9 @@ import {
   Cpu,
   Moon,
   Sun,
-  Search
+  Search,
+  BarChart3,
+  Sparkles
 } from 'lucide-react';
 import { ChatConversation, ChatMessage, ChatAttachment, ModelSettings } from '@/types/chat';
 import { ChatSidebar } from '@/components/chat/ChatSidebar';
@@ -23,6 +25,10 @@ import { ImageLightbox } from '@/components/chat/ImageLightbox';
 import { DocumentViewerModal } from '@/components/chat/DocumentViewerModal';
 import { ShortcutsModal } from '@/components/chat/ShortcutsModal';
 import { SettingsModal } from '@/components/chat/SettingsModal';
+import { CodeSandboxModal } from '@/components/chat/CodeSandboxModal';
+import { PromptTemplatesModal } from '@/components/chat/PromptTemplatesModal';
+import { AnalyticsModal } from '@/components/chat/AnalyticsModal';
+import { playSendSound, playCompleteSound } from '@/lib/soundEffects';
 import { ToastProvider, useToast } from '@/components/chat/ToastNotification';
 
 const LOCAL_STORAGE_KEY = 'ai_coding_tutor_chat_sessions_v2';
@@ -113,6 +119,14 @@ function HomePageInner() {
   const [viewingDocAttachment, setViewingDocAttachment] = useState<ChatAttachment | null>(null);
   const [isShortcutsOpen, setIsShortcutsOpen] = useState<boolean>(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
+
+  // Upgraded Modals state: Code Sandbox, Prompt Templates, Analytics
+  const [isSandboxOpen, setIsSandboxOpen] = useState<boolean>(false);
+  const [sandboxCode, setSandboxCode] = useState<string>('');
+  const [sandboxLang, setSandboxLang] = useState<string>('python');
+  const [isPromptTemplatesOpen, setIsPromptTemplatesOpen] = useState<boolean>(false);
+  const [isAnalyticsOpen, setIsAnalyticsOpen] = useState<boolean>(false);
+  const [injectedText, setInjectedText] = useState<string>('');
   
   // Header inline renaming state
   const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);
@@ -259,6 +273,35 @@ function HomePageInner() {
     }
   }, [activeConversationId]);
 
+  // Code Sandbox handler
+  const handleRunCode = useCallback((code: string, language: string) => {
+    setSandboxCode(code);
+    setSandboxLang(language);
+    setIsSandboxOpen(true);
+  }, []);
+
+  const handleAskAIAboutCode = useCallback((code: string, language: string) => {
+    const formatted = `Hãy phân tích và hướng dẫn giải thích giúp tôi đoạn mã ${language.toUpperCase()} này:\n\n\`\`\`${language}\n${code}\n\`\`\``;
+    setInjectedText(formatted);
+  }, []);
+
+  const handleSelectPromptTemplate = useCallback((promptText: string) => {
+    setInjectedText(promptText);
+  }, []);
+
+  const handleImportConversation = useCallback((imported: ChatConversation) => {
+    setConversations((prev) => {
+      const existing = prev.filter((c) => c.id !== imported.id);
+      return [imported, ...existing];
+    });
+    setActiveConversationId(imported.id);
+    showToast({
+      type: 'success',
+      title: 'Khôi phục thành công',
+      message: `Đã nạp cuộc trò chuyện: "${imported.title}"`,
+    });
+  }, [showToast]);
+
   // Delete an individual message
   const handleDeleteMessage = useCallback((messageId: string) => {
     setConversations((prev) =>
@@ -353,6 +396,8 @@ function HomePageInner() {
     );
 
     setIsGenerating(true);
+    playSendSound();
+    setInjectedText('');
 
     // Contextual follow-ups
     const followUps: string[] = [];
@@ -442,6 +487,7 @@ function HomePageInner() {
           streamIntervalRef.current = null;
           generationTimerRef.current = null;
           setIsGenerating(false);
+          playCompleteSound();
         }
       }, SPEED);
     }, 400);
@@ -599,6 +645,29 @@ function HomePageInner() {
         onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
       />
 
+      {/* Interactive Code Sandbox Modal */}
+      <CodeSandboxModal
+        isOpen={isSandboxOpen}
+        onClose={() => setIsSandboxOpen(false)}
+        initialCode={sandboxCode}
+        initialLanguage={sandboxLang}
+        onAskAIAboutCode={handleAskAIAboutCode}
+      />
+
+      {/* Socratic Prompt Templates Modal */}
+      <PromptTemplatesModal
+        isOpen={isPromptTemplatesOpen}
+        onClose={() => setIsPromptTemplatesOpen(false)}
+        onSelectPrompt={handleSelectPromptTemplate}
+      />
+
+      {/* Analytics & Token Usage Modal */}
+      <AnalyticsModal
+        isOpen={isAnalyticsOpen}
+        onClose={() => setIsAnalyticsOpen(false)}
+        conversations={conversations}
+      />
+
       {/* Left Sidebar */}
       <ChatSidebar
         conversations={conversations}
@@ -611,6 +680,8 @@ function HomePageInner() {
         onClearAll={handleClearAll}
         onOpenShortcuts={() => setIsShortcutsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
+        onOpenAnalytics={() => setIsAnalyticsOpen(true)}
+        onImportConversation={handleImportConversation}
         isOpen={isDesktopSidebarOpen}
         onToggle={() => setIsDesktopSidebarOpen((prev) => !prev)}
         isMobileOpen={isMobileSidebarOpen}
@@ -754,6 +825,26 @@ function HomePageInner() {
               )}
             </div>
 
+            {/* Prompt Templates quick trigger */}
+            <button
+              type="button"
+              onClick={() => setIsPromptTemplatesOpen(true)}
+              className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800 p-2 text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-700 transition"
+              title="Kho mẫu câu hỏi Socratic & Thuật toán"
+            >
+              <Sparkles className="h-4 w-4 text-amber-500" />
+            </button>
+
+            {/* Analytics & Token Usage button */}
+            <button
+              type="button"
+              onClick={() => setIsAnalyticsOpen(true)}
+              className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800 p-2 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-white dark:hover:bg-slate-700 transition"
+              title="Thống kê hoạt động & Token"
+            >
+              <BarChart3 className="h-4 w-4 text-emerald-500" />
+            </button>
+
             {/* In-chat search toggle */}
             <button
               type="button"
@@ -818,6 +909,7 @@ function HomePageInner() {
           onRegenerate={handleRegenerateResponse}
           onDeleteMessage={handleDeleteMessage}
           onEditUserMessage={handleEditUserMessage}
+          onRunCode={handleRunCode}
         />
 
         {/* Bottom Composer Box */}
@@ -828,6 +920,8 @@ function HomePageInner() {
           isGenerating={isGenerating}
           onStopGenerating={handleStopGenerating}
           disabled={isSearchOpen && !!searchQuery}
+          onOpenPromptTemplates={() => setIsPromptTemplatesOpen(true)}
+          externalInputText={injectedText}
         />
       </div>
     </div>

@@ -11,7 +11,10 @@ import {
   Sparkles,
   ClipboardCheck,
   CheckCircle2,
-  Square
+  Square,
+  Mic,
+  MicOff,
+  Lightbulb
 } from 'lucide-react';
 import { ChatAttachment, FileValidationError } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
@@ -23,6 +26,8 @@ interface ChatInputProps {
   isGenerating?: boolean;
   onStopGenerating?: () => void;
   disabled?: boolean;
+  onOpenPromptTemplates?: () => void;
+  externalInputText?: string;
 }
 
 const MAX_IMAGE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB
@@ -42,8 +47,12 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   isGenerating = false,
   onStopGenerating,
   disabled = false,
+  onOpenPromptTemplates,
+  externalInputText,
 }) => {
   const [inputText, setInputText] = useState('');
+  const [isListening, setIsListening] = useState(false);
+  const recognitionRef = useRef<any>(null);
   const [stagedAttachments, setStagedAttachments] = useState<ChatAttachment[]>([]);
   const [validationErrors, setValidationErrors] = useState<FileValidationError[]>([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -66,6 +75,89 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   useEffect(() => {
     adjustTextareaHeight();
   }, [inputText, adjustTextareaHeight]);
+
+  // Handle external text injection (from prompt templates or suggestions)
+  useEffect(() => {
+    if (externalInputText) {
+      setInputText(externalInputText);
+      if (textareaRef.current) {
+        textareaRef.current.focus();
+      }
+    }
+  }, [externalInputText]);
+
+  // Handle Speech-to-Text Recognition (Web Speech API)
+  const handleToggleListening = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      setValidationErrors((prev) => [
+        ...prev,
+        {
+          fileName: 'Trình nhận diện giọng nói',
+          reason: 'Trình duyệt hiện tại chưa hỗ trợ Web Speech API. Vui lòng sử dụng Google Chrome hoặc Microsoft Edge để nói trực tiếp.',
+        },
+      ]);
+      return;
+    }
+
+    if (isListening) {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop();
+        } catch {}
+      }
+      setIsListening(false);
+      return;
+    }
+
+    try {
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'vi-VN';
+      recognition.continuous = true;
+      recognition.interimResults = true;
+
+      recognition.onstart = () => {
+        setIsListening(true);
+      };
+
+      recognition.onresult = (event: any) => {
+        let currentTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          currentTranscript += event.results[i][0].transcript;
+        }
+        if (currentTranscript.trim()) {
+          setInputText((prev) => (prev ? `${prev} ${currentTranscript.trim()}` : currentTranscript.trim()));
+        }
+      };
+
+      recognition.onerror = (event: any) => {
+        console.warn('Speech Recognition error:', event);
+        setIsListening(false);
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
+      recognition.start();
+      recognitionRef.current = recognition;
+    } catch (e) {
+      setIsListening(false);
+    }
+  }, [isListening]);
+
+  // Clean up speech recognition on unmount
+  useEffect(() => {
+    return () => {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop();
+        } catch {}
+      }
+    };
+  }, []);
 
   // Clean up object URLs on unmount
   useEffect(() => {
@@ -238,6 +330,13 @@ export const ChatInput: React.FC<ChatInputProps> = ({
       return;
     }
 
+    if (isListening && recognitionRef.current) {
+      try {
+        recognitionRef.current.stop();
+      } catch {}
+      setIsListening(false);
+    }
+
     setIsSubmitting(true);
     onSendMessage(trimmed, stagedAttachments);
 
@@ -363,8 +462,21 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           </div>
         )}
 
+        {/* Listening Indicator overlay */}
+        {isListening && (
+          <div className="absolute top-3 right-14 z-20 flex items-center gap-2 rounded-full bg-rose-600 text-white px-3 py-1 text-xs font-semibold shadow-lg animate-pulse">
+            <span className="h-2 w-2 rounded-full bg-white animate-ping" />
+            <span>Đang nghe tiếng Việt...</span>
+            <div className="flex items-center gap-0.5 h-3">
+              <span className="w-0.5 h-2 bg-white animate-bounce" style={{ animationDelay: '0ms' }} />
+              <span className="w-0.5 h-3 bg-white animate-bounce" style={{ animationDelay: '150ms' }} />
+              <span className="w-0.5 h-1.5 bg-white animate-bounce" style={{ animationDelay: '300ms' }} />
+            </div>
+          </div>
+        )}
+
         {/* Textarea & Actions Row */}
-        <div className="flex items-end gap-2 p-3">
+        <div className="flex items-end gap-1.5 sm:gap-2 p-3">
           {/* File Picker Trigger */}
           <button
             type="button"
@@ -376,6 +488,41 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           >
             <Paperclip className="h-5 w-5" />
           </button>
+
+          {/* Voice Speech-to-Text Button */}
+          {isListening ? (
+            <button
+              type="button"
+              onClick={handleToggleListening}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-600 text-white shadow-md shadow-rose-600/30 ring-4 ring-rose-500/20 animate-pulse transition"
+              title="Dừng ghi âm giọng nói"
+            >
+              <MicOff className="h-5 w-5" />
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={handleToggleListening}
+              disabled={disabled}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-rose-600 dark:hover:text-rose-400 focus:outline-none focus:ring-2 focus:ring-rose-500/30 transition disabled:opacity-50"
+              title="Nhập bằng giọng nói (Microphone - Web Speech API Tiếng Việt)"
+            >
+              <Mic className="h-5 w-5" />
+            </button>
+          )}
+
+          {/* Socratic Prompt Templates Button */}
+          {onOpenPromptTemplates && (
+            <button
+              type="button"
+              onClick={onOpenPromptTemplates}
+              disabled={disabled}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-amber-500 dark:hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-500/30 transition disabled:opacity-50"
+              title="Kho mẫu câu hỏi Socratic & Thuật toán"
+            >
+              <Sparkles className="h-5 w-5 text-amber-500" />
+            </button>
+          )}
 
           <input
             ref={fileInputRef}

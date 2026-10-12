@@ -21,6 +21,7 @@ interface ChatMessageListProps {
   onRegenerate?: () => void;
   onDeleteMessage?: (id: string) => void;
   onEditUserMessage?: (id: string, newContent: string) => void;
+  onRunCode?: (code: string, language: string) => void;
 }
 
 export const ChatMessageList: React.FC<ChatMessageListProps> = ({
@@ -32,6 +33,7 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
   onRegenerate,
   onDeleteMessage,
   onEditUserMessage,
+  onRunCode,
 }) => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -134,6 +136,7 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
             onDeleteMessage={onDeleteMessage}
             onEditUserMessage={onEditUserMessage}
             onSelectFollowUp={onSelectSuggestion}
+            onRunCode={onRunCode}
           />
         ))}
 
