@@ -6,16 +6,20 @@ import {
   PanelLeftClose, 
   PanelLeftOpen, 
   Plus, 
-  Edit3,
-  Check,
-  X,
-  ChevronDown,
-  Cpu,
-  Moon,
-  Sun,
-  Search,
-  BarChart3,
-  Sparkles
+  Edit3, 
+  Check, 
+  X, 
+  ChevronDown, 
+  Cpu, 
+  Moon, 
+  Sun, 
+  Search, 
+  BarChart3, 
+  Sparkles,
+  Compass,
+  Trophy,
+  ShieldCheck,
+  Code2
 } from 'lucide-react';
 import { ChatConversation, ChatMessage, ChatAttachment, ModelSettings } from '@/types/chat';
 import { ChatSidebar } from '@/components/chat/ChatSidebar';
@@ -28,6 +32,9 @@ import { SettingsModal } from '@/components/chat/SettingsModal';
 import { CodeSandboxModal } from '@/components/chat/CodeSandboxModal';
 import { PromptTemplatesModal } from '@/components/chat/PromptTemplatesModal';
 import { AnalyticsModal } from '@/components/chat/AnalyticsModal';
+import { LearningRoadmapModal } from '@/components/chat/LearningRoadmapModal';
+import { ProblemSetModal, CodingProblem } from '@/components/chat/ProblemSetModal';
+import { CodeQualityModal } from '@/components/chat/CodeQualityModal';
 import { playSendSound, playCompleteSound } from '@/lib/soundEffects';
 import { ToastProvider, useToast } from '@/components/chat/ToastNotification';
 

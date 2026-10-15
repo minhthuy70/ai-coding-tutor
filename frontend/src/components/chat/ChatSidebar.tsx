@@ -19,7 +19,11 @@ import {
   Upload,
   Printer,
   FileCode,
-  FileText
+  FileText,
+  Compass,
+  Trophy,
+  ShieldCheck,
+  Code2
 } from 'lucide-react';
 import { ChatConversation } from '@/types/chat';
 
@@ -40,6 +44,10 @@ interface ChatSidebarProps {
   onToggle: () => void;
   isMobileOpen: boolean;
   onCloseMobile: () => void;
+  onOpenRoadmap?: () => void;
+  onOpenProblemSet?: () => void;
+  onOpenCodeQuality?: () => void;
+  onOpenSandbox?: () => void;
 }
 
 export const ChatSidebar: React.FC<ChatSidebarProps> = ({
@@ -59,6 +67,10 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   onToggle,
   isMobileOpen,
   onCloseMobile,
+  onOpenRoadmap,
+  onOpenProblemSet,
+  onOpenCodeQuality,
+  onOpenSandbox,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -250,6 +262,61 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
           <Plus className="h-4 w-4 transition-transform group-hover:rotate-90 duration-200" />
           <span>Cuộc trò chuyện mới</span>
         </button>
+      </div>
+
+      {/* Studio Learning & Practice Hub Tools */}
+      <div className="px-3 pb-2 space-y-1.5">
+        <div className="grid grid-cols-2 gap-1.5 text-xs font-bold">
+          {onOpenRoadmap && (
+            <button
+              type="button"
+              onClick={() => { onOpenRoadmap(); onCloseMobile(); }}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-blue-50/70 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200/60 dark:border-blue-800/60 transition shadow-2xs"
+              title="Lộ trình học tập & Cây kỹ năng"
+            >
+              <Compass className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+              <span className="truncate">Lộ trình</span>
+            </button>
+          )}
+
+          {onOpenProblemSet && (
+            <button
+              type="button"
+              onClick={() => { onOpenProblemSet(); onCloseMobile(); }}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-amber-50/70 hover:bg-amber-100 dark:bg-amber-950/40 dark:hover:bg-amber-900/60 text-amber-700 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800/60 transition shadow-2xs"
+              title="Đấu trường & Kho bài tập LeetCode"
+            >
+              <Trophy className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+              <span className="truncate">Kho bài tập</span>
+            </button>
+          )}
+        </div>
+
+        <div className="grid grid-cols-2 gap-1.5 text-xs font-bold">
+          {onOpenSandbox && (
+            <button
+              type="button"
+              onClick={() => { onOpenSandbox(); onCloseMobile(); }}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-emerald-50/70 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/60 transition shadow-2xs"
+              title="Mở Code Sandbox để chạy thử nghiệm"
+            >
+              <Code2 className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+              <span className="truncate">Sandbox</span>
+            </button>
+          )}
+
+          {onOpenCodeQuality && (
+            <button
+              type="button"
+              onClick={() => { onOpenCodeQuality(); onCloseMobile(); }}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-indigo-50/70 hover:bg-indigo-100 dark:bg-indigo-950/40 dark:hover:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800/60 transition shadow-2xs"
+              title="Đánh giá & Phân tích chất lượng mã nguồn"
+            >
+              <ShieldCheck className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
+              <span className="truncate">Đánh giá code</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Search Bar */}

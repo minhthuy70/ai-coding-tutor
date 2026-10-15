@@ -18,17 +18,13 @@ import {
   Code2,
   FileCode,
   Flame,
-  CheckCheck
+  CheckCheck,
+  ShieldCheck,
+  BookOpen,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { playCodeRunSound } from '@/lib/soundEffects';
-
-interface CodeSandboxModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  initialCode: string;
-  initialLanguage?: string;
-  onAskAIAboutCode?: (code: string, language: string) => void;
-}
 
 interface TestCase {
   id: number;
@@ -39,12 +35,28 @@ interface TestCase {
   actualOutput?: string;
 }
 
+interface CodeSandboxModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  initialCode: string;
+  initialLanguage?: string;
+  onAskAIAboutCode?: (code: string, language: string) => void;
+  problemTitle?: string;
+  problemDescription?: string;
+  initialTestCases?: TestCase[];
+  onOpenCodeQuality?: (code: string, language: string) => void;
+}
+
 export const CodeSandboxModal: React.FC<CodeSandboxModalProps> = ({
   isOpen,
   onClose,
   initialCode,
   initialLanguage = 'python',
   onAskAIAboutCode,
+  problemTitle,
+  problemDescription,
+  initialTestCases,
+  onOpenCodeQuality,
 }) => {
   const [code, setCode] = useState(initialCode);
   const [language, setLanguage] = useState(initialLanguage.toLowerCase());
@@ -57,6 +69,7 @@ export const CodeSandboxModal: React.FC<CodeSandboxModalProps> = ({
   const [memoryUsageMb, setMemoryUsageMb] = useState<number | null>(null);
   const [copied, setCopied] = useState(false);
   const [bigOEstimate, setBigOEstimate] = useState<string | null>(null);
+  const [showProblemDesc, setShowProblemDesc] = useState(true);
 
   // Test cases state
   const [testCases, setTestCases] = useState<TestCase[]>([
@@ -76,8 +89,14 @@ export const CodeSandboxModal: React.FC<CodeSandboxModalProps> = ({
       setExecutionTimeMs(null);
       setMemoryUsageMb(null);
       setBigOEstimate(null);
+      if (initialTestCases && initialTestCases.length > 0) {
+        setTestCases(initialTestCases);
+      }
+      if (problemTitle) {
+        setShowProblemDesc(true);
+      }
     }
-  }, [isOpen, initialCode, initialLanguage]);
+  }, [isOpen, initialCode, initialLanguage, initialTestCases, problemTitle]);
 
   // Keyboard shortcut: Ctrl + Enter to run code, Escape to close
   useEffect(() => {
@@ -388,6 +407,37 @@ Thực thi thành công đoạn mã.`);
               <Download className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Tải về</span>
             </button>
+
+            {/* Code Quality Check Button */}
+            {onOpenCodeQuality && (
+              <button
+                type="button"
+                onClick={() => onOpenCodeQuality(code, language)}
+                className="flex items-center gap-1 rounded-lg border border-indigo-300 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 px-2.5 py-1.5 font-bold transition"
+                title="Kiểm tra chuẩn PEP 8, Code Smell & Hiệu năng"
+              >
+                <ShieldCheck className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
+                <span className="hidden sm:inline">Chất lượng mã</span>
+              </button>
+            )}
+
+            {/* Toggle Problem Description Button */}
+            {problemTitle && (
+              <button
+                type="button"
+                onClick={() => setShowProblemDesc(!showProblemDesc)}
+                className={`flex items-center gap-1 rounded-lg border px-2.5 py-1.5 font-bold transition ${
+                  showProblemDesc
+                    ? 'border-amber-400 bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300'
+                    : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                }`}
+                title="Bật/Tắt đề bài bài tập"
+              >
+                <BookOpen className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
+                <span className="hidden sm:inline">Đề bài</span>
+                {showProblemDesc ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+              </button>
+            )}
           </div>
 
           {/* Ask AI About Code */}
@@ -410,6 +460,24 @@ Thực thi thành công đoạn mã.`);
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-slate-800 overflow-hidden">
           {/* Left Column: Code Editor */}
           <div className="flex flex-col h-full overflow-hidden bg-slate-900 text-slate-100">
+            {/* Optional Problem Description Panel */}
+            {problemTitle && showProblemDesc && (
+              <div className="p-3.5 bg-slate-950/90 border-b border-slate-800 text-xs text-slate-300 max-h-40 overflow-y-auto space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-extrabold text-amber-400 text-xs flex items-center gap-1.5">
+                    <BookOpen className="h-3.5 w-3.5" />
+                    {problemTitle}
+                  </span>
+                  <span className="text-[10px] text-slate-500 font-mono">Đề bài kèm theo</span>
+                </div>
+                {problemDescription && (
+                  <p className="text-[11px] text-slate-300 whitespace-pre-line leading-relaxed">
+                    {problemDescription}
+                  </p>
+                )}
+              </div>
+            )}
+
             <div className="flex items-center justify-between px-3.5 py-2 bg-slate-950 text-slate-400 text-xs font-mono border-b border-slate-800">
               <div className="flex items-center gap-1.5">
                 <Code2 className="h-4 w-4 text-blue-400" />
