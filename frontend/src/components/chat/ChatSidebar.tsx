@@ -204,18 +204,23 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   };
 
   const sidebarContent = (
-    <div className="flex flex-col h-full bg-[#F7F7F8] dark:bg-slate-950 border-r border-[#E5E7EB] dark:border-slate-800 text-[#202123] dark:text-slate-100 transition-colors">
-      {/* Top Header */}
-      <div className="p-3.5 border-b border-[#E5E7EB] dark:border-slate-800 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-xs">
+    <div className="flex flex-col h-full bg-[#F4F4F6] dark:bg-[#090d16] text-slate-900 dark:text-slate-100 transition-colors duration-300">
+      {/* Top Header — gradient accent */}
+      <div className="relative px-4 py-3.5 border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-between overflow-hidden">
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-indigo-600/3 to-transparent dark:from-blue-600/10 dark:via-indigo-600/6 pointer-events-none" />
+
+        <div className="relative flex items-center gap-2.5">
+          {/* Animated logo */}
+          <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25">
             <Terminal className="h-4.5 w-4.5" />
+            <span className="absolute inset-0 rounded-xl bg-white/10 opacity-0 hover:opacity-100 transition-opacity" />
           </div>
           <div className="flex flex-col">
             <span className="font-extrabold text-sm tracking-tight text-slate-900 dark:text-slate-100 leading-tight">
               AI Coding Tutor
             </span>
-            <span className="text-[10px] text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider">
+            <span className="text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Multimodal Studio
             </span>
           </div>
@@ -225,7 +230,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
         <button
           type="button"
           onClick={onCloseMobile}
-          className="md:hidden rounded-lg p-1.5 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none transition"
+          className="relative md:hidden rounded-lg p-1.5 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none transition"
           aria-label="Đóng thanh bên"
         >
           <X className="h-5 w-5" />
@@ -233,16 +238,16 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
       </div>
 
       {/* New Chat Button */}
-      <div className="p-3">
+      <div className="p-3 pb-2">
         <button
           type="button"
           onClick={() => {
             onNewConversation();
             onCloseMobile();
           }}
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 text-sm font-bold text-slate-700 dark:text-slate-200 shadow-2xs hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+          className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-3 py-2.5 text-sm font-bold text-white shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/30 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all duration-200"
         >
-          <Plus className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+          <Plus className="h-4 w-4 transition-transform group-hover:rotate-90 duration-200" />
           <span>Cuộc trò chuyện mới</span>
         </button>
       </div>
@@ -251,27 +256,27 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
       {conversations.length > 1 && (
         <div className="px-3 pb-2">
           <div className="relative flex items-center">
-            <Search className="absolute left-2.5 h-3.5 w-3.5 text-slate-400 dark:text-slate-500" />
+            <Search className="absolute left-3 h-3.5 w-3.5 text-slate-400 dark:text-slate-500" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Tìm kiếm..."
-              className="w-full rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pl-8 pr-2.5 py-1.5 text-xs text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition"
+              placeholder="Tìm kiếm cuộc trò chuyện..."
+              className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 pl-9 pr-3 py-2 text-xs text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/15 transition-all"
             />
           </div>
         </div>
       )}
 
       {/* Recent Chats List */}
-      <div className="flex-1 overflow-y-auto px-2 py-1 space-y-1">
-        <div className="flex items-center justify-between px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
-          <span>Gần đây ({filteredConversations.length})</span>
+      <div className="flex-1 overflow-y-auto px-2 py-1 space-y-0.5">
+        <div className="flex items-center justify-between px-3 py-2 text-[10.5px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600">
+          <span>Gần đây · {filteredConversations.length}</span>
           {conversations.length > 1 && onClearAll && (
             <button
               type="button"
               onClick={onClearAll}
-              className="text-[10px] text-slate-400 dark:text-slate-500 hover:text-rose-600 dark:hover:text-rose-400 transition"
+              className="text-[10px] text-slate-400 dark:text-slate-600 hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
               title="Xóa tất cả"
             >
               Xóa tất cả
@@ -291,10 +296,10 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
             return (
               <div
                 key={conv.id}
-                className={`group relative flex items-center justify-between rounded-xl px-2.5 py-2 text-xs font-medium transition cursor-pointer ${
+                className={`group relative flex items-center justify-between rounded-xl px-2.5 py-2.5 text-xs font-medium transition-all duration-150 cursor-pointer ${
                   isActive
-                    ? 'bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 shadow-2xs border border-slate-200 dark:border-slate-800 font-semibold'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-900/60 hover:text-slate-900 dark:hover:text-slate-200'
+                    ? 'bg-white dark:bg-slate-800/80 text-blue-700 dark:text-blue-400 shadow-sm border border-blue-200/60 dark:border-blue-800/40 font-semibold'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-white/70 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200 border border-transparent'
                 }`}
                 onClick={() => {
                   if (!isEditing) {
@@ -410,40 +415,42 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
         )}
       </div>
 
-      {/* Bottom Footer Section: Settings, Shortcuts, Analytics, Import */}
-      <div className="p-3 border-t border-[#E5E7EB] dark:border-slate-800 bg-slate-100/60 dark:bg-slate-900/60 space-y-2">
-        <div className="flex items-center justify-between px-1">
+      {/* Bottom Footer Section */}
+      <div className="p-3 border-t border-slate-200/80 dark:border-slate-800 bg-gradient-to-b from-transparent to-slate-100/80 dark:to-slate-900/60 space-y-1">
+        {/* Row 1: Settings + Shortcuts */}
+        <div className="grid grid-cols-2 gap-1">
           <button
             type="button"
             onClick={onOpenSettings}
-            className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition"
+            className="flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-sm transition-all border border-transparent hover:border-slate-200 dark:hover:border-slate-700"
             title="Cài đặt thông số AI và giao diện"
           >
-            <Sliders className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
+            <Sliders className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
             <span>Cài đặt AI</span>
           </button>
 
           <button
             type="button"
             onClick={onOpenShortcuts}
-            className="flex items-center gap-1 rounded-lg px-2 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-800 hover:text-slate-800 dark:hover:text-slate-200 transition"
+            className="flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-800 hover:text-slate-800 dark:hover:text-slate-200 hover:shadow-sm transition-all border border-transparent hover:border-slate-200 dark:hover:border-slate-700"
             title="Xem danh sách phím tắt"
           >
-            <Keyboard className="h-3.5 w-3.5" />
+            <Keyboard className="h-3.5 w-3.5 shrink-0" />
             <span>Phím tắt</span>
           </button>
         </div>
 
-        <div className="flex items-center justify-between px-1 border-t border-slate-200/60 dark:border-slate-800/60 pt-1.5">
+        {/* Row 2: Analytics + Import */}
+        <div className="grid grid-cols-2 gap-1 pt-1 border-t border-slate-200/50 dark:border-slate-800/50">
           {onOpenAnalytics && (
             <button
               type="button"
               onClick={onOpenAnalytics}
-              className="flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+              className="flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-sm transition-all border border-transparent hover:border-slate-200 dark:hover:border-slate-700"
               title="Xem thống kê hội thoại và ước lượng token"
             >
-              <BarChart3 className="h-3.5 w-3.5 text-emerald-500" />
-              <span>Thống kê & Token</span>
+              <BarChart3 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+              <span className="truncate">Thống kê</span>
             </button>
           )}
 
@@ -452,11 +459,11 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
               <button
                 type="button"
                 onClick={() => importInputRef.current?.click()}
-                className="flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                className="flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-sm transition-all border border-transparent hover:border-slate-200 dark:hover:border-slate-700"
                 title="Khôi phục cuộc trò chuyện từ tệp .json"
               >
-                <Upload className="h-3.5 w-3.5" />
-                <span>Nạp .json</span>
+                <Upload className="h-3.5 w-3.5 shrink-0" />
+                <span>Nạp JSON</span>
               </button>
               <input
                 ref={importInputRef}
@@ -468,6 +475,11 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
             </>
           )}
         </div>
+
+        {/* Version badge */}
+        <p className="text-center text-[10px] text-slate-400 dark:text-slate-600 pt-1 font-medium">
+          AI Coding Tutor · v2.0 · Demo UI
+        </p>
       </div>
     </div>
   );
@@ -477,7 +489,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
       {/* Mobile Drawer Overlay */}
       {isMobileOpen && (
         <div
-          className="fixed inset-0 z-40 bg-slate-900/50 backdrop-blur-xs md:hidden animate-in fade-in duration-200"
+          className="fixed inset-0 z-40 modal-backdrop md:hidden animate-fade-in"
           onClick={onCloseMobile}
           aria-hidden="true"
         />
@@ -485,7 +497,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-72 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-y-0 left-0 z-50 w-72 transform transition-transform duration-300 ease-in-out md:hidden shadow-2xl ${
           isMobileOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -494,7 +506,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
 
       {/* Desktop Sidebar */}
       <aside
-        className={`hidden md:flex flex-col shrink-0 border-r border-[#E5E7EB] dark:border-slate-800 transition-all duration-300 ease-in-out ${
+        className={`hidden md:flex flex-col shrink-0 border-r border-slate-200/80 dark:border-slate-800 transition-all duration-300 ease-in-out ${
           isOpen ? 'w-64' : 'w-0 overflow-hidden border-r-0'
         }`}
       >

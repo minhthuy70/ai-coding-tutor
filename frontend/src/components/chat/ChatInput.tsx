@@ -434,16 +434,17 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        className={`relative flex flex-col rounded-2xl border bg-white dark:bg-slate-900 shadow-sm transition-all duration-200 ${
+        className={`relative flex flex-col rounded-2xl border bg-white dark:bg-slate-900 transition-all duration-200 ${
           isDragging 
-            ? 'border-blue-500 bg-blue-50/40 dark:bg-blue-950/40 ring-4 ring-blue-500/15 scale-[1.005]' 
-            : 'border-slate-300 dark:border-slate-700 focus-within:border-blue-600 focus-within:ring-3 focus-within:ring-blue-600/15 focus-within:shadow-md'
+            ? 'border-blue-500 bg-blue-50/30 dark:bg-blue-950/30 ring-4 ring-blue-500/20 scale-[1.005] shadow-lg shadow-blue-500/10' 
+            : 'border-slate-200 dark:border-slate-700 shadow-sm focus-within:border-blue-500 focus-within:ring-3 focus-within:ring-blue-500/15 focus-within:shadow-md dark:focus-within:border-blue-600 dark:focus-within:ring-blue-600/15'
         }`}
       >
         {isDragging && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-2xl bg-blue-50/95 dark:bg-slate-900/95 text-blue-700 dark:text-blue-400 text-sm font-semibold backdrop-blur-xs">
-            <FileUp className="h-6 w-6 mr-2 animate-bounce" />
-            Thả hình ảnh hoặc tài liệu vào đây...
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-2xl bg-blue-50/95 dark:bg-slate-900/95 text-blue-700 dark:text-blue-400 backdrop-blur-sm">
+            <FileUp className="h-10 w-10 mb-3 animate-bounce text-blue-500" />
+            <p className="text-sm font-bold">Thả tệp để đính kèm</p>
+            <p className="text-xs text-blue-500 dark:text-blue-400 mt-1">Hình ảnh, PDF, code...</p>
           </div>
         )}
 
@@ -464,13 +465,16 @@ export const ChatInput: React.FC<ChatInputProps> = ({
 
         {/* Listening Indicator overlay */}
         {isListening && (
-          <div className="absolute top-3 right-14 z-20 flex items-center gap-2 rounded-full bg-rose-600 text-white px-3 py-1 text-xs font-semibold shadow-lg animate-pulse">
-            <span className="h-2 w-2 rounded-full bg-white animate-ping" />
-            <span>Đang nghe tiếng Việt...</span>
-            <div className="flex items-center gap-0.5 h-3">
-              <span className="w-0.5 h-2 bg-white animate-bounce" style={{ animationDelay: '0ms' }} />
-              <span className="w-0.5 h-3 bg-white animate-bounce" style={{ animationDelay: '150ms' }} />
-              <span className="w-0.5 h-1.5 bg-white animate-bounce" style={{ animationDelay: '300ms' }} />
+          <div className="absolute top-2.5 right-2.5 z-20 flex items-center gap-2 rounded-full bg-rose-600 text-white px-3 py-1.5 text-xs font-bold shadow-lg shadow-rose-600/30 ring-4 ring-rose-500/20">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+            </span>
+            <span>Đang nghe...</span>
+            <div className="flex items-center gap-0.5 h-4">
+              {[2, 4, 3, 5, 2].map((h, i) => (
+                <span key={i} className="w-0.5 bg-white/80 rounded-full animate-bounce" style={{ height: `${h * 2}px`, animationDelay: `${i * 80}ms` }} />
+              ))}
             </div>
           </div>
         )}
@@ -541,9 +545,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             onKeyDown={handleKeyDown}
             onPaste={handlePaste}
             disabled={disabled}
-            placeholder="Hỏi về code, dán ảnh màn hình (Ctrl + V), hoặc kéo thả tệp... (Enter để gửi, Shift + Enter xuống dòng)"
+            placeholder="Hỏi về code, dán ảnh màn hình (Ctrl+V), hoặc kéo thả tệp..."
             rows={1}
-            className="flex-1 resize-none bg-transparent py-2.5 px-1 text-sm text-[#202123] dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none leading-relaxed max-h-[180px]"
+            className="flex-1 resize-none bg-transparent py-2.5 px-1 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none leading-relaxed max-h-[180px] font-sans"
           />
 
           {/* Stop Generating Button or Send Button */}
@@ -551,7 +555,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             <button
               type="button"
               onClick={onStopGenerating}
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-600 text-white hover:bg-rose-700 shadow-md transition active:scale-95"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-600 hover:bg-rose-700 text-white shadow-md shadow-rose-600/30 transition active:scale-95"
               title="Dừng tạo phản hồi"
             >
               <Square className="h-4 w-4 fill-white" />
@@ -561,9 +565,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({
               type="button"
               onClick={handleSubmit}
               disabled={!hasContent || disabled || isSubmitting}
-              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition duration-150 ${
+              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-all duration-150 ${
                 hasContent && !disabled && !isSubmitting
-                  ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500/40'
+                  ? 'bg-gradient-to-br from-blue-600 to-indigo-600 text-white hover:from-blue-500 hover:to-indigo-500 shadow-md shadow-blue-600/30 hover:shadow-lg hover:shadow-blue-600/40 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500/40'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-300 dark:text-slate-600 cursor-not-allowed'
               }`}
               aria-label="Gửi tin nhắn"
@@ -572,7 +576,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
               {isSubmitting ? (
                 <Loader2 className="h-4 w-4 animate-spin text-white" />
               ) : (
-                <Send className="h-4 w-4" />
+                <Send className={`h-4 w-4 ${hasContent && !disabled ? 'drop-shadow-sm' : ''}`} />
               )}
             </button>
           )}
