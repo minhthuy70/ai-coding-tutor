@@ -9,7 +9,10 @@ import {
   Code2,
   Bot,
   ArrowRight,
-  Zap
+  Zap,
+  Compass,
+  Trophy,
+  ShieldCheck
 } from 'lucide-react';
 import { ChatMessage, ChatAttachment } from '@/types/chat';
 import { ChatMessageItem } from './ChatMessageItem';
@@ -24,6 +27,10 @@ interface ChatMessageListProps {
   onDeleteMessage?: (id: string) => void;
   onEditUserMessage?: (id: string, newContent: string) => void;
   onRunCode?: (code: string, language: string) => void;
+  onOpenRoadmap?: () => void;
+  onOpenProblemSet?: () => void;
+  onOpenSandbox?: () => void;
+  onOpenCodeQuality?: (code?: string, language?: string) => void;
 }
 
 const suggestions = [
@@ -77,7 +84,21 @@ const TYPING_PHRASES = [
   'Tối ưu Big-O complexity ngay...',
 ];
 
-function WelcomeScreen({ onSelectSuggestion }: { onSelectSuggestion?: (q: string) => void }) {
+interface WelcomeScreenProps {
+  onSelectSuggestion?: (q: string) => void;
+  onOpenRoadmap?: () => void;
+  onOpenProblemSet?: () => void;
+  onOpenSandbox?: () => void;
+  onOpenCodeQuality?: () => void;
+}
+
+function WelcomeScreen({ 
+  onSelectSuggestion,
+  onOpenRoadmap,
+  onOpenProblemSet,
+  onOpenSandbox,
+  onOpenCodeQuality
+}: WelcomeScreenProps) {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -110,7 +131,7 @@ function WelcomeScreen({ onSelectSuggestion }: { onSelectSuggestion?: (q: string
   }, [charIndex, isDeleting, phraseIndex]);
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center px-4 py-10 select-none overflow-hidden">
+    <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 select-none overflow-hidden">
       {/* Ambient Background Orbs */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden>
         <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-500/5 dark:bg-blue-500/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '0s' }} />
@@ -121,26 +142,26 @@ function WelcomeScreen({ onSelectSuggestion }: { onSelectSuggestion?: (q: string
       {/* Hero Section */}
       <div className="relative flex flex-col items-center text-center max-w-2xl w-full">
         {/* Animated Logo */}
-        <div className="welcome-orb mb-6 animate-fade-in">
-          <div className="welcome-orb-inner relative flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 text-white shadow-2xl glow-indigo">
+        <div className="welcome-orb mb-5 animate-fade-in">
+          <div className="welcome-orb-inner relative flex h-18 w-18 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600 text-white shadow-2xl glow-indigo">
             {/* Rotating ring */}
             <div className="absolute inset-0 rounded-3xl border-2 border-white/20 animate-spin-slow" style={{ borderTopColor: 'rgba(255,255,255,0.6)' }} />
-            <Sparkles className="h-9 w-9 relative z-10 drop-shadow-lg" />
+            <Sparkles className="h-8 w-8 relative z-10 drop-shadow-lg" />
           </div>
         </div>
 
         {/* Title */}
-        <div className="animate-fade-in delay-75 space-y-2">
+        <div className="animate-fade-in delay-75 space-y-1.5">
           <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
             <span className="gradient-text">AI Coding Tutor</span>
           </h1>
           <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
-            Trợ lý lập trình thế hệ mới · Phương pháp Socratic
+            Nền tảng Gia sư Lập trình Đa phương thức · Phương pháp Socratic & Sandbox Thực thi
           </p>
         </div>
 
         {/* Typewriter subtitle */}
-        <div className="mt-4 animate-fade-in delay-150 h-8 flex items-center justify-center">
+        <div className="mt-3 animate-fade-in delay-150 h-7 flex items-center justify-center">
           <p className="text-sm text-slate-600 dark:text-slate-300 font-medium">
             {displayText}
             <span className="inline-block w-0.5 h-4 bg-blue-500 ml-0.5 animate-pulse rounded-full" />
@@ -148,13 +169,13 @@ function WelcomeScreen({ onSelectSuggestion }: { onSelectSuggestion?: (q: string
         </div>
 
         {/* Stats pills */}
-        <div className="mt-5 animate-fade-in delay-200 flex flex-wrap items-center justify-center gap-2">
+        <div className="mt-4 animate-fade-in delay-200 flex flex-wrap items-center justify-center gap-2">
           {[
-            { icon: Zap, label: 'Multimodal AI', color: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/60' },
-            { icon: Code2, label: 'Code Sandbox', color: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border-blue-200 dark:border-blue-800/60' },
-            { icon: Bot, label: 'Socratic Hints', color: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50 border-violet-200 dark:border-violet-800/60' },
+            { icon: Zap, label: 'Multimodal Vision & Audio', color: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/60' },
+            { icon: Code2, label: 'Code Sandbox Live Runner', color: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border-blue-200 dark:border-blue-800/60' },
+            { icon: Bot, label: 'Socratic Step-by-Step', color: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50 border-violet-200 dark:border-violet-800/60' },
           ].map(({ icon: Icon, label, color }) => (
-            <span key={label} className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${color}`}>
+            <span key={label} className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-0.5 text-xs font-semibold ${color}`}>
               <Icon className="h-3.5 w-3.5" />
               {label}
             </span>
@@ -162,8 +183,77 @@ function WelcomeScreen({ onSelectSuggestion }: { onSelectSuggestion?: (q: string
         </div>
       </div>
 
+      {/* Studio Quick Launcher Action Bar */}
+      <div className="mt-6 w-full max-w-2xl">
+        <div className="flex items-center justify-between mb-2.5 px-1">
+          <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
+            Công cụ Học tập & Thực hành Studio
+          </span>
+          <span className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold">
+            Tích hợp toàn diện
+          </span>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          {onOpenRoadmap && (
+            <button
+              type="button"
+              onClick={onOpenRoadmap}
+              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-blue-200/70 dark:border-blue-800/50 bg-blue-50/50 dark:bg-blue-950/30 hover:bg-blue-100/70 dark:hover:bg-blue-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+            >
+              <div className="h-9 w-9 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
+                <Compass className="h-4.5 w-4.5" />
+              </div>
+              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Lộ trình học</span>
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Cây kỹ năng</span>
+            </button>
+          )}
+
+          {onOpenProblemSet && (
+            <button
+              type="button"
+              onClick={onOpenProblemSet}
+              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-amber-200/70 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/30 hover:bg-amber-100/70 dark:hover:bg-amber-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+            >
+              <div className="h-9 w-9 rounded-xl bg-amber-500 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
+                <Trophy className="h-4.5 w-4.5" />
+              </div>
+              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Kho bài tập</span>
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">LeetCode & Tests</span>
+            </button>
+          )}
+
+          {onOpenSandbox && (
+            <button
+              type="button"
+              onClick={onOpenSandbox}
+              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-emerald-200/70 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-950/30 hover:bg-emerald-100/70 dark:hover:bg-emerald-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+            >
+              <div className="h-9 w-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
+                <Code2 className="h-4.5 w-4.5" />
+              </div>
+              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Code Sandbox</span>
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Chạy đa ngôn ngữ</span>
+            </button>
+          )}
+
+          {onOpenCodeQuality && (
+            <button
+              type="button"
+              onClick={onOpenCodeQuality}
+              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-indigo-200/70 dark:border-indigo-800/50 bg-indigo-50/50 dark:bg-indigo-950/30 hover:bg-indigo-100/70 dark:hover:bg-indigo-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+            >
+              <div className="h-9 w-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
+                <ShieldCheck className="h-4.5 w-4.5" />
+              </div>
+              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Soát lỗi Code</span>
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">PEP8 & Big-O</span>
+            </button>
+          )}
+        </div>
+      </div>
+
       {/* Suggestion Cards Grid */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-2xl">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-2xl">
         {suggestions.map((item, idx) => {
           const Icon = item.icon;
           return (
@@ -212,8 +302,8 @@ function WelcomeScreen({ onSelectSuggestion }: { onSelectSuggestion?: (q: string
       </div>
 
       {/* Bottom hint */}
-      <p className="mt-8 animate-fade-in delay-500 text-[11px] text-slate-400 dark:text-slate-600 text-center">
-        💡 Nhấn <kbd className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-mono text-[10px]">Ctrl+/</kbd> để xem phím tắt • Kéo thả file để đính kèm
+      <p className="mt-6 animate-fade-in delay-500 text-[11px] text-slate-400 dark:text-slate-600 text-center">
+        💡 Nhấn <kbd className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-mono text-[10px]">Ctrl+/</kbd> để xem phím tắt • Kéo thả tệp hoặc nhấn Ctrl+V để đính kèm
       </p>
     </div>
   );
@@ -229,6 +319,10 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
   onDeleteMessage,
   onEditUserMessage,
   onRunCode,
+  onOpenRoadmap,
+  onOpenProblemSet,
+  onOpenSandbox,
+  onOpenCodeQuality,
 }) => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -239,7 +333,15 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
   const lastAssistantIndex = messages.map((m) => m.role).lastIndexOf('assistant');
 
   if (messages.length === 0) {
-    return <WelcomeScreen onSelectSuggestion={onSelectSuggestion} />;
+    return (
+      <WelcomeScreen 
+        onSelectSuggestion={onSelectSuggestion} 
+        onOpenRoadmap={onOpenRoadmap}
+        onOpenProblemSet={onOpenProblemSet}
+        onOpenSandbox={onOpenSandbox}
+        onOpenCodeQuality={onOpenCodeQuality ? () => onOpenCodeQuality() : undefined}
+      />
+    );
   }
 
   return (
@@ -261,6 +363,7 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
               onEditUserMessage={onEditUserMessage}
               onSelectFollowUp={onSelectSuggestion}
               onRunCode={onRunCode}
+              onOpenCodeQuality={onOpenCodeQuality}
             />
           </div>
         ))}

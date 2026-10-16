@@ -19,7 +19,8 @@ import {
   CornerDownRight,
   Sparkles,
   Play,
-  AlertTriangle
+  AlertTriangle,
+  ShieldCheck
 } from 'lucide-react';
 import { ChatMessage, ChatAttachment } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
@@ -35,6 +36,7 @@ interface ChatMessageItemProps {
   onEditUserMessage?: (id: string, newContent: string) => void;
   onSelectFollowUp?: (query: string) => void;
   onRunCode?: (code: string, language: string) => void;
+  onOpenCodeQuality?: (code: string, language: string) => void;
 }
 
 // Map language names to accent colors
@@ -67,6 +69,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
   onEditUserMessage,
   onSelectFollowUp,
   onRunCode,
+  onOpenCodeQuality,
 }) => {
   const [copied, setCopied] = useState(false);
   const [copiedCodeBlockIdx, setCopiedCodeBlockIdx] = useState<number | null>(null);
@@ -229,6 +232,18 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                   <Play className="h-3 w-3 fill-emerald-400" />
                   <span>Chạy</span>
                 </button>
+                {/* Code Quality button */}
+                {onOpenCodeQuality && (
+                  <button
+                    type="button"
+                    onClick={() => onOpenCodeQuality(codeText, language)}
+                    className="flex items-center gap-1 rounded-md bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/30 px-2.5 py-1 text-[11px] text-indigo-400 hover:text-indigo-300 transition-all font-semibold"
+                    title="Đánh giá chất lượng mã nguồn, lỗi PEP 8, Big-O và gợi ý tối ưu"
+                  >
+                    <ShieldCheck className="h-3 w-3 text-indigo-400" />
+                    <span>Soát lỗi</span>
+                  </button>
+                )}
                 {/* Copy code */}
                 <button
                   type="button"

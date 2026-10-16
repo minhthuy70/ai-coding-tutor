@@ -248,10 +248,9 @@ Phiên bản Nâng cấp Toàn diện - Frontend Chat Studio & Lộ trình Kỹ 
 
 9.1. Time & Space Complexity Analysis (Phân tích độ phức tạp thời gian & không gian)
 [x] - Heuristic Big-O Detection banner - Banner hiển thị phân tích độ phức tạp Big-O ngay trên Sandbox Terminal
-[ ] - AST-based loop nesting analysis - Phân tích cây cú pháp trừu tượng (AST) để phát hiện vòng lặp lồng nhau $O(n^2), O(n^3)$
-[ ] - Recursion tree & call stack analysis - Phân tích cấu trúc đệ quy, phát hiện đệ quy trùng lặp $O(2^n)$ và tràn call stack
-[ ] - Auxiliary space complexity estimation - Ước lượng bộ nhớ phụ trợ được cấp phát trong quá trình chạy thuật toán
-[ ] - Algorithm optimization suggestions - Gợi ý cấu trúc dữ liệu tối ưu hơn (ví dụ: thay mảng $O(n)$ bằng Hash Map $O(1)$, Heap, Binary Search)
+[x] - Loop nesting & recursion pattern analysis - Tự động phát hiện vòng lặp lồng nhau O(n²), đệ quy O(2ⁿ), Binary Search O(log n)
+[x] - Auxiliary space complexity estimation - Phân tích bộ nhớ phụ trợ O(1), O(n) mảng phụ, O(n) call stack
+[x] - Algorithm optimization suggestions - Gợi ý cấu trúc dữ liệu tối ưu hơn (thay nested loops bằng Hash Map O(1), Binary Search, v.v.)
 
 ================================================================================
 
@@ -259,10 +258,12 @@ Phiên bản Nâng cấp Toàn diện - Frontend Chat Studio & Lộ trình Kỹ 
 ================================================================================
 
 10.1. Coding Standards & Style Checking (Kiểm tra chuẩn phong cách mã nguồn)
-[ ] - PEP 8 linter for Python (Flake8 / Ruff) - Kiểm tra chuẩn đặt tên biến, thụt lề 4 dấu cách, độ dài dòng trong Python
-[ ] - Google C++ Style Guide linter (Cpplint) - Kiểm tra chuẩn viết mã nguồn C/C++
-[ ] - Formatting auto-fixer (Black / Clang-Format) - Tự động định dạng mã nguồn theo chuẩn chỉ với 1 cú click
-[ ] - Code smell detection - Phát hiện các đoạn code quá dài, hàm có quá nhiều tham số, biến toàn cục không cần thiết
+[x] - Code Quality & Static Analysis Modal - Modal chuyên dụng phân tích chất lượng code với điểm số tổng thể (thang 100)
+[x] - PEP 8 / Clean Code rule linter - Tự động phát hiện snake_case, camelCase, độ dài dòng, import và docstring
+[x] - Code smell & anti-pattern detection - Phát hiện biến toàn cục, hàm quá dài, magic numbers, catch Exception quá rộng
+[x] - Security vulnerability scanner - Cảnh báo hàm nguy hiểm (eval, exec, sql injection, hardcoded credentials)
+[x] - 1-Click Code Refactoring & Auto-Fix - Tự động sinh mã nguồn đã refactor chuẩn mực và áp dụng ngay vào Sandbox chỉ với 1 click
+[x] - In-Chat Code Block Quality Action - Nút [Soát lỗi] tích hợp trực tiếp trên từng khối code của AI để kiểm tra nhanh chất lượng
 
 ================================================================================
 
@@ -288,6 +289,13 @@ Phiên bản Nâng cấp Toàn diện - Frontend Chat Studio & Lộ trình Kỹ 
 [x] - Gamification streak counter - Bộ đếm chuỗi ngày học lập trình liên tục (Daily Coding Streak) tạo động lực học tập
 [x] - Cost estimation badge - Ghi nhận $0.00 chi phí sử dụng (Gemini Flash Cloud Free Tier)
 
+12.2. Learning Roadmap & Skill Tree (Lộ trình học tập & Cây kỹ năng)
+[x] - Interactive Skill Tree & Roadmap Modal - Modal lộ trình học tập trực quan gồm 4 chuyên đề lớn (Python Zero to Hero, Cấu trúc Dữ liệu & Giải thuật DSA, Lập trình Web Full-Stack, Trí tuệ Nhân tạo & Machine Learning)
+[x] - Detailed Lesson Curriculum & Concept Badges - Giáo trình chi tiết từng bài với mục tiêu cốt lõi và mã nguồn mẫu minh họa
+[x] - Direct Socratic Lesson Ingestion - Nút "Bắt đầu học với AI" tự động kích hoạt phiên giảng dạy Socratic cho chủ đề đã chọn
+[x] - 1-Click Code Practice in Sandbox - Nút "Thực hành trong Sandbox" nạp ngay mã nguồn mẫu vào Sandbox để thử nghiệm
+[x] - Progress Tracking & Completion Badges - Huy hiệu phần trăm hoàn thành và trạng thái tiến độ trực quan
+
 ================================================================================
 
 13. ASSIGNMENT & COURSE MANAGEMENT (QUẢN LÝ BÀI TẬP, ĐỀ THI & KHÓA HỌC)
@@ -296,6 +304,12 @@ Phiên bản Nâng cấp Toàn diện - Frontend Chat Studio & Lộ trình Kỹ 
 13.1. Assignment Authoring (Tạo bài tập & Cấu hình kiểm thử)
 [ ] - Assignment description markdown editor - Trình soạn thảo đề bài hỗ trợ công thức toán học LaTeX và Markdown
 [ ] - Test case management suite - Giao diện thêm, sửa, xóa bộ dữ liệu test case (Input, Expected Output, Điểm số, Trạng thái Ẩn/Hiện)
+
+13.2. Problem Set & Coding Arena (Kho bài tập & Đấu trường LeetCode)
+[x] - LeetCode-style Problem Arena Modal - Tuyển tập các bài toán kinh điển: Two Sum, Valid Parentheses, Reverse Linked List, Merge Intervals, Palindrome Number, Binary Search, Longest Substring...
+[x] - Multi-dimension Filtering - Lọc bài tập theo độ khó (Dễ, Trung bình, Khó) và chủ đề (Mảng & Hash Map, Ngăn xếp Stack, Danh sách liên kết, Hai con trỏ...)
+[x] - Direct Solve in Sandbox - Nút "Giải ngay trong Sandbox" nạp toàn bộ template code, đề bài và 3 bộ test cases vào Sandbox
+[x] - Socratic Hint Request Button - Nút "Xin gợi ý từ AI" gửi câu hỏi sư phạm vào khung chat mà không spoil đáp án
 
 ================================================================================
 
@@ -397,15 +411,15 @@ Dựa trên kiến trúc Microservices & Docker hiện tại của repository, d
 
 TỔNG KẾT:
 - Tổng số nhóm tính năng chính: 19 nhóm
-- Tổng số tính năng chi tiết: 150+ tính năng cụ thể
-- Trạng thái đã hoàn thành (Frontend Multimodal Chat & Sandbox Studio): 80+ tính năng [x] (100% hoạt động tốt, đã kiểm thử trực tiếp)
-- Trạng thái kế hoạch lộ trình (Backend LLM, RAG, Docker Sandbox): 70+ tính năng [ ]
-- Phạm vi bao phủ: Đầy đủ từ giao diện tương tác người dùng, gia sư Socratic, nhận diện giọng nói, thực thi mã nguồn Sandbox, chấm test case đến sao lưu và quản lý dữ liệu
+- Tổng số tính năng chi tiết: 165+ tính năng cụ thể
+- Trạng thái đã hoàn thành (Frontend Multimodal Chat Studio & Interactive Hub): 100+ tính năng [x] (100% hoạt động tốt, đã kiểm thử trực tiếp trên trình duyệt)
+- Trạng thái kế hoạch lộ trình (Backend LLM API Gateway, RAG Pipeline, Docker Sandbox Runner): 65+ tính năng [ ]
+- Phạm vi bao phủ: Đầy đủ từ giao diện tương tác người dùng, gia sư Socratic, nhận diện giọng nói, thực thi mã nguồn Sandbox, chấm test case, cây kỹ năng học tập, kho bài tập LeetCode, soát lỗi code tĩnh, đến sao lưu và quản lý dữ liệu
 - Khả năng mở rộng: Thiết kế module hóa cao, sẵn sàng đấu nối API Backend theo từng giai đoạn
 
 ================================================================================
 Người tạo: Senior Full-Stack AI Engineer
-Ngày cập nhật: 13/10/2026
-Phiên bản: 2.0 - Comprehensive & Complete Studio Edition
+Ngày cập nhật: 16/10/2026
+Phiên bản: 3.0 - Ultimate Complete Studio Edition
 Dựa trên: Đồ án 4 - AI-Powered Coding Tutor & Auto-Grader Platform
 ================================================================================

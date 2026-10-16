@@ -59,63 +59,60 @@ export default function HomePage() {
 
 function HomePageInner() {
   const { showToast, confirm } = useToast();
-  const [conversations, setConversations] = useState<ChatConversation[]>(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  const [conversations, setConversations] = useState<ChatConversation[]>([
+    {
+      id: 'conv-initial',
+      title: 'Cuộc trò chuyện mới',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      messages: [],
+    },
+  ]);
+
+  const [activeConversationId, setActiveConversationId] = useState<string>('conv-initial');
+
+  const [modelSettings, setModelSettings] = useState<ModelSettings>({
+    temperature: 0.7,
+    maxTokens: 2048,
+    persona: 'socratic',
+  });
+
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  // Load persisted state from localStorage safely on mount
+  useEffect(() => {
+    setMounted(true);
+    try {
+      const savedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
+      if (savedTheme) {
+        setIsDarkMode(savedTheme === 'dark');
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setIsDarkMode(true);
+      }
+
+      const savedConv = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (savedConv) {
+        const parsed = JSON.parse(savedConv);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setConversations(parsed);
         }
-      } catch {}
-    }
-    return [
-      {
-        id: 'conv-initial',
-        title: 'Cuộc trò chuyện mới',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-        messages: [],
-      },
-    ];
-  });
+      }
 
-  const [activeConversationId, setActiveConversationId] = useState<string>(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        const saved = localStorage.getItem(LOCAL_STORAGE_ACTIVE_KEY);
-        if (saved) return saved;
-      } catch {}
-    }
-    return 'conv-initial';
-  });
+      const savedActive = localStorage.getItem(LOCAL_STORAGE_ACTIVE_KEY);
+      if (savedActive) {
+        setActiveConversationId(savedActive);
+      }
 
-  const [modelSettings, setModelSettings] = useState<ModelSettings>(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        const saved = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
-        if (saved) return JSON.parse(saved);
-      } catch {}
+      const savedSettings = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
+      if (savedSettings) {
+        setModelSettings(JSON.parse(savedSettings));
+      }
+    } catch (err) {
+      console.warn('Could not read from localStorage:', err);
     }
-    return {
-      temperature: 0.7,
-      maxTokens: 2048,
-      persona: 'socratic',
-    };
-  });
-
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        const saved = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
-        if (saved) return saved === 'dark';
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return true;
-        }
-      } catch {}
-    }
-    return false;
-  });
+  }, []);
 
   const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState<boolean>(true);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
@@ -131,8 +128,16 @@ function HomePageInner() {
   const [isSandboxOpen, setIsSandboxOpen] = useState<boolean>(false);
   const [sandboxCode, setSandboxCode] = useState<string>('');
   const [sandboxLang, setSandboxLang] = useState<string>('python');
+  const [sandboxProblemTitle, setSandboxProblemTitle] = useState<string>('');
+  const [sandboxProblemDesc, setSandboxProblemDesc] = useState<string>('');
+  const [sandboxTestCases, setSandboxTestCases] = useState<Array<{id:number; name:string; input:string; expectedOutput:string}>>([]);
   const [isPromptTemplatesOpen, setIsPromptTemplatesOpen] = useState<boolean>(false);
   const [isAnalyticsOpen, setIsAnalyticsOpen] = useState<boolean>(false);
+  const [isRoadmapOpen, setIsRoadmapOpen] = useState<boolean>(false);
+  const [isProblemSetOpen, setIsProblemSetOpen] = useState<boolean>(false);
+  const [isCodeQualityOpen, setIsCodeQualityOpen] = useState<boolean>(false);
+  const [codeQualityCode, setCodeQualityCode] = useState<string>('');
+  const [codeQualityLang, setCodeQualityLang] = useState<string>('python');
   const [injectedText, setInjectedText] = useState<string>('');
   
   // Header inline renaming state
@@ -160,21 +165,24 @@ function HomePageInner() {
 
   // Persist conversations
   useEffect(() => {
+    if (!mounted) return;
     try {
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(conversations));
       localStorage.setItem(LOCAL_STORAGE_ACTIVE_KEY, activeConversationId);
     } catch {}
-  }, [conversations, activeConversationId]);
+  }, [conversations, activeConversationId, mounted]);
 
   // Persist model settings
   useEffect(() => {
+    if (!mounted) return;
     try {
       localStorage.setItem(LOCAL_STORAGE_SETTINGS_KEY, JSON.stringify(modelSettings));
     } catch {}
-  }, [modelSettings]);
+  }, [modelSettings, mounted]);
 
   // Persist theme & sync documentElement dark class
   useEffect(() => {
+    if (!mounted) return;
     try {
       localStorage.setItem(LOCAL_STORAGE_THEME_KEY, isDarkMode ? 'dark' : 'light');
       if (isDarkMode) {
@@ -183,7 +191,7 @@ function HomePageInner() {
         document.documentElement.classList.remove('dark');
       }
     } catch {}
-  }, [isDarkMode]);
+  }, [isDarkMode, mounted]);
 
   // Global Keyboard Shortcuts (Ctrl+B, Ctrl+Shift+O, Ctrl+/)
   useEffect(() => {
@@ -284,8 +292,29 @@ function HomePageInner() {
   const handleRunCode = useCallback((code: string, language: string) => {
     setSandboxCode(code);
     setSandboxLang(language);
+    setSandboxProblemTitle('');
+    setSandboxProblemDesc('');
+    setSandboxTestCases([]);
     setIsSandboxOpen(true);
   }, []);
+
+  const handleSolveInSandbox = useCallback((problem: CodingProblem, language: string) => {
+    const starterCode = language === 'javascript'
+      ? (problem.starterCode.javascript || problem.starterCode.python)
+      : (problem.starterCode.python);
+    setSandboxCode(starterCode || '');
+    setSandboxLang(language);
+    setSandboxProblemTitle(`Bài tập #${problem.number}: ${problem.title}`);
+    setSandboxProblemDesc(problem.description);
+    setSandboxTestCases(problem.testCases);
+    setIsSandboxOpen(true);
+  }, []);
+
+  const handleOpenCodeQuality = useCallback((code?: string, language?: string) => {
+    setCodeQualityCode(code || sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n');
+    setCodeQualityLang(language || sandboxLang || 'python');
+    setIsCodeQualityOpen(true);
+  }, [sandboxCode, sandboxLang]);
 
   const handleAskAIAboutCode = useCallback((code: string, language: string) => {
     const formatted = `Hãy phân tích và hướng dẫn giải thích giúp tôi đoạn mã ${language.toUpperCase()} này:\n\n\`\`\`${language}\n${code}\n\`\`\``;
@@ -295,6 +324,11 @@ function HomePageInner() {
   const handleSelectPromptTemplate = useCallback((promptText: string) => {
     setInjectedText(promptText);
   }, []);
+
+  const handleStartLessonFromRoadmap = useCallback((lessonPrompt: string) => {
+    setInjectedText(lessonPrompt);
+    showToast({ type: 'info', title: 'Bắt đầu bài học Socratic', message: 'Câu hỏi đã được điền vào ô nhập. Nhấn Enter để gửi!', duration: 3000 });
+  }, [showToast]);
 
   const handleImportConversation = useCallback((imported: ChatConversation) => {
     setConversations((prev) => {
@@ -659,6 +693,10 @@ function HomePageInner() {
         initialCode={sandboxCode}
         initialLanguage={sandboxLang}
         onAskAIAboutCode={handleAskAIAboutCode}
+        problemTitle={sandboxProblemTitle}
+        problemDescription={sandboxProblemDesc}
+        initialTestCases={sandboxTestCases}
+        onOpenCodeQuality={handleOpenCodeQuality}
       />
 
       {/* Socratic Prompt Templates Modal */}
@@ -673,6 +711,32 @@ function HomePageInner() {
         isOpen={isAnalyticsOpen}
         onClose={() => setIsAnalyticsOpen(false)}
         conversations={conversations}
+      />
+
+      {/* Learning Roadmap Modal */}
+      <LearningRoadmapModal
+        isOpen={isRoadmapOpen}
+        onClose={() => setIsRoadmapOpen(false)}
+        onStartLesson={handleStartLessonFromRoadmap}
+        onOpenPracticeInSandbox={(code, lang) => { setSandboxCode(code); setSandboxLang(lang); setSandboxProblemTitle(''); setSandboxTestCases([]); setIsSandboxOpen(true); setIsRoadmapOpen(false); }}
+      />
+
+      {/* Problem Set & Arena Modal */}
+      <ProblemSetModal
+        isOpen={isProblemSetOpen}
+        onClose={() => setIsProblemSetOpen(false)}
+        onSolveInSandbox={handleSolveInSandbox}
+        onAskAIHint={(prompt) => { setInjectedText(prompt); setIsProblemSetOpen(false); }}
+      />
+
+      {/* Code Quality Analysis Modal */}
+      <CodeQualityModal
+        isOpen={isCodeQualityOpen}
+        onClose={() => setIsCodeQualityOpen(false)}
+        initialCode={codeQualityCode}
+        initialLanguage={codeQualityLang}
+        onApplyRefactoredCode={(code) => { setSandboxCode(code); setIsSandboxOpen(true); setIsCodeQualityOpen(false); }}
+        onAskAIAboutQuality={(prompt) => { setInjectedText(prompt); setIsCodeQualityOpen(false); }}
       />
 
       {/* Left Sidebar */}
@@ -693,6 +757,10 @@ function HomePageInner() {
         onToggle={() => setIsDesktopSidebarOpen((prev) => !prev)}
         isMobileOpen={isMobileSidebarOpen}
         onCloseMobile={() => setIsMobileSidebarOpen(false)}
+        onOpenRoadmap={() => setIsRoadmapOpen(true)}
+        onOpenProblemSet={() => setIsProblemSetOpen(true)}
+        onOpenCodeQuality={() => { setCodeQualityCode(sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n'); setCodeQualityLang(sandboxLang); setIsCodeQualityOpen(true); }}
+        onOpenSandbox={() => { setSandboxCode('# Mở Sandbox trống để viết code mới\nprint("Xin chào, Gia sư AI!")'); setSandboxLang('python'); setSandboxProblemTitle(''); setSandboxTestCases([]); setIsSandboxOpen(true); }}
       />
 
       {/* Main Chat Interface */}
@@ -776,7 +844,59 @@ function HomePageInner() {
           </div>
 
           {/* Right Header Controls */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Quick Studio Tools */}
+            <div className="hidden lg:flex items-center gap-1 mr-1 border-r border-slate-200 dark:border-slate-800 pr-2">
+              <button
+                type="button"
+                onClick={() => setIsRoadmapOpen(true)}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/70 dark:hover:bg-blue-950/50 transition border border-transparent hover:border-blue-200 dark:hover:border-blue-800/60"
+                title="Lộ trình học tập & Cây kỹ năng lập trình"
+              >
+                <Compass className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
+                <span>Lộ trình</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsProblemSetOpen(true)}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50/70 dark:hover:bg-amber-950/50 transition border border-transparent hover:border-amber-200 dark:hover:border-amber-800/60"
+                title="Kho bài tập thuật toán & Đấu trường code"
+              >
+                <Trophy className="h-3.5 w-3.5 text-amber-500" />
+                <span>Bài tập</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setSandboxCode('# Mở Code Sandbox trực tiếp\nprint("Hello, AI Coding Tutor!")');
+                  setSandboxLang('python');
+                  setSandboxProblemTitle('');
+                  setSandboxTestCases([]);
+                  setIsSandboxOpen(true);
+                }}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50/70 dark:hover:bg-emerald-950/50 transition border border-transparent hover:border-emerald-200 dark:hover:border-emerald-800/60"
+                title="Mở trình thực thi code & Sandbox test case"
+              >
+                <Code2 className="h-3.5 w-3.5 text-emerald-500" />
+                <span>Sandbox</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setCodeQualityCode(sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n');
+                  setCodeQualityLang(sandboxLang);
+                  setIsCodeQualityOpen(true);
+                }}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/70 dark:hover:bg-indigo-950/50 transition border border-transparent hover:border-indigo-200 dark:hover:border-indigo-800/60"
+                title="Kiểm tra chất lượng code, PEP 8 & Big-O"
+              >
+                <ShieldCheck className="h-3.5 w-3.5 text-indigo-500" />
+                <span>Soát lỗi</span>
+              </button>
+            </div>
             {/* Quick Dark Mode toggle */}
             <button
               type="button"
@@ -921,6 +1041,16 @@ function HomePageInner() {
           onDeleteMessage={handleDeleteMessage}
           onEditUserMessage={handleEditUserMessage}
           onRunCode={handleRunCode}
+          onOpenRoadmap={() => setIsRoadmapOpen(true)}
+          onOpenProblemSet={() => setIsProblemSetOpen(true)}
+          onOpenSandbox={() => {
+            setSandboxCode('# Mở Code Sandbox trực tiếp\nprint("Hello World!")');
+            setSandboxLang('python');
+            setSandboxProblemTitle('');
+            setSandboxTestCases([]);
+            setIsSandboxOpen(true);
+          }}
+          onOpenCodeQuality={handleOpenCodeQuality}
         />
 
         {/* Bottom Composer Box */}
