@@ -41,4 +41,8 @@ export interface ModelSettings {
   temperature: number; // 0.0 - 1.0
   maxTokens: number;   // 512 - 4096
   persona: 'socratic' | 'strict_reviewer' | 'algorithm_expert' | 'casual';
+  aiProvider?: 'built_in_socratic' | 'gemini' | 'openai' | 'ollama';
+  geminiApiKey?: string;
+  openaiApiKey?: string;
+  ollamaBaseUrl?: string;
 }

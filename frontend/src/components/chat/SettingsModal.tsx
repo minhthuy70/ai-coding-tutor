@@ -1,7 +1,24 @@
-'use client';
-
 import React, { useEffect, useState } from 'react';
-import { X, Sliders, Moon, Sun, Sparkles, Shield, Cpu, Zap, Volume2, VolumeX } from 'lucide-react';
+import { 
+  X, 
+  Sliders, 
+  Moon, 
+  Sun, 
+  Sparkles, 
+  Shield, 
+  Cpu, 
+  Zap, 
+  Volume2, 
+  VolumeX,
+  Key,
+  Check,
+  AlertCircle,
+  Eye,
+  EyeOff,
+  ExternalLink,
+  Server,
+  Bot
+} from 'lucide-react';
 import { ModelSettings } from '@/types/chat';
 import { isSoundEnabled, setSoundEnabled } from '@/lib/soundEffects';
 
@@ -23,12 +40,68 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   onToggleDarkMode,
 }) => {
   const [soundOn, setSoundOn] = useState<boolean>(() => isSoundEnabled());
+  const [showApiKey, setShowApiKey] = useState(false);
+  const [testStatus, setTestStatus] = useState<'idle' | 'testing' | 'success' | 'error'>('idle');
+  const [testMessage, setTestMessage] = useState('');
+
+  const handleTestConnection = async () => {
+    if (settings.aiProvider === 'gemini') {
+      if (!settings.geminiApiKey?.trim()) {
+        setTestStatus('error');
+        setTestMessage('Vui lòng nhập Gemini API Key trước khi kiểm tra.');
+        return;
+      }
+      setTestStatus('testing');
+      setTestMessage('Đang kiểm tra kết nối Google Gemini API...');
+      try {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${settings.geminiApiKey.trim()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: 'Trả lời: OK' }] }]
+          })
+        });
+        if (res.ok) {
+          setTestStatus('success');
+          setTestMessage('Kết nối Gemini 1.5 Flash thành công! Model đã sẵn sàng.');
+        } else {
+          const err = await res.json().catch(() => ({}));
+          setTestStatus('error');
+          setTestMessage(err?.error?.message || `Lỗi API HTTP ${res.status}`);
+        }
+      } catch (e: any) {
+        setTestStatus('error');
+        setTestMessage(`Lỗi mạng: ${e?.message || 'Không thể gửi yêu cầu'}`);
+      }
+    } else if (settings.aiProvider === 'ollama') {
+      setTestStatus('testing');
+      setTestMessage('Đang kiểm tra kết nối Ollama...');
+      try {
+        const url = settings.ollamaBaseUrl?.trim() || 'http://localhost:11434';
+        const res = await fetch(`${url}/api/tags`);
+        if (res.ok) {
+          setTestStatus('success');
+          setTestMessage(`Kết nối Ollama thành công tại ${url}!`);
+        } else {
+          setTestStatus('error');
+          setTestMessage(`Ollama trả về HTTP ${res.status}`);
+        }
+      } catch (e: any) {
+        setTestStatus('error');
+        setTestMessage(`Không tìm thấy Ollama tại ${settings.ollamaBaseUrl || 'http://localhost:11434'}. Vui lòng chạy lệnh 'ollama serve'.`);
+      }
+    } else {
+      setTestStatus('success');
+      setTestMessage('Bộ máy Socratic Cục bộ luôn sẵn sàng (100% Offline Free)!');
+    }
+  };
 
   const handleToggleSound = () => {
     const next = !soundOn;
     setSoundOn(next);
     setSoundEnabled(next);
   };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -40,6 +113,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
+
+  const currentProvider = settings.aiProvider || 'built_in_socratic';
 
   const personas = [
     {
@@ -128,6 +203,152 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
           >
             {soundOn ? 'Đang bật' : 'Đã tắt'}
           </button>
+        </div>
+
+        {/* AI Provider & API Key Configuration */}
+        <div className="space-y-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 p-3.5">
+          <div className="flex items-center justify-between">
+            <label className="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+              <Cpu className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+              <span>Nguồn cấp Mô hình AI &amp; Khóa API:</span>
+            </label>
+            <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 px-2 py-0.5 rounded-full">
+              {currentProvider === 'gemini' ? 'Google Gemini Live' : currentProvider === 'ollama' ? 'Ollama Local' : 'Socratic Built-in'}
+            </span>
+          </div>
+
+          {/* Provider selector tabs */}
+          <div className="grid grid-cols-3 gap-1.5 pt-1">
+            <button
+              type="button"
+              onClick={() => {
+                onUpdateSettings({ ...settings, aiProvider: 'built_in_socratic' });
+                setTestStatus('idle');
+              }}
+              className={`p-2 rounded-xl text-center border text-xs font-semibold transition flex flex-col items-center gap-1 ${
+                currentProvider === 'built_in_socratic'
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 shadow-2xs'
+                  : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
+              }`}
+            >
+              <Bot className="h-4 w-4" />
+              <span className="text-[11px] leading-tight">Gia sư Tích hợp</span>
+              <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-bold">100% Free</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                onUpdateSettings({ ...settings, aiProvider: 'gemini' });
+                setTestStatus('idle');
+              }}
+              className={`p-2 rounded-xl text-center border text-xs font-semibold transition flex flex-col items-center gap-1 ${
+                currentProvider === 'gemini'
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 shadow-2xs'
+                  : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
+              }`}
+            >
+              <Sparkles className="h-4 w-4 text-amber-500" />
+              <span className="text-[11px] leading-tight">Google Gemini</span>
+              <span className="text-[9px] text-blue-600 dark:text-blue-400 font-bold">Cloud API</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                onUpdateSettings({ ...settings, aiProvider: 'ollama' });
+                setTestStatus('idle');
+              }}
+              className={`p-2 rounded-xl text-center border text-xs font-semibold transition flex flex-col items-center gap-1 ${
+                currentProvider === 'ollama'
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 shadow-2xs'
+                  : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
+              }`}
+            >
+              <Server className="h-4 w-4 text-violet-500" />
+              <span className="text-[11px] leading-tight">Ollama Local</span>
+              <span className="text-[9px] text-slate-500 font-bold">Offline</span>
+            </button>
+          </div>
+
+          {/* Gemini API Key input */}
+          {currentProvider === 'gemini' && (
+            <div className="space-y-2 pt-2 animate-in fade-in duration-200">
+              <div className="flex items-center justify-between text-[11px]">
+                <span className="font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1">
+                  <Key className="h-3 w-3 text-amber-500" />
+                  Gemini API Key:
+                </span>
+                <a
+                  href="https://aistudio.google.com/app/apikey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-0.5 text-[10.5px]"
+                >
+                  <span>Lấy key miễn phí (Google AI Studio)</span>
+                  <ExternalLink className="h-2.5 w-2.5" />
+                </a>
+              </div>
+              <div className="relative flex items-center">
+                <input
+                  type={showApiKey ? 'text' : 'password'}
+                  value={settings.geminiApiKey || ''}
+                  onChange={(e) => onUpdateSettings({ ...settings, geminiApiKey: e.target.value })}
+                  placeholder="AIzaSy..."
+                  className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 pl-3 pr-10 py-2 text-xs font-mono text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowApiKey(!showApiKey)}
+                  className="absolute right-2.5 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                >
+                  {showApiKey ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Ollama Base URL input */}
+          {currentProvider === 'ollama' && (
+            <div className="space-y-2 pt-2 animate-in fade-in duration-200">
+              <span className="text-[11px] font-semibold text-slate-700 dark:text-slate-300 block">
+                Ollama Server Endpoint:
+              </span>
+              <input
+                type="text"
+                value={settings.ollamaBaseUrl || 'http://localhost:11434'}
+                onChange={(e) => onUpdateSettings({ ...settings, ollamaBaseUrl: e.target.value })}
+                placeholder="http://localhost:11434"
+                className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-xs font-mono text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+              />
+            </div>
+          )}
+
+          {/* Connection Test Button & Feedback */}
+          <div className="pt-1.5 flex items-center justify-between">
+            <button
+              type="button"
+              onClick={handleTestConnection}
+              disabled={testStatus === 'testing'}
+              className="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-xs font-bold text-slate-800 dark:text-slate-200 transition disabled:opacity-50"
+            >
+              {testStatus === 'testing' ? 'Đang kiểm tra...' : 'Kiểm tra kết nối'}
+            </button>
+
+            {testStatus === 'success' && (
+              <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                <Check className="h-3.5 w-3.5" />
+                <span>{testMessage}</span>
+              </span>
+            )}
+
+            {testStatus === 'error' && (
+              <span className="text-[11px] text-rose-500 font-semibold flex items-center gap-1 truncate max-w-[240px]">
+                <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+                <span className="truncate">{testMessage}</span>
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Persona Presets */}

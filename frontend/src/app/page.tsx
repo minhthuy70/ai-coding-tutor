@@ -37,6 +37,7 @@ import { ProblemSetModal, CodingProblem } from '@/components/chat/ProblemSetModa
 import { CodeQualityModal } from '@/components/chat/CodeQualityModal';
 import { playSendSound, playCompleteSound } from '@/lib/soundEffects';
 import { ToastProvider, useToast } from '@/components/chat/ToastNotification';
+import { getSocraticAssistantResponse } from '@/lib/socraticEngine';
 
 const LOCAL_STORAGE_KEY = 'ai_coding_tutor_chat_sessions_v2';
 const LOCAL_STORAGE_ACTIVE_KEY = 'ai_coding_tutor_active_chat_id_v2';
@@ -100,48 +101,56 @@ function HomePageInner() {
         }
       }
 
-      const savedActive = localStorage.getItem(LOCAL_STORAGE_ACTIVE_KEY);
-      if (savedActive) {
-        setActiveConversationId(savedActive);
+        const savedActive = localStorage.getItem(LOCAL_STORAGE_ACTIVE_KEY);
+        if (savedActive) {
+          setActiveConversationId(savedActive);
+        }
+
+        const savedSettings = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
+        if (savedSettings) {
+          setModelSettings(JSON.parse(savedSettings));
+        }
+
+        const savedSolved = localStorage.getItem('ai_coding_tutor_solved_problems_v1');
+        if (savedSolved) {
+          try {
+            setSolvedProblemIds(JSON.parse(savedSolved));
+          } catch {}
+        }
+      } catch (err) {
+        console.warn('Could not read from localStorage:', err);
       }
+    }, []);
 
-      const savedSettings = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
-      if (savedSettings) {
-        setModelSettings(JSON.parse(savedSettings));
-      }
-    } catch (err) {
-      console.warn('Could not read from localStorage:', err);
-    }
-  }, []);
+    const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState<boolean>(true);
+    const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
+    const [isGenerating, setIsGenerating] = useState<boolean>(false);
+    
+    // Modals state
+    const [lightboxData, setLightboxData] = useState<{ url: string; name: string } | null>(null);
+    const [viewingDocAttachment, setViewingDocAttachment] = useState<ChatAttachment | null>(null);
+    const [isShortcutsOpen, setIsShortcutsOpen] = useState<boolean>(false);
+    const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
 
-  const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState<boolean>(true);
-  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  
-  // Modals state
-  const [lightboxData, setLightboxData] = useState<{ url: string; name: string } | null>(null);
-  const [viewingDocAttachment, setViewingDocAttachment] = useState<ChatAttachment | null>(null);
-  const [isShortcutsOpen, setIsShortcutsOpen] = useState<boolean>(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
-
-  // Upgraded Modals state: Code Sandbox, Prompt Templates, Analytics
-  const [isSandboxOpen, setIsSandboxOpen] = useState<boolean>(false);
-  const [sandboxCode, setSandboxCode] = useState<string>('');
-  const [sandboxLang, setSandboxLang] = useState<string>('python');
-  const [sandboxProblemTitle, setSandboxProblemTitle] = useState<string>('');
-  const [sandboxProblemDesc, setSandboxProblemDesc] = useState<string>('');
-  const [sandboxTestCases, setSandboxTestCases] = useState<Array<{id:number; name:string; input:string; expectedOutput:string}>>([]);
-  const [isPromptTemplatesOpen, setIsPromptTemplatesOpen] = useState<boolean>(false);
-  const [isAnalyticsOpen, setIsAnalyticsOpen] = useState<boolean>(false);
-  const [isRoadmapOpen, setIsRoadmapOpen] = useState<boolean>(false);
-  const [isProblemSetOpen, setIsProblemSetOpen] = useState<boolean>(false);
-  const [isCodeQualityOpen, setIsCodeQualityOpen] = useState<boolean>(false);
-  const [codeQualityCode, setCodeQualityCode] = useState<string>('');
-  const [codeQualityLang, setCodeQualityLang] = useState<string>('python');
-  const [injectedText, setInjectedText] = useState<string>('');
-  
-  // Header inline renaming state
-  const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);
+    // Upgraded Modals state: Code Sandbox, Prompt Templates, Analytics
+    const [isSandboxOpen, setIsSandboxOpen] = useState<boolean>(false);
+    const [sandboxCode, setSandboxCode] = useState<string>('');
+    const [sandboxLang, setSandboxLang] = useState<string>('python');
+    const [sandboxProblemTitle, setSandboxProblemTitle] = useState<string>('');
+    const [sandboxProblemDesc, setSandboxProblemDesc] = useState<string>('');
+    const [sandboxTestCases, setSandboxTestCases] = useState<Array<{id:number; name:string; input:string; expectedOutput:string}>>([]);
+    const [solvedProblemIds, setSolvedProblemIds] = useState<string[]>([]);
+    const [isPromptTemplatesOpen, setIsPromptTemplatesOpen] = useState<boolean>(false);
+    const [isAnalyticsOpen, setIsAnalyticsOpen] = useState<boolean>(false);
+    const [isRoadmapOpen, setIsRoadmapOpen] = useState<boolean>(false);
+    const [isProblemSetOpen, setIsProblemSetOpen] = useState<boolean>(false);
+    const [isCodeQualityOpen, setIsCodeQualityOpen] = useState<boolean>(false);
+    const [codeQualityCode, setCodeQualityCode] = useState<string>('');
+    const [codeQualityLang, setCodeQualityLang] = useState<string>('python');
+    const [injectedText, setInjectedText] = useState<string>('');
+    
+    // Header inline renaming state
+    const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);
   const [headerTitleInput, setHeaderTitleInput] = useState<string>('');
 
   // Selected AI Model state
@@ -310,6 +319,25 @@ function HomePageInner() {
     setIsSandboxOpen(true);
   }, []);
 
+  const handleProblemSolved = useCallback((problemTitle: string) => {
+    setSolvedProblemIds((prev) => {
+      if (!prev.includes(problemTitle)) {
+        const next = [...prev, problemTitle];
+        try {
+          localStorage.setItem('ai_coding_tutor_solved_problems_v1', JSON.stringify(next));
+        } catch {}
+        showToast({
+          type: 'success',
+          title: 'Vượt qua 100% Test Cases!',
+          message: `Chúc mừng bạn đã hoàn thành xuất sắc: "${problemTitle}" (+50 XP)`,
+          duration: 5000,
+        });
+        return next;
+      }
+      return prev;
+    });
+  }, [showToast]);
+
   const handleOpenCodeQuality = useCallback((code?: string, language?: string) => {
     setCodeQualityCode(code || sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n');
     setCodeQualityLang(language || sandboxLang || 'python');
@@ -440,99 +468,77 @@ function HomePageInner() {
     playSendSound();
     setInjectedText('');
 
-    // Contextual follow-ups
-    const followUps: string[] = [];
-    if (text.toLowerCase().includes('sort') || text.toLowerCase().includes('thuật toán')) {
-      followUps.push('Đi sâu vào phân tích Time Complexity O(n log n)', 'Cách viết bằng ngôn ngữ C++', 'Tối ưu hóa bộ nhớ phụ');
-    } else if (text.toLowerCase().includes('error') || text.toLowerCase().includes('lỗi')) {
-      followUps.push('Xem nguyên nhân gây tràn bộ nhớ Stack', 'Các bước debug với gdb', 'Gợi ý cách sửa mã an toàn');
-    } else {
-      followUps.push('Giải thích chi tiết hơn về phần này', 'Đưa ra ví dụ minh họa bằng Python', 'Kiểm tra lỗi tiềm ẩn theo CWE');
-    }
+    // Fetch response from Socratic Engine (Live Gemini, Ollama, or Built-in Pedagogical Matrix)
+    getSocraticAssistantResponse(text, attachments, modelSettings, selectedModel.name)
+      .then((aiResponse) => {
+        const aiMsgId = `msg-ai-${Date.now()}`;
+        const fullContent = aiResponse.content;
 
-    // Delay before AI starts "typing"
-    generationTimerRef.current = setTimeout(() => {
-      const fileCountText = attachments.length > 0
-        ? ` cùng **${attachments.length} tệp đính kèm** (${attachments.map((a) => a.name).join(', ')})`
-        : '';
-
-      const sampleCodeDemo =
-        text.toLowerCase().includes('sort') || text.toLowerCase().includes('thuật toán')
-          ? `\n\n### Đoạn mã tham khảo thuật toán:\n\`\`\`python\ndef quick_sort(arr):\n    """Thuật toán phân hoạch QuickSort - O(n log n)"""\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)\n\`\`\``
-          : '';
-
-      const personaLabel =
-        modelSettings.persona === 'socratic'
-          ? 'Trợ giảng Socratic'
-          : modelSettings.persona === 'algorithm_expert'
-          ? 'Chuyên gia Giải thuật'
-          : 'Rà soát Clean Code';
-
-      const fullContent = `**[Mô hình: ${selectedModel.name} | Phong cách: ${personaLabel}]**\n\nHệ thống đã tiếp nhận dữ liệu văn bản${fileCountText}.${sampleCodeDemo}\n\n> Lưu ý: Tính năng LLM và RAG (ChromaDB) đang sẵn sàng kết nối. Yêu cầu của bạn đã được ghi nhận trong phiên làm việc.`;
-
-      const aiMsgId = `msg-ai-${Date.now()}`;
-
-      // Insert empty streaming placeholder
-      setConversations((prev) =>
-        prev.map((conv) => {
-          if (conv.id === activeConversationId) {
-            return {
-              ...conv,
-              updatedAt: new Date().toISOString(),
-              messages: [
-                ...conv.messages,
-                {
-                  id: aiMsgId,
-                  role: 'assistant' as const,
-                  content: '',
-                  timestamp: new Date().toISOString(),
-                  isDemoNotice: true,
-                  isStreaming: true,
-                  suggestedFollowUps: followUps,
-                },
-              ],
-            };
-          }
-          return conv;
-        })
-      );
-
-      // Typewriter character-by-character streaming
-      let charIdx = 0;
-      const CHUNK = 4; // characters per tick
-      const SPEED = 18; // ms per tick
-
-      if (streamIntervalRef.current) clearInterval(streamIntervalRef.current);
-
-      streamIntervalRef.current = setInterval(() => {
-        charIdx += CHUNK;
-        const slicedContent = fullContent.slice(0, charIdx);
-        const done = charIdx >= fullContent.length;
-
+        // Insert empty streaming placeholder
         setConversations((prev) =>
           prev.map((conv) => {
-            if (conv.id !== activeConversationId) return conv;
-            return {
-              ...conv,
-              messages: conv.messages.map((m) =>
-                m.id === aiMsgId
-                  ? { ...m, content: slicedContent, isStreaming: !done }
-                  : m
-              ),
-            };
+            if (conv.id === activeConversationId) {
+              return {
+                ...conv,
+                updatedAt: new Date().toISOString(),
+                messages: [
+                  ...conv.messages,
+                  {
+                    id: aiMsgId,
+                    role: 'assistant' as const,
+                    content: '',
+                    timestamp: new Date().toISOString(),
+                    isDemoNotice: false,
+                    isStreaming: true,
+                    suggestedFollowUps: aiResponse.followUps,
+                  },
+                ],
+              };
+            }
+            return conv;
           })
         );
 
-        if (done) {
-          clearInterval(streamIntervalRef.current!);
-          streamIntervalRef.current = null;
-          generationTimerRef.current = null;
-          setIsGenerating(false);
-          playCompleteSound();
-        }
-      }, SPEED);
-    }, 400);
-  }, [activeConversationId, selectedModel, modelSettings]);
+        // Typewriter character-by-character streaming
+        let charIdx = 0;
+        const CHUNK = 5; // characters per tick
+        const SPEED = 16; // ms per tick
+
+        if (streamIntervalRef.current) clearInterval(streamIntervalRef.current);
+
+        streamIntervalRef.current = setInterval(() => {
+          charIdx += CHUNK;
+          const slicedContent = fullContent.slice(0, charIdx);
+          const done = charIdx >= fullContent.length;
+
+          setConversations((prev) =>
+            prev.map((conv) => {
+              if (conv.id !== activeConversationId) return conv;
+              return {
+                ...conv,
+                messages: conv.messages.map((m) =>
+                  m.id === aiMsgId
+                    ? { ...m, content: slicedContent, isStreaming: !done }
+                    : m
+                ),
+              };
+            })
+          );
+
+          if (done) {
+            clearInterval(streamIntervalRef.current!);
+            streamIntervalRef.current = null;
+            generationTimerRef.current = null;
+            setIsGenerating(false);
+            playCompleteSound();
+          }
+        }, SPEED);
+      })
+      .catch((err: any) => {
+        setIsGenerating(false);
+        showToast({ type: 'error', title: 'Lỗi sinh phản hồi AI', message: err?.message || 'Không thể tạo câu trả lời' });
+      });
+  }, [activeConversationId, selectedModel, modelSettings, showToast]);
 
   // Edit user message and regenerate from that point
   const handleEditUserMessage = useCallback((messageId: string, newContent: string) => {
@@ -571,63 +577,66 @@ function HomePageInner() {
     showToast({ type: 'info', title: 'Đang tạo lại câu trả lời...', duration: 2500 });
     setIsGenerating(true);
 
-    generationTimerRef.current = setTimeout(() => {
-      const fullContent = `**[Mô hình: ${selectedModel.name} | Tạo lại]**\n\nĐã tạo lại phản hồi mới cho yêu cầu của bạn.\n\n> Hệ thống phản hồi theo phong cách ${
-        modelSettings.persona === 'socratic' ? 'Socratic' : 'Chuyên gia'
-      }. Khi backend kích hoạt, nội dung sẽ được xử lý qua RAG.`;
+    getSocraticAssistantResponse(lastUserMsg.content, lastUserMsg.attachments || [], modelSettings, selectedModel.name)
+      .then((aiResponse) => {
+        const fullContent = aiResponse.content;
+        const aiMsgId = `msg-ai-regen-${Date.now()}`;
 
-      const aiMsgId = `msg-ai-regen-${Date.now()}`;
-
-      setConversations((prev) =>
-        prev.map((conv) => {
-          if (conv.id !== activeConversationId) return conv;
-          return {
-            ...conv,
-            updatedAt: new Date().toISOString(),
-            messages: [
-              ...conv.messages,
-              {
-                id: aiMsgId,
-                role: 'assistant' as const,
-                content: '',
-                timestamp: new Date().toISOString(),
-                isDemoNotice: true,
-                isStreaming: true,
-                suggestedFollowUps: ['Đi sâu vào phân tích Time Complexity O(n log n)', 'Cách viết bằng ngôn ngữ C++', 'Tối ưu hóa bộ nhớ phụ'],
-              },
-            ],
-          };
-        })
-      );
-
-      let charIdx = 0;
-      const CHUNK = 4;
-      const SPEED = 18;
-      if (streamIntervalRef.current) clearInterval(streamIntervalRef.current);
-
-      streamIntervalRef.current = setInterval(() => {
-        charIdx += CHUNK;
-        const slicedContent = fullContent.slice(0, charIdx);
-        const done = charIdx >= fullContent.length;
         setConversations((prev) =>
           prev.map((conv) => {
             if (conv.id !== activeConversationId) return conv;
             return {
               ...conv,
-              messages: conv.messages.map((m) =>
-                m.id === aiMsgId ? { ...m, content: slicedContent, isStreaming: !done } : m
-              ),
+              updatedAt: new Date().toISOString(),
+              messages: [
+                ...conv.messages,
+                {
+                  id: aiMsgId,
+                  role: 'assistant' as const,
+                  content: '',
+                  timestamp: new Date().toISOString(),
+                  isDemoNotice: false,
+                  isStreaming: true,
+                  suggestedFollowUps: aiResponse.followUps,
+                },
+              ],
             };
           })
         );
-        if (done) {
-          clearInterval(streamIntervalRef.current!);
-          streamIntervalRef.current = null;
-          generationTimerRef.current = null;
-          setIsGenerating(false);
-        }
-      }, SPEED);
-    }, 400);
+
+        let charIdx = 0;
+        const CHUNK = 5;
+        const SPEED = 16;
+        if (streamIntervalRef.current) clearInterval(streamIntervalRef.current);
+
+        streamIntervalRef.current = setInterval(() => {
+          charIdx += CHUNK;
+          const slicedContent = fullContent.slice(0, charIdx);
+          const done = charIdx >= fullContent.length;
+          setConversations((prev) =>
+            prev.map((conv) => {
+              if (conv.id !== activeConversationId) return conv;
+              return {
+                ...conv,
+                messages: conv.messages.map((m) =>
+                  m.id === aiMsgId ? { ...m, content: slicedContent, isStreaming: !done } : m
+                ),
+              };
+            })
+          );
+          if (done) {
+            clearInterval(streamIntervalRef.current!);
+            streamIntervalRef.current = null;
+            generationTimerRef.current = null;
+            setIsGenerating(false);
+            playCompleteSound();
+          }
+        }, SPEED);
+      })
+      .catch((err: any) => {
+        setIsGenerating(false);
+        showToast({ type: 'error', title: 'Lỗi tạo lại phản hồi', message: err?.message });
+      });
   }, [activeConversation, activeConversationId, selectedModel, modelSettings, showToast]);
 
   // Filtered messages for in-chat search
@@ -697,6 +706,7 @@ function HomePageInner() {
         problemDescription={sandboxProblemDesc}
         initialTestCases={sandboxTestCases}
         onOpenCodeQuality={handleOpenCodeQuality}
+        onProblemSolved={handleProblemSolved}
       />
 
       {/* Socratic Prompt Templates Modal */}
@@ -727,6 +737,7 @@ function HomePageInner() {
         onClose={() => setIsProblemSetOpen(false)}
         onSolveInSandbox={handleSolveInSandbox}
         onAskAIHint={(prompt) => { setInjectedText(prompt); setIsProblemSetOpen(false); }}
+        solvedProblemIds={solvedProblemIds}
       />
 
       {/* Code Quality Analysis Modal */}

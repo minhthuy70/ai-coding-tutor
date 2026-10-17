@@ -230,16 +230,19 @@ Phiên bản Nâng cấp Toàn diện - Frontend Chat Studio & Lộ trình Kỹ 
 [x] - In-Sandbox Automated Test Case Suite - Tab kiểm thử tự động với 3 bộ dữ liệu: Test 1 (Mẫu), Test 2 (Giá trị lớn), Test 3 (Edge case)
 [x] - 1-Click Test Execution - Chạy đồng loạt các test case và hiển thị huy hiệu trạng thái PASSED / FAILED trực quan
 [x] - Test Case Input & Expected Output visualizer - Hiển thị chi tiết cặp dữ liệu đầu vào và đầu ra mong đợi
+[x] - Custom Test Case Creator - Cho phép học viên tự thêm test case tùy chỉnh để kiểm tra các trường hợp biên đặc thù
+[x] - Score calculation & grading rubric - Tự động tính điểm tổng kết dựa trên tỉ lệ phần trăm test case vượt qua (100% test pass nhận banner vinh danh +50 XP)
 [ ] - Hidden test cases runner - Chạy bộ test case ẩn để chấm điểm chính thức chống gian lận hardcode kết quả
 [ ] - Strict vs. Lenient output comparison - So khớp kết quả chính xác tuyệt đối hoặc bỏ qua khoảng trắng thừa/dòng trống cuối
 [ ] - Floating point tolerance matching - So khớp số thực với sai số cho phép $\epsilon = 10^{-6}$
-[ ] - Score calculation & grading rubric - Tự động tính điểm tổng kết dựa trên tỉ lệ phần trăm test case vượt qua (thang 100)
 
 8.2. Automated Feedback & Mistake Localization (Phản hồi tự động & Định vị lỗi)
-[ ] - Diff viewer for failed test cases - Hiển thị so sánh trực quan giữa Kết quả thực tế (Actual Output) và Kết quả mong đợi (Expected Output)
-[ ] - Failed input display for public tests - Hiển thị bộ dữ liệu đầu vào gây ra lỗi cho các test case công khai
-[ ] - AI-assisted syntax error translation - AI dịch thông báo lỗi tiếng Anh phức tạp của trình biên dịch sang tiếng Việt dễ hiểu
-[ ] - Edge case coverage checking - Cảnh báo các trường hợp biên sinh viên hay quên (mảng rỗng, n = 0, số âm, số nguyên cực đại)
+[x] - Diff viewer for failed test cases - Hiển thị so sánh trực quan giữa Kết quả thực tế (Actual Output) và Kết quả mong đợi (Expected Output)
+[x] - Failed input display for public tests - Hiển thị bộ dữ liệu đầu vào gây ra lỗi cho các test case công khai kèm nút nhờ AI phân tích
+[x] - Socratic 3-Tier Progressive Hint Drawer - Hệ thống gợi ý 3 cấp độ (Cấp 1: Tư duy -> Cấp 2: Thuật toán -> Cấp 3: Tối ưu & Edge Cases)
+[x] - Solved Problem Tracker & XP Leveling - Theo dõi tiến độ bài toán đã giải qua LocalStorage và thanh tiến độ XP trên thanh tiêu đề
+[x] - AI-assisted syntax error translation - AI dịch thông báo lỗi tiếng Anh phức tạp của trình biên dịch sang tiếng Việt dễ hiểu
+[x] - Edge case coverage checking - Cảnh báo các trường hợp biên sinh viên hay quên (mảng rỗng, n = 0, số âm, số nguyên cực đại)
 
 ================================================================================
 

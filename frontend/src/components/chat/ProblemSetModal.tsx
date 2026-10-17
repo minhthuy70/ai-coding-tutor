@@ -48,6 +48,11 @@ export interface CodingProblem {
     expectedOutput: string;
   }[];
   hintPrompt: string;
+  hints?: {
+    level1: string; // Tư duy cốt lõi (Socratic Conceptual)
+    level2: string; // Chiến lược thuật toán & Mã giả (Pseudocode)
+    level3: string; // Tối ưu Big-O & Edge Cases
+  };
 }
 
 interface ProblemSetModalProps {
@@ -55,6 +60,7 @@ interface ProblemSetModalProps {
   onClose: () => void;
   onSolveInSandbox: (problem: CodingProblem, language: string) => void;
   onAskAIHint: (prompt: string) => void;
+  solvedProblemIds?: string[];
 }
 
 export const PROBLEMS_DATA: CodingProblem[] = [
@@ -71,7 +77,8 @@ export const PROBLEMS_DATA: CodingProblem[] = [
     constraints: ['2 <= nums.length <= 10^4', '-10^9 <= nums[i] <= 10^9', '-10^9 <= target <= 10^9', 'Chỉ tồn tại duy nhất một nghiệm đúng'],
     examples: [
       { input: '9\n2 7 11 15', output: '0 1', explanation: 'nums[0] + nums[1] == 2 + 7 == 9, trả về 0 1.' },
-      { input: '6\n3 2 4', output: '1 2', explanation: 'nums[1] + nums[2] == 2 + 4 == 6, trả về 1 2.' }
+      { input: '6\n3 2 4', output: '1 2', explanation: 'nums[1] + nums[2] == 2 + 4 == 6, trả về 1 2.' },
+      { input: '6\n3 3', output: '0 1', explanation: 'Hai số giống nhau nhưng khác vị trí index.' }
     ],
     starterCode: {
       python: `# Bài toán Two Sum: O(n) thời gian dùng Hash Map
@@ -114,7 +121,12 @@ if (input.length >= 2) {
       { id: 2, name: 'Test 2 (Chỉ số cuối)', input: '6\n3 2 4', expectedOutput: '1 2' },
       { id: 3, name: 'Test 3 (Hai số giống nhau)', input: '6\n3 3', expectedOutput: '0 1' }
     ],
-    hintPrompt: 'Tôi đang làm bài toán Two Sum. Thay vì dùng 2 vòng lặp lồng $O(n^2)$, hãy dùng phương pháp Socratic gợi ý cho tôi cách dùng cấu trúc dữ liệu Hash Table (Dictionary trong Python) để giảm độ phức tạp thời gian xuống $O(n)$ mà không đưa ra code hoàn chỉnh ngay.'
+    hintPrompt: 'Tôi đang làm bài toán Two Sum. Thay vì dùng 2 vòng lặp lồng O(n^2), hãy dùng phương pháp Socratic gợi ý cho tôi cách dùng cấu trúc dữ liệu Hash Table để giảm độ phức tạp thời gian xuống O(n) mà không đưa ra code hoàn chỉnh ngay.',
+    hints: {
+      level1: 'Thay vì duyệt hai vòng lặp lồng nhau O(n²), hãy đặt câu hỏi: Khi duyệt đến một phần tử x, ta đang tìm một phần tử y thỏa mãn y = target - x. Liệu có cấu trúc dữ liệu nào cho phép tra cứu xem y đã từng xuất hiện hay chưa trong thời gian O(1)?',
+      level2: 'Sử dụng Bảng băm (Hash Map / Dictionary). Khởi tạo `seen = {}`:\n- Lặp qua từng số `num` tại chỉ số `i`.\n- Tính phần bù `complement = target - num`.\n- Nếu `complement in seen`: in ra `seen[complement]` và `i`.\n- Ngược lại: gán `seen[num] = i` để phục vụ các số xét sau.',
+      level3: 'Độ phức tạp thời gian: O(n) với một lượt duyệt duy nhất. Độ phức tạp không gian: O(n) cho bảng băm. Chú ý: Đề bài yêu cầu không dùng cùng 1 phần tử hai lần, kỹ thuật kiểm tra trước khi ghi vào `seen` đã tự động đảm bảo điều này.'
+    }
   },
   {
     id: 'prob-02',
@@ -129,7 +141,8 @@ if (input.length >= 2) {
     constraints: ['1 <= s.length <= 10^4', 's chỉ chứa các ký tự ()[]{}'],
     examples: [
       { input: '()[]{}', output: 'true', explanation: 'Các cặp ngoặc đóng mở đúng thứ tự.' },
-      { input: '(]', output: 'false', explanation: 'Ngoặc tròn mở nhưng lại đóng bằng ngoặc vuông.' }
+      { input: '(]', output: 'false', explanation: 'Ngoặc tròn mở nhưng lại đóng bằng ngoặc vuông.' },
+      { input: '([)]', output: 'false', explanation: 'Ngoặc đóng sai thứ tự lồng nhau.' }
     ],
     starterCode: {
       python: `# Kiểm tra tính hợp lệ của chuỗi ngoặc dùng Stack
@@ -156,7 +169,12 @@ is_valid_parentheses()`,
       { id: 2, name: 'Test 2 (Lồng nhau)', input: '{[()]}', expectedOutput: 'true' },
       { id: 3, name: 'Test 3 (Sai thứ tự)', input: '([)]', expectedOutput: 'false' }
     ],
-    hintPrompt: 'Tôi đang làm bài kiểm tra chuỗi ngoặc hợp lệ (Valid Parentheses). Hãy đóng vai gia sư Socratic, giải thích tại sao Stack (Ngăn xếp) với tính chất LIFO lại là cấu trúc dữ liệu tối ưu nhất cho bài toán này và đặt câu hỏi gợi ý cho tôi.'
+    hintPrompt: 'Tôi đang làm bài kiểm tra chuỗi ngoặc hợp lệ (Valid Parentheses). Hãy đóng vai gia sư Socratic, giải thích tại sao Stack (Ngăn xếp) với tính chất LIFO lại là cấu trúc dữ liệu tối ưu nhất cho bài toán này và đặt câu hỏi gợi ý cho tôi.',
+    hints: {
+      level1: 'Một cặp ngoặc mở xuất hiện sau cùng luôn phải được đóng đầu tiên trước khi các ngoặc mở bên ngoài được đóng. Cấu trúc dữ liệu nào hoạt động theo nguyên lý Last In, First Out (LIFO)?',
+      level2: 'Dùng Ngăn xếp (Stack):\n- Duyệt qua từng ký tự của chuỗi `s`.\n- Nếu gặp ngoặc mở `(`, `{`, `[`: đẩy vào Stack (`stack.append(char)`).\n- Nếu gặp ngoặc đóng: kiểm tra xem Stack có rỗng không hoặc phần tử đỉnh lấy ra (`pop()`) có khớp với ngoặc đóng tương ứng hay không.',
+      level3: 'Sau khi duyệt hết chuỗi, chuỗi chỉ hợp lệ khi Stack rỗng hoàn toàn (`len(stack) == 0`). Độ phức tạp: O(n) thời gian, O(n) không gian. Cẩn thận các edge cases: chuỗi chỉ toàn ngoặc mở `((((` hoặc chuỗi mở đầu bằng ngoặc đóng `)]}`.'
+    }
   },
   {
     id: 'prob-03',
@@ -165,7 +183,7 @@ is_valid_parentheses()`,
     difficulty: 'Dễ',
     category: 'BinarySearch',
     acceptanceRate: '92.1%',
-    description: 'Cho một mảng số nguyên `nums` đã được sắp xếp theo thứ tự tăng dần và một số nguyên `target`.\nHãy viết hàm tìm kiếm `target` trong mảng `nums`. Nếu `target` tồn tại, trả về chỉ số của nó, ngược lại trả về `-1`.\nThuật toán bắt buộc phải có độ phức tạp thời gian chạy $O(\\log n)$.',
+    description: 'Cho một mảng số nguyên `nums` đã được sắp xếp theo thứ tự tăng dần và một số nguyên `target`.\nHãy viết hàm tìm kiếm `target` trong mảng `nums`. Nếu `target` tồn tại, trả về chỉ số của nó, ngược lại trả về `-1`.\nThuật toán bắt buộc phải có độ phức tạp thời gian chạy O(log n).',
     inputDesc: 'Dòng 1: Target\nDòng 2: Mảng số nguyên đã sắp xếp tăng dần',
     outputDesc: 'In ra chỉ số tìm thấy hoặc -1',
     constraints: ['1 <= nums.length <= 10^4', '-10^4 < nums[i], target < 10^4', 'Tất cả các số trong nums là duy nhất và đã sắp xếp'],
@@ -202,7 +220,12 @@ binary_search()`,
       { id: 2, name: 'Test 2 (Không tìm thấy)', input: '2\n-1 0 3 5 9 12', expectedOutput: '-1' },
       { id: 3, name: 'Test 3 (Phần tử đầu tiên)', input: '-1\n-1 0 3 5 9 12', expectedOutput: '0' }
     ],
-    hintPrompt: 'Hãy hướng dẫn tôi tư duy Binary Search (Chia để trị). Tại sao mỗi lần so sánh ta lại có thể loại bỏ được một nửa không gian tìm kiếm? Cách tính `mid = (left + right) // 2` có nguy cơ tràn số (integer overflow) trong C++ không?'
+    hintPrompt: 'Hãy hướng dẫn tôi tư duy Binary Search (Chia để trị). Tại sao mỗi lần so sánh ta lại có thể loại bỏ được một nửa không gian tìm kiếm? Cách tính mid = (left + right) // 2 có nguy cơ tràn số trong C++ không?',
+    hints: {
+      level1: 'Mảng đã được sắp xếp tăng dần! Nếu ta so sánh phần tử cần tìm `target` với phần tử nằm chính giữa `nums[mid]`, ta có thể chắc chắn loại bỏ 50% số phần tử còn lại mà không cần kiểm tra từng số.',
+      level2: 'Dùng hai con trỏ `left = 0, right = len(nums) - 1`:\n- Trong khi `left <= right`: tính `mid = (left + right) // 2`.\n- Nếu `nums[mid] == target`: in ra `mid` và kết thúc.\n- Nếu `nums[mid] < target`: thu hẹp tìm kiếm sang nửa phải `left = mid + 1`.\n- Ngược lại: thu hẹp sang nửa trái `right = mid - 1`.',
+      level3: 'Độ phức tạp: O(log n) thời gian, O(1) bộ nhớ. Lưu ý cho C++/Java: phép cộng `(left + right)` có nguy cơ Integer Overflow nếu giá trị lớn; giải pháp chuẩn là `mid = left + (right - left) / 2`.'
+    }
   },
   {
     id: 'prob-04',
@@ -216,7 +239,8 @@ binary_search()`,
     outputDesc: 'In ra các khoảng sau khi hợp nhất theo định dạng "start end" trên mỗi dòng',
     constraints: ['1 <= intervals.length <= 10^4', '0 <= start <= end <= 10^4'],
     examples: [
-      { input: '4\n1 3\n2 6\n8 10\n15 18', output: '1 6\n8 10\n15 18', explanation: 'Khoảng [1,3] và [2,6] gối lên nhau, được hợp nhất thành [1,6].' }
+      { input: '4\n1 3\n2 6\n8 10\n15 18', output: '1 6\n8 10\n15 18', explanation: 'Khoảng [1,3] và [2,6] gối lên nhau, được hợp nhất thành [1,6].' },
+      { input: '2\n1 4\n2 3', output: '1 4', explanation: 'Khoảng [1,4] bao trọn khoảng [2,3].' }
     ],
     starterCode: {
       python: `# Hợp nhất các khoảng thời gian Merge Intervals O(n log n)
@@ -250,7 +274,12 @@ merge_intervals()`,
       { id: 1, name: 'Test 1 (Gối đầu mẫu)', input: '4\n1 3\n2 6\n8 10\n15 18', expectedOutput: '1 6\n8 10\n15 18' },
       { id: 2, name: 'Test 2 (Chứa trọn)', input: '2\n1 4\n2 3', expectedOutput: '1 4' }
     ],
-    hintPrompt: 'Tôi đang giải bài toán Merge Intervals. Tại sao bước sắp xếp các khoảng theo thời điểm bắt đầu `start` lại là mấu chốt quyết định giúp ta giải bài toán trong 1 lượt duyệt duy nhất?'
+    hintPrompt: 'Tôi đang giải bài toán Merge Intervals. Tại sao bước sắp xếp các khoảng theo thời điểm bắt đầu `start` lại là mấu chốt quyết định giúp ta giải bài toán trong 1 lượt duyệt duy nhất?',
+    hints: {
+      level1: 'Nếu các khoảng thời gian nằm lộn xộn, làm sao biết hai khoảng có giao nhau? Tiêu chí sắp xếp nào sẽ giúp ta chỉ cần xét các khoảng liền kề theo thứ tự thời gian?',
+      level2: 'Sắp xếp danh sách `intervals` theo thời điểm bắt đầu `start` tăng dần. Khởi tạo `merged = []`:\n- Duyệt qua từng khoảng `curr`.\n- Nếu `merged` rỗng hoặc `merged[-1].end < curr.start`: thêm `curr` vào `merged`.\n- Ngược lại: khoảng hiện tại bị gối đầu, cập nhật `merged[-1].end = max(merged[-1].end, curr.end)`.',
+      level3: 'Độ phức tạp: O(n log n) do sắp xếp, O(n) không gian lưu kết quả. Chú ý trường hợp một khoảng bao trọn khoảng kia (ví dụ `[1, 10]` và `[2, 5]`), lúc này giá trị kết thúc phải là `max(10, 5) = 10`.'
+    }
   },
   {
     id: 'prob-05',
@@ -294,7 +323,12 @@ longest_increasing_subsequence()`,
       { id: 2, name: 'Test 2 (Mảng tăng sẵn)', input: '1 2 3 4 5', expectedOutput: '5' },
       { id: 3, name: 'Test 3 (Mảng bằng nhau)', input: '7 7 7 7 7', expectedOutput: '1' }
     ],
-    hintPrompt: 'Hãy hướng dẫn tôi xây dựng công thức chuyển trạng thái Quy hoạch động cho bài toán Dãy con tăng dài nhất (LIS). Định nghĩa mảng `dp[i]` ở đây đại diện cho ý nghĩa gì?'
+    hintPrompt: 'Hãy hướng dẫn tôi xây dựng công thức chuyển trạng thái Quy hoạch động cho bài toán Dãy con tăng dài nhất (LIS). Định nghĩa mảng `dp[i]` ở đây đại diện cho ý nghĩa gì?',
+    hints: {
+      level1: 'Dãy con tăng không nhất thiết phải liên tiếp nhau! Tại mỗi vị trí i, độ dài dãy con tăng kết thúc tại `nums[i]` có thể kế thừa từ bất kỳ vị trí j nào đứng trước nó (j < i) nếu `nums[i] > nums[j]`.',
+      level2: 'Quy hoạch động (DP):\n- Gọi `dp[i]` là độ dài dãy con tăng dài nhất kết thúc tại chỉ số `i`. Khởi tạo `dp = [1] * n`.\n- Hai vòng lặp lồng: với mỗi `i` từ 0 đến n-1, duyệt mọi `j` từ 0 đến i-1.\n- Nếu `nums[i] > nums[j]`: `dp[i] = max(dp[i], dp[j] + 1)`.\n- Kết quả cuối cùng là `max(dp)`.',
+      level3: 'Độ phức tạp thời gian: O(n²) với DP truyền thống, O(n) không gian. Để tối ưu lên O(n log n), có thể kết hợp Binary Search với mảng `tails` (thuật toán Patience Sorting).'
+    }
   },
   {
     id: 'prob-06',
@@ -348,7 +382,12 @@ num_islands()`,
       { id: 1, name: 'Test 1 (1 đảo lớn)', input: '4 5\n1 1 1 1 0\n1 1 0 1 0\n1 1 0 0 0\n0 0 0 0 0', expectedOutput: '1' },
       { id: 2, name: 'Test 2 (3 đảo riêng biệt)', input: '4 5\n1 1 0 0 0\n1 1 0 0 0\n0 0 1 0 0\n0 0 0 1 1', expectedOutput: '3' }
     ],
-    hintPrompt: 'Hãy dùng phương pháp gợi mở Socratic giải thích bài toán Number of Islands. Tại sao kỹ thuật "làm chìm đảo" (sink the island - đánh dấu ô 1 thành 0 sau khi thăm) lại giúp chúng ta không cần dùng thêm mảng phụ `visited`?'
+    hintPrompt: 'Hãy dùng phương pháp gợi mở Socratic giải thích bài toán Number of Islands. Tại sao kỹ thuật "làm chìm đảo" (sink the island - đánh dấu ô 1 thành 0 sau khi thăm) lại giúp chúng ta không cần dùng thêm mảng phụ `visited`?',
+    hints: {
+      level1: 'Một hòn đảo là một thành phần liên thông gồm các ô "1" kề nhau 4 hướng. Khi duyệt gặp một ô đất "1", làm sao ta đi thăm toàn bộ các ô thuộc cùng đảo đó để không bao giờ đếm lại nó nữa?',
+      level2: 'Duyệt đồ thị bằng DFS (hoặc BFS):\n- Lặp qua từng ô `(r, c)` trong ma trận. Nếu `grid[r][c] == "1"`, tăng biến `islands += 1` và gọi `dfs(r, c)`.\n- Hàm `dfs(r, c)` kiểm tra biên, nếu gặp ô "1" thì đổi thành "0" (làm chìm đảo) và đệ quy sang 4 ô lân cận (trên, dưới, trái, phải).',
+      level3: 'Kỹ thuật "làm chìm đảo" (ghi đè trực tiếp `grid[r][c] = "0"`) giúp giảm độ phức tạp không gian phụ xuống O(1) ngoài stack đệ quy (thay vì cần ma trận `visited` O(m*n)). Độ phức tạp thời gian: O(m*n).'
+    }
   },
   {
     id: 'prob-07',
@@ -373,7 +412,88 @@ WHERE salary < (SELECT MAX(salary) FROM Employee);`,
     testCases: [
       { id: 1, name: 'Test 1 (Đầy đủ 3 lương)', input: '1 100\n2 200\n3 300', expectedOutput: '200' }
     ],
-    hintPrompt: 'Làm thế nào để tìm mức lương cao thứ 2 trong SQL? Tại sao dùng `LIMIT 1 OFFSET 1` đơn thuần có thể bị lỗi khi bảng không có mức lương thứ 2? Hãy hướng dẫn tôi cách dùng `MAX()` hoặc Subquery.'
+    hintPrompt: 'Làm thế nào để tìm mức lương cao thứ 2 trong SQL? Tại sao dùng LIMIT 1 OFFSET 1 đơn thuần có thể bị lỗi khi bảng không có mức lương thứ 2? Hãy hướng dẫn tôi cách dùng MAX() hoặc Subquery.',
+    hints: {
+      level1: 'Mức lương cao thứ nhì thực chất là mức lương lớn nhất trong số tất cả các mức lương còn lại sau khi đã loại bỏ mức lương cao nhất tuyệt đối!',
+      level2: 'Dùng Subquery lồng nhau:\n```sql\nSELECT MAX(salary) AS SecondHighestSalary\nFROM Employee\nWHERE salary < (\n  SELECT MAX(salary) FROM Employee\n);\n```',
+      level3: 'Hàm `MAX()` trong SQL có đặc tính rất hay: Nếu tập dữ liệu truyền vào rỗng (ví dụ bảng chỉ có 1 nhân viên), `MAX()` tự động trả về `NULL` đúng theo yêu cầu của đề bài mà không làm phát sinh lỗi.'
+    }
+  },
+  {
+    id: 'prob-08',
+    number: 8,
+    title: 'Đảo Ngược Danh Sách Liên Kết Đơn (Reverse Linked List)',
+    difficulty: 'Dễ',
+    category: 'LinkedList',
+    acceptanceRate: '82.4%',
+    description: 'Cho con trỏ đầu `head` của một danh sách liên kết đơn. Hãy đảo ngược thứ tự các nút trong danh sách liên kết và trả về danh sách đã đảo ngược.\n\nThuật toán cần thực hiện lặp (Iterative) hoặc đệ quy (Recursive) trong thời gian O(n) và O(1) không gian phụ.',
+    inputDesc: 'Dãy các số nguyên cách nhau bởi dấu cách biểu diễn danh sách liên kết ban đầu',
+    outputDesc: 'Dãy các số nguyên sau khi đảo ngược cách nhau bởi dấu cách',
+    constraints: ['0 <= Số lượng node <= 5000', '-5000 <= Node.val <= 5000'],
+    examples: [
+      { input: '1 2 3 4 5', output: '5 4 3 2 1', explanation: 'Danh sách 1 -> 2 -> 3 -> 4 -> 5 đảo ngược thành 5 -> 4 -> 3 -> 2 -> 1.' },
+      { input: '1 2', output: '2 1', explanation: 'Danh sách 1 -> 2 đảo ngược thành 2 -> 1.' }
+    ],
+    starterCode: {
+      python: `# Đảo ngược danh sách liên kết đơn O(n) thời gian, O(1) không gian
+import sys
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reverse_linked_list():
+    raw = sys.stdin.read().strip()
+    if not raw:
+        return
+    vals = list(map(int, raw.split()))
+    if not vals:
+        return
+        
+    # Xây dựng danh sách liên kết
+    head = ListNode(vals[0])
+    curr = head
+    for v in vals[1:]:
+        curr.next = ListNode(v)
+        curr = curr.next
+        
+    # Thuật toán đảo ngược 3 con trỏ: prev, curr, next_node
+    prev = None
+    curr = head
+    while curr:
+        next_node = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next_node
+        
+    # In ra danh sách sau khi đảo ngược
+    res = []
+    curr = prev
+    while curr:
+        res.append(str(curr.val))
+        curr = curr.next
+    print(" ".join(res))
+
+reverse_linked_list()`,
+      javascript: `const fs = require('fs');
+const input = fs.readFileSync(0, 'utf-8').trim();
+if (input) {
+  const nums = input.split(/\\s+/);
+  console.log(nums.reverse().join(' '));
+}`
+    },
+    testCases: [
+      { id: 1, name: 'Test 1 (5 phần tử)', input: '1 2 3 4 5', expectedOutput: '5 4 3 2 1' },
+      { id: 2, name: 'Test 2 (2 phần tử)', input: '1 2', expectedOutput: '2 1' },
+      { id: 3, name: 'Test 3 (1 phần tử)', input: '42', expectedOutput: '42' }
+    ],
+    hintPrompt: 'Làm thế nào để đảo ngược chiều các liên kết `curr.next` trong danh sách liên kết đơn mà không bị mất dấu nút tiếp theo? Hãy dùng phương pháp gợi ý Socratic phân tích kỹ thuật 3 con trỏ.',
+    hints: {
+      level1: 'Khi bạn thay đổi liên kết `curr.next = prev`, bạn sẽ lập tức mất đi địa chỉ của nút kế tiếp ban đầu! Bạn cần làm gì trước khi bẻ ngoặt chiều mũi tên liên kết?',
+      level2: 'Kỹ thuật 3 con trỏ (`prev`, `curr`, `next_node`):\n1. Lưu tạm `next_node = curr.next`.\n2. Bẻ chiều: `curr.next = prev`.\n3. Dịch `prev` tiến lên: `prev = curr`.\n4. Dịch `curr` tiến lên: `curr = next_node`.\nLặp lại cho đến khi `curr` trở thành `None`.',
+      level3: 'Khi vòng lặp kết thúc, `prev` chính là con trỏ đầu mới (`new head`) của danh sách đảo ngược. Độ phức tạp: O(n) thời gian, O(1) bộ nhớ phụ. Trường hợp biên: Danh sách rỗng (`head = None`) hoặc chỉ có 1 nút duy nhất.'
+    }
   }
 ];
 
@@ -382,11 +502,13 @@ export const ProblemSetModal: React.FC<ProblemSetModalProps> = ({
   onClose,
   onSolveInSandbox,
   onAskAIHint,
+  solvedProblemIds,
 }) => {
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeProblemId, setActiveProblemId] = useState<string>(PROBLEMS_DATA[0].id);
+  const [selectedHintLevel, setSelectedHintLevel] = useState<1 | 2 | 3>(1);
 
   const filteredProblems = useMemo(() => {
     return PROBLEMS_DATA.filter((p) => {
@@ -403,6 +525,18 @@ export const ProblemSetModal: React.FC<ProblemSetModalProps> = ({
   const activeProblem = useMemo(() => {
     return PROBLEMS_DATA.find((p) => p.id === activeProblemId) || PROBLEMS_DATA[0];
   }, [activeProblemId]);
+
+  const solvedCount = useMemo(() => {
+    if (!solvedProblemIds || solvedProblemIds.length === 0) return 0;
+    return PROBLEMS_DATA.filter((p) =>
+      solvedProblemIds.some(
+        (idOrTitle) =>
+          idOrTitle.includes(p.title) ||
+          idOrTitle.includes(p.id) ||
+          idOrTitle.includes(String(p.number))
+      )
+    ).length;
+  }, [solvedProblemIds]);
 
   if (!isOpen) return null;
 
@@ -431,13 +565,21 @@ export const ProblemSetModal: React.FC<ProblemSetModalProps> = ({
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-2xl p-2 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
-          >
-            <X className="h-5 w-5" />
-          </button>
+          <div className="flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-xs font-bold">
+              <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+              <span>Đã giải: {solvedCount} / {PROBLEMS_DATA.length} bài</span>
+              <span className="text-amber-600 dark:text-amber-400 font-black">• {solvedCount * 50} XP</span>
+            </div>
+
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-2xl p-2 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
         </div>
 
         {/* Filter & Search Bar */}
@@ -448,55 +590,76 @@ export const ProblemSetModal: React.FC<ProblemSetModalProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Tìm kiếm bài tập theo tên hoặc từ khóa..."
-              className="w-full bg-transparent text-xs text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none"
+              placeholder="Tìm kiếm theo tên thuật toán hoặc chủ đề..."
+              className="w-full bg-transparent text-xs text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none font-medium"
             />
-            {searchQuery && (
-              <button onClick={() => setSearchQuery('')} className="text-slate-400 hover:text-slate-600">
-                <X className="h-3.5 w-3.5" />
-              </button>
-            )}
           </div>
 
-          {/* Difficulty Filter */}
-          <div className="flex items-center gap-1.5">
-            <span className="text-[11px] font-bold text-slate-400 mr-1 hidden sm:inline">Độ khó:</span>
-            {['all', 'Dễ', 'Trung bình', 'Khó'].map((diff) => (
-              <button
-                key={diff}
-                type="button"
-                onClick={() => setSelectedDifficulty(diff)}
-                className={`px-2.5 py-1 rounded-xl text-xs font-bold transition-all ${
-                  selectedDifficulty === diff
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:bg-slate-50'
-                }`}
-              >
-                {diff === 'all' ? 'Tất cả' : diff}
-              </button>
-            ))}
+          <div className="flex items-center gap-2 overflow-x-auto">
+            {/* Difficulty Filter */}
+            <div className="flex items-center rounded-xl bg-slate-200/60 dark:bg-slate-800 p-0.5 text-xs font-bold text-slate-600 dark:text-slate-400">
+              {['all', 'Dễ', 'Trung bình', 'Khó'].map((diff) => (
+                <button
+                  key={diff}
+                  type="button"
+                  onClick={() => setSelectedDifficulty(diff)}
+                  className={`px-3 py-1 rounded-lg transition ${
+                    selectedDifficulty === diff
+                      ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+                      : 'hover:text-slate-900 dark:hover:text-white'
+                  }`}
+                >
+                  {diff === 'all' ? 'Tất cả độ khó' : diff}
+                </button>
+              ))}
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex items-center rounded-xl bg-slate-200/60 dark:bg-slate-800 p-0.5 text-xs font-bold text-slate-600 dark:text-slate-400">
+              {['all', 'Array', 'Stack', 'DP', 'LinkedList', 'SQL'].map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-2.5 py-1 rounded-lg transition ${
+                    selectedCategory === cat
+                      ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+                      : 'hover:text-slate-900 dark:hover:text-white'
+                  }`}
+                >
+                  {cat === 'all' ? 'Tất cả dạng' : cat}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Content Body: Split Left (List) & Right (Details) */}
-        <div className="flex-1 flex flex-col md:flex-row min-h-0 overflow-hidden">
+        {/* Modal Body: Two Columns */}
+        <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
           
           {/* Left Column: Problem List */}
-          <div className="w-full md:w-5/12 border-r border-slate-200/80 dark:border-slate-800 overflow-y-auto p-4 space-y-2 bg-slate-50/40 dark:bg-slate-900/40">
-            <div className="flex items-center justify-between px-2 pb-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+          <div className="w-full md:w-5/12 border-r border-slate-200/70 dark:border-slate-800 overflow-y-auto p-4 space-y-2.5 bg-slate-50/30 dark:bg-slate-950/20">
+            <div className="flex items-center justify-between px-1 mb-1 text-xs font-bold text-slate-400">
               <span>Danh sách ({filteredProblems.length} bài)</span>
-              <span>Tỉ lệ đỗ</span>
+              <span>Tỉ lệ chấp nhận</span>
             </div>
 
             {filteredProblems.map((prob) => {
-              const isSelected = prob.id === activeProblemId;
+              const isSelected = prob.id === activeProblem.id;
+              const isSolved = (solvedProblemIds || []).some(
+                (idOrTitle) =>
+                  idOrTitle.includes(prob.title) ||
+                  idOrTitle.includes(prob.id) ||
+                  idOrTitle.includes(String(prob.number))
+              );
+
               return (
                 <div
                   key={prob.id}
                   onClick={() => setActiveProblemId(prob.id)}
-                  className={`group p-3 rounded-2xl border transition-all cursor-pointer ${
+                  className={`p-3.5 rounded-2xl border transition-all cursor-pointer ${
                     isSelected
-                      ? 'bg-white dark:bg-slate-800 border-amber-500 dark:border-amber-500 shadow-md shadow-amber-500/10'
+                      ? 'bg-amber-50/60 dark:bg-amber-950/20 border-amber-300 dark:border-amber-700 shadow-sm'
                       : 'bg-white/80 dark:bg-slate-800/60 border-slate-200/70 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
                   }`}
                 >
@@ -512,9 +675,17 @@ export const ProblemSetModal: React.FC<ProblemSetModalProps> = ({
                       </h4>
                     </div>
 
-                    <span className="text-[10px] font-bold text-slate-400 shrink-0">
-                      {prob.acceptanceRate}
-                    </span>
+                    <div className="flex items-center gap-1 shrink-0">
+                      {isSolved && (
+                        <span className="flex items-center gap-0.5 text-[10px] font-extrabold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-500/30 px-1.5 py-0.5 rounded-md">
+                          <CheckCircle2 className="h-3 w-3" />
+                          <span>Đã giải</span>
+                        </span>
+                      )}
+                      <span className="text-[10px] font-bold text-slate-400">
+                        {prob.acceptanceRate}
+                      </span>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-2 mt-2">
@@ -622,6 +793,100 @@ export const ProblemSetModal: React.FC<ProblemSetModalProps> = ({
                     <li key={i}>{c}</li>
                   ))}
                 </ul>
+              </div>
+
+              {/* 3-Tier Socratic Progressive Hint System */}
+              <div className="mb-4 rounded-2xl border border-amber-200/80 dark:border-amber-900/40 bg-gradient-to-br from-amber-50/60 via-orange-50/30 to-amber-50/20 dark:from-amber-950/20 dark:via-orange-950/10 dark:to-slate-900 p-4">
+                <div className="flex items-center justify-between mb-2.5">
+                  <div className="flex items-center gap-2">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-400">
+                      <Sparkles className="h-3.5 w-3.5" />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-wider text-amber-900 dark:text-amber-300">
+                      Hệ thống gợi ý Socratic 3 Cấp độ
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-bold text-amber-700/80 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/50 px-2 py-0.5 rounded-full">
+                    Mở khóa từng bước
+                  </span>
+                </div>
+
+                {/* Level Tabs */}
+                <div className="flex items-center gap-1 mb-3 bg-white/80 dark:bg-slate-900/80 p-1 rounded-xl border border-amber-200/60 dark:border-amber-900/40">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedHintLevel(1)}
+                    className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 ${
+                      selectedHintLevel === 1
+                        ? 'bg-amber-500 text-white shadow-xs'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    <HelpCircle className="h-3 w-3" />
+                    <span>Cấp 1: Tư duy</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedHintLevel(2)}
+                    className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 ${
+                      selectedHintLevel === 2
+                        ? 'bg-blue-600 text-white shadow-xs'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    <Cpu className="h-3 w-3" />
+                    <span>Cấp 2: Thuật toán</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedHintLevel(3)}
+                    className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 ${
+                      selectedHintLevel === 3
+                        ? 'bg-emerald-600 text-white shadow-xs'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    <Flame className="h-3 w-3" />
+                    <span>Cấp 3: Tối ưu & Edge Cases</span>
+                  </button>
+                </div>
+
+                {/* Hint Content Card */}
+                <div className="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs leading-relaxed text-slate-700 dark:text-slate-200">
+                  {selectedHintLevel === 1 && (
+                    <div>
+                      <div className="font-extrabold text-amber-600 dark:text-amber-400 mb-1 flex items-center gap-1.5 text-xs">
+                        <Sparkles className="h-3.5 w-3.5" />
+                        <span>Gợi mở tư duy Socratic (Không tiết lộ code giải):</span>
+                      </div>
+                      <p className="whitespace-pre-line text-slate-700 dark:text-slate-300">
+                        {activeProblem.hints?.level1 || activeProblem.hintPrompt}
+                      </p>
+                    </div>
+                  )}
+                  {selectedHintLevel === 2 && (
+                    <div>
+                      <div className="font-extrabold text-blue-600 dark:text-blue-400 mb-1 flex items-center gap-1.5 text-xs">
+                        <Cpu className="h-3.5 w-3.5" />
+                        <span>Chiến lược thuật toán & Cấu trúc dữ liệu:</span>
+                      </div>
+                      <p className="whitespace-pre-line text-slate-700 dark:text-slate-300 font-mono text-[11px] sm:text-xs">
+                        {activeProblem.hints?.level2 || 'Sử dụng cấu trúc dữ liệu tối ưu để giảm thời gian xử lý.'}
+                      </p>
+                    </div>
+                  )}
+                  {selectedHintLevel === 3 && (
+                    <div>
+                      <div className="font-extrabold text-emerald-600 dark:text-emerald-400 mb-1 flex items-center gap-1.5 text-xs">
+                        <Flame className="h-3.5 w-3.5" />
+                        <span>Độ phức tạp Big-O & Xử lý trường hợp biên (Edge Cases):</span>
+                      </div>
+                      <p className="whitespace-pre-line text-slate-700 dark:text-slate-300">
+                        {activeProblem.hints?.level3 || 'Chú ý các trường hợp mảng rỗng hoặc giá trị trùng lặp.'}
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
 
             </div>
