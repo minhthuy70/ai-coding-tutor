@@ -12,7 +12,10 @@ import {
   Zap,
   Compass,
   Trophy,
-  ShieldCheck
+  ShieldCheck,
+  GraduationCap,
+  ScanSearch,
+  User
 } from 'lucide-react';
 import { ChatMessage, ChatAttachment } from '@/types/chat';
 import { ChatMessageItem } from './ChatMessageItem';
@@ -31,6 +34,9 @@ interface ChatMessageListProps {
   onOpenProblemSet?: () => void;
   onOpenSandbox?: () => void;
   onOpenCodeQuality?: (code?: string, language?: string) => void;
+  onOpenInstructor?: () => void;
+  onOpenPlagiarism?: () => void;
+  onOpenProfile?: () => void;
 }
 
 const suggestions = [
@@ -90,6 +96,9 @@ interface WelcomeScreenProps {
   onOpenProblemSet?: () => void;
   onOpenSandbox?: () => void;
   onOpenCodeQuality?: () => void;
+  onOpenInstructor?: () => void;
+  onOpenPlagiarism?: () => void;
+  onOpenProfile?: () => void;
 }
 
 function WelcomeScreen({ 
@@ -97,7 +106,10 @@ function WelcomeScreen({
   onOpenRoadmap,
   onOpenProblemSet,
   onOpenSandbox,
-  onOpenCodeQuality
+  onOpenCodeQuality,
+  onOpenInstructor,
+  onOpenPlagiarism,
+  onOpenProfile,
 }: WelcomeScreenProps) {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -193,18 +205,18 @@ function WelcomeScreen({
             Tích hợp toàn diện
           </span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
           {onOpenRoadmap && (
             <button
               type="button"
               onClick={onOpenRoadmap}
-              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-blue-200/70 dark:border-blue-800/50 bg-blue-50/50 dark:bg-blue-950/30 hover:bg-blue-100/70 dark:hover:bg-blue-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+              className="group flex flex-col items-center justify-center p-2.5 rounded-2xl border border-blue-200/70 dark:border-blue-800/50 bg-blue-50/50 dark:bg-blue-950/30 hover:bg-blue-100/70 dark:hover:bg-blue-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
             >
-              <div className="h-9 w-9 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
-                <Compass className="h-4.5 w-4.5" />
+              <div className="h-8 w-8 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+                <Compass className="h-4 w-4" />
               </div>
-              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Lộ trình học</span>
-              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Cây kỹ năng</span>
+              <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 leading-tight">Lộ trình học</span>
+              <span className="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Cây kỹ năng</span>
             </button>
           )}
 
@@ -212,13 +224,13 @@ function WelcomeScreen({
             <button
               type="button"
               onClick={onOpenProblemSet}
-              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-amber-200/70 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/30 hover:bg-amber-100/70 dark:hover:bg-amber-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+              className="group flex flex-col items-center justify-center p-2.5 rounded-2xl border border-amber-200/70 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/30 hover:bg-amber-100/70 dark:hover:bg-amber-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
             >
-              <div className="h-9 w-9 rounded-xl bg-amber-500 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
-                <Trophy className="h-4.5 w-4.5" />
+              <div className="h-8 w-8 rounded-xl bg-amber-500 text-white flex items-center justify-center mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+                <Trophy className="h-4 w-4" />
               </div>
-              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Kho bài tập</span>
-              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">LeetCode & Tests</span>
+              <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 leading-tight">Kho bài tập</span>
+              <span className="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">LeetCode & Tests</span>
             </button>
           )}
 
@@ -226,13 +238,13 @@ function WelcomeScreen({
             <button
               type="button"
               onClick={onOpenSandbox}
-              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-emerald-200/70 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-950/30 hover:bg-emerald-100/70 dark:hover:bg-emerald-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+              className="group flex flex-col items-center justify-center p-2.5 rounded-2xl border border-emerald-200/70 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-950/30 hover:bg-emerald-100/70 dark:hover:bg-emerald-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
             >
-              <div className="h-9 w-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
-                <Code2 className="h-4.5 w-4.5" />
+              <div className="h-8 w-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+                <Code2 className="h-4 w-4" />
               </div>
-              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Code Sandbox</span>
-              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Chạy đa ngôn ngữ</span>
+              <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 leading-tight">Code Sandbox</span>
+              <span className="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Chạy đa ngôn ngữ</span>
             </button>
           )}
 
@@ -240,13 +252,41 @@ function WelcomeScreen({
             <button
               type="button"
               onClick={onOpenCodeQuality}
-              className="group flex flex-col items-center justify-center p-3 rounded-2xl border border-indigo-200/70 dark:border-indigo-800/50 bg-indigo-50/50 dark:bg-indigo-950/30 hover:bg-indigo-100/70 dark:hover:bg-indigo-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+              className="group flex flex-col items-center justify-center p-2.5 rounded-2xl border border-indigo-200/70 dark:border-indigo-800/50 bg-indigo-50/50 dark:bg-indigo-950/30 hover:bg-indigo-100/70 dark:hover:bg-indigo-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
             >
-              <div className="h-9 w-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center mb-2 shadow-sm group-hover:scale-105 transition-transform">
-                <ShieldCheck className="h-4.5 w-4.5" />
+              <div className="h-8 w-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+                <ShieldCheck className="h-4 w-4" />
               </div>
-              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Soát lỗi Code</span>
-              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">PEP8 & Big-O</span>
+              <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 leading-tight">Soát lỗi Code</span>
+              <span className="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">PEP8 & Big-O</span>
+            </button>
+          )}
+
+          {onOpenInstructor && (
+            <button
+              type="button"
+              onClick={onOpenInstructor}
+              className="group flex flex-col items-center justify-center p-2.5 rounded-2xl border border-sky-200/70 dark:border-sky-800/50 bg-sky-50/50 dark:bg-sky-950/30 hover:bg-sky-100/70 dark:hover:bg-sky-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+            >
+              <div className="h-8 w-8 rounded-xl bg-sky-600 text-white flex items-center justify-center mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+                <GraduationCap className="h-4 w-4" />
+              </div>
+              <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 leading-tight">Bảng điểm GV</span>
+              <span className="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Quản lý lớp học</span>
+            </button>
+          )}
+
+          {onOpenPlagiarism && (
+            <button
+              type="button"
+              onClick={onOpenPlagiarism}
+              className="group flex flex-col items-center justify-center p-2.5 rounded-2xl border border-rose-200/70 dark:border-rose-800/50 bg-rose-50/50 dark:bg-rose-950/30 hover:bg-rose-100/70 dark:hover:bg-rose-900/50 transition-all shadow-2xs hover:shadow-md hover:-translate-y-0.5 text-center"
+            >
+              <div className="h-8 w-8 rounded-xl bg-rose-600 text-white flex items-center justify-center mb-1.5 shadow-sm group-hover:scale-105 transition-transform">
+                <ScanSearch className="h-4 w-4" />
+              </div>
+              <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 leading-tight">So trùng Code</span>
+              <span className="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Phát hiện sao chép</span>
             </button>
           )}
         </div>
@@ -323,6 +363,9 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
   onOpenProblemSet,
   onOpenSandbox,
   onOpenCodeQuality,
+  onOpenInstructor,
+  onOpenPlagiarism,
+  onOpenProfile,
 }) => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -340,6 +383,9 @@ export const ChatMessageList: React.FC<ChatMessageListProps> = ({
         onOpenProblemSet={onOpenProblemSet}
         onOpenSandbox={onOpenSandbox}
         onOpenCodeQuality={onOpenCodeQuality ? () => onOpenCodeQuality() : undefined}
+        onOpenInstructor={onOpenInstructor}
+        onOpenPlagiarism={onOpenPlagiarism}
+        onOpenProfile={onOpenProfile}
       />
     );
   }

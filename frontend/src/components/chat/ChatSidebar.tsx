@@ -23,7 +23,11 @@ import {
   Compass,
   Trophy,
   ShieldCheck,
-  Code2
+  Code2,
+  GraduationCap,
+  ScanSearch,
+  User as UserIcon,
+  Award
 } from 'lucide-react';
 import { ChatConversation } from '@/types/chat';
 
@@ -48,6 +52,11 @@ interface ChatSidebarProps {
   onOpenProblemSet?: () => void;
   onOpenCodeQuality?: () => void;
   onOpenSandbox?: () => void;
+  onOpenInstructor?: () => void;
+  onOpenPlagiarism?: () => void;
+  onOpenProfile?: () => void;
+  userRole?: 'student' | 'instructor';
+  solvedCount?: number;
 }
 
 export const ChatSidebar: React.FC<ChatSidebarProps> = ({
@@ -71,6 +80,11 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   onOpenProblemSet,
   onOpenCodeQuality,
   onOpenSandbox,
+  onOpenInstructor,
+  onOpenPlagiarism,
+  onOpenProfile,
+  userRole = 'student',
+  solvedCount = 0,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -317,6 +331,32 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
             </button>
           )}
         </div>
+
+        <div className="grid grid-cols-2 gap-1.5 text-xs font-bold">
+          {onOpenInstructor && (
+            <button
+              type="button"
+              onClick={() => { onOpenInstructor(); onCloseMobile(); }}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-sky-50/70 hover:bg-sky-100 dark:bg-sky-950/40 dark:hover:bg-sky-900/60 text-sky-700 dark:text-sky-300 border border-sky-200/60 dark:border-sky-800/60 transition shadow-2xs"
+              title="Bảng điểm & Quản lý lớp học Giảng viên"
+            >
+              <GraduationCap className="h-3.5 w-3.5 text-sky-600 dark:text-sky-400 shrink-0" />
+              <span className="truncate">Bảng điểm GV</span>
+            </button>
+          )}
+
+          {onOpenPlagiarism && (
+            <button
+              type="button"
+              onClick={() => { onOpenPlagiarism(); onCloseMobile(); }}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-rose-50/70 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/60 text-rose-700 dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/60 transition shadow-2xs"
+              title="So trùng mã nguồn & Kiểm tra đạo văn"
+            >
+              <ScanSearch className="h-3.5 w-3.5 text-rose-600 dark:text-rose-400 shrink-0" />
+              <span className="truncate">So trùng code</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Search Bar */}
@@ -543,9 +583,49 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
           )}
         </div>
 
+        {/* User Profile Card */}
+        {onOpenProfile && (
+          <button
+            type="button"
+            onClick={() => {
+              onOpenProfile();
+              onCloseMobile();
+            }}
+            className="w-full mt-1.5 flex items-center justify-between p-2 rounded-xl bg-gradient-to-r from-blue-500/10 via-indigo-500/5 to-purple-500/10 hover:from-blue-500/15 hover:to-purple-500/15 border border-blue-200/50 dark:border-blue-800/40 text-left transition-all group"
+            title="Xem Hồ sơ học viên & Huy hiệu thành tích"
+          >
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="relative">
+                <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">
+                  {userRole === 'instructor' ? 'TS' : 'A'}
+                </div>
+                <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-slate-900" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs font-bold text-slate-800 dark:text-slate-100 truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {userRole === 'instructor' ? 'TS. Trần Minh Trí' : 'Nguyễn Văn An'}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 text-[10px] text-slate-500 dark:text-slate-400">
+                  <span className={`px-1 rounded text-[9px] font-bold ${
+                    userRole === 'instructor' 
+                      ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/60 dark:text-purple-300' 
+                      : 'bg-blue-100 text-blue-700 dark:bg-blue-900/60 dark:text-blue-300'
+                  }`}>
+                    {userRole === 'instructor' ? 'Giảng viên' : 'Học viên'}
+                  </span>
+                  <span>· {solvedCount} bài giải</span>
+                </div>
+              </div>
+            </div>
+            <Award className="h-4 w-4 text-amber-500 shrink-0 group-hover:scale-110 transition-transform" />
+          </button>
+        )}
+
         {/* Version badge */}
         <p className="text-center text-[10px] text-slate-400 dark:text-slate-600 pt-1 font-medium">
-          AI Coding Tutor · v2.0 · Demo UI
+          AI Coding Tutor · v4.0 Perfect Master Edition
         </p>
       </div>
     </div>

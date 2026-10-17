@@ -19,7 +19,11 @@ import {
   Compass,
   Trophy,
   ShieldCheck,
-  Code2
+  Code2,
+  GraduationCap,
+  ScanSearch,
+  User as UserIcon,
+  Award
 } from 'lucide-react';
 import { ChatConversation, ChatMessage, ChatAttachment, ModelSettings } from '@/types/chat';
 import { ChatSidebar } from '@/components/chat/ChatSidebar';
@@ -35,6 +39,9 @@ import { AnalyticsModal } from '@/components/chat/AnalyticsModal';
 import { LearningRoadmapModal } from '@/components/chat/LearningRoadmapModal';
 import { ProblemSetModal, CodingProblem } from '@/components/chat/ProblemSetModal';
 import { CodeQualityModal } from '@/components/chat/CodeQualityModal';
+import { InstructorDashboardModal } from '@/components/chat/InstructorDashboardModal';
+import { PlagiarismCheckerModal } from '@/components/chat/PlagiarismCheckerModal';
+import { UserProfileModal } from '@/components/chat/UserProfileModal';
 import { playSendSound, playCompleteSound } from '@/lib/soundEffects';
 import { ToastProvider, useToast } from '@/components/chat/ToastNotification';
 import { getSocraticAssistantResponse } from '@/lib/socraticEngine';
@@ -117,6 +124,11 @@ function HomePageInner() {
             setSolvedProblemIds(JSON.parse(savedSolved));
           } catch {}
         }
+
+        const savedRole = localStorage.getItem('ai_tutor_user_role');
+        if (savedRole === 'student' || savedRole === 'instructor') {
+          setUserRole(savedRole);
+        }
       } catch (err) {
         console.warn('Could not read from localStorage:', err);
       }
@@ -147,6 +159,10 @@ function HomePageInner() {
     const [isCodeQualityOpen, setIsCodeQualityOpen] = useState<boolean>(false);
     const [codeQualityCode, setCodeQualityCode] = useState<string>('');
     const [codeQualityLang, setCodeQualityLang] = useState<string>('python');
+    const [isInstructorOpen, setIsInstructorOpen] = useState<boolean>(false);
+    const [isPlagiarismOpen, setIsPlagiarismOpen] = useState<boolean>(false);
+    const [isProfileOpen, setIsProfileOpen] = useState<boolean>(false);
+    const [userRole, setUserRole] = useState<'student' | 'instructor'>('student');
     const [injectedText, setInjectedText] = useState<string>('');
     
     // Header inline renaming state
@@ -224,6 +240,14 @@ function HomePageInner() {
 
     window.addEventListener('keydown', handleGlobalShortcuts);
     return () => window.removeEventListener('keydown', handleGlobalShortcuts);
+  }, []);
+
+  // Role toggle handler
+  const handleRoleChange = useCallback((role: 'student' | 'instructor') => {
+    setUserRole(role);
+    try {
+      localStorage.setItem('ai_tutor_user_role', role);
+    } catch {}
   }, []);
 
   // Rename a conversation
@@ -750,6 +774,39 @@ function HomePageInner() {
         onAskAIAboutQuality={(prompt) => { setInjectedText(prompt); setIsCodeQualityOpen(false); }}
       />
 
+      {/* Instructor Gradebook & Assignment Authoring Modal */}
+      <InstructorDashboardModal
+        isOpen={isInstructorOpen}
+        onClose={() => setIsInstructorOpen(false)}
+        onOpenProblemSet={() => {
+          setIsInstructorOpen(false);
+          setIsProblemSetOpen(true);
+        }}
+      />
+
+      {/* Code Plagiarism & Similarity Detection Engine Modal */}
+      <PlagiarismCheckerModal
+        isOpen={isPlagiarismOpen}
+        onClose={() => setIsPlagiarismOpen(false)}
+      />
+
+      {/* Student Profile & Gamification Achievements Modal */}
+      <UserProfileModal
+        isOpen={isProfileOpen}
+        onClose={() => setIsProfileOpen(false)}
+        solvedCount={solvedProblemIds.length}
+        userRole={userRole}
+        onRoleChange={handleRoleChange}
+        onOpenRoadmap={() => {
+          setIsProfileOpen(false);
+          setIsRoadmapOpen(true);
+        }}
+        onOpenProblemSet={() => {
+          setIsProfileOpen(false);
+          setIsProblemSetOpen(true);
+        }}
+      />
+
       {/* Left Sidebar */}
       <ChatSidebar
         conversations={conversations}
@@ -772,6 +829,11 @@ function HomePageInner() {
         onOpenProblemSet={() => setIsProblemSetOpen(true)}
         onOpenCodeQuality={() => { setCodeQualityCode(sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n'); setCodeQualityLang(sandboxLang); setIsCodeQualityOpen(true); }}
         onOpenSandbox={() => { setSandboxCode('# Mở Sandbox trống để viết code mới\nprint("Xin chào, Gia sư AI!")'); setSandboxLang('python'); setSandboxProblemTitle(''); setSandboxTestCases([]); setIsSandboxOpen(true); }}
+        onOpenInstructor={() => setIsInstructorOpen(true)}
+        onOpenPlagiarism={() => setIsPlagiarismOpen(true)}
+        onOpenProfile={() => setIsProfileOpen(true)}
+        userRole={userRole}
+        solvedCount={solvedProblemIds.length}
       />
 
       {/* Main Chat Interface */}
@@ -907,7 +969,47 @@ function HomePageInner() {
                 <ShieldCheck className="h-3.5 w-3.5 text-indigo-500" />
                 <span>Soát lỗi</span>
               </button>
+
+              <button
+                type="button"
+                onClick={() => setIsInstructorOpen(true)}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50/70 dark:hover:bg-sky-950/50 transition border border-transparent hover:border-sky-200 dark:hover:border-sky-800/60"
+                title="Bảng điểm sinh viên & Quản lý lớp học Giảng viên"
+              >
+                <GraduationCap className="h-3.5 w-3.5 text-sky-500" />
+                <span>Bảng điểm GV</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsPlagiarismOpen(true)}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50/70 dark:hover:bg-rose-950/50 transition border border-transparent hover:border-rose-200 dark:hover:border-rose-800/60"
+                title="So trùng mã nguồn & Kiểm tra đạo văn"
+              >
+                <ScanSearch className="h-3.5 w-3.5 text-rose-500" />
+                <span>So trùng</span>
+              </button>
             </div>
+
+            {/* User Profile & Badges Trigger */}
+            <button
+              type="button"
+              onClick={() => setIsProfileOpen(true)}
+              className="flex items-center gap-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-800/90 px-2.5 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-xs transition"
+              title="Xem Hồ sơ học viên & Huy hiệu thành tích"
+            >
+              <div className="h-5 w-5 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-[10px]">
+                {userRole === 'instructor' ? 'TS' : 'A'}
+              </div>
+              <span className="hidden xl:inline text-xs font-bold text-slate-800 dark:text-slate-100">
+                {userRole === 'instructor' ? 'TS. Trí' : 'An'}
+              </span>
+              <span className="rounded-full bg-amber-100 dark:bg-amber-900/60 px-1.5 py-0.5 text-[9px] font-bold text-amber-700 dark:text-amber-300 flex items-center gap-0.5">
+                <Award className="h-2.5 w-2.5" />
+                {solvedProblemIds.length * 50 + 250} XP
+              </span>
+            </button>
+
             {/* Quick Dark Mode toggle */}
             <button
               type="button"
@@ -1062,6 +1164,9 @@ function HomePageInner() {
             setIsSandboxOpen(true);
           }}
           onOpenCodeQuality={handleOpenCodeQuality}
+          onOpenInstructor={() => setIsInstructorOpen(true)}
+          onOpenPlagiarism={() => setIsPlagiarismOpen(true)}
+          onOpenProfile={() => setIsProfileOpen(true)}
         />
 
         {/* Bottom Composer Box */}
