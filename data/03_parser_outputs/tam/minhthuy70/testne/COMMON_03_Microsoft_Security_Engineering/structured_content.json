@@ -1,0 +1,5679 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.035,
+            0.063,
+            0.215,
+            0.098
+          ],
+          "level": 2,
+          "content": "Microsoft"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.124,
+            0.733,
+            0.177
+          ],
+          "level": 2,
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "aside_text",
+          "bbox": [
+            0.893,
+            0.049,
+            0.966,
+            0.768
+          ],
+          "content": "patterns & practices"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.063,
+            0.936,
+            0.096
+          ],
+          "content": "Microsoft"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.135,
+            0.759,
+            0.184
+          ],
+          "level": 2,
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.442,
+            0.293,
+            0.647,
+            0.377
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.414,
+            0.937,
+            0.449
+          ],
+          "content": "patt er ns & pra ct ices"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.849,
+            0.752,
+            0.938,
+            0.774
+          ],
+          "content": "**J.D. Meier**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.814,
+            0.78,
+            0.937,
+            0.803
+          ],
+          "content": "**Alex Mackman**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.817,
+            0.807,
+            0.937,
+            0.83
+          ],
+          "content": "**Blaine Wastell**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.788,
+            0.836,
+            0.936,
+            0.858
+          ],
+          "content": "**Prashant Bansode**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.832,
+            0.863,
+            0.937,
+            0.886
+          ],
+          "content": "**Jason Taylor**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.808,
+            0.891,
+            0.937,
+            0.914
+          ],
+          "content": "**Rudolph Araujo**"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.197,
+            0.775,
+            0.326
+          ],
+          "content": "Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.329,
+            0.777,
+            0.389
+          ],
+          "content": "Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.392,
+            0.592,
+            0.406
+          ],
+          "content": "© 2005 Microsoft Corporation. All rights reserved."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.409,
+            0.761,
+            0.446
+          ],
+          "content": "Microsoft, MS-DOS, Windows, Windows NT, Windows Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.449,
+            0.649,
+            0.462
+          ],
+          "content": "All other trademarks are property of their respective owners."
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.086,
+            0.319,
+            0.133
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.108,
+            0.171,
+            0.94,
+            0.908
+          ],
+          "content": "- **Introduction**\n- Summary ....**vii**\n- Overview ....vii\n- Why We Wrote This Guide ....viii\n- Features of the Guidance ....viii\n- Audience ....ix\n- How To Use This Guidance ....ix\n- Ways to Use the Guide ....x\n- Applying Guidance to Your Role ....x\n- Feedback ....xi\n- The Team That Brought You This Guide ....xi\n- Contributors and Reviewers ....xi\n- Tell Us About Your Success ....xii\n- Conclusion ....xii\n- Additional Resources ....xii\n- **Chapter 1**\n- **patterns & practices Security Engineering Approach**\n- Summary ....1\n- Overview ....1\n- Key Activities in the Life Cycle ....2\n- Security Overlay ....2\n- How the Security Activities Work Together....3\n- Incremental Adoption ....4\n- Terminology ....5\n- Conclusion ....6\n- Additional Resources ....6\n- **Chapter 2**\n- **Security Objectives**\n- Summary ....7\n- Overview ....7\n- Discovery Process ....8\n- Types of Objectives ....8\n- Techniques ....9\n- Roles Matrix ....9\n- Derive From Functional Requirements ....9\n- Conclusion ....10"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.064,
+            0.036,
+            0.083,
+            0.052
+          ],
+          "content": "iv"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.178,
+            0.053
+          ],
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.062,
+            0.084,
+            0.894,
+            0.902
+          ],
+          "content": "- **Chapter 3**\n- **Security Design Guidelines 11**\n- Summary .... 11\n- Overview .... 11\n- Security Frame .... 12\n- Categories of Vulnerabilities .... 12\n- Application-Specific Guidelines .... 13\n- Deployment Considerations .... 14\n- Design Guidelines Summary .... 14\n- Conclusion .... 16\n- Additional Resources .... 16\n- **Chapter 4**\n- **Threat Modeling 17**\n- Summary .... 17\n- What Is Threat Modeling? .... 17\n- Why Use Threat Modeling? .... 17\n- Where Does Threat Modeling Fit In? .... 18\n- Terminology .... 19\n- Activity Overview .... 19\n- Activity Summary Table .... 21\n- Key Concepts .... 21\n- Conclusion .... 22\n- Additional Resources .... 22\n- **Chapter 5**\n- **Security Architecture and Design Review 23**\n- Summary .... 23\n- Overview .... 23\n- Techniques .... 24\n- Checklists .... 25\n- Deployment and Infrastructure Considerations .... 26\n- Application Architecture and Design Considerations .... 26\n- Conclusion .... 27\n- Additional Resources .... 27\n- **Chapter 6**\n- **Security Code Review 29**\n- Summary .... 29\n- Overview .... 29\n- Activity Overview .... 30\n- Activity Summary Table .... 31"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.822,
+            0.037,
+            0.89,
+            0.052
+          ],
+          "content": "Contents"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.921,
+            0.039,
+            0.935,
+            0.051
+          ],
+          "content": "v"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.175,
+            0.082,
+            0.936,
+            0.214
+          ],
+          "content": "- Techniques 31\n- Use a Question List 32\n- Hotspots 32\n- Code Review Scenarios 33\n- Team Roles 34\n- Conclusion 34\n- Additional Resources 34"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.151,
+            0.251,
+            0.938,
+            0.407
+          ],
+          "content": "- **Security Deployment Review 35**\n- Summary .... 35\n- Overview .... 35\n- Techniques .... 36\n- Server Security Categories .... 36\n- Application Security Categories .... 37\n- Conclusion .... 38\n- Additional Resources .... 38"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": []
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.111,
+            0.087,
+            0.38,
+            0.131
+          ],
+          "level": 1,
+          "content": "Introduction"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.203,
+            0.237,
+            0.231
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.239,
+            0.936,
+            0.455
+          ],
+          "content": "This chapter summarizes the patterns & practices approach to security engineering. To design, build, and deploy secure applications, you must integrate security into your application development life cycle by including specific security-related activities in your current software engineering processes. Security-related activities include identifying security objectives; applying security design guidelines, patterns, and principles; conducting security architecture and design reviews; creating threat models; performing security code reviews; security testing; and conducting security deployment reviews. You can adopt these activities incrementally as you see fit. These security activities are integrated in MSF Agile, available with Visual Studio Team System. This combination provides tools, guidance, and workflow to help make security a seamless part of your development experience."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.48,
+            0.229,
+            0.507
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.516,
+            0.924,
+            0.634
+          ],
+          "content": "This guide describes an approach for integrating security into your software development life cycle. It describes the set of security activities that you should use to refine and extend your existing life cycle activities. This guide presents an overview of the approach and explains the main security engineering activates and how to adopt them. For further detailed guidance, on each of the activities see the Security Engineering Index at [http://msdn.com/securityengineering.](http://msdn.com/securityengineering)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.639,
+            0.585,
+            0.661
+          ],
+          "content": "This guide consists of the following chapters:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.663,
+            0.932,
+            0.723
+          ],
+          "content": "**Chapter 1, “patterns & practices Security Engineering Approach,”** summarizes the patterns & practices approach to security engineering and shows how the key security engineering activities fit into your software development life cycle."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.726,
+            0.929,
+            0.804
+          ],
+          "content": "**Chapter 2, “Security Objectives,”** summarizes the patterns & practices approach to security objectives by explaining what they are and why you should use them. Knowledge of your security objectives is essential to the success of all other security-related activities."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.807,
+            0.923,
+            0.888
+          ],
+          "content": "**Chapter 3, “Security Design Guidelines,”** summarizes the patterns & practices approach to security design guidelines. Adopting security design guidelines can help reduce your attack surface by addressing common vulnerabilities, allowing you to focus on the unique aspects of your design."
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.063,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "viii Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.083,
+            0.887,
+            0.161
+          ],
+          "content": "**Chapter 4, “Threat Modeling,”** summarizes the patterns & practices approach to threat modeling. Threat modeling is an engineering technique that you can use to help identify threats, attacks, vulnerabilities, and countermeasures that may be relevant to your application."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.165,
+            0.889,
+            0.243
+          ],
+          "content": "**Chapter 5, “Security Architecture and Design Review,”** summarizes the patterns & practices approach to security architecture and design review by explaining what it is and why you should use it. It also describes the key concepts behind the approach."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.247,
+            0.88,
+            0.344
+          ],
+          "content": "**Chapter 6, “Security Code Review,”** summarizes the patterns & practices approach to security code review. Security code review is an effective mechanism for uncovering security issues before testing or deployment begins. Performing code reviews helps you reduce the number of implementation errors in an application before it is deployed to a test team or to a customer."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.348,
+            0.884,
+            0.427
+          ],
+          "content": "**Chapter 7, “Security Deployment Review,”** summarizes the patterns & practices approach to security deployment review. A security deployment review is an activity that can be used to ensure that configuration and deployment problems are discovered before the application is in production."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.454,
+            0.398,
+            0.483
+          ],
+          "level": 2,
+          "content": "Why We Wrote This Guide"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.491,
+            0.574,
+            0.512
+          ],
+          "content": "We wrote this guide to accomplish the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.516,
+            0.852,
+            0.553
+          ],
+          "content": "● To provide guidance on how to build software that meets your security objectives."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.558,
+            0.847,
+            0.579
+          ],
+          "content": "● To help integrate security engineering throughout your application life cycle."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.582,
+            0.852,
+            0.623
+          ],
+          "content": "● To explain key security-related activities such as threat modeling and to show you how to implement these approaches."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.652,
+            0.39,
+            0.678
+          ],
+          "level": 2,
+          "content": "Features of the Guidance"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.687,
+            0.84,
+            0.708
+          ],
+          "content": "To help maximize the value of this guidance, it provides the following features:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.711,
+            0.871,
+            0.77
+          ],
+          "content": "● **Life cycle approach.** The guide provides end-to-end guidance on building software that meets your security objectives, throughout your application life cycle, to reduce risk and increase your return on software development costs."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.774,
+            0.864,
+            0.892
+          ],
+          "content": "**Security frame.** The guidance uses a security frame which is a pattern-based information model that defines a set of security-related categories specifically for the application type you are designing. These categories represent the areas where security mistakes are most often made. Patterns & practices security guidance includes context-specific security frames for each major application type."
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.797,
+            0.037,
+            0.889,
+            0.053
+          ],
+          "content": "Introduction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.915,
+            0.037,
+            0.936,
+            0.052
+          ],
+          "content": "ix"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.083,
+            0.885,
+            0.143
+          ],
+          "content": "**Principles and practices.** These serve as the foundation for the guidance and provide a stable basis for recommendations. They also reflect successful approaches used in the field."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.146,
+            0.929,
+            0.244
+          ],
+          "content": "**Processes and activities.** The guidance provides steps for key activities including threat modeling, security architecture and design reviews, security code reviews and security deployment reviews. For simplification and tangible results, the life cycle is decomposed into activities with inputs, outputs, and steps. You can use the steps as a baseline or to help you evolve your own activities."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.247,
+            0.893,
+            0.287
+          ],
+          "content": "● **How Tos.** The guidance includes a set of step-by-step procedures to help you implement key solutions from the guidance."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.29,
+            0.934,
+            0.368
+          ],
+          "content": "● **Modular.** Each module within the guidance is designed to be read independently. You do not need to read the guidance from beginning to end to get the benefits, although you are encouraged to read Security Engineering Explained to understand the big picture."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.372,
+            0.934,
+            0.469
+          ],
+          "content": "● **Job aids.** The guide provides a number of review activities, including a security architecture and design review, to help you evaluate the security implications of your architecture and design choices early in the life cycle. A security code review helps you spot potential security issues. Checklists that capture the key review elements are provided."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.473,
+            0.892,
+            0.512
+          ],
+          "content": "● **Subject matter expertise.** The guidance exposes insight from various experts throughout Microsoft and from customers in the field."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.516,
+            0.921,
+            0.595
+          ],
+          "content": "**Validation.** The guidance is validated internally through testing. Also, extensive reviews have been performed by product, field, and product support teams. Externally, the guidance is validated through community participation and extensive customer feedback cycles."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.624,
+            0.234,
+            0.65
+          ],
+          "level": 2,
+          "content": "Audience"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.659,
+            0.925,
+            0.759
+          ],
+          "content": "This guide is valuable for anyone who cares about application security objectives. It is designed to be used by team members from many different disciplines, including business analysts, architects, developers, testers, security analysts, and administrators. The guidance is task-based, and is centered on key security activities that should be performed at the various stages of the application life cycle."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.784,
+            0.449,
+            0.812
+          ],
+          "level": 2,
+          "content": "How To Use This Guidance"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.821,
+            0.925,
+            0.882
+          ],
+          "content": "You can read this guide from beginning to end, or you can read specific chapters to learn more about specific security engineering activities. You can adopt the security engineering activities described in this guide in their entirety for your organization,"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.064,
+            0.038,
+            0.079,
+            0.052
+          ],
+          "content": "x"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.037,
+            0.331,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.083,
+            0.868,
+            0.164
+          ],
+          "continues_prev": true,
+          "content": "or if your software engineering processes do not include specific security activities you can incrementally adopt activities. The activities you should adopt first will depend on the security objectives you have identified, as well as any outstanding problems your process or application currently has."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.13,
+            0.177,
+            0.376,
+            0.2
+          ],
+          "level": 2,
+          "content": "Ways to Use the Guide"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.209,
+            0.785,
+            0.23
+          ],
+          "content": "There are many ways to use this guidance. The following are some ideas:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.234,
+            0.843,
+            0.292
+          ],
+          "content": "**Use it to learn about security engineering.** Use the guide as an introduction [and then use the companion Web-based resources at http://msdn.com/securityengineering to learn more.](http://msdn.com/securityengineering)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.296,
+            0.851,
+            0.336
+          ],
+          "content": "● **Incorporate security engineering into your application life cycle.** Adopt the activities incrementally and incorporate them into your application life cycle."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.339,
+            0.885,
+            0.399
+          ],
+          "content": "**Create training and promote security engineering within your organization.** Create training from the concepts and activities described in this guide and use it to promote security engineering within your organization."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.131,
+            0.414,
+            0.47,
+            0.438
+          ],
+          "level": 2,
+          "content": "Applying Guidance to Your Role"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.446,
+            0.501,
+            0.467
+          ],
+          "content": "This guide applies to the following roles:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.471,
+            0.879,
+            0.529
+          ],
+          "content": "● **Business analysts and the management team.** Use techniques described in Chapter 2, “Security Objectives” to identify initial security objectives early in the life cycle."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.533,
+            0.885,
+            0.669
+          ],
+          "content": "**Architects and lead developers.** Use the principles and best-practice design guidelines in Chapter 3, “Security Design Guidelines,” to help architect and design systems capable of meeting security objectives. You can also use the threat modeling activity described in Chapter 4, “Threat Modeling” to help assess design choices before committing to a solution and you can use the review activity described in Chapter 5, “Security Architecture and Design Review” to review architectural and design decisions before costly mistakes are made."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.673,
+            0.879,
+            0.731
+          ],
+          "content": "**Developers.** Use the security code review techniques highlighted in Chapter 6, “Security Code Review” to analyze your code and identify security issues before your code is tested."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.735,
+            0.868,
+            0.812
+          ],
+          "content": "● **Administrators and operations staff.** Use the deployment review techniques descried in Chapter 7, “Security Deployment Review” to ensure that configuration errors do not introduce security vulnerabilities at application deployment time."
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.797,
+            0.037,
+            0.89,
+            0.053
+          ],
+          "content": "Introduction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.915,
+            0.037,
+            0.935,
+            0.052
+          ],
+          "content": "xi"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.084,
+            0.24,
+            0.112
+          ],
+          "level": 2,
+          "content": "Feedback"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.121,
+            0.628,
+            0.142
+          ],
+          "content": "Provide feedback by using either a Wiki or e-mail:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.145,
+            0.582,
+            0.167
+          ],
+          "content": "● **Wiki.** Security guidance feedback page at"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.198,
+            0.168,
+            0.873,
+            0.191
+          ],
+          "content": "[http://channel9.msdn.com/wiki/default.aspx/Channel9.SecurityGuidanceFeedback](http://channel9.msdn.com/wiki/default.aspx/Channel9.SecurityGuidanceFeedback)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.193,
+            0.638,
+            0.213
+          ],
+          "content": "● **E-mail.** Send e-mail to secguide@microsoft.com."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.221,
+            0.774,
+            0.243
+          ],
+          "content": "We are particularly interested in feedback regarding the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.246,
+            0.612,
+            0.266
+          ],
+          "content": "● Technical issues specific to recommendations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.27,
+            0.487,
+            0.291
+          ],
+          "content": "● Usefulness and usability issues"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.106,
+            0.318,
+            0.608,
+            0.347
+          ],
+          "level": 2,
+          "content": "The Team That Brought You This Guide"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.355,
+            0.671,
+            0.377
+          ],
+          "content": "This guide was produced by the following individuals:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.379,
+            0.302,
+            0.399
+          ],
+          "content": "● J.D. Meier"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.403,
+            0.346,
+            0.423
+          ],
+          "content": "Alex Mackman"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.427,
+            0.337,
+            0.446
+          ],
+          "content": "Blaine Wastell"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.451,
+            0.369,
+            0.47
+          ],
+          "content": "Prashant Bansode"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.475,
+            0.322,
+            0.496
+          ],
+          "content": "● Jason Taylor"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.498,
+            0.355,
+            0.52
+          ],
+          "content": "● Rudolph Araujo"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.548,
+            0.466,
+            0.576
+          ],
+          "level": 2,
+          "content": "Contributors and Reviewers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.584,
+            0.697,
+            0.605
+          ],
+          "content": "Many thanks to the following contributors and reviewers:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.608,
+            0.896,
+            0.667
+          ],
+          "content": "**External Contributors and Reviewers:** Anil John, Johns Hopkins University - Applied Physics Laboratory; Frank Heidt; Keith Brown Pluralsight LLC; Mark Curphey, Foundstone Professional Services"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.671,
+            0.875,
+            0.712
+          ],
+          "content": "**Microsoft Services and PSS Contributors and Reviewers:** Adam Semel, Denny Dayton, Gregor Noriskin, Kate Baroni, Tom Christian, Wade Mascia"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.714,
+            0.902,
+            0.753
+          ],
+          "content": "● **Microsoft Product Group:** Charlie Kaufman, Don Willits, Mike Downen, Rick Samona"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.757,
+            0.911,
+            0.796
+          ],
+          "content": "● **Microsoft IT Contributors and Reviewers:** Akshay Aggarwal, Irfan Chaudhry, Shawn Veney, Talhah Mir"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.8,
+            0.67,
+            0.821
+          ],
+          "content": "● **MSDN Contributors and Reviewers:** Kent Sharkey"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.824,
+            0.619,
+            0.846
+          ],
+          "content": "● **Microsoft EEG:** Corey Ladas, James Waletzky"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.064,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "xii Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.082,
+            0.817,
+            0.123
+          ],
+          "content": "**Test team:** Larry Brader, Microsoft Corporation; Nadupalli Venkata Surya Sateesh, Sivanthapatham Shanmugasundaram, Infosys Technologies Ltd."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.126,
+            0.883,
+            0.164
+          ],
+          "content": "● **Edit team:** Nelly Delgado, Microsoft Corporation; Sharon Smith, Linda Werner & Associates"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.169,
+            0.697,
+            0.191
+          ],
+          "content": "● **Release Management:** Sanjeev Garg, Microsoft Corporation"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.224,
+            0.414,
+            0.252
+          ],
+          "level": 2,
+          "content": "Tell Us About Your Success"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.261,
+            0.871,
+            0.321
+          ],
+          "content": "If this guide helps you, we would like to know. Tell us by writing a short summary of the problems you faced and how this guide helped you out. Submit your summary to MyStory@Microsoft.com."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.347,
+            0.21,
+            0.374
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.384,
+            0.889,
+            0.503
+          ],
+          "content": "The patterns & practices approach to security engineering focuses on integrating security into your life cycle through the adoption of a limited set of key security activities. The specific activities that make up the security engineering discipline include defining security objectives, applying design guidelines for security, creating threat models, conducting architecture and design reviews for security, completing code reviews for security, and performing deployment reviews for security."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.507,
+            0.881,
+            0.566
+          ],
+          "content": "This chapter introduced you to the Security Engineering Explained guide. Subsequent chapters in this guide explain each of the security engineering activities in more detail."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.594,
+            0.339,
+            0.621
+          ],
+          "level": 2,
+          "content": "Additional Resources"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.63,
+            0.677,
+            0.652
+          ],
+          "content": "For more information, see [http://msdn.com/securityengineering.](http://msdn.com/securityengineering)"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.12,
+            0.137,
+            0.184,
+            0.227
+          ],
+          "content": ""
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.11,
+            0.261,
+            0.748,
+            0.356
+          ],
+          "level": 1,
+          "content": "patterns & practices Security Engineering Approach"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.424,
+            0.237,
+            0.452
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.459,
+            0.933,
+            0.695
+          ],
+          "content": "This chapter summarizes the patterns & practices approach to security engineering. To design, build, and deploy secure applications, you must integrate security into your application development life cycle by including specific security-related activities in your current software engineering processes. Security-related activities include identifying security objectives; applying secure design guidelines, patterns, and principles; conducting architecture and design reviews for security; creating threat models; performing regular code reviews for security; testing for security; and conducting deployment reviews to ensure secure configuration. You can adopt these activities incrementally as you see fit. These security activities are integrated in MSF Agile, available with Visual Studio® Team System. This combination provides tools, guidance, and workflow to help make security a seamless part of your development experience."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.719,
+            0.23,
+            0.747
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.756,
+            0.898,
+            0.796
+          ],
+          "content": "The patterns & practices approach to security engineering can be summarized as follows:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.799,
+            0.923,
+            0.859
+          ],
+          "content": "**Integrate security into your lifecycle.** Upfront security design, secure coding practices, and testing for security must all be an integral part of your application development processes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.861,
+            0.91,
+            0.922
+          ],
+          "content": "● **Identify your objectives.** Understand early what the security objectives are for your application. These objectives will play a critical role in shaping threat modeling, code reviews, and testing."
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "level": 2,
+          "content": "2 Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.083,
+            0.885,
+            0.181
+          ],
+          "content": "**Know your threats.** Analyze your application in a structured and systematic way to recognize its threats and vulnerabilities. The threat modeling activity enables you to identify and understand threats, understand the risks each threat poses, and uncover vulnerabilities that you can use to shape subsequent security design and implementation decisions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.184,
+            0.886,
+            0.246
+          ],
+          "content": "**Use an iterative approach.** Some activities, such as code review, threat modeling and security testing should be performed multiple times during the development process to maximize application security."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.272,
+            0.453,
+            0.301
+          ],
+          "level": 2,
+          "content": "Key Activities in the Life Cycle"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.308,
+            0.863,
+            0.35
+          ],
+          "content": "Figure 1.1 shows the key security engineering activities and where they should be integrated into the application life cycle."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.13,
+            0.362,
+            0.31,
+            0.387
+          ],
+          "level": 2,
+          "content": "Security Overlay"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.136,
+            0.407,
+            0.818,
+            0.835
+          ],
+          "content": "<table><tr><td>Activities</td><td>Core</td><td>Security</td></tr><tr><td colspan=\"2\">Planning</td><td></td></tr><tr><td>Requirements and Analysis</td><td>Functional RequirementsNon Functional RequirementsTechnology Requirements</td><td>Security Objectives</td></tr><tr><td>Architecture and Design</td><td>Design GuidelinesArchitecture and Design Review</td><td>Security Design GuidelinesThreat ModelingSecurity Architecture and Design Review</td></tr><tr><td>Development</td><td>Unit TestsCode ReviewDaily Builds</td><td>Security Code Review</td></tr><tr><td>Testing</td><td>Integration TestingSystem Testing</td><td>Security Testing</td></tr><tr><td>Deployment</td><td>Deployment Review</td><td>Security Deployment Review</td></tr><tr><td colspan=\"2\">Maintenance</td><td></td></tr></table>",
+          "captions": [
+            {
+              "bbox": [
+                0.132,
+                0.842,
+                0.218,
+                0.86
+              ],
+              "content": "Figure 1.1"
+            }
+          ],
+          "footnotes": [
+            {
+              "bbox": [
+                0.131,
+                0.859,
+                0.637,
+                0.881
+              ],
+              "content": "Security engineering activities in the application development life cycle"
+            }
+          ],
+          "image_source": "images/page_14_table_6.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.439,
+            0.037,
+            0.889,
+            0.054
+          ],
+          "content": "Chapter 1: patterns & practices Security Engineering Approach"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.919,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.083,
+            0.911,
+            0.123
+          ],
+          "content": "There are a number of distinct security-related activities that should be an integral part of your application life cycle. These are:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.127,
+            0.921,
+            0.187
+          ],
+          "content": "**Security Objectives.** Define security objectives and requirements early in the process. Security objectives are goals and constraints that affect the confidentiality, integrity, and availability of your data and application."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.189,
+            0.925,
+            0.286
+          ],
+          "content": "**Design Guidelines for Security.** To avoid many of the vulnerabilities introduced by poor design choices, your design activity should use proven design practices, patterns, and principles. By organizing these design patterns and practices into common vulnerability categories, you can focus on those areas where security mistakes are most often made."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.29,
+            0.892,
+            0.329
+          ],
+          "content": "● **Threat Modeling.** Threat modeling helps you to understand and identify the threats and vulnerabilities relevant to your specific application scenario."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.333,
+            0.932,
+            0.412
+          ],
+          "content": "**Architecture and Design for Security.** The architecture and design review process analyzes the architecture and design from a security perspective. It examines a number of aspects including deployment and infrastructure, overall application architecture and design, and each tier in the application."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.416,
+            0.923,
+            0.474
+          ],
+          "content": "**Code Review for Security.** All code should be subject to code inspections where the emphasis is on identifying security vulnerabilities. This should be a continuous activity during the development and test phases of the application life cycle."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.478,
+            0.923,
+            0.537
+          ],
+          "content": "**Security Testing.** Use a risk-based approach and use the output from the threat modeling activity to help establish the scope of your testing activities and define your test plans."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.54,
+            0.925,
+            0.599
+          ],
+          "content": "**Deployment Review for Security.** When your application is deployed, you need to be sure that weak or inappropriate configuration settings do not introduce security vulnerabilities."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.628,
+            0.648,
+            0.656
+          ],
+          "level": 2,
+          "content": "How the Security Activities Work Together"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.664,
+            0.902,
+            0.704
+          ],
+          "content": "Security-related activities start early and continue throughout the application life cycle, many in parallel with one another."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.711,
+            0.927,
+            0.751
+          ],
+          "content": "Figure 1.2 on the next page shows how security activities span the various **activities** of the application development life cycle."
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.064,
+            0.036,
+            0.08,
+            0.051
+          ],
+          "content": "4"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.331,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.134,
+            0.077,
+            0.874,
+            0.359
+          ],
+          "content": "|  | Requirements and Analysis | Architecture and Design | Development | Testing | Deployment | Maintenance |\n| --- | --- | --- | --- | --- | --- | --- |\n| Security Objectives |  |  |  |  |  |  |\n| Design Guidelines |  |  |  |  |  |  |\n| Threat Modeling |  |  |  |  |  |  |\n| Arch/DesignReview |  |  |  |  |  |  |\n| Code Review |  |  |  |  |  |  |\n| Testing |  |  |  |  |  |  |\n| Deployment Review |  |  |  |  |  |  |",
+          "captions": [
+            {
+              "bbox": [
+                0.132,
+                0.364,
+                0.219,
+                0.382
+              ],
+              "content": "Figure 1.2"
+            },
+            {
+              "bbox": [
+                0.132,
+                0.382,
+                0.549,
+                0.401
+              ],
+              "content": "Security activities in the application development life cycle"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_16_table_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.413,
+            0.868,
+            0.454
+          ],
+          "content": "Allow the results of each activity to influence the others in order to have a security engineering process that is more effective than the sum of its parts. For example:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.457,
+            0.885,
+            0.553
+          ],
+          "content": "Your security objectives should be considered alongside other critical business objectives. Application specific security objectives should be identified and documented early during requirements and analysis and should be balanced along side other quality of service requirements such as performance, availability and reliability."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.558,
+            0.851,
+            0.597
+          ],
+          "content": "● Using security design guidelines will mitigate many threats found during the threat modeling process."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.6,
+            0.887,
+            0.661
+          ],
+          "content": "Threat modeling allows you to identify threats and vulnerabilities. The identified vulnerabilities and subsequent mitigations should be used to shape and influence subsequent design, development, and testing decisions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.663,
+            0.875,
+            0.703
+          ],
+          "content": "● Issues found during code review and testing may result in new threats added to the threat model which in turn will drive new ideas for testing and code review."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.732,
+            0.344,
+            0.759
+          ],
+          "level": 2,
+          "content": "Incremental Adoption"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.768,
+            0.881,
+            0.849
+          ],
+          "content": "If your current software engineering processes do not include specific security activities, it is possible to incrementally adopt the key security activities. The activities you should adopt first will depend on the security objectives you have identified, as well as any outstanding problems your process or application currently has."
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.438,
+            0.037,
+            0.889,
+            0.054
+          ],
+          "content": "Chapter 1: patterns & practices Security Engineering Approach"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.919,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.083,
+            0.929,
+            0.122
+          ],
+          "content": "For most organizations, the best results will come from adopting the activities in the following order:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.126,
+            0.925,
+            0.166
+          ],
+          "content": "● **Security Objectives.** If you do not know the security objectives for your application, it will be difficult to be successful with any other activity."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.17,
+            0.925,
+            0.247
+          ],
+          "content": "● **Architecture and Design Review for Security.** Bugs introduced in the design phase are the most expensive to deal with later. By introducing architecture and design reviews focused on security, you avoid the need for costly rework later in the life cycle."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.251,
+            0.934,
+            0.369
+          ],
+          "content": "**Threat Modeling.** By adopting threat modeling, in addition to helping you focus your security development efforts, improving the overall quality of your software engineering, and ensuring that you address relevant threats, you can help your test teams create test plans to test for specific vulnerabilities. Threat models also serve as a focus for communication among the various roles and help to ensure that developers and IT professionals alike really understand the application."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.372,
+            0.93,
+            0.431
+          ],
+          "content": "**Code Review for Security.** While design bugs are the most expensive, implementation bugs are the most common. Reviewing your code for security vulnerabilities can save you later rework or help avoid costly exploits."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.434,
+            0.929,
+            0.493
+          ],
+          "content": "● **Security Review for Deployment.** An application is only as secure as its weakest link. Even a highly effective process can be undone by a configuration error during deployment."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.497,
+            0.928,
+            0.554
+          ],
+          "content": "● **Design Guidelines for Security.** By adopting proven design principles and learning from others mistakes you can ensure your application is secure from the start."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.559,
+            0.901,
+            0.599
+          ],
+          "content": "● **Security Testing.** Testing should be used to validate designed mitigations and ensure nothing has slipped through the cracks."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.628,
+            0.268,
+            0.656
+          ],
+          "level": 2,
+          "content": "Terminology"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.664,
+            0.935,
+            0.703
+          ],
+          "content": "To get the most out of the content in this document, it is important to understand the difference between threats, vulnerabilities, attacks, and countermeasures."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.708,
+            0.897,
+            0.766
+          ],
+          "content": "● **Threat.** A threat is an undesired event. A potential occurrence, often best described as an effect that might damage or compromise an asset or objective. It may or may not be malicious in nature."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.771,
+            0.931,
+            0.829
+          ],
+          "content": "**Vulnerability.** A vulnerability is a weakness in some aspect or feature of a system that makes an exploit possible. Vulnerabilities can exist at the network, host, or application levels and include operational practices."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.833,
+            0.934,
+            0.892
+          ],
+          "content": "**Attack (or exploit).** An attack is an action taken that uses one or more vulnerabilities to realize a threat. This could be someone following through on a threat or exploiting a vulnerability."
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "level": 2,
+          "content": "6 Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.083,
+            0.871,
+            0.182
+          ],
+          "content": "**Countermeasure.** Countermeasures address vulnerabilities to reduce the probability of attacks or the impacts of threats. They do not directly address threats; instead, they address the factors that define the threats. Countermeasures range from improving application design, or improving your code, to improving an operational practice."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.21,
+            0.21,
+            0.237
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.246,
+            0.864,
+            0.343
+          ],
+          "content": "The patterns & practices approach to security engineering focuses on integrating security into your life cycle through the adoption of a limited set of key security activities. It uses a pattern-based information model in the form of a set of vulnerability categories to help you systematically focus your efforts on areas where mistakes are most often made."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.35,
+            0.876,
+            0.431
+          ],
+          "content": "The specific activities that make up the security engineering discipline include defining security objectives, applying design guidelines for security, creating threat models, conducting architecture and design reviews for security, completing code reviews for security, and performing deployment reviews for security."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.456,
+            0.339,
+            0.483
+          ],
+          "level": 2,
+          "content": "Additional Resources"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.492,
+            0.677,
+            0.513
+          ],
+          "content": "For more information, see [http://msdn.com/securityengineering.](http://msdn.com/securityengineering)"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.111,
+            0.137,
+            0.191,
+            0.228
+          ],
+          "content": ""
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.106,
+            0.261,
+            0.527,
+            0.309
+          ],
+          "level": 1,
+          "content": "Security Objectives"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.377,
+            0.237,
+            0.406
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.413,
+            0.925,
+            0.533
+          ],
+          "content": "Security objectives and requirements should be defined early in the application development process. Security objectives are goals and constraints that affect the confidentiality, integrity, and availability of your data and application. This module summarizes the patterns & practices approach to security objectives by explaining what they are and why you should use them. It also describes the key concepts behind the approach."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.558,
+            0.23,
+            0.585
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.593,
+            0.932,
+            0.673
+          ],
+          "content": "Security objectives should be identified as early in the development process as possible, ideally in the requirements and analysis phase. Security objectives are critically important. If you do not know what the objectives are for your application, then it is difficult to be successful with any other security activity."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.678,
+            0.458,
+            0.699
+          ],
+          "content": "Security objectives are used to:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.702,
+            0.677,
+            0.724
+          ],
+          "content": "● Filter the set of design guidelines that are applicable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.727,
+            0.502,
+            0.747
+          ],
+          "content": "Guide threat modeling activities."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.75,
+            0.905,
+            0.772
+          ],
+          "content": "● Determine the scope and guide the process of architecture and design reviews."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.774,
+            0.494,
+            0.794
+          ],
+          "content": "● Help set code review objectives."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.798,
+            0.597,
+            0.819
+          ],
+          "content": "Guide security test planning and execution."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.822,
+            0.457,
+            0.843
+          ],
+          "content": "Guide deployment reviews."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.851,
+            0.922,
+            0.892
+          ],
+          "content": "In each activity, you can use the security objectives to help you focus on the highest value areas while avoiding issues that will not affect your application."
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.081,
+            0.051
+          ],
+          "content": "8"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.086,
+            0.302,
+            0.113
+          ],
+          "level": 2,
+          "content": "Discovery Process"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.122,
+            0.89,
+            0.278
+          ],
+          "content": "Identifying security objectives is an iterative process that is initially driven by an examination of the application’s requirements and usage scenarios. By the end of the requirements and analysis phase, you should have a first set of objectives that are not yet tied to design or implementation details. During the design phase, additional objectives will surface that are specific to the application architecture and design. During the implementation phase, you may discover a few additional objectives based upon specific technology or implementation choices that have an impact on overall application security."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.283,
+            0.844,
+            0.345
+          ],
+          "content": "Each evolution of the security objectives will affect other security activities. You should review the threat model, architecture and design review guidelines, and general code review guidelines when your security objectives change."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.37,
+            0.313,
+            0.399
+          ],
+          "level": 2,
+          "content": "Types of Objectives"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.406,
+            0.868,
+            0.504
+          ],
+          "content": "Security objectives are unique for each application. However, there is a set of common categories of objectives that you can use to jump-start the identification process. Each of these categories is associated with a set of questions you can use to build your objective list. Table 2.1 lists the security objective categories and associated questions."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.123,
+            0.535,
+            0.887,
+            0.914
+          ],
+          "content": "| Objective Category | Questions to Ask |\n| --- | --- |\n| Tangible assets to protect | Are there user accounts and passwords to protect?Is there confidential user information (such as credit card numbers) that needs to be protected?Is there sensitive intellectual property that needs to be protected?Can this system be used as a conduit to access other corporate assets that need to be protected? |\n| Intangible assets to protect | Are there corporate values that could be compromised by an attack on this system?Is there potential for an attack that may be embarrassing, although not otherwise damaging? |\n| Compliance requirements | Are there corporate security policies that must be adhered to?Is there security legislation you must comply with?Is there privacy legislation you must comply with?Are there standards you must adhere to?Are there constraints forced upon you by your deployment environment? |\n| Quality of service requirements | Are there specific availability requirements you must meet?Are there specific performance requirements you must meet? |",
+          "captions": [
+            {
+              "bbox": [
+                0.13,
+                0.511,
+                0.606,
+                0.529
+              ],
+              "content": "Table 2.1. Application Vulnerabilities and Potential Problems"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_20_table_8.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.668,
+            0.036,
+            0.89,
+            0.054
+          ],
+          "content": "Chapter 2: Security Objectives"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.918,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "9"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.085,
+            0.259,
+            0.113
+          ],
+          "level": 2,
+          "content": "Techniques"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.122,
+            0.801,
+            0.143
+          ],
+          "content": "Use the following techniques to help you discover security objectives:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.146,
+            0.325,
+            0.164
+          ],
+          "content": "● Roles Matrix"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.169,
+            0.551,
+            0.19
+          ],
+          "content": "Derive From Functional Requirements"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.176,
+            0.205,
+            0.317,
+            0.229
+          ],
+          "level": 2,
+          "content": "Roles Matrix"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.238,
+            0.932,
+            0.299
+          ],
+          "content": "When an application supports multiple roles it is important to understand what each role should be allowed to do. This can be accomplished with a roles matrix that contains privileges in rows and roles in columns such as the one shown in Table 2.2."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.169,
+            0.328,
+            0.932,
+            0.505
+          ],
+          "content": "<table><tbody><tr><td colspan=\"4\">Objects</td></tr><tr><td>Subjects User creation Permission</td><td>Object</td><td>Object</td><td>Object</td></tr><tr><td>modification</td><td>creation</td><td>removal</td><td>read</td></tr><tr><td>Admin ✓ ✓</td><td></td><td></td><td></td></tr><tr><td>Content creator</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Reader</td><td></td><td></td><td>✓</td></tr><tr><td>Anonymous</td><td></td><td></td><td>✓</td></tr></tbody></table>",
+          "captions": [
+            {
+              "bbox": [
+                0.176,
+                0.304,
+                0.424,
+                0.323
+              ],
+              "content": "Table 2.2: Role Matrix Example"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_21_table_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.532,
+            0.935,
+            0.591
+          ],
+          "content": "Once the roles matrix has been created, you can generate security objectives to ensure the integrity of the application’s roles mechanism. For example, the following objectives could be generated from the preceding matrix:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.594,
+            0.898,
+            0.633
+          ],
+          "content": "● Anonymous users should not be allowed to create users, modify permissions, create objects, or remove objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.637,
+            0.889,
+            0.675
+          ],
+          "content": "● Content creator users should not be allowed to modify permissions or create users"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.684,
+            0.894,
+            0.724
+          ],
+          "content": "Many systems have multiple roles and privileges can be assigned flexibly to any role. In this case your objectives need to be more general:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.728,
+            0.871,
+            0.749
+          ],
+          "content": "● Roles should only have access to the privileges to which they are assigned."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.752,
+            0.877,
+            0.792
+          ],
+          "content": "● Privilege changes should only be allowed by a role that has the ‘permission modification’ privilege."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.176,
+            0.807,
+            0.583,
+            0.832
+          ],
+          "level": 2,
+          "content": "Derive From Functional Requirements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.839,
+            0.935,
+            0.92
+          ],
+          "content": "You can generate security objectives by examining every functional requirement in your application through the lens of confidentiality, integrity, and availability (CIA). This provides a very effective mechanism for generating security objectives based on known application characteristics."
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.066,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "10"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.083,
+            0.738,
+            0.103
+          ],
+          "content": "Consider the following abbreviated set of application requirements:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.107,
+            0.862,
+            0.146
+          ],
+          "content": "● Administrator must be able to add users and change user permissions through an administrator interface."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.151,
+            0.767,
+            0.17
+          ],
+          "content": "● Each application server must be able to serve 1000 concurrent users."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.174,
+            0.847,
+            0.194
+          ],
+          "content": "● Registered users must be able to purchase books from the Web user interface."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.203,
+            0.888,
+            0.262
+          ],
+          "content": "Examine each requirement while thinking about confidentiality, integrity and availability. The first step is to derive potential vulnerabilities from the requirement. For instance, the following vulnerabilities could be derived from the first requirement above:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.266,
+            0.874,
+            0.285
+          ],
+          "content": "● **Confidentiality.** User names and permissions are exposed to non-administrator."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.289,
+            0.863,
+            0.309
+          ],
+          "content": "● **Integrity.** Non-administrator is able to add users and change user permissions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.313,
+            0.885,
+            0.333
+          ],
+          "content": "● **Availability.** Administrator is not able to add users and change user permissions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.341,
+            0.889,
+            0.38
+          ],
+          "content": "Once you understand the potential vulnerabilities you can derive security objectives. Table 2.3 shows example output from this process."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.124,
+            0.41,
+            0.887,
+            0.714
+          ],
+          "content": "| Original Requirement Administrator must be able to add users and change user permis-sions through an ad-ministrator interface. | Derived Security Objectives C - Protect user names and permissions from disclosure to a non-administrator I - Restrict non-administrator from adding users and changing user permissions A - Application is available so that the administrator is able to add users and change user permissions |\n| --- | --- |\n| Each application server must be able to serve 1000 concurrent users. | A - Application server is available for users |\n| Registered users must be able to purchase books from the Web user interface | C - Protect registered user credentials and other sensitive information from non-administrators and non-registered users I - Restrict non-registered user from purchasing books from the Web user-interface I - Restrict registered users from obtaining books for the wrong price A - Web user interface is available for registered users to purchase books |",
+          "captions": [
+            {
+              "bbox": [
+                0.131,
+                0.386,
+                0.594,
+                0.405
+              ],
+              "content": "Table 2.3 Objectives Derived from Functional Requirements"
+            },
+            {
+              "bbox": [
+                0.131,
+                0.743,
+                0.888,
+                0.763
+              ],
+              "content": "Note: A requirement may generate zero or more objectives for confidentiality, integrity, or availability."
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_22_table_12.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.798,
+            0.21,
+            0.824
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.833,
+            0.878,
+            0.913
+          ],
+          "content": "Identification of security objectives is the first, best step you can take to help ensure the security of your application. The objectives, once created, can be used to direct all the subsequent security activities that you perform. Security objectives do not remain static, but are influenced by later design and implementation activities."
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.137,
+            0.191,
+            0.229
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.106,
+            0.261,
+            0.689,
+            0.309
+          ],
+          "level": 2,
+          "content": "Security Design Guidelines"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.106,
+            0.377,
+            0.237,
+            0.406
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.413,
+            0.931,
+            0.533
+          ],
+          "content": "Design guidelines represent proven practices that have evolved over time to reduce risks associated with designing applications. Adopting security design guidelines can help reduce your attack surface by addressing common vulnerabilities, allowing you to focus on the unique aspects of your design. This module summarizes the patterns & practices approach to security design guidelines by explaining what it is and why you should use it. It also describes the key concepts behind the approach."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.557,
+            0.23,
+            0.584
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.593,
+            0.921,
+            0.653
+          ],
+          "content": "Designing a secure application can present architects and developers with many challenges. Design guidelines represent the set of practices that can be employed to reduce the risk of security vulnerabilities."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.659,
+            0.849,
+            0.681
+          ],
+          "content": "Each guideline must meet the following qualifications before it is included:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.683,
+            0.862,
+            0.724
+          ],
+          "content": "● **Actionable.** Must be associated with a vulnerability that can be mitigated through the use of the guideline."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.726,
+            0.892,
+            0.767
+          ],
+          "content": "● **Relevant.** Must be associated with a vulnerability that is known to affect real applications."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.769,
+            0.878,
+            0.811
+          ],
+          "content": "● **Impactful.** Must represent key engineering decisions that will have a wideranging impact."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.817,
+            0.919,
+            0.898
+          ],
+          "content": "The set of guidelines is distilled into a pattern-based security frame, or framework, that describes all of the areas in which poor design can lead to security vulnerabilities. The security frame allows the inclusion of additional guidelines or the refinement of existing guidelines based on newly discovered vulnerabilities."
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.066,
+            0.036,
+            0.092,
+            0.052
+          ],
+          "content": "12"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.083,
+            0.851,
+            0.122
+          ],
+          "content": "Design guidelines include both deployment considerations and design considerations."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.15,
+            0.264,
+            0.178
+          ],
+          "level": 2,
+          "content": "Security Frame"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.187,
+            0.889,
+            0.287
+          ],
+          "content": "The security frame is a pattern-based information model that defines a set of securityrelated categories specifically for the application type you are designing. These categories represent the areas where security mistakes are most often made. Patterns & practices security guidance includes context-specific security frames for each major application type."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.13,
+            0.298,
+            0.437,
+            0.322
+          ],
+          "level": 2,
+          "content": "Categories of Vulnerabilities"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.331,
+            0.886,
+            0.429
+          ],
+          "content": "Design guidelines are organized by the common application vulnerability categories contained in the security frame, including input / data validation, authentication, authorization, configuration management, sensitive data, cryptography, exception management and auditing and logging. These represent the key areas for application security design, where mistakes are most often made."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.435,
+            0.887,
+            0.476
+          ],
+          "content": "Table 3.1 lists the set of vulnerability categories that is common to most application types along with the associated potential problems that can occur due to bad design."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.123,
+            0.505,
+            0.886,
+            0.888
+          ],
+          "content": "| Vulnerability Category Input / Data Validation | Potential Problem Due to Bad Design Insertion of malicious strings in user interface elements or public APIs. These attacks include command execution, cross - site scripting (XSS), SQL injection, and buffer overflow. Results can range from information disclosure to elevation of privilege and arbitrary code execution. |\n| --- | --- |\n| Authentication | Identity spoofing, password cracking, elevation of privileges, and unauthorized access. |\n| Authorization | Access to confidential or restricted data, data tampering, and execution of unauthorized operations. |\n| Configuration Management | Unauthorized access to administration interfaces, ability to update configuration data, and unauthorized access to user accounts and account profiles. |\n| Sensitive Data | Confidential information disclosure and data tampering. |\n| Cryptography | Access to confidential data or account credentials, or both. |\n| Exception Management | Denial of service and disclosure of sensitive system-level details. |\n| Auditing and Logging | Failure to spot the signs of intrusion, inability to prove a user's actions, and difficulties in problem diagnosis. |",
+          "captions": [
+            {
+              "bbox": [
+                0.13,
+                0.481,
+                0.607,
+                0.5
+              ],
+              "content": "Table 3.1. Application Vulnerabilities and Potential Problems"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_24_table_9.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.616,
+            0.036,
+            0.89,
+            0.054
+          ],
+          "content": "Chapter 3: Security Design Guidelines"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.91,
+            0.036,
+            0.935,
+            0.052
+          ],
+          "content": "13"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.175,
+            0.084,
+            0.511,
+            0.109
+          ],
+          "level": 2,
+          "content": "Application-Specific Guidelines"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.117,
+            0.924,
+            0.216
+          ],
+          "content": "Depending on the application being designed, the types of issues that must be addressed vary. The categories defined in each application-specific security frame were defined by security experts who have examined and analyzed the top security issues across many applications. They have been refined with input from Microsoft consultants, product support engineers, customers, and Microsoft partners."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.221,
+            0.899,
+            0.301
+          ],
+          "content": "For example, when you design a secure Web application, it is important that you follow guidelines to ensure effective user authentication and authorization, to protect sensitive data as it is transmitted over public networks, and to prevent attacks such as session hijacking."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.306,
+            0.908,
+            0.348
+          ],
+          "content": "Some of the important Web application issues that must be addressed with secure design practices are shown in Figure 3.1."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.18,
+            0.365,
+            0.809,
+            0.758
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.177,
+                0.764,
+                0.263,
+                0.782
+              ],
+              "content": "Figure 3.1"
+            },
+            {
+              "bbox": [
+                0.178,
+                0.782,
+                0.392,
+                0.802
+              ],
+              "content": "Web application design issues"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_25_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.813,
+            0.923,
+            0.894
+          ],
+          "content": "When you design a secure, smart client application, the set of guidelines changes to address the most important threats for this application type. For example, authentication and authorization are no longer such important concerns; however, input / data validation and exception handling are."
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.066,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "14"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.086,
+            0.418,
+            0.113
+          ],
+          "level": 2,
+          "content": "Deployment Considerations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.122,
+            0.866,
+            0.278
+          ],
+          "content": "During the application design phase, you should review your corporate security policies and procedures together with the infrastructure that your application is to be deployed on. Frequently, the target environment is rigid, and your application design must reflect the restrictions. In some cases, you may need to make design tradeoffs; for example, because of protocol or port restrictions or specific deployment topologies. Identify constraints early in the design phase to avoid surprises later, and involve members of the network and infrastructure teams to help with this process."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.14,
+            0.326,
+            0.534,
+            0.601
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.13,
+                0.283,
+                0.792,
+                0.322
+              ],
+              "content": "Figure 3.2 shows the various deployment aspects that require design-time consideration."
+            },
+            {
+              "bbox": [
+                0.132,
+                0.607,
+                0.219,
+                0.625
+              ],
+              "content": "Figure 3.2"
+            },
+            {
+              "bbox": [
+                0.132,
+                0.626,
+                0.329,
+                0.644
+              ],
+              "content": "Deployment considerations"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_26_image_5.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.68,
+            0.424,
+            0.708
+          ],
+          "level": 2,
+          "content": "Design Guidelines Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.716,
+            0.866,
+            0.797
+          ],
+          "content": "Design guidelines are best practices associated with specific known vulnerabilities and common design mistakes. Patterns & practices security guidance contains design guidelines for a variety of application types. Table 3.2 summarizes general design guidelines that are common to most application types."
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.616,
+            0.037,
+            0.89,
+            0.053
+          ],
+          "content": "Chapter 3: Security Design Guidelines"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.91,
+            0.036,
+            0.935,
+            0.052
+          ],
+          "content": "15"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.169,
+            0.107,
+            0.933,
+            0.712
+          ],
+          "content": "| Category Input / Data Validation | Guidelines Do not trust input; consider centralized input validation. Do not rely on client-side validation. Be careful with canonicalization issues. Constrain, reject, and sanitize input. Validate for type, length, format, and range. |\n| --- | --- |\n| Authentication | Use strong passwords. Support password expiration periods and account disablement. Do not store credentials (use one-way hashes with salt). Encrypt communication channels to protect authentication tokens. |\n| Authorization | Use least privileged accounts. Consider authorization granularity. Enforce separation of privileges. Restrict user access to system-level resources. |\n| Configuration Management | Use least privileged process and service accounts. Do not store credentials in clear text. Use strong authentication and authorization on administration interfaces. Do not use the Local Security Authority (LSA). Secure the communication channel for remote administration. |\n| Sensitive Data | Avoid storing secrets. Encrypt sensitive data over the wire. Secure the communication channel. Provide strong access controls for sensitive data stores. |\n| Cryptography | Do not develop your own. Use proven and tested platform features. Keep unencrypted data close to the algorithm. Use the right algorithm and key size. Avoid key management (use DPAPI). Cycle your keys periodically. Store keys in a restricted location. |\n| Exception Management | Use structured exception handling. Do not reveal sensitive application implementation details. Do not log private data such as passwords. Consider a centralized exception management framework. |\n| Auditing and Logging | Identify malicious behavior. Know what good traffic looks like. Audit and log activity through all of the application tiers. Secure access to log files. Back up and regularly analyze log files. |",
+          "captions": [
+            {
+              "bbox": [
+                0.176,
+                0.083,
+                0.559,
+                0.102
+              ],
+              "content": "Table 3.2. Design Guidelines for Your Application"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_27_table_3.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.066,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "16"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.331,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.088,
+            0.209,
+            0.114
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.124,
+            0.881,
+            0.281
+          ],
+          "content": "Design guidelines can be used as a tool to help you meet your application security objectives. The security frame provides a structure within which you can modify or add design guidelines as you learn about your application’s architecture and deployment environment. Patterns & practices security guidance includes a core set of guidelines, organized by application type that you can use as a starting point for your application’s guidelines. Each guideline should be actionable, impactful, and relevant; and guidelines should be organized into the categories contained in the security frame."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.309,
+            0.338,
+            0.336
+          ],
+          "level": 2,
+          "content": "Additional Resources"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.344,
+            0.865,
+            0.404
+          ],
+          "content": "For more information, see “Chapter 4, Design Guidelines for Secure Web Applica[tions” at http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/THCMCh04.asp.](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/THCMCh04.asp)"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.111,
+            0.137,
+            0.191,
+            0.227
+          ],
+          "content": ""
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.107,
+            0.261,
+            0.471,
+            0.309
+          ],
+          "level": 1,
+          "content": "Threat Modeling"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.377,
+            0.237,
+            0.406
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.413,
+            0.912,
+            0.513
+          ],
+          "content": "Threat modeling is an engineering technique that you can use to help identify threats, attacks, vulnerabilities, and countermeasures that may be relevant to your application. This module summarizes the patterns & practices approach to threat modeling by explaining what it is and why you should use it. It also describes the key concepts behind the approach."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.538,
+            0.443,
+            0.567
+          ],
+          "level": 2,
+          "content": "What Is Threat Modeling?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.574,
+            0.925,
+            0.636
+          ],
+          "content": "Threat modeling is an engineering technique that you can use to help identify threats, attacks, vulnerabilities, and countermeasures that might be relevant to your application. The threat modeling activity helps you to recognize the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.638,
+            0.422,
+            0.657
+          ],
+          "content": "● Your security objectives"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.662,
+            0.355,
+            0.68
+          ],
+          "content": "● Relevant threats"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.685,
+            0.616,
+            0.705
+          ],
+          "content": "● Relevant vulnerabilities and countermeasures"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.734,
+            0.454,
+            0.763
+          ],
+          "level": 2,
+          "content": "Why Use Threat Modeling?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.771,
+            0.89,
+            0.888
+          ],
+          "content": "Threat modeling is performed to identify when and where more resources are required (or justified) to reduce risks. There are many possible vulnerabilities, threats, and attacks, and it is unlikely that your application will encounter all of them. It is also unlikely that your company would need to address all of them. Threat modeling helps you to identify where your organization needs to apply effort."
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.066,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "18"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.11,
+            0.036,
+            0.331,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.083,
+            0.406,
+            0.103
+          ],
+          "content": "Threat modeling helps you to:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.107,
+            0.725,
+            0.128
+          ],
+          "content": "● Shape your application design to meet your security objectives."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.132,
+            0.872,
+            0.17
+          ],
+          "content": "● Help make engineering decisions that weigh security goals against other design goals."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.174,
+            0.835,
+            0.213
+          ],
+          "content": "● Address and improve the quality of your engineering efforts by eliminating common vulnerabilities."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.218,
+            0.88,
+            0.256
+          ],
+          "content": "● Improve quality of service by implementing necessary and effective countermeasures."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.261,
+            0.822,
+            0.282
+          ],
+          "content": "● Reduce risk of security issues arising during development and operations."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.31,
+            0.526,
+            0.338
+          ],
+          "level": 2,
+          "content": "Where Does Threat Modeling Fit In?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.346,
+            0.883,
+            0.425
+          ],
+          "content": "Threat modeling begins early in the architecture and design phase of the application life cycle. It is performed with knowledge of your security objectives. Your security objectives are a key part of your business objectives and they are used to determine the extent of the threat modeling activity and where to spend the most effort."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.432,
+            0.874,
+            0.49
+          ],
+          "content": "As the life cycle progresses and your design and development evolve, you progressively add more detail to your threat model. Threat modeling is iterative, and you need to repeat the process as indicated by the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.494,
+            0.845,
+            0.532
+          ],
+          "content": "● Increase the detail of your model whenever new environmental facts become known."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.537,
+            0.879,
+            0.576
+          ],
+          "content": "● While you develop, increase the detail of your model as design and implementation decisions reveal new facts."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.581,
+            0.857,
+            0.639
+          ],
+          "content": "● Add detail as new uses and configurations of the application appear. This is during the application lifetime including after the application is in production and is maintained by the operations team."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.647,
+            0.87,
+            0.687
+          ],
+          "content": "Add information to the model as it becomes available to you, and keep identifying what you now know and what you need to know next."
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.687,
+            0.037,
+            0.89,
+            0.053
+          ],
+          "content": "Chapter 4: Threat Modeling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.91,
+            0.036,
+            0.935,
+            0.052
+          ],
+          "content": "19"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.085,
+            0.269,
+            0.113
+          ],
+          "level": 2,
+          "content": "Terminology"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.122,
+            0.56,
+            0.142
+          ],
+          "content": "Threat modeling uses the following terms:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.146,
+            0.935,
+            0.243
+          ],
+          "content": "**Asset.** An asset is a resource that has value. It varies by perspective. To your business, an asset might be the availability of information or the information itself, such as customer data. It might be intangible, such as your company’s reputation. To an attacker, an asset could be the ability to misuse your application for unauthorized access to data or privileged operations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.247,
+            0.894,
+            0.306
+          ],
+          "content": "● **Threat.** A threat is an undesired event or potential occurrence, often best described as an effect that could damage or compromise an asset or objective. It may or may not be malicious in nature."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.309,
+            0.932,
+            0.369
+          ],
+          "content": "**Vulnerability.** A vulnerability is a weakness in some aspect or feature of a system that makes an attack possible. Vulnerabilities can exist at the network, host, or application level and include operational practices."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.372,
+            0.934,
+            0.431
+          ],
+          "content": "**Attack (or exploit).** An attack is an action taken that uses one or more vulnerabilities to realize a threat. This could be someone following through on a threat or exploiting a vulnerability."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.434,
+            0.932,
+            0.534
+          ],
+          "content": "**Countermeasure.** A countermeasure addresses a vulnerability to reduce the probability of attack or the impact of a threat. A countermeasure does not directly address a threat. Instead, it addresses the factors that define the threat. Countermeasures range from improving application design or improving code, to improving an operational practice."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.561,
+            0.33,
+            0.589
+          ],
+          "level": 2,
+          "content": "Activity Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.597,
+            0.915,
+            0.678
+          ],
+          "content": "The five major threat modeling steps are shown in Figure 4.1 on the next page. You should progressively refine your threat model by repeatedly performing steps 2 through 5. You will be able to add more detail as you move through your application development life cycle and discover more about your application design."
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "20"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.132,
+            0.104,
+            0.478,
+            0.529
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.132,
+                0.533,
+                0.217,
+                0.551
+              ],
+              "content": "Figure 4.1"
+            },
+            {
+              "bbox": [
+                0.132,
+                0.551,
+                0.397,
+                0.571
+              ],
+              "content": "The iterative threat modeling process"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_32_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.58,
+            0.445,
+            0.601
+          ],
+          "content": "The five threat modeling steps are:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.604,
+            0.88,
+            0.644
+          ],
+          "content": "● **Step 1: Identify security objectives.** Clear objectives help you to focus the threat modeling activity and determine how much effort to spend on subsequent steps."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.648,
+            0.874,
+            0.687
+          ],
+          "content": "● **Step 2: Create an application overview.** Itemizing your application’s important characteristics and actors helps you to identify relevant threats during step 4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.69,
+            0.884,
+            0.748
+          ],
+          "content": "● **Step 3: Decompose your application.** A detailed understanding of the mechanics of your application makes it easier for you to uncover more relevant and more detailed threats."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.753,
+            0.888,
+            0.793
+          ],
+          "content": "● **Step 4: Identify threats.** Use details from steps 2 and 3 to identify threats relevant to your application scenario and context."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.796,
+            0.885,
+            0.856
+          ],
+          "content": "**Step 5: Identify vulnerabilities.** Review the layers of your application to identify weaknesses in the context of your threats. Use vulnerability categories to help you to focus on those areas where mistakes are most often made."
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.687,
+            0.036,
+            0.89,
+            0.053
+          ],
+          "content": "Chapter 4: Threat Modeling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.908,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "21"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.083,
+            0.93,
+            0.201
+          ],
+          "content": "You add progressively more detail to your threat model as you move through your application development life cycle and discover more details about your application design. Because key resources identified in threat modeling are also likely to be important from a performance and functionality perspective, you can expect to revisit and adjust your model as you balance your needs. This is normal and is a valuable outcome of the process."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.227,
+            0.412,
+            0.256
+          ],
+          "level": 2,
+          "content": "Activity Summary Table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.263,
+            0.917,
+            0.304
+          ],
+          "content": "Table 4.1 summarizes the threat modeling activity and shows the input and output for each step."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.17,
+            0.333,
+            0.932,
+            0.689
+          ],
+          "content": "| Input | Step | Output |\n| --- | --- | --- |\n| Business requirementsSecurity policiesCompliance requirements | Step 1: Identify security objectives | Key security objectives |\n| Deployment diagramsUse casesFunctional specifications | Step 2: Create an application overview | Whiteboard-style diagram with end-to-end deployment scenarioKey scenariosRolesTechnologiesApplication security mechanisms |\n| Deployment diagramsUse casesFunctional specificationsData flow diagrams | Step 3: Decompose your application | Trust boundariesEntry pointsExit pointsData flows |\n| Common threats | Step 4: Identify threats | Threat list |\n| Common vulnerabilities | Step 5: Identify vulnerabilities | Vulnerability list |",
+          "captions": [
+            {
+              "bbox": [
+                0.176,
+                0.309,
+                0.573,
+                0.329
+              ],
+              "content": "Table 4.1: Activity Summary with Input and Output"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_33_table_6.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.737,
+            0.289,
+            0.766
+          ],
+          "level": 2,
+          "content": "Key Concepts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.772,
+            0.931,
+            0.853
+          ],
+          "content": "The patterns & practices threat modeling approach is optimized to help you identify vulnerabilities in your application. The key concepts on the next page represent best practices refined by industry security experts, Microsoft consultants, product support engineers, customers, and Microsoft partners."
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "22"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.123,
+            0.107,
+            0.887,
+            0.627
+          ],
+          "content": "| Concept | Description |\n| --- | --- |\n| Modeling to reduce risk | Use threat modeling to identify when and where you should apply effort to eliminate or reduce a potential threat. Avoid wasted effort by threat modeling to clarify the areas of most risk. |\n| Incremental rendering | Perform threat modeling iteratively. You should not be too concerned about missing details in any single iteration — instead focus on making each iteration productive. |\n| Context precision | Understand application use cases and roles in order to identify threats and vulnerabilities that are specific to your application. Different application types, application usage, and roles can yield different threats and vulnerabilities. |\n| Boundaries | Establish boundaries in order to help you define constraints and goals. Boundaries help you identify what must not be allowed to happen, what can happen, and what must happen. |\n| Entry and exit criteria | Define entry and exit criteria to establish tests for success. You should know before you start what your threat model will look like when complete (good enough) and when you have spent the right amount of time on the activity. |\n| Communication and collaboration tool | Use the threat model as a communication and collaboration tool. Leverage discovered threats and vulnerabilities to improve shared knowledge and understanding. |\n| Pattern-based information model | Use a pattern-based information model to identify the patterns of repeatable problems and solutions, and organize them into categories. |\n| Primary engineering decisions | Expose your high-risk engineering decisions and design choices with your threat model. These high-risk choices are good candidates for focusing prototyping efforts. |",
+          "captions": [
+            {
+              "bbox": [
+                0.131,
+                0.083,
+                0.323,
+                0.102
+              ],
+              "content": "Table 4.2: Key Concepts"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_34_table_3.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.654,
+            0.21,
+            0.681
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.689,
+            0.882,
+            0.847
+          ],
+          "content": "Threat modeling is a structured activity for identifying and evaluating application threats and vulnerabilities. You should start the threat modeling activity early in the architecture and design phase of your application life cycle, and then continually update and refine the model as you learn more about your design and implementation. Use threat modeling to shape your application design to meet your security objectives, to help weigh the security threat against other design concerns (such as performance) when making key engineering decisions, and to reduce the risk of security issues arising during development and operations."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.873,
+            0.34,
+            0.899
+          ],
+          "level": 2,
+          "content": "Additional Resources"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.908,
+            0.812,
+            0.93
+          ],
+          "content": "For more information on threat modeling, see [http://msdn.com/threatmodeling.](http://msdn.com/threatmodeling)"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.113,
+            0.137,
+            0.191,
+            0.229
+          ],
+          "content": ""
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.107,
+            0.26,
+            0.824,
+            0.351
+          ],
+          "level": 1,
+          "content": "Security Architecture and Design Review"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.424,
+            0.237,
+            0.452
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.459,
+            0.919,
+            0.52
+          ],
+          "content": "This module summarizes the patterns & practices approach to security architecture and design review by explaining what it is and why you should use it. It also describes the key concepts behind the approach."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.526,
+            0.913,
+            0.565
+          ],
+          "content": "There are three important aspects to conducting an architecture and design review for security:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.568,
+            0.901,
+            0.608
+          ],
+          "content": "● You evaluate your application architecture in relation to its target deployment environment and infrastructure."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.611,
+            0.865,
+            0.652
+          ],
+          "content": "● You review your design choices in each of the key vulnerability categories defined by a security frame."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.654,
+            0.93,
+            0.716
+          ],
+          "content": "Finally, you conduct a tier-by-tier component analysis and examine the security mechanisms employed by your key components, such as your presentation layer, business layer, and data access layer."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.743,
+            0.229,
+            0.769
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.778,
+            0.917,
+            0.859
+          ],
+          "content": "The architecture and design review process analyzes application architecture and design from a security perspective. Use this activity to expose the high-risk design decisions that have been made. Do not rely solely on the use of design documentation as some design decisions will not be explicit but will have to be discovered"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "24"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.106,
+            0.036,
+            0.33,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.083,
+            0.867,
+            0.183
+          ],
+          "content": "through dialog and exploration. Use a combination of design documents, architecture experts and discussion to achieve the best results. The goal of the review is to decompose your application and identify key items, including trust boundaries, data flow, entry points, and privileged code. You must also keep in mind the physical deployment configuration of your application."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.188,
+            0.868,
+            0.268
+          ],
+          "content": "Pay attention to those areas defined by the security frame for your application as this is where you will most commonly find vulnerabilities. Patterns & practices security guidance includes context-specific security frames for each major application type that you can use to get started."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.293,
+            0.214,
+            0.321
+          ],
+          "level": 2,
+          "content": "Techniques"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.329,
+            0.876,
+            0.408
+          ],
+          "content": "Use a question driven approach to expose the highest risk design decisions and use the security frame to dive into areas that reveal common mistakes. The following techniques can help to guide your approach when reviewing the architecture and design of your application."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.411,
+            0.883,
+            0.471
+          ],
+          "content": "**Deployment and infrastructure.** Review the design of your application in relation to the target deployment environment and the associated security policies. Consider the restrictions imposed by the underlying infrastructure layer security."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.474,
+            0.881,
+            0.552
+          ],
+          "content": "**Security frame.** Review the approach to critical areas in your application, including authentication, authorization, input / data validation, exception management, and other areas. Use the application vulnerability categories as a roadmap and to make sure that you do not miss any key areas during the review."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.555,
+            0.845,
+            0.615
+          ],
+          "content": "● **Tier-by-tier analysis.** Walk through the logical tiers of your application, and evaluate security choices within your presentation, business, and data access layers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.628,
+            0.742,
+            0.65
+          ],
+          "content": "Figure 5.1 shows this three-pronged approach to the review process."
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.519,
+            0.036,
+            0.89,
+            0.054
+          ],
+          "content": "Chapter 5: Security Architecture and Design Review"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.909,
+            0.036,
+            0.935,
+            0.052
+          ],
+          "content": "25"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.183,
+            0.079,
+            0.755,
+            0.404
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.177,
+                0.412,
+                0.262,
+                0.429
+              ],
+              "content": "Figure 5.1"
+            },
+            {
+              "bbox": [
+                0.178,
+                0.43,
+                0.316,
+                0.448
+              ],
+              "content": "Application review"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_37_image_2.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.482,
+            0.247,
+            0.508
+          ],
+          "level": 2,
+          "content": "Checklists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.517,
+            0.932,
+            0.617
+          ],
+          "content": "Use checklists to help you perform architecture and design reviews while evaluating the security of your applications. The checklist should help you explore the highlevel design and architecture decisions that have been made for your application. You should evolve your checklists to include custom checks based on the unique aspects of your application’s architecture."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.622,
+            0.928,
+            0.742
+          ],
+          "content": "Patterns & practices security guidance includes checklists for each major application type. Use these checklists as a starting point and add new items as you learn more about architecture and design reviews. A small sample checklist containing items that are applicable to many applications is shown below. To view a complete check[list, refer to patterns & practices guidance on the Web at http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityChecklistsIndex.asp.](http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityChecklistsIndex.asp)"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.066,
+            0.036,
+            0.09,
+            0.052
+          ],
+          "content": "26"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.11,
+            0.037,
+            0.331,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.084,
+            0.627,
+            0.109
+          ],
+          "level": 2,
+          "content": "Deployment and Infrastructure Considerations"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.123,
+            0.142,
+            0.886,
+            0.466
+          ],
+          "content": "| Check | Description |\n| --- | --- |\n|  | The design identifies, and accommodates the company security policy. |\n|  | Restrictions imposed by infrastructure security (including available services, protocols, and firewall restrictions) are identified. |\n|  | The design recognizes and accommodates restrictions imposed by hosting environments (including application isolation requirements). |\n|  | The target environment code access security trust level is known. |\n|  | The design identifies the deployment infrastructure requirements and the deployment configuration of the application. |\n|  | Domain structures, remote application servers, and database servers are identified. |\n|  | The design identifies clustering requirements. |\n|  | Secure communication features provided by the platform and the application are known. |\n|  | The design addresses the required scalability and performance criteria. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_table_3.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.504,
+            0.683,
+            0.529
+          ],
+          "level": 2,
+          "content": "Application Architecture and Design Considerations"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.544,
+            0.342,
+            0.566
+          ],
+          "level": 2,
+          "content": "Input / Data Validation"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.123,
+            0.597,
+            0.886,
+            0.904
+          ],
+          "content": "| Check | Description |\n| --- | --- |\n|  | All entry points and trust boundaries are identified by the design. |\n|  | Input validation is applied whenever input is received from outside the current trust boundary. |\n|  | The design assumes that user input is malicious. |\n|  | Centralized input validation is used where appropriate. |\n|  | The input validation strategy that the application adopted is modular and consistent. |\n|  | The validation approach is to constrain, reject, and then sanitize input. (Looking for known, valid, and safe input is much easier than looking for known malicious or dangerous input.) |\n|  | Data is validated for type, length, format, and range. |\n|  | The design addresses potential canonicalization issues. |\n|  | Input file names and file paths are avoided where possible. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_table_6.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.519,
+            0.036,
+            0.89,
+            0.054
+          ],
+          "content": "Chapter 5: Security Architecture and Design Review"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.909,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "27"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.169,
+            0.081,
+            0.932,
+            0.223
+          ],
+          "continues_prev": true,
+          "content": "| Check | Description |\n| --- | --- |\n|  | The design addresses potential SQL injection issues. |\n|  | The design addresses potential cross-site scripting issues. |\n|  | The design does not rely on client-side validation. |\n|  | The design applies defense in depth to the input validation strategy by providing input validation across tiers. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_39_table_2.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.271,
+            0.256,
+            0.297
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.307,
+            0.916,
+            0.406
+          ],
+          "content": "If you spend time and effort at the beginning of your project to analyze and review your application architecture and design, you can eliminate design-related vulnerabilities and improve your application’s overall security. It is much easier and less expensive to fix vulnerabilities at design time than it is later in the development cycle when substantial re-engineering might be required."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.412,
+            0.913,
+            0.51
+          ],
+          "content": "Use the architecture and design review as a checkpoint to ensure compliance with your team’s design guidelines. The review should cover both deployment and design considerations. By considering your design in relation to the target deployment environment and the security policies defined by that environment, you can help to ensure a smoother and more secure application deployment."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.516,
+            0.932,
+            0.614
+          ],
+          "content": "Perform architecture and design reviews iteratively as your design evolves or as you learn more about the design and architecture of your applications. If your application has already been created, the architecture and design review is still an important part of the security assessment process that can help you to fix vulnerabilities and improve future designs."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.64,
+            0.384,
+            0.667
+          ],
+          "level": 2,
+          "content": "Additional Resources"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.676,
+            0.881,
+            0.737
+          ],
+          "content": "For more information, see “Security Architecture and Design Review Index” at [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/securityarchanddesignreviewindex.asp.](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/securityarchanddesignreviewindex.asp)"
+        }
+      ]
+    },
+    {
+      "page_idx": 40,
+      "blocks": []
+    },
+    {
+      "page_idx": 41,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.106,
+            0.261,
+            0.578,
+            0.308
+          ],
+          "level": 1,
+          "content": "Security Code Review"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.377,
+            0.237,
+            0.406
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.413,
+            0.935,
+            0.512
+          ],
+          "content": "Security code review is an effective mechanism for uncovering security issues before testing or deployment begins. Performing code reviews helps you reduce the number of implementation errors in an application before it is deployed to a test team or to a customer. While design bugs are the most expensive to fix, implementation bugs are the most common."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.517,
+            0.911,
+            0.579
+          ],
+          "content": "This module summarizes the patterns & practices approach to code review by explaining what it is and why you should use it. It also describes the key concepts behind the approach."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.604,
+            0.229,
+            0.631
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.64,
+            0.928,
+            0.759
+          ],
+          "content": "A properly conducted code review can do more for the security of your code than nearly any other activity. A large numbers of bugs can be found and fixed before the code makes it into an official build or into the hands of the test team. Additionally, the code review process lends itself very well to sharing security best practices among a development team, and it produces lessons that can be learned from to prevent future bugs."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.763,
+            0.93,
+            0.903
+          ],
+          "content": "To have an effective code review, you must first understand the patterns of bad code that you want to eradicate, and then review the code with a clear idea of what you are looking for. You can use security objectives to guide the code review process. Some vulnerability types may have elevated priority and others may be out of bounds based upon these objectives. Threat models can be used to create a more focused code review. Reviewing for specific known threats is more likely to result in bugs than a generic review that could be applied to any application."
+        }
+      ]
+    },
+    {
+      "page_idx": 42,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "30"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.085,
+            0.284,
+            0.113
+          ],
+          "level": 2,
+          "content": "Activity Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.121,
+            0.87,
+            0.163
+          ],
+          "content": "The four code review steps are shown in Figure 6.1. Each step builds upon the last, producing a result that is greater than the sum of its parts."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.133,
+            0.178,
+            0.475,
+            0.598
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.131,
+                0.603,
+                0.271,
+                0.641
+              ],
+              "content": "Figure 6.1 Code Review Steps"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_42_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.652,
+            0.415,
+            0.673
+          ],
+          "content": "The four code review steps are:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.676,
+            0.879,
+            0.715
+          ],
+          "content": "● **Step 1. Identify security code review objectives.** Establish goals and constraints for the review."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.719,
+            0.855,
+            0.779
+          ],
+          "content": "● **Step 2. Perform a preliminary scan.** Use static analysis to find an initial set of bugs and improve your understanding of where bugs are most likely to be discovered during further review."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.782,
+            0.877,
+            0.842
+          ],
+          "content": "**Step 3. Review the code for security issues.** Review the code thoroughly to find security vulnerabilities that are common to many applications. You can use the results of step 2 to focus your analysis."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.844,
+            0.889,
+            0.924
+          ],
+          "content": "**Step 4. Review for security issues unique to the architecture.** Complete a final analysis that focuses on bugs that relate to the unique architecture of your application. This step is most important if you have implemented a custom security mechanism or any feature designed specifically to mitigate a known security threat."
+        }
+      ]
+    },
+    {
+      "page_idx": 43,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.652,
+            0.036,
+            0.89,
+            0.053
+          ],
+          "content": "Chapter 6: Security Code Review"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.909,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "31"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.085,
+            0.412,
+            0.113
+          ],
+          "level": 2,
+          "content": "Activity Summary Table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.122,
+            0.891,
+            0.162
+          ],
+          "content": "Table 6.1 summarizes the security code review activity and shows the input and output for each step."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.17,
+            0.192,
+            0.932,
+            0.488
+          ],
+          "content": "| Input ● Security Requirements ● Code (including list of changes since last review) ● Constraints | Step Step 1. Identify code review objectives | Output ● Code review objectives |\n| --- | --- | --- |\n| ● Code ● Code review objectives | Step 2. Perform preliminary scan | ● Vulnerability list (false positives filtered out) ● List of flagged areas |\n| ● Code ● Code review objectives ● List of flagged areas | Step 3. Review code for security issues | ● Vulnerability list |\n| ● Code ● Code review objectives | Step 4. Review code for security issues unique to the application architecture | ● Vulnerability list |",
+          "captions": [
+            {
+              "bbox": [
+                0.176,
+                0.168,
+                0.573,
+                0.187
+              ],
+              "content": "Table 6.1: Activity Summary with Input and Output"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_43_table_5.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.523,
+            0.259,
+            0.551
+          ],
+          "level": 2,
+          "content": "Techniques"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.558,
+            0.913,
+            0.598
+          ],
+          "content": "An effective code reviewer makes use of the following techniques while reviewing code. These techniques are most effective when used in combination."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.602,
+            0.879,
+            0.642
+          ],
+          "content": "● **Control flow analysis.** Control flow analysis is the mechanism used to step through logical conditions in the code. The process works as follows:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.201,
+            0.644,
+            0.903,
+            0.684
+          ],
+          "content": "1. Look at a function and determine each branch condition. These can include loops, **switch** statements, **if** statements and **try**/**catch** blocks."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.201,
+            0.688,
+            0.843,
+            0.707
+          ],
+          "content": "2. Understand the conditions under which each block will be executed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.201,
+            0.712,
+            0.569,
+            0.732
+          ],
+          "content": "3. Move to the next function and repeat."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.737,
+            0.925,
+            0.816
+          ],
+          "content": "**Dataflow analysis.** Dataflow analysis is the mechanism used to trace data from the points of input to the points of output. Because there can be many data flows in your application, use your code review objectives and the flagged areas from step 2 to focus your work. The process works as follows:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.201,
+            0.819,
+            0.902,
+            0.859
+          ],
+          "content": "1. For each input location, determine how much you trust the source of input. When in doubt you should give it no trust."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.201,
+            0.862,
+            0.876,
+            0.902
+          ],
+          "content": "2. Trace the flow of data to each possible output, noting along the way any attempts at data validation."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.201,
+            0.906,
+            0.565,
+            0.926
+          ],
+          "content": "3. Move to the next input and continue."
+        }
+      ]
+    },
+    {
+      "page_idx": 44,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "32"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.085,
+            0.317,
+            0.113
+          ],
+          "level": 2,
+          "content": "Use a Question List"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.122,
+            0.885,
+            0.26
+          ],
+          "content": "Using a question-driven approach can help with the review process. Patterns & practices security guidance includes question lists for each major application type. These lists each contain a set of questions that are known to be effective during code review. Apply these questions while using control flow and dataflow analysis, and add to the questions as you learn more about reviewing code. Keep in mind that some vulnerabilities require contextual knowledge of control and data flow while others are context free and can be found with simple pattern matching."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.286,
+            0.184,
+            0.313
+          ],
+          "level": 2,
+          "content": "Hotspots"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.322,
+            0.888,
+            0.381
+          ],
+          "content": "Each question list is organized into a set of hotspots or trouble areas that are based on implementation mistakes that most commonly result in application vulnerabilities. Table 6.2 shows example hotspots."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.123,
+            0.411,
+            0.887,
+            0.93
+          ],
+          "content": "| Hotspot SQL Injection | What to look for in code A SQL injection attack occurs when un-trusted input can modify the logic of a SQL query in unexpected ways. As you are work through the code, ensure that any input that is used in a SQL query is validated, or make sure that the SQL queries are parameterized. |\n| --- | --- |\n| Cross Site Scripting | Cross-site scripting occurs when an attacker manages to input script code into an application so that it is echoed back and executed in the security context of the application. This allows an attacker to steal user information, including forms data and cookies. This vulnerability could be present whenever a Web application echoes unfiltered user input back to Web content. |\n| Data Access | Look for improper storage of database connection strings and proper use of authentication to the database. |\n| Input/Data Validation | Look for client-side validation that is not backed by server-side validation, poor validation techniques, and reliance on file names or other insecure mechanisms to make security decisions. |\n| Authentication | Look for weak passwords, clear-text credentials, overlong sessions, and other common authentication problems. |\n| Authorization | Look for failure to limit database access, inadequate separation of privileges, and other common authorization problems. |\n| Sensitive data | Look for mismanagement of sensitive data by disclosing secrets in error messages, code, memory, files, or network. |\n| Unsafe code | Pay particularly close attention to any code compiled with the /unsafe switch. This code will not be given all of the protection normal managed code is given. Look for potential buffer overflows, array out of bound errors, integer underflow and overflow, as well as data truncation errors. |",
+          "captions": [
+            {
+              "bbox": [
+                0.131,
+                0.387,
+                0.289,
+                0.406
+              ],
+              "content": "Table 6.2: Hotspots"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_44_table_7.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 45,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.652,
+            0.037,
+            0.889,
+            0.053
+          ],
+          "content": "Chapter 6: Security Code Review"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.909,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "33"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.168,
+            0.081,
+            0.932,
+            0.533
+          ],
+          "continues_prev": true,
+          "content": "| Hotspot | What to look for in code |\n| --- | --- |\n| Unmanaged code | In addition to the checks performed for unsafe code, also scan unmanaged code looking for the use of dangerous APIs, such as strcpy and strcat. Be sure to review any interop calls and the unmanaged code itself to make sure that bad assumptions are not made as execution control passes from managed to unmanaged code. |\n| Hard-coded secrets | Look for hard-coded secrets by examining the code for variable names such as “key”, “password”, “pwd”, “secret”, “hash”, and “salt”. |\n| Poor error handling | Look for functions with missing error handlers or empty catch blocks. |\n| Web.config | Examine your configuration management settings in the Web.config file to ensure that forms authentication tickets are protected adequately, that the correct algorithms are specified on the machineKey element and so on. |\n| Code access security | Search for the use of asserts, link demands and allowPartiallyTrustedCallersAttribute (APTCA). |\n| Code that uses cryptography | Check for failure to clear secrets as well as improper use of the cryptography APIs themselves. |\n| Undocumented public interfaces | Most undocumented interfaces should not be in the product, and they are almost never given the same level of design and test scrutiny as the rest of the product. |\n| Threading problems | Check for race conditions and deadlocks, especially in static methods and constructors. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_45_table_2.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.579,
+            0.408,
+            0.606
+          ],
+          "level": 2,
+          "content": "Code Review Scenarios"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.616,
+            0.782,
+            0.637
+          ],
+          "content": "There are several strategies for conducting code reviews, including:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.639,
+            0.902,
+            0.678
+          ],
+          "content": "● **Individual Review.** This strategy assumes that a single person will review the code."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.683,
+            0.91,
+            0.742
+          ],
+          "content": "**Team Review.** This strategy assumes that multiple people will review the same code. This can be a highly effective code review strategy, but it requires additional organization to be successful."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.749,
+            0.906,
+            0.788
+          ],
+          "content": "In either strategy, you can select a reviewer who is familiar or unfamiliar with the code."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.796,
+            0.933,
+            0.856
+          ],
+          "content": "The advantage of using a reviewer who does not have prior knowledge of the code is that he or she will examine the code with fresh eyes and will be less likely to make assumptions than someone who is more familiar might be."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.862,
+            0.926,
+            0.92
+          ],
+          "content": "The advantage of using a reviewer with knowledge of the code is that he or she will be able to find subtle errors that require expert familiarity with the application under review."
+        }
+      ]
+    },
+    {
+      "page_idx": 46,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.09,
+            0.052
+          ],
+          "content": "34"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.108,
+            0.036,
+            0.332,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.086,
+            0.216,
+            0.112
+          ],
+          "level": 2,
+          "content": "Team Roles"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.122,
+            0.626,
+            0.142
+          ],
+          "content": "During a code review, there are a several distinct tasks:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.146,
+            0.818,
+            0.185
+          ],
+          "content": "● **Present the objectives.** Describe the application/component purpose and security objectives."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.189,
+            0.833,
+            0.209
+          ],
+          "content": "● **Present the code.** Walk through the code and describe its design and intent."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.213,
+            0.605,
+            0.233
+          ],
+          "content": "**Review the code.** Review the code and find bugs."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.237,
+            0.849,
+            0.276
+          ],
+          "content": "● **Take notes.** Take notes that describe the bugs found, any open questions, and areas for future investigation."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.284,
+            0.516,
+            0.305
+          ],
+          "content": "Typically, the following roles are involved:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.309,
+            0.872,
+            0.367
+          ],
+          "content": "**Business analyst.** The business analyst describes the application purpose and security objectives. He or she is usually responsible for the presenting the objectives from a business standpoint."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.371,
+            0.875,
+            0.43
+          ],
+          "content": "● **Architect.** The architect describes the application purpose and component architecture. He or she is usually responsible for presenting the objectives from a systems architecture standpoint."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.433,
+            0.875,
+            0.491
+          ],
+          "content": "● **Developer.** The developer describes code details, reviews the code, and finds bugs. He or she is usually responsible for presenting the code and reviewing the code."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.496,
+            0.867,
+            0.557
+          ],
+          "content": "● **Tester.** The tester reviews the code and finds bugs, and typically has less code knowledge but a more destructive, break-the-code mind-set than the developer has. He or she is usually responsible for reviewing code and recording bugs."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.583,
+            0.21,
+            0.609
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.619,
+            0.879,
+            0.738
+          ],
+          "content": "Security code reviews are a powerful tool to reduce the number of vulnerabilities in your application. Through the use of control flow and dataflow analysis in conjunction with a question list it is possible to find and fix implementation bugs before they are delivered to your test team or customer. Use the lessons learned in code review to update the question list and spread secure development best practices through the development team."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.763,
+            0.339,
+            0.79
+          ],
+          "level": 2,
+          "content": "Additional Resources"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.799,
+            0.849,
+            0.841
+          ],
+          "content": "For more information, see “patterns & practices Security Code Review Index” at [http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityCodeReviewIndex.asp.](http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityCodeReviewIndex.asp)"
+        }
+      ]
+    },
+    {
+      "page_idx": 47,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.115,
+            0.137,
+            0.189,
+            0.228
+          ],
+          "content": "7"
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.106,
+            0.261,
+            0.722,
+            0.309
+          ],
+          "level": 1,
+          "content": "Security Deployment Review"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.377,
+            0.237,
+            0.406
+          ],
+          "level": 2,
+          "content": "Summary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.413,
+            0.93,
+            0.494
+          ],
+          "content": "A security deployment review is an activity that can be used to ensure that configuration and deployment problems are discovered before they can result in an application vulnerability. Even the most securely designed and implemented application can be compromised by an error during deployment, leaving it open to attack."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.498,
+            0.932,
+            0.56
+          ],
+          "content": "This module summarizes the patterns & practices approach to security deployment reviews by explaining what they are and why you should use them. It also describes the key concepts behind the approach."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.584,
+            0.23,
+            0.612
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.621,
+            0.931,
+            0.682
+          ],
+          "content": "Application security is dependent upon the security of the underlying infrastructure on which the application is deployed. The deployment review, depending upon your application, will cover configuration of both the network and the host."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.687,
+            0.919,
+            0.747
+          ],
+          "content": "When you review your security deployment, you can organize the precautions you must take and the settings you must configure into categories. These categories are shown in Figure 7.1 on the next page."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.752,
+            0.899,
+            0.795
+          ],
+          "content": "By using these configuration categories, you can systematically review the entire application, or pick a particular category and complete specific steps."
+        }
+      ]
+    },
+    {
+      "page_idx": 48,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.065,
+            0.036,
+            0.091,
+            0.052
+          ],
+          "content": "36"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.036,
+            0.332,
+            0.054
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.134,
+            0.079,
+            0.59,
+            0.326
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.132,
+                0.333,
+                0.217,
+                0.351
+              ],
+              "content": "Figure 7.1"
+            },
+            {
+              "bbox": [
+                0.132,
+                0.351,
+                0.357,
+                0.371
+              ],
+              "content": "Server configuration categories"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_48_image_2.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.404,
+            0.213,
+            0.432
+          ],
+          "level": 2,
+          "content": "Techniques"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.439,
+            0.721,
+            0.46
+          ],
+          "content": "Use following techniques when conducting a deployment review:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.464,
+            0.828,
+            0.504
+          ],
+          "content": "● **Use server security categories.** Use server security categories to help make deployment reviews for security systematic and repeatable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.507,
+            0.887,
+            0.564
+          ],
+          "content": "● **Break down your deployment review.** You can use the categories to break down your application deployment for further analysis and to help identify vulnerabilities."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.57,
+            0.867,
+            0.628
+          ],
+          "content": "**Review systematically.** By using categories, you can systematically go through the deployment review process from start to finish or pick a particular category for further analysis."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.658,
+            0.407,
+            0.686
+          ],
+          "level": 2,
+          "content": "Server Security Categories"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.693,
+            0.866,
+            0.773
+          ],
+          "content": "Patterns & practices security guidance includes server security categories for each major application type. Use these categories as a starting point and add new items as you learn more about deployment reviews. Table 7.1 lists categories that are common to most deployed applications."
+        }
+      ]
+    },
+    {
+      "page_idx": 49,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.605,
+            0.036,
+            0.89,
+            0.053
+          ],
+          "content": "Chapter 7: Security Deployment Review"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.909,
+            0.036,
+            0.934,
+            0.052
+          ],
+          "content": "37"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.168,
+            0.107,
+            0.932,
+            0.721
+          ],
+          "content": "| Category | Practices |\n| --- | --- |\n| Patches and Updates | Patching and updating your server software is a critical first step. |\n| Accounts | Accounts allow authenticated users to access a computer. These accounts must be audited. Configure accounts with least privilege to help prevent elevation of privilege. Remove any accounts that you do not need. Help to prevent brute force and dictionary attacks by using strong password policies, and then use auditing and alerts to detect logon failures. |\n| Auditing and Logging | Auditing is one of your most important tools for identifying intruders, attacks in progress, and evidence of attacks that have occurred. Configure auditing for your server. Event and system logs also help you to troubleshoot security problems. |\n| Files and Directories | Secure all files and directories with restricted permissions that only allow access to necessary services and accounts. Use auditing to allow you to detect when suspicious or unauthorized activity occurs. |\n| Ports | Services that run on the server listen to specific ports so that they can respond to incoming requests. Audit the ports on your server regularly to ensure that a service that is not secured or that is unnecessary is not active on your server. |\n| Protocols | Avoid using protocols that are inherently insecure. If you cannot avoid using these protocols, take the appropriate measures to provide secure authentication and communication. |\n| Registry | Many security-related settings are stored in the registry. As a result, you must secure the registry. You can do this by applying restricted Windows access control lists (ACLs) and by blocking remote registry administration. |\n| Services | If the service is necessary, secure and maintain the service. Consider monitoring any service to ensure availability. If your service software is not secure, but you need the service, try to find a secure alternative. |\n| Shares | Remove all unnecessary file shares. Secure any remaining shares with restricted permissions. |",
+          "captions": [
+            {
+              "bbox": [
+                0.176,
+                0.083,
+                0.463,
+                0.102
+              ],
+              "content": "Table 7.1 Server Security Categories"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_49_table_3.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.767,
+            0.514,
+            0.796
+          ],
+          "level": 2,
+          "content": "Application Security Categories"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.174,
+            0.804,
+            0.926,
+            0.922
+          ],
+          "content": "Patterns & practices security guidance includes application security categories for the appropriate application types. Some application types will require review of application security categories as well as server security categories. For example, you should review application-level Web.config file settings for ASP.NET applications. Use these categories as a starting point, and add new items as you learn more about deployment reviews."
+        }
+      ]
+    },
+    {
+      "page_idx": 50,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.066,
+            0.036,
+            0.091,
+            0.051
+          ],
+          "content": "38"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.037,
+            0.331,
+            0.053
+          ],
+          "content": "Security Engineering Explained"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.086,
+            0.209,
+            0.112
+          ],
+          "level": 2,
+          "content": "Conclusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.122,
+            0.887,
+            0.202
+          ],
+          "content": "Deployment reviews can help to ensure that application security is not compromised by poor configuration of the network or host. By using server security categories, you can conduct a systematic review that can be effectively repeated during the next deployment."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.228,
+            0.338,
+            0.255
+          ],
+          "level": 2,
+          "content": "Additional Resources"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.264,
+            0.823,
+            0.302
+          ],
+          "content": "For more information, see “patterns & practices Security Deployment Review Index” at"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.302,
+            0.886,
+            0.324
+          ],
+          "content": "[http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityDeploymentReviewIndex.asp.](http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityDeploymentReviewIndex.asp)"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "title": "a01cPatternsTest",
+      "authors": [
+        "rjc"
+      ],
+      "subject": "a01cPatternsTest",
+      "created_at": "2005-10-07T00:35:14-07:00",
+      "modified_at": "2005-10-13T14:46:40-07:00",
+      "creator_application": "Adobe PageMaker 7.0",
+      "producer_application": "Acrobat Distiller 6.0 (Windows)",
+      "page_count": 51,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 488.3682861328125,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 40,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 41,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 42,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 43,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 44,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 45,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 46,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 47,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 48,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 49,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        },
+        {
+          "page_idx": 50,
+          "width_pt": 531.0,
+          "height_pt": 648.0
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}
