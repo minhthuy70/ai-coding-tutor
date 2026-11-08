@@ -1,0 +1,21 @@
+simulation_label,document_id,pdf_filename,pdf_page_index,pdf_printed_label,section_title,page_type,secondary_types,complexity,selected_reason,ground_truth_file,review_status,notes
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Spec Introduction,TEXT,,MEDIUM,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Java Syntax,CODE,,HIGH,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Section Header,HEADING,,LOW,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Technical Description,TEXT,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Type System Rules,EQUATION,,HIGH,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Code with Annotations,MIXED,CODE;TEXT,HIGH,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Package System,TEXT,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Operator Precedence,TABLE,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Class Definitions,CODE,,HIGH,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Exception Handling,TEXT,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Chapter Heading,HEADING,,LOW,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Formal Type Notation,MIXED,TEXT;EQUATION,HIGH,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Memory Model,TEXT,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,GC Architecture,FIGURE,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Concurrency Code,CODE,,HIGH,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Reference Appendix,TEXT,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Keyword Reference,TABLE,,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,API Section Heading,HEADING,,LOW,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,Deprecated Features,TEXT,,LOW,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS
+SIMULATED_DATA,DOC03,DOC03_The_Java_Language_Java_SE_26_Edition.pdf,,,API Code Examples,MIXED,TEXT;CODE,MIDDLE,Stratified sampling,,NOT_VERIFIED,SIMULATED_DATA - NOT_REAL_EXPERIMENTAL_RESULTS

@@ -1,0 +1,92 @@
+{
+  "simulation_label": "SIMULATED_DATA",
+  "report_status": "SYNTHETIC_ONLY",
+  "execution_status": "NOT_EXECUTED",
+  "report_metadata": {
+    "version": "1.0.0",
+    "generated_date": "2026-11-04",
+    "report_purpose": "Demonstration and workflow testing"
+  },
+  "benchmark_overview": {
+    "total_documents": 5,
+    "total_samples": 100,
+    "samples_per_document": 20,
+    "total_parser_candidates": 3,
+    "total_parser_page_records": 300,
+    "sampling_method": "Stratified sampling"
+  },
+  "documents_summary": [
+    {
+      "document_id": "DOC01",
+      "pdf_filename": "DOC01_C++23_Working_Draft.pdf",
+      "domain": "Programming Language Specification",
+      "samples": 20
+    },
+    {
+      "document_id": "DOC02",
+      "pdf_filename": "DOC02_Python_Tutorial.pdf",
+      "domain": "Programming Tutorial",
+      "samples": 20
+    },
+    {
+      "document_id": "DOC03",
+      "pdf_filename": "DOC03_The_Java_Language_Java_SE_26_Edition.pdf",
+      "domain": "Programming Language Specification",
+      "samples": 20
+    },
+    {
+      "document_id": "DOC04",
+      "pdf_filename": "DOC04_Mathematics_for_Computer_Science.pdf",
+      "domain": "Computer Science Mathematics",
+      "samples": 20
+    },
+    {
+      "document_id": "DOC05",
+      "pdf_filename": "DOC05_Security_Engineering_Explained.pdf",
+      "domain": "Security Engineering",
+      "samples": 20
+    }
+  ],
+  "parser_candidates": [
+    {
+      "name": "MinerU",
+      "installation_status": "NOT_INSTALLED",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "name": "Docling",
+      "installation_status": "NOT_INSTALLED",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "name": "PyMuPDF",
+      "installation_status": "NOT_INSTALLED",
+      "execution_status": "NOT_EXECUTED"
+    }
+  ],
+  "evaluation_metrics": {
+    "text_accuracy": {"weight": 0.20, "description": "Accuracy of extracted text content"},
+    "content_completeness": {"weight": 0.15, "description": "Completeness of extracted content"},
+    "reading_order": {"weight": 0.10, "description": "Correctness of reading order"},
+    "heading_detection": {"weight": 0.10, "description": "Accuracy of heading detection"},
+    "table_extraction": {"weight": 0.15, "description": "Accuracy of table extraction"},
+    "code_preservation": {"weight": 0.10, "description": "Preservation of code formatting"},
+    "formula_preservation": {"weight": 0.10, "description": "Preservation of mathematical formulas"},
+    "layout_preservation": {"weight": 0.10, "description": "Preservation of document layout"}
+  },
+  "simulated_ranking": {
+    "disclaimer": "SIMULATED_RANKING_NOT_EMPIRICAL - Do not use for real decisions",
+    "ranking_status": "NOT_EMPERICAL",
+    "overall_scores": {
+      "status": "SYNTHETIC_ASSUMPTIONS_ONLY"
+    }
+  },
+  "data_files": {
+    "ground_truth": "data/04_benchmark/synthetic_ground_truth.csv",
+    "parser_results": "data/04_benchmark/synthetic_parser_results.csv",
+    "benchmark_results": "data/04_benchmark/benchmark_results.csv",
+    "processing_times": "data/04_benchmark/processing_times.csv",
+    "resource_usage": "data/04_benchmark/resource_usage.csv"
+  },
+  "important_disclaimer": "This is a SYNTHETIC benchmark dataset for demonstration and workflow testing purposes only. No actual PDF parsing was performed. All scores and metrics are simulated assumptions, not measured experimental results. Do not use these results for making real parser selection decisions."
+}

@@ -1,0 +1,162 @@
+{
+  "simulation_label": "SIMULATED_DATA",
+  "benchmark_purpose": "DEMONSTRATION_AND_WORKFLOW_TESTING",
+  "data_status": "SYNTHETIC_ONLY",
+  "execution_status": "NOT_EXECUTED",
+  "benchmark_metadata": {
+    "version": "1.0.0",
+    "created_date": "2026-11-04",
+    "total_documents": 5,
+    "total_samples": 100,
+    "samples_per_document": 20,
+    "total_parser_candidates": 3,
+    "total_parser_page_records": 300
+  },
+  "documents": [
+    {
+      "document_id": "DOC01",
+      "pdf_filename": "DOC01_C++23_Working_Draft.pdf",
+      "domain": "Programming Language Specification",
+      "samples": 20,
+      "sampling_method": "Stratified sampling",
+      "sampling_distribution": {
+        "first_third": 6,
+        "middle_third": 8,
+        "final_third": 6
+      }
+    },
+    {
+      "document_id": "DOC02",
+      "pdf_filename": "DOC02_Python_Tutorial.pdf",
+      "domain": "Programming Tutorial",
+      "samples": 20,
+      "sampling_method": "Stratified sampling",
+      "sampling_distribution": {
+        "first_third": 6,
+        "middle_third": 8,
+        "final_third": 6
+      }
+    },
+    {
+      "document_id": "DOC03",
+      "pdf_filename": "DOC03_The_Java_Language_Java_SE_26_Edition.pdf",
+      "domain": "Programming Language Specification",
+      "samples": 20,
+      "sampling_method": "Stratified sampling",
+      "sampling_distribution": {
+        "first_third": 6,
+        "middle_third": 8,
+        "final_third": 6
+      }
+    },
+    {
+      "document_id": "DOC04",
+      "pdf_filename": "DOC04_Mathematics_for_Computer_Science.pdf",
+      "domain": "Computer Science Mathematics",
+      "samples": 20,
+      "sampling_method": "Stratified sampling",
+      "sampling_distribution": {
+        "first_third": 6,
+        "middle_third": 8,
+        "final_third": 6
+      }
+    },
+    {
+      "document_id": "DOC05",
+      "pdf_filename": "DOC05_Security_Engineering_Explained.pdf",
+      "domain": "Security Engineering",
+      "samples": 20,
+      "sampling_method": "Stratified sampling",
+      "sampling_distribution": {
+        "first_third": 6,
+        "middle_third": 8,
+        "final_third": 6
+      }
+    }
+  ],
+  "parser_candidates": [
+    {
+      "name": "MinerU",
+      "description": "AI-powered PDF parser with layout understanding",
+      "version": "NOT_INSTALLED",
+      "installation_status": "NOT_INSTALLED"
+    },
+    {
+      "name": "Docling",
+      "description": "Document understanding library from IBM",
+      "version": "NOT_INSTALLED",
+      "installation_status": "NOT_INSTALLED"
+    },
+    {
+      "name": "PyMuPDF",
+      "description": "Python bindings for MuPDF PDF rendering library",
+      "version": "NOT_INSTALLED",
+      "installation_status": "NOT_INSTALLED"
+    }
+  ],
+  "evaluation_metrics": [
+    {
+      "metric_name": "text_accuracy",
+      "weight": 0.20,
+      "description": "Accuracy of extracted text content"
+    },
+    {
+      "metric_name": "content_completeness",
+      "weight": 0.15,
+      "description": "Completeness of extracted content"
+    },
+    {
+      "metric_name": "reading_order",
+      "weight": 0.10,
+      "description": "Correctness of reading order"
+    },
+    {
+      "metric_name": "heading_detection",
+      "weight": 0.10,
+      "description": "Accuracy of heading detection"
+    },
+    {
+      "metric_name": "table_extraction",
+      "weight": 0.15,
+      "description": "Accuracy of table extraction"
+    },
+    {
+      "metric_name": "code_preservation",
+      "weight": 0.10,
+      "description": "Preservation of code formatting"
+    },
+    {
+      "metric_name": "formula_preservation",
+      "weight": 0.10,
+      "description": "Preservation of mathematical formulas"
+    },
+    {
+      "metric_name": "layout_preservation",
+      "weight": 0.10,
+      "description": "Preservation of document layout"
+    }
+  ],
+  "metric_weight_validation": {
+    "total_weight": 1.0,
+    "status": "VALID"
+  },
+  "sampling_configuration": {
+    "method": "Stratified sampling",
+    "strata": ["First Third", "Middle Third", "Final Third"],
+    "samples_per_stratum": {
+      "First Third": 6,
+      "Middle Third": 8,
+      "Final Third": 6
+    }
+  },
+  "page_types": [
+    "TEXT",
+    "CODE",
+    "TABLE",
+    "EQUATION",
+    "FIGURE",
+    "HEADING",
+    "MIXED"
+  ],
+  "important_disclaimer": "This is a SYNTHETIC benchmark dataset for demonstration and workflow testing purposes only. No actual PDF parsing was performed. All scores and metrics are simulated assumptions, not measured experimental results. Do not use these results for making real parser selection decisions."
+}
