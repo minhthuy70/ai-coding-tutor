@@ -118,19 +118,25 @@ def process_chunking():
             chunks = recursive_code_aware_split(sec["content"])
             
             for sub_idx, chunk_text in enumerate(chunks):
+                clean_chunk_text = chunk_text.strip()
+                # Bỏ qua các chunk quá ngắn hoặc chỉ chứa thẻ trang
+                stripped_marker = re.sub(r'<!--\s*page:\s*\d+\s*-->', '', clean_chunk_text).strip()
+                if len(stripped_marker) < 40:
+                    continue
+
                 chunk_counter += 1
-                has_code = "```" in chunk_text
+                has_code = "```" in clean_chunk_text
                 chunk_id = f"{Path(filename).stem}_c{chunk_counter:04d}"
                 
                 chunk_data = {
                     "id": chunk_id,
-                    "text": chunk_text,
+                    "text": clean_chunk_text,
                     "metadata": {
                         "source_file": filename,
                         "section_title": sec_title,
                         "language": language,
                         "has_code": has_code,
-                        "length_chars": len(chunk_text)
+                        "length_chars": len(clean_chunk_text)
                     }
                 }
                 all_chunks.append(chunk_data)

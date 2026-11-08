@@ -56,26 +56,52 @@ def parse_with_magic_pdf_cli(pdf_path: Path, out_dir: Path) -> bool:
         return False
 
 def fallback_pdf_extractor(pdf_path: Path, out_dir: Path):
-    """Fallback an toàn bằng pypdf nếu máy chưa có GPU/weights MinerU."""
-    logger.info(f"[FALLBACK] Trích xuất text an toàn cho: {pdf_path.name}")
+    """Fallback an toàn bằng PyMuPDF/PyPDF nếu máy chưa có GPU/weights MinerU."""
+    logger.info(f"[EXTRACT] Trích xuất text an toàn cho: {pdf_path.name}")
     out_doc_dir = out_dir / pdf_path.stem
     out_doc_dir.mkdir(parents=True, exist_ok=True)
     out_md_file = out_doc_dir / f"{pdf_path.stem}.md"
 
+    full_text = ""
+    page_count = 0
     try:
-        import pypdf
-        reader = pypdf.PdfReader(str(pdf_path))
+        import pymupdf
+        doc = pymupdf.open(str(pdf_path))
+        page_count = len(doc)
         extracted = []
-        for i, page in enumerate(reader.pages):
-            txt = page.extract_text() or ""
-            extracted.append(f"\n\n## Trang {i + 1}\n\n{txt}")
+        for i, page in enumerate(doc):
+            txt = page.get_text("text") or ""
+            if txt.strip():
+                extracted.append(f"\n\n<!-- page: {i + 1} -->\n## Trang {i + 1}\n\n{txt.strip()}")
         full_text = "\n".join(extracted)
     except Exception as e:
-        full_text = f"# {pdf_path.stem}\n\n[Lỗi trích xuất PDF: {e}]"
+        try:
+            import pypdf
+            reader = pypdf.PdfReader(str(pdf_path))
+            page_count = len(reader.pages)
+            extracted = []
+            for i, page in enumerate(reader.pages):
+                txt = page.extract_text() or ""
+                extracted.append(f"\n\n<!-- page: {i + 1} -->\n## Trang {i + 1}\n\n{txt.strip()}")
+            full_text = "\n".join(extracted)
+        except Exception as e2:
+            full_text = f"# {pdf_path.stem}\n\n[Lỗi trích xuất PDF: {e2}]"
 
     with open(out_md_file, "w", encoding="utf-8") as f:
         f.write(full_text)
-    logger.info(f"✅ [FALLBACK] Đã lưu: {out_md_file.name}")
+
+    # Tạo _SUCCESS.json tương thích chuẩn MinerU pipeline
+    import json
+    success_file = out_doc_dir / "_SUCCESS.json"
+    success_file.write_text(json.dumps({
+        "status": "ok",
+        "source_pdf": str(pdf_path),
+        "markdown": f"{pdf_path.stem}.md",
+        "page_count": page_count,
+        "extractor": "pymupdf_fast_engine"
+    }, indent=2), encoding="utf-8")
+
+    logger.info(f"✅ Đã lưu: {out_md_file.name} ({page_count} trang)")
 
 def handle_text_document(doc_path: Path, out_dir: Path):
     """Chuyển đổi trực tiếp các file .md, .rst, .html vào thư mục mineru output."""
