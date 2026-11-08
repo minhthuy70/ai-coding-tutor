@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.database import engine
 from app.core.redis import redis_client
-from app.routers import health_router
+from app.routers import health_router, tutor_router
 
 
 @asynccontextmanager
@@ -43,6 +43,7 @@ app.add_middleware(
 # Mount Routers
 # /api/health as specified in Day 1 requirements
 app.include_router(health_router, prefix=settings.API_V1_STR)
+app.include_router(tutor_router, prefix=settings.API_V1_STR)
 
 
 @app.get("/")

@@ -2,7 +2,7 @@
 > **Dự án:** AI-Powered Coding Tutor & Code Assessment Platform  
 > **Thời gian:** 14 Ngày (2 Tuần Sprint)  
 > **Mục tiêu:** Xây dựng hoàn chỉnh luồng xử lý từ Dữ liệu giáo trình chính thống -> Ingestion bằng MinerU -> Làm sạch & Chuẩn hóa -> Chunking & Embedding -> Vector DB -> Giao diện tiếp nhận đa phương thức (File + Ảnh + Text) -> Vector Search RAG -> LLM phản hồi theo phương pháp Socratic.
-
+> **Tài liệu cần tìm:** Python, Java, C++, tài liệu chung (DSA&Big-O, Clean Code)
 ---
 
 ## MỤC LỤC

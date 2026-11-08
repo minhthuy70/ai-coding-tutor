@@ -7,6 +7,7 @@
  */
 
 import { ChatAttachment, ModelSettings } from '@/types/chat';
+import { sendMultimodalChat } from '@/lib/api';
 
 export interface SocraticEngineResult {
   content: string;
@@ -581,6 +582,61 @@ print("Kết quả:", solve_problem(sample))
 }
 
 /**
+ * Gọi FastAPI Backend + RAG ChromaDB (Server-side Retrieval-Augmented Generation)
+ */
+async function callBackendRAG(
+  userText: string,
+  attachments: ChatAttachment[],
+  settings: ModelSettings
+): Promise<SocraticEngineResult> {
+  const codeFiles: File[] = [];
+  const imageFiles: File[] = [];
+
+  for (const att of attachments) {
+    if (att.category === 'image' && att.previewUrl) {
+      try {
+        const res = await fetch(att.previewUrl);
+        const blob = await res.blob();
+        const file = new File([blob], att.name || 'image.png', { type: att.type || 'image/png' });
+        imageFiles.push(file);
+      } catch (e) {
+        console.warn('Không thể chuyển đổi ảnh thành File object:', e);
+      }
+    } else if (att.fileContent) {
+      const blob = new Blob([att.fileContent], { type: 'text/plain' });
+      const file = new File([blob], att.name || 'code.txt', { type: 'text/plain' });
+      codeFiles.push(file);
+    }
+  }
+
+  const res = await sendMultimodalChat(userText, undefined, codeFiles, imageFiles);
+
+  let finalContent = res.reply;
+  if (res.sources && res.sources.length > 0) {
+    const citations = res.sources
+      .map(
+        (s, idx) =>
+          `* **[${idx + 1}] ${s.source}** - ${s.section} *(Độ khớp: ${Math.round(s.similarity_score * 100)}%)*`
+      )
+      .join('\n');
+    finalContent += `\n\n---\n### 📚 Tài liệu Giáo trình Tham chiếu (RAG Evidence):\n${citations}`;
+  }
+
+  return {
+    modelBadge: 'FastAPI + RAG ChromaDB',
+    content: finalContent,
+    followUps:
+      res.suggestedFollowUps && res.suggestedFollowUps.length > 0
+        ? res.suggestedFollowUps
+        : [
+            'Giải thích chi tiết hơn về tài liệu giáo trình trên',
+            'Đưa ra các test case biên để kiểm tra lỗi',
+            'Tối ưu độ phức tạp thời gian Big-O',
+          ],
+  };
+}
+
+/**
  * Hàm điều phối chính để sinh phản hồi cho Trợ giảng AI
  */
 export async function getSocraticAssistantResponse(
@@ -589,6 +645,19 @@ export async function getSocraticAssistantResponse(
   settings: ModelSettings,
   selectedModelName: string
 ): Promise<SocraticEngineResult> {
+  // 0. Nếu người dùng chọn dùng FastAPI Backend + RAG ChromaDB
+  if (settings.aiProvider === 'backend_rag') {
+    try {
+      return await callBackendRAG(userText, attachments, settings);
+    } catch (err: any) {
+      console.warn('Backend RAG call failed, falling back to built-in Socratic engine:', err);
+      const fallback = generateBuiltInSocraticResponse(userText, attachments, settings, selectedModelName);
+      return {
+        ...fallback,
+        content: `> ⚠️ **Thông báo kết nối Backend RAG:** Không thể kết nối tới FastAPI Server (${err?.message || 'Backend chưa khởi động hoặc lỗi mạng'}). Hệ thống đã tự động chuyển sang **Bộ máy Socratic Cục bộ**.\n\n---\n\n${fallback.content}`,
+      };
+    }
+  }
   // 1. Nếu người dùng chọn dùng Gemini và đã cung cấp API key
   if (settings.aiProvider === 'gemini' && settings.geminiApiKey?.trim()) {
     try {
