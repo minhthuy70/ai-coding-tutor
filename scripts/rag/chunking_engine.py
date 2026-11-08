@@ -25,12 +25,14 @@ OUTPUT_DIR = BASE_DIR / "data" / "06_rag_dataset" / "chunks"
 
 def detect_language_from_filename(filename: str) -> str:
     fn = filename.lower()
-    if "python" in fn or "pep8" in fn:
+    if fn.startswith("py_") or "python" in fn or "pep8" in fn:
         return "python"
-    elif "c++" in fn or "cpp" in fn or "stl" in fn or "pointer" in fn:
+    elif fn.startswith("cpp_") or "c++" in fn or "cpp" in fn or "stl" in fn or "pointer" in fn:
         return "cpp"
-    elif "java" in fn:
+    elif fn.startswith("java_") or "java" in fn:
         return "java"
+    elif fn.startswith("common_"):
+        return "general"
     elif "math" in fn or "big_o" in fn or "algorithm" in fn:
         return "math_cs"
     elif "security" in fn or "cwe" in fn:
