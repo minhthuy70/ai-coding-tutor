@@ -1,10 +1,6 @@
-<!-- page: 1 -->
-
 ## Microsoft
 
 ## Security Engineering Explained
-
-<!-- page: 2 -->
 
 Microsoft
 
@@ -24,8 +20,6 @@ patt er ns & pra ct ices
 
 **Rudolph Araujo**
 
-<!-- page: 3 -->
-
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
@@ -35,8 +29,6 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 Microsoft, MS-DOS, Windows, Windows NT, Windows Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
 All other trademarks are property of their respective owners.
-
-<!-- page: 4 -->
 
 ## Contents
 
@@ -76,8 +68,6 @@ All other trademarks are property of their respective owners.
 - Roles Matrix ....9
 - Derive From Functional Requirements ....9
 - Conclusion ....10
-
-<!-- page: 5 -->
 
 - **Chapter 3**
 - **Security Design Guidelines 11**
@@ -119,8 +109,6 @@ All other trademarks are property of their respective owners.
 - Activity Overview .... 30
 - Activity Summary Table .... 31
 
-<!-- page: 6 -->
-
 - Techniques 31
 - Use a Question List 32
 - Hotspots 32
@@ -137,10 +125,6 @@ All other trademarks are property of their respective owners.
 - Application Security Categories .... 37
 - Conclusion .... 38
 - Additional Resources .... 38
-
-<!-- page: 7 -->
-
-<!-- page: 8 -->
 
 # Introduction
 
@@ -159,8 +143,6 @@ This guide consists of the following chapters:
 **Chapter 2, “Security Objectives,”** summarizes the patterns & practices approach to security objectives by explaining what they are and why you should use them. Knowledge of your security objectives is essential to the success of all other security-related activities.
 
 **Chapter 3, “Security Design Guidelines,”** summarizes the patterns & practices approach to security design guidelines. Adopting security design guidelines can help reduce your attack surface by addressing common vulnerabilities, allowing you to focus on the unique aspects of your design.
-
-<!-- page: 9 -->
 
 **Chapter 4, “Threat Modeling,”** summarizes the patterns & practices approach to threat modeling. Threat modeling is an engineering technique that you can use to help identify threats, attacks, vulnerabilities, and countermeasures that may be relevant to your application.
 
@@ -188,8 +170,6 @@ To help maximize the value of this guidance, it provides the following features:
 
 **Security frame.** The guidance uses a security frame which is a pattern-based information model that defines a set of security-related categories specifically for the application type you are designing. These categories represent the areas where security mistakes are most often made. Patterns & practices security guidance includes context-specific security frames for each major application type.
 
-<!-- page: 10 -->
-
 **Principles and practices.** These serve as the foundation for the guidance and provide a stable basis for recommendations. They also reflect successful approaches used in the field.
 
 **Processes and activities.** The guidance provides steps for key activities including threat modeling, security architecture and design reviews, security code reviews and security deployment reviews. For simplification and tangible results, the life cycle is decomposed into activities with inputs, outputs, and steps. You can use the steps as a baseline or to help you evolve your own activities.
@@ -211,8 +191,6 @@ This guide is valuable for anyone who cares about application security objective
 ## How To Use This Guidance
 
 You can read this guide from beginning to end, or you can read specific chapters to learn more about specific security engineering activities. You can adopt the security engineering activities described in this guide in their entirety for your organization,
-
-<!-- page: 11 -->
 
 or if your software engineering processes do not include specific security activities you can incrementally adopt activities. The activities you should adopt first will depend on the security objectives you have identified, as well as any outstanding problems your process or application currently has.
 
@@ -237,8 +215,6 @@ This guide applies to the following roles:
 **Developers.** Use the security code review techniques highlighted in Chapter 6, “Security Code Review” to analyze your code and identify security issues before your code is tested.
 
 ● **Administrators and operations staff.** Use the deployment review techniques descried in Chapter 7, “Security Deployment Review” to ensure that configuration errors do not introduce security vulnerabilities at application deployment time.
-
-<!-- page: 12 -->
 
 ## Feedback
 
@@ -288,8 +264,6 @@ Many thanks to the following contributors and reviewers:
 
 ● **Microsoft EEG:** Corey Ladas, James Waletzky
 
-<!-- page: 13 -->
-
 **Test team:** Larry Brader, Microsoft Corporation; Nadupalli Venkata Surya Sateesh, Sivanthapatham Shanmugasundaram, Infosys Technologies Ltd.
 
 ● **Edit team:** Nelly Delgado, Microsoft Corporation; Sharon Smith, Linda Werner & Associates
@@ -310,8 +284,6 @@ This chapter introduced you to the Security Engineering Explained guide. Subsequ
 
 For more information, see [http://msdn.com/securityengineering.](http://msdn.com/securityengineering)
 
-<!-- page: 14 -->
-
 # patterns & practices Security Engineering Approach
 
 ## Summary
@@ -325,8 +297,6 @@ The patterns & practices approach to security engineering can be summarized as f
 **Integrate security into your lifecycle.** Upfront security design, secure coding practices, and testing for security must all be an integral part of your application development processes.
 
 ● **Identify your objectives.** Understand early what the security objectives are for your application. These objectives will play a critical role in shaping threat modeling, code reviews, and testing.
-
-<!-- page: 15 -->
 
 ## 2 Security Engineering Explained
 
@@ -345,8 +315,6 @@ Figure 1.1 shows the key security engineering activities and where they should b
 Figure 1.1
 
 Security engineering activities in the application development life cycle
-
-<!-- page: 16 -->
 
 There are a number of distinct security-related activities that should be an integral part of your application life cycle. These are:
 
@@ -370,10 +338,7 @@ Security-related activities start early and continue throughout the application 
 
 Figure 1.2 on the next page shows how security activities span the various **activities** of the application development life cycle.
 
-<!-- page: 17 -->
-
 |  | Requirements and Analysis | Architecture and Design | Development | Testing | Deployment | Maintenance |
-| --- | --- | --- | --- | --- | --- | --- |
 | Security Objectives |  |  |  |  |  |  |
 | Design Guidelines |  |  |  |  |  |  |
 | Threat Modeling |  |  |  |  |  |  |
@@ -399,8 +364,6 @@ Threat modeling allows you to identify threats and vulnerabilities. The identifi
 ## Incremental Adoption
 
 If your current software engineering processes do not include specific security activities, it is possible to incrementally adopt the key security activities. The activities you should adopt first will depend on the security objectives you have identified, as well as any outstanding problems your process or application currently has.
-
-<!-- page: 18 -->
 
 For most organizations, the best results will come from adopting the activities in the following order:
 
@@ -428,8 +391,6 @@ To get the most out of the content in this document, it is important to understa
 
 **Attack (or exploit).** An attack is an action taken that uses one or more vulnerabilities to realize a threat. This could be someone following through on a threat or exploiting a vulnerability.
 
-<!-- page: 19 -->
-
 ## 6 Security Engineering Explained
 
 **Countermeasure.** Countermeasures address vulnerabilities to reduce the probability of attacks or the impacts of threats. They do not directly address threats; instead, they address the factors that define the threats. Countermeasures range from improving application design, or improving your code, to improving an operational practice.
@@ -443,8 +404,6 @@ The specific activities that make up the security engineering discipline include
 ## Additional Resources
 
 For more information, see [http://msdn.com/securityengineering.](http://msdn.com/securityengineering)
-
-<!-- page: 20 -->
 
 # Security Objectives
 
@@ -472,8 +431,6 @@ Guide deployment reviews.
 
 In each activity, you can use the security objectives to help you focus on the highest value areas while avoiding issues that will not affect your application.
 
-<!-- page: 21 -->
-
 ## Discovery Process
 
 Identifying security objectives is an iterative process that is initially driven by an examination of the application’s requirements and usage scenarios. By the end of the requirements and analysis phase, you should have a first set of objectives that are not yet tied to design or implementation details. During the design phase, additional objectives will surface that are specific to the application architecture and design. During the implementation phase, you may discover a few additional objectives based upon specific technology or implementation choices that have an impact on overall application security.
@@ -487,13 +444,10 @@ Security objectives are unique for each application. However, there is a set of 
 Table 2.1. Application Vulnerabilities and Potential Problems
 
 | Objective Category | Questions to Ask |
-| --- | --- |
 | Tangible assets to protect | Are there user accounts and passwords to protect?Is there confidential user information (such as credit card numbers) that needs to be protected?Is there sensitive intellectual property that needs to be protected?Can this system be used as a conduit to access other corporate assets that need to be protected? |
 | Intangible assets to protect | Are there corporate values that could be compromised by an attack on this system?Is there potential for an attack that may be embarrassing, although not otherwise damaging? |
 | Compliance requirements | Are there corporate security policies that must be adhered to?Is there security legislation you must comply with?Is there privacy legislation you must comply with?Are there standards you must adhere to?Are there constraints forced upon you by your deployment environment? |
 | Quality of service requirements | Are there specific availability requirements you must meet?Are there specific performance requirements you must meet? |
-
-<!-- page: 22 -->
 
 ## Techniques
 
@@ -527,8 +481,6 @@ Many systems have multiple roles and privileges can be assigned flexibly to any 
 
 You can generate security objectives by examining every functional requirement in your application through the lens of confidentiality, integrity, and availability (CIA). This provides a very effective mechanism for generating security objectives based on known application characteristics.
 
-<!-- page: 23 -->
-
 Consider the following abbreviated set of application requirements:
 
 ● Administrator must be able to add users and change user permissions through an administrator interface.
@@ -550,7 +502,6 @@ Once you understand the potential vulnerabilities you can derive security object
 Table 2.3 Objectives Derived from Functional Requirements
 
 | Original Requirement Administrator must be able to add users and change user permis-sions through an ad-ministrator interface. | Derived Security Objectives C - Protect user names and permissions from disclosure to a non-administrator I - Restrict non-administrator from adding users and changing user permissions A - Application is available so that the administrator is able to add users and change user permissions |
-| --- | --- |
 | Each application server must be able to serve 1000 concurrent users. | A - Application server is available for users |
 | Registered users must be able to purchase books from the Web user interface | C - Protect registered user credentials and other sensitive information from non-administrators and non-registered users I - Restrict non-registered user from purchasing books from the Web user-interface I - Restrict registered users from obtaining books for the wrong price A - Web user interface is available for registered users to purchase books |
 
@@ -559,8 +510,6 @@ Note: A requirement may generate zero or more objectives for confidentiality, in
 ## Conclusion
 
 Identification of security objectives is the first, best step you can take to help ensure the security of your application. The objectives, once created, can be used to direct all the subsequent security activities that you perform. Security objectives do not remain static, but are influenced by later design and implementation activities.
-
-<!-- page: 24 -->
 
 ## Security Design Guidelines
 
@@ -582,8 +531,6 @@ Each guideline must meet the following qualifications before it is included:
 
 The set of guidelines is distilled into a pattern-based security frame, or framework, that describes all of the areas in which poor design can lead to security vulnerabilities. The security frame allows the inclusion of additional guidelines or the refinement of existing guidelines based on newly discovered vulnerabilities.
 
-<!-- page: 25 -->
-
 Design guidelines include both deployment considerations and design considerations.
 
 ## Security Frame
@@ -599,7 +546,6 @@ Table 3.1 lists the set of vulnerability categories that is common to most appli
 Table 3.1. Application Vulnerabilities and Potential Problems
 
 | Vulnerability Category Input / Data Validation | Potential Problem Due to Bad Design Insertion of malicious strings in user interface elements or public APIs. These attacks include command execution, cross - site scripting (XSS), SQL injection, and buffer overflow. Results can range from information disclosure to elevation of privilege and arbitrary code execution. |
-| --- | --- |
 | Authentication | Identity spoofing, password cracking, elevation of privileges, and unauthorized access. |
 | Authorization | Access to confidential or restricted data, data tampering, and execution of unauthorized operations. |
 | Configuration Management | Unauthorized access to administration interfaces, ability to update configuration data, and unauthorized access to user accounts and account profiles. |
@@ -607,8 +553,6 @@ Table 3.1. Application Vulnerabilities and Potential Problems
 | Cryptography | Access to confidential data or account credentials, or both. |
 | Exception Management | Denial of service and disclosure of sensitive system-level details. |
 | Auditing and Logging | Failure to spot the signs of intrusion, inability to prove a user's actions, and difficulties in problem diagnosis. |
-
-<!-- page: 26 -->
 
 ## Application-Specific Guidelines
 
@@ -624,8 +568,6 @@ Web application design issues
 
 When you design a secure, smart client application, the set of guidelines changes to address the most important threats for this application type. For example, authentication and authorization are no longer such important concerns; however, input / data validation and exception handling are.
 
-<!-- page: 27 -->
-
 ## Deployment Considerations
 
 During the application design phase, you should review your corporate security policies and procedures together with the infrastructure that your application is to be deployed on. Frequently, the target environment is rigid, and your application design must reflect the restrictions. In some cases, you may need to make design tradeoffs; for example, because of protocol or port restrictions or specific deployment topologies. Identify constraints early in the design phase to avoid surprises later, and involve members of the network and infrastructure teams to help with this process.
@@ -640,12 +582,9 @@ Deployment considerations
 
 Design guidelines are best practices associated with specific known vulnerabilities and common design mistakes. Patterns & practices security guidance contains design guidelines for a variety of application types. Table 3.2 summarizes general design guidelines that are common to most application types.
 
-<!-- page: 28 -->
-
 Table 3.2. Design Guidelines for Your Application
 
 | Category Input / Data Validation | Guidelines Do not trust input; consider centralized input validation. Do not rely on client-side validation. Be careful with canonicalization issues. Constrain, reject, and sanitize input. Validate for type, length, format, and range. |
-| --- | --- |
 | Authentication | Use strong passwords. Support password expiration periods and account disablement. Do not store credentials (use one-way hashes with salt). Encrypt communication channels to protect authentication tokens. |
 | Authorization | Use least privileged accounts. Consider authorization granularity. Enforce separation of privileges. Restrict user access to system-level resources. |
 | Configuration Management | Use least privileged process and service accounts. Do not store credentials in clear text. Use strong authentication and authorization on administration interfaces. Do not use the Local Security Authority (LSA). Secure the communication channel for remote administration. |
@@ -654,8 +593,6 @@ Table 3.2. Design Guidelines for Your Application
 | Exception Management | Use structured exception handling. Do not reveal sensitive application implementation details. Do not log private data such as passwords. Consider a centralized exception management framework. |
 | Auditing and Logging | Identify malicious behavior. Know what good traffic looks like. Audit and log activity through all of the application tiers. Secure access to log files. Back up and regularly analyze log files. |
 
-<!-- page: 29 -->
-
 ## Conclusion
 
 Design guidelines can be used as a tool to help you meet your application security objectives. The security frame provides a structure within which you can modify or add design guidelines as you learn about your application’s architecture and deployment environment. Patterns & practices security guidance includes a core set of guidelines, organized by application type that you can use as a starting point for your application’s guidelines. Each guideline should be actionable, impactful, and relevant; and guidelines should be organized into the categories contained in the security frame.
@@ -663,8 +600,6 @@ Design guidelines can be used as a tool to help you meet your application securi
 ## Additional Resources
 
 For more information, see “Chapter 4, Design Guidelines for Secure Web Applica[tions” at http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/THCMCh04.asp.](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/THCMCh04.asp)
-
-<!-- page: 30 -->
 
 # Threat Modeling
 
@@ -685,8 +620,6 @@ Threat modeling is an engineering technique that you can use to help identify th
 ## Why Use Threat Modeling?
 
 Threat modeling is performed to identify when and where more resources are required (or justified) to reduce risks. There are many possible vulnerabilities, threats, and attacks, and it is unlikely that your application will encounter all of them. It is also unlikely that your company would need to address all of them. Threat modeling helps you to identify where your organization needs to apply effort.
-
-<!-- page: 31 -->
 
 Threat modeling helps you to:
 
@@ -714,8 +647,6 @@ As the life cycle progresses and your design and development evolve, you progres
 
 Add information to the model as it becomes available to you, and keep identifying what you now know and what you need to know next.
 
-<!-- page: 32 -->
-
 ## Terminology
 
 Threat modeling uses the following terms:
@@ -734,8 +665,6 @@ Threat modeling uses the following terms:
 
 The five major threat modeling steps are shown in Figure 4.1 on the next page. You should progressively refine your threat model by repeatedly performing steps 2 through 5. You will be able to add more detail as you move through your application development life cycle and discover more about your application design.
 
-<!-- page: 33 -->
-
 Figure 4.1
 
 The iterative threat modeling process
@@ -752,8 +681,6 @@ The five threat modeling steps are:
 
 **Step 5: Identify vulnerabilities.** Review the layers of your application to identify weaknesses in the context of your threats. Use vulnerability categories to help you to focus on those areas where mistakes are most often made.
 
-<!-- page: 34 -->
-
 You add progressively more detail to your threat model as you move through your application development life cycle and discover more details about your application design. Because key resources identified in threat modeling are also likely to be important from a performance and functionality perspective, you can expect to revisit and adjust your model as you balance your needs. This is normal and is a valuable outcome of the process.
 
 ## Activity Summary Table
@@ -763,7 +690,6 @@ Table 4.1 summarizes the threat modeling activity and shows the input and output
 Table 4.1: Activity Summary with Input and Output
 
 | Input | Step | Output |
-| --- | --- | --- |
 | Business requirementsSecurity policiesCompliance requirements | Step 1: Identify security objectives | Key security objectives |
 | Deployment diagramsUse casesFunctional specifications | Step 2: Create an application overview | Whiteboard-style diagram with end-to-end deployment scenarioKey scenariosRolesTechnologiesApplication security mechanisms |
 | Deployment diagramsUse casesFunctional specificationsData flow diagrams | Step 3: Decompose your application | Trust boundariesEntry pointsExit pointsData flows |
@@ -774,12 +700,9 @@ Table 4.1: Activity Summary with Input and Output
 
 The patterns & practices threat modeling approach is optimized to help you identify vulnerabilities in your application. The key concepts on the next page represent best practices refined by industry security experts, Microsoft consultants, product support engineers, customers, and Microsoft partners.
 
-<!-- page: 35 -->
-
 Table 4.2: Key Concepts
 
 | Concept | Description |
-| --- | --- |
 | Modeling to reduce risk | Use threat modeling to identify when and where you should apply effort to eliminate or reduce a potential threat. Avoid wasted effort by threat modeling to clarify the areas of most risk. |
 | Incremental rendering | Perform threat modeling iteratively. You should not be too concerned about missing details in any single iteration — instead focus on making each iteration productive. |
 | Context precision | Understand application use cases and roles in order to identify threats and vulnerabilities that are specific to your application. Different application types, application usage, and roles can yield different threats and vulnerabilities. |
@@ -796,8 +719,6 @@ Threat modeling is a structured activity for identifying and evaluating applicat
 ## Additional Resources
 
 For more information on threat modeling, see [http://msdn.com/threatmodeling.](http://msdn.com/threatmodeling)
-
-<!-- page: 36 -->
 
 # Security Architecture and Design Review
 
@@ -817,8 +738,6 @@ Finally, you conduct a tier-by-tier component analysis and examine the security 
 
 The architecture and design review process analyzes application architecture and design from a security perspective. Use this activity to expose the high-risk design decisions that have been made. Do not rely solely on the use of design documentation as some design decisions will not be explicit but will have to be discovered
 
-<!-- page: 37 -->
-
 through dialog and exploration. Use a combination of design documents, architecture experts and discussion to achieve the best results. The goal of the review is to decompose your application and identify key items, including trust boundaries, data flow, entry points, and privileged code. You must also keep in mind the physical deployment configuration of your application.
 
 Pay attention to those areas defined by the security frame for your application as this is where you will most commonly find vulnerabilities. Patterns & practices security guidance includes context-specific security frames for each major application type that you can use to get started.
@@ -835,8 +754,6 @@ Use a question driven approach to expose the highest risk design decisions and u
 
 Figure 5.1 shows this three-pronged approach to the review process.
 
-<!-- page: 38 -->
-
 Figure 5.1
 
 Application review
@@ -847,12 +764,9 @@ Use checklists to help you perform architecture and design reviews while evaluat
 
 Patterns & practices security guidance includes checklists for each major application type. Use these checklists as a starting point and add new items as you learn more about architecture and design reviews. A small sample checklist containing items that are applicable to many applications is shown below. To view a complete check[list, refer to patterns & practices guidance on the Web at http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityChecklistsIndex.asp.](http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityChecklistsIndex.asp)
 
-<!-- page: 39 -->
-
 ## Deployment and Infrastructure Considerations
 
 | Check | Description |
-| --- | --- |
 |  | The design identifies, and accommodates the company security policy. |
 |  | Restrictions imposed by infrastructure security (including available services, protocols, and firewall restrictions) are identified. |
 |  | The design recognizes and accommodates restrictions imposed by hosting environments (including application isolation requirements). |
@@ -868,7 +782,6 @@ Patterns & practices security guidance includes checklists for each major applic
 ## Input / Data Validation
 
 | Check | Description |
-| --- | --- |
 |  | All entry points and trust boundaries are identified by the design. |
 |  | Input validation is applied whenever input is received from outside the current trust boundary. |
 |  | The design assumes that user input is malicious. |
@@ -879,10 +792,7 @@ Patterns & practices security guidance includes checklists for each major applic
 |  | The design addresses potential canonicalization issues. |
 |  | Input file names and file paths are avoided where possible. |
 
-<!-- page: 40 -->
-
 | Check | Description |
-| --- | --- |
 |  | The design addresses potential SQL injection issues. |
 |  | The design addresses potential cross-site scripting issues. |
 |  | The design does not rely on client-side validation. |
@@ -900,10 +810,6 @@ Perform architecture and design reviews iteratively as your design evolves or as
 
 For more information, see “Security Architecture and Design Review Index” at [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/securityarchanddesignreviewindex.asp.](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/securityarchanddesignreviewindex.asp)
 
-<!-- page: 41 -->
-
-<!-- page: 42 -->
-
 # Security Code Review
 
 ## Summary
@@ -917,8 +823,6 @@ This module summarizes the patterns & practices approach to code review by expla
 A properly conducted code review can do more for the security of your code than nearly any other activity. A large numbers of bugs can be found and fixed before the code makes it into an official build or into the hands of the test team. Additionally, the code review process lends itself very well to sharing security best practices among a development team, and it produces lessons that can be learned from to prevent future bugs.
 
 To have an effective code review, you must first understand the patterns of bad code that you want to eradicate, and then review the code with a clear idea of what you are looking for. You can use security objectives to guide the code review process. Some vulnerability types may have elevated priority and others may be out of bounds based upon these objectives. Threat models can be used to create a more focused code review. Reviewing for specific known threats is more likely to result in bugs than a generic review that could be applied to any application.
-
-<!-- page: 43 -->
 
 ## Activity Overview
 
@@ -936,8 +840,6 @@ The four code review steps are:
 
 **Step 4. Review for security issues unique to the architecture.** Complete a final analysis that focuses on bugs that relate to the unique architecture of your application. This step is most important if you have implemented a custom security mechanism or any feature designed specifically to mitigate a known security threat.
 
-<!-- page: 44 -->
-
 ## Activity Summary Table
 
 Table 6.1 summarizes the security code review activity and shows the input and output for each step.
@@ -945,7 +847,6 @@ Table 6.1 summarizes the security code review activity and shows the input and o
 Table 6.1: Activity Summary with Input and Output
 
 | Input ● Security Requirements ● Code (including list of changes since last review) ● Constraints | Step Step 1. Identify code review objectives | Output ● Code review objectives |
-| --- | --- | --- |
 | ● Code ● Code review objectives | Step 2. Perform preliminary scan | ● Vulnerability list (false positives filtered out) ● List of flagged areas |
 | ● Code ● Code review objectives ● List of flagged areas | Step 3. Review code for security issues | ● Vulnerability list |
 | ● Code ● Code review objectives | Step 4. Review code for security issues unique to the application architecture | ● Vulnerability list |
@@ -970,8 +871,6 @@ An effective code reviewer makes use of the following techniques while reviewing
 
 3. Move to the next input and continue.
 
-<!-- page: 45 -->
-
 ## Use a Question List
 
 Using a question-driven approach can help with the review process. Patterns & practices security guidance includes question lists for each major application type. These lists each contain a set of questions that are known to be effective during code review. Apply these questions while using control flow and dataflow analysis, and add to the questions as you learn more about reviewing code. Keep in mind that some vulnerabilities require contextual knowledge of control and data flow while others are context free and can be found with simple pattern matching.
@@ -983,7 +882,6 @@ Each question list is organized into a set of hotspots or trouble areas that are
 Table 6.2: Hotspots
 
 | Hotspot SQL Injection | What to look for in code A SQL injection attack occurs when un-trusted input can modify the logic of a SQL query in unexpected ways. As you are work through the code, ensure that any input that is used in a SQL query is validated, or make sure that the SQL queries are parameterized. |
-| --- | --- |
 | Cross Site Scripting | Cross-site scripting occurs when an attacker manages to input script code into an application so that it is echoed back and executed in the security context of the application. This allows an attacker to steal user information, including forms data and cookies. This vulnerability could be present whenever a Web application echoes unfiltered user input back to Web content. |
 | Data Access | Look for improper storage of database connection strings and proper use of authentication to the database. |
 | Input/Data Validation | Look for client-side validation that is not backed by server-side validation, poor validation techniques, and reliance on file names or other insecure mechanisms to make security decisions. |
@@ -992,10 +890,7 @@ Table 6.2: Hotspots
 | Sensitive data | Look for mismanagement of sensitive data by disclosing secrets in error messages, code, memory, files, or network. |
 | Unsafe code | Pay particularly close attention to any code compiled with the /unsafe switch. This code will not be given all of the protection normal managed code is given. Look for potential buffer overflows, array out of bound errors, integer underflow and overflow, as well as data truncation errors. |
 
-<!-- page: 46 -->
-
 | Hotspot | What to look for in code |
-| --- | --- |
 | Unmanaged code | In addition to the checks performed for unsafe code, also scan unmanaged code looking for the use of dangerous APIs, such as strcpy and strcat. Be sure to review any interop calls and the unmanaged code itself to make sure that bad assumptions are not made as execution control passes from managed to unmanaged code. |
 | Hard-coded secrets | Look for hard-coded secrets by examining the code for variable names such as “key”, “password”, “pwd”, “secret”, “hash”, and “salt”. |
 | Poor error handling | Look for functions with missing error handlers or empty catch blocks. |
@@ -1018,8 +913,6 @@ In either strategy, you can select a reviewer who is familiar or unfamiliar with
 The advantage of using a reviewer who does not have prior knowledge of the code is that he or she will examine the code with fresh eyes and will be less likely to make assumptions than someone who is more familiar might be.
 
 The advantage of using a reviewer with knowledge of the code is that he or she will be able to find subtle errors that require expert familiarity with the application under review.
-
-<!-- page: 47 -->
 
 ## Team Roles
 
@@ -1051,8 +944,6 @@ Security code reviews are a powerful tool to reduce the number of vulnerabilitie
 
 For more information, see “patterns & practices Security Code Review Index” at [http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityCodeReviewIndex.asp.](http://msdn.microsoft.com/library/en-us/dnpag2/html/SecurityCodeReviewIndex.asp)
 
-<!-- page: 48 -->
-
 # Security Deployment Review
 
 ## Summary
@@ -1068,8 +959,6 @@ Application security is dependent upon the security of the underlying infrastruc
 When you review your security deployment, you can organize the precautions you must take and the settings you must configure into categories. These categories are shown in Figure 7.1 on the next page.
 
 By using these configuration categories, you can systematically review the entire application, or pick a particular category and complete specific steps.
-
-<!-- page: 49 -->
 
 Figure 7.1
 
@@ -1089,12 +978,9 @@ Use following techniques when conducting a deployment review:
 
 Patterns & practices security guidance includes server security categories for each major application type. Use these categories as a starting point and add new items as you learn more about deployment reviews. Table 7.1 lists categories that are common to most deployed applications.
 
-<!-- page: 50 -->
-
 Table 7.1 Server Security Categories
 
 | Category | Practices |
-| --- | --- |
 | Patches and Updates | Patching and updating your server software is a critical first step. |
 | Accounts | Accounts allow authenticated users to access a computer. These accounts must be audited. Configure accounts with least privilege to help prevent elevation of privilege. Remove any accounts that you do not need. Help to prevent brute force and dictionary attacks by using strong password policies, and then use auditing and alerts to detect logon failures. |
 | Auditing and Logging | Auditing is one of your most important tools for identifying intruders, attacks in progress, and evidence of attacks that have occurred. Configure auditing for your server. Event and system logs also help you to troubleshoot security problems. |
@@ -1108,8 +994,6 @@ Table 7.1 Server Security Categories
 ## Application Security Categories
 
 Patterns & practices security guidance includes application security categories for the appropriate application types. Some application types will require review of application security categories as well as server security categories. For example, you should review application-level Web.config file settings for ASP.NET applications. Use these categories as a starting point, and add new items as you learn more about deployment reviews.
-
-<!-- page: 51 -->
 
 ## Conclusion
 

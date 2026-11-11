@@ -1509,7 +1509,7 @@ Programming Recommendations
      # Wrong:
      def foo():
          try:
-             1 / 0
+
          finally:
              return 42
 
