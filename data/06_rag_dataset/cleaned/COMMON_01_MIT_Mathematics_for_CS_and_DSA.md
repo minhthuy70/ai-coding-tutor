@@ -1,11 +1,7 @@
-<!-- page: 1 -->
-
 ## MiIT OpenCourseWare
 
 Mathematics for Computer Science
 by Eric Lehman, F. Thomason Leighton & Albert R. Meyer
-
-<!-- page: 2 -->
 
 # Mathematics for Computer Science revised Monday 18 $^{th}$ May, 2015, 01:43
 
@@ -24,10 +20,6 @@ and the Computer Science and AI Laboratory,
 Massachusetts Institute of Technology
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">2015, Eric Lehman, F Tom Leighton, Albert R Meyer. This work is available under the terms of the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license.</span></small>
-
-<!-- page: 3 -->
-
-<!-- page: 4 -->
 
 ## Contents
 
@@ -66,8 +58,6 @@ Massachusetts Institute of Technology
 - 4.3 Functions 87
 - 4.4 Binary Relations 89
 - 4.5 Finite Cardinality 93
-
-<!-- page: 5 -->
 
 ## Contents
 
@@ -110,8 +100,6 @@ Massachusetts Institute of Technology
 - 9.1 Vertex Degrees 319
 - 9.2 Walks and Paths 320
 
-<!-- page: 6 -->
-
 ## Contents
 
 - 9.3 Adjacency Matrices 323
@@ -153,8 +141,6 @@ Massachusetts Institute of Technology
 - 12.5 Returning to $K_{5}$ and $K_{3,3}$ 486
 - 12.6 Coloring Planar Graphs 487
 
-<!-- page: 7 -->
-
 Contents
 
 12.7 Classifying Polyhedra 489
@@ -191,8 +177,6 @@ Introduction 501
 15.4 Solving Linear Recurrences 638
 15.5 Formal Power Series 643
 15.6 References 646
-
-<!-- page: 8 -->
 
 ## IV Probability
 
@@ -232,8 +216,6 @@ Introduction 501
 - 20.1 Gambler's Ruin 839
 - 20.2 Random Walks on Graphs 849
 
-<!-- page: 9 -->
-
 ## V Recurrences
 
 Introduction 865
@@ -256,13 +238,7 @@ Glossary of Symbols 899
 
 Index 902
 
-<!-- page: 10 -->
-
 I Proofs
-
-<!-- page: 11 -->
-
-<!-- page: 12 -->
 
 ## Introduction
 
@@ -275,8 +251,6 @@ Philosophical proof involves careful exposition and persuasion typically based o
 Deducing your existence from the fact that you're thinking about your existence is a pretty cool and persuasive-sounding idea. However, with just a few more lines
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ Actually, only scientific falsehood can be demonstrated by an experiment—when the experiment fails to behave as predicted. But no amount of experiment can confirm that the next experiment won’t fail. For this reason, scientists rarely speak of truth, but rather of theories that accurately predict past, and anticipated future, experiments.</span></small>
-
-<!-- page: 13 -->
 
 ## 0.1. References
 
@@ -295,8 +269,6 @@ The first three Chapters assume the reader is familiar with a few mathematical c
 ## 0.1 References
 
 [11], [45], [1]
-
-<!-- page: 14 -->
 
 ## What is a Proof?
 
@@ -333,8 +305,6 @@ are each prime. Hmmm, starts to look like a plausible claim. In fact we can keep
 But $p(40) = 40^2 + 40 + 41 = 41 \cdot 41$, which is not prime. So it's not true that the expression is prime for all nonnegative integers. In fact, it's not hard to show that no polynomial with integer coefficients can map all nonnegative numbers into
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ The symbol ::= means “equal by definition.” It’s always ok simply to write “=” instead of ::=, but reminding the reader that an equality holds by definition can be helpful.</span></small>
-
-<!-- page: 15 -->
 
 Chapter 1 What is a Proof?
 
@@ -382,8 +352,6 @@ Proposition 1.1.6 (Four Color Theorem). Every map can be colored with 4 colors s
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ Two regions are adjacent only when they share a boundary segment of positive length. They are not considered to be adjacent if their boundaries meet only at a few points.</span></small>
 
-<!-- page: 16 -->
-
 ## 1.1. Propositions
 
 Several incorrect proofs of this theorem have been published, including one that stood for 10 years in the late 19th century before its mistake was found. A laborious proof was finally found in 1976 by mathematicians Appel and Haken, who used a complex computer program to categorize the four-colorable maps. The program left a few thousand maps uncategorized, which were checked by hand by Haken and his assistants—among them his 15-year-old daughter.
@@ -409,8 +377,6 @@ Goldbach's Conjecture dates back to 1742. It is known to hold for all numbers up
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ The story of the proof of the Four Color Theorem is told in a well-reviewed popular (non-technical) book: “Four Colors Suffice. How the Map Problem was Solved.” Robin Wilson. Princeton Univ. Press, 2003, 276pp. ISBN 0-691-11533-8.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ In fact, Wiles' original proof was wrong, but he and several collaborators used his ideas to arrive at a correct proof a year later. This story is the subject of the popular book, Fermat's Enigma by Simon Singh, Walker & Company, November, 1997.</span></small>
-
-<!-- page: 17 -->
 
 8
 
@@ -438,8 +404,6 @@ This notation for predicates is confusingly similar to ordinary function notatio
 
 The standard procedure for establishing truth in mathematics was invented by Euclid, a mathematician working in Alexandria, Egypt around 300 BC. His idea was to begin with five assumptions about geometry, which seemed undeniable based on direct experience. (For example, “There is a straight line segment between every
 
-<!-- page: 18 -->
-
 ## 1.4. Our Axioms
 
 pair of points".) Propositions like these that are simply accepted as true are called axioms.
@@ -463,8 +427,6 @@ Euclid's axiom-and-proof approach, now called the axiomatic method, remains the 
 The ZFC axioms are important in studying and justifying the foundations of mathematics, but for practical purposes, they are much too primitive. Proving theorems in ZFC is a little like writing programs in byte code instead of a full-fledged programming language—by one reckoning, a formal proof in ZFC that $2 + 2 = 4$ requires more than 20,000 steps! So instead of starting with ZFC, we're going to take a huge set of axioms as our foundation: we'll accept all familiar facts from high school math.
 
 This will give us a quick launch, but you may find this imprecise specification of the axioms troubling at times. For example, in the midst of a proof, you may start to wonder, “Must I prove this little fact or can I take it as an axiom?” There really is no absolute answer, since what’s reasonable to assume and what requires proof depends on the circumstances and the audience. A good general guideline is simply to be up front about what you’re assuming.
-
-<!-- page: 19 -->
 
 Chapter 1 What is a Proof?
 
@@ -510,8 +472,6 @@ is not sound: if P is assigned T and Q is assigned F, then the antecedent is tru
 
 As with axioms, we will not be too formal about the set of legal inference rules. Each step in a proof should be clear and “logical”; in particular, you should state what previously proved facts are used to derive each new conclusion.
 
-<!-- page: 20 -->
-
 ## 1.5. Proving an Implication
 
 ## 1.4.2 Patterns of Proof
@@ -547,8 +507,6 @@ In order to prove that $P$ IMPLIES $Q$:
 1. Write, "Assume P."
 
 2. Show that $Q$ logically follows.
-
-<!-- page: 21 -->
 
 Chapter 1 What is a Proof?
 
@@ -587,8 +545,6 @@ There are a couple points here that apply to all proofs:
 \- You'll often need to do some scratchwork while you're trying to figure out the logical steps of a proof. Your scratchwork can be as disorganized as you like—full of dead-ends, strange diagrams, obscene words, whatever. But keep your scratchwork separate from your final proof, which should be clear and concise.
 
 \- Proofs typically begin with the word “Proof” and end with some sort of delimiter like □ or “QED.” The only purpose for these conventions is to clarify where proofs begin and end.
-
-<!-- page: 22 -->
 
 1.6. Proving an “If and Only If”
 
@@ -636,8 +592,6 @@ Two triangles have the same side lengths if and only if two side lengths and the
 
 The phrase “if and only if” comes up so often that it is often abbreviated “iff.”
 
-<!-- page: 23 -->
-
 Chapter 1 What is a Proof?
 
 ## 1.6.1 Method #1: Prove Each Statement Implies the Other
@@ -684,8 +638,6 @@ $$
 \sqrt {\frac {(x _ {1} - \mu) ^ {2} + (x _ {2} - \mu) ^ {2} + \cdots + (x _ {n} - \mu) ^ {2}}{n}} = 0.\tag{1.4}
 $$
 
-<!-- page: 24 -->
-
 ## 1.7. Proof by Cases
 
 Now since zero is the only number whose square root is zero, equation (1.4) holds iff
@@ -726,8 +678,6 @@ Case 1: Suppose that at least 3 people did meet x. This case splits into two sub
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ Part of a case analysis argument is showing that you’ve covered all the cases. This is often obvious, because the two cases are of the form “P” and “not P.” However, the situation above is not stated quite so simply.</span></small>
 
-<!-- page: 25 -->
-
 Chapter 1 What is a Proof?
 
 Case 1.1: No pair among those people met each other. Then these people are a group of at least 3 strangers. The theorem holds in this subcase.
@@ -762,8 +712,6 @@ Method: In order to prove a proposition P by contradiction:
 
 4. Write, “This is a contradiction. Therefore, P must be true.”
 
-<!-- page: 26 -->
-
 ## 1.9. Good Proofs in Practice
 
 ## Example
@@ -788,8 +736,6 @@ In practice, the notion of proof is a moving target. Proofs in a professional re
 
 State your game plan. A good proof begins by explaining the general line of reasoning, for example, “We use case analysis” or “We argue by contradiction.”
 
-<!-- page: 27 -->
-
 Chapter 1 What is a Proof?
 
 Keep a linear flow. Sometimes proofs are written like mathematical mosaics, with juicy tidbits of independent reasoning sprinkled throughout. This is not good. The steps of an argument should follow one another in an intelligible order.
@@ -808,8 +754,6 @@ Be wary of the “obvious.” When familiar or truly obvious facts are needed in
 Most especially, don’t use phrases like “clearly” or “obviously” in an attempt to bully the reader into accepting something you’re having trouble proving. Also, go on the alert whenever you see one of these phrases in someone else’s proof.
 
 Finish. At some point in a proof, you'll have established all the essential facts you need. Resist the temptation to quit and leave the reader to draw the “obvious” conclusion. Instead, tie everything together yourself and explain why the original claim follows.
-
-<!-- page: 28 -->
 
 ## 1.10. References
 
@@ -832,8 +776,6 @@ Class Problems
 Problem 1.1.
 
 The Pythagorean Theorem says that if $a$ and $b$ are the lengths of the sides of a right
-
-<!-- page: 29 -->
 
 Chapter 1 What is a Proof?
 
@@ -864,8 +806,6 @@ you can now conclude that  $a^{2} + b^{2} = c^{2}$ , as claimed.
 This really is an elegant and convincing proof of the Pythagorean Theorem, but it has some worrisome features. One concern is that there might be something special
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ Over a hundred different proofs are listed on the mathematics website http://www.cut-the-knot.org/pythagoras/.</span></small>
-
-<!-- page: 30 -->
 
 ## 1.10. References
 
@@ -908,8 +848,6 @@ $$
 and the claim now follows by the rules for multiplying fractions.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ From [44], Twenty Years Before the Blackboard by Michael Stueben and Diane Sandford</span></small>
-
-<!-- page: 31 -->
 
 Chapter 1 What is a Proof?
 
@@ -979,8 +917,6 @@ which we know is true.
 
 The last statement is true because $a - b$ is a real number, and the square of a real number is never negative. This proves the claim.
 
-<!-- page: 32 -->
-
 ## 1.10. References
 
 ## Problem 1.5.
@@ -1008,8 +944,6 @@ Show that  $\log_{7} n$  is either an integer or irrational, where n is a positi
 ## Problem 1.7.
 
 If we raise an irrational number to an irrational power, can the result be rational? Show that it can by considering  $\sqrt{2}^{\sqrt{2}}$  and arguing by cases.
-
-<!-- page: 33 -->
 
 Chapter 1 What is a Proof?
 
@@ -1053,8 +987,6 @@ Here is a different proof that  $\sqrt{2}$  is irrational, taken from the Americ
 
 Proof. Suppose for the sake of contradiction that  $\sqrt{2}$  is rational, and choose the
 
-<!-- page: 34 -->
-
 ## 1.10. References
 
 least integer, $q > 0$, such that $(\sqrt{2} - 1)q$ is a nonnegative integer. Let $q' ::= (\sqrt{2} - 1)q$. Clearly $0 < q' < q$. But an easy computation shows that $(\sqrt{2} - 1)q'$ is a nonnegative integer, contradicting the minimality of $q$.
@@ -1093,8 +1025,6 @@ The fact that there are irrational numbers $a, b$ such that $a^b$ is rational wa
 
 We know  $a = \sqrt{2}$  is irrational, and  $a^{b} = 3$  by definition. Finish the proof that these values for a, b work, by showing that  $2 \log_{2} 3$  is irrational.
 
-<!-- page: 35 -->
-
 Chapter 1 What is a Proof?
 
 ## Problem 1.17.
@@ -1121,8 +1051,6 @@ Prove that $\log_9 12$ is irrational.
 
 Prove that $\log_{12} 18$ is irrational.
 
-<!-- page: 36 -->
-
 ## The Well Ordering Principle
 
 Every nonempty set of nonnegative integers has a smallest element.
@@ -1146,8 +1074,6 @@ This means that  $m_{0}$  and  $n_{0}$  must have a common prime factor, p > 1. 
 $$
 \frac {m _ {0} / p}{n _ {0} / p} = \frac {m _ {0}}{n _ {0}},
 $$
-
-<!-- page: 37 -->
 
 ## Chapter 2 The Well Ordering Principle
 
@@ -1189,8 +1115,6 @@ $$
 
 Let's use this template to prove
 
-<!-- page: 38 -->
-
 ## 2.2. Template for Well Ordering Proofs
 
 ## Theorem 2.2.1.
@@ -1227,8 +1151,6 @@ $$
 
 Assuming there are counterexamples, $C$ is a nonempty set of nonnegative integers. So, by the Well Ordering Principle, $C$ has a minimum element, which we'll call $c$. That is, among the nonnegative integers, $c$ is the smallest counterexample to equation (2.1).
 
-<!-- page: 39 -->
-
 Chapter 2 The Well Ordering Principle
 
 Since c is the smallest counterexample, we know that  $(2.1)$  is false for n = c but true for all nonnegative integers n < c. But  $(2.1)$  is true for n = 0, so c > 0. This means c - 1 is a nonnegative integer, and since it is less than c, equation  $(2.1)$  is true for c - 1. That is,
@@ -1261,8 +1183,6 @@ So n must be a product of two integers a and b where 1 < a, b < n. Since a and b
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ ...unique up to the order in which the prime factors appear</span></small>
 
-<!-- page: 40 -->
-
 ## 2.4. Well Ordered Sets
 
 primes  $q_{1}\cdots q_{l}$ . Therefore,  $n = p_{1}\cdots p_{k}q_{1}\cdots q_{l}$  can be written as a product of primes, contradicting the claim that  $n \in C$ . Our assumption that C is not empty must therefore be false.
@@ -1284,8 +1204,6 @@ This theorem is just as obvious as the Well Ordering Principle, and it would be 
 Proof. Let $S$ be any nonempty set of integers $\geq -n$. Now add $n$ to each of the elements in $S$; let's call this new set $S + n$. Now $S + n$ is a nonempty set of nonnegative integers, and so by the Well Ordering Principle, it has a minimum element, $m$. But then it's easy to see that $m - n$ is the minimum element of $S$.
 
 The definition of well ordering states that every subset of a well ordered set is well ordered, and this yields two convenient, immediate corollaries of Theorem 2.4.1:
-
-<!-- page: 41 -->
 
 ## Chapter 2 The Well Ordering Principle
 
@@ -1318,8 +1236,6 @@ Now we can define a very different well ordered set by adding nonnegative intege
 Proof. Given any nonempty subset, $S$, of $\mathbb{N} + \mathbb{F}$, look at all the nonnegative integers, $n$, such that $n + f$ is in $S$ for some $f \in \mathbb{F}$. This is a nonempty set nonnegative integers, so by the WOP, there is a minimum one; call it $n_s$.
 
 By definition of  $n_{s}$ , there is some  $f \in F$  such that  $n_{S} + f$  is in the set S. So the set all fractions f such that  $n_{S} + f \in S$  is a nonempty subset of F, and since F is well ordered, this nonempty set contains a minimum element; call it  $f_{S}$ . Now it easy to verify that  $n_{S} + f_{S}$  is the minimum element of S (Problem 2.14).
-
-<!-- page: 42 -->
 
 ## 2.4. Well Ordered Sets
 
@@ -1356,8 +1272,6 @@ $$
 Assume for the purpose of obtaining a contradiction that $C$ is nonempty. Then by the WOP, there is a smallest number, $m \in C$. This $m$ must be positive because ....
 
 But if $S(m)$ holds and $m$ is positive, then $S(m - 10)$ or $S(m - 15)$ must hold, because ....
-
-<!-- page: 43 -->
 
 ## Chapter 2 The Well Ordering Principle
 
@@ -1405,8 +1319,6 @@ $$
 
 8. In particular, $F(m - 1)$ and $F(m - 2)$ are both even.
 
-<!-- page: 44 -->
-
 ## 2.4. Well Ordered Sets
 
 9. But by the defining equation (2.3), $F(m)$ equals the sum $F(m - 1) + F(m - 2)$ of two even numbers, and so it is also even.
@@ -1444,8 +1356,6 @@ q _ {0} = \frac {m}{n / 2}
 $$
 
 expresses  $q_{0}$  in lowest terms, a contradiction.
-
-<!-- page: 45 -->
 
 Chapter 2 The Well Ordering Principle
 
@@ -1488,8 +1398,6 @@ Hint: Consider two cases: first, when the target number of dollars is less than 
 Use the Well Ordering Principle to prove that any integer greater than or equal to 8 can be represented as the sum of nonnegative integer multiples of 3 and 5.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ Proofs by other methods such as induction or by appeal to known formulas for similar sums will not receive credit.</span></small>
-
-<!-- page: 46 -->
 
 ## 2.4. Well Ordered Sets
 
@@ -1545,8 +1453,6 @@ $$
 C: := \{n \mid S (n) \text {and} \mathrm{NOT} (5 \mid n) \}
 $$
 
-<!-- page: 47 -->
-
 ## Chapter 2 The Well Ordering Principle
 
 Assume for the purpose of obtaining a contradiction that C is nonempty. Then by the WOP, there is a smallest number,  $m \in C$ . Then  $S(m - 10)$  or  $S(m - 15)$  must hold, because the m cents postage is made from 10 and 15 cent stamps, so we remove one.
@@ -1588,8 +1494,6 @@ $$
 $$
 \sum_ {i = 1} ^ {m} (2 (i - 1) + 1)?
 $$
-
-<!-- page: 48 -->
 
 ## 2.4. Well Ordered Sets
 
@@ -1641,8 +1545,6 @@ $$
 \frac {0}{1}, \frac {1}{2}, \frac {2}{3}, \frac {3}{4}, \dots
 $$
 
-<!-- page: 49 -->
-
 ## Chapter 2 The Well Ordering Principle
 
 (f) Let  $W ::= N \cup F$  be the set consisting of the nonnegative integers along with all the fractions of the form  $n/(n + 1)$ . Describe a length 5 decreasing sequence of elements of W starting with 1,…length 50 decreasing sequence,…length 500.
@@ -1660,8 +1562,6 @@ Prove that a set, R, of real numbers is well ordered iff there is no infinite de
 $$
 r _ {0} > r _ {1} > r _ {2} > \dots\tag{2.12}
 $$
-
-<!-- page: 50 -->
 
 ## 3
 
@@ -1685,8 +1585,6 @@ To get around the ambiguity of English, mathematicians have devised a special la
 
 Surprisingly, in the midst of learning the language of logic, we'll come across the most important open problem in computer science—a problem whose solution could change the world.
 
-<!-- page: 51 -->
-
 ## 3.1 Propositions from Propositions
 
 In English, we can modify, combine, and relate propositions with words such as “not,” “and,” “or,” “implies,” and “if-then.” For example, we can combine three propositions into one like this:
@@ -1708,13 +1606,10 @@ The first row of the table indicates that when proposition P is true, the propos
 In general, a truth table indicates the true/false value of a proposition for each possible set of truth values for the variables. For example, the truth table for the proposition “P AND Q” has four lines, since there are four settings of truth values for the two variables:
 
 | P | Q | P AND Q |
-| --- | --- | --- |
 | T | T | T |
 | T | F | F |
 | F | T | F |
 | F | F | F |
-
-<!-- page: 52 -->
 
 ## 3.1. Propositions from Propositions
 
@@ -1723,7 +1618,6 @@ According to this table, the proposition “P AND Q” is true only when P and Q
 There is a subtlety in the truth table for “P OR Q”:
 
 | P | Q | P OR Q |
-| --- | --- | --- |
 | T | T | T |
 | T | F | T |
 | F | T | T |
@@ -1734,7 +1628,6 @@ The first row of this table says that “P OR Q” is true even if both P and Q 
 If you want to exclude the possibility of having both cake and ice cream, you should combine them with the exclusive-or operation, XOR:
 
 | P | Q | P XOR Q |
-| --- | --- | --- |
 | T | T | F |
 | T | F | T |
 | F | T | T |
@@ -1753,8 +1646,6 @@ An implication is true exactly when the if-part is false or the then-part is tru
 This sentence is worth remembering; a large fraction of all mathematical statements are of the if-then form!
 
 Let's experiment with this definition. For example, is the following proposition true or false?
-
-<!-- page: 53 -->
 
 Chapter 3 Logical Formulas
 
@@ -1796,8 +1687,6 @@ $$
 
 of these rules was always true.
 
-<!-- page: 54 -->
-
 ## 3.2. Propositional Logic in Computer Programs
 
 For example, suppose only conditions  $C_{2}$  and  $C_{5}$  are true, and the system indeed takes the specified actions  $A_{2}$  and  $A_{5}$ . This means that in this case the system is behaving according to specification, and accordingly we want the formula (3.1) to come out true. Now the implications  $C_{2}$  IMPLIES  $A_{2}$  and  $C_{5}$  IMPLIES  $A_{5}$  are both true because both their hypotheses and their conclusions are true. But in order for (3.1) to be true, we need all the other implications with the false hypotheses  $C_{i}$  for  $i \neq 2, 5$  to be true. This is exactly what the rule for implications with false hypotheses accomplishes.
@@ -1807,7 +1696,6 @@ For example, suppose only conditions  $C_{2}$  and  $C_{5}$  are true, and the s
 Mathematicians commonly join propositions in one additional way that doesn't arise in ordinary speech. The proposition “P if and only if Q” asserts that P and Q have the same truth value. Either both are true or both are false.
 
 | P | Q | P IFF Q |
-| --- | --- | --- |
 | T | T | T |
 | T | F | F |
 | F | T | F |
@@ -1831,8 +1719,6 @@ $$
 
 Java uses the symbol || for “OR,” and the symbol && for “AND.” The further instructions are carried out only if the proposition following the word if is true. On closer inspection, this big expression is built from two simpler propositions.
 
-<!-- page: 55 -->
-
 Let A be the proposition that x > 0, and let B be the proposition that y > 100. Then we can rewrite the condition as
 
 $$
@@ -1850,7 +1736,6 @@ $$
 We begin with a table with just the truth values of A and B:
 
 | A | B | A | OR | (NOT(A) AND B) | A OR B |
-| --- | --- | --- | --- | --- | --- |
 | T | T |  |  |  |  |
 | T | F |  |  |  |  |
 | F | T |  |  |  |  |
@@ -1863,7 +1748,6 @@ These values are enough to fill in two more columns:
 Now we have the values needed to fill in the AND column:
 
 | A | B | A | OR | (NOT(A) | AND | B) | A OR B |
-| --- | --- | --- | --- | --- | --- | --- | --- |
 | T | T |  |  | F | F |  | T |
 | T | F |  |  | F | F |  | T |
 | F | T |  |  | T | T |  | T |
@@ -1872,15 +1756,12 @@ Now we have the values needed to fill in the AND column:
 and this provides the values needed to fill in the remaining column for the first OR:
 
 | A | B | A | OR | (NOT(A) | AND | B) | A OR B |
-| --- | --- | --- | --- | --- | --- | --- | --- |
 | T | T |  | T | F | F |  | T |
 | T | F |  | T | F | F |  | T |
 | F | T |  | T | T | T |  | T |
 | F | F |  | F | T | F |  | F |
 
 Expressions whose truth values always match are called equivalent. Since the two emphasized columns of truth values of the two expressions are the same, they are
-
-<!-- page: 56 -->
 
 ## 3.2. Propositional Logic in Computer Programs
 
@@ -1906,10 +1787,7 @@ Simplifying logical expressions has real practical importance in computer scienc
 
 Java uses symbols like “&&” and “||” in place of AND and OR. Circuit designers use “·” and “+,” and actually refer to AND as a product and OR as a sum. Mathematicians use still other symbols, given in the table below.
 
-<!-- page: 57 -->
-
 | English | Symbolic Notation |
-| --- | --- |
 | NOT(P) | $\neg P$ (alternatively, $\overline{P}$) |
 | P AND Q | $P \land Q$ |
 | P OR Q | $P \lor Q$ |
@@ -1938,15 +1816,12 @@ If I am not grumpy, then I am not hungry.
 We can settle the issue by recasting both sentences in terms of propositional logic. Let P be the proposition “I am hungry” and Q be “I am grumpy.” The first sentence says “P IMPLIES Q” and the second says “NOT(Q) IMPLIES NOT(P).” Once more, we can compare these two statements in a truth table:
 
 | P | Q | (P IMPLIES Q) | (NOT(Q) | IMPLIES | NOT(P)) |
-| --- | --- | --- | --- | --- | --- |
 | T | T | T | F | T | F |
 | T | F | F | T | F | F |
 | F | T | T | F | T | T |
 | F | F | T | T | T | T |
 
 Sure enough, the highlighted columns showing the truth values of these two statements are the same. A statement of the form “NOT(Q) IMPLIES NOT(P)” is called
-
-<!-- page: 58 -->
 
 ## 3.3. Equivalence and Validity
 
@@ -1961,7 +1836,6 @@ $$
 This sounds like a rather different contention, and a truth table confirms this suspicion:
 
 | P | Q | P IMPLIES Q | Q IMPLIES P |
-| --- | --- | --- | --- |
 | T | T | T | T |
 | T | F | F | T |
 | F | T | T | F |
@@ -1980,7 +1854,6 @@ $$
 Once again, we can verify this with a truth table.
 
 | P | Q | (P IMPLIES Q) | AND | (Q IMPLIES P) | P IFF Q |
-| --- | --- | --- | --- | --- | --- |
 | T | T | T | T | T | T |
 | T | F | F | F | T | F |
 | F | T | T | F | F | F |
@@ -1991,8 +1864,6 @@ The fourth column giving the truth values of
 $(P \text{ IMPLIES } Q) \text{ AND } (Q \text{ IMPLIES } P)$
 
 is the same as the sixth column giving the truth values of P IFF Q, which confirms that the AND of the implications is equivalent to the IFF statement.
-
-<!-- page: 59 -->
 
 Chapter 3 Logical Formulas
 
@@ -2030,8 +1901,6 @@ $$
 (A \text {AND} B) \text {OR} (A \text {AND} C).\tag{3.4}
 $$
 
-<!-- page: 60 -->
-
 ## 3.4. The Algebra of Propositions
 
 You can read a disjunctive form for any propositional formula directly from its truth table. For example, the formula
@@ -2043,7 +1912,6 @@ $$
 has truth table:
 
 | A | B | C | A | AND | (B OR C) |
-| --- | --- | --- | --- | --- | --- |
 | T | T | T |  | T |  |
 | T | T | F |  | T |  |
 | T | F | T |  | T |  |
@@ -2078,8 +1946,6 @@ A OR (B AND C) is equivalent to (A OR B) AND (A OR C).
 Note the contrast between Theorem 3.4.2 and arithmetic, where sums do not distribute over products.
 
 The expression  $(3.6)$  is a disjunctive form where each AND-term is an AND of every one of the variables or their negations in turn. An expression of this form is called a disjunctive normal form (DNF). A DNF formula can often be simplified into a smaller disjunctive form. For example, the DNF  $(3.6)$  further simplifies to the equivalent disjunctive form  $(3.4)$  above.
-
-<!-- page: 61 -->
 
 Chapter 3 Logical Formulas
 
@@ -2122,8 +1988,6 @@ $$
 $$
 
 (zero for AND)
-
-<!-- page: 62 -->
 
 ## 3.4. The Algebra of Propositions
 
@@ -2184,8 +2048,6 @@ Now we will repeatedly apply The Distributivity of AND over OR (Theorem 3.4.1) t
 $$
 ((\overline {{A}} \text {OR} \overline {{B}}) \text {AND} \overline {{A}}) \text {OR} ((\overline {{A}} \text {OR} \overline {{B}}) \text {AND} \overline {{C}}).
 $$
-
-<!-- page: 63 -->
 
 Chapter 3 Logical Formulas
 
@@ -2265,8 +2127,6 @@ $$
 
 This example illustrates a strategy for applying these equivalences to convert any formula into disjunctive normal form, and conversion to conjunctive normal form works similarly, which explains:
 
-<!-- page: 64 -->
-
 ## 3.5. The SAT Problem
 
 Theorem 3.4.4. Any propositional formula can be transformed into disjunctive normal form or a conjunctive normal form using the equivalences listed above.
@@ -2289,8 +2149,6 @@ The general problem of deciding whether a proposition is satisfiable is called S
 
 Is there a more efficient solution to SAT? In particular, is there some brilliant procedure that determines SAT in a number of steps that grows polynomially—like
 
-<!-- page: 65 -->
-
 $n^{2}$  or  $n^{14}$ —instead of exponentially— $2^{n}$ —whether any given proposition of size n is satisfiable or not? No one knows. And an awful lot hangs on the answer.
 
 The general definition of an “efficient” procedure is one that runs in polynomial time, that is, that runs in a number of basic steps bounded by a polynomial in s, where s is the size of an input. It turns out that an efficient solution to SAT would immediately imply efficient solutions to many other important problems involving scheduling, routing, resource allocation, and circuit verification across multiple disciplines including programming, algebra, finance, and political theory. This would be wonderful, but there would also be worldwide chaos. Decrypting coded messages would also become an easy task, so online financial transactions would be insecure and secret communications could be read by everyone. Why this would happen is explained in Section 8.12.
@@ -2312,8 +2170,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ P stands for problems whose instances can be solved in time that grows polynomially with the size of the instance. NP stands for nondeterministic polynomial time, but we’ll leave an explanation of what that is to texts on the theory of computational complexity.</span></small>
-
-<!-- page: 66 -->
 
 ## 3.6. Predicate Formulas
 
@@ -2375,8 +2231,6 @@ you can solve every problem we come up with,
 
 (3.17)
 
-<!-- page: 67 -->
-
 Chapter 3 Logical Formulas
 
 or maybe
@@ -2418,8 +2272,6 @@ This sentence is ambiguous because the order of quantifiers is unclear. Let A be
 $$
 \exists d \in D \forall a \in A. H (a, d)
 $$
-
-<!-- page: 68 -->
 
 ## 3.6. Predicate Formulas
 
@@ -2464,8 +2316,6 @@ Similarly, these sentences mean the same thing:
 There is no one who likes being mocked.
 
 Everyone dislikes being mocked.
-
-<!-- page: 69 -->
 
 Chapter 3 Logical Formulas
 
@@ -2521,8 +2371,6 @@ is true for all $d \in D$. So given any $d \in D$, there is an element in $D$, n
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ That is, a predicate that depends on two variables.</span></small>
 
-<!-- page: 70 -->
-
 ## 3.7. References
 
 We hope this is helpful as an explanation, but we don't really want to call it a “proof.” The problem is that with something as basic as (3.22), it's hard to see what more elementary axioms are ok to use in proving it. What the explanation above did was translate the logical formula (3.22) into English and then appeal to the meaning, in English, of “for all” and “there exists” as justification.
@@ -2537,8 +2385,6 @@ is not valid. We can prove this just by describing an interpretation where the h
 
 ## 3.7 References
 
-[18]
-
 ## Problems for Section 3.1
 
 ## Practice Problems
@@ -2552,8 +2398,6 @@ Some people are uncomfortable with the idea that from a false hypothesis you can
 Your class has a textbook and a final exam. Let $P$, $Q$, and $R$ be the following propositions:
 
 $P::=$ You get an A on the final exam.
-
-<!-- page: 71 -->
 
 ## Chapter 3 Logical Formulas
 
@@ -2593,8 +2437,6 @@ $$
 \mathrm{NOT} (H) \text { IFF } \mathrm{NOT} (T),
 $$
 
-<!-- page: 72 -->
-
 ## 3.7. References
 
 or equivalently,
@@ -2623,8 +2465,6 @@ So if k and b were both 1, then the value of  $a_{1}a_{0}$  would be 01 and the 
 
 In fact, the final carry bit equals 1 only when all three binary inputs are 1, that is, when k = 3 and b = 1. In that case, the value of  $cs_{1}s_{0}$  is 100, namely, the binary representation of  $3 + 1$ .
 
-<!-- page: 73 -->
-
 This 2-bit half-adder could be described by the following formulas:
 
 $$
@@ -2650,8 +2490,6 @@ Visualized as digital circuits, the above adders consist of a sequence of single
 There are adder circuits that are much faster, and only slightly larger, than the ripple-carry circuits of Problem 3.5. They work by computing the values in later columns for both a carry of 0 and a carry of 1, in parallel. Then, when the carry from the earlier columns finally arrives, the pre-computed answer can be quickly selected. We'll illustrate this idea by working out the equations for an $(n + 1)$-bit parallel half-adder.
 
 Parallel half-adders are built out of parallel add1 modules. An  $(n+1)$ -bit add1 module takes as input the  $(n+1)$ -bit binary representation,  $a_{n} \ldots a_{1}a_{0}$ , of an integer, s, and produces as output the binary representation,  $c p_{n} \ldots p_{1}p_{0}$ , of  $s+1$ .
-
-<!-- page: 74 -->
 
 ## 3.7. References
 
@@ -2685,11 +2523,7 @@ $$
 
 (b) Instead of a truth-table, prove this claim with an argument by cases according to the truth value of $P$.
 
-<!-- page: 75 -->
-
 Figure 3.1 Structure of a Double-size add1 Module.
-
-<!-- page: 76 -->
 
 ## 3.7. References
 
@@ -2739,8 +2573,6 @@ $$
 P \text {OR} (Q \text {AND} R) \quad \text {is equivalent to} \quad (P \text {OR} Q) \text {AND} (P \text {OR} R)\tag{3.26}
 $$
 
-<!-- page: 77 -->
-
 Chapter 3 Logical Formulas
 
 ## Class Problems
@@ -2787,8 +2619,6 @@ $N: :=$ system functioning normally.
 
 $^{3}$ Revised from Rosen, 5th edition, Exercise 1.1.36
 
-<!-- page: 78 -->
-
 ## 3.7. References
 
 (b) Demonstrate that this set of specifications is satisfiable by describing a single truth assignment for the variables L, Q, B, N and verifying that under this assignment, all the specifications are true.
@@ -2824,8 +2654,6 @@ Explain why every propositional formula—possibly involving any of the usual op
 ## Problem 3.15.
 
 Explain how to find a conjunctive form for a propositional formula directly from a disjunctive form for its complement.
-
-<!-- page: 79 -->
 
 ## Homework Problems
 
@@ -2869,8 +2697,6 @@ $$
 \begin{array}{c} X _ {1} \text {IFF} (P \text {XOR} Q), \\ X _ {2} \text {IFF} (X _ {1} \text {XOR} R), \\ A \text {IFF} (\overline {{P}} \text {AND} S), \\ O \text {IFF} (X _ {2} \text {OR} A) \end{array}
 $$
 
-<!-- page: 80 -->
-
 ## 3.7. References
 
 (a) Explain why the AND of the four constraining formulas above along with a fifth formula consisting of just the variable O will be satisfiable iff (3.27) is satisfiable.
@@ -2904,8 +2730,6 @@ For each of the following propositions:
 $$
 1. \forall x \exists y. 2 x - y = 0
 $$
-
-<!-- page: 81 -->
 
 Chapter 3 Logical Formulas
 
@@ -2952,8 +2776,6 @@ $$
 $$
 
 (Just define your counter model. You do not need to verify that it is correct.)
-
-<!-- page: 82 -->
 
 ## 3.7. References
 
@@ -3007,8 +2829,6 @@ $$
 \forall x ((x = \text {David AND} L (x, \text {Claire})) \text {OR} (x \neq \text {David AND NOT} (L (x, \text {Claire}))))
 $$
 
-<!-- page: 83 -->
-
 Chapter 3 Logical Formulas
 
 (c)
@@ -3032,7 +2852,6 @@ A string like 01x0y of binary symbols and variables denotes the concatenation of
 Here are some examples of formulas and their English translations. Names for these predicates are listed in the third column so that you can reuse them in your solutions (as we do in the definition of the predicate NO-1S below).
 
 | Meaning | Formula | Name |
-| --- | --- | --- |
 | x is a prefix of y | $\exists z (xz = y)$ | PREFIX(x, y) |
 | x is a substring of y | $\exists u \exists v (uxv = y)$ | SUBSTRING(x, y) |
 | x is empty or a string of 0's | NOT(SUBSTRING(1, x)) | NO-1S(x) |
@@ -3044,8 +2863,6 @@ Here are some examples of formulas and their English translations. Names for the
 (c) $x$ does not contain both a 0 and a 1.
 
 (d) $x$ is the binary representation of $2^{k} + 1$ for some integer $k \geq 0$.
-
-<!-- page: 84 -->
 
 ## 3.7. References
 
@@ -3091,8 +2908,6 @@ $$
 (\forall y. P (y)) \text {AND} (\forall x. Q (x)),\tag{3.29}
 $$
 
-<!-- page: 85 -->
-
 which more clearly shows that the separate occurrences of  $\forall x$  in (3.28) are unrelated.
 
 Renaming variables in this way allows every predicate formula to be converted into an equivalent formula in which every variable name is used in only one way. Specifically, a predicate formula satisfies the unique variable convention if
@@ -3122,8 +2937,6 @@ It turns out that every predicate formula can be changed into an equivalent form
 ## Problem 3.29.
 
 Express each of the following predicates and propositions in formal logic notation. The domain of discourse is the nonnegative integers, N. Moreover, in addition to
-
-<!-- page: 86 -->
 
 ## 3.7. References
 
@@ -3162,8 +2975,6 @@ The domain of discourse should be the set of students in the class; in addition,
 \- equality, and
 
 \- $E(x, y)$, meaning that “$x$ has sent e-mail to $y$.”
-
-<!-- page: 87 -->
 
 Chapter 3 Logical Formulas
 
@@ -3205,8 +3016,6 @@ Once you have defined a formula for a predicate P you may use the abbreviation �
 
 (d) Student $x$ is second.
 
-<!-- page: 88 -->
-
 ## 3.7. References
 
 ## Problem 3.34.
@@ -3230,10 +3039,6 @@ $$
 (b) $[x = y + 1]$
 
 (c) $x = 3$
-
-<!-- page: 89 -->
-
-<!-- page: 90 -->
 
 ## 4
 
@@ -3265,8 +3070,6 @@ Sets are simple, flexible, and everywhere. You'll find some set mentioned in nea
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ It's not hard to develop a notion of multisets in which elements can occur more than once, but multisets are not ordinary sets and are not covered in this text.</span></small>
 
-<!-- page: 91 -->
-
 Chapter 4 Mathematical Data Types
 
 ## 4.1.1 Some Popular Sets
@@ -3274,7 +3077,6 @@ Chapter 4 Mathematical Data Types
 Mathematicians have devised special symbols to represent some common sets.
 
 | symbol | set | elements |
-| --- | --- | --- |
 | ∅ | the empty set | none |
 | N | nonnegative integers | {0, 1, 2, 3, ...} |
 | Z | integers | {...,-3,-2,-1,0,1,2,3,...} |
@@ -3307,8 +3109,6 @@ x \in A \cup B \quad \text { IFF } \quad x \in A \text {   OR   } x \in B.
 $$
 
 So $X \cup Y = \{1, 2, 3, 4\}$.
-
-<!-- page: 92 -->
 
 4.1. Sets
 
@@ -3364,8 +3164,6 @@ For example, the elements of pow($\{1, 2\}$) are $\emptyset$, $\{1\}$, $\{2\}$ a
 
 More generally, if A has n elements, then there are  $2^{n}$  sets in pow(A)—see Theorem 4.5.5. For this reason, some authors use the notation  $2^{A}$  instead of pow(A).
 
-<!-- page: 93 -->
-
 Chapter 4 Mathematical Data Types
 
 ## 4.1.4 Set Builder Notation
@@ -3411,8 +3209,6 @@ This is an oval-shaped region around the origin in the complex plane.
 Two sets are defined to be equal if they have exactly the same elements. That is, X = Y means that  $z \in X$  if and only if  $z \in Y$ , for all elements,  $z^{2}$ . So, set equalities can be formulated and proved as “iff” theorems. For example:
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ This is actually the first of the ZFC axioms for set theory mentioned at the end of Section 1.3 and discussed further in Section 7.3.2.</span></small>
-
-<!-- page: 94 -->
 
 ## 4.1. Sets
 
@@ -3480,8 +3276,6 @@ $$
 
 Despite this correspondence between two kinds of operations, it's important not to confuse propositional operations with set operations. For example, if $X$ and $Y$
 
-<!-- page: 95 -->
-
 Chapter 4 Mathematical Data Types
 
 are sets, then it is wrong to write “X AND Y” instead of “ $X \cap Y$ .” Applying AND to sets will cause your compiler—or your grader—to throw a type error, because an operation that is only supposed to be applied to truth values has been applied to sets. Likewise, if P and Q are propositions, then it is a type error to write “ $P \cup Q$ ” instead of “P OR Q.”
@@ -3511,8 +3305,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ Some texts call them ordered pairs.</span></small>
-
-<!-- page: 96 -->
 
 ## 4.3. Functions
 
@@ -3551,7 +3343,6 @@ where n ranges over the nonnegative integers.
 A function with a finite domain could be specified by a table that shows the value of the function at each element of the domain. For example, a function  $f_{4}(P, Q)$  where P and Q are propositional variables is specified by:
 
 | P | Q | $f_{4}(P, Q)$ |
-| --- | --- | --- |
 | T | T | T |
 | T | F | F |
 | F | T | T |
@@ -3564,8 +3355,6 @@ f _ {4} (P, Q): := [ P \text { IMPLIES } Q ].
 $$
 
 A function might also be defined by a procedure for computing its value at any element of its domain, or by some other kind of specification. For example, define
-
-<!-- page: 97 -->
 
 $f_{5}(y)$  to be the length of a left to right search of the bits in the binary string y until a 1 appears, so
 
@@ -3599,8 +3388,6 @@ Doing things step by step is a universal idea. Taking a walk is a literal exampl
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ There is a picky distinction between the function f which applies to elements of A and the function which applies f pointwise to subsets of A, because the domain of f is A, while the domain of pointwise-f is pow(A). It is usually clear from context whether f or pointwise-f is meant, so there is no harm in overloading the symbol f in this way.</span></small>
 
-<!-- page: 98 -->
-
 ## 4.4. Binary Relations
 
 Abstractly, taking a step amounts to applying a function, and going step by step corresponds to applying functions one after the other. This is captured by the operation of composing functions. Composing the functions f and g means that first f is applied to some argument, x, to produce  $f(x)$ , and then g is applied to that result to produce  $g(f(x))$ .
@@ -3629,8 +3416,6 @@ Notice that Definition 4.4.1 is exactly the same as the definition in Section 4.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ Writing the relation or operator symbol between its arguments is called infix notation. Infix expressions like “m < n” or “m + n” are the usual notation used for things like the less-then relation or the addition operation rather than prefix notation like “< (m, n)” or “+(m, n).”</span></small>
 
-<!-- page: 99 -->
-
 Chapter 4 Mathematical Data Types
 
 domain element, a, there is at most one pair in the graph whose first coordinate is a. As we said, a function is a special case of a binary relation.
@@ -3652,8 +3437,6 @@ Some subjects in the codomain, SubNums, do not appear among this list of pairs�
 ## 4.4.1 Relation Diagrams
 
 Some standard properties of a relation can be visualized in terms of a diagram. The diagram for a binary relation, $R$, has points corresponding to the elements of the domain appearing in one column (a very long column if $\text{domain}(R)$ is infinite). All the elements of the codomain appear in another column which we'll usually picture as being to the right of the domain column. There is an arrow going from a point, $a$, in the lefthand, domain column to a point, $b$, in the righthand, codomain column, precisely when the corresponding elements are related by $R$. For example, here are diagrams for two functions:
-
-<!-- page: 100 -->
 
 ## 4.4. Binary Relations
 
@@ -3678,8 +3461,6 @@ So in the diagrams above, the relation on the left has the $[= 1$ out] and $[\ge
 The relation on the right has the  $[=1\ out]$  and  $[\leq1\ in]$  properties, which means it is a total, injective function. But it does not have the  $[\geq1\ in]$  property because element 4 has no arrow going into it; it is not surjective.
 
 The arrows in a diagram for $R$ correspond, of course, exactly to the pairs in the graph of $R$. Notice that the arrows alone are not enough to determine, for example, if $R$ has the $[\geq 1$ out], total, property. If all we knew were the arrows, we wouldn't know about any points in the domain column that had no arrows out. In other words, $\text{graph}(R)$ alone does not determine whether $R$ is total: we also need to know what domain $(R)$ is.
-
-<!-- page: 101 -->
 
 Example 4.4.3. The function defined by the formula $1 / x^2$ has the $[\geq 1$ out] property if its domain is $\mathbb{R}^{+}$, but not if its domain is some set of real numbers including 0. It has the $[= 1$ in] and $[= 1$ out] property if its domain and codomain are both $\mathbb{R}^{+}$, but it has neither the $[\leq 1$ in] nor the $[\geq 1$ out] property if its domain and codomain are both $\mathbb{R}$.
 
@@ -3708,8 +3489,6 @@ $$
 In other words,  $R^{-1}$  is the relation you get by reversing the direction of the arrows in the diagram of R.
 
 Definition 4.4.6. The image of a set under the relation,  $R^{-1}$ , is called the inverse image of the set. That is, the inverse image of a set, X, under the relation, R, is defined to be  $R^{-1}(X)$ .
-
-<!-- page: 102 -->
 
 ## 4.5. Finite Cardinality
 
@@ -3748,8 +3527,6 @@ If $R$ is also surjective, then every element of $B$ has an arrow into it, so th
 $$
 \# \text {arrows} \geq | B |.
 $$
-
-<!-- page: 103 -->
 
 94
 
@@ -3794,8 +3571,6 @@ More concisely,
 $$
 f (a _ {i}) := b _ {\min (i, 3)},
 $$
-
-<!-- page: 104 -->
 
 ## 4.5. Finite Cardinality
 
@@ -3855,8 +3630,6 @@ But every computer scientist knows$^{6}$ that there are $2^{n}$ $n$-bit sequence
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ In case you're someone who doesn't know how many n-bit sequences there are, you'll find the  $2^{n}$  explained in Section 14.2.2.</span></small>
 
-<!-- page: 105 -->
-
 Chapter 4 Mathematical Data Types
 
 ## Problems for Section 4.1
@@ -3904,8 +3677,6 @@ From here on, feel free to use any previously expressed property in describing f
 This means that $y$ is supposed to be a collection of sets, and $x$ is the union of all of them. A more concise notation for “$\bigcup_{z \in y} z$” is simply “$\bigcup y$.”
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ See Section 7.3.2.</span></small>
-
-<!-- page: 106 -->
 
 ## 4.5. Finite Cardinality
 
@@ -3965,8 +3736,6 @@ Powerset Properties.
 
 Let $A$ and $B$ be sets.
 
-<!-- page: 107 -->
-
 Chapter 4 Mathematical Data Types
 
 (a) Prove that
@@ -4012,8 +3781,6 @@ $$
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ From Christenson & Tilford, David Gale's Subset Takeaway Game, American Mathematical Monthly, Oct. 1997</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{9}$ David Gale worked out some of the properties of this game and conjectured that the second player wins the game for any set A. This remains an open problem.</span></small>
-
-<!-- page: 108 -->
 
 ## 4.5. Finite Cardinality
 
@@ -4068,8 +3835,6 @@ You've seen how certain set identities follow from corresponding propositional e
 $$
 (A - B) \cup (A \cap B) = A
 $$
-
-<!-- page: 109 -->
 
 Chapter 4 Mathematical Data Types
 
@@ -4127,8 +3892,6 @@ iff $x\in A\cup B$ and $y\in C\cup D$
 
 iff $(x,y)\in L$
 
-<!-- page: 110 -->
-
 ## 4.5. Finite Cardinality
 
 (c) Fix the proof to show that $R \subseteq L$.
@@ -4162,8 +3925,6 @@ In other words,  $D^{2}$  is the language consisting of all the length two words
 If $S$ is a language, the language you can get by concatenating any number of copies of words in $S$ is called $S^*$—pronounced “$S$ star.” (By convention, the empty word, $\lambda$, always included in $S^{*}$.) For example, $\{0, 11\}^*$ is the language consisting of all the words you can make by stringing together 0's and 11's. This language could also be described as consisting of the words whose blocks of 1's are always of even length. Another example is $(D^2)^*$, which consists of all the even length words. Finally, the language, $B$, of all binary words is just $D^*$.
 
 A language is called concatenation-definable (c-d) if it can be constructed by starting with finite languages and then applying the operations of concatenation,
-
-<!-- page: 111 -->
 
 Chapter 4 Mathematical Data Types
 
@@ -4221,8 +3982,6 @@ Now doing a complement of this 4-count language give a 5-count language consisti
 
 The c-d languages are precisely the languages that are $n$-count for some nonnegative integer $n$.
 
-<!-- page: 112 -->
-
 ## 4.5. Finite Cardinality
 
 very simple languages are not. This problem ends with the conclusion that the language $\{00\}^*$ of even length words whose bits are all 0's is not a c-d language.
@@ -4259,8 +4018,6 @@ Hint: By cases: whether R and S are both 0-finite, whether R or S contains no al
 
 So we have proved that the set  $(00)^{*}$  of even length all-0 words is not a c-d language.
 
-<!-- page: 113 -->
-
 Chapter 4 Mathematical Data Types
 
 ## Problems for Section 4.4
@@ -4280,7 +4037,6 @@ In other words, you get the diagram for  $R^{-1}$  from R by “reversing the ar
 Fill in the remaining entries is this table:
 
 | R is | iff | $R^{-1}$ is |
-| --- | --- | --- |
 | total |  | a surjection |
 | a function |  |  |
 | a surjection |  |  |
@@ -4302,8 +4058,6 @@ For a binary relation, $R: A \to B$, some properties of $R$ can be determined fr
 2. graph(R) and A alone,
 
 3. graph(R) and B alone,
-
-<!-- page: 114 -->
 
 ## 4.5. Finite Cardinality
 
@@ -4349,8 +4103,6 @@ Let $f: A \to B$ and $g: B \to C$ be functions and $h: A \to C$ be their composi
 
 (c) If $f$ is a bijection, then so is $f^{-1}$.
 
-<!-- page: 115 -->
-
 Chapter 4 Mathematical Data Types
 
 ## Problem 4.20.
@@ -4394,8 +4146,6 @@ Five basic properties of binary relations  $R : A \rightarrow B$  are:
 4. $R$ is total $[\geq 1$ out]
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{11}$ The official definition of inj is with a total injective relation ( $[\geq 1\ out, \leq 1\ in]$ )</span></small>
-
-<!-- page: 116 -->
 
 ## 4.5. Finite Cardinality
 
@@ -4445,8 +4195,6 @@ Let $f: A \to B$ and $g: B \to C$ be functions.
 
 Let A, B, and C be nonempty sets, and let  $f : B \rightarrow C$  and  $g : A \rightarrow B$  be
 
-<!-- page: 117 -->
-
 ## Chapter 4 Mathematical Data Types
 
 functions. Let  $h ::= f \circ g$  be the composition function of f and g, namely, the function with domain A and range C such that  $h(x) = f(g(x))$ .
@@ -4489,8 +4237,6 @@ Let R be a binary relation on a set D. Let x, y be variables ranging over D. Cir
 
 8. $R(R^{-1}(x)) = x$
 
-<!-- page: 118 -->
-
 ## 4.5. Finite Cardinality
 
 ## Problem 4.28.
@@ -4520,8 +4266,6 @@ Each part of this problem describes an intuitive, informal query over the data, 
 \- set difference, -.
 
 \- relational image—for example, $R(A)$ for some set $A$, or $R(a)$ for some specific element $a$.
-
-<!-- page: 119 -->
 
 ## Chapter 4 Mathematical Data Types
 
@@ -4561,8 +4305,6 @@ Find similar solutions for each of the following searches:
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{12}$ Note the reversal of R and S in the definition; this is to make relational composition work like function composition. For functions,  $f \circ g$  means you apply g first. That is, if we let h be  $f \circ g$ , then  $h(x) = f(g(x))$ .</span></small>
 
-<!-- page: 120 -->
-
 ## 4.5. Finite Cardinality
 
 ## Exam Problems
@@ -4578,7 +4320,6 @@ $$
 (a) Fill in the arrows so the following figure describes the graph of the relation, R:
 
 | A | arrows | B |
-| --- | --- | --- |
 | {a} |  |  |
 |  |  | {a,b} |
 | {b,c} |  |  |
@@ -4592,8 +4333,6 @@ $$
 (b) Circle the properties below possessed by the relation $R$: function total injective surjective bijective
 
 (c) Circle the properties below possessed by the relation $R^{-1}$: function total injective surjective bijective
-
-<!-- page: 121 -->
 
 Chapter 4 Mathematical Data Types
 
@@ -4643,8 +4382,6 @@ where  $Id_{A}$  is the identity function on A.
 
 (A simple argument in terms of "arrows" will do the job.)
 
-<!-- page: 122 -->
-
 ## 4.5. Finite Cardinality
 
 ## Problem 4.32.
@@ -4693,8 +4430,6 @@ Assume $f: A \to B$ is total function, and $A$ is finite. Replace the $\star$ wi
 
 Let $A = \{a_{0}, a_{1}, \ldots, a_{n-1}\}$ be a set of size n, and $B = \{b_{0}, b_{1}, \ldots, b_{m-1}\}$ a set of size m. Prove that $|A \times B| = mn$ by defining a simple bijection from $A \times B$ to the nonnegative integers from 0 to mn - 1.
 
-<!-- page: 123 -->
-
 Chapter 4 Mathematical Data Types
 
 Problem 4.36.
@@ -4706,8 +4441,6 @@ Lemma. If R is a function, and  $X \subseteq A$ , then
 $$
 | X | \geq | R (X) |.
 $$
-
-<!-- page: 124 -->
 
 ## 5
 
@@ -4734,8 +4467,6 @@ Let's number the students by their order in line, starting the count with 0, as 
 Of course, this sequence has a more concise mathematical description:
 
 If student n gets a candy bar, then student  $n + 1$  gets a candy bar, for all nonnegative integers n.
-
-<!-- page: 125 -->
 
 Chapter 5 Induction
 
@@ -4766,8 +4497,6 @@ $$
 $$
 
 This Induction Rule works for the same intuitive reason that all the students get candy bars, and we hope the explanation using candy bars makes it clear why the soundness of ordinary induction can be taken for granted. In fact, the rule is so obvious that it's hard to see what more basic principle could be used to justify it.$^{1}$ What's not so obvious is how much mileage we get by using it.
-
-<!-- page: 126 -->
 
 ## 5.1. Ordinary Induction
 
@@ -4805,8 +4534,6 @@ $$
 
 Thus, if  $P(n)$  is true, then so is  $P(n + 1)$ . This argument is valid for every nonnegative integer n, so this establishes the second fact required by the induction proof. Therefore, the Induction Principle says that the predicate  $P(m)$  is true for all nonnegative integers, m. The theorem is proved.
 
-<!-- page: 127 -->
-
 Chapter 5 Induction
 
 ## 5.1.3 A Template for Induction Proofs
@@ -4830,8 +4557,6 @@ $$
 5. Invoke induction. Given these facts, the induction principle allows you to conclude that $P(n)$ is true for all nonnegative $n$. This is the logical capstone to the whole argument, but it is so standard that it's usual not to mention it explicitly.
 
 Always be sure to explicitly label the base case and the inductive step. Doing so will make your proofs clearer and will decrease the chance that you forget a key step—like checking the base case.
-
-<!-- page: 128 -->
 
 ## 5.1. Ordinary Induction
 
@@ -4867,8 +4592,6 @@ A complication was that the building's unconventional architect, Frank Gehry, wa
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ In the special case n = 0, the whole courtyard consists of a single central square; otherwise, there are four central squares.</span></small>
 
-<!-- page: 129 -->
-
 $2^{n}$
 
 Figure 5.1 A $2^{n} \times 2^{n}$ courtyard for $n = 3$.
@@ -4886,8 +4609,6 @@ Base case:  $P(0)$  is true because Bill fills the whole courtyard.
 Inductive step: Assume that there is a tiling of a $2^{n} \times 2^{n}$ courtyard with Bill in the center for some $n \geq 0$. We must prove that there is a way to tile a $2^{n+1} \times 2^{n+1}$ courtyard with Bill in the center ....
 
 Now we're in trouble! The ability to tile a smaller courtyard with Bill in the
-
-<!-- page: 130 -->
 
 ## 5.1. Ordinary Induction
 
@@ -4907,8 +4628,6 @@ Base case:  $P(0)$  is true because Bill fills the whole courtyard.
 
 Inductive step: Assume that  $P(n)$  is true for some  $n \geq 0$ ; that is, for every location of Bill in a  $2^{n} \times 2^{n}$  courtyard, there exists a tiling of the remainder. Divide the  $2^{n+1} \times 2^{n+1}$  courtyard into four quadrants, each  $2^{n} \times 2^{n}$ . One quadrant contains Bill (B in the diagram below). Place a temporary Bill (X in the diagram) in each of the three central squares lying outside this quadrant as shown in Figure 5.4.
 
-<!-- page: 131 -->
-
 Figure 5.4 Using a stronger inductive hypothesis to prove Theorem 5.1.2.
 
 Now we can tile each of the four quadrants by the induction assumption. Replacing the three temporary Bills with a single L-shaped tile completes the job. This proves that  $P(n)$  implies  $P(n+1)$  for all  $n \geq 0$ . Thus  $P(m)$  is true for all  $m \in N$ , and the theorem follows as a special case where we put Bill in a central square.
@@ -4918,8 +4637,6 @@ This proof has two nice properties. First, not only does the argument guarantee 
 Strengthening the induction hypothesis is often a good move when an induction proof won't go through. But keep in mind that the stronger assertion must actually be true; otherwise, there isn't much hope of constructing a valid proof. Sometimes finding just the right induction hypothesis requires trial, error, and insight. For example, mathematicians spent almost twenty years trying to prove or disprove the conjecture that every planar graph is 5-choosable.$^{4}$ Then, in 1994, Carsten Thomassen gave an induction proof simple enough to explain on a napkin. The key turned out to be finding an extremely clever induction hypothesis; with that in hand, completing the argument was easy!
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$5-choosability is a slight generalization of 5-colorability. Although every planar graph is 4-colorable and therefore 5-colorable, not every planar graph is 4-choosable. If this all sounds like nonsense, don't panic. We'll discuss graphs, planarity, and coloring in Part II of the text.</span></small>
-
-<!-- page: 132 -->
 
 ## 5.1. Ordinary Induction
 
@@ -4963,8 +4680,6 @@ $$
 h _ {1}, \underbrace {h _ {2} , \dots , h _ {n} , h _ {n + 1}} _ {\text {same color}}
 $$
 
-<!-- page: 133 -->
-
 So $h_1$ is the same color as the remaining horses besides $h_{n+1}$ — that is, $h_2, \ldots, h_n$. Likewise, $h_{n+1}$ is the same color as the remaining horses besides $h_1$ — that is, $h_2, \ldots, h_n$, again. Since $h_1$ and $h_{n+1}$ are the same color as $h_2, \ldots, h_n$, all $n+1$ horses must be the same color, and so $P(n+1)$ is true. Thus, $P(n)$ implies $P(n+1)$.
 
 By the principle of induction, $P(n)$ is true for all $n \geq 1$.
@@ -4980,8 +4695,6 @@ Students sometimes explain that the mistake in the proof is because  $P(n)$  is 
 ## 5.2 Strong Induction
 
 A useful variant of induction is called strong induction. Strong induction and ordinary induction are used for exactly the same thing: proving that a predicate is true for all nonnegative integers. Strong induction is useful when a simple proof that the predicate holds for  $n + 1$  does not follow just from the fact that it holds at n, but from the fact that it holds for other values  $\leq n$ .
-
-<!-- page: 134 -->
 
 ## 5.2. Strong Induction
 
@@ -5022,8 +4735,6 @@ The template for strong induction proofs is identical to the template given in S
 
 As a first example, we'll use strong induction to re-prove Theorem 2.3.1 which we previously proved using Well Ordering.
 
-<!-- page: 135 -->
-
 Chapter 5 Induction
 
 Theorem. Every integer greater than 1 is a product of primes.
@@ -5058,8 +4769,6 @@ Proof. We prove by strong induction that the Inductians can make change for any 
 
 There is a collection of coins whose value is  $n + 8$  Strongs.
 
-<!-- page: 136 -->
-
 ## 5.2. Strong Induction
 
 Figure 5.5 One way to make 26 Sg using Strongian currency
@@ -5084,8 +4793,6 @@ Here is another exciting game that's surely about to sweep the nation!
 
 You begin with a stack of n boxes. Then you make a sequence of moves. In each move, you divide one stack of boxes into two nonempty stacks. The game ends when you have n stacks, each containing a single box. You earn points for each move; in particular, if you divide one stack of height  $a + b$  into two stacks with heights a and b, then you score ab points for that move. Your overall score is the sum of the points that you earn for each move. What strategy should you use to maximize your total score?
 
-<!-- page: 137 -->
-
 Figure 5.6 An example of the stacking game with n = 10 boxes. On each line, the underlined stack is divided in the next step.
 
 As an example, suppose that we begin with a stack of $n = 10$ boxes. Then the game might proceed as shown in Figure 5.6. Can you find a better strategy?
@@ -5106,8 +4813,6 @@ Proof. The proof is by strong induction. Let  $P(n)$  be the proposition that ev
 
 Base case: If n = 1, then there is only one block. No moves are possible, and so the total score for the game is  $1(1 - 1)/2 = 0$ . Therefore,  $P(1)$  is true.
 
-<!-- page: 138 -->
-
 Inductive step: Now we must show that  $P(1), \ldots, P(n)$  imply  $P(n + 1)$  for all  $n \geq 1$ . So assume that  $P(1), \ldots, P(n)$  are all true and that we have a stack of  $n + 1$  blocks. The first move must split this stack into substacks with positive sizes a and b where  $a + b = n + 1$  and  $0 < a, b \leq n$ . Now the total score for the game is the sum of points for this first move plus points obtained by unstacking the two resulting substacks:
 
 $$
@@ -5125,8 +4830,6 @@ Strong induction looks genuinely “stronger” than ordinary induction —after
 But strong induction really isn't any stronger, because a simple text manipulation program can automatically reformat any proof using strong induction into a proof using ordinary induction—just by decorating the induction hypothesis with a universal quantifier in a standard way. Still, it's worth distinguishing these two kinds of induction, since which you use will signal whether the inductive step for $n + 1$ follows directly from the case for $n$ or requires cases smaller than $n$, and that is generally good for your reader to know.
 
 The template for the two kinds of induction rules looks nothing like the one for the Well Ordering Principle, but this chapter included a couple of examples where induction was used to prove something already proved using well ordering. In fact, this can always be done. As the examples may suggest, any well ordering proof can automatically be reformatted into an induction proof. So theoretically, no one
-
-<!-- page: 139 -->
 
 Chapter 5 Induction
 
@@ -5147,8 +4850,6 @@ One of the most important uses of induction in computer science involves proving
 ## 5.4.1 States and Transitions
 
 Formally, a state machine is nothing more than a binary relation on a set, except that the elements of the set are called “states,” the relation is called the transition relation, and an arrow in the graph of the transition relation is called a transition. A transition from state q to state r will be written  $q \longrightarrow r$ . The transition relation
-
-<!-- page: 140 -->
 
 ## 5.4. State Machines
 
@@ -5172,8 +4873,6 @@ State machines are often defined with labels on states and/or transitions to ind
 
 Suppose we have a robot that starts at the origin and moves on an infinite 2-dimensional integer grid. The state of the robot at any time can be specified by the integer coordinates  $(x, y)$  of the robot's current position. So the start state is  $(0, 0)$ . At each step, the robot may move to a diagonally adjacent grid point, as illustrated in Figure 5.8.
 
-<!-- page: 141 -->
-
 Figure 5.8 The Diagonally Moving Robot.
 
 To be precise, the robot's transitions are:
@@ -5196,11 +4895,7 @@ Lemma 5.4.1. For any transition, $q \longrightarrow r$, of the diagonally-moving
 
 This lemma follows immediately from the definition of the robot's transitions: $(m,n)\longrightarrow (m\pm 1,n\pm 1)$. After a transition, the sum of coordinates changes by
 
-<!-- page: 142 -->
-
 Figure 5.9 Can the Robot get to (1,0)?
-
-<!-- page: 143 -->
 
 ## Chapter 5 Induction
 
@@ -5234,8 +4929,6 @@ Definition 5.4.4. An execution of the state machine is a (possibly infinite) seq
 
 \- it begins with the start state, and
 
-<!-- page: 144 -->
-
 ## 5.4. State Machines
 
 \- if $q$ and $r$ are consecutive states in the sequence, then $q \longrightarrow r$.
@@ -5251,8 +4944,6 @@ If a preserved invariant of a state machine is true for the start state, then it
 The Invariant Principle is nothing more than the Induction Principle reformulated in a convenient form for state machines. Showing that a predicate is true in the start state is the base case of the induction, and showing that a predicate is a preserved invariant corresponds to the inductive step. $^{5}$
 
 $^{5}$ Preserved invariants are commonly just called “invariants” in the literature on program correctness, but we decided to throw in the extra adjective to avoid confusion with other definitions. For example, other texts (as well as another subject at MIT) use “invariant” to mean “predicate true of all reachable states.” Let’s call this definition “invariant-2.” Now invariant-2 seems like a reasonable definition, since unreachable states by definition don’t matter, and all we want to show is that a desired property is invariant-2. But this confuses the objective of demonstrating that a property is invariant-2 with the method of finding a preserved invariant to show that it is invariant-2.
-
-<!-- page: 145 -->
 
 Chapter 5 Induction
 
@@ -5271,8 +4962,6 @@ Floyd left for Stanford the following year. He won the Turing award—the “Nob
 http://oldwww.acm.org/pubs/membernet/stories/floyd.pdf
 
 written by his closest colleague, Don Knuth.
-
-<!-- page: 146 -->
 
 5.4. State Machines
 
@@ -5312,8 +5001,6 @@ Fortunately, they find a solution in the nick of time. You can work out how.
 
 The jug-filling scenario can be modeled with a state machine that keeps track of the amount, b, of water in the big jug, and the amount, l, in the little jug. With the 3 and 5 gallon water jugs, the states formally will be pairs,  $(b, l)$ , of real numbers
 
-<!-- page: 147 -->
-
 such that $0 \leq b \leq 5, 0 \leq l \leq 3$. (We can prove that the reachable values of $b$ and $l$ will be nonnegative integers, but we won't assume this.) The start state is $(0, 0)$, since both jugs start empty.
 
 Since the amount of water in the jug must be known exactly, we will only consider moves in which a jug gets completely filled or completely emptied. There are several kinds of transitions:
@@ -5348,8 +5035,6 @@ The Die Hard series is getting tired, so we propose a final Die Hard Once and Fo
 
 Now, reaching any state of the form  $(4, l)$  is impossible. We prove this using the Invariant Principle. Specifically, we define the preserved invariant predicate,  $P((b, l))$ , to be that b and l are nonnegative integer multiples of 3.
 
-<!-- page: 148 -->
-
 ## 5.4. State Machines
 
 To prove that P is a preserved invariant of Die-Hard-Once-and-For-All machine, we assume  $P(q)$  holds for some state  $q ::= (b, l)$  and that  $q \longrightarrow r$ . We have to show that  $P(r)$  holds. The proof divides into cases, according to which transition rule is used.
@@ -5377,8 +5062,6 @@ Partial correctness can commonly be proved using the Invariant Principle. Termin
 ## Exponentiating
 
 The most straightforward way to compute the bth power of a number, a, is to multiply a by itself b - 1 times. But the solution can be found in considerably
-
-<!-- page: 149 -->
 
 ## Chapter 5 Induction
 
@@ -5422,8 +5105,6 @@ $$
 
 Since there is a transition from $(x,y,z)$, we have $z \neq 0$, and since $z \in \mathbb{N}$ by (5.4), we can consider just two cases:
 
-<!-- page: 150 -->
-
 ## 5.4. State Machines
 
 If $z$ is even, then we have that $x_{t} = x^{2}, y_{t} = y, z_{t} = z / 2$. Therefore, $z_{t} \in \mathbb{N}$ and
@@ -5447,8 +5128,6 @@ Ok, it's partially correct, but what's fast about it? The answer is that the num
 More precisely, it requires at most $2(\lceil \log b \rceil + 1)$ multiplications for the Fast Exponentiation algorithm to compute $a^b$ for $b > 1$. The reason is that the number in register $z$ is initially $b$, and gets at least halved with each transition. So it can't be halved more than $\lceil \log b \rceil + 1$ times before hitting zero and causing the program to terminate. Since each of the transitions involves at most two multiplications, the total number of multiplications until $z = 0$ is at most $2(\lceil \log b \rceil + 1)$ for $b > 0$ (see Problem 5.36).
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ As usual in computer science,  $\log b$  means the base two logarithm,  $\log_{2}b$ . We use,  $\ln b$  for the natural logarithm  $\log_{e}b$ , and otherwise write the logarithm base explicitly, as in  $\log_{10}b$ .</span></small>
-
-<!-- page: 151 -->
 
 Chapter 5 Induction
 
@@ -5484,8 +5163,6 @@ Of course, we could prove Theorem 5.4.7 by induction on the value of $f(q)$, but
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ Weakly increasing variables are often also called nondecreasing. We will avoid this terminology to prevent confusion between nondecreasing variables and variables with the much weaker property of not being a decreasing variable.</span></small>
 
-<!-- page: 152 -->
-
 ## 5.4. State Machines
 
 Theorem 5.4.7 generalizes straightforwardly to derived variables taking values in a well ordered set (Section 2.4.
@@ -5518,8 +5195,6 @@ $$
 v (x, y) := y + \frac {x}{x + 1}.
 $$
 
-<!-- page: 153 -->
-
 Figure 5.10 Gehry's new tile.
 
 Now it's easy to check that if $(x, y) \longrightarrow (x', y')$ is a legitimate robot move, then $v((x', y')) < v((x, y))$. In particular, $v$ is a strictly decreasing derived variable, so Theorem 5.4.8 implies that the robot always get stuck—even though we can't say how many moves it will take until it does.
@@ -5539,8 +5214,6 @@ Frank Gehry has changed his mind. Instead of the L-shaped tiles shown in figure 
 False Claim. The proof is by induction. Let  $P(n)$  be the proposition that for every location of Bill in a  $2^{n} \times 2^{n}$  courtyard, there exists a tiling of the remainder with the offset tile pattern.
 
 False proof. Base case: $P(0)$ is true because Bill fills the whole courtyard.
-
-<!-- page: 154 -->
 
 ## 5.4. State Machines
 
@@ -5565,8 +5238,6 @@ for all $n \geq 1$.
 Remember to formally
 
 1. Declare proof by induction.
-
-<!-- page: 155 -->
 
 Chapter 5 Induction
 
@@ -5614,8 +5285,6 @@ $$
 
 But now we're going to prove a contradictory theorem!
 
-<!-- page: 156 -->
-
 ## 5.4. State Machines
 
 False Theorem. For all  $n \geq 0$ ,
@@ -5661,8 +5330,6 @@ $$
 ## Problem 5.9.
 
 For any binary string,  $\alpha$ , let num ( $\alpha$ ) be the nonnegative integer it represents in binary notation. For example, num (10) = 2, and num (0101) = 5.
-
-<!-- page: 157 -->
 
 Chapter 5 Induction
 
@@ -5724,8 +5391,6 @@ $$
 \mathrm{num} \left(\alpha_ {n + 1}\right) = a _ {n + 1} 2 ^ {n + 1} + \mathrm{num} \left(\alpha_ {n}\right).\tag{5.14}
 $$
 
-<!-- page: 158 -->
-
 ## 5.4. State Machines
 
 ## Problem 5.10.
@@ -5743,8 +5408,6 @@ Our plucky porcine pal is perplexed by this peculiar pattern. Use induction on t
 Figure 5.12 Some shapes that Theory Hippotamus created.
 
 Problem 5.11.
-
-<!-- page: 159 -->
 
 Chapter 5 Induction
 
@@ -5769,8 +5432,6 @@ Prove by induction that for $n \geq 0$, the area of the $n^{\mathrm{th}}$ snowfl
 $$
 a _ {n} = a _ {0} \left(\frac {8}{5} - \frac {3}{5} \left(\frac {4}{9}\right) ^ {n}\right).\tag{5.16}
 $$
-
-<!-- page: 160 -->
 
 ## 5.4. State Machines
 
@@ -5822,8 +5483,6 @@ For $P$'s that satisfy (5.18), some of the assertions below Can hold for some, b
 
 (i)  $[\exists n. P(2n)]$  IMPLIES  $\forall n. P(2n + 2)$
 
-<!-- page: 161 -->
-
 Chapter 5 Induction
 
 (j)  $\exists n.\exists m > n.\left[P(2n)\text{ AND NOT}(P(2m))\right]$
@@ -5862,8 +5521,6 @@ You are given n envelopes, numbered  $0, 1, \ldots, n - 1$ . Envelope 0 contains
 For all nonnegative integers  $k < 2^{n}$ , there is a subset of the n envelopes whose contents total to exactly k dollars.
 
 Prove by induction that $P(n)$ holds for all integers $n \geq 1$.
-
-<!-- page: 162 -->
 
 ## 5.4. State Machines
 
@@ -5935,8 +5592,6 @@ $$
 
 Which sentences in the proof below contain logical errors?
 
-<!-- page: 163 -->
-
 Chapter 5 Induction
 
 False Claim. Every Fibonacci number is even.
@@ -5993,8 +5648,6 @@ $$
 
 and we must prove Even $(n + 1)$.
 
-<!-- page: 164 -->
-
 ## 5.4. State Machines
 
 Then by strong induction hypothesis, Even(n) and Even(n-1) are true, that is,  $F(n)$  and  $F(n-1)$  are both even. But by the defining equation (5.21),  $F(n+1)$  equals the sum,  $F(n)+F(n-1)$ , of two even numbers, and so it is also even. This proves Even(n+1) as required.
@@ -6045,8 +5698,6 @@ $$
 
 8. $P(3), P(5)$, and $P(7)$
 
-<!-- page: 165 -->
-
 Chapter 5 Induction
 
 ## Class Problems
@@ -6093,8 +5744,6 @@ Base Case  $(n = 2)$ :  $P(2)$  is true because 2 is prime, and so it is a lengt
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ This mind-boggling formula is known as Binet's formula. We'll explain in Chapter 15, and again in Chapter 21, how it comes about.</span></small>
 
-<!-- page: 166 -->
-
 ## 5.4. State Machines
 
 Inductive step: Suppose that  $n \geq 2$  and that i is a pusp for every integer i where  $2 \leq i < n + 1$ . We must show that  $P(n + 1)$  holds, namely, that  $n + 1$  is also a pusp. We argue by cases:
@@ -6124,8 +5773,6 @@ A group of  $n \geq 1$  people can be divided into teams, each containing either
 The following Lemma is true, but the proof given for it below is defective. Pin-point exactly where the proof first makes an unjustified step and explain why it is unjustified.
 
 Lemma. For any prime p and positive integers  $n, x_{1}, x_{2}, \ldots, x_{n}$ , if  $p \mid x_{1}x_{2} \ldots x_{n}$ ,
-
-<!-- page: 167 -->
 
 Chapter 5 Induction
 
@@ -6168,8 +5815,6 @@ inductive step.
 ## Problem 5.27.
 
 Use strong induction to prove that $n \leq 3^{n/3}$ for every integer $n \geq 0$.
-
-<!-- page: 168 -->
 
 ## 5.4. State Machines
 
@@ -6215,11 +5860,8 @@ $$
 (b, l) \longrightarrow \left\{ \begin{array}{l l} (0, b + l) & \text {if} b + l \leq 3, \\ (b - (3 - l), 3) & \text {otherwise.} \end{array} \right.
 $$
 
-<!-- page: 169 -->
-
 ```txt
 Chapter 5 Induction
-
 ```
 
 ## Problem 5.31.
@@ -6250,7 +5892,6 @@ while s ≠ 0 do
         r := r + r + r;
         s := (s - 2)/3;
 return a;
-
 ```
 
 We can model the algorithm as a state machine whose states are triples of nonnegative integers  $(r, s, a)$ . The initial state is  $(x, y, 0)$ . The transitions are given by the rule that for s > 0:
@@ -6260,8 +5901,6 @@ $$
 $$
 
 (a) List the sequence of steps that appears in the execution of the algorithm for inputs $x = 5$ and $y = 10$.
-
-<!-- page: 170 -->
 
 ## 5.4. State Machines
 
@@ -6297,8 +5936,6 @@ A hungry ant is placed on an unbounded grid. Each square of the grid either cont
 
 The ant can only smell food directly in front of it. The ant can only remember a small number of things, and what it remembers after any move only depends on what it remembered and smelled immediately before the move. Based on smell and
 
-<!-- page: 171 -->
-
 Chapter 5 Induction
 
 memory, the ant may choose to move forward one square, or it may turn right or left. It eats a crumb when it lands on it.
@@ -6316,8 +5953,6 @@ Suppose that you have a regular deck of cards arranged as follows, from top to b
 Only two operations on the deck are allowed: inshuffling and outshuffling. In both, you begin by cutting the deck exactly in half, taking the top half into your right hand and the bottom into your left. Then you shuffle the two halves together so that the cards are perfectly interlaced; that is, the shuffled deck consists of one card from the left, one from the right, one from the left, one from the right, etc. The top card in the shuffled deck comes from the right hand in an outshuffle and from the left hand in an inshuffle.
 
 (a) Model this problem as a state machine.
-
-<!-- page: 172 -->
 
 ## 5.4. State Machines
 
@@ -6359,8 +5994,6 @@ $$
 
 This is the same as doing binary addition of the numbers, but throwing away the carries (see Problem 3.5).
 
-<!-- page: 173 -->
-
 Chapter 5 Induction
 
 The XOR of the numbers of stones in the piles is called their Nim sum. In this problem we will verify that if the Nim sum is not zero on a player's turn, then the player has a winning strategy. For example, if the game starts with five piles of equal size, then the first player has a winning strategy, but if the game starts with four equal-size piles, then the second player can force a win.
@@ -6388,17 +6021,13 @@ In this problem you will establish a basic property of a puzzle toy called the F
 The standard initial position is
 
 | 1 | 2 | 3 | 4 |
-| --- | --- | --- | --- |
 | 5 | 6 | 7 | 8 |
 | 9 | 10 | 11 | 12 |
 | 13 | 14 | 15 |  |
 
 We would like to reach the target position (known in the oldest author's youth as
 
-<!-- page: 174 -->
-
 | $n_{1}$ | $n_{2}$ | $n_{3}$ | $n_{4}$ |
-| --- | --- | --- | --- |
 | $n_{5}$ |  | $n_{6}$ | $n_{7}$ |
 | $n_{8}$ | $n_{9}$ | $n_{10}$ | $n_{11}$ |
 | $n_{12}$ | $n_{13}$ | $n_{14}$ | $n_{15}$ |
@@ -6408,7 +6037,6 @@ We would like to reach the target position (known in the oldest author's youth a
 “the impossible”):
 
 | 15 | 14 | 13 | 12 |
-| --- | --- | --- | --- |
 | 11 | 10 | 9 | 8 |
 | 7 | 6 | 5 | 4 |
 | 3 | 2 | 1 |  |
@@ -6435,8 +6063,6 @@ $$
 \text {parity} (S) := \left\{ \begin{array}{l l} 0 & \text {if} p (L) + i \text {is even}, \\ 1 & \text {otherwise}. \end{array} \right.
 $$
 
-<!-- page: 175 -->
-
 (b) Verify that the parity of the start state and the target state are different.
 
 (c) Show that the parity of a state is preserved under transitions. Conclude that “the impossible” is impossible to reach.
@@ -6461,8 +6087,6 @@ Any state with C > 1000 is called a collapsed state, which the Authority dearly 
 
 Since the toll booth collectors may need to start off with some amount of money in order to make change, and there may also be some number of “official” cars already on the bridge when it is opened to the public, the consultants must be ready to analyze the system started at any uncollapsed state. So let  $A_{0}$  be the initial number of dollars at the entrance toll booth,  $B_{0}$  the initial number of dollars at the exit toll booth, and  $C_{0} \leq 1000$  the number of official cars on the bridge when it is opened. You should assume that even official cars pay tolls on exiting or entering the bridge after the bridge is opened.
 
-<!-- page: 176 -->
-
 ## 5.4. State Machines
 
 (a) Give a mathematical model of the Authority's system for letting cars on and off the bridge by specifying a transition relation between states of the form $(A, B, C)$ above.
@@ -6476,7 +6100,6 @@ $$
 ## as one of the following
 
 | constant | C |
-| --- | --- |
 | strictly increasing | SI |
 | strictly decreasing | SD |
 | weakly increasing but not constant | WI |
@@ -6501,8 +6124,6 @@ where  $A_{0}$  is the initial number of dollars at the entrance toll booth,  $B
 
 Explain more precisely in terms of system transitions what the intern means, and briefly, but clearly, justify her claim.
 
-<!-- page: 177 -->
-
 Chapter 5 Induction
 
 ## Problem 5.40.
@@ -6522,7 +6143,6 @@ For example, you might begin by flipping nine heads and one tail, yielding 90 he
 (c) Define the following derived variables:
 
 | C ::= the number of coins on the table, | H ::= the number of heads, |
-| --- | --- |
 | T ::= the number of tails, | $C_2$ ::= remainder(C/2), |
 | $H_2$ ::= remainder(H/2), | $T_2$ ::= remainder(T/2). |
 
@@ -6546,12 +6166,9 @@ A classroom is designed so students sit in a square arrangement. An outbreak of 
 
 Here is an illustration of a  $6 \times 6$ -seat classroom with seats represented by squares. The locations of infected students are marked with an asterisk.
 
-<!-- page: 178 -->
-
 ## 5.4. State Machines
 
 | * |  |  |  | * |  |
-| --- | --- | --- | --- | --- | --- |
 |  | * |  |  |  |  |
 |  |  | * | * |  |  |
 |  |  |  |  |  |  |
@@ -6575,8 +6192,6 @@ Theorem. If fewer than n students among those in an  $n \times n$  arrangement a
 Prove this theorem.
 
 Hint: Think of the state of an outbreak as an  $n \times n$  square above, with asterisks indicating infection. The rules for the spread of infection then define the transitions of a state machine. Find a weakly decreasing derived variable that leads to a proof of this theorem.
-
-<!-- page: 179 -->
 
 Chapter 5 Induction
 
@@ -6616,8 +6231,6 @@ $$
 (2, 4, 1, 5, 3) \longrightarrow (2, 1, 5, 4, 3).
 $$
 
-<!-- page: 180 -->
-
 ## 5.4. State Machines
 
 The Rotate-Triple could also rotate the consecutive numbers 2, 4, 1 into 1, 2, 4 so that
@@ -6643,10 +6256,6 @@ explain why it is impossible to reach
 $$
 T: := (1, 2, \dots , 2 0 1 2, 2 0 1 3, 2 0 1 4).
 $$
-
-<!-- page: 181 -->
-
-<!-- page: 182 -->
 
 ## Recursive Data Types
 
@@ -6675,8 +6284,6 @@ Definitions of recursive data types have two parts:
 \- Constructor case(s) that specify how to construct new data elements from previously constructed elements or from base elements.
 
 The definition of strings over a given character set, $A$, follows this pattern:
-
-<!-- page: 183 -->
 
 Chapter 6 Recursive Data Types
 
@@ -6709,8 +6316,6 @@ Constructor case: $|\langle a,s\rangle|::= 1 + |s|$.
 This definition of length follows a standard pattern: functions on recursive data types can be defined recursively using the same cases as the data type definition. Specifically, to define a function, f, on a recursive data type, define the value of f for the base cases of the data type definition, then define the value of f in each constructor case in terms of the values of f on the component data items.
 
 Let's do another example: the concatenation $s \cdot t$ of the strings $s$ and $t$ is the string consisting of the letters of $s$ followed by the letters of $t$. This is a perfectly clear mathematical definition of concatenation (except maybe for what to do with the empty string), and in terms of Scheme/Python lists, $s \cdot t$ would be the list append $(s, t)$. Here's a recursive definition of concatenation.
-
-<!-- page: 184 -->
 
 ## 6.1. Recursive Definitions and Structural Induction
 
@@ -6760,14 +6365,11 @@ $$
 
 (def length, base case)
 
-<!-- page: 185 -->
-
 ```lisp
 (concat def, constructor case)
 (length def, constructor case)
     since P(r) holds
 (length def, constructor case)
-
 ```
 
 Chapter 6 Recursive Data Types
@@ -6802,8 +6404,6 @@ The number, $\#_{c}(s)$, of occurrences of the character $c \in A$ in the string
 
 Base case: $\#_c(\lambda) ::= 0$.
 
-<!-- page: 186 -->
-
 ## 6.2. Strings of Matched Brackets
 
 Constructor case:
@@ -6833,8 +6433,6 @@ Let $\{],[\}^{*}$ be the set of all strings of square brackets. For example, the
 A string,  $s \in \{\] , []*$ , is called a matched string if its brackets “match up” in the usual way. For example, the left hand string above is not matched because its second right bracket does not have a matching left bracket. The string on the right is matched.
 
 We're going to examine several different ways to define and prove properties of matched strings using recursively defined sets and functions. These properties are pretty straightforward, and you might wonder whether they have any particular relevance in computer science. The honest answer is “not much relevance any more.” The reason for this is one of the great successes of computer science, as explained in the text box below.
-
-<!-- page: 187 -->
 
 178
 
@@ -6892,8 +6490,6 @@ $$
 [ \lambda ] \lambda = [ ] \in \text {RecMatch}.
 $$
 
-<!-- page: 188 -->
-
 ## 6.2. Strings of Matched Brackets
 
 Now,
@@ -6932,8 +6528,6 @@ This completes the proof of the constructor case. We conclude by structural indu
 
 Warning: When a recursive definition of a data type allows the same element to be constructed in more than one way, the definition is said to be ambiguous. We were careful to choose an unambiguous definition of RecMatch to ensure that functions defined recursively on its definition would always be well-defined. Recursively defining a function on an ambiguous data type definition usually will not work. To illustrate the problem, here's another definition of the matched strings.
 
-<!-- page: 189 -->
-
 Chapter 6 Recursive Data Types
 
 Definition 6.2.2. Define the set, AmbRecMatch $\subseteq \{]$, $[\}^*$ recursively as follows:
@@ -6971,8 +6565,6 @@ Definition 6.3.1. The set, N, is a data type defined recursively as:
 \- If $n \in \mathbb{N}$, then the successor, $n + 1$, of $n$ is in $\mathbb{N}$.
 
 The point here is to make it clear that ordinary induction is simply the special case of structural induction on the recursive Definition 6.3.1. This also justifies the familiar recursive definitions of functions on the nonnegative integers.
-
-<!-- page: 190 -->
 
 6.3. Recursive Functions on Nonnegative Integers
 
@@ -7014,8 +6606,6 @@ $$
 
 This “definition” has no base case. If some function,  $f_{1}$ , satisfied (6.2), so would a function obtained by adding a constant to the value of  $f_{1}$ . So equation (6.2) does not uniquely define an  $f_{1}$ .
 
-<!-- page: 191 -->
-
 Chapter 6 Recursive Data Types
 
 $$
@@ -7047,8 +6637,6 @@ $$
 The constant function equal to 1 will satisfy (6.5), but it's not known if another function does as well. The problem is that the third case specifies $f_4(n)$ in terms of $f_4$ at arguments larger than $n$, and so cannot be justified by induction on $\mathbb{N}$. It's known that any $f_4$ satisfying (6.5) equals 1 for all $n$ up to over $10^{18}$.
 
 A final example is the Ackermann function, which is an extremely fast-growing function of two nonnegative arguments. Its inverse is correspondingly slow-growing—it grows slower than  $\log n$ ,  $\log \log n$ ,  $\log \log \log n$ ,  $\ldots$ , but it does grow unboundly. This inverse actually comes up analyzing a useful, highly efficient procedure known as the Union-Find algorithm. This algorithm was conjectured to run in a number of steps that grew linearly in the size of its input, but turned out to be “linear”
-
-<!-- page: 192 -->
 
 ## 6.4. Arithmetic Expressions
 
@@ -7083,8 +6671,6 @@ Definition 6.4.1.
 \- Constructor cases: If $e, f \in \mathrm{Aexp}$, then
 
 $-[e + f] \in \text{Aexp}$. The expression $[e + f]$ is called a sum. The Aexp's $e$ and $f$ are called the components of the sum; they're also called the summands.
-
-<!-- page: 193 -->
 
 Chapter 6 Recursive Data Types
 
@@ -7132,8 +6718,6 @@ $$
 \operatorname{eval} (\cdot [ e _ {1} ], n): := - \operatorname{eval} (e _ {1}, n).\tag{6.13}
 $$
 
-<!-- page: 194 -->
-
 ## 6.4. Arithmetic Expressions
 
 For example, here's how the recursive definition of eval would arrive at the value of $3 + x^2$ when $x$ is 2:
@@ -7178,8 +6762,6 @@ $$
 \operatorname{subst} (f, \cdot [ e _ {1} ]): := - [ \operatorname{subst} (f, e _ {1}) ].\tag{6.18}
 $$
 
-<!-- page: 195 -->
-
 Chapter 6 Recursive Data Types
 
 Here's how the recursive definition of the substitution function would find the result of substituting $3x$ for $x$ in the $x(x - 1)$:
@@ -7207,8 +6789,6 @@ $$
 The Environment Model only computes the value of 3x once, and so it requires one fewer multiplication than the Substitution model to compute (6.20). This is a good place to stop and work this example out yourself (Problem 6.18).
 
 But how do we know that these final values reached by these two approaches, that is, the final integer values of  $(6.19)$  and  $(6.20)$ , agree? In fact, we can prove pretty easily that these two approaches always agree by structural induction on the definitions of the two approaches. More precisely, what we want to prove is
-
-<!-- page: 196 -->
 
 ## 6.4. Arithmetic Expressions
 
@@ -7260,8 +6840,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ This is an example of why it’s useful to notify the reader what the induction variable is—in this case it isn’t n.</span></small>
 
-<!-- page: 197 -->
-
 Chapter 6 Recursive Data Types
 
 by Definition 6.4.2.(6.11) of eval for a sum expression. By induction hypothesis (6.22), this in turn equals
@@ -7287,8 +6865,6 @@ Structural induction then goes beyond number counting, and offers a simple, natu
 In many cases, a nonnegative integer size can be defined for a recursively defined datum, such as the length of a string, or the number of operations in an Aexp. It is then possible to prove properties of data by ordinary induction on their size. But this approach often produces more cumbersome proofs than structural induction.
 
 In fact, structural induction is theoretically more powerful than ordinary induction. However, it's only more powerful when it comes to reasoning about infinite data types—like infinite trees, for example—so this greater power doesn't matter in practice. What does matter is that for recursively defined data types, structural induction is a simple and natural approach. This makes it a technique every computer scientist should embrace.
-
-<!-- page: 198 -->
 
 ## 6.5. Induction in Computer Science
 
@@ -7344,8 +6920,6 @@ If $f, g$ are F18's, then so are
 
 Warning: Don't confuse $1 / x = x^{-1}$ with the inverse $\mathrm{id}^{-1}$ of the identity function $\mathrm{id}(x)$. The inverse $\mathrm{id}^{-1}$ is equal to $\mathrm{id}$.
 
-<!-- page: 199 -->
-
 Chapter 6 Recursive Data Types
 
 (b) Prove by Structural Induction on this definition that the Elementary 18.01 Functions are closed under taking derivatives. That is, show that if $f(x)$ is an F18, then so is $f' ::= df/dx$. (Just work out 2 or 3 of the most interesting constructor cases; you may skip the less interesting ones.)
@@ -7394,8 +6968,6 @@ $$
 \langle \text {bintree}, G _ {1}, G _ {2} \rangle \in \text {binary - 2PTG}.
 $$
 
-<!-- page: 200 -->
-
 ## 6.5. Induction in Computer Science
 
 The size,  $|G|$ , of  $G \in binary-2PTG$  is defined recursively on this definition by:
@@ -7431,8 +7003,6 @@ $$
 $$
 2 \cdot \text {length} (\text {flatten} (G)) = | G | + 1.\tag{6.24}
 $$
-
-<!-- page: 201 -->
 
 Chapter 6 Recursive Data Types
 
@@ -7484,8 +7054,6 @@ $$
 \# _ {c} (s \cdot t) = \# _ {c} (s) + \# _ {c} (t).
 $$
 
-<!-- page: 202 -->
-
 ## 6.5. Induction in Computer Science
 
 Figure 6.2 Constructing the Koch Snowflake.
@@ -7519,8 +7087,6 @@ Constructor case: The set of leaf labels of the LBT  $\langle l, B, C \rangle$  
 The set of labels of an LBT is the union of its leaf- and internal-labels.
 
 The LBT's with unique labels are also defined recursively:
-
-<!-- page: 203 -->
 
 Chapter 6 Recursive Data Types
 
@@ -7563,8 +7129,6 @@ If $f, g$ are Atrig's, then so are
 Prove by structural induction on this definition that if  $f(x)$  is an Atrig, then so is  $f' ::= df/dx$ .
 
 ## Problem 6.11.
-
-<!-- page: 204 -->
 
 ## 6.5. Induction in Computer Science
 
@@ -7614,8 +7178,6 @@ $$
 \begin{array}{r l} & \bullet F _ {1}: \\ & \quad - 5 \in F _ {1}, \\ & \quad - \text {if} n \in F _ {1}, \text {then} 5 n \in F _ {1}. \end{array}
 $$
 
-<!-- page: 205 -->
-
 Chapter 6 Recursive Data Types
 
 $$
@@ -7653,8 +7215,6 @@ Of these two statements, circle the one that would be simpler to prove by struct
 \- $P_3(s) ::= s \in \text{AmbRecMatch}$.
 
 \- $P_4(s) ::= (s \in \text{RecMatch IMPLIES } s \in \text{AmbRecMatch})$.
-
-<!-- page: 206 -->
 
 ## 6.5. Induction in Computer Science
 
@@ -7704,8 +7264,6 @@ Inductive step: To prove  $P(n + 1)$ , suppose  $|x| = n + 1$  and  $x \in \text
 
 Let's say that a string $y$ is an erase of a string $z$ iff $y$ is the result of erasing a single occurrence of $p$ in $z$.
 
-<!-- page: 207 -->
-
 Chapter 6 Recursive Data Types
 
 Since $x \in$ Erasable and has positive length, there must be an erase, $y \in$ Erasable, of $x$. So $|y| = n - 1 \geq 0$, and since $y \in$ Erasable, we may assume by induction hypothesis that $y \in$ RecMatch.
@@ -7743,8 +7301,6 @@ Problem 6.15. (a) Prove that the set RecMatch, of matched strings of Definition 
 (b) Prove AmbRecMatch $\subseteq$ RecMatch, where AmbRecMatch is the set of ambiguous matched strings of Definition 6.2.2.
 
 (c) Prove that RecMatch = AmbRecMatch.
-
-<!-- page: 208 -->
 
 ## 6.5. Induction in Computer Science
 
@@ -7784,8 +7340,6 @@ $$
 
 (AA)
 
-<!-- page: 209 -->
-
 Chapter 6 Recursive Data Types
 
 Prove that if $B: \mathbb{N}^2 \to \mathbb{N}$ is a partial function that satisfies this same definition, then $B$ is total and $B = A$.
@@ -7824,8 +7378,6 @@ V
 
 We're going to characterize a large category of games as a recursive data type and then prove, by structural induction, a fundamental theorem about game strategies. The games we'll consider are known as deterministic games of perfect information,
 
-<!-- page: 210 -->
-
 because at each move, the complete game situation is known to the players, and this information completely determines how the rest of the game can be played. Games like chess, checkers, GO, and tic-tac-toe fit this description. In contrast, most card games do not fit, since card players usually do not know exactly what cards belong to the other players. Neither do games involving random features like dice rolls, since a player's move does not uniquely determine what happens next.
 
 Chess counts as a deterministic game of perfect information because at any point of play, both players know whose turn it is to move and the location of every chess piece on the board. $^{2}$  At the start of the game, there are 20 possible first moves: the player with the White pieces can move one of his eight pawns forward 1 or 2 squares or one of his two knights forward and left or forward and right. For the second move, the Black player can make one of the 20 corresponding moves of his own pieces. The White player would then make the third move, but now the number of possible third moves depends on what the first two moves happened to be.
@@ -7841,8 +7393,6 @@ This motivates the following formal definition:
 Definition. Let V be a nonempty set of real numbers. The class VG of V-valued deterministic max-min games of perfect information is defined recursively as fol-
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ In order to prevent the possibility of an unending game, chess rules specify a limit on the number of moves, or a limit on the number of times a given board position may repeat. So the number of moves or the number of position repeats would count as part of the game situation known to both players.</span></small>
-
-<!-- page: 211 -->
 
 Chapter 6 Recursive Data Types
 
@@ -7882,8 +7432,6 @@ $$
 s (G) \text {is} \left\{ \begin{array}{l l} \text {a first move of $G$} & \text {if $G$ has label $a$,} \\ \text {undefined,} & \text {otherwise.} \end{array} \right.
 $$
 
-<!-- page: 212 -->
-
 ## 6.5. Induction in Computer Science
 
 Any pair of strategies for the two players determines a unique play of a game, and hence a unique payoff, in an obvious way. Namely, when it is a player's turn to move in a game $G$, he chooses the move specified by his strategy. A strategy for the max-player is said to ensure payoff $v$ when, paired with any strategy for the min-player, the resulting payoff is at least $v$. Dually, a strategy for the min-player caps payoff at $v$ when, paired with any strategy for the max-player, the resulting payoff is at most $v$.
@@ -7908,8 +7456,6 @@ So where do we come upon games with an infinite number of first moves? Well, sup
 
 There still are only a finite number of possible moves at any stage of the n-game chess tournament, but we can define a meta-chess-tournament, whose first move is
 
-<!-- page: 213 -->
-
 a choice of any positive integer n, after which we play an n-game tournament. Now the meta-chess-tournament has an infinite number of first moves.
 
 Of course only the first move in the meta-chess-tournament is infinite, but then we could set up a tournament consisting of n meta-chess-tournaments. This would be a game with n possible infinite moves. And then we could have a meta-meta-chess-tournament whose first move was to choose how many meta-chess-tournaments to play. This meta-meta-chess-tournament will have an infinite number of infinite moves. Then we could move on to meta-meta-meta-chess-tournaments ....
@@ -7917,8 +7463,6 @@ Of course only the first move in the meta-chess-tournament is infinite, but then
 As silly or weird as these meta games may seem, their weirdness doesn't disqualify the Fundamental Theorem: each of these games will still have a value.
 
 (d) State some reasonable generalization of the Fundamental Theorem to games with an infinite set V of possible payoffs. Optional: Prove your generalization.
-
-<!-- page: 214 -->
 
 ## 7
 
@@ -7935,8 +7479,6 @@ Likewise in computer science, it's implausible to think that writing a program t
 Infinite sets also provide a nice setting to practice proof methods, because it's harder to sneak in unjustified steps under the guise of intuition. And there has been a truly astonishing outcome of studying infinite sets. Their study led to the discovery of fundamental, logical limits on what computers can possibly do. For example, in Section 7.2, we'll use reasoning developed for infinite sets to prove that it's impossible to have a perfect type-checker for a programming language.
 
 So in this chapter, we ask you to bite the bullet and start learning to cope with infinity.
-
-<!-- page: 215 -->
 
 Chapter 7 Infinite Sets
 
@@ -7970,8 +7512,6 @@ A nice technical feature of Cantor's idea is that it avoids the need for a defin
 
 Warning: We haven't, and won't, define what the “size” of an infinite set is. The definition of infinite “sizes” requires the definition of some infinite sets called
 
-<!-- page: 216 -->
-
 ## 7.1. Infinite Cardinality
 
 ordinals with special well-ordering properties. The theory of ordinals requires getting deeper into technical set theory than we want to go, and we can get by just fine without defining infinite sizes. All we need are the “as big as” and “same size” relations, surj and bij, between sets.
@@ -7997,8 +7537,6 @@ Another familiar property of finite sets carries over to infinite sets, but this
 Theorem 7.1.4. [Schröder-Bernstein] For any sets A, B, if A surj B and B surj A, then A bij B.
 
 That is, the Schröder-Bernstein Theorem says that if $A$ is at least as big as $B$ and conversely, $B$ is at least as big as $A$, then $A$ is the same size as $B$. Phrased this way, you might be tempted to take this theorem for granted, but that would be a mistake. For infinite sets $A$ and $B$, the Schröder-Bernstein Theorem is actually pretty technical. Just because there is a surjective function $f: A \to B$—which need not be a bijection—and a surjective function $g: B \to A$—which also need not be a bijection—it’s not at all clear that there must be a bijection $e: A \to B$. The idea is to construct $e$ from parts of both $f$ and $g$. We’ll leave the actual construction to Problem 7.11.
-
-<!-- page: 217 -->
 
 Chapter 7 Infinite Sets
 
@@ -8039,8 +7577,6 @@ We're omitting a proof of Theorem 7.1.5 because proving it involves technical se
 A basic property of finite sets that does not carry over to infinite sets is that adding something new makes a set bigger. That is, if $A$ is a finite set and $b \notin A$, then $|A \cup \{b\}| = |A| + 1$, and so $A$ and $A \cup \{b\}$ are not the same size. But if $A$ is infinite, then these two sets are the same size!
 
 Lemma 7.1.7. Let $A$ be a set and $b \notin A$. Then $A$ is infinite iff $A$ bij $A \cup \{b\}$.
-
-<!-- page: 218 -->
 
 ## 7.1. Infinite Cardinality
 
@@ -8084,8 +7620,6 @@ of the elements of C, possibly with repeats.
 
 Lemma 7.1.9. A set, $C$, is countable iff $\mathbb{N}$ surj $C$. In fact, a nonempty set $C$ is countable iff there is a total surjective function $g: \mathbb{N} \to C$.
 
-<!-- page: 219 -->
-
 Chapter 7 Infinite Sets
 
 The proof is left to Problem 7.12.
@@ -8115,8 +7649,6 @@ A small modification of the proof of Lemma 7.1.7 shows that countably infinite s
 Also, since adding one new element to an infinite set doesn't change its size, you can add any finite number of elements without changing the size by simply adding one element after another. Something even stronger is true: you can add a countably infinite number of new elements to an infinite set and still wind up with just a set of the same size (Problem 7.13).
 
 By the way, it's a common mistake to think that, because you can add any finite number of elements to an infinite set and have a bijection with the original set, that you can also throw in infinitely many new elements. In general it isn't true that just because it's OK to do something any finite number of times, it also OK to do it an infinite number of times. For example, starting from 3, you can increment by 1 any finite number of times, and the result will be some integer greater than or equal to 3. But if you increment an infinite number of times, you don't get an integer at all.
-
-<!-- page: 220 -->
 
 ## 7.1. Infinite Cardinality
 
@@ -8168,8 +7700,6 @@ This immediately implies
 
 Corollary 7.1.13. $\{0,1\}^{\omega}$ is uncountable.
 
-<!-- page: 221 -->
-
 Chapter 7 Infinite Sets
 
 ## More Countable and Uncountable Sets
@@ -8197,8 +7727,6 @@ Let's map any real number $r$ to the infinite bit string $b(r)$ equal to the seq
 $$
 \begin{array}{c} b (5) = 0 0 0 \ldots , \\ b (1 / 1 0) = 1 0 0 0 \ldots , \\ b (1 / 9) = 1 1 1 \ldots , \\ b (4 \frac {1}{9 9}) = 0 1 0 1 0 1 \ldots \\ b (\sqrt {2}), b (1 / 3) \text {are undefined.} \end{array}
 $$
-
-<!-- page: 222 -->
 
 ## 7.1. Infinite Cardinality
 
@@ -8246,8 +7774,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">In such cases, define $b(r)$ to be the sequence that ends with all 0's.</span></small>
 
-<!-- page: 223 -->
-
 Chapter 7 Infinite Sets
 
 ## Larger Infinities
@@ -8271,8 +7797,6 @@ But now we can exhibit a sequence that's missing from our allegedly complete lis
 $$
 \begin{array}{c c c c c c c c c} \hline A _ {0} & = & \mathbf {1} & 0 & 0 & 0 & 1 & 1 & \dots \\ A _ {1} & = & 0 & \mathbf {1} & 1 & 1 & 0 & 1 & \dots \\ A _ {2} & = & 1 & 1 & \mathbf {1} & 1 & 1 & 1 & \dots \\ A _ {3} & = & 0 & 1 & 0 & \mathbf {0} & 1 & 0 & \dots \\ A _ {4} & = & 0 & 0 & 1 & 0 & \mathbf {0} & 0 & \dots \\ A _ {5} & = & 1 & 0 & 0 & 1 & 1 & \mathbf {1} & \dots \\ \vdots & & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots \\ \hline \end{array}
 $$
-
-<!-- page: 224 -->
 
 ## 7.2. The Halting Problem
 
@@ -8300,8 +7824,6 @@ This story begins with a reminder that having procedures operate on programs is 
 
 The fundamental thing that just can't be done by computation is a perfect job of type-checking, optimizing, or any kind of analysis of the overall run time behavior of programs. In this section, we'll illustrate this with a basic example known as the Halting Problem. The general Halting Problem for some programming language
 
-<!-- page: 225 -->
-
 is, given an arbitrary program, to determine whether the program will run forever if it is not interrupted. If the program does not run forever, it is said to halt. Real programs may halt in many ways, for example, by returning some final value, aborting with some kind of error, or by awaiting user input. But it's easy to detect when any given program will halt: just run it on a virtual machine and wait till it stops. The problem comes when the given program does not halt—you may wind up waiting indefinitely without realizing that the wait is fruitless. So how could you detect that the program does not halt? We will use a diagonal argument to prove that if an analysis program tries to recognize the non-halting programs, it is bound to give wrong answers, or no answers, for an infinite number of the programs it is supposed to be able to analyze!
 
 To be precise about this, let's call a programming procedure—written in your favorite programming language—a string procedure when it is applicable to strings over a standard alphabet—say, the 256 character ASCII alphabet. As a simple example, you might think about how to write a string procedure that halts precisely when it is applied to a double letter ASCII string, namely, a string in which every character occurs twice in a row. For example, aaCC33, and zz++ccBB are double letter strings, but aa;bb, b33, and AAAAA are not.
@@ -8313,8 +7835,6 @@ Let ASCII\* be the set of (finite) strings of ASCII characters. There is no harm
 Focusing just on string procedures, the general Halting Problem is to decide, given strings $s$ and $t$, whether or not the procedure $P_{s}$ halts when applied to $t$. We'll show that the general problem can't be solved by showing that a special case can't be solved, namely, whether or not $P_{s}$ applied to $s$ halts. So, let's define
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ The string,  $s \in ASCII^{*}$ , and the procedure,  $P_{s}$ , have to be distinguished to avoid a type error: you can’t apply a string to string. For example, let s be the string that you wrote as your program to recognize the double letter strings. Applying s to a string argument, say aabbccdd, should throw a type exception; what you need to do is compile s to the procedure  $P_{s}$  and then apply  $P_{s}$  to aabbccdd.</span></small>
-
-<!-- page: 226 -->
 
 ## 7.2. The Halting Problem
 
@@ -8368,8 +7888,6 @@ So that does it: it's logically impossible for programs in any particular langua
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ The weasel word “overall” creeps in here to rule out some run time properties that are easy to recognize because they depend only on part of the run time behavior. For example, the set of programs that halt after executing at most 100 instructions is recognizable.</span></small>
 
-<!-- page: 227 -->
-
 For example, most compilers do “static” type-checking at compile time to ensure that programs won’t make run-time type errors. A program that type-checks is guaranteed not to cause a run-time type-error. But since it’s impossible to recognize perfectly when programs won’t cause type-errors, it follows that the type-checker must be rejecting programs that really wouldn’t cause a type-error. The conclusion is that no type-checker is perfect—you can always do better!
 
 It’s a different story if we think about the practical possibility of writing programming analyzers. The fact that it’s logically impossible to analyze perfectly arbitrary programs does not mean that you can’t do a very good job analyzing interesting programs that come up in practice. In fact, these “interesting” programs are commonly intended to be analyzable in order to confirm that they do what they’re supposed to do.
@@ -8385,8 +7903,6 @@ In the end, it's not clear how much of a hurdle this theoretical limitation impl
 So from now on, if you hear people making claims about having general program analysis/verification/optimization methods, you'll know they can't be telling the whole story.
 
 One more important point: there's no hope of getting around this by switching programming languages. Our proof covered programs written in some given programming language like Java, for example, and concluded that no Java program can perfectly analyze all Java programs. Could there be a C++ analysis procedure that successfully takes on all Java programs? After all, C++ does allow more intimate manipulation of computer memory than Java does. But there is no loophole here: it's possible to write a virtual machine for C++ in Java, so if there were a C++ procedure that analyzed Java programs, the Java virtual machine would be able to do it too, and that's impossible. These logical limitations on the power of computation apply no matter what kinds of programs or computers you use.
-
-<!-- page: 228 -->
 
 ## 7.3 The Logic of Sets
 
@@ -8419,8 +7935,6 @@ The simplest reasoning about sets crashes mathematics! Russell and his colleague
 Actually, a way out of the paradox was clear to Russell and others at the time: it's unjustified to assume that $W$ is a set. The step in the proof where we let $S$ be $W$ has no justification, because $S$ ranges over sets, and $W$ might not be a set. In fact, the paradox implies that $W$ had better not be a set!
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ Bertrand Russell was a mathematician/logician at Cambridge University at the turn of the Twentieth Century. He reported that when he felt too old to do mathematics, he began to study and write about philosophy, and when he was no longer smart enough to do philosophy, he began writing about politics. He was jailed as a conscientious objector during World War I. For his extensive philosophical and political writing, he won a Nobel Prize for Literature.</span></small>
-
-<!-- page: 229 -->
 
 Chapter 7 Infinite Sets
 
@@ -8455,8 +7969,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ Technically this is called a first-order predicate formula of set theory</span></small>
-
-<!-- page: 230 -->
 
 ## 7.3. The Logic of Sets
 
@@ -8514,8 +8026,6 @@ $$
 
 Choice. Given a set, s, whose members are nonempty sets no two of which have any element in common, then there is a set, c, consisting of exactly one element from each set in s. The formula is given in Problem 7.28.
 
-<!-- page: 231 -->
-
 Chapter 7 Infinite Sets
 
 ## 7.3.3 Avoiding Russell's Paradox
@@ -8531,8 +8041,6 @@ So this is where mainstream mathematics stands today: there is a handful of ZFC 
 In fact, while there is broad agreement that the ZFC axioms are capable of proving all of standard mathematics, the axioms have some further consequences that sound paradoxical. For example, the Banach-Tarski Theorem says that, as a consequence of the axiom of choice, a solid ball can be divided into six pieces and then the pieces can be rigidly rearranged to give two solid balls of the same size as the original!
 
 \- Some basic questions about the nature of sets remain unresolved. For example, Cantor raised the question whether there is a set whose size is strictly between the smallest infinite set, $\mathbb{N}$ (see Problem 7.9), and the strictly larger set, pow(N)? Cantor guessed not:
-
-<!-- page: 232 -->
 
 7.4. Does All This Really Work?
 
@@ -8555,8 +8063,6 @@ If the romance of different-size infinities and continuum hypotheses doesn't app
 Problem 7.1.
 
 Prove that if $A$ and $B$ are countable sets, then so is $A \cup B$.
-
-<!-- page: 233 -->
 
 Chapter 7 Infinite Sets
 
@@ -8600,8 +8106,6 @@ For each of the following sets, indicate whether it is finite, countably infinit
 
 Circle the correct completions (there may be more than one)
 A strict N IFF ...
-
-<!-- page: 234 -->
 
 ## 7.4. Does All This Really Work?
 
@@ -8651,8 +8155,6 @@ is not finitely discontinuous. This assumption about $P_0$ is correct, but it's 
 
 To illustrate this point, let A be the nonnegative integers and B be the nonnegative rational numbers, and remember that both A and B are countably infinite. Some of the predicates  $P(C)$  below are finitely discontinuous and some are not. Indicate which is which.
 
-<!-- page: 235 -->
-
 Chapter 7 Infinite Sets
 
 1. $C$ is finite.
@@ -8695,8 +8197,6 @@ Problem 7.9. (a) Several students felt the proof of Lemma 7.1.7 was worrisome, i
 
 The rational numbers fill the space between integers, so a first thought is that there must be more of them than the integers, but it's not true. In this problem you'll show that there are the same number of positive rationals as positive integers. That is, the positive rationals are countable.
 
-<!-- page: 236 -->
-
 ## 7.4. Does All This Really Work?
 
 (a) Define a bijection between the set, $\mathbb{Z}^{+}$, of positive integers, and the set, $(\mathbb{Z}^{+} \times \mathbb{Z}^{+})$, of all pairs of positive integers:
@@ -8734,8 +8234,6 @@ iii. paths that are infinite going forwards starting from some element of $B$.
 iv. paths that are unending but finite.
 
 (c) What do the paths of the last type (iv) look like?
-
-<!-- page: 237 -->
 
 Chapter 7 Infinite Sets
 
@@ -8779,8 +8277,6 @@ Hint: $1 / x$ almost works.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ The half-open unit interval,  $(0,1]$ , is  $\{r\in R\mid0<r\leq1\}$ . Similarly,  $[0,\infty)::=\{r\in R\mid r\geq0\}$ .</span></small>
 
-<!-- page: 238 -->
-
 ## 7.4. Does All This Really Work?
 
 is one that has infinitely many occurrences of nonzero digits. Let L be the set of all such long sequences. Describe a bijection from L to the half-open real interval  $(0, 1]$ .
@@ -8818,8 +8314,6 @@ $$
 Show that their product,  $A \times B$ , is also a countable set by showing how to list the elements of  $A \times B$ . You need only show enough of the initial terms in your sequence to make the pattern clear—a half dozen or so terms usually suffice.
 
 Problem 7.17. (a) Prove that if $A$ and $B$ are countable sets, then so is $A \cup B$.
-
-<!-- page: 239 -->
 
 Chapter 7 Infinite Sets
 
@@ -8871,8 +8365,6 @@ pow({T,F}),
 
 $\mathrm{pow}(\{0,1\}^{\omega})$
 
-<!-- page: 240 -->
-
 ## 7.4. Does All This Really Work?
 
 ## Problems for Section 7.2
@@ -8923,8 +8415,6 @@ Now of course, we could take U, pow(U), pow(pow(U)), ... and keep on in this way
 
 The method used to prove Cantor's Theorem that the power set is “bigger” than the
 
-<!-- page: 241 -->
-
 set, leads to many important results in logic and computer science. In this problem we'll apply that idea to describe a set of binary strings that can't be described by ordinary logical formulas. To be provocative, we could say that we will describe an undescribable set of strings!
 
 The following logical formula illustrates how a formula can describe a set of strings. The formula
@@ -8952,8 +8442,6 @@ Now we have just the kind of situation where a Cantor-style diagonal argument ca
 For example, using character-by-character translations of formulas into binary, neither the string 0000 nor the string 10 would be the binary representation of a formula, so the display procedure applied to either of them would display no-1s.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ no-1s and similar formulas were examined in Problem 3.25, but it is not necessary to have done that problem to do this one.</span></small>
-
-<!-- page: 242 -->
 
 ## 7.4. Does All This Really Work?
 
@@ -9000,8 +8488,6 @@ $$
 Prove that $\{1,2,3\}^{\omega}$ is uncountable.
 
 Hint: One approach is to define a surjective function from $\{1, 2, 3\}^{\omega}$ to the power set $\mathrm{pow}(\mathbb{N})$.
-
-<!-- page: 243 -->
 
 Chapter 7 Infinite Sets
 
@@ -9051,8 +8537,6 @@ $$
 \forall s. \text {pairwise - disjoint} (s) \text {IMPLIES} \exists c. \text {choice - set} (c, s).
 $$
 
-<!-- page: 244 -->
-
 ## 7.4. Does All This Really Work?
 
 The only issue here is that set theory is technically supposed to be expressed in terms of pure formulas in the language of sets, which means formula that uses only the membership relation,  $\in$ , propositional connectives, the two quantifies  $\forall$  and  $\exists$ , and variables ranging over all sets. Verify that the axiom of choice can be expressed as a pure formula, by explaining how to replace all impure subformulas above with equivalent pure formulas.
@@ -9099,8 +8583,6 @@ is a formula of set theory that means that “x is empty.”
 
 (b) Write a formula, member-minimal $(u,v)$, of set theory that means that $u$ is $\in$-minimal in $v$.
 
-<!-- page: 245 -->
-
 Chapter 7 Infinite Sets
 
 (c) The Foundation axiom of set theory says that  $\in$  is a well founded relation on sets. Express the Foundation axiom as a formula of set theory. You may use “member-minimal” and “isempty” in your formula as abbreviations for the formulas defined above.
@@ -9130,8 +8612,6 @@ A pair  $(a, b)$  is simply a sequence of length two whose first item is a and w
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{9}$ See Section 7.3.2.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{10}$ Some similar ways that don’t work are described in problem 7.27.</span></small>
-
-<!-- page: 246 -->
 
 ## 7.4. Does All This Really Work?
 
@@ -9181,8 +8661,6 @@ There is a method for proving things about ordinals that follows directly from t
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{11}$ See Section 7.3.2.</span></small>
 
-<!-- page: 247 -->
-
 Chapter 7 Infinite Sets
 
 That is:
@@ -9213,13 +8691,7 @@ of ordinals  $\nu_{i}$  is called a member-decreasing sequence starting at  $\nu
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{12}$ Do not assume the Foundation Axiom of ZFC (Section 7.3.2) which says that there isn’t any set that starts an infinite member-decreasing sequence. Even in versions of set theory in which the Foundation Axiom does not hold, there cannot be any infinite member-decreasing sequence of ordinals.</span></small>
 
-<!-- page: 248 -->
-
 ## II Structures
-
-<!-- page: 249 -->
-
-<!-- page: 250 -->
 
 ## Introduction
 
@@ -9233,13 +8705,9 @@ Graphs, also known as networks, are a fundamental structure in computer science.
 
 In Chapter 11 we focus on simple graphs that represent mutual or symmetric re-
 
-<!-- page: 251 -->
-
 ## Part II Structures
 
 relationships, such as being in conflict, being compatible, being independent, being capable of running in parallel. Planar Graphs—simple graphs that can be drawn in the plane—are examined in Chapter 12, the final chapter of Part II. The impossibility of placing 50 geocentric satellites in orbit so that they uniformly blanket the globe will be one of the conclusions reached in this chapter.
-
-<!-- page: 252 -->
 
 ## Number Theory
 
@@ -9266,8 +8734,6 @@ a k = b.
 $$
 
 The divides relation comes up so frequently that multiple synonyms for it are used all the time. The following phrases all say the same thing:
-
-<!-- page: 253 -->
 
 Chapter 8 Number Theory
 
@@ -9308,8 +8774,6 @@ The following lemma collects some basic facts about divisibility.
 1. If $a \mid b$ and $b \mid c$, then $a \mid c$.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ Don't Panic—we're going to stick to some relatively benign parts of number theory. These super-hard unsolved problems rarely get put on problem sets.</span></small>
-
-<!-- page: 254 -->
 
 ## 8.1. Divisibility
 
@@ -9357,8 +8821,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ This theorem is often called the “Division Algorithm,” but we prefer to call it a theorem since it does not actually describe a division procedure for computing the quotient and remainder.</span></small>
 
-<!-- page: 255 -->
-
 The number q is called the quotient and the number r is called the remainder of n divided by d. We use the notation  $\mathrm{qcnt}(n, d)$  for the quotient and  $\mathrm{rem}(n, d)$  for the remainder. For example,  $\mathrm{qcnt}(2716, 10) = 271$  and  $\mathrm{rem}(2716, 10) = 6$ , since  $2716 = 271 \cdot 10 + 6$ . Similarly,  $\mathrm{rem}(-11, 7) = 3$ , since  $-11 = (-2) \cdot 7 + 3$ .
 
 There is a remainder operator built into many programming languages. For example, “32 % 5” will be familiar as remainder notation to programmers in Java, C, and C++; it evaluates to  $\text{rem}(32, 5) = 2$  in all three languages. On the other hand, these and other languages treat remainders involving negative numbers inconsistently, so don’t be distracted by your programming language’s behavior, and remember to stick to the definition according to the Division Theorem 8.1.4.
@@ -9379,14 +8841,11 @@ It would be nice if we could solve all these silly water jug questions at once. 
 
 Suppose that we have water jugs with capacities $a$ and $b$ with $b \geq a$. Let's carry out some sample operations of the state machine and see what happens, assuming
 
-<!-- page: 256 -->
-
 ## 8.1. Divisibility
 
 the $b$-jug is big enough:
 
 | (0,0) → (a,0) | fill first jug |
-| --- | --- |
 | → (0,a) | pour first into second |
 | → (a,a) | fill first jug |
 | → (2a-b,b) | pour first into second (assuming 2a ≥ b) |
@@ -9410,8 +8869,6 @@ Inductive step: Suppose the machine is in state  $(x, y)$  after n steps, that i
 \- Otherwise, we pour water from one jug to another until one is empty or the other is full. By our assumption, the amount x and y in each jug is a linear combination of a and b before we begin pouring. After pouring, one jug is either empty (contains 0 gallons) or full (contains a or b gallons). Thus, the other jug contains either  $x + y$  gallons,  $x + y - a$ , or  $x + y - b$  gallons, all of which are linear combinations of a and b since x and y are. So  $P(n + 1)$  holds in this case as well.
 
 Since $P(n + 1)$ holds in any case, this proves the inductive step, completing the proof by induction.
-
-<!-- page: 257 -->
 
 Chapter 8 Number Theory
 
@@ -9440,8 +8897,6 @@ $$
 $$
 
 where the last equality follows from the fact that everything is a divisor of 0.
-
-<!-- page: 258 -->
 
 8.2. The Greatest Common Divisor
 
@@ -9478,8 +8933,6 @@ $$
 $$
 
 so we can't use the reasoning above to rule out Bruce getting 3 gallons into the big jug. As a matter of fact, because the gcd here is 1, Bruce will be able to get any number of gallons into the big jug up to its capacity. To explain this, we will need a little more number theory.
-
-<!-- page: 259 -->
 
 Chapter 8 Number Theory
 
@@ -9531,8 +8984,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ A tighter analysis shows that at most  $\log_{\varphi}(a)$  transitions are possible where  $\varphi$  is the golden ratio  $(1 + \sqrt{5})/2$ , see Problem 8.14.</span></small>
 
-<!-- page: 260 -->
-
 ## 8.2. The Greatest Common Divisor
 
 of these common divisors. Since any constant multiple of a linear combination is also a linear combination, Theorem 8.2.2 implies that any multiple of the gcd is a linear combination, giving:
@@ -9554,8 +9005,6 @@ $$
 $$
 
 We began by initializing two variables, x = a and y = b. In the first two columns above, we carried out Euclid's algorithm. At each step, we computed  $\text{rem}(x, y)$  which equals  $x - \text{qcnt}(x, y) \cdot y$ . Then, in this linear combination of x and y, we
-
-<!-- page: 261 -->
 
 replaced x and y by equivalent linear combinations of a and b, which we already had computed. After simplifying, we were left with a linear combination of a and b equal to  $\text{rem}(x, y)$ , as desired. The final solution is boxed.
 
@@ -9588,8 +9037,6 @@ where the coefficient  $s'$  is positive. The trick is to notice that if in equa
 Now we can form 3 gallons using jugs with capacities 21 and 26: We simply repeat the following steps  $s'$  times:
 
 1. Fill the 21-gallon jug.
-
-<!-- page: 262 -->
 
 ## 8.2. The Greatest Common Divisor
 
@@ -9653,8 +9100,6 @@ $$
 
 The same approach works regardless of the jug capacities and even regardless of the amount we're trying to produce! Simply repeat these two steps until the desired amount of water is obtained:
 
-<!-- page: 263 -->
-
 Chapter 8 Number Theory
 
 1. Fill the smaller jug.
@@ -9682,8 +9127,6 @@ In 1966, Chen showed that there are infinitely many primes p such that  $p + 2$ 
 Conjectured Inefficiency of Factoring Given the product of two large primes $n = pq$, there is no efficient procedure to recover the primes $p$ and $q$. That is, no polynomial time procedure (see Section 3.5) is guaranteed to find $p$ and $q$ in a number of steps bounded by a polynomial in the length of the binary representation of $n$ (not $n$ itself). The length of the binary representation at most $1 + \log_2 n$.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ So 0, 1, and -1 are the only integers that are neither prime nor composite.</span></small>
-
-<!-- page: 264 -->
 
 ## 8.3. Prime Mysteries
 
@@ -9727,8 +9170,6 @@ Thus, primes gradually taper off. As a rule of thumb, about 1 integer out of eve
 
 The Prime Number Theorem was conjectured by Legendre in 1798 and proved a century later by de la Vallée Poussin and Hadamard in 1896. However, after his death, a notebook of Gauss was found to contain the same conjecture, which he
 
-<!-- page: 265 -->
-
 Chapter 8 Number Theory
 
 apparently made in 1791 at age 15. (You have to feel sorry for all the otherwise “great” mathematicians who had the misfortune of being contemporaries of Gauss.)
@@ -9763,8 +9204,6 @@ $e = 2.718281828459045235360287471352662497757247093699959574966$
 
 599218174135966290435729003342952605956307381323286279434...
 
-<!-- page: 266 -->
-
 ## 8.4 The Fundamental Theorem of Arithmetic
 
 There is an important fact about primes that you probably already know: every positive integer number has a unique prime factorization. So every positive integer can be built up from primes in exactly one way. These quirky prime numbers are the building blocks for the integers.
@@ -9796,8 +9235,6 @@ There is a certain wonder in unique factorization, especially in view of the pri
 The Fundamental Theorem is also called the Unique Factorization Theorem, which is a more descriptive and less pretentious, name—but we really want to get your attention to the importance and non-obviousness of unique factorization.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ The “product” of just one number is defined to be that number, and the product of no numbers is by convention defined to be 1. So each prime, p, is uniquely the product of the primes in the length-one sequence consisting solely of p, and 1, which you will remember is not a prime, is uniquely the product of the empty sequence.</span></small>
-
-<!-- page: 267 -->
 
 Chapter 8 Number Theory
 
@@ -9839,8 +9276,6 @@ $$
 q _ {2} \dots q _ {k}.
 $$
 
-<!-- page: 268 -->
-
 ## 8.5. Alan Turing
 
 Figure 8.1 Alan Turing
@@ -9860,8 +9295,6 @@ so Lemma 8.4.3 implies that $q_{1}$ divides one of the $p_i$'s, which contradict
 The man pictured in Figure 8.1 is Alan Turing, the most important figure in the history of computer science. For decades, his fascinating life story was shrouded by government secrecy, societal taboo, and even his own deceptions.
 
 At age 24, Turing wrote a paper entitled On Computable Numbers, with an Application to the Entscheidungsproblem. The crux of the paper was an elegant way to model a computer in mathematical terms. This was a breakthrough, because it allowed the tools of mathematics to be brought to bear on questions of computation. For example, with his model in hand, Turing immediately proved that there exist problems that no computer can solve—no matter how ingenious the programmer. Turing’s paper is all the more remarkable because he wrote it in 1936, a full decade
-
-<!-- page: 269 -->
 
 Chapter 8 Number Theory
 
@@ -9884,8 +9317,6 @@ $$
 Turing's code requires the message to be a prime number, so we may need to pad the result with some more digits to make a prime. The Prime Number Theorem indicates that padding with relatively few digits will work. In this case, appending the digits 13 gives the number 2209032015182513, which is prime.
 
 Here is how the encryption process works. In the description below, m is the unencoded message (which we want to keep secret),  $\widehat{m}$  is the encrypted message (which the Nazis may intercept), and k is the key.
-
-<!-- page: 270 -->
 
 ## 8.5. Alan Turing
 
@@ -9921,8 +9352,6 @@ The Nazis see only the encrypted message $\widehat{m} = m \cdot k$, so recoverin
 
 This all sounds promising, but there is a major flaw in Turing's code.
 
-<!-- page: 271 -->
-
 Chapter 8 Number Theory
 
 ## Primality Testing
@@ -9934,8 +9363,6 @@ In 1974, Volker Strassen invented a simple, fast probabilistic primality test. S
 Still, the theoretical possibility of a wrong answer was intellectually bothersome—even if the probability of being wrong was a lot less than the probability of an undetectable computer hardware error leading to a wrong answer. Finally in 2002, in a breakthrough paper beginning with a quote from Gauss emphasizing the importance and antiquity of primality testing, Manindra Agrawal, Neeraj Kayal, and Nitin Saxena presented an amazing, thirteen line description of a polynomial time primality test.
 
 This definitively places primality testing way below the exponential effort apparently needed for SAT and similar problems. The polynomial bound on the Agrawal et al. test had degree 12, and subsequent research has reduced the degree to 5, but this is still too large to be practical, and probabilistic primality tests remain the method used in practice today. It's plausible that the degree bound can be reduced a bit more, but matching the speed of the known probabilistic tests remains a daunting challenge.
-
-<!-- page: 272 -->
 
 ## 8.6. Modular Arithmetic
 
@@ -9980,8 +9407,6 @@ Proof. By the Division Theorem 8.1.4, there exist unique pairs of integers $q_{1
 $$
 \begin{array}{l} {a = q _ {1} n + r _ {1}} \\ {b = q _ {2} n + r _ {2},} \end{array}
 $$
-
-<!-- page: 273 -->
 
 Chapter 8 Number Theory
 
@@ -10031,8 +9456,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ Binary relations with these properties are called equivalence relations, see Section 9.10.</span></small>
 
-<!-- page: 274 -->
-
 ## 8.7. Remainder Arithmetic
 
 according to whether their remainders on division by 3 are 0, 1, or 2. The upshot is that when arithmetic is done modulo n, there are really only n different kinds of numbers to worry about, because there are only n possible remainders. In this sense, modular arithmetic is a simplification of ordinary arithmetic.
@@ -10073,8 +9496,6 @@ The proof for 8.8 is virtually identical, using the fact that if $n$ divides $(b
 
 The Congruence Lemma 8.6.1 says that two numbers are congruent iff their remainders are equal, so we can understand congruences by working out arithmetic with remainders. And if all we want is the remainder modulo $n$ of a series of additions, multiplications, subtractions applied to some numbers, we can take remainders at every step so that the entire computation only involves number in the range $[0..n)$.
 
-<!-- page: 275 -->
-
 Chapter 8 Number Theory
 
 ## General Principle of Remainder Arithmetic
@@ -10108,8 +9529,6 @@ We got a repeat of the second step, $\mathrm{rem}(3^2, 36)$ after just two more 
 $$
 \mathrm{rem} (3 ^ {3 4 5 6 7 8 9}, 3 6) = \mathrm{rem} (3 ^ {3}, 3 6) = 2 7.
 $$
-
-<!-- page: 276 -->
 
 ## 8.7. Remainder Arithmetic
 
@@ -10150,8 +9569,6 @@ i + j \equiv \mathrm{rem} (i, n) + \mathrm{rem} (j, n) \pmod {n}.
 $$
 
 By Corollary 8.6.3 again, the remainders on each side of this congruence are equal, which immediately gives (8.11). An identical proof applies to (8.12).
-
-<!-- page: 277 -->
 
 Chapter 8 Number Theory
 
@@ -10233,8 +9650,6 @@ In 1940, France had fallen before Hitler's army, and Britain stood alone against
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ A set with addition and multiplication operations that satisfy these equalities is known as a commutative ring. In addition to  $Z_{n}$ , the integers, rationals, reals, and polynomials with integer coefficients are all examples of commutative rings. On the other hand, the set  $\{T, F\}$  of truth values with OR for addition and AND for multiplication is not a commutative ring because it fails to satisfy one of these equalities. The  $n \times n$  matrices of integers are not a commutative ring because they fail to satisfy another one of these equalities.</span></small>
 
-<!-- page: 278 -->
-
 plies brought across the north Atlantic from the United States by convoys of ships. These convoys were engaged in a cat-and-mouse game with German “U-boats”—submarines—which prowled the Atlantic, trying to sink supply ships and starve Britain into submission. The outcome of this struggle pivoted on a balance of information: could the Germans locate convoys better than the Allies could locate U-boats, or vice versa?
 
 Germany lost.
@@ -10256,8 +9671,6 @@ Decryption (Uh-oh.)
 The decryption step is a problem. We might hope to decrypt in the same way as before by dividing the encrypted message  $\widehat{m}$  by the key k. The difficulty is that  $\widehat{m}$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{9}$ See http://en.wikipedia.org/wiki/Polish\_Cipher\_Bureau.</span></small>
-
-<!-- page: 279 -->
 
 is the remainder when $mk$ is divided by $n$. So dividing $\widehat{m}$ by $k$ might not even give us an integer!
 
@@ -10300,8 +9713,6 @@ $$
 So there can't be any such inverse $j$.
 
 So some numbers have inverses modulo 15 and others don't. This may seem a little unsettling at first, but there's a simple explanation of what's going on.
-
-<!-- page: 280 -->
 
 8.9. Multiplicative Inverses and Cancelling
 
@@ -10349,8 +9760,6 @@ Working with a prime modulus is attractive here because, like the rational and r
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{10}$ Other texts call them coprime.</span></small>
 
-<!-- page: 281 -->
-
 Chapter 8 Number Theory
 
 ## 8.9.2 Cancellation
@@ -10397,8 +9806,6 @@ $$
 
 So all we need to decrypt the message is to find an inverse of the secret key k, which will be easy using the Pulverizer—providing k has an inverse. But k is positive and less than the modulus n, so one simple way to ensure that k is relatively prime to the modulus is to have n be a prime number.
 
-<!-- page: 282 -->
-
 8.9. Multiplicative Inverses and Cancelling
 
 ## 8.9.4 Breaking Turing's Code (Version 2.0)
@@ -10428,8 +9835,6 @@ This is a huge vulnerability, so Turing's hypothetical Version 2.0 code has no p
 A few years after the war, Turing's home was robbed. Detectives soon determined that a former homosexual lover of Turing's had conspired in the robbery. So they arrested him—that is, they arrested Alan Turing—because at that time in Britain, homosexuality was a crime punishable by up to two years in prison. Turing was sentenced to a hormonal “treatment” for his homosexuality: he was given estrogen injections. He began to develop breasts.
 
 Three years later, Alan Turing, the founder of computer science, was dead. His mother explained what happened in a biography of her own son. Despite her repeated warnings, Turing carried out chemistry experiments in his own home. Apparently, her worst fear was realized: by working with potassium cyanide while eating an apple, he poisoned himself.
-
-<!-- page: 283 -->
 
 Chapter 8 Number Theory
 
@@ -10462,8 +9867,6 @@ $$
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{11}$ Since 0 is not relatively prime to anything,  $\phi(n)$  could equivalently be defined using the interval  $(0..n)$  instead of  $[0..n)$ .</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{12}$ Some texts call it Euler's totient function.</span></small>
-
-<!-- page: 284 -->
 
 ## 8.10. Euler's Theorem
 
@@ -10504,8 +9907,6 @@ Definition 8.9.6. The Riemann Hypothesis: Every nontrivial zero of the zeta func
 A proof would immediately imply, among other things, a strong form of the Prime Number Theorem.
 
 Researchers continue to work intensely to settle this conjecture, as they have for over a century. It is another of the Millennium Problems whose solver will earn \$1,000,000 from the Clay Institute.
-
-<!-- page: 285 -->
 
 Chapter 8 Number Theory
 
@@ -10567,8 +9968,6 @@ Proof. A product of elements in  $Z_{n}^{*}$  remains in  $Z_{n}^{*}$  by Lemma 
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{13}$ Some other texts use the notation  $n^{*}$  for  $Z_{n}^{*}$ .</span></small>
 
-<!-- page: 286 -->
-
 ## 8.10. Euler's Theorem
 
 Proof. (of Euler's Theorem 8.10.3 for $\mathbb{Z}_n$)
@@ -10614,8 +10013,6 @@ Corollary 8.10.8 (Fermat's Little Theorem). Suppose $p$ is a prime and $k$ is no
 $$
 k ^ {p - 1} \equiv 1 \pmod {p}
 $$
-
-<!-- page: 287 -->
 
 Chapter 8 Number Theory
 
@@ -10667,8 +10064,6 @@ As a consequence of Theorem 8.10.10, we have
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{14}$ This proof previews a kind of counting argument that we will explore more fully in Part III.</span></small>
 
-<!-- page: 288 -->
-
 ## 8.11. RSA Public Key Encryption
 
 Corollary 8.10.11. For any number n, if  $p_{1}$ ,  $p_{2}$ , ...,  $p_{j}$  are the (distinct) prime factors of n, then
@@ -10692,8 +10087,6 @@ Interestingly, RSA does not operate modulo a prime, as Turing's hypothetical Ver
 The scheme for RSA public key encryption appears in the box.
 
 If the message $m$ is relatively prime to $n$, then a simple application of Euler's Theorem implies that this way of decoding the encrypted message indeed reproduces the original unencrypted message. In fact, the decoding always works—even in (the highly unlikely) case that $m$ is not relatively prime to $n$. The details are worked out in Problem 8.81.
-
-<!-- page: 289 -->
 
 ## The RSA Cryptosystem
 
@@ -10724,8 +10117,6 @@ $$
 m = \widehat {m} ^ {d} (\mathbb {Z} _ {n}).
 $$
 
-<!-- page: 290 -->
-
 Why is RSA thought to be secure? It would be easy to figure out the private key d if you knew p and q—you could do it the same way the Receiver does using the Pulverizer. But assuming the conjecture that it is hopelessly hard to factor a number that is the product of two primes with hundreds of digits, an effort to factor n is not going to break RSA.
 
 Could there be another approach to reverse engineer the private key d from the public key that did not involve factoring n? Not really. It turns out that given just the private and the public keys, it is easy to factor  $n^{15}$  (a proof of this is sketched in Problem 8.83). So if we are confident that factoring is hopelessly hard, then we can be equally confident that finding the private key just from the public key will be hopeless.
@@ -10742,8 +10133,6 @@ So why does society, or at least everybody's secret codes, fall apart if there i
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{15}$ In practice, for this reason, the public and private keys should be randomly chosen so that neither is “too small.”</span></small>
 
-<!-- page: 291 -->
-
 Let's begin with the observation from Section 3.2 that a digital circuit can be described by a bunch of propositional formulas of about the same total size as the circuit. So testing circuits for satisfiability is equivalent to the SAT problem for propositional formulas (see Problem 3.18).
 
 Now designing digital multiplication circuits is completely routine. We can easily build a digital “product checker” circuit out of AND, OR, and NOT gates with 1 output wire and 4n digital input wires. The first n inputs are for the binary representation of an integer i, the next n inputs for the binary representation of an integer j, and the remaining 2n inputs for the binary representation of an integer k. The output of the circuit is 1 iff ij = k and i, j > 1. A straightforward design for such a product checker uses proportional to  $n^{2}$  gates.
@@ -10759,8 +10148,6 @@ So after n SAT tests, we have factored m. This means that if SAT for digital cir
 ## 8.13 References
 
 [2], [41]
-
-<!-- page: 292 -->
 
 ## 8.13. References
 
@@ -10801,8 +10188,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{16}$ Euclid proved this 2300 years ago. About 250 years ago, Euler proved the converse: every even perfect number is of this form (for a simple proof see http://primes.utm.edu/notes/proofs/EvenPerfect.html). As is typical in number theory, apparently simple results lie at the brink of the unknown. For example, it is not known if there are an infinite number of even perfect numbers or any odd perfect numbers at all.</span></small>
-
-<!-- page: 293 -->
 
 Chapter 8 Number Theory
 
@@ -10860,8 +10245,6 @@ $$
 x ^ {\prime} 3 0 + y ^ {\prime} 2 2 = \operatorname * {g c d} (3 0, 2 2)
 $$
 
-<!-- page: 294 -->
-
 ## 8.13. References
 
 Problem 8.9. (a) Use the Pulverizer to find gcd(84, 108)
@@ -10903,8 +10286,6 @@ For nonzero integers, $a, b$, prove the following properties of divisibility and
 (c) If $p \mid bc$ for some prime, $p$, then $p \mid b$ or $p \mid c$.
 
 (d) Let $m$ be the smallest integer linear combination of $a$ and $b$ that is positive. Show that $m = \gcd(a, b)$.
-
-<!-- page: 295 -->
 
 Chapter 8 Number Theory
 
@@ -10948,8 +10329,6 @@ $$
 
 (c) Explain why the machine terminates after at most the same number of transitions as the Euclidean algorithm.
 
-<!-- page: 296 -->
-
 ## 8.13. References
 
 ## Problem 8.14.
@@ -10984,8 +10363,6 @@ The receptacle can be used to store an unlimited amount of water, but has no mea
 
 The Binary GCD state machine computes the GCD of integers a, b > 0 using only division by 2 and subtraction, which makes it run very efficiently on hardware that uses binary representation of numbers. In practice, it runs more quickly than the more famous Euclidean algorithm described in Section 8.2.1.
 
-<!-- page: 297 -->
-
 Chapter 8 Number Theory
 
 $$
@@ -11013,8 +10390,6 @@ Hint: After the binary gcd procedure has factored out 2's, it starts computing t
 $$
 u _ {x} a + v _ {x} b = x \text {and} u _ {y} a + v _ {y} b = y.
 $$
-
-<!-- page: 298 -->
 
 ## 8.13. References
 
@@ -11055,8 +10430,6 @@ $$
 $$
 
 2. Empty the little bucket.
-
-<!-- page: 299 -->
 
 Chapter 8 Number Theory
 
@@ -11108,8 +10481,6 @@ $$
 \min (A \cup B) = \min (\min (A), \min (B)).\tag{8.30}
 $$
 
-<!-- page: 300 -->
-
 ## 8.13. References
 
 ## Problems for Section 8.3
@@ -11149,8 +10520,6 @@ The set of complex numbers that are equal to $m + n\sqrt{-5}$ for some integers 
 A sum or product of numbers in $\mathbb{Z}[\sqrt{-5}]$ is in $\mathbb{Z}[\sqrt{-5}]$, and since $\mathbb{Z}[\sqrt{-5}]$ is a subset of the complex numbers, all the usual rules for addition and multiplication are true for it. But some weird things do happen. For example, the prime 29 has factors:
 
 (a) Find $x, y \in \mathbb{Z}[\sqrt{-5}]$ such that $xy = 29$ and $x \neq \pm 1 \neq y$.
-
-<!-- page: 301 -->
 
 Chapter 8 Number Theory
 
@@ -11200,8 +10569,6 @@ Problem 8.27. (a) Prove if $n$ is not divisible by 3, then $n^2 \equiv 1 \pmod{3
 
 (c) Conclude that if $p$ is a prime greater than 3, then $p^2 - 1$ is divisible by 24.
 
-<!-- page: 302 -->
-
 ## 8.13. References
 
 ## Problem 8.28.
@@ -11233,8 +10600,6 @@ Be sure to clearly state and label your Induction Hypothesis, Base case(s), and 
 Prove that if q has positive degree and positive leading coefficient, then q produces multiples. You may assume that every such polynomial is strictly increasing for large arguments.
 
 Part (b) implies that an integer polynomial with positive leading coefficient and degree has infinitely many nonprimes in its range. This fact no longer holds true for multivariate polynomials. An amazing consequence of Matiyasevich's [31] solution to Hilbert's Tenth Problem is that multivariate polynomials can be understood as general purpose programs for generating sets of integers. If a set of nonnegative integers can be generated by any program, then it equals the set of nonnegative integers in the range of a multivariate integer polynomial! In particular, there is an integer polynomial $p(x_{1},\ldots ,x_{7})$ whose nonnegative values as $x_{1},\dots,x_{7}$ range over $\mathbb{N}$ are precisely the set of all prime numbers!
-
-<!-- page: 303 -->
 
 Chapter 8 Number Theory
 
@@ -11292,8 +10657,6 @@ $$
 (7 6 3) _ {1 6} = 7 \cdot 1 6 ^ {2} + 6 \cdot 1 6 + 3 \equiv 1 \not \equiv 7 \equiv 7 + 6 + 3 \pmod {9}.
 $$
 
-<!-- page: 304 -->
-
 ## 8.13. References
 
 (a) For exactly what integers k > 1 is it true that the sum of the digits of the base 16 representation of an integer is congruent modulo k to that integer? Justify your answer.
@@ -11334,8 +10697,6 @@ $$
 
 implies $r_1 = r_2$.
 
-<!-- page: 305 -->
-
 Chapter 8 Number Theory
 
 ## Problem 8.33.
@@ -11373,8 +10734,6 @@ For the rest of this problem, assume linear-recursive functions and repeats are 
 (f) Conclude that every positive integer is a divisor of infinitely many Fibonacci numbers.
 
 Hint: Start the Fibonacci sequence with the values 0,1 instead of 1, 1.
-
-<!-- page: 306 -->
 
 ## 8.13. References
 
@@ -11422,8 +10781,6 @@ $$
 
 for all n.
 
-<!-- page: 307 -->
-
 Chapter 8 Number Theory
 
 (a) Explain why (8.40) does not follow immediately from Euler's Theorem.
@@ -11465,8 +10822,6 @@ $$
 $$
 
 For exactly what integers  $k \in (1, 10]$  is it true that the sum of the digits of the base 11 representation of every nonnegative integer is congruent modulo k to that integer?
-
-<!-- page: 308 -->
 
 ## 8.13. References
 
@@ -11514,8 +10869,6 @@ Problem 8.42.
 
 (a) Given inputs  $m, n \in Z^{+}$ , the Pulverizer will produce  $x, y \in Z$  such that:
 
-<!-- page: 309 -->
-
 Chapter 8 Number Theory
 
 (b) Assume $n > 1$. Explain how to use the numbers $x, y$ to find the inverse of $m$ modulo $n$ when there is an inverse.
@@ -11556,8 +10909,6 @@ $$
 
 when $m_1 \not\equiv m_2 \pmod{p}$. Express your solution in the form $x \equiv ? \pmod{p}$ and $y \equiv ? \pmod{p}$ where the ?'s denote expressions involving $m_1, m_2, b_1,$ and $b_2$. You may find it helpful to solve the original equations over the reals first.
 
-<!-- page: 310 -->
-
 ## 8.13. References
 
 ## Problems for Section 8.10
@@ -11587,8 +10938,6 @@ How many numbers between 1 and 6042 (inclusive) are relatively prime to 3780? Hi
 Problem 8.51.
 
 How many numbers between 1 and 3780 (inclusive) are relatively prime to 3780?
-
-<!-- page: 311 -->
 
 Chapter 8 Number Theory
 
@@ -11639,8 +10988,6 @@ Let $\phi$ be Euler's function.
 Hint: Consider whether k has an odd prime factor or not.
 
 (d) Briefly explain why $\phi(k) = 2$ for exactly three values of $k$.
-
-<!-- page: 312 -->
 
 ## 8.13. References
 
@@ -11696,8 +11043,6 @@ $$
 
 Hint: Take the remainder of $m$ divided by the order. Reminder: The order of $k \in \mathbb{Z}_n$ is the smallest positive $m$ such that $k^m = 1(\mathbb{Z}_n)$.
 
-<!-- page: 313 -->
-
 Chapter 8 Number Theory
 
 Now suppose $p > 2$ is a prime of the form $2^s + 1$. For example, $2^1 + 1, 2^2 + 1, 2^4 + 1$ are such primes.
@@ -11739,8 +11084,6 @@ ii. If $n$ is not a square modulo $p$ then $n^{(p - 1) / 2} \equiv -1 \pmod{p}$.
 (d) Suppose that  $p \equiv 3 \pmod{4}$ , and n is a square mod p. Find a simple expression in terms of n and p for a square root of n. Hint: Write p as  $p = 4k + 3$  and use Euler's Criterion. You might have to multiply two sides of an equation by n at one point.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{17}$ Numbers of the form  $2^{2^{k}} + 1$  are called Fermat numbers, so we can rephrase this conclusion as saying that any prime of the form  $2^{s} + 1$  must actually be a Fermat number. The Fermat numbers are prime for k = 1, 2, 3, 4, but not for k = 5. In fact, it is not known if any Fermat number with k > 4 is prime.</span></small>
-
-<!-- page: 314 -->
 
 ## 8.13. References
 
@@ -11790,8 +11133,6 @@ If no positive power of k equals 1 in  $Z_{n}$ , then  $\text{ord}(k, n) := \inf
 
 Hint: Let  $m = \text{ord}(k, n)$ . Consider the quotient and remainder of  $\phi(n)$  divided by m.
 
-<!-- page: 315 -->
-
 Chapter 8 Number Theory
 
 ## Problem 8.64.
@@ -11825,8 +11166,6 @@ $$
 Note that $a$ and $m$ need not be relatively prime.
 
 Assume  $m = p_{1}^{k_{1}} \cdots p_{n}^{k_{n}}$  for distinct primes,  $p_{1}, \ldots, p_{n}$  and positive integers  $k_{1}, \ldots, k_{n}$ .
-
-<!-- page: 316 -->
 
 ## 8.13. References
 
@@ -11878,8 +11217,6 @@ for any polynomial  $p(x)$  with integer coefficients. true false
 
 (d) $\gcd(a^n, b^n) = (\gcd(a, b))^n$ true false
 
-<!-- page: 317 -->
-
 308 Chapter 8 Number Theory
 
 (e) If $\gcd(a, b) \neq 1$ and $\gcd(b, c) \neq 1$, then $\gcd(a, c) \neq 1$. true false
@@ -11923,8 +11260,6 @@ Find an integer $k > 1$ such that $n$ and $n^k$ agree in their last three digits
 (a) Explain why  $(-12)^{482}$  has a multiplicative inverse modulo 175.
 
 (b) What is the value of $\phi(175)$, where $\phi$ is Euler's function?
-
-<!-- page: 318 -->
 
 ## 8.13. References
 
@@ -11988,8 +11323,6 @@ $$
 [ a c \equiv b c \bmod d ] \quad \text { IMPLIES } \quad [ a \equiv b \bmod d ].
 $$
 
-<!-- page: 319 -->
-
 Chapter 8 Number Theory
 
 Problem 8.73. (a) Show that if $p \mid n$ for some prime $p$ and integer $n > 0$, then $(p - 1) \mid \phi(n)$.
@@ -12026,8 +11359,6 @@ Using the RSA encryption system, Pete the publisher generates a private key  $(d
 
 RSA has the useful property that these same keys can switch roles: if Pete wants to broadcast an unforgeable “signed” message, he can encrypt his message using
 
-<!-- page: 320 -->
-
 ## 8.13. References
 
 his private key as though it was someone's public key. That is, from a plain text  $m \in [0, n)$ , Pete would broadcast a “signed” version,  $s ::= \text{rem}(m^{d}, n)$ .
@@ -12063,8 +11394,6 @@ Let's try out RSA!
 (a) Go through the beforehand steps.
 
 \- Choose primes p and q to be relatively small, say in the range 10-40. In practice, p and q might contain hundreds of digits, but small numbers are easier to handle with pencil and paper.
-
-<!-- page: 321 -->
 
 ## Chapter 8 Number Theory
 
@@ -12110,8 +11439,6 @@ $$
 
 We'll now prove this.
 
-<!-- page: 322 -->
-
 ## 8.13. References
 
 (a) Explain why (8.51) follows very simply from Euler's theorem when $m$ is relatively prime to $n$.
@@ -12150,8 +11477,6 @@ In this problem we will examine the Rabin cryptosystem that does have such a sec
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{18}$ There is no need to appeal to the Chinese Remainder Theorem.</span></small>
 
-<!-- page: 323 -->
-
 cryptosystem efficiently, then they also have the ability to factor numbers that are products of two primes.
 
 Why should that convince us that it is hard to break the cryptosystem efficiently? Well, mathematicians have been trying to factor efficiently for centuries, and they still haven't figured out how to do it.
@@ -12177,8 +11502,6 @@ $$
 So, if you know p, q, then using the solution to part (c), you can efficiently find the square roots of  $s!$ . Thus, given the private key, decoding is easy.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{19}$ We will see soon, that there are other numbers that would be encrypted by  $\mathrm{rem}(m^{2}, N)$ , so we’ll have to disallow those other numbers as possible messages in order to make it possible to decode this cryptosystem, but let’s ignore that for now.</span></small>
-
-<!-- page: 324 -->
 
 ## 8.13. References
 
@@ -12206,8 +11529,6 @@ A square root of m modulo n is an integer  $s \in [0.n)$  such that  $s^{2} \equ
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{20}$This is a very weak kind of “security” property, because it doesn’t even rule out the possibility of deciphering RSA encoded messages by some method that did not require knowing the private key. Nevertheless, over twenty years experience supports the security of RSA in practice.</span></small>
 
-<!-- page: 325 -->
-
 ## Chapter 8 Number Theory
 
 In particular, the number 1 has four square roots modulo n. The two trivial ones are 1 and n - 1 (which is  $\equiv -1 \pmod{n}$ ). The other two are called the nontrivial square roots of 1.
@@ -12217,8 +11538,6 @@ In particular, the number 1 has four square roots modulo n. The two trivial ones
 Show that if y turns out to be a nontrivial root of 1 modulo n, then you can factor n. Hint: From the fact that  $y^{2}-1=(y+1)(y-1)$ , show that  $y+1$  must be divisible by exactly one of q and p.
 
 (e) It turns out that at least half the positive integers $r < n$ that are relatively prime to $n$ will yield $y$'s in part (d) that are nontrivial roots of 1. Conclude that if, in addition to $n$ and the public key, $e$, you also knew the private key $d$, then you can be sure of being able to factor $n$.
-
-<!-- page: 326 -->
 
 ## Directed graphs & Partial Orders
 
@@ -12230,13 +11549,9 @@ Another place digraphs emerge in computer science is in the hyperlink structure 
 
 Figure 9.1 A 4-node directed graph with 6 edges.
 
-<!-- page: 327 -->
-
 Figure 9.2 A 6-switch packet routing digraph.
 
 Figure 9.3 Links among Web Pages.
-
-<!-- page: 328 -->
 
 ## 9.1. Vertex Degrees
 
@@ -12266,8 +11581,6 @@ $$
 
 Proof. Both sums are equal to  $|E(G)|$ .
 
-<!-- page: 329 -->
-
 Chapter 9 Directed graphs & Partial Orders
 
 Figure 9.5 The Digraph for Divisibility on $\{1,2,\dots ,12\}$.
@@ -12291,8 +11604,6 @@ $$
 The redundancy of this definition is enough to make any computer scientist cringe, but it does make it easy to talk about how many times vertices and edges occur on the walk. Here is a formal definition:
 
 Definition 9.2.1. A walk in a digraph, G, is an alternating sequence of vertices and edges that begins with a vertex, ends with a vertex, and such that for every edge  $\langle u \rightarrow v \rangle$  in the walk, vertex u is the element just before the edge, and vertex v is the next element after the edge.
-
-<!-- page: 330 -->
 
 ## 9.2. Walks and Paths
 
@@ -12331,8 +11642,6 @@ If you walk for a while, stop for a rest at some vertex, and then continue walki
 $$
 1 \langle 1 \rightarrow 2 \rangle 2 \langle 2 \rightarrow 4 \rangle 4\tag{9.2}
 $$
-
-<!-- page: 331 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -12380,8 +11689,6 @@ Definition 9.2.4. The distance, dist  $(u, v)$ , in a graph from vertex u to ver
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ It's tempting to say the merge is the concatenation of the two walks, but that wouldn't quite be right because if the walks were concatenated, the vertex v would appear twice in a row where the walks meet.</span></small>
 
-<!-- page: 332 -->
-
 ## 9.3. Adjacency Matrices
 
 As would be expected, this definition of distance satisfies:
@@ -12413,8 +11720,6 @@ If a graph, G, has n vertices,  $v_{0}, v_{1}, \ldots, v_{n-1}$ , a useful way t
 $$
 (A _ {G}) _ {i j} := \left\{\begin{array}{l l}1&\text {if} \left\langle v _ {i} \rightarrow v _ {j} \right\rangle \in E (G),\\0&\text {otherwise.}\end{array}\right.
 $$
-
-<!-- page: 333 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -12448,8 +11753,6 @@ Notice that the adjacency matrix  $A_{G}$  is the length-1 walk counting matrix 
 
 Theorem 9.3.2. If C is the length-k walk counting matrix for a graph G, and D is the length-m walk counting matrix, then CD is the length  $k + m$  walk counting matrix for G.
 
-<!-- page: 334 -->
-
 ## 9.3. Adjacency Matrices
 
 According to this theorem, the square  $(A_{G})^{2}$  of the adjacency matrix is the length two walk counting matrix for G. Applying the theorem again to  $(A_{G})^{2}A_{G}$  shows that the length-3 walk counting matrix is  $(A_{G})^{3}$ . More generally, it follows by induction that
@@ -12473,8 +11776,6 @@ But the right hand side of (9.5) is precisely the definition of  $(CD)_{uv}$ . T
 The relation between powers of the adjacency matrix and numbers of walks is cool—to us math nerds at least—but a much more important problem is finding shortest paths between pairs of nodes. For example, when you drive home for vacation, you generally want to take the shortest-time route.
 
 One simple way to find the lengths of all the shortest paths in an $n$-vertex graph, $G$, is to compute the successive powers of $A_G$ one by one up to the $n - 1$st, watching for the first power at which each entry becomes positive. That's because Theorem 9.3.2 implies that the length of the shortest path, if any, between $u$ and $v$, that is, the distance from $u$ to $v$, will be the smallest value $k$ for which $(A_G)_uv^k$ is nonzero, and if there is a shortest path, its length will be $\leq n - 1$. Refinements of this idea lead to methods that find shortest paths in reasonably efficient ways. The methods apply as well to weighted graphs, where edges are labelled with weights
-
-<!-- page: 335 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -12516,8 +11817,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ The reversal of the order of R and S in (9.8) is not a typo. This is so that relational composition generalizes function composition. The value of function f composed with function g at an argument, x, is  $f(g(x))$ . So in the composition,  $f \circ g$ , the function g is applied first.</span></small>
 
-<!-- page: 336 -->
-
 ## 9.5. Directed Acyclic Graphs & Scheduling
 
 This even works for n = 0, with the usual convention that  $G^{0}$  is the identity relation  $\operatorname{Id}_{V(G)}$  on the set of vertices. $^{3}$  Since there is a walk iff there is a path, and every path is of length at most  $|V(G)| - 1$ , we now have $^{4}$
@@ -12552,13 +11851,9 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ Equation (9.9) involves a harmless abuse of notation: we should have written</span></small>
 
-<!-- page: 337 -->
-
 New 6-3: SB in Computer Science and Engineering
 
 Figure 9.6 Subject prerequisites for MIT Computer Science (6-3) Majors.
-
-<!-- page: 338 -->
 
 ## 9.5. Directed Acyclic Graphs & Scheduling
 
@@ -12576,10 +11871,7 @@ Definition 9.5.2. A topological sort of a finite DAG is a list of all the vertic
 
 There are many ways to get dressed one item at a time while obeying the constraints of Figure 9.7. We have listed two such topological sorts in Figure 9.8. In
 
-<!-- page: 339 -->
-
 | underwear | left sock |
-| --- | --- |
 | shirt | shirt |
 | pants | tie |
 | belt | underwear |
@@ -12609,8 +11901,6 @@ To build an order for getting dressed, we pick one of these minimal elements—s
 
 So our construction shows:
 
-<!-- page: 340 -->
-
 ## 9.5. Directed Acyclic Graphs & Scheduling
 
 Theorem 9.5.4. Every finite DAG has a topological sort.
@@ -12633,11 +11923,7 @@ Definition 9.5.5. Two vertices in a DAG are comparable when one of them is reach
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ Yes, we know that you can’t actually put on both socks at once, but imagine you are being dressed by a bunch of robot processors and you are in a big hurry. Still not working for you? Ok, forget about the clothes and imagine they are programs with the precedence constraints shown in Figure 9.7.</span></small>
 
-<!-- page: 341 -->
-
 Figure 9.9 A parallel schedule for the tasks-getting-dressed digraph in Figure 9.7. The tasks in  $A_{i}$  can be performed in step i for  $1 \leq i \leq 4$ . A chain of 4 tasks (the critical path in this example) is shown with bold edges.
-
-<!-- page: 342 -->
 
 ## 9.5. Directed Acyclic Graphs & Scheduling
 
@@ -12662,8 +11948,6 @@ A largest chain ending at an element a is called a critical path to a, and the n
 There is a very simple schedule that completes every task in its minimum number of steps: just use a “greedy” strategy of performing tasks as soon as possible. Schedule all the elements of depth k at step k. That’s how we found the above schedule for getting dressed.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ We think it would be nicer to call them the parts of the partition, but “blocks” is the standard terminology.</span></small>
-
-<!-- page: 343 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -12697,8 +11981,6 @@ Proof. Assume that there is no chain of size greater than $t$. Let $\ell$ be the
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ Lemma 9.5.12 also follows from a more general result known as Dilworth's Theorem, which we will not discuss.</span></small>
 
-<!-- page: 344 -->
-
 ## 9.6. Partial Orders
 
 335
@@ -12730,8 +12012,6 @@ $$
 $$
 
 for every $a, b, c \in A$.
-
-<!-- page: 345 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -12773,8 +12053,6 @@ Theorem 9.6.8. A relation R is a strict partial order iff R is the positive walk
 
 Strict partial orders come up in many situations which on the face of it have nothing to do with digraphs. For example, the less-than order, <, on numbers is a strict partial order:
 
-<!-- page: 346 -->
-
 ## 9.6. Partial Orders
 
 \- if $x < y$ and $y < z$ then $x < z$, so less-than is transitive, and
@@ -12810,8 +12088,6 @@ A strict partial order may be the positive walk relation of different DAGs. This
 The less-than-or-equal relation,  $\leq$ , is at least as familiar as the less-than strict partial order, and the ordinary containment relation,  $\subseteq$ , is even more common than the proper containment relation. These are examples of weak partial orders, which are just strict partial orders with the additional condition that every element is related to itself. To state this precisely, we have to relax the asymmetry property so it does not apply when a vertex is compared to itself; this relaxed property is called antisymmetry:
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{9}$ Some texts use this Corollary to define strict partial orders.</span></small>
-
-<!-- page: 347 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -12853,8 +12129,6 @@ For practice with the definitions, you can check that two more examples are vacu
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{11}$ General relations are usually denoted by a letter like R instead of a cryptic squiggly symbol, so  $\preceq$  is kind of like the musical performer/composer Prince, who redefined the spelling of his name to be his own squiggly symbol. A few years ago he gave up and went back to the spelling “Prince.”</span></small>
 
-<!-- page: 348 -->
-
 ## 9.7 Representing Partial Orders by Set Containment
 
 Axioms can be a great way to abstract and reason about important properties of objects, but it helps to have a clear picture of the things that satisfy the axioms. DAGs provide one way to picture partial orders, but it also can help to picture them in terms of other familiar mathematical objects. In this section, we’ll show that every partial order can be pictured as a collection of sets related by containment. That is, every partial order has the “same shape” as such a collection. The technical word for “same shape” is “isomorphic.”
@@ -12883,8 +12157,6 @@ In this way we have completely captured the weak partial order  $\preceq$  by th
 
 Lemma 9.7.2. Let $\preceq$ be a weak partial order on a set, $A$. Then $\preceq$ is isomorphic to the subset relation, $\subseteq$, on the collection of inverse images under the $\preceq$ relation of elements $a \in A$.
 
-<!-- page: 349 -->
-
 Chapter 9 Directed graphs & Partial Orders
 
 We leave the proof to Problem 9.29. Essentially the same construction shows that strict partial orders can be represented by sets under the proper subset relation, $\subset$ (Problem 9.30). To summarize:
@@ -12908,8 +12180,6 @@ Taking the product of two relations is a useful way to construct new relations f
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{12}$ Linear orders are often called “total” orders, but this terminology conflicts with the definition of “total relation,” and it regularly confuses students.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">Being a linear order is a much stronger condition than being a partial order that is a total relation. For example, any weak partial order is a total relation but generally won't be linear.</span></small>
-
-<!-- page: 350 -->
 
 ## 9.10. Equivalence Relations
 
@@ -12940,8 +12210,6 @@ Definition 9.10.1. A relation is an equivalence relation if it is reflexive, sym
 Congruence modulo n is an important example of an equivalence relation:
 
 \- It is reflexive because $x \equiv x \pmod{n}$.
-
-<!-- page: 351 -->
 
 ## Chapter 9 Directed graphs & Partial Orders
 
@@ -12984,8 +12252,6 @@ $$
 Notice that 7, 12, 17, etc., all have the same equivalence class; that is,  $[7]_{R} = [12]_{R} = [17]_{R} = \cdots$ .
 
 There is an exact correspondence between equivalence relations on A and partitions of A. Namely, given any partition of a set, being in the same block is obviously an equivalence relation. On the other hand we have:
-
-<!-- page: 352 -->
 
 ## 9.11. Summary of Relational Properties
 
@@ -13045,8 +12311,6 @@ $$
 
 If there is an edge from $x$ to $y$ in $R$, then there is an edge back from $y$ to $x$ as well.
 
-<!-- page: 353 -->
-
 Chapter 9 Directed graphs & Partial Orders
 
 Asymmetry R is asymmetric when
@@ -13095,8 +12359,6 @@ Weak Partial Order R is a weak partial order iff R is transitive and anti-symmet
 
 Equivalence Relation R is an equivalence relation iff R is reflexive, symmetric and transitive iff R equals the in-the-same-block-relation for some partition of domain(R).
 
-<!-- page: 354 -->
-
 ## 9.11. Summary of Relational Properties
 
 ## Problems for Section 9.1
@@ -13141,8 +12403,6 @@ List the pairs in each of the relations below.
 
 Lemma 9.2.5 states that $\mathrm{dist}(u,v) \leq \mathrm{dist}(u,x) + \mathrm{dist}(x,v)$. It also states that equality holds iff $x$ is on a shortest path from $u$ to $v$.
 
-<!-- page: 355 -->
-
 Chapter 9 Directed graphs & Partial Orders
 
 (a) Prove the “iff” statement from left to right.
@@ -13175,8 +12435,6 @@ But you can get a shorter string containing all eight 3-bit strings by starting 
 
 (b) Explain how any walk that includes every edge in the graph shown in Figure 9.10 determines a string that is 3-good. Find the walk in this graph that deter-
 
-<!-- page: 356 -->
-
 ## 9.11. Summary of Relational Properties
 
 Figure 9.10 The 2-bit graph.
@@ -13198,8 +12456,6 @@ Problem 9.6. (a) Give an example of a digraph in which a vertex v is on a positi
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{13}$ The 3-good strings explained here generalize to n-good strings for  $n \geq 3$ . They were studied by the great Dutch mathematician/logician Nicolaas de Bruijn, and are known as de Bruijn sequences. de Bruijn died in February, 2012 at the age of 94.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{14}$ Problem 9.8 explains why such “Eulerian” paths exist.</span></small>
-
-<!-- page: 357 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -13236,8 +12492,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">In other words $H = G \cup G^{-1}$.</span></small>
-
-<!-- page: 358 -->
 
 ## 9.11. Summary of Relational Properties
 
@@ -13291,8 +12545,6 @@ $$
 
 where  $R^{+}$  is the positive length walk relation determined by R on the set A.
 
-<!-- page: 359 -->
-
 ## Chapter 9 Directed graphs & Partial Orders
 
 ## Problem 9.10.
@@ -13331,8 +12583,6 @@ A chicken that virtually pecks every other chicken is called a king chicken.
 
 We can model this situation with a chicken digraph whose vertices are chickens with an edge from chicken u to chicken v precisely when u pecks v. In the graph
 
-<!-- page: 360 -->
-
 in Figure 9.11, three of the four chickens are kings. Chicken c is not a king in this example since it does not peck chicken b and it does not peck any chicken that pecks chicken b. Chicken a is a king since it pecks chicken d, who in turn pecks chickens b and c.
 
 In general, a tournament digraph is a digraph with exactly one edge between each pair of distinct vertices.
@@ -13356,8 +12606,6 @@ The King Chicken Theorem means that if the player with the most victories is def
 ## Problem 9.12.
 
 What is the size of the longest chain that is guaranteed to exist in any partially ordered set of n elements? What about the largest antichain?
-
-<!-- page: 361 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -13384,8 +12632,6 @@ What is the smallest number of partially ordered tasks for which there can be mo
 ## Problem 9.16.
 
 The table below lists some prerequisite information for some subjects in the MIT
-
-<!-- page: 362 -->
 
 ## 9.11. Summary of Relational Properties
 
@@ -13461,8 +12707,6 @@ A pair of Math for Computer Science Teaching Assistants, Lisa and Annie, have de
 
 4. Get shots for Lisa's cat, Tailspin - 11 days, after task #1.
 
-<!-- page: 363 -->
-
 5. Open a Starbucks chain for the army to get their caffeine - 10 days, after task #3.
 
 6. Train an army of elite interstellar warriors by dragging people to see The Phantom Menace dozens of times - 4 days, after tasks #3, #4, and #5.
@@ -13478,8 +12722,6 @@ Figure 9.12 Graph representing the task precedence constraints.
 (a) Give some valid order in which the tasks might be completed.
 
 Lisa and Annie want to complete all these tasks in the shortest possible time. However, they have agreed on some constraining work rules.
-
-<!-- page: 364 -->
 
 ## 9.11. Summary of Relational Properties
 
@@ -13516,8 +12758,6 @@ $$
 What are the possible final states reachable from $G$?
 
 A line graph is a graph whose edges are all on one path. All the final graphs in part (a) are line graphs.
-
-<!-- page: 365 -->
 
 ## Chapter 9 Directed graphs & Partial Orders
 
@@ -13563,8 +12803,6 @@ We want to schedule $n$ tasks with prerequisite constraints among the tasks defi
 
 (b) Let  $D_{n,t}$  be the DAG with n elements that consists of a chain of t-1 elements, with the bottom element in the chain being a prerequisite of all the remaining elements as in the following figure:
 
-<!-- page: 366 -->
-
 ## 9.11. Summary of Relational Properties
 
 What is the minimum time schedule for  $D_{n,t}$ ? Explain why it is unique. How many processors does it require?
@@ -13586,8 +12824,6 @@ In this DAG (Figure 9.13) for the divisibility relation on $\{1, \ldots, 12\}$, 
 Problem 9.22. (a) Why is every strict partial order a DAG?
 
 (b) Give an example of a DAG that is not a strict partial order.
-
-<!-- page: 367 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -13618,8 +12854,6 @@ The proper subset relation, $\subset$, defines a strict partial order on the sub
 (c) What are the maximal and minimal elements? Are they maximum and minimum?
 
 (d) Answer the previous part for the $\subset$ partial order on the set pow [1..6] - $\emptyset$.
-
-<!-- page: 368 -->
 
 ## 9.11. Summary of Relational Properties
 
@@ -13661,8 +12895,6 @@ Prove that if R is a transitive binary relation on a set, A, then  $R = R^{+}$ .
 
 Let R be a binary relation on a set D. Each of the following equalities and containments expresses the fact that R has one of the basic relational properties: reflexive,
 
-<!-- page: 369 -->
-
 Chapter 9 Directed graphs & Partial Orders
 
 Figure 9.14 DAG with edges not needed in paths
@@ -13689,12 +12921,9 @@ Class Problems
 
 Problem 9.28.
 
-<!-- page: 370 -->
-
 ## 9.11. Summary of Relational Properties
 
 | Direct Prerequisites | Subject |
-| --- | --- |
 | 18.01 | 6.042 |
 | 18.01 | 18.02 |
 | 18.01 | 18.03 |
@@ -13725,8 +12954,6 @@ $$
 $$
 
 Then the function  $L() : A \to \mathcal{L}$  is an isomorphism from the  $\preceq$  relation on A, to the subset relation on L.
-
-<!-- page: 371 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -13778,8 +13005,6 @@ For each of the binary relations below, state whether it is a strict partial ord
 
 (c) The relation between propositional formulas, $G$, $H$, that $G$ IMPLIES $H$ is valid.
 
-<!-- page: 372 -->
-
 ## 9.11. Summary of Relational Properties
 
 (d) The relation 'beats' on Rock, Paper and Scissor (for those who don't know the game "Rock, Paper, Scissors:" Rock beats Scissors, Scissors beats Paper and Paper beats Rock).
@@ -13821,8 +13046,6 @@ How many are there that are transitive?, ... asymmetric?, ... reflexive?, ... ir
 ...strict partial orders?, ...weak partial orders?
 
 Hint: There are easier ways to find these numbers than listing all the relations and checking which properties each one has.
-
-<!-- page: 373 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -13870,8 +13093,6 @@ For the next parts, let $f, g$ be nonnegative functions from the integers to the
 
 (o) The “asymptotically equal” relation,  $f \sim g$ .
 
-<!-- page: 374 -->
-
 ## 9.11. Summary of Relational Properties
 
 ## Problem 9.38.
@@ -13916,8 +13137,6 @@ Suppose the precedence constraints on a set of 32 unit time tasks was isomorphic
 
 For example, the task corresponding to the set $\{2,4\}$ must be completed before the task corresponding to the set $\{1,2,4\}$ because $\{2,4\} \subset \{1,2,4\}$; the task
 
-<!-- page: 375 -->
-
 corresponding to the empty set must be scheduled first because $\emptyset \subset S$ for every nonempty set $S \subseteq \{1, 2, 3, 4, 5\}$.
 
 (a) What is the minimum parallel time to complete these tasks?
@@ -13957,8 +13176,6 @@ Prove that if $R$ and $S$ are well founded partial orders, then so is their prod
 ## Problem 9.43.
 
 Let $S$ be a sequence of $n$ different numbers. A subsequence of $S$ is a sequence that can be obtained by deleting elements of $S$.
-
-<!-- page: 376 -->
 
 ## 9.11. Summary of Relational Properties
 
@@ -14004,8 +13221,6 @@ So $\prec$ is a partial order on $A$ (Section 9.9).
 
 For each of the following relations, decide whether it is reflexive, whether it is
 
-<!-- page: 377 -->
-
 Chapter 9 Directed graphs & Partial Orders
 
 symmetric, whether it is transitive, and whether it is an equivalence relation.
@@ -14047,8 +13262,6 @@ Namely, let $R$ be an equivalence relation on a set, $A$, and define the equival
 $$
 [ a ] _ {R} := \{b \in A \mid a R b \}.
 $$
-
-<!-- page: 378 -->
 
 ## 9.11. Summary of Relational Properties
 
@@ -14093,8 +13306,6 @@ iii.  $\forall c, d.\quad c R d IFF d R c$
 iv.  $\forall c, d.\quad c R d$  IMPLIES d R c
 
 v.  $\forall c, d.\quad c R d$  IMPLIES NOT(d R c)
-
-<!-- page: 379 -->
 
 Chapter 9 Directed graphs & Partial Orders
 
@@ -14144,8 +13355,6 @@ Let $R_{1}$ and $R_{2}$ be two equivalence relations on a set, A. Prove or give 
 
 Prove that for any nonempty set D, there is a unique binary relation on D that is both a weak partial order and also an equivalence relation.
 
-<!-- page: 380 -->
-
 ## 9.11. Summary of Relational Properties
 
 ## Exam Problems
@@ -14174,10 +13383,6 @@ The less-than, $<$, relation on real-valued functions, $f(x)$, of the form $f(x)
 
 The relation “has the same prime factors” on the integers.
 
-<!-- page: 381 -->
-
-<!-- page: 382 -->
-
 ## 10
 
 # Communication Networks
@@ -14194,8 +13399,6 @@ Recall that there is a unique path between every pair of vertices in a tree. So,
 
 Communication networks are supposed to get packets from inputs to outputs, with each packet entering the network at its own input switch and arriving at its own output switch. We're going to consider several different communication network designs, where each network has $N$ inputs and $N$ outputs; for convenience, we'll
 
-<!-- page: 383 -->
-
 Chapter 10 Communication Networks
 
 assume $N$ is a power of two.
@@ -14209,8 +13412,6 @@ The delay between the time that a packets arrives at an input and arrives at its
 Packets are usually routed from input to output by the shortest path possible. With a shortest-path routing, the worst-case delay is the distance between the input and output that are farthest apart. This is called the diameter of the network. In other words, the diameter of a network $^{1}$ is the maximum length of any shortest
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ The usual definition of diameter for a general graph (simple or directed) is the largest distance between any two vertices, but in the context of a communication network we're only interested in the distance between inputs and outputs, not between arbitrary pairs of vertices.</span></small>
-
-<!-- page: 384 -->
 
 path between an input and an output. For example, in the complete binary tree above, the distance from input 1 to output 3 is six. No input and output are farther apart than this, so the diameter of this tree is also six.
 
@@ -14232,8 +13433,6 @@ $$
 
 the total number of switches is 2N - 1, which is nearly the best possible with  $3 \times 3$  switches.
 
-<!-- page: 385 -->
-
 Chapter 10 Communication Networks
 
 ## 10.5 Network Latency
@@ -14250,8 +13449,6 @@ The complete binary tree has a fatal drawback: the root switch is a bottleneck. 
 
 It's true that if the routing problem is given by the identity permutation,  $\mathrm{Id}(i)::=i$ , then there is an easy routing, P, that solves the problem: let  $P_{i}$  be the path from input i up through one switch and back down to output i. On the other hand, if the problem was given by  $\pi(i)::=(N-1)-i$ , then in any solution, Q, for  $\pi$ , each path  $Q_{i}$  beginning at input i must eventually loop all the way up through the root switch and then travel back down to output  $(N-1)-i$ . These two situations are illustrated below. We can distinguish between a “good” set of paths and a “bad” set based on congestion. The congestion of a routing, P, is equal to the largest number of paths in P that pass through a single switch. For example, the congestion of the routing on the left is 1, since at most 1 path passes through each switch. However, the congestion of the routing on the right is 4, since 4 paths pass through the root
 
-<!-- page: 386 -->
-
 10.7. 2-D Array
 
 switch (and the two switches directly below the root). Generally, lower congestion is better since packets can be delayed at an overloaded switch.
@@ -14263,7 +13460,6 @@ So for the complete binary tree, the worst permutation would be  $\pi(i) ::= (N 
 Let's tally the results of our analysis so far:
 
 | network | diameter | switch size | # switches | congestion |
-| --- | --- | --- | --- | --- |
 | complete binary tree | $2 \log N + 2$ | $3 \times 3$ | $2N - 1$ | $N$ |
 
 ## 10.7 2-D Array
@@ -14276,11 +13472,7 @@ The diameter in this example is 8, which is the number of edges between input 0 
 
 Theorem 10.7.1. The congestion of an N-input array is 2.
 
-<!-- page: 387 -->
-
 Chapter 10 Communication Networks
-
-<!-- page: 388 -->
 
 ## 10.8. Butterfly
 
@@ -14293,7 +13485,6 @@ As with the tree, the network latency when minimizing congestion is the same as 
 Now we can record the characteristics of the 2-D array.
 
 | network | diameter | switch size | # switches | congestion |
-| --- | --- | --- | --- | --- |
 | complete binary tree | $2\log N + 2$ | $3 \times 3$ | $2N - 1$ | $N$ |
 | 2-D array | $2N$ | $2 \times 2$ | $N^{2}$ | 2 |
 
@@ -14309,8 +13500,6 @@ The base case is  $F_{1}$  with 2 input switches and 2 output switches connected
 
 In the constructor step, we construct  $F_{n+1}$  with  $2^{n+1}$  inputs and outputs out of two  $F_{n}$  nets connected to a new set of  $2^{n+1}$  input switches, as shown in as in Figure 10.2. That is, the i th and  $2^{n} + i$ th new input switches are each connected to the same two switches, the i th input switches of each of two  $F_{n}$  components for
 
-<!-- page: 389 -->
-
 Chapter 10 Communication Networks
 
 Figure 10.1  $F_{1}$ , the Butterfly Net switches with  $N = 2^{1}$ .
@@ -14325,8 +13514,6 @@ There is an easy recursive procedure to route a packet through the Butterfly Net
 
 The congestion of the butterfly network is about  $\sqrt{N}$ . More precisely, the congestion is  $\sqrt{N}$  if N is an even power of 2 and  $\sqrt{N/2}$  if N is an odd power of 2. A
 
-<!-- page: 390 -->
-
 Figure 10.2  $F_{n+1}$ , the Butterfly Net switches with  $2^{n+1}$  inputs and outputs.
 
 simple proof of this appears in Problem10.8.
@@ -14334,7 +13521,6 @@ simple proof of this appears in Problem10.8.
 Let's add the butterfly data to our comparison table:
 
 | network | diameter | switch size | # switches | congestion |
-| --- | --- | --- | --- | --- |
 | complete binary tree | $2 \log N + 2$ | $3 \times 3$ | $2N - 1$ | $N$ |
 | 2-D array | $2N$ | $2 \times 2$ | $N^{2}$ | $2$ |
 | butterfly | $\log N + 2$ | $2 \times 2$ | $N(\log(N) + 1)$ | $\sqrt{N}$ or $\sqrt{N/2}$ |
@@ -14344,8 +13530,6 @@ The butterfly has lower congestion than the complete binary tree. It also uses f
 ## 10.9 Beneš Network
 
 In the 1960's, a researcher at Bell Labs named Václav E. Beneš had a remarkable idea. He obtained a marvelous communication network with congestion 1 by placing two butterflies back-to-back. This amounts to recursively growing Beneš nets by adding both inputs and outputs at each stage. Now we recursively define $B_{n}$
-
-<!-- page: 391 -->
 
 Chapter 10 Communication Networks
 
@@ -14365,14 +13549,11 @@ All paths in  $B_{n+1}$  from an input switch to an output are length  $2(n+1)-1
 
 So Beneš has doubled the number of switches and the diameter, but by doing so he has completely eliminated congestion problems! The proof of this fact relies on
 
-<!-- page: 392 -->
-
 ## 10.9. Beneš Network
 
 a clever induction argument that we'll come to in a moment. Let's first see how the Beneš network stacks up:
 
 | network | diameter | switch size | # switches | congestion |
-| --- | --- | --- | --- | --- |
 | complete binary tree | $2 \log N + 2$ | $3 \times 3$ | $2N - 1$ | $N$ |
 | 2-D array | $2N$ | $2 \times 2$ | $N^{2}$ | $2$ |
 | butterfly | $\log N + 2$ | $2 \times 2$ | $N(\log(N) + 1)$ | $\sqrt{N}$ or $\sqrt{N/2}$ |
@@ -14406,8 +13587,6 @@ $$
 
 We can route each packet to its destination through either the upper subnetwork or the lower subnetwork. However, the choice for one packet may constrain the choice for another. For example, we cannot route both packet 0 and packet 4 through the same network, since that would cause two packets to collide at a single switch, resulting in congestion. Rather, one packet must go through the upper
 
-<!-- page: 393 -->
-
 Figure 10.4 Beneš net $B_{3}$.
 
 network and the other through the lower network. Similarly, packets 1 and 5, 2 and 6, and 3 and 7 must be routed through different networks. Let's record these constraints in a graph. The vertices are the 8 packets. If two packets must pass through different networks, then there is an edge between them. Thus, our constraint graph looks like this:
@@ -14415,8 +13594,6 @@ network and the other through the lower network. Similarly, packets 1 and 5, 2 a
 Notice that at most one edge is incident to each vertex.
 
 The output side of the network imposes some further constraints. For example, the packet destined for output 0 (which is packet 6) and the packet destined for output 4 (which is packet 2) cannot both pass through the same network; that would require both packets to arrive from the same switch. Similarly, the packets destined for outputs 1 and 5, 2 and 6, and 3 and 7 must also pass through different switches. We can record these additional constraints in our graph with gray edges:
-
-<!-- page: 394 -->
 
 10.9. Beneš Network
 
@@ -14437,8 +13614,6 @@ Case 1: [The cycle contains a doubled edge.] No other edge can be incident to ei
 Case 2: [No edge on the cycle is doubled.] Since each vertex is incident to at most one edge from each set, any path with no doubled edges must traverse successive edges that alternate from one set to the other. In particular, a cycle must traverse a path of alternating edges that begins and ends with edges from different sets. This means the cycle has to be of even length.
 
 For example, here is a 2-coloring of the constraint graph:
-
-<!-- page: 395 -->
 
 Chapter 10 Communication Networks
 
@@ -14465,8 +13640,6 @@ Consider the following communication network:
 (a) What is the max congestion?
 
 0.5in
-
-<!-- page: 396 -->
 
 ## 10.9. Beneš Network
 
@@ -14504,8 +13677,6 @@ Each packet must be routed through either the upper subnetwork or the lower subn
 
 (b) Add a solid edge in your graph between each pair of packets that can not go
 
-<!-- page: 397 -->
-
 through the same subnetwork because a collision would occur in the next-to-last column of switches.
 
 (c) Color the vertices of your graph red and blue so that adjacent vertices get different colors. Why must this be possible, regardless of the permutation  $\pi$ ?
@@ -14525,7 +13696,6 @@ Two edges point from each leaf of an input tree, and each of these edges points 
 (b) Fill in the table, and explain your entries.
 
 | # switches | switch size | diameter | max congestion |
-| --- | --- | --- | --- |
 |  |  |  |  |
 
 ## Problem 10.4.
@@ -14533,8 +13703,6 @@ Two edges point from each leaf of an input tree, and each of these edges points 
 The n-input 2-D array network was shown to have congestion 2. An n-input 2-layer array consisting of two n-input 2-D Arrays connected as pictured below for n = 4.
 
 In general, an n-input 2-layer array has two layers of switches, with each layer connected like an n-input 2-D array. There is also an edge from each switch in the
-
-<!-- page: 398 -->
 
 ## 10.9. Beneš Network
 
@@ -14551,15 +13719,12 @@ first layer to the corresponding switch in the second layer. The inputs of the 2
 A 5-path communication network is shown below. From this, it's easy to see what an $n$-path network would be. Fill in the table of properties below, and be prepared to justify your answers.
 
 | network | # switches | switch size | diameter | max congestion |
-| --- | --- | --- | --- | --- |
 | 5-path |  |  |  |  |
 | n-path |  |  |  |  |
 
 ## Problem 10.6.
 
 Tired of being a TA, Megumi has decided to become famous by coming up with a
-
-<!-- page: 399 -->
 
 Chapter 10 Communication Networks
 
@@ -14572,10 +13737,7 @@ In the Megumi-net a minimum latency routing does not have minimum congestion. Th
 Fill in the following chart for Megumi's new net and explain your answers.
 
 | network | diameter | # switches | congestion | LMC | CML |
-| --- | --- | --- | --- | --- | --- |
 | Megumi’s net |  |  |  |  |  |
-
-<!-- page: 400 -->
 
 ## 10.9. Beneš Network
 
@@ -14592,7 +13754,6 @@ In the Reasoner-net a minimum latency routing does not have minimum congestion. 
 Fill in the following chart for the Reasoner-net and briefly explain your answers.
 
 | diameter | switch size(s) | # switches | congestion | LMC | CML |
-| --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |
 
 ## Problem 10.8.
@@ -14604,10 +13765,6 @@ Show that the congestion of the butterfly net, $F_{n}$, is exactly $\sqrt{N}$ wh
 \- If $v$ is a vertex in column $i$ of the butterfly network, there is a path from exactly $2^i$ input vertices to $v$ and a path from $v$ to exactly $2^{n - i}$ output vertices.
 
 \- At which column of the butterfly network must the congestion be worst? What is the congestion of the topmost switch in that column of the network?
-
-<!-- page: 401 -->
-
-<!-- page: 402 -->
 
 ## Simple Graphs
 
@@ -14624,8 +13781,6 @@ Don't answer—this is a trick question designed to trip you up. Using a little 
 ## 11.1 Vertex Adjacency and Degrees
 
 Simple graphs are defined as digraphs in which edges are undirected—they connect two vertices without pointing in either direction between the vertices. So instead of a directed edge  $\langle v \rightarrow w\rangle$  which starts at vertex v and ends at vertex w, a simple
-
-<!-- page: 403 -->
 
 Chapter 11 Simple Graphs
 
@@ -14655,8 +13810,6 @@ Definition 11.1.2. Two vertices in a simple graph are said to be adjacent iff th
 
 For example, for the graph $H$ of Figure 11.1, vertex $a$ is adjacent to vertex $b$, and $b$ is adjacent to $d$. The edge $\langle a - c \rangle$ is incident to its endpoints $a$ and $c$. Vertex $h$ has degree 1, $d$ has degree 2, and $\deg(e) = 3$. It is possible for a vertex to have degree 0, in which case it is not adjacent to any other vertices. A simple graph, $G$,
 
-<!-- page: 404 -->
-
 ## 11.2. Sexual Demographics in America
 
 does not need to have any edges at all.  $|E(G)|$  could be zero, implying that the degree of every vertex would also be zero. But a simple graph must have at least one vertex— $|V(G)|$  is required to be at least one.
@@ -14676,8 +13829,6 @@ Actually, this is a pretty hard graph to figure out, let alone draw. The graph i
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ You might try to represent a self-loop going between a vertex v and itself as  $\{v, v\}$ , but this equals  $\{v\}$ . It wouldn't be an edge, which is defined to be a set of two vertices.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$For simplicity, we'll ignore the possibility of someone being both a man and a woman, or neither.</span></small>
-
-<!-- page: 405 -->
 
 Chapter 11 Simple Graphs
 
@@ -14705,8 +13856,6 @@ In other words, we've proved that the average number of female partners of males
 
 Now the Census Bureau reports that there are slightly more females than males in America; in particular $|F| / |M|$ is about 1.035. So we know that males have on average $3.5\%$ more opposite-gender partners than females, and that this tells us nothing about any sex's promiscuity or selectivity. Rather, it just has to do with the relative number of males and females. Collectively, males and females have the same number of opposite gender partners, since it takes one of each set for every
 
-<!-- page: 406 -->
-
 ## 11.3. Some Common Graphs
 
 partnership, but there are fewer males, so they have a higher ratio. This means that the University of Chicago, ABC, and the Federal government studies are way off. After a huge effort, they gave a totally wrong answer.
@@ -14730,8 +13879,6 @@ We refer to Lemma 11.2.1 as the Handshaking Lemma: if we total up the number of 
 Some graphs come up so frequently that they have names. A complete graph $K_{n}$ has $n$ vertices and an edge between every two vertices, for a total of $n(n - 1)/2$ edges. For example, $K_{5}$ is shown in Figure 11.3.
 
 The empty graph has no edges at all. For example, the empty graph with 5 nodes is shown in Figure 11.4.
-
-<!-- page: 407 -->
 
 Chapter 11 Simple Graphs
 
@@ -14759,8 +13906,6 @@ If we add the edge $\langle v_n - v_1\rangle$ to the line graph $L_{n}$, we get 
 
 Figure 11.5 $L_{5}$: a 5-node line graph.
 
-<!-- page: 408 -->
-
 ## 11.4. Isomorphism
 
 Figure 11.6 $C_5$: a 5-node cycle graph.
@@ -14781,8 +13926,6 @@ $$
 
 for all $u, v \in V(G)$. Two graphs are isomorphic when there is an isomorphism between them.
 
-<!-- page: 409 -->
-
 Chapter 11 Simple Graphs
 
 Figure 11.8 Isomorphic $C_5$ graphs.
@@ -14802,8 +13945,6 @@ Notice that if f is an isomorphism between G and H, then  $f^{-1}$  is an isomor
 Isomorphism preserves the connection properties of a graph, abstracting out what the vertices are called, what they are made out of, or where they appear in a drawing of the graph. More precisely, a property of a graph is said to be preserved under isomorphism if whenever $G$ has that property, every graph isomorphic to $G$ also has that property. For example, since an isomorphism is a bijection between sets of vertices, isomorphic graphs must have the same number of vertices. What's more, if $f$ is a graph isomorphism that maps a vertex, $v$, of one graph to the vertex, $f(v)$, of an isomorphic graph, then by definition of isomorphism, every vertex adjacent to $v$ in the first graph will be mapped by $f$ to a vertex adjacent to $f(v)$ in the isomorphic graph. Thus, $v$ and $f(v)$ will have the same degree. If one graph has a vertex of degree 4 and another does not, then they can't be isomorphic. In fact, they can't be isomorphic if the number of degree 4 vertices in each of the graphs is not the same.
 
 Looking for preserved properties can make it easy to determine that two graphs are not isomorphic, or to guide the search for an isomorphism when there is one. It's generally easy in practice to decide whether two graphs are isomorphic. However, no one has yet found a procedure for determining whether two graphs are
-
-<!-- page: 410 -->
 
 ## 11.5. Bipartite Graphs & Matchings
 
@@ -14835,8 +13976,6 @@ But what about getting a mate for every man so that every woman is married at mo
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ Partitioning a set means cutting it up into nonempty pieces. In this case, it means that  $L(G)$  and  $R(G)$  are nonempty,  $L(G) \cup R(G) = V(G)$ , and  $L(G) \cap R(G) = \emptyset$ .</span></small>
 
-<!-- page: 411 -->
-
 Figure 11.9 A graph where an edge between a man and woman denotes that the man likes the woman.
 
 he likes? The answer, of course, depends on the bipartite graph that represents who likes who, but the good news is that it is possible to find natural properties of the who-likes-who graph that completely determine the answer to this question.
@@ -14852,8 +13991,6 @@ A famous result known as Hall's Matching Theorem gives necessary and sufficient 
 We'll state and prove Hall's Theorem using man-likes-woman terminology. Define the set of women liked by a given set of men to consist of all women liked by
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ By the way, we do not mean to imply that marriage should or should not be heterosexual. Nor do we mean to imply that men should get their choice instead of women. It’s just that there are fewer men than women in America, making it impossible to match up all the women with different men. So please don’t take offense.</span></small>
-
-<!-- page: 412 -->
 
 ## 11.5. Bipartite Graphs & Matchings
 
@@ -14877,8 +14014,6 @@ $$
 
 Base case ( $|M| = 1$ ): If  $|M| = 1$ , then the matching condition implies that the lone man likes at least one woman, and so a matching exists.
 
-<!-- page: 413 -->
-
 Chapter 11 Simple Graphs
 
 Inductive Step: Suppose that  $|M| = m + 1 \geq 2$ . To find a matching for M, there are two cases.
@@ -14898,8 +14033,6 @@ The proof of Theorem 11.5.2 gives an algorithm for finding a matching in a bipar
 Let's restate Theorem 11.5.2 in abstract terms so that you'll not always be condemned to saying, “Now this group of men likes at least as many women…”
 
 Definition 11.5.3. A matching in a graph G is a set M of edges of G such that no vertex is an endpoint of more than one edge in M. A matching is said to cover a set, S, of vertices iff each vertex in S is an endpoint of an edge of the matching. A matching is said to be perfect if it covers  $V(G)$ . In any graph, G, the set  $\mathrm{N}(S)$  of
-
-<!-- page: 414 -->
 
 ## 11.5. Bipartite Graphs & Matchings
 
@@ -14943,8 +14076,6 @@ Also, since every node in S is the endpoint of at least d edges,
 
 #edges incident to a vertex in  $S \geq d|S|$ .
 
-<!-- page: 415 -->
-
 Chapter 11 Simple Graphs
 
 It follows that $d|\mathrm{N}(S)| \geq d|S|$. Cancelling $d$ completes the derivation of equation (11.2).
@@ -14967,8 +14098,6 @@ For example, suppose Brad likes Angelina best, and Angelina likes Brad best, but
 
 This unfortunate situation is illustrated in Figure 11.11, where the digits “1” and “2” near a man shows which of the two women he ranks first and second, respectively, and similarly for the women.
 
-<!-- page: 416 -->
-
 11.6. The Stable Marriage Problem
 
 Figure 11.11 Preferences for four people. Both men like Angelina best and both women like Brad best.
@@ -14984,8 +14113,6 @@ The question is, given everybody's preferences, can you find a stable set of mar
 It turns out there always is a stable matching among a group of men and women. We don't know of any immediate way to recognize this, and it seems surprising. In fact, in the apparently similar “buddy” matching problem where people are supposed to be paired off as buddies, regardless of gender, a stable matching may not be possible. An example of preferences among four people where there is no stable buddy match is given in Problem 11.22. But when men are only allowed to marry women, and vice-versa, then we will be able to describe a simple procedure to produce a stable matching.$^{6}$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$Once again, we disclaim any political statement here—it’s just the way that the math works out.</span></small>
-
-<!-- page: 417 -->
 
 Chapter 11 Simple Graphs
 
@@ -15009,8 +14136,6 @@ There are a number of facts about this Mating Ritual that we would like to prove
 
 \- The resulting marriages are stable.
 
-<!-- page: 418 -->
-
 ## 11.6. The Stable Marriage Problem
 
 Mating Ritual at Akamai
@@ -15026,8 +14151,6 @@ It's easy to see why the Mating Ritual has a terminal day when people finally ge
 ## 11.6.3 They All Live Happily Ever After...
 
 We will prove that the Mating Ritual leaves everyone in a stable marriage. To do this, we note one very useful fact about the Ritual: if on some morning a woman has any suitor, then her favorite suitor will still be serenading her the next morning—his list won’t have changed. So she is sure to have today’s favorite suitor among her suitors tomorrow. That means she will be able to choose a favorite suitor tomorrow who is at least as desirable to her as today’s favorite. So day by day, her favorite suitor can stay the same or get better, never worse. This sounds like an invariant,
-
-<!-- page: 419 -->
 
 Chapter 11 Simple Graphs
 
@@ -15053,8 +14176,6 @@ Case 1: Jen is not on Brad's list by the end. Then by invariant $P$, we know tha
 
 Case 2: Jen is on Brad's list. Since Brad picks women to serenade by working down his list, his wife must be higher on his preference list than Jen. So he's not going to run off with Jen—once again, Brad and Jen are not a rogue couple.
 
-<!-- page: 420 -->
-
 11.6. The Stable Marriage Problem
 
 ## 11.6.4 ...Especially the Men
@@ -15074,8 +14195,6 @@ Definition 11.6.7. Let $Q$ be the predicate: for every woman, $w$, and man, $m$,
 Proof. Suppose $Q$ holds at some point in the Ritual and some woman, Alice, is about to be crossed off some man's, Bob's, list. We claim that Alice must not be feasible for Bob. Therefore $Q$ will still hold after Alice is crossed off, proving that $Q$ is invariant.
 
 To verify the claim, notice that when Alice gets crossed of Bob's list, it's because Alice has a suitor, Ted, she prefers to Bob. What's more since $Q$ holds, all Ted's feasible wives are still on his list, and Alice is at the top. So Ted likes Alice better than all his other feasible spouses. Now if Alice could be married to Bob in some set of stable marriages, then Ted must be married to a wife he likes less than Alice, making Alice and Ted a rogue couple and contradicting stability. So Alice can't be married to Bob, that is, Alice is not a feasible wife for Bob, as claimed.
-
-<!-- page: 421 -->
 
 Chapter 11 Simple Graphs
 
@@ -15099,8 +14218,6 @@ Not surprisingly, the Mating Ritual is also used by at least one large online da
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ Much more about the Stable Marriage Problem can be found in the very readable mathematical monograph by Dan Gusfield and Robert W. Irving, [24].</span></small>
 
-<!-- page: 422 -->
-
 ## 11.7. Coloring
 
 Figure 11.12 A scheduling graph for five exams. Exams connected by an edge cannot be given at the same time.
@@ -15118,8 +14235,6 @@ The Schedules Office's problem is easy to describe as a graph. There will be a v
 6.002 and 6.042 cannot have an exam at the same time since there are students in both courses, so there is an edge between their nodes. On the other hand, 6.042 and 6.170 can have an exam at the same time if they're taught at the same time (which they sometimes are), since no student can be enrolled in both (that is, no student should be enrolled in both when they have a timing conflict).
 
 We next identify each time slot with a color. For example, Monday morning
-
-<!-- page: 423 -->
 
 Chapter 11 Simple Graphs
 
@@ -15140,8 +14255,6 @@ In general, trying to figure out if you can color a graph with a fixed number of
 ## 11.7.2 Some Coloring Bounds
 
 There are some simple properties of graphs that give useful bounds on colorability. The simplest property is being a cycle: an even-length closed cycle is 2-colorable.
-
-<!-- page: 424 -->
 
 ## 11.7. Coloring
 
@@ -15181,8 +14294,6 @@ Proof of Theorem 11.7.3. We use induction on the number of vertices in the graph
 
 Base case  $(n = 1)$ : A 1-vertex graph has maximum degree 0 and is 1-colorable, so  $P(1)$  is true.
 
-<!-- page: 425 -->
-
 Chapter 11 Simple Graphs
 
 Figure 11.14 A 7-node star graph.
@@ -15199,8 +14310,6 @@ One reason coloring problems frequently arise in practice is because scheduling 
 
 Another example comes from the need to assign frequencies to radio stations. If
 
-<!-- page: 426 -->
-
 two stations have an overlap in their broadcast area, they can't be given the same frequency. Frequencies are precious and expensive, so you want to minimize the number handed out. This amounts to finding the minimum coloring for a graph whose vertices are the stations and whose edges connect stations with overlapping areas.
 
 Coloring also comes up in allocating registers for program variables. While a variable is in use, its value needs to be saved in a register. Registers can be reused for different variables but two variables need different registers if they are referenced during overlapping intervals of program execution. So register allocation is the coloring problem for a graph whose vertices are the variables: vertices are adjacent if their intervals overlap, and the colors are registers. Once again, the goal is to minimize the number of colors needed to color the graph.
@@ -15216,8 +14325,6 @@ Surprisingly, it's another of those million dollar prize questions to find an ef
 Walks and paths in simple graphs are essentially the same as in digraphs. We just modify the digraph definitions using undirected edges instead of directed ones. For example, the formal definition of a walk in a simple graph is a virtually the same as the Definition 9.2.1 of a walk in a digraph:
 
 Definition 11.8.1. A walk in a simple graph, G, is an alternating sequence of vertices and edges that begins with a vertex, ends with a vertex, and such that for every edge  $\langle u—v\rangle$  in the walk, one of the endpoints u, v is the element just before the
-
-<!-- page: 427 -->
 
 Chapter 11 Simple Graphs
 
@@ -15244,8 +14351,6 @@ As in digraphs, the length of a walk is one less than the number of occurrences 
 ## 11.8.2 Cycles as Subgraphs
 
 A cycle does not really have a beginning or an end, so it can be described by any of the paths that go around it. For example, in the graph in Figure 11.15, the cycle starting at b and going through vertices bcdehb can also be described as starting
-
-<!-- page: 428 -->
 
 ## 11.9. Connectivity
 
@@ -15281,8 +14386,6 @@ Definition 11.9.1. Two vertices are connected in a graph when there is a path th
 
 Being connected is usually a good property for a graph to have. For example, it could mean that it is possible to get from any node to any other node, or that it is possible to communicate between any pair of nodes, depending on the application.
 
-<!-- page: 429 -->
-
 Chapter 11 Simple Graphs
 
 But not all graphs are connected. For example, the graph where nodes represent cities and edges represent highways might be connected for North American cities, but would surely not be connected if you also included cities in Australia. The same is true for communication networks like the internet—in order to be protected from viruses that spread on the internet, some government networks are completely isolated from the internet.
@@ -15306,8 +14409,6 @@ Theorem 11.9.3. The following graph properties are equivalent:
 2. The graph is not 2-colorable.
 
 3. The graph contains an odd length closed walk.
-
-<!-- page: 430 -->
 
 ## 11.9. Connectivity
 
@@ -15353,8 +14454,6 @@ $$
 \mathbf {w} = \mathbf {f} \widehat {x} \mathbf {r}
 $$
 
-<!-- page: 431 -->
-
 for some positive length walks f and r that begin and end at x. Since
 
 $$
@@ -15385,8 +14484,6 @@ Notice that according to Definition 11.9.4, if a graph is k-connected, it is als
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{9}$ There is a corresponding definition of k-vertex connectedness based on deleting vertices rather than edges. Graph theory texts usually use “k-connected” as shorthand for “k-vertex connected.” But edge-connectedness will be enough for us.</span></small>
 
-<!-- page: 432 -->
-
 ## 11.9. Connectivity
 
 For example, in the graph in figure 11.15, vertices c and e are 3-connected, b and e are 2-connected, g and e are 1 connected, and no vertices are 4-connected. The graph as a whole is only 1-connected. A complete graph,  $k_{n}$ , is  $(n - 1)$ -connected. Every cycle is 2-connected.
@@ -15415,8 +14512,6 @@ every graph, $G$, with $k$ edges has at least $|V(G)| - k$ connected components.
 
 Base case  $(k = 0)$ : In a graph with 0 edges, each vertex is itself a connected component, and so there are exactly  $|V(G)| = |V(G)| - 0$  connected components. So  $P(0)$  holds.
 
-<!-- page: 433 -->
-
 Chapter 11 Simple Graphs
 
 ## Inductive step:
@@ -15438,8 +14533,6 @@ We've already made good use of digraphs without cycles, but simple graphs withou
 ## 11.10.1 Leaves, Parents & Children
 
 Definition 11.10.1. An acyclic graph is called a forest. A connected acyclic graph is called a tree.
-
-<!-- page: 434 -->
 
 11.10. Forests & Trees
 
@@ -15467,8 +14560,6 @@ Theorem 11.10.3. Every tree has the following properties:
 
 2. There is a unique path between every pair of vertices.
 
-<!-- page: 435 -->
-
 Chapter 11 Simple Graphs
 
 Figure 11.19 The tree from Figure 11.18 redrawn with node e as the root and the other nodes arranged in levels.
@@ -15486,8 +14577,6 @@ Proof. 1. A cycle in a subgraph is also a cycle in the whole graph, so any subgr
 2. Since a tree is connected, there is at least one path between every pair of vertices. Suppose for the purposes of contradiction, that there are two different paths between some pair of vertices. Then there are two distinct paths $\mathbf{p} \neq \mathbf{q}$ between the same two vertices with minimum total length $|\mathbf{p}| + |\mathbf{q}|$. If these paths shared a vertex, $w$, other than at the start and end of the paths, then the parts of $\mathbf{p}$ and $\mathbf{q}$ from start to $w$, or the parts of $\mathbf{p}$ and $\mathbf{q}$ from $w$ to the end, must be distinct paths between the same vertices with total length less than $|\mathbf{p}| + |\mathbf{q}|$, contradicting the minimality of this sum. Therefore, $\mathbf{p}$ and $\mathbf{q}$ have no vertices in common besides their endpoints, and so $\mathbf{p}^{\widehat{\mathrm{~reverse}}(\mathbf{q})}$ is a cycle.
 
 3. An additional edge $\langle u - v\rangle$ together with the unique path between $u$ and $v$ forms a cycle.
-
-<!-- page: 436 -->
 
 ## 11.10. Forests & Trees
 
@@ -15515,8 +14604,6 @@ Trees are everywhere. In fact, every connected graph contains a subgraph that is
 
 Definition 11.10.5. Define a spanning subgraph of a graph, G, to be a subgraph containing all the vertices of G.
 
-<!-- page: 437 -->
-
 Chapter 11 Simple Graphs
 
 Figure 11.20 A graph where the edges of a spanning tree have been thickened.
@@ -15537,8 +14624,6 @@ Definition 11.10.7. A minimum weight spanning tree (MST) of an edge-weighted gra
 
 Is the spanning tree shown in Figure 11.21(a) an MST of the weighted graph shown in Figure 11.21(b)? It actually isn't, since the tree shown in Figure 11.22 is also a spanning tree of the graph shown in Figure 11.21(b), and this spanning tree has weight 17.
 
-<!-- page: 438 -->
-
 (a)
 
 (b)
@@ -15546,8 +14631,6 @@ Is the spanning tree shown in Figure 11.21(a) an MST of the weighted graph shown
 Figure 11.21 A spanning tree (a) with weight 19 for a graph (b).
 
 Figure 11.22 An MST with weight 17 for the graph in Figure 11.21(b).
-
-<!-- page: 439 -->
 
 What about the tree shown in Figure 11.22? It seems to be an MST, but how do we prove it? In general, how do we find an MST for a connected graph G? We could try enumerating all subtrees of G, but that approach would be hopeless for large graphs.
 
@@ -15575,8 +14658,6 @@ Any path in $G$ from a white vertex to a black vertex obviously must include a g
 
 Lemma 11.10.11. An edge extends a pre-MST $F$ if it is a minimum weight gray edge in some solid coloring of $F$.
 
-<!-- page: 440 -->
-
 11.10. Forests & Trees
 
 Figure 11.23 A spanning tree found by Algorithm 1.
@@ -15592,8 +14673,6 @@ Algorithm 2. [Kruskal] Grow a forest one edge at a time by adding a minimum weig
 An edge does not create a cycle iff it connects different components. The edge chosen by Kruskal's algorithm will be the minimum weight gray edge when the components it connects are assigned different colors.
 
 For example, in the weighted graph we have been considering, we might run Algorithm 1 as follows. Start by choosing one of the weight 1 edges, since this is the smallest weight in the graph. Suppose we chose the weight 1 edge on the bottom of the triangle of weight 1 edges in our graph. This edge is incident to the same vertex as two weight 1 edges, a weight 4 edge, a weight 7 edge, and a weight 3 edge. We would then choose the incident edge of minimum weight. In this case, one of the two weight 1 edges. At this point, we cannot choose the third weight 1 edge: it won't be gray because its endpoints are both in the tree, and so are both colored white. But we can continue by choosing a weight 2 edge. We might end up with the spanning tree shown in Figure 11.23, which has weight 17, the smallest we've seen so far.
-
-<!-- page: 441 -->
 
 Chapter 11 Simple Graphs
 
@@ -15616,8 +14695,6 @@ Let F be a pre-MST that is a subgraph of some MST M of G, and suppose e is a min
 If $e$ happens to be an edge of $M$, then $F + e$ remains a subgraph of $M$, and so is a pre-MST.
 
 The other case is when e is not an edge of M. In that case,  $M + e$  will be a connected, spanning subgraph. Also M has a path p between the different colored endpoints of e, so  $M + e$  has a cycle consisting of e together with p. Now p has both a black endpoint and a white one, so it must contain some gray edge  $g \neq e$ . The trick is to remove g from  $M + e$  to obtain a subgraph  $M + e - g$ . Since gray
-
-<!-- page: 442 -->
 
 ## 11.11. References
 
@@ -15652,8 +14729,6 @@ Problem 11.1. (a) Prove that in every simple graph, there are an even number of 
 (c) Call a sequence of people at the party a handshake sequence if each person in the sequence has shaken hands with the next person, if any, in the sequence.
 
 Suppose George was at the party and has shaken hands with an odd number of people. Explain why, starting with George, there must be a handshake sequence ending with a different person who has shaken an odd number of hands.
-
-<!-- page: 443 -->
 
 Chapter 11 Simple Graphs
 
@@ -15694,8 +14769,6 @@ Which of the items below are simple-graph properties preserved under isomorphism
 (g) One vertex is a subset of another one.
 
 (h) The graph can be pictured in a way that all the edges have the same length.
-
-<!-- page: 444 -->
 
 ## 11.11. References
 
@@ -15739,8 +14812,6 @@ Figure 11.24 Graphs with several isomorphisms
 
 Determine which among the four graphs pictured in Figure 11.25 are isomorphic. For each pair of isomorphic graphs, describe an isomorphism between them. For each pair of graphs that are not isomorphic, give a property that is preserved under
 
-<!-- page: 445 -->
-
 Figure 11.25 Which graphs are isomorphic?
 
 isomorphism such that one graph has the property, but the other does not. For at least one of the properties you choose, prove that it is indeed preserved under isomorphism (you only need prove one of them).
@@ -15754,8 +14825,6 @@ $$
 Suppose $f$ is an isomorphism from graph $G$ to graph $H$. Prove that $f(\mathrm{N}(v)) = \mathrm{N}(f(v))$.
 
 Your proof should follow by simple reasoning using the definitions of isomorphism and neighbors—no pictures or handwaving.
-
-<!-- page: 446 -->
 
 ## 11.11. References
 
@@ -15788,8 +14857,6 @@ Sure enough, this is a line graph.
 
 Inductive case: We assume that the induction hypothesis holds for some  $n \geq 1$  and prove that it holds for  $n + 1$ . Let  $G_{n}$  be any two-ended graph with n edges. By the induction assumption,  $G_{n}$  is a line graph. Now suppose that we create a two-ended graph  $G_{n+1}$  by adding one more edge to  $G_{n}$ . This can be done in only one way: the new edge must join an endpoint of  $G_{n}$  to a new vertex; otherwise,  $G_{n+1}$  would not be two-ended.
 
-<!-- page: 447 -->
-
 Chapter 11 Simple Graphs
 
 Clearly,  $G_{n+1}$  is also a line graph. Therefore, the induction hypothesis holds for all graphs with  $n + 1$  edges, which completes the proof by induction.
@@ -15812,14 +14879,11 @@ A Latin square is  $n \times n$  array whose entries are the number  $1, \ldots,
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{10}$ At Guinness brewery in the early 1900's, W. S. Gosset (a chemist) and E. S. Beavan (a “maltster”)</span></small>
 
-<!-- page: 448 -->
-
 ## 11.11. References
 
 For example, here is a  $4 \times 4$  Latin square:
 
 | 1 | 2 | 3 | 4 |
-| --- | --- | --- | --- |
 | 3 | 4 | 2 | 1 |
 | 2 | 1 | 4 | 3 |
 | 4 | 3 | 1 | 2 |
@@ -15827,7 +14891,6 @@ For example, here is a  $4 \times 4$  Latin square:
 (a) Here are three rows of what could be part of a  $5 \times 5$  Latin square:
 
 | 2 | 4 | 5 | 3 | 1 |
-| --- | --- | --- | --- | --- |
 | 4 | 1 | 3 | 2 | 5 |
 | 3 | 2 | 1 | 5 | 4 |
 |  |  |  |  |  |
@@ -15844,8 +14907,6 @@ Fill in the last two rows to extend this “Latin rectangle” to a complete Lat
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">Somewhat sceptical about paying high prices for customized fertilizer, Gosset and Beavan planned a season long test of the influence of fertilizer and planting month on barley yields. For as many months as there were varieties of barley, they would plant one sample of each variety using a different one of the fertilizers. So every month, they would have all the barley varieties planted and all the fertilizers used, which would give them a way to judge the overall quality of that planting month. But they also wanted to judge the fertilizers, so they wanted each fertilizer to be used on each variety during the course of the season. Now they had a little mathematical problem, which we can abstract as follows.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">Suppose there are n barley varieties and an equal number of recommended fertilizers. Form an  $n \times n$  array with a column for each fertilizer and a row for each planting month. We want to fill in the entries of this array with the integers  $1, \ldots, n$  numbering the barley varieties, so that every row contains all n integers in some order (so every month each variety is planted and each fertilizer is used), and also every column contains all n integers (so each fertilizer is used on all the varieties over the course of the growing season).</span></small>
-
-<!-- page: 449 -->
 
 ## Problem 11.11.
 
@@ -15871,8 +14932,6 @@ Because of the incredible popularity of Math for Computer Science, Rajeev decide
 
 (a) Explain how to model the delegate selection problem as a bipartite matching problem.
 
-<!-- page: 450 -->
-
 ## 11.11. References
 
 (b) The staff's records show that each student is a member of at most 4 groups, and all the groups have 4 or more members. That's enough to guarantee there is a proper delegate selection. Explain.
@@ -15892,7 +14951,6 @@ For example,  $(P \text{ AND } Q) \widehat{R} P$ , because the formula  $(P \tex
 (b) Fill in the  $\widehat{R}$  arrows from A to B.
 
 | A | arrows | B |
-| --- | --- | --- |
 |  |  | Q |
 
 $P\mathrm{XOR}Q$
@@ -15910,8 +14968,6 @@ NOT(P AND Q)
 (c) The diagram in part (b) defines a bipartite graph $G$ with $L(G) = A$, $R(G) = B$ and an edge between $F$ and $G$ iff $F\widehat{R} G$. Exhibit a subset $S$ of $A$ such that both $S$ and $A - S$ are nonempty, and the set $\mathrm{N}(S)$ of neighbors of $S$ is the same size as $S$, that is, $|\mathrm{N}(S)| = |S|$.
 
 (d) Let $G$ be an arbitrary, finite, bipartite graph. For any subset $S \subseteq L(G)$, let $\overline{S} ::= L(G) - S$, and likewise for any $M \subseteq R(G)$, let $\overline{M} ::= R(G) - M$. Suppose
-
-<!-- page: 451 -->
 
 Chapter 11 Simple Graphs
 
@@ -15943,8 +14999,6 @@ Scholars through the ages have identified twenty fundamental human virtues: hone
 
 Suggestion: Use Hall's theorem. Try various interpretations for the vertices on the left and right sides of your bipartite graph.
 
-<!-- page: 452 -->
-
 ## 11.11. References
 
 ## Problems for Section 11.6
@@ -15956,14 +15010,12 @@ Suggestion: Use Hall's theorem. Try various interpretations for the vertices on 
 Four Students want separate assignments to four VI-A Companies. Here are their preference rankings:
 
 | Student | Companies |
-| --- | --- |
 | Albert: | HP, Bellcore, AT&amp;T, Draper |
 | Sarah: | AT&amp;T, Bellcore, Draper, HP |
 | Tasha: | HP, Draper, AT&amp;T, Bellcore |
 | Elizabeth: | Draper, AT&amp;T, Bellcore, HP |
 
 | Company | Students |
-| --- | --- |
 | AT&amp;T: | Elizabeth, Albert, Tasha, Sarah |
 | Bellcore: | Tasha, Sarah, Albert, Elizabeth |
 | HP: | Elizabeth, Tasha, Albert, Sarah |
@@ -15987,8 +15039,6 @@ d. Alice is crossed off Harry's list, and Harry prefers Alice to anyone he is se
 
 e. If Alice is on Harry's list, then she prefers Harry to any suitor she has.
 
-<!-- page: 453 -->
-
 Chapter 11 Simple Graphs
 
 ## Problem 11.19.
@@ -16004,7 +15054,6 @@ Hint: Follows directly from the definition of “rogue couple.”
 The preferences among 4 boys and 4 girls are partially specified in the following table:
 
 | B1: | G1 | G2 | - | - |
-| --- | --- | --- | --- | --- |
 | B2: | G2 | G1 | - | - |
 | B3: | - | - | G4 | G3 |
 | B4: | - | - | G3 | G4 |
@@ -16029,8 +15078,6 @@ Hint: Arrange the boys into a list of $n/2$ pairs, and likewise arrange the girl
 
 The Mating Ritual of Section 11.6.1 for finding stable marriages works even when the numbers of men and women are not equal. As before, a set of (monogamous) marriages between men and women is called stable when it has no “rogue couples.”
 
-<!-- page: 454 -->
-
 ## 11.11. References
 
 (a) Extend the definition of rogue couple so it covers the case of unmarried men and women. Verify that in a stable set of marriages, either all the men are married or all the women are married.
@@ -16050,8 +15097,6 @@ Figure 11.26 Some preferences with no stable buddy matching.
 The most famous application of stable matching was in assigning graduating medical students to hospital residencies. Each hospital has a preference ranking of students, and each student has a preference ranking of hospitals, but unlike finding stable marriages between an equal number of boys and girls, hospitals generally have differing numbers of available residencies, and the total number of residencies may not equal the number of graduating students.
 
 Explain how to adapt the Stable Matching problem with an equal number of boys and girls to this more general situation. In particular, modify the definition of stable matching so it applies in this situation, and explain how to adapt the Mating Ritual
-
-<!-- page: 455 -->
 
 Chapter 11 Simple Graphs
 
@@ -16095,8 +15140,6 @@ In every marriage, someone is a winner iff their spouse is a loser.
 
 (11.6)
 
-<!-- page: 456 -->
-
 ## 11.11. References
 
 (a) The left to right direction of  $(11.6)$  is equivalent to the assertion that married partners cannot both be winners. Explain why this follows directly from the definition of rogue couple.
@@ -16128,16 +15171,12 @@ In every marriage, someone is a winner iff their spouse is a loser, (11.7)
 Four unfortunate children want to be adopted by four foster families of ill repute. A child can only be adopted by one family, and a family can only adopt one child. Here are their preference rankings (most-favored to least-favored):
 
 | Child | Families |
-| --- | --- |
 | Bottlecap: | Hatfields, McCoys, Grinches, Scrooges |
 | Lucy: | Grinches, Scrooges, McCoys, Hatfields |
 | Dingdong: | Hatfields, Scrooges, Grinches, McCoys |
 | Zippy: | McCoys, Grinches, Scrooges, Hatfields |
 
-<!-- page: 457 -->
-
 | Family | Children |
-| --- | --- |
 | Grinches: | Zippy, Dingdong, Bottlecap, Lucy |
 | Hatfields: | Zippy, Bottlecap, Dingdong, Lucy |
 | Scrooges: | Bottlecap, Lucy, Dingdong, Zippy |
@@ -16146,7 +15185,6 @@ Four unfortunate children want to be adopted by four foster families of ill repu
 (a) Exhibit two different stable matching of Children and Families.
 
 | Family | Child in 1st match | Child in 2nd match |
-| --- | --- | --- |
 | Grinches: |  |  |
 | Hatfields: |  |  |
 | Scrooges: |  |  |
@@ -16175,8 +15213,6 @@ Let Alice be one of the women, and Bob be one of the men. Indicate which of the 
 (f) Bob is not serenading Alice.
 
 (g) Bob's list of women to serenade is empty.
-
-<!-- page: 458 -->
 
 ## 11.11. References
 
@@ -16218,8 +15254,6 @@ A computer can perform such calculations most quickly if the value of each varia
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{11}$ From [29], Exercise 13.3.1</span></small>
 
-<!-- page: 459 -->
-
 program to a register. Computers usually have few registers, however, so they must be used wisely and reused often. This is called the register allocation problem.
 
 In the example above, variables $a$ and $b$ must be assigned different registers, because they hold distinct input values. Furthermore, $c$ and $d$ must be assigned different registers; if they used the same one, then the value of $c$ would be overwritten in the second step and we'd get the wrong answer in the third step. On the other hand, variables $b$ and $d$ may use the same register; after the first step, we no longer need $b$ and can overwrite the register that holds its value. Also, $f$ and $h$ may use the same register; once $f + 1$ is evaluated in the last step, the register holding the value of $f$ can be overwritten.
@@ -16245,8 +15279,6 @@ Suppose an n-vertex bipartite graph has exactly k connected components, each of 
 ## Problem 11.34.
 
 6.042 is often taught using recitations. Suppose it happened that 8 recitations were
-
-<!-- page: 460 -->
 
 ## 11.11. References
 
@@ -16288,8 +15320,6 @@ A simple graph, G, is said to have width w iff its vertices can be arranged in a
 
 (d) Describe an example of a graph with 100 vertices, width 3, but average degree more than 5.
 
-<!-- page: 461 -->
-
 Chapter 11 Simple Graphs
 
 ## Problem 11.36.
@@ -16318,8 +15348,6 @@ A basic example of a simple graph with chromatic number $n$ is the complete grap
 
 This problem will show that 3-coloring a graph is just as difficult as finding a satisfying truth assignment for a propositional formula. The graphs considered will all be taken to have three designated color-vertices connected in a triangle to force them to have different colors in any coloring of the graph. The colors assigned to the color-vertices will be called T, F and N.
 
-<!-- page: 462 -->
-
 ## 11.11. References
 
 Suppose f is an n-argument truth function. That is,
@@ -16346,8 +15374,6 @@ For example, a 3-color-NOT-gate consists simply of two adjacent vertices. One ve
 
 Figure 11.27 Graph $G$ with no triangles and $\chi(G) = 4$.
 
-<!-- page: 463 -->
-
 [h]
 
 Figure 11.28 A 3-color NOT-gate
@@ -16355,8 +15381,6 @@ Figure 11.28 A 3-color NOT-gate
 [h]
 
 Figure 11.29 A 3-color OR-gate
-
-<!-- page: 464 -->
 
 ## 11.11. References
 
@@ -16379,8 +15403,6 @@ So to find a 3-coloring for any simple graph, simply draw it in the plane with e
 (a) Prove that the graph in Figure 11.30 satisfies condition (1) by exhibiting the claimed 3-colorings.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{12}$ This gadget and reduction of 3-colorability to planar 3-colorability are due to Larry Stockmeyer [42].</span></small>
-
-<!-- page: 465 -->
 
 Chapter 11 Simple Graphs
 
@@ -16414,8 +15436,6 @@ Base case:  $(n = 1) G$  has one vertex, the degree of which is 0. Since G is 1-
 
 Inductive step: We may assume  $P(n)$ . To prove  $P(n + 1)$ , let  $G_{n+1}$  be a graph with  $n + 1$  vertices whose vertex degrees are all k or less. Also,
 
-<!-- page: 466 -->
-
 ## 11.11. References
 
 suppose $G_{n+1}$ has a vertex, $v$, of degree strictly less than $k$. Now we only need to prove that $G_{n+1}$ is $k$-colorable.
@@ -16448,8 +15468,6 @@ In the graph shown in Figure 11.32, the vertices connected in the triangle on th
 
 (b) Prove that in any 3-coloring of the whole graph, the vertex labeled $P$ XOR $Q$ is colored with the XOR of the colors of vertices $P$ and $Q$.
 
-<!-- page: 467 -->
-
 [h]
 
 Figure 11.32 A 3-color XOR-gate
@@ -16467,8 +15485,6 @@ Problem 11.43. (a) Give an example of a simple graph that has two vertices $u \n
 The entire field of graph theory began when Euler asked whether the seven bridges of Königsberg could all be crossed exactly once. Abstractly, we can represent the parts of the city separated by rivers as vertices and the bridges as edges between the vertices. Then Euler's question asks whether there is a closed walk through the graph that includes every edge in a graph exactly once. In his honor, such a walk is called an Euler tour.
 
 So how do you tell in general whether a graph has an Euler tour? At first glance this may seem like a daunting problem. The similar sounding problem of finding a cycle that touches every vertex exactly once is one of those Millenium Prize NP-
-
-<!-- page: 468 -->
 
 ## 11.11. References
 
@@ -16506,8 +15522,6 @@ The n-dimensional hypercube,  $H_{n}$ , is a graph whose vertices are the binary
 
 (a) Prove that it is impossible to find two spanning trees of  $H_{3}$  that do not share some edge.
 
-<!-- page: 469 -->
-
 Chapter 11 Simple Graphs
 
 (b) Verify that for any two vertices $x \neq y$ of $H_3$, there are 3 paths from $x$ to $y$ in $H_3$, such that, besides $x$ and $y$, no two of those paths have a vertex in common.
@@ -16530,8 +15544,6 @@ Let $M_{n}$ be a graph defined as follows: begin by taking n graphs with non-ove
 
 (b) Draw a picture of $M_4$.
 
-<!-- page: 470 -->
-
 ## 11.11. References
 
 (c) Explain why $M_{n}$ is $(n - 1)$-edge connected.
@@ -16553,8 +15565,6 @@ $P(2)$ holds because there is only one graph with two vertices of positive degre
 Inductive step: We must show that  $P(n)$  implies  $P(n+1)$  for all  $n \geq 2$ . Consider an n-vertex graph in which every vertex has positive degree. By the assumption  $P(n)$ , this graph is connected; that is, there is a path between every pair of vertices. Now we add one more vertex x to obtain an  $(n+1)$ -vertex graph:
 
 All that remains is to check that there is a path from x to every other vertex z. Since x has positive degree, there is an edge from x to some other vertex, y. Thus, we can obtain a path from x to z by going from x to y and then following the path from y to z. This proves  $P(n + 1)$ .
-
-<!-- page: 471 -->
 
 Chapter 11 Simple Graphs
 
@@ -16583,8 +15593,6 @@ Bogus proof. The proof is by strong induction on the number of vertices in the g
 For the inductive case, assume $n \geq 1$ and $P(1), \ldots, P(n)$ hold. We must prove $P(n + 1)$, namely, that if an $(n + 1)$-node graph is tangled, then it is connected.
 
 So let G be a tangled,  $(n+1)$ -node graph. Choose  $\lceil n/3\rceil$  of the vertices and let  $G_{1}$  be the tangled subgraph of G with these vertices and  $G_{2}$  be the tangled subgraph with the rest of the vertices. Note that since  $n \geq 1$ , the graph G has a least two vertices, and so both  $G_{1}$  and  $G_{2}$  contain at least one vertex. Since  $G_{1}$  and  $G_{2}$  are tangled, we may assume by strong induction that both are connected. Also, since G is tangled, there is an edge leaving the vertices of  $G_{1}$  which necessarily connects to a vertex of  $G_{2}$ . This means there is a path between any two vertices of G: a path within one subgraph if both vertices are in the same subgraph, and a path traversing the connecting edge if the vertices are in separate subgraphs. Therefore, the entire graph, G, is connected. This completes the proof of the inductive case, and the Claim follows by strong induction.
-
-<!-- page: 472 -->
 
 ## 11.11. References
 
@@ -16625,12 +15633,9 @@ How many possible final states are reachable from start state G?
 constant increasing decreasing
 nonincreasing nondecreasing none of these
 
-<!-- page: 473 -->
-
 For any state, let e be the number of edges in it, and let c be the number of connected components it has. Since e may increase or decrease in a transition, it does not have any of the first four properties. The derived variables are:
 
 | 0) e | none of these |
-| --- | --- |
 | i) c | 1.0in |
 | ii) $c + e$ | 1.0in |
 | iii) $2c + e$ | 1.0in |
@@ -16660,8 +15665,6 @@ Hint: Consider a longest path.
 
 (b) For $G - e$, the graph $G$ with vertex $e$ deleted, describe two spanning trees that have no edges in common.
 
-<!-- page: 474 -->
-
 ## 11.11. References
 
 Figure 11.33 The graph $G$.
@@ -16689,8 +15692,6 @@ Let $H_{3}$ be the graph shown in Figure 11.34. Explain why it is impossible to 
 Problem 11.57. (a) Let T be a tree and e a new edge between two vertices of T. Explain why  $T + e$  must contain a cycle.
 
 (b) Conclude that  $T + e$  must have another spanning tree besides T.
-
-<!-- page: 475 -->
 
 Chapter 11 Simple Graphs
 
@@ -16727,8 +15728,6 @@ The diameter of a connected graph is the largest distance between any two vertic
 \- The number of vertices is one less than twice the number of leaves. true false
 
 \- The number of vertices is one less than the number of edges. true false
-
-<!-- page: 476 -->
 
 ## 11.11. References
 
@@ -16769,8 +15768,6 @@ Procedure Mark starts with a connected, simple graph with all edges unmarked and
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{13}\chi(G)$  is the chromatic number of G.</span></small>
 
-<!-- page: 477 -->
-
 Chapter 11 Simple Graphs
 
 Procedure Mark simply keeps marking eligible edges, and terminates when there are none.
@@ -16805,8 +15802,6 @@ The choices for properties are: constant, strictly increasing, strictly decreasi
 (iv) $e - s$
 (v) $c + e$
 (vi) $3c + 2e$
-
-<!-- page: 478 -->
 
 ## 11.11. References
 
@@ -16844,8 +15839,6 @@ $$
 
 (c) Grow an MST for $G$ by treating the vertices $(0,0), (0,3), (2,3)$ as 1-vertex trees and then successively adding, for each tree in parallel, the minimum weight
 
-<!-- page: 479 -->
-
 edge among the edges with one endpoint in the tree. Continue as long as there is no edge between two trees, then go back to applying the general gray edge method until the parallel trees merge to form a spanning tree of $G$. (This is 6.042's parallel MST algorithm.)
 
 (d) Verify that you got the same MST each time.
@@ -16880,8 +15873,6 @@ $$
 
 (b) Prove conversely that if $D$ satisfies equation (11.9), then $D$ is a list of the degrees of the vertices of some $n$-vertex tree. Hint: Induction.
 
-<!-- page: 480 -->
-
 ## 11.11. References
 
 (c) Assume that $D$ satisfies equation (11.9). Show that it is possible to partition $D$ into two sets $S_{1}, S_{2}$ such that the sum of the elements in each set is the same. Hint: Trees are bipartite.
@@ -16891,10 +15882,6 @@ $$
 Prove Corollary 11.10.12: If all edges in a finite weighted graph have distinct weights, then the graph has a unique MST.
 
 Hint: Suppose $M$ and $N$ were different MST's of the same graph. Let $e$ be the smallest edge in one and not the other, say $e \in M - N$, and observe that $N + e$ must have a cycle.
-
-<!-- page: 481 -->
-
-<!-- page: 482 -->
 
 # 12 Planar Graphs
 
@@ -16916,11 +15903,7 @@ We took the idea of a planar drawing for granted in the previous section, but if
 
 Definition 12.2.1. A drawing of a graph assigns to each node a distinct point in the plane and assigns to each edge a smooth curve in the plane whose endpoints correspond to the nodes incident to the edge. The drawing is planar if none of the
 
-<!-- page: 483 -->
-
 Figure 12.1 Three dog houses and and three human houses. Is there a route from each dog house to each human house so that no pair of routes cross each other?
-
-<!-- page: 484 -->
 
 ## 12.2. Definitions of Planar Graphs
 
@@ -16931,8 +15914,6 @@ Figure 12.2 Five quadrapi (4-armed creatures).
 (b)
 
 Figure 12.3  $K_{3,3}$  (a) and  $K_{5}$  (b). Can you redraw these graphs so that no pairs of edges cross?
-
-<!-- page: 485 -->
 
 (a)
 
@@ -16945,8 +15926,6 @@ Figure 12.4 Planar drawings of (a) $K_{3,3}$ without $\langle u - v\rangle$, and
 When wires are arranged on a surface, like a circuit board or microchip, crossings require troublesome three-dimensional structures. When Steve Wozniak designed the disk drive for the early Apple II computer, he struggled mightily to achieve a nearly planar design according to the following excerpt from apple2history.org which in turn quotes Fire in the Valley by Freiberger and Swaine:
 
 For two weeks, he worked late each night to make a satisfactory design. When he was finished, he found that if he moved a connector he could cut down on feedthroughs, making the board more reliable. To make that move, however, he had to start over in his design. This time it only took twenty hours. He then saw another feedthrough that could be eliminated, and again started over on his design. “The final design was generally recognized by computer engineers as brilliant and was by engineering aesthetics beautiful. Woz later said, ‘It’s something you can only do if you’re the engineer and the PC board layout person yourself. That was an artistic layout. The board has virtually no feedthroughs.’”
-
-<!-- page: 486 -->
 
 ## 12.2. Definitions of Planar Graphs
 
@@ -16972,13 +15951,9 @@ These four cycles correspond nicely to the four continuous faces in Figure 12.6 
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ Most texts drop the adjective continuous from the definition of a face as a connected region. We need the adjective to distinguish continuous faces from the discrete faces we're about to define.</span></small>
 
-<!-- page: 487 -->
-
 Figure 12.5 A planar drawing with four continuous faces.
 
 Figure 12.6 The drawing with labeled vertices.
-
-<!-- page: 488 -->
 
 ## 12.2. Definitions of Planar Graphs
 
@@ -17004,8 +15979,6 @@ It turns out that bridges and dongles are the only complications, at least for c
 
 The association between the continuous faces of a planar drawing and closed walks provides the discrete data type we can use instead of continuous drawings. We'll define a planar embedding of connected graph to be the set of closed walks that are its face boundaries. Since all we care about in a graph are the connections between
 
-<!-- page: 489 -->
-
 Figure 12.8 A planar drawing with a dongle.
 
 vertices —not what a drawing of the graph actually looks like —planar embeddings are exactly what we need.
@@ -17021,8 +15994,6 @@ A new curve won't cross any other curves precisely when it stays within one of t
 Definition 12.2.2. A planar embedding of a connected graph consists of a nonempty set of closed walks of the graph called the discrete faces of the embedding. Planar embeddings are defined recursively as follows:
 
 Base case: If G is a graph consisting of a single vertex, v, then a planar embedding of G has one discrete face, namely, the length zero closed walk, v.
-
-<!-- page: 490 -->
 
 ## 12.2. Definitions of Planar Graphs
 
@@ -17054,8 +16025,6 @@ $$
 \alpha^ {\widehat {}} (b \langle b - a \rangle a) \quad \text {and} \quad (a \langle a - b \rangle b) ^ {\widehat {}} \beta
 $$
 
-<!-- page: 491 -->
-
 Chapter 12 Planar Graphs
 
 Figure 12.10 The “add a bridge” case.
@@ -17086,8 +16055,6 @@ Yes! In general, a graph is planar because it has a planar drawing according to 
 
 The bad news is that Definition 12.2.2 is a lot more technical than the intuitively simple notion of a drawing whose edges don't cross. In many cases it's easier to
 
-<!-- page: 492 -->
-
 ## 12.2. Definitions of Planar Graphs
 
 Figure 12.11 Two illustrations of the same embedding.
@@ -17105,8 +16072,6 @@ There isn't one! That's because there really isn't any need to distinguish one f
 So pictures that show different “outside” boundaries may actually be illustrations of the same planar embedding. For example, the two embeddings shown in Figure 12.11 are really the same —check it: they have the same boundary cycles.
 
 This is what justifies the “add bridge” case in Definition 12.2.2: whatever face is chosen in the embeddings of each of the disjoint planar graphs, we can draw a bridge between them without needing to cross any other edges in the drawing, because we can assume the bridge connects two “outer” faces.
-
-<!-- page: 493 -->
 
 ## 12.3 Euler's Formula
 
@@ -17131,8 +16096,6 @@ Constructor case (split a face): Suppose G is a connected graph with a planar em
 Then the graph obtained by adding the edge $\langle a - b\rangle$ to the edges of $G$ has a planar embedding with one more face and one more edge than $G$. So the quantity $v - e + f$ will remain the same for both graphs, and since by structural induction this quantity is 2 for $G$'s embedding, it's also 2 for the embedding of $G$ with the added edge. So $P$ holds for the constructed embedding.
 
 Constructor case (add bridge): Suppose G and H are connected graphs with planar embeddings and disjoint sets of vertices. Then connecting these two graphs with a bridge merges the two bridged faces into a single face, and leaves all other faces unchanged. So the bridge operation yields a planar embedding of a connected
-
-<!-- page: 494 -->
 
 ## 12.4. Bounding the Number of Edges in a Planar Graph
 
@@ -17167,8 +16130,6 @@ Proof. By definition, a connected graph is planar iff it has a planar embedding.
 $$
 3 f \leq 2 e.\tag{12.4}
 $$
-
-<!-- page: 495 -->
 
 Chapter 12 Planar Graphs
 
@@ -17212,8 +16173,6 @@ $$
 4 f \leq 2 e\tag{12.6}
 $$
 
-<!-- page: 496 -->
-
 ## 12.6. Coloring Planar Graphs
 
 for any embedding of a planar bipartite graph. By Euler's theorem, $f = 2 - v + e$. Substituting $2 - v + e$ for $f$ in (12.6), we have
@@ -17248,8 +16207,6 @@ We need only one more lemma:
 
 Proof. Assuming to the contrary that every vertex of some planar graph had degree at least 6, then the sum of the vertex degrees is at least 6v. But the sum of the vertex degrees equals 2e by the Handshake Lemma 11.2.1, so we have  $e \geq 3v$  contradicting the fact that  $e \leq 3v - 6 < 3v$  by Theorem 12.4.3.
 
-<!-- page: 497 -->
-
 Chapter 12 Planar Graphs
 
 Figure 12.12 Merging adjacent vertices  $n_{1}$  and  $n_{2}$  into new vertex, m.
@@ -17270,8 +16227,6 @@ Case 1:  $(\deg(g) < 5)$ : Deleting g from G leaves a graph, H, that is planar b
 
 Case 2:  $(\deg(g) = 5)$ : If the five neighbors of g in G were all adjacent to each other, then these five vertices would form a nonplanar subgraph isomorphic to  $K_{5}$ , contradicting Lemma 12.6.1 (since  $K_{5}$  is not planar). So there must
 
-<!-- page: 498 -->
-
 ## 12.7. Classifying Polyhedra
 
 be two neighbors, $n_1$ and $n_2$, of $g$ that are not adjacent. Now merge $n_1$ and $g$ into a new vertex, $m$. In this new graph, $n_2$ is adjacent to $m$, and the graph is planar by Lemma 12.6.2. So we can then merge $m$ and $n_2$ into a another new vertex, $m'$, resulting in a new graph, $G'$, which by Lemma 12.6.2 is also planar. Since $G'$ has $v - 1$ vertices, it is five-colorable by the induction hypothesis.
@@ -17289,8 +16244,6 @@ We can determine how many more regular polyhedra there are by thinking about pla
 For example, planar embeddings of the three polyhedra in Figure 12.1 are shown in Figure 12.14.
 
 Let $m$ be the number of faces that meet at each corner of a polyhedron, and let $n$ be the number of edges on each face. In the corresponding planar graph, there are $m$ edges incident to each of the $v$ vertices. By the Handshake Lemma 11.2.1, we
-
-<!-- page: 499 -->
 
 (a)
 
@@ -17310,12 +16263,9 @@ V
 
 Figure 12.14 Planar embeddings of the tetrahedron (a), cube (b), and octahedron (c).
 
-<!-- page: 500 -->
-
 ## 12.7. Classifying Polyhedra
 
 | n | m | v | e | f | polyhedron |
-| --- | --- | --- | --- | --- | --- |
 | 3 | 3 | 4 | 6 | 4 | tetrahedron |
 | 4 | 3 | 8 | 12 | 6 | cube |
 | 3 | 4 | 6 | 12 | 8 | octahedron |
@@ -17352,8 +16302,6 @@ Equation 12.7 places strong restrictions on the structure of a polyhedron. Every
 
 The 5 polyhedra in Figure 12.15 are the only possible regular polyhedra. So if you want to put more than 20 geocentric satellites in orbit so that they uniformly blanket the globe—tough luck!
 
-<!-- page: 501 -->
-
 Chapter 12 Planar Graphs
 
 ## 12.8 Another Characterization for Planar Graphs
@@ -17384,8 +16332,6 @@ Write each cycle as a sequence of letters without spaces, starting with the alph
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ The three operations can each be performed any number of times in any order.</span></small>
 
-<!-- page: 502 -->
-
 (a)
 
 (b)
@@ -17403,8 +16349,6 @@ Write each cycle as a sequence of letters without spaces, starting with the alph
 (f)
 
 Figure 12.16 One method by which the graph in (a) can be reduced to  $C_{3}$  (f), thereby showing that  $C_{3}$  is a minor of the graph. The steps are: merging the nodes incident to  $e_{1}$  (b), deleting  $v_{1}$  and all edges incident to it (c), deleting  $v_{2}$  (d), deleting  $e_{2}$ , and deleting  $v_{3}$  (f).
-
-<!-- page: 503 -->
 
 Chapter 12 Planar Graphs
 
@@ -17427,8 +16371,6 @@ Let $G$ and $H$ be planar graphs. An embedding $E_G$ of $G$ is isomorphic to an 
 (c) One of the embeddings pictured above is not isomorphic to either of the others. Which one? Briefly explain why.
 
 (d) Explain why all embeddings of two isomorphic planar graphs must have the same number of faces.
-
-<!-- page: 504 -->
 
 ## 12.8. Another Characterization for Planar Graphs
 
@@ -17460,8 +16402,6 @@ Problem 12.5. (a) A simple graph has 8 vertices and 24 edges. What is the averag
 
 (c) A connected simple graph has one more vertex than it has edges. Explain why it is a planar graph.
 
-<!-- page: 505 -->
-
 Chapter 12 Planar Graphs
 
 (d) How many faces does a planar graph from part c have?
@@ -17489,8 +16429,6 @@ Prove the following assertions by structural induction on the definition of plan
 (a) In a planar embedding of a graph, each edge occurs exactly twice in the faces of the embedding.
 
 (b) In a planar embedding of a connected graph with at least three vertices, each face is of length at least three.
-
-<!-- page: 506 -->
 
 ## 12.8. Another Characterization for Planar Graphs
 
@@ -17522,8 +16460,6 @@ $$
 
 (c) Prove that any connected triangle-free planar graph is 4-colorable.
 
-<!-- page: 507 -->
-
 Chapter 12 Planar Graphs
 
 ## Problem 12.9. (a) Prove
@@ -17546,13 +16482,7 @@ Corollary (Delete Edge). Deleting an edge from a planar graph leaves a planar gr
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ If  $\pi : \{0, 1, \ldots, n\} \to \{0, 1, \ldots, n\}$  is a bijection, then the sequence  $e_{\pi(0)}, e_{\pi(1)}, \ldots, e_{\pi(n)}$  is called a permutation of the sequence  $e_{0}, e_{1}, \ldots, e_{n}$ .</span></small>
 
-<!-- page: 508 -->
-
 III Counting
-
-<!-- page: 509 -->
-
-<!-- page: 510 -->
 
 ## Introduction
 
@@ -17574,8 +16504,6 @@ Counting is useful in computer science for several reasons:
 
 We begin our study of counting in Chapter 13 with a collection of rules and methods for finding closed-form expressions for commonly-occurring sums and products such as $\sum_{i=0}^{n} x^i$ and $\prod_{i=1}^{n} i$. We also introduce asymptotic notations such as $\sim$, $O$, and $\Theta$ that are commonly used in computer science to express how a quantity such as the running time of a program grows with the size of the input.
 
-<!-- page: 511 -->
-
 Part III Counting
 
 Chapter 14 describes the most basic rules for determining the cardinality of a set. These rules are actually theorems, but our focus here will be less on their proofs than on teaching their use in simple counting as a practical skill, like integration.
@@ -17587,8 +16515,6 @@ Finally, Chapter 15 introduces generating functions which allow many counting pr
 ## 12.9 References
 
 [4], [8], [17], [22] [46].
-
-<!-- page: 512 -->
 
 ## 13
 
@@ -17622,8 +16548,6 @@ Our first motivating example will be the value of a financial instrument known a
 
 The methods we develop for sums will also work for products, since any product can be converted into a sum by taking its logarithm. For instance, later in the
 
-<!-- page: 513 -->
-
 Chapter 13 Sums and Asymptotics
 
 chapter we will use this approach to find a good closed-form approximation to the factorial function
@@ -17649,8 +16573,6 @@ In order to answer such questions, we need to know what a dollar paid out in the
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ Such trading ultimately led to the subprime mortgage disaster in 2008–2009. We’ll talk more about that in a later chapter.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ U.S. interest rates have dropped steadily for several years, and ordinary bank deposits now earn around 1.0%. But just a few years ago the rate was 8%; this rate makes some of our examples a little more dramatic. The rate has been as high as 17% in the past thirty years.</span></small>
-
-<!-- page: 514 -->
 
 ## 13.1. The Value of an Annuity
 
@@ -17683,8 +16605,6 @@ The difference between S and xS is not so great, and so if we were to subtract x
 $$
 \begin{array}{c} S = 1 + x + x ^ {2} + x ^ {3} + \dots + x ^ {n} \\ - x S = - x - x ^ {2} - x ^ {3} - \dots - x ^ {n} - x ^ {n + 1}. \end{array}
 $$
-
-<!-- page: 515 -->
 
 Chapter 13 Sums and Asymptotics
 
@@ -17724,8 +16644,6 @@ $$
 \sum_ {i = 0} ^ {\infty} x ^ {i} = \frac {1}{1 - x}.
 $$
 
-<!-- page: 516 -->
-
 ## 13.1. The Value of an Annuity
 
 Proof.
@@ -17759,8 +16677,6 @@ Plugging in $m = \$50,000$ and $p = 0.08$, we see that the value $V$ is only \$6
 Equation 13.2 and Theorem 13.1.1 are incredibly useful in computer science.
 
 Here are some other common sums that can be put into closed form using equa-
-
-<!-- page: 517 -->
 
 Chapter 13 Sums and Asymptotics
 
@@ -17799,8 +16715,6 @@ $$
 $$
 
 This is not a geometric sum. The ratio between successive terms is not fixed, and so our formula for the sum of a geometric sum cannot be directly applied. But
-
-<!-- page: 518 -->
 
 ## 13.1. The Value of an Annuity
 
@@ -17846,8 +16760,6 @@ $$
 \sum_ {i = 1} ^ {\infty} i x ^ {i} = \frac {x}{(1 - x) ^ {2}}.\tag{13.13}
 $$
 
-<!-- page: 519 -->
-
 Chapter 13 Sums and Asymptotics
 
 As a consequence, suppose that there is an annuity that pays $im$ dollars at the end of each year $i$, forever. For example, if $m = \$50,000$, then the payouts are \$50,000 and then \$100,000 and then \$150,000 and so on. It is hard to believe that the value of this annuity is finite! But we can use Theorem 13.1.2 to compute the value:
@@ -17871,8 +16783,6 @@ $$
 $$
 
 It turns out that there is a way to derive these expressions, but before we explain it, we thought it would be fun—OK, our definition of “fun” may be different than
-
-<!-- page: 520 -->
 
 ## 13.2. Sums of Powers
 
@@ -17918,8 +16828,6 @@ $$
 
 Solving this system gives the solution $a = 1/3$, $b = 1/2$, $c = 1/6$, $d = 0$. Therefore, if our initial guess at the form of the solution was correct, then the summation is equal to $n^3 / 3 + n^2 / 2 + n / 6$, which matches equation 13.14.
 
-<!-- page: 521 -->
-
 Chapter 13 Sums and Asymptotics
 
 The point is that if the desired formula turns out to be a polynomial, then once you get an estimate of the degree of the polynomial, all the coefficients of the polynomial can be found automatically.
@@ -17964,8 +16872,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ Weakly decreasing functions are usually called nonincreasing.</span></small>
 
-<!-- page: 522 -->
-
 ## 13.3. Approximating Sums
 
 Figure 13.1 The area of the $i$th rectangle is $f(i)$. The shaded region has area $\sum_{i=1}^{n} f(i)$.
@@ -18006,8 +16912,6 @@ $$
 
 is the shaded area under the curve of  $f(x)$  from 1 to n shown in Figure 13.2.
 
-<!-- page: 523 -->
-
 Figure 13.2 The shaded area under the curve of $f(x)$ from 1 to $n$ (shown in bold) is $I = \int_{1}^{n} f(x) dx$.
 
 Comparing the shaded regions in Figures 13.1 and 13.2 shows that $S$ is at least $I$ plus the area of the leftmost rectangle. Hence,
@@ -18037,8 +16941,6 @@ S = \sum_ {i = 1} ^ {n} \sqrt {i}
 $$
 
 as follows.
-
-<!-- page: 524 -->
 
 ## 13.3. Approximating Sums
 
@@ -18074,8 +16976,6 @@ In other words, the sum is very close to  $\frac{2}{3}n^{3/2}$ . We’ll define 
 
 As a first application of Theorem 13.3.2, we explain in the next section how it helps in resolving a classic paradox in structural engineering.
 
-<!-- page: 525 -->
-
 Chapter 13 Sums and Asymptotics
 
 ## 13.4 Hanging Out Over the Edge
@@ -18091,8 +16991,6 @@ We'll approach this problem recursively. How far past the end of the table can w
 Figure 13.4 One book can overhang half a book length.
 
 Now suppose we have a stack of books that will not tip over if the bottom book rests on the table—call that a stable stack. Let's define the overhang of a stable stack to be the horizontal distance from the center of mass of the stack to the furthest edge of the top book. So the overhang is purely a property of the stack, regardless of its placement on the table. If we place the center of mass of the stable stack at the edge of the table as in Figure 13.5, the overhang is how far we can get the top
-
-<!-- page: 526 -->
 
 ## 13.4. Hanging Out Over the Edge
 
@@ -18113,8 +17011,6 @@ $$
 Now suppose we have a stable stack of  $n + 1$  books with maximum overhang. If the overhang of the n books on top of the bottom book was not maximum, we could get a book to stick out further by replacing the top stack with a stack of n books with larger overhang. So the maximum overhang,  $B_{n+1}$ , of a stack of  $n + 1$  books is obtained by placing a maximum overhang stable stack of n books on top of the bottom book. And we get the biggest overhang for the stack of  $n + 1$  books by placing the center of mass of the n books right over the edge of the bottom book as in Figure 13.6.
 
 So we know where to place the  $n + 1$ st book to get maximum overhang. In fact, the reasoning above actually shows that this way of stacking  $n + 1$  books is the unique way to build a stable stack where the top book extends as far as possible. All we have to do is calculate what this extension is.
-
-<!-- page: 527 -->
 
 Figure 13.6 Additional overhang with  $n + 1$  books.
 
@@ -18139,8 +17035,6 @@ $$
 $$
 
 So our next task is to examine the behavior of  $B_{n}$  as n grows.
-
-<!-- page: 528 -->
 
 13.4. Hanging Out Over the Edge
 
@@ -18182,8 +17076,6 @@ $$
 H _ {n} = \ln (n) + \gamma + \frac {1}{2 n} + \frac {1}{1 2 n ^ {2}} + \frac {\epsilon (n)}{1 2 0 n ^ {4}}\tag{13.21}
 $$
 
-<!-- page: 529 -->
-
 Here  $\gamma$  is a value 0.577215664... called Euler's constant, and  $\epsilon(n)$  is between 0 and 1 for all n. We will not prove this formula.
 
 We are now finally done with our analysis of the book stacking problem. Plugging the value of  $H_{n}$  into (13.19), we find that the maximum overhang for n books is very close to  $1/2\ln(n)$ . Since  $\ln(n)$  grows to infinity as n increases, this means that if we are given enough books we can get a book to hang out arbitrarily far over the edge of the table. Of course, the number of books we need will grow as an exponential function of the overhang; it will take 227 books just to achieve an overhang of 3, never mind an overhang of 100.
@@ -18202,8 +17094,6 @@ But there is more to the story. All our reasoning above was about stacks in whic
 
 For cases like equation 13.21 where we understand the growth of a function like $H_{n}$ up to some (unimportant) error terms, we use a special notation, $\sim$, to denote the leading term of the function. For example, we say that $H_{n} \sim \ln(n)$ to indicate that
 
-<!-- page: 530 -->
-
 ## 13.4. Hanging Out Over the Edge
 
 (a)
@@ -18211,8 +17101,6 @@ For cases like equation 13.21 where we understand the growth of a function like 
 (b)
 
 Figure 13.8 Figure (a) shows a stable stack of two books where the bottom book extends the same amount past the end of the table as the maximum overhang two-book stack shown in Figure (b).
-
-<!-- page: 531 -->
 
 Chapter 13 Sums and Asymptotics
 
@@ -18260,8 +17148,6 @@ $$
 \ln (P) = \sum_ {i = 1} ^ {n} \ln (f (i)).
 $$
 
-<!-- page: 532 -->
-
 ## 13.5. Products
 
 We can then apply our summing tools to find a closed form (or approximate closed form) for  $\ln(P)$  and then exponentiate at the end to undo the logarithm.
@@ -18307,8 +17193,6 @@ where
 $$
 \frac {1}{1 2 n + 1} \leq \epsilon (n) \leq \frac {1}{1 2 n}.
 $$
-
-<!-- page: 533 -->
 
 Chapter 13 Sums and Asymptotics
 
@@ -18366,12 +17250,9 @@ of the correct value. For  $n \geq 10$ , this means that either bound will be wi
 
 For quick future reference, these facts are summarized in Corollary 13.5.2 and Table 13.1.
 
-<!-- page: 534 -->
-
 13.6. Double Trouble
 
 | Approximation | $n \geq 1$ | $n \geq 10$ | $n \geq 100$ | $n \geq 1000$ |
-| --- | --- | --- | --- | --- |
 | $\sqrt{2\pi n} \left( \frac{n}{e} \right)^n$ | &lt; 10% | &lt; 1% | &lt; 0.1% | &lt; 0.01% |
 | $\sqrt{2\pi n} \left( \frac{n}{e} \right)^n e^{1/12n}$ | &lt; 1% | &lt; 0.01% | &lt; 0.0001% | &lt; 0.000001% |
 
@@ -18386,8 +17267,6 @@ $$
 ## 13.6 Double Trouble
 
 Sometimes we have to evaluate sums of sums, otherwise known as double summations. This sounds hairy, and sometimes it is. But usually, it is straightforward—you just evaluate the inner sum, replace it with a closed form, and then evaluate the
-
-<!-- page: 535 -->
 
 Chapter 13 Sums and Asymptotics
 
@@ -18413,8 +17292,6 @@ Now let's look for an exact answer. If we think about the pairs $(k,j)$ over whi
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ OK, so maybe this one is a little hairy, but it is also fairly straightforward. Wait till you see the next one!</span></small>
 
-<!-- page: 536 -->
-
 ## 13.6. Double Trouble
 
 we are summing, they form a triangle:
@@ -18428,8 +17305,6 @@ The summation in equation 13.26 is summing each row and then adding the row sums
 $$
 \begin{array}{r l} \sum_ {k = 1} ^ {n} H _ {k} & = \sum_ {k = 1} ^ {n} \sum_ {j = 1} ^ {k} \frac {1}{j} \\ & = \sum_ {j = 1} ^ {n} \sum_ {k = j} ^ {n} \frac {1}{j} \\ & = \sum_ {j = 1} ^ {n} \frac {1}{j} \sum_ {k = j} ^ {n} 1 \\ & = \sum_ {j = 1} ^ {n} \frac {1}{j} (n - j + 1) \\ & = \sum_ {j = 1} ^ {n} \frac {n + 1}{j} - \sum_ {j = 1} ^ {n} \frac {j}{j} \\ & = (n + 1) \sum_ {j = 1} ^ {n} \frac {1}{j} - \sum_ {j = 1} ^ {n} 1 \\ & = (n + 1) H _ {n} - n. \end{array}\tag{13.27}
 $$
-
-<!-- page: 537 -->
 
 Chapter 13 Sums and Asymptotics
 
@@ -18468,8 +17343,6 @@ $$
 Corollary 13.7.4. $x^{b} = o(a^{x})$ for any $a, b \in \mathbb{R}$ with $a > 1$.
 
 Lemma 13.7.3 and Corollary 13.7.4 can also be proved using l'Hôpital's Rule or the Maclaurin Series for $\log x$ and $e^x$. Proofs can be found in most calculus texts.
-
-<!-- page: 538 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -18521,8 +17394,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">where “lub” abbreviates “least upper bound.”</span></small>
 
-<!-- page: 539 -->
-
 Chapter 13 Sums and Asymptotics
 
 We need lim sup's in Definition 13.7.5 to cover cases when limits don't exist. For example, if $f(x) / g(x)$ oscillates between 3 and 5 as $x$ grows, then $\lim_{x\to \infty}f(x) / g(x)$ does not exist, but $f = O(g)$ because $\limsup_{x\to \infty}f(x) / g(x) = 5$.
@@ -18556,8 +17427,6 @@ We'll omit the routine proof.
 Big O notation is especially useful when describing the running time of an algorithm. For example, the usual algorithm for multiplying  $n \times n$  matrices uses a number of operations proportional to  $n^{3}$  in the worst case. This fact can be expressed concisely by saying that the running time is  $O(n^{3})$ . So this asymptotic notation allows the speed of the algorithm to be discussed without reference to constant factors or lower-order terms that might be machine specific. It turns out that there is another matrix multiplication procedure that uses  $O(n^{2.55})$  operations. The fact that this procedure is asymptotically faster indicates that it involves new ideas that go beyond a simply more efficient implementation of the  $O(n^{3})$  method.
 
 Of course the asymptotically faster procedure will also definitely be much more efficient on large enough matrices, but being asymptotically faster does not mean
-
-<!-- page: 540 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -18597,8 +17466,6 @@ Just knowing that the running time of an algorithm is  $\Theta(n^{3})$ , for exa
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ It is even conceivable that there is an  $O(n^{2})$  matrix multiplication procedure, but none is known.<br><br> $^{8}$ Since  $\Theta(n^{3})$  only implies that the running time,  $T(n)$ , is between  $cn^{3}$  and  $dn^{3}$  for constants 0 < c < d, the time  $T(2n)$  could regularly exceed  $T(n)$  by a factor as large as 8d/c. The factor is sure to be close to 8 for all large n only if  $T(n) \sim n^{3}$ .</span></small>
 
-<!-- page: 541 -->
-
 Chapter 13 Sums and Asymptotics
 
 ## 13.7.4 Pitfalls with Asymptotic Notation
@@ -18630,8 +17497,6 @@ And anyway, we should not be adding  $O(1)$ 's as though they were numbers. We n
 ## Equality Blunder
 
 The notation  $f = O(g)$  is too firmly entrenched to avoid, but the use of “=” is regrettable. For example, if  $f = O(g)$ , it seems quite reasonable to write  $O(g) = f$ . But doing so might tempt us to the following blunder: because  $2n = O(n)$ , we can say  $O(n) = 2n$ . But  $n = O(n)$ , so we conclude that  $n = O(n) = 2n$ , and therefore n = 2n. To avoid such nonsense, we will never write “ $O(f) = g$ .”
-
-<!-- page: 542 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -18693,8 +17558,6 @@ $$
 g = O (f).
 $$
 
-<!-- page: 543 -->
-
 Chapter 13 Sums and Asymptotics
 
 For example, $x^{2} = \Omega(x)$, $2^{x} = \Omega(x^{2})$, and $x / 100 = \Omega(100x + \sqrt{x})$.
@@ -18736,8 +17599,6 @@ We begin with two large glasses. The first glass contains a pint of water, and t
 (b) What is the limit of the amount of wine in each glass as $n$ approaches infinity?
 
 Problem 13.2.
-
-<!-- page: 544 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -18787,8 +17648,6 @@ Sammy the Shark is a financial service provider who offers loans on the followin
 
 Is a Harvard degree really worth more than an MIT degree? Let us say that a person with a Harvard degree starts with \$40,000 and gets a \$20,000 raise every year after graduation, whereas a person with an MIT degree starts with \$30,000, but gets a 20% raise every year. Assume inflation is a fixed 8% every year. That is, \$1.08 a year from now is worth \$1.00 today.
 
-<!-- page: 545 -->
-
 Chapter 13 Sums and Asymptotics
 
 (a) How much is a Harvard degree worth today if the holder will work for n years following graduation?
@@ -18832,8 +17691,6 @@ Let
 $$
 S: := \sum_ {n = 1} ^ {5} \sqrt {3} n.
 $$
-
-<!-- page: 546 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -18885,11 +17742,7 @@ $$
 \bullet \sum_ {i = 1} ^ {n} \frac {1}{i} \geq \int_ {0} ^ {n} \frac {1}{x + 1} d x
 $$
 
-<!-- page: 547 -->
-
 Figure 13.9 Integral bounds for two sums
-
-<!-- page: 548 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -18935,8 +17788,6 @@ An explorer is trying to reach the Holy Grail, which she believes is located in 
 
 For example, if the shrine were 2/3 of a day's walk into the desert, then she could recover the Holy Grail after two days using the following strategy. She leaves the oasis with 1 gallon of water, travels 1/3 day into the desert, caches 1/3 gallon, and then walks back to the oasis—arriving just as her water supply runs out. Then she picks up another gallon of water at the oasis, walks 1/3 day into the desert, tops off her water supply by taking the 1/3 gallon in her cache, walks the remaining 1/3
 
-<!-- page: 549 -->
-
 day to the shrine, grabs the Holy Grail, and then walks for 2/3 of a day back to the oasis—again arriving with no water to spare.
 
 But what if the shrine were located farther away?
@@ -18968,8 +17819,6 @@ Hint: Find a value for a you think that works, then apply the integral bound.
 ## Problem 13.14.
 
 There is a bug on the edge of a 1-meter rug. The bug wants to cross to the other side of the rug. It crawls at 1 cm per second. However, at the end of each second,
-
-<!-- page: 550 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -19013,8 +17862,6 @@ Problem 13.16.
 
 Find the least nonnegative integer, $n$, such that $f(x)$ is $O(x^n)$ when $f$ is defined
 
-<!-- page: 551 -->
-
 Chapter 13 Sums and Asymptotics
 
 by each of the expressions below.
@@ -19038,7 +17885,6 @@ by each of the expressions below.
 Let $f(n) = n^{3}$. For each function $g(n)$ in the table below, indicate which of the indicated asymptotic relations hold.
 
 | $g(n)$ | $f = O(g)$ | $f = o(g)$ | $g = O(f)$ | $g = o(f)$ |
-| --- | --- | --- | --- | --- |
 | $6 - 5n - 4n^{2} + 3n^{3}$ |  |  |  |  |
 | $n^{3} \log n$ |  |  |  |  |
 | $(\sin(\pi n/2) + 2)n^{3}$ |  |  |  |  |
@@ -19067,8 +17913,6 @@ $$
 $$
 \bullet n = \Theta \left(\frac {3 n ^ {3}}{(n + 1) (n - 1)}\right)
 $$
-
-<!-- page: 552 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -19120,8 +17964,6 @@ Problem 13.22. (a) Prove that $\log x < x$ for all $x > 1$ (requires elementary 
 
 (c) Prove that $f \sim g$ iff $f = g + h$ for some function $h = o(g)$.
 
-<!-- page: 553 -->
-
 Chapter 13 Sums and Asymptotics
 
 ## Problem 13.23.
@@ -19129,7 +17971,6 @@ Chapter 13 Sums and Asymptotics
 Indicate which of the following holds for each pair of functions  $(f(n), g(n))$  in the table below. Assume  $k \geq 1$ ,  $\epsilon > 0$ , and c > 1 are constants. Pick the four table entries you consider to be the most challenging or interesting and justify your answers to these.
 
 | $f(n)$ $g(n)$ | $f = O(g)$ | $f = o(g)$ | $g = O(f)$ | $g = o(f)$ | $f = \Theta(g)$ | $f \sim g$ |
-| --- | --- | --- | --- | --- | --- | --- |
 | $2^{n}$ $2^{n/2}$ |  |  |  |  |  |  |
 | $\sqrt{n}$ $n^{\sin(n\pi/2)}$ |  |  |  |  |  |  |
 | $\log(n!)$ $\log(n^{n})$ |  |  |  |  |  |  |
@@ -19171,8 +18012,6 @@ $$
 $$
 \frac {n ^ {2} + 2 n - 3}{n ^ {2} - 7}
 $$
-
-<!-- page: 554 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -19236,8 +18075,6 @@ Problem 13.29.
 
 Suppose $f, g: \mathbb{N}^{+} \to \mathbb{N}^{+}$ and $f \sim g$.
 
-<!-- page: 555 -->
-
 Chapter 13 Sums and Asymptotics
 
 (a) Prove that $2f \sim 2g$.
@@ -19300,8 +18137,6 @@ Explain why the claim is false. Then identify and explain the mistake in the fol
 
 Bogus proof. The proof is by induction on n where the induction hypothesis,  $P(n)$ , is the assertion (13.31).
 
-<!-- page: 556 -->
-
 ## 13.7. Asymptotic Notation
 
 base case:  $P(0)$  holds trivially.
@@ -19350,8 +18185,6 @@ $$
 
 where $a, b$ are positive constants and $\sim$ denotes asymptotic equality. Hint: $an = a2^{\log_2 n}$.
 
-<!-- page: 557 -->
-
 Chapter 13 Sums and Asymptotics
 
 (b) You may assume that if $f(n) \geq 1$ and $g(n) \geq 1$ for all $n$, then $f \sim g \longrightarrow f^{\frac{1}{n}} \sim g^{\frac{1}{n}}$. Show that
@@ -19399,8 +18232,6 @@ Problem 13.38.
 \- $f = O(g)$, the “big Oh” relation.
 
 \- $f = \Theta(g)$, the “Theta” relation.
-
-<!-- page: 558 -->
 
 ## 13.7. Asymptotic Notation
 
@@ -19458,10 +18289,6 @@ Reminder:  $V(G)$  is the set of vertices and  $E(G)$  is the set of edges of G.
 
 (d) $\chi (G) = O(|V(G)|)$.
 
-<!-- page: 559 -->
-
-<!-- page: 560 -->
-
 # Cardinality Rules
 
 ## 14.1 Counting One Thing by Counting Another
@@ -19490,8 +18317,6 @@ $$
 \underbrace {0 0} _ {\text {chocolate}} \quad 1 \quad \underbrace {} _ {\text {lemon - filled}} \quad 1 \quad \underbrace {0 0 0 0 0 0} _ {\text {sugar}} \quad 1 \quad \underbrace {0 0} _ {\text {glazed}} \quad 1 \quad \underbrace {0 0} _ {\text {plain}}
 $$
 
-<!-- page: 561 -->
-
 Chapter 14 Cardinality Rules
 
 and close up the gaps:
@@ -19519,8 +18344,6 @@ This particular bijection might seem frighteningly ingenious if you've not seen 
 ## 14.2 Counting Sequences
 
 The Bijection Rule lets us count one thing by counting another. This suggests a general strategy: get really good at counting just a few things, then use bijections to count everything else! This is the strategy we'll follow. In particular, we'll get really good at counting sequences. When we want to determine the size of some other set $T$, we'll find a bijection from $T$ to a set of sequences $S$. Then we'll use our super-ninja sequence-counting skills to determine $|S|$, which immediately gives us $|T|$. We'll need to hone this idea somewhat as we go along, but that's pretty much it!
-
-<!-- page: 562 -->
 
 ## 14.2. Counting Sequences
 
@@ -19578,8 +18401,6 @@ $$
 | \{0, 1 \} ^ {n} | = | \{0, 1 \} | ^ {n} = 2 ^ {n}.
 $$
 
-<!-- page: 563 -->
-
 Chapter 14 Cardinality Rules
 
 ## 14.2.3 The Sum Rule
@@ -19620,8 +18441,6 @@ $$
 
 $^{1}$ The notation  $S^{5}$  means  $S \times S \times S \times S \times S$ .
 
-<!-- page: 564 -->
-
 ## 14.3. The Generalized Product Rule
 
 Thus, the length-six passwords are in the set  $F \times S^{5}$ , the length-seven passwords are in  $F \times S^{6}$ , and the length-eight passwords are in  $F \times S^{7}$ . Since these sets are disjoint, we can apply the Sum Rule and count the total number of possible passwords as follows:
@@ -19650,8 +18469,6 @@ $$
 
 This reduces the original problem to a problem of counting sequences. Unfortunately, the Product Rule does not apply directly to counting sequences of this type because the entries depend on one another; in particular, they must all be different. However, a slightly sharper tool does the trick.
 
-<!-- page: 565 -->
-
 Chapter 14 Cardinality Rules
 
 ```txt
@@ -19660,7 +18477,6 @@ Given everyone’s hard work on this material, the instructors considered awardi
 Best Administrative Critique We asserted that the quiz was closed-book. On the cover page, one strong candidate for this award wrote, “There is no book.”
 Awkward Question Award “Okay, the left sock, right sock, and pants are in an antichain, but how—even with assistance—could I put on all three at once?”
 Best Collaboration Statement Inspired by a student who wrote “I worked alone” on Quiz 1.
-
 ```
 
 Rule 14.3.1 (Generalized Product Rule). Let S be a set of length-k sequences. If there are:
@@ -19684,8 +18500,6 @@ $$
 $$
 
 ways to award the 3 prizes to different people.
-
-<!-- page: 566 -->
 
 ## 14.3. The Generalized Product Rule
 
@@ -19725,8 +18539,6 @@ where $r_P, r_N$, and $r_B$ are distinct rows and $c_P, c_N$, and $c_B$ are dist
 
 \- $r_P$ is one of 8 rows
 
-<!-- page: 567 -->
-
 (a) valid
 
 (b) invalid
@@ -19761,8 +18573,6 @@ $$
 
 permutations of an n-element set. In particular, this formula says that there are
 
-<!-- page: 568 -->
-
 ## 14.4. The Division Rule
 
 $3! = 6$ permutations of the 3-element set $\{a, b, c\}$, which is the number we found above.
@@ -19795,8 +18605,6 @@ $$
 
 where  $r_{1}$  and  $r_{2}$  are distinct rows and  $c_{1}$  and  $c_{2}$  are distinct columns. Let B be the set of all valid rook configurations. There is a natural function f from set A to set B; in particular, f maps the sequence  $(r_{1}, c_{1}, r_{2}, c_{2})$  to a configuration with one rook in row  $r_{1}$, column  $c_{1}$  and the other rook in row  $r_{2}$, column  $c_{2}$.
 
-<!-- page: 569 -->
-
 (a) valid
 
 (b) invalid
@@ -19823,8 +18631,6 @@ On the second line, we've computed the size of $A$ using the General Product Rul
 
 In how many ways can King Arthur arrange to seat his n different knights at his round table? A seating defines who sits where. Two seatings are considered to be the same arrangement if each knight sits between the same two knights in both
 
-<!-- page: 570 -->
-
 ## 14.4. The Division Rule
 
 seatings. An equivalent way to say this is that two seatings yield the same arrangement when they yield the same sequence of knights starting at knight number 1 and going clockwise around the table. For example, the following two seatings determine the same arrangement:
@@ -19846,8 +18652,6 @@ This mapping from seating to arrangements is actually an n-to-1 function, since 
 $$
 \frac {\# \text {seatings}}{n} = \frac {n !}{n} = (n - 1)!.
 $$
-
-<!-- page: 571 -->
 
 ## 14.5 Counting Subsets
 
@@ -19878,8 +18682,6 @@ The expression  $\binom{n}{k}$  is read “n choose k.” Now we can immediately
 We can derive a simple formula for the n choose k number using the Division Rule. We do this by mapping any permutation of an n-element set  $\{a_{1},\ldots,a_{n}\}$  into a k-element subset simply by taking the first k elements of the permutation. That is, the permutation  $a_{1}a_{2}\ldots a_{n}$  will map to the set  $\{a_{1},a_{2},\ldots,a_{k}\}$ .
 
 Notice that any other permutation with the same first $k$ elements $a_1, \ldots, a_k$ in any order and the same remaining elements $n - k$ elements in any order will also map to this set. What's more, a permutation can only map to $\{a_1, a_2, \ldots, a_k\}$ if its first $k$ elements are the elements $a_1, \ldots, a_k$ in some order. Since there are $k!$ possible permutations of the first $k$ elements and $(n - k)!$ permutations of the remaining elements, we conclude from the Product Rule that exactly $k!(n - k)!$ permutations of the $n$-element set map to the particular subset, $S$. In other words, the mapping from permutations to $k$-element subsets is $k!(n - k)!$-to-1.
-
-<!-- page: 572 -->
 
 ## 14.5. Counting Subsets
 
@@ -19921,8 +18723,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ We don’t use it here, but a sum of zero terms equals 0.</span></small>
 
-<!-- page: 573 -->
-
 ## 14.6 Sequences with Repetitions
 
 ## 14.6.1 Sequences of Subsets
@@ -19954,8 +18754,6 @@ $$
 ## 14.6.2 The Bookkeeper Rule
 
 We can also generalize our count of n-bit sequences with k ones to counting sequences of n letters over an alphabet with more than two letters. For example, how many sequences can be formed by permuting the letters in the 10-letter word BOOKKEEPER?
-
-<!-- page: 574 -->
 
 ## 14.6. Sequences with Repetitions
 
@@ -19990,8 +18788,6 @@ $$
 ## A Word about Words
 
 Someday you might refer to the Subset Split Rule or the Bookkeeper Rule in front of a roomful of colleagues and discover that they're all staring back at you blankly. This is not because they're dumb, but rather because we made up the name “Bookkeeper Rule.” However, the rule is excellent and the name is apt, so we suggest
-
-<!-- page: 575 -->
 
 Chapter 14 Cardinality Rules
 
@@ -20028,8 +18824,6 @@ Theorem 14.6.4 (Binomial Theorem). For all $n \in \mathbb{N}$ and $a, b \in \mat
 $$
 (a + b) ^ {n} = \sum_ {k = 0} ^ {n} \binom {n} {k} a ^ {n - k} b ^ {k}
 $$
-
-<!-- page: 576 -->
 
 ## 14.7. Counting Practice: Poker Hands
 
@@ -20073,8 +18867,6 @@ $$
 \begin{array}{c} \text {Ace} \\ A, 2, 3, 4, 5, 6, 7, 8, 9, \end{array} \begin{array}{c} \text {Jack} \\ J, \end{array} \begin{array}{c} \text {Queen} \\ Q, \end{array} \begin{array}{c} \text {King} \\ K. \end{array}
 $$
 
-<!-- page: 577 -->
-
 Chapter 14 Cardinality Rules
 
 Five-Card Draw is the number of 5-element subsets of a 52-element set, which is
@@ -20107,8 +18899,6 @@ $$
 $$
 
 Now we need only count the sequences. There are 13 ways to choose the first rank, 12 ways to choose the second rank, and 4 ways to choose the suit. Thus, by the Generalized Product Rule, there are  $13 \cdot 12 \cdot 4 = 624$  hands with a Four-of-a-Kind. This means that only 1 hand in about 4165 has a Four-of-a-Kind. Not surprisingly, Four-of-a-Kind is considered to be a very good poker hand!
-
-<!-- page: 578 -->
 
 14.7. Counting Practice: Poker Hands
 
@@ -20153,8 +18943,6 @@ Each hand with Two Pairs is described by a sequence consisting of:
 
 2. The suits of the first pair, which can be selected  $\binom{4}{2}$  ways.
 
-<!-- page: 579 -->
-
 Chapter 14 Cardinality Rules
 
 3. The rank of the second pair, which can be chosen in 12 ways.
@@ -20192,8 +18980,6 @@ $$
 ## Another Approach
 
 The preceding example was disturbing! One could easily overlook the fact that the mapping was 2-to-1 on an exam, fail the course, and turn to a life of crime. You can make the world a safer place in two ways:
-
-<!-- page: 580 -->
 
 ## 14.7. Counting Practice: Poker Hands
 
@@ -20242,8 +19028,6 @@ Each such hand is described by a sequence that specifies:
 
 1. The ranks of the diamond, the club, the heart, and the spade, which can be selected in  $13 \cdot 13 \cdot 13 \cdot 13 = 13^{4}$  ways.
 
-<!-- page: 581 -->
-
 Chapter 14 Cardinality Rules
 
 2. The suit of the extra card, which can be selected in 4 ways.
@@ -20280,8 +19064,6 @@ For example, picking out three socks is not enough; you might end up with one re
 
 If there are more pigeons than holes they occupy, then at least two pigeons must be in the same hole.
 
-<!-- page: 582 -->
-
 ## 14.8. The Pigeonhole Principle
 
 Figure 14.3 One possible mapping of four socks to three colors.
@@ -20301,8 +19083,6 @@ Mathematicians have come up with many ingenious applications for the pigeonhole 
 2. The set $B$ (the pigeonholes).
 
 3. The function $f$ (the rule for assigning pigeons to pigeonholes).
-
-<!-- page: 583 -->
 
 Chapter 14 Cardinality Rules
 
@@ -20331,8 +19111,6 @@ We proved that an $n$-element set has $2^n$ different subsets in Section 14.2. T
 $$
 | A | = 2 ^ {9 0} \geq 1. 2 3 7 \times 1 0 ^ {2 7}
 $$
-
-<!-- page: 584 -->
 
 ## 14.8. The Pigeonhole Principle
 
@@ -20430,8 +19208,6 @@ $$
 
 Figure 14.4 Ninety 25-digit numbers. Can you find two different subsets of these numbers that have the same sum?
 
-<!-- page: 585 -->
-
 Chapter 14 Cardinality Rules
 
 On the other hand:
@@ -20462,8 +19238,6 @@ $$
 
 One of the top mathematicians of the Twentieth Century, Paul Erdős, conjectured in 1931 that there are no such sets involving significantly smaller numbers. More precisely, he conjectured that the largest number in such a set must be greater than $c2^n$ for some constant $c > 0$. He offered \$500 to anyone who could prove or disprove his conjecture, but the problem remains unsolved.
 
-<!-- page: 586 -->
-
 14.8. The Pigeonhole Principle
 
 ## 14.8.3 A Magic Trick
@@ -20485,8 +19259,6 @@ The Assistant has a second legitimate way to communicate: he can choose which of
 The problem facing the Magician and Assistant is actually a bipartite matching problem. Each vertex on the left will correspond to the information available to the Assistant, namely, a set of 5 cards. So the set X of left hand vertices will have  $\binom{52}{5}$  elements.
 
 Each vertex on the right will correspond to the information available to the Magician, namely, a sequence of 4 distinct cards. So the set Y of right hand vertices will have  $52 \cdot 51 \cdot 50 \cdot 49$  elements. When the audience selects a set of 5 cards, then the Assistant must reveal a sequence of 4 cards from that hand. This constraint is represented by having an edge between a set of 5 cards on the left and a sequence of 4 cards on the right precisely when every card in the sequence is also in the set. This specifies the bipartite graph. Some edges are shown in the diagram in
-
-<!-- page: 587 -->
 
 Chapter 14 Cardinality Rules
 
@@ -20516,8 +19288,6 @@ $$
 (K \spadesuit , 8 \heartsuit , 6 \diamondsuit , Q \spadesuit).\tag{14.4}
 $$
 
-<!-- page: 588 -->
-
 Using the matching, the Magician sees that the hand (14.3) is matched to the sequence (14.4), so he can name the one card in the corresponding set not already revealed, namely, the 9♣. Notice that the fact that the sets are matched, that is, that different sets are paired with distinct sequences, is essential. For example, if the audience picked the previous hand (14.2), it would be possible for the Assistant to reveal the same sequence (14.4), but he better not do that; if he did, then the Magician would have no way to tell if the remaining card was the 9♣ or the 2◇.
 
 So how can we be sure the needed matching can be found? The answer is that each vertex on the left has degree  $5 \cdot 4! = 120$ , since there are five ways to select the card kept secret and there are 4! permutations of the remaining 4 cards. In addition, each vertex on the right has degree 48, since there are 48 possibilities for the fifth card. So this graph is degree-constrained according to Definition 11.5.5, and so has a matching by Theorem 11.5.6.
@@ -20539,8 +19309,6 @@ $$
 \- The Assistant locates the ranks of these two cards on the cycle shown in Figure 14.6. For any two distinct ranks on this cycle, one is always between 1 and 6 hops clockwise from the other. For example, the 3♡ is 6 hops clockwise from the 10♡.
 
 \- The more counterclockwise of these two cards is revealed first, and the other becomes the secret card. Thus, in our example, the 10♡ would be revealed, and the 3♡ would be the secret card. Therefore:
-
-<!-- page: 589 -->
 
 Chapter 14 Cardinality Rules
 
@@ -20573,8 +19341,6 @@ In the example, the Assistant wants to send 6 and so reveals the remaining three
 $$
 1 0 \heartsuit \quad Q \spadesuit \quad J \diamondsuit \quad 9 \diamondsuit
 $$
-
-<!-- page: 590 -->
 
 ## 14.9. Inclusion-Exclusion
 
@@ -20609,8 +19375,6 @@ different four-card hands. This is bad news for the Magician: if he sees that se
 ## 14.9 Inclusion-Exclusion
 
 How big is a union of sets? For example, suppose there are 60 math majors, 200 EECS majors, and 40 physics majors. How many students are there in these three
-
-<!-- page: 591 -->
 
 departments? Let $M$ be the set of math majors, $E$ be the set of EECS majors, and $P$ be the set of physics majors. In these terms, we're asking for $|M \cup E \cup P|$.
 
@@ -20649,8 +19413,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ ...though not at MIT anymore.</span></small>
-
-<!-- page: 592 -->
 
 ## 14.9. Inclusion-Exclusion
 
@@ -20697,8 +19459,6 @@ $$
 $$
 
 Let $P_{42}$ be the set of all permutations in which 42 appears. Define $P_{60}$ and $P_{04}$ similarly. Thus, for example, the permutation above is contained in both $P_{60}$ and $P_{04}$, but not $P_{42}$. In these terms, we're looking for the size of the set $P_{42} \cup P_{04} \cup P_{60}$.
-
-<!-- page: 593 -->
 
 Chapter 14 Cardinality Rules
 
@@ -20754,8 +19514,6 @@ plus the sizes of all three-way intersections
 minus the sizes of all four-way intersections
 plus the sizes of all five-way intersections, etc.
 
-<!-- page: 594 -->
-
 ## 14.9. Inclusion-Exclusion
 
 The formulas for unions of two and three sets are special cases of this general rule.
@@ -20789,8 +19547,6 @@ $$
 $$
 
 While it's often handy express the rule in this way as a sum of sums, it is not necessary to group the terms by how many sets are in the intersections. So another way to state the rule is:
-
-<!-- page: 595 -->
 
 Chapter 14 Cardinality Rules
 
@@ -20834,8 +19590,6 @@ $$
 \left| \bigcap_ {j \in I} C _ {p _ {j}} \right| = \frac {n}{\prod_ {j \in I} p _ {j}},\tag{14.9}
 $$
 
-<!-- page: 596 -->
-
 ## 14.10. Combinatorial Proofs
 
 for any nonempty set $I \subseteq [1..m]$. This lets us calculate:
@@ -20872,8 +19626,6 @@ $$
 \frac {n !}{k ! (n - k) !}.
 $$
 
-<!-- page: 597 -->
-
 Chapter 14 Cardinality Rules
 
 But we didn't really have to resort to algebra; we just used counting principles. Hmmm....
@@ -20907,8 +19659,6 @@ $$
 $$
 
 Ted and Bob each correctly counted the number of possible boxing teams. Thus, their answers must be equal. So we know:
-
-<!-- page: 598 -->
 
 ## 14.10. Combinatorial Proofs
 
@@ -20952,8 +19702,6 @@ Combinatorial proofs are based on counting the same thing in different ways. Thi
 
 For example, let's take a closer look at the combinatorial proof of Pascal's Identity (14.10). In this case, the set $S$ of things to be counted is the collection of all size-$k$ subsets of integers in the interval [1..n].
 
-<!-- page: 599 -->
-
 Chapter 14 Cardinality Rules
 
 Now we've already counted $S$ one way, via the Bookkeeper Rule, and found $|S| = \binom{n}{k}$. The other "way" corresponds to defining a bijection between $S$ and the disjoint union of two sets $A$ and $B$ where,
@@ -20992,8 +19740,6 @@ $$
 | S | = \binom{3 n}{n}
 $$
 
-<!-- page: 600 -->
-
 ## 14.11. References
 
 n-element subsets.
@@ -21031,8 +19777,6 @@ Alice is thinking of a number between 1 and 1000.
 What is the least number of yes/no questions you could ask her and be guaranteed to discover what it is? (Alice always answers truthfully.)
 
 (a)
-
-<!-- page: 601 -->
 
 Chapter 14 Cardinality Rules
 
@@ -21082,8 +19826,6 @@ using unions (∪) and set products (×).
 
 (b) Compute  $|L|$ , the number of different license plates, using the sum and product rules.
 
-<!-- page: 602 -->
-
 ## 14.11. References
 
 Problem 14.6. (a) How many of the billion numbers in the range from 1 to $10^{9}$ contain the digit 1? (Hint: How many don't?)
@@ -21124,8 +19866,6 @@ For example, the codes of a couple of numbered trees are shown in the Figure 14.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ The necessarily unique node adjacent to a leaf is called its father.</span></small>
 
-<!-- page: 603 -->
-
 Chapter 14 Cardinality Rules
 
 Figure 14.7
@@ -21147,8 +19887,6 @@ Let $X$ and $Y$ be finite sets.
 (d) Show a bijection between the powerset, $\mathrm{pow}(X)$, and the set $[X \to \{0,1\}]$ of 0-1-valued total functions on $X$.
 
 (e) Let $X$ be a set of size $n$ and $B_X$ be the set of all bijections from $X$ to $X$.
-
-<!-- page: 604 -->
 
 ## 14.11. References
 
@@ -21186,8 +19924,6 @@ Eight students—Anna, Brian, Caine,...—are to be seated around a circular tab
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ A sequence in which all the elements of a set X appear exactly once is called a permutation of X (see Section 14.3.3).</span></small>
 
-<!-- page: 605 -->
-
 ## Chapter 14 Cardinality Rules
 
 matter which way they face. We'll be interested in counting how many arrangements there are of these 8 students, given some restrictions.
@@ -21221,8 +19957,6 @@ Six women and nine men are on the faculty of a school's EECS department. The ind
 ## Problem 14.16.
 
 Your class tutorial has 12 students, who are supposed to break up into 4 groups of 3 students each. Your Teaching Assistant (TA) has observed that the students waste too much time trying to form balanced groups, so he decided to pre-assign students to groups and email the group assignments to his students.
-
-<!-- page: 606 -->
 
 ## 14.11. References
 
@@ -21259,8 +19993,6 @@ The ad writer was a former Harvard student who had evaluated the formula  $(2^{9
 Answer the following questions using the Generalized Product Rule.
 
 (a) Next week, I'm going to get really fit! On day 1, I'll exercise for 5 minutes. On each subsequent day, I'll exercise 0, 1, 2, or 3 minutes more than the previous day. For example, the number of minutes that I exercise on the seven days of next week might be 5, 6, 9, 9, 9, 11, 12. How many such sequences are possible?
-
-<!-- page: 607 -->
 
 Chapter 14 Cardinality Rules
 
@@ -21305,8 +20037,6 @@ This problem is about binary relations on the set of integers in the interval  $
 
 (d) How many linear strict partial orders are there?
 
-<!-- page: 608 -->
-
 ## 14.11. References
 
 ## Problem 14.21.
@@ -21346,8 +20076,6 @@ indicates
 1. the repeated suit, $s \in S$,
 
 2. the set, $\{r_1, r_2\} \in R_2$, of ranks of the cards of suit, $s$, and
-
-<!-- page: 609 -->
 
 Chapter 14 Cardinality Rules
 
@@ -21395,8 +20123,6 @@ $$
 | B | = 6 \cdot 5 \cdot \binom{7}{3}.
 $$
 
-<!-- page: 610 -->
-
 ## 14.11. References
 
 (a) For how many rolls do exactly two dice have the value 6 and the remaining five dice all have different values? Remember to describe a bijection and write a simple arithmetic formula.
@@ -21424,8 +20150,6 @@ $$
 Another way to count these edge sequences is to start with the empty graph and build up a spanning forest of rooted trees by adding edges in sequence. When n - k edges have been added, the graph with these edges will be a spanning forest
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ From Double counting, wikipedia, Aug. 30, 2014. See also Pr ufer Sequences</span></small>
-
-<!-- page: 611 -->
 
 consisting of k rooted trees. To add the next edge, we choose any vertex to be the root of a new tree. Then we add an edge between this new root and the root of any one of the k - 1 subtrees that did not include the chosen vertex. So the next edge can be chosen in  $n(k - 1)$  ways to form a new spanning forest consisting of k - 1 rooted trees.
 
@@ -21463,10 +20187,7 @@ The Tao of BOOKKEEPER: we seek enlightenment through contemplation of the word B
 
 (c) Suppose we map arrangements of the letters in  $BO_{1}O_{2}K$  to arrangements of the letters in BOOK by erasing the subscripts. Indicate with arrows how the arrangements on the left are mapped to the arrangements on the right.
 
-<!-- page: 612 -->
-
 | $O_2BO_1K$ |  |
-| --- | --- |
 | $KO_2BO_1$ |  |
 | $O_1BO_2K$ | $BOOK$ |
 | $KO_1BO_2$ | $OBOK$ |
@@ -21502,8 +20223,6 @@ This is the Tao of Bookkeeper.
 (n) How many arrangements of VOODOODOLL are there?
 
 (o) How many length 52 sequences of digits contain exactly 17 two's, 23 fives, and 12 nines?
-
-<!-- page: 613 -->
 
 Chapter 14 Cardinality Rules
 
@@ -21547,8 +20266,6 @@ The degree sequence of a simple graph is the weakly decreasing sequence of degre
 
 We're interested in counting how many numbered trees there are with a given degree sequence. We'll do this using the bijection defined in Problem 14.8 between $n$-vertex numbered trees and length $n - 2$ code words whose characters are integers between 1 and $n$.
 
-<!-- page: 614 -->
-
 ## 14.11. References
 
 The occurrence number for a character in a word is the number of times that the character occurs in the word. For example, in the word 65622, the occurrence number for 6 is two, and the occurrence number for 5 is one. The occurrence sequence of a word is the weakly decreasing sequence of occurrence numbers of characters in the word. The occurrence sequence for this word is (2, 2, 1) because it has two occurrences of each of the characters 6 and 2, and one occurrence of 5.
@@ -21574,8 +20291,6 @@ In general, to find the pattern of a code word, list its characters in decreasin
 ## Problem 14.31.
 
 Let $G$ be a simple graph with 6 vertices and an edge between every pair of vertices (that is, $G$ is a complete graph). A length-3 cycle in $G$ is called a triangle.
-
-<!-- page: 615 -->
 
 Chapter 14 Cardinality Rules
 
@@ -21633,8 +20348,6 @@ There is a robot that steps between integer positions in 3-dimensional space. Ea
 
 (b) How many paths can the robot follow going from the origin  $(i, j, k)$  to  $(m, n, p)$ ?
 
-<!-- page: 616 -->
-
 ## 14.11. References
 
 ## Problems for Section 14.7
@@ -21681,8 +20394,6 @@ $$
 
 (a) How many length $m$ words can be formed from an $n$-letter alphabet, if no letter is used more than once?
 
-<!-- page: 617 -->
-
 Chapter 14 Cardinality Rules
 
 (b) How many length m words can be formed from an n-letter alphabet, if letters can be reused?
@@ -21723,8 +20434,6 @@ For each property, either give the minimum number of people that must be in a gr
 
 (b) At least 2 people were born on January 1.
 
-<!-- page: 618 -->
-
 ## 14.11. References
 
 (c) At least 3 people were born on the same day of the week.
@@ -21759,8 +20468,6 @@ Hint: Compare the number of 5-card hands in an n-card deck with the number of 4-
 
 (b) Show that, in principle, the Magician could pull off the Card Trick with a deck of 124 cards.
 
-<!-- page: 619 -->
-
 Chapter 14 Cardinality Rules
 
 Hint: Hall's Theorem and degree-constrained (11.5.5) graphs.
@@ -21791,14 +20498,11 @@ Hint: How many ways are there to pick two positions in a row of length four and 
 
 Section 14.8.6 explained why it is not possible to perform a four-card variant of the hidden-card magic trick with one card hidden. But the Magician and her Assistant
 
-<!-- page: 620 -->
-
 are determined to find a way to make a trick like this work. They decide to change the rules slightly: instead of the Assistant lining up the three unhidden cards for the Magician to see, he will line up all four cards with one card face down and the other three visible. We'll call this the face-down four-card trick.
 
 For example, suppose the audience members had selected the cards 9♡, 10♢, A♣, 5♣. Then the Assistant could choose to arrange the 4 cards in any order so long as one is face down and the others are visible. Two possibilities are:
 
 | A♣ | ? | 10◇ | 5♣ |
-| --- | --- | --- | --- |
 | ? | 5♣ | 9♥ | 10◇ |
 
 (a) Explain how to model this face-down four-card trick as a matching problem, and show that there must be a bipartite matching which theoretically will allow the Magician and Assistant to perform the trick.
@@ -21814,8 +20518,6 @@ Explain how in Case 2. the Magician can determine the face down card from the ca
 (c) Explain how any method for performing the face-down four-card trick can be adapted to perform the regular (5-card hand, show 4 cards) with a 52-card deck consisting of the usual 52 cards along with a 53rd card called the joker.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{9}$ This elegant method was devised in Fall '09 by student Katie E Everett.</span></small>
-
-<!-- page: 621 -->
 
 Chapter 14 Cardinality Rules
 
@@ -21855,8 +20557,6 @@ The working days in the next year can be numbered 1, 2, 3, ..., 300. I'd like to
 
 \- On days that are a multiple of 5, I'll refuse to come out from under the blankets.
 
-<!-- page: 622 -->
-
 ## 14.11. References
 
 In total, how many work days will I avoid in the coming year?
@@ -21890,8 +20590,6 @@ Let P denote the set of all possible committees on which Aleph and Beth would se
 To ensure password security, a company requires their employees to choose a password. A length 10 word containing each of the characters:
 
 a, d, e, f, i, l, o, p, r, s,
-
-<!-- page: 623 -->
 
 Chapter 14 Cardinality Rules
 
@@ -21930,8 +20628,6 @@ $$
 Hint: Show them an example.
 
 (14.15)
-
-<!-- page: 624 -->
 
 ## 14.11. References
 
@@ -21989,8 +20685,6 @@ $$
 | D | = \sum_ {\emptyset \neq I \subseteq \{1, \dots , n \}} (- 1) ^ {| I | + 1} \left| \bigcap_ {i \in I} S _ {i} \right|\tag{14.21}
 $$
 
-<!-- page: 625 -->
-
 Chapter 14 Cardinality Rules
 
 (f) Finally, explain why (14.21) immediately implies the usual form of the Inclusion-Exclusion Principle:
@@ -22037,8 +20731,6 @@ $$
 n! \left(1 - \frac {1}{1 !} + \frac {1}{2 !} - \frac {1}{3 !} + \dots \pm \frac {1}{n !}\right).
 $$
 
-<!-- page: 626 -->
-
 ## 14.11. References
 
 (g) As n goes to infinity, the number of derangements approaches a constant fraction of all permutations. What is that constant? Hint:
@@ -22079,8 +20771,6 @@ $$
 
 (g) Use this formula to find the number of primes up to 150.
 
-<!-- page: 627 -->
-
 Chapter 14 Cardinality Rules
 
 ## Exam Problems
@@ -22112,8 +20802,6 @@ You may answer the following questions with a numerical formula that may involve
 (a) How many possible lineups are there that satisfy all three of these rules?
 
 (b) How many possible lineups are there that satisfy at least one of these rules?
-
-<!-- page: 628 -->
 
 ## 14.11. References
 
@@ -22157,8 +20845,6 @@ What is $|H_S|$?
 
 What is $|H_F|$?
 
-<!-- page: 629 -->
-
 (e) Let  $H_{SF}$  be the set of all straight flush hands; that is, the hand is both a straight and a flush.
 
 What is $|H_{SF}|$?
@@ -22201,8 +20887,6 @@ $$
 
 (b) The sum of these multinomial coefficients has an easily expressed value. What
 
-<!-- page: 630 -->
-
 ## 14.11. References
 
 is it?
@@ -22240,8 +20924,6 @@ $$
 $$
 
 Hint: Consider the bit strings with an even number of ones and an odd number of ones.
-
-<!-- page: 631 -->
 
 Chapter 14 Cardinality Rules
 
@@ -22281,8 +20963,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{10}$ This problem is based on “Use of everywhere divergent generating function,” mathoverflow, response 8,147 by Aaron Meyerowitz, Nov. 12, 2010.</span></small>
 
-<!-- page: 632 -->
-
 ## 14.11. References
 
 Hint: Let  $M_{b}$  be the number of menus where, if Doritos appear at all, they only appear at breakfast; likewise, for  $M_{l}, M_{d}$ .
@@ -22316,8 +20996,6 @@ $$
 $$
 
 Hint: Let  $S_{i}$  be the set of binary sequences with exactly n zeroes,  $k + 1$  ones, and a total of exactly i occurrences of zeroes appearing before the rightmost occurrence of a one.
-
-<!-- page: 633 -->
 
 Chapter 14 Cardinality Rules
 
@@ -22361,8 +21039,6 @@ Before doing the reasonable thing—dump on your CFO or Harvard Business School�
 
 (b) Verify this combinatorial proof by giving an algebraic proof of this same fact.
 
-<!-- page: 634 -->
-
 ## 14.11. References
 
 ## Exam Problems
@@ -22374,10 +21050,6 @@ Each day, an MIT student selects a breakfast from among b possibilities, lunch f
 $$
 \begin{array}{r l} & b l d - [ (b - 1) + (l - 1) + (d - 1) + 1 ] \\ & \qquad = (l - 1) (d - 1) + (b - 1) (d - 1) + (b - 1) (l - 1) + (b - 1) (l - 1) (d - 1). \end{array}
 $$
-
-<!-- page: 635 -->
-
-<!-- page: 636 -->
 
 ## Generating Functions
 
@@ -22402,8 +21074,6 @@ Generating functions can produce noteworthy insights even when the sequence of c
 $$
 G (x) := 1 + x + x ^ {2} + \dots + x ^ {n} + \dots .\tag{15.2}
 $$
-
-<!-- page: 637 -->
 
 Chapter 15 Generating Functions
 
@@ -22453,8 +21123,6 @@ $$
 
 Equations (15.3) and (15.5) hold numerically only when $|x| < 1$, because both generating function series diverge when $|x| \geq 1$. But in the context of generating functions, we regard infinite series as formal algebraic objects. Equations such as (15.3) and (15.5) define symbolic identities that hold for purely algebraic reasons. In fact, good use can be made of generating functions determined by infinite series that don't converge anywhere (besides $x = 0$). We'll explain this further in Section 15.5 at the end of this chapter, but for now, take it on faith that you don't need to worry about convergence.
 
-<!-- page: 638 -->
-
 ## 15.2 Counting with Generating Functions
 
 Generating functions are particularly useful for representing and counting the number of ways to select n things. For example, suppose there are two flavors of donuts, chocolate and plain. Let  $d_{n}$  be the number of ways to select n chocolate or plain flavored donuts.  $d_{n} = n + 1$ , because there are  $n + 1$  such donut selections—all chocolate, 1 plain and n - 1 chocolate, 2 plain and n - 2 chocolate, ..., all plain. We define a generating function,  $D(x)$ , for counting these donut selections by letting the coefficient of  $x^{n}$  be  $d_{n}$ . This gives us equation (15.5)
@@ -22491,8 +21159,6 @@ $$
 
 Let's also suppose there are two kinds of bananas—red and yellow. Now, $b_{n} = n + 1$ by the same reasoning used to count selections of $n$ chocolate and plain
 
-<!-- page: 639 -->
-
 Chapter 15 Generating Functions
 
 donuts, and by (15.6) we have
@@ -22522,7 +21188,6 @@ $$
 To explain the generating function Product Rule, we can think about evaluating the product  $A(x) \cdot B(x)$  by using a table to identify all the cross-terms from the product of the sums:
 
 |  | $b_{0}x^{0}$ | $b_{1}x^{1}$ | $b_{2}x^{2}$ | $b_{3}x^{3}$ | ... |
-| --- | --- | --- | --- | --- | --- |
 | $a_{0}x^{0}$ | $a_{0}b_{0}x^{0}$ | $a_{0}b_{1}x^{1}$ | $a_{0}b_{2}x^{2}$ | $a_{0}b_{3}x^{3}$ | ... |
 | $a_{1}x^{1}$ | $a_{1}b_{0}x^{1}$ | $a_{1}b_{1}x^{2}$ | $a_{1}b_{2}x^{3}$ | ... |  |
 | $a_{2}x^{2}$ | $a_{2}b_{0}x^{2}$ | $a_{2}b_{1}x^{3}$ | ... |  |  |
@@ -22530,8 +21195,6 @@ To explain the generating function Product Rule, we can think about evaluating t
 | ⋮ | ... |  |  |  |  |
 
 In this layout, all the terms involving the same power of x lie on a 45-degree sloped diagonal. So, the index-n diagonal contains all the  $x^{n}$ -terms, and the coefficient of
-
-<!-- page: 640 -->
 
 ## 15.2. Counting with Generating Functions
 
@@ -22575,8 +21238,6 @@ The Rule depends on a precise definition of what “selecting items from the uni
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ Formally, the Convolution Rule applies when there is a bijection between n-element selections from  $A \cup B$  and ordered pairs of selections from the sets A and B containing a total of n elements. We think the informal statement is clear enough.</span></small>
 
-<!-- page: 641 -->
-
 Chapter 15 Generating Functions
 
 ## 15.2.4 Counting Donuts with the Convolution Rule
@@ -22611,8 +21272,6 @@ $$
 \frac {d ^ {n}}{d ^ {n} x} \frac {1}{(1 - x) ^ {k}} = k (k + 1) \dots (k + n - 1) (1 - x) ^ {- (k + n)}
 $$
 
-<!-- page: 642 -->
-
 ## 15.2. Counting with Generating Functions
 
 (see Problem 15.5), so
@@ -22636,8 +21295,6 @@ which is a restatement of the Binomial Theorem 14.6.4. Thus, we have proved the 
 These examples of counting donuts and deriving the binomial coefficients illustrate where generating functions get their power:
 
 Generating functions can allow counting problems to be solved by algebraic manipulation, and conversely, they can allow algebraic identities to be derived by counting techniques.
-
-<!-- page: 643 -->
 
 Chapter 15 Generating Functions
 
@@ -22685,8 +21342,6 @@ $$
 P (x) = 1 + x
 $$
 
-<!-- page: 644 -->
-
 ## 15.3. Partial Fractions
 
 The Convolution Rule says that the generating function for choosing from among all four kinds of fruit is:
@@ -22714,8 +21369,6 @@ Let's illustrate the use of Lemma 15.3.1 by finding the power series coefficient
 $$
 R (x) := \frac {x}{1 - x - x ^ {2}}.
 $$
-
-<!-- page: 645 -->
 
 Chapter 15 Generating Functions
 
@@ -22777,8 +21430,6 @@ $$
 R (x) = \frac {x}{1 - x - x ^ {2}} = \frac {1}{\sqrt {5}} \left(\frac {1}{1 - \alpha_ {1} x} - \frac {1}{1 - \alpha_ {2} x}\right)
 $$
 
-<!-- page: 646 -->
-
 ## 15.3. Partial Fractions
 
 Each term in the partial fractions expansion has a simple power series given by the geometric sum formula:
@@ -22820,8 +21471,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ In other words,</span></small>
-
-<!-- page: 647 -->
 
 ## 15.4 Solving Linear Recurrences
 
@@ -22865,8 +21514,6 @@ $$
 
 Binet's formula for Fibonacci numbers is astonishing and maybe scary. It's not even obvious that the expression on the right hand side (15.14) is an integer. But the formula is very useful. For example, it provides—via the repeated squaring method—a much more efficient way to compute Fibonacci numbers than crunching through the recurrence. It also make explicit the exponential growth of these numbers.
 
-<!-- page: 648 -->
-
 ## 15.4. Solving Linear Recurrences
 
 Figure 15.1 The initial configuration of the disks in the Towers of Hanoi problem.
@@ -22895,13 +21542,9 @@ The recursive solution has three stages, which are described below and illustrat
 
 Stage 1. Move the top n-1 disks from the first post to the second using the solution for n-1 disks. This can be done in  $t_{n-1}$  steps.
 
-<!-- page: 649 -->
-
 Figure 15.2 The 7-step solution to the Towers of Hanoi problem when there are n = 3 disks.
 
 Figure 15.3 A recursive solution to the Towers of Hanoi problem.
-
-<!-- page: 650 -->
 
 ## 15.4. Solving Linear Recurrences
 
@@ -22936,8 +21579,6 @@ We can now find a formula for  $t_{n}$  using generating functions. Let  $T(x)$ 
 $$
 T (x) := t _ {0} + t _ {1} x + t _ {2} x ^ {2} + \dots t _ {n} x ^ {n} + \dots .
 $$
-
-<!-- page: 651 -->
 
 Chapter 15 Generating Functions
 
@@ -22999,8 +21640,6 @@ for constants $c_i \in \mathbb{C}$ is called a degree $d$ linear recurrence with
 
 The methods above can be used to solve linear recurrences with a large class of inhomogeneous terms. In particular, when the inhomogeneous term itself has a generating function that can be expressed as a quotient of polynomials, the approach
 
-<!-- page: 652 -->
-
 ## 15.5. Formal Power Series
 
 used above to derive generating functions for the Fibonacci and Tower of Hanoi examples carries over to yield a quotient of polynomials that defines the generating function  $f(0) + f(1)x + f(2)x^{2} + \cdots$ . Then partial fractions can be used to find a formula for  $f(n)$  that is a linear combination of terms of the form  $n^{k}\alpha^{n}$  where k is a nonnegative integer  $\leq d$  and  $\alpha$  is the reciprocal of a root of the denominator polynomial. For example, see Problems 15.15, 15.16, 15.20, and 15.21.
@@ -23042,8 +21681,6 @@ $$
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ This section is based on an example from “Use of everywhere divergent generating function,” mathoverflow, response 8,147 by Aaron Meyerowitz, Nov. 12, 2010.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ A combinatorial proof of (15.17) is given in Problem 14.64</span></small>
-
-<!-- page: 653 -->
 
 Chapter 15 Generating Functions
 
@@ -23095,8 +21732,6 @@ $$
 G \otimes H: := \left(g _ {0} + h _ {0}, g _ {0} h _ {1} + g _ {1} h _ {0}, \dots , \sum_ {i = 0} ^ {n} g _ {i} h _ {n - i}, \dots\right).
 $$
 
-<!-- page: 654 -->
-
 ## 15.5. Formal Power Series
 
 These operations on infinite sequences have lots of nice properties. For example, it's easy to check that sequence addition and multiplication are commutative:
@@ -23146,8 +21781,6 @@ $$
 the definition of $\otimes$ implies that $J\otimes K = I$, and so $K = 1 / J$ and $J = 1 / Ke$.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ The elements in the sequences may be the real numbers, complex numbers, or, more generally, may be the elements from any given commutative ring.</span></small>
-
-<!-- page: 655 -->
 
 Chapter 15 Generating Functions
 
@@ -23205,8 +21838,6 @@ $$
 ([ x ] 4 x) \cdot [ x ^ {n} ] x G (x) \quad [ x ^ {n + 1} ] 4 x ^ {2} G (x)
 $$
 
-<!-- page: 656 -->
-
 ## 15.6. References
 
 ## Problem 15.2.
@@ -23252,8 +21883,6 @@ Write a formula for the generating function whose successive coefficients are gi
 (f) 1, 4, 9, 16, 25, ...
 
 (g) 1, 1, 1/2, 1/6, 1/24, 1/120,...
-
-<!-- page: 657 -->
 
 Chapter 15 Generating Functions
 
@@ -23301,8 +21930,6 @@ We will use generating functions to determine how many ways there are to use pen
 
 (b) Write the generating function $N(x)$ for the number of ways to use only nickels to make $n$ cents.
 
-<!-- page: 658 -->
-
 ## 15.6. References
 
 (c) Write the generating function for the number of ways to use only nickels and pennies to change n cents.
@@ -23340,8 +21967,6 @@ We are interested in generating functions for the number of different ways to co
 ## Problem 15.10.
 
 Miss McGillicuddy never goes outside without a collection of pets. In particular:
-
-<!-- page: 659 -->
 
 ## Chapter 15 Generating Functions
 
@@ -23389,8 +22014,6 @@ Every day in the life of Dangerous Dan is a disaster filled with mishaps.
 
 \- Dan breaks a sequence of two or more dinnerware items (where each item is either a bowl or a plate or a cup.)
 
-<!-- page: 660 -->
-
 ## 15.6. References
 
 Let $T_{n}$ be the number of different combinations of n mishaps that Dan can suffer in one day (where we regard different sequences of breaks as different combinations). For example, $T_{0} = T_{1} = 0$, since there are always two or more breaks. On the other hand, $T_{3} = 36$; the reasoning is that there can be three breaks (which can happen in $3^{3} = 27$ different combinations), or a spill and two breaks (which can happen in $3^{2} = 9$ different combinations).
@@ -23430,8 +22053,6 @@ T-Pain is planning an epic boat trip and he needs to decide what to bring with h
 \- In order for the boat trip to be truly epic, he has to bring at least 1 nautical-themed pashmina afghan.
 
 (a) Let  $B(x)$  be the generating function for the number of ways to bring n burgers,  $F(x)$  for the number of ways to bring n pairs of flip flops,  $T(x)$  for towels, and  $A(x)$  for Afghans. Write simple formulas for each of these.
-
-<!-- page: 661 -->
 
 Chapter 15 Generating Functions
 
@@ -23475,8 +22096,6 @@ $$
 g (x) = \frac {\boxed {}}{1 - x} + \frac {\boxed {}}{(1 - x) ^ {2}}
 $$
 
-<!-- page: 662 -->
-
 ## 15.6. References
 
 (c) Write a closed-form expression for $T_{n}$:
@@ -23519,8 +22138,6 @@ The famous mathematician, Fibonacci, has decided to start a rabbit farm to fill 
 
 (a) Define the number, $r_n$, of pairs of rabbits Fibonacci has in month $n$, using a recurrence relation. That is, define $r_n$ in terms of various $r_i$ where $i < n$.
 
-<!-- page: 663 -->
-
 Chapter 15 Generating Functions
 
 (b) Let  $R(x)$  be the generating function for rabbit pairs,
@@ -23552,8 +22169,6 @@ $$
 (c) Give a simple formula for $s_n$.
 
 (d) A better (indeed optimal, but we won't prove this) procedure to solve the Towers of Sheboygan puzzle can be defined in terms of two mutually recursive procedures, procedure $P_{1}(n)$ for moving a stack of $n$ rings 1 pole forward, and $P_{2}(n)$
-
-<!-- page: 664 -->
 
 ## 15.6. References
 
@@ -23603,8 +22218,6 @@ $$
 \frac {1}{(1 - x) ^ {2}} = \left(\frac {1}{(1 - x)}\right) ^ {\prime} = 1 + 2 x + 3 x ^ {2} + \dots
 $$
 
-<!-- page: 665 -->
-
 Chapter 15 Generating Functions
 
 SO
@@ -23653,8 +22266,6 @@ $$
 
 The method of partial fractions can only be applied to rational functions—that is, quotients of polynomials—and there are many interesting generating functions that are not of this form. Catalan numbers come up frequently in counting the sizes
 
-<!-- page: 666 -->
-
 ## 15.6. References
 
 of various recursively defined sets—there are in fact hundreds of interpretations of these numbers! $^{6}$
@@ -23696,8 +22307,6 @@ Namely, one precise way to determine if a string is matched is to start with 0 a
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ https://en.wikipedia.org/wiki/Catalan\_number</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ Problem 6.16 also examines these strings.</span></small>
-
-<!-- page: 667 -->
 
 ## Chapter 15 Generating Functions
 
@@ -23744,8 +22353,6 @@ SO
 $$
 C = \frac {1}{1 - x C},\tag{15.26}
 $$
-
-<!-- page: 668 -->
 
 ## 15.6. References
 
@@ -23803,8 +22410,6 @@ Let $R(x) := \sum_{0}^{\infty} r_n x^n$ be the generating function of this seque
 
 Alyssa Hacker sends out a video that spreads like wildfire over the UToob network. On the day of the release—call it day zero—and the day following—call it day one—the video doesn’t receive any hits. However, starting with day two, the number of hits,  $r_{n}$ , can be expressed as seven times the number of hits on the previous day, four times the number of hits the day before that, and the number of days that has passed since the release of the video plus one. So, for example on day 2, there will be  $7 \times 0 + 4 \times 0 + 3 = 3$  hits.
 
-<!-- page: 669 -->
-
 Chapter 15 Generating Functions
 
 (a) Give a linear a recurrence for $r_n$.
@@ -23859,8 +22464,6 @@ $$
 (r, 0, 0, \dots , 0, \dots).
 $$
 
-<!-- page: 670 -->
-
 ## 15.6. References
 
 For example the number 1 may be used to indicate the identity series, I, and 0 may indicate to the zero series, Z. Whether “r” means the number or the sequence is supposed to be clear from context.
@@ -23909,15 +22512,7 @@ Verify that the monomial  $x^{n}$  refers to the same power series as  $X^{n}$ .
 
 Show that a sequence  $G ::= (g_{0}, g_{1}, \ldots)$  has a multiplicative inverse in the ring of formal power series iff  $g_{0} \neq 0$ .
 
-<!-- page: 671 -->
-
-<!-- page: 672 -->
-
 IV Probability
-
-<!-- page: 673 -->
-
-<!-- page: 674 -->
 
 ## Introduction
 
@@ -23931,8 +22526,6 @@ Our goal in the remaining chapters is to equip you with the tools that will enab
 
 Chapter 16 introduces the basic definitions and an elementary 4-step process that can be used to determine the probability that a specified event occurs. We illustrate the method on two famous problems where your intuition will probably fail you. The key concepts of conditional probability and independence are introduced, along with examples of their use, and regrettable misuse, in practice: the probability you have a disease given that a diagnostic test says you do, and the probability that a suspect is guilty given that his blood type matches the blood found at the
 
-<!-- page: 675 -->
-
 scene of the crime.
 
 Random variables provide a more quantitative way to measure random events, and we study them in Chapter 18. For example, instead of determining the probability that it will rain, we may want to determine how much or how long it is likely to rain. The fundamental concept of the expected value of a random variable is introduced and some of its key properties are developed.
@@ -23940,8 +22533,6 @@ Random variables provide a more quantitative way to measure random events, and w
 Chapter 19 examines the probability that a random variable deviates significantly from its expected value. Probability of deviation provides the theoretical basis for estimation by sampling which is fundamental in science, engineering, and human affairs. It is also especially important in engineering practice, where things are generally fine if they are going as expected, and you would like to be assured that the probability of an unexpected event is very low.
 
 A final chapter applies the previous probabilistic tools to solve problems involving more complex random processes. You will see why you will probably never get very far ahead at the casino and how two Stanford graduate students became billionaires by combining graph theory and probability theory to design a better search engine for the web.
-
-<!-- page: 676 -->
 
 ## 16 Events and Probability Spaces
 
@@ -23962,8 +22553,6 @@ This incident highlights a fact about probability: the subject uncovers lots of 
 ## 16.1.1 Clarifying the Problem
 
 Craig's original letter to Marilyn vos Savant is a bit vague, so we must make some assumptions in order to have any hope of modeling the game formally. For example, we will assume that:
-
-<!-- page: 677 -->
 
 1. The car is equally likely to be hidden behind each of the three doors.
 
@@ -23993,8 +22582,6 @@ Our first objective is to identify all the possible outcomes of the experiment. 
 
 2. The door initially chosen by the player.
 
-<!-- page: 678 -->
-
 ## 16.2. The Four Step Method
 
 Figure 16.1 The first level in a tree diagram for the Monty Hall Problem. The branches correspond to the door behind which the car is located.
@@ -24009,11 +22596,7 @@ For each possible location of the prize, the player could initially choose any o
 
 Notice that the third layer reflects the fact that the host has either one choice or two, depending on the position of the car and the door initially selected by the player. For example, if the prize is behind door A and the player picks door B, then
 
-<!-- page: 679 -->
-
 Figure 16.2 The full tree diagram for the Monty Hall Problem. The second level indicates the door initially chosen by the player. The third level indicates the door revealed by Monty Hall.
-
-<!-- page: 680 -->
 
 ## 16.2. The Four Step Method
 
@@ -24059,8 +22642,6 @@ The outcomes in this event are marked with checks in Figure 16.4.
 
 Notice that exactly half of the outcomes are checked, meaning that the player wins by switching in half of all outcomes. You might be tempted to conclude that a player who switches wins with probability 1/2. This is wrong. The reason is that these outcomes are not all equally likely, as we'll see shortly.
 
-<!-- page: 681 -->
-
 revealed
 
 $(A,A,B)$
@@ -24089,13 +22670,9 @@ $(C,C,B)$
 
 Figure 16.3 The tree diagram for the Monty Hall Problem with the outcomes labeled for each path from root to leaf. For example, outcome  $(A, A, B)$  corresponds to the car being behind door A, the player initially choosing door A, and Monty Hall revealing the goat behind door B.
 
-<!-- page: 682 -->
-
 ## 16.2. The Four Step Method
 
 Figure 16.4 The tree diagram for the Monty Hall Problem, where the outcomes where the player wins by switching are denoted with a check mark.
-
-<!-- page: 683 -->
 
 Chapter 16 Events and Probability Spaces
 
@@ -24125,8 +22702,6 @@ We'll examine the official justification for this rule in Section 17.4, but here
 
 How likely is such a path to arrive at the topmost outcome,  $(A, A, B)$ ? Well, there is a 1-in-3 chance that a path would follow the A-branch at the top level, a 1-in-3 chance it would continue along the A-branch at the second level, and 1-in-2
 
-<!-- page: 684 -->
-
 ## 16.2. The Four Step Method
 
 chance it would follow the B-branch at the third level. Thus, there is half of a one third of a one third chance, of arriving at the  $(A, A, B)$  leaf. That is, the chance is  $1/3 \cdot 1/3 \cdot 1/2 = 1/18$ —the same product (in reverse order) we arrived at in (16.2). We have illustrated all of the outcome probabilities in Figure 16.5.
@@ -24149,11 +22724,7 @@ It seems Marilyn's answer is correct! A player who switches doors wins the car w
 
 We're done with the problem! We didn't need any appeals to intuition or ingenious analogies. In fact, no mathematics more difficult than adding and multiplying fractions was required. The only hard part was resisting the temptation to leap to an “intuitively obvious” answer.
 
-<!-- page: 685 -->
-
 Figure 16.5 The tree diagram for the Monty Hall Problem where edge weights denote the probability of that branch being taken given that we are at the parent of that branch. For example, if the car is behind door A, then there is a 1/3 chance that the player's initial selection is door B. The rightmost column shows the outcome probabilities for the Monty Hall Problem. Each outcome probability is simply the product of the probabilities on the path from the root to the outcome leaf.
-
-<!-- page: 686 -->
 
 16.3. Strange Dice
 
@@ -24172,8 +22743,6 @@ Naturally, you are skeptical, especially after you see that these are not ordina
 Biker dude notices your hesitation, so he sweetens his offer: he will pay you \$105 if you roll the higher number, but you only need pay him \$100 if he rolls higher, and he will let you pick a die first, after which he will pick one of the other two. The sweetened deal sounds persuasive since it gives you a chance to pick what you think is the best die, so you decide you will play. But which of the dice should you choose? Die $B$ is appealing because it has a 9, which is a sure winner if it comes up. Then again, die $A$ has two fairly large numbers, and die $C$ has an 8 and no really small values.
 
 In the end, you choose die $B$ because it has a 9, and then biker dude selects die $A$. Let's see what the probability is that you will win. (Of course, you probably should have done this before picking die $B$ in the first place.) Not surprisingly, we will use the four-step method to compute this probability.
-
-<!-- page: 687 -->
 
 Chapter 16 Events and Probability Spaces
 
@@ -24209,13 +22778,9 @@ These outcomes are marked A in the tree diagram in Figure 16.7.
 
 To find outcome probabilities, we first assign probabilities to edges in the tree diagram. Each number on each die comes up with probability 1/3, regardless of the value of the other die. Therefore, we assign all edges probability 1/3. The probability of an outcome is the product of the probabilities on the corresponding root-to-leaf path, which means that every outcome has probability 1/9. These probabilities are recorded on the right side of the tree diagram in Figure 16.7.
 
-<!-- page: 688 -->
-
 die A    die B    winner probability of outcome
 
 Figure 16.7 The tree diagram for one roll of die A versus die B. Die A wins with probability 5/9.
-
-<!-- page: 689 -->
 
 Chapter 16 Events and Probability Spaces
 
@@ -24253,13 +22818,9 @@ This is too good a deal to pass up. You know that die C is likely to beat die A 
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$Double or nothing is slang for doing another wager after you have lost the first. If you lose again, you will owe biker dude double what you owed him before. If you win, you will owe him nothing; in fact, since he should pay you \$210 if he loses, you would come out \$10 ahead.</span></small>
 
-<!-- page: 690 -->
-
 die C die A winner probability of outcome
 
 Figure 16.8 The tree diagram for one roll of die C versus die A. Die C wins with probability 5/9.
-
-<!-- page: 691 -->
 
 dude picks A or B, the odds would be in your favor this time. Biker dude must really be a nice guy.
 
@@ -24285,8 +22846,6 @@ The probability of each outcome is  $(1/3)^{4} = 1/81$  and so, once again, we h
 
 To compute the number of outcomes where A beats B, we observe that the two rolls of die A result in nine equally likely outcomes in a sample space  $S_{A}$  in which
 
-<!-- page: 692 -->
-
 ## 16.3. Strange Dice
 
 Figure 16.9 Parts of the tree diagram for die B versus die A where each die is rolled twice. The first two levels are shown in (a). The last two levels consist of nine copies of the tree in (b).
@@ -24310,8 +22869,6 @@ $$
 $$
 
 A similar count shows that there are 42 pairs for which B-sum is larger than the A-sum, and there are two pairs where the sums are equal, namely, when they both equal 14. This means that A loses to B with probability  $42/81 > 1/2$  and ties with probability 2/81. Die A wins with probability only 37/81.
-
-<!-- page: 693 -->
 
 Chapter 16 Events and Probability Spaces
 
@@ -24339,8 +22896,6 @@ To work this out, we’ll assume that the probability that a randomly chosen stu
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">2 TBA - Reference Ron Graham paper.</span></small>
 
-<!-- page: 694 -->
-
 ## 16.4. The Birthday Principle
 
 ## 16.4.1 Exact Formula for Match Probability
@@ -24366,8 +22921,6 @@ For example, the Birthday Principle says that if you have  $\sqrt{2\cdot365}\app
 Among other applications, it implies that to use a hash function that maps n items into a hash table of size d, you can expect many collisions if  $n^{2}$  is more than
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ The fact that  $1 - x < e^{-x}$  for all x > 0 follows by truncating the Taylor series  $e^{-x} = 1 - x + x^{2}/2! - x^{3}/3! + \cdots$ . The approximation  $e^{-x} \approx 1 - x$  is pretty accurate when x is small.</span></small>
-
-<!-- page: 695 -->
 
 Chapter 16 Events and Probability Spaces
 
@@ -24402,8 +22955,6 @@ The study of probability is closely tied to set theory because any set can be a 
 Most of the rules and identities that we have developed for finite sets extend very naturally to probability.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ Yes, sample spaces can be infinite. If you did not read Chapter 7, don’t worry—countable just means that you can list the elements of the sample space as $\omega_{0}, \omega_{1}, \omega_{2}, \ldots$.</span></small>
-
-<!-- page: 696 -->
 
 ## 16.5. Set Theory and Probability
 
@@ -24442,8 +22993,6 @@ $$
 The Difference Rule follows from the Sum Rule because $B$ is the union of the disjoint sets $B - A$ and $A \cap B$. Inclusion-Exclusion then follows from the Sum and Difference Rules, because $A \cup B$ is the union of the disjoint sets $A$ and $B - A$. Boole's inequality is an immediate consequence of Inclusion-Exclusion since probabilities are nonnegative. Monotonicity follows from the definition of event probability and the fact that outcome probabilities are nonnegative.
 
 The two-event Inclusion-Exclusion equation above generalizes to any finite set of events in the same way as the corresponding Inclusion-Exclusion rule for $n$ sets. Boole's inequality also generalizes to both finite and countably infinite sets of events:
-
-<!-- page: 697 -->
 
 Chapter 16 Events and Probability Spaces
 
@@ -24485,8 +23034,6 @@ $$
 \begin{array}{r l} \operatorname * {P r} [ E ] & = \frac {1 3 \cdot 1 2 \cdot \binom {4} {3} \cdot \binom {4} {2}}{\binom {5 2} {5}} \\ & = \frac {1 3 \cdot 1 2 \cdot 4 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2}{5 2 \cdot 5 1 \cdot 5 0 \cdot 4 9 \cdot 4 8} = \frac {1 8}{1 2 4 9 5} \\ & \approx \frac {1}{6 9 4}. \end{array}
 $$
 
-<!-- page: 698 -->
-
 ## 16.5. Set Theory and Probability
 
 Figure 16.10 The tree diagram for the game where players take turns flipping a fair coin. The first player to flip heads wins.
@@ -24512,8 +23059,6 @@ In this case, the sample space is the infinite set
 $$
 \mathcal {S}: := \{\mathrm{T} ^ {n} \mathrm{H} \mid n \in \mathbb {N} \},
 $$
-
-<!-- page: 699 -->
 
 690
 
@@ -24551,8 +23096,6 @@ Let B be the number of heads that come up on 2n independent tosses of a fair coi
 
 2.  $\frac{2}{\sqrt{\pi n}}$
 
-<!-- page: 700 -->
-
 ## 16.6. References
 
 3.  $\frac{1}{\sqrt{\pi n}}$
@@ -24589,8 +23132,6 @@ Answer the questions below using the four step method. You can use the same tree
 
 To determine which of two people gets a prize, a coin is flipped twice. If the flips
 
-<!-- page: 701 -->
-
 are a Head and then a Tail, the first player wins. If the flips are a Tail and then a Head, the second player wins. However, if both coins land the same way, the flips don't count and the whole process starts over.
 
 Assume that on each flip, a Head comes up with probability p, regardless of what happened on other flips. Use the four step method to find a simple formula for the probability that the first player wins. What is the probability that neither player wins?
@@ -24617,8 +23158,6 @@ Use The Four Step Method to find the following probabilities. The tree diagram m
 
 (b) Contestant Zelda, an alien abduction researcher from Helena, Montana, switches to one of the remaining two doors with equal probability. What is the probability that Zelda wins the prize?
 
-<!-- page: 702 -->
-
 ## 16.6. References
 
 Now let's revise our assumptions about how contestants choose doors. Say the doors are labeled A, B, C, and D. Suppose that Carol always opens the earliest door possible (the door whose label is earliest in the alphabet) with the restriction that she can neither reveal the prize nor open the door that the player picked.
@@ -24644,8 +23183,6 @@ One of the Immortals (Kurgan from the Russian steppe) argues that as n grows lar
 (b) What is the probability that the experiment succeeds as a function of $p$ and $n$?
 
 (c) How should $p$, the bias of the coin, be chosen in order to maximize the probability that the experiment succeeds?
-
-<!-- page: 703 -->
 
 (d) What is the probability of success if p is chosen in this way? What quantity does this approach when n, the number of Immortal Warriors, grows large?
 
@@ -24678,8 +23215,6 @@ $$
 We may as well assume p < 1/n, since the upper bound is trivial otherwise. For example, if n = 100 and  $p = 10^{-5}$ , we conclude that there is at most one chance in 1000 of system failure within a year and at least one chance in 100,000.
 
 Let's model this situation with the sample space $S ::= \text{pow}([1, n])$ whose outcomes are subsets of positive integers $\leq n$, where $s \in S$ corresponds to the indices
-
-<!-- page: 704 -->
 
 ## 16.6. References
 
@@ -24737,8 +23272,6 @@ $$
 
 Hint: Replace the $A_{n}$'s by pairwise disjoint events and use the Sum Rule.
 
-<!-- page: 705 -->
-
 Chapter 16 Events and Probability Spaces
 
 ## Problem 16.11.
@@ -24779,8 +23312,6 @@ Suppose you repeatedly flip a fair coin until three consecutive flips match the 
 
 Hint: Symmetry between Heads and Tails.
 
-<!-- page: 706 -->
-
 # Conditional Probability
 
 ## 17.1 Monty Hall Confusion
@@ -24808,8 +23339,6 @@ for this probability which, by the reasoning above, equals 1/2.
 ## 17.1.1 Behind the Curtain
 
 A “given” condition is essentially an instruction to focus on only some of the possible outcomes. Formally, we’re defining a new sample space consisting only of some of the outcomes. In this particular example, we’re given that the player chooses door A and that there is a goat behind B. Our new sample space therefore consists
-
-<!-- page: 707 -->
 
 ## Chapter 17 Conditional Probability
 
@@ -24839,8 +23368,6 @@ Pure probability is often counterintuitive, but conditional probability can be e
 
 So if everything in the opening Section 17.1 is mathematically sound, why does it seem to contradict the results that we established in Chapter 16? The problem is a
 
-<!-- page: 708 -->
-
 ## 17.2. Definition and Notation
 
 common one: we chose the wrong condition. In our initial description of the scenario, we learned the location of the goat when Carol opened door B. But when we defined our condition as “the contestant opens A and the goat is behind B,” we included the outcome  $(A, A, C)$  in which Carol opens door C! The correct conditional probability should have been “what are the odds of winning by switching given the contestant chooses door A and Carol opens door B.” By choosing a condition that did not reflect everything known, we inadvertently included an extraneous outcome in our calculation. With the correct conditioning, we still win by switching 1/9 of the time, but the smaller set of known outcomes has smaller total probability:
@@ -24857,8 +23384,6 @@ $$
 
 which is exactly what we already deduced from the tree diagram 16.2 in the previous chapter.
 
-<!-- page: 709 -->
-
 Chapter 17 Conditional Probability
 
 ## The O. J. Simpson Trial
@@ -24874,8 +23399,6 @@ Strogatz's article goes into more detail about the calculations behind that $80\
 ## 17.3 The Four-Step Method for Conditional Probability
 
 In a best-of-three tournament, the local C-league hockey team wins the first game with probability 1/2. In subsequent games, their probability of winning is determined by the outcome of the previous game. If the local team won the previous game, then they are invigorated by victory and win the current game with probability 2/3. If they lost the previous game, then they are demoralized by defeat and win the current game with probability only 1/3. What is the probability that the
-
-<!-- page: 710 -->
 
 local team wins the tournament, given that they win the first game?
 
@@ -24909,8 +23432,6 @@ $$
 F = \{W W, W L W, W L L \}.
 $$
 
-<!-- page: 711 -->
-
 The outcomes in these events are indicated with check marks in the tree diagram in Figure 17.1.
 
 ## Step 3: Determine Outcome Probabilities
@@ -24936,8 +23457,6 @@ We're done! If the local team wins the first game, then they win the whole tourn
 We've now settled into a routine of solving probability problems using tree diagrams. But we've left a big question unaddressed: mathematical justification behind those funny little pictures. Why do they work?
 
 The answer involves conditional probabilities. In fact, the probabilities that we've been recording on the edges of tree diagrams are conditional probabilities. For example, consider the uppermost path in the tree diagram for the hockey team problem, which corresponds to the outcome $WW$. The first edge is labeled 1/2,
-
-<!-- page: 712 -->
 
 ## 17.4. Why Tree Diagrams Work
 
@@ -24981,8 +23500,6 @@ An n-event version of the Rule is given in Problem 17.1, but its form should be 
 
 As a simple application of the product rule for conditional probabilities, we can use the rule to calculate the number of size-k subsets of the integers  $[1..n]$ . Of course we already know this number is  $\binom{n}{k}$ , but now the rule will give us a new derivation of the formula for  $\binom{n}{k}$ .
 
-<!-- page: 713 -->
-
 Let's pick some size-k subset, $S \subseteq [1..n]$, as a target. Suppose we choose a size-k subset at random, with all subsets of $[1..n]$ equally likely to be chosen, and let $p$ be the probability that our randomly chosen equals this target. That is, the probability of picking $S$ is $p$, and since all sets are equally likely to be chosen, the number of size-k subsets equals $1/p$.
 
 So what's $p$? Well, the probability that the smallest number in the random set is one of the $k$ numbers in $S$ is $k / n$. Then, given that the smallest number in the random set is in $S$, the probability that the second smallest number in the random set is one of the remaining $k - 1$ elements in $S$ is $(k - 1) / (n - 1)$. So by the product rule, the probability that the two smallest numbers in the random set are both in $S$ is
@@ -25012,8 +23529,6 @@ $$
 ## 17.4.2 Medical Testing
 
 Breast cancer is a deadly disease that claims thousands of lives every year. Early detection and accurate diagnosis are high priorities, and routine mammograms are
-
-<!-- page: 714 -->
 
 one of the first lines of defense. They're not very accurate as far as medical tests go, but they are correct between 90% and 95% of the time, which seems pretty good for a relatively inexpensive non-invasive test.$^{1}$ However, mammogram results are also an example of conditional probabilities having counterintuitive consequences. If the test was positive for breast cancer in you or a loved one, and the test is better than 90% accurate, you'd naturally expect that to mean there is better than 90% chance that the disease was present. But a mathematical analysis belies that gut instinct. Let's start by precisely defining how accurate a mammogram is:
 
@@ -25045,15 +23560,11 @@ So, if the test is positive, then there is an $84.6\%$ chance that the result is
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ The statistics in this example are roughly based on actual medical data, but have been rounded or simplified for illustrative purposes.</span></small>
 
-<!-- page: 715 -->
-
 Step 1: Find the Sample Space
 
 The sample space is found with the tree diagram in Figure 17.2.
 
 Figure 17.2 The tree diagram for a breast cancer test.
-
-<!-- page: 716 -->
 
 notice that there is a simple way to make a test that is 99% accurate: always return a negative result! This test gives the right answer for all healthy people and the wrong answer only for the 1% that actually have cancer. This 99% accurate test tells us nothing; the “less accurate” mammogram is still a lot more useful.
 
@@ -25074,8 +23585,6 @@ One way to understand such a statement is that it just means that 15% of the peo
 But what does this 15% probability tell you if you personally got a positive result? Should you be relieved that there is less than one chance in five that you have the disease? Should you worry that there is nearly one chance in five that you do have the disease? Should you start treatment just in case? Should you get more tests?
 
 These are crucial practical questions, but it is important to understand that they are not mathematical questions. Rather, these are questions about statistical judge-
-
-<!-- page: 717 -->
 
 ments and the philosophical meaning of probability. We’ll say a bit more about this after looking at one more example of after-the-fact probabilities.
 
@@ -25115,8 +23624,6 @@ $$
 
 by definition of conditional probability. Dividing by $\operatorname{Pr}[A]$ gives (17.2).
 
-<!-- page: 718 -->
-
 17.4. Why Tree Diagrams Work
 
 ## 17.4.6 Philosophy of Probability
@@ -25136,8 +23643,6 @@ As an aside, it is not clear whether Bayes himself was Bayesian in this sense. H
 Another school of thought says that probabilities can only be meaningfully applied to repeatable processes like rolling dice or flipping coins. In this frequentist view, the probability of an event represents the fraction of trials in which the event occurred. So we can make sense of the a posteriori probabilities of the C-league hockey example of Section 17.4.5 by imagining that many hockey series were played, and the probability that the local team won their first game, given that they won the series, is simply the fraction of series where they won the first game among all the series they won.
 
 Getting back to prime numbers, we mentioned in Section 8.5.1 that there is a probabilistic primality test. If a number N is composite, there is at least a 3/4 chance that the test will discover this. In the remaining 1/4 of the time, the test is inconclusive. But as long as the result is inconclusive, the test can be run independently again and again up to, say, 1000 times. So if N actually is composite, then
-
-<!-- page: 719 -->
 
 Chapter 17 Conditional Probability
 
@@ -25166,8 +23671,6 @@ For example, suppose we conduct the following experiment. First, we flip a fair 
 $$
 \Pr [ A ] = \frac {1}{2} \cdot \frac {1}{6} + \frac {1}{2} \cdot \frac {1}{3 6} = \frac {7}{7 2}.
 $$
-
-<!-- page: 720 -->
 
 ## 17.5. The Law of Total Probability
 
@@ -25215,8 +23718,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ Problem 17.14 explains why this and similar conditional identities follow on general principles from the corresponding unconditional identities.</span></small>
 
-<!-- page: 721 -->
-
 Chapter 17 Conditional Probability
 
 SO
@@ -25251,8 +23752,6 @@ Given the discrepancy in these findings, it feels like someone must be doing bad
 
 \- $M_{CS}$::= the candidate is a man applying to the CS department.
 
-<!-- page: 722 -->
-
 ## 17.6. Simpson's Paradox
 
 <table><tr><td rowspan="2">CS</td><td>2 men admitted out of 5 candidates</td><td>40%</td></tr><tr><td>50 women admitted out of 100 candidates</td><td>50%</td></tr><tr><td rowspan="2">EE</td><td>70 men admitted out of 100 candidates</td><td>70%</td></tr><tr><td>4 women admitted out of 5 candidates</td><td>80%</td></tr><tr><td rowspan="2">Overall</td><td>72 men admitted, 105 candidates</td><td> $\approx 69\%$ </td></tr><tr><td>54 women admitted, 105 candidates</td><td> $\approx 51\%$ </td></tr></table>
@@ -25281,8 +23780,6 @@ Initially, we and the plaintiffs both assumed that the overall admissions statis
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$At the actual university in the lawsuit, the “exclusive” departments more popular among women were those that did not require a mathematical foundation, such as English and education. Women’s disproportionate choice of these careers reflects gender bias, but one which predates the university’s involvement.</span></small>
 
-<!-- page: 723 -->
-
 This leads us to the conclusion that the admissions gap in not due to any systematic bias on the school's part.
 
 But suppose we replaced “the candidate is a man/woman applying to the EE department,” by “the candidate is a man/woman for whom an admissions decision was made during an odd-numbered day of the month,” and likewise with CS and an even-numbered day of the month. Since we don’t think the parity of a date is a cause for the outcome of an admission decision, we would most likely dismiss the “coincidence” that on both odd and even dates, women are more frequently admitted. Instead we would judge, based on the overall data showing women less likely to be admitted, that gender bias against women was an issue in the university.
@@ -25302,8 +23799,6 @@ $$
 In other words, A and B are independent if knowing that B happens does not alter the probability that A happens, as is the case with flipping two coins on opposite sides of a room.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ These issues are thoughtfully examined in Causality: Models, Reasoning and Inference, Judea Pearl, Cambridge U. Press, 2001.</span></small>
-
-<!-- page: 724 -->
 
 ## 17.7. Independence
 
@@ -25336,8 +23831,6 @@ $$
 In this example, the assumption of independence is reasonable. The result of one coin toss should have negligible impact on the outcome of the other coin toss. And if we were to repeat the experiment many times, we would be likely to have  $A \cap B$  about 1/4 of the time.
 
 On the other hand, there are many examples of events where assuming independence isn't justified. For example, an hourly weather forecast for a clear day might list a 10% chance of rain every hour from noon to midnight, meaning each hour has a 90% chance of being dry. But that does not imply that the odds of a rainless day are a mere $0.9^{12} \approx 0.28$. In reality, if it doesn't rain as of 5pm, the odds are higher than 90% that it will stay dry at 6pm as well—and if it starts pouring at 5pm, the chances are much higher than 10% that it will still be rainy an hour later.
-
-<!-- page: 725 -->
 
 Chapter 17 Conditional Probability
 
@@ -25399,8 +23892,6 @@ The generalization to mutual independence of n events should now be clear.
 
 Assumptions about independence are routinely made in practice. Frequently, such assumptions are quite reasonable. Sometimes, however, the reasonableness of an
 
-<!-- page: 726 -->
-
 ## 17.8. Mutual Independence
 
 independence assumption is not so clear, and the consequences of a faulty assumption can be severe.
@@ -25432,8 +23923,6 @@ Presumably, this dialogue was as confusing to you as it was for the jury. Essent
 \- 1 person in 5 has marker $D$.
 
 \- 1 person in 170 has marker $E$.
-
-<!-- page: 727 -->
 
 ## Chapter 17 Conditional Probability
 
@@ -25473,8 +23962,6 @@ $$
 \begin{array}{c} \operatorname * {P r} [ A _ {1} ] = \operatorname * {P r} [ H H H ] + \operatorname * {P r} [ H H T ] + \operatorname * {P r} [ T T H ] + \operatorname * {P r} [ T T T ] \\ = \frac {1}{8} + \frac {1}{8} + \frac {1}{8} + \frac {1}{8} = \frac {1}{2}. \end{array}
 $$
 
-<!-- page: 728 -->
-
 ## 17.8. Mutual Independence
 
 By symmetry,  $\Pr[A_{2}]=\Pr[A_{3}]=1/2$  as well. Now we can begin checking all the equalities required for mutual independence:
@@ -25504,8 +23991,6 @@ $$
 The first line uses the fact that $A \cap B \cap C \cap D \cap E$ is a subset of $A \cap E$. (We picked out the $A$ and $E$ markers because they're the rarest.) We use pairwise independence on the second line. Now the probability of a random match is 1 in 17,000—a far cry from 1 in 170 million! And this is the strongest conclusion we can reach assuming only pairwise independence.
 
 On the other hand, the 1 in 17,000 bound that we get by assuming pairwise independence is a lot better than the bound that we would have if there were no independence at all. For example, if the markers are dependent, then it is possible that
-
-<!-- page: 729 -->
 
 Chapter 17 Conditional Probability
 
@@ -25551,8 +24036,6 @@ Problem 17.2.
 
 Dirty Harry places two bullets in random chambers of the six-bullet cylinder of his revolver. He gives the cylinder a random spin and says “Feeling lucky?” as he holds the gun against your heart.
 
-<!-- page: 730 -->
-
 ## 17.8. Mutual Independence
 
 (a) What is the probability that you will get shot if he pulls the trigger?
@@ -25587,8 +24070,6 @@ Suppose you have three cards: A♡, A♠, and a Jack. From these, you choose a r
 
 3. the revealed card is an A♡,
 
-<!-- page: 731 -->
-
 Chapter 17 Conditional Probability
 
 4. the revealed card is an Ace.
@@ -25618,8 +24099,6 @@ A guard offers to tell Sauron the name of one of the other prisoners who will be
 Sauron knows the guard to be a truthful fellow. However, Sauron declines this offer. He reasons that knowing what the guards says will reduce his chances, so he is better off not knowing. For example, if the guard says, “Little Bunny Foo-Foo will be released”, then his own probability of release will drop to 1/2 because he will then know that either he or Voldemort will also be released, and these two events are equally likely.
 
 Dark Lord Sauron has made a typical mistake when reasoning about conditional probability. Using a tree diagram and the four-step method, explain his mistake. What is the probability that Sauron is released given that the guard says Foo-Foo is released?
-
-<!-- page: 732 -->
 
 ## 17.8. Mutual Independence
 
@@ -25659,8 +24138,6 @@ Let $G$ be the simple graph shown in Figure 17.4.
 
 A directed graph $\overrightarrow{G}$ can be randomly constructed from $G$ by assigning a direction to each edge independently with equal likelihood.
 
-<!-- page: 733 -->
-
 Figure 17.3 The DAG $G_{0}$
 
 (c) What is the probability that $\overrightarrow{G} = G_0$?
@@ -25689,8 +24166,6 @@ $$
 \Pr [ T _ {1} \cap T _ {2} \cap T _ {3} ]?
 $$
 
-<!-- page: 734 -->
-
 ## 17.8. Mutual Independence
 
 Figure 17.4 Simple graph $G$
@@ -25704,8 +24179,6 @@ Figure 17.4 Simple graph $G$
 Outside of their hum-drum duties as Math for Computer Science Teaching Assistants, Oscar is trying to learn to levitate using only intense concentration and Liz is trying to become the world champion flaming torch juggler. Suppose that Oscar's probability of success is 1/6, Liz's chance of success is 1/4, and these two events are independent.
 
 (a) If at least one of them succeeds, what is the probability that Oscar learns to levitate?
-
-<!-- page: 735 -->
 
 Chapter 17 Conditional Probability
 
@@ -25740,8 +24213,6 @@ Hint: Try to find the probability that HHT comes before HTT conditioning on whet
 ## Problem 17.13.
 
 A 52-card deck is thoroughly shuffled and you are dealt a hand of 13 cards.
-
-<!-- page: 736 -->
 
 ## 17.8. Mutual Independence
 
@@ -25783,8 +24254,6 @@ Here's a variation of Monty Hall's game: the contestant still picks one of three
 
 To analyze this setup, we define two events:
 
-<!-- page: 737 -->
-
 Chapter 17 Conditional Probability
 
 GP: The event that the contestant guesses the door with the prize behind it on his first guess.
@@ -25819,8 +24288,6 @@ There are two decks of cards, the red deck and the blue deck. They differ slight
 
 One of the decks is randomly chosen and hidden in a box. You reach in the box and randomly pick a card that turns out to be the eight of hearts. You believe intuitively that this makes the red deck more likely to be in the box than the blue deck.
 
-<!-- page: 738 -->
-
 ## 17.8. Mutual Independence
 
 Your intuitive judgment about the red deck can be formalized and verified using some inequalities between probabilities and conditional probabilities involving the events
@@ -25853,8 +24320,6 @@ H ::= the chosen coin came up Heads.
 
 (b) State an inequality involving conditional probabilities of the above events that formalizes the assertion “Given that the chosen coin came up Heads, the chosen coin is more likely to have been Coin 1 than Coin 2.”
 
-<!-- page: 739 -->
-
 Chapter 17 Conditional Probability
 
 (c) Prove that, given that the chosen coin came up Heads, the chosen coin is more likely to have been Coin 1 than Coin 2 iff
@@ -25885,8 +24350,6 @@ $$
 
 (d) Write a formula solely in terms of the expressions given in part (a) for the probability that a person will suffer Beaver Fever given that Doctor Meyer says they will. Then calculate the numerical value of the formula.
 
-<!-- page: 740 -->
-
 ## 17.8. Mutual Independence
 
 Suppose there was a vaccine to prevent Beaver Fever, but the vaccine was expensive or slightly risky itself. If you were sure you were going to suffer from Beaver Fever, getting vaccinated would be worthwhile, but even if Dr. Meyer diagnosed you as a future sufferer of Beaver Fever, the probability you actually will suffer Beaver Fever remains low (about 1/32 by part (d)).
@@ -25906,8 +24369,6 @@ Suppose that Let's Make a Deal is played according to slightly different rules a
 ## Problem 17.20.
 
 You are organizing a neighborhood census and instruct your census takers to knock on doors and note the sex of any child that answers the knock. Assume that there
-
-<!-- page: 741 -->
 
 are two children in every household and that girls and boys are equally likely to be children and equally likely to open the door.
 
@@ -25955,8 +24416,6 @@ A guard is going to release exactly two of the three prisoners, Sauron, Voldemor
 
 (a) What is the probability that Voldemort will be released?
 
-<!-- page: 742 -->
-
 ## 17.8. Mutual Independence
 
 The guard will truthfully tell Voldemort the name of one of the prisoners to be released. We're interested in the following events:
@@ -25998,8 +24457,6 @@ Suppose you flip three fair, mutually independent coins. Define the following ev
 \- Let $B$ be the event that the second coin is heads.
 
 \- Let $C$ be the event that the third coin is heads.
-
-<!-- page: 743 -->
 
 Chapter 17 Conditional Probability
 
@@ -26043,8 +24500,6 @@ Hint: Choose A, B, C, D 3-way but not 4-way independent.
 
 so $A$ and $B$ are not independent given $C \cap D$.
 
-<!-- page: 744 -->
-
 ## 17.8. Mutual Independence
 
 ## Problems for Section 17.8
@@ -26074,8 +24529,6 @@ Sally is either happy or unhappy in college.
 (b) What is the probability that Sally is happy in college?
 
 (c) What is the probability that Sally attends Yale, given that she is happy in college?
-
-<!-- page: 745 -->
 
 Chapter 17 Conditional Probability
 
@@ -26125,8 +24578,6 @@ But the judge is mistaken; an example where the plaintiff and defence assertions
 
 It is possible to have three events $A$, $B$, and $C$ that:
 
-<!-- page: 746 -->
-
 ## 17.8. Mutual Independence
 
 \- satisfy the “product rule.” That is,
@@ -26169,13 +24620,9 @@ For the following parts (b)-(d), let $V$ be a fixed set of $n > 3$ vertices, and
 
 Hint: Use part (b), item 2.
 
-<!-- page: 747 -->
-
 (d) What is the probability that two distinct vertices x and y lie on a three-cycle in G? Answer with a simple expression in terms of p and r, where  $r ::= \Pr[\text{NOT}(P(x, y))]$  is the correct answer to part (c).
 
 Hint: Express x and y being on a three-cycle as a simple formula involving  $E(x, y)$  and  $P(x, y)$ .
-
-<!-- page: 748 -->
 
 ## 18
 
@@ -26212,8 +24659,6 @@ $$
 $$
 C (H T T) = 1 \quad C (T T T) = 0.
 $$
-
-<!-- page: 749 -->
 
 Chapter 18 Random Variables
 
@@ -26256,8 +24701,6 @@ and this event has probability
 $$
 \Pr [ C = 2 ] = \Pr [ T H H ] + \Pr [ H T H ] + \Pr [ H H T ] = \frac {1}{8} + \frac {1}{8} + \frac {1}{8} = 3 / 8.
 $$
-
-<!-- page: 750 -->
 
 ## 18.2. Independence
 
@@ -26307,8 +24750,6 @@ $$
 [ H _ {1} = 1 ] = \{H H H, H T H, H H T, H T T \}.
 $$
 
-<!-- page: 751 -->
-
 Chapter 18 Random Variables
 
 Then $H_{1}$ is independent of $M$, since
@@ -26349,8 +24790,6 @@ Lemmas 18.2.1 and 18.2.2 both extend straightforwardly to $k$-way independent va
 
 A random variable maps outcomes to values. The probability density function,  $\mathrm{PDF}_{R}(x)$ , of a random variable, R, measures the probability that R takes the value
 
-<!-- page: 752 -->
-
 ## 18.3. Distribution Functions
 
 x, and the closely related cumulative distribution function,  $\mathrm{CDF}_{R}(x)$ , measures the probability that  $R \leq x$ . Random variables that show up for different spaces of outcomes often wind up behaving in much the same way because they have the same probability of taking different values, that is, because they have the same pdf/cdf.
@@ -26389,13 +24828,9 @@ $$
 \lim _ {x \to \infty} \mathrm{CDF} _ {R} (x) = 1 \text {and} \lim _ {x \to - \infty} \mathrm{CDF} _ {R} (x) = 0.
 $$
 
-<!-- page: 753 -->
-
 Figure 18.1 The probability density function for the sum of two 6-sided dice.
 
 Figure 18.2 The cumulative distribution function for the sum of two 6-sided dice.
-
-<!-- page: 754 -->
 
 ## 18.3. Distribution Functions
 
@@ -26439,8 +24874,6 @@ $$
 
 for all $v \in V$.
 
-<!-- page: 755 -->
-
 If the elements of V in increasing order are  $a_{1}, a_{2}, \ldots, a_{n}$ , then the cumulative distribution function would be  $F : R \to [0, 1]$  where
 
 $$
@@ -26466,8 +24899,6 @@ People are surprised when they first learn that there is a strategy that wins mo
 Suppose that you somehow knew a number x that was in between the numbers in the envelopes. Now you peek in one envelope and see a number. If it is bigger than x, then you know you're peeking at the higher number. If it is smaller than x, then you're peeking at the lower number. In other words, if you know a number x between the numbers in the envelopes, then you are certain to win the game.
 
 The only flaw with this brilliant strategy is that you do not know such an $x$. This sounds like a dead end, but there's a cool way to salvage things: try to guess $x!$
-
-<!-- page: 756 -->
 
 There is some probability that you guess correctly. In this case, you win 100% of the time. On the other hand, if you guess incorrectly, then you're no worse off than before; your chance of winning is still 50%. Combining these two cases, your overall chance of winning is better than 50%.
 
@@ -26503,8 +24934,6 @@ The four outcomes in the event that you win are marked in the tree diagram.
 
 First, we assign edge probabilities. Your guess x is too low with probability L/n, too high with probability  $(n - H)/n$ , and just right with probability  $(H - L)/n$ . Next, you peek at either the lower or higher number with equal probability. Multiplying along root-to-leaf paths gives the outcome probabilities.
 
-<!-- page: 757 -->
-
 Chapter 18 Random Variables
 
 Figure 18.3 The tree diagram for the numbers game.
@@ -26520,8 +24949,6 @@ $$
 The final inequality relies on the fact that the higher number $H$ is at least 1 greater than the lower number $L$ since they are required to be distinct.
 
 Sure enough, you win with this strategy more than half the time, regardless of the numbers in the envelopes! So with numbers chosen from the range  $0, 1, \ldots, 100$ , you win with probability at least  $1/2 + 1/200 = 50.5\%$ . If instead we agree to stick to numbers  $0, \ldots, 10$ , then your probability of winning rises to 55%. By Las Vegas standards, those are great odds.
-
-<!-- page: 758 -->
 
 ## 18.3. Distribution Functions
 
@@ -26547,8 +24974,6 @@ In many fields, including Computer Science, probability analyses come down to ge
 
 The tails do get small very fast. For example, the probability of flipping at most 25 heads in 100 tosses is less than 1 in 3,000,000. In fact, the tail of the distribution falls off so rapidly that the probability of flipping exactly 25 heads is nearly twice the probability of flipping exactly 24 heads plus the probability of flipping exactly
 
-<!-- page: 759 -->
-
 Figure 18.4 The pdf for the unbiased binomial distribution for $n = 20$, $f_{20}(k)$.
 
 23 heads plus ... the probability of flipping no heads.
@@ -26564,8 +24989,6 @@ $$
 for some  $n \in N^{+}$  and  $p \in [0,1]$ . This is because there are  $\binom{n}{k}$  sequences with k heads and n - k tails, but now  $p^{k}(1 - p)^{n-k}$  is the probability of each such sequence.
 
 For example, the plot in Figure 18.5 shows the probability density function  $f_{n,p}(k)$  corresponding to flipping n = 20 independent coins that are heads with probability p = 0.75. The graph shows that we are most likely to get k = 15 heads, as you might expect. Once again, the probability falls off quickly for larger and smaller values of k.
-
-<!-- page: 760 -->
 
 18.4. Great Expectations
 
@@ -26584,8 +25007,6 @@ $$
 $$
 
 Let's work through some examples.
-
-<!-- page: 761 -->
 
 Chapter 18 Random Variables
 
@@ -26643,8 +25064,6 @@ $$
 
 For example, if A is the event that a coin with bias p comes up heads, then  $\operatorname{Ex}[I_{A}] = \Pr[I_{A} = 1] = p$ .
 
-<!-- page: 762 -->
-
 18.4. Great Expectations
 
 ## 18.4.4 Alternate Definition of Expectation
@@ -26672,8 +25091,6 @@ In general, equation (18.3) is more useful than the defining equation (18.2) for
 ## 18.4.5 Conditional Expectation
 
 Just like event probabilities, expectations can be conditioned on some event. Given a random variable R, the expected value of R conditioned on an event A is the probability-weighted average value of R over outcomes in A. More formally:
-
-<!-- page: 763 -->
 
 Chapter 18 Random Variables
 
@@ -26707,8 +25124,6 @@ $$
 \mathrm{Ex} [ R ] = \sum_ {i} \mathrm{Ex} [ R \mid A _ {i} ] \Pr [ A _ {i} ].
 $$
 
-<!-- page: 764 -->
-
 ## 18.4. Great Expectations
 
 Proof.
@@ -26738,8 +25153,6 @@ Since  $\overline{A}$  is the condition that the system does not crash on the fi
 $$
 \mathrm{Ex} [ C \mid \overline {{A}} ] = 1 + \mathrm{Ex} [ C ].\tag{18.7}
 $$
-
-<!-- page: 765 -->
 
 Chapter 18 Random Variables
 
@@ -26774,8 +25187,6 @@ As a further example, suppose a couple insists on having children until they get
 This is really a variant of the previous problem. The question, “How many hours until the program crashes?” is mathematically the same as the question, “How many children must the couple have until they get a boy?” In this case, a crash corresponds to having a boy, so we should set p = 1/2. By the preceding analysis, the couple should expect a baby boy after having 1/p = 2 children. Since the last of these will be a boy, they should expect just one girl. So even in societies where couples pursue this commitment to boys, the expected population will divide evenly between boys and girls.
 
 There is a simple intuitive argument that explains the mean time to failure formula (18.8). Suppose the system is restarted after each failure. This makes the mean time to failure the same as the mean time between successive repeated failures. Now if the probability of failure at a given step is p, then after n steps we expect to have pn failures. Now, by definition, the average number of steps between failures is equal to np/p, namely, 1/p.
-
-<!-- page: 766 -->
 
 ## 18.4. Great Expectations
 
@@ -26817,8 +25228,6 @@ It’s late on a Friday night in your neighborhood hangout when two new biker du
 
 This sounds like a fair game, but after your regrettable encounter with strange dice (Section 16.3), you are definitely skeptical about gambling with bikers. So before agreeing to play, you go through the four-step method and write out the
 
-<!-- page: 767 -->
-
 you guess right?
 
 Eric guesses right?
@@ -26828,8 +25237,6 @@ Nick guesses right?
 your probability payoff
 
 Figure 18.6 The tree diagram for the game where three players each wager \$2 and then guess the outcome of a fair coin toss. The winners split the pot.
-
-<!-- page: 768 -->
 
 ## 18.4. Great Expectations
 
@@ -26861,8 +25268,6 @@ The “something” that’s fishy is the opportunity that Nick and Eric have to
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ The money invested in a wager is commonly referred to as the pot.</span></small>
 
-<!-- page: 769 -->
-
 you guess right?
 
 Eric guesses right?
@@ -26873,8 +25278,6 @@ your
 payoff
 
 Figure 18.7 The revised tree diagram reflecting the scenario where Nick always guesses the opposite of Eric.
-
-<!-- page: 770 -->
 
 ## 18.4. Great Expectations
 
@@ -26904,8 +25307,6 @@ In a typical state lottery,
 
 This is a lot like the game you played with Nick and Eric, except that there are more players and more choices. Chernoff discovered that a small set of numbers
 
-<!-- page: 771 -->
-
 was selected by a large fraction of the population. Apparently many people think the same way; they pick the same numbers not on purpose as in the previous game with Nick and Eric, but based on the Red Sox winning average or today’s date. The result is as though the players were intentionally colluding to lose. If any one of them guessed correctly, then they’d have to split the pot with many other players. By selecting numbers uniformly at random, Chernoff was unlikely to get one of these favored sequences. So if he won, he’d likely get the whole pot! By analyzing actual state lottery data, he determined that he could win an average of 7 cents on the dollar. In other words, his expected return was not –\$.50 as you might think, but +\$.07.$^{2}$ Inadvertent collusion often arises in betting pools and is a phenomenon that you can take advantage of.
 
 ## 18.5 Linearity of Expectation
@@ -26927,8 +25328,6 @@ $$
 A small extension of this proof, which we leave to the reader, implies
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{2}$ Most lotteries now offer randomized tickets to help smooth out the distribution of selected sequences.</span></small>
-
-<!-- page: 772 -->
 
 ## 18.5. Linearity of Expectation
 
@@ -26968,8 +25367,6 @@ Linearity of expectation is especially useful when you have a sum of indicator r
 
 Letting G be the number of men that get their own hat, we want to find the expectation of G. But all we know about G is that the probability that a man gets
 
-<!-- page: 773 -->
-
 his own hat back is $1/n$. There are many different probability distributions of hat permutations with this property, so we don't know enough about the distribution of $G$ to calculate its expectation directly using equation (18.2) or (18.3). But linearity of expectation lets us sidestep this issue.
 
 We'll use a standard, useful trick to apply linearity, namely, we'll express $G$ as a sum of indicator variables. In particular, let $G_{i}$ be an indicator for the event that the $i$th man gets his own hat. That is, $G_{i} = 1$ if the $i$th man gets his own hat, and $G_{i} = 0$ otherwise. The number of men that get their own hat is then the sum of these indicator random variables:
@@ -27003,8 +25400,6 @@ $$
 $$
 
 For example,  $A_{i}$  could be the event that the ith man gets the right hat back. But in general, it could be any subset of the sample space, and we are asking for the expected number of events that will contain a random sample point.
-
-<!-- page: 774 -->
 
 ## 18.5. Linearity of Expectation
 
@@ -27044,8 +25439,6 @@ $$
 J = J _ {1} + J _ {2} + \dots + J _ {n}.
 $$
 
-<!-- page: 775 -->
-
 Chapter 18 Random Variables
 
 By Theorem 18.5.4,
@@ -27080,8 +25473,6 @@ A clever application of linearity of expectation leads to a simple solution to t
 
 blue green green red blue orange blue orange gray.
 
-<!-- page: 776 -->
-
 ## 18.5. Linearity of Expectation
 
 Let's partition the sequence into 5 segments:
@@ -27111,8 +25502,6 @@ $$
 $$
 
 Cool! It's those Harmonic Numbers again.
-
-<!-- page: 777 -->
 
 Chapter 18 Random Variables
 
@@ -27152,8 +25541,6 @@ $$
 \begin{array}{l l} \sum_ {i = 0} ^ {\infty} \mathrm{Ex} [ R _ {i} ] = \sum_ {i = 0} ^ {\infty} \sum_ {s \in \mathcal {S}} R _ {i} (s) \cdot \operatorname * {P r} [ s ] & \text {(Def. 18.4.1)} \\ = \sum_ {s \in \mathcal {S}} \sum_ {i = 0} ^ {\infty} R _ {i} (s) \cdot \operatorname * {P r} [ s ] & \text {(exchanging order of summation)} \\ = \sum_ {s \in \mathcal {S}} \left[ \sum_ {i = 0} ^ {\infty} R _ {i} (s) \right] \cdot \operatorname * {P r} [ s ] & \text {(factoring out \Pr[s])} \\ = \sum_ {s \in \mathcal {S}} T (s) \cdot \operatorname * {P r} [ s ] & \text {(Def. of T)} \\ = \mathrm{Ex} [ T ] & \text {(Def. 18.4.1)} \\ = \mathrm{Ex} \left[ \sum_ {i = 0} ^ {\infty} R _ {i} \right]. & \text {(Def. of T).} \end{array}
 $$
 
-<!-- page: 778 -->
-
 ## 18.5. Linearity of Expectation
 
 ## 18.5.6 A Gambling Paradox
@@ -27175,8 +25562,6 @@ Something's wrong here.
 The argument claiming the expectation is zero against a fair wheel is flawed by an implicit, invalid use of linearity of expectation for an infinite sum.
 
 To explain this carefully, let  $B_{n}$  be the number of dollars you win on your nth bet, where  $B_{n}$  is defined to be zero if red comes up before the nth spin of the wheel.
-
-<!-- page: 779 -->
 
 Chapter 18 Random Variables
 
@@ -27215,8 +25600,6 @@ diverges rapidly.
 So the presumption that you can't beat a fair game, and the argument we offered to support this presumption, are mistaken: by bet doubling, you can be sure to walk away a winner. Probability theory has led to an apparently absurd conclusion.
 
 But probability theory shouldn't be rejected because it leads to this absurd conclusion. If you only had a finite amount of money to bet with—say enough money to make $k$ bets before going bankrupt—then it would be correct to calculate your expectation by summing $B_1 + B_2 + \dots + B_k$, and your expectation would be zero for the fair wheel and negative against an unfair wheel. In other words, in order to follow the bet doubling strategy, you need to have an infinite bankroll. So it's absurd to assume you could actually follow a bet doubling strategy, and it's entirely reasonable that an absurd assumption leads to an absurd conclusion.
-
-<!-- page: 780 -->
 
 ## 18.5. Linearity of Expectation
 
@@ -27266,8 +25649,6 @@ Problem 18.1.
 
 Let $I_{A}$ and $I_{B}$ be the indicator variables for events A and B. Prove that $I_{A}$ and $I_{B}$ are independent iff A and B are independent.
 
-<!-- page: 781 -->
-
 Chapter 18 Random Variables
 
 Hint: Let $A^1 ::= A$ and $A^0 ::= \overline{A}$, so the event $[I_A = c]$ is the same as $A^c$ for $c \in \{0, 1\}$; likewise for $B^1, B^0$.
@@ -27314,8 +25695,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">for every outcome $\omega \in S$.</span></small>
 
-<!-- page: 782 -->
-
 ## 18.5. Linearity of Expectation
 
 (c) Let $V = \{1, 2, 3\}$ and $(R, S, T)$ take the following triples of values with equal probability,
@@ -27353,8 +25732,6 @@ Let $M = \max\{R, S, T\}$. Compute the values of the probability density functio
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ That is, Pr[R = 1] = 1/2.</span></small>
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ That is,  $\Pr[S = 1]$  is one or zero.</span></small>
-
-<!-- page: 783 -->
 
 ## Class Problems
 
@@ -27398,8 +25775,6 @@ $$
 \mathrm{PDF} _ {J} (k - 1) > \mathrm{PDF} _ {J} (k) \quad \text {for} k > n p + p.
 $$
 
-<!-- page: 784 -->
-
 ## 18.5. Linearity of Expectation
 
 (b) Conclude that the maximum value of  $PDF_{J}$  is asymptotically equal to
@@ -27431,8 +25806,6 @@ We model this scenario with a random walk graph whose vertices are the integers 
 The sailor begins his random walk at the origin. This is described by an initial distribution which labels the origin with probability 1 and all other vertices with probability 0. After one step, the sailor is equally likely to be at location 1 or -1, so the distribution after one step gives label 1/2 to the vertices 1 and -1 and labels all other vertices with probability 0.
 
 (a) Give the distributions after the 2nd, 3rd, and 4th step by filling in the table of probabilities below, where omitted entries are 0. For each row, write all the nonzero entries so they have the same denominator.
-
-<!-- page: 785 -->
 
 <table><tr><td rowspan="2"></td><td colspan="9">location</td></tr><tr><td>-4</td><td>-3</td><td>-2</td><td>-1</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>initially</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>after 1 step</td><td></td><td></td><td></td><td>1/2</td><td>0</td><td>1/2</td><td></td><td></td><td></td></tr><tr><td>after 2 steps</td><td></td><td></td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td></td><td></td></tr><tr><td>after 3 steps</td><td></td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td></td></tr><tr><td>after 4 steps</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td></tr></table>
 
@@ -27467,8 +25840,6 @@ $$
 ## Problem 18.9.
 
 Bruce Lee, on a movie that didn’t go public, is practicing by breaking 5 boards with his fists. He is able to break a board with probability 0.8—he is practicing with his left fist, that’s why it’s not 1—and he breaks each board independently.
-
-<!-- page: 786 -->
 
 ## 18.5. Linearity of Expectation
 
@@ -27508,8 +25879,6 @@ Hint: Let D be the tree diagram for this process. Explain why D can be described
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ This game is actually offered in casinos with k = 3, where it is called Carnival Dice.</span></small>
 
-<!-- page: 787 -->
-
 Chapter 18 Random Variables
 
 Figure 18.8 Sample space tree for coin toss until two consecutive tails.
@@ -27542,8 +25911,6 @@ $$
 
 A record of who beat whom in a round-robin tournament can be described with a tournament digraph, where the vertices correspond to players and there is an edge
 
-<!-- page: 788 -->
-
 Figure 18.9 Outcome Tree for Flipping Until HHH
 
 $\langle x \rightarrow y \rangle$ iff x beat y in their game. A ranking of the players is a path that includes all the players. A tournament digraph may in general have one or more rankings. $^{7}$
@@ -27561,8 +25928,6 @@ Let $e(S)$ be the expected number of flips starting at the root of subtree S of 
 Write a small system of equations involving  $e(D)$ ,  $e(B)$ , and  $e(C)$  that could be solved to find  $e(D)$ . You do not need to solve the equations.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ It has a unique ranking iff it is a DAG, see Problem 9.4.</span></small>
-
-<!-- page: 789 -->
 
 Figure 18.10 Outcome Tree for Flipping Until HH or TT
 
@@ -27585,8 +25950,6 @@ Pick the first number. Call it the current maximum. Go through the rest of the v
 What is the expected number of times we update the current maximum?
 
 Hint: Let  $X_{i}$  be the indicator variable for the event that the ith element in the vector is larger than all the previous elements.
-
-<!-- page: 790 -->
 
 ## 18.5. Linearity of Expectation
 
@@ -27626,8 +25989,6 @@ Example: If the student rolls a 2 the first morning, a 5 the second morning, and
 
 Example: If the rolls are 5 and 3, then the student delays for U = 15 days.
 
-<!-- page: 791 -->
-
 (d) A student is busy with probability 1/2, relaxed with probability 1/3, and unlucky with probability 1/6. Let D be the number of days the student delays laundry. What is Ex[D]?
 
 ## Problem 18.20.
@@ -27659,8 +26020,6 @@ Assume all random choices during the grading process are independent.
 (b) What is the expected score on an exam graded by a lecturer?
 
 (c) What is the expected score on a Math for Computer Science final exam?
-
-<!-- page: 792 -->
 
 ## 18.5. Linearity of Expectation
 
@@ -27709,7 +26068,6 @@ If there is a girl in front, behind, to the left, or to the right of a boy, then
 Here are seven propositions:
 
 | $x_{1}$ | OR | $x_{3}$ | OR | $\overline{x_{7}}$ |
-| --- | --- | --- | --- | --- |
 | $\overline{x_{5}}$ | OR | $x_{6}$ | OR | $x_{7}$ |
 | $x_{2}$ | OR | $\overline{x_{4}}$ | OR | $x_{6}$ |
 | $\overline{x_{4}}$ | OR | $x_{5}$ | OR | $\overline{x_{7}}$ |
@@ -27720,8 +26078,6 @@ Here are seven propositions:
 ## Note that:
 
 1. Each proposition is the disjunction (OR) of three terms of the form $x_{i}$ or the form $\overline{x_i}$.
-
-<!-- page: 793 -->
 
 Chapter 18 Random Variables
 
@@ -27765,8 +26121,6 @@ A random assignment of true/false values will be made independently to each of t
 
 There are n students who are both taking Math for Computer Science and Introduction to Signal Processing this term. To make it easier on themselves, the Professors in charge of these classes have decided to randomly permute their class lists and
 
-<!-- page: 794 -->
-
 ## 18.5. Linearity of Expectation
 
 then assign students grades based on their rank in the permutation—just as many students have suspected :−). Assume all permutations are equally likely and that the ranking in each class is independent of the other.
@@ -27790,8 +26144,6 @@ Proof.
 $$
 \begin{array}{l} \operatorname{Ex} [ R _ {1} \cdot R _ {2} ] \\ = \sum_ {r \in \operatorname{range} (R _ {1} \cdot R _ {2})} r \cdot \Pr [ R _ {1} \cdot R _ {2} = r ] \\ = \sum_ {r _ {i} \in \operatorname{range} (R _ {i})} r _ {1} r _ {2} \cdot \Pr [ R _ {1} = r _ {1} \text {and} R _ {2} = r _ {2} ] \\ = \sum_ {r _ {1} \in \operatorname{range} (R _ {1})} \sum_ {r _ {2} \in \operatorname{range} (R _ {2})} r _ {1} r _ {2} \cdot \Pr [ R _ {1} = r _ {1} \text {and} R _ {2} = r _ {2} ] \\ = \sum_ {r _ {1} \in \operatorname{range} (R _ {1})} \sum_ {r _ {2} \in \operatorname{range} (R _ {2})} r _ {1 r _ {2}} \cdot \Pr [ R _ {1} = r _ {1} ] \cdot \Pr [ R _ {2} = r _ {2} ] \\ = \sum_ {r _ {1} \in \operatorname{range} (R _ {1})} \left(r _ {1} \Pr [ R _ {1} = r _ {1} ] \cdot \sum_ {r _ {2} \in \operatorname{range} (R _ {2})} r _ {2} \Pr [ R _ {2} = r _ {2} ]\right) \\ = \sum_ {r _ {1} \in \operatorname{range} (R _ {1})} r _ {1} \Pr [ R _ {1} = r _ {1} ] \cdot \operatorname{Ex} [ R _ {2} ] \\ = \operatorname{Ex} [ R _ {2} ] \cdot \sum_ {r _ {1} \in \operatorname{range} (R _ {1})} r _ {1} \Pr [ R _ {1} = r _ {1} ] \\ = \operatorname{Ex} [ R _ {2} ] \cdot \operatorname{Ex} [ R _ {1} ]. \end{array}
 $$
-
-<!-- page: 795 -->
 
 Chapter 18 Random Variables
 
@@ -27827,8 +26179,6 @@ The army needs to test n soldiers for a disease. There is a blood test that accu
 
 Approach (1) is to test blood from each soldier individually; this requires n tests. Approach (2) is to randomly group the soldiers into g groups of k soldiers, where  $n = gk$ . For each group, blend the k blood samples of the people in the group, and test the blended sample. If the group-blend is free of the disease, we are done with that group after one test. If the group-blend tests positive for the disease, then someone in the group has the disease, and we to test all the people in the group for a total of  $k + 1$  tests on that group.
 
-<!-- page: 796 -->
-
 ## 18.5. Linearity of Expectation
 
 Since the groups are chosen randomly, each soldier in the group has the disease with probability p, and it is safe to assume that whether one soldier has the disease is independent of whether the others do.
@@ -27861,8 +26211,6 @@ Hint: The event  $[f(R)=a]$  is the disjoint union of all the events  $[R=r]$  f
 
 Peeta bakes between 1 and 2n loaves of bread to sell every day. Each day he rolls
 
-<!-- page: 797 -->
-
 ## Chapter 18 Random Variables
 
 a fair, n-sided die to get a number from 1 to n, then flips a fair coin. If the coin is heads, he bakes m loaves of bread, where m is the number on the die that day, and if the coin is tails, he bakes 2m loaves.
@@ -27889,8 +26237,6 @@ Let D be the number of balls drawn until the process ends with the box full of w
 
 Hint: Let $D_{i}$ be the number of draws after the $i$th white ball until the draw when the $(i + 1)$st white ball is put into the box.
 
-<!-- page: 798 -->
-
 ## Deviation from the Mean
 
 In the previous chapter, we took it for granted that expectation is useful and developed a bunch of techniques for calculating expected values. But why should we care about this value? After all, a random variable may never take a value anywhere near its expectation.
@@ -27904,8 +26250,6 @@ This issue of deviation from the mean is the focus of this chapter.
 ## 19.1 Markov's Theorem
 
 Markov's theorem gives a generally coarse estimate of the probability that a random variable takes a value much larger than its mean. It is an almost trivial result by
-
-<!-- page: 799 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -27938,8 +26282,6 @@ Corollary 19.1.2. If $R$ is a nonnegative random variable, then for all $c \geq 
 $$
 \Pr [ R \geq c \cdot \operatorname{Ex} [ R ] ] \leq \frac {1}{c}.\tag{19.3}
 $$
-
-<!-- page: 800 -->
 
 ## 19.1. Markov's Theorem
 
@@ -27974,8 +26316,6 @@ Unfortunately, Markov's Theorem is not always so accurate. For example, it gives
 ## 19.1.2 Markov's Theorem for Bounded Variables
 
 Suppose we learn that the average IQ among MIT students is 150 (which is not true, by the way). What can we say about the probability that an MIT student has an IQ of more than 200? Markov's theorem immediately tells us that no more than 150/200 or 3/4 of the students can have such a high IQ. Here, we simply applied
-
-<!-- page: 801 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28012,8 +26352,6 @@ $$
 $$
 
 The case when z = 2 turns out to be so important that the numerator of the right hand side of (19.4) has been given a name:
-
-<!-- page: 802 -->
 
 ## 19.2. Chebyshev's Theorem
 
@@ -28053,8 +26391,6 @@ The expected payoff is the same for both games, but the games are very different
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ There are Chebyshev Theorems in several other disciplines, but Theorem 19.2.3 is the only one we’ll refer to.</span></small>
 
-<!-- page: 803 -->
-
 Chapter 19 Deviation from the Mean
 
 We can compute the Var[A] by working “from the inside out” as follows:
@@ -28091,8 +26427,6 @@ $$
 \sigma_ {R}: := \sqrt {\mathrm{Var} [ R ]} = \sqrt {\mathrm{Ex} [ (R - \mathrm{Ex} [ R ]) ^ {2} ]}.
 $$
 
-<!-- page: 804 -->
-
 ## 19.2. Chebyshev's Theorem
 
 Figure 19.1 The standard deviation of a distribution indicates how wide the “main part” of it is.
@@ -28116,8 +26450,6 @@ $$
 $$
 
 Now we see explicitly how the “likely” values of R are clustered in an  $O(\sigma_{R})$ -sized region around Ex[R], confirming that the standard deviation measures how spread out the distribution of R is around its mean.
-
-<!-- page: 805 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28159,8 +26491,6 @@ $$
 
 for any random variable, $R$.
 
-<!-- page: 806 -->
-
 ## 19.3. Properties of Variance
 
 Here we use the notation  $Ex^{2}[R]$  as shorthand for  $(\mathrm{Ex}[R])^{2}$ .
@@ -28194,8 +26524,6 @@ $$
 so all we need is a formula for $\operatorname{Ex}[C^2]$.
 
 Reasoning about C using conditional expectation worked nicely in Section 18.4.6 to find mean time to failure, and a similar approach works for  $C^{2}$ . Namely, the expected value of  $C^{2}$  is the probability, p, of failure in the first hour times  $1^{2}$ , plus the probability,  $(1 - p)$ , of non-failure in the first hour times the expected value of
-
-<!-- page: 807 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28239,8 +26567,6 @@ $$
 
 $^{2}$ That is, C has the geometric distribution with parameter p according to Definition 18.4.6.
 
-<!-- page: 808 -->
-
 ## 19.3. Properties of Variance
 
 It's even simpler to prove that adding a constant does not change the variance, as the reader can verify:
@@ -28283,8 +26609,6 @@ $$
 \mathrm{Ex} [ R S ] = \mathrm{Ex} [ R ] \mathrm{Ex} [ S ]\tag{19.13}
 $$
 
-<!-- page: 809 -->
-
 Chapter 19 Deviation from the Mean
 
 since $R$ and $S$ are independent:
@@ -28315,8 +26639,6 @@ $$
 
 Democratic politicians were astonished in 2010 when their early polls of sample voters showed Republican Scott Brown was favored by a majority of voters and so would win the special election to fill the Senate seat that the late Democrat Teddy Kennedy had occupied for over 40 years. Based on their poll results, they mounted an intense, but ultimately unsuccessful, effort to save the seat for their party.
 
-<!-- page: 810 -->
-
 19.4. Estimation by Random Sampling
 
 ## 19.4.1 A Voter Poll
@@ -28346,8 +26668,6 @@ So we'd better determine the number, $n$, of times we must poll voters so that i
 $S_{n}$  is binomially distributed. Equation (19.15), combined with the fact that  $p(1-p)$  is maximized when p = 1 - p, that is, when p = 1/2 (check for yourself!),
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ We're choosing a random voter n times with replacement. We don't remove a chosen voter from the set of voters eligible to be chosen later; so we might choose the same voter more than once! We would get a slightly better estimate if we required n different people to be chosen, but doing so complicates both the selection process and its analysis for little gain.</span></small>
-
-<!-- page: 811 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28389,8 +26709,6 @@ There are important cases where the relevant distributions are not binomial beca
 
 As before, suppose there are n students and d days in the year, and let M be the number of pairs of students with matching birthdays. Now it will be easy to
 
-<!-- page: 812 -->
-
 calculate the expected number of pairs of students with matching birthdays. Then we can take the same approach as we did in estimating voter preferences to get an estimate of the probability of getting a number of pairs close to the expected number.
 
 Unlike the situation with voter preferences, having matching birthdays for different pairs of students are not mutually independent events. Knowing Alice's birthday matches Bob's tells us nothing about who Carol matches, and knowing Alice has the same birthday as Carol tells us nothing about who Bob matches. But if Alice matches Bob and Alice matches Carol, it's certain that Bob and Carol match as well! The events that various pairs of students have matching birthdays are not mutually independent, and indeed not even three-way independent. The best we can say is that they are pairwise independent. This will allow us to apply the same reasoning to Birthday Matching as we did for voter preference. Namely, let $B_1, B_2, \ldots, B_n$ be the birthdays of $n$ independently chosen people, and let $E_{i,j}$ be the indicator variable for the event that the $i$th and $j$th people chosen have the same birthdays, that is, the event $[B_i = B_j]$. So in our probability model, the $B_i$'s are mutually independent variables, and the $E_{i,j}$'s are pairwise independent. Also, the expectations of $E_{i,j}$ for $i \neq j$ equals the probability that $B_i = B_j$, namely, $1/d$.
@@ -28412,8 +26730,6 @@ Similarly,
 $$
 \begin{array}{r l r} \mathrm{Var} [ M ] & = \mathrm{Var} \left[ \sum_ {1 \leq i <   j \leq n} E _ {i, j} \right] \\ & = \sum_ {1 \leq i <   j \leq n} \mathrm{Var} [ E _ {i, j} ] & \text {(Theorem 19.3.8)} \\ & = \binom {n} {2} \cdot \frac {1}{d} \left(1 - \frac {1}{d}\right). & \text {(Corollary 19.3.2)} \end{array}
 $$
-
-<!-- page: 813 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28452,8 +26768,6 @@ $$
 $$
 
 The second important property of  $S_{n}/n$  is that its variance is the variance of  $G_{i}$
-
-<!-- page: 814 -->
 
 (def of $S_{n}$)
 
@@ -28497,8 +26811,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{4}$ This is the Weak Law of Large Numbers. As you might suppose, there is also a Strong Law, but it’s outside the scope of 6.042.</span></small>
 
-<!-- page: 815 -->
-
 ## 19.5 Confidence versus Probability
 
 So Chebyshev's Bound implies that sampling 3,125 voters will yield a fraction that, $95\%$ of the time, is within 0.04 of the actual fraction of the voting population who prefer Brown.
@@ -28521,8 +26833,6 @@ This is a bit of a mouthful, so special phrasing closer to the sloppy language i
 
 At the 95% confidence level, the fraction of voters who prefer Brown is  $1250/3125 \pm 0.04$ .
 
-<!-- page: 816 -->
-
 So confidence levels refer to the results of estimation procedures for real-world quantities. The phrase “confidence level” should be heard as a reminder that some statistical procedure was used to obtain an estimate, and in judging the credibility of the estimate, it may be important to learn just what this procedure was.
 
 ## 19.6 Sums of Random Variables
@@ -28538,8 +26848,6 @@ An early idea was to assign each server an alphabetic range of forum topics. (�
 If the length of every task were known in advance, then finding a balanced distribution would be a kind of “bin packing” problem. Such problems are hard to solve exactly, but approximation algorithms can come close. Unfortunately, in this case task lengths are not known in advance, which is typical of workload problems in the real world.
 
 So the load balancing problem seems sort of hopeless, because there is no data available to guide decisions. So the programmers of Fussbook gave up and just
-
-<!-- page: 817 -->
 
 randomly assigned posts to computers. Imagine their surprise when the system stayed up and hasn't crashed yet!
 
@@ -28564,8 +26872,6 @@ $$
 $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{5}$ Yes, this is the same Chernoff who figured out how to beat the state lottery—this guy knows a thing or two.</span></small>
-
-<!-- page: 818 -->
 
 19.6. Sums of Random Variables
 
@@ -28603,8 +26909,6 @@ $$
 e ^ {- (0. 0 1 8 7 \dots) \cdot 5 0 0 0 0 0} <   e ^ {- 9 3 9 2},
 $$
 
-<!-- page: 819 -->
-
 Chapter 19 Deviation from the Mean
 
 which is an inconceivably small number.
@@ -28632,8 +26936,6 @@ $$
 So the Pick-4 lottery may be exciting for the players, but the lottery operator has little doubt as to the outcome!
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{6}$ As we noted in Chapter 18, human choices are often not uniform and they can be highly dependent. For example, lots of people will pick an important date. The lottery folks should not get too much comfort from the analysis that follows, unless they assign random 4-digit numbers to each player.</span></small>
-
-<!-- page: 820 -->
 
 19.6. Sums of Random Variables
 
@@ -28666,8 +26968,6 @@ $$
 $$
 
 The probability that some server is overloaded is at most m times the probability
-
-<!-- page: 821 -->
 
 ## Chapter 19 Deviation from the Mean
 
@@ -28703,8 +27003,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{7}$ See “A Conversation with Herman Chernoff,” Statistical Science 1996, Vol. 11, No. 4, pp 335–350.</span></small>
 
-<!-- page: 822 -->
-
 ## 19.6. Sums of Random Variables
 
 Algebra aside, there is a brilliant idea in this proof: in this context, exponentiating somehow supercharges the Markov bound. This is not true in general! One unfortunate side-effect of this supercharging is that we have to bound some nasty expectations involving exponentials in order to complete the proof. This is done in the two lemmas below, where variables take on values as in Theorem 19.6.1.
@@ -28734,8 +27032,6 @@ Proof. All summations below range over values v taken by the random variable  $T
 $$
 \begin{array}{l l} \operatorname{Ex} [ c ^ {T _ {i}} ] = \sum c ^ {v}   \operatorname * {P r} [ T _ {i} = v ] & \text {(def of Ex[.])} \\ \leq \sum (1 + (c - 1) v)   \operatorname * {P r} [ T _ {i} = v ] & \text {(convexity—see below)} \\ = \sum \operatorname * {P r} [ T _ {i} = v ] + (c - 1) v   \operatorname * {P r} [ T _ {i} = v ] \\ = \sum \operatorname * {P r} [ T _ {i} = v ] + (c - 1) \sum v   \operatorname * {P r} [ T _ {i} = v ] \\ = 1 + (c - 1)   \operatorname{Ex} [ T _ {i} ] \\ \leq e ^ {(c - 1)   \operatorname{Ex} [ T _ {i} ]} & \text {(since 1 + z \leq e^z).} \end{array}
 $$
-
-<!-- page: 823 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28793,8 +27089,6 @@ $$
 \Pr [ T \geq c \operatorname{Ex} [ T ] ] \leq \frac {1}{c}.
 $$
 
-<!-- page: 824 -->
-
 ## 19.6. Sums of Random Variables
 
 Chebyshev's Theorem gives us the stronger result that
@@ -28831,8 +27125,6 @@ $$
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{8}$ This is in reference and deference to the famous saying that “If something can go wrong, it probably will.”</span></small>
 
-<!-- page: 825 -->
-
 Chapter 19 Deviation from the Mean
 
 Proof.
@@ -28852,8 +27144,6 @@ In fact, if there are 100,000 random tickets in Pick-4, Theorem 19.6.4 says that
 ## 19.7 Really Great Expectations
 
 Making independent tosses of a fair coin until some desired pattern comes up is a simple process you should feel solidly in command of by now, right? So how about a bet about the simplest such process—tossing until a head comes up? Ok, you’re wary of betting with us, but how about this: we’ll let you set the odds.
-
-<!-- page: 826 -->
 
 19.7. Really Great Expectations
 
@@ -28878,8 +27168,6 @@ $$
 $$
 
 So you can expect to pay me an infinite number of cents before winning my “generous” payment. No amount of generosity can make this bet fair! In fact this particular example is a special case of an astonishingly general one: the expected waiting time for any random variable to achieve a larger value is infinite.
-
-<!-- page: 827 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28915,8 +27203,6 @@ A herd of cows is stricken by an outbreak of cold cow disease. The disease lower
 
 (c) Notice that the results of part (b) are purely arithmetic facts about averages, not about probabilities. But you verified the claim in part (a) by applying Markov's bound on the deviation of a random variable. Justify this approach by regarding the
 
-<!-- page: 828 -->
-
 ## 19.7. Really Great Expectations
 
 temperature, T, of a cow as a random variable. Carefully specify the probability space on which T is defined: what are the outcomes? what are their probabilities? Explain the precise connection between properties of T and average herd temperature that justifies the application of Markov's Bound.
@@ -28940,8 +27226,6 @@ A herd of cows is stricken by an outbreak of hot cow disease. The disease raises
 (a) Use Markov's Bound 19.1.1 to prove that at most $2/5$ of the cows could have survived.
 
 (b) Notice that the conclusion of part (a) is a purely arithmetic facts about averages, not about probabilities. But you verified the claim of part (a) by applying Markov's bound on the deviation of a random variable. Justify this approach by explaining how to define a random variable, $T$, for the temperature of a cow. Carefully specify the probability space on which $T$ is defined: what are the outcomes? what are their probabilities? Explain the precise connection between properties of $T$, average herd temperature, and fractions of the herd with various temperatures, that justify application of Markov's Bound.
-
-<!-- page: 829 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -28976,8 +27260,6 @@ Tom has a gambling problem. He plays 240 hands of draw poker, 120 hands of black
 (a) What is the expected number of hands that Tom wins in a day?
 
 (b) What would the Markov bound be on the probability that Tom will win at least 216 hands on a given day?
-
-<!-- page: 830 -->
 
 ## 19.7. Really Great Expectations
 
@@ -29014,8 +27296,6 @@ For any random variable, R, with mean,  $\mu$ , and standard deviation,  $\sigma
 $$
 \Pr [ | R - \mu | \geq x ] \leq \left(\frac {\sigma}{x}\right) ^ {2}.
 $$
-
-<!-- page: 831 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -29073,8 +27353,6 @@ Let $R$ be a positive integer valued random variable.
 
 (c) If $R \leq 2$, that is, the only values of $R$ are 1 and 2, how large can $\operatorname{Var}[R]$ be?
 
-<!-- page: 832 -->
-
 ## 19.7. Really Great Expectations
 
 ## Homework Problems
@@ -29108,8 +27386,6 @@ The expected absolute deviation of a real-valued random variable, R, with mean  
 $$
 \mathrm{Ex} [ | R - \mu | ].
 $$
-
-<!-- page: 833 -->
 
 Prove that the expected absolute deviation is always less than or equal to the standard deviation, $\sigma$. (For simplicity, you may assume that $R$ is defined on a finite sample space.)
 
@@ -29154,8 +27430,6 @@ Let $D_{n}$ be the total number of heads among mutually independent tosses of n 
 Let $K_{n}$ be the complete graph with n vertices. Each of the edges of the graph will be randomly assigned one of the colors red, green, or blue. The assignments of colors to edges are mutually independent, and the probability of an edge being assigned red is r, blue is b, and green is g (so $r + b + g = 1$).
 
 A set of three vertices in the graph is called a triangle. A triangle is monochromatic if the three edges connecting the vertices are all the same color.
-
-<!-- page: 834 -->
 
 ## 19.7. Really Great Expectations
 
@@ -29203,8 +27477,6 @@ There is a herd of cows whose average body temperature turns out to be 100 degre
 
 The herd is stricken by an outbreak of wacky cow disease, which will eventually kill any cow whose body temperature differs from the average by 10 degrees or more.
 
-<!-- page: 835 -->
-
 Chapter 19 Deviation from the Mean
 
 (a) Apply the Chebyshev bound to the temperature $T$ of a random cow to show that at most $20\%$ of the cows will be killed by this disease outbreak.
@@ -29230,8 +27502,6 @@ A recent Gallup poll found that 35% of the adult population of the United States
 ## Problem 19.20.
 
 Let $B_{1}, B_{2}, \ldots, B_{n}$ be mutually independent random variables with a uniform distribution on the integer interval [1, d]. Let D equal to the number of events
-
-<!-- page: 836 -->
 
 ## 19.7. Really Great Expectations
 
@@ -29260,8 +27530,6 @@ Suppose you were the defendant. How would you explain to the judge why the numbe
 ## Problem 19.22.
 
 The proof of the Pairwise Independent Sampling Theorem 19.4.1 was given for
-
-<!-- page: 837 -->
 
 Chapter 19 Deviation from the Mean
 
@@ -29301,8 +27569,6 @@ Write a brief explanation to these befuddled editors explaining what's wrong wit
 
 Hint: xkcd comic: “significant” xkcd.com/882/
 
-<!-- page: 838 -->
-
 ## 19.7. Really Great Expectations
 
 ## Exam Problems
@@ -29337,8 +27603,6 @@ You do the asking, you count how many said they will vote for the President, you
 
 2. Mr. President, with probability at least 95 percent, p is within 0.04 of 0.53.
 
-<!-- page: 839 -->
-
 Chapter 19 Deviation from the Mean
 
 3. Mr. President, either p is within 0.04 of 0.53 or something very strange (5-in-100) has happened.
@@ -29364,8 +27628,6 @@ Mathematically, the program is an actual outcome that already happened. The rand
 5. Given that the last line in the program is buggy, the probability that the next-to-last line in the program will also be buggy is greater than b.
 
 6. The expectation of the indicator variable for the last line in the random sample being buggy is b.
-
-<!-- page: 840 -->
 
 ## 19.7. Really Great Expectations
 
@@ -29407,8 +27669,6 @@ A gambler plays 120 hands of draw poker, 60 hands of black jack, and 20 hands of
 
 (a) What is the expected number of hands the gambler wins in a day?
 
-<!-- page: 841 -->
-
 (b) What would the Markov bound be on the probability that the gambler will win at least 108 hands on a given day?
 
 (c) Assume the outcomes of the card games are pairwise, but possibly not mutually, independent. What is the variance in the number of hands won per day? You may answer with a numerical expression that is not completely evaluated.
@@ -29432,8 +27692,6 @@ Hint: Use Chernoff's Bound, Theorem 19.6.1,. Note that $\beta(12) > 18$, where $
 ## Problem 19.29.
 
 Sometimes I forget a few items when I leave the house in the morning. For example,
-
-<!-- page: 842 -->
 
 ## 19.7. Really Great Expectations
 
@@ -29466,8 +27724,6 @@ Reasoning based on the Chernoff bound goes a long way in explaining the recent s
 
 \- A bond is a collection of loans, packaged into one entity. A bond can be divided into tranches, in some ordering, which tell us how to assign losses from defaults. Suppose a bond contains 1000 loans, and is divided into 10
 
-<!-- page: 843 -->
-
 tranches of 100 bonds each. Then, all the defaults must fill up the lowest tranche before the affect others. For example, suppose 150 defaults happened. Then, the first 100 defaults would occur in tranche 1, and the next 50 defaults would happen in tranche 2.
 
 \- The lowest tranche of a bond is called the mezzanine tranche.
@@ -29491,8 +27747,6 @@ tranches of 100 bonds each. Then, all the defaults must fill up the lowest tranc
 ## Problem 19.31.
 
 We have two coins: one is a fair coin, but the other produces heads with probability 3/4. One of the two coins is picked, and this coin is tossed n times. Use the Chernoff Bound to determine the smallest n which allows determination of which coin was picked with 95% confidence.
-
-<!-- page: 844 -->
 
 ## 19.7. Really Great Expectations
 
@@ -29546,8 +27800,6 @@ $$
 
 (a) Prove that $\operatorname{Ex}[R]$ is finite.
 
-<!-- page: 845 -->
-
 Chapter 19 Deviation from the Mean
 
 (b) Prove that $\operatorname{Var}[R]$ is infinite.
@@ -29580,8 +27832,6 @@ Suppose $\Pr[K = k] = \Theta(k^{-4})$.
 
 ## Problem 19.36.
 
-<!-- page: 846 -->
-
 ## 19.7. Really Great Expectations
 
 A gambler bets \$10 on “red” at a roulette table (the odds of red are 18/38, slightly less than even) to win \$10. If he wins, he gets back twice the amount of his bet, and he quits. Otherwise, he doubles his previous bet and continues.
@@ -29595,10 +27845,6 @@ For example, if he loses his first two bets but wins his third bet, the total sp
 (c) What is his expected final profit (amount won minus amount lost)?
 
 (d) You can beat a biased game by bet doubling, but bet doubling is not feasible because it requires an infinite bankroll. Verify this by proving that the expected size of the gambler's last bet is infinite.
-
-<!-- page: 847 -->
-
-<!-- page: 848 -->
 
 ## Random Walks
 
@@ -29618,8 +27864,6 @@ The gambler's situation as he proceeds with his \$1 bets is illustrated in Figur
 
 In an unbiased game, the individual bets are fair: the gambler is equally likely to win or lose each bet—that is, $p = 1/2$. The gambler is more likely to win if $p > 1/2$ and less likely to win if $p < 1/2$; these random walks are called biased. We want to determine the probability that the walk terminates at boundary $T$—the probability that the gambler wins. We'll do this in Section 20.1.1. But before we
 
-<!-- page: 849 -->
-
 Figure 20.1 A graph of the gambler’s capital versus time for one possible sequence of bet outcomes. At each time step, the graph goes up with probability $p$ and down with probability $1 - p$. The gambler continues betting until the graph reaches either 0 or $T$. If he starts with $\$n$, his intended profit is $\$m$ where $T = n + m$.
 
 derive the probability, let's examine what it turns out to be.
@@ -29631,8 +27875,6 @@ We’ll show below that starting with $n$ dollars and aiming for a target of $T 
 So in the unbiased game, the larger the initial stake relative to the target, the higher the probability the gambler will win, which makes some intuitive sense. But note that although the gambler now wins nearly all the time, when he loses, he loses big. Bankruptcy costs him \$1M, while when he wins, he wins only \$100. The gambler’s average win remains zero dollars, which is what you’d expect when making fair bets.
 
 Another useful way to describe this scenario is as a game between two players. Say Albert starts with \$500, and Eric starts with \$100. They flip a fair coin, and
-
-<!-- page: 850 -->
 
 every time a Head appears, Albert wins \$1 from Eric, and vice versa for Tails. They play this game until one person goes bankrupt. This problem is identical to the Gambler's Ruin problem with $n = 500$ and $T = 100 + 500 = 600$. The probability of Albert winning is $500/600 = 5/6$.
 
@@ -29655,8 +27897,6 @@ r ^ {n + 1} \cdot p - r ^ {n} \cdot q = \left(r ^ {n} \cdot \frac {q}{p}\right) 
 $$
 
 so this assignment makes the first bet a fair one in terms of worth. Moreover, whether Albert wins or loses the bet, the successive chip worths counting up Albert's stack and then down Eric's remain $r, r^2, \ldots, r^n, \ldots, r^{n+m}$, ensuring by the
-
-<!-- page: 851 -->
 
 Chapter 20 Random Walks
 
@@ -29699,8 +27939,6 @@ $$
 where  $r ::= q / p$ .
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ Here we're legitimately appealing to infinite linearity, since the payoff amounts remain bounded independent of the number of bets.</span></small>
-
-<!-- page: 852 -->
 
 20.1. Gambler's Ruin
 
@@ -29749,8 +27987,6 @@ Now if $p \neq q$, then using partial fractions we conclude that
 $$
 W (x) = \frac {A}{1 - x} + \frac {B}{1 - r x},\tag{20.7}
 $$
-
-<!-- page: 853 -->
 
 Chapter 20 Random Walks
 
@@ -29804,8 +28040,6 @@ $$
 
 and gives:
 
-<!-- page: 854 -->
-
 ## 20.1. Gambler's Ruin
 
 Corollary 20.1.2. In the Gambler's Ruin game with initial capital, $n$, target, $T$, and probability $p < 1/2$ of winning each individual bet,
@@ -29836,8 +28070,6 @@ Why is the gambler so unlikely to make money when the game is only slightly bias
 
 Our intuition is that if the gambler starts with, say, a billion dollars, then he is sure to play for a very long time, so at some point there should be a lucky, upward swing that puts him \$100 ahead. But his capital is steadily drifting downward. If the gambler does not have a lucky, upward swing early on, then he is doomed. After his capital drifts downward by tens and then hundreds of dollars, the size of the upward swing the gambler needs to win grows larger and larger. And as the
 
-<!-- page: 855 -->
-
 Figure 20.2 In a biased random walk, the downward drift usually dominates swings of good luck.
 
 size of the required swing grows, the odds that it occurs decrease exponentially. As a rule of thumb, drift dominates swings in the long term.
@@ -29855,8 +28087,6 @@ In a fair game, there is no drift; swings are the only effect. In the absence of
 ## 20.1.4 How Long a Walk?
 
 Now that we know the probability,  $w_{n}$ , that the gambler is a winner in both fair and unfair games, we consider how many bets he needs on average to either win or go broke. A linear recurrence approach works here as well.
-
-<!-- page: 856 -->
 
 ## 20.1. Gambler's Ruin
 
@@ -29902,8 +28132,6 @@ $$
 
 For example, if the gambler starts with \$10 dollars and plays until he is broke or ahead \$10, then 10 · 10 = 100 bets are required on average. If he starts with \$500 and plays until he is broke or ahead \$100, then the expected number of bets until the game is over is 500 × 100 = 50,000. This simple formula (20.12) cries out for an intuitive proof, but we have not found one (where are you, Pascal?).
 
-<!-- page: 857 -->
-
 Chapter 20 Random Walks
 
 ## 20.1.5 Quit While You Are Ahead
@@ -29926,8 +28154,6 @@ So even starting with just one dollar, the expected number of plays before going
 
 But in general, you shouldn't feel reassured by an infinite expected time to go broke. For example, think about a variant Gambler's Ruin game which works as follows: run one second of the process that has a $10^{-100}$ of failing in any second. If it does not fail, then you go broke immediately. Otherwise, you play a fair, unbounded Gambler's Ruin game. Now there is an overwhelming probability, namely,
 
-<!-- page: 858 -->
-
 ## 20.2. Random Walks on Graphs
 
 $1 - 10^{-100}$, that you will go broke immediately. But there is a $10^{-100}$ probability that you will wind up playing fair Gambler's Ruin, so your overall expected time will be at least $10^{-100}$ times the expectation of fair Gambler's Ruin, namely, it will still be infinite.
@@ -29942,8 +28168,6 @@ The web graph is an enormous graph with trillions of vertices. In 1995, two stud
 
 This approach works fine if you only have a few documents that match a search term. But on the web, there are many billions of documents and millions of matches
 
-<!-- page: 859 -->
-
 to a typical search. For example, on May 2, 2012, a search on Google for “‘Mathematics for Computer Science’ text” gave 482,000 hits! Which ones should we look at first? Just because a page gets a high keyword score—say because it has “Mathematics Mathematics . . . Mathematics” copied 200 times across the front of the document—does not make it a great candidate for attention. The web is filled with bogus websites that repeat certain words over and over in order to attract visitors.
 
 Google's enormous market capital in part derives from the revenue it receives from advertisers paying to appear at the top of search results. That top placement would not be worth much if Google's results were as easy to manipulate as keyword frequencies. Advertisers pay because Google's ranking method is consistently good at determining the most relevant web pages. For example, Google demonstrated its accuracy in our case by giving first rank$^{2}$ to our 6.042 text.
@@ -29957,8 +28181,6 @@ Looking at the web graph, do you have an idea which vertex/page might be the bes
 Unfortunately, there are some problems with this idea. Suppose you wanted to have your page get a high ranking. One thing you could do is to create lots of dummy pages with links to your page.
 
 $^{2}$ First rank for some reason was an early version archived at Princeton; the Spring 2010 version on the MIT Open Courseware site ranked 4th and 5th.
-
-<!-- page: 860 -->
 
 ## 20.2. Random Walks on Graphs
 
@@ -29981,8 +28203,6 @@ We can also compute the probability of arriving at a particular page, $y$, by su
 $$
 \begin{array}{r c l} \Pr [ \text {go to} y ] & = & \sum_ {\text {edges} \langle x \to y \rangle} \Pr \left[ \text {follow link} \langle x \to y \rangle \mid \text {at page} x \right] \cdot \Pr [ \text {at page} x ] \\ & = & \sum_ {\text {edges} \langle x \to y \rangle} \frac {\Pr [ \text {at} x ]}{\operatorname{outdeg} (x)} \end{array} \tag {20.13}
 $$
-
-<!-- page: 861 -->
 
 Chapter 20 Random Walks
 
@@ -30016,8 +28236,6 @@ $$
 \Pr [ \text {at} x ] = \Pr [ \text {go to} x \text {at next step} ]
 $$
 
-<!-- page: 862 -->
-
 ## 20.2. Random Walks on Graphs
 
 Sergey and Larry defined their page ranks to be a stationary distribution. They did this by solving the following system of linear equations: find a nonnegative number,  $\operatorname{Rank}(x)$ , for each vertex, x, such that
@@ -30041,8 +28259,6 @@ Now just keeping track of the digraph whose vertices are trillions of web pages 
 Anyway, now you can see how this text ranked first out of 378,000 matches. Lots of other universities used our notes and presumably have links to the MIT Mathematics for Computer Science Open Course Ware site, and the university sites themselves are legitimate, which ultimately leads to the text getting a high page rank in the web graph.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{3}$ Google Details, and Defends, Its Use of Electricity, New York Times, September 8, 2011.</span></small>
-
-<!-- page: 863 -->
 
 Chapter 20 Random Walks
 
@@ -30094,8 +28310,6 @@ $$
 
 Conclude that starting with a 1 dollar stake in a fair game, the gambler can expect to play forever!
 
-<!-- page: 864 -->
-
 ## 20.2. Random Walks on Graphs
 
 ## Problem 20.3.
@@ -30136,8 +28350,6 @@ Problem 20.5.
 
 Consider the following random-walk graphs:
 
-<!-- page: 865 -->
-
 Chapter 20 Random Walks
 
 Figure 20.3
@@ -30161,8 +28373,6 @@ Figure 20.5
 (g) How many stationary distributions are there for graph 20.5?
 
 (h) If you start at node $b$ in graph 20.5 and take a (long) random walk, what will be the approximate probability that you are at node $d$?
-
-<!-- page: 866 -->
 
 ## 20.2. Random Walks on Graphs
 
@@ -30192,8 +28402,6 @@ Problem 20.8. (a) Find a stationary distribution for the random walk graph in Fi
 
 Figure 20.6
 
-<!-- page: 867 -->
-
 Chapter 20 Random Walks
 
 (b) Explain why a long random walk starting at node x in Figure 20.6 will not converge to a stationary distribution. Characterize which starting distributions will converge to the stationary one.
@@ -30215,8 +28423,6 @@ Figure 20.8
 ## Problem 20.9.
 
 We use random walks on a digraph, G, to model the typical movement pattern of a Math for CS student right after the final exam.
-
-<!-- page: 868 -->
 
 ## 20.2. Random Walks on Graphs
 
@@ -30246,8 +28452,6 @@ What is the limiting distribution of the graph from part a? Would it change if t
 
 (e) Let's consider another directed graph. If the student starts at node 1 with probability $1/2$ and node 2 with probability $1/2$, what is $P^{(0)}, P^{(1)}, P^{(2)}$ in the following graph? What is the limiting distribution?
 
-<!-- page: 869 -->
-
 Chapter 20 Random Walks
 
 (f) Now we are ready for the real problem. In order to make it home, the poor Math for student is faced with $n$ doors along a long hall way. Unbeknownst to him, the door that goes outside to paradise (that is, freedom from the class and more importantly, vacation!) is at the very end. At each step along the way, he passes by a door which he opens up and goes through with probability 1/2. Every time he does this, he gets teleported back to the exam room. Let's figure out how long it will take the poor guy to escape from the class. What is $P^{(0)}, P^{(1)}, P^{(2)}$? What is the limiting distribution?
@@ -30267,8 +28471,6 @@ $$
 where into(w) ::= {v | &lt;v → w&gt; is an edge}.
 
 ## Problem 20.11.
-
-<!-- page: 870 -->
 
 ## 20.2. Random Walks on Graphs
 
@@ -30308,19 +28510,11 @@ Call a vertex, x, dilated if  $d_{1}(x)/d_{2}(x)=\gamma$ . Show that there is an
 
 For which of the graphs in Figure 20.9 is the uniform distribution over nodes a
 
-<!-- page: 871 -->
-
 Figure 20.9 Which ones have uniform stationary distribution?
 
 stationary distribution? The edges are labeled with transition probabilities. Explain your reasoning.
 
-<!-- page: 872 -->
-
 V Recurrences
-
-<!-- page: 873 -->
-
-<!-- page: 874 -->
 
 ## Introduction
 
@@ -30342,8 +28536,6 @@ A recurrence in isolation is not a very useful description of a sequence. Simple
 
 We'll first introduce two general solving techniques: guess-and-verify and plug-and-chug. These methods are applicable to every recurrence, but their success requires a flash of insight—sometimes an unrealistically brilliant flash. So we'll also introduce two big classes of recurrences, linear and divide-and-conquer, that often come up in computer science. Essentially all recurrences in these two classes are solvable using cookbook techniques; you follow the recipe and get the answer. A drawback is that calculation replaces insight. The “Aha!” moment that is essential
 
-<!-- page: 875 -->
-
 ## Part V Recurrences
 
 in the guess-and-verify and plug-and-chug methods is replaced by a “Huh” at the end of a cookbook procedure.
@@ -30351,8 +28543,6 @@ in the guess-and-verify and plug-and-chug methods is replaced by a “Huh” at 
 At the end of the chapter, we'll develop rules of thumb to help you assess many recurrences without any calculation. These rules can help you distinguish promising approaches from bad ideas early in the process of designing an algorithm.
 
 Recurrences are one aspect of a broad theme in computer science: reducing a big problem to progressively smaller problems until easy base cases are reached. This same idea underlies both induction proofs and recursive algorithms. As we'll see, all three ideas snap together nicely. For example, the running time of a recursive algorithm could be described with a recurrence with induction used to verify the solution.
-
-<!-- page: 876 -->
 
 ## Recurrences
 
@@ -30384,8 +28574,6 @@ Such verification proofs are especially tidy because recurrence equations and in
 
 Our guess is verified. So we can now resolve our remaining questions about the 64-disk puzzle. Since  $T_{64} = 2^{64} - 1$ , the monks must complete more than 18 billion billion steps before the world ends. Better study for the final.
 
-<!-- page: 877 -->
-
 Chapter 21 Recurrences
 
 ## 21.1.1 The Upper Bound Trap
@@ -30411,8 +28599,6 @@ Plug-and-chug is another way to solve recurrences. This is also sometimes called
 ## Step 1: Plug and Chug Until a Pattern Appears
 
 The first step is to expand the recurrence equation by alternately “plugging” (applying the recurrence) and “chugging” (simplifying the result) until a pattern appears. Be careful: too much simplification can make a pattern harder to spot. The rule
-
-<!-- page: 878 -->
 
 ## 21.1. The Towers of Hanoi
 
@@ -30440,8 +28626,6 @@ $$
 
 The final expression on the right is the same as the expression on the first line, except that $k$ is replaced by $k + 1$. Surprisingly, this effectively proves that the formula is correct for all $k$. Here is why: we know the formula holds for $k = 1$, because that's the original recurrence equation. And we've just shown that if the formula holds for some $k \geq 1$, then it also holds for $k + 1$. So the formula holds for all $k \geq 1$ by induction.
 
-<!-- page: 879 -->
-
 ## Chapter 21 Recurrences
 
 ## Step 3: Write $T_{n}$ Using Early Terms with Known Values
@@ -30468,14 +28652,11 @@ Here is how Merge Sort works. The input is a list of n numbers, and the output i
 
 Let's work through an example. Suppose we want to sort this list:
 
-<!-- page: 880 -->
-
 ## 10, 7, 23, 5, 2, 8, 6, 9.
 
 Since there is more than one number, the first half (10, 7, 23, 5) and the second half (2, 8, 6, 9) are sorted recursively. The results are 5, 7, 10, 23 and 2, 6, 8, 9. All that remains is to merge these two lists. This is done by repeatedly emitting the smaller of the two leading terms. When one list is empty, the whole other list is emitted. The example is worked out below. In this table, underlined numbers are about to be emitted.
 
 | First Half | Second Half | Output |
-| --- | --- | --- |
 | 5, 7, 10, 23 | 2, 6, 8, 9 |  |
 | 5, 7, 10, 23 | 6, 8, 9 | 2 |
 | 7, 10, 23 | 6, 8, 9 | 2, 5 |
@@ -30494,8 +28675,6 @@ A traditional question about sorting algorithms is, “What is the maximum numbe
 \- If there is only one number in the list, then no comparisons are required, so $T_{1} = 0$.
 
 \- Otherwise, $T_{n}$ includes comparisons used in sorting the first half (at most $T_{n/2}$), in sorting the second half (also at most $T_{n/2}$), and in merging the two halves. The number of comparisons in the merging step is at most $n - 1$. This is because at least one number is emitted after each comparison and one more number is emitted at the end when one list becomes empty. Since $n$ items are emitted in all, there can be at most $n - 1$ comparisons.
-
-<!-- page: 881 -->
 
 Chapter 21 Recurrences
 
@@ -30531,8 +28710,6 @@ $$
 \begin{array}{r l} & T _ {n} = 2 ^ {k} T _ {n / 2 ^ {k}} + (n - 2 ^ {k - 1}) + (n - 2 ^ {k - 2}) + \dots + (n - 2 ^ {0}) \\ & \quad = 2 ^ {k} T _ {n / 2 ^ {k}} + k n - 2 ^ {k - 1} - 2 ^ {k - 2} \dots - 2 ^ {0} \\ & \quad = 2 ^ {k} T _ {n / 2 ^ {k}} + k n - 2 ^ {k} + 1. \end{array}
 $$
 
-<!-- page: 882 -->
-
 ## 21.2. Merge Sort
 
 On the second line, we grouped the n terms and powers of 2. On the third, we collapsed the geometric sum.
@@ -30564,8 +28741,6 @@ $$
 $$
 
 As a double-check, we could write out an explicit induction proof. This would be straightforward, because we already worked out the guts of the proof in step 2 of the plug-and-chug procedure.
-
-<!-- page: 883 -->
 
 ## 21.3 Linear Recurrences
 
@@ -30600,8 +28775,6 @@ $$
 $$
 
 Here, $f(n)$ denotes the number of ways to climb $n$ stairs. Also, we've switched from subscript notation to functional notation, from $T_{n}$ to $f_{n}$. Here the change is cosmetic, but the expressiveness of functions will be useful later.
-
-<!-- page: 884 -->
 
 ## 21.3. Linear Recurrences
 
@@ -30643,8 +28816,6 @@ $$
 x = \frac {1 \pm \sqrt {5}}{2}.
 $$
 
-<!-- page: 885 -->
-
 ## Chapter 21 Recurrences
 
 This suggests that there are at least two different solutions to the recurrence, neglecting the boundary conditions.
@@ -30678,8 +28849,6 @@ is a solution for all real numbers s and t. The theorem expanded two solutions t
 $$
 f (0) = s \left(\frac {1 + \sqrt {5}}{2}\right) ^ {0} + t \left(\frac {1 - \sqrt {5}}{2}\right) ^ {0} = s + t = 1.
 $$
-
-<!-- page: 886 -->
 
 ## 21.3. Linear Recurrences
 
@@ -30720,8 +28889,6 @@ This also implies that the ratio of consecutive Fibonacci numbers rapidly approa
 $$
 \frac {f (2 0)}{f (1 9)} = \frac {1 0 9 4 6}{6 7 6 5} = 1. 6 1 8 0 3 3 9 9 8 \dots
 $$
-
-<!-- page: 887 -->
 
 Chapter 21 Recurrences
 
@@ -30771,8 +28938,6 @@ is also a solution.
 
 All that remains is to select a solution consistent with the boundary conditions by choosing the constants appropriately. Each boundary condition implies a linear equation involving these constants. So we can determine the constants by solving a system of linear equations. For example, suppose our boundary conditions were
 
-<!-- page: 888 -->
-
 ## 21.3. Linear Recurrences
 
 $f(0) = 0$, $f(1) = 1$, $f(2) = 4$, and $f(3) = 9$. Then we would obtain four equations in four unknowns:
@@ -30815,8 +28980,6 @@ Solving inhomogeneous linear recurrences is neither very different nor very diff
 
 3. Now restore $g(n)$ and find a single solution to the recurrence, ignoring boundary conditions. This is called a particular solution. We'll explain how to find a particular solution shortly.
 
-<!-- page: 889 -->
-
 ## Chapter 21 Recurrences
 
 4. Add the homogeneous and particular solutions together to obtain the general solution.
@@ -30853,8 +29016,6 @@ $$
 \begin{array}{r l} f (1) = 1 & \text {IMPLIES} \quad c 2 ^ {1} - 1 - 2 = 1 \\ & \text {IMPLIES} \quad c = 2. \end{array}
 $$
 
-<!-- page: 890 -->
-
 ## 21.4. Divide-and-Conquer Recurrences
 
 Therefore, the function  $f(n) = 2 \cdot 2^{n} - n - 2$  solves this variant of the Towers of Hanoi recurrence. For comparison, the solution to the original Towers of Hanoi problem was  $2^{n} - 1$ . So if moving disks takes time proportional to their size, then the monks will need about twice as much time to solve the whole puzzle.
@@ -30888,8 +29049,6 @@ $$
 In particular,  $T(n)$  is not a linear combination of a fixed number of immediately preceding terms; rather,  $T(n)$  is a function of  $T(n/2)$ , a term halfway back in the sequence.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">$^{1}$ Chapter 15 explains how to solve linear recurrences with generating functions—it’s a little more complicated, but it does not require guessing.</span></small>
-
-<!-- page: 891 -->
 
 Chapter 21 Recurrences
 
@@ -30933,8 +29092,6 @@ $$
 
 Determine the values of these constants by solving the resulting system of linear equations.
 
-<!-- page: 892 -->
-
 ## 21.4. Divide-and-Conquer Recurrences
 
 Merge Sort is an example of a divide-and-conquer algorithm: it divides the input, “conquers” the pieces, and combines the results. Analysis of such algorithms commonly leads to divide-and-conquer recurrences, which have this form:
@@ -30972,8 +29129,6 @@ Let's solve the Merge Sort recurrence again, using the Akra-Bazzi formula instea
 $$
 2 \cdot (1 / 2) ^ {p} = 1.
 $$
-
-<!-- page: 893 -->
 
 Chapter 21 Recurrences
 
@@ -31017,8 +29172,6 @@ $$
 
 This expresses the $n$th term as a function of the first term, whose value is specified in a boundary condition. But notice that $T_{n} = \Theta(n \log n)$ for every value of $T_{1}$. The boundary condition doesn't matter!
 
-<!-- page: 894 -->
-
 ## 21.4. Divide-and-Conquer Recurrences
 
 This is the typical situation: the asymptotic solution to a divide-and-conquer recurrence is independent of the boundary conditions. Intuitively, if the bottom-level operation in a recursive algorithm takes, say, twice as long, then the overall running time will at most double. This matters in practice, but the factor of 2 is concealed by asymptotic notation. There are corner-case exceptions. For example, the solution to $T(n) = 2T(n/2)$ is either $\Theta(n)$ or zero, depending on whether $T(1)$ is zero. These cases are of little practical interest, so we won't consider them further.
@@ -31044,8 +29197,6 @@ Theorem 21.4.1 (Akra-Bazzi). Suppose that the function $T: \mathbb{R} \to \mathb
 $$
 T (x) = \sum_ {i = 1} ^ {k} a _ {i} T (b _ {i} x + h _ {i} (x)) + g (x) \quad \text {   for   } x > x _ {0},\tag{21.4}
 $$
-
-<!-- page: 895 -->
 
 ## Chapter 21 Recurrences
 
@@ -31115,8 +29266,6 @@ $$
 
 This is the rigorously correct Merge Sort recurrence valid for all input sizes, complete with floor and ceiling operators. In this case, the functions  $h_{1}(x)$  and
 
-<!-- page: 896 -->
-
 ## 21.4. Divide-and-Conquer Recurrences
 
 $h_{2}(x)$  are both at most 1, which is easily  $O(x/\log^{2}x)$  as required by the theorem statement. These functions  $h_{i}$  do not affect—or even appear in—the asymptotic solution to the recurrence. This justifies our earlier claim that applying floor and ceiling operators to the size of a subproblem does not alter the asymptotic solution to a divide-and-conquer recurrence.
@@ -31151,8 +29300,6 @@ $$
 
 The Master Theorem can be proved by induction on $n$ or, more easily, as a corollary of Theorem 21.4.1. We will not include the details here.
 
-<!-- page: 897 -->
-
 ## 21.5 A Feel for Recurrences
 
 We've guessed and verified, plugged and chugged, found roots, computed integrals, and solved linear systems and exponential equations. Now let's step back and look for some rules of thumb. What kinds of recurrences have what sorts of solutions? Here are some recurrences we solved earlier:
@@ -31174,8 +29321,6 @@ T _ {n} = 3 T _ {n - 1} + 1
 $$
 
 This increases the root of the characteristic equation from 2 to 3, which raises the solution exponentially, from $\Theta(2^n)$ to $\Theta(3^n)$.
-
-<!-- page: 898 -->
 
 ## 21.5. A Feel for Recurrences
 
@@ -31208,8 +29353,6 @@ The running time of an algorithm A is described by the recurrence  $T(n) = 7T(n/
 ## Problem 21.2.
 
 Use the Akra-Bazzi formula to find  $\Theta()$  asymptotic bounds for the following divide-and-conquer recurrences. For each recurrence,  $T(1)=1$  and  $T(n)=\Theta(1)$  for all
-
-<!-- page: 899 -->
 
 ## Chapter 21 Recurrences
 
@@ -31253,8 +29396,6 @@ Here is how the new algorithm works. The input is a list of n distinct numbers. 
 
 \- We merge this combined list with the third list, again throwing out duplicates.
 
-<!-- page: 900 -->
-
 ## 21.5. A Feel for Recurrences
 
 The final, merged list is the output. What's great is that because multiple copies of each number are maintained, even if the sorter occasionally forgets about a number, OverSort can still output a complete, sorted list.
@@ -31297,8 +29438,6 @@ $$
 
 (c) A society of devil-worshipers meets every week in a catacomb to initiate new members. Members who have been in the society for two or more weeks initiate four new members each and members who have been in the society for only one
 
-<!-- page: 901 -->
-
 ## Chapter 21 Recurrences
 
 week initiate one new member each. On week 0 there is one devil-worshiper. There are two devil-worshipers on week 1.
@@ -31306,12 +29445,6 @@ week initiate one new member each. On week 0 there is one devil-worshiper. There
 Write a recurrence relation for the number of members  $D(n)$  in the society on the nth week.
 
 You do NOT need to solve the recurrence. Be sure to include the base cases.
-
-<!-- page: 902 -->
-
-<!-- page: 903 -->
-
-<!-- page: 904 -->
 
 ## Bibliography
 
@@ -31343,8 +29476,6 @@ You do NOT need to solve the recurrence. Be sure to include the base cases.
 
 [14] Shimon Even. Algorithmic Combinatorics. Macmillan, 1973. 591
 
-<!-- page: 905 -->
-
 ## BIBLIOGRAPHY
 
 [15] Ronald Fagin, Joseph Y. Halpern, Yoram Moses, and Moshe T. Vardi. Reasoning About Knowledge. MIT Press, 1995. 19
@@ -31374,8 +29505,6 @@ You do NOT need to solve the recurrence. Be sure to include the base cases.
 [27] Gregory F. Lawler and Lester N. Coyle. Lectures on Contemporary Probability. American Mathematical Society, 1999. 690
 
 [28] Eric Lehman, Tom Leighton, and Albert R Meyer. Mathematics for Computer Science. unpublished, 2015.
-
-<!-- page: 906 -->
 
 ## BIBLIOGRAPHY
 
@@ -31409,8 +29538,6 @@ You do NOT need to solve the recurrence. Be sure to include the base cases.
 
 [43] Gilbert Strang. Introduction to Applied Mathematics. Wellesley-Cambridge Press, Wellesley, Massachusetts, 1986.
 
-<!-- page: 907 -->
-
 ## BIBLIOGRAPHY
 
 [44] Michael Stueben and Diane Sandford. Twenty Years Before the Blackboard. Mathematical Association of America, 1998. 21
@@ -31421,12 +29548,9 @@ You do NOT need to solve the recurrence. Be sure to include the base cases.
 
 [47] David Williams. Weighing the Odds. Cambridge University Press, 2001. MR1854128. 690
 
-<!-- page: 908 -->
-
 ## Glossary of Symbols
 
 | symbol | meaning |
-| --- | --- |
 | ::= | is defined to be |
 | ■ | end of proof symbol |
 | ≠ | not equal |
@@ -31464,12 +29588,9 @@ You do NOT need to solve the recurrence. Be sure to include the base cases.
 | [r] | the floor of r: the greatest integer ≤ r |
 | [r] | the ceiling of r: the least integer ≥ r |
 
-<!-- page: 909 -->
-
 ## Glossary of Symbols
 
 | symbol | meaning |
-| --- | --- |
 | R(X) | image of set X under binary relation R |
 | $R^{-1}$ | inverse of binary relation R |
 | $R^{-1}(X)$ | inverse image of set X under relation R |
@@ -31510,10 +29631,7 @@ You do NOT need to solve the recurrence. Be sure to include the base cases.
 | ⟨u → v⟩ | directed edge from vertex u to vertex v |
 | IdA | identity relation on set A: aIdAa' iff a = a' |
 
-<!-- page: 910 -->
-
 | symbol | meaning |
-| --- | --- |
 | $R^{*}$ | path relation of relation $R$; reflexive transitive closure of $R$ |
 | $R^{+}$ | positive path relation of $R$; transitive closure of $R$ |
 | $\mathbf{f}\widehat{x}\mathbf{g}$ | merge of walk $\mathbf{f}$ with end vertex $x$and walk $\mathbf{g}$ with start vertex $x$ |
@@ -31550,8 +29668,6 @@ You do NOT need to solve the recurrence. Be sure to include the base cases.
 | $\text{Var}[R]$ | variance of $R$ |
 | $\text{Var}^{2}[R]$ | the square of the variance of $R$ |
 | $\sigma_{R}$ | standard deviation of $R$ |
-
-<!-- page: 911 -->
 
 ## Index
 
@@ -31628,8 +29744,6 @@ binary relation, 89, 130, 326
     injection, 91
     product of relations, 340
     properties, 335, 337, 343, 363
-
-<!-- page: 912 -->
 
 ## INDEX
 
@@ -31713,8 +29827,6 @@ of functions, 89
 of relations, 326
 concatenation, 175, 322
 
-<!-- page: 913 -->
-
 ## INDEX
 
 concatentation, 101
@@ -31796,8 +29908,6 @@ DNF, see disjunctive form
 domain, 87, 89
 domain of discourse, 59, 615
 Dongles, 482
-
-<!-- page: 914 -->
 
 ## INDEX
 
@@ -31881,8 +29991,6 @@ general binomial density function, 750
 Generalized Pigeonhole Principle, 574
 Generalized Product Rule, 556
 
-<!-- page: 915 -->
-
 ## INDEX
 
 generating function, 647, 654
@@ -31960,8 +30068,6 @@ irreflexive relation, 336, 343, 363
 isomorphic, 339, 362, 496
 
 k-combination, see Sbset Split Theo-
-
-<!-- page: 916 -->
 
 ## INDEX
 
@@ -32044,8 +30150,6 @@ outside face, 477
 
 Page, Larry, 317, 849
 
-<!-- page: 917 -->
-
 ## INDEX
 
 page rank, 850, 852
@@ -32124,8 +30228,6 @@ reciprocal, 645
 recurrence, 865
 recursive data type, 173 ambiguity, 179
 reflexive relation, 336, 343
-
-<!-- page: 918 -->
 
 ## INDEX
 
@@ -32209,8 +30311,6 @@ summation notation, 29, 181
 Sum Rule, 687
 Sum Rule (counting), 554
 
-<!-- page: 919 -->
-
 ## INDEX
 
 surjection, see binary relation
@@ -32272,8 +30372,6 @@ winnings, 757
 wrap, 658
 Zermelo-Fraenkel Set Theory, 220, 223
 ZFC, see Zermello-Fraenkel Set Theory
-
-<!-- page: 920 -->
 
 6.042J / 18.062J Mathematics for Computer Science
 Spring 2015

@@ -1,5 +1,3 @@
-<!-- page: 1 -->
-
 **Python Tutorial**
 
 **Release 3.7.0**
@@ -11,10 +9,6 @@
 **September 02, 2018**
 
 **Python Software Foundation Email: docs@python.org**
-
-<!-- page: 2 -->
-
-<!-- page: 3 -->
 
 ## CONTENTS
 
@@ -52,8 +46,6 @@
 - 7.1 Fancier Output Formatting . 53
 - 7.2 Reading and Writing Files . 57
 - **8 Errors and Exceptions 61**
-
-<!-- page: 4 -->
 
 - 8.1 Syntax Errors 61
 - 8.2 Exceptions 61
@@ -104,8 +96,6 @@
 - 14.1 Tab Completion and History Editing 103
 - 14.2 Alternatives to the Interactive Interpreter 103
 
-<!-- page: 5 -->
-
 - **15 Floating Point Arithmetic: Issues and Limitations 105**
 - 15.1 Representation Error 108
 - **16 Appendix 111**
@@ -120,10 +110,6 @@
 - **D Copyright 145**
 - **Index 147**
 
-<!-- page: 6 -->
-
-<!-- page: 7 -->
-
 Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
 
 The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, [https://www.python.org/](https://www.python.org/), and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.
@@ -137,10 +123,6 @@ For a description of standard objects and modules, see library-index. reference-
 This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in library-index.
 
 The Glossary is also worth going through.
-
-<!-- page: 8 -->
-
-<!-- page: 9 -->
 
 # WHETTING YOUR APPETITE
 
@@ -168,8 +150,6 @@ Python enables programs to be written compactly and readably. Programs written i
 
 Python is extensible: if you know how to program in C it is easy to add a new built-in function or module to the interpreter, either to perform critical operations at maximum speed, or to link Python programs to libraries that may only be available in binary form (such as a vendor-specific graphics library). Once you
 
-<!-- page: 10 -->
-
 are really hooked, you can link the Python interpreter into an application written in C and use it as an extension or command language for that application.
 
 By the way, the language is named after the BBC show “Monty Python’s Flying Circus” and has nothing to do with reptiles. Making references to Monty Python skits in documentation is not only allowed, it is encouraged!
@@ -179,8 +159,6 @@ Now that you are all excited about Python, you’ll want to examine it in some m
 In the next chapter, the mechanics of using the interpreter are explained. This is rather mundane information, but essential for trying out the examples shown later.
 
 The rest of the tutorial introduces various features of the Python language and system through examples, beginning with simple expressions, statements and data types, through functions and modules, and finally touching upon advanced concepts like exceptions and user-defined classes.
-
-<!-- page: 11 -->
 
 # USING THE PYTHON INTERPRETER
 
@@ -210,8 +188,6 @@ When a script file is used, it is sometimes useful to be able to run the script 
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 On Unix, the Python 3.x interpreter is by default not installed with the executable named python, so that it does not conflict with a simultaneously installed Python 2.x executable.</span></small>
 
-<!-- page: 12 -->
-
 All command line options are described in using-on-general.
 
 ## 2.1.1 Argument Passing
@@ -228,18 +204,16 @@ Python 3.7 (default, Sep 16 2015, 09:25:04)
 [GCC 4.8.2] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
-
 ```
 
 Continuation lines are needed when entering a multi-line construct. As an example, take a look at this if statement:
 
-```txt
+```python
 >>> the_world_is_flat = True
 >>> if the_world_is_flat:
 ...     print("Be careful not to fall off!")
 ...
 Be careful not to fall off!
-
 ```
 
 For more on interactive mode, see Interactive Mode.
@@ -254,18 +228,14 @@ To declare an encoding other than the default one, a special comment line should
 
 ```txt
 # -*- coding: encoding -*-
-
 ```
 
 where encoding is one of the valid codecs supported by Python.
-
-<!-- page: 13 -->
 
 For example, to declare that Windows-1252 encoding is to be used, the first line of your source code file should be:
 
 ```txt
 # -*- coding: cp1252 -*-
-
 ```
 
 One exception to the first line rule is when the source code starts with a UNIX “shebang” line. In this case, the encoding declaration should be added as the second line of the file. For example:
@@ -273,12 +243,7 @@ One exception to the first line rule is when the source code starts with a UNIX 
 ```txt
 #!/usr/bin/env python3
 # -*- coding: cp1252 -*-
-
 ```
-
-<!-- page: 14 -->
-
-<!-- page: 15 -->
 
 ## AN INFORMAL INTRODUCTION TO PYTHON
 
@@ -293,7 +258,6 @@ Some examples:
 spam = 1  # and this is the second comment
         # ... and now a third!
 text = "# This is not a comment because it's inside quotes."
-
 ```
 
 ## 3.1 Using Python as a Calculator
@@ -313,12 +277,9 @@ The interpreter acts as a simple calculator: you can type an expression at it an
 5.0
 >>> 8 / 5  # division always returns a floating point number
 1.6
-
 ```
 
 The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. We will see more about numeric types later in the tutorial.
-
-<!-- page: 16 -->
 
 Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional result) you can use the // operator; to calculate the remainder you can use %:
 
@@ -332,7 +293,6 @@ Division (/) always returns a float. To do floor division and get an integer res
 2
 >>> 5 * 3 + 2  # result * divisor + remainder
 17
-
 ```
 
 With Python, it is possible to use the \*\* operator to calculate powers<sup>1</sup>:
@@ -342,7 +302,6 @@ With Python, it is possible to use the \*\* operator to calculate powers<sup>1</
 25
 >>> 2 ** 7  # 2 to the power of 7
 128
-
 ```
 
 The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive prompt:
@@ -352,7 +311,6 @@ The equal sign (=) is used to assign a value to a variable. Afterwards, no resul
 >>> height = 5 * 9
 >>> width * height
 900
-
 ```
 
 If a variable is not “defined” (assigned a value), trying to use it will give you an error:
@@ -362,7 +320,6 @@ If a variable is not “defined” (assigned a value), trying to use it will giv
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'n' is not defined
-
 ```
 
 There is full support for floating point; operators with mixed type operands convert the integer operand to floating point:
@@ -370,7 +327,6 @@ There is full support for floating point; operators with mixed type operands con
 ```txt
 >>> 4 * 3.75 - 1
 14.0
-
 ```
 
 In interactive mode, the last printed expression is assigned to the variable \_. This means that when you are using Python as a desk calculator, it is somewhat easier to continue calculations, for example:
@@ -384,14 +340,11 @@ In interactive mode, the last printed expression is assigned to the variable \_.
 113.0625
 >>> round(_, 2)
 113.06
-
 ```
 
 This variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you would create an independent local variable with the same name masking the built-in variable with its magic behavior.
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 Since \*\* has higher precedence than -, -3\*\*2 will be interpreted as -(3\*\*2) and thus result in -9. To avoid this and get 9, you can use (-3)\*\*2.</span></small>
-
-<!-- page: 17 -->
 
 In addition to int and float, Python supports other types of numbers, such as Decimal and Fraction. Python also has built-in support for complex numbers, and uses the j or J suffix to indicate the imaginary part (e.g. 3+5j).
 
@@ -412,7 +365,6 @@ Besides numbers, Python can also manipulate strings, which can be expressed in s
 '"Yes," they said.'
 >>> "'Isn\'t," they said.'
 '"Isn\'t," they said.'
-
 ```
 
 In the interactive interpreter, the output string is enclosed in quotes and special characters are escaped with backslashes. While this might sometimes look different from the input (the enclosing quotes could change), the two strings are equivalent. The string is enclosed in double quotes if the string contains a single quote and no double quotes, otherwise it is enclosed in single quotes. The print() function produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters:
@@ -428,7 +380,6 @@ In the interactive interpreter, the output string is enclosed in quotes and spec
 >>> print(s)  # with print(), \n produces a new line
 First line.
 Second line.
-
 ```
 
 If you don’t want characters prefaced by \ to be interpreted as special characters, you can use raw strings by adding an r before the first quote:
@@ -439,19 +390,15 @@ C:\some
 ame
 >>> print(r'C:\some\name')  # note the r before the quote
 C:\some\name
-
 ```
 
 String literals can span multiple lines. One way is using triple-quotes: "'"'..."'"' or ''''...'''' . End of lines are automatically included in the string, but it’s possible to prevent this by adding a \ at the end of the line. The following example:
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">2 Unlike other languages, special characters such as \n have the same meaning with both single ('...') and double ("...") quotes. The only difference between the two is that within single quotes you don’t need to escape " (but you have to escape \') and vice versa.</span></small>
 
-<!-- page: 18 -->
-
 ```txt
 Display this usage message
 Hostname to connect to
-
 ```
 
 ```python
@@ -459,13 +406,11 @@ print("\"\ Usage: thingy [OPTIONS]
     -h
     -H hostname
 """)
-
 ```
 
 ```txt
 Display this usage message
 Hostname to connect to
-
 ```
 
 produces the following output (note that the initial newline is not included):
@@ -474,7 +419,6 @@ produces the following output (note that the initial newline is not included):
 Usage: thingy [OPTIONS]
     -h
     -H hostname
-
 ```
 
 Strings can be concatenated (glued together) with the + operator, and repeated with \*:
@@ -483,7 +427,6 @@ Strings can be concatenated (glued together) with the + operator, and repeated w
 >>> # 3 times 'un', followed by 'ium'
 >>> 3 * 'un' + 'ium'
 'unununium'
-
 ```
 
 Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.
@@ -491,7 +434,6 @@ Two or more string literals (i.e. the ones enclosed between quotes) next to each
 ```txt
 >>> 'Py' 'thon'
 'Python'
-
 ```
 
 This feature is particularly useful when you want to break long strings:
@@ -501,7 +443,6 @@ This feature is particularly useful when you want to break long strings:
 ...             'to have them joined together.')
 >>> text
 'Put several strings within parentheses to have them joined together.'
-
 ```
 
 This only works with two literals though, not with variables or expressions:
@@ -514,7 +455,6 @@ SyntaxError: invalid syntax
 >>> ('un' * 3) 'ium'
 ...
 SyntaxError: invalid syntax
-
 ```
 
 If you want to concatenate variables or a variable and a literal, use +:
@@ -522,7 +462,6 @@ If you want to concatenate variables or a variable and a literal, use +:
 ```txt
 >>> prefix + 'thon'
 'Python'
-
 ```
 
 Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
@@ -533,12 +472,9 @@ Strings can be indexed (subscripted), with the first character having index 0. T
 'P'
 >>> word[5]  # character in position 5
 'n'
-
 ```
 
 Indices may also be negative numbers, to start counting from the right:
-
-<!-- page: 19 -->
 
 ```txt
 >>> word[-1]  # last character
@@ -547,7 +483,6 @@ Indices may also be negative numbers, to start counting from the right:
 'o'
 >>> word[-6]
 'p'
-
 ```
 
 Note that since -0 is the same as 0, negative indices start from -1.
@@ -559,7 +494,6 @@ In addition to indexing, slicing is also supported. While indexing is used to ob
 'Py'
 >>> word[2:5]  # characters from position 2 (included) to 5 (excluded)
 'tho'
-
 ```
 
 Note how the start is always included, and the end always excluded. This makes sure that s[:i] + s[i:] is always equal to s:
@@ -569,7 +503,6 @@ Note how the start is always included, and the end always excluded. This makes s
 'Python'
 >>> word[:4] + word[4:]
 'Python'
-
 ```
 
 Slice indices have useful defaults; an omitted first index defaults to zero, an omitted second index defaults to the size of the string being sliced.
@@ -581,7 +514,6 @@ Slice indices have useful defaults; an omitted first index defaults to zero, an 
 'on'
 >>> word[-2:]   # characters from the second-last (included) to the end
 'on'
-
 ```
 
 One way to remember how slices work is to think of the indices as pointing between characters, with the left edge of the first character numbered 0. Then the right edge of the last character of a string of n characters has index n, for example:
@@ -592,7 +524,6 @@ One way to remember how slices work is to think of the indices as pointing betwe
 +---+---+---+---+---+---+
 0 1 2 3 4 5 6
 -6 -5 -4 -3 -2 -1
-
 ```
 
 The first row of numbers gives the position of the indices 0…6 in the string; the second row gives the corresponding negative indices. The slice from i to j consists of all characters between the edges labeled i and j, respectively.
@@ -606,10 +537,7 @@ Attempting to use an index that is too large will result in an error:
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: string index out of range
-
 ```
-
-<!-- page: 20 -->
 
 However, out of range slice indexes are handled gracefully when used for slicing:
 
@@ -618,7 +546,6 @@ However, out of range slice indexes are handled gracefully when used for slicing
 'on'
 >>> word[42:]
 ''
-
 ```
 
 Python strings cannot be changed — they are immutable. Therefore, assigning to an indexed position in the string results in an error:
@@ -630,7 +557,6 @@ TypeError: 'str' object does not support item assignment
 >>> word[2:] = 'py'
   ...
 TypeError: 'str' object does not support item assignment
-
 ```
 
 If you need a different string, you should create a new one:
@@ -640,7 +566,6 @@ If you need a different string, you should create a new one:
 'Jython'
 >>> word[:2] + 'py'
 'Pypy'
-
 ```
 
 The built-in function len() returns the length of a string:
@@ -649,7 +574,6 @@ The built-in function len() returns the length of a string:
 >>> s = 'supercalifragilisticexpialidocious'
 >>> len(s)
 34
-
 ```
 
 **See also:**
@@ -672,7 +596,6 @@ Python knows a number of compound data types, used to group together other value
 >>> squares = [1, 4, 9, 16, 25]
 >>> squares
 [1, 4, 9, 16, 25]
-
 ```
 
 Like strings (and all other built-in sequence type), lists can be indexed and sliced:
@@ -681,17 +604,13 @@ Like strings (and all other built-in sequence type), lists can be indexed and sl
 >>> squares[0]  # indexing returns the item
 1
 >>> squares[-1]
-
 ```
 
 (continues on next page)
 
-<!-- page: 21 -->
-
 ```txt
 >>> squares[-3:]  # slicing returns a new list
 [9, 16, 25]
-
 ```
 
 (continued from previous page)
@@ -701,7 +620,6 @@ All slice operations return a new list containing the requested elements. This m
 ```txt
 >>> squares[:]
 [1, 4, 9, 16, 25]
-
 ```
 
 Lists also support operations like concatenation:
@@ -709,7 +627,6 @@ Lists also support operations like concatenation:
 ```txt
 >>> squares + [36, 49, 64, 81, 100]
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-
 ```
 
 Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
@@ -721,7 +638,6 @@ Unlike strings, which are immutable, lists are a mutable type, i.e. it is possib
 >>> cubes[3] = 64  # replace the wrong value
 >>> cubes
 [1, 8, 27, 64, 125]
-
 ```
 
 You can also add new items at the end of the list, by using the append() method (we will see more about methods later):
@@ -731,7 +647,6 @@ You can also add new items at the end of the list, by using the append() method 
 >>> cubes.append(7 ** 3)  # and the cube of 7
 >>> cubes
 [1, 8, 27, 64, 125, 216, 343]
-
 ```
 
 Assignment to slices is also possible, and this can even change the size of the list or clear it entirely:
@@ -752,7 +667,6 @@ Assignment to slices is also possible, and this can even change the size of the 
 >>> letters[:] = []
 >>> letters
 []
-
 ```
 
 The built-in function len() also applies to lists:
@@ -761,12 +675,9 @@ The built-in function len() also applies to lists:
 >>> letters = ['a', 'b', 'c', 'd']
 >>> len(letters)
 4
-
 ```
 
 It is possible to nest lists (create lists containing other lists), for example:
-
-<!-- page: 22 -->
 
 ```python
 >>> a = ['a', 'b', 'c']
@@ -778,7 +689,6 @@ It is possible to nest lists (create lists containing other lists), for example:
 ['a', 'b', 'c']
 >>> x[0][1]
 'b'
-
 ```
 
 ## 3.2 First Steps Towards Programming
@@ -800,7 +710,6 @@ Of course, we can use Python for more complicated tasks than adding two and two 
 3
 5
 8
-
 ```
 
 This example introduces several new features.
@@ -813,30 +722,22 @@ This example introduces several new features.
 
 • The print() function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely, like this:
 
-<!-- page: 23 -->
-
 ```python
 >>> i = 256*256
 >>> print('The value of i is', i)
 The value of i is 65536
-
 ```
 
 The keyword argument end can be used to avoid the newline after the output, or end the output with a different string:
 
-```txt
+```python
 >>> a, b = 0, 1
 >>> while a < 1000:
 ...     print(a, end=',')
 ...     a, b = b, a+b
 ...
 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
-
 ```
-
-<!-- page: 24 -->
-
-<!-- page: 25 -->
 
 ## MORE CONTROL FLOW TOOLS
 
@@ -860,7 +761,6 @@ Please enter an integer: 42
 ...     print('More')
 ...
 More
-
 ```
 
 There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.
@@ -878,10 +778,7 @@ The for statement in Python differs a bit from what you may be used to in C or P
 cat 3
 window 6
 defenestrate 12
-
 ```
-
-<!-- page: 26 -->
 
 If you need to modify the sequence you are iterating over while inside the loop (for example to duplicate selected items), it is recommended that you first make a copy. Iterating over a sequence does not implicitly make a copy. The slice notation makes this especially convenient:
 
@@ -892,7 +789,6 @@ If you need to modify the sequence you are iterating over while inside the loop 
 ...
 >>> words
 ['defenestrate', 'cat', 'window', 'defenestrate']
-
 ```
 
 With for w in words:, the example would attempt to create an infinite list, inserting defenestrate over and over again.
@@ -901,7 +797,7 @@ With for w in words:, the example would attempt to create an infinite list, inse
 
 If you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. It generates arithmetic progressions:
 
-```txt
+```python
 >>> for i in range(5):
 ...     print(i)
 ...
@@ -910,7 +806,6 @@ If you do need to iterate over a sequence of numbers, the built-in function rang
 2
 3
 4
-
 ```
 
 The given end point is never part of the generated sequence; range(10) generates 10 values, the legal indices for items of a sequence of length 10. It is possible to let the range start at another number, or to specify a different increment (even negative; sometimes this is called the ‘step’):
@@ -924,12 +819,11 @@ range(0, 10, 3)
 
 range(-10, -100, -30)
     -10, -40, -70
-
 ```
 
 To iterate over the indices of a sequence, you can combine range() and len() as follows:
 
-```txt
+```python
 >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
 >>> for i in range(len(a)):
 ...     print(i, a[i])
@@ -939,17 +833,13 @@ To iterate over the indices of a sequence, you can combine range() and len() as 
 2 a
 3 little
 4 lamb
-
 ```
 
 In most such cases, however, it is convenient to use the enumerate() function, see Looping Techniques. A strange thing happens if you just print a range:
 
-<!-- page: 27 -->
-
-```txt
+```python
 >>> print(range(10))
 range(0, 10)
-
 ```
 
 In many ways the object returned by range() behaves as if it is a list, but in fact it isn’t. It is an object which returns the successive items of the desired sequence when you iterate over it, but it doesn’t really make the list, thus saving space.
@@ -959,7 +849,6 @@ We say such an object is iterable, that is, suitable as a target for functions a
 ```erlang
 >>> list(range(5))
 [0, 1, 2, 3, 4]
-
 ```
 
 Later we will see more functions that return iterables and take iterables as argument.
@@ -988,7 +877,6 @@ Loop statements may have an else clause; it is executed when the loop terminates
 7 is a prime number
 8 equals 2 * 4
 9 equals 3 * 3
-
 ```
 
 (Yes, this is the correct code. Look closely: the else clause belongs to the for loop, **not** the if statement.)
@@ -1004,12 +892,9 @@ The continue statement, also borrowed from C, continues with the next iteration 
 ...         continue
 ...     print("Found a number", num)
 Found an even number 2
-
 ```
 
 (continues on next page)
-
-<!-- page: 28 -->
 
 ```txt
 Found a number 3
@@ -1019,7 +904,6 @@ Found an even number 6
 Found a number 7
 Found an even number 8
 Found a number 9
-
 ```
 
 (continued from previous page)
@@ -1028,29 +912,26 @@ Found a number 9
 
 The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action. For example:
 
-```txt
+```python
 >>> while True:
 ...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
 ...
-
 ```
 
 This is commonly used for creating minimal classes:
 
-```txt
+```python
 >>> class MyEmptyClass:
 ...     pass
 ...
-
 ```
 
 Another place pass can be used is as a place-holder for a function or conditional body when you are working on new code, allowing you to keep thinking at a more abstract level. The pass is silently ignored:
 
-```txt
+```python
 >>> def initlog(*args):
 ...     pass   # Remember to implement this!
 ...
-
 ```
 
 ## 4.6 Defining Functions
@@ -1069,14 +950,11 @@ We can create a function that writes the Fibonacci series to an arbitrary bounda
 >>> # Now call the function we just defined:
 ... fib(2000)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
-
 ```
 
 The keyword def introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line, and must be indented.
 
 The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, or docstring. (More about docstrings can be found in the section Documentation
-
-<!-- page: 29 -->
 
 Strings.) There are tools which use docstrings to automatically produce online or printed documentation, or to let the user interactively browse through code; it’s good practice to include docstrings in code that you write, so make a habit of it.
 
@@ -1092,7 +970,6 @@ A function definition introduces the function name in the current symbol table. 
 >>> f = fib
 >>> f(100)
 0 1 1 2 3 5 8 13 21 34 55 89
-
 ```
 
 Coming from other languages, you might object that fib is not a function but a procedure since it doesn’t return a value. In fact, even functions without a return statement do return a value, albeit a rather boring one. This value is called None (it’s a built-in name). Writing the value None is normally suppressed by the interpreter if it would be the only value written. You can see it if you really want to using print():
@@ -1101,7 +978,6 @@ Coming from other languages, you might object that fib is not a function but a p
 >>> fib(0)
 >>> print(fib(0))
 None
-
 ```
 
 It is simple to write a function that returns a list of the numbers of the Fibonacci series, instead of printing it:
@@ -1119,7 +995,6 @@ It is simple to write a function that returns a list of the numbers of the Fibon
 >>> f100 = fib2(100)    # call it
 >>> f100                 # write the result
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-
 ```
 
 This example, as usual, demonstrates some new Python features:
@@ -1129,8 +1004,6 @@ This example, as usual, demonstrates some new Python features:
 • The statement result.append(a) calls a method of the list object result. A method is a function that ‘belongs’ to an object and is named obj.methodname, where obj is some object (this may be an
 
 1 Actually, call by object reference would be a better description, since if a mutable object is passed, the caller will see any changes the callee makes to it (items inserted into a list).
-
-<!-- page: 30 -->
 
 expression), and methodname is the name of a method that is defined by the object’s type. Different types define different methods. Methods of different types may have the same name without causing ambiguity. (It is possible to define your own object types and methods, using classes, see Classes) The method append() shown in the example is defined for list objects; it adds a new element at the end of the list. In this example it is equivalent to result = result + [a], but more efficient.
 
@@ -1154,7 +1027,6 @@ def ask_ok(prompt, retries=4, reminder='Please try again!')
         if retries < 0:
             raise ValueError('invalid user response')
         print(reminder)
-
 ```
 
 This function can be called in several ways:
@@ -1175,14 +1047,11 @@ def f(arg=i):
 
 i = 6
 f()
-
 ```
 
 will print 5.
 
 **Important warning:** The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes. For example, the following function accumulates the arguments passed to it on subsequent calls:
-
-<!-- page: 31 -->
 
 ```python
 def f(a, L=[]):
@@ -1192,16 +1061,14 @@ def f(a, L=[]):
 print(f(1))
 print(f(2))
 print(f(3))
-
 ```
 
 This will print
 
 ```txt
-[1]
+
 [1, 2]
 [1, 2, 3]
-
 ```
 
 If you don’t want the default to be shared between subsequent calls, you can write the function like this instead:
@@ -1212,7 +1079,6 @@ def f(a, L=None):
         L = []
     L.append(a)
     return L
-
 ```
 
 ## 4.7.2 Keyword Arguments
@@ -1225,7 +1091,6 @@ def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
     print("if you put", voltage, "volts through it.")
     print "-- Lovely plumage, the", type)
     print "-- It's", state, "!")
-
 ```
 
 accepts one required argument (voltage) and three optional arguments (state, action, and type). This function can be called in any of the following ways:
@@ -1237,7 +1102,6 @@ parrot(voltage=1000000, action='V00000M')
 parrot(action='V00000M', voltage=1000000)
 parrot('a million', 'bereft of life', 'jump')
 parrot('a thousand', state='pushing up the daisies')
-
 ```
 
 but all the following calls would be invalid:
@@ -1247,12 +1111,9 @@ parrot()                      # required argument missing
 parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
 parrot(110, voltage=220)      # duplicate value for the same argument
 parrot(actor='John Cleese')  # unknown keyword argument
-
 ```
 
 In a function call, keyword arguments must follow positional arguments. All the keyword arguments passed must match one of the arguments accepted by the function (e.g. actor is not a valid argument for the parrot function), and their order is not important. This also includes non-optional arguments (e.g. parrot(voltage=1000) is valid too). No argument may receive a value more than once. Here’s an example that fails due to this restriction:
-
-<!-- page: 32 -->
 
 ```python
 >>> def function(a):
@@ -1262,7 +1123,6 @@ In a function call, keyword arguments must follow positional arguments. All the 
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: function() got multiple values for keyword argument 'a'
-
 ```
 
 When a final formal parameter of the form \*\*name is present, it receives a dictionary (see typesmapping) containing all keyword arguments except for those corresponding to a formal parameter. This may be combined with a formal parameter of the form \*name (described in the next subsection) which receives a tuple containing the positional arguments beyond the formal parameter list. (\*name must occur before \*\*name.) For example, if we define a function like this:
@@ -1276,7 +1136,6 @@ def cheeseshop(kind, *arguments, **keywords):
     print Gab * 40)
     for kw in keywords:
         print(kw, ":", keywords[kw])
-
 ```
 
 It could be called like this:
@@ -1287,7 +1146,6 @@ cheeseshop("Limburger", "It's very runny, sir.",
     shopkeeper="Michael Palin",
     client="John Cheese",
     sketch="Cheese Shop Sketch")
-
 ```
 
 and of course it would print:
@@ -1301,7 +1159,6 @@ It's really very, VERY runny, sir.
 shopkeeper : Michael Palin
 client : John Cleese
 sketch : Cheese Shop Sketch
-
 ```
 
 Note that the order in which the keyword arguments are printed is guaranteed to match the order in which they were provided in the function call.
@@ -1313,12 +1170,9 @@ Finally, the least frequently used option is to specify that a function can be c
 ```python
 def write_multiple_items(file, separator, *args):
     file.write(separator.join(args))
-
 ```
 
 Normally, these variadic arguments will be last in the list of formal parameters, because they scoop up all remaining input arguments that are passed to the function. Any formal parameters which occur after
-
-<!-- page: 33 -->
 
 the \*args parameter are ‘keyword-only’ arguments, meaning that they can only be used as keywords rather than positional arguments.
 
@@ -1330,7 +1184,6 @@ the \*args parameter are ‘keyword-only’ arguments, meaning that they can onl
 'earth/mars/venus'
 >>> concat("earth", "mars", "venus", sep=".")
 'earth.mars.venus'
-
 ```
 
 ## 4.7.4 Unpacking Argument Lists
@@ -1343,7 +1196,6 @@ The reverse situation occurs when the arguments are already in a list or tuple b
 >>> args = [3, 6]
 >>> list(range(*args))         # call with arguments unpacked from a list
 [3, 4, 5]
-
 ```
 
 In the same fashion, dictionaries can deliver keyword arguments with the \*\*-operator:
@@ -1357,7 +1209,6 @@ In the same fashion, dictionaries can deliver keyword arguments with the \*\*-op
 >>> d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
 >>> parrot(**d)
 -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
-
 ```
 
 ## 4.7.5 Lambda Expressions
@@ -1373,19 +1224,15 @@ Small anonymous functions can be created with the lambda keyword. This function 
 42
 >>> f(1)
 43
-
 ```
 
 The above example uses a lambda expression to return a function. Another use is to pass a small function as an argument:
-
-<!-- page: 34 -->
 
 ```python
 >>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
 >>> pairs.sort(key=lambda pair: pair[1])
 >>> pairs
 [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
-
 ```
 
 ## 4.7.6 Documentation Strings
@@ -1412,7 +1259,6 @@ Here is an example of a multi-line docstring:
 Do nothing, but document it.
 
     No, really, it doesn't do anything.
-
 ```
 
 ## 4.7.7 Function Annotations
@@ -1424,12 +1270,9 @@ Annotations are stored in the \_\_annotations\_\_ attribute of the function as a
 ```python
 >>> def f(ham: str, eggs: str = 'eggs') -> str:
 ...     print("Annotations:", f.__annotations__)
-
 ```
 
 (continues on next page)
-
-<!-- page: 35 -->
 
 ```python
 (continued from previous page)
@@ -1440,7 +1283,6 @@ Annotations are stored in the \_\_annotations\_\_ attribute of the function as a
 Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
 Arguments: spam eggs
 'spam and eggs'
-
 ```
 
 ## 4.8 Intermezzo: Coding Style
@@ -1470,10 +1312,6 @@ This helps users with small displays and makes it possible to have several code 
 • Don’t use fancy encodings if your code is meant to be used in international environments. Python’s default, UTF-8, or even plain ASCII work best in any case.
 
 • Likewise, don’t use non-ASCII characters in identifiers if there is only the slightest chance people speaking a different language will read or maintain the code.
-
-<!-- page: 36 -->
-
-<!-- page: 37 -->
 
 # DATA STRUCTURES
 
@@ -1521,8 +1359,6 @@ list.**sort**(key=None, reverse=False)
 
 Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their explanation).
 
-<!-- page: 38 -->
-
 list.**reverse**() Reverse the elements of the list in place.
 
 list.**copy**() Return a shallow copy of the list. Equivalent to a[:].
@@ -1550,7 +1386,6 @@ An example that uses most of the list methods:
 ['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
 >>> fruits.pop()
 'pear'
-
 ```
 
 You might have noticed that methods like insert, remove or sort that only modify the list have no return value printed – they return the default None.<sup>1</sup> This is a design principle for all mutable data structures in Python.
@@ -1575,12 +1410,9 @@ The list methods make it very easy to use a list as a stack, where the last elem
 5
 >>> stack
 [3, 4]
-
 ```
 
 1 Other languages may return the mutated object, which allows method chaining, such as d->insert("a")->remove("b")->sort();.
-
-<!-- page: 39 -->
 
 ## 5.1.2 Using Lists as Queues
 
@@ -1599,7 +1431,6 @@ To implement a queue, use collections.deque which was designed to have fast appe
 'John'
 >>> queue                                        # Remaining queue in order of arrival
 deque(['Michael', 'Terry', 'Graham'])
-
 ```
 
 ## 5.1.3 List Comprehensions
@@ -1615,21 +1446,18 @@ For example, assume we want to create a list of squares, like:
 ...
 >>> squares
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
 ```
 
 Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate the list of squares without any side effects using:
 
 ```txt
 squares = list(map(lambda x: x**2, range(10)))
-
 ```
 
 or, equivalently:
 
 ```python
 squares = [x**2 for x in range(10)]
-
 ```
 
 which is more concise and readable.
@@ -1639,12 +1467,9 @@ A list comprehension consists of brackets containing an expression followed by a
 ```erlang
 >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
 [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
-
 ```
 
 and it’s equivalent to:
-
-<!-- page: 40 -->
 
 ```python
 >>> combs = []
@@ -1655,14 +1480,13 @@ and it’s equivalent to:
 ...
 >>> combs
 [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
-
 ```
 
 Note how the order of the for and if statements is the same in both these snippets.
 
 If the expression is a tuple (e.g. the (x, y) in the previous example), it must be parenthesized.
 
-```txt
+```python
 >>> vec = [-4, -2, 0, 2, 4]
 >>> # create a new list with the values doubled
 >>> [x*2 for x in vec]
@@ -1690,7 +1514,6 @@ SyntaxError: invalid syntax
 >>> vec = [[1,2,3], [4,5,6], [7,8,9]]
 >>> [num for elem in vec for num in elem]
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
 ```
 
 List comprehensions can contain complex expressions and nested functions:
@@ -1699,7 +1522,6 @@ List comprehensions can contain complex expressions and nested functions:
 >>> from math import pi
 >>> [str(round(pi, i)) for i in range(1, 6)]
 ['3.1', '3.14', '3.142', '3.1416', '3.14159']
-
 ```
 
 ## 5.1.4 Nested List Comprehensions
@@ -1712,17 +1534,13 @@ Consider the following example of a 3x4 matrix implemented as a list of 3 lists 
 >>> matrix = [
 ...         [1, 2, 3, 4],
 ...         [5, 6, 7, 8],
-
 ```
 
 (continues on next page)
 
-<!-- page: 41 -->
-
 ```txt
 ...     [9, 10, 11, 12],
 ... ]
-
 ```
 
 (continued from previous page)
@@ -1732,7 +1550,6 @@ The following list comprehension will transpose rows and columns:
 ```erlang
 >>> [[row[i] for row in matrix] for i in range(4)]
 [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
-
 ```
 
 As we saw in the previous section, the nested listcomp is evaluated in the context of the for that follows it, so this example is equivalent to:
@@ -1744,7 +1561,6 @@ As we saw in the previous section, the nested listcomp is evaluated in the conte
 ...
 >>> transposed
 [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
-
 ```
 
 which, in turn, is the same as:
@@ -1760,7 +1576,6 @@ which, in turn, is the same as:
 ...
 >>> transposed
 [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
-
 ```
 
 In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a great job for this use case:
@@ -1768,7 +1583,6 @@ In the real world, you should prefer built-in functions to complex flow statemen
 ```txt
 >>> list(zip(*matrix))
 [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
-
 ```
 
 See Unpacking Argument Lists for details on the asterisk in this line.
@@ -1786,19 +1600,15 @@ There is a way to remove an item from a list given its index instead of its valu
 >>> a
 [1, 66.25, 1234.5]
 >>> del a[:]
-
 ```
 
 (continues on next page)
 
 **5.2. The del statement**
 
-<!-- page: 42 -->
-
 ```json
 >>> a
 []
-
 ```
 
 (continued from previous page)
@@ -1807,7 +1617,6 @@ del can also be used to delete entire variables:
 
 ```txt
 >>> del a
-
 ```
 
 Referencing the name a hereafter is an error (at least until another value is assigned to it). We’ll find other uses for del later.
@@ -1837,7 +1646,6 @@ TypeError: 'tuple' object does not support item assignment
 ... v = ([1, 2, 3], [3, 2, 1])
 >>> v
 ([1, 2, 3], [3, 2, 1])
-
 ```
 
 As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to create tuples which contain mutable objects, such as lists.
@@ -1850,12 +1658,9 @@ A special problem is the construction of tuples containing 0 or 1 items: the syn
 >>> empty = ()
 >>> singleton = 'hello',    # <-- note trailing comma
 >>> len(empty)
-
 ```
 
 (continues on next page)
-
-<!-- page: 43 -->
 
 ```txt
 0
@@ -1863,7 +1668,6 @@ A special problem is the construction of tuples containing 0 or 1 items: the syn
 1
 >>> singleton
 ('hello',)
-
 ```
 
 (continued from previous page)
@@ -1872,7 +1676,6 @@ The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the val
 
 ```txt
 >>> x, y, z = t
-
 ```
 
 This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
@@ -1885,7 +1688,7 @@ Curly braces or the set() function can be used to create sets. Note: to create a
 
 Here is a brief demonstration:
 
-```txt
+```python
 >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 >>> print(basket)                      # show that duplicates have been removed
 {'orange', 'banana', 'pear', 'apple'}
@@ -1908,21 +1711,17 @@ False
 {'a', 'c'}
 >>> a ^ b                          # letters in a or b but not both
 {'r', 'd', 'b', 'm', 'z', 'l'}
-
 ```
 
 Similarly to list comprehensions, set comprehensions are also supported:
 
-```txt
+```python
 >>> a = {x for x in 'abracadabra' if x not in 'abc'}
 >>> a
 {'r', 'd'}
-
 ```
 
 **5.4. Sets**
-
-<!-- page: 44 -->
 
 ## 5.5 Dictionaries
 
@@ -1955,7 +1754,6 @@ Here is a small example using a dictionary:
 True
 >>> 'jack' not in tel
 False
-
 ```
 
 The dict() constructor builds dictionaries directly from sequences of key-value pairs:
@@ -1963,15 +1761,13 @@ The dict() constructor builds dictionaries directly from sequences of key-value 
 ```txt
 >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
 {'sape': 4139, 'guido': 4127, 'jack': 4098}
-
 ```
 
 In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
 
-```txt
+```python
 >>> {x: x**2 for x in (2, 4, 6)}
 {2: 4, 4: 16, 6: 36}
-
 ```
 
 When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:
@@ -1979,10 +1775,7 @@ When the keys are simple strings, it is sometimes easier to specify pairs using 
 ```python
 >>> dict(sape=4139, guido=4127, jack=4098)
 {'sape': 4139, 'guido': 4127, 'jack': 4098}
-
 ```
-
-<!-- page: 45 -->
 
 ## 5.6 Looping Techniques
 
@@ -1995,7 +1788,6 @@ When looping through dictionaries, the key and corresponding value can be retrie
 ...
 gallahad the pure
 robin the brave
-
 ```
 
 When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function.
@@ -2007,7 +1799,6 @@ When looping through a sequence, the position index and corresponding value can 
 0 tic
 1 tac
 2 toe
-
 ```
 
 To loop over two or more sequences at the same time, the entries can be paired with the zip() function.
@@ -2021,12 +1812,11 @@ To loop over two or more sequences at the same time, the entries can be paired w
 What is your name?  It is lancelot.
 What is your quest?  It is the holy grail.
 What is your favorite color?  It is blue.
-
 ```
 
 To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed() function.
 
-```txt
+```python
 >>> for i in reversed(range(1, 10, 2)):
 ...     print(i)
 ...
@@ -2035,7 +1825,6 @@ To loop over a sequence in reverse, first specify the sequence in a forward dire
 5
 3
 1
-
 ```
 
 To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving the source unaltered.
@@ -2049,12 +1838,9 @@ apple
 banana
 orange
 pear
-
 ```
 
 ## 5.6. Looping Techniques
-
-<!-- page: 46 -->
 
 It is sometimes tempting to change a list while you are looping over it; however, it is often simpler and safer to create a new list instead.
 
@@ -2068,7 +1854,6 @@ It is sometimes tempting to change a list while you are looping over it; however
 ...
 >>> filtered_data
 [56.2, 51.7, 55.3, 52.5, 47.8]
-
 ```
 
 ## 5.7 More on Conditions
@@ -2090,7 +1875,6 @@ It is possible to assign the result of a comparison or other Boolean expression 
 >>> non_null = string1 or string2 or string3
 >>> non_null
 'Trondheim'
-
 ```
 
 Note that in Python, unlike C, assignment cannot occur inside expressions. C programmers may grumble about this, but it avoids a common class of problems encountered in C programs: typing = in an expression when == was intended.
@@ -2098,8 +1882,6 @@ Note that in Python, unlike C, assignment cannot occur inside expressions. C pro
 ## 5.8 Comparing Sequences and Other Types
 
 Sequence objects may be compared to other objects with the same sequence type. The comparison uses lexicographical ordering: first the first two items are compared, and if they differ this determines the outcome of the comparison; if they are equal, the next two items are compared, and so on, until either sequence is exhausted. If two items to be compared are themselves sequences of the same type, the lexicographical comparison is carried out recursively. If all items of two sequences compare equal, the sequences are considered equal. If one sequence is an initial sub-sequence of the other, the shorter sequence is the smaller (lesser)
-
-<!-- page: 47 -->
 
 one. Lexicographical ordering for strings uses the Unicode code point number to order individual characters. Some examples of comparisons between sequences of the same type:
 
@@ -2111,14 +1893,9 @@ one. Lexicographical ordering for strings uses the Unicode code point number to 
 (1, 2)               < (1, 2, -1)
 (1, 2, 3)           == (1.0, 2.0, 3.0)
 (1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)
-
 ```
 
 Note that comparing objects of different types with < or > is legal provided that the objects have appropriate comparison methods. For example, mixed numeric types are compared according to their numeric value, so 0 equals 0.0, etc. Otherwise, rather than providing an arbitrary ordering, the interpreter will raise a TypeError exception.
-
-<!-- page: 48 -->
-
-<!-- page: 49 -->
 
 ## MODULES
 
@@ -2145,14 +1922,12 @@ def fib2(n):    # return Fibonacci series up to n
         result.append(a)
         a, b = b, a+b
     return result
-
 ```
 
 Now enter the Python interpreter and import this module with the following command:
 
-```txt
+```python
 >>> import fibo
-
 ```
 
 This does not enter the names of the functions defined in fibo directly in the current symbol table; it only enters the module name fibo there. Using the module name you can access the functions:
@@ -2161,12 +1936,9 @@ This does not enter the names of the functions defined in fibo directly in the c
 >>> fibo.fib(1000)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
 >>> fibo.fib2(100)
-
 ```
 
 (continues on next page)
-
-<!-- page: 50 -->
 
 (continued from previous page)
 
@@ -2174,7 +1946,6 @@ This does not enter the names of the functions defined in fibo directly in the c
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 >>> fibo.__name__
 'fibo'
-
 ```
 
 If you intend to use a function often you can assign it to a local name:
@@ -2183,7 +1954,6 @@ If you intend to use a function often you can assign it to a local name:
 >>> fib = fibo.fib
 >>> fib(500)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
 ```
 
 ## 6.1 More on Modules
@@ -2196,22 +1966,20 @@ Modules can import other modules. It is customary but not required to place all 
 
 There is a variant of the import statement that imports names from a module directly into the importing module’s symbol table. For example:
 
-```txt
+```python
 >>> from fibo import fib, fib2
 >>> fib(500)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
 ```
 
 This does not introduce the module name from which the imports are taken in the local symbol table (so in the example, fibo is not defined).
 
 There is even a variant to import all names that a module defines:
 
-```txt
+```python
 >>> from fibo import *
 >>> fib(500)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
 ```
 
 This imports all names except those beginning with an underscore (\_). In most cases Python programmers do not use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you have already defined.
@@ -2220,26 +1988,22 @@ Note that in general the practice of importing \* from a module or package is fr
 
 If the module name is followed by as, then the name following as is bound directly to the imported module.
 
-```txt
+```python
 >>> import fibo as fib
 >>> fib.fib(500)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
 ```
 
 1In fact function definitions are also ‘statements’ that are ‘executed’; the execution of a module-level function definition enters the function name in the module’s global symbol table.
-
-<!-- page: 51 -->
 
 This is effectively importing the module in the same way that import fibo will do, with the only difference of it being available as fib.
 
 It can also be used when utilising from with similar effects:
 
-```txt
+```python
 >>> from fibo import fib as fibonacci
 >>> fibonacci(500)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
 ```
 
 **Note:** For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use importlib.reload(), e.g. import importlib; importlib.reload(modulename).
@@ -2250,7 +2014,6 @@ When you run a Python module with
 
 ```xml
 python fibo.py <arguments>
-
 ```
 
 the code in the module will be executed, just as if you imported it, but with the \_\_name\_\_ set to "\_\_main\_\_". That means that by adding this code at the end of your module:
@@ -2259,7 +2022,6 @@ the code in the module will be executed, just as if you imported it, but with th
 if __name__ == "__main__":
     import sys
     fib(int(sys.argv[1]))
-
 ```
 
 you can make the file usable as a script as well as an importable module, because the code that parses the command line only runs if the module is executed as the “main” file:
@@ -2267,15 +2029,13 @@ you can make the file usable as a script as well as an importable module, becaus
 ```txt
 $ python fibo.py 50
 0 1 1 2 3 5 8 13 21 34
-
 ```
 
 If the module is imported, the code is not run:
 
-```txt
+```python
 >>> import fibo
 >>>
-
 ```
 
 This is often used either to provide a convenient user interface to a module, or for testing purposes (running the module as a script executes a test suite).
@@ -2291,8 +2051,6 @@ When a module named spam is imported, the interpreter first searches for a built
 • The installation-dependent default.
 
 **Note:** On file systems which support symlinks, the directory containing the input script is calculated after the symlink is followed. In other words the directory containing the symlink is **not** added to the module
-
-<!-- page: 52 -->
 
 search path.
 
@@ -2320,25 +2078,21 @@ Some tips for experts:
 
 Python comes with a library of standard modules, described in a separate document, the Python Library Reference (“Library Reference” hereafter). Some modules are built into the interpreter; these provide access to operations that are not part of the core of the language but are nevertheless built in, either for efficiency or to provide access to operating system primitives such as system calls. The set of such modules is a configuration option which also depends on the underlying platform. For example, the winreg module is only provided on Windows systems. One particular module deserves some attention: sys, which is built into every Python interpreter. The variables sys.ps1 and sys.ps2 define the strings used as primary and secondary prompts:
 
-```txt
+```python
 >>> import sys
 >>> sys.ps1
 '>>> '
 >>> sys.ps2
 '... '
-
 ```
 
 (continues on next page)
 
-<!-- page: 53 -->
-
-```txt
+```python
 >>> sys.ps1 = 'C> '
 C> print('Yuck!')
 Yuck!
 C>
-
 ```
 
 (continued from previous page)
@@ -2347,17 +2101,16 @@ These two variables are only defined if the interpreter is in interactive mode.
 
 The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not set. You can modify it using standard list operations:
 
-```txt
+```python
 >>> import sys
 >>> sys.path.append('/ufs/guido/lib/python')
-
 ```
 
 ## 6.3 The dir() Function
 
 The built-in function dir() is used to find out which names a module defines. It returns a sorted list of strings:
 
-```txt
+```python
 >>> import fibo, sys
 >>> dir(fibo)
 ['__name__', 'fib', 'fib2']
@@ -2379,7 +2132,6 @@ The built-in function dir() is used to find out which names a module defines. It
 'setcheckinterval', 'setdlopenflags', 'setprofile', 'setrecursionlimit',
 'setswitchinterval', 'settrace', 'stderr', 'stdin', 'stdout',
 'thread_info', 'version', 'version_info', 'warnoptions']
-
 ```
 
 Without arguments, dir() lists the names you have defined currently:
@@ -2390,14 +2142,11 @@ Without arguments, dir() lists the names you have defined currently:
 >>> fib = fibo.fib
 >>> dir()
 ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']
-
 ```
 
 Note that it lists all types of names: variables, modules, functions, etc.
 
 dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module builtins:
-
-<!-- page: 54 -->
 
 ```python
 >>> import builtins
@@ -2431,7 +2180,6 @@ dir() does not list the names of built-in functions and variables. If you want a
 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',
 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',
 'zip']
-
 ```
 
 ## 6.4 Packages
@@ -2447,14 +2195,11 @@ sound/                                      Top-level package
         __init__.py
         wavread.py
         wavwrite.py
-
 ```
 
 (continues on next page)
 
-<!-- page: 55 -->
-
-```txt
+```python
 aiffread.py
     aiffwrite.py
     auread.py
@@ -2472,7 +2217,6 @@ filters/                 Subpackage for filters
     vocoder.py
     karaoke.py
     ...
-
 ```
 
 When importing the package, Python searches through the directories on sys.path looking for the package subdirectory.
@@ -2483,49 +2227,41 @@ Users of the package can import individual modules from the package, for example
 
 ```python
 import sound.effects.echo
-
 ```
 
 This loads the submodule sound.effects.echo. It must be referenced with its full name.
 
 ```javascript
 sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
-
 ```
 
 An alternative way of importing the submodule is:
 
 ```python
 from sound.effects import echo
-
 ```
 
 This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:
 
 ```javascript
 echo.echofilter(input, output, delay=0.7, atten=4)
-
 ```
 
 Yet another variation is to import the desired function or variable directly:
 
 ```python
 from sound.effects.echo import echofilter
-
 ```
 
 Again, this loads the submodule echo, but this makes its function echofilter() directly available:
 
 ```txt
 echofilter(input, output, delay=0.7, atten=4)
-
 ```
 
 Note that when using from package import item, the item can be either a submodule (or subpackage) of the package, or some other name defined in the package, like a function, class or variable. The import statement first tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to find it, an ImportError exception is raised.
 
 Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a package; the last item can be a module or a package but can’t be a class or function or variable defined
-
-<!-- page: 56 -->
 
 in the previous item.
 
@@ -2537,7 +2273,6 @@ The only solution is for the package author to provide an explicit index of the 
 
 ```python
 __all__ = ["echo", "surround", "reverse"]
-
 ```
 
 This would mean that from sound.effects import \* would import the three named submodules of the sound package.
@@ -2548,7 +2283,6 @@ If \_\_all\_\_ is not defined, the statement from sound.effects import \* does n
 import sound.effects.echo
 import sound.effects.surround
 from sound.effects import *
-
 ```
 
 In this example, the echo and surround modules are imported in the current namespace because they are defined in the sound.effects package when the from...import statement is executed. (This also works when \_\_all\_\_ is defined.)
@@ -2563,13 +2297,10 @@ When packages are structured into subpackages (as with the sound package in the 
 
 You can also write relative imports, with the from module import name form of import statement. These imports use leading dots to indicate the current and parent packages involved in the relative import. From the surround module for example, you might use:
 
-<!-- page: 57 -->
-
 ```python
 from . import echo
 from .. import formats
 from ..filters import equalizer
-
 ```
 
 Note that relative imports are based on the name of the current module. Since the name of the main module is always "\_\_main\_\_", modules intended for use as the main module of a Python application must always use absolute imports.
@@ -2579,10 +2310,6 @@ Note that relative imports are based on the name of the current module. Since th
 Packages support one more special attribute, \_\_path\_\_. This is initialized to be a list containing the name of the directory holding the package’s \_\_init\_\_.py before the code in that file is executed. This variable can be modified; doing so affects future searches for modules and subpackages contained in the package.
 
 While this feature is not often needed, it can be used to extend the set of modules found in a package.
-
-<!-- page: 58 -->
-
-<!-- page: 59 -->
 
 ## INPUT AND OUTPUT
 
@@ -2600,7 +2327,6 @@ Often you’ll want more control over the formatting of your output than simply 
 >>> year = 2016 ; event = 'Referendum'
 >>> f'Results of the {year} {event}'
 'Results of the 2016 Referendum'
-
 ```
 
 • The str.format() method of strings requires more manual effort. You’ll still use { and } to mark where a variable will be substituted and can provide detailed formatting directives, but you’ll also need to provide the information to be formatted.
@@ -2610,7 +2336,6 @@ Often you’ll want more control over the formatting of your output than simply 
 >>> percentage = yes_votes/(yes_votes+no_votes)
 >>> '{:-9} YES votes {:2.2%}'.format(yes_votes, percentage)
 ' 42572654 YES votes 49.67%'
-
 ```
 
 • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create any layout you can imagine. The string type has some methods that perform useful operations for padding strings to a given column width.
@@ -2620,8 +2345,6 @@ When you don’t need fancy output but just want a quick display of some variabl
 The str() function is meant to return representations of values which are fairly human-readable, while repr() is meant to generate representations which can be read by the interpreter (or will force a SyntaxError if there is no equivalent syntax). For objects which don’t have a particular representation for human consumption, str() will return the same value as repr(). Many values, such as numbers or structures like lists and dictionaries, have the same representation using either function. Strings, in particular, have two distinct representations.
 
 Some examples:
-
-<!-- page: 60 -->
 
 ```python
 >>> s = 'Hello, world.'
@@ -2644,7 +2367,6 @@ The value of x is 32.5, and y is 40000...
 >>> # The argument to repr() may be any Python object:
 ... repr((x, y, ('spam', 'eggs')))
 "(32.5, 40000, ('spam', 'eggs'))"
-
 ```
 
 The string module contains a Template class that offers yet another way to substitute values into strings, using placeholders like \$x and replacing them with values from a dictionary, but offers much less control of the formatting.
@@ -2658,7 +2380,6 @@ An optional format specifier can follow the expression. This allows greater cont
 ```python
 >>> import math
 >>> print(f'The value of pi is approximately {math.pi:.3f}.')
-
 ```
 
 Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for making columns line up.
@@ -2671,23 +2392,19 @@ Passing an integer after the ':' will cause that field to be a minimum number of
 Sjoerd       ==>        4127
 Jack         ==>        4098
 Dcab         ==>        7678
-
 ```
 
 Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(), and '!r' applies repr():
 
-```txt
+```python
 >>> animals = 'eels'
 >>> print(f'My hovercraft is full of {animals}.')
 My hovercraft is full of eels.
 >>> print('My hovercraft is full of {animals !r}.')
 My hovercraft is full of 'eels'.
-
 ```
 
 For a reference on these format specifications, see the reference guide for the formatspec.
-
-<!-- page: 61 -->
 
 ## 7.1.2 The String format() Method
 
@@ -2696,7 +2413,6 @@ Basic usage of the str.format() method looks like this:
 ```python
 >>> print('We are the {} who say "{}!"'.format('knights', 'Ni'))
 We are the knights who say "Ni!"
-
 ```
 
 The brackets and characters within them (called format fields) are replaced with the objects passed into the str.format() method. A number in the brackets can be used to refer to the position of the object passed into the str.format() method.
@@ -2706,7 +2422,6 @@ The brackets and characters within them (called format fields) are replaced with
 spam and eggs
 >>> print('{1} and {0}'.format('spam', 'eggs'))
 eggs and spam
-
 ```
 
 If keyword arguments are used in the str.format() method, their values are referred to by using the name of the argument.
@@ -2715,42 +2430,38 @@ If keyword arguments are used in the str.format() method, their values are refer
 >>> print('This {food} is {adjective}'.'.format(
 ...     food='spam', adjective='absolutely horrible'))
 This spam is absolutely horrible.
-
 ```
 
 Positional and keyword arguments can be arbitrarily combined:
 
-```txt
+```python
 >>> print('The story of {0}, {1}, and {other}'.'.format('Bill', 'Manfred',
                           other='Georg'))
 The story of Bill, Manfred, and Georg.
-
 ```
 
 If you have a really long format string that you don’t want to split up, it would be nice if you could reference the variables to be formatted by name instead of by position. This can be done by simply passing the dict and using square brackets '[]' to access the keys
 
-```txt
+```python
 >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
 >>> print('Jack: {O[Jack]:d}; Sjoerd: {O[Sjoerd]:d}; '
 ...         'Dcab: {O[Dcab]:d}'.format(table))
 Jack: 4098; Sjoerd: 4127; Dcab: 8637678
-
 ```
 
 This could also be done by passing the table as keyword arguments with the ‘\*\*’ notation.
 
-```txt
+```python
 >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
 >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
 Jack: 4098; Sjoerd: 4127; Dcab: 8637678
-
 ```
 
 This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing all local variables.
 
 As an example, the following lines produce a tidily-aligned set of columns giving integers and their squares and cubes:
 
-```txt
+```python
 >>> for x in range(1, 11):
 ...     print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
 ...
@@ -2759,12 +2470,9 @@ As an example, the following lines produce a tidily-aligned set of columns givin
 3   9    27
 4  16    64
 5  25  125
-
 ```
 
 (continues on next page)
-
-<!-- page: 62 -->
 
 ```txt
 (continued from previous page)
@@ -2773,7 +2481,6 @@ As an example, the following lines produce a tidily-aligned set of columns givin
 8 64 512
 9 81 729
 10 100 1000
-
 ```
 
 For a complete overview of string formatting with str.format(), see formatstrings.
@@ -2798,7 +2505,6 @@ Here’s the same table of squares and cubes, formatted manually:
 8  64   512
 9  81   729
 10 100 1000
-
 ```
 
 (Note that the one space between each column was added by the way print() works: it always adds spaces between its arguments.)
@@ -2814,20 +2520,16 @@ There is another method, str.zfill(), which pads a numeric string on the left wi
 '-003.14'
 >>> '3.14159265359'.zfill(5)
 '3.14159265359'
-
 ```
 
 ## 7.1.4 Old string formatting
 
 The % operator can also be used for string formatting. It interprets the left argument much like a sprintf()- style format string to be applied to the right argument, and returns the string resulting from this formatting operation. For example:
 
-<!-- page: 63 -->
-
-```txt
+```python
 >>> import math
 >>> print('The value of pi is approximately %5.3f.' % math.pi)
 The value of pi is approximately 3.142.
-
 ```
 
 More information can be found in the old-string-formatting section.
@@ -2838,7 +2540,6 @@ open() returns a file object, and is most commonly used with two arguments: open
 
 ```txt
 >>> f = open('workfile', 'w')
-
 ```
 
 The first argument is a string containing the filename. The second argument is another string containing a few characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w' for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode argument is optional; 'r' will be assumed if it’s omitted.
@@ -2854,7 +2555,6 @@ It is good practice to use the with keyword when dealing with file objects. The 
 ...     read_data = f.read()
 >>> f.closed
 True
-
 ```
 
 If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any system resources used by it. If you don’t explicitly close a file, Python’s garbage collector will eventually destroy the object and close the open file for you, but the file may stay open for a while. Another risk is that different Python implementations will do this clean-up at different times.
@@ -2867,14 +2567,11 @@ After a file object is closed, either by a with statement or by calling f.close(
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: I/O operation on closed file.
-
 ```
 
 ## 7.2.1 Methods of File Objects
 
 The rest of the examples in this section will assume that a file object called f has already been created.
-
-<!-- page: 64 -->
 
 To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s memory. Otherwise, at most size bytes are read and returned. If the end of the file has been reached, f.read() will return an empty string ('').
 
@@ -2883,7 +2580,6 @@ To read a file’s contents, call f.read(size), which reads some quantity of dat
 'This is the entire file.\n'
 >>> f.read()
 ''
-
 ```
 
 f.readline() reads a single line from the file; a newline character (\n) is left at the end of the string, and is only omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by '\n', a string containing only a single newline.
@@ -2895,7 +2591,6 @@ f.readline() reads a single line from the file; a newline character (\n) is left
 'Second line of the file\n'
 >>> f.readline()
 ''
-
 ```
 
 For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple code:
@@ -2906,7 +2601,6 @@ For reading lines from a file, you can loop over the file object. This is memory
 ...
 This is the first line of the file.
 Second line of the file
-
 ```
 
 If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().
@@ -2916,7 +2610,6 @@ f.write(string) writes the contents of string to the file, returning the number 
 ```python
 >>> f.write('This is a test\n')
 15
-
 ```
 
 Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) – before writing them:
@@ -2926,7 +2619,6 @@ Other types of objects need to be converted – either to a string (in text mode
 >>> s = str(value)  # convert the tuple to string
 >>> f.write(s)
 18
-
 ```
 
 f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from the beginning of the file when in binary mode and an opaque number when in text mode.
@@ -2936,12 +2628,9 @@ To change the file object’s position, use f.seek(offset, from\_what). The posi
 ```txt
 >>> f = open('workfile', 'rb+')
 >>> f.write(b'0123456789abcdef')
-
 ```
 
 (continues on next page)
-
-<!-- page: 65 -->
 
 ```python
 >>> f.seek(5)      # Go to the 6th byte in the file
@@ -2950,7 +2639,6 @@ b'5'
 >>> f.seek(-3, 2)  # Go to the 3rd byte before the end
 >>> f.read(1)
 b'd'
-
 ```
 
 (continued from previous page)
@@ -2973,21 +2661,18 @@ If you have an object x, you can view its JSON string representation with a simp
 >>> import json
 >>> json.dumps([1, 'simple', 'list'])
 '[1, "simple", "list"]'
-
 ```
 
 Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text file object opened for writing, we can do this:
 
 ```txt
 json.dump(x, f)
-
 ```
 
 To decode the object again, if f is a text file object which has been opened for reading:
 
 ```txt
 x = json.load(f)
-
 ```
 
 This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON requires a bit of extra effort. The reference for the json module contains an explanation of this.
@@ -2996,11 +2681,7 @@ This simple serialization technique can handle lists and dictionaries, but seria
 
 pickle - the pickle module
 
-<!-- page: 66 -->
-
 Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As such, it is specific to Python and cannot be used to communicate with applications written in other languages. It is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code, if the data was crafted by a skilled attacker.
-
-<!-- page: 67 -->
 
 ## ERRORS AND EXCEPTIONS
 
@@ -3010,13 +2691,12 @@ Until now error messages haven’t been more than mentioned, but if you have tri
 
 Syntax errors, also known as parsing errors, are perhaps the most common kind of complaint you get while you are still learning Python:
 
-```txt
+```python
 >>> while True print('Hello world')
   File "<stdin>", line 1
     while True print('Hello world')
 
 SyntaxError: invalid syntax
-
 ```
 
 The parser repeats the offending line and displays a little ‘arrow’ pointing at the earliest point in the line where the error was detected. The error is caused by (or at least detected at) the token preceding the arrow: in the example, the error is detected at the function print(), since a colon (':') is missing before it. File name and line number are printed so you know where to look in case the input came from a script.
@@ -3038,10 +2718,7 @@ NameError: name 'spam' is not defined
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: Can't convert 'int' object to str implicitly
-
 ```
-
-<!-- page: 68 -->
 
 The last line of the error message indicates what happened. Exceptions come in different types, and the type is printed as part of the message: the types in the example are ZeroDivisionError, NameError and TypeError. The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception names are built-in identifiers (not reserved keywords).
 
@@ -3062,7 +2739,6 @@ It is possible to write programs that handle selected exceptions. Look at the fo
 ...         break
 ...     except ValueError:
 ...         print("Oops!  That was no valid number.  Try again...")
-
 ```
 
 The try statement works as follows.
@@ -3080,7 +2756,6 @@ A try statement may have more than one except clause, to specify handlers for di
 ```python
 ... except (RuntimeError, TypeError, NameError):
 ...     pass
-
 ```
 
 A class in an except clause is compatible with an exception if it is the same class or a base class thereof (but not the other way around — an except clause listing a derived class is not compatible with a base class). For example, the following code will print B, C, D in that order:
@@ -3088,12 +2763,9 @@ A class in an except clause is compatible with an exception if it is the same cl
 ```python
 class B(Exception):
     pass
-
 ```
 
 (continues on next page)
-
-<!-- page: 69 -->
 
 ```python
 class C(B):
@@ -3111,7 +2783,6 @@ for cls in [B, C, D]:
         print("C")
     except B:
         print("B")
-
 ```
 
 Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching except clause is triggered.
@@ -3132,7 +2803,6 @@ except ValueError:
 except:
     print("Unexpected error:", sys.exc_info()[0])
     raise
-
 ```
 
 The try … except statement has an optional else clause, which, when present, must follow all except clauses. It is useful for code that must be executed if the try clause does not raise an exception. For example:
@@ -3146,7 +2816,6 @@ for arg in sys.argv[1:]:
     else:
         print(arg, 'has', len(f.readlines()), 'lines')
         f.close()
-
 ```
 
 The use of the else clause is better than adding additional code to the try clause because it avoids accidentally catching an exception that wasn’t raised by the code being protected by the try … except statement.
@@ -3154,8 +2823,6 @@ The use of the else clause is better than adding additional code to the try clau
 When an exception occurs, it may have an associated value, also known as the exception’s argument. The presence and type of the argument depend on the exception type.
 
 The except clause may specify a variable after the exception name. The variable is bound to an exception instance with the arguments stored in instance.args. For convenience, the exception instance defines \_\_str\_\_() so the arguments can be printed directly without having to reference .args. One may also
-
-<!-- page: 70 -->
 
 instantiate an exception first before raising it and add any attributes to it as desired.
 
@@ -3176,7 +2843,6 @@ instantiate an exception first before raising it and add any attributes to it as
 ('spam', 'eggs')
 x = spam
 y = eggs
-
 ```
 
 If an exception has arguments, they are printed as the last part (‘detail’) of the message for unhandled exceptions.
@@ -3193,7 +2859,6 @@ Exception handlers don’t just handle exceptions if they occur immediately in t
 ...     print('Handling run-time error:', err)
 ...
 Handling run-time error: division by zero
-
 ```
 
 ## 8.4 Raising Exceptions
@@ -3205,14 +2870,12 @@ The raise statement allows the programmer to force a specified exception to occu
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: HiThere
-
 ```
 
 The sole argument to raise indicates the exception to be raised. This must be either an exception instance or an exception class (a class that derives from Exception). If an exception class is passed, it will be implicitly instantiated by calling its constructor with no arguments:
 
 ```ruby
 raise ValueError  # shorthand for 'raise ValueError()'
-
 ```
 
 If you need to determine whether an exception was raised but don’t intend to handle it, a simpler form of the raise statement allows you to re-raise the exception:
@@ -3221,12 +2884,9 @@ If you need to determine whether an exception was raised but don’t intend to h
 >>> try:
 ...     raise NameError('HiThere')
 ... except NameError:
-
 ```
 
 (continues on next page)
-
-<!-- page: 71 -->
 
 ```python
 ...     print('An exception flew by!')
@@ -3236,7 +2896,6 @@ An exception flew by!
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
 NameError: HiThere
-
 ```
 
 (continued from previous page)
@@ -3277,18 +2936,15 @@ class TransitionError(Error):
         self.previous = previous
         self.next = next
         self.message = message
-
 ```
 
 Most exceptions are defined with names that end in “Error,” similar to the naming of the standard exceptions. Many standard modules define their own exceptions to report errors that may occur in functions they define. More information on classes is presented in chapter Classes.
-
-<!-- page: 72 -->
 
 ## 8.6 Defining Clean-up Actions
 
 The try statement has another optional clause which is intended to define clean-up actions that must be executed under all circumstances. For example:
 
-```txt
+```python
 >>> try:
 ...     raise KeyboardInterrupt
 ... finally:
@@ -3298,7 +2954,6 @@ Goodbye, world!
 KeyboardInterrupt
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
-
 ```
 
 A finally clause is always executed before leaving the try statement, whether an exception has occurred or not. When an exception has occurred in the try clause and has not been handled by an except clause (or it has occurred in an except or else clause), it is re-raised after the finally clause has been executed. The finally clause is also executed “on the way out” when any other clause of the try statement is left via a break, continue or return statement. A more complicated example:
@@ -3326,7 +2981,6 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 3, in divide
 TypeError: unsupported operand type(s) for/: 'str' and 'str'
-
 ```
 
 As you can see, the finally clause is executed in any event. The TypeError raised by dividing two strings is not handled by the except clause and therefore re-raised after the finally clause has been executed.
@@ -3337,12 +2991,9 @@ In real world applications, the finally clause is useful for releasing external 
 
 Some objects define standard clean-up actions to be undertaken when the object is no longer needed, regardless of whether or not the operation using the object succeeded or failed. Look at the following example, which tries to open a file and print its contents to the screen.
 
-<!-- page: 73 -->
-
 ```python
 for line in open("myfile.txt"):
     print(line, end="")
-
 ```
 
 The problem with this code is that it leaves the file open for an indeterminate amount of time after this part of the code has finished executing. This is not an issue in simple scripts, but can be a problem for larger applications. The with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly.
@@ -3351,14 +3002,9 @@ The problem with this code is that it leaves the file open for an indeterminate 
 with open("myfile.txt") as f:
     for line in f:
         print(line, end="")
-
 ```
 
 After the statement is executed, the file f is always closed, even if a problem was encountered while processing the lines. Objects which, like files, provide predefined clean-up actions will indicate this in their documentation.
-
-<!-- page: 74 -->
-
-<!-- page: 75 -->
 
 ## CLASSES
 
@@ -3377,8 +3023,6 @@ Objects have individuality, and multiple names (in multiple scopes) can be bound
 ## 9.2 Python Scopes and Namespaces
 
 Before introducing classes, I first have to tell you something about Python’s scope rules. Class definitions play some neat tricks with namespaces, and you need to know how scopes and namespaces work to fully
-
-<!-- page: 76 -->
 
 understand what’s going on. Incidentally, knowledge about this subject is useful for any advanced Python programmer.
 
@@ -3409,8 +3053,6 @@ Although scopes are determined statically, they are used dynamically. At any tim
 If a name is declared global, then all references and assignments go directly to the middle scope containing the module’s global names. To rebind variables found outside of the innermost scope, the nonlocal statement can be used; if not declared nonlocal, those variables are read-only (an attempt to write to such a variable will simply create a new local variable in the innermost scope, leaving the identically named outer variable unchanged).
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 Except for one thing. Module objects have a secret read-only attribute called \_\_dict\_\_ which returns the dictionary used to implement the module’s namespace; the name \_\_dict\_\_ is an attribute but not a global name. Obviously, using this violates the abstraction of namespace implementation, and should be restricted to things like post-mortem debuggers.</span></small>
-
-<!-- page: 77 -->
 
 Usually, the local scope references the local names of the (textually) current function. Outside functions, the local scope references the same namespace as the global scope: the module’s namespace. Class definitions place yet another namespace in the local scope.
 
@@ -3447,7 +3089,6 @@ def scope_test():
 
 scope_test()
 print("In global scope:", spam)
-
 ```
 
 The output of the example code is:
@@ -3457,12 +3098,9 @@ After local assignment: test spam
 After nonlocal assignment: nonlocal spam
 After global assignment: nonlocal spam
 In global scope: global spam
-
 ```
 
 Note how the local assignment (which is default) didn’t change scope\_test’s binding of spam. The nonlocal assignment changed scope\_test’s binding of spam, and the global assignment changed the module-level binding.
-
-<!-- page: 78 -->
 
 You can also see that there was no previous binding for spam before the global assignment.
 
@@ -3481,7 +3119,6 @@ class ClassName:
     .
     .
     <statement-N>
-
 ```
 
 Class definitions, like function definitions (def statements) must be executed before they have any effect. (You could conceivably place a class definition in a branch of an if statement, or inside a function.)
@@ -3505,18 +3142,14 @@ class MyClass:
 
     def f(self):
         return 'hello world'
-
 ```
 
 then MyClass.i and MyClass.f are valid attribute references, returning an integer and a function object, respectively. Class attributes can also be assigned to, so you can change the value of MyClass.i by assignment. \_\_doc\_\_ is also a valid attribute, returning the docstring belonging to the class: "A simple example class".
-
-<!-- page: 79 -->
 
 Class instantiation uses function notation. Just pretend that the class object is a parameterless function that returns a new instance of the class. For example (assuming the above class):
 
 ```txt
 x = MyClass()
-
 ```
 
 creates a new instance of the class and assigns this object to the local variable x.
@@ -3526,14 +3159,12 @@ The instantiation operation (“calling” a class object) creates an empty obje
 ```python
 def __init__(self):
     self.data = []
-
 ```
 
 When a class defines an \_\_init\_\_() method, class instantiation automatically invokes \_\_init\_\_() for the newly-created class instance. So in this example, a new, initialized instance can be obtained by:
 
 ```txt
 x = MyClass()
-
 ```
 
 Of course, the \_\_init\_\_() method may have arguments for greater flexibility. In that case, arguments given to the class instantiation operator are passed on to \_\_init\_\_(). For example,
@@ -3547,7 +3178,6 @@ Of course, the \_\_init\_\_() method may have arguments for greater flexibility.
 >>> x = Complex(3.0, -4.5)
 >>> x.r, x.i
 (3.0, -4.5)
-
 ```
 
 ## 9.3.3 Instance Objects
@@ -3562,14 +3192,11 @@ while x.counter < 10:
     x.counter = x.counter * 2
 print(x.counter)
 del x.counter
-
 ```
 
 The other kind of instance attribute reference is a method. A method is a function that “belongs to” an object. (In Python, the term method is not unique to class instances: other object types can have methods as well. For example, list objects have methods called append, insert, remove, sort, and so on. However, in the following discussion, we’ll use the term method exclusively to mean methods of class instance objects, unless explicitly stated otherwise.)
 
 Valid method names of an instance object depend on its class. By definition, all attributes of a class that are function objects define corresponding methods of its instances. So in our example, x.f is a valid method reference, since MyClass.f is a function, but x.i is not, since MyClass.i is not. But x.f is not the same thing as MyClass.f — it is a method object, not a function object.
-
-<!-- page: 80 -->
 
 ## 9.3.4 Method Objects
 
@@ -3577,7 +3204,6 @@ Usually, a method is called right after it is bound:
 
 ```txt
 x.f()
-
 ```
 
 In the MyClass example, this will return the string 'hello world'. However, it is not necessary to call a method right away: x.f is a method object, and can be stored away and called at a later time. For example:
@@ -3586,7 +3212,6 @@ In the MyClass example, this will return the string 'hello world'. However, it i
 xf = x.f
 while True:
     print(xf())
-
 ```
 
 will continue to print hello world until the end of time.
@@ -3619,10 +3244,7 @@ class Dog:
 'Fido'
 >>> e.name                # unique to e
 'Buddy'
-
 ```
-
-<!-- page: 81 -->
 
 As discussed in A Word About Names and Objects, shared data can have possibly surprising effects with involving mutable objects such as lists and dictionaries. For example, the tricks list in the following code should not be used as a class variable because just a single list would be shared by all Dog instances:
 
@@ -3643,7 +3265,6 @@ class Dog:
 >>> e.add_trick('play dead')
 >>> d.tricks                    # unexpectedly shared by all dogs
 ['roll over', 'play dead']
-
 ```
 
 Correct design of the class should use an instance variable instead:
@@ -3666,7 +3287,6 @@ class Dog:
 ['roll over']
 >>> e.tricks
 ['play dead']
-
 ```
 
 ## 9.4 Random Remarks
@@ -3676,8 +3296,6 @@ Data attributes override method attributes with the same name; to avoid accident
 Data attributes may be referenced by methods as well as by ordinary users (“clients”) of an object. In other words, classes are not usable to implement pure abstract data types. In fact, nothing in Python makes it possible to enforce data hiding — it is all based upon convention. (On the other hand, the Python implementation, written in C, can completely hide implementation details and control access to an object if necessary; this can be used by extensions to Python written in C.)
 
 Clients should use data attributes with care — clients may mess up invariants maintained by the methods
-
-<!-- page: 82 -->
 
 by stamping on their data attributes. Note that clients may add data attributes of their own to an instance object without affecting the validity of the methods, as long as name conflicts are avoided — again, a naming convention can save a lot of headaches here.
 
@@ -3699,7 +3317,6 @@ class C:
         return 'hello world'
 
     h = g
-
 ```
 
 Now f, g and h are all attributes of class C that refer to function objects, and consequently they are all methods of instances of C — h being exactly equivalent to g. Note that this practice usually only serves to confuse the reader of a program.
@@ -3717,34 +3334,29 @@ class Bag:
     def addtwice(self, x):
         self.add(x)
         self.add(x)
-
 ```
 
 Methods may reference global names in the same way as ordinary functions. The global scope associated with a method is the module containing its definition. (A class is never used as a global scope.) While one rarely encounters a good reason for using global data in a method, there are many legitimate uses of the global scope: for one thing, functions and modules imported into the global scope can be used by methods, as well as functions and classes defined in it. Usually, the class containing the method is itself defined in this global scope, and in the next section we’ll find some good reasons why a method would want to reference its own class.
 
 Each value is an object, and therefore has a class (also called its type). It is stored as object.\_\_class\_\_.
 
-<!-- page: 83 -->
-
 ## 9.5 Inheritance
 
 Of course, a language feature would not be worthy of the name “class” without supporting inheritance. The syntax for a derived class definition looks like this:
 
-```txt
+```python
 class DerivedClassName(BaseClassName):
     <statement-1>
     .
     .
     .
     <statement-N>
-
 ```
 
 The name BaseClassName must be defined in a scope containing the derived class definition. In place of a base class name, other arbitrary expressions are also allowed. This can be useful, for example, when the base class is defined in another module:
 
-```txt
+```python
 class DerivedClassName(modname.BaseClassName):
-
 ```
 
 Execution of a derived class definition proceeds the same as for a base class. When the class object is constructed, the base class is remembered. This is used for resolving attribute references: if a requested attribute is not found in the class, the search proceeds to look in the base class. This rule is applied recursively if the base class itself is derived from some other class.
@@ -3765,19 +3377,16 @@ Python has two built-in functions that work with inheritance:
 
 Python supports a form of multiple inheritance as well. A class definition with multiple base classes looks like this:
 
-```txt
+```python
 class DerivedClassName(Base1, Base2, Base3):
     <statement-1>
     .
     .
     .
     <statement-N>
-
 ```
 
 ## 9.5. Inheritance
-
-<!-- page: 84 -->
 
 For most purposes, in the simplest cases, you can think of the search for attributes inherited from a parent class as depth-first, left-to-right, not searching twice in the same class where there is an overlap in the hierarchy. Thus, if an attribute is not found in DerivedClassName, it is searched for in Base1, then (recursively) in the base classes of Base1, and if it was not found there, it was searched for in Base2, and so on.
 
@@ -3812,12 +3421,9 @@ class MappingSubclass(Mapping):
         # but does not break __init__()
         for item in zip(keys, values):
             self.items_list.append(item)
-
 ```
 
 Note that the mangling rules are designed mostly to avoid accidents; it still is possible to access or modify a variable that is considered private. This can even be useful in special circumstances, such as in the debugger.
-
-<!-- page: 85 -->
 
 Notice that code passed to exec() or eval() does not consider the classname of the invoking class to be the current class; this is similar to the effect of the global statement, the effect of which is likewise restricted to code that is byte-compiled together. The same restriction applies to getattr(), setattr() and delattr(), as well as when referencing \_\_dict\_\_ directly.
 
@@ -3835,7 +3441,6 @@ john = Employee()  # Create an empty employee record
 john.name = 'John Doe'
 john.dept = 'computer lab'
 john.salary = 1000
-
 ```
 
 A piece of Python code that expects a particular abstract data type can often be passed a class that emulates the methods of that data type instead. For instance, if you have a function that formats some data from a file object, you can define a class with methods read() and readline() that get the data from a string buffer instead, and pass it as an argument.
@@ -3857,7 +3462,6 @@ for char in "123":
     print(char)
 for line in open("myfile.txt"):
     print(line, end='')
-
 ```
 
 This style of access is clear, concise, and convenient. The use of iterators pervades and unifies Python. Behind the scenes, the for statement calls iter() on the container object. The function returns an iterator object that defines the method \_\_next\_\_() which accesses elements in the container one at a time. When there are no more elements, \_\_next\_\_() raises a StopIteration exception which tells the for loop to terminate. You can call the \_\_next\_\_() method using the next() built-in function; this example shows how it all works:
@@ -3866,12 +3470,9 @@ This style of access is clear, concise, and convenient. The use of iterators per
 >>> s = 'abc'
 >>> it = iter(s)
 >>> it
-
 ```
 
 (continues on next page)
-
-<!-- page: 86 -->
 
 ```txt
 <iterator object at 0x00A1DB50>
@@ -3886,7 +3487,6 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
     next(it)
 StopIteration
-
 ```
 
 (continued from previous page)
@@ -3908,10 +3508,9 @@ class Reverse:
             raise StopIteration
         self.index = self.index - 1
         return self.data[self.index]
-
 ```
 
-```txt
+```python
 >>> rev = Reverse('spam')
 >>> iter(rev)
 <__main__.Reverse object at 0x00A1DB50>
@@ -3922,7 +3521,6 @@ m
 a
 p
 s
-
 ```
 
 ## 9.9 Generators
@@ -3933,10 +3531,7 @@ Generators are a simple and powerful tool for creating iterators. They are writt
 def reverse(data):
     for index in range(len(data)-1, -1, -1):
         yield data[index]
-
 ```
-
-<!-- page: 87 -->
 
 ```python
 >>> for char in reverse('golf'):
@@ -3946,7 +3541,6 @@ f
 l
 o
 g
-
 ```
 
 Anything that can be done with generators can also be done with class-based iterators as described in the previous section. What makes generators so compact is that the \_\_iter\_\_() and \_\_next\_\_() methods are created automatically.
@@ -3980,12 +3574,7 @@ Examples:
 >>> data = 'golf'
 >>> list(data[i] for i in range(len(data)-1, -1, -1))
 ['f', 'l', 'o', 'g']
-
 ```
-
-<!-- page: 88 -->
-
-<!-- page: 89 -->
 
 # BRIEF TOUR OF THE STANDARD LIBRARY
 
@@ -4000,20 +3589,18 @@ The os module provides dozens of functions for interacting with the operating sy
 >>> os.chdir('/server/accesslogs')  # Change current working directory
 >>> os.system('mkdir today')   # Run the command mkdir in the system shell
 0
-
 ```
 
 Be sure to use the import os style instead of from os import \*. This will keep os.open() from shadowing the built-in open() function which operates much differently.
 
 The built-in dir() and help() functions are useful as interactive aids for working with large modules like os:
 
-```txt
+```python
 >>> import os
 >>> dir(os)
 <returns a list of all module functions>
 >>> help(os)
 <returns an extensive manual page created from the module's docstrings>
-
 ```
 
 For daily file and directory management tasks, the shutil module provides a higher level interface that is easier to use:
@@ -4024,7 +3611,6 @@ For daily file and directory management tasks, the shutil module provides a high
 'archive.db'
 >>> shutil.move('/build/executables', 'installdir')
 'installdir'
-
 ```
 
 ## 10.2 File Wildcards
@@ -4035,10 +3621,7 @@ The glob module provides a function for making file lists from directory wildcar
 >>> import glob
 >>> glob.glob('.py')
 ['primes.py', 'random.py', 'quote.py']
-
 ```
-
-<!-- page: 90 -->
 
 ## 10.3 Command Line Arguments
 
@@ -4048,7 +3631,6 @@ Common utility scripts often need to process command line arguments. These argum
 >>> import sys
 >>> print(sys.argv)
 ['demo.py', 'one', 'two', 'three']
-
 ```
 
 The getopt module processes sys.argv using the conventions of the Unix getopt() function. More powerful and flexible command line processing is provided by the argparse module.
@@ -4060,7 +3642,6 @@ The sys module also has attributes for stdin, stdout, and stderr. The latter is 
 ```html
 >>> sys.stderr.write('Warning, log file not found starting a new one\n')
 Warning, log file not found starting a new one
-
 ```
 
 The most direct way to terminate a script is to use sys.exit().
@@ -4069,13 +3650,12 @@ The most direct way to terminate a script is to use sys.exit().
 
 The re module provides regular expression tools for advanced string processing. For complex matching and manipulation, regular expressions offer succinct, optimized solutions:
 
-```txt
+```python
 >>> import re
 >>> re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
 ['foot', 'fell', 'fastest']
 >>> re.sub(r'(\b[a-z]+) \1', r'\1', 'cat in the the hat')
 'cat in the hat'
-
 ```
 
 When only simple capabilities are needed, string methods are preferred because they are easier to read and debug:
@@ -4083,25 +3663,21 @@ When only simple capabilities are needed, string methods are preferred because t
 ```txt
 >>> 'tea for too'.replace('too', 'two')
 'tea for two'
-
 ```
 
 ## 10.6 Mathematics
 
 The math module gives access to the underlying C library functions for floating point math:
 
-```txt
+```python
 >>> import math
 >>> math.cos(math.pi / 4)
 0.70710678118654757
 >>> math.log(1024, 2)
 10.0
-
 ```
 
 The random module provides tools for making random selections:
-
-<!-- page: 91 -->
 
 ```python
 >>> import random
@@ -4113,12 +3689,11 @@ The random module provides tools for making random selections:
 0.17970987693706186
 >>> random.randrange(6)      # random integer chosen from range(6)
 4
-
 ```
 
 The statistics module calculates basic statistical properties (the mean, median, variance, etc.) of numeric data:
 
-```txt
+```python
 >>> import statistics
 >>> data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]
 >>> statistics.mean(data)
@@ -4127,7 +3702,6 @@ The statistics module calculates basic statistical properties (the mean, median,
 1.25
 >>> statistics.variance(data)
 1.3720238095238095
-
 ```
 
 The SciPy project <[https://scipy.org](https://scipy.org)> has many other modules for numerical computations.
@@ -4155,7 +3729,6 @@ There are a number of modules for accessing the internet and processing internet
 ...    Beware the Ides of March.
 ...    """)
 >>> server.quit()
-
 ```
 
 (Note that the second example needs a mailserver running on localhost.)
@@ -4163,8 +3736,6 @@ There are a number of modules for accessing the internet and processing internet
 ## 10.8 Dates and Times
 
 The datetime module supplies classes for manipulating dates and times in both simple and complex ways. While date and time arithmetic is supported, the focus of the implementation is on efficient member extrac-
-
-<!-- page: 92 -->
 
 tion for output formatting and manipulation. The module also supports objects that are timezone aware.
 
@@ -4182,7 +3753,6 @@ datetime.date(2003, 12, 2)
 >>> age = now - birthday
 >>> age.days
 14368
-
 ```
 
 ## 10.9 Data Compression
@@ -4201,7 +3771,6 @@ Common data archiving and compression formats are directly supported by modules 
 b'witch which has which witches wrist watch'
 >>> zlib.crc32(s)
 226805979
-
 ```
 
 ## 10.10 Performance Measurement
@@ -4210,18 +3779,15 @@ Some Python users develop a deep interest in knowing the relative performance of
 
 For example, it may be tempting to use the tuple packing and unpacking feature instead of the traditional approach to swapping arguments. The timeit module quickly demonstrates a modest performance advantage:
 
-```txt
+```python
 >>> from timeit import Timer
 >>> Timer('t=a; a=b; b=t', 'a=1; b=2').timeit()
 0.57535828626024577
 >>> Timer('a,b = b,a', 'a=1; b=2').timeit()
 0.54962537085770791
-
 ```
 
 In contrast to timeit’s fine level of granularity, the profile and pstats modules provide tools for identifying time critical sections in larger blocks of code.
-
-<!-- page: 93 -->
 
 ## 10.11 Quality Control
 
@@ -4240,7 +3806,6 @@ def average(values):
 
 import doctest
 doctest.testmod()   # automatically validate the embedded tests
-
 ```
 
 The unittest module is not as effortless as the doctest module, but it allows a more comprehensive set of tests to be maintained in a separate file:
@@ -4259,7 +3824,6 @@ class TestStatisticalFunctions(unittest.TestCase):
             average(20, 30, 70)
 
 unittest.main()  # Calling from the command line invokes all tests
-
 ```
 
 ## 10.12 Batteries Included
@@ -4272,13 +3836,9 @@ The email package is a library for managing email messages, including MIME and o
 
 • The json package provides robust support for parsing this popular data interchange format. The csv module supports direct reading and writing of files in Comma-Separated Value format, commonly supported by databases and spreadsheets. XML processing is supported by the xml.etree.ElementTree, xml.dom and xml.sax packages. Together, these modules and packages greatly simplify data interchange between Python applications and other tools.
 
-<!-- page: 94 -->
-
 • The sqlite3 module is a wrapper for the SQLite database library, providing a persistent database that can be updated and accessed using slightly nonstandard SQL syntax.
 
 • Internationalization is supported by a number of modules including gettext, locale, and the codecs package.
-
-<!-- page: 95 -->
 
 # BRIEF TOUR OF THE STANDARD LIBRARY — PART II
 
@@ -4292,7 +3852,6 @@ The reprlib module provides a version of repr() customized for abbreviated displ
 >>> import reprlib
 >>> reprlib.repr(set('supercalifragilisticexpialidocious'))
 "{'a', 'c', 'd', 'e', 'f', 'g', ...}"
-
 ```
 
 The pprint module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter. When the result is longer than one line, the “pretty printer” adds line breaks and indentation to more clearly reveal data structure:
@@ -4308,12 +3867,11 @@ The pprint module offers more sophisticated control over printing both built-in 
     ['green', 'red']], []
     [["magenta', 'yellow'],
     'blue']]]
-
 ```
 
 The textwrap module formats paragraphs of text to fit a given screen width:
 
-```txt
+```python
 >>> import textwrap
 >>> doc = """The wrap() method is just like fill() except that it returns
 ... a list of strings instead of one big string with newlines to separate
@@ -4324,12 +3882,9 @@ The wrap() method is just like fill()
 except that it returns a list of strings
 instead of one big string with newlines
 to separate the wrapped lines.
-
 ```
 
 The locale module accesses a database of culture specific data formats. The grouping attribute of locale’s format function provides a direct way of formatting numbers with group separators:
-
-<!-- page: 96 -->
 
 ```python
 >>> import locale
@@ -4342,7 +3897,6 @@ The locale module accesses a database of culture specific data formats. The grou
 >>> locale.format_string("%s%.*f", (conv['currency_symbol'],
 ...                       conv['frac_digits'], x), grouping=True)
 '$1,234,567.80'
-
 ```
 
 ## 11.2 Templating
@@ -4356,7 +3910,6 @@ The format uses placeholder names formed by \$ with valid Python identifiers (al
 >>> t = Template('\${village}folk send \$\$10 to \$cause.')
 >>> t.substitute(village='Nottingham', cause='the ditch fund')
 'Nottinghamfolk send \$10 to the ditch fund.'
-
 ```
 
 The substitute() method raises a KeyError when a placeholder is not supplied in a dictionary or a keyword argument. For mail-merge style applications, user supplied data may be incomplete and the safe\_substitute() method may be more appropriate — it will leave placeholders unchanged if data is missing:
@@ -4370,7 +3923,6 @@ Traceback (most recent call last):
 KeyError: 'owner'
 >>> t.safe_substitute(d)
 'Return the unladen swallow to $owner.'
-
 ```
 
 Template subclasses can specify a custom delimiter. For example, a batch renaming utility for a photo browser may elect to use percent signs for placeholders such as the current date, image sequence number, or file format:
@@ -4388,20 +3940,16 @@ Enter rename style (%d-date %n-seqnum %f-format):  Ashley_%n%f
 >>> for i, filename in enumerate(photofiles):
 ...     base, ext = os.path.splitext(filename)
 ...     newname = t.substitute(d=date, n=i, f=ext)
-
 ```
 
 (continues on next page)
 
-<!-- page: 97 -->
-
-```txt
+```python
 ...     print('{0} --> {1}'.format(filename, newname))
 
 img_1074.jpg --> Ashley_0.jpg
 img_1076.jpg --> Ashley_1.jpg
 img_1077.jpg --> Ashley_2.jpg
-
 ```
 
 (continued from previous page)
@@ -4431,7 +3979,6 @@ for i in range(3):
     print(filename, hex(crc32), comp_size, uncomp_size)
 
     start += extra_size + comp_size      # skip to the next header
-
 ```
 
 ## 11.4 Multi-threading
@@ -4448,12 +3995,9 @@ class AsyncTask(threading.Thread):
         threading.Thread.__init__(self)
         self.infile = infile
         self.outfile = outfile
-
 ```
 
 (continues on next page)
-
-<!-- page: 98 -->
 
 ```python
 def run(self):
@@ -4468,7 +4012,6 @@ print('The main program continues to run in foreground.')
 
 background.join()      # Wait for the background task to finish
 print('Main program waited until background was done.')
-
 ```
 
 The principal challenge of multi-threaded applications is coordinating threads that share data or other resources. To that end, the threading module provides a number of synchronization primitives including locks, events, condition variables, and semaphores.
@@ -4479,14 +4022,13 @@ While those tools are powerful, minor design errors can result in problems that 
 
 The logging module offers a full featured and flexible logging system. At its simplest, log messages are sent to a file or to sys.stderr:
 
-```txt
+```python
 import logging
 logging.debug('Debugging information')
 logging.info('Informational message')
 logging.warning('Warning:config file %s not found', 'server.conf')
 logging.error('Error occurred')
 logging.critical('Critical error -- shutting down')
-
 ```
 
 This produces the following output:
@@ -4495,14 +4037,11 @@ This produces the following output:
 WARNING:root:Warning:config file server.conf not found
 ERROR:root:Error occurred
 CRITICAL:root:Critical error -- shutting down
-
 ```
 
 By default, informational and debugging messages are suppressed and the output is sent to standard error. Other output options include routing messages through email, datagrams, sockets, or to an HTTP Server. New filters can select different routing based on message priority: DEBUG, INFO, WARNING, ERROR, and CRITICAL.
 
 The logging system can be configured directly from Python or can be loaded from a user editable configuration file for customized logging without altering the application.
-
-<!-- page: 99 -->
 
 ## 11.6 Weak References
 
@@ -4533,7 +4072,6 @@ Traceback (most recent call last):
   File "C:/python37/lib/weakref.py", line 46, in __getitem__
     o = self.data[key]() )
 KeyError: 'primary'
-
 ```
 
 ## 11.7 Tools for Working with Lists
@@ -4549,20 +4087,16 @@ The array module provides an array() object that is like a list that stores only
 26932
 >>> a[1:3]
 array('H', [10, 700])
-
 ```
 
 The collections module provides a deque() object that is like a list with faster appends and pops from the left side but slower lookups in the middle. These objects are well suited for implementing queues and breadth first tree searches:
 
-<!-- page: 100 -->
-
-```txt
+```python
 >>> from collections import deque
 >>> d = deque(["task1", "task2", "task3"])
 >>> d.append("task4")
 >>> print("Handling", d.popleft())
 Handling task1
-
 ```
 
 ```python
@@ -4573,7 +4107,6 @@ def breadth_first_search(unsearched):
         if is_goal(m):
             return m
         unsearched.append(m)
-
 ```
 
 In addition to alternative list implementations, the library also offers other tools such as the bisect module with functions for manipulating sorted lists:
@@ -4584,7 +4117,6 @@ In addition to alternative list implementations, the library also offers other t
 >>> bisect.insert(scores, (300, 'ruby'))
 >>> scores
 [(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]
-
 ```
 
 The heapq module provides functions for implementing heaps based on regular lists. The lowest valued entry is always kept at position zero. This is useful for applications which repeatedly access the smallest element but do not want to run a full list sort:
@@ -4596,7 +4128,6 @@ The heapq module provides functions for implementing heaps based on regular list
 >>> heappush(data, -5)                    # add a new entry
 >>> [heappop(data) for i in range(3)]  # fetch the three smallest entries
 [-5, 0, 1]
-
 ```
 
 ## 11.8 Decimal Floating Point Arithmetic
@@ -4621,10 +4152,7 @@ For example, calculating a 5% tax on a 70 cent phone charge gives different resu
 Decimal('0.74')
 >>> round(.70 * 1.05, 2)
 0.73
-
 ```
-
-<!-- page: 101 -->
 
 The Decimal result keeps a trailing zero, automatically inferring four place significance from multiplicands with two place significance. Decimal reproduces mathematics as done by hand and avoids issues that can arise when binary floating point cannot exactly represent decimal quantities.
 
@@ -4640,7 +4168,6 @@ Decimal('0.00')
 True
 >>> sum([0.1]*10) == 1.0
 False
-
 ```
 
 The decimal module provides arithmetic with as much precision as needed:
@@ -4649,12 +4176,7 @@ The decimal module provides arithmetic with as much precision as needed:
 >>> getcontext().prec = 36
 >>> Decimal(1) / Decimal(7)
 Decimal('0.142857142857142857142857142857142857')
-
 ```
-
-<!-- page: 102 -->
-
-<!-- page: 103 -->
 
 # VIRTUAL ENVIRONMENTS AND PACKAGES
 
@@ -4688,16 +4210,13 @@ On Unix or MacOS, run:
 
 ```tcl
 source tutorial-env/bin/activate
-
 ```
-
-<!-- page: 104 -->
 
 (This script is written for the bash shell. If you use the **csh** or **fish** shells, there are alternate activate.csh and activate.fish scripts you should use instead.)
 
 Activating the virtual environment will change your shell’s prompt to show what virtual environment you’re using, and modify the environment so that running python will get you that particular version and installation of Python. For example:
 
-```txt
+```python
 $ source ~/envs/tutorial-env/bin/activate
 (tutorial-env) $ python
 Python 3.5.1 (default, May 6 2016, 10:59:36)
@@ -4707,7 +4226,6 @@ Python 3.5.1 (default, May 6 2016, 10:59:36)
 ['', '/usr/local/lib/python35.zip', ...,
 '~/envs/tutorial-env/lib/python3.5/site-packages']
 >>>
-
 ```
 
 ## 12.3 Managing Packages with pip
@@ -4722,7 +4240,6 @@ novas             - The United States Naval Observatory NOVAS astronomy library
 astroobs          - Provides astronomy ephemeris to plan telescope observations
 PyAstronomy        - A collection of astronomy related tools for Python.
 ...
-
 ```
 
 pip has a number of subcommands: “search”, “install”, “uninstall”, “freeze”, etc. (Consult the installingindex guide for complete documentation for pip.)
@@ -4736,7 +4253,6 @@ Collecting novas
 Installing collected packages: novas
   Running setup.py install for novas
 Successfully installed novas-3.1.1.3
-
 ```
 
 You can also install a specific version of a package by giving the package name followed by == and the version number:
@@ -4747,12 +4263,9 @@ Collecting requests==2.6.0
   Using cached requests-2.6.0-py2.py3-none-any.whl
 Installing collected packages: requests
 Successfully installed requests-2.6.0
-
 ```
 
 If you re-run this command, pip will notice that the requested version is already installed and do nothing. You can supply a different version number to get that version, or you can run pip install --upgrade to upgrade the package to the latest version:
-
-<!-- page: 105 -->
 
 ```txt
 (tutorial-env) $ pip install --upgrade requests
@@ -4762,7 +4275,6 @@ Installing collected packages: requests
     Uninstalling requests-2.6.0:
       Successfully uninstalled requests-2.6.0
 Successfully installed requests-2.7.0
-
 ```
 
 pip uninstall followed by one or more package names will remove the packages from the virtual environment.
@@ -4782,7 +4294,6 @@ Author-email: me@kennethreitz.com
 License: Apache 2.0
 Location: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages
 Requires:
-
 ```
 
 pip list will display all of the packages installed in the virtual environment:
@@ -4794,7 +4305,6 @@ numpy (1.9.2)
 pip (7.0.3)
 requests (2.7.0)
 setuptools (16.0)
-
 ```
 
 pip freeze will produce a similar list of the installed packages, but the output uses the format that pip install expects. A common convention is to put this list in a requirements.txt file:
@@ -4805,7 +4315,6 @@ pip freeze will produce a similar list of the installed packages, but the output
 novas==3.1.1.3
 numpy==1.9.2
 requests==2.7.0
-
 ```
 
 The requirements.txt can then be committed to version control and shipped as part of an application. Users can then install all the necessary packages with install -r:
@@ -4821,14 +4330,9 @@ Collecting requests==2.7.0 (from -r requirements.txt (line 3))
 Installing collected packages: novas, numpy, requests
   Running setup.py install for novas
 Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0
-
 ```
 
-<!-- page: 106 -->
-
 pip has many more options. Consult the installing-index guide for complete documentation for pip. When you’ve written a package and want to make it available on the Python Package Index, consult the distributingindex guide.
-
-<!-- page: 107 -->
 
 ## WHAT NOW?
 
@@ -4860,11 +4364,7 @@ More Python resources:
 
 For Python-related questions and problem reports, you can post to the newsgroup comp.lang.python, or send them to the mailing list at [python-list@python.org](mailto:python-list@python.org). The newsgroup and mailing list are gatewayed, so messages posted to one will automatically be forwarded to the other. There are hundreds of postings a day, asking (and answering) questions, suggesting new features, and announcing new modules. Mailing list archives are available at [https://mail.python.org/pipermail/](https://mail.python.org/pipermail/).
 
-<!-- page: 108 -->
-
 Before posting, be sure to check the list of Frequently Asked Questions (also called the FAQ). The FAQ answers many of the questions that come up again and again, and may already contain the solution for your problem.
-
-<!-- page: 109 -->
 
 ## INTERACTIVE INPUT EDITING AND HISTORY SUBSTITUTION
 
@@ -4879,10 +4379,6 @@ Completion of variable and module names is automatically enabled at interpreter 
 This facility is an enormous step forward compared to earlier versions of the interpreter; however, some wishes are left: It would be nice if the proper indentation were suggested on continuation lines (the parser knows if an indent token is required next). The completion mechanism might use the interpreter’s symbol table. A command to check (or even suggest) matching parentheses, quotes, etc., would also be useful.
 
 One alternative enhanced interactive interpreter that has been around for quite some time is [IPython](https://ipython.org/), which features tab completion, object exploration and advanced history management. It can also be thoroughly customized and embedded into other applications. Another similar enhanced interactive environment is [bpython](https://www.bpython-interpreter.org/).
-
-<!-- page: 110 -->
-
-<!-- page: 111 -->
 
 # FLOATING POINT ARITHMETIC: ISSUES AND LIMITATIONS
 
@@ -4916,19 +4412,15 @@ In the same way, no matter how many base 2 digits you’re willing to use, the d
 
 ```txt
 0.0001100110011001100110011001100110011001100110011...
-
 ```
 
 Stop at any finite number of bits, and you get an approximation. On most machines today, floats are approximated using a binary fraction with the numerator using the first 53 bits starting with the most significant bit and with the denominator as a power of two. In the case of 1/10, the binary fraction is 3602879701896397 / 2 \*\* 55 which is close to but not exactly equal to the true value of 1/10.
 
 Many users are not aware of the approximation because of the way values are displayed. Python only prints a decimal approximation to the true decimal value of the binary approximation stored by the machine. On most machines, if Python were to print the true decimal value of the binary approximation stored for 0.1, it would have to display
 
-<!-- page: 112 -->
-
 ```txt
 >>> 0.1
 0.100000000000000055511151231257827021181583404541015625
-
 ```
 
 That is more digits than most people find useful, so Python keeps the number of digits manageable by displaying a rounded value instead
@@ -4936,7 +4428,6 @@ That is more digits than most people find useful, so Python keeps the number of 
 ```txt
 >>> 1 / 10
 0.1
-
 ```
 
 Just remember, even though the printed result looks like the exact value of 1/10, the actual stored value is the nearest representable binary fraction.
@@ -4958,7 +4449,6 @@ For more pleasant output, you may wish to use string formatting to produce a lim
 
 >>> repr(math.pi)
 '3.141592653589793'
-
 ```
 
 It’s important to realize that this is, in a real sense, an illusion: you’re simply rounding the display of the true machine value.
@@ -4968,7 +4458,6 @@ One illusion may beget another. For example, since 0.1 is not exactly 1/10, summ
 ```txt
 >>> .1 + .1 + .1 == .3
 False
-
 ```
 
 Also, since the 0.1 cannot get any closer to the exact value of 1/10 and 0.3 cannot get any closer to the exact value of 3/10, then pre-rounding with round() function cannot help:
@@ -4976,7 +4465,6 @@ Also, since the 0.1 cannot get any closer to the exact value of 1/10 and 0.3 can
 ```txt
 >>> round(.1, 1) + round(.1, 1) + round(.1, 1) == round(.3, 1)
 False
-
 ```
 
 Though the numbers cannot be made closer to their intended exact values, the round() function can be useful for post-rounding so that results with inexact values become comparable to one another:
@@ -4984,10 +4472,7 @@ Though the numbers cannot be made closer to their intended exact values, the rou
 ```txt
 >>> round(.1 + .1 + .1, 10) == round(.3, 10)
 True
-
 ```
-
-<!-- page: 113 -->
 
 Binary floating-point arithmetic holds many surprises like this. The problem with “0.1” is explained in precise detail below, in the “Representation Error” section. See [The Perils of Floating Point](http://www.lahey.com/float.htm) for a more complete account of other common surprises.
 
@@ -5007,7 +4492,6 @@ Python provides tools that may help on those rare occasions when you really do w
 >>> x = 3.14159
 >>> x.as_integer_ratio()
 (3537115888337719, 1125899906842624)
-
 ```
 
 Since the ratio is exact, it can be used to losslessly recreate the original value:
@@ -5015,7 +4499,6 @@ Since the ratio is exact, it can be used to losslessly recreate the original val
 ```txt
 >>> x == 3537115888337719 / 1125899906842624
 True
-
 ```
 
 The float.hex() method expresses a float in hexadecimal (base 16), again giving the exact value stored by your computer:
@@ -5023,7 +4506,6 @@ The float.hex() method expresses a float in hexadecimal (base 16), again giving 
 ```txt
 >>> x.hex()
 '0x1.921f9f01b866ep+1'
-
 ```
 
 This precise hexadecimal representation can be used to reconstruct the float value exactly:
@@ -5031,7 +4513,6 @@ This precise hexadecimal representation can be used to reconstruct the float val
 ```txt
 >>> x == float.fromhex('0x1.921f9f01b866ep+1')
 True
-
 ```
 
 Since the representation is exact, it is useful for reliably porting values across different versions of Python (platform independence) and exchanging data with other languages that support the same format (such as Java and C99).
@@ -5043,10 +4524,7 @@ Another helpful tool is the math.fsum() function which helps mitigate loss-of-pr
 False
 >>> math.fsum([0.1] * 10) == 1.0
 True
-
 ```
-
-<!-- page: 114 -->
 
 ## 15.1 Representation Error
 
@@ -5058,14 +4536,12 @@ Why is that? 1/10 is not exactly representable as a binary fraction. Almost all 
 
 ```lisp
 1 / 10 ~= J / (2**N)
-
 ```
 
 as
 
 ```txt
 J ~= 2**N / 10
-
 ```
 
 and recalling that J has exactly 53 bits (is >= 2\*\*52 but < 2\*\*53), the best value for N is 56:
@@ -5073,7 +4549,6 @@ and recalling that J has exactly 53 bits (is >= 2\*\*52 but < 2\*\*53), the best
 ```txt
 >>> 2**52 <=  2**56 // 10  < 2**53
 True
-
 ```
 
 That is, 56 is the only value for N that leaves J with exactly 53 bits. The best possible value for J is then that quotient rounded:
@@ -5082,7 +4557,6 @@ That is, 56 is the only value for N that leaves J with exactly 53 bits. The best
 >>> q, r = divmod(2**56, 10)
 >>> r
 6
-
 ```
 
 Since the remainder is more than half of 10, the best approximation is obtained by rounding up:
@@ -5090,21 +4564,18 @@ Since the remainder is more than half of 10, the best approximation is obtained 
 ```txt
 >>> q+1
 7205759403792794
-
 ```
 
 Therefore the best possible approximation to 1/10 in 754 double precision is:
 
 ```javascript
 7205759403792794 / 2 ** 56
-
 ```
 
 Dividing both the numerator and denominator by two reduces the fraction to:
 
 ```txt
 3602879701896397 / 2 ** 55
-
 ```
 
 Note that since we rounded up, this is actually a little bit larger than 1/10; if we had not rounded up, the quotient would have been a little bit smaller than 1/10. But in no case can it be exactly 1/10!
@@ -5114,7 +4585,6 @@ So the computer never “sees” 1/10: what it sees is the exact fraction given 
 ```txt
 >>> 0.1 * 2 ** 55
 3602879701896397.0
-
 ```
 
 If we multiply that fraction by 10\*\*55, we can see the value out to 55 decimal digits:
@@ -5122,17 +4592,13 @@ If we multiply that fraction by 10\*\*55, we can see the value out to 55 decimal
 ```txt
 >>> 3602879701896397 * 10 ** 55 // 2 ** 55
 100000000000000000055511151231257827021181583404541015625
-
 ```
-
-<!-- page: 115 -->
 
 meaning that the exact number stored in the computer is equal to the decimal value 0.1000000000000000055511151231257827021181583404541015625. Instead of displaying the full decimal value, many languages (including older versions of Python), round the result to 17 significant digits:
 
 ```python
 >>> format(0.1, '.17f')
 '0.10000000000000001'
-
 ```
 
 The fractions and decimal modules make these calculations easy:
@@ -5152,12 +4618,7 @@ Decimal('0.100000000000000055511151231257827021181583404541015625')
 
 >>> format(Decimal.from_float(0.1), '.17')
 '0.10000000000000001'
-
 ```
-
-<!-- page: 116 -->
-
-<!-- page: 117 -->
 
 ## APPENDIX
 
@@ -5175,7 +4636,6 @@ On BSD’ish Unix systems, Python scripts can be made directly executable, like 
 
 ```txt
 #!/usr/bin/env python3.5
-
 ```
 
 (assuming that the interpreter is on the user’s PATH) at the beginning of the script and giving the file an executable mode. The #! must be the first two characters of the file. On some platforms, this first line must end with a Unix-style line ending ('\n'), not a Windows ('\r\n') line ending. Note that the hash, or pound, character, '#', is used to start a comment in Python.
@@ -5184,7 +4644,6 @@ The script can be given an executable mode, or permission, using the **chmod** c
 
 ```batch
 \$ chmod +x myscript.py
-
 ```
 
 On Windows systems, there is no notion of an “executable mode”. The Python installer automatically associates .py files with python.exe so that a double-click on a Python file will run it as a script. The extension can also be .pyw, in that case, the console window that normally appears is suppressed.
@@ -5194,8 +4653,6 @@ On Windows systems, there is no notion of an “executable mode”. The Python i
 When you use Python interactively, it is frequently handy to have some standard commands executed every time the interpreter is started. You can do this by setting an environment variable named PYTHONSTARTUP
 
 <small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 A problem with the GNU Readline package may prevent this.</span></small>
-
-<!-- page: 118 -->
 
 to the name of a file containing your start-up commands. This is similar to the .profile feature of the Unix shells.
 
@@ -5210,25 +4667,21 @@ if filename and os.path.isfile(filename):
     with open(filename) as fobj:
         startup_file = fobj.read()
     exec(startup_file)
-
 ```
 
 ## 16.1.4 The Customization Modules
 
 Python provides two hooks to let you customize it: sitecustomize and usercustomize. To see how it works, you need first to find the location of your user site-packages directory. Start Python and run this code:
 
-```txt
+```python
 >>> import site
 >>> site.getusersitepackages()
 '/home/user/.local/lib/python3.5/site-packages'
-
 ```
 
 Now you can create a file named usercustomize.py in that directory and put anything you want in it. It will affect every invocation of Python, unless it is started with the -s option to disable the automatic import.
 
 sitecustomize works in the same way, but is typically created by an administrator of the computer in the global site-packages directory, and is imported before usercustomize. See the documentation of the site module for more details.
-
-<!-- page: 119 -->
 
 # GLOSSARY
 
@@ -5255,7 +4708,6 @@ See variable annotation, function annotation, [**PEP 484**](https://www.python.o
 ```python
 complex(real=3, imag=5)
 complex(**{'real': 3, 'imag': 5})
-
 ```
 
 • positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by \*. For example, 3 and 5 are both positional arguments in the following calls:
@@ -5263,10 +4715,7 @@ complex(**{'real': 3, 'imag': 5})
 ```txt
 complex(3, 5)
 complex(*(3, 5))
-
 ```
-
-<!-- page: 120 -->
 
 Arguments are assigned to the named local variables in a function body. See the calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable.
 
@@ -5304,8 +4753,6 @@ See also text file for a file object able to read and write str objects.
 
 Some operations need the binary data to be mutable. The documentation often refers to these as “readwrite bytes-like objects”. Example mutable buffer objects include bytearray and a memoryview of a bytearray. Other operations require the binary data to be stored in immutable objects (“read-only bytes-like objects”); examples of these include bytes and a memoryview of a bytes object.
 
-<!-- page: 121 -->
-
 **bytecode** Python source code is compiled into bytecode, the internal representation of a Python program in the CPython interpreter. The bytecode is also cached in .pyc files so that executing the same file is faster the second time (recompilation from source to bytecode can be avoided). This “intermediate language” is said to run on a virtual machine that executes the machine code corresponding to each bytecode. Do note that bytecodes are not expected to work between different Python virtual machines, nor to be stable between Python releases.
 
 A list of bytecode instructions can be found in the documentation for the dis module.
@@ -5336,20 +4783,16 @@ The decorator syntax is merely syntactic sugar, the following two function defin
 def f(...):
     ...
 f = staticmethod(f)
-
 ```
 
 (continues on next page)
 
-<!-- page: 122 -->
-
 (continued from previous page)
 
-```txt
+```python
 @staticmethod
 def f(...):
     ...
-
 ```
 
 The same concept exists for classes, but is less commonly used there. See the documentation for function definitions and class definitions for more about decorators.
@@ -5378,8 +4821,6 @@ For more information about descriptors’ methods, see descriptors.
 
 There are actually three categories of file objects: raw binary files, buffered binary files and text files. Their interfaces are defined in the io module. The canonical way to create a file object is by using the
 
-<!-- page: 123 -->
-
 open() function.
 
 **file-like object** A synonym for file object.
@@ -5398,10 +4839,9 @@ See [**PEP 302**](https://www.python.org/dev/peps/pep-0302), [**PEP 420**](https
 
 Function annotations are usually used for type hints: for example this function is expected to take two int arguments and is also expected to have an int return value:
 
-```txt
+```python
 def sum_two_numbers(a: int, b: int) -> int:
     return a + b
-
 ```
 
 Function annotation syntax is explained in section function.
@@ -5416,7 +4856,6 @@ By importing the \_\_future\_\_ module and evaluating its variables, you can see
 >>> import __future__
 >>> __future__.division
 _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)
-
 ```
 
 **garbage collection** The process of freeing memory when it is not used anymore. Python performs garbage collection via reference counting and a cyclic garbage collector that is able to detect and break reference cycles. The garbage collector can be controlled using the gc module.
@@ -5431,18 +4870,14 @@ Each yield temporarily suspends processing, remembering the location execution s
 
 **generator expression** An expression that returns an iterator. It looks like a normal expression followed by a for expression defining a loop variable, range, and an optional if expression. The combined expression generates values for an enclosing function:
 
-```txt
+```python
 >>> sum(i*i for i in range(10))
 285
-
 ```
 
 ```txt
 # sum of squares 0, 1, 4, ... 81
-
 ```
-
-<!-- page: 124 -->
 
 **generic function** A function composed of multiple functions implementing the same operation for different types. Which implementation should be used during a call is determined by the dispatch algorithm. See also the single dispatch glossary entry, the functools.singledispatch() decorator, and [**PEP 443**](https://www.python.org/dev/peps/pep-0443).
 
@@ -5476,8 +4911,6 @@ All of Python’s immutable built-in objects are hashable; mutable containers (s
 
 **interpreted** Python is an interpreted language, as opposed to a compiled one, though the distinction can be blurry because of the presence of the bytecode compiler. This means that source files can be run directly without explicitly creating an executable which is then run. Interpreted languages typically
 
-<!-- page: 125 -->
-
 have a shorter development/debug cycle than compiled ones, though their programs generally also run more slowly. See also interactive.
 
 **interpreter shutdown** When asked to shut down, the Python interpreter enters a special phase where it gradually releases all allocated resources, such as modules and various critical internal structures. It also makes several calls to the garbage collector. This can trigger the execution of code in user-defined destructors or weakref callbacks. Code executed during the shutdown phase can encounter various exceptions as the resources it relies on may not function anymore (common examples are library modules or the warnings machinery).
@@ -5503,8 +4936,6 @@ There are several ways to create a key function. For example. the str.lower() me
 **lambda** An anonymous inline function consisting of a single expression which is evaluated when the function is called. The syntax to create a lambda function is lambda [parameters]: expression
 
 **LBYL** Look before you leap. This coding style explicitly tests for pre-conditions before making calls or lookups. This style contrasts with the EAFP approach and is characterized by the presence of many if statements.
-
-<!-- page: 126 -->
 
 In a multi-threaded environment, the LBYL approach can risk introducing a race condition between “the looking” and “the leaping”. For example, the code, if key in mapping: return mapping[key] can fail if another thread removes key from mapping after the test, but before the lookup. This issue can be solved with locks or by using the EAFP approach.
 
@@ -5540,8 +4971,6 @@ More information can be found in metaclasses.
 
 A named tuple can be a built-in type such as time.struct\_time, or it can be created with a regular class definition. A full featured named tuple can also be created with the factory function collections. namedtuple(). The latter approach automatically provides extra features such as a self-documenting representation like Employee(name='jones', title='programmer').
 
-<!-- page: 127 -->
-
 **namespace** The place where a variable is stored. Namespaces are implemented as dictionaries. There are the local, global and built-in namespaces as well as nested namespaces in objects (in methods). Namespaces support modularity by preventing naming conflicts. For instance, the functions builtins. open and os.open() are distinguished by their namespaces. Namespaces also aid readability and maintainability by making it clear which module implements a function. For instance, writing random. seed() or itertools.islice() makes it clear that those functions are implemented by the random and itertools modules, respectively.
 
 **namespace package** A [**PEP 420**](https://www.python.org/dev/peps/pep-0420) package which serves only as a container for subpackages. Namespace packages may have no physical representation, and specifically are not like a regular package because they have no \_\_init\_\_.py file.
@@ -5562,9 +4991,8 @@ See also regular package and namespace package.
 
 • positional-or-keyword: specifies an argument that can be passed either positionally or as a keyword argument. This is the default kind of parameter, for example foo and bar in the following:
 
-```txt
+```python
 def func(foo, bar=None): ...
-
 ```
 
 • positional-only: specifies an argument that can be supplied only by position. Python has no syntax for defining positional-only parameters. However, some built-in functions have positionalonly parameters (e.g. abs()).
@@ -5575,16 +5003,13 @@ def func(foo, bar=None): ...
 
 • var-positional: specifies that an arbitrary sequence of positional arguments can be provided (in addition to any positional arguments already accepted by other parameters). Such a parameter can be defined by prepending the parameter name with \*, for example args in the following:
 
-```txt
+```python
 def func(*args, **kwargs): ...
-
 ```
 
 • var-keyword: specifies that arbitrarily many keyword arguments can be provided (in addition to any keyword arguments already accepted by other parameters). Such a parameter can be defined by prepending the parameter name with \*\*, for example kwargs in the example above.
 
 Parameters can specify both optional and required arguments, as well as default values for some optional arguments.
-
-<!-- page: 128 -->
 
 See also the argument glossary entry, the FAQ question on the difference between arguments and parameters, the inspect.Parameter class, the function section, and [**PEP 362**](https://www.python.org/dev/peps/pep-0362).
 
@@ -5625,17 +5050,13 @@ This process allows the standard library to continue to evolve over time, withou
 ```python
 for i in range(len(food)):
     print(food[i])
-
 ```
-
-<!-- page: 129 -->
 
 As opposed to the cleaner, Pythonic method:
 
 ```python
 for piece in food:
     print(piece)
-
 ```
 
 **qualified name** A dotted name showing the “path” from a module’s global scope to a class, function or method defined in that module, as defined in [**PEP 3155**](https://www.python.org/dev/peps/pep-3155). For top-level functions and classes, the qualified name is the same as the object’s name:
@@ -5652,7 +5073,6 @@ for piece in food:
 'C.D'
 >>> C.D.meth.__qualname__
 'C.D.meth'
-
 ```
 
 When used to refer to modules, the fully qualified name means the entire dotted path to the module, including any parent packages, e.g. email.mime.text:
@@ -5661,7 +5081,6 @@ When used to refer to modules, the fully qualified name means the entire dotted 
 >>> import email.mime.text
 >>> email.mime.text.__name__
 'email.mime.text'
-
 ```
 
 **reference count** The number of references to an object. When the reference count of an object drops to zero, it is deallocated. Reference counting is generally not visible to Python code, but it is a key element of the CPython implementation. The sys module defines a getrefcount() function that programmers can call to return the reference count for a particular object.
@@ -5679,8 +5098,6 @@ The collections.abc.Sequence abstract base class defines a much richer interface
 **single dispatch** A form of generic function dispatch where the implementation is chosen based on the type of a single argument.
 
 **slice** An object usually containing a portion of a sequence. A slice is created using the subscript notation, [] with colons between numbers when several are given, such as in variable\_name[1:3:5]. The bracket (subscript) notation uses slice objects internally.
-
-<!-- page: 130 -->
 
 **special method** A method that is called implicitly by Python to execute a certain operation on a type, such as addition. Such methods have names starting and ending with double underscores. Special methods are documented in specialnames.
 
@@ -5708,7 +5125,6 @@ from typing import List, Tuple
 def remove_gray_shades(
     colors: List[Tuple[int, int, int]]) -> List[Tuple[int, int, int]]:
     pass
-
 ```
 
 could be made more readable like this:
@@ -5720,7 +5136,6 @@ Color = Tuple[int, int, int]
 
 def remove_gray_shades(colors: List[Color]) -> List[Color]:
     pass
-
 ```
 
 See typing and [**PEP 484**](https://www.python.org/dev/peps/pep-0484), which describe this functionality.
@@ -5735,25 +5150,21 @@ See typing and [**PEP 484**](https://www.python.org/dev/peps/pep-0484), which de
 
 **universal newlines** A manner of interpreting text streams in which all of the following are recognized as ending a line: the Unix end-of-line convention '\n', the Windows convention '\r\n', and the old
 
-<!-- page: 131 -->
-
 Macintosh convention '\r'. See [**PEP 278**](https://www.python.org/dev/peps/pep-0278) and [**PEP 3116**](https://www.python.org/dev/peps/pep-3116), as well as bytes.splitlines() for an additional use.
 
 **variable annotation** An annotation of a variable or a class attribute.
 
 When annotating a variable or a class attribute, assignment is optional:
 
-```txt
+```python
 class C:
     field: 'annotation'
-
 ```
 
 Variable annotations are usually used for type hints: for example this variable is expected to take int values:
 
 ```txt
 count: int = 0
-
 ```
 
 Variable annotation syntax is explained in section annassign.
@@ -5767,10 +5178,6 @@ See also venv.
 **virtual machine** A computer defined entirely in software. Python’s virtual machine executes the bytecode emitted by the bytecode compiler.
 
 **Zen of Python** Listing of Python design principles and philosophies that are helpful in understanding and using the language. The listing can be found by typing “import this” at the interactive prompt.
-
-<!-- page: 132 -->
-
-<!-- page: 133 -->
 
 ## ABOUT THESE DOCUMENTS
 
@@ -5792,10 +5199,6 @@ Many people have contributed to the Python language, the Python standard library
 
 It is only with the input and contributions of the Python community that Python has such wonderful documentation – Thank You!
 
-<!-- page: 134 -->
-
-<!-- page: 135 -->
-
 ## HISTORY AND LICENSE
 
 ## C.1 History of the software
@@ -5809,7 +5212,6 @@ In May 2000, Guido and the Python core development team moved to BeOpen.com to f
 All Python releases are Open Source (see [https://opensource.org/](https://opensource.org/) for the Open Source Definition). Historically, most, but not all, Python releases have also been GPL-compatible; the table below summarizes the various releases.
 
 | Release | Derived from | Year | Owner | GPL compatible? |
-| --- | --- | --- | --- | --- |
 | 0.9.0 thru 1.2 | n/a | 1991-1995 | CWI | yes |
 | 1.3 thru 1.5.2 | 1.2 | 1995-1999 | CNRI | yes |
 | 1.6 | 1.5.2 | 2000 | CNRI | no |
@@ -5825,8 +5227,6 @@ All Python releases are Open Source (see [https://opensource.org/](https://opens
 **Note:** GPL-compatible doesn’t mean that we’re distributing Python under the GPL. All Python licenses, unlike the GPL, let you distribute a modified version without making your changes open source. The GPL-compatible licenses make it possible to combine Python with other software that is released under the GPL; the others don’t.
 
 Thanks to the many outside volunteers who have worked under Guido’s direction to make these releases possible.
-
-<!-- page: 136 -->
 
 ## C.2 Terms and conditions for accessing or otherwise using Python
 
@@ -5854,10 +5254,7 @@ BEOPEN PYTHON OPEN SOURCE LICENSE AGREEMENT VERSION 1
 
 ```txt
 1. This LICENSE AGREEMENT is between BeOpen.com ("BeOpen"), having an office at 160 Saratoga Avenue, Santa Clara, CA 95051, and the Individual or Organization (continues on next page)
-
 ```
-
-<!-- page: 137 -->
 
 (continued from previous page)
 
@@ -5883,8 +5280,6 @@ BEOPEN PYTHON OPEN SOURCE LICENSE AGREEMENT VERSION 1
 
 (continues on next page)
 
-<!-- page: 138 -->
-
 (continued from previous page)
 
 Agreement. This Agreement together with Python 1.6.1 may be located on the Internet using the following unique, persistent identifier (known as a handle): 1895.22/1013. This Agreement may also be obtained from a proxy server on the Internet using the following URL: http://hdl.handle.net/1895.22/1013."
@@ -5907,13 +5302,10 @@ Copyright © 1991 - 1995, Stichting Mathematisch Centrum Amsterdam, The Netherla
 
 (continues on next page)
 
-<!-- page: 139 -->
-
 ```txt
 (continued from previous page)
 
 STICHTING MATHEMATISCH CENTRUM DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL STICHTING MATHEMATISCH CENTRUM BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
 ```
 
 ## C.3 Licenses and Acknowledgements for Incorporated Software
@@ -5959,12 +5351,9 @@ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
 PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-
 ```
 
 (continues on next page)
-
-<!-- page: 140 -->
 
 ```txt
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -5972,7 +5361,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 Any feedback is very welcome.
 http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html
 email: m-mat @ math.sci.hiroshima-u.ac.jp (remove space)
-
 ```
 
 (continued from previous page)
@@ -5991,7 +5379,6 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the project nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 ```
 
 ## C.3.3 Asynchronous socket services
@@ -6002,18 +5389,14 @@ The asynchat and asyncore modules contain the following notice:
 Copyright 1996 by Sam Rushing
 All Rights Reserved
 Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of Sam Rushing not be used in advertising or publicity pertaining to
-
 ```
 
 (continues on next page)
-
-<!-- page: 141 -->
 
 ```txt
 distribution of the software without specific, written prior permission.
 
 SAM RUSHING DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL SAM RUSHING BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
 ```
 
 (continued from previous page)
@@ -6030,7 +5413,6 @@ All Rights Reserved
 Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of Timothy O'Malley not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission.
 
 Timothy O'Malley DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL Timothy O'Malley BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
 ```
 
 ## C.3.5 Execution tracing
@@ -6050,12 +5432,9 @@ Author: Skip Montanaro
 
 Copyright 1999, Bioreason, Inc., all rights reserved.
 Author: Andrew Dalke
-
 ```
 
 (continues on next page)
-
-<!-- page: 142 -->
 
 ```txt
 (continued from previous page)
@@ -6066,7 +5445,6 @@ Author: Skip Montanaro
 Copyright 1991-1995, Stichting Mathematisch Centrum, all rights reserved.
 
 Permission to use, copy, modify, and distribute this Python software and its associated documentation for any purpose without fee is hereby granted, provided that the above copyright notice appears in all copies, and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of neither Automatrix, Bioreason or Mojam Media be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission.
-
 ```
 
 ## C.3.6 UUencode and UUdecode functions
@@ -6083,7 +5461,6 @@ LANCE ELLINGHOUSE DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDI
 Modified by Jack Jansen, CWI, July 1995:
 - Use binascii module to do the actual line-by-line conversion between ascii and binary. This results in a 1000-fold speedup. The C version is still 5 times faster, though.
 - Arguments more compliant with Python standard
-
 ```
 
 ## C.3.7 XML Remote Procedure Calls
@@ -6097,12 +5474,9 @@ Copyright (c) 1999-2002 by Secret Labs AB
 Copyright (c) 1999-2002 by Fredrik Lundh
 
 By obtaining, using, and/or copying this software and/or its
-
 ```
 
 (continues on next page)
-
-<!-- page: 143 -->
 
 ```txt
 associated documentation, you agree that you have read, understood, and will comply with the following terms and conditions:
@@ -6110,7 +5484,6 @@ associated documentation, you agree that you have read, understood, and will com
 Permission to use, copy, modify, and distribute this software and its associated documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appears in all copies, and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of Secret Labs AB or the author not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission.
 
 SECRET LABS AB AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL SECRET LABS AB OR THE AUTHOR BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
 ```
 
 (continued from previous page)
@@ -6127,7 +5500,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 ```
 
 ## C.3.9 Select kqueue
@@ -6136,12 +5508,9 @@ The select module contains the following notice for the kqueue interface:
 
 ```txt
 Copyright (c) 2000 Doug White, 2006 James Knight, 2007 Christian Heimes All rights reserved.
-
 ```
 
 (continues on next page)
-
-<!-- page: 144 -->
 
 ```txt
 (continued from previous page)
@@ -6151,7 +5520,6 @@ Redistribution and use in source and binary forms, with or without modification,
 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
 THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 ```
 
 ## C.3.10 SipHash24
@@ -6174,14 +5542,11 @@ Solution inspired by code from:
 Samuel Neves (supercop/crypto_auth/siphash24/little)
 djb (supercop/crypto_auth/siphash24/little2)
 Jean-Philippe Aumasson (https://131002.net/siphash/siphash24.c)
-
 ```
 
 ## C.3.11 strtod and dtoa
 
 The file Python/dtoa.c, which supplies C functions dtoa and strtod for conversion of C doubles to and from strings, is derived from the file of the same name by David M. Gay, currently available from [http://www.netlib.org/fp/](http://www.netlib.org/fp/). The original file, as retrieved on March 16, 2009, contains the following copyright and licensing notice:
-
-<!-- page: 145 -->
 
 ```c
 /******************************************************************
@@ -6202,14 +5567,13 @@ The file Python/dtoa.c, which supplies C functions dtoa and strtod for conversio
 * OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
 *
 **********************************************************************/
-
 ```
 
 ## C.3.12 OpenSSL
 
 The modules hashlib, posix, ssl, crypt use the OpenSSL library for added performance if made available by the operating system. Additionally, the Windows and Mac OS X installers for Python may include a copy of the OpenSSL libraries, so we include a copy of the OpenSSL license here:
 
-```txt
+```python
 LICENSE ISSUES
 =================
 
@@ -6237,12 +5601,9 @@ OpenSSL License
 * software must display the following acknowledgment:
 * "This product includes software developed by the OpenSSL Project
 * for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
-
 ```
 
 (continues on next page)
-
-<!-- page: 146 -->
 
 (continued from previous page)
 
@@ -6306,8 +5667,6 @@ OpenSSL License
 
 (continues on next page)
 
-<!-- page: 147 -->
-
 (continued from previous page)
 
 ```c
@@ -6349,7 +5708,6 @@ OpenSSL License
 * copied and put under another distribution licence
 * [including the GNU Public Licence.]
 */
-
 ```
 
 ## C.3.13 expat
@@ -6360,18 +5718,14 @@ The pyexpat extension is built using an included copy of the expat sources unles
 Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd and Clark Cooper
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
 ```
 
 (continues on next page)
-
-<!-- page: 148 -->
 
 ```txt
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 ```
 
 (continued from previous page)
@@ -6388,7 +5742,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 ```
 
 ## C.3.15 zlib
@@ -6401,12 +5754,9 @@ Copyright (C) 1995-2011 Jean-loup Gailly and Mark Adler
 This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
 
 Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
-
 ```
 
 (continues on next page)
-
-<!-- page: 149 -->
 
 ```txt
 (continued from previous page)
@@ -6419,7 +5769,6 @@ Permission is granted to anyone to use this software for any purpose, including 
 
 Jean-loup Gailly          Mark Adler
 jloup@gzip.org            madler@alumni.caltech.edu
-
 ```
 
 ## C.3.16 cfuhash
@@ -6438,10 +5787,7 @@ Redistribution and use in source and binary forms, with or without modification,
 * Neither the name of the author nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 ```
-
-<!-- page: 150 -->
 
 ## C.3.17 libmpdec
 
@@ -6457,8 +5803,6 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-<!-- page: 151 -->
-
 ## COPYRIGHT
 
 Python and this documentation is:
@@ -6472,10 +5816,6 @@ Copyright © 1995-2000 Corporation for National Research Initiatives. All rights
 Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.
 
 See History and License for complete license and permissions information.
-
-<!-- page: 152 -->
-
-<!-- page: 153 -->
 
 ## Symbols
 
@@ -6504,8 +5844,6 @@ EAFP, **116** environment variable PATH, 45, 111 PYTHONPATH, 45, 47 PYTHONSTARTU
 ## F
 
 f-string, **116** file object, 57 file object, **116** file-like object, **117** finder, **117** floor division, **117** for statement, 19 Fortran contiguous, 115 function, **117** annotations, 28
-
-<!-- page: 154 -->
 
 function annotation, **117**
 
@@ -6546,8 +5884,6 @@ object, **121** file, 57 method, 73 open built-in function, 57
 ## P
 
 package, **121** parameter, **121** PATH, 45, 111 path module search, 45 path based finder, **122** path entry, **122** path entry finder, **122** path entry hook, **122** path-like object, **122** PEP, **122** portion, **122** positional argument, **122** provisional API, **122** provisional package, **122** Python 3000, **122** Python Enhancement Proposals PEP 1, 122 PEP 238, 117 PEP 278, 125 PEP 302, 117, 120 PEP 3107, 28 PEP 3116, 125 PEP 3147, 46 PEP 3155, 123 PEP 343, 115 PEP 362, 114, 122 PEP 411, 122 PEP 420, 117, 121, 122 PEP 443, 118 PEP 451, 117 PEP 484, 28, 113, 117, 124, 125
-
-<!-- page: 155 -->
 
 PEP 492, 114, 115 PEP 498, 116 PEP 519, 122 PEP 525, 114 PEP 526, 113, 125 PEP 8, 29 Pythonic, **122** PYTHONPATH, 45, 47 PYTHONSTARTUP, 111
 

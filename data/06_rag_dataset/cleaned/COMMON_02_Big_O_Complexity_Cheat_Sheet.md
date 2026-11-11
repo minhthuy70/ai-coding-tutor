@@ -1,5 +1,3 @@
-<!-- page: 1 -->
-
 ## #Big O Cheat Sheet:
 
 ## -Big Os-
