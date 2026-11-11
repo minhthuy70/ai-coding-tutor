@@ -1,0 +1,1665 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.223,
+            0.217,
+            0.76,
+            0.399
+          ],
+          "level": 2,
+          "content": "python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.168,
+            0.634,
+            0.831,
+            0.868
+          ],
+          "content": "Classes and Objects; Inheritance Hướng đối tượng"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.145,
+            0.042,
+            0.854,
+            0.136
+          ],
+          "level": 2,
+          "content": "Hướng đối tượng là gì?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.197,
+            0.949,
+            0.321
+          ],
+          "content": "• Là kỹ thuật bao bọc dữ liệu, nhằm tạo ra một kiểu dữ liệu mới."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.335,
+            0.339,
+            0.397
+          ],
+          "content": "• Các khái niệm:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.411,
+            0.554,
+            0.473
+          ],
+          "content": "– Trừu tượng (Abstraction)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.486,
+            0.544,
+            0.547
+          ],
+          "content": "– Đa hình (Polymorphism)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.56,
+            0.562,
+            0.623
+          ],
+          "content": "– Đóng gói (Encapsulation)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.634,
+            0.5,
+            0.697
+          ],
+          "content": "– Kế thừa (Inheritance)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.889,
+            0.566,
+            0.983
+          ],
+          "level": 2,
+          "content": "2 python\" HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.955,
+            0.986,
+            0.979
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.161,
+            0.046,
+            0.84,
+            0.136
+          ],
+          "level": 2,
+          "content": "OOP, định nghĩa Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.199,
+            0.961,
+            0.331
+          ],
+          "content": "• Python được xây dựng như một ngôn ngữ lập trình hướng thủ tục (procedural language)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.344,
+            0.905,
+            0.401
+          ],
+          "content": "– OOP có tồn tại, hoạt động tốt nhưng không chặt chẽ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.419,
+            0.48,
+            0.476
+          ],
+          "content": "• Khai báo class như sau"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.522,
+            0.488,
+            0.661
+          ],
+          "content": "**class name**: **statements**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.0,
+            0.89,
+            0.566,
+            0.983
+          ],
+          "content": "2 python\" HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.986,
+            0.979
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.5,
+            0.318,
+            0.729,
+            0.45
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Diem:\n    x = 0\n    y = 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.216,
+            0.043,
+            0.782,
+            0.137
+          ],
+          "level": 2,
+          "content": "Fields (thuộc tính)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.191,
+            0.338,
+            0.236
+          ],
+          "level": 2,
+          "content": "name = value"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.239,
+            0.344,
+            0.485
+          ],
+          "sub_type": "code",
+          "content": "```python\n- Ví dụ:\n  # main\n  p1 = Diem()\n  p1.x = 2\n  p1.y = -5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.487,
+            0.251,
+            0.606,
+            0.299
+          ],
+          "level": 2,
+          "content": "diem.py"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.52,
+            0.891,
+            0.616
+          ],
+          "content": "– Thuộc tính là biến nằm trong lớp, mô tả đặc tính của đối tượng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.62,
+            0.838,
+            0.715
+          ],
+          "content": "– Được khai báo trực tiếp trong lớp hay trong hàm tạo (constructors)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.73,
+            0.885,
+            0.821
+          ],
+          "content": "– Python không có tính chất đóng gói (encapsulation) hay private fields"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.893,
+            0.062,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_8.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.89,
+            0.567,
+            0.985
+          ],
+          "level": 2,
+          "content": "2 python\" HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.281,
+            0.045,
+            0.72,
+            0.137
+          ],
+          "level": 2,
+          "content": "Sử dụng Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.079,
+            0.198,
+            0.307,
+            0.248
+          ],
+          "content": "import **class**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.284,
+            0.791,
+            0.335
+          ],
+          "content": "– client programs must import the classes they use"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.048,
+            0.395,
+            0.258,
+            0.444
+          ],
+          "level": 2,
+          "content": "point\\_main.py"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.046,
+            0.45,
+            0.932,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom Diem import *\n\n# main\np1 = Diem()\np1.x = 7\np1.y = -3\n...\n\n# Python objects are dynamic (can add fields any time!)\np1.name = \"Tyler Durden\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.895,
+            0.062,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.071,
+            0.895,
+            0.566,
+            0.983
+          ],
+          "content": "python HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.256,
+            0.046,
+            0.746,
+            0.131
+          ],
+          "level": 2,
+          "content": "Object Methods"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.197,
+            0.92,
+            0.305
+          ],
+          "level": 2,
+          "content": "def name(self, parameter, ..., parameter): statements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.88,
+            0.461
+          ],
+          "content": "– **self** must be the first parameter to any object method • represents the \"implicit parameter\" (this in Java)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.501,
+            0.925,
+            0.552
+          ],
+          "content": "– must access the object's fields through the self reference"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.578,
+            0.38,
+            0.627
+          ],
+          "content": "class **Diem**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.21,
+            0.639,
+            0.914,
+            0.695
+          ],
+          "content": "**def dich\\_chuyen(self, dx, dy):**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.703,
+            0.597,
+            0.751
+          ],
+          "content": "**self**.x += dx"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.765,
+            0.597,
+            0.819
+          ],
+          "content": "**self**.y += dy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.0,
+            0.89,
+            0.568,
+            0.985
+          ],
+          "content": "2 python HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.986,
+            0.979
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "aside_text",
+          "bbox": [
+            0.048,
+            0.273,
+            0.087,
+            0.872
+          ],
+          "content": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.252,
+            0.048,
+            0.757,
+            0.125
+          ],
+          "level": 2,
+          "content": "Exercise Answer"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.049,
+            0.208,
+            0.167,
+            0.255
+          ],
+          "level": 2,
+          "content": "diem.py"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.094,
+            0.262,
+            0.935,
+            0.885
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom math import *\n\nclass Diem:\n    x = 0\n    y = 0\n\n    def dat_vi_tri(self, x, y):\n        self.x = x\n        self.y = y\n\n    def khoang_cach_tu_tam_o(self):\n        return sqrt(self.x * self.x + self.y * self.y)\n\n    def khoang_cach(self, other):\n        dx = self.x - other.x\n        dy = self.y - other.y\n        return sqrt(dx * dx + dy * dy)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.001,
+            0.895,
+            0.064,
+            0.979
+          ],
+          "content": ""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.072,
+            0.905,
+            0.565,
+            0.983
+          ],
+          "content": "python HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.252,
+            0.047,
+            0.749,
+            0.133
+          ],
+          "level": 2,
+          "content": "Calling Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.196,
+            0.244,
+            0.249
+          ],
+          "content": "• Có 2 cách”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.318,
+            0.624,
+            0.372
+          ],
+          "content": "1) **object**.**method**(**parameters**)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.384,
+            0.166,
+            0.438
+          ],
+          "content": "hoặc"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.446,
+            0.75,
+            0.501
+          ],
+          "content": "2) **Class**.**method**(**object**, **parameters**)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.576,
+            0.671,
+            0.822
+          ],
+          "sub_type": "code",
+          "content": "```python\n• Ví dụ:\n    p = Diem(3, -4)\n    p.dich_chuyen(1, 5)\n    Diem.dich_chuyen(p, 1, 5)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.893,
+            0.063,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.0,
+            0.89,
+            0.567,
+            0.985
+          ],
+          "content": "2 python\" HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.139,
+            0.045,
+            0.859,
+            0.137
+          ],
+          "level": 2,
+          "content": "Constructors (hàm tạo)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.194,
+            0.97,
+            0.297
+          ],
+          "content": "def **\\_\\_init\\_\\_(**self**, parameter, ..., parameter**): **statements**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.351,
+            0.93,
+            0.401
+          ],
+          "content": "– a constructor is a special method with the name \\_\\_init"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.439,
+            0.637,
+            0.743
+          ],
+          "sub_type": "code",
+          "content": "```python\n- Ví dụ:\n  class Diem:\n    def __init__(self, x, y):\n      self.x = x\n      self.y = y\n    ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.802,
+            0.736,
+            0.889
+          ],
+          "content": "• How would we make it possible to construct a Diem() with no parameters to get (0, 0)?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.067,
+            0.892,
+            0.567,
+            0.984
+          ],
+          "level": 2,
+          "content": "python HIENLTH"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.893,
+            0.063,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.076,
+            0.199,
+            0.439,
+            0.314
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __str__(self):\n    return string\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.149,
+            0.045,
+            0.855,
+            0.138
+          ],
+          "level": 2,
+          "content": "toString and str"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.344,
+            0.934,
+            0.393
+          ],
+          "content": "– equivalent to Java's toString (converts object to a string)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.403,
+            0.824,
+            0.452
+          ],
+          "content": "– invoked automatically when str or print is called"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.52,
+            0.875,
+            0.619
+          ],
+          "content": "Exercise: Write a \\_\\_str\\_\\_ method for diem objects that returns strings like \"(3, -14)\""
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.087,
+            0.649,
+            0.963,
+            0.743
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __str__(self):\n    return \"(\" + str(self.x) + \", \" + str(self.y) + \")\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.889,
+            0.567,
+            0.984
+          ],
+          "level": 2,
+          "content": "2 python\" HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.986,
+            0.979
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "aside_text",
+          "bbox": [
+            0.015,
+            0.24,
+            0.056,
+            0.978
+          ],
+          "content": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.173,
+            0.046,
+            0.828,
+            0.134
+          ],
+          "level": 2,
+          "content": "Complete Point Class"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.012,
+            0.175,
+            0.13,
+            0.221
+          ],
+          "level": 2,
+          "content": "diem.py"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.075,
+            0.238,
+            0.969,
+            1.0
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom math import *\n\nclass Diem:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n    def khoang_cach_tu_tam_o(self):\n        return sqrt(self.x * self.x + self.y * self.y)\n\n    def khoang_cach(self, other):\n        dx = self.x - other.x\n        dy = self.y - other.y\n        return sqrt(dx * dx + dy * dy)\n\n    def dich_chuyen(self, dx, dy):\n        self.x += dx\n        self.y += dy\n\n    def __str__(self):\n        return \"(\" + str(self.x) + \", \" + str(self.y) + \")\"\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.165,
+            0.047,
+            0.831,
+            0.133
+          ],
+          "level": 2,
+          "content": "Operator Overloading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.201,
+            0.933,
+            0.305
+          ],
+          "content": "**operator overloading**: You can define functions so that Python's built-in operators can be used with your class."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.314,
+            0.854,
+            0.357
+          ],
+          "content": "• See also: [http://docs.python.org/ref/customization.html](http://docs.python.org/ref/customization.html)"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.03,
+            0.397,
+            0.493,
+            0.658
+          ],
+          "content": "| Operator | Class Method |\n| --- | --- |\n| - | __sub__(self, other) |\n| + | __add__(self, other) |\n| * | __mul__(self, other) |\n| / | __truediv__(self, other) |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_table_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.169,
+            0.66,
+            0.36,
+            0.696
+          ],
+          "content": "Unary Operators"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.03,
+            0.695,
+            0.492,
+            0.803
+          ],
+          "content": "| - | __neg__(self) |\n| --- | --- |\n| + | __pos__(self) |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_table_5.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.514,
+            0.398,
+            0.976,
+            0.763
+          ],
+          "content": "| Operator | Class Method |\n| --- | --- |\n| == | __eq__(self, other) |\n| != | __ne__(self, other) |\n| &lt; | __lt__(self, other) |\n| > | __gt__(self, other) |\n| &lt;= | __le__(self, other) |\n| >= | __ge__(self, other) |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_table_6.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.89,
+            0.567,
+            0.983
+          ],
+          "level": 2,
+          "content": "2 python\" HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.955,
+            0.986,
+            0.979
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.394,
+            0.042,
+            0.609,
+            0.137
+          ],
+          "level": 2,
+          "content": "Bài tập"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.194,
+            0.949,
+            0.323
+          ],
+          "content": "• **Viết class PhanSo** để biểu diễn phân số như 1/2 hay -3/8."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.371,
+            0.873,
+            0.496
+          ],
+          "content": "• Viết hàm rút gọn phân số; ví dụ, rút gọn 4/12 thành 1/3 hay 6/-9 thành -2/3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.506,
+            0.907,
+            0.617
+          ],
+          "content": "– Hint: Sử dụng hàm tìm ước chứng lớn nhất (greatest common divisor) ➔ math.gcd(a,b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.697,
+            0.804,
+            0.761
+          ],
+          "content": "• Định nghĩa hàm **cong** và **nhan** 2 phân số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.81,
+            0.677,
+            0.873
+          ],
+          "content": "• Định nghĩa các toán tử +, \\*, ==, <"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.892,
+            0.063,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.0,
+            0.891,
+            0.568,
+            0.985
+          ],
+          "content": "2 python HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.986,
+            0.98
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.151,
+            0.047,
+            0.851,
+            0.133
+          ],
+          "level": 2,
+          "content": "Generating Exceptions"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.077,
+            0.191,
+            0.667,
+            0.241
+          ],
+          "level": 2,
+          "content": "raise ExceptionType(\"message\")"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.296,
+            0.811,
+            0.344
+          ],
+          "level": 2,
+          "content": "– useful when the client uses your object improperly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.353,
+            0.915,
+            0.437
+          ],
+          "content": "– types: ArithmeticError, AssertionError, IndexError, NameError, SyntaxError, TypeError, ValueError"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.488,
+            0.252,
+            0.535
+          ],
+          "level": 2,
+          "content": "– Example:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.559,
+            0.44,
+            0.596
+          ],
+          "content": "class BankAccount:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.19,
+            0.643,
+            0.95,
+            0.788
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef deposit(self, amount):\n    if amount < 0:\n        raise ValueError(\"negative amount\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.89,
+            0.567,
+            0.983
+          ],
+          "level": 2,
+          "content": "2 python HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.163,
+            0.043,
+            0.832,
+            0.134
+          ],
+          "level": 2,
+          "content": "Inheritance (thừa kế)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.191,
+            0.528,
+            0.29
+          ],
+          "content": "class **name**(**superclass**): **statements**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.083,
+            0.341,
+            0.884,
+            0.533
+          ],
+          "sub_type": "code",
+          "content": "```python\n- Ví dụ:\n  class Diem3D(Diem):    # Diem3D extends Diem\n    z = 0\n    ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.627,
+            0.814,
+            0.8
+          ],
+          "level": 2,
+          "content": "• Python also supports multiple inheritance class name(superclass, ..., superclass): statements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.854,
+            0.893,
+            0.889
+          ],
+          "content": "(if > 1 superclass has the same field/method, conflicts are resolved in left right order)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.0,
+            0.892,
+            0.567,
+            0.984
+          ],
+          "content": "2 python HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.986,
+            0.979
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.077,
+            0.045,
+            0.924,
+            0.133
+          ],
+          "level": 2,
+          "content": "Calling Superclass Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.187,
+            0.947,
+            0.241
+          ],
+          "content": "• methods: **class**.**method**(**object**, **parameters**)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.259,
+            0.835,
+            0.315
+          ],
+          "content": "• constructors: **class**.\\_\\_init\\_\\_(**parameters**)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.358,
+            0.841,
+            0.643
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Diem3D(Diem):\n    z = 0\n    def __init__(self, x, y, z):\n        Diem.__init__(self, x, y)\n        self.z = z\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.205,
+            0.704,
+            0.948,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef dich_chuyen(self, dx, dy, dz):\n    Diem.dich_chuyen(self, dx, dy)\n    self.z += dz\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.889,
+            0.568,
+            0.985
+          ],
+          "level": 2,
+          "content": "2 python\" HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.955,
+            0.986,
+            0.98
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.281,
+            0.047,
+            0.715,
+            0.125
+          ],
+          "level": 2,
+          "content": "Static method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.196,
+            0.966,
+            0.322
+          ],
+          "content": "• Để định nghĩa method dạng static thì thêm từ khóa **@staticmethod**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.338,
+            0.184,
+            0.398
+          ],
+          "content": "• Ví dụ:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.415,
+            0.383,
+            0.472
+          ],
+          "content": "class **class\\_name**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.489,
+            0.413,
+            0.545
+          ],
+          "content": "@staticmethod"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.563,
+            0.849,
+            0.625
+          ],
+          "content": "def **static\\_method\\_name**(param\\_list):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.647,
+            0.326,
+            0.697
+          ],
+          "content": "pass"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.711,
+            0.244,
+            0.773
+          ],
+          "content": "• Cách gọi:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.787,
+            0.782,
+            0.849
+          ],
+          "content": "**class\\_name**.**static\\_method\\_name**()"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.893,
+            0.063,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.001,
+            0.889,
+            0.568,
+            0.985
+          ],
+          "content": "2 python HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "17"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.0"
+    },
+    "document": {
+      "title": "CSE 142 Python Slides",
+      "authors": [
+        "Marty Stepp"
+      ],
+      "keywords": [
+        "Python"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2023-04-10T07:05:38+07:00",
+      "modified_at": "2023-04-10T07:05:38+07:00",
+      "creator_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "producer_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "page_count": 17,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

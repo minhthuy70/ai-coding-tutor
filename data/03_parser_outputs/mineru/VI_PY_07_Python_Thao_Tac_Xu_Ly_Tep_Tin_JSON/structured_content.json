@@ -1,0 +1,2752 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.12,
+            0.217,
+            0.877,
+            0.844
+          ],
+          "level": 2,
+          "content": "python TM Working with other files JSON JavaScript Object Notation"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.139,
+            0.594,
+            0.703,
+            0.802
+          ],
+          "sub_type": "code",
+          "content": "```javascript\n\"name\": \"Hien Luong\",\n\"age\": 18,\n\"isActive\": true\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.414,
+            0.049,
+            0.581,
+            0.123
+          ],
+          "level": 2,
+          "content": "JSON"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.201,
+            0.984,
+            0.448
+          ],
+          "content": "• **JSON** (JavaScript Object Notation) is a lightweight data interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.461,
+            0.501,
+            0.523
+          ],
+          "content": "• Example: (like dict type)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.982
+          ],
+          "level": 2,
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.935,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.235,
+            0.047,
+            0.765,
+            0.133
+          ],
+          "level": 2,
+          "content": "Python and JSON"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.201,
+            0.251,
+            0.253
+          ],
+          "content": "• import json"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.0,
+            0.326,
+            0.96,
+            0.992
+          ],
+          "sub_type": "code",
+          "content": "```python\n• JSON to Python\njsonData = '{\"name\": \"Hien Luong\", \"age\": 18}\"\njsonToPython = json.loads(jsonData)\n\n• Python to JSON\npythonDictionary = {\n    'name':'Hien', 'age':40, 'isEmployed':True\n}\ndictionaryToJson =\njson.dumps(pythonDictionary)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.894,
+            0.062,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_3.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.149,
+            0.047,
+            0.854,
+            0.132
+          ],
+          "level": 2,
+          "content": "Python JSON functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.203,
+            0.665,
+            0.269
+          ],
+          "content": "• Python JSON parsing function"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.286,
+            0.418,
+            0.349
+          ],
+          "content": "– obj = **load**(file)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.366,
+            0.488,
+            0.43
+          ],
+          "content": "– obj = **loads**(string)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.448,
+            0.786,
+            0.597
+          ],
+          "content": "• Python JSON Serialization Functions – **dump**(obj, file)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.612,
+            0.46,
+            0.676
+          ],
+          "content": "– str = **dumps**(obj)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.047,
+            0.875,
+            0.137
+          ],
+          "level": 2,
+          "content": "Map Python type to json"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.025,
+            0.218,
+            0.973,
+            0.825
+          ],
+          "content": "| Python | JSON |\n| --- | --- |\n| dict | object |\n| list, tuple | array |\n| str | string |\n| int, float, int- &amp; float-derived Enums | number |\n| True | true |\n| False | false |\n| None | null |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.889,
+            0.264,
+            0.982
+          ],
+          "level": 2,
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.935,
+            0.993
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.972,
+            0.954,
+            0.985,
+            0.98
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.187,
+            0.047,
+            0.814,
+            0.136
+          ],
+          "level": 2,
+          "content": "Map JSON to python"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.11,
+            0.165,
+            0.889,
+            0.927
+          ],
+          "content": "| JSON | Python |\n| --- | --- |\n| object | dict |\n| array | list |\n| string | str |\n| number (int) | int |\n| number (real) | float |\n| true | True |\n| false | False |\n| null | None |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.893,
+            0.062,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.074,
+            0.913,
+            0.248,
+            0.98
+          ],
+          "content": "pGunom"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.252,
+            0.047,
+            0.746,
+            0.125
+          ],
+          "level": 2,
+          "content": "What is an API?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.2,
+            0.929,
+            0.359
+          ],
+          "content": "• An API, or Application Programming Interface, is a server that you can use to retrieve and send data to using code. APIs are most commonly used to retrieve data."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.281,
+            0.397,
+            0.642,
+            0.629
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.689,
+            0.542,
+            0.807
+          ],
+          "content": "• Making API Requests in Python – pip install **requests**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.935,
+            0.993
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.953,
+            0.986,
+            0.981
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.057,
+            0.908,
+            0.117
+          ],
+          "level": 2,
+          "content": "Working With JSON from an API example"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.199,
+            0.939,
+            0.305
+          ],
+          "content": "• Call API form [https://dummyjson.com/](https://dummyjson.com/), parse and store in json file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.382,
+            0.359,
+            0.435
+          ],
+          "content": "import json, requests"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.507,
+            0.885,
+            0.629
+          ],
+          "sub_type": "code",
+          "content": "```txt\nresult = requests.get('https://dummyjson.com/products')\npythondict = result.json()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.699,
+            0.643,
+            0.821
+          ],
+          "sub_type": "code",
+          "content": "```txt\nprint(json.dumps(pythondict, indent=4))\nprint(list(pythondict.keys()))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.982
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.122,
+            0.217,
+            0.877,
+            0.749
+          ],
+          "level": 2,
+          "content": "python TM Working with other files Word (python-docx)"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.307,
+            0.047,
+            0.697,
+            0.134
+          ],
+          "level": 2,
+          "content": "python-docx"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.2,
+            0.417,
+            0.252
+          ],
+          "content": "• pip install python-docx"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.327,
+            0.755,
+            0.378
+          ],
+          "content": "<u>https://python-docx.readthedocs.io/en/latest/</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.391,
+            0.888,
+            0.496
+          ],
+          "content": "<u>https://buildmedia.readthedocs.org/media/pdf/python</u>-[docx/latest/python-docx.pdf](https://buildmedia.readthedocs.org/media/pdf/python-docx/latest/python-docx.pdf)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.265,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.715,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.306,
+            0.047,
+            0.698,
+            0.135
+          ],
+          "level": 2,
+          "content": "python-docx"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.2,
+            0.296,
+            0.252
+          ],
+          "content": "• Import library:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.263,
+            0.563,
+            0.315
+          ],
+          "content": "from docx import Document"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.327,
+            0.342,
+            0.378
+          ],
+          "content": "• Open existed file:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.395,
+            0.887,
+            0.452
+          ],
+          "content": "document = Document('existing-doc-file.docx’)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.466,
+            0.317,
+            0.515
+          ],
+          "content": "• Create new file:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.536,
+            0.533,
+            0.59
+          ],
+          "content": "document = Document()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.604,
+            0.333,
+            0.657
+          ],
+          "content": "• Save file (.docx):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.673,
+            0.549,
+            0.729
+          ],
+          "content": "document.save(filename)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.982
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.935,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.984,
+            0.98
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.893,
+            0.062,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.306,
+            0.047,
+            0.697,
+            0.134
+          ],
+          "level": 2,
+          "content": "python-docx"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.2,
+            0.652,
+            0.251
+          ],
+          "content": "• document.add\\_heading(content, level)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.262,
+            0.911,
+            0.31
+          ],
+          "content": "– Title: document.add\\_heading(\"This is a title part, level=0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.323,
+            0.972,
+            0.372
+          ],
+          "content": "– Level 1: document.add\\_heading(\"This is a heading 1\", level=1)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.441,
+            0.254,
+            0.493
+          ],
+          "content": "• Paragraph:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.515,
+            0.741,
+            0.569
+          ],
+          "content": "– p = document.add\\_paragraph(content)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.591,
+            0.3,
+            0.643
+          ],
+          "content": "– Alignment:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.663,
+            0.589,
+            0.711
+          ],
+          "content": "• from docx.enum.text import"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.163,
+            0.719,
+            0.624,
+            0.77
+          ],
+          "content": "WD\\_PARAGRAPH\\_ALIGNMENT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.792,
+            0.964,
+            0.847
+          ],
+          "content": "• p.alignment = WD\\_PARAGRAPH\\_ALIGNMENT.LEFT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.889,
+            0.265,
+            0.981
+          ],
+          "level": 2,
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.935,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.306,
+            0.047,
+            0.698,
+            0.135
+          ],
+          "level": 2,
+          "content": "python-docx"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.204,
+            0.333,
+            0.265
+          ],
+          "level": 2,
+          "content": "• Paragraph(tt):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.291,
+            0.677,
+            0.349
+          ],
+          "content": "– Add sentences into paragraph:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.37,
+            0.944,
+            0.431
+          ],
+          "content": "• sentence\\_element = p.add\\_run(str(content))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.449,
+            0.523,
+            0.507
+          ],
+          "content": "– Set format bold/italic:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.53,
+            0.697,
+            0.587
+          ],
+          "content": "• sentence\\_element.bold = bold"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.606,
+            0.708,
+            0.661
+          ],
+          "content": "• sentence\\_element.italic = italic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.678,
+            0.851,
+            0.735
+          ],
+          "content": "• entence\\_element.underline = underline"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.982
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.986,
+            0.98
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.307,
+            0.047,
+            0.697,
+            0.134
+          ],
+          "level": 2,
+          "content": "python-docx"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.209,
+            0.355,
+            0.27
+          ],
+          "content": "• Insert picture"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.304,
+            0.315,
+            0.363
+          ],
+          "content": "• Insert table"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.265,
+            0.982
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.715,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.156,
+            0.217,
+            0.844,
+            0.896
+          ],
+          "level": 2,
+          "content": "python Working with csv files (Comma Separated Values) csv module"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.058,
+            0.899,
+            0.117
+          ],
+          "level": 2,
+          "content": "Spread sheet and corresponding CSV file"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.086,
+            0.168,
+            0.621,
+            0.491
+          ],
+          "content": "| Name | Exam1 | Exam2 | Final Exam | Overall Grade |\n| --- | --- | --- | --- | --- |\n| Bill | 75.00 | 100.00 | 50.00 | 75.00 |\n| Fred | 50.00 | 50.00 | 50.00 | 50.00 |\n| Irving | 0.00 | 0.00 | 0.00 | 0.00 |\n| Monty | 100.00 | 100.00 | 100.00 | 100.00 |\n|  |  |  |  |  |\n| Average |  |  |  | 56.25 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_table_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.048,
+            0.515,
+            0.665,
+            0.551
+          ],
+          "content": "FIGURE 14.2 A simple spreadsheet from Microsoft Excel 2008."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.078,
+            0.572,
+            0.747,
+            0.789
+          ],
+          "content": "Name,Exam1,Exam2,Final Exam,Overall Grade Bi11,75.00,100.00,50.00,75.00 Fred,50.00,50.00,50.00,50.00 Irvin9,0.00,0.00,0.00,0.00 Monty,100.00,100.00,100.00,100.00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.837,
+            0.345,
+            0.875
+          ],
+          "content": "Average,,,,56.25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.891,
+            0.266,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.391,
+            0.048,
+            0.611,
+            0.124
+          ],
+          "level": 2,
+          "content": "csv file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.201,
+            0.802,
+            0.259
+          ],
+          "content": "[• https://docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.275,
+            0.934,
+            0.395
+          ],
+          "content": "• Text file which each rows using (,), (;), or tab (\\t) to separate value."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.414,
+            0.564,
+            0.47
+          ],
+          "content": "• Python support csv module:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.483,
+            0.762,
+            0.529
+          ],
+          "content": "– csv.field\\_size\\_limit – return maximum field size"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.542,
+            0.942,
+            0.635
+          ],
+          "content": "– csv.get\\_dialect – get the dialect which is associated with the name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.649,
+            0.736,
+            0.695
+          ],
+          "content": "– csv.list\\_dialects – show all registered dialects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.709,
+            0.786,
+            0.754
+          ],
+          "content": "– csv.register\\_dialect - associate dialect with name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.767,
+            0.949,
+            0.864
+          ],
+          "content": "– csv.unregister\\_dialect - delete the dialect associated with the name the dialect registry"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.265,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.934,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.324,
+            0.048,
+            0.676,
+            0.125
+          ],
+          "level": 2,
+          "content": "csv module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.2,
+            0.632,
+            0.249
+          ],
+          "content": "• csv.reader – read data from a csv file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.265,
+            0.593,
+            0.312
+          ],
+          "content": "• csv.writer – write data to a csv file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.327,
+            0.926,
+            0.381
+          ],
+          "content": "• **csv.QUOTE\\_ALL** - Quote everything, regardless of type."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.391,
+            0.839,
+            0.493
+          ],
+          "content": "**csv.QUOTE\\_MINIMAL** - Quote fields with special characters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.508,
+            0.945,
+            0.611
+          ],
+          "content": "**csv.QUOTE\\_NONNUMERIC** - Quote all fields that aren't numbers value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.626,
+            0.877,
+            0.68
+          ],
+          "content": "• **csv.QUOTE\\_NONE** – Don't quote anything in output"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.982
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.934,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.364,
+            0.049,
+            0.64,
+            0.125
+          ],
+          "level": 2,
+          "content": "Read csv"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.028,
+            0.181,
+            0.74,
+            0.319
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport csv\nworkbook_file = open('Workbook1.csv','r')\nworkbook_reader = csv.reader(workbook_file)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.368,
+            0.476,
+            0.459
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor row in workbook_reader:\n    print(row)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.028,
+            0.509,
+            0.374,
+            0.551
+          ],
+          "content": "workbook\\_file.close()"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.0,
+            0.583,
+            0.811,
+            0.983
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>>\n['Name', 'Exam1', 'Exam2', 'Final Exam', 'Overall Grade']\n['Bill', '75.00', '100.00', '50.00', '75.00']\n['Fred', '50.00', '50.00', '50.00', '50.00']\n['Irving', '0.00', '0.00', '0.00', '0.00']\n['Monty', '100.00', '100.00', '100.00', '100.00']\n[]\n['Average', '', '', '', '56.25']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.07,
+            0.045,
+            0.933,
+            0.133
+          ],
+          "level": 2,
+          "content": "Read file csv into Dictionary"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.002,
+            0.299,
+            0.852,
+            0.61
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport csv\nwith ('employee_birthday.txt', mode='r') as csv_file:\n    csv_reader = csv.DictReader(csv_file)\n    for row in csv_reader:\n        print(f'\\t{row[\"name\"]} - {row[\"age\"]}.')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.982
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.935,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.98
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.353,
+            0.047,
+            0.646,
+            0.125
+          ],
+          "level": 2,
+          "content": "Write csv"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.002,
+            0.177,
+            0.977,
+            0.596
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport csv\nwith ('employee_file.csv', mode='w') as employee_file:\n    employee_writer = csv.writer(employee_file, delimiter=',,\n        quotechar='', quoting=csv.QUOTE_MINIMAL)\n\n    employee_writer.writerow(['John Smith', 'Accounting', 'November'])\n    employee_writer.writerow(['Erica Meyers', 'IT', 'March'])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.935,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.984,
+            0.98
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.202,
+            0.047,
+            0.801,
+            0.126
+          ],
+          "level": 2,
+          "content": "Write csv from Dict"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.003,
+            0.227,
+            0.995,
+            0.605
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport csv\nwith ('employee_file2.csv', mode='w') as csv_file:\n    fieldnames = ['emp_name', 'dept']\n    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)\n    writer.writeheader()\n    writer.writerow({'emp_name': 'John Smith', 'dept': 'Accounting'})\n    writer.writerow({'emp_name': 'Erica Meyers', 'dept': 'IT'})\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.982
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.935,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.046,
+            0.901,
+            0.123
+          ],
+          "level": 2,
+          "content": "Xử lý csv trong thư viện Pandas"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.003,
+            0.326,
+            0.439,
+            0.834
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport pandas\ndf = pandas.read_csv('hrdata.csv',\nindex_col='Name')\nprint(df)\n\nimport pandas\ndf = pandas.read_csv('hrdata.csv',\nindex_col='Name',\nparse_dates=['Birth Date'])\nprint(df)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.551,
+            0.363,
+            0.944,
+            0.819
+          ],
+          "content": "|  | A | B | C | D |\n| --- | --- | --- | --- | --- |\n| 1 | Name | Phone | BirthDate | Salary |\n| 2 | Henry | 909223456 | 4/23/1999 | 1500 |\n| 3 | Peter | 909189345 | 11/22/2000 | 999 |\n| 4 | Adam | 363738290 | 12/31/1995 | 1099 |\n| 5 | Anh | 39292174 | 11/30/2021 | 1001 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_table_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.982
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.893,
+            0.062,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.05,
+            0.902,
+            0.128
+          ],
+          "level": 2,
+          "content": "Xử lý csv trong thư viện Pandas"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.197,
+            0.9,
+            0.516
+          ],
+          "sub_type": "code",
+          "content": "```python\ndf = pandas.read_csv('hrdata.csv',\n    index_col='Employee',\n    parse_dates=['Hired'],\n    header=0,\n    names=['Employee', 'Hired', 'Salary', 'Sick Days'])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.583,
+            0.269,
+            0.634
+          ],
+          "level": 2,
+          "content": "\\# Process data"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.71,
+            0.513,
+            0.831
+          ],
+          "sub_type": "code",
+          "content": "```bazel\n# Write new file\ndf.to_csv('hrdata_modified.csv')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.267,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.935,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.225,
+            0.218,
+            0.758,
+            0.397
+          ],
+          "level": 2,
+          "content": "python TM"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.362,
+            0.457,
+            0.64,
+            0.533
+          ],
+          "level": 2,
+          "content": "Excel file"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.052,
+            0.912,
+            0.126
+          ],
+          "level": 2,
+          "content": "Working excel file with openpyxl"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.978,
+            0.322
+          ],
+          "content": "• **There are many libraries for working (read/write) with Excel file**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.341,
+            0.4,
+            0.397
+          ],
+          "content": "• **Openpyxl library:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.411,
+            0.432,
+            0.462
+          ],
+          "content": "– **pip install openpyxl**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.474,
+            0.793,
+            0.527
+          ],
+          "content": "– **https://openpyxl.readthedocs.io/en/stable**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.98
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.057,
+            0.925,
+            0.117
+          ],
+          "level": 2,
+          "content": "Write data to excel file excel with openpyxl"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.03,
+            0.164,
+            0.752,
+            0.209
+          ],
+          "content": "\\# File excel (Workbook), trong file sẽ có nhiều Worksheet,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.031,
+            0.21,
+            0.43,
+            0.253
+          ],
+          "content": "\\# trong worksheet có nhiều cell"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.029,
+            0.262,
+            0.434,
+            0.309
+          ],
+          "content": "from openpyxl import Workbook"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.029,
+            0.368,
+            0.254,
+            0.415
+          ],
+          "content": "wb = Workbook()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.032,
+            0.473,
+            0.397,
+            0.521
+          ],
+          "content": "\\# Tạo worksheet có tên NIIE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.029,
+            0.528,
+            0.442,
+            0.575
+          ],
+          "content": "ws = wb.create\\_sheet(“NIIE\", 1)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.029,
+            0.743,
+            0.292,
+            0.79
+          ],
+          "content": "ws.append([2, 3, 4])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.029,
+            0.849,
+            0.42,
+            0.894
+          ],
+          "content": "wb.save(\"DemoOpenpyxl.xlsx\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.532,
+            0.633,
+            0.694,
+            0.679
+          ],
+          "content": "\\# Ghi ô \"A1\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.532,
+            0.741,
+            0.76,
+            0.788
+          ],
+          "content": "\\# Thêm dòng mới"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.533,
+            0.849,
+            0.659,
+            0.893
+          ],
+          "content": "\\# Lưu file"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.893,
+            0.261,
+            0.981
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.931,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.185,
+            0.053,
+            0.815,
+            0.121
+          ],
+          "level": 2,
+          "content": "Read data from excel file"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.197,
+            0.593,
+            0.631
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom openpyxl import load_workbook\nwb = load_workbook('demo.xlsx')\nprint (wb.sheetnames)\nws = wb[wb.sheetnames[0]]\nfor row in ws.values:\n    for value in row:\n        print(value,\"\\t\",end=\"\")\n        print(\"\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.991
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.051,
+            0.929,
+            0.123
+          ],
+          "level": 2,
+          "content": "Working excel file with xlsxwriter"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.201,
+            0.615,
+            0.249
+          ],
+          "level": 2,
+          "content": "[• https://xlsxwriter.readthedocs.io/](https://xlsxwriter.readthedocs.io/)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.071,
+            0.307,
+            0.347,
+            0.356
+          ],
+          "level": 2,
+          "content": "import xlsxwriter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.011,
+            0.413,
+            0.814,
+            0.447
+          ],
+          "content": "Eile Edit View Navigate Code Refactor Run Iools VCS Window Help FileFactory-ExcelFactory.py"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.003,
+            0.41,
+            1.0,
+            0.994
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_image_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.267,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.051,
+            0.929,
+            0.123
+          ],
+          "level": 2,
+          "content": "Working excel file with xlsxwriter"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.005,
+            0.179,
+            0.173,
+            0.216
+          ],
+          "level": 2,
+          "content": "import xlsxwriter"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.004,
+            0.246,
+            0.468,
+            0.361
+          ],
+          "sub_type": "code",
+          "content": "```python\n# Tạo một file excel cùng 1 sheet\nworkbook = xlsxwriter.Workbook('demo.xlsx')\nworksheet = workbook.add_worksheet()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.004,
+            0.387,
+            0.338,
+            0.61
+          ],
+          "sub_type": "code",
+          "content": "```python\n# thiết lập các cột cho file\nworksheet.set_column('A:A', 5)\nworksheet.set_column('B:B', 15)\nworksheet.set_column('C:C', 20)\nworksheet.set_column('D:D', 15)\nworksheet.set_column('E:E', 15)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.004,
+            0.637,
+            0.44,
+            0.717
+          ],
+          "sub_type": "code",
+          "content": "```python\n# định dạng tiêu đề cột in đậm\nbold = workbook.add_format({'bold': True})\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.004,
+            0.744,
+            0.458,
+            0.982
+          ],
+          "content": "\\# thêm dòng tiêu đề và định dạng in đậm worksheet.write(**'A1'**, **'STT'**,bold) worksheet.write(**'B1'**, **'MÃ SẢN PHẨM'**,bold) worksheet.write(**'C1'**, **'TÊN SẢN PHẨM'**,bold) worksheet.write(**'D1'**, **'SỐ LƯỢNG'**,bold) worksheet.write(**'E1'**, **'ĐƠN GIÁ'**,bold)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.503,
+            0.163,
+            0.81,
+            0.599
+          ],
+          "content": "#thêm một dòng dữ liệu worksheet.write(**'A2'**,1) worksheet.write(**'B2'**,**'SP1'**) worksheet.write(**'C2'**, **'Coca'**) worksheet.write(**'D2'**, **'15'**) worksheet.write(**'E2'**, **'15000'**) #thêm một dòng dữ liệu worksheet.write(**'A3'**,2) worksheet.write(**'B3'**,**'SP2'**) worksheet.write(**'C3'**, **'Pepsi'**) worksheet.write(**'D3'**, **'20'**) worksheet.write(**'E3'**, **'18000'**)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.504,
+            0.627,
+            0.969,
+            0.708
+          ],
+          "content": "#Chèn Logo vào worksheet.insert\\_image(**'B5'**, **‘HIENLTH.png'**)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.505,
+            0.734,
+            0.681,
+            0.774
+          ],
+          "content": "workbook.close()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.519,
+            0.857,
+            0.915,
+            0.989
+          ],
+          "content": "Chạy phần mềm và vào thư mục phần mềm xem file Excel sẽ có kết quả như mong muốn"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.953,
+            0.985,
+            0.981
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.0,
+            0.007,
+            1.0,
+            0.993
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom openpyxl import load_workbook\nwb = load_workbook('demo.xlsx')\nprint (wb.sheetnames)\nws = wb[wb.sheetnames[0]]\nfor row in ws.values:\n    for value in row:\n        print(value,\"\\t\",end='')\n        print(\"\")]\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.341,
+            0.047,
+            0.662,
+            0.135
+          ],
+          "level": 2,
+          "content": "PyQRCode"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.199,
+            0.389,
+            0.251
+          ],
+          "content": "• pip install PyQRCode"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.264,
+            0.619,
+            0.315
+          ],
+          "content": "• <u>https://pythonhosted.org/PyQRCode</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.367,
+            0.268,
+            0.408
+          ],
+          "content": "import pyqrcode"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.455,
+            0.677,
+            0.543
+          ],
+          "content": "\\# String which represent the QR code s = **\"https://www.youtube.com/c/HIENLTHChannel\"**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.589,
+            0.34,
+            0.677
+          ],
+          "content": "\\# Generate QR code qr = pyqrcode.create(s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.722,
+            0.502,
+            0.809
+          ],
+          "content": "\\# Create and save the png file naming qr.svg(**\"myyoutube.svg\"**, scale=8)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.0,
+            0.854,
+            0.469,
+            0.981
+          ],
+          "content": "qr.png(**\"myyoutube.png\"**, scale=8) 2 python TM"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.694,
+            0.547,
+            0.955,
+            0.896
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_31_image_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.714,
+            0.932,
+            0.934,
+            0.992
+          ],
+          "content": "HIENLTH"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.894,
+            0.062,
+            0.978
+          ],
+          "content": ""
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "32"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.0"
+    },
+    "document": {
+      "title": "CSE 142 Python Slides",
+      "authors": [
+        "Marty Stepp"
+      ],
+      "keywords": [
+        "Python"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2023-03-29T13:07:07+07:00",
+      "modified_at": "2023-03-29T13:07:07+07:00",
+      "creator_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "producer_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "page_count": 32,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

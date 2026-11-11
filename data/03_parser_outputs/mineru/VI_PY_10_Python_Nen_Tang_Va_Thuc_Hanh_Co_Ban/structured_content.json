@@ -1,0 +1,673 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "index",
+          "bbox": [
+            0.063,
+            0.033,
+            0.947,
+            0.897
+          ],
+          "content": "- **Contents**\n- **Python** Tutorial BASIC....1 #!/bin/python3\n- python Getting Started....1 print(\"Hello, World!\")\n- Python Syntax....1 Python Syntax\n- if 5 > 2:\n- Python Comments....1 print(\"Five is greater than two!\")\n- if 5 > 2:\n- Python - Variable Exercises....1 print(\"Five is greater than two!\")\n- Python Data Types....1 x = 5\n- y = \"Hello, World!\"\n- Python Numbers....2 print(x)\n- print(y)\n- Python Casting....2 #Five is greater than two!\n- Python Strings....2 #Five is greater than two!\n- #5\n- Python Booleans....4 #Hello, World!\n- Python Lists....4 Python Comments\n- #This is a comment.\n- Python Tuples....6 print(\"Hello, World!\")\n- \"\"\"\n- Python Sets....7 This is a comment\n- Python Dictionaries....9 <sup>written</sup> in\n- more than just one line\n- \"\"\"\n- Python - Nested Dictionaries : từ điển lòng\n- 10 print(\"Hello, World!\")\n- Hello, World!\n- Python If ... Else....11 Hello, World!\n- Python While Loops....11 Python - <sub>V</sub>ariable Exercises\n- Python For Loops....11 x = str(3) # x will be '3'\n- y = int(3) # y will be 3\n- Python Functions....11 z = float(3) # z will be 3.0\n- print(x,y,z)\n- Python Lambda (ẩn danh)....12 x = 5\n- Python Arrays....12 y = \"John\"\n- print(type(x),type(y))\n- x, y, z = \"Orange\", \"Banana\", \"Cherry\"\n- print(x,y,z)\n- x = \"awesome\"\n- Python\n- Python\n- **Framework**\n- **Machine learning**\n- **Deep learning**\n- Máy cái sota\n- **Linear algebra**\n- **Statistic & probability**\n- **Pytorch, sklearn, caffe, tensorflow, keras**\n- **Python Data Types**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.911,
+            0.468,
+            0.947
+          ],
+          "level": 2,
+          "content": "Python Tutorial BASIC"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.692,
+            0.928,
+            0.844,
+            0.95
+          ],
+          "content": "int, float, complex"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.064,
+            0.959,
+            0.505,
+            0.982
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.505,
+            0.313,
+            0.671,
+            0.421
+          ],
+          "sub_type": "code",
+          "content": "```julia\nSlicing Strings\nb = \"Hello, World!\"\nprint(b[2:5])\nprint(b[:5])\nprint(b[2:])\nprint(b[-5:-2])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.505,
+            0.867,
+            0.812,
+            0.949
+          ],
+          "sub_type": "code",
+          "content": "```txt\nString Format\n\nage = 36\ntxt = \"My name is John, and I am {}\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.504,
+            0.034,
+            0.796,
+            0.302
+          ],
+          "sub_type": "code",
+          "content": "```python\nconsectetur adipiscing elit,\nsed do eiusmod tempor incididunt\nut labore et dolore magna aliqua.\"\"\"\nprint(a)\nif \"Lorem\" in a:\n    print(\"Yes, 'free' is present.\")\nHello\n5\ne\nb a n a n a\nLorem ipsum dolor sit amet,\nconsectetur adipiscing elit,\nsed do eiusmod tempor incididunt\nut labore et dolore magna aliqua.\nYes, 'free' is present.\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.062,
+            0.037,
+            0.497,
+            0.324
+          ],
+          "sub_type": "code",
+          "content": "```erb\nSequence Types: list, tuple, range\nMapping Type: dict\nSet Types: set, frozenset\nBoolean Type: bool\nBinary Types: bytes, bytearray, memoryview\nx = [\"apple\", \"banana\", \"cherry\"]\n#display x:\nprint(x)\n#display the data type of x:\nprint(type(x))\n['apple', 'banana', 'cherry']\n<class 'list'>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.062,
+            0.335,
+            0.426,
+            0.535
+          ],
+          "sub_type": "code",
+          "content": "```python\nPython Numbers\n#convert from int to float:\nx = float(1)\n#convert from float to int:\ny = int(2.8)\n#convert from int to complex:\nz = complex(x)\nprint(x,y,z)\nprint(type(x),type(y),type(z))\n1.0 2 (1+0j)\n<class 'float'> <class 'int'> <class 'complex'>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.562,
+            0.204,
+            0.76
+          ],
+          "sub_type": "code",
+          "content": "```matlab\nPython Casting\nx = int(1)\ny = int(2.8)\nz = int(\"3\")\nprint(x,y,z)\nx = str(\"s1\")\ny = str(2)\nz = str(3.0)\nprint(x,y,z)\n1 2 3\ns1 2 3.0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.504,
+            0.522,
+            0.945,
+            0.701
+          ],
+          "sub_type": "code",
+          "content": "```txt\nPython - Modify Strings\na = \" Hello, World! \"\nprint(a.upper())\nprint(a.lower())\nprint(a.strip()) #Remove Whitespace\nprint(a.split(\", \"))\nHELLO, WORLD!\nhello, world!\nHello, World!\n[' Hello', ' World!']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.505,
+            0.713,
+            0.705,
+            0.84
+          ],
+          "sub_type": "code",
+          "content": "```txt\ntxt = \"Hello my friends\"\ntxt.upper()\nprint(txt)\ntxt=txt.upper()\nprint(txt)\nHello my friends\nHELLO MY FRIENDS\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.77,
+            0.358,
+            0.954
+          ],
+          "sub_type": "code",
+          "content": "```python\nPython Strings\nBasic:\na = \"Hello\"\nprint(a)\nprint(len(a))\nprint(a[1])\nfor x in \"banana\":\n    print(x,end=' ')\nprint()\na = \"\"\"Lorem ipsum dolor sit amet,\n```",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.064,
+                0.959,
+                0.505,
+                0.983
+              ],
+              "content": "Huy init | https://www.facebook.com/huyinit13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.053,
+            0.034,
+            0.949,
+            0.953
+          ],
+          "content": "<table><tr><td rowspan=\"4\" colspan=\"2\">print(txt.format(age))quantity = 3itemno = 567price = 49.95myorder = &quot;I want {} pieces of item {} for {} dollars.&quot;print(myorder.format(quantity, itemno, price))myorder = &quot;I want to pay {2} dollars for {0} pieces of item {1).&quot;print(myorder.format(quantity, itemno, price))My name is John, and I am 36I want 3 pieces of item 567 for 49.95 dollars.I want to pay 49.95 dollars for 3 pieces of item 567.</td><td>isalpha()</td><td>string are alphanumericReturns True if all characters in the string are in the alphabet</td></tr><tr><td>isdecimal()</td><td>Returns True if all characters in the string are decimals</td></tr><tr><td>isdigit()</td><td>Returns True if all characters in the string are digits</td></tr><tr><td>isidentifier()</td><td>Returns True if the string is an identifier</td></tr><tr><td rowspan=\"3\" colspan=\"2\">String MethodsPython has a set of built-in methods that you can use on strings.Note: All string methods returns new values. They do not change the original string.</td><td>islower()</td><td>Returns True if all characters in the string are lower case</td></tr><tr><td>isnumeric()</td><td>Returns True if all characters in the string are numeric</td></tr><tr><td>isprintable()</td><td>Returns True if all characters in the string are printable</td></tr><tr><td>Method</td><td>Description</td><td>isspace()</td><td>Returns True if all characters in the string are whitespaces</td></tr><tr><td>capitalize()</td><td>Converts the first character to upper case</td><td>istitle()</td><td>Returns True if the string follows the rules of a title</td></tr><tr><td>casefold()</td><td>Converts string into lower case</td><td>isupper()</td><td>Returns True if all characters in the string are upper case</td></tr><tr><td>center()</td><td>Returns a centered string</td><td>join()</td><td>Joins the elements of an iterable to the end of the string</td></tr><tr><td>count()</td><td>Returns the number of times a specified value occurs in a string</td><td>ljust()</td><td>Returns a left justified version of the string</td></tr><tr><td>encode()</td><td>Returns an encoded version of the string</td><td>lower()</td><td>Converts a string into lower case</td></tr><tr><td>endswith()</td><td>Returns true if the string ends with the specified value</td><td>lstrip()</td><td>Returns a left trim version of the string</td></tr><tr><td>expandtabs()</td><td>Sets the tab size of the string</td><td>maketrans()</td><td>Returns a translation table to be used in translations</td></tr><tr><td>find()</td><td>Searches the string for a specified value and returns the position of where it was found</td><td>partition()</td><td>Returns a tuple where the string is parted into three parts</td></tr><tr><td>format()</td><td>Formats specified values in a string</td><td>replace()</td><td>Returns a string where a specified value is replaced with a specified value</td></tr><tr><td>format_map()</td><td>Formats specified values in a string</td><td>rfind()</td><td>Searches the string for a specified</td></tr><tr><td>index()</td><td>Searches the string for a specified value and returns the position of where it was found</td><td></td><td></td></tr><tr><td>isalnum()</td><td>Returns True if all characters in the</td><td></td><td></td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_table_0.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.028,
+            0.865,
+            0.042,
+            0.885
+          ],
+          "content": "3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.065,
+            0.959,
+            0.505,
+            0.983
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.046,
+            0.033,
+            0.945,
+            0.947
+          ],
+          "content": "<table><tr><td></td><td>value and returns the last position of where it was found</td><td rowspan=\"2\">print(bool(&quot;&quot;) print(bool())) print(bool([])) print(bool({})) def myFunction() : return True print(&quot;end &quot;,myFunction())</td></tr><tr><td>rindex()</td><td>Searches the string for a specified value and returns the last position of where it was found</td></tr><tr><td>rjust()</td><td>Returns a right justified version of the string</td><td rowspan=\"5\">TrueFalseFalseTrueTrueFalseFalseFalseFalseFalseFalseEnd True</td></tr><tr><td>rpartition()</td><td>Returns a tuple where the string is parted into three parts</td></tr><tr><td>rsplit()</td><td>Splits the string at the specified separator, and returns a list</td></tr><tr><td>rstrip()</td><td>Returns a right trim version of the string</td></tr><tr><td>split()</td><td>Splits the string at the specified separator, and returns a list</td></tr><tr><td>splitlines()</td><td>Splits the string at line breaks and returns a list</td><td rowspan=\"5\">Bộ sưu tập Python (Măng)Có bốn kiểu dữ liệu thu thập trong ngôn ngữ lập trình Python:Danh sách là một tập hợp được sắp xếp và có thể thay đổi. Cho phép các thành viên trùng lặp.Tuplelà một bộ sưu tập có thứ tự và không thể thay đổi. Cho phép các thành viên trùng lặp.Tập hợplà một tập hợp không có thứ tự và không được lập chỉ mục. Không có thành viên trùng lặp.Từ diễnlà một bộ sưu tập không có thứ tự và có thể thay đổi. Không có thành viên trùng lặp.</td></tr><tr><td>startswith()</td><td>Returns true if the string starts with the specified value</td></tr><tr><td>strip()</td><td>Returns a trimmed version of the string</td></tr><tr><td>swapcase()</td><td>Swaps cases, lower case becomes upper case and vice versa</td></tr><tr><td>title()</td><td>Converts the first character of each word to upper case</td></tr><tr><td>translate()</td><td>Returns a translated string</td><td rowspan=\"2\">Khi chơn một kiểu tập hợp, sẽ rất hữu ích khi hiểu các thuộc tính của kiểu đó. Chơn loại phù hợp cho một tập dữ liệu cụ thể có thể có nghĩa là duy trì ý nghĩa và, nó có thể có nghĩa là tăng hiệu quả hoặc bảo mật.</td></tr><tr><td>upper()</td><td>Converts a string into upper case</td></tr><tr><td>zfill()</td><td>Fills the string with a specified number of 0 values at the beginning</td><td>Python Liststhislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]print(thislist)print(len(thislist))print(type(thislist))list1 = [&quot;abc&quot;, 34, True, 40, &quot;male&quot;]print(list1)print(type(list1))[apple&#x27;, &#x27;banana&#x27;, &#x27;cherry&#x27;]3</td></tr></table>",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.065,
+                0.96,
+                0.504,
+                0.982
+              ],
+              "content": "Huy init | https://www.facebook.com/huyinit13"
+            }
+          ],
+          "image_source": "images/page_3_table_0.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.062,
+            0.032,
+            0.942,
+            0.944
+          ],
+          "sub_type": "code",
+          "content": "```python\n<class 'list'>\n['abc', 34, True, 40, 'male']\n<class 'list'>\nPython - Access List Items\nthislist = [\"apple\", \"banana\", \"cherry\", \"orange\",\n\"kiwi\", \"melon\", \"mango\"]\nprint(thislist[1])\nprint(thislist[-1])\nprint(thislist[2:5])\nprint(thislist[:4])\nprint(thislist[2:])\nprint(thislist[-4:-1])\nif \"apple\" in thislist:\n    print(\"Yes, 'apple' is in the fruits list\")\nbanana\nmango\n['cherry', 'orange', 'kiwi']\n['apple', 'banana', 'cherry', 'orange']\n['cherry', 'orange', 'kiwi', 'melon', 'mango']\n['orange', 'kiwi', 'melon']\nYes, 'apple' is in the fruits list\nPython - add List Items\nthislist = [\"apple\", \"banana\", \"cherry\"]\nthislist[1] = \"watermelon\"\nprint(thislist)\nthislist.insert(2, \"kiwi\")\nprint(thislist)\nthislist.append(\"orange\")\nprint(thislist)\n['apple', 'watermelon', 'cherry']\n['apple', 'watermelon', 'kiwi', 'cherry']\n['apple', 'watermelon', 'kiwi', 'cherry', 'orange']\nPython - Remove List Items\nthislist = [\"apple\", \"banana\",\n\"cherry\", \"union\", \"peach\"]\nthislist.remove(\"banana\")\nprint(thislist)\nthislist.pop(1)\nprint(thislist)\ndel thislist[1]\nprint(thislist)\nthislist.pop()\nprint(thislist)\nthislist.clear()\nprint(thislist)\ndel thislist\n#print(len(thislist)) : #this will cause an error because you have successfully deleted \"thislist\".\n['apple', 'cherry', 'union', 'peach']\n['apple', 'union', 'peach']\n['apple', 'peach']\n['apple']\nPython - Loop Lists\nthislist = [\"apple\", \"banana\", \"cherry\"]\nfor x in thislist:\n    print(x,end=' ')\n    print()\n    for i in range(len(thislist)):\n        print(thislist[i],end=' ')\n    print()\n    i = 0\n    while i < len(thislist):\n        print(thislist[i],end=' ')\n        i = i + 1\n    print()\n    [print(x,end=' ') for x in thislist]\n    apple banana cherry\n    apple banana cherry\n    apple banana cherry\n    apple banana cherry\n    apple banana cherry\nPython - Sort Lists\nthislist = [\"orange\", \"mango\", \"kiwi\", \"pineapple\",\n\"banana\"]\nthislist.sort()\n    print(thislist)\n    thislist.sort(reverse = True)\n    print(thislist)\n    thislist = [100, 50, 65, 82, 23]\n    thislist.sort()\n    print(thislist)\n    def myfunc(n):\n        return abs(n - 50)\n    thislist.sort(key = myfunc)\n    print(thislist)\n    thislist = [\"banana\", \"Orange\", \"Kiwi\", \"cherry\"]\n    thislist.sort()\n    print(thislist)\n    thislist.sort(key = str.lower)\n    print(thislist)\n    thislist.reverse()\n    print(thislist)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.065,
+            0.959,
+            0.505,
+            0.983
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.028,
+            0.866,
+            0.044,
+            0.885
+          ],
+          "content": "6"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.063,
+            0.035,
+            0.941,
+            0.95
+          ],
+          "content": "<table><tr><td rowspan=\"3\" colspan=\"2\">[&#x27;banana&#x27;, &#x27;kiwi&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;, &#x27;pineapple&#x27;][&#x27;pineapple&#x27;, &#x27;orange&#x27;, &#x27;mango&#x27;, &#x27;kiwi&#x27;, &#x27;banana&#x27;][23, 50, 65, 82, 100][50, 65, 23, 82, 100][&#x27;Kiwi&#x27;, &#x27;Orange&#x27;, &#x27;banana&#x27;, &#x27;cherry&#x27;][&#x27;banana&#x27;, &#x27;cherry&#x27;, &#x27;Kiwi&#x27;, &#x27;Orange&#x27;][&#x27;Orange&#x27;, &#x27;Kiwi&#x27;, &#x27;cherry&#x27;, &#x27;banana&#x27;]</td><td>insert()</td><td>Adds an element at the specified position</td></tr><tr><td>pop()</td><td>Removes the element at the specified position</td></tr><tr><td>remove()</td><td>Removes the item with the specified value</td></tr><tr><td rowspan=\"2\" colspan=\"2\">thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]mylist = thislist.copy()print(mylist)mylist = list(thislist)print(mylist)&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;cherry&#x27;][&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;cherry&#x27;]</td><td>reverse()</td><td>Reverses the order of the list</td></tr><tr><td>sort()</td><td>Sorts the list</td></tr><tr><td colspan=\"2\">Python - List Methodslist1 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]list2 = [1, 2, 3]list3 = list1 + list2print(list3)list3=list1for x in list2:list3.append(x)print(list3)&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, 1, 2, 3]&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, 1, 2, 3]</td><td colspan=\"2\">Python TuplesTuples are used to store multiple items in a single variable.A tuple is a collection which is ordered and unchangeable.Tuples are written with round brackets.Tuples được sử dụng để lưu trữ nhiều mục trong một biến duy nhất.Bộ tuple là một bộ sưu tập được sắp xếp theo thứ tự và không thể thay đổi .Tuples được viết bằng dấu ngoặc tròn.basicthistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;)print(thistuple)print(len(thistuple))(&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;cherry&#x27;)</td></tr><tr><td colspan=\"2\">List Methods</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">Python has a set of built-in methods that you can use on lists.</td><td colspan=\"2\"></td></tr><tr><td>Method</td><td>Description</td><td rowspan=\"3\" colspan=\"2\">thistuple = (&quot;apple&quot;,)#you have to add a comma print(type(thistuple))#NOT a tuplethisttuple = (&quot;apple&quot;)print(type(thisttuple))</td></tr><tr><td>append()</td><td>Adds an element at the end of the list</td></tr><tr><td>clear()</td><td>Removes all the elements from the list</td></tr><tr><td>copy()</td><td>Returns a copy of the list</td><td rowspan=\"2\" colspan=\"2\">tuple1 = (&quot;abc&quot;, 34, True, 40, &quot;male&quot;)print(tuple1)&lt;class &#x27;tuple&#x27;&gt;&lt;class &#x27;str&#x27;&gt;(&#x27;abc&#x27;, 34, True, 40, &#x27;male&#x27;)</td></tr><tr><td>count()</td><td>Returns the number of elements with the specified value</td></tr><tr><td>extend()</td><td>Add the elements of a list (or any iterable), to the end of the current list</td><td colspan=\"2\">Python - Access Tuple Items</td></tr><tr><td>index()</td><td>Returns the index of the first element with the specified value</td><td colspan=\"2\">thistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;, &quot;kiwi&quot;, &quot;melon&quot;, &quot;mango&quot;)print(thistuple[1])print(thistuple[-1])</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.065,
+            0.96,
+            0.505,
+            0.982
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.065,
+            0.959,
+            0.504,
+            0.983
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.502,
+            0.575,
+            0.939,
+            0.942
+          ],
+          "content": "<table><tr><td colspan=\"2\">Set Methods</td></tr><tr><td colspan=\"2\">Python has a set of built-in methods that you can use on sets.</td></tr><tr><td>Method</td><td>Description</td></tr><tr><td>add()</td><td>Adds an element to the set</td></tr><tr><td>clear()</td><td>Removes all the elements from the set</td></tr><tr><td>copy()</td><td>Returns a copy of the set</td></tr><tr><td>difference()</td><td>Returns a set containing the difference between two or more sets</td></tr><tr><td>difference update()</td><td>Removes the items in this set that are also included in</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_table_0.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.066,
+            0.035,
+            0.494,
+            0.442
+          ],
+          "sub_type": "code",
+          "content": "```txt\nAccess Set Items\nthisset = {\"apple\", \"banana\", \"cherry\"}\nfor x in thisset:\n  print(x,end=' ')\nprint()\nprint(\"banana\" in thisset)\ncherry apple banana\nTrue\nPython - Add Set Items\nthisset = {\"apple\", \"banana\"}\nthisset.add(\"orange\")\nprint(thisset)\ntropical = {\"pineapple\",}\nthisset.update(tropical)\nprint(thisset)\n#it can be any iterable object (tuples, lists, dictionaries etc.).\nmylist = [\"kiwi\", \"orange\"]\nthisset.update(mylist)\nprint(thisset)\n{'banana', 'orange', 'apple'}\n{'banana', 'orange', 'pineapple', 'apple'}\n{'apple', 'kiwi', 'banana', 'orange', 'pineapple'}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.065,
+            0.454,
+            0.479,
+            0.845
+          ],
+          "sub_type": "code",
+          "content": "```lua\nPython - Remove Set Items\n#if the item to remove does not exist, remove() will raise an error.\nthisset = {\"apple\", \"banana\", \"cherry\", \"kiwi\", \"oil\"}\nthisset.remove(\"banana\")\nprint(thisset)\n#if the item to remove does not exist, discard() will NOT raise an error.\nthisset.discard(\"apple\")\nprint(thisset)\nx = thisset.pop()\nprint(x)\nprint(thisset)\nthisset.clear()\nprint(thisset)\ndel thisset\n# print(thisset) sẽ bị lõi\n{'kiwi', 'oil', 'cherry', 'apple'}\n{'kiwi', 'oil', 'cherry'}\nkiwi\n{'oil', 'cherry'}\nset()\n```",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.065,
+                0.959,
+                0.505,
+                0.982
+              ],
+              "content": "Huy init | https://www.facebook.com/huyinit13"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.505,
+            0.033,
+            0.827,
+            0.56
+          ],
+          "sub_type": "code",
+          "content": "```lua\nprint(x,end='')\nprint()\n\nbanana apple cherry\nPython - Join Sets\nset1 = {\"a\", \"b\" , \"c\"}\nset2 = {1, 2, 3}\nset3 = set1.union(set2)\nprint(set3)\nset1.update(set2)\nprint(set1)\n{'a', 1, 2, 3, 'c', 'b'}\n{'a', 1, 2, 3, 'c', 'b'}\nx = {\"apple\", \"banana\", \"cherry\"}\ny = {\"google\", \"microsoft\", \"apple\"}\nx.intersection_update(y)\nprint(x)\nz = x.intersection(y)\nprint(z)\nx = {\"apple\", \"banana\", \"cherry\"}\ny = {\"google\", \"microsoft\", \"apple\"}\nx.symmetric_difference_update(y)\nprint(x)\nz = x.symmetric_difference(y)\nprint(z)\n{'apple'}\n{'apple'}\n{'banana', 'google', 'cherry', 'microsoft'}\n{'banana', 'apple', 'cherry'}\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.059,
+            0.035,
+            0.461,
+            0.75
+          ],
+          "sub_type": "code",
+          "content": "```txt\nanother, specified set\n\ndiscard() Remove the specified item\n\nintersection() Returns a set, that is the intersection of two other sets\n\nintersection_u pdate() Removes the items in this set that are not present in other, specified set(s)\n\nisdisjoint() Returns whether two sets have a intersection or not\n\nissubset() Returns whether another set contains this set or not\n\nissuperset() Returns whether this set contains another set or not\n\npop() Removes an element from the set\n\nremove() Removes the specified element\n\nsymmetric_dif ference() Returns a set with the symmetric differences of two sets\n\nsymmetric_dif ference_update() inserts the symmetric differences from this set and another\n\nunion() Return a set containing the union of sets\n\nupdate() Update the set with the union of this set and others\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.785,
+            0.239,
+            0.804
+          ],
+          "level": 2,
+          "content": "Python Dictionaries"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.065,
+            0.802,
+            0.493,
+            0.946
+          ],
+          "content": "Dictionaries are used to store data values in key:value pairs. A dictionary is a collection which is ordered\\*, changeable and does not allow duplicates. Dictionaries are written with curly brackets, and have keys and values: Từ điển được sử dụng để lưu trữ các giá trị dữ liệu trong các cặp key: value."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.504,
+            0.034,
+            0.94,
+            0.944
+          ],
+          "sub_type": "code",
+          "content": "```txt\nTừ diễn là một tập hợp được sắp xếp theo thứ tự *, có thể thay đổi và không cho phép trùng lặp.\nTừ diễn được viết bằng dấu ngoặc nhọn và có các khóa và giá trị:\nBasic:\nthisdict = { \"brand\": \"Ford\", \"model\": \"Mustang\", \"year\": 1964, \"year\": 2020\n}\nprint(thisdict)\nprint(thisdict[\"brand\"])\nprint(len(thisdict))\nprint(type(thisdict))\n{'brand': 'Ford', 'model': 'Mustang', 'year': 2020}\nFord\n3\n<class 'dict'>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.065,
+            0.96,
+            0.504,
+            0.982
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.033,
+            0.944,
+            0.951
+          ],
+          "sub_type": "code",
+          "content": "```python\ndict_keys(['brand', 'model', 'year', 'name'])\ndict_values(['Ford', 'Mustang', 1964, 'huy'])\ndict_values(['Ford', 'Mustang', 1964, 'HUY'])\nYes, 'model' is in the thisdict dictionary\ndict_items(['brand', 'Ford'), ('model', 'Mustang'),\n('year', 1964), ('name', 'HUY'])\n\nPython - Change Dictionary Items\nthisdict =    {\n\"brand\": \"Ford\",\n\"model\": \"Mustang\",\n\"year\": 1964\n}\nthisdict[\"year\"] = 2018\nprint(thisdict)\nthisdict.update({\"year\": 2020})\nprint(thisdict)\n{'brand': 'Ford', 'model': 'Mustang', 'year': 2018}\n{'brand': 'Ford', 'model': 'Mustang', 'year': 2020}\n\nPython - Remove Dictionary Items\nthisdict =    {\n\"brand\": \"Ford\",\n\"model\": \"Mustang\",\n\"year\": 1964,\n\"name\":\"Huy\"\n}\nthisdict.pop(\"model\")\nprint(thisdict)\nthisdict.popitem()#removes the last inserted item\nprint(thisdict)\nthisdict.clear()\nprint(thisdict)\n{'brand': 'Ford', 'year': 1964, 'name': 'Huy'}\n{'brand': 'Ford', 'year': 1964}\n{}\n\nPython - Loop Dictionaries\nthisdict =    {\n\"brand\": \"Ford\",\n\"model\": \"Mustang\",\n\"year\": 1964\n}\nfor x in thisdict:\nprint(x,end=' ')\nprint()\nfor x in thisdict:\nprint(thisdict[x],end=' ')\nprint()\nfor x in thisdict.values():\nprint(x,end=' ')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.065,
+            0.959,
+            0.504,
+            0.983
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.051,
+            0.034,
+            0.945,
+            0.96
+          ],
+          "sub_type": "code",
+          "content": "```python\nPython has a set of built-in methods that you can use on dictionaries.\nMethod Description\nclear() Removes all the elements from the dictionary\ncopy() Returns a copy of the dictionary\nfromkeys() Returns a dictionary with the specified keys and value\nget() Returns the value of the specified key\nitems() Returns a list containing a tuple for each key value pair\nkeys() Returns a list containing the dictionary's keys\npop() Removes the element with the specified key\npopitem() Removes the last inserted key-value pair\nsetdefault() Returns the value of the specified key. If the key does not exist: insert the key, with the specified value\nupdate() Updates the dictionary with the specified key-value pairs\nvalues() Returns a list of all the values in the dictionary\nPython If ... Else\n#The elif keyword is pythons way of saying \"if the previous conditions were not true, then try this condition\".\n#The else keyword catches anything which isn't caught by the preceding conditions.\n# and+or\na = 200\nb = 33\nif b > a:\nprint(\"b is greater than a\")\nelif a == b:\nprint(\"a and b are equal\")\nelse:\nprint(\"a is greater than b\")\nif a > b: print(\"a is greater than b\")\nprint(\"A\") if a > b else print(\"B\")\nc = 500\nif a > b and c > a:\nprint(\"Both conditions are True\")\nif a > b or a > c:\nprint(\"At least one of the conditions is True\")\na is greater than b\na is greater than b\nA\nBoth conditions are True\nAt least one of the conditions is True\nPython While Loops\ni = 1\nwhile i < 6:\nprint(i,end=' ')\ni += 1\nelse:\nprint(\"\\ni is no longer less than 6\")\n1 2 3 4 5\ni is no longer less than 6\nPython For Loops\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\nprint(x)\nif x == \"banana\":break\nfor x in fruits:\nif x == \"banana\":continue\nprint(x)\nfor x in range(6):\nprint(x,end= ' ')\nelse:\nprint(\"Finally finished!\")\napple\nbanana\napple\ncherry\n0 1 2 3 4 5 Finally finished!\nPython Functions\ndef my_function(fname):\nprint(fname + \" Refsnes\")\nmy_function(\"Emil\")\ndef my_function1(country = \"Norway\"):\nprint(\"I am from \" + country)\nmy_function1(\"India\")\nmy_function1()\ndef my_function3(x):\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.024,
+            0.865,
+            0.049,
+            0.885
+          ],
+          "level": 2,
+          "content": "12"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.065,
+            0.034,
+            0.502,
+            0.353
+          ],
+          "sub_type": "code",
+          "content": "```python\nreturn 5 * x\nprint(my_function3(3))\nprint(my_function3(5))\n\nEmil Refsnes\nI am from India\nI am from Norway\n15\n25\n\ndef tri_recursion(k):\n    if(k > 0):\n        result = k + tri_recursion(k - 1)\n        print(result,end=' ')\n    else:\n        result = 0\n    return result\ntri_recursion(6)\n1 3 6 10 15 21\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.065,
+            0.368,
+            0.504,
+            0.621
+          ],
+          "sub_type": "code",
+          "content": "```python\nPython Lambda (ân danh)\nx = lambda a: a + 10\nprint(x(5))\nx = lambda a, b: a * b\nprint(x(5, 6))\nx = lambda a, b, c: a + b + c\nprint(x(5, 6, 2))\ndef myfunc(n):\n    return lambda a : a * n\nmydoubler = myfunc(2)\nprint(mydoubler(11))\n15\n30\n13\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.066,
+            0.64,
+            0.223,
+            0.663
+          ],
+          "level": 2,
+          "content": "Python Arrays"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.661,
+            0.501,
+            0.945
+          ],
+          "sub_type": "code",
+          "content": "```python\nNote: This page shows you how to use LISTS as\nARRAYS, however, to work with arrays in Python\nyou will have to import a library, like the NumPy\nlibrary.\ncars = [\"Ford\", \"Volvo\", \"BMW\"]\ncars[0] = \"Toyota\"\nprint(cars)\nx = len(cars)\nprint(x)\nfor x in cars:\n    print(x,end=' ')\ncars.append(\"Honda\")\nprint('\\n',cars)\ncars.pop(3)\nprint(cars)\n['Toyota', 'Volvo', 'BMW']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.065,
+            0.96,
+            0.504,
+            0.982
+          ],
+          "content": "Huy init | https://www.facebook.com/huyinit13"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.0"
+    },
+    "document": {
+      "authors": [
+        "DELL"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2021-09-29T03:41:19+00:00",
+      "modified_at": "2021-09-29T03:41:19Z",
+      "creator_application": "Microsoft® Word 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 12,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 612.0,
+          "height_pt": 792.0
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

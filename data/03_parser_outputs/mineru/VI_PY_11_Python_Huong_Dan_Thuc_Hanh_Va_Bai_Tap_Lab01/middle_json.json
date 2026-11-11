@@ -1,0 +1,530 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.0"
+    },
+    "document": {
+      "title": "Microsoft PowerPoint - Python_Exercise.pptx",
+      "authors": [
+        "ASUS"
+      ],
+      "created_at": "2023-04-09T14:57:31+07:00",
+      "modified_at": "2023-04-09T14:57:31+07:00",
+      "producer_application": "Microsoft: Print To PDF",
+      "page_count": 3,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.168,
+            0.059,
+            0.831,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Lab 01 (30%)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.039,
+            0.21,
+            0.835,
+            0.322
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Build student management with some basic features:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.085,
+            0.329,
+            0.374,
+            0.376
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– View student list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.382,
+            0.381,
+            0.428
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Add new student"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.433,
+            0.42,
+            0.481
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Update student info"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.086,
+            0.486,
+            0.348,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Delete student"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.085,
+            0.536,
+            0.529,
+            0.585
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Search student by keyword"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.086,
+            0.589,
+            0.312,
+            0.635
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Sort student"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.045,
+            0.641,
+            0.152,
+            0.693
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HINT:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.086,
+            0.702,
+            0.323,
+            0.748
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Design menu"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.085,
+            0.752,
+            0.462,
+            0.798
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Store data in JSON file"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.085,
+            0.804,
+            0.826,
+            0.854
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– Student: Id, fullName, className, courseMarks"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 12,
+          "bbox": [
+            0.0,
+            0.881,
+            0.063,
+            0.965
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 12,
+              "bbox": [
+                0.0,
+                0.881,
+                0.063,
+                0.965
+              ],
+              "image_path": "images/page_0_image_12.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 13,
+          "bbox": [
+            0.072,
+            0.878,
+            0.264,
+            0.967
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.64,
+            0.904,
+            0.919,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HIENLTH"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.97,
+            0.941,
+            0.985,
+            0.965
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.168,
+            0.058,
+            0.832,
+            0.147
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Lab 01 (30%)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.039,
+            0.208,
+            0.297,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Data example:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.0,
+            0.28,
+            0.92,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.0,
+                0.28,
+                0.92,
+                0.98
+              ],
+              "content": "{\n    id: 2100006678,\n    fullName: \"Nguyễn Văn Tèo\",\n    className: \"21BITV04\",\n    courseMarks: [\n        {\n            subject: \"Advanced Programming\",\n            mark: 9.9\n        }\n    ]\n}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "json"
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.97,
+            0.941,
+            0.985,
+            0.966
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.169,
+            0.059,
+            0.83,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Lab 01 (30%)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.038,
+            0.21,
+            0.823,
+            0.265
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Each group has a maximum of 5 members."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.039,
+            0.282,
+            0.506,
+            0.338
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Deadline: Apr 15"
+            },
+            {
+              "type": "equation_inline",
+              "content": "^{th}"
+            },
+            {
+              "type": "text",
+              "content": " , 2023"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.355,
+            0.952,
+            0.411
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Group representatives submit submissions via LMS"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.0,
+            0.878,
+            0.265,
+            0.968
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.64,
+            0.904,
+            0.92,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HIENLTH"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.97,
+            0.941,
+            0.985,
+            0.965
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

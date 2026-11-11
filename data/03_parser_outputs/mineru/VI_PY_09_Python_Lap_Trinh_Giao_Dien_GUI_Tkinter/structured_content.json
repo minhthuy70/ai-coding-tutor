@@ -1,0 +1,358 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.03,
+            0.038,
+            0.98,
+            0.947
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom Tkinter import *\nroot = Tk()\nw = Label(root, text=\"Hello Tkinter!\")\nw.pack()\nroot.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.058,
+            0.053,
+            0.946,
+            0.904
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom Tkinter import *\n\nroot = Tk()\n\nLabel(root,\n    text=\"Red Text in Times Font\",\n    fg = \"red\",\n    font = \"Times\").pack()\nLabel(root,\n    text=\"Green Text in Helvetica Font\",\n    fg = \"light green\",\n    bg = \"dark green\",\n    font = \"Helvetica 16 bold italic\").pack()\nLabel(root,\n    text=\"Blue Text in Verdana bold\",\n    fg = \"blue\",\n    bg = \"yellow\",\n    font = \"Verdana 10 bold\").pack()\n\nroot.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.426,
+            0.081,
+            0.573,
+            0.148
+          ],
+          "level": 2,
+          "content": "IMAGE"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.058,
+            0.241,
+            0.566,
+            0.398
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom Tkinter import *\nroot = Tk()\nimg = PhotoImage(file='python.gif')\nmy_image = Label(root, image=img)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.305,
+            0.404,
+            0.914,
+            0.745
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_2.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.042,
+            0.975,
+            0.896
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport Tkinter\nimport tkinter.Tk()\n\ntop = Tkinter.Tk()\n\ndef helloCallBack():\n    tkinterEF.showinfo( \"Hello Python\", \"Hello World\")\nB = Tkinter.Button(top, text =\"Hello\", command = helloCallBack)\nB.pack()\ntop.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.436,
+            0.082,
+            0.563,
+            0.146
+          ],
+          "content": "MENU"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.472,
+            0.156,
+            0.528,
+            0.229
+          ],
+          "content": "119"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.11,
+            0.304,
+            0.87,
+            0.553
+          ],
+          "sub_type": "code",
+          "content": "```python\nroot = tk.Tk()\nmenu_bar = tk.Menu(root)\nfile_menu = tk.Menu(menu_bar, tearoff=0)\nfile_menu.add_command(label=\"Quit\", command=root.destroy)\nmenu_bar.add_cascade(label=\"File\", menu=file_menu)\nroot.config(menu=menu_bar)\nroot.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.59,
+            0.491,
+            0.853,
+            0.899
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_3.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.335,
+            0.083,
+            0.665,
+            0.149
+          ],
+          "level": 2,
+          "content": "RADIO BUTTON"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.176,
+            0.299,
+            0.771,
+            0.951
+          ],
+          "sub_type": "code",
+          "content": "```python\nroot = tk.Tk()\nv = tk.IntVar()\ntk.Label(root,\n    text=\"\"Choose a\nprogramming language:\"\",\n    justify = tk.LEFT,\n    padx = 20).pack()\ntk.Radiobutton(root,\n        text=\"Python\",\n        padx = 20,\n        variable=v,\n        value=1).pack(anchor Republic)\ntk.Radiobutton(root,\n        text=\"Perl\",\n        padx = 20,\n        variable=v,\n        value=2).pack(anchor Republic)\nroot.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.762,
+            0.478,
+            0.911,
+            0.602
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_0.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.023,
+            0.043,
+            0.972,
+            0.947
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport Tkinter as tk\n\nroot = tk.Tk()\nvar1 = tk.IntVar()\ntk.Checkbutton(root, text=\"male\", variable=var1).grid(row=0, sticky(tk.W)\nvar2 = tk.IntVar()\ntk.Checkbutton(root, text=\"female\", variable=var2).grid(row=1, sticky(tk.W)\nroot.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.052,
+            0.966,
+            0.689
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport Tkinter as tk\n\ndef show_values():\n    print (w1.get(), w2.get())\n\nroot = tk.Tk()\nw1 = tk.Scale(root, from_=0, to=42)\nw1.pack()\nw2 = tk.Scale(root, from_=0, to=200, orient=tk.HORIZONTAL)\nw2.pack()\ntk.Button(root, text='Show', command=show_values).pack()\n\nroot.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.8,
+            0.26,
+            0.957,
+            0.589
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.018,
+            0.039,
+            0.98,
+            0.957
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport Tkinter as tk\n\ndef show_entries():\n    print(\"First Name: %s\\nLast Name: %s\" % (e1.get(), e2.get()))\nroot = tk.Tk()\ntk.Label(root, text=\"First Name\").grid(row=0)\ntk.Label(root, text=\"Last Name\").grid(row=1)\n\ne1 = tk.Entry(root)\ne2 = tk.Entry(root)\n\ne1.grid(row=0, column=1)\ne2.grid(row=1, column=1)\n\ntk.Button(root, text='Quit', command=root.quit).grid(row=3, column=0, sticky(tk.W, pady=4)\ntk.Button(root, text='Show', command=show_entries).grid(row=3, column=1, sticky(tk.W, pady=4)\nroot.mainloop( )\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.043,
+            0.042,
+            0.948,
+            0.801
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport Tkinter as tk\n\ndef show_text():\n    print(T.get('1.0', tk.END))\n\nroot = tk.Tk()\n\nT = tk.Text(root, height=2, width=30)\nT.pack()\nT.insert(tk.END, \"Just a text Widget\\nin two lines\\n\")\nB = tk.Button(root, text='Show', command=show_text)\nB.pack()\nroot.mainloop()\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.0"
+    },
+    "document": {
+      "title": "python3-dothanhnghi-ctu.pdf",
+      "authors": [
+        "ASUS"
+      ],
+      "created_at": "2023-04-12T12:37:24+07:00",
+      "modified_at": "2023-04-12T12:37:24+07:00",
+      "producer_application": "Microsoft: Print To PDF",
+      "page_count": 10,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 792.0,
+          "height_pt": 612.0
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

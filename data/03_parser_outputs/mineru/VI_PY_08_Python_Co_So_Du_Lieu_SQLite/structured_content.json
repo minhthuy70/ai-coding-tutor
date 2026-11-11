@@ -1,0 +1,1977 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.221,
+            0.213,
+            0.972,
+            0.606
+          ],
+          "level": 2,
+          "content": "python IsQLite"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.205,
+            0.639,
+            0.797,
+            0.847
+          ],
+          "level": 2,
+          "content": "Relational Database and SQLite"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.51,
+            0.214,
+            0.53,
+            0.241
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_0.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.647,
+            0.213,
+            0.666,
+            0.24
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.26,
+            0.047,
+            0.741,
+            0.135
+          ],
+          "level": 2,
+          "content": "SQLite Browser"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.347,
+            0.168,
+            0.711,
+            0.195
+          ],
+          "content": "SQLite Database Browser - /Users/jc/tmp/example.db"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.215,
+            0.323,
+            0.239
+          ],
+          "content": "New Database"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.36,
+            0.215,
+            0.377,
+            0.241
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.377,
+            0.215,
+            0.465,
+            0.239
+          ],
+          "content": "Open Database"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.296,
+            0.259,
+            0.425,
+            0.283
+          ],
+          "content": "Database Structure"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.446,
+            0.259,
+            0.531,
+            0.283
+          ],
+          "content": "Browse Data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.55,
+            0.259,
+            0.639,
+            0.284
+          ],
+          "content": "Edit Pragmas"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.659,
+            0.259,
+            0.745,
+            0.283
+          ],
+          "content": "Execute SQL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.228,
+            0.319,
+            0.272,
+            0.346
+          ],
+          "content": "Table:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.303,
+            0.321,
+            0.413,
+            0.347
+          ],
+          "content": "total\\_members"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.575,
+            0.32,
+            0.657,
+            0.345
+          ],
+          "content": "New Record"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.697,
+            0.32,
+            0.794,
+            0.345
+          ],
+          "content": "Delete Record"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.231,
+            0.381,
+            0.56,
+            0.522
+          ],
+          "content": "<table><tr><td rowspan=\"2\"></td><td>list</td><td>month</td><td>members</td></tr><tr><td>Filter</td><td>Filter</td><td>Filter</td></tr><tr><td>1</td><td>gluster-board</td><td>2013-09-05</td><td>99999</td></tr><tr><td>2</td><td>gluster-users</td><td>2013-09-05</td><td>99999</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_table_15.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.544,
+            0.37,
+            0.578
+          ],
+          "content": "1 - 2 of 12 >"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.55,
+            0.612,
+            0.575
+          ],
+          "content": "Go to:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.208,
+            0.624,
+            0.247,
+            0.653
+          ],
+          "content": "×"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.629,
+            0.567,
+            0.653
+          ],
+          "content": "SQL Log"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.681,
+            0.374,
+            0.708
+          ],
+          "content": "Show SQL submitted by"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.386,
+            0.683,
+            0.464,
+            0.709
+          ],
+          "content": "Application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.765,
+            0.682,
+            0.805,
+            0.706
+          ],
+          "content": "Clear"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.22,
+            0.741,
+            0.776,
+            0.839
+          ],
+          "sub_type": "code",
+          "content": "```sql\nPRAGMA foreign_keys = \"1\";\nPRAGMA encoding\nSELECT type, name, sql, tbl_name FROM sqlite_master;\nSELECT COUNT(*) FROM (SELECT rowid,* FROM `total_members` ORDER BY `rowid` ASC);\nSELECT rowid,* FROM `total_members` ORDER BY `rowid` ASC LIMIT 0, 50000;\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.891,
+            0.251,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.765,
+            0.865,
+            0.812,
+            0.888
+          ],
+          "content": "UTF-8"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.317,
+            0.907,
+            0.726,
+            0.962
+          ],
+          "content": "[http://sqlitebrowser.org/](http://sqlitebrowser.org/)"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.2,
+            0.049,
+            0.802,
+            0.121
+          ],
+          "level": 2,
+          "content": "Relational Databases"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.367,
+            0.902,
+            0.703
+          ],
+          "content": "Relational databases model data by storing rows and columns in tables. The power of the relational database lies in its ability to efficiently retrieve data from those tables and in particular where there are multiple tables and the relationships between those tables involved in the query."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.77,
+            0.805,
+            0.815
+          ],
+          "content": "[http://en.wikipedia.org/wiki/Relational\\_database](http://en.wikipedia.org/wiki/Relational_database)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.982
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.32,
+            0.049,
+            0.679,
+            0.133
+          ],
+          "level": 2,
+          "content": "Terminology"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.269,
+            0.635,
+            0.326
+          ],
+          "content": "Database - contains many tables"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.377,
+            0.918,
+            0.437
+          ],
+          "content": "Relation (or table) - contains tuples and attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.485,
+            0.965,
+            0.61
+          ],
+          "content": "Tuple (or row) - a set of fields that generally represents an “object” like a person or a music track"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.057,
+            0.656,
+            0.943,
+            0.841
+          ],
+          "content": "Attribute (also column or field) - one of possibly many elements of data corresponding to the object represented by the row"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.982
+          ],
+          "content": "python"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.108,
+            0.0,
+            1.0,
+            0.486
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_0.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.021,
+            0.531,
+            0.97,
+            0.907
+          ],
+          "content": "A relation is defined as a set of tuples that have the same attributes. A tuple usually represents an object and information about that object. Objects are typically physical objects or concepts. A relation is usually described as a table, which is organized into rows and columns. All the data referenced by an attribute are in the same domain and conform to the same constraints. (Wikipedia)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.982
+          ],
+          "content": "python"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.954,
+            0.986,
+            0.98
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.157,
+            0.197,
+            0.845,
+            0.799
+          ],
+          "content": "<table><tr><td colspan=\"4\">Columns / Attributes</td></tr><tr><td>TITLE</td><td>RATING</td><td>LEN</td><td rowspan=\"3\">Rows / Tuples</td></tr><tr><td>About to Rock</td><td>3</td><td>354</td></tr><tr><td>Who Made Who</td><td>4</td><td>252</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\">Tables / Relations</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_table_0.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.265,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.434,
+            0.048,
+            0.565,
+            0.121
+          ],
+          "level": 2,
+          "content": "SQL"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.029,
+            0.251,
+            0.968,
+            0.388
+          ],
+          "level": 2,
+          "content": "Structured Query Language is the language we use to issue commands to the database"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.057,
+            0.439,
+            0.599,
+            0.506
+          ],
+          "content": "\\- Create data (a.k.a Insert)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.057,
+            0.557,
+            0.371,
+            0.619
+          ],
+          "content": "\\- Retrieve data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.057,
+            0.675,
+            0.349,
+            0.74
+          ],
+          "content": "\\- Update data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.057,
+            0.792,
+            0.335,
+            0.853
+          ],
+          "content": "\\- Delete data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.786,
+            0.951,
+            0.831
+          ],
+          "content": "[http://en.wikipedia.org/wiki/SQL](http://en.wikipedia.org/wiki/SQL)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.892,
+            0.063,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_7.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.889,
+            0.267,
+            0.983
+          ],
+          "level": 2,
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.213,
+            0.255,
+            0.28,
+            0.339
+          ],
+          "content": "Input Files"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.57,
+            0.186,
+            0.621
+          ],
+          "content": "Excel"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.099,
+            0.688,
+            0.185,
+            0.743
+          ],
+          "content": "D3.js"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.516,
+            0.373,
+            0.598
+          ],
+          "content": "Output Files"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.431,
+            0.301,
+            0.592,
+            0.415
+          ],
+          "content": "Python Programs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.653,
+            0.332,
+            0.703,
+            0.368
+          ],
+          "content": "SQL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.773,
+            0.302,
+            0.929,
+            0.408
+          ],
+          "content": "Database File"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.819,
+            0.469,
+            0.883,
+            0.514
+          ],
+          "content": "SQL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.784,
+            0.581,
+            0.918,
+            0.687
+          ],
+          "content": "SQLite Browser"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.293,
+            0.166,
+            0.4
+          ],
+          "content": "End User"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.298,
+            0.292,
+            0.475,
+            0.402
+          ],
+          "content": "Application Software"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.584,
+            0.323,
+            0.633,
+            0.359
+          ],
+          "content": "SQL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.296,
+            0.555,
+            0.462,
+            0.609
+          ],
+          "content": "Developer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.524,
+            0.659,
+            0.603,
+            0.71
+          ],
+          "content": "DBA"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.736,
+            0.293,
+            0.928,
+            0.402
+          ],
+          "content": "Database Data Server"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.799,
+            0.481,
+            0.863,
+            0.526
+          ],
+          "content": "SQL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.754,
+            0.608,
+            0.91,
+            0.715
+          ],
+          "content": "Database Tools"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.265,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.345,
+            0.147,
+            0.656,
+            0.222
+          ],
+          "level": 2,
+          "content": "SQL: Insert"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.349,
+            0.854,
+            0.417
+          ],
+          "level": 2,
+          "content": "Câu lệnh INSERT Chèn 1 dòng vào bảng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.02,
+            0.616,
+            0.897,
+            0.757
+          ],
+          "content": "INSERT INTO HocVien (HoTen, DienThoai) VALUES (‘Nhất Nghệ', '028393 22735')"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.334,
+            0.147,
+            0.664,
+            0.221
+          ],
+          "level": 2,
+          "content": "SQL: Delete"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.082,
+            0.347,
+            0.834,
+            0.415
+          ],
+          "level": 2,
+          "content": "Xóa các dòng dựa vào điều kiện chọn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.032,
+            0.614,
+            0.794,
+            0.763
+          ],
+          "content": "DELETE FROM HocVien WHERE DienThoai=‘0909123456"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.325,
+            0.145,
+            0.674,
+            0.229
+          ],
+          "level": 2,
+          "content": "SQL: Update"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.347,
+            0.871,
+            0.417
+          ],
+          "level": 2,
+          "content": "Cập nhật một/một vài cột theo điều kiện"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.009,
+            0.581,
+            0.863,
+            0.717
+          ],
+          "content": "UPDATE HocVien SET HoTen=‘Hồng Anh’ WHERE MaHV=3"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.144,
+            0.145,
+            0.859,
+            0.229
+          ],
+          "level": 2,
+          "content": "Retrieving Records: Select"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.342,
+            0.925,
+            0.528
+          ],
+          "content": "The select statement retrieves a group of records - you can either retrieve all the records or a subset of the records with a WHERE clause"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.018,
+            0.583,
+            0.554,
+            0.645
+          ],
+          "content": "SELECT \\* FROM HocVien"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.018,
+            0.649,
+            0.555,
+            0.711
+          ],
+          "content": "SELECT \\* FROM HocVien"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.018,
+            0.719,
+            0.7,
+            0.782
+          ],
+          "content": "WHERE DienThoai=‘0909123456'"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.173,
+            0.133,
+            0.827,
+            0.231
+          ],
+          "level": 2,
+          "content": "Sắp xếp với ORDER BY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.341,
+            0.923,
+            0.455
+          ],
+          "content": "Sử dụng ORDER BY ở câu lệnh SELECT để lấy kết quả có sắp xếp tăng hay giảm dần theo điều kiện nào đó."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.008,
+            0.616,
+            0.859,
+            0.767
+          ],
+          "content": "SELECT \\* FROM HocVien ORDER BY HoTen SELECT \\* FROM HocVien ORDER BY DienThoai DESC"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.239,
+            0.047,
+            0.764,
+            0.135
+          ],
+          "level": 2,
+          "content": "Python vs SQLite"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.199,
+            0.374,
+            0.27
+          ],
+          "content": "• Chèn thư viện:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.291,
+            0.467,
+            0.359
+          ],
+          "content": "**import sqlite3**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.463,
+            0.585,
+            0.533
+          ],
+          "content": "• Mở database để thao tác:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.035,
+            0.555,
+            0.954,
+            0.617
+          ],
+          "content": "**MyDB=sqlite3.connect(‘NhatNgheDB.db’)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.708,
+            0.658,
+            0.78
+          ],
+          "content": "→ trả về đối tượng Connection"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.893,
+            0.063,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_6.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.889,
+            0.267,
+            0.982
+          ],
+          "level": 2,
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.954,
+            0.986,
+            0.98
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.209,
+            0.044,
+            0.785,
+            0.137
+          ],
+          "level": 2,
+          "content": "Đối tượng cursor()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.004,
+            0.186,
+            0.946,
+            0.314
+          ],
+          "content": "Đối tượng này trỏ tới các bảng ghi (records/rows) trong tập dữ liệu lấy về và thực thi các câu truy vấn"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.003,
+            0.366,
+            0.292,
+            0.415
+          ],
+          "sub_type": "code",
+          "content": "```txt\nimport sqlite3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.002,
+            0.481,
+            0.944,
+            0.535
+          ],
+          "sub_type": "code",
+          "content": "```txt\nMyDB = sqlite3.connect('N:\\\\NhatNgheDb.db')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.003,
+            0.603,
+            0.417,
+            0.661
+          ],
+          "sub_type": "code",
+          "content": "```txt\nC = MyDB.cursor()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.07,
+            0.049,
+            0.924,
+            0.136
+          ],
+          "level": 2,
+          "content": "Thực thi truy vấn – execute()"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.216,
+            0.687,
+            0.367
+          ],
+          "level": 2,
+          "content": "Cú pháp: cursor.execute() Ví dụ: Câu lệnh DDL tạo bảng"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.257,
+            0.421,
+            0.788,
+            0.995
+          ],
+          "sub_type": "code",
+          "content": "```sql\n#create a table of students\nc.execute('''\nCREATE TABLE HocVien\n(\n    MaHV text PRIMARY KEY,\n    HoTen text,\n    DienThoai text,\n    NgaySinh date,\n    Email text\n)\n')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.888,
+            0.248,
+            0.985
+          ],
+          "content": "python"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.954,
+            0.986,
+            0.98
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.071,
+            0.049,
+            0.922,
+            0.135
+          ],
+          "level": 2,
+          "content": "Thực thi truy vấn – execute()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.216,
+            0.813,
+            0.367
+          ],
+          "content": "Cú pháp: cursor.**execute**() Ví dụ: Câu lệnh DDL tạo mới dữ liệu"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.043,
+            0.436,
+            0.93,
+            0.792
+          ],
+          "sub_type": "code",
+          "content": "```txt\n#insert data into our table\nc.execute('''INSERT INTO HocVien VALUES ('001','Hien Luong', '0909009900',\n       '1/1/1981','hyhien@gmail.com')\n'''')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.986,
+            0.98
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.41,
+            0.04,
+            0.591,
+            0.136
+          ],
+          "level": 2,
+          "content": "Chú ý"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.004,
+            0.191,
+            0.938,
+            0.339
+          ],
+          "content": "Sử dụng hàm **commit()**để lưu các thay đổi và sử dụng <u>hàm</u> <strong><u>close()</u></strong><u>để đóng kết nối.</u>"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.048,
+            0.345,
+            0.924,
+            0.531
+          ],
+          "sub_type": "code",
+          "content": "```txt\n#insert data into our table\nc.execute('''INSERT INTO HocVien VALUES ('001','Hien','Luong','1/1/1981','11W')''')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.047,
+            0.583,
+            0.876,
+            0.706
+          ],
+          "sub_type": "code",
+          "content": "```txt\n#Save changes using the commit() function\nMyDB.commit()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.049,
+            0.761,
+            0.655,
+            0.883
+          ],
+          "sub_type": "code",
+          "content": "```txt\n#Close the database connection\nMyDB.close()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.891,
+            0.267,
+            0.983
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.961,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.048,
+            0.901,
+            0.131
+          ],
+          "level": 2,
+          "content": "Phương thức executemany()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.198,
+            0.974,
+            0.263
+          ],
+          "content": "• Cho phép thực thi nhiều câu lệnh SQL cùng một lúc"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.273,
+            0.185,
+            0.334
+          ],
+          "content": "• Ví dụ:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.343,
+            0.203,
+            0.39
+          ],
+          "content": "products = ("
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.072,
+            0.395,
+            0.284,
+            0.445
+          ],
+          "sub_type": "code",
+          "content": "```javascript\n(1, 'Ti vi', 1234),\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.072,
+            0.447,
+            0.337,
+            0.499
+          ],
+          "sub_type": "code",
+          "content": "```javascript\n(2, 'Máy giặt', 5712),\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.073,
+            0.501,
+            0.342,
+            0.551
+          ],
+          "sub_type": "code",
+          "content": "```csv\n(3, 'Điều hòa', 9000),\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.555,
+            0.314,
+            0.604
+          ],
+          "content": "(4, 'Volvo', 29000),"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.608,
+            0.353,
+            0.658
+          ],
+          "content": "(5, 'Bentley', 350000),"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.073,
+            0.663,
+            0.353,
+            0.711
+          ],
+          "sub_type": "code",
+          "content": "```javascript\n(6, 'Hummer', 41400),\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.073,
+            0.715,
+            0.381,
+            0.765
+          ],
+          "sub_type": "code",
+          "content": "```javascript\n(7, 'Volkswagen', 21600)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.823,
+            0.966,
+            0.872
+          ],
+          "content": "cursor.**executemany**(\"INSERT INTO HangHoa VALUES(?, ?, ?)\", products)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.893,
+            0.062,
+            0.979
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_image_12.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.981
+          ],
+          "level": 2,
+          "content": "python"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.954,
+            0.986,
+            0.979
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.047,
+            0.913,
+            0.131
+          ],
+          "level": 2,
+          "content": "Truy vấn lấy dữ liệu - SELECT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.2,
+            0.217,
+            0.255
+          ],
+          "content": "• Bước 1:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.285,
+            0.813,
+            0.345
+          ],
+          "content": "cursor.**execute**(“SELECT statement”)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.36,
+            0.217,
+            0.415
+          ],
+          "content": "• Bước 2:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.439,
+            0.622,
+            0.506
+          ],
+          "content": "data = cursor.**fetchone()**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.525,
+            0.6,
+            0.591
+          ],
+          "content": "rows = cursor.**fetchall()**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.605,
+            0.217,
+            0.66
+          ],
+          "content": "• Bước 3:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.681,
+            0.419,
+            0.738
+          ],
+          "content": "for row in rows:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.756,
+            0.42,
+            0.818
+          ],
+          "content": "print(row) ）"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.889,
+            0.267,
+            0.981
+          ],
+          "content": "python TM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.955,
+            0.984,
+            0.979
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.339,
+            0.045,
+            0.656,
+            0.124
+          ],
+          "level": 2,
+          "content": "Xem thêm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.203,
+            0.678,
+            0.266
+          ],
+          "content": "[• https://www.sqlitetutorial.net/](https://www.sqlitetutorial.net/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.288,
+            0.95,
+            0.353
+          ],
+          "content": "[• https://www.sqlitetutorial.net/sqlite-python/](https://www.sqlitetutorial.net/sqlite-python/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.374,
+            0.973,
+            0.51
+          ],
+          "content": "<u>https://www.datacamp.com/community/tutor</u>[ials/sqlite-in-python](https://www.datacamp.com/community/tutorials/sqlite-in-python)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.0,
+            0.89,
+            0.265,
+            0.981
+          ],
+          "content": "python"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.96,
+            0.954,
+            0.985,
+            0.979
+          ],
+          "content": "22"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.0"
+    },
+    "document": {
+      "title": "CSE 142 Python Slides",
+      "authors": [
+        "Marty Stepp"
+      ],
+      "keywords": [
+        "Python"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2023-04-10T07:07:18+07:00",
+      "modified_at": "2023-04-10T07:07:18+07:00",
+      "creator_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "producer_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "page_count": 22,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720.0,
+          "height_pt": 540.0
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

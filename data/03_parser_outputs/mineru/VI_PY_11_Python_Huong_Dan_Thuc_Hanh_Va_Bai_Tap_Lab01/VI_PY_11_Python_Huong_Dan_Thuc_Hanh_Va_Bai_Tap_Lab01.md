@@ -1,0 +1,59 @@
+<!-- page: 1 -->
+
+## Python Lab 01 (30%)
+
+## • Build student management with some basic features:
+
+– View student list
+
+– Add new student
+
+– Update student info
+
+– Delete student
+
+– Search student by keyword
+
+– Sort student
+
+## HINT:
+
+– Design menu
+
+– Store data in JSON file
+
+– Student: Id, fullName, className, courseMarks
+
+![](images/page_0_image_12.jpg)
+
+## python
+
+<!-- page: 2 -->
+
+## Python Lab 01 (30%)
+
+## • Data example:
+
+```json
+{
+    id: 2100006678,
+    fullName: "Nguyễn Văn Tèo",
+    className: "21BITV04",
+    courseMarks: [
+        {
+            subject: "Advanced Programming",
+            mark: 9.9
+        }
+    ]
+}
+```
+
+<!-- page: 3 -->
+
+## Python Lab 01 (30%)
+
+• Each group has a maximum of 5 members.
+
+• Deadline: Apr 15$^{th}$ , 2023
+
+• Group representatives submit submissions via LMS
