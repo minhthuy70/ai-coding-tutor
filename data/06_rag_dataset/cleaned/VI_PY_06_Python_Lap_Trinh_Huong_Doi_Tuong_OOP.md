@@ -258,9 +258,9 @@ Unary Operators
 
 ## – Example:
 
+```python
 class BankAccount:
 
-```python
 def deposit(self, amount):
     if amount < 0:
         raise ValueError("negative amount")
@@ -297,9 +297,7 @@ class Diem3D(Diem):
     def __init__(self, x, y, z):
         Diem.__init__(self, x, y)
         self.z = z
-```
-
-```python
+python
 def dich_chuyen(self, dx, dy, dz):
     Diem.dich_chuyen(self, dx, dy)
     self.z += dz

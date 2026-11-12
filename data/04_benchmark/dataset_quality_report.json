@@ -1,0 +1,82 @@
+{
+  "verdict": "PASSED (XUẤT SẮC)",
+  "quality_score": 96.14,
+  "total_chunks": 7528,
+  "total_sources": 19,
+  "suite_1_schema": {
+    "passed": true,
+    "duplicate_ids": 0,
+    "missing_fields": 0,
+    "empty_chunks": 0
+  },
+  "suite_2_token_compliance": {
+    "passed": true,
+    "max_tokens": 900,
+    "min_tokens": 6,
+    "mean_tokens": 144.74,
+    "median_tokens": 136.0,
+    "p95_tokens": 292.0,
+    "exceeding_1000_tokens_count": 0,
+    "optimal_ratio_percent": 69.67
+  },
+  "suite_3_code_integrity": {
+    "passed": true,
+    "chunks_with_code": 1442,
+    "unclosed_code_blocks": 0,
+    "total_python_blocks": 1064,
+    "valid_python_ast_syntax": 243,
+    "ast_syntax_valid_rate_percent": 22.84
+  },
+  "suite_4_cleanliness": {
+    "passed": true,
+    "residual_page_comments": 0,
+    "residual_local_images": 0,
+    "residual_null_bytes": 0,
+    "non_nfc_strings": 0,
+    "excessive_blank_lines": 0
+  },
+  "suite_5_distribution": {
+    "languages": {
+      "algorithm_dsa": 3481,
+      "security": 232,
+      "python": 3815
+    },
+    "topics": {
+      "control_flow_and_loops": 1756,
+      "algorithm_complexity_math": 1587,
+      "data_structures_collections": 647,
+      "object_oriented_programming": 834,
+      "functions_and_modules": 797,
+      "gui_desktop": 172,
+      "basic_syntax_types": 262,
+      "file_io_data": 245,
+      "debugging_exceptions": 235,
+      "database_sql": 39,
+      "software_security": 69,
+      "general_programming": 623,
+      "scientific_data_libraries": 137,
+      "clean_code_pep8": 125
+    },
+    "sources": {
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA.pdf": 3476,
+      "COMMON_02_Big_O_Complexity_Cheat_Sheet.pdf": 5,
+      "COMMON_03_Microsoft_Security_Engineering.pdf": 167,
+      "COMMON_04_MITRE_CWE_Top_25_Vulnerabilities.pdf": 65,
+      "PY_01_Official_Tutorial.pdf": 653,
+      "PY_02_DataStructures_and_OOP_Classes.rst": 114,
+      "PY_03_Debugging_and_Common_Errors.pdf": 992,
+      "PY_04_PEP8_Clean_Code_Specification.rst": 125,
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.pdf": 816,
+      "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi.pdf": 86,
+      "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc.pdf": 295,
+      "VI_PY_05_Giao_Trinh_Python_Tu_Co_Ban_Den_Machine_Learning.pdf": 479,
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.pdf": 23,
+      "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON.pdf": 34,
+      "VI_PY_08_Python_Co_So_Du_Lieu_SQLite.pdf": 23,
+      "VI_PY_09_Python_Lap_Trinh_Giao_Dien_GUI_Tkinter.pdf": 5,
+      "VI_PY_10_Python_Nen_Tang_Va_Thuc_Hanh_Co_Ban.pdf": 34,
+      "VI_PY_11_Python_Huong_Dan_Thuc_Hanh_Va_Bai_Tap_Lab01.pdf": 4,
+      "VI_PY_Python_Rat_La_Co_Ban.pdf": 132
+    }
+  }
+}

@@ -186,7 +186,7 @@ Some Python modules are also useful as scripts. These can be invoked using pytho
 
 When a script file is used, it is sometimes useful to be able to run the script and enter interactive mode afterwards. This can be done by passing -i before the script.
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 On Unix, the Python 3.x interpreter is by default not installed with the executable named python, so that it does not conflict with a simultaneously installed Python 2.x executable.</span></small>
+  1 On Unix, the Python 3.x interpreter is by default not installed with the executable named python, so that it does not conflict with a simultaneously installed Python 2.x executable.
 
 All command line options are described in using-on-general.
 
@@ -344,7 +344,7 @@ In interactive mode, the last printed expression is assigned to the variable \_.
 
 This variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you would create an independent local variable with the same name masking the built-in variable with its magic behavior.
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 Since \*\* has higher precedence than -, -3\*\*2 will be interpreted as -(3\*\*2) and thus result in -9. To avoid this and get 9, you can use (-3)\*\*2.</span></small>
+  1 Since \*\* has higher precedence than -, -3\*\*2 will be interpreted as -(3\*\*2) and thus result in -9. To avoid this and get 9, you can use (-3)\*\*2.
 
 In addition to int and float, Python supports other types of numbers, such as Decimal and Fraction. Python also has built-in support for complex numbers, and uses the j or J suffix to indicate the imaginary part (e.g. 3+5j).
 
@@ -394,21 +394,17 @@ C:\some\name
 
 String literals can span multiple lines. One way is using triple-quotes: "'"'..."'"' or ''''...'''' . End of lines are automatically included in the string, but it’s possible to prevent this by adding a \ at the end of the line. The following example:
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">2 Unlike other languages, special characters such as \n have the same meaning with both single ('...') and double ("...") quotes. The only difference between the two is that within single quotes you don’t need to escape " (but you have to escape \') and vice versa.</span></small>
-
-```txt
-Display this usage message
-Hostname to connect to
-```
+  2 Unlike other languages, special characters such as \n have the same meaning with both single ('...') and double ("...") quotes. The only difference between the two is that within single quotes you don’t need to escape " (but you have to escape \') and vice versa.
 
 ```python
+Display this usage message
+Hostname to connect to
+python
 print("\"\ Usage: thingy [OPTIONS]
     -h
     -H hostname
 """)
-```
-
-```txt
+txt
 Display this usage message
 Hostname to connect to
 ```
@@ -778,11 +774,9 @@ The for statement in Python differs a bit from what you may be used to in C or P
 cat 3
 window 6
 defenestrate 12
-```
 
-If you need to modify the sequence you are iterating over while inside the loop (for example to duplicate selected items), it is recommended that you first make a copy. Iterating over a sequence does not implicitly make a copy. The slice notation makes this especially convenient:
+    If you need to modify the sequence you are iterating over while inside the loop (for example to duplicate selected items), it is recommended that you first make a copy. Iterating over a sequence does not implicitly make a copy. The slice notation makes this especially convenient:
 
-```python
 >>> for w in words[:]:  # Loop over a slice copy of the entire list.
 ...     if len(w) > 6:
 ...         words.insert(0, w)
@@ -1065,15 +1059,13 @@ print(f(3))
 
 This will print
 
-```txt
+```python
 
 [1, 2]
 [1, 2, 3]
-```
 
-If you don’t want the default to be shared between subsequent calls, you can write the function like this instead:
+    If you don’t want the default to be shared between subsequent calls, you can write the function like this instead:
 
-```python
 def f(a, L=None):
     if L is None:
         L = []
@@ -2591,11 +2583,9 @@ f.readline() reads a single line from the file; a newline character (\n) is left
 'Second line of the file\n'
 >>> f.readline()
 ''
-```
 
-For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple code:
+    For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple code:
 
-```python
 >>> for line in f:
 ...     print(line, end='')
 ...
@@ -2876,11 +2866,9 @@ The sole argument to raise indicates the exception to be raised. This must be ei
 
 ```ruby
 raise ValueError  # shorthand for 'raise ValueError()'
-```
 
-If you need to determine whether an exception was raised but don’t intend to handle it, a simpler form of the raise statement allows you to re-raise the exception:
+    If you need to determine whether an exception was raised but don’t intend to handle it, a simpler form of the raise statement allows you to re-raise the exception:
 
-```python
 >>> try:
 ...     raise NameError('HiThere')
 ... except NameError:
@@ -3052,7 +3040,7 @@ Although scopes are determined statically, they are used dynamically. At any tim
 
 If a name is declared global, then all references and assignments go directly to the middle scope containing the module’s global names. To rebind variables found outside of the innermost scope, the nonlocal statement can be used; if not declared nonlocal, those variables are read-only (an attempt to write to such a variable will simply create a new local variable in the innermost scope, leaving the identically named outer variable unchanged).
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 Except for one thing. Module objects have a secret read-only attribute called \_\_dict\_\_ which returns the dictionary used to implement the module’s namespace; the name \_\_dict\_\_ is an attribute but not a global name. Obviously, using this violates the abstraction of namespace implementation, and should be restricted to things like post-mortem debuggers.</span></small>
+  1 Except for one thing. Module objects have a secret read-only attribute called \_\_dict\_\_ which returns the dictionary used to implement the module’s namespace; the name \_\_dict\_\_ is an attribute but not a global name. Obviously, using this violates the abstraction of namespace implementation, and should be restricted to things like post-mortem debuggers.
 
 Usually, the local scope references the local names of the (textually) current function. Outside functions, the local scope references the same namespace as the global scope: the module’s namespace. Class definitions place yet another namespace in the local scope.
 
@@ -3355,9 +3343,12 @@ class DerivedClassName(BaseClassName):
 
 The name BaseClassName must be defined in a scope containing the derived class definition. In place of a base class name, other arbitrary expressions are also allowed. This can be useful, for example, when the base class is defined in another module:
 
-```python
-class DerivedClassName(modname.BaseClassName):
+```txt
+
 ```
+
+python
+class DerivedClassName(modname.BaseClassName):
 
 Execution of a derived class definition proceeds the same as for a base class. When the class object is constructed, the base class is remembered. This is used for resolving attribute references: if a requested attribute is not found in the class, the search proceeds to look in the base class. This rule is applied recursively if the base class itself is derived from some other class.
 
@@ -3508,9 +3499,7 @@ class Reverse:
             raise StopIteration
         self.index = self.index - 1
         return self.data[self.index]
-```
-
-```python
+txt
 >>> rev = Reverse('spam')
 >>> iter(rev)
 <__main__.Reverse object at 0x00A1DB50>
@@ -3531,9 +3520,7 @@ Generators are a simple and powerful tool for creating iterators. They are writt
 def reverse(data):
     for index in range(len(data)-1, -1, -1):
         yield data[index]
-```
-
-```python
+python
 >>> for char in reverse('golf'):
 ...     print(char)
 ...
@@ -3601,11 +3588,9 @@ The built-in dir() and help() functions are useful as interactive aids for worki
 <returns a list of all module functions>
 >>> help(os)
 <returns an extensive manual page created from the module's docstrings>
-```
 
-For daily file and directory management tasks, the shutil module provides a higher level interface that is easier to use:
+    For daily file and directory management tasks, the shutil module provides a higher level interface that is easier to use:
 
-```python
 >>> import shutil
 >>> shutil.copyfile('data.db', 'archive.db')
 'archive.db'
@@ -4097,9 +4082,7 @@ The collections module provides a deque() object that is like a list with faster
 >>> d.append("task4")
 >>> print("Handling", d.popleft())
 Handling task1
-```
-
-```python
+python
 unsearched = deque([starting_node])
 def breadth_first_search(unsearched):
     node = unsearched.popleft()
@@ -4652,7 +4635,7 @@ On Windows systems, there is no notion of an “executable mode”. The Python i
 
 When you use Python interactively, it is frequently handy to have some standard commands executed every time the interpreter is started. You can do this by setting an environment variable named PYTHONSTARTUP
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 A problem with the GNU Readline package may prevent this.</span></small>
+  1 A problem with the GNU Readline package may prevent this.
 
 to the name of a file containing your start-up commands. This is similar to the .profile feature of the Unix shells.
 
@@ -4873,9 +4856,7 @@ Each yield temporarily suspends processing, remembering the location execution s
 ```python
 >>> sum(i*i for i in range(10))
 285
-```
-
-```txt
+txt
 # sum of squares 0, 1, 4, ... 81
 ```
 

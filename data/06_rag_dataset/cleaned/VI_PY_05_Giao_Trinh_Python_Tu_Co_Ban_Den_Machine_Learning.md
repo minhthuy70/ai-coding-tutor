@@ -439,11 +439,9 @@ print("List sau khi cap nhat:", features)
 
 Listing 2.4: Sử dụng cấu trúc điều kiện
 
-```txt
-score = 0.85
-```
-
 ```python
+score = 0.85
+python
 if score >= 0.8:
     print("Mo hinh dat do chinh xac cao")
 else:
@@ -596,9 +594,7 @@ class SimpleLinearRegression:
         denominator = sum((X[i] - mean_x) ** 2 for i in range(n))
 
         if denominator == 0:
-```
-
-```python
+python
 raise ValueError("Bao loi: Phuong sai cua X bang 0, khong
     the tinh toan.")
 
@@ -759,9 +755,7 @@ data_vnm = {
 df_mock = pd.DataFrame(data_vnm)
 
 df_mock.to_csv('vinamilk_stock.csv', index=False)
-```
-
-```lua
+lua
 CHƯƠNG 4. X smile DUI LIỆU VỚI NUMPY VÀ PANDAS (NUMPY & PANDAS) 16
 
 print("Đã ạo thành công file 'vinamilk_stock.csv' trong uth ụmc êhin ạti"))
@@ -1180,9 +1174,7 @@ print(imp.fit_transform(X).round(4))
 # Mac dinh BayesianRidge, 10 vong, gioi han mien gia tri theo du lieu
     quan sat
 lo, hi = np.nanmin(X, axis=0), np.nanmax(X, axis=0)
-```
-
-```python
+python
 imp = IterativeImputer(max_iter=10, min_value=lo, max_value=hi,
     random_state=0)
 print(imp.fit_transform(X).round(3))
@@ -1476,9 +1468,7 @@ data = np.array(["red", "blue", "red", "red", "blue",
 
 ohe = OneHotEncoder(handle_unknown="ignore")
 X = ohe.fit_transform(data)      # ket qua la ma tran thua (sparse)
-```
-
-```python
+python
 print(ohe.get_feature_names_out())
 # ['x0_blue' 'x0_orange' 'x0_red' 'x0_white'] (sap xep alphabet)
 print(X.toarray()[:3])
@@ -1769,9 +1759,7 @@ for scaler in [MinMaxScaler(), MaxAbsScaler(),
                    StandardScaler(), RobustScalerSalary):
     print(type(scaler).__name__, scaler.fit_transform(x).ravel().
         round(4))
-```
-
-```txt
+txt
 # MinMaxScaler      [0.       0.0714 0.1429 0.2143 1.     ]
 # MaxAbsScaler      [0.0667 0.1333 0.2       0.2667 1.     ]
 # StandardScaler [-0.7845 -0.5883 -0.3922 -0.1961 1.9612]
@@ -1947,14 +1935,10 @@ print(missing[missing > 0].sort_values(ascending=False))
 df.loc[df["Garage Yr Blt"] > 2010, "Garage Yr Blt"] = None
 df = df[df["Gr Liv Area"] <= 4000]
 print(df.shape)
-```
-
-```lua
+lua
 print(df["Exter Qual"].value_counts())
 print(df[["Lot Area", "Gr Liv Area", "SalePrice"]].describe())
-```
-
-```ini
+ini
 [Chỗ chèn hình]
 images/ch-preprocessing-ames-outliers.png
 ```
@@ -1994,9 +1978,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 preprocess = ColumnTransformer([
     ("nom", Pipeline([
-```
-
-```python
+python
 ("impute", SimpleImputer(strategy="most_frequent")),
         ("onehot", OneHotEncoder(handle_unknown="ignore")),
     ]), nominal),
@@ -2177,9 +2159,7 @@ from sklearn.linear_model import LinearRegression
 # 1. Tao du lieu gia dinh
 X = np.array([[1], [2], [3], [4], [5]])
 y = np.array([2.1, 3.9, 6.1, 8.2, 9.9])
-```
-
-```python
+python
 # 2. Khoi tao va huan luyen mo hình
 model = LinearRegression()
 model.fit(X, y)
@@ -2339,9 +2319,7 @@ from sklearn.neighbors import KNeighborsClassifier
 knn = make_pipeline(StandardScaler(), KNeighborsClassifier(
     n_neighbors=5))
 knn.fit(X_train, y_train)
-```
-
-```python
+python
 print("Accuracy:", knn.score(X_test, y_test))
 
 # Cac vi du tinh tay o tren
@@ -2590,9 +2568,7 @@ models = {
         (max_iter=1000)),
     "DecisionTree": DecisionTreeClassifier(max_depth=3, random_state
         =42),
-```
-
-```python
+python
 "SVM":            make_pipeline(StandardScaler(), SVC()),
 }
 for name, m in models.items():
@@ -2768,9 +2744,7 @@ perm = permutation_importance(rf, X_test, y_test, n_repeats=10,
     random_state=0)
 print(pd.Series(perm.importances_mean, index=data.feature_names)
     .sort_values(ascending=False).head(5))
-```
-
-```ini
+ini
 [Chô chèn hình]
 images/ch-ensemble-rf-importance.png
 ```
@@ -3214,9 +3188,7 @@ print(dbscan.labels_)          # [-1 -1 0 1 0 0 -1 1 1]
 
 print(dbscan.core_sample_indices_)   # [2 4 5 7]
 print(dbscan.components_)         # toa do cac diem loi
-```
-
-```txt
+txt
 [Chỗ chèn hình]
 images/ch-clustering-dbscan.png
 ```
@@ -3276,9 +3248,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
 # customers: DataFrame cac cot so (tuoi, thu nhap, so lan mua, tong chi tieu)
-```
-
-```python
+python
 seg = make_pipeline(StandardScaler(), KMeans(n_clusters=4, n_init=10,
     random_state=0))
 labels = seg.fit_predict(customers)
@@ -3538,9 +3508,7 @@ Lưu ý: vector suy biến chỉ xác định duy nhất đến **dấu**: NumPy
 
 Định lý trên gợi ý cách tính SVD bằng tay cho ma trận có nhiều dòng: (1) lập $\mathbf{X}^{\top}\mathbf{X}-$ ma trận vuông, đối xứng, kích thước bằng số cột; (2) tìm các trị riêng $\lambda_{i}$ và vector riêng đơn vị $v_{i}$ của nó; (3) giá trị suy biến $\sigma_{i} = \sqrt{\lambda_{i}}$ ; (4) vector suy biến trái $\mathbf{u}_i = \mathbf{X}\mathbf{v}_i / \sigma_i$
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 $\text{Ví dụ 10.5 (SVD của ma trận } 5 \times 2). Cho \mathbf{X} = \begin{pmatrix} 3 &amp; 7 \\ 1 &amp; 5 \\ 6 &amp; 4 \\ 8 &amp; 1 \\ 2 &amp; 3 \end{pmatrix}.$
-</div>
 
 Bước 1 - lập X$^{\top}$**X :**
 
@@ -3587,9 +3555,7 @@ for ax, k in zip(axes, [5, 20, 50, 512]):
     ax.set_title(f"k = {k}");
 ax.axis("off")
 plt.show()
-```
-
-```txt
+txt
 [Chỗ chèn hình]
 images/ch-reduce-svd-image.png
 ```
@@ -3719,9 +3685,7 @@ Z = pca.transform(X)                 # [2.8491 2.5216 -2.1493
        -3.0973 -0.1241]
 X_rec = pca.inverse_transform(Z)      # tai tao (nam tren duong
        PC1)
-```
-
-```txt
+txt
 [Chô chèn hình]
 images/ch-reduce-pca-2d.png
 ```
@@ -3757,9 +3721,7 @@ plt.ylabel("Phuong sai tich luy"); plt.show()
 Z = PCA(n_components=2).fit_transform(digits.data)
 plt.scatter(Z[:, 0], Z[:, 1], c=digits.target, cmap="tab10", s=8)
 plt.colorbar(); plt.show()
-```
-
-```ini
+ini
 [Chô chèn hình]
 images/ch-reduce-pca-variance.png
 ```
@@ -3979,9 +3941,7 @@ from sklearn.linear_model import LogisticRegression
 
 model = make_pipeline(StandardScaler(), LogisticRegression(max_iter
 =1000))
-```
-
-```python
+python
 CV = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 scores = cross_val_score(model, X_tmp, y_tmp, cv=cv, scoring="accuracy")
 print(scores.round(4), scores.mean().round(4), scores.std().round(4))
@@ -4073,9 +4033,7 @@ print("AUC:", roc_auc_score(y_test, y_score))
 
 ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
 RocCurveDisplay.from_predictions(y_test, y_score)
-```
-
-```txt
+txt
 [Chỗ chèn hình]
 images/ch-validation-roc.png
 ```
@@ -4154,9 +4112,7 @@ rand = RandomizedSearchCV(pipe, {"svc__C": loguniform(1e-2, 1e3),
                 =0, n_jobs=-1)
 rand.fit(X_tmp, y_tmp)
 print(rand.best_params_)
-```
-
-```ini
+ini
 [Chỗ chèn hình]
 images/ch-validation-grid-heatmap.png
 ```
@@ -4348,9 +4304,7 @@ class Perceptron:
         if errors == 0:          # hoi tu
             break
         return self
-```
-
-```python
+python
 def predict(self, X):
         return (np.dot(X, self.w) + self.b >= 0).astype(int)
 
@@ -4431,11 +4385,9 @@ $$
 
 **Lan truyền xuôi:**
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 $z_{1} = 0,1\cdot 1 + 0,2\cdot 0,5 + 0,1 = 0,3,$ $h_1 = \sigma (0,3) = 0,5744,$
 $z_{2} = 0,3\cdot 1 + 0,4\cdot 0,5 + 0,1 = 0,6,$ $h_2 = \sigma (0,6) = 0,6457,$
 $z_{o} = 0,5\cdot 0,5744 + 0,6\cdot 0,6457 + 0,1 = 0,7746,$ $o = \sigma (0,7746) = 0,6845,$
-</div>
 
 mất mát $L = \frac{1}{2} (1 - 0,6845)^{2} = 0,0498.$
 
@@ -4563,9 +4515,7 @@ Listing 12.5: MLPRegressor dự đoán giá nhà Ames
 ```python
 from sklearn.neural_network import MLPRegressor
 from sklearn.compose import TransformedTargetRegressor
-```
-
-```julia
+julia
 # preprocess: ColumnTransformer da xay dung o Chuong Tien xu ly du
     lieu
 reg = make_pipeline(preprocess,
@@ -4613,9 +4563,7 @@ Listing 12.7: Vòng lặp huấn luyện tối giản với PyTorch
 ```python
 import torch
 from torch import nn
-```
-
-```python
+python
 net = nn.Sequential(nn.Linear(64, 128), nn.ReLU(), nn.Linear(128, 10)
 )
 opt = torch.optim.Adam(net.parameters(), lr=1e-3)

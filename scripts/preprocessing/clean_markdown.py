@@ -90,6 +90,37 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
         stats["removed_page_numbers"] += len(matches)
         text = re.sub(pat, '', text, flags=re.MULTILINE | re.IGNORECASE)
 
+    # 3.1. Loại bỏ các thẻ HTML wrapper của MinerU (docvortex algorithm, footnotes, small, font)
+    text = re.sub(r'<div class="docvortex-[^"]*"[^>]*>', '\n', text, flags=re.IGNORECASE)
+    text = re.sub(r'</div>', '\n', text, flags=re.IGNORECASE)
+    text = re.sub(r'<span class="docvortex-[^"]*"[^>]*>', ' ', text, flags=re.IGNORECASE)
+    text = re.sub(r'</span>', ' ', text, flags=re.IGNORECASE)
+    text = re.sub(r'</?(?:small|font|center)[^>]*>', ' ', text, flags=re.IGNORECASE)
+
+    # 3.2. Chuyển đổi khối mã thụt lề RST (::\n\n    code) sang markdown fenced code blocks (```python)
+    import textwrap
+    def repl_rst(match):
+        code = textwrap.dedent(match.group(1)).strip()
+        return f':\n\n```python\n{code}\n```\n\n'
+    text = re.sub(r'::\s*\n\n((?: {4}[^\n]*\n|\n)+)', repl_rst, text)
+
+    # 3.3. Xóa các khối code rỗng (```txt\n```) sinh ra do lỗi ngắt trang
+    text = re.sub(r'```[a-zA-Z0-9_\-]*\s*\n*\s*```\n?', '', text)
+
+    # 3.4. Nối liền các đoạn code bị cắt đứt giữa thân hàm do sang trang PDF (Page-break stitch)
+    broken_code_pagebreak_pat = re.compile(
+        r'```\s*\n+(?:(?:python|Python|\d+)\s*\n+)?((?:def|class|if|for|while|\s{4,})[^\n`]+:\s*)\n+```(?:python|py)?\n',
+        re.IGNORECASE
+    )
+    text = broken_code_pagebreak_pat.sub(r'\n    \1\n', text)
+
+    # 3.5. Ghép khai báo class/def mồ côi nằm lẻ loi trước ```python vào bên trong code block
+    strict_orphaned_pat = re.compile(
+        r'(?:python\s*\n+)?((?:class\s+[A-Za-z_]\w*(?:\([^)]*\))?|def\s+[A-Za-z_]\w*\([^)]*\)):\s*)\n+```(?:python|py)?\n',
+        re.IGNORECASE
+    )
+    text = strict_orphaned_pat.sub(r'```python\n\1\n', text)
+
     # 4. Xóa watermark và tiêu đề lặp lại vô nghĩa
     watermark_pat = r'^\s*(?:DRAFT|CONFIDENTIAL|INTERNAL USE ONLY|BẢN THẢO)\s*$'
     text = re.sub(watermark_pat, '', text, flags=re.MULTILINE | re.IGNORECASE)

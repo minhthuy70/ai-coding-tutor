@@ -344,9 +344,7 @@ Có thể tìm vị trí của một chuỗi con trong chuỗi lớn bằng
 ```txt
 cách gọi phương thức find(str, beg=0
 end=len(string)). Bắt đầu là vị trí 0, nếu không tìm ra thì trả về -1. Ví dụ:
-```
-
-```lua
+lua
 str = 'Hello world'
 print str.find('world')
 (hiền thị 6)
@@ -782,9 +780,7 @@ class myclass([parentclass]):
 
 ```python
 class animal():
-```
-
-```python
+python
 name = ''
 age = 0
 def __init__(self, name = '', age = 0):
@@ -984,9 +980,7 @@ os.chown(path, uid, gid) : CHOWN một đường dẫn
 
 ```txt
 - os.makedirs(path[, mode]): tạo đường dẫn (có recursive)
-```
-
-```txt
+txt
 - os.removedirs(path): xóa một đường dẫn (có recursive)
 ```
 
@@ -1086,9 +1080,7 @@ response = urllib2.urlopen('https://api.github.com/users/voduytuan/repos')
 data = json.load(response)
 
 print data
-```
-
-```csv
+csv
 Ví dụ trên sẽ truy vấn đường dẫn
 https://api.github.com/users/voduytuan/repos để lấy danh
 sách Repository trên Github của mình dưới định dạng
@@ -1166,9 +1158,7 @@ note = '''
     </food>
     <food>
         <name>Strawberrv Belgian Waffles</name>
-```
-
-```python
+python
 <price>\$7.95</price>
     <description>Light Belgian waffles covered with strawberries and whipped cream</description>
     <calories>900</calories>
@@ -1295,9 +1285,7 @@ cursor = db.cursor()
 sql = 'SELECT * FROM user'
 cursor.execute(sql)
 myusers = cursor.fetchall()
-```
-
-```txt
+txt
 Ví dụ dữ liệu biến myusers là: ((1, 'John'), (2, 'Doe'))
 ```
 

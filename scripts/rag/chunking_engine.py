@@ -119,6 +119,39 @@ def generate_short_prefix(filename: str) -> str:
     if "py_04" in fn: return "py04_pep8"
     return Path(filename).stem[:8].lower()
 
+def split_oversized_code_block(code_content: str, max_tokens: int = 800) -> List[str]:
+    """
+    Nếu một khối mã nguồn quá dài vượt ngưỡng an toàn (> 800 tokens),
+    chia nhỏ khối code theo các dòng nhưng luôn đảm bảo mỗi phần con
+    được bọc trọn vẹn trong cặp ```<lang> ... ``` hợp lệ.
+    """
+    lines = code_content.strip().splitlines()
+    if not lines:
+        return [code_content]
+    header = lines[0]
+    footer = "```"
+    body_lines = lines[1:-1] if lines[-1].startswith("```") else lines[1:]
+
+    sub_blocks = []
+    curr_lines = []
+
+    for line in body_lines:
+        curr_lines.append(line)
+        test_block = f"{header}\n" + "\n".join(curr_lines) + f"\n{footer}"
+        if count_tokens(test_block) >= max_tokens:
+            if len(curr_lines) > 1:
+                last_line = curr_lines.pop()
+                sub_blocks.append(f"{header}\n" + "\n".join(curr_lines) + f"\n{footer}")
+                curr_lines = [last_line]
+            else:
+                sub_blocks.append(test_block)
+                curr_lines = []
+
+    if curr_lines:
+        sub_blocks.append(f"{header}\n" + "\n".join(curr_lines) + f"\n{footer}")
+
+    return sub_blocks if sub_blocks else [code_content]
+
 def safe_code_aware_split(text: str, chunk_size: int = 700, chunk_overlap: int = 120) -> List[str]:
     """
     Chia nhỏ đoạn văn bản đảm bảo không cắt ngang bất kỳ khối code (```) nào.
@@ -183,7 +216,11 @@ def safe_code_aware_split(text: str, chunk_size: int = 700, chunk_overlap: int =
                     chunks.append(current_chunk)
                     current_chunk = ""
                 # Khối code đứng độc lập làm 1 chunk riêng biệt để bảo toàn hàm/class
-                chunks.append(b_content)
+                if count_tokens(b_content) > 900:
+                    for sub_b in split_oversized_code_block(b_content, max_tokens=700):
+                        chunks.append(sub_b)
+                else:
+                    chunks.append(b_content)
 
     if current_chunk:
         chunks.append(current_chunk)

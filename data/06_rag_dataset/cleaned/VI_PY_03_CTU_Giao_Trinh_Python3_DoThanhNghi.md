@@ -176,9 +176,7 @@ word = 'word'
 sentence = "This is a sentence."
 message = """This message will
 ... span several lines.""""
-```
-
-```lua
+lua
 print("False")
 ```
 
@@ -221,9 +219,7 @@ def hi(name):
     print('Hello ' + name)
     print('Have a good day!')
 hi('nghi')
-```
-
-```perl
+perl
 >>> print('hello')
 hello
 >>> print('hi','there')
@@ -289,9 +285,7 @@ Computer 10 1000.23
 >>> x, y = y, x
 >>> print(x, y)
 2 1
-```
-
-```lua
+lua
 >>> var1 = "Python"
 >>> def func1():
 ...     var1 = "PHP"
@@ -305,9 +299,7 @@ Computer 10 1000.23
 In side func1() var1 =  PHP
 >>> func2()
 In side func2() global var1 =  Python
-```
-
-```diff
+diff
 Biến, kiểu cơ bản, phép toán
 >>> x = 7.2
 >>> x
@@ -326,9 +318,7 @@ Biến, kiểu cơ bản, phép toán
 >>> t = 2-1j
 >>> z+t
 (5+1j)
-```
-
-```csv
+csv
 Biến, kiểu cơ bản, phép toán
 >>> x = 7
 >>> y = 2
@@ -346,9 +336,7 @@ Biến, kiểu cơ bản, phép toán
 >>> b = True
 >>> type(b)
 <class 'bool'>
-```
-
-```python
+txt
 >>> s = 'Hello World!'
 >>> type(s)
 <class 'str'>
@@ -385,9 +373,7 @@ if (a==0):
 else:
     x = -b/a
     print('x = ', x)
-```
-
-```python
+python
 Cấu trúc điều khiển
 25
 • Cấu trúc lặp while
@@ -405,9 +391,7 @@ Cấu trúc điều khiển
             i = i + 1
 
         print('s = 1 + 2 + ... + %d = %d' %(n, s))
-```
-
-```python
+txt
 Cấu trúc điều khiển
 26
 • Cấu trúc lặp for
@@ -415,9 +399,7 @@ Cấu trúc điều khiển
         ...
         loop_body
         ...
-```
-
-```diff
+diff
 • Hàm xây dựng sẵn trong các mô-đun
 >>> import os
 >>> import random as rand
@@ -467,9 +449,7 @@ if you attend the birthday party of Tutu
 Dear Philippe
 It will be a great pleasure
 if you attend the birthday party of Tutu
-```
-
-```python
+txt
 >>> def addTwo(a, b):
 ...     return a + b
 ...
@@ -484,9 +464,7 @@ if you attend the birthday party of Tutu
 >>> p, q = divide(x, y)
 >>> print(p, q)
 0.666666666666666 2
-```
-
-```python
+python
 >>> def gcd(m, n):
 ...     while (m != n):
 ...             if (m > n):
@@ -504,9 +482,7 @@ if you attend the birthday party of Tutu
 >>> x, y = 2, 5
 >>> coPrime(x, y)
 2 and 5 are co-prime
-```
-
-```python
+python
 >>> def fact(n):
 ...     if (n == 1):
 ...             return 1
@@ -559,9 +535,7 @@ Another line.
 One line,
 another line,
 and some...
-```
-
-```python
+txt
 >>> a = "58"
 >>> type(a)
 <class 'str'>
@@ -579,9 +553,7 @@ and some...
 0.0012
 >>> eval('23-12')
 11
-```
-
-```python
+txt
 >>> a = "Part 1"
 >>> b = "and part 2"
 >>> a + ' ' + b
@@ -599,9 +571,7 @@ Part 1Part 1
 '1'
 >>> s[6:-1]
 'Part '
-```
-
-```python
+python
 >>> print(s)
 Part 1Part 1
 >>> len(s)
@@ -643,9 +613,7 @@ True
 ' a string, with stuff'
 >>> 'newlines\n\n\n'.strip()
 ' newlines
-```
-
-```txt
+txt
 Kiểu List
 Ordered collection of objects
 >>> r
@@ -664,9 +632,7 @@ Ordered collection of objects
 >>> t = [0.0] * 10
 >>> t
 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-```
-
-```txt
+txt
 >>> r = [1, 2.0, 3, 5]
 >>> r[3] = 'word'
 >>> r
@@ -686,9 +652,7 @@ Ordered collection of objects
 True
 >>> r.index(6)
 1
-```
-
-```txt
+txt
 >>> r = [1, 2.0, 3, 5]
 >>> r.append('thing')
 >>> r
@@ -705,9 +669,7 @@ True
 'another'
 >>> r
 [1, 2.0, 3, 5, 'item']
-```
-
-```txt
+txt
 >>> r = [2, 5, -1, 0, 20]
 >>> r.sort()
 >>> r
@@ -725,9 +687,7 @@ True
 ['1', '1234', '2', 'apa']
 >>> w
 ['apa', '2', '1234', '1']
-```
-
-```coffeescript
+coffeescript
 >>> s = 'biovitrum'
 >>> w = list(s)
 >>> w
@@ -793,9 +753,7 @@ Kiểu Tuples (as List, except immutable)
 [1, 3, 2]
 >>> tuple(r)
 (1, 3, 2)
-```
-
-```txt
+txt
 >>> h = {'key': 12, 'nyckel': 'word'}
 >>> h['key']
 12
@@ -835,9 +793,7 @@ KeyError: 'Per'
 ['word', 12]
 >>> len(h)
 2
-```
-
-```txt
+txt
 >>> h = {'key': 12, 'nyckel': 'word'}
 >>> g = h.copy()
 >>> del h['key']
@@ -950,9 +906,7 @@ Total Employee: 2
 Name: Tutu, Salary: 5000
 >>> print("Total Employee: %d" %Employee.empCount)
 Total Employee: 2
-```
-
-```python
+python
 >>> emp1.age = 7
 >>> emp1.age
 7
@@ -1026,9 +980,7 @@ Hàm super()
 ...             print("%s meow" %self.name)
 ...
 >>>
-```
-
-```txt
+txt
 Kế thừa (đa hình)
 >>> a = Animal()
 >>> a.say()
@@ -1043,9 +995,7 @@ Flappy twitter
 >>> c.say()
 Kitty meow
 >>>
-```
-
-```python
+python
 >>> class Owl(Bird,Cat):
 ...     pass
 ...
@@ -1124,9 +1074,7 @@ str
 >>> p2 = Point2D(5,-2)
 >>> print(p1 + p2)
 Point2D (7.000000, 8.000000)
-```
-
-```python
+python
 >>> class JustCounter:
 ...     __secretCount = 0
 ...
@@ -1190,9 +1138,7 @@ Enter a float num: 7.2
 Enter your input: [x*5 for x in range(2,10,2)]
 >>> print(eval(istr))
 [10, _20, 30, 40]
-```
-
-```python
+python
 • Hàm
     file_obj = open(file_name [, access_mode][, buffering])
     file_obj.close()
@@ -1242,9 +1188,7 @@ File content is :
   Python is a great language.
 Yeah its great!!
 >>> fo.close()
-```
-
-```python
+txt
 >>> import os
 >>> os.rename("foo.txt", "foo1.txt")
 >>> os.remove("foo1.txt")
@@ -1291,9 +1235,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 2, in KelvinToFahrenheit
 AssertionError: Colder than absolute zero!
-```
-
-```python
+python
 >>> try:
 ...     fh = open("testfile", "r")
 ...     fh.write("This is my test file for exception handling!!")
@@ -1306,9 +1248,7 @@ AssertionError: Colder than absolute zero!
 ...
 Error: can't find file or read data
 This would always be executed!!
-```
-
-```python
+python
 Ngoại lệ
 73
 
@@ -1583,9 +1523,7 @@ ftp.login(USER_NAME, PASSWD)
 print("File list at %s:%s" %(FTP_SERVER, ftp.pwd()))
 print(ftp.retrlines('LIST'))
 ftp.quit()
-```
-
-```python
+python
 import ftplib
 
 FTP_SERVER = '172.30.35.70'
@@ -1602,9 +1540,7 @@ f = open(FILE_NAME, "wb")
 ftp.retrbinary('RETR ' + FILE_NAME, f.write)
 f.close()
 ftp.quit()
-```
-
-```python
+python
 import ftplib
 
 FTP_SERVER = '172.30.35.70'
@@ -1620,9 +1556,7 @@ ftp.login(USER_NAME, PASSWD)
 ftp.storbinary("STOR " + FILE_NAME, open(FILE_NAME, "rb"), 1024)
 print("Uploaded file: %s" %FILE_NAME)
 ftp.quit()
-```
-
-```python
+python
 GUI email sử dụng SMTP của Google
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -1709,9 +1643,7 @@ print('%s\n' % data[0][1])
 
 mailbox.close()
 mailbox.logout()
-```
-
-```python
+python
 import http.client as httplib
 httpconn = httplib.HTTPConnection("172.18.54.56", 80)
 httpconn.request("GET", "/hello.html")
@@ -1737,9 +1669,7 @@ if resp.status == 200:
     print(resp_head)
 
 httpconn.close()
-```
-
-```python
+python
 import http.client as httplib
 import urllib.parse
 
@@ -1805,17 +1735,13 @@ print('<body>')
 print('<h2>Hello World! This is my first CGI program</h2>')
 print '</body>')
 print '</html>')
-```
-
-```erb
+erb
 1 <form action="/cgi-bin/hello_post.py" method="post">
 2 First Name: <input type="text" name="first_name"><br>
 3 Last Name: <input type="text" name="last_name">
 4 <input type="submit" value="Submit">
 5 </form>
-```
-
-```python
+python
 #!/usr/bin/python3
 # Import modules for CGI handling
 import cgi, cgitb
@@ -1836,18 +1762,14 @@ print("<body>")
 print("<h2>Hello %s %s</h2>" % (first_name, last_name))
 print("</body>")
 print("</html>")
-```
-
-```html
+html
 radio-form.html
     <form action="/cgi-bin/radiobutton.py" method="post">
         <input type="radio" name="subject" value="maths"> Maths
         <input type="radio" name="subject" value="physics"> Physics
         <input type="submit" value="Select Subject">
             </form>
-```
-
-```python
+python
 #!/usr/bin/python3
 
 # Import modules for CGI handling
@@ -1875,7 +1797,7 @@ print("</html>")
 
 ## Lập trình Web
 
-```txt
+```python
 <form action="/cgi-bin/dropdown.py" method="post">
 <select name="dropdown">
 <option value="Maths" selected>Maths</option>
@@ -1883,9 +1805,7 @@ print("</html>")
 </select>
 <input type="submit" value="Submit">
 </form>
-```
-
-```python
+python
 dropdown.py ×
 #!/usr/bin/python3
 
@@ -1966,9 +1886,7 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 mycursor.execute("CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))")
-```
-
-```python
+python
 import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
@@ -1985,9 +1903,7 @@ mycursor.execute(sql, val)
 mydb.commit()
 
 print(mycursor.rowcount, "record inserted.")
-```
-
-```python
+python
 import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
@@ -2000,9 +1916,7 @@ mycursor.execute("SELECT * FROM customers")
 myresult = mycursor.fetchall()
 for x in myresult:
     print(x)
-```
-
-```python
+python
 select1.py ×
 import mysql.connector
 mydb = mysql.connector.connect(
@@ -2045,9 +1959,7 @@ root = Tk()
 w = Label(root, text="Hello Tkinter!")
 w.pack()
 root.mainloop()
-```
-
-```python
+python
 from Tkinter import *
 
 root = Tk()
@@ -2068,9 +1980,7 @@ Label(root,
     font = "Verdana 10 bold").pack()
 
 root.mainloop()
-```
-
-```python
+python
 from Tkinter import *
 root = Tk()
 img = PhotoImage(file='python.gif')
@@ -2127,9 +2037,7 @@ tk.Radiobutton(root,
     variable=v,
     value=2).pack(anchor Republic)
 root.mainloop()
-```
-
-```python
+python
 import Tkinter as tk
 
 root = tk.Tk()
@@ -2138,9 +2046,7 @@ tk.Checkbutton(root, text="male", variable=var1).grid(row=0, sticky(tk.W)
 var2 = tk.IntVar()
 tk.Checkbutton(root, text="female", variable=var2).grid(row=1, sticky(tk.W)
 root.mainloop()
-```
-
-```python
+python
 import Tkinter as tk
 
 def show_values():
@@ -2174,9 +2080,7 @@ e2.grid(row=1, column=1)
 tk.Button(root, text='Quit', command=root.quit).grid(row=3, column=0, sticky(tk.W, pady=4)
 tk.Button(root, text='Show', command=show_entries).grid(row=3, column=1, sticky(tk.W, pady=4)
 root.mainloop( )
-```
-
-```python
+python
 import Tkinter as tk
 
 def show_text():
@@ -2237,9 +2141,7 @@ plt.show()
     '.' = points
     'o' = filled circles
     '^' = filled triangles
-```
-
-```python
+python
 • Ví dụ đơn giản với label, title, legend, ylim, linestyle
 from matplotlib import pyplot as plt
 import numpy as np
@@ -2333,9 +2235,7 @@ import matplotlib.pyplot as plt value1 = [82,76,24,40,67,62,75,78, 71,32,98,89,7
 ```txt
 box_plot_data=[value1,value2,value3,value4]
 plt.boxplot(box_plot_data,patch_artist=True,
-```
-
-```python
+python
 labels=['course1','course2','course3','course4'])
 plt.show()
 ```
@@ -2382,9 +2282,7 @@ line, = ax.plot(x, y, lw=2)
 def init():
     line.set_data([], [])
     return line,
-```
-
-```python
+python
 • Vẽ đồ thị với Matplotlib
 # animation function. This is called sequentially
 def animate(i):

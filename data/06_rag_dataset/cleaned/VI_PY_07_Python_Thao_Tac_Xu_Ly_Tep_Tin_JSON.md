@@ -80,12 +80,10 @@ json.dumps(pythonDictionary)
 
 import json, requests
 
-```txt
+```python
 result = requests.get('https://dummyjson.com/products')
 pythondict = result.json()
-```
-
-```python
+txt
 print(json.dumps(pythondict, indent=4))
 print(list(pythondict.keys()))
 ```
@@ -218,9 +216,7 @@ Average,,,,56.25
 import csv
 workbook_file = open('Workbook1.csv','r')
 workbook_reader = csv.reader(workbook_file)
-```
-
-```python
+python
 for row in workbook_reader:
     print(row)
 ```
@@ -378,18 +374,14 @@ Eile Edit View Navigate Code Refactor Run Iools VCS Window Help FileFactory-Exce
 # Tạo một file excel cùng 1 sheet
 workbook = xlsxwriter.Workbook('demo.xlsx')
 worksheet = workbook.add_worksheet()
-```
-
-```python
+python
 # thiết lập các cột cho file
 worksheet.set_column('A:A', 5)
 worksheet.set_column('B:B', 15)
 worksheet.set_column('C:C', 20)
 worksheet.set_column('D:D', 15)
 worksheet.set_column('E:E', 15)
-```
-
-```python
+python
 # định dạng tiêu đề cột in đậm
 bold = workbook.add_format({'bold': True})
 ```
