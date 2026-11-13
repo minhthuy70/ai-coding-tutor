@@ -186,8 +186,6 @@ Some Python modules are also useful as scripts. These can be invoked using pytho
 
 When a script file is used, it is sometimes useful to be able to run the script and enter interactive mode afterwards. This can be done by passing -i before the script.
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 On Unix, the Python 3.x interpreter is by default not installed with the executable named python, so that it does not conflict with a simultaneously installed Python 2.x executable.</span></small>
-
 All command line options are described in using-on-general.
 
 ## 2.1.1 Argument Passing
@@ -344,8 +342,6 @@ In interactive mode, the last printed expression is assigned to the variable \_.
 
 This variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you would create an independent local variable with the same name masking the built-in variable with its magic behavior.
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 Since \*\* has higher precedence than -, -3\*\*2 will be interpreted as -(3\*\*2) and thus result in -9. To avoid this and get 9, you can use (-3)\*\*2.</span></small>
-
 In addition to int and float, Python supports other types of numbers, such as Decimal and Fraction. Python also has built-in support for complex numbers, and uses the j or J suffix to indicate the imaginary part (e.g. 3+5j).
 
 ## 3.1.2 Strings
@@ -393,8 +389,6 @@ C:\some\name
 ```
 
 String literals can span multiple lines. One way is using triple-quotes: "'"'..."'"' or ''''...'''' . End of lines are automatically included in the string, but it’s possible to prevent this by adding a \ at the end of the line. The following example:
-
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">2 Unlike other languages, special characters such as \n have the same meaning with both single ('...') and double ("...") quotes. The only difference between the two is that within single quotes you don’t need to escape " (but you have to escape \') and vice versa.</span></small>
 
 ```txt
 Display this usage message
@@ -3052,8 +3046,6 @@ Although scopes are determined statically, they are used dynamically. At any tim
 
 If a name is declared global, then all references and assignments go directly to the middle scope containing the module’s global names. To rebind variables found outside of the innermost scope, the nonlocal statement can be used; if not declared nonlocal, those variables are read-only (an attempt to write to such a variable will simply create a new local variable in the innermost scope, leaving the identically named outer variable unchanged).
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 Except for one thing. Module objects have a secret read-only attribute called \_\_dict\_\_ which returns the dictionary used to implement the module’s namespace; the name \_\_dict\_\_ is an attribute but not a global name. Obviously, using this violates the abstraction of namespace implementation, and should be restricted to things like post-mortem debuggers.</span></small>
-
 Usually, the local scope references the local names of the (textually) current function. Outside functions, the local scope references the same namespace as the global scope: the module’s namespace. Class definitions place yet another namespace in the local scope.
 
 It is important to realize that scopes are determined textually: the global scope of a function defined in a module is that module’s namespace, no matter from where or by what alias the function is called. On the other hand, the actual search for names is done dynamically, at run time — however, the language definition is evolving towards static name resolution, at “compile” time, so don’t rely on dynamic name resolution! (In fact, local variables are already determined statically.)
@@ -4651,8 +4643,6 @@ On Windows systems, there is no notion of an “executable mode”. The Python i
 ## 16.1.3 The Interactive Startup File
 
 When you use Python interactively, it is frequently handy to have some standard commands executed every time the interpreter is started. You can do this by setting an environment variable named PYTHONSTARTUP
-
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">1 A problem with the GNU Readline package may prevent this.</span></small>
 
 to the name of a file containing your start-up commands. This is similar to the .profile feature of the Unix shells.
 

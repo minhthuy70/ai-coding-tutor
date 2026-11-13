@@ -42,52 +42,11 @@ Ngô Hoàng Dũng - Lê Hoàng Ân - Nguyễn Thị Hà - Lê Ngọc Ánh Dươn
 - 3.3 Tính Kế thừa (Inheritance) 10
 - 3.4 Quản lý thuộc tính: Siêu tham số (Hyperparameters) và Tham số học được (Learned Parameters) 11
 
-- 3.5 Thiết kế Custom Estimator chuẩn Scikit-Learn ..... 11
-- 3.6 Mẫu thiết kế Pipeline ..... 12
-- 3.7 Tóm tất chương ..... 12
 - **4 Xử Lý Dữ Liệu Với NumPy Và Pandas**
 - **(NumPy & Pandas)** ..... **13**
-- 4.1 Thư viện NumPy - Tính toán Khoa học ..... 13
-- 4.1.1 Khởi tạo mạng và kiểm tra thuộc tính ..... 13
-- 4.1.2 Thao tác trên mạng: Thêm phần tử, xóa, sửa ..... 14
-- 4.1.3 Slicing và Boolean Indexing (Lọc dữ liệu) ..... 14
-- 4.1.4 Đại số tuyến tính (Linear Algebra) ..... 15
-- 4.2 Thư viện Pandas - Xử lý và Phân tích Dữ liệu ..... 15
-- 4.2.1 Tạo và Đọc dữ liệu ..... 15
-- 4.2.2 Truy xuất & Điều kiện lọc dữ liệu ..... 16
-- 4.2.3 Xử lý dữ liệu khuyết & Thống kê mô tả ..... 16
-- 4.2.4 Thay thế và Áp dụng hàm ..... 17
-- 4.2.5 Gom nhóm (GroupBy) & Gộp dữ liệu (Concat/Merge) ..... 17
+
 - **5 Tiền xử lý dữ liệu**
 - **(Data Preprocessing)** ..... **18**
-- 5.1 Khởi nguồn và vai trò của tiền xử lý dữ liệu ..... 19
-- 5.1.1 “Rác vào, rác ra” ..... 19
-- 5.1.2 Tiền xử lý trong quy trình khai phá tri thức (KDD) ..... 19
-- 5.1.3 Phân loại các tác vụ tiền xử lý ..... 20
-- 5.1.4 Thư viện scikit-learn và giao diện fit / transform ..... 20
-- 5.2 Các kiểu dữ liệu và lựa chọn phép biến đổi ..... 21
-- 5.3 Xử lý dữ liệu thiếu (Missing Values) ..... 21
-- 5.3.1 Cơ chế sinh dữ liệu thiếu ..... 22
-- 5.3.2 Simple Imputer: trung bình, trung vị, giá trị phổ biến ..... 22
-- 5.3.3 KNN Imputer và khoảng cách nan-Euclid ..... 23
-- 5.3.4 Iterative Imputer ..... 25
-- 5.4 Phát hiện ngoại lai (Outlier Detection) ..... 28
-- 5.4.1 Phương pháp một biến: z-score và quy tắc IQR ..... 28
-- 5.4.2 Phương pháp nhiều biến: Local Outlier Factor (LOF) ..... 29
-- 5.5 Mã hóa dữ liệu phân loại ..... 31
-- 5.5.1 Label Encoder ..... 31
-- 5.5.2 One Hot Encoder ..... 33
-- 5.6 Vector hóa văn bản ..... 35
-- 5.6.1 Mô hình túi từ và Count Vectorizer ..... 35
-- 5.6.2 TF-IDF ..... 37
-- 5.7 Chuẩn hóa thang đo đặc trưng (Feature Scaling) ..... 40
-- 5.7.1 Vì sao cần chuẩn hóa thang đo? ..... 40
-- 5.7.2 Min MaxScaler ..... 40
-- 5.7.3 Max AbsScaler ..... 40
-- 5.7.4 StandardScaler (chuẩn hóa z-score) ..... 41
-- 5.7.5 RobustScaler ..... 41
-- 5.7.6 Ví dụ so sánh bốn bộ chuẩn hóa ..... 41
-- 5.8 Dữ liệu mất cân bằng và SMOTE ..... 42
 
 - 5.9 Kết hợp các bước: Pipeline và ColumnTransformer 44
 - 5.10 Nghiên cứu tỉnh hướng: bộ dữ liệu Ames Housing 45
@@ -183,27 +142,8 @@ Ngô Hoàng Dũng - Lê Hoàng Ân - Nguyễn Thị Hà - Lê Ngọc Ánh Dươn
 - 11.5.1 Đường cong học và đường cong kiểm định 105
 - 11.6 Những sai làm thường gặp 106
 
-- 11.7 Tóm tắt chương ..... 106
-- 11.8 Bài tập ..... 106
-- Tài liệu tham khảo của chương ..... 107
 - 12 Mạng no-ron nhân tạo
 - **(Neural Network)** ..... **108**
-- 12.1 Lịch sử phát triển ..... 109
-- 12.2 Perceptron ..... 109
-- 12.3 Mạng no-ron nhiều lớp (MLP) ..... 111
-- 12.3.1 Kiến trúc ..... 111
-- 12.3.2 Hàm kích hoạt ..... 112
-- 12.3.3 Hàm mất mát và lớp đầu ra ..... 112
-- 12.4 Lan truyền ngược (Backpropagation) ..... 112
-- 12.5 Huấn luyện mạng no-ron trong thực tế ..... 114
-- 12.5.1 Bộ tối ưu ..... 114
-- 12.5.2 Khởi tạo và chuẩn hóa ..... 114
-- 12.5.3 Chống quá khớp ..... 114
-- 12.6 MLP với scikit-learn ..... 115
-- 12.7 Giới thiệu thư viện học sâu ..... 116
-- 12.8 Tóm tắt chương ..... 117
-- 12.9 Bài tập ..... 117
-- Tài liệu tham khảo của chương ..... 118
 
 # Chương 1: Giới thiệu về Python
 
@@ -3538,9 +3478,7 @@ Lưu ý: vector suy biến chỉ xác định duy nhất đến **dấu**: NumPy
 
 Định lý trên gợi ý cách tính SVD bằng tay cho ma trận có nhiều dòng: (1) lập $\mathbf{X}^{\top}\mathbf{X}-$ ma trận vuông, đối xứng, kích thước bằng số cột; (2) tìm các trị riêng $\lambda_{i}$ và vector riêng đơn vị $v_{i}$ của nó; (3) giá trị suy biến $\sigma_{i} = \sqrt{\lambda_{i}}$ ; (4) vector suy biến trái $\mathbf{u}_i = \mathbf{X}\mathbf{v}_i / \sigma_i$
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 $\text{Ví dụ 10.5 (SVD của ma trận } 5 \times 2). Cho \mathbf{X} = \begin{pmatrix} 3 &amp; 7 \\ 1 &amp; 5 \\ 6 &amp; 4 \\ 8 &amp; 1 \\ 2 &amp; 3 \end{pmatrix}.$
-</div>
 
 Bước 1 - lập X$^{\top}$**X :**
 
@@ -4431,11 +4369,9 @@ $$
 
 **Lan truyền xuôi:**
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 $z_{1} = 0,1\cdot 1 + 0,2\cdot 0,5 + 0,1 = 0,3,$ $h_1 = \sigma (0,3) = 0,5744,$
 $z_{2} = 0,3\cdot 1 + 0,4\cdot 0,5 + 0,1 = 0,6,$ $h_2 = \sigma (0,6) = 0,6457,$
 $z_{o} = 0,5\cdot 0,5744 + 0,6\cdot 0,6457 + 0,1 = 0,7746,$ $o = \sigma (0,7746) = 0,6845,$
-</div>
 
 mất mát $L = \frac{1}{2} (1 - 0,6845)^{2} = 0,0498.$
 

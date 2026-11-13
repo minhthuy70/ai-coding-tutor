@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Data Cleaning & Normalization Script for MinerU / PDF Markdown Outputs
+Data Cleaning & Normalization Script for MinerU / PDF Markdown Outputs (v2.0)
 Author: AI Coding Tutor Team
-Task: NGÀY 03 - Viết Script Làm Sạch Dữ Liệu (Data Cleaning)
+Task: NGÀY 03 - Nâng cấp Pipeline Làm Sạch Dữ Liệu (Data Cleaning v2.0)
 
 Features:
-    1. Chuẩn hóa mã hóa Unicode tiếng Việt về dựng sẵn (NFC), loại bỏ null bytes và control chars.
-    2. Loại bỏ các thẻ đánh dấu trang của MinerU (<!-- page: X -->).
+    1. Chuẩn hóa mã hóa Unicode tiếng Việt về dựng sẵn (NFC), khử triệt để null bytes, ký tự điều khiển và zero-width chars.
+    2. Loại bỏ hoàn toàn các thẻ đánh dấu trang của MinerU (<!-- page: X -->).
     3. Loại bỏ số trang rời rạc (Page X of Y, Trang X, - X -).
-    4. Loại bỏ các liên kết hình ảnh cục bộ rác ![](images/...) và bảng biểu rỗng.
-    5. Bảo tồn 100% thụt lề và cấu trúc khối mã nguồn (Code Blocks), chuẩn hóa cú pháp language tag.
-    6. Chuẩn hóa khoảng trắng thừa, xóa trailing spaces và giới hạn tối đa 2 dòng trống liên tiếp.
-    7. Hỗ trợ chế độ Dry-Run / Test Sample để kiểm tra trước và sau khi làm sạch.
+    4. Loại bỏ các dòng mục lục rác (TOC Dot Leaders) gây nhiễu Vector Search RAG.
+    5. Loại bỏ thẻ HTML Layout của MinerU / Docvortex (docvortex-page-footnote, span/div layout rác).
+    6. Loại bỏ liên kết hình ảnh cục bộ rác ![](images/...) và bảng biểu rỗng.
+    7. Bảo tồn nguyên vẹn 100% thụt lề (indentation) của khối mã nguồn và công thức LaTeX.
+    8. Chuẩn hóa khoảng trắng, xóa trailing spaces và giới hạn tối đa 2 dòng trống liên tiếp.
 """
 
 import os
@@ -60,16 +61,24 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
         "raw_lines": len(raw_text.splitlines()),
         "removed_page_comments": 0,
         "removed_page_numbers": 0,
+        "removed_toc_lines": 0,
+        "removed_html_noise": 0,
         "removed_image_links": 0,
         "removed_empty_tables": 0,
         "cleaned_code_blocks": 0,
-        "null_bytes_removed": 0
+        "null_bytes_removed": 0,
+        "zero_width_removed": 0
     }
 
-    # 1. Đếm và xóa null bytes / control characters (giữ \n, \t, \r)
+    # 1. Đếm và xóa null bytes, ký tự ẩn zero-width / BOM, chuẩn hóa Unicode NFC
     null_count = raw_text.count('\x00')
     stats["null_bytes_removed"] = null_count
-    text = unicodedata.normalize('NFC', raw_text)
+
+    zw_matches = re.findall(r'[\u200b-\u200f\ufeff\u2060]', raw_text)
+    stats["zero_width_removed"] = len(zw_matches)
+
+    text = re.sub(r'[\u200b-\u200f\ufeff\u2060]', '', raw_text)
+    text = unicodedata.normalize('NFC', text)
     text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]', '', text)
 
     # 2. Xóa các thẻ comment đánh dấu trang của MinerU <!-- page: X -->
@@ -105,47 +114,76 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
     stats["removed_empty_tables"] = len(empty_matches)
     text = re.sub(empty_table_pat, '', text, flags=re.MULTILINE)
 
-    # 7. Bảo tồn và chuẩn hóa Code Blocks
-    # Tách các khối code block để không làm ảnh hưởng đến thụt lề bên trong code
+    # 7. Tách riêng khối Code Blocks để các bộ lọc text không can thiệp vào code
     parts = []
     code_block_pattern = re.compile(r'(```[a-zA-Z0-9_\+\#-]*\n[\s\S]*?```)', re.MULTILINE)
     last_end = 0
 
     for match in code_block_pattern.finditer(text):
         start, end = match.span()
-        # Phần văn bản trước code block: chuẩn hóa khoảng trắng
         pre_text = text[last_end:start]
+
+        # Áp dụng các bộ lọc văn bản chuyên sâu trên phần không phải code:
+        # A. Lọc bỏ các dòng Mục lục rác (TOC Dot Leaders: .... 15)
+        toc_pat = r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9].*?\s*\.{4,}\s*\d+\s*$'
+        toc_matches = re.findall(toc_pat, pre_text, flags=re.MULTILINE)
+        stats["removed_toc_lines"] += len(toc_matches)
+        pre_text = re.sub(toc_pat, '', pre_text, flags=re.MULTILINE)
+
+        # B. Lọc bỏ HTML Footnote và thẻ layout rác của MinerU/Docvortex
+        # B1. Xóa toàn bộ khối docvortex footnote
+        fn_matches = re.findall(r'<small><span class=[\'"]docvortex-page-footnote[\s\S]*?</span></small>\n?', pre_text, flags=re.I)
+        stats["removed_html_noise"] += len(fn_matches)
+        pre_text = re.sub(r'<small><span class=[\'"]docvortex-page-footnote[\s\S]*?</span></small>\n?', '', pre_text, flags=re.I)
+
+        # B2. Xóa các khối script / style
+        pre_text = re.sub(r'<(script|style)[^>]*>[\s\S]*?</\1>', '', pre_text, flags=re.I)
+
+        # B3. Xóa các thẻ layout bọc ngoài (span, div, small, font, center, noscript), giữ lại nội dung văn bản bên trong
+        layout_matches = re.findall(r'</?(?:span|div|small|font|center|noscript|section|article)[^>]*>', pre_text, flags=re.I)
+        stats["removed_html_noise"] += len(layout_matches)
+        pre_text = re.sub(r'</?(?:span|div|small|font|center|noscript|section|article)[^>]*>', '', pre_text, flags=re.I)
+
         parts.append(pre_text)
 
-        # Xử lý riêng khối code block
+        # C. Xử lý chuẩn hóa khối code block
         code_block = match.group(1)
         lines = code_block.splitlines()
         header = lines[0].strip()
         body = lines[1:-1]
         footer = lines[-1].strip()
 
-        # Kiểm tra nếu MinerU gán nhầm tag (txt, toml, hcl, bash) cho code Python
         code_body_text = "\n".join(body)
         is_python = any(re.search(kw, code_body_text, re.MULTILINE) for kw in PYTHON_KEYWORDS)
         if is_python and (header == "```" or header in ["```txt", "```toml", "```hcl", "```ini", "```text"]):
             header = "```python"
             stats["cleaned_code_blocks"] += 1
 
-        # Tái cấu trúc code block: giữ nguyên 100% indentation trong body
         rebuilt_block = f"\n\n{header}\n" + "\n".join(body) + f"\n{footer}\n\n"
         parts.append(rebuilt_block)
         last_end = end
 
-    # Thêm phần còn lại
-    parts.append(text[last_end:])
+    # Xử lý phần văn bản sau khối code cuối cùng
+    post_text = text[last_end:]
+    toc_matches = re.findall(r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9].*?\s*\.{4,}\s*\d+\s*$', post_text, flags=re.MULTILINE)
+    stats["removed_toc_lines"] += len(toc_matches)
+    post_text = re.sub(r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9].*?\s*\.{4,}\s*\d+\s*$', '', post_text, flags=re.MULTILINE)
+
+    fn_matches = re.findall(r'<small><span class=[\'"]docvortex-page-footnote[\s\S]*?</span></small>\n?', post_text, flags=re.I)
+    stats["removed_html_noise"] += len(fn_matches)
+    post_text = re.sub(r'<small><span class=[\'"]docvortex-page-footnote[\s\S]*?</span></small>\n?', '', post_text, flags=re.I)
+    post_text = re.sub(r'<(script|style)[^>]*>[\s\S]*?</\1>', '', post_text, flags=re.I)
+
+    layout_matches = re.findall(r'</?(?:span|div|small|font|center|noscript|section|article)[^>]*>', post_text, flags=re.I)
+    stats["removed_html_noise"] += len(layout_matches)
+    post_text = re.sub(r'</?(?:span|div|small|font|center|noscript|section|article)[^>]*>', '', post_text, flags=re.I)
+
+    parts.append(post_text)
     text = "".join(parts)
 
     # 8. Chuẩn hóa khoảng trắng & dòng trống
-    # Xóa khoảng trắng cuối mỗi dòng
     cleaned_lines = [line.rstrip() for line in text.splitlines()]
     text = "\n".join(cleaned_lines)
-
-    # Giới hạn tối đa 2 dòng trống liên tiếp (\n\n\n+ -> \n\n)
     text = re.sub(r'\n{3,}', '\n\n', text)
     cleaned_text = text.strip()
 
@@ -159,7 +197,7 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
 def test_single_file(file_path: Path):
     """Chạy thử nghiệm làm sạch trên 1 file cụ thể và in báo cáo chi tiết Before vs After."""
     print("=" * 80)
-    print(f"CHẠY THỬ NGHIỆM LÀM SẠCH (DRY-RUN): {file_path.name}")
+    print(f"CHẠY THỬ NGHIỆM LÀM SẠCH (DRY-RUN v2.0): {file_path.name}")
     print(f"Đường dẫn: {file_path}")
     print("=" * 80)
 
@@ -172,66 +210,29 @@ def test_single_file(file_path: Path):
 
     cleaned_text, stats = clean_markdown_text(raw_text)
 
-    print("\n📊 BÁO CÁO THỐNG KÊ LÀM SẠCH:")
+    print("\n📊 BÁO CÁO THỐNG KÊ LÀM SẠCH v2.0:")
     print(f"  • Dung lượng gốc (Raw Chars)     : {stats['raw_chars']:,} ký tự ({stats['raw_lines']:,} dòng)")
     print(f"  • Dung lượng sau lọc (Cleaned)   : {stats['cleaned_chars']:,} ký tự ({stats['cleaned_lines']:,} dòng)")
-    print(f"  • Tỷ lệ giảm dung lượng rác      : {stats['reduction_percent']:.2f}% (Mục tiêu: 10 - 25%)")
+    print(f"  • Tỷ lệ giảm dung lượng rác      : {stats['reduction_percent']:.2f}%")
     print(f"  • Số thẻ '<!-- page: X -->' xóa  : {stats['removed_page_comments']:,}")
     print(f"  • Số dòng số trang rác xóa       : {stats['removed_page_numbers']:,}")
+    print(f"  • Số dòng mục lục (TOC) xóa      : {stats['removed_toc_lines']:,}")
+    print(f"  • Số thẻ HTML layout rác xóa     : {stats['removed_html_noise']:,}")
     print(f"  • Số liên kết ảnh rác xóa        : {stats['removed_image_links']:,}")
     print(f"  • Số bảng rỗng đã loại bỏ        : {stats['removed_empty_tables']:,}")
     print(f"  • Số Code Block chuẩn hóa tag    : {stats['cleaned_code_blocks']:,}")
+    print(f"  • Ký tự ẩn / Zero-width xóa      : {stats['zero_width_removed']:,}")
     print(f"  • Null bytes loại bỏ             : {stats['null_bytes_removed']:,}")
-
-    # Hiển thị mẫu so sánh Before vs After
-    print("\n🔍 MẪU ĐỐI CHIẾU TRỰC QUAN (BEFORE vs AFTER):")
-    
-    # 1. Đoạn có thẻ page comment và rác
-    raw_lines = raw_text.splitlines()
-    cleaned_lines = cleaned_text.splitlines()
-
-    print("\n--- [MẪU 1: LỌC THẺ TRANG & ẢNH RÁC] ---")
-    print(">>> TRƯỚC (RAW):")
-    sample_raw = [l for l in raw_lines[:35] if "<!-- page:" in l or "![" in l][:3]
-    for l in sample_raw:
-        print(f"    [RAW] {l}")
-    print(">>> SAU (CLEANED):")
-    print("    [CLEANED] Đã triệt tiêu hoàn toàn các dòng chú thích page và link ảnh rác cục bộ.")
-
-    print("\n--- [MẪU 2: 20 DÒNG ĐẦU TIÊN CỦA FILE SAU KHI LÀM SẠCH] ---")
-    for i, line in enumerate(cleaned_lines[:20], 1):
-        print(f"    {i:02d}: {line}")
-
-    # Tìm một đoạn code block trong cleaned text để kiểm tra tính toàn vẹn
-    code_match = re.search(r'```python[\s\S]*?```', cleaned_text)
-    if code_match:
-        print("\n--- [MẪU 3: KIỂM TRA TÍNH TOÀN VẸN CỦA CODE BLOCK PYTHON] ---")
-        code_sample = code_match.group(0)[:300]
-        for line in code_sample.splitlines()[:8]:
-            print(f"    {line}")
-        print("    ...")
-        print("    ✅ Cấu trúc thụt lề (Indentation) và cú pháp code được bảo toàn nguyên vẹn 100%.")
-
     print("\n" + "=" * 80)
-
-def run_dry_run_batch():
-    """Chạy thử nghiệm trên 2 file tiêu biểu: 1 sách kỹ thuật dày và 1 giáo trình bài giảng."""
-    sample_files = [
-        INPUT_DIR / "01_sach" / "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat" / "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md",
-        INPUT_DIR / "02_giao_trinh" / "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi" / "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi.md"
-    ]
-    for sf in sample_files:
-        if sf.exists():
-            test_single_file(sf)
 
 def process_all_files():
     """Hàm chạy thực tế làm sạch tất cả các file và lưu vào data/06_rag_dataset/cleaned/."""
-    logger.info("=== BẮT ĐẦU QUÁ TRÌNH LÀM SẠCH TOÀN BỘ FILES ===")
+    logger.info("=== BẮT ĐẦU QUÁ TRÌNH LÀM SẠCH TOÀN BỘ FILES (v2.0) ===")
     logger.info(f"Nguồn dữ liệu: {INPUT_DIR}")
     logger.info(f"Đích lưu trữ: {OUTPUT_DIR}")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    md_files = list(INPUT_DIR.rglob("*.md"))
+    md_files = sorted(list(INPUT_DIR.rglob("*.md")))
 
     if not md_files:
         logger.warning(f"Không tìm thấy file markdown nào trong {INPUT_DIR}.")
@@ -239,6 +240,9 @@ def process_all_files():
 
     logger.info(f"Tìm thấy {len(md_files)} file Markdown cần làm sạch.")
     total_processed = 0
+
+    total_toc_removed = 0
+    total_html_removed = 0
 
     for file_path in md_files:
         try:
@@ -253,15 +257,23 @@ def process_all_files():
             with open(out_file, "w", encoding="utf-8") as f:
                 f.write(cleaned_content)
 
-            logger.info(f"✅ Đã làm sạch: {file_path.name} (Giảm {stats['reduction_percent']:.1f}% rác) -> {out_file.name}")
+            total_toc_removed += stats["removed_toc_lines"]
+            total_html_removed += stats["removed_html_noise"]
+
+            logger.info(
+                f"✅ Đã làm sạch: {file_path.name} "
+                f"(Giảm {stats['reduction_percent']:.1f}% rác | Xóa {stats['removed_toc_lines']} dòng TOC, {stats['removed_html_noise']} thẻ HTML) "
+                f"-> {out_file.name}"
+            )
             total_processed += 1
         except Exception as e:
             logger.error(f"❌ Lỗi khi làm sạch {file_path.name}: {e}")
 
-    logger.info(f"=== HOÀN TẤT: Đã làm sạch thành công {total_processed} files vào {OUTPUT_DIR} ===")
+    logger.info(f"=== HOÀN TẤT v2.0: Đã làm sạch thành công {total_processed} files vào {OUTPUT_DIR} ===")
+    logger.info(f"📊 Tổng kết: Đã triệt tiêu {total_toc_removed:,} dòng mục lục rác và {total_html_removed:,} thẻ HTML rác layout!")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Script làm sạch Markdown MinerU cho RAG")
+    parser = argparse.ArgumentParser(description="Script làm sạch Markdown MinerU cho RAG (v2.0)")
     parser.add_argument("--execute", action="store_true", help="Thực thi làm sạch toàn bộ và lưu file vào cleaned/")
     parser.add_argument("--test", type=str, default="", help="Đường dẫn đến 1 file markdown cụ thể để test dry-run")
     args = parser.parse_args()
@@ -271,5 +283,7 @@ if __name__ == "__main__":
     elif args.test:
         test_single_file(Path(args.test))
     else:
-        # Mặc định là chế độ chạy thử nghiệm Dry-Run
-        run_dry_run_batch()
+        # Chạy test mẫu file tiêu biểu
+        sample = INPUT_DIR / "01_sach" / "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat" / "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md"
+        if sample.exists():
+            test_single_file(sample)

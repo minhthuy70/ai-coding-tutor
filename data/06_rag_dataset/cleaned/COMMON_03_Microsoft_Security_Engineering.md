@@ -49,65 +49,21 @@ All other trademarks are property of their respective owners.
 - Additional Resources ....xii
 - **Chapter 1**
 - **patterns & practices Security Engineering Approach**
-- Summary ....1
-- Overview ....1
-- Key Activities in the Life Cycle ....2
-- Security Overlay ....2
-- How the Security Activities Work Together....3
-- Incremental Adoption ....4
-- Terminology ....5
-- Conclusion ....6
-- Additional Resources ....6
+
 - **Chapter 2**
 - **Security Objectives**
-- Summary ....7
-- Overview ....7
-- Discovery Process ....8
-- Types of Objectives ....8
-- Techniques ....9
-- Roles Matrix ....9
-- Derive From Functional Requirements ....9
-- Conclusion ....10
 
 - **Chapter 3**
 - **Security Design Guidelines 11**
-- Summary .... 11
-- Overview .... 11
-- Security Frame .... 12
-- Categories of Vulnerabilities .... 12
-- Application-Specific Guidelines .... 13
-- Deployment Considerations .... 14
-- Design Guidelines Summary .... 14
-- Conclusion .... 16
-- Additional Resources .... 16
+
 - **Chapter 4**
 - **Threat Modeling 17**
-- Summary .... 17
-- What Is Threat Modeling? .... 17
-- Why Use Threat Modeling? .... 17
-- Where Does Threat Modeling Fit In? .... 18
-- Terminology .... 19
-- Activity Overview .... 19
-- Activity Summary Table .... 21
-- Key Concepts .... 21
-- Conclusion .... 22
-- Additional Resources .... 22
+
 - **Chapter 5**
 - **Security Architecture and Design Review 23**
-- Summary .... 23
-- Overview .... 23
-- Techniques .... 24
-- Checklists .... 25
-- Deployment and Infrastructure Considerations .... 26
-- Application Architecture and Design Considerations .... 26
-- Conclusion .... 27
-- Additional Resources .... 27
+
 - **Chapter 6**
 - **Security Code Review 29**
-- Summary .... 29
-- Overview .... 29
-- Activity Overview .... 30
-- Activity Summary Table .... 31
 
 - Techniques 31
 - Use a Question List 32
@@ -118,13 +74,6 @@ All other trademarks are property of their respective owners.
 - Additional Resources 34
 
 - **Security Deployment Review 35**
-- Summary .... 35
-- Overview .... 35
-- Techniques .... 36
-- Server Security Categories .... 36
-- Application Security Categories .... 37
-- Conclusion .... 38
-- Additional Resources .... 38
 
 # Introduction
 

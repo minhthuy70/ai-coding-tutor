@@ -39,341 +39,6 @@ Trường Đại học Xây dựng Hà Nội
 - 2.4.2 Truy cập và chính sửa phần tử trong List …… 10
 - 2.4.3 Thêm và xóa phần tử trong List …… 10
 
-- 2.5 Kiểu dữ liệu Tuple.... 10
-- 2.5.1 Khái niệm và bản chất của Tuple.... 10
-- 2.5.2 Truy cập phần tử trong Tuple .... 10
-- 2.5.3 Tính bắt biến và ý nghĩa thực tiễn .... 11
-- 2.5.4 Kiểu dữ liệu Dictionary.... 11
-- 2.5.5 Bản chất của Dictionary .... 11
-- 2.5.6 Truy cập và thay đổi dữ liệu trong Dictionary .... 11
-- 2.5.7 Duyệt Dictionary .... 12
-- 2.5.8 Ứng dụng thực tế của Dictionary.... 12
-- 2.6 Kiểu dữ liệu Set.... 12
-- 2.6.1 Khái niệm và đặc điểm của Set.... 12
-- 2.6.2 Thao tác cơ bản với Set.... 12
-- 2.6.3 Các phép toán tập hợp .... 12
-- 2.6.4 Ứng dụng của Set.... 13
-- 2.7 Chỉ mục trong kiểu dữ liệu tuần tự.... 13
-- 2.7.1 Vai trò của chỉ mục .... 13
-- 2.7.2 Chỉ mục dương trong Python.... 13
-- 2.7.3 Chỉ mục âm trong Python.... 14
-- 2.7.4 So sánh chỉ mục dương và chỉ mục âm.... 14
-- 2.7.5 Chỉ mục và độ dài dữ liệu.... 15
-- 2.7.6 Lỗi truy cập ngoài phạm vi chỉ mục.... 15
-- 2.7.7 Chỉ mục trong các kiểu dữ liệu tuần tự khác nhau.... 15
-- 2.8 Duyệt các kiểu dữ liệu tuần tự.... 16
-- 2.9 Cắt lát dữ liệu (Slicing) trong các kiểu dữ liệu tuần tự.... 16
-- 2.9.1 Cú pháp tổng quát của cắt lát .... 16
-- 2.9.2 Cắt lát cơ bản với chỉ số bắt đầu và kết thúc .... 16
-- 2.9.3 Cắt lát khi bổ qua chỉ mục bắt đầu hoặc kết thúc .... 17
-- 2.9.4 Cắt lát với bước nhảy (step).... 17
-
-- 2.9.5 Cắt lát với chỉ số âm.... 17
-- 2.9.6 Đảo ngược dữ liệu bằng cắt lát .... 17
-- 2.9.7 Cắt lát với chuỗi .... 18
-- 2.9.8 Cắt lát với Tuple .... 18
-- 2.9.9 Những lưu ý quan trọng khi sử dụng cắt lát .... 18
-- 2.9.10 Ý nghĩa của cắt lát trong lập trình kỹ thuật .... 18
-- 2.10 Bài tập luyện tập .... 19
-- 2.10.1 Câu hỏi trắc nghiệm .... 19
-- 2.11 Bài tập thực hành.... 20
-- CHUỔNG 3. Nhập xuất dữ liệu trong Python .... 23
-- 3.1 Xuất dữ liệu ra màn hình .... 23
-- 3.1.1 Hàm print() .... 23
-- 3.1.2 In nhiều dữ liệu cùng lúc .... 23
-- 3.1.3 Tủy chỉnh định dạng khi in .... 24
-- 3.1.4 In dữ liệu dạng bằng .... 24
-- 3.2 Nhập dữ liệu từ bàn phím.... 25
-- 3.2.1 Hàm input() .... 25
-- 3.2.2 Nhập và chuyển đổi kiểu dữ liệu .... 25
-- 3.3 Nhập xuất dữ liệu với tập tin.... 25
-- 3.3.1 Ví dụ tập tin dữ liệu.... 25
-- 3.3.2 Đọc tập tin và xử lý dữ liệu .... 26
-- 3.3.3 Ghi kết quả ra tập tin .... 26
-- 3.4 Các phương thức làm việc với tập tin trong Python .... 26
-- 3.4.1 close() .... 26
-- 3.4.2 fileno() .... 27
-- 3.4.3 flush() .... 27
-- 3.4.4 isatty() .... 27
-- 3.4.5 read(n) .... 27
-
-- 3.4.6 readable()....28
-- 3.4.7 readline(n=-1)....28
-- 3.4.8 readlines(n=-1)....28
-- 3.4.9 seek(offset, from=SEEK\_SET)....28
-- 3.4.10 seekable()....29
-- 3.4.11 tell()....29
-- 3.4.12 truncate(size=None)....29
-- 3.4.13 writable()....29
-- 3.4.14 write(s)....30
-- 3.4.15 writelines(lines)....30
-- 3.5 Nhận xét....30
-- 3.6 Ứng dụng thực tế....30
-- 3.7 Bài tập chương....30
-- 3.7.1 Câu hỏi trắc nghiệm....30
-- 3.7.2 Bài tập thực hành....32
-- 3.7.3 Gọi ý....33
-- CHƯƠNG 4. Điều khiển luồng và câu lệnh điều kiện trong Python....34
-- 4.1 Giá trị Boolean và vai trò trong điều khiển luồng....34
-- 4.1.1 Khái niệm giá trị Boolean....34
-- 4.1.2 Biểu thức logic....34
-- 4.2 Các toán tử trả về giá trị Boolean....34
-- 4.2.1 Toán tử so sánh....34
-- 4.2.2 Toán tử kiểm tra thành viên....35
-- 4.2.3 Toán tử so sánh đối tượng....35
-- 4.3 Các giá trị tương đương Boolean trong Python....36
-- 4.3.1 Khái niệm Truthy và Falsy....36
-- 4.3.2 Các giá trị được coi là False....36
-
-- 4.4 Toán tử logic ..... 36
-- 4.4.1 Ba toán tử logic cơ bản ..... 36
-- 4.4.2 Bằng logic ..... 36
-- 4.5 Thứ tự ưu tiên của các phép toán logic ..... 37
-- 4.6 Các chú ý quan trọng khi làm việc với phép toán logic ..... 37
-- 4.7 Câu lệnh if - elif - else ..... 38
-- 4.7.1 Câu lệnh if ..... 38
-- 4.7.2 Câu lệnh if - else ..... 38
-- 4.7.3 Câu lệnh if - elif - else ..... 39
-- 4.7.4 Câu lệnh điều kiện lồng nhau ..... 40
-- 4.7.5 Một số lưu ý quan trọng khi sử dụng câu lệnh điều kiện ..... 41
-- 4.7.6 Ý nghĩa của câu lệnh điều kiện trong lập trình kỹ thuật ..... 41
-- 4.7.7 Câu lệnh điều kiện lồng nhau ..... 41
-- 4.7.8 Ứng dụng câu lệnh điều kiện trong bài toán kỹ thuật ..... 43
-- 4.8 Vòng lắp trong Python ..... 45
-- 4.8.1 Vòng lắp for ..... 45
-- 4.8.2 Vòng lắp while ..... 48
-- 4.8.3 So sánh vòng lắp for và while ..... 49
-- 4.8.4 Vòng lắp lồng nhau ..... 49
-- 4.8.5 Lệnh break, continue và pass ..... 51
-- 4.8.6 Ứng dụng vòng lắp trong bài toán kỹ thuật ..... 52
-- 4.8.7 Xử lý ngoại lệ trong Python (try - except) ..... 53
-- 4.9 Bài tập chương: Câu lệnh điều kiện, vòng lắp và xử lý ngoại lệ ..... 57
-- 4.9.1 Câu hỏi trắc nghiệm ..... 57
-- 4.9.2 Bài tập thực hành ..... 59
-- 4.9.3 Bài tập tổng hợp ..... 60
-- 4.10 Hàm và Module trong Python ..... 60
-- 4.10.1 Khái niệm về hàm ..... 60
-
-- 4.10.2 Định nghĩa và gọi hàm....60
-- 4.10.3 Hàm có tham số....61
-- 4.10.4 Tham số của hàm trong Python....61
-- 4.10.5 Hàm trả về giá trị....64
-- 4.10.6 Phạm vi biến trong hàm....65
-- 4.10.7 Hàm vô danh (Lambda function)....66
-- 4.10.8 Các hàm xử lý tập hợp trong Python....66
-- 4.10.9 List Comprehension....72
-- 4.10.10 So sánh các phương pháp xử lý tập hợp....76
-- 4.10.11 Khái niệm về Module....76
-- 4.10.12 Sử dụng module có sẵn....76
-- 4.10.13 Tự xây dựng module....76
-- 4.10.14 Ý nghĩa của hàm và module trong lập trình kỹ thuật....77
-- 4.10.15 Kết luận....77
-- 4.11 Bài tập....77
-- CHƯƠNG 5. Lập trình hướng đối tượng trong Python....79
-- 5.1 Giới thiệu về lập trình hướng đối tượng....79
-- 5.1.1 Khái niệm lập trình hướng đối tượng....79
-- 5.1.2 Lợi ích của lập trình hướng đối tượng....79
-- 5.1.3 Các khái niệm cơ bản trong OOP....80
-- 5.2 Lớp và đối tượng trong Python....81
-- 5.2.1 Định nghĩa lớp....81
-- 5.2.2 Tạo đối tượng từ lớp....81
-- 5.2.3 Thuộc tính của đối tượng....82
-- 5.3 Phương thức khởi tạo - Constructor....83
-- 5.3.1 Phương thức \_\_init\_\_()....83
-- 5.3.2 Giá trị mặc định cho tham số....85
-
-- 5.4 Phương thức của lớp ....85
-- 5.4.1 Định nghĩa phương thức....85
-- 5.4.2 Phương thức với giá trị trả về ....86
-- 5.5 Tính đóng gói (Encapsulation) ....87
-- 5.5.1 Khái niệm đóng gói....87
-- 5.5.2 Thuộc tính và phương thức riêng tư ....87
-- 5.5.3 Getter và Setter ....89
-- 5.5.4 Property decorator ....90
-- 5.6 Tính kế thừa (Inheritance)....90
-- 5.6.1 Khái niệm kế thừa....90
-- 5.6.2 Cú pháp kế thừa....91
-- 5.6.3 Ví dụ kế thừa cơ bản....91
-- 5.6.4 Phương thức super()....92
-- 5.6.5 Kế thừa nhiều cấp ....92
-- 5.6.6 Kiểm tra quan hệ kế thừa....93
-- 5.7 Tính đa hình (Polymorphism)....94
-- 5.7.1 Khái niệm đa hình....94
-- 5.7.2 Đa hình thông qua ghi đề phương thức ....94
-- 5.7.3 Đa hình với các toán tử ....95
-- 5.8 Các phương thức đặc biệt (Magic Methods)....96
-- 5.8.1 Giới thiệu về magic methods....96
-- 5.8.2 Một số magic methods thường dùng ....97
-- 5.8.3 Ví dụ sử dụng magic methods ....97
-- 5.9 Thuộc tính và phương thức lớp (Class Attributes and Methods)....98
-- 5.9.1 Thuộc tính lớp....98
-- 5.9.2 Phương thức lớp ....99
-- 5.9.3 Phương thức tỉnh ....100
-
-- 5.10 Ứng dụng OOP trong bài toán thực tế....101
-- 5.10.1 Hệ thống quản lý thư viện....101
-- 5.11 Bài tập thực hành....104
-- 5.11.1 Bài tập cơ bản....104
-- 5.11.2 Bài tập nâng cao....104
-- 5.12 Tổng kết chương....105
-- 5.13 Bài tập....105
-- CHƯỜNG 6. Thư viện NumPy trong Kỹ thuật....107
-- 6.1 Giới thiệu về NumPy....107
-- 6.1.1 Tại sao NumPy quan trọng trong kỹ thuật....107
-- 6.1.2 Cải đặt và import NumPy....107
-- 6.2 Mắng NumPy - ndarray....108
-- 6.2.1 Khái niệm măng đa chiều....108
-- 6.2.2 Tạo măng NumPy....108
-- 6.2.3 Thuộc tính của măng NumPy....111
-- 6.2.4 Kiểu dữ liệu trong NumPy....112
-- 6.3 Chỉ mục và cắt lát măng NumPy....112
-- 6.3.1 Chỉ mục cơ bản....113
-- 6.3.2 Cắt lát (Slicing)....114
-- 6.3.3 Chỉ mục nâng cao....116
-- 6.4 Các phép toán trên ma trận....119
-- 6.4.1 Pháp toán từng phần tử (Element-wise Operations)....119
-- 6.4.2 Pháp toán với scalar....120
-- 6.4.3 Nhân ma trận (Matrix Multiplication)....121
-- 6.4.4 Chuyển vị ma trận (Transpose)....122
-- 6.4.5 Các phép toán ma trận nâng cao....123
-- 6.4.6 Broadcasting - Cơ chế mở rộng tự động....126
-
-- 6.5 Các phép xử lý và thống kê trên ma trận .... 127
-- 6.5.1 Các hàm thống kê cơ bản.... 127
-- 6.5.2 Chỉ số của giá trị min/max.... 128
-- 6.5.3 Phương sai và độ lệch chuẩn .... 129
-- 6.5.4 Tích lũy và tích lũy theo chiều.... 129
-- 6.5.5 Sắp xếp măng .... 130
-- 6.5.6 Loại bổ trùng lặp và tìm giá trị duy nhất.... 131
-- 6.5.7 Các hàm toán học phổ biến.... 131
-- 6.5.8 Hàm lượng giác .... 132
-- 6.5.9 Chuẩn hóa dữ liệu.... 133
-- 6.5.10 Reshape và thay đổi cấu trúc măng .... 134
-- 6.5.11 Nội và chia măng .... 135
-- 6.6 Ứng dụng NumPy trong kỹ thuật.... 136
-- 6.6.1 Xử lý tín hiệu.... 136
-- 6.6.2 Xử lý dữ liệu cảm biển.... 138
-- 6.6.3 Tính toán ma trận cho kết cấu.... 139
-- 6.6.4 Mô phỏng và tính toán số.... 140
-- 6.6.5 Xử lý ma trận hình ảnh.... 141
-- 6.6.6 Phân tích thống kê dữ liệu thực nghiệm.... 142
-- 6.6.7 Hồi quy tuyến tính .... 142
-- 6.7 Bài tập thực hành.... 143
-- CHƯỜNG 7. Trực quan hóa dữ liệu - Visualization .... 148
-- 7.1 Giới thiệu về Trực quan hóa dữ liệu trong Kỹ thuật .... 148
-- 7.2 Cải đặt và cấu hình.... 149
-- 7.2.1 Cải đặt thư viện .... 149
-- 7.2.2 Import và cấu hình.... 149
-- 7.2.3 Lưu hình ảnh .... 149
-
-- 7.3 Matplotlib: Nền tầng Visualization ..... 149
-- 7.3.1 Cấu trúc cơ bản: Figure và Axes ..... 150
-- 7.3.2 Line Plot - Đồ thị đường..... 151
-- 7.3.3 Scatter Plot - Biểu đồ phân tán ..... 151
-- 7.3.4 Histogram và Distribution Plot ..... 152
-- 7.3.5 Bar Chart - Biểu đồ cột ..... 153
-- 7.3.6 Subplots - Vẽ nhiều biểu đồ ..... 154
-- 7.4 Seaborn: Statistical Visualization ..... 156
-- 7.4.1 Boxplot - Phát hiện Outliers ..... 156
-- 7.4.2 Violin Plot - Phân phối chi tiết ..... 158
-- 7.4.3 Heatmap - Correlation Matrix ..... 158
-- 7.4.4 Pairplot - Quan hệ giữa nhiều biến ..... 159
-- 7.4.5 Distribution Plot với KDE ..... 161
-- 7.5 Visualization cho Machine Learning ..... 162
-- 7.5.1 Confusion Matrix ..... 162
-- 7.5.2 ROC Curve và AUC ..... 163
-- 7.5.3 Learning Curves - Phát hiện Overfitting ..... 165
-- 7.5.4 Feature Importance ..... 168
-- 7.5.5 Precision-Recall Curve ..... 169
-- 7.6 Visualization cho Deep Learning ..... 170
-- 7.6.1 Training History Visualization ..... 170
-- 7.6.2 Visualizing Neural Network Architecture ..... 172
-- 7.6.3 Activation Maps Visualization ..... 174
-- 7.7 Best Practices trong Data Visualization ..... 175
-- 7.7.1 Nguyên tắc thiết kế biểu đồ hiệu quả ..... 175
-- 7.7.2 Code Template tái sử dụng ..... 176
-- 7.8 Bài tập thực hành ..... 177
-- 7.9 Kết luận ..... 179
-
-- CHUỔNG 8. Tính toán Khoa học với Thư viện SciPy....180
-- 8.1 Giới thiệu về SciPy....180
-- 8.1.1 Cải đặt và Import....180
-- 8.1.2 Các Hàm Cơ bản và Hằng số Toán học....180
-- 8.2 Tổng quan Các Gói của SciPy....182
-- 8.2.1 scipy.integrate - Tích phân và Phương trình Vi phân ....182
-- 8.2.2 scipy.optimize - Tôi ưu hóa và Tím nghiệm....182
-- 8.2.3 scipy.interpolate - Nội suy và Xấp xỉ....182
-- 8.2.4 scipy.linalg - Đại số Tuyến tính....182
-- 8.2.5 scipy.signal - Xử lý Tín hiệu....182
-- 8.2.6 scipy.stats - Thống kê và Xác suất....182
-- 8.2.7 scipy.sparse - Ma trận Thưa....183
-- 8.2.8 scipy.fft - Biến đổi Fourier Nhanh....183
-- 8.3 Tính Tích phân với SciPy....183
-- 8.3.1 Cơ sở Lý thuyết Tích phân Số....183
-- 8.3.2 Tích phân Một biến với quad....183
-- 8.3.3 Tích phân Bội....184
-- 8.3.4 Ứng dụng: Tính Năng lượng và Công....185
-- 8.4 Giải Phương trình Vi phân với SciPy....186
-- 8.4.1 Phương trình Vi phân Thường (ODE)....186
-- 8.4.2 Phương pháp Số Giải ODE....187
-- 8.4.3 Sử dụng solve\_ivp....187
-- 8.4.4 Hệ Phương trình Vi phân....188
-- 8.4.5 Ứng dụng: Mô hình Lotka-Volterra (Săn mồi - Con mồi)....189
-- 8.5 Tìm Nghiệm Phương trình với SciPy....191
-- 8.5.1 Cơ sở Lý thuyết....191
-- 8.5.2 Phương pháp Chia đôi (Bisection Method)....191
-- 8.5.3 Phương pháp Newton-Raphson và fsolve....193
-
-- 8.5.4 Giải Hệ Phương trình Phi tuyến ..... 194
-- 8.5.5 Ứng dụng: Tính Điểm Cân bằng trong Phân ứng Hóa học ..... 196
-- 8.6 Nội suy Dữ liệu với SciPy ..... 197
-- 8.6.1 Cơ sở Lý thuyết Nội suy ..... 197
-- 8.6.2 Nội suy Tuyến tính ..... 198
-- 8.6.3 Nội suy Đa thức và Spline ..... 199
-- 8.6.4 Nội suy Hai chiều ..... 200
-- 8.6.5 Ứng dụng: Xử lý Dữ liệu Thiếu ..... 202
-- 8.7 Bài tập Thực hành ..... 203
-- 8.8 Kết luận ..... 206
-- CHƯƠNG 9. Lời Giải Bài Tập ..... 208
-- 9.1 Chương 1: Biến, Toán tử, Kiểu dữ liệu ..... 208
-- 9.1.1 Lời giải Bài tập 1 ..... 208
-- 9.1.2 Lời giải Bài tập 2 ..... 208
-- 9.1.3 Lời giải Bài tập 3 ..... 209
-- 9.1.4 Lời giải Bài tập 4 ..... 210
-- 9.1.5 Lời giải Bài tập 5 ..... 210
-- 9.2 Chương 2: Cấu trúc Dữ liệu ..... 211
-- 9.2.1 Lời giải Bài tập 1 ..... 211
-- 9.2.2 Lời giải Bài tập 3 ..... 212
-- 9.2.3 Lời giải Bài tập 5 ..... 212
-- 9.3 Chương 3: Nhập Xuất Dữ liệu ..... 213
-- 9.3.1 Lời giải Bài tập 2 ..... 213
-- 9.3.2 Lời giải Bài tập 5 ..... 214
-- 9.3.3 Lời giải Bài tập 8 ..... 214
-- 9.4 Chương 4: Điều kiện và Vòng lắp ..... 215
-- 9.4.1 Lời giải Bài tập 1 ..... 215
-- 9.4.2 Lời giải Bài tập 2 ..... 216
-
-- 9.5 Chương 5: Hàm và Module ....217
-- 9.5.1 Lời giải Bài tập 1....217
-- 9.5.2 Lời giải Bài tập 2....218
-- 9.5.3 Lời giải Bài tập 3....219
-- 9.5.4 Lời giải Bài tập 4....220
-- 9.5.5 Lời giải Bài tập 5....221
-- 9.6 Chương 6: Lập trình Hướng Đối tượng ....223
-- 9.6.1 Lời giải Bài tập 1....223
-- 9.6.2 Lời giải Bài tập 2....224
-- 9.6.3 Lời giải Bài tập 3....225
-- 9.7 Chương 7: NumPy trong Kỹ thuật....228
-- 9.7.1 Lời giải Bài tập 1....228
-- 9.7.2 Lời giải Bài tập 2....229
-- 9.8 Chương 8: Visualization ....230
-- 9.8.1 Lời giải Bài tập 1....230
-- 9.8.2 Lời giải Bài tập 2....230
-- 9.9 Chương 9: SciPy ....231
-- 9.9.1 Lời giải Bài tập 1....231
-- 9.9.2 Lời giải Bài tập 4....233
-- 9.10 Lưu ý chung ....234
-
 ## Giới thiệu
 
 Trong bối cảnh chuyển đổi số mạnh mẽ hiện nay, lập trình đã trở thành một công cụ nền tảng không chỉ đối với các nhà khoa học máy tính mà còn đối với kỹ sư và nhà nghiên cứu trong hầu hết các lĩnh vực khoa học – kỹ thuật. Khả năng mô hình hóa, mô phỏng, xử lý dữ liệu và tự động hóa bằng máy tính đóng vai trò then chốt trong việc giải quyết các bài toán thực tiễn ngày càng phức tạp. Vì vậy, việc trang bị cho sinh viên những kiến thức và kỹ năng lập trình ngay từ giai đoạn đào tạo đại học là một yêu cầu tất yếu.
@@ -1370,9 +1035,7 @@ print(f"{a} + {b} = {a + b}")
 
 **Kết quả hiển thị:**
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 $7 + 3 = 10$
-</div>
 
 Định dạng số thực:
 
@@ -4542,11 +4205,9 @@ temp.celsius = -300  # Sẽ bị tù chối
 
 **Kết quả hiển thị:**
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 Nhiet do: $25^{\circ}\mathrm{C} = 77.0^{\circ}\mathrm{F}$
 Nhiet do moi: $30^{\circ}\mathrm{C} = 86.0^{\circ}\mathrm{F}$
 Nhiet do khong the thap hon $-273.15^{\circ}\mathrm{C}$
-</div>
 
 ## 5.6 Tính kế thừa (Inheritance)
 
@@ -7846,7 +7507,6 @@ Hình 7.10: Pairplot khám phá quan hệ giữa các features trong Iris datase
 
 Kết hợp histogram với Kernel Density Estimation (KDE) để smooth distribution curve.
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
 # Normal distribution
@@ -7863,7 +7523,6 @@ bimodal = np.concatenate([np.random.normal(80, 10, 500),
             np.random.normal(120, 10, 500)])
 sns.histplot(bimodal, kde=True, color='green', ax=axes[0,
     $\leftrightarrow$ 1])
-</div>
 
 ```python
 axes[0, 1].set_title('Bimodal Distribution')
@@ -8300,7 +7959,6 @@ Overfitting Gap
 
 Hình 7.17: Training history visualization cho deep learning model
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 layers = [4, 6, 6, 3]  # Input, Hidden1, Hidden2, Output
 layer_names = ['Input\nLayer', 'Hidden\nLayer 1',
                       'Hidden\nLayer 2', 'Output\nLayer']
@@ -8324,7 +7982,6 @@ for i in range(len(layers) - 1):
             x1, y1 = i * 3, j - layers[i]/2
             x2, y2 = (i+1) * 3, k - layers[i+1]/2
             ax.plot([x1+0.3, x2-0.3], [y1, y2], 'gray',
-</div>
 
 ```python
 alpha=0.3, linewidth=0.5)
@@ -8804,7 +8461,6 @@ Cần lưu ý rằng trong dblquad, tích phân ngoài cùng (theo biến đầu
 
 Trong vật lý và kỹ thuật, tích phân thường được sử dụng để tính các đại lượng như công, năng lượng, moment, và khối lượng.
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 # Ví dụ 6: Tính công của lực biến thiên
 # Một lò xo có độ cứng k = 100 N/m được nén từ vị trí x=0
     ↙ đến x=0.2m
@@ -8832,7 +8488,6 @@ def density(x):
 
 mass, err = integrate.quad(density, 0, L)
 print(f"Khôi lượng thanh: {mass:.3f} kg")
-</div>
 
 ## 8.4 Giải Phương trình Vi phân với SciPy
 
@@ -9592,13 +9247,9 @@ Kết quả cho thấy cubic spline khôi phục dữ liệu với độ chính 
 
 **Bài tập 1: Tích phân Ứng dụng** Tính diện tích hình phẳng giới hạn bởi các đường:
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 - $y = x^{2}$
-</div>
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 - $y = 2x + 3$
-</div>
 
 Yêu cầu:
 

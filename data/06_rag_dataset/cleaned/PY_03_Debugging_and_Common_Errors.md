@@ -424,33 +424,9 @@ If you include at least part of the sentence the error appears in, that makes it
 - **Contents**
 - **5 Conditionals and recursion**
 - **41**
-- 5.1 Modulus operator ..... 41
-- 5.2 Boolean expressions ..... 41
-- 5.3 Logical operators ..... 42
-- 5.4 Conditional execution ..... 42
-- 5.5 Alternative execution ..... 43
-- 5.6 Chained conditionals ..... 43
-- 5.7 Nested conditionals ..... 43
-- 5.8 Recursion ..... 44
-- 5.9 Stack diagrams for recursive functions ..... 45
-- 5.10 Infinite recursion ..... 46
-- 5.11 Keyboard input ..... 46
-- 5.12 Debugging ..... 47
-- 5.13 Glossary ..... 48
-- 5.14 Exercises ..... 49
+
 - **6 Fruitful functions**
 - **51**
-- 6.1 Return values ..... 51
-- 6.2 Incremental development ..... 52
-- 6.3 Composition ..... 54
-- 6.4 Boolean functions ..... 54
-- 6.5 More recursion ..... 55
-- 6.6 Leap of faith ..... 57
-- 6.7 One more example ..... 57
-- 6.8 Checking types ..... 58
-- 6.9 Debugging ..... 59
-- 6.10 Glossary ..... 60
-- 6.11 Exercises ..... 60
 
 - **7 Iteration 63**
 - 7.1 Multiple assignment 63
@@ -488,33 +464,9 @@ If you include at least part of the sentence the error appears in, that makes it
 - **Contents**
 - **10 Lists**
 - **87**
-- 10.1 A list is a sequence ..... 87
-- 10.2 Lists are mutable ..... 87
-- 10.3 Traversing a list ..... 89
-- 10.4 List operations ..... 89
-- 10.5 List slices ..... 89
-- 10.6 List methods ..... 90
-- 10.7 Map, filter and reduce ..... 91
-- 10.8 Deleting elements ..... 92
-- 10.9 Lists and strings ..... 93
-- 10.10 Objects and values ..... 93
-- 10.11 Aliasing ..... 94
-- 10.12 List arguments ..... 95
-- 10.13 Debugging ..... 96
-- 10.14 Glossary ..... 97
-- 10.15 Exercises ..... 98
+
 - **11 Dictionaries**
 - **101**
-- 11.1 Dictionary as a set of counters ..... 102
-- 11.2 Looping and dictionaries ..... 103
-- 11.3 Reverse lookup ..... 104
-- 11.4 Dictionaries and lists ..... 105
-- 11.5 Memos ..... 106
-- 11.6 Global variables ..... 108
-- 11.7 Long integers ..... 109
-- 11.8 Debugging ..... 109
-- 11.9 Glossary ..... 110
-- 11.10 Exercises ..... 111
 
 - **12 Tuples 113**
 - 12.1 Tuples are immutable 113
@@ -607,35 +559,15 @@ If you include at least part of the sentence the error appears in, that makes it
 - **xxi**
 - **19 Case study: Tkinter**
 - **179**
-- 19.1 GUI .... 179
-- 19.2 Buttons and callbacks .... 180
-- 19.3 Canvas widgets .... 181
-- 19.4 Coordinate sequences .... 182
-- 19.5 More widgets .... 182
-- 19.6 Packing widgets .... 183
-- 19.7 Menus and Callables .... 185
-- 19.8 Binding .... 186
-- 19.9 Debugging .... 188
-- 19.10 Glossary .... 189
-- 19.11 Exercises .... 190
+
 - **A Debugging**
 - **193**
-- A.1 Syntax errors .... 193
-- A.2 Runtime errors .... 195
-- A.3 Semantic errors .... 198
+
 - **B Analysis of Algorithms**
 - **201**
-- B.1 Order of growth .... 202
-- B.2 Analysis of basic Python operations .... 204
-- B.3 Analysis of search algorithms .... 205
-- B.4 Hashtables .... 206
+
 - **C Lumpy**
 - **211**
-- C.1 State diagram .... 211
-- C.2 Stack diagram .... 212
-- C.3 Object diagrams .... 213
-- C.4 Function and class objects .... 215
-- C.5 Class Diagrams .... 216
 
 ## Chapter 1
 
@@ -3100,9 +3032,7 @@ print c(x, y+3, x+y)
 Exercise 6.5. The Ackermann function, A(m,n), is defined:
 ```
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 $A(m,n) = \begin{cases} n + 1 &amp; \text{if } m = 0 \\ A(m - 1,1) &amp; \text{if } m &gt; 0 \text{ and } n = 0 \\ A(m - 1,A(m,n - 1)) &amp; \text{if } m &gt; 0 \text{ and } n &gt; 0. \end{cases}$
-</div>
 
 See [http: // en. wikipedia. org/ wiki/ Ackermann\_ function .](http://en.wikipedia.org/wiki/Ackermann_function) Write a function named ack that evaluates Ackermann’s function. Use your function to evaluate ack(3, 4), which should be 125. What happens for larger values of m and n? Solution: [http: // thinkpython. com/ code/ ackermann. py](http://thinkpython.com/code/ackermann.py) .
 
@@ -3182,9 +3112,7 @@ Figure 7.1: State diagram.
 
 One of the most common forms of multiple assignment is an **update**, where the new value of the variable depends on the old.
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 $x = x + 1$
-</div>
 
 This means “get the current value of x, add one, and then update x with the new value.”
 
@@ -4634,10 +4562,8 @@ An object with more than one reference has more than one name, so we say that th
 
 If the aliased object is mutable, changes made with one alias affect the other:
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 a  $\rightarrow$  [1, 2, 3]
 b  $\rightarrow$
-</div>
 
 Figure 10.4: State diagram.
 
@@ -6562,8 +6488,6 @@ For example, the Unix command ls -l normally displays the contents of the curren
 
 The argument is a string that contains a shell command. The return value is an object that behaves just like an open file. You can read the output from the ls process one line at a time with readline or get the whole thing at once with read:
 
-<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280"><sup>1</sup>popen is deprecated now, which means we are supposed to stop using it and start using the subprocess module. But for simple cases, I find subprocess more complicated than necessary. So I am going to keep using popen until they take it away.</span></small>
-
 ```txt
 >>> res = fp.read()
 When you are done, you close the pipe like a file:
@@ -7870,11 +7794,9 @@ This code makes it easy to compare cards; because higher suits map to higher num
 
 The mapping for ranks is fairly obvious; each of the numerical ranks maps to the corresponding integer, and for face cards:
 
-<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
 Jack $\mapsto$ 11
 Queen $\mapsto$ 12
 King $\mapsto$ 13
-</div>
 
 I am using the 7→ symbol to make it clear that these mappings are not part of the Python program. They are part of the program design, but they don’t appear explicitly in the code.
 
