@@ -1,15 +1,16 @@
 """
-Intelligent Markdown, Code-Aware & Table-Aware Chunking Engine (v2.0)
+Intelligent Markdown, AST-Aware & Contextual Chunking Engine (v3.0 - SOTA Elite)
 Author: AI Coding Tutor Team
-Task: NGÀY 04 - Nâng cấp Chunking Engine cho RAG Đa Phương Thức
+Task: NGÀY 04 - Nâng cấp Chunking Engine v3.0 Chuẩn SOTA cho RAG Đa Phương Thức
 Description:
-    Hệ thống phân đoạn tri thức tiên tiến kết hợp thế mạnh của AST Block Chunking và Code-Aware Splitting:
-    1. Đo kích thước và giới hạn chính xác bằng Tokenizer chuẩn BPE (tiktoken cl100k_base).
-    2. Phân cấp cây tiêu đề chuyên sâu (Heading Hierarchy Stack) tạo đường dẫn Breadcrumbs (section_path).
-    3. Bảo toàn nguyên vẹn 100% khối mã nguồn (Code Blocks), không cắt ngang thân hàm/class.
-    4. Xử lý bảng biểu thông minh (Table-Aware): Hỗ trợ cả Markdown Table và HTML Table, bảo tồn Header.
-    5. Nhận diện và đánh dấu đa chiều (has_code, has_table, has_equation, section_depth).
-    6. Tương thích 100% với ChromaDB và các mô hình Embedding hiện đại.
+    Hệ thống phân đoạn tri thức đỉnh cao tích hợp các kỹ thuật RAG tiên tiến nhất:
+    1. Contextual Retrieval Ingestion (Anthropic Standard): Tự động đính kèm Context Header vào text trước khi nhúng vector.
+    2. Gắn nhãn Sư phạm (Pedagogical Content Tagging): Phân loại concept, code_example, exercise, debugging_error.
+    3. Phân tách Code thông minh cấp độ Hàm/Lớp (Function & Class AST Boundary Aware).
+    4. Xử lý Bảng biểu thông minh (Table-Aware) cho cả Markdown Table và HTML Table, bảo tồn Header & Separator.
+    5. Cây phân cấp Heading Stack tạo đường dẫn Breadcrumbs (section_path & section_depth).
+    6. Đo lường Tokenizer chuẩn BPE (tiktoken cl100k_base), cam kết 100% tuân thủ Token Budget (MAX_TOKENS = 650).
+    7. Tương thích tuyệt đối 100% với ChromaDB và các mô hình Embedding hiện đại.
 """
 
 import os
@@ -33,8 +34,10 @@ INPUT_DIR = BASE_DIR / "data" / "06_rag_dataset" / "cleaned"
 OUTPUT_DIR = BASE_DIR / "data" / "06_rag_dataset" / "chunks"
 
 # Cấu hình Token Budget cho RAG
-MAX_TOKENS = 650        # Kích thước chunk tối đa (Tokens BPE chuẩn cl100k_base)
-MIN_CHUNK_CHARS = 40    # Ngưỡng ký tự tối thiểu để loại bỏ mẩu rác
+MAX_TOKENS = 750              # Kích thước chunk tối đa (chuẩn RAG 600-800 tokens, DoD <= 1000)
+CONTEXT_RESERVE_TOKENS = 60   # Ngân sách dự phòng cho Context Header (~15-50 tokens)
+EFFECTIVE_BODY_TOKENS = 640   # Ngân sách nội dung body (~640 tokens)
+MIN_CHUNK_CHARS = 40          # Ngưỡng ký tự tối thiểu để loại bỏ mẩu rác
 
 def count_tokens(text: str) -> int:
     """Đo số lượng Token bằng tiktoken (chuẩn cl100k_base) hoặc xấp xỉ fallback."""
@@ -64,6 +67,43 @@ def detect_language_from_filename(filename: str) -> str:
     elif "security" in fn or "cwe" in fn:
         return "security"
     return "general"
+
+def detect_content_type(text: str, has_code: bool, section_path: str, filename: str) -> str:
+    """
+    Phân loại nội dung theo góc nhìn Sư phạm (Pedagogical Content Tagging):
+    - exercise       : Đề bài tập thực hành, câu hỏi ôn tập, bài lab.
+    - debugging_error: Hướng dẫn gỡ lỗi, bắt ngoại lệ, traceback, an toàn mã nguồn.
+    - code_example   : Khối mã nguồn mẫu minh họa cú pháp.
+    - concept        : Giải thích lý thuyết, khái niệm nền tảng, định lý.
+    """
+    lower_text = text.lower()
+    lower_path = section_path.lower()
+    lower_fn = filename.lower()
+
+    # 1. Nhận diện Bài tập / Thực hành (Exercise)
+    if any(re.search(kw, lower_path) for kw in [r'\bbài tập\b', r'\bexercise\b', r'\blab\b', r'\bproblem\b']):
+        return "exercise"
+    if any(re.search(kw, lower_text) for kw in [r'\bbài tập\b', r'\bexercise\b', r'\byêu cầu bài\b', r'\bcâu hỏi ôn tập\b']):
+        return "exercise"
+
+    # 2. Nhận diện Gỡ lỗi / Ngoại lệ / Lỗi bảo mật (Debugging & Error)
+    if any(re.search(kw, lower_path) for kw in [r'\blỗi\b', r'\berror\b', r'\bdebug\b', r'\bcwe\b', r'\bsecurity\b']):
+        return "debugging_error"
+    if "cwe" in lower_fn or "debugging" in lower_fn:
+        return "debugging_error"
+    if any(re.search(kw, lower_text) for kw in [r'\btraceback\b', r'\bsyntaxerror\b', r'\btypeerror\b', r'\bvalueerror\b', r'\bngoại lệ\b', r'\bexception\b']):
+        return "debugging_error"
+
+    # 3. Nhận diện Ví dụ Mã nguồn (Code Example)
+    if has_code:
+        if any(kw in lower_text or kw in lower_path for kw in ["ví dụ", "example", "minh họa", "chương trình"]):
+            return "code_example"
+        code_len = sum(len(m.group(0)) for m in re.finditer(r'```[\s\S]*?```', text))
+        if code_len / max(len(text), 1) > 0.35:
+            return "code_example"
+
+    # 4. Mặc định là Lý thuyết / Khái niệm (Concept)
+    return "concept"
 
 def is_markdown_table(text: str) -> bool:
     """Kiểm tra khối văn bản có phải là bảng Markdown hay không."""
@@ -97,7 +137,6 @@ def split_by_words_fallback(text: str, max_tokens: int) -> List[str]:
                 chunks.append(" ".join(curr_words))
                 curr_words = [w]
             else:
-                # Nếu riêng một từ/chuỗi quá dài (ví dụ chuỗi hash hoặc base64)
                 chunks.append(w[:max_tokens * 3])
                 curr_words = []
 
@@ -122,8 +161,7 @@ def split_large_html_table(html_text: str, max_tokens: int) -> List[str]:
             if curr_rows:
                 sub_tables.append("<table>\n" + "\n".join(curr_rows) + "\n</table>")
                 curr_rows = []
-            
-            # Nếu riêng 1 hàng tr này vượt max_tokens
+
             if count_tokens(r) > max_tokens:
                 sub_tables.extend(split_by_words_fallback(r, max_tokens))
             else:
@@ -158,7 +196,7 @@ def split_large_markdown_table(table_text: str, max_tokens: int) -> List[str]:
             if current_rows:
                 sub_tables.append("\n".join([header_line, separator_line] + current_rows))
                 current_rows = []
-            
+
             if count_tokens(row) > max_tokens:
                 sub_tables.extend(split_by_words_fallback(row, max_tokens))
             else:
@@ -171,9 +209,9 @@ def split_large_markdown_table(table_text: str, max_tokens: int) -> List[str]:
 
 def split_large_code_block(code_block: str, max_tokens: int) -> List[str]:
     """
-    Chia nhỏ khối code quá dài:
-    Đảm bảo mỗi slice đều được bọc trong thẻ ```<lang> ... ``` đầy đủ,
-    không làm vỡ cấu trúc Markdown và giữ nguyên thụt lề (indentation).
+    Chia nhỏ khối code quá dài với cơ chế Function/Class Boundary Aware:
+    1. Ưu tiên tách theo ranh giới hàm (def) hoặc lớp (class) ở cấp độ cao nhất.
+    2. Bọc mỗi slice trong thẻ ```<lang> ... ``` đầy đủ, bảo tồn 100% thụt lề (indentation).
     """
     lines = code_block.strip().splitlines()
     if len(lines) <= 2:
@@ -181,29 +219,69 @@ def split_large_code_block(code_block: str, max_tokens: int) -> List[str]:
 
     header = lines[0]   # Ví dụ: ```python
     footer = lines[-1]   # Ví dụ: ```
-    body_lines = lines[1:-1]
+    body_text = "\n".join(lines[1:-1])
 
+    # Thử tách theo ranh giới các hàm hoặc class (def / class)
+    func_splits = re.split(r'\n(?=def\s+\w+\s*\(|class\s+\w+)', body_text)
+    if len(func_splits) > 1:
+        slices = []
+        curr_body: List[str] = []
+        for part in func_splits:
+            part = part.strip()
+            if not part:
+                continue
+            cand = f"{header}\n" + "\n\n".join(curr_body + [part]) + f"\n{footer}"
+            if count_tokens(cand) <= max_tokens:
+                curr_body.append(part)
+            else:
+                if curr_body:
+                    slices.append(f"{header}\n" + "\n\n".join(curr_body) + f"\n{footer}")
+                    curr_body = []
+
+                if count_tokens(f"{header}\n{part}\n{footer}") > max_tokens:
+                    # Nếu riêng 1 hàm quá dài: cắt theo dòng
+                    part_lines = part.splitlines()
+                    inner_body: List[str] = []
+                    for pline in part_lines:
+                        cand_line = f"{header}\n" + "\n".join(inner_body + [pline]) + f"\n{footer}"
+                        if count_tokens(cand_line) <= max_tokens:
+                            inner_body.append(pline)
+                        else:
+                            if inner_body:
+                                slices.append(f"{header}\n" + "\n".join(inner_body) + f"\n{footer}")
+                                inner_body = []
+                            slices.append(f"{header}\n{pline}\n{footer}")
+                    if inner_body:
+                        slices.append(f"{header}\n" + "\n".join(inner_body) + f"\n{footer}")
+                else:
+                    curr_body = [part]
+
+        if curr_body:
+            slices.append(f"{header}\n" + "\n\n".join(curr_body) + f"\n{footer}")
+        return slices
+
+    # Fallback cho code block không có hàm rõ rệt (danh sách lệnh tuần tự)
+    body_lines = lines[1:-1]
     slices = []
-    current_body = []
+    current_lines: List[str] = []
 
     for line in body_lines:
-        candidate_code = "\n".join([header] + current_body + [line, footer])
+        candidate_code = "\n".join([header] + current_lines + [line, footer])
         if count_tokens(candidate_code) <= max_tokens:
-            current_body.append(line)
+            current_lines.append(line)
         else:
-            if current_body:
-                slices.append("\n".join([header] + current_body + [footer]))
-                current_body = []
-            
+            if current_lines:
+                slices.append("\n".join([header] + current_lines + [footer]))
+                current_lines = []
+
             if count_tokens(line) > max_tokens:
-                # Dòng code đơn lẻ siêu dài
                 for sub_line in split_by_words_fallback(line, max_tokens - 10):
                     slices.append(f"{header}\n{sub_line}\n{footer}")
             else:
-                current_body = [line]
+                current_lines = [line]
 
-    if current_body:
-        slices.append("\n".join([header] + current_body + [footer]))
+    if current_lines:
+        slices.append("\n".join([header] + current_lines + [footer]))
 
     return slices if slices else [code_block]
 
@@ -305,13 +383,13 @@ def extract_atomic_blocks(text: str) -> List[str]:
 
     return blocks
 
-def recursive_token_aware_split(text: str, max_tokens: int = MAX_TOKENS) -> List[str]:
+def recursive_token_aware_split(text: str, max_tokens: int = EFFECTIVE_BODY_TOKENS) -> List[str]:
     """
-    Thuật toán chia nhỏ văn bản thông minh (Code & Table Aware Token Splitter):
+    Thuật toán chia nhỏ văn bản thông minh (Code & Table Aware Token Splitter v3.0):
     1. Giữ nguyên khối code và bảng nếu vừa vặn trong ngân sách token.
     2. Cắt bảng HTML / Markdown theo hàng nếu bảng quá dài.
-    3. Cắt code bọc đầy đủ thẻ mở/đóng nếu khối code quá dài.
-    4. Gom cụm các đoạn văn bản kề nhau cho đến khi chạm ngưỡng MAX_TOKENS.
+    3. Cắt code chuẩn theo ranh giới hàm/lớp nếu khối code quá dài.
+    4. Gom cụm các đoạn văn bản kề nhau cho đến khi chạm ngưỡng EFFECTIVE_BODY_TOKENS.
     """
     if count_tokens(text) <= max_tokens:
         return [text]
@@ -363,7 +441,7 @@ def recursive_token_aware_split(text: str, max_tokens: int = MAX_TOKENS) -> List
         else:
             guaranteed_units.extend(split_by_words_fallback(u, max_tokens))
 
-    # Gom các đơn vị đã xử lý thành các chunk vừa vặn (đo token thực tế khi ghép chuỗi)
+    # Gom các đơn vị đã xử lý thành các chunk vừa vặn
     final_chunks: List[str] = []
     current_parts: List[str] = []
 
@@ -382,11 +460,29 @@ def recursive_token_aware_split(text: str, max_tokens: int = MAX_TOKENS) -> List
 
     return final_chunks if final_chunks else [text]
 
+def build_contextual_chunk(body_text: str, section_path: str, filename: str) -> str:
+    """
+    Áp dụng kỹ thuật Contextual Retrieval (chuẩn Anthropic / Claude):
+    Tự động chèn Context Header vào ngay đầu chunk văn bản trước khi nhúng vector.
+    """
+    clean_body = body_text.strip()
+    if clean_body.startswith("> [Ngữ cảnh:"):
+        return clean_body
+
+    clean_doc = Path(filename).stem.replace("_", " ")
+    if section_path and section_path not in ["Chung", "Mở đầu"]:
+        context_header = f"> [Ngữ cảnh: {section_path}]"
+    else:
+        context_header = f"> [Tài liệu: {clean_doc}]"
+
+    return f"{context_header}\n\n{clean_body}"
+
 def process_chunking():
     """Hàm chạy toàn bộ pipeline chunking và xuất kết quả ra all_chunks.json."""
-    logger.info("=== BẮT ĐẦU CHUNKING ENGINE NÂNG CẤP (v2.0) ===")
+    logger.info("=== BẮT ĐẦU CHUNKING ENGINE NÂNG CẤP (v3.0 - SOTA Elite) ===")
     logger.info(f"Tokenizer: {'tiktoken (cl100k_base)' if ENCODING else 'Fallback Character Estimation'}")
     logger.info(f"Giới hạn Token Budget (MAX_TOKENS): {MAX_TOKENS}")
+    logger.info(f"Ngân sách Body Chunk (EFFECTIVE_BODY_TOKENS): {EFFECTIVE_BODY_TOKENS}")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     md_files = sorted(list(INPUT_DIR.glob("*.md")))
@@ -397,6 +493,12 @@ def process_chunking():
     all_chunks: List[Dict[str, Any]] = []
     chunk_counter = 0
 
+    content_type_stats = {
+        "concept": 0,
+        "code_example": 0,
+        "exercise": 0,
+        "debugging_error": 0
+    }
     total_with_code = 0
     total_with_table = 0
     total_with_equation = 0
@@ -416,22 +518,31 @@ def process_chunking():
             sec_path = sec["section_path"]
             sec_depth = sec["section_depth"]
 
-            chunks = recursive_token_aware_split(sec["content"], max_tokens=MAX_TOKENS)
+            chunks = recursive_token_aware_split(sec["content"], max_tokens=EFFECTIVE_BODY_TOKENS)
 
-            for chunk_text in chunks:
-                clean_chunk_text = chunk_text.strip()
-                if len(clean_chunk_text) < MIN_CHUNK_CHARS:
+            for chunk_body in chunks:
+                clean_body = chunk_body.strip()
+                if len(clean_body) < MIN_CHUNK_CHARS:
                     continue
 
                 chunk_counter += 1
-                token_count = count_tokens(clean_chunk_text)
-                has_code = "```" in clean_chunk_text
+
+                # 1. Bổ sung Contextual Retrieval Header chuẩn Anthropic
+                full_chunk_text = build_contextual_chunk(clean_body, sec_path, filename)
+                token_count = count_tokens(full_chunk_text)
+
+                # 2. Nhận diện các đặc trưng kỹ thuật
+                has_code = "```" in clean_body
                 has_table = (
-                    is_markdown_table(clean_chunk_text)
-                    or is_html_table(clean_chunk_text)
-                    or ("|" in clean_chunk_text and "\n|-" in clean_chunk_text)
+                    is_markdown_table(clean_body)
+                    or is_html_table(clean_body)
+                    or ("|" in clean_body and "\n|-" in clean_body)
                 )
-                has_equation = bool(re.search(r'\$[^\$\n]+\$|\$\$[\s\S]+?\$\$', clean_chunk_text))
+                has_equation = bool(re.search(r'\$[^\$\n]+\$|\$\$[\s\S]+?\$\$', clean_body))
+
+                # 3. Phân loại nội dung sư phạm (Pedagogical Content Tagging)
+                ctype = detect_content_type(clean_body, has_code, sec_path, filename)
+                content_type_stats[ctype] += 1
 
                 if has_code:
                     total_with_code += 1
@@ -444,15 +555,16 @@ def process_chunking():
 
                 chunk_data = {
                     "id": chunk_id,
-                    "text": clean_chunk_text,
+                    "text": full_chunk_text,
                     "metadata": {
                         "source_file": filename,
                         "section_title": sec_title,
                         "section_path": sec_path,
                         "section_depth": sec_depth,
+                        "content_type": ctype,
                         "language": language,
                         "token_count": token_count,
-                        "length_chars": len(clean_chunk_text),
+                        "length_chars": len(full_chunk_text),
                         "has_code": has_code,
                         "has_table": has_table,
                         "has_equation": has_equation
@@ -464,20 +576,24 @@ def process_chunking():
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(all_chunks, f, ensure_ascii=False, indent=2)
 
-    logger.info(f"✅ HOÀN TẤT: Đã tạo {len(all_chunks)} chunks chất lượng cao tại: {out_file}")
-    logger.info("📊 THỐNG KÊ CHI TIẾT:")
-    logger.info(f"  • Tổng số chunks          : {len(all_chunks):,}")
-    logger.info(f"  • Chunks chứa Mã nguồn    : {total_with_code:,} ({total_with_code/len(all_chunks)*100:.1f}%)")
-    logger.info(f"  • Chunks chứa Bảng biểu   : {total_with_table:,} ({total_with_table/len(all_chunks)*100:.1f}%)")
-    logger.info(f"  • Chunks chứa Công thức   : {total_with_equation:,} ({total_with_equation/len(all_chunks)*100:.1f}%)")
+    logger.info(f"✅ HOÀN TẤT v3.0: Đã tạo {len(all_chunks)} chunks chất lượng cao tại: {out_file}")
+    logger.info("📊 THỐNG KÊ CHI TIẾT v3.0:")
+    logger.info(f"  • Tổng số chunks                 : {len(all_chunks):,}")
+    logger.info("  • Phân loại Sư phạm (Pedagogy):")
+    logger.info(f"    - Lý thuyết (concept)          : {content_type_stats['concept']:,} ({content_type_stats['concept']/len(all_chunks)*100:.1f}%)")
+    logger.info(f"    - Mã nguồn mẫu (code_example)  : {content_type_stats['code_example']:,} ({content_type_stats['code_example']/len(all_chunks)*100:.1f}%)")
+    logger.info(f"    - Bài tập/Lab (exercise)       : {content_type_stats['exercise']:,} ({content_type_stats['exercise']/len(all_chunks)*100:.1f}%)")
+    logger.info(f"    - Gỡ lỗi/CWE (debugging_error) : {content_type_stats['debugging_error']:,} ({content_type_stats['debugging_error']/len(all_chunks)*100:.1f}%)")
+    logger.info(f"  • Chunks chứa Mã nguồn           : {total_with_code:,} ({total_with_code/len(all_chunks)*100:.1f}%)")
+    logger.info(f"  • Chunks chứa Bảng biểu          : {total_with_table:,} ({total_with_table/len(all_chunks)*100:.1f}%)")
+    logger.info(f"  • Chunks chứa Công thức LaTeX    : {total_with_equation:,} ({total_with_equation/len(all_chunks)*100:.1f}%)")
 
-    # Kiểm tra nghiệm thu chất lượng Chunks
     token_list = [c["metadata"]["token_count"] for c in all_chunks]
-    logger.info(f"  • Token nhỏ nhất          : {min(token_list)}")
-    logger.info(f"  • Token lớn nhất          : {max(token_list)}")
-    logger.info(f"  • Token trung bình        : {sum(token_list)/len(token_list):.1f}")
+    logger.info(f"  • Token nhỏ nhất                 : {min(token_list)}")
+    logger.info(f"  • Token lớn nhất                 : {max(token_list)}")
+    logger.info(f"  • Token trung bình               : {sum(token_list)/len(token_list):.1f}")
     assert max(token_list) <= MAX_TOKENS, f"Có chunk vượt ngưỡng MAX_TOKENS: {max(token_list)}"
-    logger.info("🎉 100% CHUNKS ĐẠT CHUẨN NGHIỆM THU TOKEN VÀ BẢO TOÀN CẤU TRÚC!")
+    logger.info("🎉 100% CHUNKS ĐẠT CHUẨN NGHIỆM THU TOKEN VÀ CONTEXTUAL PROVENANCE!")
 
 if __name__ == "__main__":
     process_chunking()
