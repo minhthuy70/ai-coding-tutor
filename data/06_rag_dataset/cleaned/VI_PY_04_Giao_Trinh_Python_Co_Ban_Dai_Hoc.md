@@ -1404,9 +1404,7 @@ for i in range (0, ROW):
 ```
 
 1. Cách nào sau đây dùng để khai báo mắng hai chiều với 2 hàng và 3 cột:
-A. $a = [[1,2,3], [4,5,6]]$
-B. $a = [1,2,3,4,5,6]$
-C. $a = [1,2,3];[4,5,6]$
+A. $a = [[1,2,3], [4,5,6]]$B.$a = [1,2,3,4,5,6]$C.$a = [1,2,3];[4,5,6]$
 
 ```python
 temp = int(input("Phan tu "+str(i)+ "-"+ str(j) +"

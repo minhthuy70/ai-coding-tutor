@@ -267,9 +267,7 @@ Viết chương trình chuyển đổi nhiệt độ giữa các đơn vị:
 
 • Celsius sang Fahrenheit: $F = C \times \frac{9}{5} +$ 32
 
-• Fahrenheit sang Celsius: $C = (F - 32)\times \frac{5}{9}$
-
-• Celsius sang Kelvin: $K = C + 273.15$
+• Fahrenheit sang Celsius: $C = (F - 32)\times \frac{5}{9}$• Celsius sang Kelvin:$K = C + 273.15$
 
 Yêu cầu: Nhập vào giá trị và đơn vị ban đầu, sau đó chuyển đổi sang các đơn vị còn lại.
 
@@ -4205,9 +4203,7 @@ temp.celsius = -300  # Sẽ bị tù chối
 
 **Kết quả hiển thị:**
 
-Nhiet do: $25^{\circ}\mathrm{C} = 77.0^{\circ}\mathrm{F}$
-Nhiet do moi: $30^{\circ}\mathrm{C} = 86.0^{\circ}\mathrm{F}$
-Nhiet do khong the thap hon $-273.15^{\circ}\mathrm{C}$
+Nhiet do: $25^{\circ}\mathrm{C} = 77.0^{\circ}\mathrm{F}$Nhiet do moi:$30^{\circ}\mathrm{C} = 86.0^{\circ}\mathrm{F}$Nhiet do khong the thap hon$-273.15^{\circ}\mathrm{C}$
 
 ## 5.6 Tính kế thừa (Inheritance)
 
@@ -7023,7 +7019,7 @@ Trong đó $I_{1}, I_{2}, I_{3}$ là dòng điện (Ampere) tại các node.
 
 ## Mở rộng:
 
-• Tính công suất tiêu thụ tại mỗi node nếu điện trở tương ứng là $R_{1} = 2\Omega, R_{2} =$ 3Ω, $R_{3}=4\Omega$ (sử dụng công thức $P = I^{2} \times R)$
+• Tính công suất tiêu thụ tại mỗi node nếu điện trở tương ứng là $R_{1} = 2\Omega, R_{2} =$3Ω,$R_{3}=4\Omega$(sử dụng công thức$P = I^{2} \times R)$
 
 • Tính tổng công suất tiêu thụ của toàn mạch
 
@@ -7053,11 +7049,7 @@ print("Sai so:", np.allclose(check, b))
 
 ## Đáp án tham khảo cho Bài 7:
 
-$I_{1} \approx 5.09 \mathrm{~A}, I_{2} \approx 3.27 \mathrm{~A}, I_{3} \approx 3.09 \mathrm{~A}$
-
-• Định thức det(A) = 33
-
-$P_{1} \approx 51.8 \mathrm{~W}, P_{2} \approx 32.0 \mathrm{~W}, P_{3} \approx 38.2 \mathrm{~W}$
+$I_{1} \approx 5.09 \mathrm{~A}, I_{2} \approx 3.27 \mathrm{~A}, I_{3} \approx 3.09 \mathrm{~A}$• Định thức det(A) = 33$P_{1} \approx 51.8 \mathrm{~W}, P_{2} \approx 32.0 \mathrm{~W}, P_{3} \approx 38.2 \mathrm{~W}$
 
 ## CHƯƠNG 6. THƯ VIỆN NUMPY TRONG KỸ THUẬT
 
@@ -8689,27 +8681,23 @@ Tìm nghiệm của phương trình là một trong những bài toán cơ bản
 
 ## 8.5.1 Cơ sở Lý thuyết
 
-Bài toán tìm nghiệm phương trình $f(x) = 0$ được gọi là bài toán tìm điểm không (root-finding problem). Điểm $x^{*}$ được gọi là nghiệm (hoặc điểm không, root) của phương trình nếu $f(x^{*}) = 0$ . Về mặt hình học, nghiệm là giao điểm giữa đồ thị hàm số $y = f(x)$ và trục hoành.
+Bài toán tìm nghiệm phương trình $f(x) = 0$được gọi là bài toán tìm điểm không (root-finding problem). Điểm$x^{*}$được gọi là nghiệm (hoặc điểm không, root) của phương trình nếu$f(x^{*}) = 0$. Về mặt hình học, nghiệm là giao điểm giữa đồ thị hàm số$y = f(x)$ và trục hoành.
 
 Các phương pháp số tìm nghiệm có thể phân thành hai loại chính:
 
-• **Phương pháp ngoặc (Bracketing methods)**: Yêu cầu hai điểm ban đầu a và b sao cho $f(a)\cdot f(b) <   0$ (hàm đổi dấu), đảm bảo tồn tại ít nhất một nghiệm trong khoảng $[a,b]$ . Phương pháp chia đôi (bisection) là đại diện tiêu biểu.
+• **Phương pháp ngoặc (Bracketing methods)**: Yêu cầu hai điểm ban đầu a và b sao cho $f(a)\cdot f(b) <   0$(hàm đổi dấu), đảm bảo tồn tại ít nhất một nghiệm trong khoảng$[a,b]$ . Phương pháp chia đôi (bisection) là đại diện tiêu biểu.
 
 • **Phương pháp lặp mở (Open methods)**: Chỉ cần một hoặc vài điểm xuất phát, sử dụng thông tin về đạo hàm để hội tụ nhanh hơn. Phương pháp Newton-Raphson là ví dụ điển hình.
 
 ## 8.5.2 Phương pháp Chia đôi (Bisection Method)
 
-Phương pháp chia đôi là thuật toán đơn giản và tin cậy nhất để tìm nghiệm. $\acute{\mathrm{Y}}$ tưởng dựa trên định lý giá trị trung gian: nếu hàm liên tục $f(x)$ đổi dấu trên $[a,b]$ , tức $f(a)\cdot f(b) <   0$ thì tồn tại ít nhất một nghiệm trong khoảng đó.
+Phương pháp chia đôi là thuật toán đơn giản và tin cậy nhất để tìm nghiệm. $\acute{\mathrm{Y}}$tưởng dựa trên định lý giá trị trung gian: nếu hàm liên tục$f(x)$đổi dấu trên$[a,b]$, tức$f(a)\cdot f(b) <   0$ thì tồn tại ít nhất một nghiệm trong khoảng đó.
 
 Thuật toán hoạt động như sau:
 
-1. Tính điểm giữa $c = \frac{a + b}{2}$
+1. Tính điểm giữa $c = \frac{a + b}{2}$2. Nếu$f(c) = 0$hoặc$\vert b - a\vert$ đủ nhỏ: dừng, trả vê c
 
-2. Nếu $f(c) = 0$ hoặc $\vert b - a\vert$ đủ nhỏ: dừng, trả vê c
-
-3. Nếu $f(a)\cdot f(c) <   0:$ nghiệm nằm trong $[a,c]$ , đặt $b = c$
-
-4. Ngược lại: nghiệm nằm trong $[c,b]$ , đặt $a = c$
+3. Nếu $f(a)\cdot f(c) <   0:$nghiệm nằm trong$[a,c]$, đặt$b = c$4. Ngược lại: nghiệm nằm trong$[c,b]$, đặt$a = c$
 
 5. Quay lại bước 1
 
@@ -8773,7 +8761,7 @@ $$
 x _ {n + 1} = x _ {n} - \frac {f (x _ {n})}{f ^ {\prime} (x _ {n})}
 $$
 
-Phương pháp này có tốc độ hội tụ bậc hai (quadratic convergence): nếu $x_{n}$ gần nghiệm, sai số ở bước tiếp theo tỷ lệ với bình phương sai số hiện tại: $\left|x_{n + 1} - x^{*}\right|\propto \left|x_{n} - x^{*}\right|^{2}$ Điều này có nghĩa số chữ số chính xác tăng gấp đôi sau mỗi bước lặp khi gần nghiệm.
+Phương pháp này có tốc độ hội tụ bậc hai (quadratic convergence): nếu $x_{n}$gần nghiệm, sai số ở bước tiếp theo tỷ lệ với bình phương sai số hiện tại:$\left|x_{n + 1} - x^{*}\right|\propto \left|x_{n} - x^{*}\right|^{2}$ Điều này có nghĩa số chữ số chính xác tăng gấp đôi sau mỗi bước lặp khi gần nghiệm.
 
 Tuy nhiên, phương pháp Newton có nhược điểm:
 
@@ -8973,7 +8961,7 @@ Nội suy (interpolation) là kỹ thuật ước lượng giá trị của hàm
 
 ## 8.6.1 Cơ sở Lý thuyết Nội suy
 
-Cho tập điểm dữ liệu $(x_{i},y_{i})$ với $i = 0,1,\dots,n,$ ta muốn tìm hàm f(x) sao cho $f(x_{i}) =$ yi với mọi i, và có thể tính f(x) tại bất kỳ x nào trong khoảng $[x_0, x_n]$ . Hàm f(x) được gọi là hàm nội suy.
+Cho tập điểm dữ liệu $(x_{i},y_{i})$với$i = 0,1,\dots,n,$ta muốn tìm hàm f(x) sao cho$f(x_{i}) =$yi với mọi i, và có thể tính f(x) tại bất kỳ x nào trong khoảng$[x_0, x_n]$ . Hàm f(x) được gọi là hàm nội suy.
 
 Các yêu cầu đối với hàm nội suy:
 
@@ -9247,9 +9235,7 @@ Kết quả cho thấy cubic spline khôi phục dữ liệu với độ chính 
 
 **Bài tập 1: Tích phân Ứng dụng** Tính diện tích hình phẳng giới hạn bởi các đường:
 
-- $y = x^{2}$
-
-- $y = 2x + 3$
+- $y = x^{2}$-$y = 2x + 3$
 
 Yêu cầu:
 
@@ -9271,7 +9257,7 @@ Với $R = 1000\Omega ,C = 10^{-6}F.$ , và điện áp đầu vào là sóng vu
 
 2. Giải phương trình với $V_{C}(0) = 0$ trên khoảng 50ms
 
-3. Vẽ đồ thị $V_{\mathrm{in}}(t)$ và $V_{C}(t)$ trên cùng một figure
+3. Vẽ đồ thị $V_{\mathrm{in}}(t)$và$V_{C}(t)$ trên cùng một figure
 
 4. Nhận xét về quá trình nạp và xả của tụ điện
 
@@ -9314,9 +9300,7 @@ $$
 \ddot {\theta} _ {2} = (\text {phương trình tương tự})
 $$
 
-1. Chuyển về hệ bậc nhất với 4 biến: $[\theta_{1},\omega_{1},\theta_{2},\omega_{2}]$
-
-2. Giải với điều kiện ban đầu: $\theta_{1} = 90, \theta_{2} = -90, \omega_{1} = \omega_{2} = 0$
+1. Chuyển về hệ bậc nhất với 4 biến: $[\theta_{1},\omega_{1},\theta_{2},\omega_{2}]$2. Giải với điều kiện ban đầu:$\theta_{1} = 90, \theta_{2} = -90, \omega_{1} = \omega_{2} = 0$
 
 3. Vẽ quỹ đạo của hai khối nặng trong không gian 2D
 
@@ -9328,9 +9312,7 @@ $$
 \rho (r) = \rho_ {0} (1 + \alpha r ^ {2})
 $$
 
-với $\rho_0 = 7850 \mathrm{~kg} / \mathrm{m}^3$ (thép), $\alpha = 10 \mathrm{~m}^{-2}$ , độ dày đồng đều $h = 0.01\mathrm{m}$
-
-1. Thiết lập tích phân kép trong tọa độ cực: $M = \iint \rho (r)h  dA$
+với $\rho_0 = 7850 \mathrm{~kg} / \mathrm{m}^3$(thép),$\alpha = 10 \mathrm{~m}^{-2}$, độ dày đồng đều$h = 0.01\mathrm{m}$1. Thiết lập tích phân kép trong tọa độ cực:$M = \iint \rho (r)h  dA$
 
 2. Tính khối lượng bằng dblquad
 
@@ -9344,9 +9326,7 @@ $$
 \begin{array}{c} T _ {1} \cos \theta_ {1} + T _ {2} \cos \theta_ {2} + T _ {3} \cos \theta_ {3} = 0 \\ T _ {1} \sin \theta_ {1} + T _ {2} \sin \theta_ {2} + T _ {3} \sin \theta_ {3} = P \\ l _ {1} T _ {1} + l _ {2} T _ {2} - l _ {3} T _ {3} = 0 \end{array}
 $$
 
-với $l_{1} = l_{2} = l_{3} = 1\mathrm{m}$
-
-1. Giải hệ phương trình để tìm lực trong các thanh $(T_{1}, T_{2}, T_{3})$
+với $l_{1} = l_{2} = l_{3} = 1\mathrm{m}$1. Giải hệ phương trình để tìm lực trong các thanh$(T_{1}, T_{2}, T_{3})$
 
 2. Xác định thanh nào chịu kéo (dương), thanh nào chịu nén (âm)
 
@@ -9377,19 +9357,17 @@ $$
 m _ {2} \ddot {x} _ {2} = - k _ {2} (x _ {2} - x _ {1}) - c _ {2} \dot {x} _ {2} + F (t)
 $$
 
-Với $m_{1} = m_{2} = 1 \mathrm{~kg}, k_{1} = k_{2} = 100 \mathrm{~N/m}, c_{1} = c_{2} = 1 \mathrm{~N} \cdot \mathrm{s/m}$ , và lực kích thích $F(t) = 10\sin (5t)\mathrm{N}.$
+Với $m_{1} = m_{2} = 1 \mathrm{~kg}, k_{1} = k_{2} = 100 \mathrm{~N/m}, c_{1} = c_{2} = 1 \mathrm{~N} \cdot \mathrm{s/m}$, và lực kích thích$F(t) = 10\sin (5t)\mathrm{N}.$
 
 1. Chuyển về hệ bậc nhất 4 phương trình
 
-2. Giải với điều kiện ban đầu $x_{1} = x_{2} = \dot{x}_{1} = \dot{x}_{2} = 0$
-
-3. Vẽ biến thiên $x_{1}(t)$ và $x_{2}(t)$
+2. Giải với điều kiện ban đầu $x_{1} = x_{2} = \dot{x}_{1} = \dot{x}_{2} = 0$3. Vẽ biến thiên$x_{1}(t)$và$x_{2}(t)$
 
 4. Phân tích phổ tần số (FFT) của dao động
 
 5. Xác định tần số cộng hưởng
 
-**Bài tập 10: Tổng hợp (Nâng cao)** Bài toán tối ưu hóa quỹ đạo: Một vật được phóng lên với vận tốc ban đầu $v_{0}$ tại góc θ so với phương ngang. Vật chịu lực cản không khí tỷ lệ với vận tốc: $F_{d} = -bv$
+**Bài tập 10: Tổng hợp (Nâng cao)** Bài toán tối ưu hóa quỹ đạo: Một vật được phóng lên với vận tốc ban đầu $v_{0}$tại góc θ so với phương ngang. Vật chịu lực cản không khí tỷ lệ với vận tốc:$F_{d} = -bv$
 
 Phương trình chuyển động:
 

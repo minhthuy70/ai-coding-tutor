@@ -19,7 +19,6 @@
 2023 CWE Top 25 Most Dangerous Software Weaknesses</title>
 </head>
 <body onload="onloadCookie()">
-<a name="top" id="top"></a>
 
 	                <a href="/index.html" style="color:#32498D; text-decoration:none">
 	                <img src="/images/cwe-20years-logo.png" width="203" height="58" style="float:left;border:0;margin-right:6px" alt="CWE" />
@@ -699,7 +698,6 @@ Share via: <a class="twitter-share-button" href="https://twitter.com/intent/twee
 
 November 11, 2024
 
-  <a name="footer" id="footer"></a>
     <table width="100%" cellpadding="0" cellspacing="0" border="0" class="ltgreybackground" style="clear:both">
       <tr>
         <td colspan="3" id="line">&nbsp;</td>

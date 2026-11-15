@@ -683,11 +683,9 @@ Later chapters will make more suggestions about debugging and other programming 
 
 **Programming languages are formal languages that have been designed to express computations.**
 
-Formal languages tend to have strict rules about syntax. For example, $3 + 3 = 6$ is a syntactically correct mathematical statement, but 3+ = 3\$6 is not. $H_{2}O$ is a syntactically correct chemical formula, but $_{2}$ Zz is not.
+Formal languages tend to have strict rules about syntax. For example, $3 + 3 = 6$ is a syntactically correct mathematical statement, but 3+ = 3\$6 is not. $H_{2}O$is a syntactically correct chemical formula, but$_{2}$ Zz is not.
 
-Syntax rules come in two flavors, pertaining to **tokens** and structure. Tokens are the basic elements of the language, such as words, numbers, and chemical elements. One of the problems with 3+ = 3\$6 is that \$ is not a legal token in mathematics (at least as far as I know). Similarly, $_{2}$ Zz is not legal because there is no element with the abbreviation $Zz$
-
-The second type of syntax rule pertains to the structure of a statement; that is, the way the tokens are arranged. The statement $3+ = 3$ is illegal because even though + and = are legal tokens, you can’t have one right after the other. Similarly, in a chemical formula the subscript comes after the element name, not before.
+Syntax rules come in two flavors, pertaining to **tokens** and structure. Tokens are the basic elements of the language, such as words, numbers, and chemical elements. One of the problems with 3+ = 3\$6 is that \$is not a legal token in mathematics (at least as far as I know). Similarly,$_{2}$Zz is not legal because there is no element with the abbreviation$Zz$The second type of syntax rule pertains to the structure of a statement; that is, the way the tokens are arranged. The statement$3+ = 3$ is illegal because even though + and = are legal tokens, you can’t have one right after the other. Similarly, in a chemical formula the subscript comes after the element name, not before.
 
 **Exercise 1.1.** Write a well-structured English sentence with invalid tokens in it. Then write another sentence with all valid tokens but with invalid structure.
 
@@ -9221,13 +9219,11 @@ The following table shows the run time of these algorithms for different problem
 | 1 000 | 100 001 | 1 001 001 |
 | 10 000 | 1 000 001 | > 10<sup>10</sup> |
 
-At $n = 10,$ Algorithm A looks pretty bad; it takes almost 10 times longer than Algorithm B. But for $n = 100$ they are about the same, and for larger values A is much better.
+At $n = 10,$Algorithm A looks pretty bad; it takes almost 10 times longer than Algorithm B. But for$n = 100$ they are about the same, and for larger values A is much better.
 
 The fundamental reason is that for large values of n, any function that contains an $n^{2}$ term will grow faster than a function whose leading term is n. The **leading term** is the term with the highest exponent.
 
-For Algorithm A, the leading term has a large coefficient, 100, which is why B does better than A for small n. But regardless of the coefficients, there will always be some value of n where $an^{2}>bn$
-
-The same argument applies to the non-leading terms. Even if the run time of Algorithm A were $n + 1000000,$ it would still be better than Algorithm B for sufficiently large n.
+For Algorithm A, the leading term has a large coefficient, 100, which is why B does better than A for small n. But regardless of the coefficients, there will always be some value of n where $an^{2}>bn$The same argument applies to the non-leading terms. Even if the run time of Algorithm A were$n + 1000000,$ it would still be better than Algorithm B for sufficiently large n.
 
 In general, we expect an algorithm with a smaller leading term to be a better algorithm for large problems, but for smaller problems, there may be a **crossover point** where another algorithm is better. The location of the crossover point depends on the details of the algorithms, the inputs, and the hardware, so it is usually ignored for purposes of algorithmic analysis. But that doesn’t mean you can forget about it.
 
@@ -9237,7 +9233,7 @@ If two algorithms have the same leading order term, it is hard to say which is b
 
 An **order of growth** is a set of functions whose asymptotic growth behavior is considered equivalent. For example, 2n, 100n and n + 1 belong to the same order of growth, which is written $O(n)$ in **Big-Oh notation** and often called **linear** because every function in the set grows linearly with n.
 
-All functions with the leading term $n^{2}$ belong to $O(n^{2})$ ; they are **quadratic**, which is a fancy word for functions with the leading term $n^{2}$
+All functions with the leading term $n^{2}$belong to$O(n^{2})$; they are **quadratic**, which is a fancy word for functions with the leading term$n^{2}$
 
 The following table shows some of the orders of growth that appear most commonly in algorithmic analysis, in increasing order of badness.
 
@@ -9251,13 +9247,11 @@ For the logarithmic terms, the base of the logarithm doesn’t matter; changing 
 
 2. What is the order of growth of $(n^{2} + n)\cdot (n + 1)?$ Before you start multiplying, remember that you only need the leading term.
 
-3. If $f$ is in $O(g)$ , for some unspecified function g, what can we say about $af + b?$
+3. If $f$is in$O(g)$, for some unspecified function g, what can we say about$af + b?$4. If$f_{1}$and$f_{2}$are in$O(g)$, what can we say about$f_{1} + f_{2}$ ?
 
-4. If $f_{1}$ and $f_{2}$ are in $O(g)$ , what can we say about $f_{1} + f_{2}$ ?
+5. If $f_{1}$is in$O(g)$and$f_{2}$is in$O(h)$, what can we say about$f_{1} + f_{2}$ ?
 
-5. If $f_{1}$ is in $O(g)$ and $f_{2}$ is in $O(h)$ , what can we say about $f_{1} + f_{2}$ ?
-
-6. If $f_{1}$ is in $O(g)$ and $f_{2}$ is $O(h)$ , what can we say about $f_{1} \cdot f_{2}$?
+6. If $f_{1}$is in$O(g)$and$f_{2}$is$O(h)$, what can we say about$f_{1} \cdot f_{2}$?
 
 Programmers who care about performance often find this kind of analysis hard to swallow. They have a point: sometimes the coefficients and the non-leading terms make a real difference. Sometimes the details of the hardware, the programming language, and the characteristics of the input make a big difference. And for small problems asymptotic behavior is irrelevant.
 
@@ -9283,9 +9277,9 @@ If you use the same loop to “add” a list of strings, the run time is quadrat
 
 The string method join is usually faster because it is linear in the total length of the strings.
 
-As a rule of thumb, if the body of a loop is in $O(n^{a})$ then the whole loop is in $O(n^{a + 1})$ . The exception is if you can show that the loop exits after a constant number of iterations. If a loop runs k times regardless of n, then the loop is in $O(n^{a})$ , even for large k.
+As a rule of thumb, if the body of a loop is in $O(n^{a})$then the whole loop is in$O(n^{a + 1})$. The exception is if you can show that the loop exits after a constant number of iterations. If a loop runs k times regardless of n, then the loop is in$O(n^{a})$ , even for large k.
 
-Multiplying by k doesn’t change the order of growth, but neither does dividing. So if the body of a loop is in $O(n^{a})$ and it runs n/k times, the loop is in $O(n^{a + 1})$ , even for large k.
+Multiplying by k doesn’t change the order of growth, but neither does dividing. So if the body of a loop is in $O(n^{a})$and it runs n/k times, the loop is in$O(n^{a + 1})$ , even for large k.
 
 Most string and tuple operations are linear, except indexing and len, which are constant time. The built-in functions min and max are linear. The run-time of a slice operation is proportional to the length of the output, but independent of the size of the input.
 

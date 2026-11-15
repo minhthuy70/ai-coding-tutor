@@ -948,7 +948,7 @@ $$
 
 trong đó d là **tổng số chiều** của bài toán và |P| là **số chiều tính được**.
 
-**Ví dụ 5.2** (Tính khoảng cách nan-Euclid). - $\mathbf{x} = (5, nan)$ và $\mathbf{y} = (4, 5)$ : chỉ tọa độ thứ nhất tính được, $d = 2, |P| = 1$
+**Ví dụ 5.2** (Tính khoảng cách nan-Euclid). - $\mathbf{x} = (5, nan)$và$\mathbf{y} = (4, 5)$: chỉ tọa độ thứ nhất tính được,$d = 2, |P| = 1$
 
 $$
 d _ {n a n} = \sqrt {\frac {2}{1} (5 - 4) ^ {2}} = \sqrt {2} \approx 1, 4 1 4.
@@ -971,7 +971,7 @@ $$
 
 Bảng 5.5: Dữ liệu ví dụ cho KNN Imputer
 
-**Bước 1 – xác định** X và y. Để điền $x_{1}$ ở dòng 2, coi cột $x_{1}$ là “nhãn” y, hai cột còn lại $(x_{2}, x_{3})$ là đặc trưng X. Điểm cần dự đoán là $\mathbf{q} = (4,5)$ ; các dòng được làm láng giềng phải **có** giá trị $x_{1}$ (dòng 1, 3, 4, 5).
+**Bước 1 – xác định** X và y. Để điền $x_{1}$ở dòng 2, coi cột$x_{1}$là “nhãn” y, hai cột còn lại$(x_{2}, x_{3})$là đặc trưng X. Điểm cần dự đoán là$\mathbf{q} = (4,5)$; các dòng được làm láng giềng phải **có** giá trị$x_{1}$ (dòng 1, 3, 4, 5).
 
 **Bước 2 – tính khoảng cách nan-Euclid** trên hai cột $(x_{2}, x_{3}), d = 2:$
 
@@ -990,7 +990,7 @@ Bảng 5.6: Kết quả chạy tay KNN Imputer (k = 3)
 
 ## Lưu ý.
 
-• Hệ số $d / |P|$ phải được <u>áp dụng</u> **mỗi khi** có tọa độ bị thiếu. Quên hệ số này — chẳng hạn viết $d(\mathbf{q},\mathrm{dòng}5) = \sqrt{(5 - 8)^2} = 3$ thay vì $\sqrt{18} \approx 4,243$ — là lỗi hay gặp khi tính tay. Ở pví dụ này lỗi đó tình cờ không làm đổi tập láng giềng, nhưng trong trường hợp tổng quát sẽ cho kết quả sai.
+• Hệ số $d / |P|$phải được <u>áp dụng</u> **mỗi khi** có tọa độ bị thiếu. Quên hệ số này — chẳng hạn viết$d(\mathbf{q},\mathrm{dòng}5) = \sqrt{(5 - 8)^2} = 3$thay vì$\sqrt{18} \approx 4,243$ — là lỗi hay gặp khi tính tay. Ở pví dụ này lỗi đó tình cờ không làm đổi tập láng giềng, nhưng trong trường hợp tổng quát sẽ cho kết quả sai.
 
 • KNNImputer của scikit-learn đo khoảng cách trên **toàn bộ** 3 cột. Tọa độ đang cần điền của dòng nhận vốn bị thiếu nên tự động bị loại, và hệ số trở thành 3/|P| thay vì 2/|P| Mọi khoảng cách từ dòng nhận vì thế cùng được nhân với $\sqrt{3 / 2}$ , nên thứ tự láng giềng và giá trị điền **không đổi**.
 
@@ -1026,13 +1026,11 @@ Simple Imputer bỏ qua quan hệ giữa các cột; KNN Imputer khai thác quan
 
 1. **Khởi tạo**: điền tạm mọi ô thiếu bằng trung bình cột.
 
-2. Lần lượt với từng cột x<sub>j</sub> có ô thiếu: coi $x_{j}$ là biến mục tiêu y, các cột còn lại (với giá trị đang điền tạm) là X; huấn luyện mô hình hồi quy trên các dòng mà $x_{j}$ được quan sát; dự đoán và **cập nhật** các ô thiếu của $x_{j}$
+2. Lần lượt với từng cột x<sub>j</sub> có ô thiếu: coi $x_{j}$là biến mục tiêu y, các cột còn lại (với giá trị đang điền tạm) là X; huấn luyện mô hình hồi quy trên các dòng mà$x_{j}$được quan sát; dự đoán và **cập nhật** các ô thiếu của$x_{j}$
 
 3. Lặp lại bước 2 cho đến khi các giá trị điền ổn định hoặc đạt số vòng tối đa max\_iter.
 
-Bộ hồi quy ở bước 2 có thể là bất kỳ mô hình nào. Trong ví dụ dưới đây ta dùng hồi quy tuyến tính, giải bằng phương trình chuẩn $\boldsymbol{\beta} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y}$ (Chương **??**); cột đầu tiên của X toàn số 1 ứng với hệ số chặn $\beta_{0}$
-
-**Ví dụ 5.4** (Chạy tay một vòng Iterative Imputer). Điền ba ô thiếu trong Bảng 5.7 theo thứ tự cột $x_{1}\rightarrow x_{2}\rightarrow x_{3}$
+Bộ hồi quy ở bước 2 có thể là bất kỳ mô hình nào. Trong ví dụ dưới đây ta dùng hồi quy tuyến tính, giải bằng phương trình chuẩn $\boldsymbol{\beta} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y}$(Chương **??**); cột đầu tiên của X toàn số 1 ứng với hệ số chặn$\beta_{0}$**Ví dụ 5.4** (Chạy tay một vòng Iterative Imputer). Điền ba ô thiếu trong Bảng 5.7 theo thứ tự cột$x_{1}\rightarrow x_{2}\rightarrow x_{3}$
 
 | STT | x<sub>1</sub> | x<sub>2</sub> | x<sub>3</sub> |
 | 1 | 3 | 7 | 1 |
@@ -1049,7 +1047,7 @@ $$
 \bar {x} _ {1} = \frac {3 + 6 + 5 + 1}{4} = 3, 7 5, \qquad \bar {x} _ {2} = \frac {7 + 4 + 3 + 9}{4} = 5, 7 5, \qquad \bar {x} _ {3} = \frac {1 + 8 + 7 + 4}{4} = 5.
 $$
 
-Bước 2 - dự đoán $x_{1}$ từ $(x_{2}, x_{3})$ . Dùng bốn dòng có $x_{1}$ (dòng 4 đang mang giá trị tạm $x_{2} = 5,75$ dòng 5 mang $x_{3} = 5)$
+Bước 2 - dự đoán $x_{1}$từ$(x_{2}, x_{3})$. Dùng bốn dòng có$x_{1}$(dòng 4 đang mang giá trị tạm$x_{2} = 5,75$dòng 5 mang$x_{3} = 5)$
 
 $$
 \mathbf {X} = \left( \begin{array}{c c c} 1 & 7 & 1 \\ 1 & 3 & 7 \\ 1 & 5, 7 5 & 4 \\ 1 & 9 & 5 \end{array} \right), \quad \mathbf {y} = \left( \begin{array}{c} 3 \\ 6 \\ 5 \\ 1 \end{array} \right), \quad \mathbf {X} ^ {\top} \mathbf {X} = \left( \begin{array}{c c c} 4 & 2 4, 7 5 & 1 7 \\ 2 4, 7 5 & 1 7 2, 0 6 & 9 6 \\ 1 7 & 9 6 & 9 1 \end{array} \right), \quad \mathbf {X} ^ {\top} \mathbf {y} = \left( \begin{array}{c} 1 5 \\ 7 6, 7 5 \\ 7 0 \end{array} \right),
@@ -1059,13 +1057,13 @@ $$
 (\mathbf {X} ^ {\top} \mathbf {X}) ^ {- 1} \approx \left( \begin{array}{c c c} 5, 9 5 6 3 & - 0, 5 7 3 5 & - 0, 5 0 7 7 \\ - 0, 5 7 3 5 & 0, 0 6 9 3 & 0, 0 3 4 0 \\ - 0, 5 0 7 7 & 0, 0 3 4 0 & 0, 0 7 0 0 \end{array} \right), \qquad \boldsymbol {\beta} = (\mathbf {X} ^ {\top} \mathbf {X}) ^ {- 1} \mathbf {X} ^ {\top} \mathbf {y} \approx \left( \begin{array}{c} 9, 7 8 8 9 5 \\ - 0, 9 0 1 5 3 \\ - 0, 1 0 8 4 1 \end{array} \right)
 $$
 
-Thay dòng $2(x_{2}=4,x_{3}=8):x_{1}=9,78895-0,90153\times4-0,10841\times8\approx5,3155.$ Bước 3 – dự đoán $x_{2}$ **từ** $(x_{1},x_{3})$ , thế giá trị vừa điền $x_{1} = 5,3155$ vào dòng 2 (dòng 5 vẫn mang $x_{3} = 5)$
+Thay dòng $2(x_{2}=4,x_{3}=8):x_{1}=9,78895-0,90153\times4-0,10841\times8\approx5,3155.$Bước 3 – dự đoán$x_{2}$**từ**$(x_{1},x_{3})$, thế giá trị vừa điền$x_{1} = 5,3155$vào dòng 2 (dòng 5 vẫn mang$x_{3} = 5)$
 
 $$
 \mathbf {X} = \left( \begin{array}{c c c} 1 & 3 & 1 \\ 1 & 5, 3 1 5 5 & 8 \\ 1 & 6 & 7 \\ 1 & 1 & 5 \end{array} \right), \quad \mathbf {y} = \left( \begin{array}{c} 7 \\ 4 \\ 3 \\ 9 \end{array} \right) \Rightarrow \boldsymbol {\beta} \approx \binom{1 0, 4 9 7 2}{- 1, 1 5 7 8}.
 $$
 
-Thay dòng 4 4 $(x_{1} = 5, x_{3} = 4)$: $x_{2} = 10,4972 - 1,1578 \times 5 - 0,0598 \times 4 \approx 4,469$. **Bước 4 – dự đoán** $x_{3}$ **từ** $(x_{1}, x_{2})$ với các giá trị vừa điền (tính với đầy đủ chữ số):
+Thay dòng 4 4 $(x_{1} = 5, x_{3} = 4)$: $x_{2} = 10,4972 - 1,1578 \times 5 - 0,0598 \times 4 \approx 4,469$. **Bước 4 – dự đoán** $x_{3}$**từ**$(x_{1}, x_{2})$ với các giá trị vừa điền (tính với đầy đủ chữ số):
 
 $$
 \mathbf {X} = \left( \begin{array}{c c c} 1 & 3 & 7 \\ 1 & 5, 3 1 5 5 & 4 \\ 1 & 6 & 3 \\ 1 & 5 & 4, 4 6 8 9 \end{array} \right), \quad \mathbf {y} = \left( \begin{array}{c} 1 \\ 8 \\ 7 \\ 4 \end{array} \right) \Rightarrow \boldsymbol {\beta} \approx \left( \begin{array}{c} 9, 7 8 0 7 \\ 0, 3 4 8 7 \\ - 1, 4 0 0 1 \end{array} \right).
@@ -1073,9 +1071,7 @@ $$
 
 Thay dòng 5 $(x_{1} = 1, x_{2} = 9)$: $x_{3} = 9,7807 + 0,3487 \times 1 - 1,4001 \times 9 \approx -2,47$.
 
-Kết thúc vòng thứ nhất: $x_{1}\approx 5,32;x_{2}\approx 4,47;x_{3}\approx -2,47.$
-
-**Phân tích kết quả: bài toán điều kiện xấu.** Giá trị $x_{3}\approx -2,47$ nằm **ngoài** miền quan sát [1; 8] của cột $x_{3}$ — một dấu hiệu cảnh báo. Nguyên nhân nằm ở bốn dòng dùng để hồi quy ở bước 4: tổng $x_{1} + x_{2}$ của chúng lần lượt là 10; 9,32; 9; 9,47, , tức hai đặc trưng gần như phụ thuộc tuyến tính (**đa cộng tuyến**). Khi đó $\mathbf{X}^{\top}\mathbf{X}$ gần suy biến: số điều kiện của nó vào khoảng $1,8\times 10^{6}$ và phần tử lớn nhất của $(\mathbf{X}^{\top}\mathbf{X})^{-1}$ lên tới khoảng 9505. Hệ quả là nghiệm cực kỳ nhạy với sai số làm tròn ở các bước trước:
+Kết thúc vòng thứ nhất: $x_{1}\approx 5,32;x_{2}\approx 4,47;x_{3}\approx -2,47.$**Phân tích kết quả: bài toán điều kiện xấu.** Giá trị$x_{3}\approx -2,47$nằm **ngoài** miền quan sát [1; 8] của cột$x_{3}$— một dấu hiệu cảnh báo. Nguyên nhân nằm ở bốn dòng dùng để hồi quy ở bước 4: tổng$x_{1} + x_{2}$của chúng lần lượt là 10; 9,32; 9; 9,47, , tức hai đặc trưng gần như phụ thuộc tuyến tính (**đa cộng tuyến**). Khi đó$\mathbf{X}^{\top}\mathbf{X}$gần suy biến: số điều kiện của nó vào khoảng$1,8\times 10^{6}$và phần tử lớn nhất của$(\mathbf{X}^{\top}\mathbf{X})^{-1}$ lên tới khoảng 9505. Hệ quả là nghiệm cực kỳ nhạy với sai số làm tròn ở các bước trước:
 
 | x<sub>1</sub> (dòng 2) | x<sub>2</sub> (dòng 4) | β<sub>0</sub> | β<sub>1</sub> | β<sub>2</sub> | x<sub>3</sub> (dòng 5) |
 | 5,31553… (đủ chữ số) | 4,46889… | 9,781 | 0,349 | -1,400 | -2,47 |
@@ -1086,7 +1082,7 @@ Kết thúc vòng thứ nhất: $x_{1}\approx 5,32;x_{2}\approx 4,47;x_{3}\appro
 
 Bảng 5.8: Độ nhạy của bước 4 khi các giá trị điền trước đó bị làm tròn
 
-Chỉ cần $x_{1}$ lệch 0,01 là hệ số chặn $\beta_{0}$ đã nhảy từ khoảng 9,8 lên 32,9 hay xuống −41. Vì vậy, khi tính tay mỗi người làm tròn một kiểu sẽ cho những hệ số rất khác nhau, dù **không ai tính sai phép tính**. Lặp thêm nhiều vòng cũng không giúp gì: với max\_iter=10, giá trị điền của $x_{3}$ còn trôi tới khoảng −28,5.
+Chỉ cần $x_{1}$lệch 0,01 là hệ số chặn$\beta_{0}$đã nhảy từ khoảng 9,8 lên 32,9 hay xuống −41. Vì vậy, khi tính tay mỗi người làm tròn một kiểu sẽ cho những hệ số rất khác nhau, dù **không ai tính sai phép tính**. Lặp thêm nhiều vòng cũng không giúp gì: với max\_iter=10, giá trị điền của$x_{3}$ còn trôi tới khoảng −28,5.
 
 Bài học thực hành:
 
@@ -1143,9 +1139,9 @@ Theo định nghĩa kinh điển của Hawkins (1980), **ngoại lai** (outlier)
 
 ## 5.4.1 Phương pháp một biến: z-score và quy tắc IQR
 
-**Quy tắc z-score.** Coi điểm có $|z| = |x - \bar{x}| / s > 3$ là ngoại lai. Điểm yếu của quy tắc này là chính ngoại lai kéo lệch x¯ và làm s phình to (**hiệu ứng che lấp** – masking). Với cột $x =$ (2, 4, 6, 8, 30) sẽ dùng lại ở mục 5.7: $\bar{x} = 10, s = 10,20$ <u>nên</u> $z(30) = 1,96 < 3$ — giá trị 30 **không** bị phát hiện. Thực ra có thể chứng minh $|z|\leq \sqrt{n - 1}$ (Shiffler, 1988), nên với $n = 5$ không quan sát nào có thể vượt ngưỡng 3.
+**Quy tắc z-score.** Coi điểm có $|z| = |x - \bar{x}| / s > 3$là ngoại lai. Điểm yếu của quy tắc này là chính ngoại lai kéo lệch x¯ và làm s phình to (**hiệu ứng che lấp** – masking). Với cột$x =$(2, 4, 6, 8, 30) sẽ dùng lại ở mục 5.7:$\bar{x} = 10, s = 10,20$<u>nên</u>$z(30) = 1,96 < 3$— giá trị 30 **không** bị phát hiện. Thực ra có thể chứng minh$|z|\leq \sqrt{n - 1}$(Shiffler, 1988), nên với$n = 5$ không quan sát nào có thể vượt ngưỡng 3.
 
-**Quy tắc IQR (Tukey, 1977).** Dựa trên các tứ phân $\mathrm{vi}Q_{1},Q_{3}$ và khoảng tứ phân vị IQR = $Q_{3}-Q_{1}$ ; điểm nằm ngoài khoảng
+**Quy tắc IQR (Tukey, 1977).** Dựa trên các tứ phân $\mathrm{vi}Q_{1},Q_{3}$và khoảng tứ phân vị IQR =$Q_{3}-Q_{1}$ ; điểm nằm ngoài khoảng
 
 $$
 \left[ Q _ {1} - 1, 5 \mathrm{IQR}, Q _ {3} + 1, 5 \mathrm{IQR} \right]\tag{5.2}
@@ -1338,7 +1334,7 @@ print(oe.fit_transform(quality).ravel())
 
 Ý tưởng mã hóa “một bit bật” (one-hot) xuất phát từ thiết kế mạch số, nơi mỗi trạng thái của máy trạng thái được biểu diễn bằng đúng một flip-flop ở mức 1. Trong thống kê, kỹ thuật tương đương là **biến giả** (dummy variable), được Suits (1957) phổ biến cho hồi quy với biến phân loại.
 
-**Định nghĩa 5.5** (One Hot Encoding). Với tập K nhãn $\mathcal{C} = \{c_0,\dots ,c_{K - 1}\}$ , One Hot Encoding ánh xạ nhãn $C_k$ thành vector đơn vị thứ k trong $\mathbb{R}^{K}$
+**Định nghĩa 5.5** (One Hot Encoding). Với tập K nhãn $\mathcal{C} = \{c_0,\dots ,c_{K - 1}\}$, One Hot Encoding ánh xạ nhãn$C_k$thành vector đơn vị thứ k trong$\mathbb{R}^{K}$
 
 $$
 \psi (c _ {k}) = \mathbf {e} _ {k} = (0, \dots , 0, \underbrace {1} _ {v i t r i k}, 0, \dots , 0) \in \{0, 1 \} ^ {K}.\tag{5.5}
@@ -1455,7 +1451,7 @@ Bảng 5.14: So sánh Label Encoder và One Hot Encoder
 
 Ý tưởng biểu diễn một văn bản bằng **tần suất các từ** có từ rất sớm: nhà ngôn ngữ học Zellig Harris (1954) trong Distributional Structure đã nhắc đến “túi từ” (bag of words), và Hans Peter Luhn (1957) tại IBM đề xuất dùng tần suất từ để đánh chỉ mục tài liệu tự động. Năm 1975, Salton, Wong và Yang hệ thống hóa thành **mô hình không gian vector** (Vector Space Model): mỗi văn bản là một vector trong không gian có số chiều bằng kích thước từ vựng.
 
-**Định nghĩa 5.6** (Count Vectorizer). Cho kho văn bản (corpus) $D = \{d_{1},\dots ,d_{N}\}$ và từ vựng $V = \{t_1,\dots ,t_M\}$ gồm mọi từ xuất hiện trong D. Count Vectorizer biểu diễn văn bản d bằng vector
+**Định nghĩa 5.6** (Count Vectorizer). Cho kho văn bản (corpus) $D = \{d_{1},\dots ,d_{N}\}$và từ vựng$V = \{t_1,\dots ,t_M\}$ gồm mọi từ xuất hiện trong D. Count Vectorizer biểu diễn văn bản d bằng vector
 
 $$
 \mathbf {x} _ {d} = \big (\operatorname{tf} (t _ {1}, d), \operatorname{tf} (t _ {2}, d), \dots , \operatorname{tf} (t _ {M}, d) \big),\tag{5.7}
@@ -1465,11 +1461,7 @@ trong đó tf(t, d) (term frequency) là số lần từ t xuất hiện trong d
 
 **Ví dụ 5.8.** Xét kho văn bản gồm 3 câu:
 
-• $d_{1}$ “the cats are in the house”
-
-$d_{2}$ “the dogs are in the house and outside”
-
-$d_{3}$ “the cats and dogs are friends”
+• $d_{1}$“the cats are in the house”$d_{2}$“the dogs are in the house and outside”$d_{3}$ “the cats and dogs are friends”
 
 Từ vựng (sắp xếp alphabet) gồm M = 9 từ: and, are, cats, dogs, friends, house, in, outside, the.
 
@@ -1509,7 +1501,7 @@ $$
 \hat {\mathbf {x}} _ {d} = \frac {\mathbf {x} _ {d}}{\| \mathbf {x} _ {d} \| _ {2}}, \quad \| \mathbf {x} _ {d} \| _ {2} = \sqrt {\sum_ {j} x _ {d j} ^ {2}}.\tag{5.8}
 $$
 
-Với $d_{1}\colon\|\mathbf{x}_{d_{1}}\|_{2}^{2}=1+1+1+1+2^{2}=8,$ , nên các số 1 trở thành $1 / \sqrt{8} \approx 0,3536$ và số 2 trở thành $2 / \sqrt{8}\approx 0,7071$ . Tương tự $\| \mathbf{x}_{d_2}\| _2 = \sqrt{10}\mathrm{và}\| \mathbf{x}_{d_3}\| _2 = \sqrt{6}:$
+Với $d_{1}\colon\|\mathbf{x}_{d_{1}}\|_{2}^{2}=1+1+1+1+2^{2}=8,$, nên các số 1 trở thành$1 / \sqrt{8} \approx 0,3536$và số 2 trở thành$2 / \sqrt{8}\approx 0,7071$. Tương tự$\| \mathbf{x}_{d_2}\| _2 = \sqrt{10}\mathrm{và}\| \mathbf{x}_{d_3}\| _2 = \sqrt{6}:$
 
 |  | and | are | cats | dogs | friends | house | in | outside | the |
 | d<sub>1</sub> | 0 | 0.3536 | 0.3536 | 0 | 0 | 0.3536 | 0.3536 | 0 | 0.7071 |
@@ -1579,7 +1571,7 @@ $$
 \cos (d _ {i}, d _ {j}) = \hat {\mathbf {x}} _ {d _ {i}} \cdot \hat {\mathbf {x}} _ {d _ {j}}.\tag{5.12}
 $$
 
-Ta có cos $(d_{1},d_{2})\approx 0,6915$ , cos $(d_{1},d_{3})\approx 0,4702,$ , cos $(d_{2},d_{3})\approx 0,5288:$ hai câu cùng nói về “in the house” $(d_{1}, d_{2})$ giống nhau nhất — phù hợp với trực giác.
+Ta có cos $(d_{1},d_{2})\approx 0,6915$, cos$(d_{1},d_{3})\approx 0,4702,$, cos$(d_{2},d_{3})\approx 0,5288:$hai câu cùng nói về “in the house”$(d_{1}, d_{2})$ giống nhau nhất — phù hợp với trực giác.
 
 ## Listing 5.12: TF-IDF Vectorizer với các cấu hình khác nhau
 
@@ -1683,7 +1675,7 @@ trong đó $Q_{1}, Q_{3}$ là các phân vị 25% và 75%. Trung vị và khoả
 
 ## 5.7.6 Ví dụ so sánh bốn bộ chuẩn hóa
 
-**Ví dụ 5.10.** Cho cột $x = (2,4,6,8,30)$ , trong đó 30 là một ngoại lai. Các đại lượng cần thiết: min = 2, max = 30, max $|x| = 30, \mu = 10, \sigma = \sqrt{104} \approx 10, 198,$ , median $= 6,Q_{1} = 4,Q_{3} = 8,$ IQR = 4.
+**Ví dụ 5.10.** Cho cột $x = (2,4,6,8,30)$, trong đó 30 là một ngoại lai. Các đại lượng cần thiết: min = 2, max = 30, max$|x| = 30, \mu = 10, \sigma = \sqrt{104} \approx 10, 198,$, median$= 6,Q_{1} = 4,Q_{3} = 8,$ IQR = 4.
 
 | x | MinMax | MaxAbs | Standard | Robust |
 | 2 | 0.0000 | 0.0667 | -0.7845 | -1.0 |
@@ -1740,13 +1732,13 @@ Trong nhiều bài toán phân lớp, lớp quan trọng nhất lại là lớp 
 
 **SMOTE** (Synthetic Minority Over-sampling Technique), do Chawla, Bowyer, Hall và Kegelmeyer công bố năm 2002, khắc phục nhược điểm của việc nhân bản: thay vì sao chép, SMOTE **tổng hợp mẫu mới** nằm trên đoạn thẳng nối một mẫu thiểu số với một láng giềng cùng lớp của nó.
 
-**Định nghĩa 5.8** (Sinh mẫu SMOTE). Với mỗi mẫu thiểu số $X_{i}$ : tìm k láng giềng gần nhất **trong lớp thiểu số**; chọn ngẫu nhiên một láng giềng $X_{nn}$ và một số $\lambda \sim U(0,1)$ ; mẫu mới là
+**Định nghĩa 5.8** (Sinh mẫu SMOTE). Với mỗi mẫu thiểu số $X_{i}$: tìm k láng giềng gần nhất **trong lớp thiểu số**; chọn ngẫu nhiên một láng giềng$X_{nn}$và một số$\lambda \sim U(0,1)$ ; mẫu mới là
 
 $$
 \mathbf {x} _ {m \acute {o} i} = \mathbf {x} _ {i} + \lambda \left(\mathbf {x} _ {n n} - \mathbf {x} _ {i}\right).\tag{5.18}
 $$
 
-Ví dụ 5.11 (Tạo một mẫu SMOTE). Lớp thiểu số gồm $P_{1}(2,3), P_{2}(4,4), P_{3}(3,6)$ ; chọn $k = 2.$ Hai láng giềng của $P_{1}$ là $P_{2}(d = \sqrt{5}\approx 2,236)$ và $P_{3}(d = \sqrt{10}\approx 3,162)$ . Giả sử lần rút ngẫu nhiên chọn được $P_{2}$ và $\lambda = 0,4.$
+Ví dụ 5.11 (Tạo một mẫu SMOTE). Lớp thiểu số gồm $P_{1}(2,3), P_{2}(4,4), P_{3}(3,6)$; chọn$k = 2.$Hai láng giềng của$P_{1}$là$P_{2}(d = \sqrt{5}\approx 2,236)$và$P_{3}(d = \sqrt{10}\approx 3,162)$. Giả sử lần rút ngẫu nhiên chọn được$P_{2}$và$\lambda = 0,4.$
 
 $$
 \mathbf {x} _ {m o i} = (2, 3) + 0, 4 \times \left[ (4, 4) - (2, 3) \right] = (2, 3) + (0, 8; 0, 4) = (2, 8; 3, 4).
@@ -2002,9 +1994,7 @@ print(scores.mean().round(3))
 
 1. Cho dãy gồm các phần tử cat, dog, fish, dog, cat, bird. Hãy (a) tự cài đặt Label Encoder theo thứ tự xuất hiện; (b) so sánh với kết quả của LabelEncoder trong scikit-learn và giải thích vì sao khác nhau.
 
-2. Với dãy ở bài 1, tự cài đặt One Hot Encoder bằng list, for và dictionary. Chứng minh rằng khoảng cách Euclid giữa hai vector one-hot khác nhau bất kỳ luôn bằng $\sqrt{2}$
-
-3. Thêm câu $d_{4} =$ “the birds are outside” vào kho văn bản ở mục TF-IDF. Tính tay df(t) và idf(t) (làm trơn) cho các từ are, outside, the, birds, sau đó kiểm tra bằng TfidfVectorizer.
+2. Với dãy ở bài 1, tự cài đặt One Hot Encoder bằng list, for và dictionary. Chứng minh rằng khoảng cách Euclid giữa hai vector one-hot khác nhau bất kỳ luôn bằng $\sqrt{2}$3. Thêm câu$d_{4} =$ “the birds are outside” vào kho văn bản ở mục TF-IDF. Tính tay df(t) và idf(t) (làm trơn) cho các từ are, outside, the, birds, sau đó kiểm tra bằng TfidfVectorizer.
 
 4. Dùng bảng tính (Excel/Google Sheets) dựng lại toàn bộ Bảng 5.15–5.19. Gợi ý: hàm LN, SQRT, SUMSQ.
 
@@ -2094,7 +2084,7 @@ $$
 y = w _ {0} + w _ {1} x + \epsilon\tag{6.1}
 $$
 
-trong đó $w_{0}$ là hê số chặn (intercept), $w_{1}$ là hệ số góc (slope), và ε là sai số ngẫu nhiên.
+trong đó $w_{0}$là hê số chặn (intercept),$w_{1}$ là hệ số góc (slope), và ε là sai số ngẫu nhiên.
 
 ## 6.2 Hàm mất mát (Loss Function)
 
@@ -2104,7 +2094,7 @@ $$
 J (w _ {0}, w _ {1}) = \frac {1}{2 n} \sum_ {i = 1} ^ {n} \left(y _ {i} - (w _ {0} + w _ {1} x _ {i})\right) ^ {2}\tag{6.2}
 $$
 
-Mục tiêu của bài toán là tìm $(w_0, w_1)$ sao cho $J(w_{0},w_{1})$ đạt giá trị nhỏ nhất.
+Mục tiêu của bài toán là tìm $(w_0, w_1)$sao cho$J(w_{0},w_{1})$ đạt giá trị nhỏ nhất.
 
 ## 6.3 Cài đặt Hồi quy tuyến tính với Scikit-Learn
 
@@ -2154,7 +2144,7 @@ Phân lớp (classification) là bài toán học có giám sát trong đó đ�
 
 ## 7.1 Bài toán phân lớp
 
-**Định nghĩa 7.1** (Bài toán phân lớp). Cho tập huấn luyện $\{(\mathbf{x}_i,y_i)\}_{i = 1}^n$ với $\mathbf{x}_i\in \mathbb{R}^d$ và $y_{i}\in$ $\{1,\dots ,K\}$ . Cần học hàm $f:\mathbb{R}^{d}\to\{1,\ldots,K\}$ sao cho f(x) dự đoán đúng nhãn của các điểm **chưa từng thấy**. Nhiều thuật toán còn ước lượng xác suất $P(y = k\mid \mathbf{x})$ và chọn nhãn có xác suất lớn nhất.
+**Định nghĩa 7.1** (Bài toán phân lớp). Cho tập huấn luyện $\{(\mathbf{x}_i,y_i)\}_{i = 1}^n$với$\mathbf{x}_i\in \mathbb{R}^d$và$y_{i}\in$ $\{1,\dots ,K\}$. Cần học hàm$f:\mathbb{R}^{d}\to\{1,\ldots,K\}$sao cho f(x) dự đoán đúng nhãn của các điểm **chưa từng thấy**. Nhiều thuật toán còn ước lượng xác suất$P(y = k\mid \mathbf{x})$ và chọn nhãn có xác suất lớn nhất.
 
 Về mặt hình học, bộ phân lớp chia không gian đặc trưng thành các vùng; ranh giới giữa các vùng gọi là **biên quyết định** (decision boundary). Các thuật toán khác nhau tạo ra biên có hình dạng khác nhau: tuyến tính (Logistic Regression, SVM tuyến tính), các đoạn song song trục (Decision Tree), hay biên phức tạp tùy dữ liệu (KNN, SVM với nhân).
 
@@ -2193,7 +2183,7 @@ KNN (K-Nearest Neighbors) được Evelyn Fix và Joseph Hodges đề xuất nă
 
 3. Gán nhãn chiếm đa số trong K điểm đó (có thể bỏ phiếu có trọng số 1/d)
 
-Ví dụ 7.1 (Tính tay KNN phân lớp). Cho 5 mẫu huấn luyện có hai đặc trưng $x_{1}, x_{2}$ và nhãn $y\in \{0,1\}$ (Bång 7.1) . Dự đoán nhãn của mẫu mới $\mathbf{q} = (2,4)$ với khoảng cách Euclid $d =$ $\sqrt{(x_1 - 2)^2 + (x_2 - 4)^2}$
+Ví dụ 7.1 (Tính tay KNN phân lớp). Cho 5 mẫu huấn luyện có hai đặc trưng $x_{1}, x_{2}$và nhãn$y\in \{0,1\}$(Bång 7.1) . Dự đoán nhãn của mẫu mới$\mathbf{q} = (2,4)$với khoảng cách Euclid$d =$ $\sqrt{(x_1 - 2)^2 + (x_2 - 4)^2}$
 
 | ST1T | x<sub>7</sub><sup>1</sup> | x<sub>6</sub><sup>2</sup> | y<sub>0</sub> | K√ho5ả<sup>2</sup>n+g2c<sup>2</sup>ác=h√đế2n9q≈=5,(328,54) | Thứ4hạng |
 | 2 | 2 | 4 | 1 | √0<sup>2</sup> + 0<sup>2</sup> = 0 | 1 |
@@ -2203,7 +2193,7 @@ Ví dụ 7.1 (Tính tay KNN phân lớp). Cho 5 mẫu huấn luyện có hai đ�
 
 Bảng 7.1: Dữ liệu huấn luyện và khoảng cách đến điểm cần dự đoán
 
-Với $K = 3:$ ba mẫu gần nhất là 2, 3, 4, đều có nhãn $1 \Rightarrow \hat{y} = 1$. Vói $K = 4$: thêm mẫu 1 (nhãn 0), kết quả bỏ phiếu 3 : 1, vẫn dự đoán $\hat{y} = 1$
+Với $K = 3:$ba mẫu gần nhất là 2, 3, 4, đều có nhãn$1 \Rightarrow \hat{y} = 1$. Vói $K = 4$: thêm mẫu 1 (nhãn 0), kết quả bỏ phiếu 3 : 1, vẫn dự đoán $\hat{y} = 1$
 
 ## 7.2.1 KNN có trọng số
 
@@ -2215,7 +2205,7 @@ $$
 
 trong đó ε là một số rất nhỏ (ví dụ $10^{-5})$ để tránh chia cho 0 khi q trùng với một điểm huấn luyện.
 
-**Ví dụ 7.2** (Trọng số khi điểm cần dự đoán trùng một mẫu). Tiếp ví dụ trên với $K = 4$ và $\varepsilon = 10^{-5}$
+**Ví dụ 7.2** (Trọng số khi điểm cần dự đoán trùng một mẫu). Tiếp ví dụ trên với $K = 4$và$\varepsilon = 10^{-5}$
 
 $$
 w _ {2} = \frac {1}{0 + 1 0 ^ {- 5}} = 1 0 0 0 0 0, \qquad w _ {3} = \frac {1}{1 , 4 1 4} \approx 0, 7 0 7,
@@ -2225,9 +2215,9 @@ $$
 w _ {4} = \frac {1}{5 , 0 9 9} \approx 0, 1 9 6, \quad w _ {1} = \frac {1}{5 , 3 8 5} \approx 0, 1 8 6.
 $$
 
-Tổng trọng số của lớp $l\text{ là}100000 + 0,707 + 0,196 \approx 100000,9,$ của lớp 0 là 0,186. Chuẩn hóa về tỉ lệ: lớp 0 chiếm $\frac{0,186}{100001,09} \approx 1,86 \times 10^{-6} \approx 0,$ , lớp 1 chiếm ≈ 1. Mẫu trùng khớp gần như quyết định toàn bộ kết quả. Chú $\acute{y}\frac{1}{0 + 10^{-5}} = 10^{5}$ chứ không phải 1 — một nhầm lẫn hay gặp khi tính tay. Trong scikit-learn, nếu có láng giềng cách đúng 0 thì weights="distance" chỉ tính các láng giềng đó.
+Tổng trọng số của lớp $l\text{ là}100000 + 0,707 + 0,196 \approx 100000,9,$của lớp 0 là 0,186. Chuẩn hóa về tỉ lệ: lớp 0 chiếm$\frac{0,186}{100001,09} \approx 1,86 \times 10^{-6} \approx 0,$, lớp 1 chiếm ≈ 1. Mẫu trùng khớp gần như quyết định toàn bộ kết quả. Chú$\acute{y}\frac{1}{0 + 10^{-5}} = 10^{5}$ chứ không phải 1 — một nhầm lẫn hay gặp khi tính tay. Trong scikit-learn, nếu có láng giềng cách đúng 0 thì weights="distance" chỉ tính các láng giềng đó.
 
-Ví dụ 7.3 (Trọng số phá thế hòa phiếu). Cũng với dữ liệu ở Bảng 7.1, xét $\mathbf{q} = (5,6)$ và $K = 4.$ Khoảng cách đến các mẫu 1, 5, 2, 4 lần lượt là 2; √10 ≈ 3,162; √13 ≈ 3,606; √13 ≈ 3,606 (mẫu 3 xa nhất, $\sqrt{17}\approx 4,123)$ . Bỏ phiếu đều cho kết quả **hòa** 2 : 2: mẫu 1, 5 nhãn 0; mẫu 2, 4 nhãn 1. Với trọng số 1/d:
+Ví dụ 7.3 (Trọng số phá thế hòa phiếu). Cũng với dữ liệu ở Bảng 7.1, xét $\mathbf{q} = (5,6)$và$K = 4.$Khoảng cách đến các mẫu 1, 5, 2, 4 lần lượt là 2; √10 ≈ 3,162; √13 ≈ 3,606; √13 ≈ 3,606 (mẫu 3 xa nhất,$\sqrt{17}\approx 4,123)$ . Bỏ phiếu đều cho kết quả **hòa** 2 : 2: mẫu 1, 5 nhãn 0; mẫu 2, 4 nhãn 1. Với trọng số 1/d:
 
 $$
 W _ {0} = \frac {1}{2} + \frac {1}{3 , 1 6 2} \approx 0, 8 1 6, \quad W _ {1} = \frac {1}{3 , 6 0 6} + \frac {1}{3 , 6 0 6} \approx 0, 5 5 5 \Rightarrow \hat {y} = 0.
@@ -2243,7 +2233,7 @@ $$
 \hat {y} = \frac {1}{K} \sum_ {i \in N _ {K} (\mathbf {q})} y _ {i} \quad \text {hoăc} \quad \hat {y} = \frac {\sum_ {i \in N _ {K} (\mathbf {q})} w _ {i} y _ {i}}{\sum_ {i \in N _ {K} (\mathbf {q})} w _ {i}}, \quad w _ {i} = \frac {1}{d (\mathbf {q} , \mathbf {x} _ {i})}.\tag{7.2}
 $$
 
-**Ví dụ 7.4** (Tính tay KNN hồi quy với $K = 4)$ . Cùng 5 mẫu như Bảng 7.1 nhưng y là số thực. Dự đoán cho $\mathbf{q} = (3,4)$
+**Ví dụ 7.4** (Tính tay KNN hồi quy với $K = 4)$. Cùng 5 mẫu như Bảng 7.1 nhưng y là số thực. Dự đoán cho$\mathbf{q} = (3,4)$
 
 | ST1T | x<sub>7</sub><sup>1</sup> | x<sub>6</sub><sup>2</sup> | <sub>7</sub>y,3 | √4<sup>2</sup> +d(2q<sup>2</sup>,x≈<sub>i</sub>)4,472 | w<sub>i</sub> = 1/d0,224 |
 | 2 | 2 | 4 | 5,4 | √1<sup>2</sup> + 0<sup>2</sup> = 1 | 1 |
@@ -2255,11 +2245,7 @@ Bảng 7.2: KNN hồi quy: khoảng cách và trọng số đến $\mathbf{q} = 
 
 Bốn láng giềng gần nhất là mẫu 2, 3, 1, 4.
 
-• Trung bình đều: $\hat{y} = \frac{5,4 + 4,2 + 7,3 + 5,1}{4} = \frac{22}{4} = 5,5.$
-
-• Trung bình có trọng số: $\hat{y} = \frac{5,4\times 1 + 4,2\times 0,447 + 7,3\times 0,224 + 5,1\times 0,2}{1 + 0,447 + 0,224 + 0,2}\approx 5,31.$
-
-Lưu ý: phép trung bình lấy trên **giá trị mục tiêu** $y_{i}$ của các láng giềng, không phải trên khoảng cách. Đây cũng chính là cơ chế của KNN Imputer ở mục 5.3: cột cần điền đóng vai trò y.
+• Trung bình đều: $\hat{y} = \frac{5,4 + 4,2 + 7,3 + 5,1}{4} = \frac{22}{4} = 5,5.$• Trung bình có trọng số:$\hat{y} = \frac{5,4\times 1 + 4,2\times 0,447 + 7,3\times 0,224 + 5,1\times 0,2}{1 + 0,447 + 0,224 + 0,2}\approx 5,31.$Lưu ý: phép trung bình lấy trên **giá trị mục tiêu**$y_{i}$ của các láng giềng, không phải trên khoảng cách. Đây cũng chính là cơ chế của KNN Imputer ở mục 5.3: cột cần điền đóng vai trò y.
 
 ## Lưu ý thực hành.
 
@@ -2364,7 +2350,7 @@ $$
 P (y = 1 \mid \mathbf {x}) = \sigma (\mathbf {w} ^ {\top} \mathbf {x} + b), \qquad \sigma (z) = \frac {1}{1 + e ^ {- z}},\tag{7.5}
 $$
 
-và dự đoán $\hat{y} = 1$ khi xác suất ≥ 0,5, , tức khi $\mathbf{w}^{\top}\mathbf{x} + b\geq 0.$ Do đó biên quyết định là một **siêu phẳng**.
+và dự đoán $\hat{y} = 1$khi xác suất ≥ 0,5, , tức khi$\mathbf{w}^{\top}\mathbf{x} + b\geq 0.$ Do đó biên quyết định là một **siêu phẳng**.
 
 | z | -2 | 0 | 1 | 2 |
 | σ(z) | 0.1192 | 0.5 | 0.7311 | 0.8808 |
@@ -2379,11 +2365,9 @@ $$
 J (\mathbf {w}, b) = - \frac {1}{n} \sum_ {i = 1} ^ {n} \left[ y _ {i} \ln \hat {p} _ {i} + (1 - y _ {i}) \ln (1 - \hat {p} _ {i}) \right], \qquad \hat {p} _ {i} = \sigma (\mathbf {w} ^ {\top} \mathbf {x} _ {i} + b).\tag{7.6}
 $$
 
-Hàm này lồi, không có nghiệm đóng, nên được giải bằng Gradient Descent hoặc các phương pháp tối ưu bậc hai (thuật toán lbfgs mặc định của scikit-learn). Gradient có dạng rất gọn: $\nabla_{\mathbf{w}}J = \frac{1}{n}\sum_{i}(\hat{p}_{i} - y_{i})\mathbf{x}_{i}$ giống hệt hồi quy tuyến tính, chỉ thay ŷ bằng $\hat{p}$
+Hàm này lồi, không có nghiệm đóng, nên được giải bằng Gradient Descent hoặc các phương pháp tối ưu bậc hai (thuật toán lbfgs mặc định của scikit-learn). Gradient có dạng rất gọn: $\nabla_{\mathbf{w}}J = \frac{1}{n}\sum_{i}(\hat{p}_{i} - y_{i})\mathbf{x}_{i}$giống hệt hồi quy tuyến tính, chỉ thay ŷ bằng$\hat{p}$**Diễn giải.** ln$\frac{p}{1 - p} = \mathbf{w}^{\top}\mathbf{x} + b:$mỗi khi$x_{j}$tăng 1 đơn vị, odds (tỉ số$p / (1 - p))$được nhân với$e^{w_{j}}$ . Đây là lý do hồi quy logistic được ưa chuộng trong y khoa và tài chính, nơi cần giải thích mô hình.
 
-**Diễn giải.** ln $\frac{p}{1 - p} = \mathbf{w}^{\top}\mathbf{x} + b:$ mỗi khi $x_{j}$ tăng 1 đơn vị, odds (tỉ số $p / (1 - p))$ được nhân với $e^{w_{j}}$ . Đây là lý do hồi quy logistic được ưa chuộng trong y khoa và tài chính, nơi cần giải thích mô hình.
-
-**Đa lớp.** Với K lớp, dùng hàm **softmax**: $P(y = k\mid \mathbf{x}) = \frac{e^{z_{k}}}{\sum_{j}e^{z_{j}}}$ với $z_{k} = \mathbf{w}_{k}^{\top}\mathbf{x} + b_{k}$ . Tham số C trong scikit-learn là nghịch đảo của mức chính quy hóa L2 (giống Ridge): C nhỏ ⇒ chính quy hóa mạnh.
+**Đa lớp.** Với K lớp, dùng hàm **softmax**: $P(y = k\mid \mathbf{x}) = \frac{e^{z_{k}}}{\sum_{j}e^{z_{j}}}$với$z_{k} = \mathbf{w}_{k}^{\top}\mathbf{x} + b_{k}$ . Tham số C trong scikit-learn là nghịch đảo của mức chính quy hóa L2 (giống Ridge): C nhỏ ⇒ chính quy hóa mạnh.
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -2415,7 +2399,7 @@ Entropy (ID3/C4.5): $H = -\sum_{k=1}^{K} p_k \log_2 p_k$.
 
 (7.8)
 
-Nút “thuần” (chỉ một lớp) có $G = H = 0;$ với hai lớp cân bằng, $G = 0,5$ và H = 1. Thuật toán chọn câu hỏi chia nút làm **giảm độ hỗn tạp nhiều nhất**, tính theo trung bình có trọng số của các nút con. Với entropy, mức giảm này gọi là **độ lợi thông tin** (Information Gain):
+Nút “thuần” (chỉ một lớp) có $G = H = 0;$với hai lớp cân bằng,$G = 0,5$ và H = 1. Thuật toán chọn câu hỏi chia nút làm **giảm độ hỗn tạp nhiều nhất**, tính theo trung bình có trọng số của các nút con. Với entropy, mức giảm này gọi là **độ lợi thông tin** (Information Gain):
 
 $$
 \mathrm{IG} = H (\mathrm{cha}) - \sum_ {c \in \mathrm{con}} \frac {n _ {c}}{n} H (c).\tag{7.9}
@@ -2423,13 +2407,7 @@ $$
 
 **Ví dụ 7.6** (Tính một lần chia nút). Nút cha có 10 mẫu: 6 "Có", 4 "Không". . Một câu hỏi chia thành nút trái 4 mẫu (4 Có, 0 Không) và nút phải 6 mẫu (2 Có, 4 Không).
 
-• Gini cha: $1 - (0,6^{2} + 0,4^{2}) = 0,48.$
-
-• Gini trái: 0; Gini phải: $1 - \left((2 / 6)^{2} + (4 / 6)^{2}\right) = 0,4444.$
-
-• Gini sau chia: $0,4 \times 0 + 0,6 \times 0,4444 = 0,2667 \Rightarrow \text{giám } 0,2133.$
-
-• Entropy cha: 0,9710; entropy phải: 0,9183; $\mathrm{IG} = 0,9710 - 0,6\times 0,9183 = 0,4200.$
+• Gini cha: $1 - (0,6^{2} + 0,4^{2}) = 0,48.$• Gini trái: 0; Gini phải:$1 - \left((2 / 6)^{2} + (4 / 6)^{2}\right) = 0,4444.$• Gini sau chia:$0,4 \times 0 + 0,6 \times 0,4444 = 0,2667 \Rightarrow \text{giám } 0,2133.$• Entropy cha: 0,9710; entropy phải: 0,9183;$\mathrm{IG} = 0,9710 - 0,6\times 0,9183 = 0,4200.$
 
 Thuật toán thử mọi đặc trưng và mọi ngưỡng, rồi chọn phép chia có mức giảm lớn nhất.
 
@@ -2464,7 +2442,7 @@ Hình 7.3: Cây quyết định độ sâu 3 trên dữ liệu Iris (kết quả
 
 ## 7.6.1 Lề cực đại
 
-Với dữ liệu hai lớp $y_{i}\in \{-1, + 1\}$ tách được tuyến tính, có vô số siêu phẳng w $^{T}$ x + b = 0 phân tách hai lớp. SVM chọn siêu phẳng có **lề** (khoảng cách đến điểm gần nhất của mỗi lớp) lớn nhất. Độ rộng lề bằng 2/||w|| , nên bài toán là:
+Với dữ liệu hai lớp $y_{i}\in \{-1, + 1\}$tách được tuyến tính, có vô số siêu phẳng w$^{T}$ x + b = 0 phân tách hai lớp. SVM chọn siêu phẳng có **lề** (khoảng cách đến điểm gần nhất của mỗi lớp) lớn nhất. Độ rộng lề bằng 2/||w|| , nên bài toán là:
 
 $$
 \min _ {\mathbf {w}, b} \frac {1}{2} \| \mathbf {w} \| ^ {2} \quad \text {vói} \quad y _ {i} (\mathbf {w} ^ {\top} \mathbf {x} _ {i} + b) \geq 1, \forall i.\tag{7.10}
@@ -2491,11 +2469,7 @@ C lớn: phạt vi phạm nặng, lề hẹp, dễ quá khớp; C nhỏ: lề r�
 images/ch-classify-svm.png
 ```
 
-• Tuyến tính: $k(\mathbf{x},\mathbf{z}) = \mathbf{x}^{\top}\mathbf{z}.$
-
-• Đa thức: $k(\mathbf{x},\mathbf{z}) = (\gamma \mathbf{x}^{\top}\mathbf{z} + r)^{p}.$
-
-• RBF (Gauss): $k(\mathbf{x},\mathbf{z}) = \exp (-\gamma \| \mathbf{x} - \mathbf{z}\| ^2)$ — mặc định trong scikit-learn; γ lớn cho biên càng “uốn lượn”.
+• Tuyến tính: $k(\mathbf{x},\mathbf{z}) = \mathbf{x}^{\top}\mathbf{z}.$• Đa thức:$k(\mathbf{x},\mathbf{z}) = (\gamma \mathbf{x}^{\top}\mathbf{z} + r)^{p}.$• RBF (Gauss):$k(\mathbf{x},\mathbf{z}) = \exp (-\gamma \| \mathbf{x} - \mathbf{z}\| ^2)$ — mặc định trong scikit-learn; γ lớn cho biên càng “uốn lượn”.
 
 Hình 7.4: SVM tuyến tính: siêu phẳng phân tách, lề cực đại và các vector hỗ trợ (khoanh tròn).
 
@@ -2513,7 +2487,7 @@ print(grid.best_params_, grid.score(X_test, y_test))
 print("So vector ho tro:", grid.best_estimator_[-1].n_support_)
 ```
 
-SVM cần **chuẩn hóa dữ liệu** (vì dựa trên khoảng cách và tích vô hướng), hoạt động tốt trên dữ liệu số chiều cao như văn bản, nhưng huấn luyện chậm khi số mẫu lớn (độ phức tạp cỡ $O(n^{2})$ đến $O(n^{3}))$ và không trực tiếp cho xác suất.
+SVM cần **chuẩn hóa dữ liệu** (vì dựa trên khoảng cách và tích vô hướng), hoạt động tốt trên dữ liệu số chiều cao như văn bản, nhưng huấn luyện chậm khi số mẫu lớn (độ phức tạp cỡ $O(n^{2})$đến$O(n^{3}))$ và không trực tiếp cho xác suất.
 
 ## 7.7 So sánh các thuật toán
 
@@ -2565,9 +2539,9 @@ Các chỉ số đánh giá như ma trận nhầm lẫn, precision, recall, F1 v
 
 ## 7.9 Bài tập
 
-1. Cho 6 điểm $P_{1}(1,1), P_{2}(2,1), P_{3}(1,2)$ thuộc lớp A và $P_{4}(5,5), P_{5}(6,5), P_{6}(5,6)$ thuộc lớp B. (a) Phân lớp $\mathbf{q} = (2,5; 2,5)$ với $K = 3$ (đáp số: A). (b) Phân lớp $\mathbf{q} = (4, 4)$ với $K = 1,3,5$ . Khi $K = 5$ , kết quả có thay đổi nếu dùng bỏ phiếu có trọng số 1/d không?
+1. Cho 6 điểm $P_{1}(1,1), P_{2}(2,1), P_{3}(1,2)$thuộc lớp A và$P_{4}(5,5), P_{5}(6,5), P_{6}(5,6)$thuộc lớp B. (a) Phân lớp$\mathbf{q} = (2,5; 2,5)$với$K = 3$(đáp số: A). (b) Phân lớp$\mathbf{q} = (4, 4)$với$K = 1,3,5$. Khi$K = 5$ , kết quả có thay đổi nếu dùng bỏ phiếu có trọng số 1/d không?
 
-2. Với dữ liệu Bảng 7.2, dự đoán y tại $\mathbf{q} = (6, 6)$ bằng KNN hồi quy với $K = 2\mathrm{và}K = 3,$ theo cả trung bình đều và trung bình có trọng số. Kiểm tra bằng KNeighborsRegressor.
+2. Với dữ liệu Bảng 7.2, dự đoán y tại $\mathbf{q} = (6, 6)$bằng KNN hồi quy với$K = 2\mathrm{và}K = 3,$ theo cả trung bình đều và trung bình có trọng số. Kiểm tra bằng KNeighborsRegressor.
 
 3. Trong ví dụ lọc thư rác, tính lại xác suất spam khi email có cả “free” và “meeting”.
 
@@ -2637,7 +2611,7 @@ $$
 \text {Sai số} = \text {Độ chệch} ^ {2} + \text {Phương sai} + \text {Nhiễu không thể giảm.}\tag{8.1}
 $$
 
-**Độ chệch** (bias) cao: mô hình quá đơn giản, thiếu khớp. **Phương sai** (variance) cao: mô hình thay đổi mạnh theo dữ liệu huấn luyện, quá khớp. Lấy trung bình $B$ mô hình có phương sai $\sigma^2$ tương quan đôi một ρ, phương sai của trung bình là
+**Độ chệch** (bias) cao: mô hình quá đơn giản, thiếu khớp. **Phương sai** (variance) cao: mô hình thay đổi mạnh theo dữ liệu huấn luyện, quá khớp. Lấy trung bình $B$mô hình có phương sai$\sigma^2$ tương quan đôi một ρ, phương sai của trung bình là
 
 $$
 \rho \sigma^ {2} + \frac {1 - \rho}{B} \sigma^ {2},\tag{8.2}
@@ -2721,21 +2695,9 @@ Hình 8.2: Mức độ quan trọng của 10 đặc trưng hàng đầu theo Ran
 
 Năm 1988, Michael Kearns và Leslie Valiant đặt câu hỏi: liệu có thể “khuếch đại” một tập các bộ học **yếu** (chỉ tốt hơn đoán ngẫu nhiên một chút) thành một bộ học **mạnh**? Robert Schapire trả lời khẳng định năm 1990, và năm 1997 Yoav Freund cùng Schapire công bố **AdaBoost** (Adaptive Boosting) — công trình được trao giải Gödel năm 2003.
 
-**Định nghĩa 8.1** (Thuật toán AdaBoost nhị phân, $y_{i}\in \{-1, + 1\}$ ). 1. Khởi tạo trọng số các mẫu $w_{i} = 1 / n$
+**Định nghĩa 8.1** (Thuật toán AdaBoost nhị phân, $y_{i}\in \{-1, + 1\}$). 1. Khởi tạo trọng số các mẫu$w_{i} = 1 / n$2. Với$t = 1,\dots ,T.$(a) Huấn luyện bộ học yếu$h_{t}$ (thường là **gốc cây** – decision stump, cây độ sâu 1) trên dữ liệu có trọng số w.
 
-2. Với $t = 1,\dots ,T.$
-
-(a) Huấn luyện bộ học yếu $h_{t}$ (thường là **gốc cây** – decision stump, cây độ sâu 1) trên dữ liệu có trọng số w.
-
-(b) Tính sai số có trọng số $\varepsilon_{t} = \sum_{i:h_{t}(\mathbf{x}_{i})\neq y_{i}}w_{i}$
-
-(c) Tính trọng số của bộ học: $\alpha_{t} = \frac{1}{2}\ln \frac{1 - \varepsilon_{t}}{\varepsilon_{t}}$
-
-(d) Cập nhật: $w_{i}\leftarrow w_{i}\cdot e^{-\alpha_{t}y_{i}h_{t}(\mathbf{x}_{i})}$ , rồi chuẩn hóa $\ddot{d}\acute{e}\sum_{i}w_{i} = 1$
-
-3. Dự đoán: $H(\mathbf{x}) = \mathrm{sign}\Big(\sum_{t=1}^{T}\alpha_{t}h_{t}(\mathbf{x})\Big)$
-
-Mẫu bị đoán sai được nhân với $e^{\alpha_{t}} > 1$ (tăng trọng số), mẫu đoán đúng nhân với $e^{-\alpha_{t}} < 1$ (giảm trọng số). Bộ học kế tiếp vì thế phải “chú ý” nhiều hơn đến các mẫu khó. Bộ học có sai số nhỏ có $\alpha_{t}$ lớn, tức tiếng nói lớn hơn trong lần bỏ phiếu cuối.
+(b) Tính sai số có trọng số $\varepsilon_{t} = \sum_{i:h_{t}(\mathbf{x}_{i})\neq y_{i}}w_{i}$(c) Tính trọng số của bộ học:$\alpha_{t} = \frac{1}{2}\ln \frac{1 - \varepsilon_{t}}{\varepsilon_{t}}$(d) Cập nhật:$w_{i}\leftarrow w_{i}\cdot e^{-\alpha_{t}y_{i}h_{t}(\mathbf{x}_{i})}$, rồi chuẩn hóa$\ddot{d}\acute{e}\sum_{i}w_{i} = 1$3. Dự đoán:$H(\mathbf{x}) = \mathrm{sign}\Big(\sum_{t=1}^{T}\alpha_{t}h_{t}(\mathbf{x})\Big)$Mẫu bị đoán sai được nhân với$e^{\alpha_{t}} > 1$(tăng trọng số), mẫu đoán đúng nhân với$e^{-\alpha_{t}} < 1$(giảm trọng số). Bộ học kế tiếp vì thế phải “chú ý” nhiều hơn đến các mẫu khó. Bộ học có sai số nhỏ có$\alpha_{t}$ lớn, tức tiếng nói lớn hơn trong lần bỏ phiếu cuối.
 
 **Ví dụ 8.2** (Một vòng AdaBoost). Có 10 mẫu, trọng số ban đầu 0,1. Bộ học yếu đầu tiên đoán sai 3 mẫu:
 
@@ -2743,11 +2705,7 @@ $$
 \bullet \varepsilon_ {1} = 3 \times 0, 1 = 0, 3; \quad \alpha_ {1} = \frac {1}{2} \ln \frac {0 , 7}{0 , 3} = 0, 4 2 3 6.
 $$
 
-• Mẫu sai: $0,1 \times e^{0,4236} = 0,1 \times 1,5275 = 0,15275.$
-
-• Mẫu đúng: $0,1 \times e^{-0,4236} = 0,1 \times 0,6547 = 0,06547.$
-
-• Hằng số chuẩn hóa: $Z = 3 \times 0,15275 + 7 \times 0,06547 = 0,9165.$
+• Mẫu sai: $0,1 \times e^{0,4236} = 0,1 \times 1,5275 = 0,15275.$• Mẫu đúng:$0,1 \times e^{-0,4236} = 0,1 \times 0,6547 = 0,06547.$• Hằng số chuẩn hóa:$Z = 3 \times 0,15275 + 7 \times 0,06547 = 0,9165.$
 
 • Trọng số mới: mẫu sai 0,15275/0,9165 = 0,1667; mẫu đúng 0,06547/0,9165 = 0,0714.
 
@@ -2773,23 +2731,23 @@ AdaBoost nhạy với **nhiễu nhãn và ngoại lai**: các mẫu bị gán nh
 
 ## 8.4.1 Gradient Boosting
 
-Năm 2001, Jerome Friedman tổng quát hóa boosting thành **Gradient Boosting**: xây dựng mô hình cộng $F_{M}(\mathbf{x}) = F_{0} + \sum_{m = 1}^{M}\eta h_{m}(\mathbf{x})$ , trong đó mỗi cây mới $h_{m}$ được huấn luyện để khớp Pvới **gradient âm của hàm mất mát** (gọi là giả phần dư) tại mô hình hiện tại:
+Năm 2001, Jerome Friedman tổng quát hóa boosting thành **Gradient Boosting**: xây dựng mô hình cộng $F_{M}(\mathbf{x}) = F_{0} + \sum_{m = 1}^{M}\eta h_{m}(\mathbf{x})$, trong đó mỗi cây mới$h_{m}$ được huấn luyện để khớp Pvới **gradient âm của hàm mất mát** (gọi là giả phần dư) tại mô hình hiện tại:
 
 $$
 r _ {i m} = - \left[ \frac {\partial L (y _ {i} , F (\mathbf {x} _ {i}))}{\partial F (\mathbf {x} _ {i})} \right] _ {F = F _ {m - 1}}.\tag{8.3}
 $$
 
-Với mất mát bình phương $L = \frac{1}{2} (y - F)^{2}$ , giả phần dư chính là **phần dư** $y_{i} - F_{m - 1}(\mathbf{x}_{i})$ : mỗi cây mới học cách sửa sai số còn lại của các cây trước. Đây là Gradient Descent trong không gian hàm. Tốc độ học η (learning\_rate, thường 0,01–0,1) càng nhỏ càng cần nhiều cây nhưng tổng quát càng tốt.
+Với mất mát bình phương $L = \frac{1}{2} (y - F)^{2}$, giả phần dư chính là **phần dư**$y_{i} - F_{m - 1}(\mathbf{x}_{i})$ : mỗi cây mới học cách sửa sai số còn lại của các cây trước. Đây là Gradient Descent trong không gian hàm. Tốc độ học η (learning\_rate, thường 0,01–0,1) càng nhỏ càng cần nhiều cây nhưng tổng quát càng tốt.
 
-**Ví dụ 8.3** (Ý tưởng phần dư). Cần dự đoán giá ba căn nhà (nghìn USD): 150, 200, 250. Mô hình khởi đầu $F_{0}=trung bình=200,$ phần dư là $(-50, 0, +50)$ . Cây thứ nhất học phần dư này, giả sử dự đoán được $(-40, 0, +40)$ ; với $\eta = 0,5,$ mô hình mới là 200 $+0,5\times (-40,0,40) =$ (180, 200, 220), phần dư còn (−30, 0, 30). Cây thứ hai tiếp tục học phần dư mới, cứ thế sai số giảm dần.
+**Ví dụ 8.3** (Ý tưởng phần dư). Cần dự đoán giá ba căn nhà (nghìn USD): 150, 200, 250. Mô hình khởi đầu $F_{0}=trung bình=200,$phần dư là$(-50, 0, +50)$. Cây thứ nhất học phần dư này, giả sử dự đoán được$(-40, 0, +40)$; với$\eta = 0,5,$mô hình mới là 200$+0,5\times (-40,0,40) =$ (180, 200, 220), phần dư còn (−30, 0, 30). Cây thứ hai tiếp tục học phần dư mới, cứ thế sai số giảm dần.
 
 ## 8.4.2 XGBoost
 
 **XGBoost** (eXtreme Gradient Boosting) do Tianqi Chen và Carlos Guestrin công bố năm 2016, trở nên nổi tiếng nhờ thống trị các cuộc thi Kaggle. So với Gradient Boosting gốc, XGBoost:
 
-• Thêm **chính quy hóa** vào hàm mục tiêu: $\mathcal{L} = \sum_{i}L(y_{i},\hat{y}_{i}) + \sum_{m}\left(\gamma T_{m} + \frac{1}{2}\lambda \| \mathbf{w}_{m}\|^{2}\right)$ với $T_{m}$ là sô lá và $\mathbf{W}_{m}$ là giá trị các lá của cây m.
+• Thêm **chính quy hóa** vào hàm mục tiêu: $\mathcal{L} = \sum_{i}L(y_{i},\hat{y}_{i}) + \sum_{m}\left(\gamma T_{m} + \frac{1}{2}\lambda \| \mathbf{w}_{m}\|^{2}\right)$với$T_{m}$là sô lá và$\mathbf{W}_{m}$ là giá trị các lá của cây m.
 
-• Dùng **khai triển Taylor bậc hai** (gradient $g_{i}$ và hessian $h_{i}$ , cho công thức tối ưu tường minh của giá trị lá $w_{j}^{*} = -\frac{\sum_{i\in j}g_{i}}{\sum_{i\in j}h_{i} + \lambda}$ và độ lợi khi chia nút:
+• Dùng **khai triển Taylor bậc hai** (gradient $g_{i}$và hessian$h_{i}$, cho công thức tối ưu tường minh của giá trị lá$w_{j}^{*} = -\frac{\sum_{i\in j}g_{i}}{\sum_{i\in j}h_{i} + \lambda}$ và độ lợi khi chia nút:
 
 $$
 \mathrm{Gain} = \frac {1}{2} \left[ \frac {G _ {L} ^ {2}}{H _ {L} + \lambda} + \frac {G _ {R} ^ {2}}{H _ {R} + \lambda} - \frac {(G _ {L} + G _ {R}) ^ {2}}{H _ {L} + H _ {R} + \lambda} \right] - \gamma .\tag{8.4}
@@ -2942,7 +2900,7 @@ Sau khi học xong chương này, người học có khả năng:
 
 ## 9.1 Bài toán phân cụm
 
-**Định nghĩa 9.1** (Phân cụm). Cho tập dữ liệu $\{\mathbf{x}_1,\dots ,\mathbf{x}_n\} \subset \mathbb{R}^d$ **không có nhãn**. Phân cụm là tìm một phép gán $c:\{1,\ldots ,n\} \to \{1,\dots ,K\}$ (hoặc thêm nhãn “nhiễu”) sao cho độ tương tự trong cụm cao và độ tương tự giữa các cụm thấp.
+**Định nghĩa 9.1** (Phân cụm). Cho tập dữ liệu $\{\mathbf{x}_1,\dots ,\mathbf{x}_n\} \subset \mathbb{R}^d$**không có nhãn**. Phân cụm là tìm một phép gán$c:\{1,\ldots ,n\} \to \{1,\dots ,K\}$ (hoặc thêm nhãn “nhiễu”) sao cho độ tương tự trong cụm cao và độ tương tự giữa các cụm thấp.
 
 “Giống nhau” được đo bằng **khoảng cách**, nên mọi lưu ý ở Chương 5 đều áp dụng: phải **chuẩn hóa thang đo** và **mã hóa One Hot** các biến định danh; nếu không, đặc trưng có thang đo lớn sẽ quyết định toàn bộ kết quả phân cụm.
 
@@ -2976,7 +2934,7 @@ $$
 
 Mỗi bước đều không làm tăng J, nên thuật toán luôn hội tụ — nhưng chỉ đến **cực tiểu địa phương**, phụ thuộc vào khởi tạo. Arthur và Vassilvitskii (2007) đề xuất **K-Means++**: chọn tâm đầu tiên ngẫu nhiên, các tâm tiếp theo được chọn với xác suất tỉ lệ với bình phương khoảng cách đến tâm gần nhất đã chọn, giúp các tâm tản ra; đây là khởi tạo mặc định của scikit-learn. Tham số n\_init chạy nhiều lần khởi tạo và giữ kết quả có J nhỏ nhất.
 
-**Ví dụ 9.1** (Chạy tay K-Means). Cho 5 điểm P<sub>1</sub>(22, 10), P<sub>2</sub>(25, 15), P<sub>3</sub>(45, 50), P<sub>4</sub>(50, 55), P<sub>5</sub>(23, 12), K = 2, khởi tạo tâm $\mu_{1} = P_{1} = (22,10)$ và $\mu_{2} = P_{4} = (50, 55)$
+**Ví dụ 9.1** (Chạy tay K-Means). Cho 5 điểm P<sub>1</sub>(22, 10), P<sub>2</sub>(25, 15), P<sub>3</sub>(45, 50), P<sub>4</sub>(50, 55), P<sub>5</sub>(23, 12), K = 2, khởi tạo tâm $\mu_{1} = P_{1} = (22,10)$và$\mu_{2} = P_{4} = (50, 55)$
 
 **Vòng 1 – bước gán:**
 
@@ -2995,7 +2953,7 @@ $$
 \begin{array}{l} \boldsymbol {\mu} _ {1} = \frac {1}{3} \big [ (2 2, 1 0) + (2 5, 1 5) + (2 3, 1 2) \big ] = (2 3, 3 3; 1 2, 3 3), \\ \boldsymbol {\mu} _ {2} = \frac {1}{2} \big [ (4 5, 5 0) + (5 0, 5 5) \big ] = (4 7, 5; 5 2, 5). \end{array}
 $$
 
-**Vòng 2:** khoảng cách mới từ $P_{1},\ldots ,P_{5}$ đến $\mu_{1}$ là (2,69; 3,14; 43,45; 50,31; 0,47) và đến $\mu_{2}$ là (49,56; 43,73; 3,54; 3,54; 47,33). Phép gán không đổi $\{P_1, P_2, P_5\}, \{P_3, P_4\} \Rightarrow \mathbf{h}\hat{\mathbf{o}}\mathbf{i}$ **tụ**. Giá trị hàm mục tiêu $J = 42,33$
+**Vòng 2:** khoảng cách mới từ $P_{1},\ldots ,P_{5}$đến$\mu_{1}$là (2,69; 3,14; 43,45; 50,31; 0,47) và đến$\mu_{2}$là (49,56; 43,73; 3,54; 3,54; 47,33). Phép gán không đổi$\{P_1, P_2, P_5\}, \{P_3, P_4\} \Rightarrow \mathbf{h}\hat{\mathbf{o}}\mathbf{i}$**tụ**. Giá trị hàm mục tiêu$J = 42,33$
 
 ```python
 import numpy as np
@@ -3141,7 +3099,7 @@ Một cụm là tập lớn nhất các điểm **liên thông mật độ**: b�
 
 Bảng 9.4: Phân loại điểm của DBSCAN (ε = 2, MinPts = 3)
 
-Ví dụ $d(2,4) = \sqrt{1^2 + 1^2} = 1,41, d(2,5) = 2,00, d(7,3) = 1,41, d(7,8) = 1,80.$ còn $d(3,8) = 2,06 > 2.$ Kết quả: cụm 0 = {2, 4, 5}, cụm 1 = {3, 7, 8} (lõi 7 với hai điểm biên 3 và 8), nhiễu = {0, 1, 6}.
+Ví dụ $d(2,4) = \sqrt{1^2 + 1^2} = 1,41, d(2,5) = 2,00, d(7,3) = 1,41, d(7,8) = 1,80.$còn$d(3,8) = 2,06 > 2.$ Kết quả: cụm 0 = {2, 4, 5}, cụm 1 = {3, 7, 8} (lõi 7 với hai điểm biên 3 và 8), nhiễu = {0, 1, 6}.
 
 ```python
 from sklearn.cluster import DBSCAN
@@ -3331,15 +3289,13 @@ $$
 
 Khi ước lượng phương sai của tổng thể từ một mẫu, người ta thường chia cho n − 1 thay vì n (hiệu chỉnh Bessel) để được ước lượng không chệch. Độ lệch chuẩn σ là căn bậc hai của phương sai.
 
-**Ví dụ 10.1** (Tính phương sai). $A = (3,7,5)$ có $\bar{a} = \frac{3 + 7 + 5}{3} = 5$ và
+**Ví dụ 10.1** (Tính phương sai). $A = (3,7,5)$có$\bar{a} = \frac{3 + 7 + 5}{3} = 5$ và
 
 $$
 \mathrm{Var} (A) = \frac {(3 - 5) ^ {2} + (7 - 5) ^ {2} + (5 - 5) ^ {2}}{3} = \frac {8}{3} \approx 2, 6 7.
 $$
 
-Nếu chia cho $n - 1$ thì được $\frac{8}{2} = 4$
-
-Lưu ý khi lập trình: np.var mặc định chia cho n (ddof=0), còn pandas.Series.var và np.cov mặc định chia cho $n - 1$ (ddof=1) . Với mẫu nhỏ, hai quy ước cho kết quả khác nhau đáng kể, nên cần ghi rõ quy ước đang dùng.
+Nếu chia cho $n - 1$thì được$\frac{8}{2} = 4$Lưu ý khi lập trình: np.var mặc định chia cho n (ddof=0), còn pandas.Series.var và np.cov mặc định chia cho$n - 1$ (ddof=1) . Với mẫu nhỏ, hai quy ước cho kết quả khác nhau đáng kể, nên cần ghi rõ quy ước đang dùng.
 
 ## 10.2.2 Hiệp phương sai và hệ số tương quan
 
@@ -3355,13 +3311,13 @@ $$
 r = \frac {\operatorname{Cov} (A , B)}{\sigma_ {A} \sigma_ {B}} \in [ - 1, 1 ].\tag{10.3}
 $$
 
-Ví dụ 10.2 (Tính hiệp phương sai và hệ sô tương quan). $A = (2,8,4)$ và $B = (6,1,5)$ có $\bar{a} = \frac{14}{3}\approx 4,67,\bar{b} = \frac{12}{3} = 4.$
+Ví dụ 10.2 (Tính hiệp phương sai và hệ sô tương quan). $A = (2,8,4)$và$B = (6,1,5)$có$\bar{a} = \frac{14}{3}\approx 4,67,\bar{b} = \frac{12}{3} = 4.$
 
 $$
 \begin{array}{r l} \operatorname{Cov} (A, B) & = \frac {1}{3} \bigl [ (2 - 4, 6 7) (6 - 4) + (8 - 4, 6 7) (1 - 4) + (4 - 4, 6 7) (5 - 4) \bigr ] \\ & = \frac {1}{3} (- 5, 3 3 - 1 0 - 0, 6 7) = - \frac {1 6}{3} \approx - 5, 3 3. \end{array}
 $$
 
-Dấu **âm** cho biết khi A tăng thì B giảm: quan sát thứ hai có A lớn nhất nhưng B nhỏ nhất. Với $\sigma_A^2 = \frac{56}{9}\approx 6,22$ và $\sigma_B^2 = \frac{14}{3}\approx 4,67$
+Dấu **âm** cho biết khi A tăng thì B giảm: quan sát thứ hai có A lớn nhất nhưng B nhỏ nhất. Với $\sigma_A^2 = \frac{56}{9}\approx 6,22$và$\sigma_B^2 = \frac{14}{3}\approx 4,67$
 
 $$
 r = \frac {- 5 , 3 3}{\sqrt {6 , 2 2 \times 4 , 6 7}} \approx - 0, 9 9,
@@ -3369,13 +3325,11 @@ $$
 
 tức hai biến có quan hệ tuyến tính nghịch rất mạnh. Khi tính tay cần giữ đúng **dấu** của từng tích $(a_{i} - \bar{a})(b_{i} - \bar{b})$ : bỏ sót dấu âm sẽ đảo ngược hoàn toàn ý nghĩa của kết quả.
 
-**Ma trận hiệp phương sai.** Với dữ liệu d chiều, các phương sai và hiệp phương sai được gom thành ma trận đối xứng $\mathbf{C}\in\mathbb{R}^{d\times d}$ với $C_{jk} = \mathrm{Cov}(x_j,x_k)$ ; đường chéo chính là phương sai của từng biến. Nếu $X_{c}$ là dữ liệu đã trừ trung bình từng cột thì $\mathbf{C} = \frac{1}{n - 1}\mathbf{X}_c^\top \mathbf{X}_c$ quy ước chia $n - 1$ mà PCA của scikit-learn sử dụng.
+**Ma trận hiệp phương sai.** Với dữ liệu d chiều, các phương sai và hiệp phương sai được gom thành ma trận đối xứng $\mathbf{C}\in\mathbb{R}^{d\times d}$với$C_{jk} = \mathrm{Cov}(x_j,x_k)$; đường chéo chính là phương sai của từng biến. Nếu$X_{c}$là dữ liệu đã trừ trung bình từng cột thì$\mathbf{C} = \frac{1}{n - 1}\mathbf{X}_c^\top \mathbf{X}_c$quy ước chia$n - 1$ mà PCA của scikit-learn sử dụng.
 
 ## 10.2.3 Trị riêng và vector riêng
 
-Định nghĩa 10.3 (Trị riêng, vector riêng). Cho ma trận vuông A. Só λ và vector $\mathbf{v}\neq \mathbf{0}$ thỏa $\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$ được gọi là trị riêng và **vector riêng** tương ứng: nhân với A chỉ co giãn v theo hê số λ mà không làm đổi phương của nó. Các trị riêng là nghiệm của **phương trình đặc trưng** $\operatorname{det}(\mathbf{A}-\lambda\mathbf{I})=0$
-
-**Ví dụ 10.3** (Tính tay trị riêng và vector riêng). Cho $\mathbf{A} = \begin{pmatrix} 2 & 3 \\ 4 & 1 \end{pmatrix}$
+Định nghĩa 10.3 (Trị riêng, vector riêng). Cho ma trận vuông A. Só λ và vector $\mathbf{v}\neq \mathbf{0}$thỏa$\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$được gọi là trị riêng và **vector riêng** tương ứng: nhân với A chỉ co giãn v theo hê số λ mà không làm đổi phương của nó. Các trị riêng là nghiệm của **phương trình đặc trưng**$\operatorname{det}(\mathbf{A}-\lambda\mathbf{I})=0$**Ví dụ 10.3** (Tính tay trị riêng và vector riêng). Cho$\mathbf{A} = \begin{pmatrix} 2 & 3 \\ 4 & 1 \end{pmatrix}$
 
 **Bước 1 – phương trình đặc trưng:**
 
@@ -3389,17 +3343,13 @@ $$
 \left( \begin{array}{c c} - 3 & 3 \\ 4 & - 4 \end{array} \right) \binom{v _ {1}}{v _ {2}} = \mathbf {0} \Leftrightarrow - v _ {1} + v _ {2} = 0 \Leftrightarrow v _ {1} = v _ {2}.
 $$
 
-Chọn $v_{2} = 1$ thì $v_{1} = 1$ ; chuẩn hóa về độ dài 1: $\mathbf{v}_1 = \frac{1}{\sqrt{1^2 + 1^2}} (1,1)\approx (0,7071;0,7071)$ **Bước 3 – vector riêng ứng với** $\lambda_{2} = -2:$
+Chọn $v_{2} = 1$thì$v_{1} = 1$; chuẩn hóa về độ dài 1:$\mathbf{v}_1 = \frac{1}{\sqrt{1^2 + 1^2}} (1,1)\approx (0,7071;0,7071)$**Bước 3 – vector riêng ứng với**$\lambda_{2} = -2:$
 
 $$
 \left( \begin{array}{c c} 4 & 3 \\ 4 & 3 \end{array} \right) \binom{v _ {1}}{v _ {2}} = \mathbf {0} \Leftrightarrow 4 v _ {1} + 3 v _ {2} = 0 \Leftrightarrow v _ {1} = - \frac {3}{4} v _ {2}.
 $$
 
-Chọn $v_{2} = 4$ thì $v_{1} = -3;$ chuẩn hóa: $\mathbf{v}_2 = \frac{1}{\sqrt{(-3)^2 + 4^2}} (-3,4) = (-0,6;0,8).$
-
-**Kiểm tra nhanh:** tổng các trị riêng bằng **vết** (tổng đường chéo) của ma trận, $5+(-2)=2+1;$ tích các trị riêng bằng **định thức**, $5 \times (-2) = 2 \cdot 1 - 3 \cdot 4 = -10.$
-
-Ma trận A ở ví dụ này **không đối xứng** nên hai vector riêng không vuông góc $(\mathbf{v}_1 \cdot \mathbf{v}_2 \approx$ $0,14 \neq 0)$ . Ngược lại, với ma trận **đối xứng** như X⊤X hay ma trận hiệp phương sai, **định lý phổ** bảo đảm mọi trị riêng là số thực và có thể chọn các vector riêng đôi một vuông góc — đây chính là tính chất mà SVD và PCA khai thác.
+Chọn $v_{2} = 4$thì$v_{1} = -3;$chuẩn hóa:$\mathbf{v}_2 = \frac{1}{\sqrt{(-3)^2 + 4^2}} (-3,4) = (-0,6;0,8).$**Kiểm tra nhanh:** tổng các trị riêng bằng **vết** (tổng đường chéo) của ma trận,$5+(-2)=2+1;$tích các trị riêng bằng **định thức**,$5 \times (-2) = 2 \cdot 1 - 3 \cdot 4 = -10.$Ma trận A ở ví dụ này **không đối xứng** nên hai vector riêng không vuông góc$(\mathbf{v}_1 \cdot \mathbf{v}_2 \approx$ $0,14 \neq 0)$ . Ngược lại, với ma trận **đối xứng** như X⊤X hay ma trận hiệp phương sai, **định lý phổ** bảo đảm mọi trị riêng là số thực và có thể chọn các vector riêng đôi một vuông góc — đây chính là tính chất mà SVD và PCA khai thác.
 
 Listing 10.1: Phương sai, hiệp phương sai và trị riêng với NumPy
 
@@ -3432,17 +3382,7 @@ $$
 \mathbf {A} = \mathbf {U} \boldsymbol {\Sigma} \mathbf {V} ^ {\top},\tag{10.4}
 $$
 
-trong đó $\mathbf{U}\in\mathbb{R}^{m\times m}$ và $\mathbf{V}\in\mathbb{R}^{n\times n}$ là các ma trận trực giao (cột là vector suy biến trái/phải), $\pmb{\Sigma}\in\mathbb{R}^{m\times n}$ là ma trận đường chéo với các **giá trị suy biến** $\sigma_{1} \geq \sigma_{2} \geq \cdots \geq 0.$ . Ngoài ra $\sigma_{i}^{2}$ là trị riêng của $\mathbf{A}\mathbf{A}^{\top}$ (và của $A^{\top}A)$ , cột của U là vector riêng của $\mathbf{A}\mathbf{A}^{\top}$ , cột của V là vector riêng của $\mathbf{A}^{\top}\mathbf{A}$
-
-**Định lý 10.2** (Eckart–Young). Giữ lại k giá trị suy biến lớn nhất, $\mathbf{A}_k = \sum_{i=1}^k \sigma_i \mathbf{u}_i \mathbf{v}_i^\top$ là ma trận hạng k **gần A nhất** theo chuẩn Frobenius, với sai số $\| \mathbf{A} - \mathbf{A}_k\| _F = \sqrt{\sigma_{k + 1}^2 + \dots +\sigma_r^2}.$
-
-**Ví dụ 10.4** (Tính tay SVD). Cho $\mathbf{M} = \begin{pmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{pmatrix}$
-
-Bước 1. $\mathbf{MM}^{\top} = \begin{pmatrix} 17 & 8 \\ 8 & 17 \end{pmatrix}$ , phương trình đặc trưng $(17 - \lambda)^{2} - 64 = 0$ cho $\lambda_{1} = 25, \lambda_{2} = 9$ Vậy $\sigma_{1} = 5, \sigma_{2} = 3$
-
-**Bước 2.** Vector riêng của MM⊤: $\mathbf{u}_1 = \frac{1}{\sqrt{2}} (1,1)^\top ,\mathbf{u}_2 = \frac{1}{\sqrt{2}} (1, - 1)^\top$
-
-Bước 3. $\mathbf{v}_i = \mathbf{M}^\top \mathbf{u}_i / \sigma_i$;
+trong đó $\mathbf{U}\in\mathbb{R}^{m\times m}$và$\mathbf{V}\in\mathbb{R}^{n\times n}$là các ma trận trực giao (cột là vector suy biến trái/phải),$\pmb{\Sigma}\in\mathbb{R}^{m\times n}$là ma trận đường chéo với các **giá trị suy biến**$\sigma_{1} \geq \sigma_{2} \geq \cdots \geq 0.$. Ngoài ra$\sigma_{i}^{2}$là trị riêng của$\mathbf{A}\mathbf{A}^{\top}$(và của$A^{\top}A)$, cột của U là vector riêng của$\mathbf{A}\mathbf{A}^{\top}$, cột của V là vector riêng của$\mathbf{A}^{\top}\mathbf{A}$**Định lý 10.2** (Eckart–Young). Giữ lại k giá trị suy biến lớn nhất,$\mathbf{A}_k = \sum_{i=1}^k \sigma_i \mathbf{u}_i \mathbf{v}_i^\top$là ma trận hạng k **gần A nhất** theo chuẩn Frobenius, với sai số$\| \mathbf{A} - \mathbf{A}_k\| _F = \sqrt{\sigma_{k + 1}^2 + \dots +\sigma_r^2}.$**Ví dụ 10.4** (Tính tay SVD). Cho$\mathbf{M} = \begin{pmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{pmatrix}$Bước 1.$\mathbf{MM}^{\top} = \begin{pmatrix} 17 & 8 \\ 8 & 17 \end{pmatrix}$, phương trình đặc trưng$(17 - \lambda)^{2} - 64 = 0$cho$\lambda_{1} = 25, \lambda_{2} = 9$Vậy$\sigma_{1} = 5, \sigma_{2} = 3$**Bước 2.** Vector riêng của MM⊤:$\mathbf{u}_1 = \frac{1}{\sqrt{2}} (1,1)^\top ,\mathbf{u}_2 = \frac{1}{\sqrt{2}} (1, - 1)^\top$Bước 3.$\mathbf{v}_i = \mathbf{M}^\top \mathbf{u}_i / \sigma_i$;
 
 $$
 \mathbf {v} _ {1} = \frac {1}{5 \sqrt {2}} (5, 5, 0) ^ {\top} = \frac {1}{\sqrt {2}} (1, 1, 0) ^ {\top}, \quad \mathbf {v} _ {2} = \frac {1}{3 \sqrt {2}} (1, - 1, 4) ^ {\top} = \frac {1}{\sqrt {1 8}} (1, - 1, 4) ^ {\top}.
@@ -3450,7 +3390,7 @@ $$
 
 Vector thứ ba $\mathbf{v}_3 = \frac{1}{3} (2, - 2, - 1)^\top$ vuông góc với hai vector trên (ứng với giá trị suy biến 0).
 
-Bước 4 - xâp xỉ hạng 1. $\mathbf{M}_1 = \sigma_1\mathbf{u}_1\mathbf{v}_1^\top = 5 \cdot \frac{1}{2}\left( \begin{array}{ll}1 & 1 & 0\\ 1 & 1 & 0 \end{array} \right) = \left( \begin{array}{lll}2,5 & 2,5 & 0\\ 2,5 & 2,5 & 0 \end{array} \right)$ , sai số kM − $\mathbf{M}_1\| _F = \sigma_2 = 3$ . Thành phần thứ nhất giữ $\sigma_{1}^{2} / (\sigma_{1}^{2} + \sigma_{2}^{2}) = 25 / 34 \approx 73.5\%$ “năng lượng” của ma trận.
+Bước 4 - xâp xỉ hạng 1. $\mathbf{M}_1 = \sigma_1\mathbf{u}_1\mathbf{v}_1^\top = 5 \cdot \frac{1}{2}\left( \begin{array}{ll}1 & 1 & 0\\ 1 & 1 & 0 \end{array} \right) = \left( \begin{array}{lll}2,5 & 2,5 & 0\\ 2,5 & 2,5 & 0 \end{array} \right)$, sai số kM −$\mathbf{M}_1\| _F = \sigma_2 = 3$. Thành phần thứ nhất giữ$\sigma_{1}^{2} / (\sigma_{1}^{2} + \sigma_{2}^{2}) = 25 / 34 \approx 73.5\%$ “năng lượng” của ma trận.
 
 ```python
 import numpy as np
@@ -3476,7 +3416,7 @@ Lưu ý: vector suy biến chỉ xác định duy nhất đến **dấu**: NumPy
 
 ## 10.3.2 Tính SVD thông qua X>X
 
-Định lý trên gợi ý cách tính SVD bằng tay cho ma trận có nhiều dòng: (1) lập $\mathbf{X}^{\top}\mathbf{X}-$ ma trận vuông, đối xứng, kích thước bằng số cột; (2) tìm các trị riêng $\lambda_{i}$ và vector riêng đơn vị $v_{i}$ của nó; (3) giá trị suy biến $\sigma_{i} = \sqrt{\lambda_{i}}$ ; (4) vector suy biến trái $\mathbf{u}_i = \mathbf{X}\mathbf{v}_i / \sigma_i$
+Định lý trên gợi ý cách tính SVD bằng tay cho ma trận có nhiều dòng: (1) lập $\mathbf{X}^{\top}\mathbf{X}-$ma trận vuông, đối xứng, kích thước bằng số cột; (2) tìm các trị riêng$\lambda_{i}$và vector riêng đơn vị$v_{i}$của nó; (3) giá trị suy biến$\sigma_{i} = \sqrt{\lambda_{i}}$; (4) vector suy biến trái$\mathbf{u}_i = \mathbf{X}\mathbf{v}_i / \sigma_i$
 
 $\text{Ví dụ 10.5 (SVD của ma trận } 5 \times 2). Cho \mathbf{X} = \begin{pmatrix} 3 &amp; 7 \\ 1 &amp; 5 \\ 6 &amp; 4 \\ 8 &amp; 1 \\ 2 &amp; 3 \end{pmatrix}.$
 
@@ -3492,9 +3432,7 @@ $$
 (1 1 4 - \lambda) (1 0 0 - \lambda) - 6 4 ^ {2} = \lambda^ {2} - 2 1 4 \lambda + 7 3 0 4 = 0 \Leftrightarrow \lambda_ {1} \approx 1 7 1, 3 8, \lambda_ {2} \approx 4 2, 6 2.
 $$
 
-**Bước 3 – vector riêng.** Với λ<sub>1</sub>: $(114 - 171,38)v_{1} + 64v_{2} = 0 \Leftrightarrow v_{1} = 1,1153v_{2}$ . Chọn $v_{2} = 1$ được (1,1153; 1), chuẩn hóa cho $\mathbf{v}_1 = (1,1153; 1) / 1,4980 \approx (0,7446; 0,6676)$ . Với $\lambda_{2}$ : $(114 - 42,62)v_{1} + 64v_{2} = 0\Leftrightarrow v_{1} = -0,8966v_{2}$ . Chọn $v_{2} = 1$ được (−0,8966; 1), chuẩn hóa cho $\mathbf{v}_2 \approx (-0, 6676; 0, 7446)$ . Hai vector vuông góc: $0,7446 \times (-0,6676) + 0,6676 \times 0,7446 = 0$ **Bước 4 – giá trị và vector suy biến:** $\sigma_{1} = \sqrt{171,38} \approx 13,09, \sigma_{2} = \sqrt{42,62} \approx 6,53.$ và $\mathbf{u}_1 = \mathbf{X}\mathbf{v}_1 / \sigma_1\approx (0,528;0,312;0,545;0,506;0,267)$
-
-**Sai lầm thường gặp khi chuẩn hóa vector riêng.** Từ $v_{1} = -0,8966v_{2},$ nếu chọn $v_{2} = 1$ thì vector là $(v_{1}, v_{2}) = (-0, 8966; 1)$ **không phải** (1; −0,8966). Đảo chỗ hai thành phần cho ra một vector khác hẳn, không còn là vector riêng. Cách tự kiểm tra đơn giản nhất là nhân lại: X⊤**X v** phải bằng λv, và vector sau khi chuẩn hóa phải có độ dài đúng bằng 1.
+**Bước 3 – vector riêng.** Với λ<sub>1</sub>: $(114 - 171,38)v_{1} + 64v_{2} = 0 \Leftrightarrow v_{1} = 1,1153v_{2}$. Chọn$v_{2} = 1$được (1,1153; 1), chuẩn hóa cho$\mathbf{v}_1 = (1,1153; 1) / 1,4980 \approx (0,7446; 0,6676)$. Với$\lambda_{2}$:$(114 - 42,62)v_{1} + 64v_{2} = 0\Leftrightarrow v_{1} = -0,8966v_{2}$. Chọn$v_{2} = 1$được (−0,8966; 1), chuẩn hóa cho$\mathbf{v}_2 \approx (-0, 6676; 0, 7446)$. Hai vector vuông góc:$0,7446 \times (-0,6676) + 0,6676 \times 0,7446 = 0$**Bước 4 – giá trị và vector suy biến:**$\sigma_{1} = \sqrt{171,38} \approx 13,09, \sigma_{2} = \sqrt{42,62} \approx 6,53.$và$\mathbf{u}_1 = \mathbf{X}\mathbf{v}_1 / \sigma_1\approx (0,528;0,312;0,545;0,506;0,267)$**Sai lầm thường gặp khi chuẩn hóa vector riêng.** Từ$v_{1} = -0,8966v_{2},$nếu chọn$v_{2} = 1$thì vector là$(v_{1}, v_{2}) = (-0, 8966; 1)$ **không phải** (1; −0,8966). Đảo chỗ hai thành phần cho ra một vector khác hẳn, không còn là vector riêng. Cách tự kiểm tra đơn giản nhất là nhân lại: X⊤**X v** phải bằng λv, và vector sau khi chuẩn hóa phải có độ dài đúng bằng 1.
 
 ```python
 Listing 10.3: Kiểm tra cách tính SVD qua trị riêng
@@ -3511,7 +3449,7 @@ print(Vt)                          # moi dong la mot v_i (co the
 
 ## 10.3.3 Ứng dụng: nén ảnh và TruncatedSVD
 
-Một ảnh xám là ma trận m × n. Lưu $\mathbf{A}_k$ chỉ cần $k(m + n + 1)$ số thay vì mn. Với ảnh $512\times 512$ và $k = 50:50\times 1025 = 51250$ số so với 262 144 — tiết kiệm khoảng 80%.
+Một ảnh xám là ma trận m × n. Lưu $\mathbf{A}_k$chỉ cần$k(m + n + 1)$số thay vì mn. Với ảnh$512\times 512$và$k = 50:50\times 1025 = 51250$ số so với 262 144 — tiết kiệm khoảng 80%.
 
 ```python
 import matplotlib.pyplot as plt
@@ -3557,7 +3495,7 @@ print(Z.round(3))    # van ban cung chu de nam gan nhau
 
 PCA do Karl Pearson phát minh năm 1901 dưới dạng bài toán “tìm đường thẳng và mặt phẳng khớp nhất với hệ điểm”, và được Harold Hotelling (1933) phát triển độc lập, đặt tên “thành phần chính”. Trong xử lý tín hiệu, PCA còn được gọi là biến đổi Karhunen–Loève.
 
-**Định nghĩa 10.4** (Thành phần chính). Cho dữ liệu đã chuẩn hóa tâm X (n × d). Thành phần **chính thứ nhất** là vector đơn vị $\mathbf{w}_{1}$ sao cho phương sai của dữ liệu chiếu lên $w_{1}$ là **lớn nhất**:
+**Định nghĩa 10.4** (Thành phần chính). Cho dữ liệu đã chuẩn hóa tâm X (n × d). Thành phần **chính thứ nhất** là vector đơn vị $\mathbf{w}_{1}$sao cho phương sai của dữ liệu chiếu lên$w_{1}$ là **lớn nhất**:
 
 $$
 \mathbf {w} _ {1} = \arg \max _ {\| \mathbf {w} \| = 1} \mathbf {w} ^ {\top} \mathbf {C} \mathbf {w}, \qquad \mathbf {C} = \frac {1}{n - 1} \mathbf {X} _ {c} ^ {\top} \mathbf {X} _ {c}.\tag{10.5}
@@ -3567,7 +3505,7 @@ Các thành phần tiếp theo cũng cực đại phương sai nhưng phải **v
 
 Giải bài toán tối ưu bằng nhân tử Lagrange cho **Cw** = λw: các thành phần chính là **vector riêng** của ma trận hiệp phương sai, và phương sai theo thành phần thứ j chính là **trị riêng** $\lambda_{j}$ Tương đương, cực đại phương sai cũng là cực tiểu sai số tái tạo (khoảng cách bình phương từ điểm đến không gian con) — đúng cách nhìn ban đầu của Pearson.
 
-**Quan hệ PCA – SVD.** Nếu $\mathbf{X}_c = \mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^\top$ thì $\mathbf{C} = \mathbf{V}\frac{\boldsymbol{\Sigma}^2}{n - 1}\mathbf{V}^\top$ : thành phần chính là cột của V, trị riêng $\lambda_{j} = \sigma_{j}^{2} / (n - 1)$ . scikit-learn tính PCA bằng SVD vì ổn định số hơn việc lập ma trận hiệp phương sai.
+**Quan hệ PCA – SVD.** Nếu $\mathbf{X}_c = \mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^\top$thì$\mathbf{C} = \mathbf{V}\frac{\boldsymbol{\Sigma}^2}{n - 1}\mathbf{V}^\top$: thành phần chính là cột của V, trị riêng$\lambda_{j} = \sigma_{j}^{2} / (n - 1)$ . scikit-learn tính PCA bằng SVD vì ổn định số hơn việc lập ma trận hiệp phương sai.
 
 ## Các bước PCA:
 
@@ -3577,9 +3515,7 @@ Giải bài toán tối ưu bằng nhân tử Lagrange cho **Cw** = λw: các th
 
 3. Tìm trị riêng, vector riêng; sắp xếp trị riêng giảm dần.
 
-4. Chọn k vector riêng đầu làm ma trận $\mathbf{W}_k(d\times k)$
-
-5. Chiếu dữ liệu: $\mathbf{Z} = \mathbf{X}_c\mathbf{W}_k(n\times k)$
+4. Chọn k vector riêng đầu làm ma trận $\mathbf{W}_k(d\times k)$5. Chiếu dữ liệu:$\mathbf{Z} = \mathbf{X}_c\mathbf{W}_k(n\times k)$
 
 **Ví dụ 10.6** (Tính tay PCA). Giảm 5 điểm hai chiều trong Bảng 10.2 xuống còn một chiều.
 
@@ -3588,7 +3524,7 @@ Giải bài toán tối ưu bằng nhân tử Lagrange cho **Cw** = λw: các th
 
 Bảng 10.2: Dữ liệu ví dụ PCA
 
-**Bước 1 – chuẩn hóa tâm.** $\bar{x}_{1} = \frac{3 + 5 + 0 + 1 + 2}{5} = 2,2\mathrm{v}\grave{\mathrm{a}}\bar{x}_{2} = \frac{6 + 4 + 2 + 0 + 3}{5} = 3$ . Trừ trung bình từng cột, $x_{ij}^{\prime} = x_{ij} - \bar{x}_{j}$:
+**Bước 1 – chuẩn hóa tâm.** $\bar{x}_{1} = \frac{3 + 5 + 0 + 1 + 2}{5} = 2,2\mathrm{v}\grave{\mathrm{a}}\bar{x}_{2} = \frac{6 + 4 + 2 + 0 + 3}{5} = 3$. Trừ trung bình từng cột,$x_{ij}^{\prime} = x_{ij} - \bar{x}_{j}$:
 
 $$
 \mathbf {X} _ {c} = \left( \begin{array}{c c} 0, 8 & 3 \\ 2, 8 & 1 \\ - 2, 2 & - 1 \\ - 1, 2 & - 3 \\ - 0, 2 & 0 \end{array} \right).
@@ -3612,23 +3548,19 @@ $$
 \left( \begin{array}{c c} - 3, 4 7 5 8 & 2, 7 5 \\ 2, 7 5 & - 2, 1 7 5 8 \end{array} \right) \binom{v _ {1}}{v _ {2}} = \mathbf {0} \Leftrightarrow v _ {1} = 0, 7 9 1 2 v _ {2}.
 $$
 
-Chọn $v_{2} = 1 \text{ được } (v_{1}, v_{2}) = (0,7912; 1)$ ; chuẩn hóa: $\mathbf{w}_1 = \frac{(0,7912; 1)}{\sqrt{0,7912^2 + 1^2}} = \frac{(0,7912; 1)}{1,2751} \approx$ (0,6205; 0,7842).
+Chọn $v_{2} = 1 \text{ được } (v_{1}, v_{2}) = (0,7912; 1)$; chuẩn hóa:$\mathbf{w}_1 = \frac{(0,7912; 1)}{\sqrt{0,7912^2 + 1^2}} = \frac{(0,7912; 1)}{1,2751} \approx$ (0,6205; 0,7842).
 
-Với $\lambda_{2} = 1,5242: 2,1758 v_{1} + 2,75 v_{2} = 0 \Leftrightarrow v_{1} = -1,2639 v_{2};$ chọn $v_{2} = 1$ được (−1,2639; 1), chuẩn hóa cho $\mathbf{w}_2 \approx (-0, 7842; 0, 6205)$
-
-Kiểm tra: $\mathbf{C}\mathbf{w}_{1} = (3,7 \times 0,6205 + 2,75 \times 0,7842; 2,75 \times 0,6205 + 5 \times 0,7842)$ (4,452; 5,627) ≈ 7,1758 × (0,6205; 0,7842).
+Với $\lambda_{2} = 1,5242: 2,1758 v_{1} + 2,75 v_{2} = 0 \Leftrightarrow v_{1} = -1,2639 v_{2};$chọn$v_{2} = 1$được (−1,2639; 1), chuẩn hóa cho$\mathbf{w}_2 \approx (-0, 7842; 0, 6205)$Kiểm tra:$\mathbf{C}\mathbf{w}_{1} = (3,7 \times 0,6205 + 2,75 \times 0,7842; 2,75 \times 0,6205 + 5 \times 0,7842)$ (4,452; 5,627) ≈ 7,1758 × (0,6205; 0,7842).
 
 **Bước 5 – tỉ lệ phương sai giải thích:** $\frac{7,1758}{7,1758 + 1,5242} = \frac{7,1758}{8,7} \approx 82,5\%$, thành phần thứ nhất giữ khoảng 82,5% thông tin.
 
-Bước 6 – chiếu dữ liệu $\mathbf{z} = \mathbf{X}_c\mathbf{w}_1$ . Chẳng hạn với điểm đầu tiên: $z_{1} = 0,8\times 0,6205 + 3\times$ $0,7842 \approx 2,849$ . Toàn bộ:
+Bước 6 – chiếu dữ liệu $\mathbf{z} = \mathbf{X}_c\mathbf{w}_1$. Chẳng hạn với điểm đầu tiên:$z_{1} = 0,8\times 0,6205 + 3\times$ $0,7842 \approx 2,849$ . Toàn bộ:
 
 $$
 \mathbf {z} \approx (2, 8 4 9; 2, 5 2 2; - 2, 1 4 9; - 3, 0 9 7; - 0, 1 2 4).
 $$
 
-Mỗi điểm hai chiều giờ chỉ còn một con số; có thể tái tạo gần đúng điểm gốc bằng $\hat{\mathbf{x}} = \bar{\mathbf{x}} + z\mathbf{w}_1$
-
-**Sai lầm thường gặp.** (1) Từ $v_{1} = 0,7912v_{2}$ **m**à viết vector thành (1; 0,7912) là đảo nhầm **thành phần**: vector chuẩn hóa thu được, (0,7842; 0,6205), không còn là vector riêng của C. Hãy luôn kiểm tra lại **Cw** = λw như ở bước 4. (2) Quên chuẩn hóa tâm trước khi lập ma trận hiệp phương sai: khi đó ta đang tính SVD của dữ liệu gốc (như ví dụ 5 × 2 ở mục SVD) chứ không phải PCA, và thành phần chính đầu tiên bị kéo lệch về phía vector trung bình của dữ liệu.
+Mỗi điểm hai chiều giờ chỉ còn một con số; có thể tái tạo gần đúng điểm gốc bằng $\hat{\mathbf{x}} = \bar{\mathbf{x}} + z\mathbf{w}_1$**Sai lầm thường gặp.** (1) Từ$v_{1} = 0,7912v_{2}$ **m**à viết vector thành (1; 0,7912) là đảo nhầm **thành phần**: vector chuẩn hóa thu được, (0,7842; 0,6205), không còn là vector riêng của C. Hãy luôn kiểm tra lại **Cw** = λw như ở bước 4. (2) Quên chuẩn hóa tâm trước khi lập ma trận hiệp phương sai: khi đó ta đang tính SVD của dữ liệu gốc (như ví dụ 5 × 2 ở mục SVD) chứ không phải PCA, và thành phần chính đầu tiên bị kéo lệch về phía vector trung bình của dữ liệu.
 
 ## Listing 10.6: Kiểm tra ví dụ bằng NumPy và scikit-learn
 
@@ -3664,7 +3596,7 @@ X_rec = pca.inverse_transform(Z)      # tai tao (nam tren duong
 images/ch-reduce-pca-2d.png
 ```
 
-Hình 10.2: Dữ liệu ví dụ với hai trục thành phần chính w<sub>1</sub>, $\mathbf{w}_{2}$ và hình chiếu của các điểm lên $\mathbf{w}_{1}$
+Hình 10.2: Dữ liệu ví dụ với hai trục thành phần chính w<sub>1</sub>, $\mathbf{w}_{2}$và hình chiếu của các điểm lên$\mathbf{w}_{1}$
 
 ## 10.4.2 Chọn số thành phần
 
@@ -3755,11 +3687,11 @@ for k in [5, 10, 20, 40]:
 
 ## 10.6 Bài tập
 
-1. Tính phương sai (chia n và chia n − 1) của (4, 8, 6, 2). Tính hiệp phương sai và hệ số tương quan của $A = (1,2,3,4)$ và $B = (8,6,5,1)$ ; giải thích ý nghĩa của dấu. Kiểm tra bằng np.var, np.cov, np.corrcoef.
+1. Tính phương sai (chia n và chia n − 1) của (4, 8, 6, 2). Tính hiệp phương sai và hệ số tương quan của $A = (1,2,3,4)$và$B = (8,6,5,1)$ ; giải thích ý nghĩa của dấu. Kiểm tra bằng np.var, np.cov, np.corrcoef.
 
-2. Tìm trị riêng và vector riêng đơn vị của $\left( \begin{array}{cc}4 & 1\\ 2 & 3 \end{array} \right)$ (đáp số: $\lambda = 5$ và $\lambda = 2$) . Kiểm tra kết quả bằng vết, định thức và np.linalg.eig.
+2. Tìm trị riêng và vector riêng đơn vị của $\left( \begin{array}{cc}4 & 1\\ 2 & 3 \end{array} \right)$(đáp số:$\lambda = 5$và$\lambda = 2$) . Kiểm tra kết quả bằng vết, định thức và np.linalg.eig.
 
-3. Tiếp ví dụ SVD của ma trận 5 × 2: tính $\mathbf{u}_2 = \mathbf{X}\mathbf{v}_2 / \sigma_2$ , kiểm tra $u_{1} \perp u_{2}$ và tái tạo $\mathbf{X} = \sigma_{1}\mathbf{u}_{1}\mathbf{v}_{1}^{\top} + \sigma_{2}\mathbf{u}_{2}\mathbf{v}_{2}^{\top}$
+3. Tiếp ví dụ SVD của ma trận 5 × 2: tính $\mathbf{u}_2 = \mathbf{X}\mathbf{v}_2 / \sigma_2$, kiểm tra$u_{1} \perp u_{2}$và tái tạo$\mathbf{X} = \sigma_{1}\mathbf{u}_{1}\mathbf{v}_{1}^{\top} + \sigma_{2}\mathbf{u}_{2}\mathbf{v}_{2}^{\top}$
 
 4. Làm lại toàn bộ các bước PCA cho 10 điểm của Smith (2002):
 
@@ -3773,11 +3705,9 @@ $$
 
 (Đáp số: $\lambda_{1} \approx 1,2840, \mathbf{w}_{1} \approx (0,6779; 0,7352)$ , thành phần thứ nhất giữ khoảng 96,3% phương sai.)
 
-5. Tính tay SVD của $\mathbf{A} = \begin{pmatrix} 2 & 0 \\ 0 & 1 \\ 0 & 0 \end{pmatrix}$ và $\mathbf{B} = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$ . Ma trận nào có hạng 1?
+5. Tính tay SVD của $\mathbf{A} = \begin{pmatrix} 2 & 0 \\ 0 & 1 \\ 0 & 0 \end{pmatrix}$và$\mathbf{B} = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$ . Ma trận nào có hạng 1?
 
-6. Với dữ liệu ở Bảng 10.2, tái tạo các điểm từ 1 thành phần chính và tính tổng bình phương sai sô tái tạo. So sánh với $(n - 1)\lambda_{2}$
-
-7. Chứng minh rằng các tọa độ chiếu z trên thành phần chính thứ nhất có trung bình 0 và phương sai $\lambda_{1}$
+6. Với dữ liệu ở Bảng 10.2, tái tạo các điểm từ 1 thành phần chính và tính tổng bình phương sai sô tái tạo. So sánh với $(n - 1)\lambda_{2}$7. Chứng minh rằng các tọa độ chiếu z trên thành phần chính thứ nhất có trung bình 0 và phương sai$\lambda_{1}$
 
 8. Trên tập load\_breast\_cancer, so sánh tỉ lệ phương sai giải thích của PCA khi có và không có StandardScaler. Giải thích.
 
@@ -4025,15 +3955,15 @@ Với dữ liệu mất cân bằng nặng, đường **Precision – Recall** v
 ## 11.4 Độ đo cho bài toán hồi quy
 
 | Độ đo | Công thức | Ghi chú |
-| MAE | $\frac{1}{n} \sum \|y_i - \hat{y}_i\|$ | Cùng đơn vị với $y$, ít nhạy với ngoại lai |
+| MAE | $\frac{1}{n} \sum \|y_i - \hat{y}_i\|$| Cùng đơn vị với$y$, ít nhạy với ngoại lai |
 | MSE | $\frac{1}{n} \sum (y_i - \hat{y}_i)^2$ | Phạt nặng sai số lớn |
-| RMSE | $\sqrt{\text{MSE}}$ | Cùng đơn vị với $y$ |
-| $R^2$ | $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Tỉ lệ phương sai được giải thích; có thể âm |
-| MAPE | $\frac{1}{n} \sum \left\| \frac{y_i - \hat{y}_i}{y_i} \right\|$ | Sai số tương đối; không dùng khi $y_i \approx 0$ |
+| RMSE | $\sqrt{\text{MSE}}$| Cùng đơn vị với$y$ |
+| $R^2$|$1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Tỉ lệ phương sai được giải thích; có thể âm |
+| MAPE | $\frac{1}{n} \sum \left\| \frac{y_i - \hat{y}_i}{y_i} \right\|$| Sai số tương đối; không dùng khi$y_i \approx 0$ |
 
 Bảng 11.5: Các độ đo hồi quy
 
-**Ví dụ 11.3** (Tính tay độ đo hồi quy). $y = (3; -0, 5; 2; 7), \hat{y} = (2, 5; 0; 2; 8)$ . Sai số: $(0,5; - 0,5;0; - 1)$
+**Ví dụ 11.3** (Tính tay độ đo hồi quy). $y = (3; -0, 5; 2; 7), \hat{y} = (2, 5; 0; 2; 8)$. Sai số:$(0,5; - 0,5;0; - 1)$
 
 $$
 M A E = \frac {0 , 5 + 0 , 5 + 0 + 1}{4} = 0, 5, \quad M S E = \frac {0 , 2 5 + 0 , 2 5 + 0 + 1}{4} = 0, 3 7 5, \quad R M S E = 0, 6 1 2 4.
@@ -4169,7 +4099,7 @@ Hình 11.5: Trái: learning curve; phải: validation curve theo max\_depth củ
 
 2. Tính AUC bằng cách đếm cặp cho $y = (1,0,1,0,1), s = (0,9; 0,8; 0,7; 0,3; 0,2)$ , rồi kiểm tra bằng roc\_auc\_score.
 
-3. Chứng minh rằng $R^{2}$ của mô hình luôn dự đoán ȳ bằng 0. Khi nào $R^{2}<0?$
+3. Chứng minh rằng $R^{2}$của mô hình luôn dự đoán ȳ bằng 0. Khi nào$R^{2}<0?$
 
 4. So sánh điểm accuracy của KNN (K = 5) trên tập Iris khi đánh giá bằng hold-out với 10 seed khác nhau và bằng 10-fold CV. Nhận xét về độ biến động.
 
@@ -4263,7 +4193,7 @@ Ví dụ 12.1 (Perceptron cho hàm AND). Chọn w = (1, 1), b = −1,5:
 
 Bảng 12.2: Perceptron biểu diễn hàm AND
 
-Đường thẳng $x_{1} + x_{2} = 1,5$ tách điểm (1, 1) khỏi ba điểm còn lại. Nhưng với **XOR**, hai điểm lớp 1 là (0, 1), (1, 0) nằm trên một đường chéo và hai điểm lớp 0 nằm trên đường chéo kia: **không đường thẳng nào** tách được. Thật vậy, giả sử tồn tại w, b: từ $(0,0)\mapsto 0$ có $b < 0;$ từ (0, 1), (1, 0) 7→ 1 có $w_{2} + b\geq 0,w_{1} + b\geq 0$ , cộng lại được $w_{1} + w_{2} + b\geq -b > 0,$ , mâu thuẫn với (1, 1) 7→ 0. Lời giải: thêm một **lớp ẩn** — XOR = AND(OR, NAND).
+Đường thẳng $x_{1} + x_{2} = 1,5$tách điểm (1, 1) khỏi ba điểm còn lại. Nhưng với **XOR**, hai điểm lớp 1 là (0, 1), (1, 0) nằm trên một đường chéo và hai điểm lớp 0 nằm trên đường chéo kia: **không đường thẳng nào** tách được. Thật vậy, giả sử tồn tại w, b: từ$(0,0)\mapsto 0$có$b < 0;$từ (0, 1), (1, 0) 7→ 1 có$w_{2} + b\geq 0,w_{1} + b\geq 0$, cộng lại được$w_{1} + w_{2} + b\geq -b > 0,$ , mâu thuẫn với (1, 1) 7→ 0. Lời giải: thêm một **lớp ẩn** — XOR = AND(OR, NAND).
 
 ## Listing 12.1: Cài đặt perceptron từ đầu
 
@@ -4361,7 +4291,7 @@ $$
 \frac {\partial L}{\partial \mathbf {W} ^ {(l)}} = \boldsymbol {\delta} ^ {(l)} \big (\mathbf {a} ^ {(l - 1)} \big) ^ {\top}, \quad \frac {\partial L}{\partial \mathbf {b} ^ {(l)}} = \boldsymbol {\delta} ^ {(l)}.\tag{12.6}
 $$
 
-**Ví dụ 12.2** (Tính tay một bước lan truyền xuôi và ngược). Mạng 2–2–1, mọi nơ-ron dùng sigmoid, mất mát $L = \frac{1}{2} (t - o)^{2}$ . Đầu vào $\mathbf{x} = (1;0,5)$ , nhãn $t = 1$
+**Ví dụ 12.2** (Tính tay một bước lan truyền xuôi và ngược). Mạng 2–2–1, mọi nơ-ron dùng sigmoid, mất mát $L = \frac{1}{2} (t - o)^{2}$. Đầu vào$\mathbf{x} = (1;0,5)$, nhãn$t = 1$
 
 $$
 \mathbf {W} ^ {(1)} = \left( \begin{array}{c c} 0, 1 & 0, 2 \\ 0, 3 & 0, 4 \end{array} \right), \quad \mathbf {b} ^ {(1)} = \binom{0, 1}{0, 1}, \quad \mathbf {w} ^ {(2)} = (0, 5; 0, 6), \quad b ^ {(2)} = 0, 1, \quad \eta = 0, 5.
@@ -4369,11 +4299,7 @@ $$
 
 **Lan truyền xuôi:**
 
-$z_{1} = 0,1\cdot 1 + 0,2\cdot 0,5 + 0,1 = 0,3,$ $h_1 = \sigma (0,3) = 0,5744,$
-$z_{2} = 0,3\cdot 1 + 0,4\cdot 0,5 + 0,1 = 0,6,$ $h_2 = \sigma (0,6) = 0,6457,$
-$z_{o} = 0,5\cdot 0,5744 + 0,6\cdot 0,6457 + 0,1 = 0,7746,$ $o = \sigma (0,7746) = 0,6845,$
-
-mất mát $L = \frac{1}{2} (1 - 0,6845)^{2} = 0,0498.$
+$z_{1} = 0,1\cdot 1 + 0,2\cdot 0,5 + 0,1 = 0,3,$ $h_1 = \sigma (0,3) = 0,5744,$ $z_{2} = 0,3\cdot 1 + 0,4\cdot 0,5 + 0,1 = 0,6,$ $h_2 = \sigma (0,6) = 0,6457,$ $z_{o} = 0,5\cdot 0,5744 + 0,6\cdot 0,6457 + 0,1 = 0,7746,$ $o = \sigma (0,7746) = 0,6845,$mất mát$L = \frac{1}{2} (1 - 0,6845)^{2} = 0,0498.$
 
 **Lan truyền ngược:**
 
@@ -4381,7 +4307,7 @@ $$
 \begin{array}{c} \delta_ {o} = (o - t)   o (1 - o) = (- 0, 3 1 5 5) (0, 6 8 4 5) (0, 3 1 5 5) = - 0, 0 6 8 1, \\ \frac {\partial L}{\partial \mathbf {w} ^ {(2)}} = \delta_ {o}   \mathbf {h} = (- 0, 0 3 9 1; - 0, 0 4 4 0), \\ \delta_ {h _ {1}} = \delta_ {o} \cdot 0, 5 \cdot h _ {1} (1 - h _ {1}) = - 0, 0 0 8 3, \qquad \delta_ {h _ {2}} = \delta_ {o} \cdot 0, 6 \cdot h _ {2} (1 - h _ {2}) = - 0, 0 0 9 4, \\ \frac {\partial L}{\partial \mathbf {W} ^ {(1)}} = \boldsymbol {\delta} _ {h}   \mathbf {x} ^ {\top} = \left( \begin{array}{c c} - 0, 0 0 8 3 & - 0, 0 0 4 2 \\ - 0, 0 0 9 4 & - 0, 0 0 4 7 \end{array} \right). \end{array}
 $$
 
-**Cập nhật:** $\mathbf{w}^{(2)}\leftarrow (0,5;0,6) - 0,5\times (-0,0391; - 0,0440) = (0,5196;0,6220)$ . Gradient âm nên trọng số tăng, đẩy o lên gần nhãn t = 1. Chú ý gradient ở lớp ẩn nhỏ hơn lớp ra khoảng 8 lần, vì mỗi lần nhân với $\sigma^{\prime}\leq 0,25$ —day chính là hiện tượng **triệt tiêu gradient** khiến mạng sâu dùng sigmoid khó huấn luyện, và là lý do ReLU được ưa chuộng.
+**Cập nhật:** $\mathbf{w}^{(2)}\leftarrow (0,5;0,6) - 0,5\times (-0,0391; - 0,0440) = (0,5196;0,6220)$. Gradient âm nên trọng số tăng, đẩy o lên gần nhãn t = 1. Chú ý gradient ở lớp ẩn nhỏ hơn lớp ra khoảng 8 lần, vì mỗi lần nhân với$\sigma^{\prime}\leq 0,25$ —day chính là hiện tượng **triệt tiêu gradient** khiến mạng sâu dùng sigmoid khó huấn luyện, và là lý do ReLU được ưa chuộng.
 
 Listing 12.2: Kiểm tra ví dụ lan truyền ngược bằng NumPy
 
@@ -4590,7 +4516,7 @@ Bảng 12.5: Lựa chọn kiến trúc theo loại dữ liệu
 
 2. Chạy lại ví dụ lan truyền ngược thêm 100 bước. Vẽ mất mát theo số bước. Lặp lại với hàm kích hoạt ReLU ở lớp ẩn.
 
-3. Chứng minh $\sigma^{\prime}(z) = \sigma (z)(1 - \sigma (z))$ và $\sigma^{\prime}(z)\leq 0,25$ . Ước lượng độ lớn gradient ở lớp đầu tiên của mạng 10 lớp sigmoid.
+3. Chứng minh $\sigma^{\prime}(z) = \sigma (z)(1 - \sigma (z))$và$\sigma^{\prime}(z)\leq 0,25$ . Ước lượng độ lớn gradient ở lớp đầu tiên của mạng 10 lớp sigmoid.
 
 4. Với softmax và cross-entropy, chứng minh $\partial L / \partial z_{k} = \hat{y}_{k} - y_{k}$
 
