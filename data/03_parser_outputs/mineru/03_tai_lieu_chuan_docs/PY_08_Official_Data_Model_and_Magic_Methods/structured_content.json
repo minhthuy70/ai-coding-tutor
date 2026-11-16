@@ -1,0 +1,3141 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Official Python Documentation: Data Model, Dunder Methods and OOP Architecture"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.09
+          ],
+          "content": "**********"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Data model"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Objects, values and types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": "single: object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: data"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.09
+          ],
+          "content": ":dfn:`Objects` are Python's abstraction for data.  All data in a Python program"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.09
+          ],
+          "content": "is represented by objects or by relations between objects. Even code is"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "represented by objects."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": "pair: built-in function; id"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "pair: built-in function; type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": "single: identity of an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.09
+          ],
+          "content": "single: value of an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: type of an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: mutable object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.09
+          ],
+          "content": "single: immutable object"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.09
+          ],
+          "content": "Every object has an identity, a type and a value.  An object's *identity* never"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "changes once it has been created; you may think of it as the object's address in"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "memory.  The :keyword:`is` operator compares the identity of two objects; the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.09
+          ],
+          "content": "`id()` function returns an integer representing its identity."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.09
+          ],
+          "content": ".. impl-detail"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": "For CPython, ``id(x)`` is the memory address where ``x`` is stored."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": "An object's type determines the operations that the object supports (e.g., \"does"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "it have a length?\") and also defines the possible values for objects of that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "type.  The `type()` function returns an object's type (which is an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "itself).  Like its identity, an object's :dfn:`type` is also unchangeable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "[#]_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": "The *value* of some objects can change.  Objects whose value can"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": "change are said to be *mutable*; objects whose value is unchangeable once they"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "are created are called *immutable*. (The value of an immutable container object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.09
+          ],
+          "content": "that contains a reference to a mutable object can change when the latter's value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": "is changed; however the container is still considered immutable, because the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "collection of objects it contains cannot be changed.  So, immutability is not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": "strictly the same as having an unchangeable value, it is more subtle.) An"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "object's mutability is determined by its type; for instance, numbers, strings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.09
+          ],
+          "content": "and tuples are immutable, while dictionaries and lists are mutable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": "single: garbage collection"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.09
+          ],
+          "content": "single: reference counting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "single: unreachable object"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": "Objects are never explicitly destroyed; however, when they become unreachable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "they may be garbage-collected.  An implementation is allowed to postpone garbage"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "collection or omit it altogether --- it is a matter of implementation quality"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "how garbage collection is implemented, as long as no objects are collected that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "are still reachable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": ".. impl-detail"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "CPython currently uses a reference-counting scheme with (optional) delayed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "detection of cyclically linked garbage, which collects most objects as soon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "as they become unreachable, but is not guaranteed to collect garbage"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "containing circular references.  See the documentation of the :mod:`gc`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "module for information on controlling the collection of cyclic garbage."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.09
+          ],
+          "content": "Other implementations act differently and CPython may change."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": "Do not depend on immediate finalization of objects when they become"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "unreachable (so you should always close files explicitly)."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "Note that the use of the implementation's tracing or debugging facilities may"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.09
+          ],
+          "content": "keep objects alive that would normally be collectable. Also note that catching"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.09
+          ],
+          "content": "an exception with a :keyword:`try`...\\ :keyword:`except` statement may keep"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.09
+          ],
+          "content": "objects alive."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.09
+          ],
+          "content": "Some objects contain references to \"external\" resources such as open files or"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": "windows.  It is understood that these resources are freed when the object is"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.09
+          ],
+          "content": "garbage-collected, but since garbage collection is not guaranteed to happen,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": "such objects also provide an explicit way to release the external resource,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.09
+          ],
+          "content": "usually a `!close()` method. Programs are strongly recommended to explicitly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": "close such objects.  The :keyword:`try`...\\ :keyword:`finally` statement"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.09
+          ],
+          "content": "and the :keyword:`with` statement provide convenient ways to do this."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.09
+          ],
+          "content": "Some objects contain references to other objects; these are called *containers*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "Examples of containers are tuples, lists and dictionaries.  The references are"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "part of a container's value.  In most cases, when we talk about the value of a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.09
+          ],
+          "content": "container, we imply the values, not the identities of the contained objects;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": "however, when we talk about the mutability of a container, only the identities"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.09
+          ],
+          "content": "of the immediately contained objects are implied.  So, if an immutable container"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.09
+          ],
+          "content": "(like a tuple) contains a reference to a mutable object, its value changes if"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.09
+          ],
+          "content": "that mutable object is changed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.09
+          ],
+          "content": "Types affect almost all aspects of object behavior.  Even the importance of"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.09
+          ],
+          "content": "object identity is affected in some sense: for immutable types, operations that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.09
+          ],
+          "content": "compute new values may actually return a reference to any existing object with"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.09
+          ],
+          "content": "the same type and value, while for mutable objects this is not allowed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.09
+          ],
+          "content": "For example, after `a = 1; b = 1`, *a* and *b* may or may not refer to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": "the same object with the value one, depending on the implementation."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "This is because `class` is an immutable type, so the reference to `1`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.09
+          ],
+          "content": "can be reused. This behaviour depends on the implementation used, so should"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.09
+          ],
+          "content": "not be relied upon, but is something to be aware of when making use of object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": "identity tests."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.09
+          ],
+          "content": "However, after `c = []; d = []`, *c* and *d* are guaranteed to refer to two"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "different, unique, newly created empty lists. (Note that `e = f = []` assigns"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "the *same* object to both *e* and *f*.)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## The standard type hierarchy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": "single: type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.09
+          ],
+          "content": "pair: data; type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.09
+          ],
+          "content": "pair: type; hierarchy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.09
+          ],
+          "content": "pair: extension; module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": "pair: C; language"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.09
+          ],
+          "content": "Below is a list of the types that are built into Python.  Extension modules"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.09
+          ],
+          "content": "(written in C, Java, or other languages, depending on the implementation) can"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.09
+          ],
+          "content": "define additional types.  Future versions of Python may add types to the type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.09
+          ],
+          "content": "hierarchy (e.g., rational numbers, efficiently stored arrays of integers, etc.),"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.09
+          ],
+          "content": "although such additions will often be provided via the standard library instead."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.09
+          ],
+          "content": "single: attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.09
+          ],
+          "content": "pair: special; attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.09
+          ],
+          "content": "triple: generic; special; attribute"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "Some of the type descriptions below contain a paragraph listing 'special"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.09
+          ],
+          "content": "attributes.'  These are attributes that provide access to the implementation and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": "are not intended for general use.  Their definition may change in the future."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### None"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.09
+          ],
+          "content": "This type has a single value.  There is a single object with this value. This"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.09
+          ],
+          "content": "object is accessed through the built-in name `None`. It is used to signify the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.09
+          ],
+          "content": "absence of a value in many situations, e.g., it is returned from functions that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.09
+          ],
+          "content": "don't explicitly return anything. Its truth value is false."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### NotImplemented"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": "This type has a single value.  There is a single object with this value. This"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": "object is accessed through the built-in name `data`. Numeric methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": "and rich comparison methods should return this value if they do not implement the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.09
+          ],
+          "content": "operation for the operands provided.  (The interpreter will then try the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": "reflected operation, or some other fallback, depending on the operator.)  It"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.09
+          ],
+          "content": "should not be evaluated in a boolean context."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": "See"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.09
+          ],
+          "content": "`ref`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.09
+          ],
+          "content": "for more details."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "Evaluating `data` in a boolean context was deprecated."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": "Evaluating `data` in a boolean context now raises a `exc`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": "It previously evaluated to `const` and emitted a `exc`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "since Python 3.9."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Ellipsis"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.09
+          ],
+          "content": "pair: object; Ellipsis"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.09
+          ],
+          "content": "single: ...; ellipsis literal"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.09
+          ],
+          "content": "This type has a single value.  There is a single object with this value. This"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "object is accessed through the literal `...` or the built-in name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "`Ellipsis`.  Its truth value is true."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### :class:`numbers.Number`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "These are created by numeric literals and returned as results by arithmetic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.09
+          ],
+          "content": "operators and arithmetic built-in functions.  Numeric objects are immutable;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "once created their value never changes.  Python numbers are of course strongly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "related to mathematical numbers, but subject to the limitations of numerical"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "representation in computers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "The string representations of the numeric classes, computed by"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "`object.__repr__()` and `object.__str__()`, have the following"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.09
+          ],
+          "content": "properties:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.09
+          ],
+          "content": "* They are valid numeric literals which, when passed to their"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "class constructor, produce an object having the value of the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.09
+          ],
+          "content": "original numeric."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": "* The representation is in base 10, when possible."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.09
+          ],
+          "content": "* Leading zeros, possibly excepting a single zero before a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": "decimal point, are not shown."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": "* Trailing zeros, possibly excepting a single zero after a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.09
+          ],
+          "content": "decimal point, are not shown."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "* A sign is shown only when the number is negative."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.09
+          ],
+          "content": "Python distinguishes between integers, floating-point numbers, and complex"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.09
+          ],
+          "content": "numbers:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### :class:`numbers.Integral`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "These represent elements from the mathematical set of integers (positive and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "negative)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. note"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. index:: pair: integer; representation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The rules for integer representation are intended to give the most meaningful"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "interpretation of shift and mask operations involving negative integers."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "There are two types of integers:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Integers (`class`)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "These represent numbers in an unlimited range, subject to available (virtual)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "memory only.  For the purpose of shift and mask operations, a binary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "representation is assumed, and negative numbers are represented in a variant of"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "2's complement which gives the illusion of an infinite string of sign bits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "extending to the left."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Booleans (`class`)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pair: object; Boolean"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "These represent the truth values False and True.  The two objects representing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the values ``False`` and ``True`` are the only Boolean objects. The Boolean type is a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.09
+          ],
+          "content": "subtype of the integer type, and Boolean values behave like the values 0 and 1,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "respectively, in almost all contexts, the exception being that when converted to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "a string, the strings ``\"False\"`` or ``\"True\"`` are returned, respectively."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### :class:`numbers.Real` (:class:`float`)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": "pair: object; floating-point"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": "pair: floating-point; number"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.09
+          ],
+          "content": "pair: C; language"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.09
+          ],
+          "content": "pair: Java; language"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "These represent machine-level double precision floating-point numbers. You are"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "at the mercy of the underlying machine architecture (and C or Java"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": "implementation) for the accepted range and handling of overflow. Python does not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": "support single-precision floating-point numbers; the savings in processor and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "memory usage that are usually the reason for using these are dwarfed by the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "overhead of using objects in Python, so there is no reason to complicate the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": "language with two kinds of floating-point numbers."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### :class:`numbers.Complex` (:class:`complex`)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pair: object; complex"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pair: complex; number"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7040000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "These represent complex numbers as a pair of machine-level double precision"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7070000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "floating-point numbers.  The same caveats apply as for floating-point numbers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The real and imaginary parts of a complex number `z` can be retrieved through"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7130000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the read-only attributes `z.real` and `z.imag`."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.7160000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Sequences"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7190000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.7220000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7250000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pair: built-in function; len"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7280000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pair: object; sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7310000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: index operation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7340000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: item selection"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7370000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "single: subscription"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.7400000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7430000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "These represent finite ordered sets indexed by non-negative numbers. The"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7460000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "built-in function `len()` returns the number of items of a sequence. When"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7490000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the length of a sequence is *n*, the index set contains the numbers 0, 1,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7520000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "..., *n*-1.  Item *i* of sequence *a* is selected by `a[i]`. Some sequences,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.755,
+            0.9,
+            0.09
+          ],
+          "content": "including built-in sequences, interpret negative subscripts by adding the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.758,
+            0.9,
+            0.09
+          ],
+          "content": "sequence length. For example, `a[-2]` equals `a[n-2]`, the second to last"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.761,
+            0.9,
+            0.09
+          ],
+          "content": "item of sequence a with length `n`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.764,
+            0.9,
+            0.09
+          ],
+          "content": "The resulting value must be a nonnegative integer less than the number of items"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.767,
+            0.9,
+            0.09
+          ],
+          "content": "in the sequence. If it is not, an `exc` is raised."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.77,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.773,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.776,
+            0.9,
+            0.09
+          ],
+          "content": "single: slicing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.779,
+            0.9,
+            0.09
+          ],
+          "content": "single: start (slice object attribute)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.782,
+            0.9,
+            0.09
+          ],
+          "content": "single: stop (slice object attribute)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.785,
+            0.9,
+            0.09
+          ],
+          "content": "single: step (slice object attribute)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.788,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.791,
+            0.9,
+            0.09
+          ],
+          "content": "Sequences also support slicing: `a[start:stop]` selects all items with index *k* such"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.794,
+            0.9,
+            0.09
+          ],
+          "content": "that *start* `<=` *k* `<` *stop*.  When used as an expression, a slice is a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.797,
+            0.9,
+            0.09
+          ],
+          "content": "sequence of the same type. The comment above about negative subscripts also applies"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8,
+            0.9,
+            0.09
+          ],
+          "content": "to negative slice positions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.803,
+            0.9,
+            0.09
+          ],
+          "content": "Note that no error is raised if a slice position is less than zero or larger"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.806,
+            0.9,
+            0.09
+          ],
+          "content": "than the length of the sequence."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.809,
+            0.9,
+            0.09
+          ],
+          "content": "If *start* is missing or `data`, slicing behaves as if *start* was zero."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.812,
+            0.9,
+            0.09
+          ],
+          "content": "If *stop* is missing or `None`, slicing behaves as if *stop* was equal to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8150000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the length of the sequence."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8180000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Some sequences also support \"extended slicing\" with a third \"step\" parameter:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8210000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`a[i:j:k]` selects all items of *a* with index *x* where `x = i + n*k`, *n*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8240000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`>=` `0` and *i* `<=` *x* `<` *j*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8270000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Sequences are distinguished according to their mutability:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.8300000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Immutable sequences"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8330000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.8360000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8390000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pair: object; immutable sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8420000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pair: object; immutable"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.8450000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8480000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "An object of an immutable sequence type cannot change once it is created.  (If"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.051000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "the object contains references to other objects, these other objects may be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.054000000000000006,
+            0.9,
+            0.09
+          ],
+          "content": "mutable and may be changed; however, the collection of objects directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.05700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "referenced by an immutable object cannot change.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06000000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The following types are immutable sequences:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.06600000000000002,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "single: string; immutable sequences"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.07200000000000002,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Strings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": ".. index"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.08100000000000003,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08399999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "pair: built-in function; chr"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08699999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "pair: built-in function; ord"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08999999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "single: character"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09299999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "pair: string; item"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09599999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "single: Unicode"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09899999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "A string (:class:`str`) is a sequence of values that represent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10199999999999994,
+            0.9,
+            0.09
+          ],
+          "content": ":dfn:`characters`, or more formally, *Unicode code points*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10499999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "All the code points in the range ``0`` to ``0x10FFFF`` can be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10799999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "represented in a string."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11099999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "Python doesn't have a dedicated *character* type."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11399999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "Instead, every code point in the string is represented as a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11699999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "object with length ``1``."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11999999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "The built-in function :func:`ord`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12299999999999996,
+            0.9,
+            0.09
+          ],
+          "content": "converts a code point from its string form to an integer in the"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 35,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

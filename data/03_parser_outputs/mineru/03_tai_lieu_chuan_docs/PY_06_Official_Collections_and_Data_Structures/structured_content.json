@@ -1,0 +1,3080 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Official Python Documentation: Collections, Heap Queue and Bisect Algorithms"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## :mod:`!collections` --- Container datatypes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.09
+          ],
+          "content": ":synopsis: Container datatypes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "**Source code:** :source:`Lib/collections/__init__.py`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.09
+          ],
+          "content": "from collections import *"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.09
+          ],
+          "content": "import itertools"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": "__name__ = '<doctest>'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "--------------"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "This module implements specialized container datatypes providing alternatives to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.09
+          ],
+          "content": "Python's general purpose built-in containers, `class`, `class`,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.09
+          ],
+          "content": "`class`, and `class`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "=====================   ===================================================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`namedtuple()`      factory function for creating tuple subclasses with named fields"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.09
+          ],
+          "content": "`class`          list-like container with fast appends and pops on either end"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": "`class`       dict-like class for creating a single view of multiple mappings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "`class`        dict subclass for counting `term` objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": "`class`    dict subclass that remembers the order entries were added"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.09
+          ],
+          "content": "`class`    dict subclass that calls a factory function to supply missing values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`class`       wrapper around dictionary objects for easier dict subclassing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`class`       wrapper around list objects for easier list subclassing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.09
+          ],
+          "content": "`class`     wrapper around string objects for easier string subclassing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.09
+          ],
+          "content": "=====================   ===================================================================="
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### :class:`ChainMap` objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "A `class` class is provided for quickly linking a number of mappings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "so they can be treated as a single unit.  It is often much faster than creating"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.09
+          ],
+          "content": "a new dictionary and running multiple `dict.update()` calls."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.09
+          ],
+          "content": "The class can be used to simulate nested scopes and is useful in templating."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Class: `ChainMap(*maps)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": "A `class` groups multiple dicts or other mappings together to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.09
+          ],
+          "content": "create a single, updateable view.  If no *maps* are specified, a single empty"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": "dictionary is provided so that a new chain always has at least one mapping."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "The underlying mappings are stored in a list.  That list is public and can"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "be accessed or updated using the *maps* attribute.  There is no other state."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Lookups search the underlying mappings successively until a key is found.  In"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "contrast, writes, updates, and deletions only operate on the first mapping."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": "A `class` incorporates the underlying mappings by reference.  So, if"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": "one of the underlying mappings gets updated, those changes will be reflected"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "in `class`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.09
+          ],
+          "content": "All of the usual dictionary methods are supported.  In addition, there is a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": "*maps* attribute, a method for creating new subcontexts, and a property for"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "accessing all but the first mapping:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": ".. attribute:: maps"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "A user updateable list of mappings.  The list is ordered from"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.09
+          ],
+          "content": "first-searched to last-searched.  It is the only stored state and can"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.09
+          ],
+          "content": "be modified to change which mappings are searched.  The list should"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.09
+          ],
+          "content": "always contain at least one mapping."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: new_child(m=None, **kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.09
+          ],
+          "content": "Returns a new `class` containing a new map followed by"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "all of the maps in the current instance.  If `m` is specified,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.09
+          ],
+          "content": "it becomes the new map at the front of the list of mappings; if not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": "specified, an empty dict is used, so that a call to `d.new_child()`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "is equivalent to: `ChainMap({}, *d.maps)`. If any keyword arguments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "are specified, they update passed map or new empty dict. This method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "is used for creating subcontexts that can be updated without altering"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "values in any of the parent mappings."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "The optional `m` parameter was added."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.10"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "Keyword arguments support was added."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": ".. attribute:: parents"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "Property returning a new `class` containing all of the maps in"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "the current instance except the first one.  This is useful for skipping"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.09
+          ],
+          "content": "the first map in the search.  Use cases are similar to those for the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": ":keyword:`nonlocal` keyword used in :term:`nested scopes <nested"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "scope>`.  The use cases also parallel those for the built-in"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.09
+          ],
+          "content": "`super()` function.  A reference to `d.parents` is equivalent to:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "`ChainMap(*d.maps[1:])`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.09
+          ],
+          "content": "Note, the iteration order of a `class` is determined by"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.09
+          ],
+          "content": "scanning the mappings last to first"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.09
+          ],
+          "content": ">>> baseline = {'music': 'bach', 'art': 'rembrandt'}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": ">>> adjustments = {'art': 'van gogh', 'opera': 'carmen'}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.09
+          ],
+          "content": ">>> list(ChainMap(adjustments, baseline))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": "['music', 'art', 'opera']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.09
+          ],
+          "content": "This gives the same ordering as a series of :meth:`dict.update` calls"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": "starting with the last mapping::"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.09
+          ],
+          "content": ">>> combined = baseline.copy()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.09
+          ],
+          "content": ">>> combined.update(adjustments)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": ">>> list(combined)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "['music', 'art', 'opera']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": "Added support for ``|`` and ``|=`` operators, specified in :pep:`584`."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.09
+          ],
+          "content": ".. seealso"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.09
+          ],
+          "content": "* The `MultiContext class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.09
+          ],
+          "content": "<https://github.com/enthought/codetools/blob/4.0.0/codetools/contexts/multi_context.py>`_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.09
+          ],
+          "content": "in the Enthought `CodeTools package"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.09
+          ],
+          "content": "<https://github.com/enthought/codetools>`_ has options to support"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.09
+          ],
+          "content": "writing to any mapping in the chain."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": "* Django's `Context class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "<https://github.com/django/django/blob/main/django/template/context.py>`_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.09
+          ],
+          "content": "for templating is a read-only chain of mappings.  It also features"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.09
+          ],
+          "content": "pushing and popping of contexts similar to the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": ":meth:`~collections.ChainMap.new_child` method and the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.09
+          ],
+          "content": ":attr:`~collections.ChainMap.parents` property."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "* The `Nested Contexts recipe"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "<https://code.activestate.com/recipes/577434-nested-contexts-a-chain-of-mapping-objects/>`_ has options to control"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.09
+          ],
+          "content": "whether writes and other mutations apply only to the first mapping or to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": "any mapping in the chain."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.09
+          ],
+          "content": "* A `greatly simplified read-only version of Chainmap"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": "<https://code.activestate.com/recipes/305268/>`_."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### :class:`ChainMap` Examples and Recipes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.09
+          ],
+          "content": "This section shows various approaches to working with chained maps."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": "Example of simulating Python's internal lookup chain"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.09
+          ],
+          "content": "import builtins"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.09
+          ],
+          "content": "pylookup = ChainMap(locals(), globals(), vars(builtins))"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.09
+          ],
+          "content": "Example of letting user specified command-line arguments take precedence over"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.09
+          ],
+          "content": "environment variables which in turn take precedence over default values"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.09
+          ],
+          "content": "import os, argparse"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.09
+          ],
+          "content": "defaults = {'color': 'red', 'user': 'guest'}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.09
+          ],
+          "content": "parser = argparse.ArgumentParser()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.09
+          ],
+          "content": "parser.add_argument('-u', '--user')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.09
+          ],
+          "content": "parser.add_argument('-c', '--color')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "namespace = parser.parse_args()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.09
+          ],
+          "content": "command_line_args = {k: v for k, v in vars(namespace).items() if v is not None}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": "combined = ChainMap(command_line_args, os.environ, defaults)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.09
+          ],
+          "content": "print(combined['color'])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.09
+          ],
+          "content": "print(combined['user'])"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.09
+          ],
+          "content": "Example patterns for using the `class` class to simulate nested"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.09
+          ],
+          "content": "contexts"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": "c = ChainMap()        # Create root context"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": "d = c.new_child()     # Create nested child context"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": "e = c.new_child()     # Child of c, independent from d"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.09
+          ],
+          "content": "e.maps[0]             # Current context dictionary -- like Python's locals()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": "e.maps[-1]            # Root context -- like Python's globals()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.09
+          ],
+          "content": "e.parents             # Enclosing context chain -- like Python's nonlocals"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": "d['x'] = 1            # Set value in current context"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.09
+          ],
+          "content": "d['x']                # Get first key in the chain of contexts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.09
+          ],
+          "content": "del d['x']            # Delete from current context"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "list(d)               # All nested values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": "k in d                # Check all nested values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": "len(d)                # Number of nested values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "d.items()             # All nested items"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.09
+          ],
+          "content": "dict(d)               # Flatten into a regular dictionary"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.09
+          ],
+          "content": "The `class` class only makes updates (writes and deletions) to the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.09
+          ],
+          "content": "first mapping in the chain while lookups will search the full chain.  However,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.09
+          ],
+          "content": "if deep writes and deletions are desired, it is easy to make a subclass that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.09
+          ],
+          "content": "updates keys found deeper in the chain"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "class DeepChainMap(ChainMap):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "'Variant of ChainMap that allows direct updates to inner scopes'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.09
+          ],
+          "content": "def __setitem__(self, key, value):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "for mapping in self.maps:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.09
+          ],
+          "content": "if key in mapping:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "mapping[key] = value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "self.maps[0][key] = value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "def __delitem__(self, key):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "for mapping in self.maps:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.09
+          ],
+          "content": "if key in mapping:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.09
+          ],
+          "content": "del mapping[key]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.09
+          ],
+          "content": "raise KeyError(key)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": ">>> d = DeepChainMap({'zebra': 'black'}, {'elephant': 'blue'}, {'lion': 'yellow'})"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.09
+          ],
+          "content": ">>> d['lion'] = 'orange'         # update an existing key two levels down"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": ">>> d['snake'] = 'red'           # new keys get added to the topmost dict"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": ">>> del d['elephant']            # remove an existing key one level down"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.09
+          ],
+          "content": ">>> d                            # display result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "DeepChainMap({'zebra': 'black', 'snake': 'red'}, {}, {'lion': 'orange'})"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### :class:`Counter` objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.09
+          ],
+          "content": "A counter tool is provided to support convenient and rapid tallies."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "For example"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # Tally occurrences of words in a list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> cnt = Counter()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> for word in ['red', 'blue', 'red', 'green', 'blue', 'blue']:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "...     cnt[word] += 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> cnt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Counter({'blue': 3, 'red': 2, 'green': 1})"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # Find the ten most common words in Hamlet"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> import re"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> words = re.findall(r'\\w+', open('hamlet.txt').read().lower())"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> Counter(words).most_common(10)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "[('the', 1143), ('and', 966), ('to', 762), ('of', 669), ('i', 631),"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "('you', 554),  ('a', 546), ('my', 514), ('hamlet', 471), ('in', 451)]"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Class: `Counter(**kwargs)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Counter(iterable, /, **kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Counter(mapping, /, **kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "A `class` is a `class` subclass for counting `term` objects."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "It is a collection where elements are stored as dictionary keys"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "and their counts are stored as dictionary values.  Counts are allowed to be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "any integer value including zero or negative counts.  The `class`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.09
+          ],
+          "content": "class is similar to bags or multisets in other languages."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "Elements are counted from an *iterable* or initialized from another"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "*mapping* (or counter):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter()                           # a new, empty counter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter('gallahad')                 # a new counter from an iterable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter({'red': 4, 'blue': 2})      # a new counter from a mapping"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter(cats=4, dogs=8)             # a new counter from keyword args"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": "Counter objects have a dictionary interface except that they return a zero"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": "count for missing items instead of raising a `exc`:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter(['eggs', 'ham'])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c['bacon']                              # count of a missing element is zero"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.09
+          ],
+          "content": "0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "Setting a count to zero does not remove an element from a counter."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "Use `del` to remove it entirely:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c['sausage'] = 0                        # counter entry with a zero count"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": ">>> del c['sausage']                        # del actually removes the entry"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "Counters maintain insertion order internally but display from most common to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "least common when possible:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter(a=1, b=2, c=3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c                                       # display most common to least"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Counter({'c': 3, 'b': 2, 'a': 1})"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> list(c.items())                         # original insertion order"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "[('a', 1), ('b', 2), ('c', 3)]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.7 As a `class` subclass, `class`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7040000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "inherited the capability to remember insertion order.  Math operations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7070000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "on *Counter* objects also preserve order.  Results are ordered"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "according to when an element is first encountered in the left operand"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7130000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "and then by the order encountered in the right operand."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7160000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Counter objects support additional methods beyond those available for all"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7190000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "dictionaries:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7220000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: elements()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7250000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Return an iterator over elements repeating each as many times as its"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7280000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "count.  Elements are returned in the order first encountered. If an"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7310000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "element's count is less than one, `elements()` will ignore it."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7340000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter(a=4, b=2, c=0, d=-2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7370000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> sorted(c.elements())"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "['a', 'a', 'a', 'a', 'b', 'b']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7430000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: most_common(n=None)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7460000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Return a list of the *n* most common elements and their counts from the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7490000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "most common to the least.  If *n* is omitted or `None`,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7520000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`most_common()` returns *all* elements in the counter."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.755,
+            0.9,
+            0.09
+          ],
+          "content": "Elements with equal counts are ordered in the order first encountered:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.758,
+            0.9,
+            0.09
+          ],
+          "content": ">>> Counter('abracadabra').most_common(3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.761,
+            0.9,
+            0.09
+          ],
+          "content": "[('a', 5), ('b', 2), ('r', 2)]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.764,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: subtract(**kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.767,
+            0.9,
+            0.09
+          ],
+          "content": "subtract(iterable, /, **kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.77,
+            0.9,
+            0.09
+          ],
+          "content": "subtract(mapping, /, **kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.773,
+            0.9,
+            0.09
+          ],
+          "content": "Elements are subtracted from an *iterable* or from another *mapping*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.776,
+            0.9,
+            0.09
+          ],
+          "content": "(or counter).  Like `dict.update()` but subtracts counts instead"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.779,
+            0.9,
+            0.09
+          ],
+          "content": "of replacing them.  Both inputs and outputs may be zero or negative."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.782,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter(a=4, b=2, c=0, d=-2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.785,
+            0.9,
+            0.09
+          ],
+          "content": ">>> d = Counter(a=1, b=2, c=3, d=4)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.788,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c.subtract(d)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.791,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.794,
+            0.9,
+            0.09
+          ],
+          "content": "Counter({'a': 3, 'b': 0, 'c': -3, 'd': -6})"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.797,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: total()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.803,
+            0.9,
+            0.09
+          ],
+          "content": "Compute the sum of the counts."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.806,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c = Counter(a=10, b=5, c=0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.809,
+            0.9,
+            0.09
+          ],
+          "content": ">>> c.total()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.812,
+            0.9,
+            0.09
+          ],
+          "content": "15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8150000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.10"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8180000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The usual dictionary methods are available for `class` objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8210000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "except for these two which work differently for counters:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8240000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: fromkeys(iterable)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8270000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "This class method is not implemented for `class` objects."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: update(**kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8330000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "update(iterable, /, **kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8360000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "update(mapping, /, **kwargs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8390000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Elements are counted from an *iterable* or added-in from another"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8420000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "*mapping* (or counter).  Like `dict.update()` but adds counts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8450000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "instead of replacing them.  Also, the *iterable* is expected to be a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8480000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "sequence of elements, not a sequence of `(key, value)` pairs."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.051000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "Counters support rich comparison operators for equality, subset, and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.054000000000000006,
+            0.9,
+            0.09
+          ],
+          "content": "superset relationships: `==`, `!=`, `<`, `<=`, `>`, `>=`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.05700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "All of those tests treat missing elements as having zero counts so that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06000000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`Counter(a=1) == Counter(a=1, b=0)` returns true."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Rich comparison operations were added."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "In equality tests, missing elements are treated as having zero counts."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Formerly, `Counter(a=3)` and `Counter(a=3, b=0)` were considered"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "distinct."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Common patterns for working with :class:`Counter` objects"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.07800000000000003,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "c.total()                       # total of all counts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08399999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "c.clear()                       # reset all counts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08699999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "list(c)                         # list unique elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08999999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "set(c)                          # convert to a set"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09299999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "dict(c)                         # convert to a regular dictionary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09599999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "c.items()                       # access the (elem, cnt) pairs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09899999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "Counter(dict(list_of_pairs))    # convert from a list of (elem, cnt) pairs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10199999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "c.most_common()[:-n-1:-1]       # n least common elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10499999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "+c                              # remove zero and negative counts"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.10799999999999994,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11099999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "Several mathematical operations are provided for combining `class`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11399999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "objects to produce multisets (counters that have counts greater than zero)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11699999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "Addition and subtraction combine counters by adding or subtracting the counts"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 28,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

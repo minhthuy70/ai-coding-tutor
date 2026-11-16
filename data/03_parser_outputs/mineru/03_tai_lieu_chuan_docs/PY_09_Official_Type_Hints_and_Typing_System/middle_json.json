@@ -1,0 +1,3020 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 32,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Official Python Documentation: Type Hints and Typing Specification"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.09
+          ],
+          "content": "========================================="
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## :mod:`!typing` --- Support for type hints"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "import typing"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.09
+          ],
+          "content": "from dataclasses import dataclass"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.09
+          ],
+          "content": "from typing import *"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": ":synopsis: Support for type hints (see `pep`)."
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "**Source code:** :source:`Lib/typing.py`"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. note"
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.09
+          ],
+          "content": "The Python runtime does not enforce function and variable type annotations."
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "They can be used by third party tools such as :term:`type checkers <static type checker>`,"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "IDEs, linters, etc."
+        },
+        {
+          "type": "code",
+          "index": 13,
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": "--------------"
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "This module provides runtime support for type hints."
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": "Consider the function below"
+        },
+        {
+          "type": "code",
+          "index": 17,
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "def surface_area_of_cube(edge_length: float) -> str:"
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "return f\"The surface area of the cube is {6 * edge_length ** 2}.\""
+        },
+        {
+          "type": "code",
+          "index": 20,
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.09
+          ],
+          "content": "The function `surface_area_of_cube` takes an argument expected to"
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.09
+          ],
+          "content": "be an instance of `class`, as indicated by the `term`"
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`edge_length: float`. The function is expected to return an instance"
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "of `class`, as indicated by the `-> str` hint."
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.09
+          ],
+          "content": "While type hints can be simple classes like `class` or `class`,"
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.09
+          ],
+          "content": "they can also be more complex. The `mod` module provides a vocabulary of"
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.09
+          ],
+          "content": "more advanced type hints."
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": "New features are frequently added to the `typing` module."
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.09
+          ],
+          "content": "The :pypi:`typing_extensions` package"
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": "provides backports of these new features to older versions of Python."
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": ".. seealso"
+        },
+        {
+          "type": "code",
+          "index": 32,
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "`Typing cheat sheet <https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html>`_"
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "A quick overview of type hints (hosted at the mypy docs)"
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": "Type System Reference section of `the mypy docs <https://mypy.readthedocs.io/en/stable/index.html>`_"
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": "The Python typing system is standardised via PEPs, so this reference"
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "should broadly apply to most Python type checkers. (Some parts may still"
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.09
+          ],
+          "content": "be specific to mypy.)"
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": "`Static Typing with Python <https://typing.python.org/en/latest/>`_"
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "Type-checker-agnostic documentation written by the community detailing"
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": "type system features, useful typing related tools and typing best"
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "practices."
+        },
+        {
+          "type": "code",
+          "index": 43,
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 44,
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Specification for the Python Type System"
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.09
+          ],
+          "content": "The canonical, up-to-date specification of the Python type system can be"
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": "found at `Specification for the Python type system <https://typing.python.org/en/latest/spec/index.html>`_."
+        },
+        {
+          "type": "paragraph_title",
+          "index": 47,
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Type aliases"
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "A type alias is defined using the :keyword:`type` statement, which creates"
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.09
+          ],
+          "content": "an instance of `class`. In this example,"
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": "`Vector` and `list[float]` will be treated equivalently by static type"
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "checkers"
+        },
+        {
+          "type": "code",
+          "index": 52,
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "type Vector = list[float]"
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "def scale(scalar: float, vector: Vector) -> Vector:"
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "return [scalar * num for num in vector]"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 56,
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# passes type checking; a list of floats qualifies as a Vector."
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "new_vector = scale(2.0, [1.0, -4.2, 5.4])"
+        },
+        {
+          "type": "code",
+          "index": 58,
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "Type aliases are useful for simplifying complex type signatures. For example"
+        },
+        {
+          "type": "code",
+          "index": 60,
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "from collections.abc import Sequence"
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.09
+          ],
+          "content": "type ConnectionOptions = dict[str, str]"
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": "type Address = tuple[str, int]"
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "type Server = tuple[Address, ConnectionOptions]"
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.09
+          ],
+          "content": "def broadcast_message(message: str, servers: Sequence[Server]) -> None:"
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "paragraph_title",
+          "index": 67,
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# The static type checker will treat the previous type signature as"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 68,
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# being exactly equivalent to this one."
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.09
+          ],
+          "content": "def broadcast_message("
+        },
+        {
+          "type": "text",
+          "index": 70,
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.09
+          ],
+          "content": "message: str,"
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": "servers: Sequence[tuple[tuple[str, int], dict[str, str]]]"
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.09
+          ],
+          "content": ") -> None:"
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "code",
+          "index": 74,
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": "The :keyword:`type` statement is new in Python 3.12. For backwards"
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.09
+          ],
+          "content": "compatibility, type aliases can also be created through simple assignment"
+        },
+        {
+          "type": "code",
+          "index": 77,
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "Vector = list[float]"
+        },
+        {
+          "type": "code",
+          "index": 79,
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 80,
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.09
+          ],
+          "content": "Or marked with `data` to make it explicit that this is a type alias,"
+        },
+        {
+          "type": "text",
+          "index": 81,
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": "not a normal variable assignment"
+        },
+        {
+          "type": "code",
+          "index": 82,
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 83,
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.09
+          ],
+          "content": "from typing import TypeAlias"
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.09
+          ],
+          "content": "Vector: TypeAlias = list[float]"
+        },
+        {
+          "type": "code",
+          "index": 85,
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 86,
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## NewType"
+        },
+        {
+          "type": "text",
+          "index": 87,
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.09
+          ],
+          "content": "Use the :class:`NewType` helper to create distinct types"
+        },
+        {
+          "type": "code",
+          "index": 88,
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 89,
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.09
+          ],
+          "content": "from typing import NewType"
+        },
+        {
+          "type": "text",
+          "index": 90,
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": "UserId = NewType('UserId', int)"
+        },
+        {
+          "type": "text",
+          "index": 91,
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "some_id = UserId(524313)"
+        },
+        {
+          "type": "code",
+          "index": 92,
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 93,
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.09
+          ],
+          "content": "The static type checker will treat the new type as if it were a subclass"
+        },
+        {
+          "type": "text",
+          "index": 94,
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": "of the original type. This is useful in helping catch logical errors"
+        },
+        {
+          "type": "code",
+          "index": 95,
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 96,
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "def get_user_name(user_id: UserId) -> str:"
+        },
+        {
+          "type": "text",
+          "index": 97,
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "paragraph_title",
+          "index": 98,
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# passes type checking"
+        },
+        {
+          "type": "text",
+          "index": 99,
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": "user_a = get_user_name(UserId(42351))"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 100,
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# fails type checking; an int is not a UserId"
+        },
+        {
+          "type": "text",
+          "index": 101,
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": "user_b = get_user_name(-1)"
+        },
+        {
+          "type": "code",
+          "index": 102,
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 103,
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.09
+          ],
+          "content": "You may still perform all `int` operations on a variable of type `UserId`,"
+        },
+        {
+          "type": "text",
+          "index": 104,
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.09
+          ],
+          "content": "but the result will always be of type `int`. This lets you pass in a"
+        },
+        {
+          "type": "text",
+          "index": 105,
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": "`UserId` wherever an `int` might be expected, but will prevent you from"
+        },
+        {
+          "type": "text",
+          "index": 106,
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.09
+          ],
+          "content": "accidentally creating a ``UserId`` in an invalid way"
+        },
+        {
+          "type": "code",
+          "index": 107,
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 108,
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# 'output' is of type 'int', not 'UserId'"
+        },
+        {
+          "type": "text",
+          "index": 109,
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.09
+          ],
+          "content": "output = UserId(23413) + UserId(54341)"
+        },
+        {
+          "type": "code",
+          "index": 110,
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 111,
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.09
+          ],
+          "content": "Note that these checks are enforced only by the static type checker. At runtime,"
+        },
+        {
+          "type": "text",
+          "index": 112,
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.09
+          ],
+          "content": "the statement `Derived = NewType('Derived', Base)` will make `Derived` a"
+        },
+        {
+          "type": "text",
+          "index": 113,
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.09
+          ],
+          "content": "callable that immediately returns whatever parameter you pass it. That means"
+        },
+        {
+          "type": "text",
+          "index": 114,
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.09
+          ],
+          "content": "the expression `Derived(some_value)` does not create a new class or introduce"
+        },
+        {
+          "type": "text",
+          "index": 115,
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.09
+          ],
+          "content": "much overhead beyond that of a regular function call."
+        },
+        {
+          "type": "text",
+          "index": 116,
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.09
+          ],
+          "content": "More precisely, the expression `some_value is Derived(some_value)` is always"
+        },
+        {
+          "type": "text",
+          "index": 117,
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.09
+          ],
+          "content": "true at runtime."
+        },
+        {
+          "type": "text",
+          "index": 118,
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "It is invalid to create a subtype of ``Derived``"
+        },
+        {
+          "type": "code",
+          "index": 119,
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 120,
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": "from typing import NewType"
+        },
+        {
+          "type": "text",
+          "index": 121,
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.09
+          ],
+          "content": "UserId = NewType('UserId', int)"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 122,
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Fails at runtime and does not pass type checking"
+        },
+        {
+          "type": "text",
+          "index": 123,
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.09
+          ],
+          "content": "class AdminUserId(UserId): pass"
+        },
+        {
+          "type": "code",
+          "index": 124,
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 125,
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.09
+          ],
+          "content": "However, it is possible to create a :class:`NewType` based on a 'derived' ``NewType``"
+        },
+        {
+          "type": "code",
+          "index": 126,
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 127,
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": "from typing import NewType"
+        },
+        {
+          "type": "text",
+          "index": 128,
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": "UserId = NewType('UserId', int)"
+        },
+        {
+          "type": "text",
+          "index": 129,
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": "ProUserId = NewType('ProUserId', UserId)"
+        },
+        {
+          "type": "code",
+          "index": 130,
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 131,
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": "and typechecking for `ProUserId` will work as expected."
+        },
+        {
+          "type": "text",
+          "index": 132,
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.09
+          ],
+          "content": "See `pep` for more details."
+        },
+        {
+          "type": "text",
+          "index": 133,
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": ".. note"
+        },
+        {
+          "type": "code",
+          "index": 134,
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 135,
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.09
+          ],
+          "content": "Recall that the use of a type alias declares two types to be *equivalent* to"
+        },
+        {
+          "type": "text",
+          "index": 136,
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "one another. Doing ``type Alias = Original`` will make the static type checker"
+        },
+        {
+          "type": "text",
+          "index": 137,
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": "treat ``Alias`` as being *exactly equivalent* to ``Original`` in all cases."
+        },
+        {
+          "type": "text",
+          "index": 138,
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": "This is useful when you want to simplify complex type signatures."
+        },
+        {
+          "type": "text",
+          "index": 139,
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "In contrast, ``NewType`` declares one type to be a *subtype* of another."
+        },
+        {
+          "type": "text",
+          "index": 140,
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.09
+          ],
+          "content": "Doing ``Derived = NewType('Derived', Original)`` will make the static type"
+        },
+        {
+          "type": "text",
+          "index": 141,
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.09
+          ],
+          "content": "checker treat ``Derived`` as a *subclass* of ``Original``, which means a"
+        },
+        {
+          "type": "text",
+          "index": 142,
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.09
+          ],
+          "content": "value of type ``Original`` cannot be used in places where a value of type"
+        },
+        {
+          "type": "text",
+          "index": 143,
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.09
+          ],
+          "content": "``Derived`` is expected. This is useful when you want to prevent logic"
+        },
+        {
+          "type": "text",
+          "index": 144,
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.09
+          ],
+          "content": "errors with minimal runtime cost."
+        },
+        {
+          "type": "code",
+          "index": 145,
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 146,
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.09
+          ],
+          "content": "`NewType` is now a class rather than a function.  As a result, there is"
+        },
+        {
+          "type": "text",
+          "index": 147,
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "some additional runtime cost when calling `NewType` over a regular"
+        },
+        {
+          "type": "text",
+          "index": 148,
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "function."
+        },
+        {
+          "type": "text",
+          "index": 149,
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.09
+          ],
+          "content": "The performance of calling `NewType` has been restored to its level in"
+        },
+        {
+          "type": "text",
+          "index": 150,
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "Python 3.9."
+        },
+        {
+          "type": "paragraph_title",
+          "index": 151,
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Annotating callable objects"
+        },
+        {
+          "type": "text",
+          "index": 152,
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "Functions -- or other `term` objects -- can be annotated using"
+        },
+        {
+          "type": "text",
+          "index": 153,
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "`class` or deprecated `data`."
+        },
+        {
+          "type": "text",
+          "index": 154,
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "`Callable[[int], str]` signifies a function that takes a single parameter"
+        },
+        {
+          "type": "text",
+          "index": 155,
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "of type `class` and returns a `class`."
+        },
+        {
+          "type": "text",
+          "index": 156,
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "For example:"
+        },
+        {
+          "type": "text",
+          "index": 157,
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.09
+          ],
+          "content": ".. testcode"
+        },
+        {
+          "type": "code",
+          "index": 158,
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 159,
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "from collections.abc import Callable, Awaitable"
+        },
+        {
+          "type": "text",
+          "index": 160,
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.09
+          ],
+          "content": "def feeder(get_next_item: Callable[[], str]) -> None:"
+        },
+        {
+          "type": "text",
+          "index": 161,
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": "...  # Body"
+        },
+        {
+          "type": "text",
+          "index": 162,
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.09
+          ],
+          "content": "def async_query(on_success: Callable[[int], None],"
+        },
+        {
+          "type": "text",
+          "index": 163,
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": "on_error: Callable[[int, Exception], None]) -> None:"
+        },
+        {
+          "type": "text",
+          "index": 164,
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": "...  # Body"
+        },
+        {
+          "type": "text",
+          "index": 165,
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.09
+          ],
+          "content": "async def on_update(value: str) -> None:"
+        },
+        {
+          "type": "text",
+          "index": 166,
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "...  # Body"
+        },
+        {
+          "type": "text",
+          "index": 167,
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.09
+          ],
+          "content": "callback: Callable[[str], Awaitable[None]] = on_update"
+        },
+        {
+          "type": "code",
+          "index": 168,
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 169,
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.09
+          ],
+          "content": "The subscription syntax must always be used with exactly two values: the"
+        },
+        {
+          "type": "text",
+          "index": 170,
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "argument list and the return type.  The argument list must be a list of types,"
+        },
+        {
+          "type": "text",
+          "index": 171,
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "a `class`, `data`, or an ellipsis (`...`). The return type must"
+        },
+        {
+          "type": "text",
+          "index": 172,
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "be a single type."
+        },
+        {
+          "type": "text",
+          "index": 173,
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "If a literal ellipsis `...` is given as the argument list, it indicates that"
+        },
+        {
+          "type": "text",
+          "index": 174,
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "a callable with any arbitrary parameter list would be acceptable:"
+        },
+        {
+          "type": "text",
+          "index": 175,
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. testcode"
+        },
+        {
+          "type": "code",
+          "index": 176,
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 177,
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "def concat(x: str, y: str) -> str:"
+        },
+        {
+          "type": "text",
+          "index": 178,
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "return x + y"
+        },
+        {
+          "type": "text",
+          "index": 179,
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "x: Callable[..., str]"
+        },
+        {
+          "type": "text",
+          "index": 180,
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "x = str     # OK"
+        },
+        {
+          "type": "text",
+          "index": 181,
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "x = concat  # Also OK"
+        },
+        {
+          "type": "code",
+          "index": 182,
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 183,
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`Callable` cannot express complex signatures such as functions that take a"
+        },
+        {
+          "type": "text",
+          "index": 184,
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "variadic number of arguments, `ref`, or"
+        },
+        {
+          "type": "text",
+          "index": 185,
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "functions that have keyword-only parameters. However, these signatures can be"
+        },
+        {
+          "type": "text",
+          "index": 186,
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "expressed by defining a `class` class with a"
+        },
+        {
+          "type": "text",
+          "index": 187,
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`object.__call__()` method:"
+        },
+        {
+          "type": "text",
+          "index": 188,
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. testcode"
+        },
+        {
+          "type": "code",
+          "index": 189,
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 190,
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "from collections.abc import Iterable"
+        },
+        {
+          "type": "text",
+          "index": 191,
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "from typing import Protocol"
+        },
+        {
+          "type": "text",
+          "index": 192,
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "class Combiner(Protocol):"
+        },
+        {
+          "type": "text",
+          "index": 193,
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.09
+          ],
+          "content": "def __call__(self, *vals: bytes, maxlen: int | None = None) -> list[bytes]: ..."
+        },
+        {
+          "type": "text",
+          "index": 194,
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "def batch_proc(data: Iterable[bytes], cb_results: Combiner) -> bytes:"
+        },
+        {
+          "type": "text",
+          "index": 195,
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "for item in data:"
+        },
+        {
+          "type": "text",
+          "index": 196,
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "text",
+          "index": 197,
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.09
+          ],
+          "content": "def good_cb(*vals: bytes, maxlen: int | None = None) -> list[bytes]:"
+        },
+        {
+          "type": "text",
+          "index": 198,
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "text",
+          "index": 199,
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.09
+          ],
+          "content": "def bad_cb(*vals: bytes, maxitems: int | None) -> list[bytes]:"
+        },
+        {
+          "type": "text",
+          "index": 200,
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "text",
+          "index": 201,
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": "batch_proc([], good_cb)  # OK"
+        },
+        {
+          "type": "text",
+          "index": 202,
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.09
+          ],
+          "content": "batch_proc([], bad_cb)   # Error! Argument 2 has incompatible type because of"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 203,
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# different name and kind in the callback"
+        },
+        {
+          "type": "code",
+          "index": 204,
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 205,
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "Callables which take other callables as arguments may indicate that their"
+        },
+        {
+          "type": "text",
+          "index": 206,
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "parameter types are dependent on each other using `class`."
+        },
+        {
+          "type": "text",
+          "index": 207,
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": "Additionally, if that callable adds or removes arguments from other"
+        },
+        {
+          "type": "text",
+          "index": 208,
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": "callables, the `data` operator may be used.  They"
+        },
+        {
+          "type": "text",
+          "index": 209,
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "take the form `Callable[ParamSpecVariable, ReturnType]` and"
+        },
+        {
+          "type": "text",
+          "index": 210,
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "`Callable[Concatenate[Arg1Type, Arg2Type, ..., ParamSpecVariable], ReturnType]`"
+        },
+        {
+          "type": "text",
+          "index": 211,
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": "respectively."
+        },
+        {
+          "type": "text",
+          "index": 212,
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.09
+          ],
+          "content": "`Callable` now supports `class` and `data`."
+        },
+        {
+          "type": "text",
+          "index": 213,
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "See `pep` for more details."
+        },
+        {
+          "type": "text",
+          "index": 214,
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. seealso"
+        },
+        {
+          "type": "code",
+          "index": 215,
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 216,
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The documentation for :class:`ParamSpec` and :class:`Concatenate` provides"
+        },
+        {
+          "type": "text",
+          "index": 217,
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "examples of usage in ``Callable``."
+        },
+        {
+          "type": "code",
+          "index": 218,
+          "bbox": [
+            0.05,
+            0.7040000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 219,
+          "bbox": [
+            0.05,
+            0.7070000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Generics"
+        },
+        {
+          "type": "text",
+          "index": 220,
+          "bbox": [
+            0.05,
+            0.7100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Since type information about objects kept in containers cannot be statically"
+        },
+        {
+          "type": "text",
+          "index": 221,
+          "bbox": [
+            0.05,
+            0.7130000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "inferred in a generic way, many container classes in the standard library support"
+        },
+        {
+          "type": "text",
+          "index": 222,
+          "bbox": [
+            0.05,
+            0.7160000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "subscription to denote the expected types of container elements."
+        },
+        {
+          "type": "text",
+          "index": 223,
+          "bbox": [
+            0.05,
+            0.7190000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. testcode"
+        },
+        {
+          "type": "code",
+          "index": 224,
+          "bbox": [
+            0.05,
+            0.7220000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 225,
+          "bbox": [
+            0.05,
+            0.7250000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "from collections.abc import Mapping, Sequence"
+        },
+        {
+          "type": "text",
+          "index": 226,
+          "bbox": [
+            0.05,
+            0.7280000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "class Employee: ..."
+        },
+        {
+          "type": "paragraph_title",
+          "index": 227,
+          "bbox": [
+            0.05,
+            0.7310000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Sequence[Employee] indicates that all elements in the sequence"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 228,
+          "bbox": [
+            0.05,
+            0.7340000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# must be instances of \"Employee\"."
+        },
+        {
+          "type": "paragraph_title",
+          "index": 229,
+          "bbox": [
+            0.05,
+            0.7370000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Mapping[str, str] indicates that all keys and all values in the mapping"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 230,
+          "bbox": [
+            0.05,
+            0.7400000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# must be strings."
+        },
+        {
+          "type": "text",
+          "index": 231,
+          "bbox": [
+            0.05,
+            0.7430000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "def notify_by_email(employees: Sequence[Employee],"
+        },
+        {
+          "type": "text",
+          "index": 232,
+          "bbox": [
+            0.05,
+            0.7460000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "overrides: Mapping[str, str]) -> None: ..."
+        },
+        {
+          "type": "code",
+          "index": 233,
+          "bbox": [
+            0.05,
+            0.7490000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 234,
+          "bbox": [
+            0.05,
+            0.7520000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Generic functions and classes can be parameterized by using"
+        },
+        {
+          "type": "text",
+          "index": 235,
+          "bbox": [
+            0.05,
+            0.755,
+            0.9,
+            0.09
+          ],
+          "content": ":ref:`type parameter syntax <type-params>`"
+        },
+        {
+          "type": "code",
+          "index": 236,
+          "bbox": [
+            0.05,
+            0.758,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 237,
+          "bbox": [
+            0.05,
+            0.761,
+            0.9,
+            0.09
+          ],
+          "content": "from collections.abc import Sequence"
+        },
+        {
+          "type": "text",
+          "index": 238,
+          "bbox": [
+            0.05,
+            0.764,
+            0.9,
+            0.09
+          ],
+          "content": "def first[T](l: Sequence[T]) -> T:  # Function is generic over the TypeVar \"T\""
+        },
+        {
+          "type": "text",
+          "index": 239,
+          "bbox": [
+            0.05,
+            0.767,
+            0.9,
+            0.09
+          ],
+          "content": "return l[0]"
+        },
+        {
+          "type": "code",
+          "index": 240,
+          "bbox": [
+            0.05,
+            0.77,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 241,
+          "bbox": [
+            0.05,
+            0.773,
+            0.9,
+            0.09
+          ],
+          "content": "Or by using the :class:`TypeVar` factory directly"
+        },
+        {
+          "type": "code",
+          "index": 242,
+          "bbox": [
+            0.05,
+            0.776,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 243,
+          "bbox": [
+            0.05,
+            0.779,
+            0.9,
+            0.09
+          ],
+          "content": "from collections.abc import Sequence"
+        },
+        {
+          "type": "text",
+          "index": 244,
+          "bbox": [
+            0.05,
+            0.782,
+            0.9,
+            0.09
+          ],
+          "content": "from typing import TypeVar"
+        },
+        {
+          "type": "text",
+          "index": 245,
+          "bbox": [
+            0.05,
+            0.785,
+            0.9,
+            0.09
+          ],
+          "content": "U = TypeVar('U')                  # Declare type variable \"U\""
+        },
+        {
+          "type": "text",
+          "index": 246,
+          "bbox": [
+            0.05,
+            0.788,
+            0.9,
+            0.09
+          ],
+          "content": "def second(l: Sequence[U]) -> U:  # Function is generic over the TypeVar \"U\""
+        },
+        {
+          "type": "text",
+          "index": 247,
+          "bbox": [
+            0.05,
+            0.791,
+            0.9,
+            0.09
+          ],
+          "content": "return l[1]"
+        },
+        {
+          "type": "code",
+          "index": 248,
+          "bbox": [
+            0.05,
+            0.794,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "index": 249,
+          "bbox": [
+            0.05,
+            0.797,
+            0.9,
+            0.09
+          ],
+          "content": "Syntactic support for generics is new in Python 3.12."
+        },
+        {
+          "type": "paragraph_title",
+          "index": 250,
+          "bbox": [
+            0.05,
+            0.8,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Annotating tuples"
+        },
+        {
+          "type": "text",
+          "index": 251,
+          "bbox": [
+            0.05,
+            0.803,
+            0.9,
+            0.09
+          ],
+          "content": "For most containers in Python, the typing system assumes that all elements in"
+        },
+        {
+          "type": "text",
+          "index": 252,
+          "bbox": [
+            0.05,
+            0.806,
+            0.9,
+            0.09
+          ],
+          "content": "the container will be of the same type. For example"
+        },
+        {
+          "type": "code",
+          "index": 253,
+          "bbox": [
+            0.05,
+            0.809,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "index": 254,
+          "bbox": [
+            0.05,
+            0.812,
+            0.9,
+            0.09
+          ],
+          "content": "from collections.abc import Mapping"
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "MinerU_Intermediate_Layout",
+  "schema_version": "1.0"
+}

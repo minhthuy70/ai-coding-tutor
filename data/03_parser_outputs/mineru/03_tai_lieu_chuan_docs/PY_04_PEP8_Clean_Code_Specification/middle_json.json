@@ -1,0 +1,2605 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 20,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.09
+          ],
+          "content": "PEP: 8"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.09
+          ],
+          "content": "Title: Style Guide for Python Code"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.09
+          ],
+          "content": "Author: Guido van Rossum <guido@python.org>,"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "Barry Warsaw <barry@python.org>,"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.09
+          ],
+          "content": "Alyssa Coghlan <ncoghlan@gmail.com>"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.09
+          ],
+          "content": "Status: Active"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": "Type: Process"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Created: 05-Jul-2001"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Post-History: 05-Jul-2001, 01-Aug-2013"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.09
+          ],
+          "content": "Introduction"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.09
+          ],
+          "content": "============"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "This document gives coding conventions for the Python code comprising"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the standard library in the main Python distribution.  Please see the"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.09
+          ],
+          "content": "companion informational PEP describing :pep:`style guidelines for the C code"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": "in the C implementation of Python <7>`."
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "This document and :pep:`257` (Docstring Conventions) were adapted from"
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": "Guido's original Python Style Guide essay, with some additions from"
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.09
+          ],
+          "content": "Barry's style guide [2]_."
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "This style guide evolves over time as additional conventions are"
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "identified and past conventions are rendered obsolete by changes in"
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.09
+          ],
+          "content": "the language itself."
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.09
+          ],
+          "content": "Many projects have their own coding style guidelines. In the event of any"
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.09
+          ],
+          "content": "conflicts, such project-specific guides take precedence for that project."
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "A Foolish Consistency is the Hobgoblin of Little Minds"
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "======================================================"
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.09
+          ],
+          "content": "One of Guido's key insights is that code is read much more often than"
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.09
+          ],
+          "content": "it is written.  The guidelines provided here are intended to improve"
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.09
+          ],
+          "content": "the readability of code and make it consistent across the wide"
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": "spectrum of Python code.  As :pep:`20` says, \"Readability counts\"."
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.09
+          ],
+          "content": "A style guide is about consistency.  Consistency with this style guide"
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": "is important.  Consistency within a project is more important."
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Consistency within one module or function is the most important."
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "However, know when to be inconsistent -- sometimes style guide"
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "recommendations just aren't applicable.  When in doubt, use your best"
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "judgment.  Look at other examples and decide what looks best.  And"
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": "don't hesitate to ask!"
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": "In particular: do not break backwards compatibility just to comply with"
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "this PEP!"
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.09
+          ],
+          "content": "Some other good reasons to ignore a particular guideline:"
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": "1. When applying the guideline would make the code less readable, even"
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "for someone who is used to reading code that follows this PEP."
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": "2. To be consistent with surrounding code that also breaks it (maybe"
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "for historic reasons) -- although this is also an opportunity to"
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.09
+          ],
+          "content": "clean up someone else's mess (in true XP style)."
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.09
+          ],
+          "content": "3. Because the code in question predates the introduction of the"
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.09
+          ],
+          "content": "guideline and there is no other reason to be modifying that code."
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": "4. When the code needs to remain compatible with older versions of"
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.09
+          ],
+          "content": "Python that don't support the feature recommended by the style guide."
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "Code Lay-out"
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.09
+          ],
+          "content": "============"
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": "Indentation"
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "-----------"
+        },
+        {
+          "type": "text",
+          "index": 52,
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Use 4 spaces per indentation level."
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Continuation lines should align wrapped elements either vertically"
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "using Python's implicit line joining inside parentheses, brackets and"
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "braces, or using a *hanging indent* [#fn-hi]_.  When using a hanging"
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "indent the following should be considered; there should be no"
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "arguments on the first line and further indentation should be used to"
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "clearly distinguish itself as a continuation line:"
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": ":class: good"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 61,
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Correct:"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 62,
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Aligned with opening delimiter."
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": "foo = long_function_name(var_one, var_two,"
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "var_three, var_four)"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 65,
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Add 4 spaces (an extra level of indentation) to distinguish arguments from the rest."
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "def long_function_name("
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.09
+          ],
+          "content": "var_one, var_two, var_three,"
+        },
+        {
+          "type": "text",
+          "index": 68,
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.09
+          ],
+          "content": "var_four):"
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.09
+          ],
+          "content": "print(var_one)"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 70,
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Hanging indents should add a level."
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": "foo = long_function_name("
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.09
+          ],
+          "content": "var_one, var_two,"
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": "var_three, var_four)"
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": ":class: bad"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 76,
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Wrong:"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 77,
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Arguments on first line forbidden when not using vertical alignment."
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "foo = long_function_name(var_one, var_two,"
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "var_three, var_four)"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 80,
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Further indentation required as indentation is not distinguishable."
+        },
+        {
+          "type": "text",
+          "index": 81,
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": "def long_function_name("
+        },
+        {
+          "type": "text",
+          "index": 82,
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.09
+          ],
+          "content": "var_one, var_two, var_three,"
+        },
+        {
+          "type": "text",
+          "index": 83,
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.09
+          ],
+          "content": "var_four):"
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.09
+          ],
+          "content": "print(var_one)"
+        },
+        {
+          "type": "text",
+          "index": 85,
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.09
+          ],
+          "content": "The 4-space rule is optional for continuation lines."
+        },
+        {
+          "type": "text",
+          "index": 86,
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.09
+          ],
+          "content": "Optional:"
+        },
+        {
+          "type": "text",
+          "index": 87,
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 88,
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.09
+          ],
+          "content": ":class: good"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 89,
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Hanging indents *may* be indented to other than 4 spaces."
+        },
+        {
+          "type": "text",
+          "index": 90,
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": "foo = long_function_name("
+        },
+        {
+          "type": "text",
+          "index": 91,
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "var_one, var_two,"
+        },
+        {
+          "type": "text",
+          "index": 92,
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.09
+          ],
+          "content": "var_three, var_four)"
+        },
+        {
+          "type": "text",
+          "index": 93,
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.09
+          ],
+          "content": ".. _`multiline if-statements`:"
+        },
+        {
+          "type": "text",
+          "index": 94,
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": "When the conditional part of an ``if``-statement is long enough to require"
+        },
+        {
+          "type": "text",
+          "index": 95,
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.09
+          ],
+          "content": "that it be written across multiple lines, it's worth noting that the"
+        },
+        {
+          "type": "text",
+          "index": 96,
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "combination of a two character keyword (i.e. ``if``), plus a single space,"
+        },
+        {
+          "type": "text",
+          "index": 97,
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "plus an opening parenthesis creates a natural 4-space indent for the"
+        },
+        {
+          "type": "text",
+          "index": 98,
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.09
+          ],
+          "content": "subsequent lines of the multiline conditional.  This can produce a visual"
+        },
+        {
+          "type": "text",
+          "index": 99,
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": "conflict with the indented suite of code nested inside the ``if``-statement,"
+        },
+        {
+          "type": "text",
+          "index": 100,
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.09
+          ],
+          "content": "which would also naturally be indented to 4 spaces.  This PEP takes no"
+        },
+        {
+          "type": "text",
+          "index": 101,
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": "explicit position on how (or whether) to further visually distinguish such"
+        },
+        {
+          "type": "text",
+          "index": 102,
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.09
+          ],
+          "content": "conditional lines from the nested suite inside the ``if``-statement."
+        },
+        {
+          "type": "text",
+          "index": 103,
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.09
+          ],
+          "content": "Acceptable options in this situation include, but are not limited to:"
+        },
+        {
+          "type": "text",
+          "index": 104,
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 105,
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": ":class: good"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 106,
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# No extra indentation."
+        },
+        {
+          "type": "text",
+          "index": 107,
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.09
+          ],
+          "content": "if (this_is_one_thing and"
+        },
+        {
+          "type": "text",
+          "index": 108,
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.09
+          ],
+          "content": "that_is_another_thing):"
+        },
+        {
+          "type": "text",
+          "index": 109,
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.09
+          ],
+          "content": "do_something()"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 110,
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Add a comment, which will provide some distinction in editors"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 111,
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# supporting syntax highlighting."
+        },
+        {
+          "type": "text",
+          "index": 112,
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.09
+          ],
+          "content": "if (this_is_one_thing and"
+        },
+        {
+          "type": "text",
+          "index": 113,
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.09
+          ],
+          "content": "that_is_another_thing):"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 114,
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Since both conditions are true, we can frobnicate."
+        },
+        {
+          "type": "text",
+          "index": 115,
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.09
+          ],
+          "content": "do_something()"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 116,
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Add some extra indentation on the conditional continuation line."
+        },
+        {
+          "type": "text",
+          "index": 117,
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.09
+          ],
+          "content": "if (this_is_one_thing"
+        },
+        {
+          "type": "text",
+          "index": 118,
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "and that_is_another_thing):"
+        },
+        {
+          "type": "text",
+          "index": 119,
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.09
+          ],
+          "content": "do_something()"
+        },
+        {
+          "type": "text",
+          "index": 120,
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": "(Also see the discussion of whether to break before or after binary"
+        },
+        {
+          "type": "text",
+          "index": 121,
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.09
+          ],
+          "content": "operators below.)"
+        },
+        {
+          "type": "text",
+          "index": 122,
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.09
+          ],
+          "content": "The closing brace/bracket/parenthesis on multiline constructs may"
+        },
+        {
+          "type": "text",
+          "index": 123,
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.09
+          ],
+          "content": "either line up under the first non-whitespace character of the last"
+        },
+        {
+          "type": "text",
+          "index": 124,
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.09
+          ],
+          "content": "line of list, as in:"
+        },
+        {
+          "type": "text",
+          "index": 125,
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 126,
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.09
+          ],
+          "content": ":class: good"
+        },
+        {
+          "type": "text",
+          "index": 127,
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": "my_list = ["
+        },
+        {
+          "type": "text",
+          "index": 128,
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": "1, 2, 3,"
+        },
+        {
+          "type": "text",
+          "index": 129,
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": "4, 5, 6,"
+        },
+        {
+          "type": "text",
+          "index": 130,
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.09
+          ],
+          "content": "]"
+        },
+        {
+          "type": "text",
+          "index": 131,
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": "result = some_function_that_takes_arguments("
+        },
+        {
+          "type": "text",
+          "index": 132,
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.09
+          ],
+          "content": "'a', 'b', 'c',"
+        },
+        {
+          "type": "text",
+          "index": 133,
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": "'d', 'e', 'f',"
+        },
+        {
+          "type": "text",
+          "index": 134,
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.09
+          ],
+          "content": ")"
+        },
+        {
+          "type": "text",
+          "index": 135,
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.09
+          ],
+          "content": "or it may be lined up under the first character of the line that"
+        },
+        {
+          "type": "text",
+          "index": 136,
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "starts the multiline construct, as in:"
+        },
+        {
+          "type": "text",
+          "index": 137,
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 138,
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": ":class: good"
+        },
+        {
+          "type": "text",
+          "index": 139,
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "my_list = ["
+        },
+        {
+          "type": "text",
+          "index": 140,
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.09
+          ],
+          "content": "1, 2, 3,"
+        },
+        {
+          "type": "text",
+          "index": 141,
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.09
+          ],
+          "content": "4, 5, 6,"
+        },
+        {
+          "type": "text",
+          "index": 142,
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.09
+          ],
+          "content": "]"
+        },
+        {
+          "type": "text",
+          "index": 143,
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.09
+          ],
+          "content": "result = some_function_that_takes_arguments("
+        },
+        {
+          "type": "text",
+          "index": 144,
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.09
+          ],
+          "content": "'a', 'b', 'c',"
+        },
+        {
+          "type": "text",
+          "index": 145,
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.09
+          ],
+          "content": "'d', 'e', 'f',"
+        },
+        {
+          "type": "text",
+          "index": 146,
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.09
+          ],
+          "content": ")"
+        },
+        {
+          "type": "text",
+          "index": 147,
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "Tabs or Spaces?"
+        },
+        {
+          "type": "text",
+          "index": 148,
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "---------------"
+        },
+        {
+          "type": "text",
+          "index": 149,
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.09
+          ],
+          "content": "Spaces are the preferred indentation method."
+        },
+        {
+          "type": "text",
+          "index": 150,
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "Tabs should be used solely to remain consistent with code that is"
+        },
+        {
+          "type": "text",
+          "index": 151,
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.09
+          ],
+          "content": "already indented with tabs."
+        },
+        {
+          "type": "text",
+          "index": 152,
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "Python disallows mixing tabs and spaces for indentation."
+        },
+        {
+          "type": "text",
+          "index": 153,
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "Maximum Line Length"
+        },
+        {
+          "type": "text",
+          "index": 154,
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "-------------------"
+        },
+        {
+          "type": "text",
+          "index": 155,
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "Limit all lines to a maximum of 79 characters."
+        },
+        {
+          "type": "text",
+          "index": 156,
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "For flowing long blocks of text with fewer structural restrictions"
+        },
+        {
+          "type": "text",
+          "index": 157,
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.09
+          ],
+          "content": "(docstrings or comments), the line length should be limited to 72"
+        },
+        {
+          "type": "text",
+          "index": 158,
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.09
+          ],
+          "content": "characters."
+        },
+        {
+          "type": "text",
+          "index": 159,
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "Limiting the required editor window width makes it possible to have"
+        },
+        {
+          "type": "text",
+          "index": 160,
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.09
+          ],
+          "content": "several files open side by side, and works well when using code"
+        },
+        {
+          "type": "text",
+          "index": 161,
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": "review tools that present the two versions in adjacent columns."
+        },
+        {
+          "type": "text",
+          "index": 162,
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.09
+          ],
+          "content": "The default wrapping in most tools disrupts the visual structure of the"
+        },
+        {
+          "type": "text",
+          "index": 163,
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": "code, making it more difficult to understand. The limits are chosen to"
+        },
+        {
+          "type": "text",
+          "index": 164,
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": "avoid wrapping in editors with the window width set to 80, even"
+        },
+        {
+          "type": "text",
+          "index": 165,
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.09
+          ],
+          "content": "if the tool places a marker glyph in the final column when wrapping"
+        },
+        {
+          "type": "text",
+          "index": 166,
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "lines. Some web based tools may not offer dynamic line wrapping at all."
+        },
+        {
+          "type": "text",
+          "index": 167,
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.09
+          ],
+          "content": "Some teams strongly prefer a longer line length.  For code maintained"
+        },
+        {
+          "type": "text",
+          "index": 168,
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.09
+          ],
+          "content": "exclusively or primarily by a team that can reach agreement on this"
+        },
+        {
+          "type": "text",
+          "index": 169,
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.09
+          ],
+          "content": "issue, it is okay to increase the line length limit up to 99 characters,"
+        },
+        {
+          "type": "text",
+          "index": 170,
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "provided that comments and docstrings are still wrapped at 72"
+        },
+        {
+          "type": "text",
+          "index": 171,
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "characters."
+        },
+        {
+          "type": "text",
+          "index": 172,
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The Python standard library is conservative and requires limiting"
+        },
+        {
+          "type": "text",
+          "index": 173,
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "lines to 79 characters (and docstrings/comments to 72)."
+        },
+        {
+          "type": "text",
+          "index": 174,
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The preferred way of wrapping long lines is by using Python's implied"
+        },
+        {
+          "type": "text",
+          "index": 175,
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "line continuation inside parentheses, brackets and braces.  Long lines"
+        },
+        {
+          "type": "text",
+          "index": 176,
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "can be broken over multiple lines by wrapping expressions in"
+        },
+        {
+          "type": "text",
+          "index": 177,
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "parentheses. These should be used in preference to using a backslash"
+        },
+        {
+          "type": "text",
+          "index": 178,
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "for line continuation."
+        },
+        {
+          "type": "text",
+          "index": 179,
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Backslashes may still be appropriate at times.  For example, long,"
+        },
+        {
+          "type": "text",
+          "index": 180,
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "multiple ``with``-statements could not use implicit continuation"
+        },
+        {
+          "type": "text",
+          "index": 181,
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "before Python 3.10, so backslashes were acceptable for that case:"
+        },
+        {
+          "type": "text",
+          "index": 182,
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 183,
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ":class: maybe"
+        },
+        {
+          "type": "text",
+          "index": 184,
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "with open('/path/to/some/file/you/want/to/read') as file_1, \\"
+        },
+        {
+          "type": "text",
+          "index": 185,
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "open('/path/to/some/file/being/written', 'w') as file_2:"
+        },
+        {
+          "type": "text",
+          "index": 186,
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "file_2.write(file_1.read())"
+        },
+        {
+          "type": "text",
+          "index": 187,
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "(See the previous discussion on `multiline if-statements`_ for further"
+        },
+        {
+          "type": "text",
+          "index": 188,
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "thoughts on the indentation of such multiline ``with``-statements.)"
+        },
+        {
+          "type": "text",
+          "index": 189,
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Another such case is with ``assert`` statements."
+        },
+        {
+          "type": "text",
+          "index": 190,
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Make sure to indent the continued line appropriately."
+        },
+        {
+          "type": "text",
+          "index": 191,
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. _`pep8-operator-linebreak`:"
+        },
+        {
+          "type": "text",
+          "index": 192,
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Should a Line Break Before or After a Binary Operator?"
+        },
+        {
+          "type": "text",
+          "index": 193,
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.09
+          ],
+          "content": "------------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "index": 194,
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "For decades the recommended style was to break after binary operators."
+        },
+        {
+          "type": "text",
+          "index": 195,
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "But this can hurt readability in two ways: the operators tend to get"
+        },
+        {
+          "type": "text",
+          "index": 196,
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.09
+          ],
+          "content": "scattered across different columns on the screen, and each operator is"
+        },
+        {
+          "type": "text",
+          "index": 197,
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.09
+          ],
+          "content": "moved away from its operand and onto the previous line.  Here, the eye"
+        },
+        {
+          "type": "text",
+          "index": 198,
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": "has to do extra work to tell which items are added and which are"
+        },
+        {
+          "type": "text",
+          "index": 199,
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.09
+          ],
+          "content": "subtracted:"
+        },
+        {
+          "type": "text",
+          "index": 200,
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 201,
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": ":class: bad"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 202,
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Wrong:"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 203,
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# operators sit far away from their operands"
+        },
+        {
+          "type": "text",
+          "index": 204,
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.09
+          ],
+          "content": "income = (gross_wages +"
+        },
+        {
+          "type": "text",
+          "index": 205,
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "taxable_interest +"
+        },
+        {
+          "type": "text",
+          "index": 206,
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "(dividends - qualified_dividends) -"
+        },
+        {
+          "type": "text",
+          "index": 207,
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": "ira_deduction -"
+        },
+        {
+          "type": "text",
+          "index": 208,
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": "student_loan_interest)"
+        },
+        {
+          "type": "text",
+          "index": 209,
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "To solve this readability problem, mathematicians and their publishers"
+        },
+        {
+          "type": "text",
+          "index": 210,
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "follow the opposite convention.  Donald Knuth explains the traditional"
+        },
+        {
+          "type": "text",
+          "index": 211,
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": "rule in his *Computers and Typesetting* series: \"Although formulas"
+        },
+        {
+          "type": "text",
+          "index": 212,
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.09
+          ],
+          "content": "within a paragraph always break after binary operations and relations,"
+        },
+        {
+          "type": "text",
+          "index": 213,
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "displayed formulas always break before binary operations\" [3]_."
+        },
+        {
+          "type": "text",
+          "index": 214,
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Following the tradition from mathematics usually results in more"
+        },
+        {
+          "type": "text",
+          "index": 215,
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "readable code:"
+        },
+        {
+          "type": "text",
+          "index": 216,
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. code-block::"
+        },
+        {
+          "type": "text",
+          "index": 217,
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ":class: good"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 218,
+          "bbox": [
+            0.05,
+            0.7040000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Correct:"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 219,
+          "bbox": [
+            0.05,
+            0.7070000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# easy to match operators with operands"
+        },
+        {
+          "type": "text",
+          "index": 220,
+          "bbox": [
+            0.05,
+            0.7100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "income = (gross_wages"
+        },
+        {
+          "type": "text",
+          "index": 221,
+          "bbox": [
+            0.05,
+            0.7130000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "+ taxable_interest"
+        },
+        {
+          "type": "text",
+          "index": 222,
+          "bbox": [
+            0.05,
+            0.7160000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "+ (dividends - qualified_dividends)"
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "MinerU_Intermediate_Layout",
+  "schema_version": "1.0"
+}

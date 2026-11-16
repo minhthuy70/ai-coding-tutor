@@ -1,0 +1,2845 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.09
+          ],
+          "content": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.09
+          ],
+          "content": "<?xml version=\"1.0\"?>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.09
+          ],
+          "content": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "<head>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.09
+          ],
+          "content": "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.09
+          ],
+          "content": "<meta name=\"description\" content=\"Common Weakness Enumeration (CWE) is a list of software and hardware weaknesses.\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<link rel=\"shortcut icon\" href=\"/favicon.ico\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<link href=\"/css/main.css?version=5.0.102726\" rel=\"stylesheet\" type=\"text/css\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.09
+          ],
+          "content": "<link href=\"/css/custom.css\" rel=\"stylesheet\" type=\"text/css\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.09
+          ],
+          "content": "<!--[if IE]>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/ie.css?version=1.7\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<![endif]-->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=\"/includes/custom_filter.js\" language=\"JavaScript\" type=\"text/javascript\"></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=\"/includes/browserheight.js\" language=\"JavaScript\" type=\"text/javascript\"></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=\"/includes/jquery.js\" language=\"JavaScript\" type=\"text/javascript\"></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=\"/includes/cwe_minimizer.js?version=4.12.062923\" language=\"JavaScript\" type=\"text/javascript\"></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=\"/includes/cookie.js?version=4.12.062923\" language=\"Javascript\" type=\"text/javascript\"></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=\"/includes/includeglossarydef.js\" language=\"JavaScript\" type=\"text/javascript\"></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=\"/includes/custom.js\" language=\"JavaScript\" type=\"text/javascript\"></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.09
+          ],
+          "content": "<script src=https://cmp.osano.com/AzyhULTdPkqmy4aDN/318aa814-0420-45bb-857d-8fb5fac33ff8/osano.js></script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.09
+          ],
+          "content": "<link href=\"/css/print.css?version=1.11\" rel=\"stylesheet\" media=\"print\" type=\"text/css\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.09
+          ],
+          "content": "<link href=\"/css/mappingonly.css\" rel=\"stylesheet\" type=\"text/css\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<noscript>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<style type=\"text/css\">"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "#script { visibility:collapse; visibility:hidden; font-size:0px; height:0px; width:0px  }"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "#noscript { visibility:visible; font-size:inherit;  height:inherit; width:inherit}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.09
+          ],
+          "content": "</style>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": "</noscript>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.09
+          ],
+          "content": "<title>CWE -"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": "2023 CWE Top 25 Most Dangerous Software Weaknesses</title>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "</head>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "<body onload=\"onloadCookie()\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "<a name=\"top\" id=\"top\"></a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "<div id=\"MastHead\" style=\"width:100%\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": "<div style=\"width:62%;float:left;padding-top:15px;padding-left:10px;padding-bottom:2px;\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/index.html\" style=\"color:#32498D; text-decoration:none\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "<img src=\"/images/cwe-20years-logo.png\" width=\"203\" height=\"58\" style=\"float:left;border:0;margin-right:6px\" alt=\"CWE\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.09
+          ],
+          "content": "<h1 style=\"color:#314a8d;font-size:1.5em;font-family:'Verdana',sans-serif;#eee;margin: .1em auto\">Common Weakness Enumeration</h1>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": "<p style=\"color:#314a8d;font-family:'Times New Roman';font-style:italic;font-size:1em;#eee;margin:.1em auto 0 auto\">Celebrating 20 years of community-"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "<div style=\"float:right;padding-top:0px;text-align:right;padding-left:8px;padding-right:4px;padding-bottom:0px;\"><a href=\"/about/new_to_cwe.html\" titl"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.09
+          ],
+          "content": "<div style=\"float:right;padding-top:0px;text-align:right;padding-left:0px;padding-right:4px;padding-bottom:0px;\"><a href=\"/topHW/index.html\" title=\"CW"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.09
+          ],
+          "content": "<div style=\"float:right;padding-top:0px;text-align:right;padding-left:0px;padding-right:4px;padding-bottom:0px;\"><a href=\"/top25/\" title=\"CWE Top 25\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.09
+          ],
+          "content": "</div><!--End Masthead div-->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": "<div id=\"HeaderBar\" class=\"noprint\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.09
+          ],
+          "content": "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.09
+          ],
+          "content": "<td width=\"100%\" align=\"left\" style=\"padding-left:10px; font-size:75%;\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/\" >Home</a>  &gt;  <a href=\"/top25/index.html\" >CWE Top 25</a>  &gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "2023&nbsp;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "<td align=\"right\" nowrap=\"nowrap\" style=\"padding-right:12px\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "<!-- Begin /includes/search_cwe_id.html -->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"noprint\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "<form action=\"/cgi-bin/jumpmenu.cgi\" align=\"right\" style=\"padding:0px; margin:0px\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "ID <label for=\"id\" style=\"padding-right:5px\">Lookup:</label>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "<input id=\"id\" name=\"id\" type=\"text\" style=\"width:50px; font-size:80%\" maxlength=\"10\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "<input value=\"Go\" style=\"padding: 0px; font-size:80%\" type=\"submit\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "</form>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.09
+          ],
+          "content": "<!-- End /includes/search_cwe_id.html -->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": "</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.09
+          ],
+          "content": "</table>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "</div> <!--//HeaderBar-->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"yesprint\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.09
+          ],
+          "content": "<hr width=\"100%\" size=\"1\" style=\"clear:both\" color=\"#000000\" />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"topnav\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": "<ul>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.09
+          ],
+          "content": "<li><a href=\"/index.html\">Home</a></li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": "<li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": "<button class=\"dropbtn\">About &#x25BC;</button>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/about/index.html\">Who We Are</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/about/user_stories.html\">User Stories</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/about/history.html\">History</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/about/documents.html\">Documents</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/about/cwe_videos.html\">Videos</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.09
+          ],
+          "content": "</li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.09
+          ],
+          "content": "<li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.09
+          ],
+          "content": "<button class=\"dropbtn\">Learn &#x25BC;</button>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/about/new_to_cwe.html\">Basics</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-sub-group\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/documents/cwe_usage/guidance.html\">Root Cause Mapping &nbsp; &#x25BA;</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content-submenu\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/documents/cwe_usage/guidance.html\">Guidance</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/documents/cwe_usage/quick_tips.html\">Quick Tips</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/documents/cwe_usage/mapping_examples.html\">Examples</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/community/submissions/overview.html\">How to Contribute Weakness Content</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/about/faq.html\">FAQs</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/documents/glossary/index.html\">Glossary</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.09
+          ],
+          "content": "</li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.09
+          ],
+          "content": "<li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.09
+          ],
+          "content": "<button class=\"dropbtn\">Access Content &#x25BC;</button>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-sub-group\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/scoring/index.html#top_n_lists\">Top-N Lists &nbsp; &#x25BA;</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content-submenu\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/top25/\">Top 25 Software</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/topHW/index.html\">Top Hardware</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/top25/archive/2025/2025_kev_list.html\">Top 10 KEV Weaknesses</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-sub-group\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/data/index.html\">CWE List &nbsp; &#x25BA;</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content-submenu\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/data/index.html\">Current Version</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/data/reports.html\">Reports</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/data/pdfs.html\">Visualizations</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/data/archive.html\">Releases Archive</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/data/downloads.html\">Downloads</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"https://github.com/CWE-CAPEC/REST-API-wg/blob/main/Quick%20Start.md\" target=\"_blank\">REST API</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": "</li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.09
+          ],
+          "content": "<li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.09
+          ],
+          "content": "<button class=\"dropbtn\">Community &#x25BC;</button>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-sub-group\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/news/\">News &nbsp; &#x25BA;</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content-submenu\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/news/archives/news2026.html\">Current News</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"https://medium.com/@CWE_CAPEC\" target=\"_blank\">Blog</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/news/podcast.html\">Podcast</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/news/archives/index.html\">News Archive</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/community/board.html\">CWE Board</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/community/working_groups.html\">Working Groups &amp; Special Interest Groups</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/community/registration.html\">Email Lists</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "</li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.09
+          ],
+          "content": "<li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.09
+          ],
+          "content": "<button class=\"dropbtn\">Search &#x25BC;</button>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"dropdown-content\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/\">Search CWE List</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "<a href=\"/find/index.html\">Search Website</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "</li>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.09
+          ],
+          "content": "</ul>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" id=\"MainPane\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": "<!-- begin left side menu -->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.09
+          ],
+          "content": "<td valign=\"top\" rowspan=\"2\" id=\"LeftPane\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": "<!--include virtual=\"/includes/leftsidemenu.html\" Removed 11212016-->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": "<script type=\"text/javascript\">browserheight();</script>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.09
+          ],
+          "content": "</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "<!-- end left side menu -->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"height:1px\"></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.09
+          ],
+          "content": "<!-- begin right column -->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.09
+          ],
+          "content": "<td valign=\"top\" align=\"center\" rowspan=\"2\" nowrap=\"nowrap\" id=\"RightPane\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<!-- end right side menu -->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<!-- begin content pane -->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td valign=\"top\" width=\"100%\" id=\"Contentpane\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<!--Glossary tags-->"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<div id=\"styled_popup\" name=\"styled_popup\" style=\"display:none; position:fixed; top:300; height:auto; width:300px; z-index:1000\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<table width=\"300\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border:1px solid #32498D;\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr style=\"background-color:#32498D; color:#ffffff;\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td width=\"100%\" style=\"padding:1px 5px 1px 5px; border-bottom:1px solid #000000\"><div width=\"100%\" style=\"font-weight:bold;\">CWE Glossary Definition<"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td nowrap=\"nowrap\" style=\"padding:1px; border-bottom:1px solid #000000\" valign=\"top\"><a href=\"javascript:styledPopupClose();\"><img src=\"/images/layou"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr><td colspan=\"2\" style=\"background: url(/images/layout/ylgradient.jpg); background-repeat: repeat-x repeat-y; padding:5px; background-color:#FFFFCC"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<div id=\"output\" style=\"max-height:400px; overflow-y:auto\"></div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</td></tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</table>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"top25page\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<h2 class=\"header\">2023 CWE Top 25 Most Dangerous Software Weaknesses</h2>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<br>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<p style=\"text-align:center;color:red\"><i><strong>NOTICE:</strong> This is a previous version of the Top 25. For the most recent version go <strong><a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<br>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"tablebutton\"><a href=\"/top25/index.html\">Top 25 Home</a></div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "<span class=\"shareBar\">Share via: <a class=\"twitter-share-button\" href=\"https://twitter.com/intent/tweet?text=http://cwe.mitre.org/top25/archive/2023/"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"tablebutton\"><a href=\"#tableView\">View in table format</a></div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"tablebutton\"><a href=\"/top25/archive/2023/2023_key_insights.html\">Key Insights</a></div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"tablebutton\"><a href=\"/top25/archive/2023/2023_methodology.html\">Methodology</a></div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": "<br />"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.09
+          ],
+          "content": "<div id=\"top25list\"></div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": "<div id=\"tableView\" class=\"overlay\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"popup\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"tablepopup\">2023 CWE Top 25</div>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.09
+          ],
+          "content": "<a class=\"popupclose\" href=\"#top25list\">&times;</a>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.09
+          ],
+          "content": "<div class=\"popupcontent\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "<table id=\"Detail\" style=\"margin-left:auto; margin-right:auto;\" border=\"2\" cellpadding=\"2\" cellspacing=\"2\">"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "<thead><tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": "<th width=\"60px\">Rank</th>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": "<th width=\"90px\">ID</th>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "<th class=\"top25name\">Name</th><th width=\"80px\">Score</th>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "<th width=\"60px\">CVEs in KEV</th>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": "<th width=\"60px\">Rank Change vs. 2022</th>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.09
+          ],
+          "content": "</tr></thead>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>1</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/787.html\" title=\"Out-of-bounds Write\">CWE-787</a><"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td>Out-of-bounds Write</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">63.72</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7040000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">70</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7070000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">0</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7130000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7160000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>2</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7190000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/79.html\" title=\"Improper Neutralization of Input D"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7220000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td>Improper Neutralization of Input During Web Page Generation (&#x27;Cross-site Scripting&#x27;)</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7250000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">45.54</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7280000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">4</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7310000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">0</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7340000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7370000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>3</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7430000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/89.html\" title=\"Improper Neutralization of Special"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7460000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td>Improper Neutralization of Special Elements used in an SQL Command (&#x27;SQL Injection&#x27;)</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7490000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">34.27</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7520000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">6</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.755,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">0</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.758,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.761,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.764,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>4</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.767,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/416.html\" title=\"Use After Free\">CWE-416</a></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.77,
+            0.9,
+            0.09
+          ],
+          "content": "<td>Use After Free</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.773,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">16.71</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.776,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">44</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.779,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">+3</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.782,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.785,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.788,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>5</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.791,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/78.html\" title=\"Improper Neutralization of Special"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.794,
+            0.9,
+            0.09
+          ],
+          "content": "<td>Improper Neutralization of Special Elements used in an OS Command (&#x27;OS Command Injection&#x27;)</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.797,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">15.65</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">23</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.803,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">+1</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.806,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.809,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.812,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>6</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8150000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/20.html\" title=\"Improper Input Validation\">CWE-20<"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8180000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td>Improper Input Validation</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8210000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">15.50</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8240000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">35</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8270000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">-2</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8330000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8360000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>7</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8390000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/125.html\" title=\"Out-of-bounds Read\">CWE-125</a></"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8420000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td>Out-of-bounds Read</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8450000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">14.60</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8480000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">2</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.051000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\">-2</td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.054000000000000006,
+            0.9,
+            0.09
+          ],
+          "content": "</tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.05700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<tr>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06000000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><b>8</b></td>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "<td style=\"text-align:center;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"/data/definitions/22.html\" title=\"Improper Limitation of a Pathname "
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 18,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

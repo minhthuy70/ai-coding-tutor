@@ -1,0 +1,3120 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Official Python Documentation: Itertools and Functools for Functional Programming"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## :mod:`!itertools` --- Functions creating iterators for efficient looping"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.09
+          ],
+          "content": ":synopsis: Functions creating iterators for efficient looping."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": ".. testsetup"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.09
+          ],
+          "content": "from itertools import *"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": "import collections"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "import math"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "import operator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.09
+          ],
+          "content": "import random"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "--------------"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "This module implements a number of `term` building blocks inspired"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.09
+          ],
+          "content": "by constructs from APL, Haskell, and SML.  Each has been recast in a form"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": "suitable for Python."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "The module standardizes a core set of fast, memory efficient tools that are"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": "useful by themselves or in combination.  Together, they form an \"iterator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.09
+          ],
+          "content": "algebra\" making it possible to construct specialized tools succinctly and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "efficiently in pure Python."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "For instance, SML provides a tabulation tool: `tabulate(f)` which produces a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.09
+          ],
+          "content": "sequence `f(0), f(1), ...`.  The same effect can be achieved in Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.09
+          ],
+          "content": "by combining `map()` and `count()` to form `map(f, count())`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.09
+          ],
+          "content": "**General iterators:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "============================    ============================    =================================================   =================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Iterator                        Arguments                       Results                                             Example"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.09
+          ],
+          "content": "============================    ============================    =================================================   =================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.09
+          ],
+          "content": "`accumulate()`              p [,func]                       p0, p0+p1, p0+p1+p2, ...                            `accumulate([1,2,3,4,5]) → 1 3 6 10 15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.09
+          ],
+          "content": "`batched()`                 p, n                            (p0, p1, ..., p_n-1), ...                           `batched('ABCDEFG', n=3) → ABC DEF G`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": "`chain()`                   p, q, ...                       p0, p1, ... plast, q0, q1, ...                      `chain('ABC', 'DEF') → A B C D E F`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.09
+          ],
+          "content": "`chain.from_iterable()`     iterable                        p0, p1, ... plast, q0, q1, ...                      `chain.from_iterable(['ABC', 'DEF']) →"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": "`compress()`                data, selectors                 (d[0] if s[0]), (d[1] if s[1]), ...                 `compress('ABCDEF', [1,0,1,0,1,1]) → A"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "`count()`                   [start[, step]]                 start, start+step, start+2*step, ...                `count(10) → 10 11 12 13 14 ...`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "`cycle()`                   p                               p0, p1, ... plast, p0, p1, ...                      `cycle('ABCD') → A B C D A B C D ...`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "`dropwhile()`               predicate, seq                  seq[n], seq[n+1], starting when predicate fails     `dropwhile(lambda x: x<5, [1,4,6,3,8])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "`filterfalse()`             predicate, seq                  elements of seq where predicate(elem) fails         `filterfalse(lambda x: x<5, [1,4,6,3,8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": "`groupby()`                 iterable[, key]                 sub-iterators grouped by value of key(v)            `groupby(['A','B','DEF'], len) → (1, A"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": "`islice()`                  seq, [start,] stop [, step]     elements from seq[start:stop:step]                  `islice('ABCDEFG', 2, None) → C D E F "
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "`pairwise()`                iterable                        (p[0], p[1]), (p[1], p[2])                          `pairwise('ABCDEFG') → AB BC CD DE EF "
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.09
+          ],
+          "content": "`repeat()`                  elem [,n]                       elem, elem, elem, ... endlessly or up to n times    `repeat(10, 3) → 10 10 10`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": "`starmap()`                 func, seq                       func(\\*seq[0]), func(\\*seq[1]), ...                 `starmap(pow, [(2,5), (3,2), (10,3)]) "
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "`takewhile()`               predicate, seq                  seq[0], seq[1], until predicate fails               `takewhile(lambda x: x<5, [1,4,6,3,8])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": "`tee()`                     it, n                           it1, it2, ... itn  splits one iterator into n       `tee('ABC', 2) → A B C, A B C`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "`zip_longest()`             p, q, ...                       (p[0], q[0]), (p[1], q[1]), ...                     `zip_longest('ABCD', 'xy', fillvalue='"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.09
+          ],
+          "content": "============================    ============================    =================================================   =================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.09
+          ],
+          "content": "**Combinatoric iterators:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.09
+          ],
+          "content": "==============================================   ====================       ============================================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": "Iterator                                         Arguments                  Results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.09
+          ],
+          "content": "==============================================   ====================       ============================================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "`product()`                                  p, q, ... [repeat=1]       cartesian product, equivalent to a nested for-loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.09
+          ],
+          "content": "`permutations()`                             p[, r]                     r-length tuples, all possible orderings, no repeated elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": "`combinations()`                             p, r                       r-length tuples, in sorted order, no repeated elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "`combinations_with_replacement()`            p, r                       r-length tuples, in sorted order, with repeated elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "==============================================   ====================       ============================================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "==============================================   ============================================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Examples                                         Results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "==============================================   ============================================================="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "`product('ABCD', repeat=2)`                    `AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "`permutations('ABCD', 2)`                      `AB AC AD BA BC BD CA CB CD DA DB DC`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "`combinations('ABCD', 2)`                      `AB AC AD BC BD CD`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "`combinations_with_replacement('ABCD', 2)`     `AA AB AC AD BB BC BD CC CD DD`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "==============================================   ============================================================="
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Itertool Functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.09
+          ],
+          "content": "The following functions all construct and return iterators. Some provide"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": "streams of infinite length, so they should only be accessed by functions or"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "loops that truncate the stream."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `accumulate(iterable[, function, *, initial=None])`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "Make an iterator that returns accumulated sums or accumulated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.09
+          ],
+          "content": "results from other binary functions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.09
+          ],
+          "content": "The *function* defaults to addition.  The *function* should accept"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.09
+          ],
+          "content": "two arguments, an accumulated total and a value from the *iterable*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.09
+          ],
+          "content": "If an *initial* value is provided, the accumulation will start with"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": "that value and the output will have one more element than the input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.09
+          ],
+          "content": "iterable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": "Roughly equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": "def accumulate(iterable, function=operator.add, *, initial=None):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.09
+          ],
+          "content": "'Return running totals'"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# accumulate([1,2,3,4,5]) → 1 3 6 10 15"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# accumulate([1,2,3,4,5], initial=100) → 100 101 103 106 110 115"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# accumulate([1,2,3,4,5], operator.mul) → 1 2 6 24 120"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.09
+          ],
+          "content": "iterator = iter(iterable)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": "total = initial"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.09
+          ],
+          "content": "if initial is None:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.09
+          ],
+          "content": "try:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.09
+          ],
+          "content": "total = next(iterator)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.09
+          ],
+          "content": "except StopIteration:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.09
+          ],
+          "content": "return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.09
+          ],
+          "content": "yield total"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.09
+          ],
+          "content": "for element in iterator:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.09
+          ],
+          "content": "total = function(total, element)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": "yield total"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "To compute a running minimum, set *function* to :func:`min`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.09
+          ],
+          "content": "For a running maximum, set *function* to :func:`max`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.09
+          ],
+          "content": "Or for a running product, set *function* to :func:`operator.mul`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": "To build an `amortization table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.09
+          ],
+          "content": "<https://www.ramseysolutions.com/real-estate/amortization-schedule>`_,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "accumulate the interest and apply payments:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": ".. doctest::"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.09
+          ],
+          "content": ">>> data = [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": ">>> list(accumulate(data, max))              # running maximum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.09
+          ],
+          "content": "[3, 4, 6, 6, 6, 9, 9, 9, 9, 9]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": ">>> list(accumulate(data, operator.mul))     # running product"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.09
+          ],
+          "content": "[3, 12, 72, 144, 144, 1296, 0, 0, 0, 0]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Amortize a 5% loan of 1000 with 10 annual payments of 90"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.09
+          ],
+          "content": ">>> update = lambda balance, payment: round(balance * 1.05) - payment"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": ">>> list(accumulate(repeat(90, 10), update, initial=1_000))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.09
+          ],
+          "content": "[1000, 960, 918, 874, 828, 779, 728, 674, 618, 559, 497]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.09
+          ],
+          "content": "See :func:`functools.reduce` for a similar function that returns only the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.09
+          ],
+          "content": "final accumulated value."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.09
+          ],
+          "content": "Added the optional *function* parameter."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.09
+          ],
+          "content": "Added the optional *initial* parameter."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `batched(iterable, n, *, strict=False)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.09
+          ],
+          "content": "Batch data from the *iterable* into tuples of length *n*. The last"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.09
+          ],
+          "content": "batch may be shorter than *n*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "If *strict* is true, will raise a `exc` if the final"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.09
+          ],
+          "content": "batch is shorter than *n*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": "Loops over the input iterable and accumulates data into tuples up to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.09
+          ],
+          "content": "size *n*.  The input is consumed lazily, just enough to fill a batch."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.09
+          ],
+          "content": "The result is yielded as soon as the batch is full or when the input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.09
+          ],
+          "content": "iterable is `term`:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.09
+          ],
+          "content": ".. doctest"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.09
+          ],
+          "content": ">>> flattened_data = ['roses', 'red', 'violets', 'blue', 'sugar', 'sweet']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": ">>> unflattened = list(batched(flattened_data, 2))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": ">>> unflattened"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": "[('roses', 'red'), ('violets', 'blue'), ('sugar', 'sweet')]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.09
+          ],
+          "content": "Roughly equivalent to::"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": "def batched(iterable, n, *, strict=False):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# batched('ABCDEFG', 3) → ABC DEF G"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": "if n < 1:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.09
+          ],
+          "content": "raise ValueError('n must be at least one')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.09
+          ],
+          "content": "iterator = iter(iterable)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "while batch := tuple(islice(iterator, n)):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": "if strict and len(batch) != n:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": "raise ValueError('batched(): incomplete batch')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "yield batch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.12"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.13"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.09
+          ],
+          "content": "Added the *strict* option."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `chain(*iterables)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.09
+          ],
+          "content": "Make an iterator that returns elements from the first iterable until"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.09
+          ],
+          "content": "it is `term`, then proceeds to the next iterable, until all of the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "iterables are exhausted.  This combines multiple data sources into a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "single iterator.  Roughly equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "def chain(*iterables):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# chain('ABC', 'DEF') → A B C D E F"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "for iterable in iterables:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "yield from iterable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "Note that :ref:`unpacking in comprehensions <unpacking-comprehensions>`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "provides similar functionality so that ``list(chain(p, q))`` could be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "written as ``[*s for s in (p, q)]``."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.09
+          ],
+          "content": "Alternate constructor for `chain()`.  Gets chained inputs from a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "single iterable argument that is evaluated lazily.  Roughly equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": "def from_iterable(iterables):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# chain.from_iterable(['ABC', 'DEF']) → A B C D E F"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": "for iterable in iterables:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": "yield from iterable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.09
+          ],
+          "content": "Note that :ref:`unpacking in comprehensions <unpacking-comprehensions>`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "provides similar functionality so that ``list(chain.from_iterable(iterables))``"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.09
+          ],
+          "content": "could be written as ``[*s for s in iterables]``."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `combinations(iterable, r)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "Return *r* length subsequences of elements from the input *iterable*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The output is a subsequence of `product()` keeping only entries that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "are subsequences of the *iterable*.  The length of the output is given"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "by `math.comb()` which computes `n! / r! / (n - r)!` when ``0 ≤ r"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "≤ n` or zero when `r > n``."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The combination tuples are emitted in lexicographic order according to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the order of the input *iterable*. If the input *iterable* is sorted,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the output tuples will be produced in sorted order."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Elements are treated as unique based on their position, not on their"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "value.  If the input elements are unique, there will be no repeated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "values within each combination."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Roughly equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "def combinations(iterable, r):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# combinations('ABCD', 2) → AB AC AD BC BD CD"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# combinations(range(4), 3) → 012 013 023 123"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pool = tuple(iterable)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "n = len(pool)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "if r > n:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "indices = list(range(r))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "yield tuple(pool[i] for i in indices)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "while True:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.09
+          ],
+          "content": "for i in reversed(range(r)):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "if indices[i] != i + n - r:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.09
+          ],
+          "content": "else:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.09
+          ],
+          "content": "return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": "indices[i] += 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.09
+          ],
+          "content": "for j in range(i+1, r):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": "indices[j] = indices[j-1] + 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": "yield tuple(pool[i] for i in indices)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `combinations_with_replacement(iterable, r)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.09
+          ],
+          "content": "Return *r* length subsequences of elements from the input *iterable*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "allowing individual elements to be repeated more than once."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "The output is a subsequence of `product()` that keeps only entries"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": "that are subsequences (with possible repeated elements) of the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": "*iterable*.  The number of subsequence returned is ``(n + r - 1)! / r! /"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "(n - 1)!` when `n > 0``."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "The combination tuples are emitted in lexicographic order according to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": "the order of the input *iterable*. if the input *iterable* is sorted,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.09
+          ],
+          "content": "the output tuples will be produced in sorted order."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Elements are treated as unique based on their position, not on their"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "value.  If the input elements are unique, the generated combinations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "will also be unique."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Roughly equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7040000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "def combinations_with_replacement(iterable, r):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.7070000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# combinations_with_replacement('ABC', 2) → AA AB AC BB BC CC"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "pool = tuple(iterable)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7130000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "n = len(pool)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7160000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "if not n and r:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7190000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7220000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "indices = [0] * r"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7250000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "yield tuple(pool[i] for i in indices)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7280000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "while True:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7310000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "for i in reversed(range(r)):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7340000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "if indices[i] != n - 1:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7370000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "else:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7430000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7460000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "indices[i:] = [indices[i] + 1] * (r - i)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7490000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "yield tuple(pool[i] for i in indices)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7520000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.755,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.758,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `compress(data, selectors)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.761,
+            0.9,
+            0.09
+          ],
+          "content": "Make an iterator that returns elements from *data* where the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.764,
+            0.9,
+            0.09
+          ],
+          "content": "corresponding element in *selectors* is true.  Stops when either the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.767,
+            0.9,
+            0.09
+          ],
+          "content": "*data* or *selectors* iterables have been `term`.  Roughly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.77,
+            0.9,
+            0.09
+          ],
+          "content": "equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.773,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.776,
+            0.9,
+            0.09
+          ],
+          "content": "def compress(data, selectors):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.779,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# compress('ABCDEF', [1,0,1,0,1,1]) → A C E F"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.782,
+            0.9,
+            0.09
+          ],
+          "content": "return (datum for datum, selector in zip(data, selectors) if selector)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.785,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.788,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.791,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `count(start=0, step=1)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.794,
+            0.9,
+            0.09
+          ],
+          "content": "Make an iterator that returns evenly spaced values beginning with"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.797,
+            0.9,
+            0.09
+          ],
+          "content": "*start*. Can be used with `map()` to generate consecutive data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8,
+            0.9,
+            0.09
+          ],
+          "content": "points or with `zip()` to add sequence numbers.  Roughly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.803,
+            0.9,
+            0.09
+          ],
+          "content": "equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.806,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.809,
+            0.9,
+            0.09
+          ],
+          "content": "def count(start=0, step=1):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.812,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# count(10) → 10 11 12 13 14 ..."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.8150000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# count(2.5, 0.5) → 2.5 3.0 3.5 ..."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8180000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "n = start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8210000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "while True:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8240000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "yield n"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8270000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "n += step"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "When counting with floating-point numbers, better accuracy can sometimes be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8330000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "achieved by substituting multiplicative code such as: ``(start + step * i"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8360000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "for i in count())``."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8390000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8420000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Added *step* argument and allowed non-integer arguments."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.8450000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.8480000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `cycle(iterable)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.051000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "Make an iterator returning elements from the *iterable* and saving a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.054000000000000006,
+            0.9,
+            0.09
+          ],
+          "content": "copy of each.  When the iterable is `term`, return elements from"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.05700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the saved copy.  Repeats indefinitely.  Roughly equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.06000000000000001,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "def cycle(iterable):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.06600000000000002,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# cycle('ABCD') → A B C D A B C D A B C D ..."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "saved = []"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "for element in iterable:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "yield element"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "saved.append(element)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "while saved:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08399999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "for element in saved:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08699999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "yield element"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08999999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "This itertool may require significant auxiliary storage (depending on"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09299999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "the length of the iterable)."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.09599999999999993,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.09899999999999994,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `dropwhile(predicate, iterable)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10199999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "Make an iterator that drops elements from the *iterable* while the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10499999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "*predicate* is true and afterwards returns every element.  Roughly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10799999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.11099999999999995,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11399999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "def dropwhile(predicate, iterable):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.11699999999999995,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# dropwhile(lambda x: x<5, [1,4,6,3,8]) → 6 3 8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11999999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "iterator = iter(iterable)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12299999999999996,
+            0.9,
+            0.09
+          ],
+          "content": "for x in iterator:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12599999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "if not predicate(x):"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 26,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

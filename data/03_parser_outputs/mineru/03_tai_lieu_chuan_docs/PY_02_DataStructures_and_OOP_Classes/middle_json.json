@@ -1,0 +1,2560 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 25,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Official Python Documentation: Data Structures & Object-Oriented Programming"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## 5. Data Structures (Lists, Stacks, Queues, Tuples, Dictionaries)"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.09
+          ],
+          "content": ".. _tut-structures:"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "***************"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.09
+          ],
+          "content": "Data Structures"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.09
+          ],
+          "content": "***************"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": "This chapter describes some things you've learned about already in more detail,"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "and adds some new things as well."
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. _tut-morelists:"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.09
+          ],
+          "content": "More on Lists"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.09
+          ],
+          "content": "============="
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "The :ref:`list <typesseq-list>` data type has some more methods. Here are all"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "of the methods of list objects:"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.append(value, /)"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "Add an item to the end of the list.  Similar to ``a[len(a):] = [x]``."
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.extend(iterable, /)"
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Extend the list by appending all the items from the iterable.  Similar to"
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "``a[len(a):] = iterable``."
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.insert(index, value, /)"
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.09
+          ],
+          "content": "Insert an item at a given position.  The first argument is the index of the"
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "element before which to insert, so ``a.insert(0, x)`` inserts at the front of"
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the list, and ``a.insert(len(a), x)`` is equivalent to ``a.append(x)``."
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.remove(value, /)"
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.09
+          ],
+          "content": "Remove the first item from the list whose value is equal to *value*.  It raises a"
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": ":exc:`ValueError` if there is no such item."
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.pop(index=-1, /)"
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Remove the item at the given position in the list, and return it.  If no index"
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "is specified, ``a.pop()`` removes and returns the last item in the list."
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "It raises an :exc:`IndexError` if the list is empty or the index is"
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "outside the list range."
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.clear()"
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "Remove all items from the list.  Similar to ``del a[:]``."
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.index(value[, start[, stop]])"
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "Return zero-based index of the first occurrence of *value* in the list."
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": "Raises a :exc:`ValueError` if there is no such item."
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "The optional arguments *start* and *end* are interpreted as in the slice"
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.09
+          ],
+          "content": "notation and are used to limit the search to a particular subsequence of"
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.09
+          ],
+          "content": "the list.  The returned index is computed relative to the beginning of the full"
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.09
+          ],
+          "content": "sequence rather than the *start* argument."
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.count(value, /)"
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "Return the number of times *value* appears in the list."
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.sort(*, key=None, reverse=False)"
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "Sort the items of the list in place (the arguments can be used for sort"
+        },
+        {
+          "type": "text",
+          "index": 52,
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "customization, see :func:`sorted` for their explanation)."
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.reverse()"
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "Reverse the elements of the list in place."
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": ".. method:: list.copy()"
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": ":noindex:"
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "Return a shallow copy of the list.  Similar to ``a[:]``."
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "An example that uses most of the list methods::"
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']"
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.count('apple')"
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.09
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.count('tangerine')"
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "0"
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.index('banana')"
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "3"
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.index('banana', 4)  # Find next banana starting at position 4"
+        },
+        {
+          "type": "text",
+          "index": 68,
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.09
+          ],
+          "content": "6"
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.reverse()"
+        },
+        {
+          "type": "text",
+          "index": 70,
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits"
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": "['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']"
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.append('grape')"
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits"
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.09
+          ],
+          "content": "['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']"
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.sort()"
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits"
+        },
+        {
+          "type": "text",
+          "index": 77,
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.09
+          ],
+          "content": "['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']"
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": ">>> fruits.pop()"
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "'pear'"
+        },
+        {
+          "type": "text",
+          "index": 80,
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.09
+          ],
+          "content": "You might have noticed that methods like ``insert``, ``remove`` or ``sort`` that"
+        },
+        {
+          "type": "text",
+          "index": 81,
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": "only modify the list have no return value printed -- they return the default"
+        },
+        {
+          "type": "text",
+          "index": 82,
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.09
+          ],
+          "content": "``None``. [#]_  This is a design principle for all mutable data structures in"
+        },
+        {
+          "type": "text",
+          "index": 83,
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.09
+          ],
+          "content": "Python."
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.09
+          ],
+          "content": "Another thing you might notice is that not all data can be sorted or"
+        },
+        {
+          "type": "text",
+          "index": 85,
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.09
+          ],
+          "content": "compared.  For instance, ``[None, 'hello', 10]`` doesn't sort because"
+        },
+        {
+          "type": "text",
+          "index": 86,
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.09
+          ],
+          "content": "integers can't be compared to strings and ``None`` can't be compared to"
+        },
+        {
+          "type": "text",
+          "index": 87,
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.09
+          ],
+          "content": "other types.  Also, there are some types that don't have a defined"
+        },
+        {
+          "type": "text",
+          "index": 88,
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.09
+          ],
+          "content": "ordering relation.  For example, ``3+4j < 5+7j`` isn't a valid"
+        },
+        {
+          "type": "text",
+          "index": 89,
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.09
+          ],
+          "content": "comparison."
+        },
+        {
+          "type": "text",
+          "index": 90,
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": ".. _tut-lists-as-stacks:"
+        },
+        {
+          "type": "text",
+          "index": 91,
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "Using Lists as Stacks"
+        },
+        {
+          "type": "text",
+          "index": 92,
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.09
+          ],
+          "content": "---------------------"
+        },
+        {
+          "type": "text",
+          "index": 93,
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.09
+          ],
+          "content": "The list methods make it very easy to use a list as a stack, where the last"
+        },
+        {
+          "type": "text",
+          "index": 94,
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": "element added is the first element retrieved (\"last-in, first-out\").  To add an"
+        },
+        {
+          "type": "text",
+          "index": 95,
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.09
+          ],
+          "content": "item to the top of the stack, use :meth:`~list.append`.  To retrieve an item from the"
+        },
+        {
+          "type": "text",
+          "index": 96,
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "top of the stack, use :meth:`~list.pop` without an explicit index.  For example::"
+        },
+        {
+          "type": "text",
+          "index": 97,
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack = [3, 4, 5]"
+        },
+        {
+          "type": "text",
+          "index": 98,
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack.append(6)"
+        },
+        {
+          "type": "text",
+          "index": 99,
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack.append(7)"
+        },
+        {
+          "type": "text",
+          "index": 100,
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack"
+        },
+        {
+          "type": "text",
+          "index": 101,
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": "[3, 4, 5, 6, 7]"
+        },
+        {
+          "type": "text",
+          "index": 102,
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack.pop()"
+        },
+        {
+          "type": "text",
+          "index": 103,
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.09
+          ],
+          "content": "7"
+        },
+        {
+          "type": "text",
+          "index": 104,
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack"
+        },
+        {
+          "type": "text",
+          "index": 105,
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": "[3, 4, 5, 6]"
+        },
+        {
+          "type": "text",
+          "index": 106,
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack.pop()"
+        },
+        {
+          "type": "text",
+          "index": 107,
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.09
+          ],
+          "content": "6"
+        },
+        {
+          "type": "text",
+          "index": 108,
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack.pop()"
+        },
+        {
+          "type": "text",
+          "index": 109,
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.09
+          ],
+          "content": "5"
+        },
+        {
+          "type": "text",
+          "index": 110,
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.09
+          ],
+          "content": ">>> stack"
+        },
+        {
+          "type": "text",
+          "index": 111,
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.09
+          ],
+          "content": "[3, 4]"
+        },
+        {
+          "type": "text",
+          "index": 112,
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.09
+          ],
+          "content": ".. _tut-lists-as-queues:"
+        },
+        {
+          "type": "text",
+          "index": 113,
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.09
+          ],
+          "content": "Using Lists as Queues"
+        },
+        {
+          "type": "text",
+          "index": 114,
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.09
+          ],
+          "content": "---------------------"
+        },
+        {
+          "type": "text",
+          "index": 115,
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.09
+          ],
+          "content": "It is also possible to use a list as a queue, where the first element added is"
+        },
+        {
+          "type": "text",
+          "index": 116,
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.09
+          ],
+          "content": "the first element retrieved (\"first-in, first-out\"); however, lists are not"
+        },
+        {
+          "type": "text",
+          "index": 117,
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.09
+          ],
+          "content": "efficient for this purpose.  While appends and pops from the end of list are"
+        },
+        {
+          "type": "text",
+          "index": 118,
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "fast, doing inserts or pops from the beginning of a list is slow (because all"
+        },
+        {
+          "type": "text",
+          "index": 119,
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.09
+          ],
+          "content": "of the other elements have to be shifted by one).  See"
+        },
+        {
+          "type": "text",
+          "index": 120,
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": ":ref:`time-complexity` for more information."
+        },
+        {
+          "type": "text",
+          "index": 121,
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.09
+          ],
+          "content": "To implement a queue, use :class:`collections.deque` which was designed to"
+        },
+        {
+          "type": "text",
+          "index": 122,
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.09
+          ],
+          "content": "have fast appends and pops from both ends.  For example::"
+        },
+        {
+          "type": "text",
+          "index": 123,
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.09
+          ],
+          "content": ">>> from collections import deque"
+        },
+        {
+          "type": "text",
+          "index": 124,
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.09
+          ],
+          "content": ">>> queue = deque([\"Eric\", \"John\", \"Michael\"])"
+        },
+        {
+          "type": "text",
+          "index": 125,
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.09
+          ],
+          "content": ">>> queue.append(\"Terry\")           # Terry arrives"
+        },
+        {
+          "type": "text",
+          "index": 126,
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.09
+          ],
+          "content": ">>> queue.append(\"Graham\")          # Graham arrives"
+        },
+        {
+          "type": "text",
+          "index": 127,
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": ">>> queue.popleft()                 # The first to arrive now leaves"
+        },
+        {
+          "type": "text",
+          "index": 128,
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": "'Eric'"
+        },
+        {
+          "type": "text",
+          "index": 129,
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": ">>> queue.popleft()                 # The second to arrive now leaves"
+        },
+        {
+          "type": "text",
+          "index": 130,
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.09
+          ],
+          "content": "'John'"
+        },
+        {
+          "type": "text",
+          "index": 131,
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": ">>> queue                           # Remaining queue in order of arrival"
+        },
+        {
+          "type": "text",
+          "index": 132,
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.09
+          ],
+          "content": "deque(['Michael', 'Terry', 'Graham'])"
+        },
+        {
+          "type": "text",
+          "index": 133,
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": ".. _tut-listcomps:"
+        },
+        {
+          "type": "text",
+          "index": 134,
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.09
+          ],
+          "content": "List Comprehensions"
+        },
+        {
+          "type": "text",
+          "index": 135,
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.09
+          ],
+          "content": "-------------------"
+        },
+        {
+          "type": "text",
+          "index": 136,
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "List comprehensions provide a concise way to create lists."
+        },
+        {
+          "type": "text",
+          "index": 137,
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": "Common applications are to make new lists where each element is the result of"
+        },
+        {
+          "type": "text",
+          "index": 138,
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": "some operations applied to each member of another sequence or iterable, or to"
+        },
+        {
+          "type": "text",
+          "index": 139,
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "create a subsequence of those elements that satisfy a certain condition."
+        },
+        {
+          "type": "text",
+          "index": 140,
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.09
+          ],
+          "content": "For example, assume we want to create a list of squares, like::"
+        },
+        {
+          "type": "text",
+          "index": 141,
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.09
+          ],
+          "content": ">>> squares = []"
+        },
+        {
+          "type": "text",
+          "index": 142,
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.09
+          ],
+          "content": ">>> for x in range(10):"
+        },
+        {
+          "type": "text",
+          "index": 143,
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.09
+          ],
+          "content": "...     squares.append(x**2)"
+        },
+        {
+          "type": "text",
+          "index": 144,
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "text",
+          "index": 145,
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.09
+          ],
+          "content": ">>> squares"
+        },
+        {
+          "type": "text",
+          "index": 146,
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.09
+          ],
+          "content": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
+        },
+        {
+          "type": "text",
+          "index": 147,
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "Note that this creates (or overwrites) a variable named ``x`` that still exists"
+        },
+        {
+          "type": "text",
+          "index": 148,
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "after the loop completes.  We can calculate the list of squares without any"
+        },
+        {
+          "type": "text",
+          "index": 149,
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.09
+          ],
+          "content": "side effects using::"
+        },
+        {
+          "type": "text",
+          "index": 150,
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "squares = list(map(lambda x: x**2, range(10)))"
+        },
+        {
+          "type": "text",
+          "index": 151,
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.09
+          ],
+          "content": "or, equivalently::"
+        },
+        {
+          "type": "text",
+          "index": 152,
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "squares = [x**2 for x in range(10)]"
+        },
+        {
+          "type": "text",
+          "index": 153,
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "which is more concise and readable."
+        },
+        {
+          "type": "text",
+          "index": 154,
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "A list comprehension consists of brackets containing an expression followed"
+        },
+        {
+          "type": "text",
+          "index": 155,
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "by a :keyword:`!for` clause, then zero or more :keyword:`!for` or :keyword:`!if`"
+        },
+        {
+          "type": "text",
+          "index": 156,
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "clauses.  The result will be a new list resulting from evaluating the expression"
+        },
+        {
+          "type": "text",
+          "index": 157,
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.09
+          ],
+          "content": "in the context of the :keyword:`!for` and :keyword:`!if` clauses which follow it."
+        },
+        {
+          "type": "text",
+          "index": 158,
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.09
+          ],
+          "content": "For example, this listcomp combines the elements of two lists if they are not"
+        },
+        {
+          "type": "text",
+          "index": 159,
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "equal::"
+        },
+        {
+          "type": "text",
+          "index": 160,
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]"
+        },
+        {
+          "type": "text",
+          "index": 161,
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
+        },
+        {
+          "type": "text",
+          "index": 162,
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.09
+          ],
+          "content": "and it's equivalent to::"
+        },
+        {
+          "type": "text",
+          "index": 163,
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": ">>> combs = []"
+        },
+        {
+          "type": "text",
+          "index": 164,
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": ">>> for x in [1,2,3]:"
+        },
+        {
+          "type": "text",
+          "index": 165,
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.09
+          ],
+          "content": "...     for y in [3,1,4]:"
+        },
+        {
+          "type": "text",
+          "index": 166,
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "...         if x != y:"
+        },
+        {
+          "type": "text",
+          "index": 167,
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.09
+          ],
+          "content": "...             combs.append((x, y))"
+        },
+        {
+          "type": "text",
+          "index": 168,
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.09
+          ],
+          "content": "..."
+        },
+        {
+          "type": "text",
+          "index": 169,
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.09
+          ],
+          "content": ">>> combs"
+        },
+        {
+          "type": "text",
+          "index": 170,
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
+        },
+        {
+          "type": "text",
+          "index": 171,
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Note how the order of the :keyword:`for` and :keyword:`if` statements is the"
+        },
+        {
+          "type": "text",
+          "index": 172,
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "same in both these snippets."
+        },
+        {
+          "type": "text",
+          "index": 173,
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "If the expression is a tuple (e.g. the ``(x, y)`` in the previous example),"
+        },
+        {
+          "type": "text",
+          "index": 174,
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "it must be parenthesized. ::"
+        },
+        {
+          "type": "text",
+          "index": 175,
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> vec = [-4, -2, 0, 2, 4]"
+        },
+        {
+          "type": "text",
+          "index": 176,
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # create a new list with the values doubled"
+        },
+        {
+          "type": "text",
+          "index": 177,
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [x*2 for x in vec]"
+        },
+        {
+          "type": "text",
+          "index": 178,
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "[-8, -4, 0, 4, 8]"
+        },
+        {
+          "type": "text",
+          "index": 179,
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # filter the list to exclude negative numbers"
+        },
+        {
+          "type": "text",
+          "index": 180,
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [x for x in vec if x >= 0]"
+        },
+        {
+          "type": "text",
+          "index": 181,
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "[0, 2, 4]"
+        },
+        {
+          "type": "text",
+          "index": 182,
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # apply a function to all the elements"
+        },
+        {
+          "type": "text",
+          "index": 183,
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [abs(x) for x in vec]"
+        },
+        {
+          "type": "text",
+          "index": 184,
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "[4, 2, 0, 2, 4]"
+        },
+        {
+          "type": "text",
+          "index": 185,
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # call a method on each element"
+        },
+        {
+          "type": "text",
+          "index": 186,
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> freshfruit = ['  banana', '  loganberry ', 'passion fruit  ']"
+        },
+        {
+          "type": "text",
+          "index": 187,
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [weapon.strip() for weapon in freshfruit]"
+        },
+        {
+          "type": "text",
+          "index": 188,
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "['banana', 'loganberry', 'passion fruit']"
+        },
+        {
+          "type": "text",
+          "index": 189,
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # create a list of 2-tuples like (number, square)"
+        },
+        {
+          "type": "text",
+          "index": 190,
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [(x, x**2) for x in range(6)]"
+        },
+        {
+          "type": "text",
+          "index": 191,
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "[(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]"
+        },
+        {
+          "type": "text",
+          "index": 192,
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # the tuple must be parenthesized, otherwise an error is raised"
+        },
+        {
+          "type": "text",
+          "index": 193,
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [x, x**2 for x in range(6)]"
+        },
+        {
+          "type": "text",
+          "index": 194,
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "File \"<stdin>\", line 1"
+        },
+        {
+          "type": "text",
+          "index": 195,
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "[x, x**2 for x in range(6)]"
+        },
+        {
+          "type": "text",
+          "index": 196,
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.09
+          ],
+          "content": "^^^^^^^"
+        },
+        {
+          "type": "text",
+          "index": 197,
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.09
+          ],
+          "content": "SyntaxError: did you forget parentheses around the comprehension target?"
+        },
+        {
+          "type": "text",
+          "index": 198,
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": ">>> # flatten a list using a listcomp with two 'for'"
+        },
+        {
+          "type": "text",
+          "index": 199,
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.09
+          ],
+          "content": ">>> vec = [[1,2,3], [4,5,6], [7,8,9]]"
+        },
+        {
+          "type": "text",
+          "index": 200,
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [num for elem in vec for num in elem]"
+        },
+        {
+          "type": "text",
+          "index": 201,
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
+        },
+        {
+          "type": "text",
+          "index": 202,
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.09
+          ],
+          "content": "List comprehensions can contain complex expressions and nested functions::"
+        },
+        {
+          "type": "text",
+          "index": 203,
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.09
+          ],
+          "content": ">>> from math import pi"
+        },
+        {
+          "type": "text",
+          "index": 204,
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.09
+          ],
+          "content": ">>> [str(round(pi, i)) for i in range(1, 6)]"
+        },
+        {
+          "type": "text",
+          "index": 205,
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "['3.1', '3.14', '3.142', '3.1416', '3.14159']"
+        },
+        {
+          "type": "text",
+          "index": 206,
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "Nested List Comprehensions"
+        },
+        {
+          "type": "text",
+          "index": 207,
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": "--------------------------"
+        },
+        {
+          "type": "text",
+          "index": 208,
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": "The initial expression in a list comprehension can be any arbitrary expression,"
+        },
+        {
+          "type": "text",
+          "index": 209,
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "including another list comprehension."
+        },
+        {
+          "type": "text",
+          "index": 210,
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "Consider the following example of a 3x4 matrix implemented as a list of"
+        },
+        {
+          "type": "text",
+          "index": 211,
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": "3 lists of length 4::"
+        },
+        {
+          "type": "text",
+          "index": 212,
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.09
+          ],
+          "content": ">>> matrix = ["
+        },
+        {
+          "type": "text",
+          "index": 213,
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "...     [1, 2, 3, 4],"
+        },
+        {
+          "type": "text",
+          "index": 214,
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "...     [5, 6, 7, 8],"
+        },
+        {
+          "type": "text",
+          "index": 215,
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "...     [9, 10, 11, 12],"
+        },
+        {
+          "type": "text",
+          "index": 216,
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "... ]"
+        },
+        {
+          "type": "text",
+          "index": 217,
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The following list comprehension will transpose rows and columns::"
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "MinerU_Intermediate_Layout",
+  "schema_version": "1.0"
+}
