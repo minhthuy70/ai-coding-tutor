@@ -28,6 +28,56 @@ class JinaCodeEmbedder(BaseEmbedder):
 
         logger.info(f"Loading Jina Code checkpoint: {self.config.model_id}...")
         try:
+            # Compatibility patch for JinaBert in recent transformers versions
+            import transformers.pytorch_utils
+            if not hasattr(transformers.pytorch_utils, "find_pruneable_heads_and_indices"):
+                def find_pruneable_heads_and_indices(heads, n_heads, head_size, already_pruned_heads):
+                    import torch
+                    mask = torch.ones(n_heads, head_size)
+                    heads = set(heads) - already_pruned_heads
+                    for head in heads:
+                        head = head - sum(1 if h < head else 0 for h in already_pruned_heads)
+                        mask[head] = 0
+                    mask = mask.view(-1).contiguous().eq(1)
+                    index: torch.LongTensor = torch.arange(len(mask))[mask].long()
+                    return heads, index
+                transformers.pytorch_utils.find_pruneable_heads_and_indices = find_pruneable_heads_and_indices
+
+            from transformers import PretrainedConfig
+            for _attr, _default in [("is_decoder", False), ("add_cross_attention", False), ("chunk_size_feed_forward", 0), ("pruned_heads", set()), ("use_return_dict", True)]:
+                if not hasattr(PretrainedConfig, _attr):
+                    setattr(PretrainedConfig, _attr, _default)
+
+            from transformers.modeling_utils import PreTrainedModel
+            import torch
+            if not hasattr(PreTrainedModel, "get_head_mask"):
+                def get_head_mask(self, head_mask, num_hidden_layers, is_attention_chunked=False):
+                    if head_mask is not None:
+                        if head_mask.dim() == 1: head_mask = head_mask.unsqueeze(0).unsqueeze(0).unsqueeze(-1).unsqueeze(-1).expand(num_hidden_layers, -1, -1, -1, -1)
+                        elif head_mask.dim() == 2: head_mask = head_mask.unsqueeze(1).unsqueeze(-1).unsqueeze(-1)
+                        return head_mask.to(dtype=getattr(self, "dtype", torch.float32))
+                    return [None] * num_hidden_layers
+                PreTrainedModel.get_head_mask = get_head_mask
+
+            if not hasattr(PreTrainedModel, "get_extended_attention_mask"):
+                def get_extended_attention_mask(self, attention_mask, input_shape, dtype=None):
+                    if dtype is None: dtype = getattr(self, "dtype", torch.float32)
+                    if attention_mask.dim() == 3: extended_mask = attention_mask[:, None, :, :]
+                    elif attention_mask.dim() == 2: extended_mask = attention_mask[:, None, None, :]
+                    else: raise ValueError(f"Wrong attention_mask shape: {attention_mask.shape}")
+                    extended_mask = extended_mask.to(dtype=dtype)
+                    return (1.0 - extended_mask) * -10000.0
+                PreTrainedModel.get_extended_attention_mask = get_extended_attention_mask
+
+            if not hasattr(PreTrainedModel, "invert_attention_mask"):
+                def invert_attention_mask(self, encoder_attention_mask):
+                    if encoder_attention_mask.dim() == 3: ext = encoder_attention_mask[:, None, :, :]
+                    elif encoder_attention_mask.dim() == 2: ext = encoder_attention_mask[:, None, None, :]
+                    else: ext = encoder_attention_mask
+                    ext = ext.to(dtype=getattr(self, "dtype", torch.float32))
+                    return (1.0 - ext) * -10000.0
+                PreTrainedModel.invert_attention_mask = invert_attention_mask
+
             from sentence_transformers import SentenceTransformer
         except ImportError as e:
             raise RuntimeError(
@@ -35,9 +85,13 @@ class JinaCodeEmbedder(BaseEmbedder):
                 "Ensure execution occurs within Kaggle environment."
             )
 
+        model_kwargs = self.config.extra_kwargs.get("model_kwargs", {})
+        model_kwargs.setdefault("attn_implementation", "eager")
+
         self.model = SentenceTransformer(
             self.config.model_id,
             trust_remote_code=self.config.extra_kwargs.get("trust_remote_code", True),
+            model_kwargs=model_kwargs,
             device=self.config.device
         )
         self._is_loaded = True

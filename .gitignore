@@ -46,3 +46,7 @@ experiments/results/*
 # Archive & Output zips
 *.zip
 *.tar.gz
+
+# Kaggle execution outputs & temporary logs
+notebooks/kaggle_output*/
+notebooks/kernel-metadata.json

@@ -1,7 +1,7 @@
 # Kaggle Cloud GPU Dependencies for AI-Coding-Tutor Embedding Framework
 # Tested on Kaggle Environment (Python 3.10+, PyTorch 2.2+, CUDA 12.1+)
 
-transformers>=4.45.0
+transformers>=4.51.0
 sentence-transformers>=2.7.0
 accelerate>=0.30.0
 torch>=2.2.0
