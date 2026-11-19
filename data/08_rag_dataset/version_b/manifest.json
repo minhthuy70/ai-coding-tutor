@@ -1,0 +1,25 @@
+{
+  "version": "Version B (Pedagogical Tag Dominance)",
+  "routing_strategy": "Pedagogical Tag code_example Dominance + Code Ratio >= 0.50",
+  "total_chunks": 5230,
+  "collections": {
+    "qwen3_text": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "dimension": 1024,
+      "count": 4293,
+      "file": "qwen3_text/qwen3_text_vectors.jsonl"
+    },
+    "jina_code": {
+      "model": "jinaai/jina-embeddings-v2-base-code",
+      "dimension": 768,
+      "count": 937,
+      "file": "jina_code/jina_code_vectors.jsonl"
+    }
+  },
+  "delta_info": {
+    "source_bundle": "artifacts/ai_coding_tutor_embeddings_delta_558.tar.gz",
+    "delta_chunks_reassigned": 558,
+    "reassigned_from": "qwen3_text",
+    "reassigned_to": "jina_code"
+  }
+}
