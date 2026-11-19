@@ -211,7 +211,7 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
         self.assertFalse(is_valid)
         self.assertTrue(any("Duplicate chunk_id detected" in e for e in errs))
 
-    # 4. Test Checkpoint & Resume Logic Simulation
+    # 4. Test Checkpoint & Resume Logic Simulation (Intra-session)
     def test_checkpoint_and_resume_simulation(self):
         ckpt_mgr = CheckpointManager(self.test_dir / "checkpoints")
         model_name = "test_model"
@@ -251,7 +251,71 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
         self.assertEqual(total, 10)
         self.assertTrue(merged_file.exists())
 
-    # 5. Test End-to-End Pipeline with Mock Embedder
+    # 5. Test Cross-Session Resumption (Simulating /kaggle/input mounted checkpoint)
+    def test_cross_session_resumption_simulation(self):
+        # 1. Create a simulated read-only external checkpoint folder (as in /kaggle/input/prior-run/)
+        prior_checkpoint_dir = self.test_dir / "prior_kaggle_input" / "checkpoints" / "qwen3_text"
+        prior_checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        
+        prior_records = [
+            VectorRecord(
+                chunk_id=f"prior_c_{i:03d}",
+                source_file="prior.md",
+                section_path="Section",
+                modality="text",
+                model_name="qwen3_text",
+                model_version="1.0",
+                embedding_dimension=1024,
+                vector=[0.1] * 1024,
+                token_count=20,
+                content_preview=f"prior chunk {i}"
+            )
+            for i in range(20)
+        ]
+        batch_file = prior_checkpoint_dir / "batch_00000.jsonl"
+        with open(batch_file, "w", encoding="utf-8") as f:
+            for r in prior_records:
+                f.write(json.dumps(r.to_dict(), ensure_ascii=False) + "\n")
+
+        # 2. In new session, initialize CheckpointManager pointing to new working dir AND prior input dir
+        new_working_dir = self.test_dir / "new_kaggle_working" / "checkpoints"
+        ckpt_mgr = CheckpointManager(
+            checkpoint_dir=new_working_dir,
+            input_checkpoint_dirs=[self.test_dir / "prior_kaggle_input" / "checkpoints"]
+        )
+
+        completed_ids = ckpt_mgr.load_completed_chunk_ids("qwen3_text")
+        self.assertEqual(len(completed_ids), 20, "Should read 20 completed IDs from mounted input directory")
+        self.assertIn("prior_c_005", completed_ids)
+
+        # 3. Simulate adding 5 new chunks in the new session to writable working dir
+        new_records = [
+            VectorRecord(
+                chunk_id=f"new_c_{i:03d}",
+                source_file="new.md",
+                section_path="Section",
+                modality="text",
+                model_name="qwen3_text",
+                model_version="1.0",
+                embedding_dimension=1024,
+                vector=[0.1] * 1024,
+                token_count=20,
+                content_preview=f"new chunk {i}"
+            )
+            for i in range(5)
+        ]
+        ckpt_mgr.save_batch("qwen3_text", 1, new_records)
+
+        # 4. Total completed should now be 20 (prior) + 5 (new) = 25
+        completed_ids_updated = ckpt_mgr.load_completed_chunk_ids("qwen3_text")
+        self.assertEqual(len(completed_ids_updated), 25)
+
+        # 5. Consolidation merges both without duplicate
+        merged_file = self.test_dir / "all_sessions_consolidated.jsonl"
+        total = ckpt_mgr.consolidate("qwen3_text", merged_file)
+        self.assertEqual(total, 25, "Consolidation should merge records from both sessions")
+
+    # 6. Test End-to-End Pipeline with Mock Embedder
     def test_pipeline_with_mock_embedder(self):
         config = EmbeddingPipelineConfig(
             local_working_dir=self.test_dir / "pipeline_run",
