@@ -37,7 +37,10 @@ class EmbeddingPipeline:
         self.embeddings_dir = self.working_dir / self.config.embeddings_dir_name
         self.reports_dir = self.working_dir / self.config.reports_dir_name
         
-        self.checkpoint_manager = CheckpointManager(self.checkpoint_dir)
+        self.checkpoint_manager = CheckpointManager(
+            self.checkpoint_dir,
+            dataset_fingerprint=getattr(self.config, "dataset_fingerprint", None)
+        )
         self._ensure_directories()
 
     def _ensure_directories(self):
@@ -85,9 +88,20 @@ class EmbeddingPipeline:
             f"Target: {len(target_chunks):,} chunks ==="
         )
 
-        # 1. Resume check: filter out already completed chunks
-        pending_chunks = self.checkpoint_manager.filter_pending_chunks(target_chunks, model_name)
-        completed_ids = self.checkpoint_manager.load_completed_chunk_ids(model_name)
+        # 1. Resume check: filter out already completed chunks with compatibility validation
+        expected_dim = getattr(embedder.config, "dimension", None)
+        expected_mid = getattr(embedder.config, "model_id", None)
+        pending_chunks = self.checkpoint_manager.filter_pending_chunks(
+            target_chunks,
+            model_name,
+            expected_dimension=expected_dim,
+            expected_model_id=expected_mid
+        )
+        completed_ids = self.checkpoint_manager.load_completed_chunk_ids(
+            model_name,
+            expected_dimension=expected_dim,
+            expected_model_id=expected_mid
+        )
         
         all_valid_records = []
         all_failures = []
@@ -131,7 +145,9 @@ class EmbeddingPipeline:
                 self.checkpoint_manager.save_batch(
                     model_name=model_name,
                     batch_idx=b_idx,
-                    records=valid_batch
+                    records=valid_batch,
+                    dimension=expected_dim,
+                    model_id=expected_mid
                 )
 
             if (b_idx + 1) % 5 == 0 or (b_idx + 1) == batches_count:

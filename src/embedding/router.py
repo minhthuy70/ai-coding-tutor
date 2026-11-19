@@ -13,12 +13,12 @@ class ModalityRouter:
     """
     Deterministic Router implementing the Dominance-based Modality Rule:
     1. content_type == 'code_example' -> Modality.CODE (864 chunks)
-    2. has_code == True AND code length ratio >= threshold (48.27% ~ 50%) -> Modality.CODE (79 chunks)
-    3. All remaining cases -> Modality.TEXT (4,287 chunks)
-    Total: 943 CODE + 4,287 TEXT = 5,230 chunks.
+    2. has_code == True AND code length ratio >= threshold (50.0%) -> Modality.CODE (73 chunks)
+    3. All remaining cases -> Modality.TEXT (4,293 chunks)
+    Total: 937 CODE + 4,293 TEXT = 5,230 chunks.
     """
 
-    def __init__(self, code_ratio_threshold: float = 0.4827):
+    def __init__(self, code_ratio_threshold: float = 0.50):
         self.code_ratio_threshold = code_ratio_threshold
         # Regex capturing markdown code block contents
         self._code_pattern = re.compile(

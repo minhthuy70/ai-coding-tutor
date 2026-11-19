@@ -90,21 +90,38 @@ class Qwen3TextEmbedder(BaseEmbedder):
         with torch.no_grad():
             for i in range(0, len(texts), bs):
                 batch_texts = texts[i:i + bs]
-                inputs = self.tokenizer(
-                    batch_texts,
-                    max_length=self.config.context_length,
-                    padding=True,
-                    truncation=True,
-                    return_tensors="pt"
-                ).to(self.model.device)
+                try:
+                    inputs = self.tokenizer(
+                        batch_texts,
+                        max_length=self.config.context_length,
+                        padding=True,
+                        truncation=True,
+                        return_tensors="pt"
+                    ).to(self.model.device)
 
-                outputs = self.model(**inputs)
-                embeddings = self._last_token_pool(outputs.last_hidden_state, inputs["attention_mask"])
+                    outputs = self.model(**inputs)
+                    embeddings = self._last_token_pool(outputs.last_hidden_state, inputs["attention_mask"])
 
-                if self.config.normalize_embeddings:
-                    embeddings = F.normalize(embeddings, p=2, dim=1)
+                    if self.config.normalize_embeddings:
+                        embeddings = F.normalize(embeddings, p=2, dim=1)
 
-                all_embeddings.extend(embeddings.cpu().to(torch.float32).tolist())
+                    all_embeddings.extend(embeddings.cpu().to(torch.float32).tolist())
+                except torch.cuda.OutOfMemoryError:
+                    logger.warning(f"CUDA OOM with batch size {len(batch_texts)}. Clearing cache and retrying individually...")
+                    torch.cuda.empty_cache()
+                    for single_text in batch_texts:
+                        s_in = self.tokenizer(
+                            [single_text],
+                            max_length=self.config.context_length,
+                            padding=True,
+                            truncation=True,
+                            return_tensors="pt"
+                        ).to(self.model.device)
+                        s_out = self.model(**s_in)
+                        s_emb = self._last_token_pool(s_out.last_hidden_state, s_in["attention_mask"])
+                        if self.config.normalize_embeddings:
+                            s_emb = F.normalize(s_emb, p=2, dim=1)
+                        all_embeddings.extend(s_emb.cpu().to(torch.float32).tolist())
 
         return all_embeddings
 

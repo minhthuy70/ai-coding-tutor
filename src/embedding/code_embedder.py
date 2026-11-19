@@ -44,19 +44,39 @@ class JinaCodeEmbedder(BaseEmbedder):
         logger.info(f"Jina Code model successfully loaded. Dimension: {self.config.dimension}")
 
     def embed_documents(self, texts: List[str], batch_size: Optional[int] = None) -> List[List[float]]:
-        """Encode code snippets into 768-dim normalized vectors."""
+        """Encode code snippets into 768-dim normalized vectors with OOM protection."""
         if not self._is_loaded:
             self.load_model()
 
         bs = batch_size or self.config.batch_size
-        embeddings = self.model.encode(
-            texts,
-            batch_size=bs,
-            show_progress_bar=False,
-            normalize_embeddings=self.config.normalize_embeddings,
-            convert_to_numpy=True
-        )
-        return embeddings.tolist()
+        try:
+            embeddings = self.model.encode(
+                texts,
+                batch_size=bs,
+                show_progress_bar=False,
+                normalize_embeddings=self.config.normalize_embeddings,
+                convert_to_numpy=True
+            )
+            return embeddings.tolist()
+        except Exception as e:
+            # Check for CUDA OOM
+            if "out of memory" in str(e).lower() or "CUDA out of memory" in str(e):
+                logger.warning(f"CUDA OOM in JinaCodeEmbedder with batch_size {bs}. Retrying with batch_size=8...")
+                try:
+                    import torch
+                    if torch.cuda.is_available():
+                        torch.cuda.empty_cache()
+                except ImportError:
+                    pass
+                embeddings = self.model.encode(
+                    texts,
+                    batch_size=max(1, bs // 4),
+                    show_progress_bar=False,
+                    normalize_embeddings=self.config.normalize_embeddings,
+                    convert_to_numpy=True
+                )
+                return embeddings.tolist()
+            raise e
 
     def embed_query(self, query: str) -> List[float]:
         """Encode query for code retrieval."""

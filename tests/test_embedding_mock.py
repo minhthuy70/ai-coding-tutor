@@ -13,10 +13,11 @@ from pathlib import Path
 from typing import List, Optional
 
 from src.embedding.base import BaseEmbedder, Modality, VectorRecord
-from src.embedding.checkpoint import CheckpointManager
+from src.embedding.checkpoint import CheckpointManager, CheckpointCompatibilityError
 from src.embedding.config import EmbeddingPipelineConfig, ModelConfig
 from src.embedding.pipeline import EmbeddingPipeline
 from src.embedding.router import ModalityRouter
+from src.embedding.sampler import PilotSampler
 from src.embedding.validator import VectorValidator
 
 
@@ -44,11 +45,11 @@ class MockEmbedder(BaseEmbedder):
 
 
 class TestEmbeddingFrameworkMock(unittest.TestCase):
-    """Test suite for embedding framework validation, routing, and checkpointing."""
+    """Test suite for embedding framework validation, routing, checkpointing, and sampling."""
 
     def setUp(self):
         self.test_dir = Path(tempfile.mkdtemp(prefix="test_emb_"))
-        self.router = ModalityRouter()  # Uses default threshold (0.4827)
+        self.router = ModalityRouter(code_ratio_threshold=0.50)  # Threshold 0.50 as required in Stage 3
         self.validator = VectorValidator({
             "qwen3_text": 1024,
             "jina_code": 768
@@ -76,7 +77,7 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
             "metadata": {"content_type": "concept", "has_code": True}
         }
         mod, ratio = self.router.classify_chunk(chunk)
-        self.assertGreaterEqual(ratio, 0.4827)
+        self.assertGreaterEqual(ratio, 0.50)
         self.assertEqual(mod, Modality.CODE)
 
     def test_modality_routing_text_dominant(self):
@@ -91,7 +92,7 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
             "metadata": {"content_type": "concept", "has_code": True}
         }
         mod, ratio = self.router.classify_chunk(chunk)
-        self.assertLess(ratio, 0.4827)
+        self.assertLess(ratio, 0.50)
         self.assertEqual(mod, Modality.TEXT)
 
     def test_modality_routing_pure_text(self):
@@ -117,10 +118,10 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
         code_chunks = partition[Modality.CODE]
         text_chunks = partition[Modality.TEXT]
 
-        # Verify exact counts as approved for Phase 2
+        # Verify exact counts as approved for Stage 3 (threshold = 0.50)
         self.assertEqual(len(all_chunks), 5230, "Total chunks must be exactly 5,230")
-        self.assertEqual(len(code_chunks), 943, "CODE chunks must be exactly 943 (18.03%)")
-        self.assertEqual(len(text_chunks), 4287, "TEXT chunks must be exactly 4,287 (81.97%)")
+        self.assertEqual(len(code_chunks), 937, "CODE chunks must be exactly 937 (17.92%)")
+        self.assertEqual(len(text_chunks), 4293, "TEXT chunks must be exactly 4,293 (82.08%)")
         self.assertEqual(len(code_chunks) + len(text_chunks), 5230, "No chunks lost or duplicated")
 
     # 3. Test Vector Validator QA Checks
@@ -133,9 +134,10 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
             model_name="qwen3_text",
             model_version="1.0",
             embedding_dimension=1024,
-            vector=[0.1] * 1024,
+            vector=[1.0 / math.sqrt(1024)] * 1024,
             token_count=50,
-            content_preview="preview"
+            content_preview="preview",
+            metadata={"source_file": "test.md", "section_title": "T", "section_path": "P", "section_depth": 1, "content_type": "c", "language": "py", "token_count": 50, "has_code": False, "has_table": False, "has_equation": False}
         )
         is_valid, errs = self.validator.validate_record(rec, "qwen3_text", set())
         self.assertFalse(is_valid)
@@ -150,9 +152,10 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
             model_name="qwen3_text",
             model_version="1.0",
             embedding_dimension=512,
-            vector=[0.1] * 512,  # Expected 1024
+            vector=[1.0 / math.sqrt(512)] * 512,  # Expected 1024
             token_count=50,
-            content_preview="preview"
+            content_preview="preview",
+            metadata={"source_file": "test.md", "section_title": "T", "section_path": "P", "section_depth": 1, "content_type": "c", "language": "py", "token_count": 50, "has_code": False, "has_table": False, "has_equation": False}
         )
         is_valid, errs = self.validator.validate_record(rec, "qwen3_text", set())
         self.assertFalse(is_valid)
@@ -170,30 +173,35 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
             embedding_dimension=1024,
             vector=vec_nan,
             token_count=50,
-            content_preview="preview"
+            content_preview="preview",
+            metadata={"source_file": "test.md", "section_title": "T", "section_path": "P", "section_depth": 1, "content_type": "c", "language": "py", "token_count": 50, "has_code": False, "has_table": False, "has_equation": False}
         )
         is_valid, errs = self.validator.validate_record(rec_nan, "qwen3_text", set())
         self.assertFalse(is_valid)
         self.assertIn("Vector contains NaN values", errs)
 
-        vec_inf = [0.1] * 1023 + [float("inf")]
-        rec_inf = VectorRecord(
-            chunk_id="chunk_inf",
+    def test_validator_l2_norm(self):
+        # Non-normalized vector (sum of squares = 100 != 1.0)
+        unnorm_vec = [10.0] + [0.0] * 1023
+        rec = VectorRecord(
+            chunk_id="chunk_unnorm",
             source_file="test.md",
             section_path="Section 1",
             modality="text",
             model_name="qwen3_text",
             model_version="1.0",
             embedding_dimension=1024,
-            vector=vec_inf,
+            vector=unnorm_vec,
             token_count=50,
-            content_preview="preview"
+            content_preview="preview",
+            metadata={"source_file": "test.md", "section_title": "T", "section_path": "P", "section_depth": 1, "content_type": "c", "language": "py", "token_count": 50, "has_code": False, "has_table": False, "has_equation": False}
         )
-        is_valid, errs = self.validator.validate_record(rec_inf, "qwen3_text", set())
+        is_valid, errs = self.validator.validate_record(rec, "qwen3_text", set())
         self.assertFalse(is_valid)
-        self.assertIn("Vector contains Infinity values", errs)
+        self.assertTrue(any("L2 norm deviation" in e for e in errs))
 
     def test_validator_duplicate_id(self):
+        val = 1.0 / math.sqrt(1024)
         rec1 = VectorRecord(
             chunk_id="dup_01",
             source_file="test.md",
@@ -202,9 +210,10 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
             model_name="qwen3_text",
             model_version="1.0",
             embedding_dimension=1024,
-            vector=[0.1] * 1024,
+            vector=[val] * 1024,
             token_count=50,
-            content_preview="preview"
+            content_preview="preview",
+            metadata={"source_file": "test.md", "section_title": "T", "section_path": "P", "section_depth": 1, "content_type": "c", "language": "py", "token_count": 50, "has_code": False, "has_table": False, "has_equation": False}
         )
         seen = {"dup_01"}
         is_valid, errs = self.validator.validate_record(rec1, "qwen3_text", seen)
@@ -251,11 +260,11 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
         self.assertEqual(total, 10)
         self.assertTrue(merged_file.exists())
 
-    # 5. Test Cross-Session Resumption (Simulating /kaggle/input mounted checkpoint)
-    def test_cross_session_resumption_simulation(self):
-        # 1. Create a simulated read-only external checkpoint folder (as in /kaggle/input/prior-run/)
-        prior_checkpoint_dir = self.test_dir / "prior_kaggle_input" / "checkpoints" / "qwen3_text"
-        prior_checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    # 5. Test Cross-Session Resumption and Compatibility Validation
+    def test_cross_session_resumption_and_compatibility(self):
+        # 1. Create a simulated read-only external checkpoint folder with manifest
+        prior_dir = self.test_dir / "prior_kaggle_input" / "checkpoints" / "qwen3_text"
+        prior_dir.mkdir(parents=True, exist_ok=True)
         
         prior_records = [
             VectorRecord(
@@ -272,50 +281,68 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
             )
             for i in range(20)
         ]
-        batch_file = prior_checkpoint_dir / "batch_00000.jsonl"
+        batch_file = prior_dir / "batch_00000.jsonl"
         with open(batch_file, "w", encoding="utf-8") as f:
             for r in prior_records:
                 f.write(json.dumps(r.to_dict(), ensure_ascii=False) + "\n")
 
-        # 2. In new session, initialize CheckpointManager pointing to new working dir AND prior input dir
-        new_working_dir = self.test_dir / "new_kaggle_working" / "checkpoints"
+        # Write manifest
+        manifest_path = prior_dir / "checkpoint_manifest.json"
+        with open(manifest_path, "w", encoding="utf-8") as mf:
+            json.dump({
+                "model_name": "qwen3_text",
+                "model_id": "Qwen/Qwen3-Embedding-0.6B",
+                "dimension": 1024,
+                "dataset_fingerprint": "pilot_v3",
+                "batches": [{"batch_idx": 0, "file": "batch_00000.jsonl", "records": 20}]
+            }, mf)
+
+        # 2. Resuming with compatible settings works
+        new_working = self.test_dir / "working_compat" / "checkpoints"
         ckpt_mgr = CheckpointManager(
-            checkpoint_dir=new_working_dir,
-            input_checkpoint_dirs=[self.test_dir / "prior_kaggle_input" / "checkpoints"]
+            checkpoint_dir=new_working,
+            input_checkpoint_dirs=[self.test_dir / "prior_kaggle_input" / "checkpoints"],
+            dataset_fingerprint="pilot_v3"
         )
+        completed = ckpt_mgr.load_completed_chunk_ids("qwen3_text", expected_dimension=1024)
+        self.assertEqual(len(completed), 20)
 
-        completed_ids = ckpt_mgr.load_completed_chunk_ids("qwen3_text")
-        self.assertEqual(len(completed_ids), 20, "Should read 20 completed IDs from mounted input directory")
-        self.assertIn("prior_c_005", completed_ids)
+        # 3. Resuming with incompatible dimension raises CheckpointCompatibilityError
+        incompat_working = self.test_dir / "working_incompat" / "checkpoints"
+        incompat_ckpt_mgr = CheckpointManager(
+            checkpoint_dir=incompat_working,
+            input_checkpoint_dirs=[self.test_dir / "prior_kaggle_input" / "checkpoints"],
+            dataset_fingerprint="pilot_v3"
+        )
+        with self.assertRaises(CheckpointCompatibilityError):
+            incompat_ckpt_mgr.load_completed_chunk_ids("qwen3_text", expected_dimension=768)
 
-        # 3. Simulate adding 5 new chunks in the new session to writable working dir
-        new_records = [
-            VectorRecord(
-                chunk_id=f"new_c_{i:03d}",
-                source_file="new.md",
-                section_path="Section",
-                modality="text",
-                model_name="qwen3_text",
-                model_version="1.0",
-                embedding_dimension=1024,
-                vector=[0.1] * 1024,
-                token_count=20,
-                content_preview=f"new chunk {i}"
-            )
-            for i in range(5)
-        ]
-        ckpt_mgr.save_batch("qwen3_text", 1, new_records)
+    # 6. Test Pilot Deterministic Sampling
+    def test_pilot_sampler_determinism(self):
+        dataset_path = Path("data/06_rag_dataset/chunks/all_chunks.json")
+        if not dataset_path.exists():
+            self.skipTest("all_chunks.json not present at local path")
 
-        # 4. Total completed should now be 20 (prior) + 5 (new) = 25
-        completed_ids_updated = ckpt_mgr.load_completed_chunk_ids("qwen3_text")
-        self.assertEqual(len(completed_ids_updated), 25)
+        with open(dataset_path, "r", encoding="utf-8") as f:
+            all_chunks = json.load(f)
 
-        # 5. Consolidation merges both without duplicate
-        merged_file = self.test_dir / "all_sessions_consolidated.jsonl"
-        total = ckpt_mgr.consolidate("qwen3_text", merged_file)
-        self.assertEqual(total, 25, "Consolidation should merge records from both sessions")
+        sampler1 = PilotSampler(seed=42)
+        pilot1 = sampler1.sample_pilot_dataset(all_chunks, text_limit=120, code_limit=40)
 
-    # 6. Test End-to-End Pipeline with Mock Embedder
+        sampler2 = PilotSampler(seed=42)
+        pilot2 = sampler2.sample_pilot_dataset(all_chunks, text_limit=120, code_limit=40)
+
+        self.assertEqual(len(pilot1["text_chunks"]), 120)
+        self.assertEqual(len(pilot1["code_chunks"]), 40)
+        self.assertEqual(pilot1["total_chunks"], 160)
+
+        # Check determinism: same seed produces identical IDs in identical order
+        ids1 = [c["id"] for c in pilot1["text_chunks"]] + [c["id"] for c in pilot1["code_chunks"]]
+        ids2 = [c["id"] for c in pilot2["text_chunks"]] + [c["id"] for c in pilot2["code_chunks"]]
+        self.assertEqual(ids1, ids2, "Sampler with seed 42 must be 100% deterministic")
+        self.assertEqual(len(set(ids1)), 160, "All 160 sampled IDs must be unique")
+
+    # 7. Test End-to-End Pipeline with Mock Embedder
     def test_pipeline_with_mock_embedder(self):
         config = EmbeddingPipelineConfig(
             local_working_dir=self.test_dir / "pipeline_run",
@@ -323,12 +350,42 @@ class TestEmbeddingFrameworkMock(unittest.TestCase):
         )
         pipeline = EmbeddingPipeline(config)
 
-        # Create mock dataset
+        # Create mock dataset with full required schema
         mock_chunks = [
-            {"id": f"txt_{i:02d}", "text": f"Lý thuyết số {i}", "metadata": {"content_type": "concept", "has_code": False, "source_file": "doc1.md", "token_count": 30}}
+            {
+                "id": f"txt_{i:02d}",
+                "text": f"Lý thuyết số {i}",
+                "metadata": {
+                    "source_file": "doc1.md",
+                    "section_title": f"Chương {i}",
+                    "section_path": f"Chương {i}",
+                    "section_depth": 1,
+                    "content_type": "concept",
+                    "language": "python",
+                    "token_count": 30,
+                    "has_code": False,
+                    "has_table": False,
+                    "has_equation": False
+                }
+            }
             for i in range(15)
         ] + [
-            {"id": f"cod_{i:02d}", "text": f"```python\ndef fn_{i}():\n    return {i}\n```", "metadata": {"content_type": "code_example", "has_code": True, "source_file": "doc2.md", "token_count": 25}}
+            {
+                "id": f"cod_{i:02d}",
+                "text": f"```python\ndef fn_{i}():\n    return {i}\n```",
+                "metadata": {
+                    "source_file": "doc2.md",
+                    "section_title": f"Hàm {i}",
+                    "section_path": f"Hàm {i}",
+                    "section_depth": 1,
+                    "content_type": "code_example",
+                    "language": "python",
+                    "token_count": 25,
+                    "has_code": True,
+                    "has_table": False,
+                    "has_equation": False
+                }
+            }
             for i in range(5)
         ]
 

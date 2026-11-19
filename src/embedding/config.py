@@ -41,8 +41,9 @@ class EmbeddingPipelineConfig:
     reports_dir_name: str = "reports"
     checkpoint_every_batches: int = 5  # Save checkpoint every N batches
     
-    # Modality Classification Rule: threshold ~48.27% partitions exactly 943 CODE and 4,287 TEXT
-    code_ratio_threshold: float = 0.4827
+    # Modality Classification Rule: threshold 50.0% partitions exactly 937 CODE and 4,293 TEXT
+    code_ratio_threshold: float = 0.50
+    dataset_fingerprint: str = "sha256:4b969e117eac5c123756e4382cf3e0c7c7aeeba8ec8bb0d673e296532f35b856"
     
     # Model Configurations
     qwen3_text: ModelConfig = field(default_factory=lambda: ModelConfig(
@@ -52,7 +53,7 @@ class EmbeddingPipelineConfig:
         context_length=32768,
         batch_size=32,
         torch_dtype="float16",
-        query_instruction="Instruct: Given a coding question, retrieve relevant explanations or code\nQuery: "
+        query_instruction="Instruct: Given a programming question, coding task, or technical problem, retrieve relevant Python documentation, tutorials, code concepts, or API explanations.\nQuery: "
     ))
     
     jina_code: ModelConfig = field(default_factory=lambda: ModelConfig(

@@ -16,7 +16,25 @@ from .base import VectorRecord
 class VectorValidator:
     """Validates vector embeddings before persistence or indexing."""
 
-    def __init__(self, expected_dimensions: Dict[str, int] = None):
+    REQUIRED_METADATA_FIELDS = [
+        "source_file",
+        "section_title",
+        "section_path",
+        "section_depth",
+        "content_type",
+        "language",
+        "token_count",
+        "has_code",
+        "has_table",
+        "has_equation"
+    ]
+
+    def __init__(
+        self,
+        expected_dimensions: Dict[str, int] = None,
+        check_l2_norm: bool = True,
+        l2_tolerance: float = 1e-3
+    ):
         # Default expected dimensions for models
         self.expected_dimensions = expected_dimensions or {
             "qwen3_text": 1024,
@@ -24,6 +42,8 @@ class VectorValidator:
             "jina_visual": 2048,
             "colqwen2_page": 128
         }
+        self.check_l2_norm = check_l2_norm
+        self.l2_tolerance = l2_tolerance
 
     def validate_record(
         self,
@@ -82,11 +102,22 @@ class VectorValidator:
         if has_inf:
             errors.append("Vector contains Infinity values")
 
-        # 5. Metadata integrity
+        # 5. L2 Normalization Check (for single dense normalized vectors)
+        if self.check_l2_norm and not isinstance(record.vector[0], list):
+            norm = math.sqrt(sum(v * v for v in record.vector))
+            if abs(norm - 1.0) > self.l2_tolerance:
+                errors.append(f"L2 norm deviation: expected ~1.0, got {norm:.6f}")
+
+        # 6. Metadata integrity: check essential schema preservation
         if not record.source_file:
             errors.append("Missing source_file in metadata")
         if not record.modality:
             errors.append("Missing modality designation")
+
+        if record.metadata and isinstance(record.metadata, dict):
+            for req_field in self.REQUIRED_METADATA_FIELDS:
+                if req_field not in record.metadata:
+                    errors.append(f"Missing required metadata field: {req_field}")
 
         is_valid = len(errors) == 0
         return is_valid, errors
