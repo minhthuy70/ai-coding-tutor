@@ -48,8 +48,17 @@ experiments/results/*
 *.tar.gz
 
 # Large embedding vectors & checkpoints (>100MB violates GitHub push limit)
+data/08_rag_dataset/**/embeddings/**/*.jsonl
 data/08_rag_dataset/embeddings/*/*.jsonl
 data/08_rag_dataset/checkpoints/
+
+# Vector database local storage (SQLite & HNSW binary indices)
+data/07_vector_store/chroma_db/
+data/09_chromadb/
+
+# Artifact bundles & temporary scratch scripts
+artifacts/
+scratch/
 
 # Kaggle execution outputs & temporary logs
 notebooks/kaggle_output*/
