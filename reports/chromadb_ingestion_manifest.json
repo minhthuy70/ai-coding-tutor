@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-11-19T18:57:41Z",
+  "stage": "STAGE_B_IN_PRODUCTION",
+  "database_engine": "ChromaDB PersistentClient",
+  "database_path": "D:\\CNTT2311\\HK9\\DOAN4\\ai-coding-tutor\\data\\09_chromadb",
+  "source_dataset_version": "Version A (Actual Routing: 4.851 Text / 379 Code)",
+  "source_manifest": "data\\08_rag_dataset\\version_a\\manifest.json",
+  "total_chunks": 5230,
+  "collections": {
+    "qwen3_text": {
+      "name": "qwen3_text",
+      "model_id": "Qwen/Qwen3-Embedding-0.6B",
+      "dimension": 1024,
+      "distance_metric": "cosine",
+      "record_count": 4851,
+      "ingestion_duration_sec": 31.71,
+      "source_vector_file": "data\\08_rag_dataset\\version_a\\embeddings\\qwen3_text\\qwen3_text_vectors.jsonl"
+    },
+    "jina_code": {
+      "name": "jina_code",
+      "model_id": "jinaai/jina-embeddings-v2-base-code",
+      "dimension": 768,
+      "distance_metric": "cosine",
+      "record_count": 379,
+      "ingestion_duration_sec": 2.31,
+      "source_vector_file": "data\\08_rag_dataset\\version_a\\embeddings\\jina_code\\jina_code_vectors.jsonl"
+    }
+  },
+  "validation": {
+    "count_parity": true,
+    "id_uniqueness": true,
+    "zero_overlap": true,
+    "all_chunks_match": true,
+    "persistence_verified": true,
+    "nearest_neighbor_query_test": true
+  },
+  "execution_summary": {
+    "total_ingested": 5230,
+    "total_duration_sec": 37.91,
+    "status": "SUCCESS"
+  }
+}
