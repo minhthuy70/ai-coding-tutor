@@ -47,6 +47,10 @@ experiments/results/*
 *.zip
 *.tar.gz
 
+# Large embedding vectors & checkpoints (>100MB violates GitHub push limit)
+data/08_rag_dataset/embeddings/*/*.jsonl
+data/08_rag_dataset/checkpoints/
+
 # Kaggle execution outputs & temporary logs
 notebooks/kaggle_output*/
 notebooks/kernel-metadata.json
