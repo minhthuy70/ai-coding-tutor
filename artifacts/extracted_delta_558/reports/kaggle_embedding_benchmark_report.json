@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-11-19T18:28:37.911649+00:00",
+  "input_file": "ab_test_558_jina_delta.json",
+  "total_chunks_input": 558,
+  "qwen3_text": {
+    "model_id": "Qwen/Qwen3-Embedding-0.6B",
+    "target_chunks": 0,
+    "completed_vectors": 0,
+    "dimension": 1024,
+    "pooling_mode": "last_token_pooling",
+    "padding_side": "left",
+    "status": "pending",
+    "failures_count": 0,
+    "inference_time_sec": 0.0,
+    "peak_vram_gb": 0.0
+  },
+  "jina_code": {
+    "model_id": "jinaai/jina-embeddings-v2-base-code",
+    "target_chunks": 558,
+    "completed_vectors": 558,
+    "dimension": 768,
+    "pooling_mode": "attention_masked_mean_tokens",
+    "pooling_description": "Attention-Masked Mean Pooling (không sử dụng token weighting riêng)",
+    "status": "completed",
+    "failures_count": 0,
+    "inference_time_sec": 7.87,
+    "peak_vram_gb": 1.47
+  },
+  "overall": {
+    "total_embedded": 558,
+    "success_rate": 100.0,
+    "id_collision_count": 0,
+    "status": "SUCCESS"
+  }
+}
