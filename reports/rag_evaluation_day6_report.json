@@ -1,0 +1,4232 @@
+{
+  "timestamp": "2026-11-21T14:07:50Z",
+  "task": "DAY_06_RAG_RETRIEVAL_EVALUATION",
+  "benchmark_file": "D:\\CNTT2311\\HK9\\DOAN4\\ai-coding-tutor\\data\\04_benchmark\\rag_eval_queries.json",
+  "total_queries": 20,
+  "execution_time_seconds": 0.91,
+  "summary": {
+    "baseline_unfiltered": {
+      "count": 20,
+      "hit_rate_at_1": 0.5,
+      "hit_rate_at_3": 0.55,
+      "hit_rate_at_5": 0.6,
+      "mrr_at_3": 0.525,
+      "mrr_at_5": 0.5349999999999999,
+      "recall_at_5": 0.5083333333333333
+    },
+    "metadata_filtered": {
+      "count": 20,
+      "hit_rate_at_1": 0.5,
+      "hit_rate_at_3": 0.55,
+      "hit_rate_at_5": 0.6,
+      "mrr_at_3": 0.525,
+      "mrr_at_5": 0.5349999999999999,
+      "recall_at_5": 0.5083333333333333
+    },
+    "hybrid_rerank": {
+      "count": 20,
+      "hit_rate_at_1": 0.35,
+      "hit_rate_at_3": 0.55,
+      "hit_rate_at_5": 0.55,
+      "mrr_at_3": 0.4333333333333333,
+      "mrr_at_5": 0.4333333333333333,
+      "recall_at_5": 0.45
+    }
+  },
+  "category_breakdown": {
+    "theory": {
+      "baseline": {
+        "count": 5,
+        "hit_rate_at_1": 0.6,
+        "hit_rate_at_3": 0.6,
+        "hit_rate_at_5": 0.6,
+        "mrr_at_3": 0.6,
+        "mrr_at_5": 0.6,
+        "recall_at_5": 0.4
+      },
+      "filtered": {
+        "count": 5,
+        "hit_rate_at_1": 0.6,
+        "hit_rate_at_3": 0.6,
+        "hit_rate_at_5": 0.6,
+        "mrr_at_3": 0.6,
+        "mrr_at_5": 0.6,
+        "recall_at_5": 0.4
+      },
+      "hybrid": {
+        "count": 5,
+        "hit_rate_at_1": 0.4,
+        "hit_rate_at_3": 0.6,
+        "hit_rate_at_5": 0.6,
+        "mrr_at_3": 0.4666666666666666,
+        "mrr_at_5": 0.4666666666666666,
+        "recall_at_5": 0.4
+      }
+    },
+    "code": {
+      "baseline": {
+        "count": 5,
+        "hit_rate_at_1": 0.4,
+        "hit_rate_at_3": 0.4,
+        "hit_rate_at_5": 0.4,
+        "mrr_at_3": 0.4,
+        "mrr_at_5": 0.4,
+        "recall_at_5": 0.2333333333333333
+      },
+      "filtered": {
+        "count": 5,
+        "hit_rate_at_1": 0.4,
+        "hit_rate_at_3": 0.4,
+        "hit_rate_at_5": 0.4,
+        "mrr_at_3": 0.4,
+        "mrr_at_5": 0.4,
+        "recall_at_5": 0.2333333333333333
+      },
+      "hybrid": {
+        "count": 5,
+        "hit_rate_at_1": 0.2,
+        "hit_rate_at_3": 0.4,
+        "hit_rate_at_5": 0.4,
+        "mrr_at_3": 0.3,
+        "mrr_at_5": 0.3,
+        "recall_at_5": 0.3
+      }
+    },
+    "api": {
+      "baseline": {
+        "count": 5,
+        "hit_rate_at_1": 0.8,
+        "hit_rate_at_3": 1.0,
+        "hit_rate_at_5": 1.0,
+        "mrr_at_3": 0.9,
+        "mrr_at_5": 0.9,
+        "recall_at_5": 1.0
+      },
+      "filtered": {
+        "count": 5,
+        "hit_rate_at_1": 0.8,
+        "hit_rate_at_3": 1.0,
+        "hit_rate_at_5": 1.0,
+        "mrr_at_3": 0.9,
+        "mrr_at_5": 0.9,
+        "recall_at_5": 1.0
+      },
+      "hybrid": {
+        "count": 5,
+        "hit_rate_at_1": 0.6,
+        "hit_rate_at_3": 1.0,
+        "hit_rate_at_5": 1.0,
+        "mrr_at_3": 0.7666666666666667,
+        "mrr_at_5": 0.7666666666666667,
+        "recall_at_5": 0.9
+      }
+    },
+    "hybrid": {
+      "baseline": {
+        "count": 5,
+        "hit_rate_at_1": 0.2,
+        "hit_rate_at_3": 0.2,
+        "hit_rate_at_5": 0.4,
+        "mrr_at_3": 0.2,
+        "mrr_at_5": 0.24,
+        "recall_at_5": 0.4
+      },
+      "filtered": {
+        "count": 5,
+        "hit_rate_at_1": 0.2,
+        "hit_rate_at_3": 0.2,
+        "hit_rate_at_5": 0.4,
+        "mrr_at_3": 0.2,
+        "mrr_at_5": 0.24,
+        "recall_at_5": 0.4
+      },
+      "hybrid": {
+        "count": 5,
+        "hit_rate_at_1": 0.2,
+        "hit_rate_at_3": 0.2,
+        "hit_rate_at_5": 0.2,
+        "mrr_at_3": 0.2,
+        "mrr_at_5": 0.2,
+        "recall_at_5": 0.2
+      }
+    }
+  },
+  "detailed_results": {
+    "baseline_unfiltered": [
+      {
+        "id": "EVAL_01",
+        "ref_id": "Q01",
+        "category": "theory",
+        "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_04_PEP8_Clean_Code_Specification_c2459",
+          "PY_04_PEP8_Clean_Code_Specification_c2469",
+          "PY_04_PEP8_Clean_Code_Specification_c2470",
+          "PY_04_PEP8_Clean_Code_Specification_c2460"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_04_PEP8_Clean_Code_Specification_c2470",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.23604989051818848
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4421",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.34326767921447754
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_04_PEP8_Clean_Code_Specification_c2469",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.2558858394622803
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3463",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.3702006936073303
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3319",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.30061274766921997
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_02",
+        "ref_id": "Q02",
+        "category": "theory",
+        "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.232285737991333
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3729",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3934004306793213
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3759",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.24429893493652344
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3721",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.40248072147369385
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2529963254928589
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_03",
+        "ref_id": "Q04",
+        "category": "theory",
+        "query": "Sự khác biệt giữa mutable và immutable object trong mô hình dữ liệu Python?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_08_Official_Data_Model_and_Magic_Methods_c2981"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2981",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.23788350820541382
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2992",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.4211244583129883
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2993",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.32042521238327026
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3199",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.45716995000839233
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2064",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.34909623861312866
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_04",
+        "ref_id": "Q05",
+        "category": "theory",
+        "query": "Độ phức tạp Big-O trường hợp xấu nhất của thuật toán QuickSort là bao nhiêu?",
+        "target_language": "general",
+        "ground_truth": [
+          "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1440",
+          "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.31736546754837036
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4547",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5408256649971008
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1725",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.40873515605926514
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3881",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.559154748916626
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_03_Debugging_and_Common_Errors_c2423",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.42094868421554565
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_05",
+        "ref_id": "Q06",
+        "category": "theory",
+        "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.3308400511741638
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4434",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.4680566191673279
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.3820776343345642
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3716",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.49739694595336914
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5014",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.39972740411758423
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_06",
+        "ref_id": "Q10",
+        "category": "code",
+        "query": "Viết hàm QuickSort đệ quy phân hoạch mảng trong Python",
+        "target_language": "general",
+        "ground_truth": [
+          "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1441"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_10_Python_Nen_Tang_Va_Thuc_Hanh_Co_Ban_c5096",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.421877384185791
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2911",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5803226232528687
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2885",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.45478910207748413
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4547",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.5828037261962891
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2904",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.456787109375
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_07",
+        "ref_id": "Q11",
+        "category": "code",
+        "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1850"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2062",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.22208940982818604
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3517",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.44910717010498047
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_01_Official_Tutorial_c1880",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.25310420989990234
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c1879",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.49784958362579346
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3777",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2714998722076416
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_08",
+        "ref_id": "Q12",
+        "category": "code",
+        "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1859"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_03_Debugging_and_Common_Errors_c2268",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.20859301090240479
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4426",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5142247676849365
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_01_Official_Tutorial_c1892",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.3643791675567627
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c4351",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.5456832647323608
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_03_Debugging_and_Common_Errors_c2194",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.36637163162231445
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_09",
+        "ref_id": "Q16",
+        "category": "code",
+        "query": "Mã nguồn triển khai ngăn xếp (Stack) hoặc hàng đợi (Queue) bằng collections.deque",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_06_Official_Collections_and_Data_Structures_c2861",
+          "PY_06_Official_Collections_and_Data_Structures_c2862",
+          "PY_01_Official_Tutorial_c1877"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2861",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.19407957792282104
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2863",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.42340922355651855
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2862",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.24447065591812134
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c2026",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.5370795130729675
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2864",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2851749062538147
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.6666666666666666,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_10",
+        "ref_id": "Q17",
+        "category": "code",
+        "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1926",
+          "PY_01_Official_Tutorial_c1914"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_01_Official_Tutorial_c1926",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.26981067657470703
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4443",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.39684945344924927
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.35730570554733276
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c1839",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.45901596546173096
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3030",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.35958337783813477
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_11",
+        "ref_id": "Q19",
+        "category": "api",
+        "query": "Hàm any() trong Python hoạt động như thế nào và cú pháp gọi với generator expression?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_05_Official_Builtin_Functions_and_Types_c2485"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2485",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.20065808296203613
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3458",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5305153727531433
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2484",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.380453884601593
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3455",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.560600996017456
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2480",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.4573158025741577
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_12",
+        "ref_id": "Q20",
+        "category": "api",
+        "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5081",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.22065997123718262
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3461669683456421
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.25331735610961914
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5082",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.35253822803497314
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5084",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.3387983441352844
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.5,
+        "mrr_at_5": 0.5,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 2
+      },
+      {
+        "id": "EVAL_13",
+        "ref_id": "Q21",
+        "category": "api",
+        "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.289869487285614
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.4236924648284912
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5039",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.4226008653640747
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_11_Python_Huong_Dan_Thuc_Hanh_Va_Bai_Tap_Lab01_c5107",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.5125488638877869
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_01_Official_Tutorial_c1917",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.42869359254837036
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_14",
+        "ref_id": "Q22",
+        "category": "api",
+        "query": "Cách sử dụng collections.defaultdict để tránh lỗi KeyError khi đếm tần suất phần tử?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_06_Official_Collections_and_Data_Structures_c2865"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2865",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.18380415439605713
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2810",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.43648606538772583
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2866",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.19409525394439697
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2811",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.49163055419921875
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2867",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.20751041173934937
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_15",
+        "ref_id": "Q27",
+        "category": "api",
+        "query": "Cú pháp sử dụng Union và Optional trong mô-đun typing của Python?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_09_Official_Type_Hints_and_Typing_System_c3192",
+          "PY_09_Official_Type_Hints_and_Typing_System_c3191"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3192",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.2804955840110779
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3191",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3944011330604553
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2828",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.29629409313201904
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2830",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.41857224702835083
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2829",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.30062437057495117
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_16",
+        "ref_id": "Q28",
+        "category": "hybrid",
+        "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.17111051082611084
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3694",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3065708875656128
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.27674758434295654
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5163",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.4469454288482666
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5022",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.28183406591415405
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_17",
+        "ref_id": "Q29",
+        "category": "hybrid",
+        "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2562",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.19800537824630737
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3716",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.32518619298934937
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.23168760538101196
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2563",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.3325561285018921
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5030",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2761746048927307
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_18",
+        "ref_id": "Q30",
+        "category": "hybrid",
+        "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1924"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.25188571214675903
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4445",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3579237461090088
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.26102322340011597
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2544",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.6269558072090149
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3521",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.28373438119888306
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_19",
+        "ref_id": "Q33",
+        "category": "hybrid",
+        "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2821",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.23611092567443848
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2854",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5990338325500488
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2820",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.2881113886833191
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2508",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.6733179688453674
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.29150640964508057
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": true,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.2,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 5
+      },
+      {
+        "id": "EVAL_20",
+        "ref_id": "Q36",
+        "category": "hybrid",
+        "query": "Quy tắc escape ký tự và xử lý đa dòng trong Python Strings khi sử dụng raw string hoặc triple quotes?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1846"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_01_Official_Tutorial_c1846",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.28551000356674194
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_01_Official_Tutorial_c1839",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.45612090826034546
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4610",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.3393934369087219
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c1840",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.47795069217681885
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4420",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.36866700649261475
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      }
+    ],
+    "metadata_filtered": [
+      {
+        "id": "EVAL_01",
+        "ref_id": "Q01",
+        "category": "theory",
+        "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_04_PEP8_Clean_Code_Specification_c2459",
+          "PY_04_PEP8_Clean_Code_Specification_c2469",
+          "PY_04_PEP8_Clean_Code_Specification_c2470",
+          "PY_04_PEP8_Clean_Code_Specification_c2460"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_04_PEP8_Clean_Code_Specification_c2470",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.23604989051818848
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4421",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.34326767921447754
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_04_PEP8_Clean_Code_Specification_c2469",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.2558858394622803
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3463",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.3702006936073303
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3319",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.30061274766921997
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_02",
+        "ref_id": "Q02",
+        "category": "theory",
+        "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.232285737991333
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3729",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3934004306793213
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3759",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.24429893493652344
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3721",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.40248072147369385
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2529963254928589
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_03",
+        "ref_id": "Q04",
+        "category": "theory",
+        "query": "Sự khác biệt giữa mutable và immutable object trong mô hình dữ liệu Python?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_08_Official_Data_Model_and_Magic_Methods_c2981"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2981",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.23788350820541382
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2992",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.4211244583129883
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2993",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.32042521238327026
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3199",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.45716995000839233
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2064",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.34909623861312866
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_04",
+        "ref_id": "Q05",
+        "category": "theory",
+        "query": "Độ phức tạp Big-O trường hợp xấu nhất của thuật toán QuickSort là bao nhiêu?",
+        "target_language": "general",
+        "ground_truth": [
+          "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1440",
+          "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.31736546754837036
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1725",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.40873515605926514
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1004",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.4255080819129944
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1009",
+            "score": 0.015625,
+            "details": {
+              "qwen_rank": 4,
+              "qwen_dist": 0.47395390272140503
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1005",
+            "score": 0.015384615384615385,
+            "details": {
+              "qwen_rank": 5,
+              "qwen_dist": 0.47399991750717163
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_05",
+        "ref_id": "Q06",
+        "category": "theory",
+        "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.3308400511741638
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4434",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.4680566191673279
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.3820776343345642
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3716",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.49739694595336914
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5014",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.39972740411758423
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_06",
+        "ref_id": "Q10",
+        "category": "code",
+        "query": "Viết hàm QuickSort đệ quy phân hoạch mảng trong Python",
+        "target_language": "general",
+        "ground_truth": [
+          "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1441"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1658",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.540560781955719
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1700",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.548897385597229
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1684",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.5597760677337646
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1659",
+            "score": 0.015625,
+            "details": {
+              "qwen_rank": 4,
+              "qwen_dist": 0.5693840980529785
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0009",
+            "score": 0.015384615384615385,
+            "details": {
+              "qwen_rank": 5,
+              "qwen_dist": 0.5701596736907959
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_07",
+        "ref_id": "Q11",
+        "category": "code",
+        "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1850"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2062",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.22208940982818604
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3517",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.44910717010498047
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_01_Official_Tutorial_c1880",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.25310420989990234
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c1879",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.49784958362579346
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3777",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2714998722076416
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_08",
+        "ref_id": "Q12",
+        "category": "code",
+        "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1859"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_03_Debugging_and_Common_Errors_c2268",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.20859301090240479
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4426",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5142247676849365
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_01_Official_Tutorial_c1892",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.3643791675567627
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c4351",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.5456832647323608
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_03_Debugging_and_Common_Errors_c2194",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.36637163162231445
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_09",
+        "ref_id": "Q16",
+        "category": "code",
+        "query": "Mã nguồn triển khai ngăn xếp (Stack) hoặc hàng đợi (Queue) bằng collections.deque",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_06_Official_Collections_and_Data_Structures_c2861",
+          "PY_06_Official_Collections_and_Data_Structures_c2862",
+          "PY_01_Official_Tutorial_c1877"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2861",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.19407957792282104
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2863",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.42340922355651855
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2862",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.24447065591812134
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c2026",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.5370795130729675
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2864",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2851749062538147
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.6666666666666666,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_10",
+        "ref_id": "Q17",
+        "category": "code",
+        "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1926",
+          "PY_01_Official_Tutorial_c1914"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_01_Official_Tutorial_c1926",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.26981067657470703
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4443",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.39684945344924927
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.35730570554733276
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c1839",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.45901596546173096
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3030",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.35958337783813477
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_11",
+        "ref_id": "Q19",
+        "category": "api",
+        "query": "Hàm any() trong Python hoạt động như thế nào và cú pháp gọi với generator expression?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_05_Official_Builtin_Functions_and_Types_c2485"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2485",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.20065808296203613
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3458",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5305153727531433
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2484",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.380453884601593
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3455",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.560600996017456
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2480",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.4573158025741577
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_12",
+        "ref_id": "Q20",
+        "category": "api",
+        "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5081",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.22065997123718262
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3461669683456421
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.25331735610961914
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5082",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.35253822803497314
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5084",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.3387983441352844
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.5,
+        "mrr_at_5": 0.5,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 2
+      },
+      {
+        "id": "EVAL_13",
+        "ref_id": "Q21",
+        "category": "api",
+        "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.289869487285614
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.4236924648284912
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5039",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.4226008653640747
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_11_Python_Huong_Dan_Thuc_Hanh_Va_Bai_Tap_Lab01_c5107",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.5125488638877869
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_01_Official_Tutorial_c1917",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.42869359254837036
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_14",
+        "ref_id": "Q22",
+        "category": "api",
+        "query": "Cách sử dụng collections.defaultdict để tránh lỗi KeyError khi đếm tần suất phần tử?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_06_Official_Collections_and_Data_Structures_c2865"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2865",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.18380415439605713
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2810",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.43648606538772583
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2866",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.19409525394439697
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2811",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.49163055419921875
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2867",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.20751041173934937
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_15",
+        "ref_id": "Q27",
+        "category": "api",
+        "query": "Cú pháp sử dụng Union và Optional trong mô-đun typing của Python?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_09_Official_Type_Hints_and_Typing_System_c3192",
+          "PY_09_Official_Type_Hints_and_Typing_System_c3191"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3192",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.2804955840110779
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3191",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3944011330604553
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2828",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.29629409313201904
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2830",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.41857224702835083
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2829",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.30062437057495117
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_16",
+        "ref_id": "Q28",
+        "category": "hybrid",
+        "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.17111051082611084
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3694",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3065708875656128
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.27674758434295654
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5163",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.4469454288482666
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5022",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.28183406591415405
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_17",
+        "ref_id": "Q29",
+        "category": "hybrid",
+        "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2562",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.19800537824630737
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3716",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.32518619298934937
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.23168760538101196
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2563",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.3325561285018921
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5030",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.2761746048927307
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_18",
+        "ref_id": "Q30",
+        "category": "hybrid",
+        "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1924"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.25188571214675903
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4445",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.3579237461090088
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.26102322340011597
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2544",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.6269558072090149
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3521",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.28373438119888306
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_19",
+        "ref_id": "Q33",
+        "category": "hybrid",
+        "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2821",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.23611092567443848
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2854",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.5990338325500488
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2820",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.2881113886833191
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2508",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.6733179688453674
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.29150640964508057
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": true,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.2,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 5
+      },
+      {
+        "id": "EVAL_20",
+        "ref_id": "Q36",
+        "category": "hybrid",
+        "query": "Quy tắc escape ký tự và xử lý đa dòng trong Python Strings khi sử dụng raw string hoặc triple quotes?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1846"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_01_Official_Tutorial_c1846",
+            "score": 0.01639344262295082,
+            "details": {
+              "qwen_rank": 1,
+              "qwen_dist": 0.28551000356674194
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_01_Official_Tutorial_c1839",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.45612090826034546
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4610",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.3393934369087219
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_01_Official_Tutorial_c1840",
+            "score": 0.016129032258064516,
+            "details": {
+              "jina_rank": 2,
+              "jina_dist": 0.47795069217681885
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4420",
+            "score": 0.015873015873015872,
+            "details": {
+              "qwen_rank": 3,
+              "qwen_dist": 0.36866700649261475
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      }
+    ],
+    "hybrid_rerank": [
+      {
+        "id": "EVAL_01",
+        "ref_id": "Q01",
+        "category": "theory",
+        "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_04_PEP8_Clean_Code_Specification_c2459",
+          "PY_04_PEP8_Clean_Code_Specification_c2469",
+          "PY_04_PEP8_Clean_Code_Specification_c2470",
+          "PY_04_PEP8_Clean_Code_Specification_c2460"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3319",
+            "score": 1.039372853617526,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.30061274766921997,
+              "kw_score": 16.0,
+              "combined": 1.039372853617526
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3320",
+            "score": 0.9832184884728693,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3636261224746704,
+              "kw_score": 17.0,
+              "combined": 0.9832184884728693
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_04_PEP8_Clean_Code_Specification_c2470",
+            "score": 0.9789612457891781,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.23604989051818848,
+              "kw_score": 5.0,
+              "combined": 0.9789612457891781
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_04_PEP8_Clean_Code_Specification_c2469",
+            "score": 0.9591252968450863,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2558858394622803,
+              "kw_score": 5.0,
+              "combined": 0.9591252968450863
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c4407",
+            "score": 0.9380665528493062,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.386899471282959,
+              "kw_score": 14.0,
+              "combined": 0.9380665528493062
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.3333333333333333,
+        "mrr_at_5": 0.3333333333333333,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 3
+      },
+      {
+        "id": "EVAL_02",
+        "ref_id": "Q02",
+        "category": "theory",
+        "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
+            "score": 1.1717897616070438,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.232285737991333,
+              "kw_score": 28.0,
+              "combined": 1.1717897616070438
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3676",
+            "score": 1.142031656246999,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2661120295524597,
+              "kw_score": 29.0,
+              "combined": 1.142031656246999
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
+            "score": 1.1232629804186391,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2529963254928589,
+              "kw_score": 22.0,
+              "combined": 1.1232629804186391
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3674",
+            "score": 1.1015680300477761,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2982965111732483,
+              "kw_score": 27.0,
+              "combined": 1.1015680300477761
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3759",
+            "score": 1.0884117117322503,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.24429893493652344,
+              "kw_score": 15.0,
+              "combined": 1.0884117117322503
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_03",
+        "ref_id": "Q04",
+        "category": "theory",
+        "query": "Sự khác biệt giữa mutable và immutable object trong mô hình dữ liệu Python?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_08_Official_Data_Model_and_Magic_Methods_c2981"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2981",
+            "score": 1.0498639245303907,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.23788350820541382,
+              "kw_score": 10.0,
+              "combined": 1.0498639245303907
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c2993",
+            "score": 0.9673222203525342,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.32042521238327026,
+              "kw_score": 10.0,
+              "combined": 0.9673222203525342
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2064",
+            "score": 0.9490925593614314,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.34909623861312866,
+              "kw_score": 11.0,
+              "combined": 0.9490925593614314
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2625",
+            "score": 0.9370424856329326,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.37964439392089844,
+              "kw_score": 13.0,
+              "combined": 0.9370424856329326
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_05_Giao_Trinh_Python_Tu_Co_Ban_Den_Machine_Learning_c4707",
+            "score": 0.8996830504940518,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4403025507926941,
+              "kw_score": 16.0,
+              "combined": 0.8996830504940518
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_04",
+        "ref_id": "Q05",
+        "category": "theory",
+        "query": "Độ phức tạp Big-O trường hợp xấu nhất của thuật toán QuickSort là bao nhiêu?",
+        "target_language": "general",
+        "ground_truth": [
+          "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1440",
+          "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722",
+            "score": 0.8976456687589962,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.31736546754837036,
+              "kw_score": 5.0,
+              "combined": 0.8976456687589962
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1004",
+            "score": 0.8508021292462911,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4255080819129944,
+              "kw_score": 9.0,
+              "combined": 0.8508021292462911
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1002",
+            "score": 0.7937008199468221,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4826093912124634,
+              "kw_score": 9.0,
+              "combined": 0.7937008199468221
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1048",
+            "score": 0.7932257709279622,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.48308444023132324,
+              "kw_score": 9.0,
+              "combined": 0.7932257709279622
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1005",
+            "score": 0.7896670317731747,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.47399991750717163,
+              "kw_score": 8.0,
+              "combined": 0.7896670317731747
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_05",
+        "ref_id": "Q06",
+        "category": "theory",
+        "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
+            "score": 1.0091455501125821,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3308400511741638,
+              "kw_score": 16.0,
+              "combined": 1.0091455501125821
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
+            "score": 0.9647669766129755,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3820776343345642,
+              "kw_score": 17.0,
+              "combined": 0.9647669766129755
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3705",
+            "score": 0.8981975240945552,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3999912738800049,
+              "kw_score": 11.0,
+              "combined": 0.8981975240945552
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2078",
+            "score": 0.8856403643959979,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.47384750843048096,
+              "kw_score": 19.0,
+              "combined": 0.8856403643959979
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5014",
+            "score": 0.8765828070417012,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.39972740411758423,
+              "kw_score": 9.0,
+              "combined": 0.8765828070417012
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_06",
+        "ref_id": "Q10",
+        "category": "code",
+        "query": "Viết hàm QuickSort đệ quy phân hoạch mảng trong Python",
+        "target_language": "general",
+        "ground_truth": [
+          "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1441"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0009",
+            "score": 0.6229728758012961,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.5701596736907959,
+              "kw_score": 4.0,
+              "combined": 0.6229728758012961
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1684",
+            "score": 0.6065792556006222,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.5597760677337646,
+              "kw_score": 3.0,
+              "combined": 0.6065792556006222
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1681",
+            "score": 0.5880201573569088,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.578335165977478,
+              "kw_score": 3.0,
+              "combined": 0.5880201573569088
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1700",
+            "score": 0.5829360890429441,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.548897385597229,
+              "kw_score": 2.0,
+              "combined": 0.5829360890429441
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1688",
+            "score": 0.5796261131441306,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.6135064363479614,
+              "kw_score": 4.0,
+              "combined": 0.5796261131441306
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_07",
+        "ref_id": "Q11",
+        "category": "code",
+        "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1850"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2062",
+            "score": 1.0415775394521603,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.22208940982818604,
+              "kw_score": 8.0,
+              "combined": 1.0415775394521603
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_01_Official_Tutorial_c1880",
+            "score": 1.0346432228359022,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.25310420989990234,
+              "kw_score": 10.0,
+              "combined": 1.0346432228359022
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3777",
+            "score": 1.0266889257669185,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2714998722076416,
+              "kw_score": 11.0,
+              "combined": 1.0266889257669185
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3632",
+            "score": 1.0110109703910046,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3599141240119934,
+              "kw_score": 21.0,
+              "combined": 1.0110109703910046
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3630",
+            "score": 1.0020743241704522,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.33063632249832153,
+              "kw_score": 15.0,
+              "combined": 1.0020743241704522
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_08",
+        "ref_id": "Q12",
+        "category": "code",
+        "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1859"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_03_Debugging_and_Common_Errors_c2268",
+            "score": 0.9577623124319821,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.20859301090240479,
+              "kw_score": 3.0,
+              "combined": 0.9577623124319821
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3666",
+            "score": 0.9100734698491231,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4148925542831421,
+              "kw_score": 14.0,
+              "combined": 0.9100734698491231
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4602",
+            "score": 0.9066454401410637,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.42606520652770996,
+              "kw_score": 15.0,
+              "combined": 0.9066454401410637
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4603",
+            "score": 0.8543452677503194,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.42196494340896606,
+              "kw_score": 9.0,
+              "combined": 0.8543452677503194
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_01_Official_Tutorial_c1892",
+            "score": 0.8287533819353293,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3643791675567627,
+              "kw_score": 4.0,
+              "combined": 0.8287533819353293
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_09",
+        "ref_id": "Q16",
+        "category": "code",
+        "query": "Mã nguồn triển khai ngăn xếp (Stack) hoặc hàng đợi (Queue) bằng collections.deque",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_06_Official_Collections_and_Data_Structures_c2861",
+          "PY_06_Official_Collections_and_Data_Structures_c2862",
+          "PY_01_Official_Tutorial_c1877"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2861",
+            "score": 1.0695873713575252,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.19407957792282104,
+              "kw_score": 8.0,
+              "combined": 1.0695873713575252
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2862",
+            "score": 1.019196293362225,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.24447065591812134,
+              "kw_score": 8.0,
+              "combined": 1.019196293362225
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2060",
+            "score": 1.0155699956135884,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.30939602851867676,
+              "kw_score": 14.0,
+              "combined": 1.0155699956135884
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2864",
+            "score": 0.9911353049054707,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2851749062538147,
+              "kw_score": 9.0,
+              "combined": 0.9911353049054707
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_01_Official_Tutorial_c1877",
+            "score": 0.9531890806928243,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3231211304664612,
+              "kw_score": 9.0,
+              "combined": 0.9531890806928243
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_10",
+        "ref_id": "Q17",
+        "category": "code",
+        "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1926",
+          "PY_01_Official_Tutorial_c1914"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404",
+            "score": 0.9593811740064982,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.35730570554733276,
+              "kw_score": 13.0,
+              "combined": 0.9593811740064982
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_01_Official_Tutorial_c1926",
+            "score": 0.8965446467596798,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.26981067657470703,
+              "kw_score": 3.0,
+              "combined": 0.8965446467596798
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3405",
+            "score": 0.8852102060588636,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4025372266769409,
+              "kw_score": 10.0,
+              "combined": 0.8852102060588636
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5167",
+            "score": 0.8459965205274471,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.41767042875289917,
+              "kw_score": 8.0,
+              "combined": 0.8459965205274471
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2540",
+            "score": 0.832948493271844,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.41658449172973633,
+              "kw_score": 7.0,
+              "combined": 0.832948493271844
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.5,
+        "mrr_at_5": 0.5,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 2
+      },
+      {
+        "id": "EVAL_11",
+        "ref_id": "Q19",
+        "category": "api",
+        "query": "Hàm any() trong Python hoạt động như thế nào và cú pháp gọi với generator expression?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_05_Official_Builtin_Functions_and_Types_c2485"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2485",
+            "score": 1.1160287965917948,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.20065808296203613,
+              "kw_score": 13.0,
+              "combined": 1.1160287965917948
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2484",
+            "score": 0.9072935481342115,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.380453884601593,
+              "kw_score": 10.0,
+              "combined": 0.9072935481342115
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4527",
+            "score": 0.8444080922784113,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.5024365186691284,
+              "kw_score": 17.0,
+              "combined": 0.8444080922784113
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2480",
+            "score": 0.8408729954004024,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4573158025741577,
+              "kw_score": 11.0,
+              "combined": 0.8408729954004024
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2509",
+            "score": 0.7978645043315415,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.5099294185638428,
+              "kw_score": 12.0,
+              "combined": 0.7978645043315415
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_12",
+        "ref_id": "Q20",
+        "category": "api",
+        "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5081",
+            "score": 1.0430069780431637,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.22065997123718262,
+              "kw_score": 8.0,
+              "combined": 1.0430069780431637
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+            "score": 0.9398151933824729,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.25331735610961914,
+              "kw_score": 4.0,
+              "combined": 0.9398151933824729
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+            "score": 0.9301432428136434,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.3461669683456421,
+              "kw_score": 9.0,
+              "combined": 0.9301432428136434
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5084",
+            "score": 0.8947108737513532,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3387983441352844,
+              "kw_score": 6.0,
+              "combined": 0.8947108737513532
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5198",
+            "score": 0.8374848835764094,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4120481014251709,
+              "kw_score": 7.0,
+              "combined": 0.8374848835764094
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.5,
+        "mrr_at_5": 0.5,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 2
+      },
+      {
+        "id": "EVAL_13",
+        "ref_id": "Q21",
+        "category": "api",
+        "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
+            "score": 0.9436397306010236,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.289869487285614,
+              "kw_score": 6.0,
+              "combined": 0.9436397306010236
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_01_Official_Tutorial_c1917",
+            "score": 0.879100330347014,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.42869359254837036,
+              "kw_score": 12.0,
+              "combined": 0.879100330347014
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+            "score": 0.8399744844518551,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.4236924648284912,
+              "kw_score": 8.0,
+              "combined": 0.8399744844518551
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5184",
+            "score": 0.8227712130628475,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4408957362174988,
+              "kw_score": 8.0,
+              "combined": 0.8227712130628475
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5186",
+            "score": 0.8127779834566279,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4367550015449524,
+              "kw_score": 7.0,
+              "combined": 0.8127779834566279
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_14",
+        "ref_id": "Q22",
+        "category": "api",
+        "query": "Cách sử dụng collections.defaultdict để tránh lỗi KeyError khi đếm tần suất phần tử?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_06_Official_Collections_and_Data_Structures_c2865"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2865",
+            "score": 0.948029320244116,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.18380415439605713,
+              "kw_score": 2.0,
+              "combined": 0.948029320244116
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2866",
+            "score": 0.9377382206957762,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.19409525394439697,
+              "kw_score": 2.0,
+              "combined": 0.9377382206957762
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4631",
+            "score": 0.8960920494602689,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.44389355182647705,
+              "kw_score": 16.0,
+              "combined": 0.8960920494602689
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3553",
+            "score": 0.876467220330212,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.42172157764434814,
+              "kw_score": 11.0,
+              "combined": 0.876467220330212
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3274",
+            "score": 0.8626801073229026,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.33045244216918945,
+              "kw_score": 4.0,
+              "combined": 0.8626801073229026
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      },
+      {
+        "id": "EVAL_15",
+        "ref_id": "Q27",
+        "category": "api",
+        "query": "Cú pháp sử dụng Union và Optional trong mô-đun typing của Python?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_09_Official_Type_Hints_and_Typing_System_c3192",
+          "PY_09_Official_Type_Hints_and_Typing_System_c3191"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2829",
+            "score": 0.9489086144266291,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.30062437057495117,
+              "kw_score": 7.0,
+              "combined": 0.9489086144266291
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2828",
+            "score": 0.9372151247546185,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.29629409313201904,
+              "kw_score": 6.0,
+              "combined": 0.9372151247546185
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3192",
+            "score": 0.9345155522962887,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2804955840110779,
+              "kw_score": 5.0,
+              "combined": 0.9345155522962887
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2831",
+            "score": 0.8540388695284833,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3794703483581543,
+              "kw_score": 6.0,
+              "combined": 0.8540388695284833
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2830",
+            "score": 0.8450947022519955,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.41857224702835083,
+              "kw_score": 8.0,
+              "combined": 0.8450947022519955
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.3333333333333333,
+        "mrr_at_5": 0.3333333333333333,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 3
+      },
+      {
+        "id": "EVAL_16",
+        "ref_id": "Q28",
+        "category": "hybrid",
+        "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
+            "score": 1.2243899130944087,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.17111051082611084,
+              "kw_score": 26.0,
+              "combined": 1.2243899130944087
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5022",
+            "score": 1.0776538069123247,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.28183406591415405,
+              "kw_score": 19.0,
+              "combined": 1.0776538069123247
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_05_Giao_Trinh_Python_Tu_Co_Ban_Den_Machine_Learning_c4717",
+            "score": 1.071892963391164,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3362507224082947,
+              "kw_score": 29.0,
+              "combined": 1.071892963391164
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3051",
+            "score": 1.0695260325994425,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.29581665992736816,
+              "kw_score": 20.0,
+              "combined": 1.0695260325994425
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3694",
+            "score": 1.0643542068373852,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.3065708875656128,
+              "kw_score": 21.0,
+              "combined": 1.0643542068373852
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_17",
+        "ref_id": "Q29",
+        "category": "hybrid",
+        "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
+        "target_language": "python",
+        "ground_truth": [
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2562",
+            "score": 1.109788544649077,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.19800537824630737,
+              "kw_score": 12.0,
+              "combined": 1.109788544649077
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720",
+            "score": 1.0560598273547925,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.23168760538101196,
+              "kw_score": 10.0,
+              "combined": 1.0560598273547925
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5030",
+            "score": 1.0405122746611002,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2761746048927307,
+              "kw_score": 13.0,
+              "combined": 1.0405122746611002
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3717",
+            "score": 1.005162067884398,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.30263185501098633,
+              "kw_score": 12.0,
+              "combined": 1.005162067884398
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2080",
+            "score": 0.9846045451106553,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.323189377784729,
+              "kw_score": 12.0,
+              "combined": 0.9846045451106553
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_18",
+        "ref_id": "Q30",
+        "category": "hybrid",
+        "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1924"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519",
+            "score": 1.0808249345220147,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.25188571214675903,
+              "kw_score": 15.0,
+              "combined": 1.0808249345220147
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531",
+            "score": 1.0639428007321492,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.26102322340011597,
+              "kw_score": 14.0,
+              "combined": 1.0639428007321492
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3521",
+            "score": 1.014454416775677,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.28373438119888306,
+              "kw_score": 11.0,
+              "combined": 1.014454416775677
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3520",
+            "score": 0.9651585297526841,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3426353931427002,
+              "kw_score": 12.0,
+              "combined": 0.9651585297526841
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3527",
+            "score": 0.9392973704576228,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.35889142751693726,
+              "kw_score": 11.0,
+              "combined": 0.9392973704576228
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_19",
+        "ref_id": "Q33",
+        "category": "hybrid",
+        "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2821",
+            "score": 1.040199285484847,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.23611092567443848,
+              "kw_score": 9.0,
+              "combined": 1.040199285484847
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2822",
+            "score": 1.0004929380359178,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.30730098485946655,
+              "kw_score": 12.0,
+              "combined": 1.0004929380359178
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3306",
+            "score": 0.9971406979799007,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3010480999946594,
+              "kw_score": 11.0,
+              "combined": 0.9971406979799007
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2820",
+            "score": 0.9614215963182612,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.2881113886833191,
+              "kw_score": 7.0,
+              "combined": 0.9614215963182612
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3117",
+            "score": 0.9434163785062679,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.32025057077407837,
+              "kw_score": 8.0,
+              "combined": 0.9434163785062679
+            }
+          }
+        ],
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
+      },
+      {
+        "id": "EVAL_20",
+        "ref_id": "Q36",
+        "category": "hybrid",
+        "query": "Quy tắc escape ký tự và xử lý đa dòng trong Python Strings khi sử dụng raw string hoặc triple quotes?",
+        "target_language": "python",
+        "ground_truth": [
+          "PY_01_Official_Tutorial_c1846"
+        ],
+        "retrieved_top5": [
+          {
+            "rank": 1,
+            "chunk_id": "PY_01_Official_Tutorial_c1846",
+            "score": 1.0222839193286424,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.28551000356674194,
+              "kw_score": 12.0,
+              "combined": 1.0222839193286424
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2656",
+            "score": 0.8974037246646409,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.4103901982307434,
+              "kw_score": 12.0,
+              "combined": 0.8974037246646409
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4610",
+            "score": 0.8941157809779157,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.3393934369087219,
+              "kw_score": 6.0,
+              "combined": 0.8941157809779157
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2697",
+            "score": 0.8511512153444453,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.398381769657135,
+              "kw_score": 7.0,
+              "combined": 0.8511512153444453
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4420",
+            "score": 0.8463441298147518,
+            "details": {
+              "source": "qwen3_text",
+              "vec_dist": 0.36866700649261475,
+              "kw_score": 5.0,
+              "combined": 0.8463441298147518
+            }
+          }
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 1
+      }
+    ]
+  }
+}

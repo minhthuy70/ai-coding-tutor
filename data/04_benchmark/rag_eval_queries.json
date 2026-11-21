@@ -1,0 +1,332 @@
+[
+  {
+    "id": "EVAL_01",
+    "ref_benchmark_id": "Q01",
+    "category": "theory",
+    "language": "python",
+    "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
+    "intent": "Kiểm tra quy ước đặt tên biến, hàm theo chuẩn PEP 8 (snake_case, lowercase)",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_04_PEP8_Clean_Code_Specification_c2459",
+      "PY_04_PEP8_Clean_Code_Specification_c2460",
+      "PY_04_PEP8_Clean_Code_Specification_c2469",
+      "PY_04_PEP8_Clean_Code_Specification_c2470"
+    ],
+    "ground_truth_source": "PY_04_PEP8_Clean_Code_Specification.md"
+  },
+  {
+    "id": "EVAL_02",
+    "ref_benchmark_id": "Q02",
+    "category": "theory",
+    "language": "python",
+    "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
+    "intent": "Khái niệm nền tảng bao bọc dữ liệu và trừu tượng hóa",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "EVAL_03",
+    "ref_benchmark_id": "Q04",
+    "category": "theory",
+    "language": "python",
+    "query": "Sự khác biệt giữa mutable và immutable object trong mô hình dữ liệu Python?",
+    "intent": "Quản lý bộ nhớ và tính bất biến của kiểu dữ liệu",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_08_Official_Data_Model_and_Magic_Methods_c2981"
+    ],
+    "ground_truth_source": "PY_08_Official_Data_Model_and_Magic_Methods.md"
+  },
+  {
+    "id": "EVAL_04",
+    "ref_benchmark_id": "Q05",
+    "category": "theory",
+    "language": "general",
+    "query": "Độ phức tạp Big-O trường hợp xấu nhất của thuật toán QuickSort là bao nhiêu?",
+    "intent": "Phân tích tiệm cận thuật toán sắp xếp QuickSort",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "general"
+    },
+    "ground_truth_chunks": [
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1440",
+      "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722"
+    ],
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+  },
+  {
+    "id": "EVAL_05",
+    "ref_benchmark_id": "Q06",
+    "category": "theory",
+    "language": "python",
+    "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class?",
+    "intent": "Bảo vệ trạng thái đối tượng và phạm vi biến",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "EVAL_06",
+    "ref_benchmark_id": "Q10",
+    "category": "code",
+    "language": "general",
+    "query": "Viết hàm QuickSort đệ quy phân hoạch mảng trong Python",
+    "intent": "Triển khai thuật toán sắp xếp QuickSort đệ quy",
+    "expected_modality": "code",
+    "metadata_filter": {
+      "language": "general"
+    },
+    "ground_truth_chunks": [
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1441"
+    ],
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+  },
+  {
+    "id": "EVAL_07",
+    "ref_benchmark_id": "Q11",
+    "category": "code",
+    "language": "python",
+    "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
+    "intent": "Sử dụng list comprehension biến đổi danh sách",
+    "expected_modality": "code",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1850"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "EVAL_08",
+    "ref_benchmark_id": "Q12",
+    "category": "code",
+    "language": "python",
+    "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
+    "intent": "Kỹ thuật tối ưu hàm đệ quy tránh tính toán lặp lại",
+    "expected_modality": "code",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1859"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "EVAL_09",
+    "ref_benchmark_id": "Q16",
+    "category": "code",
+    "language": "python",
+    "query": "Mã nguồn triển khai ngăn xếp (Stack) hoặc hàng đợi (Queue) bằng collections.deque",
+    "intent": "Cấu trúc dữ liệu ngăn xếp hàng đợi với deque",
+    "expected_modality": "code",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1877",
+      "PY_06_Official_Collections_and_Data_Structures_c2861",
+      "PY_06_Official_Collections_and_Data_Structures_c2862"
+    ],
+    "ground_truth_source": "PY_06_Official_Collections_and_Data_Structures.md"
+  },
+  {
+    "id": "EVAL_10",
+    "ref_benchmark_id": "Q17",
+    "category": "code",
+    "language": "python",
+    "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
+    "intent": "Quản lý tài nguyên an toàn tự động đóng file",
+    "expected_modality": "code",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1914",
+      "PY_01_Official_Tutorial_c1926"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "EVAL_11",
+    "ref_benchmark_id": "Q19",
+    "category": "api",
+    "language": "python",
+    "query": "Hàm any() trong Python hoạt động như thế nào và cú pháp gọi với generator expression?",
+    "intent": "Hàm tích hợp kiểm tra chân trị any()",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_05_Official_Builtin_Functions_and_Types_c2485"
+    ],
+    "ground_truth_source": "PY_05_Official_Builtin_Functions_and_Types.md"
+  },
+  {
+    "id": "EVAL_12",
+    "ref_benchmark_id": "Q20",
+    "category": "api",
+    "language": "python",
+    "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
+    "intent": "Tương tác database sqlite3 chuẩn bị tham số",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+      "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
+    ],
+    "ground_truth_source": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite.md"
+  },
+  {
+    "id": "EVAL_13",
+    "ref_benchmark_id": "Q21",
+    "category": "api",
+    "language": "python",
+    "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
+    "intent": "Xử lý dữ liệu JSON đọc stream và đọc string",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+      "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
+    ],
+    "ground_truth_source": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON.md"
+  },
+  {
+    "id": "EVAL_14",
+    "ref_benchmark_id": "Q22",
+    "category": "api",
+    "language": "python",
+    "query": "Cách sử dụng collections.defaultdict để tránh lỗi KeyError khi đếm tần suất phần tử?",
+    "intent": "Sử dụng cấu trúc defaultdict thiết lập giá trị mặc định",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_06_Official_Collections_and_Data_Structures_c2865"
+    ],
+    "ground_truth_source": "PY_06_Official_Collections_and_Data_Structures.md"
+  },
+  {
+    "id": "EVAL_15",
+    "ref_benchmark_id": "Q27",
+    "category": "api",
+    "language": "python",
+    "query": "Cú pháp sử dụng Union và Optional trong mô-đun typing của Python?",
+    "intent": "Khai báo Type Hint Union và Optional",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_09_Official_Type_Hints_and_Typing_System_c3191",
+      "PY_09_Official_Type_Hints_and_Typing_System_c3192"
+    ],
+    "ground_truth_source": "PY_09_Official_Type_Hints_and_Typing_System.md"
+  },
+  {
+    "id": "EVAL_16",
+    "ref_benchmark_id": "Q28",
+    "category": "hybrid",
+    "language": "python",
+    "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self?",
+    "intent": "Khởi tạo thuộc tính đối tượng qua __init__",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "EVAL_17",
+    "ref_benchmark_id": "Q29",
+    "category": "hybrid",
+    "language": "python",
+    "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
+    "intent": "Kế thừa lớp và gọi hàm khởi tạo lớp cha",
+    "expected_modality": "code",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "EVAL_18",
+    "ref_benchmark_id": "Q30",
+    "category": "hybrid",
+    "language": "python",
+    "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class?",
+    "intent": "Bắt lỗi ngoại lệ và dọn dẹp tài nguyên với finally",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1924"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "EVAL_19",
+    "ref_benchmark_id": "Q33",
+    "category": "hybrid",
+    "language": "python",
+    "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__?",
+    "intent": "Giao thức Context Manager giao dịch an toàn",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
+    ],
+    "ground_truth_source": "PY_08_Official_Data_Model_and_Magic_Methods.md"
+  },
+  {
+    "id": "EVAL_20",
+    "ref_benchmark_id": "Q36",
+    "category": "hybrid",
+    "language": "python",
+    "query": "Quy tắc escape ký tự và xử lý đa dòng trong Python Strings khi sử dụng raw string hoặc triple quotes?",
+    "intent": "Xử lý chuỗi ký tự đặc biệt và chuỗi thô",
+    "expected_modality": "text",
+    "metadata_filter": {
+      "language": "python"
+    },
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1846"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  }
+]
