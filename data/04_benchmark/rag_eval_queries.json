@@ -30,9 +30,11 @@
       "language": "python"
     },
     "ground_truth_chunks": [
-      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677"
     ],
-    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+    "ground_truth_source": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md; VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
   },
   {
     "id": "EVAL_03",
@@ -79,9 +81,11 @@
       "language": "python"
     },
     "ground_truth_chunks": [
-      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704"
     ],
-    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+    "ground_truth_source": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md; VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
   },
   {
     "id": "EVAL_06",
@@ -95,9 +99,10 @@
       "language": "general"
     },
     "ground_truth_chunks": [
-      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1441"
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1441",
+      "VI_PY_10_Python_Nen_Tang_Va_Thuc_Hanh_Co_Ban_c5096"
     ],
-    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md; VI_PY_10_Python_Nen_Tang_Va_Thuc_Hanh_Co_Ban.md"
   },
   {
     "id": "EVAL_07",
@@ -105,15 +110,17 @@
     "category": "code",
     "language": "python",
     "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
-    "intent": "Sử dụng list comprehension biến đổi danh sách",
+    "intent": "Sử dụng list comprehension biến đổi danh sách lồng nhau",
     "expected_modality": "code",
     "metadata_filter": {
       "language": "python"
     },
     "ground_truth_chunks": [
-      "PY_01_Official_Tutorial_c1850"
+      "PY_01_Official_Tutorial_c1850",
+      "PY_01_Official_Tutorial_c1880",
+      "PY_02_DataStructures_and_OOP_Classes_c2062"
     ],
-    "ground_truth_source": "PY_01_Official_Tutorial.md"
+    "ground_truth_source": "PY_01_Official_Tutorial.md; PY_02_DataStructures_and_OOP_Classes.md"
   },
   {
     "id": "EVAL_08",
@@ -121,15 +128,16 @@
     "category": "code",
     "language": "python",
     "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
-    "intent": "Kỹ thuật tối ưu hàm đệ quy tránh tính toán lặp lại",
+    "intent": "Kỹ thuật tối ưu hàm đệ quy tránh tính toán lặp lại bằng memoization",
     "expected_modality": "code",
     "metadata_filter": {
       "language": "python"
     },
     "ground_truth_chunks": [
-      "PY_01_Official_Tutorial_c1859"
+      "PY_01_Official_Tutorial_c1859",
+      "PY_03_Debugging_and_Common_Errors_c2268"
     ],
-    "ground_truth_source": "PY_01_Official_Tutorial.md"
+    "ground_truth_source": "PY_01_Official_Tutorial.md; PY_03_Debugging_and_Common_Errors.md"
   },
   {
     "id": "EVAL_09",
@@ -147,7 +155,7 @@
       "PY_06_Official_Collections_and_Data_Structures_c2861",
       "PY_06_Official_Collections_and_Data_Structures_c2862"
     ],
-    "ground_truth_source": "PY_06_Official_Collections_and_Data_Structures.md"
+    "ground_truth_source": "PY_06_Official_Collections_and_Data_Structures.md; PY_01_Official_Tutorial.md"
   },
   {
     "id": "EVAL_10",
@@ -155,7 +163,7 @@
     "category": "code",
     "language": "python",
     "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
-    "intent": "Quản lý tài nguyên an toàn tự động đóng file",
+    "intent": "Quản lý tài nguyên an toàn tự động đóng file bằng with open",
     "expected_modality": "code",
     "metadata_filter": {
       "language": "python"
@@ -261,9 +269,11 @@
       "language": "python"
     },
     "ground_truth_chunks": [
-      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691"
     ],
-    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+    "ground_truth_source": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md; VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
   },
   {
     "id": "EVAL_17",
@@ -271,15 +281,17 @@
     "category": "hybrid",
     "language": "python",
     "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
-    "intent": "Kế thừa lớp và gọi hàm khởi tạo lớp cha",
+    "intent": "Kế thừa lớp và gọi hàm khởi tạo lớp cha qua super()",
     "expected_modality": "code",
     "metadata_filter": {
       "language": "python"
     },
     "ground_truth_chunks": [
-      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020"
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3715",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720"
     ],
-    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+    "ground_truth_source": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md; VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
   },
   {
     "id": "EVAL_18",
@@ -293,9 +305,11 @@
       "language": "python"
     },
     "ground_truth_chunks": [
-      "PY_01_Official_Tutorial_c1924"
+      "PY_01_Official_Tutorial_c1924",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519",
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531"
     ],
-    "ground_truth_source": "PY_01_Official_Tutorial.md"
+    "ground_truth_source": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md; PY_01_Official_Tutorial.md"
   },
   {
     "id": "EVAL_19",
@@ -309,9 +323,10 @@
       "language": "python"
     },
     "ground_truth_chunks": [
-      "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
+      "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
+      "PY_05_Official_Builtin_Functions_and_Types_c2821"
     ],
-    "ground_truth_source": "PY_08_Official_Data_Model_and_Magic_Methods.md"
+    "ground_truth_source": "PY_08_Official_Data_Model_and_Magic_Methods.md; PY_05_Official_Builtin_Functions_and_Types.md"
   },
   {
     "id": "EVAL_20",
