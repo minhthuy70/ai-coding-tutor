@@ -744,7 +744,9 @@ a = 2
 b = 3
 if a > 1:
     if b > 4:
-python
+```
+
+```python
 a = a + 1
         b = b + 1
 
@@ -974,7 +976,9 @@ Trong cấu trúc này, chúng ta cần một biến số, đặt tên là i, đ
 a = [1, 4, 5, 7]
 N = len(a)
 print("Kich thuoc mang", N)
-python
+```
+
+```python
 for i in range(0,N):
     print(i)
 ```
@@ -1106,7 +1110,9 @@ N = int(input("Nhap kich thuoc mang: "))
 for i in range(0, N):
     temp = int(input("Nhap phan tu thu " + str(i+1)))
     a.append(temp)
-python
+```
+
+```python
 #Tinh tong, tim so chan, le
 tong = chan = le = 0
 for i in range(0,N):
@@ -1193,7 +1199,9 @@ A. 9
 B. 12
 C. 15
 D. 18
-txt
+```
+
+```txt
 Đáp án
 1. C  2. C  3. D  4. C  5. C  6. C  7. C
 ```
@@ -1281,10 +1289,12 @@ Trong ví dụ ở Chương trình 6.3, hàng thứ 3 của mảng a chỉ có 2
 
 Thực ra, nhu cầu nhập mảng nhiều chiều từ bàn phím không nhiều do số lượng phần tử phải nhập là khá nhiều. Đối với chức năng đọc dữ liệu từ mảng nhiều chiều, mà chủ yếu là mảng 2 chiều, chúng ta sẽ đọc dữ liệu lên từ 1 file có sẵn. Tuy nhiên trong hướng dẫn này, chúng tôi cũng gợi ý cho người học những bước xử lý căn bản nhất khi hiện thực việc đọc dữ liệu từ bàn phím cho mảng 2 chiều. Ý tưởng chính ở đây là nhập vào từng hàng (mảng 1 chiều), rồi thêm từng hàng đó vào mảng 2 chiều. Chương trình gợi ý như sau:
 
-```python
+```txt
 a = []
 ROW = int(input("Nhap so Hang"))
-python
+```
+
+```python
 COL = int(input("Nhap so Cot"))
 for i in range (0, ROW):
     temp_row = []
@@ -1329,7 +1339,9 @@ for i in range(0, ROW):
     for j in range(0, COL):
         if a[i][j] % 2 == 0:
             chan = chan + 1
-txt
+```
+
+```python
 9 print("So phan tu chan la: ", chan)
 Chương trình 6.6: Đáp án gọi ý cho bài 2
 ```
@@ -1392,9 +1404,7 @@ for i in range (0, ROW):
 ```
 
 1. Cách nào sau đây dùng để khai báo mắng hai chiều với 2 hàng và 3 cột:
-A. $a = [[1,2,3], [4,5,6]]$
-B. $a = [1,2,3,4,5,6]$
-C. $a = [1,2,3];[4,5,6]$
+A. $a = [[1,2,3], [4,5,6]]$B.$a = [1,2,3,4,5,6]$C.$a = [1,2,3];[4,5,6]$
 
 ```python
 temp = int(input("Phan tu "+str(i)+ "-"+ str(j) +"
@@ -1437,9 +1447,13 @@ print(tong, chan, le, max1, min1)
 ```python
 for i in range (0,2):
     for j in range (0,2):
-txt
+```
+
+```python
 3 print(1)
-txt
+```
+
+```txt
 Lệnh print được thực hiện bao nhiêu lần:
 A. 2
 B. 3
@@ -1467,7 +1481,9 @@ for i in range (0,2):
     for j in range (0,3):
         if a[i][j] % 2 == 0:
             x = x + a[i][j]
-csv
+```
+
+```csv
 Giá trị của biến x là:
 A. 9
 B. 12
@@ -1482,7 +1498,9 @@ for i in range (0,1):
     for j in range (0,2):
         for j in k (0,3):
             x = x + 1
-csv
+```
+
+```csv
 Giá trị của biến x là:
 A. 6
 B. 8
@@ -1717,7 +1735,9 @@ while (i < N):
 #Tim min, max
 max1 = min1 = a[0]
 i = 0
-python
+```
+
+```python
 while (i < N):
     if a[i] < min1:
         min1 = a[i]
@@ -1986,7 +2006,9 @@ for i in file:
         temp = int(j)
         temp_row.append(temp)
     a.append(temp_row)
-lua
+```
+
+```lua
 print(a)
 file.close()
 ```
@@ -2446,7 +2468,9 @@ def maximum(x, y):
     else:
         return y
 print(maximum(2, 3))
-txt
+```
+
+```txt
 A. 2
 B. 3
 C. Cac so bang nhau
@@ -2592,7 +2616,9 @@ a = (1, 2, 3, 4)
 b = 5,6,7,8
 #luu y khi khoi tao tuple
 c = ("Xin chao")  # kieu du lieu cua c la str
-txt
+```
+
+```txt
 6 d = ("Xin chao",) # kieu du lieu cua d moi la tuple
 ```
 
@@ -2871,11 +2897,13 @@ Chương trình 10.21: Đáp án gợi ý bài 2
 
 3. Viết một chương trình xóa các phần tử trùng nhau giữa 2 tập hợp cho trước:
 
-```python
+```txt
 a = {1,2,3,4,5,6,7,8}
 b = {2,4,6,8}
 tp = a.difference(b)
-txt
+```
+
+```python
 4 print(tp)
 ```
 
@@ -3174,7 +3202,9 @@ voice = speech_recognition.Recognizer()
 with  speech_recognition.Microphone() as mic:
     print("I am listeninging...")
     audio = voice.listen(mic)
-python
+```
+
+```python
 try:
     input_text = voice.recognize_google(audio)
 except:
@@ -3241,7 +3271,9 @@ window = tk.Tk()
 
 window.title("Python App")
 window.geometry("300x200")
-javascript
+```
+
+```javascript
 8 window.mainloop()
 ```
 
@@ -3269,7 +3301,9 @@ labelA = tk.Label(text="Nhap so A: ")
 labelA.place(x=5, y=5, width = 80, height = 30)
 
 txtA = tk.Text()
-javascript
+```
+
+```javascript
 txtA.place(x = 80, y =5, width = 100, height = 30)
 window.mainloop()
 ```
@@ -3301,7 +3335,9 @@ labelB.place(x=5, y= 40, width = 80, height = 30)
 
 txtB = tk.Text()
 txtB.place(x = 80, y =40, width = 100, height = 30)
-txt
+```
+
+```txt
 labelKQ = tk.Label(text="Ket Qua: ")
 labelKQ.place(x=5, y= 75, width = 80, height = 30)
 
@@ -3385,7 +3421,9 @@ labelKQ = tk.Label(text="Ket Qua: ")
 labelKQ.place(x=5, y= 75, width = 80, height = 30)
 
 txtKQ = tk.Text()
-txt
+```
+
+```txt
 txtKQ.place(x = 80, y =75, width = 100, height = 30)
 
 button = tk.Button(text = "Tong", command = onClick)

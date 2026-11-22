@@ -4,7 +4,9 @@ root = Tk()
 w = Label(root, text="Hello Tkinter!")
 w.pack()
 root.mainloop()
-python
+```
+
+```python
 from Tkinter import *
 
 root = Tk()
@@ -47,7 +49,9 @@ def helloCallBack():
 B = Tkinter.Button(top, text ="Hello", command = helloCallBack)
 B.pack()
 top.mainloop()
-python
+```
+
+```python
 root = tk.Tk()
 menu_bar = tk.Menu(root)
 file_menu = tk.Menu(menu_bar, tearoff=0)
@@ -89,7 +93,9 @@ tk.Checkbutton(root, text="male", variable=var1).grid(row=0, sticky(tk.W)
 var2 = tk.IntVar()
 tk.Checkbutton(root, text="female", variable=var2).grid(row=1, sticky(tk.W)
 root.mainloop()
-python
+```
+
+```python
 import Tkinter as tk
 
 def show_values():
@@ -123,7 +129,9 @@ e2.grid(row=1, column=1)
 tk.Button(root, text='Quit', command=root.quit).grid(row=3, column=0, sticky(tk.W, pady=4)
 tk.Button(root, text='Show', command=show_entries).grid(row=3, column=1, sticky(tk.W, pady=4)
 root.mainloop( )
-python
+```
+
+```python
 import Tkinter as tk
 
 def show_text():

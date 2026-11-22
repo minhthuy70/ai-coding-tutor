@@ -424,33 +424,9 @@ If you include at least part of the sentence the error appears in, that makes it
 - **Contents**
 - **5 Conditionals and recursion**
 - **41**
-- 5.1 Modulus operator ..... 41
-- 5.2 Boolean expressions ..... 41
-- 5.3 Logical operators ..... 42
-- 5.4 Conditional execution ..... 42
-- 5.5 Alternative execution ..... 43
-- 5.6 Chained conditionals ..... 43
-- 5.7 Nested conditionals ..... 43
-- 5.8 Recursion ..... 44
-- 5.9 Stack diagrams for recursive functions ..... 45
-- 5.10 Infinite recursion ..... 46
-- 5.11 Keyboard input ..... 46
-- 5.12 Debugging ..... 47
-- 5.13 Glossary ..... 48
-- 5.14 Exercises ..... 49
+
 - **6 Fruitful functions**
 - **51**
-- 6.1 Return values ..... 51
-- 6.2 Incremental development ..... 52
-- 6.3 Composition ..... 54
-- 6.4 Boolean functions ..... 54
-- 6.5 More recursion ..... 55
-- 6.6 Leap of faith ..... 57
-- 6.7 One more example ..... 57
-- 6.8 Checking types ..... 58
-- 6.9 Debugging ..... 59
-- 6.10 Glossary ..... 60
-- 6.11 Exercises ..... 60
 
 - **7 Iteration 63**
 - 7.1 Multiple assignment 63
@@ -488,33 +464,9 @@ If you include at least part of the sentence the error appears in, that makes it
 - **Contents**
 - **10 Lists**
 - **87**
-- 10.1 A list is a sequence ..... 87
-- 10.2 Lists are mutable ..... 87
-- 10.3 Traversing a list ..... 89
-- 10.4 List operations ..... 89
-- 10.5 List slices ..... 89
-- 10.6 List methods ..... 90
-- 10.7 Map, filter and reduce ..... 91
-- 10.8 Deleting elements ..... 92
-- 10.9 Lists and strings ..... 93
-- 10.10 Objects and values ..... 93
-- 10.11 Aliasing ..... 94
-- 10.12 List arguments ..... 95
-- 10.13 Debugging ..... 96
-- 10.14 Glossary ..... 97
-- 10.15 Exercises ..... 98
+
 - **11 Dictionaries**
 - **101**
-- 11.1 Dictionary as a set of counters ..... 102
-- 11.2 Looping and dictionaries ..... 103
-- 11.3 Reverse lookup ..... 104
-- 11.4 Dictionaries and lists ..... 105
-- 11.5 Memos ..... 106
-- 11.6 Global variables ..... 108
-- 11.7 Long integers ..... 109
-- 11.8 Debugging ..... 109
-- 11.9 Glossary ..... 110
-- 11.10 Exercises ..... 111
 
 - **12 Tuples 113**
 - 12.1 Tuples are immutable 113
@@ -607,35 +559,15 @@ If you include at least part of the sentence the error appears in, that makes it
 - **xxi**
 - **19 Case study: Tkinter**
 - **179**
-- 19.1 GUI .... 179
-- 19.2 Buttons and callbacks .... 180
-- 19.3 Canvas widgets .... 181
-- 19.4 Coordinate sequences .... 182
-- 19.5 More widgets .... 182
-- 19.6 Packing widgets .... 183
-- 19.7 Menus and Callables .... 185
-- 19.8 Binding .... 186
-- 19.9 Debugging .... 188
-- 19.10 Glossary .... 189
-- 19.11 Exercises .... 190
+
 - **A Debugging**
 - **193**
-- A.1 Syntax errors .... 193
-- A.2 Runtime errors .... 195
-- A.3 Semantic errors .... 198
+
 - **B Analysis of Algorithms**
 - **201**
-- B.1 Order of growth .... 202
-- B.2 Analysis of basic Python operations .... 204
-- B.3 Analysis of search algorithms .... 205
-- B.4 Hashtables .... 206
+
 - **C Lumpy**
 - **211**
-- C.1 State diagram .... 211
-- C.2 Stack diagram .... 212
-- C.3 Object diagrams .... 213
-- C.4 Function and class objects .... 215
-- C.5 Class Diagrams .... 216
 
 ## Chapter 1
 
@@ -751,11 +683,9 @@ Later chapters will make more suggestions about debugging and other programming 
 
 **Programming languages are formal languages that have been designed to express computations.**
 
-Formal languages tend to have strict rules about syntax. For example, $3 + 3 = 6$ is a syntactically correct mathematical statement, but 3+ = 3\$6 is not. $H_{2}O$ is a syntactically correct chemical formula, but $_{2}$ Zz is not.
+Formal languages tend to have strict rules about syntax. For example, $3 + 3 = 6$ is a syntactically correct mathematical statement, but 3+ = 3\$6 is not. $H_{2}O$is a syntactically correct chemical formula, but$_{2}$ Zz is not.
 
-Syntax rules come in two flavors, pertaining to **tokens** and structure. Tokens are the basic elements of the language, such as words, numbers, and chemical elements. One of the problems with 3+ = 3\$6 is that \$ is not a legal token in mathematics (at least as far as I know). Similarly, $_{2}$ Zz is not legal because there is no element with the abbreviation $Zz$
-
-The second type of syntax rule pertains to the structure of a statement; that is, the way the tokens are arranged. The statement $3+ = 3$ is illegal because even though + and = are legal tokens, you can’t have one right after the other. Similarly, in a chemical formula the subscript comes after the element name, not before.
+Syntax rules come in two flavors, pertaining to **tokens** and structure. Tokens are the basic elements of the language, such as words, numbers, and chemical elements. One of the problems with 3+ = 3\$6 is that \$is not a legal token in mathematics (at least as far as I know). Similarly,$_{2}$Zz is not legal because there is no element with the abbreviation$Zz$The second type of syntax rule pertains to the structure of a statement; that is, the way the tokens are arranged. The statement$3+ = 3$ is illegal because even though + and = are legal tokens, you can’t have one right after the other. Similarly, in a chemical formula the subscript comes after the element name, not before.
 
 **Exercise 1.1.** Write a well-structured English sentence with invalid tokens in it. Then write another sentence with all valid tokens but with invalid structure.
 
@@ -982,11 +912,17 @@ SyntaxError: invalid syntax
 
 ```txt
 >>> more@ = 1000000
-txt
+```
+
+```txt
 SyntaxError: invalid syntax
-txt
+```
+
+```txt
 >>> class = 'Advanced Theoretical Zymurgy'
-txt
+```
+
+```txt
 SyntaxError: invalid syntax
 ```
 
@@ -1090,7 +1026,9 @@ produces the output
 2
 The assignment statement produces no output.
 Exercise 2.1. Type the following statements in the Python interpreter to see what they do:
-txt
+```
+
+```txt
 5
 x = 5
 x + 1
@@ -1297,7 +1235,9 @@ int can convert floating-point values to integers, but it doesn't round off; it 
 -2
 
 float converts integers and strings to floating-point numbers:
-txt
+```
+
+```txt
 >>> float(32)
 32.0
 >>> float('3.14159')
@@ -1931,7 +1871,9 @@ def square(t, length):
     for i in range(4):
         fd(t, length)
         lt(t)
-txt
+```
+
+```txt
 square(bob, 100)
 ```
 
@@ -1947,7 +1889,9 @@ def polygon(t, n, length):
     for i in range(n):
         fd(t, length)
         lt(t, angle)
-txt
+```
+
+```txt
 polygon(bob, 7, 70)
 ```
 
@@ -2179,7 +2123,7 @@ Also, you can extract the right-most digit or digits from a number. For example,
 
 A **boolean expression** is an expression that is either true or false. The following examples use the operator ==, which compares two operands and produces True if they are equal and False otherwise:
 
-```python
+```txt
 >>> 5 == 5
 True
 >>> 5 == 6
@@ -2189,7 +2133,9 @@ True and False are special values that belong to the type bool; they are not str
 <type 'bool'>
 >>> type(False)
 <type 'bool'>
-txt
+```
+
+```python
 if x < 0:
     pass          # need to handle negative values!
 ```
@@ -2284,7 +2230,9 @@ if x == y:
     print 'x and y are equal'
 else:
     if x < y:
-python
+```
+
+```python
 print 'x is less than y'
 else:
     print 'x is greater than y'
@@ -2478,7 +2426,9 @@ Syntax errors are usually easy to find, but there are a few gotchas. Whitespace 
   File "<stdin>", line 1
     y = 6
     ^
-typescript
+```
+
+```typescript
 IndentationError: unexpected indent
 ```
 
@@ -2855,9 +2805,11 @@ If you can write a recursive definition of something, you can usually write a Py
 
 ```python
 def factorial(n):
+```
 
-    If the argument happens to be 0, all we have to do is return 1:
+If the argument happens to be 0, all we have to do is return 1:
 
+```python
 def factorial(n):
     if n == 0:
         return 1
@@ -3056,7 +3008,9 @@ def b(z):
     prod = a(z, z)
     print z, prod
     return prod
-python
+```
+
+```python
 def a(x, y):
     x = x + 1
     return x * y
@@ -3120,7 +3074,9 @@ As you may have discovered, it is legal to make more than one assignment to the 
 
 ```txt
 bruce = 5
-txt
+```
+
+```txt
 print bruce,
 ```
 
@@ -3234,7 +3190,9 @@ while True:
     if line == 'done':
         break
     print line
-txt
+```
+
+```txt
 print 'Done!'
 ```
 
@@ -3533,7 +3491,9 @@ Figure 8.1: Slice indices.
 ```python
 prefixes = 'JKLMNOPQ'
 suffix = 'ack'
-txt
+```
+
+```python
 for letter in prefixes:
     print letter + suffix
 The output is:
@@ -3711,14 +3671,16 @@ The documentation uses a syntax that might be confusing. For example, in find(su
 
 The word in is a boolean operator that takes two strings and returns True if the first appears as a substring in the second:
 
-```python
+```txt
 >>> 'a' in 'banana'
 True
 >>> 'seed' in 'banana'
 False
+```
 
-    For example, the following function prints all the letters from word1 that also appear in word2:
+For example, the following function prints all the letters from word1 that also appear in word2:
 
+```python
 def in_both(word1, word2):
     for letter in word1:
         if letter in word2:
@@ -3893,12 +3855,16 @@ def any lowerscase1(s):
             return True
         else:
             return False
-python
+```
+
+```python
 def any_lowercase2(s):
     for c in s:
         if 'c'.islower():
             return 'True'
-python
+```
+
+```python
 else:
     return 'False'
 
@@ -4252,7 +4218,9 @@ The in operator also works on lists.
 True
 >>> 'Brie' in cheeses
 False
-txt
+```
+
+```txt
 The + operator concatenates lists:
 >>> a = [1, 2, 3]
 >>> b = [4, 5, 6]
@@ -4428,7 +4396,9 @@ Another common operation is to select some of the elements from a list and retur
 def only_upper(t):
     res = []
     for s in t:
-python
+```
+
+```python
 if s.isupper():
         res.append(s)
 return res
@@ -4641,12 +4611,16 @@ It is important to distinguish between operations that modify lists and operatio
 ```python
 >>> t1 = [1, 2]
 >>> t2 = t1.append(3)
-txt
+```
+
+```txt
 >>> print t1
 [1, 2, 3]
 >>> print t2
 None
-c
+```
+
+```c
 >>> t3 = t1 + [4]
 >>> print t3
 [1, 2, 3, 4]
@@ -5007,7 +4981,9 @@ Here is an example of a successful reverse lookup:
 >>> k = reverse_lookup(h, 2)
 >>> print k
 r
-txt
+```
+
+```txt
 And an unsuccessful one:
 ```
 
@@ -5138,9 +5114,11 @@ In the previous example, known is created outside the function, so it belongs to
 
 It is common to use global variables for **flags**; that is, boolean variables that indicate (“flag”) whether a condition is true. For example, some programs use a flag named verbose to control the level of detail in the output:
 
-```python
+```txt
 verbose = True
-python
+```
+
+```python
 def example1():
     if verbose:
         print 'Running example1'
@@ -5148,9 +5126,11 @@ def example1():
 
 If you try to reassign a global variable, you might be surprised. The following example is supposed to keep track of whether the function has been called:
 
-```python
+```txt
 been_called = False
-python
+```
+
+```python
 def example2():
     been_called = True          # WRONG
 ```
@@ -5159,9 +5139,11 @@ But if you run it you will see that the value of been\_called doesn’t change. 
 
 To reassign a global variable inside a function you have to **declare** the global variable before you use it:
 
-```python
+```txt
 been_called = False
-python
+```
+
+```python
 def example2():
     global been_called
     been_called = True
@@ -5171,9 +5153,11 @@ The global statement tells the interpreter something like, “In this function, 
 
 Here’s an example that tries to update a global variable:
 
-```python
+```txt
 count = 0
-python
+```
+
+```python
 def example3():
     count = count + 1          # WRONG
 ```
@@ -5188,7 +5172,9 @@ def example3():
     count += 1
 
 If the global value is mutable, you can modify it without declaring it:
-python
+```
+
+```python
 def example5():
     global known
     known = dict()
@@ -5196,9 +5182,11 @@ def example5():
 
 ## 11.7. Long integers
 
-```python
+```txt
 known = {0:0, 1:1}
-python
+```
+
+```python
 def example4():
     known[2] = 1
 ```
@@ -5346,7 +5334,9 @@ If the argument is a sequence (string, list or tuple), the result is a tuple wit
 ('l', 'u', 'p', 'i', 'n', 's')
 Because tuple is the name of a built-in function, you should avoid using it as a variable name.
 Most list operators also work on tuples. The bracket operator indexes an element:
-python
+```
+
+```python
 >>> t = ('a', 'b', 'c', 'd', 'e')
 >>> print t[0]
 'a'
@@ -5465,7 +5455,9 @@ But if you scatter the tuple, it works:
 (2, 1)
 Exercise 12.1. Many of the built-in functions use variable-length argument tuples. For example,
 max and min can take any number of arguments:
-txt
+```
+
+```txt
 >>> max(1,2,3)
 3
 But sum does not.
@@ -5506,24 +5498,30 @@ for letter, number in t:
 
 Each time through the loop, Python selects the next tuple in the list and assigns the elements to letter and number. The output of this loop is:
 
-```python
+```txt
 0 a
 1 b
 2 c
+```
 
-    If you combine zip, for and tuple assignment, you get a useful idiom for traversing two (or more) sequences at the same time. For example, has\_match takes two sequences, t1 and t2, and returns True if there is an index i such that t1[i] == t2[i]:
+If you combine zip, for and tuple assignment, you get a useful idiom for traversing two (or more) sequences at the same time. For example, has\_match takes two sequences, t1 and t2, and returns True if there is an index i such that t1[i] == t2[i]:
 
+```python
 def has_match(t1, t2):
     for x, y in zip(t1, t2):
         if x == y:
             return True
     return False
+```
 
-    If you need to traverse the elements of a sequence and their indices, you can use the built-in function enumerate:
+If you need to traverse the elements of a sequence and their indices, you can use the built-in function enumerate:
 
+```python
 for index, element in enumerate('abc'):
     print index, element
-txt
+```
+
+```txt
 0 a
 2 c
 1 b
@@ -5880,7 +5878,9 @@ def process_line(line, hist):
         word = word.lower()
 
         hist[word] = hist.get(word, 0) + 1
-python
+```
+
+```python
 hist = process_file('emma.txt')
 ```
 
@@ -5911,7 +5911,9 @@ Here is some code to print the results:
 ```python
 print 'Total number of words:', total_words(hist)
 print 'Number of different words:', different_words(hist)
-txt
+```
+
+```txt
 And the results:
 Total number of words: 161080
 Number of different words: 7214
@@ -6012,7 +6014,9 @@ def random_word(h):
     t = []
     for word, freq in h.items():
         t.extend([word] * freq)
-lua
+```
+
+```lua
 return random.choice(t)
 ```
 
@@ -6044,7 +6048,9 @@ One way to measure these kinds of relationships is Markov analysis, which charac
 
 ```txt
 Half a bee, philosophically, Must, ipso facto, half not be. But half the bee has got to be Vis a vis, its entity. D'you see?
-txt
+```
+
+```txt
 But can a bee be said to be Or not to be an entire bee When half the bee is not a bee Due to some ancient injury?
 ```
 
@@ -6317,7 +6323,9 @@ To demonstrate these functions, the following example "walks" through a director
 def walk(dirname):
     for name in os.listdir(dirname):
         path = os.path.join(dirname, name)
-python
+```
+
+```python
 if os.path.isfile(path):
     print path
 else:
@@ -6478,8 +6486,6 @@ For example, the Unix command ls -l normally displays the contents of the curren
 
 The argument is a string that contains a shell command. The return value is an object that behaves just like an open file. You can read the output from the ls process one line at a time with readline or get the whole thing at once with read:
 
-  <sup>1</sup>popen is deprecated now, which means we are supposed to stop using it and start using the subprocess module. But for simple cases, I find subprocess more complicated than necessary. So I am going to keep using popen until they take it away.
-
 ```txt
 >>> res = fp.read()
 When you are done, you close the pipe like a file:
@@ -6528,9 +6534,13 @@ def linecount(filename):
     for line in open(filename):
         count += 1
     return count
-txt
+```
+
+```txt
 print linecount('wc.py')
-txt
+```
+
+```txt
 >>> print wc
 <module 'wc' from 'wc.py'>
 ```
@@ -6762,14 +6772,14 @@ There are at least two possibilities:
 
 At this point it is hard to say whether either is better than the other, so we’ll implement the first one, just as an example.
 
-Here is the
+Here is the class definition:
 
 ```python
-class definition:
-
 class Rectangle(object):
     """Represents a rectangle.
-python
+```
+
+```python
 attributes: width, height, corner.
 """
 ```
@@ -6831,7 +6841,9 @@ You can also write functions that modify objects. For example, grow\_rectangle t
 def grow_rectangle(rect, dwidth, dheight):
     rect.width += dwidth
     rect.height += dheight
-python
+```
+
+```python
 >>> p1 = Point()
 >>> p1.x = 3.0
 >>> p1.y = 4.0
@@ -6881,7 +6893,9 @@ Figure 15.3: Object diagram.
 
 ```txt
 >>> box2 = copy.copy(box)
-txt
+```
+
+```txt
 >>> box2 is box
 ```
 
@@ -7104,7 +7118,9 @@ if sum.second >= 60:
 if sum.minute >= 60:
     sum.minute -= 60
     sum.hour += 1
-txt
+```
+
+```txt
 return sum
 ```
 
@@ -7304,7 +7320,9 @@ In Chapter 16, we defined a class named Time and in Exercise 16.1, you wrote a f
 ```python
 class Time(object):
     """Represents the time of day.""""
-python
+```
+
+```python
 def print_time(time):
     print '%.2d:%.2d:%.2d' % (time.hour, time.minute, time.second)
 ```
@@ -7372,11 +7390,9 @@ This change in perspective might be more polite, but it is not obvious that it i
 
 Here’s a version of increment (from Section 16.3) rewritten as a method:
 
-\# inside
+\# inside class Time:
 
 ```python
-class Time:
-
 def increment(self, seconds):
     seconds += self.time_to_int()
     return int_to_time(seconds)
@@ -7405,10 +7421,12 @@ TypeError: increment() takes exactly 2 arguments (3 given)
 
 The error message is initially confusing, because there are only two arguments in parentheses. But the subject is also considered an argument, so all together that’s three.
 
-```python
+```txt
 self.hour = hour
 stores the value of the parameter hour as an attribute of self.
-python
+```
+
+```python
 def is_after(self, other):
         return self.time_to_int() > other.time_to_int()
 To use this method, you have to invoke it on one object and pass the other as an argument:
@@ -7429,7 +7447,9 @@ The init method (short for “initialization”) is a special method that gets i
 
 ```python
 # inside class Time:
-python
+```
+
+```python
 def __init__(self, hour=0, minute=0, second=0):
     self.hour = hour
     self.minute = minute
@@ -7453,7 +7473,9 @@ If you provide two arguments, they override hour and minute.
 09:45:00
 And if you provide three arguments, they override all three default values.
 Exercise 17.2. Write an init method for the Point class that takes x and y as optional parameters and assigns them to the corresponding attributes.
-txt
+```
+
+```txt
 17.6. The __str__ method
 ```
 
@@ -7463,11 +7485,9 @@ txt
 
 For example, here is a str method for Time objects:
 
-\# inside
+\# inside class Time:
 
 ```python
-class Time:
-
 def __str__(self):
     return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
 ```
@@ -7490,7 +7510,9 @@ Here is what the definition might look like:
 
 ```python
 # inside class Time:
-python
+```
+
+```python
 def __add__(self, other):
     seconds = self.time_to_int() + other.time_to_int()
     return int_to_time(seconds)
@@ -7560,7 +7582,9 @@ The problem is, instead of asking the Time object to add an integer, Python is a
 
 ```python
 # inside class Time:
-python
+```
+
+```python
 def __radd__(self, other):
         return self.__add__(other)
 And here's how it's used:
@@ -7779,7 +7803,9 @@ The class definition for Card looks like this:
 ```python
 class Card(object):
     """Represents a standard playing card.""""
-python
+```
+
+```python
 def __init__(self, suit=0, rank=2):
     self.suit = suit
     self.rank = rank
@@ -7797,11 +7823,9 @@ queen_of_diamonds = Card(1, 12)
 
 In order to print Card objects in a way that people can easily read, we need a mapping from the integer codes to the corresponding ranks and suits. A natural way to do that is with lists of strings. We assign these lists to **class attributes**:
 
-\# inside
+\# inside class Card:
 
 ```python
-class Card:
-
 suit_names = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
 rank_names = [None, 'Ace', '2', '3', '4', '5', '6', '7',
            '8', '9', '10', 'Jack', 'Queen', 'King']
@@ -7849,7 +7873,9 @@ With that decided, we can write \_\_cmp\_\_:
 
 ```python
 # inside class Card:
-python
+```
+
+```python
 def __cmp__(self, other):
     # check the suits
     if self.suit > other.suit: return 1
@@ -7865,11 +7891,9 @@ def __cmp__(self, other):
 
 You can write this more concisely using tuple comparison:
 
-\# inside
+\# inside class Card:
 
 ```python
-class Card:
-
 def __cmp__(self, other):
     t1 = self.suit, self.rank
     t2 = other.suit, other.rank
@@ -7888,9 +7912,9 @@ Now that we have Cards, the next step is to define Decks. Since a deck is made u
 
 The following is a class definition for Deck. The init method creates the attribute cards and generates the standard set of fifty-two cards:
 
-```python
 class Deck(object):
 
+```python
 def __init__(self):
     self.cards = []
     for suit in range(4):
@@ -7905,11 +7929,9 @@ The easiest way to populate the deck is with a nested loop. The outer loop enume
 
 Here is a \_\_str\_\_ method for Deck:
 
-#inside
+#inside class Deck:
 
 ```python
-class Deck:
-
 def __str__(self):
     res = []
     for card in self.cards:
@@ -7942,7 +7964,9 @@ To deal cards, we would like a method that removes a card from the deck and retu
 
 ```python
 #inside class Deck:
-python
+```
+
+```python
 def pop_card(self):
     return self.cards.pop()
 ```
@@ -7951,11 +7975,9 @@ Since pop removes the last card in the list, we are dealing from the bottom of t
 
 To add a card, we can use the list method append:
 
-#inside
+#inside class Deck:
 
 ```python
-class Deck:
-
 def add_card(self, card):
     self.cards.append(card)
 ```
@@ -7968,7 +7990,9 @@ As another example, we can write a Deck method named shuffle using the function 
 
 ```python
 # inside class Deck:
-python
+```
+
+```python
 def shuffle(self):
     random.shuffle(self.cards)
 ```
@@ -8004,7 +8028,9 @@ If we provide an init method in the Hand class, it overrides the one in the Deck
 
 ```python
 # inside class Hand:
-python
+```
+
+```python
 def __init__(self, label (^:'):
     self.cards = []
     self.label = label
@@ -8036,7 +8062,9 @@ A natural next step is to encapsulate this code in a method called move\_cards:
 
 ```python
 #inside class Deck:
-python
+```
+
+```python
 def move_cards(self, hand, num):
     for i in range(num):
         hand.add_card(self.pop_card())
@@ -8133,23 +8161,31 @@ To run multiple analyses, and keep them separate, we can encapsulate the state o
 
 ```python
 class Markov(object):
-python
+```
+
+```python
 def __init__(self):
         self.suffix_map = {}
         self.prefix = ()
 Next, we transform the functions into methods. For example, here's process_word:
-python
+```
+
+```python
 def process_word(self, word, order=2):
     if len(self.prefix) < order:
         self.prefix += (word,)
         return
-python
+```
+
+```python
 try:
     self.suffix_map[self.prefix].append(word)
 except KeyError:
     # if there is no entry for this prefix, make one
     self.suffix_map[self.prefix] = [word]
-python
+```
+
+```python
 self.prefix = shift(self.prefix, word)
 ```
 
@@ -8489,9 +8525,13 @@ At the top level, this GUI contains two widgets—a Canvas and a Frame—arrange
 
 ```python
 class SimpleTurtleWorld(TurtleWorld):
-python
+```
+
+```python
 """This class is identical to TurtleWorld, but the code that lays out the GUI is simplified for explanatory purposes.""""
-python
+```
+
+```python
 def setup(self):
     self.row()
     ...
@@ -8562,7 +8602,9 @@ The last two widgets are a Text widget and a Button:
 self.te_code = self.te(width=25, height=10)
 self.te_code.insert(END, 'world.clear()\n')
 self.te_code.insert(END, 'bob = Turtle(world)\n')
-python
+```
+
+```python
 self.bu(text='Run code', command=self.run_text)
 ```
 
@@ -8595,7 +8637,9 @@ mb creates the Menubutton. Initially, the text on the button is the name of the 
 
 ```python
 for color in colors:
-txt
+```
+
+```txt
 g.mi(mb, text=color, command=Callable(set_color, color))
 ```
 
@@ -8661,9 +8705,9 @@ make\_text gets the contents of the Entry and displays it as a Text item in the 
 
 It is also possible to create bindings for Canvas items. The following is a class definition for Draggable, which is a child class of Item that provides bindings that implement dragand-drop capability.
 
-```python
 class Draggable(Item):
 
+```python
 def __init__(self, item):
     self.canvas = item.canvas
     self.tag = item.tag
@@ -8692,12 +8736,18 @@ drag computes how far the object has moved relative to the starting place, updat
 ```python
 def drag(self, event):
     dx = event.x - self.dragx
-txt
+```
+
+```txt
 dy = event.y - self.dragy
-txt
+```
+
+```txt
 self.dragx = event.x
 self.dragy = event.y
-txt
+```
+
+```txt
 self.move(dx, dy)
 ```
 
@@ -8729,7 +8779,9 @@ For example, when you are setting up a callback, it is a common error to call th
 ```python
 def the_callback():
     print 'Called.'
-txt
+```
+
+```txt
 g.bu(text='This is wrong!', command=the_callback())
 ```
 
@@ -9167,13 +9219,11 @@ The following table shows the run time of these algorithms for different problem
 | 1 000 | 100 001 | 1 001 001 |
 | 10 000 | 1 000 001 | > 10<sup>10</sup> |
 
-At $n = 10,$ Algorithm A looks pretty bad; it takes almost 10 times longer than Algorithm B. But for $n = 100$ they are about the same, and for larger values A is much better.
+At $n = 10,$Algorithm A looks pretty bad; it takes almost 10 times longer than Algorithm B. But for$n = 100$ they are about the same, and for larger values A is much better.
 
 The fundamental reason is that for large values of n, any function that contains an $n^{2}$ term will grow faster than a function whose leading term is n. The **leading term** is the term with the highest exponent.
 
-For Algorithm A, the leading term has a large coefficient, 100, which is why B does better than A for small n. But regardless of the coefficients, there will always be some value of n where $an^{2}>bn$
-
-The same argument applies to the non-leading terms. Even if the run time of Algorithm A were $n + 1000000,$ it would still be better than Algorithm B for sufficiently large n.
+For Algorithm A, the leading term has a large coefficient, 100, which is why B does better than A for small n. But regardless of the coefficients, there will always be some value of n where $an^{2}>bn$The same argument applies to the non-leading terms. Even if the run time of Algorithm A were$n + 1000000,$ it would still be better than Algorithm B for sufficiently large n.
 
 In general, we expect an algorithm with a smaller leading term to be a better algorithm for large problems, but for smaller problems, there may be a **crossover point** where another algorithm is better. The location of the crossover point depends on the details of the algorithms, the inputs, and the hardware, so it is usually ignored for purposes of algorithmic analysis. But that doesn’t mean you can forget about it.
 
@@ -9183,7 +9233,7 @@ If two algorithms have the same leading order term, it is hard to say which is b
 
 An **order of growth** is a set of functions whose asymptotic growth behavior is considered equivalent. For example, 2n, 100n and n + 1 belong to the same order of growth, which is written $O(n)$ in **Big-Oh notation** and often called **linear** because every function in the set grows linearly with n.
 
-All functions with the leading term $n^{2}$ belong to $O(n^{2})$ ; they are **quadratic**, which is a fancy word for functions with the leading term $n^{2}$
+All functions with the leading term $n^{2}$belong to$O(n^{2})$; they are **quadratic**, which is a fancy word for functions with the leading term$n^{2}$
 
 The following table shows some of the orders of growth that appear most commonly in algorithmic analysis, in increasing order of badness.
 
@@ -9197,13 +9247,11 @@ For the logarithmic terms, the base of the logarithm doesn’t matter; changing 
 
 2. What is the order of growth of $(n^{2} + n)\cdot (n + 1)?$ Before you start multiplying, remember that you only need the leading term.
 
-3. If $f$ is in $O(g)$ , for some unspecified function g, what can we say about $af + b?$
+3. If $f$is in$O(g)$, for some unspecified function g, what can we say about$af + b?$4. If$f_{1}$and$f_{2}$are in$O(g)$, what can we say about$f_{1} + f_{2}$ ?
 
-4. If $f_{1}$ and $f_{2}$ are in $O(g)$ , what can we say about $f_{1} + f_{2}$ ?
+5. If $f_{1}$is in$O(g)$and$f_{2}$is in$O(h)$, what can we say about$f_{1} + f_{2}$ ?
 
-5. If $f_{1}$ is in $O(g)$ and $f_{2}$ is in $O(h)$ , what can we say about $f_{1} + f_{2}$ ?
-
-6. If $f_{1}$ is in $O(g)$ and $f_{2}$ is $O(h)$ , what can we say about $f_{1} \cdot f_{2}$?
+6. If $f_{1}$is in$O(g)$and$f_{2}$is$O(h)$, what can we say about$f_{1} \cdot f_{2}$?
 
 Programmers who care about performance often find this kind of analysis hard to swallow. They have a point: sometimes the coefficients and the non-leading terms make a real difference. Sometimes the details of the hardware, the programming language, and the characteristics of the input make a big difference. And for small problems asymptotic behavior is irrelevant.
 
@@ -9229,9 +9277,9 @@ If you use the same loop to “add” a list of strings, the run time is quadrat
 
 The string method join is usually faster because it is linear in the total length of the strings.
 
-As a rule of thumb, if the body of a loop is in $O(n^{a})$ then the whole loop is in $O(n^{a + 1})$ . The exception is if you can show that the loop exits after a constant number of iterations. If a loop runs k times regardless of n, then the loop is in $O(n^{a})$ , even for large k.
+As a rule of thumb, if the body of a loop is in $O(n^{a})$then the whole loop is in$O(n^{a + 1})$. The exception is if you can show that the loop exits after a constant number of iterations. If a loop runs k times regardless of n, then the loop is in$O(n^{a})$ , even for large k.
 
-Multiplying by k doesn’t change the order of growth, but neither does dividing. So if the body of a loop is in $O(n^{a})$ and it runs n/k times, the loop is in $O(n^{a + 1})$ , even for large k.
+Multiplying by k doesn’t change the order of growth, but neither does dividing. So if the body of a loop is in $O(n^{a})$and it runs n/k times, the loop is in$O(n^{a + 1})$ , even for large k.
 
 Most string and tuple operations are linear, except indexing and len, which are constant time. The built-in functions min and max are linear. The run-time of a slice operation is proportional to the length of the output, but independent of the size of the input.
 
@@ -9307,7 +9355,9 @@ For now, I assume that each key only appears once. The simplest implementation o
 
 ```python
 class LinearMap(object):
-python
+```
+
+```python
 def __init__(self):
     self.items = []
 
@@ -9335,7 +9385,9 @@ One way to improve LinearMap is to break the list of key-value pairs into smalle
 
 ```python
 class BetterMap(object):
-python
+```
+
+```python
 def __init__(self, n=100):
     self.maps = []
     for i in range(n):
@@ -9371,7 +9423,9 @@ Here is an implementation of a hashtable:
 
 ```python
 class HashMap(object):
-python
+```
+
+```python
 def __init__(self):
     self.maps = BetterMap(2)
     self.num = 0
@@ -9493,7 +9547,9 @@ def countdown(n):
     else:
         print n
         countdown(n-1)
-lua
+```
+
+```lua
 lumpy = Lumpy()
 lumpy.make_reference()
 countdown(3)
@@ -9583,7 +9639,9 @@ But if you are passing functions and classes as parameters, you might want them 
 ```python
 import copy
 from swampy.Lumpy import Lumpy
-python
+```
+
+```python
 lumpy = Lumpy()
 lumpy.make_reference()
 
@@ -9598,7 +9656,9 @@ def instantiate(constructor):
     obj = constructor()
     lumpy.object_diagram()
     return obj
-txt
+```
+
+```txt
 point = instantiate(Point)
 ```
 
@@ -9620,7 +9680,9 @@ Here’s an example that shows a HAS-A relationship. You can download it from [h
 
 ```python
 from swampy.Lumpy import Lumpy
-python
+```
+
+```python
 lumpy = Lumpy()
 lumpy.make_reference()
 

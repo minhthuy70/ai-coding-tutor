@@ -59,12 +59,16 @@ print(b[2:5])
 print(b[:5])
 print(b[2:])
 print(b[-5:-2])
-txt
+```
+
+```txt
 String Format
 
 age = 36
 txt = "My name is John, and I am {}"
-python
+```
+
+```python
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua."""
@@ -80,7 +84,9 @@ consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua.
 Yes, 'free' is present.
-erb
+```
+
+```erb
 Sequence Types: list, tuple, range
 Mapping Type: dict
 Set Types: set, frozenset
@@ -93,7 +99,9 @@ print(x)
 print(type(x))
 ['apple', 'banana', 'cherry']
 <class 'list'>
-python
+```
+
+```python
 Python Numbers
 #convert from int to float:
 x = float(1)
@@ -105,7 +113,9 @@ print(x,y,z)
 print(type(x),type(y),type(z))
 1.0 2 (1+0j)
 <class 'float'> <class 'int'> <class 'complex'>
-matlab
+```
+
+```matlab
 Python Casting
 x = int(1)
 y = int(2.8)
@@ -117,7 +127,9 @@ z = str(3.0)
 print(x,y,z)
 1 2 3
 s1 2 3.0
-txt
+```
+
+```python
 Python - Modify Strings
 a = " Hello, World! "
 print(a.upper())
@@ -128,7 +140,9 @@ HELLO, WORLD!
 hello, world!
 Hello, World!
 [' Hello', ' World!']
-txt
+```
+
+```python
 txt = "Hello my friends"
 txt.upper()
 print(txt)
@@ -136,7 +150,9 @@ txt=txt.upper()
 print(txt)
 Hello my friends
 HELLO MY FRIENDS
-python
+```
+
+```python
 Python Strings
 Basic:
 a = "Hello"
@@ -280,7 +296,9 @@ print(thisset)
 {'banana', 'orange', 'apple'}
 {'banana', 'orange', 'pineapple', 'apple'}
 {'apple', 'kiwi', 'banana', 'orange', 'pineapple'}
-lua
+```
+
+```lua
 Python - Remove Set Items
 #if the item to remove does not exist, remove() will raise an error.
 thisset = {"apple", "banana", "cherry", "kiwi", "oil"}
@@ -335,7 +353,9 @@ print(z)
 {'apple'}
 {'banana', 'google', 'cherry', 'microsoft'}
 {'banana', 'apple', 'cherry'}
-txt
+```
+
+```txt
 another, specified set
 
 discard() Remove the specified item
@@ -381,7 +401,9 @@ print(type(thisdict))
 Ford
 3
 <class 'dict'>
-python
+```
+
+```python
 dict_keys(['brand', 'model', 'year', 'name'])
 dict_values(['Ford', 'Mustang', 1964, 'huy'])
 dict_values(['Ford', 'Mustang', 1964, 'HUY'])
@@ -509,10 +531,8 @@ def my_function1(country = "Norway"):
 print("I am from " + country)
 my_function1("India")
 my_function1()
-```
-
-python
 def my_function3(x):
+```
 
 ## 12
 
@@ -536,7 +556,9 @@ def tri_recursion(k):
     return result
 tri_recursion(6)
 1 3 6 10 15 21
-python
+```
+
+```python
 Python Lambda (ân danh)
 x = lambda a: a + 10
 print(x(5))

@@ -39,341 +39,6 @@ Trường Đại học Xây dựng Hà Nội
 - 2.4.2 Truy cập và chính sửa phần tử trong List …… 10
 - 2.4.3 Thêm và xóa phần tử trong List …… 10
 
-- 2.5 Kiểu dữ liệu Tuple.... 10
-- 2.5.1 Khái niệm và bản chất của Tuple.... 10
-- 2.5.2 Truy cập phần tử trong Tuple .... 10
-- 2.5.3 Tính bắt biến và ý nghĩa thực tiễn .... 11
-- 2.5.4 Kiểu dữ liệu Dictionary.... 11
-- 2.5.5 Bản chất của Dictionary .... 11
-- 2.5.6 Truy cập và thay đổi dữ liệu trong Dictionary .... 11
-- 2.5.7 Duyệt Dictionary .... 12
-- 2.5.8 Ứng dụng thực tế của Dictionary.... 12
-- 2.6 Kiểu dữ liệu Set.... 12
-- 2.6.1 Khái niệm và đặc điểm của Set.... 12
-- 2.6.2 Thao tác cơ bản với Set.... 12
-- 2.6.3 Các phép toán tập hợp .... 12
-- 2.6.4 Ứng dụng của Set.... 13
-- 2.7 Chỉ mục trong kiểu dữ liệu tuần tự.... 13
-- 2.7.1 Vai trò của chỉ mục .... 13
-- 2.7.2 Chỉ mục dương trong Python.... 13
-- 2.7.3 Chỉ mục âm trong Python.... 14
-- 2.7.4 So sánh chỉ mục dương và chỉ mục âm.... 14
-- 2.7.5 Chỉ mục và độ dài dữ liệu.... 15
-- 2.7.6 Lỗi truy cập ngoài phạm vi chỉ mục.... 15
-- 2.7.7 Chỉ mục trong các kiểu dữ liệu tuần tự khác nhau.... 15
-- 2.8 Duyệt các kiểu dữ liệu tuần tự.... 16
-- 2.9 Cắt lát dữ liệu (Slicing) trong các kiểu dữ liệu tuần tự.... 16
-- 2.9.1 Cú pháp tổng quát của cắt lát .... 16
-- 2.9.2 Cắt lát cơ bản với chỉ số bắt đầu và kết thúc .... 16
-- 2.9.3 Cắt lát khi bổ qua chỉ mục bắt đầu hoặc kết thúc .... 17
-- 2.9.4 Cắt lát với bước nhảy (step).... 17
-
-- 2.9.5 Cắt lát với chỉ số âm.... 17
-- 2.9.6 Đảo ngược dữ liệu bằng cắt lát .... 17
-- 2.9.7 Cắt lát với chuỗi .... 18
-- 2.9.8 Cắt lát với Tuple .... 18
-- 2.9.9 Những lưu ý quan trọng khi sử dụng cắt lát .... 18
-- 2.9.10 Ý nghĩa của cắt lát trong lập trình kỹ thuật .... 18
-- 2.10 Bài tập luyện tập .... 19
-- 2.10.1 Câu hỏi trắc nghiệm .... 19
-- 2.11 Bài tập thực hành.... 20
-- CHUỔNG 3. Nhập xuất dữ liệu trong Python .... 23
-- 3.1 Xuất dữ liệu ra màn hình .... 23
-- 3.1.1 Hàm print() .... 23
-- 3.1.2 In nhiều dữ liệu cùng lúc .... 23
-- 3.1.3 Tủy chỉnh định dạng khi in .... 24
-- 3.1.4 In dữ liệu dạng bằng .... 24
-- 3.2 Nhập dữ liệu từ bàn phím.... 25
-- 3.2.1 Hàm input() .... 25
-- 3.2.2 Nhập và chuyển đổi kiểu dữ liệu .... 25
-- 3.3 Nhập xuất dữ liệu với tập tin.... 25
-- 3.3.1 Ví dụ tập tin dữ liệu.... 25
-- 3.3.2 Đọc tập tin và xử lý dữ liệu .... 26
-- 3.3.3 Ghi kết quả ra tập tin .... 26
-- 3.4 Các phương thức làm việc với tập tin trong Python .... 26
-- 3.4.1 close() .... 26
-- 3.4.2 fileno() .... 27
-- 3.4.3 flush() .... 27
-- 3.4.4 isatty() .... 27
-- 3.4.5 read(n) .... 27
-
-- 3.4.6 readable()....28
-- 3.4.7 readline(n=-1)....28
-- 3.4.8 readlines(n=-1)....28
-- 3.4.9 seek(offset, from=SEEK\_SET)....28
-- 3.4.10 seekable()....29
-- 3.4.11 tell()....29
-- 3.4.12 truncate(size=None)....29
-- 3.4.13 writable()....29
-- 3.4.14 write(s)....30
-- 3.4.15 writelines(lines)....30
-- 3.5 Nhận xét....30
-- 3.6 Ứng dụng thực tế....30
-- 3.7 Bài tập chương....30
-- 3.7.1 Câu hỏi trắc nghiệm....30
-- 3.7.2 Bài tập thực hành....32
-- 3.7.3 Gọi ý....33
-- CHƯƠNG 4. Điều khiển luồng và câu lệnh điều kiện trong Python....34
-- 4.1 Giá trị Boolean và vai trò trong điều khiển luồng....34
-- 4.1.1 Khái niệm giá trị Boolean....34
-- 4.1.2 Biểu thức logic....34
-- 4.2 Các toán tử trả về giá trị Boolean....34
-- 4.2.1 Toán tử so sánh....34
-- 4.2.2 Toán tử kiểm tra thành viên....35
-- 4.2.3 Toán tử so sánh đối tượng....35
-- 4.3 Các giá trị tương đương Boolean trong Python....36
-- 4.3.1 Khái niệm Truthy và Falsy....36
-- 4.3.2 Các giá trị được coi là False....36
-
-- 4.4 Toán tử logic ..... 36
-- 4.4.1 Ba toán tử logic cơ bản ..... 36
-- 4.4.2 Bằng logic ..... 36
-- 4.5 Thứ tự ưu tiên của các phép toán logic ..... 37
-- 4.6 Các chú ý quan trọng khi làm việc với phép toán logic ..... 37
-- 4.7 Câu lệnh if - elif - else ..... 38
-- 4.7.1 Câu lệnh if ..... 38
-- 4.7.2 Câu lệnh if - else ..... 38
-- 4.7.3 Câu lệnh if - elif - else ..... 39
-- 4.7.4 Câu lệnh điều kiện lồng nhau ..... 40
-- 4.7.5 Một số lưu ý quan trọng khi sử dụng câu lệnh điều kiện ..... 41
-- 4.7.6 Ý nghĩa của câu lệnh điều kiện trong lập trình kỹ thuật ..... 41
-- 4.7.7 Câu lệnh điều kiện lồng nhau ..... 41
-- 4.7.8 Ứng dụng câu lệnh điều kiện trong bài toán kỹ thuật ..... 43
-- 4.8 Vòng lắp trong Python ..... 45
-- 4.8.1 Vòng lắp for ..... 45
-- 4.8.2 Vòng lắp while ..... 48
-- 4.8.3 So sánh vòng lắp for và while ..... 49
-- 4.8.4 Vòng lắp lồng nhau ..... 49
-- 4.8.5 Lệnh break, continue và pass ..... 51
-- 4.8.6 Ứng dụng vòng lắp trong bài toán kỹ thuật ..... 52
-- 4.8.7 Xử lý ngoại lệ trong Python (try - except) ..... 53
-- 4.9 Bài tập chương: Câu lệnh điều kiện, vòng lắp và xử lý ngoại lệ ..... 57
-- 4.9.1 Câu hỏi trắc nghiệm ..... 57
-- 4.9.2 Bài tập thực hành ..... 59
-- 4.9.3 Bài tập tổng hợp ..... 60
-- 4.10 Hàm và Module trong Python ..... 60
-- 4.10.1 Khái niệm về hàm ..... 60
-
-- 4.10.2 Định nghĩa và gọi hàm....60
-- 4.10.3 Hàm có tham số....61
-- 4.10.4 Tham số của hàm trong Python....61
-- 4.10.5 Hàm trả về giá trị....64
-- 4.10.6 Phạm vi biến trong hàm....65
-- 4.10.7 Hàm vô danh (Lambda function)....66
-- 4.10.8 Các hàm xử lý tập hợp trong Python....66
-- 4.10.9 List Comprehension....72
-- 4.10.10 So sánh các phương pháp xử lý tập hợp....76
-- 4.10.11 Khái niệm về Module....76
-- 4.10.12 Sử dụng module có sẵn....76
-- 4.10.13 Tự xây dựng module....76
-- 4.10.14 Ý nghĩa của hàm và module trong lập trình kỹ thuật....77
-- 4.10.15 Kết luận....77
-- 4.11 Bài tập....77
-- CHƯƠNG 5. Lập trình hướng đối tượng trong Python....79
-- 5.1 Giới thiệu về lập trình hướng đối tượng....79
-- 5.1.1 Khái niệm lập trình hướng đối tượng....79
-- 5.1.2 Lợi ích của lập trình hướng đối tượng....79
-- 5.1.3 Các khái niệm cơ bản trong OOP....80
-- 5.2 Lớp và đối tượng trong Python....81
-- 5.2.1 Định nghĩa lớp....81
-- 5.2.2 Tạo đối tượng từ lớp....81
-- 5.2.3 Thuộc tính của đối tượng....82
-- 5.3 Phương thức khởi tạo - Constructor....83
-- 5.3.1 Phương thức \_\_init\_\_()....83
-- 5.3.2 Giá trị mặc định cho tham số....85
-
-- 5.4 Phương thức của lớp ....85
-- 5.4.1 Định nghĩa phương thức....85
-- 5.4.2 Phương thức với giá trị trả về ....86
-- 5.5 Tính đóng gói (Encapsulation) ....87
-- 5.5.1 Khái niệm đóng gói....87
-- 5.5.2 Thuộc tính và phương thức riêng tư ....87
-- 5.5.3 Getter và Setter ....89
-- 5.5.4 Property decorator ....90
-- 5.6 Tính kế thừa (Inheritance)....90
-- 5.6.1 Khái niệm kế thừa....90
-- 5.6.2 Cú pháp kế thừa....91
-- 5.6.3 Ví dụ kế thừa cơ bản....91
-- 5.6.4 Phương thức super()....92
-- 5.6.5 Kế thừa nhiều cấp ....92
-- 5.6.6 Kiểm tra quan hệ kế thừa....93
-- 5.7 Tính đa hình (Polymorphism)....94
-- 5.7.1 Khái niệm đa hình....94
-- 5.7.2 Đa hình thông qua ghi đề phương thức ....94
-- 5.7.3 Đa hình với các toán tử ....95
-- 5.8 Các phương thức đặc biệt (Magic Methods)....96
-- 5.8.1 Giới thiệu về magic methods....96
-- 5.8.2 Một số magic methods thường dùng ....97
-- 5.8.3 Ví dụ sử dụng magic methods ....97
-- 5.9 Thuộc tính và phương thức lớp (Class Attributes and Methods)....98
-- 5.9.1 Thuộc tính lớp....98
-- 5.9.2 Phương thức lớp ....99
-- 5.9.3 Phương thức tỉnh ....100
-
-- 5.10 Ứng dụng OOP trong bài toán thực tế....101
-- 5.10.1 Hệ thống quản lý thư viện....101
-- 5.11 Bài tập thực hành....104
-- 5.11.1 Bài tập cơ bản....104
-- 5.11.2 Bài tập nâng cao....104
-- 5.12 Tổng kết chương....105
-- 5.13 Bài tập....105
-- CHƯỜNG 6. Thư viện NumPy trong Kỹ thuật....107
-- 6.1 Giới thiệu về NumPy....107
-- 6.1.1 Tại sao NumPy quan trọng trong kỹ thuật....107
-- 6.1.2 Cải đặt và import NumPy....107
-- 6.2 Mắng NumPy - ndarray....108
-- 6.2.1 Khái niệm măng đa chiều....108
-- 6.2.2 Tạo măng NumPy....108
-- 6.2.3 Thuộc tính của măng NumPy....111
-- 6.2.4 Kiểu dữ liệu trong NumPy....112
-- 6.3 Chỉ mục và cắt lát măng NumPy....112
-- 6.3.1 Chỉ mục cơ bản....113
-- 6.3.2 Cắt lát (Slicing)....114
-- 6.3.3 Chỉ mục nâng cao....116
-- 6.4 Các phép toán trên ma trận....119
-- 6.4.1 Pháp toán từng phần tử (Element-wise Operations)....119
-- 6.4.2 Pháp toán với scalar....120
-- 6.4.3 Nhân ma trận (Matrix Multiplication)....121
-- 6.4.4 Chuyển vị ma trận (Transpose)....122
-- 6.4.5 Các phép toán ma trận nâng cao....123
-- 6.4.6 Broadcasting - Cơ chế mở rộng tự động....126
-
-- 6.5 Các phép xử lý và thống kê trên ma trận .... 127
-- 6.5.1 Các hàm thống kê cơ bản.... 127
-- 6.5.2 Chỉ số của giá trị min/max.... 128
-- 6.5.3 Phương sai và độ lệch chuẩn .... 129
-- 6.5.4 Tích lũy và tích lũy theo chiều.... 129
-- 6.5.5 Sắp xếp măng .... 130
-- 6.5.6 Loại bổ trùng lặp và tìm giá trị duy nhất.... 131
-- 6.5.7 Các hàm toán học phổ biến.... 131
-- 6.5.8 Hàm lượng giác .... 132
-- 6.5.9 Chuẩn hóa dữ liệu.... 133
-- 6.5.10 Reshape và thay đổi cấu trúc măng .... 134
-- 6.5.11 Nội và chia măng .... 135
-- 6.6 Ứng dụng NumPy trong kỹ thuật.... 136
-- 6.6.1 Xử lý tín hiệu.... 136
-- 6.6.2 Xử lý dữ liệu cảm biển.... 138
-- 6.6.3 Tính toán ma trận cho kết cấu.... 139
-- 6.6.4 Mô phỏng và tính toán số.... 140
-- 6.6.5 Xử lý ma trận hình ảnh.... 141
-- 6.6.6 Phân tích thống kê dữ liệu thực nghiệm.... 142
-- 6.6.7 Hồi quy tuyến tính .... 142
-- 6.7 Bài tập thực hành.... 143
-- CHƯỜNG 7. Trực quan hóa dữ liệu - Visualization .... 148
-- 7.1 Giới thiệu về Trực quan hóa dữ liệu trong Kỹ thuật .... 148
-- 7.2 Cải đặt và cấu hình.... 149
-- 7.2.1 Cải đặt thư viện .... 149
-- 7.2.2 Import và cấu hình.... 149
-- 7.2.3 Lưu hình ảnh .... 149
-
-- 7.3 Matplotlib: Nền tầng Visualization ..... 149
-- 7.3.1 Cấu trúc cơ bản: Figure và Axes ..... 150
-- 7.3.2 Line Plot - Đồ thị đường..... 151
-- 7.3.3 Scatter Plot - Biểu đồ phân tán ..... 151
-- 7.3.4 Histogram và Distribution Plot ..... 152
-- 7.3.5 Bar Chart - Biểu đồ cột ..... 153
-- 7.3.6 Subplots - Vẽ nhiều biểu đồ ..... 154
-- 7.4 Seaborn: Statistical Visualization ..... 156
-- 7.4.1 Boxplot - Phát hiện Outliers ..... 156
-- 7.4.2 Violin Plot - Phân phối chi tiết ..... 158
-- 7.4.3 Heatmap - Correlation Matrix ..... 158
-- 7.4.4 Pairplot - Quan hệ giữa nhiều biến ..... 159
-- 7.4.5 Distribution Plot với KDE ..... 161
-- 7.5 Visualization cho Machine Learning ..... 162
-- 7.5.1 Confusion Matrix ..... 162
-- 7.5.2 ROC Curve và AUC ..... 163
-- 7.5.3 Learning Curves - Phát hiện Overfitting ..... 165
-- 7.5.4 Feature Importance ..... 168
-- 7.5.5 Precision-Recall Curve ..... 169
-- 7.6 Visualization cho Deep Learning ..... 170
-- 7.6.1 Training History Visualization ..... 170
-- 7.6.2 Visualizing Neural Network Architecture ..... 172
-- 7.6.3 Activation Maps Visualization ..... 174
-- 7.7 Best Practices trong Data Visualization ..... 175
-- 7.7.1 Nguyên tắc thiết kế biểu đồ hiệu quả ..... 175
-- 7.7.2 Code Template tái sử dụng ..... 176
-- 7.8 Bài tập thực hành ..... 177
-- 7.9 Kết luận ..... 179
-
-- CHUỔNG 8. Tính toán Khoa học với Thư viện SciPy....180
-- 8.1 Giới thiệu về SciPy....180
-- 8.1.1 Cải đặt và Import....180
-- 8.1.2 Các Hàm Cơ bản và Hằng số Toán học....180
-- 8.2 Tổng quan Các Gói của SciPy....182
-- 8.2.1 scipy.integrate - Tích phân và Phương trình Vi phân ....182
-- 8.2.2 scipy.optimize - Tôi ưu hóa và Tím nghiệm....182
-- 8.2.3 scipy.interpolate - Nội suy và Xấp xỉ....182
-- 8.2.4 scipy.linalg - Đại số Tuyến tính....182
-- 8.2.5 scipy.signal - Xử lý Tín hiệu....182
-- 8.2.6 scipy.stats - Thống kê và Xác suất....182
-- 8.2.7 scipy.sparse - Ma trận Thưa....183
-- 8.2.8 scipy.fft - Biến đổi Fourier Nhanh....183
-- 8.3 Tính Tích phân với SciPy....183
-- 8.3.1 Cơ sở Lý thuyết Tích phân Số....183
-- 8.3.2 Tích phân Một biến với quad....183
-- 8.3.3 Tích phân Bội....184
-- 8.3.4 Ứng dụng: Tính Năng lượng và Công....185
-- 8.4 Giải Phương trình Vi phân với SciPy....186
-- 8.4.1 Phương trình Vi phân Thường (ODE)....186
-- 8.4.2 Phương pháp Số Giải ODE....187
-- 8.4.3 Sử dụng solve\_ivp....187
-- 8.4.4 Hệ Phương trình Vi phân....188
-- 8.4.5 Ứng dụng: Mô hình Lotka-Volterra (Săn mồi - Con mồi)....189
-- 8.5 Tìm Nghiệm Phương trình với SciPy....191
-- 8.5.1 Cơ sở Lý thuyết....191
-- 8.5.2 Phương pháp Chia đôi (Bisection Method)....191
-- 8.5.3 Phương pháp Newton-Raphson và fsolve....193
-
-- 8.5.4 Giải Hệ Phương trình Phi tuyến ..... 194
-- 8.5.5 Ứng dụng: Tính Điểm Cân bằng trong Phân ứng Hóa học ..... 196
-- 8.6 Nội suy Dữ liệu với SciPy ..... 197
-- 8.6.1 Cơ sở Lý thuyết Nội suy ..... 197
-- 8.6.2 Nội suy Tuyến tính ..... 198
-- 8.6.3 Nội suy Đa thức và Spline ..... 199
-- 8.6.4 Nội suy Hai chiều ..... 200
-- 8.6.5 Ứng dụng: Xử lý Dữ liệu Thiếu ..... 202
-- 8.7 Bài tập Thực hành ..... 203
-- 8.8 Kết luận ..... 206
-- CHƯƠNG 9. Lời Giải Bài Tập ..... 208
-- 9.1 Chương 1: Biến, Toán tử, Kiểu dữ liệu ..... 208
-- 9.1.1 Lời giải Bài tập 1 ..... 208
-- 9.1.2 Lời giải Bài tập 2 ..... 208
-- 9.1.3 Lời giải Bài tập 3 ..... 209
-- 9.1.4 Lời giải Bài tập 4 ..... 210
-- 9.1.5 Lời giải Bài tập 5 ..... 210
-- 9.2 Chương 2: Cấu trúc Dữ liệu ..... 211
-- 9.2.1 Lời giải Bài tập 1 ..... 211
-- 9.2.2 Lời giải Bài tập 3 ..... 212
-- 9.2.3 Lời giải Bài tập 5 ..... 212
-- 9.3 Chương 3: Nhập Xuất Dữ liệu ..... 213
-- 9.3.1 Lời giải Bài tập 2 ..... 213
-- 9.3.2 Lời giải Bài tập 5 ..... 214
-- 9.3.3 Lời giải Bài tập 8 ..... 214
-- 9.4 Chương 4: Điều kiện và Vòng lắp ..... 215
-- 9.4.1 Lời giải Bài tập 1 ..... 215
-- 9.4.2 Lời giải Bài tập 2 ..... 216
-
-- 9.5 Chương 5: Hàm và Module ....217
-- 9.5.1 Lời giải Bài tập 1....217
-- 9.5.2 Lời giải Bài tập 2....218
-- 9.5.3 Lời giải Bài tập 3....219
-- 9.5.4 Lời giải Bài tập 4....220
-- 9.5.5 Lời giải Bài tập 5....221
-- 9.6 Chương 6: Lập trình Hướng Đối tượng ....223
-- 9.6.1 Lời giải Bài tập 1....223
-- 9.6.2 Lời giải Bài tập 2....224
-- 9.6.3 Lời giải Bài tập 3....225
-- 9.7 Chương 7: NumPy trong Kỹ thuật....228
-- 9.7.1 Lời giải Bài tập 1....228
-- 9.7.2 Lời giải Bài tập 2....229
-- 9.8 Chương 8: Visualization ....230
-- 9.8.1 Lời giải Bài tập 1....230
-- 9.8.2 Lời giải Bài tập 2....230
-- 9.9 Chương 9: SciPy ....231
-- 9.9.1 Lời giải Bài tập 1....231
-- 9.9.2 Lời giải Bài tập 4....233
-- 9.10 Lưu ý chung ....234
-
 ## Giới thiệu
 
 Trong bối cảnh chuyển đổi số mạnh mẽ hiện nay, lập trình đã trở thành một công cụ nền tảng không chỉ đối với các nhà khoa học máy tính mà còn đối với kỹ sư và nhà nghiên cứu trong hầu hết các lĩnh vực khoa học – kỹ thuật. Khả năng mô hình hóa, mô phỏng, xử lý dữ liệu và tự động hóa bằng máy tính đóng vai trò then chốt trong việc giải quyết các bài toán thực tiễn ngày càng phức tạp. Vì vậy, việc trang bị cho sinh viên những kiến thức và kỹ năng lập trình ngay từ giai đoạn đào tạo đại học là một yêu cầu tất yếu.
@@ -602,9 +267,7 @@ Viết chương trình chuyển đổi nhiệt độ giữa các đơn vị:
 
 • Celsius sang Fahrenheit: $F = C \times \frac{9}{5} +$ 32
 
-• Fahrenheit sang Celsius: $C = (F - 32)\times \frac{5}{9}$
-
-• Celsius sang Kelvin: $K = C + 273.15$
+• Fahrenheit sang Celsius: $C = (F - 32)\times \frac{5}{9}$• Celsius sang Kelvin:$K = C + 273.15$
 
 Yêu cầu: Nhập vào giá trị và đơn vị ban đầu, sau đó chuyển đổi sang các đơn vị còn lại.
 
@@ -1401,7 +1064,9 @@ print(f"{ 'Tin':<10}{9.0:>6}")
 
 ```txt
 Mon hoc Diem
-txt
+```
+
+```txt
 Toan 8.5
 Ly 7.5
 Tin 9.0
@@ -1936,7 +1601,9 @@ print(a is b)
 print(bool(0))
 print(bool(" "))
 print(bool([]))
-txt
+```
+
+```txt
 True
 False
 ```
@@ -2618,7 +2285,9 @@ while i <= 3:
 
 ```txt
 1 1
-csv
+```
+
+```csv
 1 2
 1 3
 2 1
@@ -4293,7 +3962,9 @@ class Student:
         print(f"Tuoi: {self.age}")
         print(f"Chuyen nganh: {self.major}")
         print(f"GPA: {self.gpa}")
-python
+```
+
+```python
 def update_gpa(self, new_gpa):
         if 0.0 <= new_gpa <= 4.0:
             self.gpa = new_gpa
@@ -4318,9 +3989,13 @@ Ten: Nguyen Van An
 Tuoi: 20
 Chuyen nganh: Computer Science
 GPA: 0.0
-txt
+```
+
+```txt
 Cap nhat GPA thanh cong: 3.5
-yaml
+```
+
+```yaml
 Ten: Nguyen Van An
 Tuoí: 20
 Chuyen nganh: Computer Science
@@ -4342,7 +4017,9 @@ class Rectangle:
 
     def calculate_perimeter(self):
         return 2 * (self.width + self.height)
-python
+```
+
+```python
 def is_square(self):
         return self.width == self.height
 
@@ -4362,7 +4039,9 @@ print(f"\nLa hinh vuong: {square.is_square()}")
 Dien tich: 50
 Chu vi: 30
 La hình vuong: False
-txt
+```
+
+```txt
 La hình vuong: True
 ```
 
@@ -4524,9 +4203,7 @@ temp.celsius = -300  # Sẽ bị tù chối
 
 **Kết quả hiển thị:**
 
-Nhiet do: $25^{\circ}\mathrm{C} = 77.0^{\circ}\mathrm{F}$
-Nhiet do moi: $30^{\circ}\mathrm{C} = 86.0^{\circ}\mathrm{F}$
-Nhiet do khong the thap hon $-273.15^{\circ}\mathrm{C}$
+Nhiet do: $25^{\circ}\mathrm{C} = 77.0^{\circ}\mathrm{F}$Nhiet do moi:$30^{\circ}\mathrm{C} = 86.0^{\circ}\mathrm{F}$Nhiet do khong the thap hon$-273.15^{\circ}\mathrm{C}$
 
 ## 5.6 Tính kế thừa (Inheritance)
 
@@ -4583,7 +4260,9 @@ class Student(Person):
 person = Person("Nguyen Van A", 30)
 print("Thong tin person:")
 person.display_info()
-python
+```
+
+```python
 print("\nThong tin student:")
 student = Student("Tran Thi B", 20, "SV001", "Computer
     Science")
@@ -4596,7 +4275,9 @@ student.display_info()
 Thong tin person:
 Ten: Nguyen Van A
 Tuoí: 30
-txt
+```
+
+```txt
 Thong tin student:
 Ten: Tran Thi B
 Tuoi: 20
@@ -4631,7 +4312,9 @@ class Mammal(Animal):
 class Dog(Mammal):
     def __init__(self, name, fur_color, breed):
         super().__init__(name, fur_color)
-python
+```
+
+```python
 self.breed = breed
 
     def speak(self):
@@ -4730,7 +4413,9 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
-python
+```
+
+```python
 return self.width * self.height
 
 class Triangle(Shape):
@@ -4777,7 +4462,9 @@ class Vector2D:
         return Vector2D(self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
-python
+```
+
+```python
 return Vector2D(self.x - other.x, self.y - other.y)
 
 def __str__(self):
@@ -4798,7 +4485,9 @@ print(f"v1 - v2 = {v4}")
 
 print(f"v1 == v2: {v1 == v2}")
 print(f"v1 == v1: {v1 == v1}")
-txt
+```
+
+```txt
 Kết quả hiển thị:
 v1 + v2 = Vector2D(4, 6)
 v1 - v2 = Vector2D(2, 2)
@@ -4864,7 +4553,9 @@ class Book:
 book1 = Book("Python Programming", "John Smith", 300)
 book2 = Book("Data Science", "Jane Doe", 250)
 book3 = Book("Python Programming", "John Smith", 300)
-python
+```
+
+```python
 print(book1)                      # Gọi __str__
 print(repr(book2))                 # Gọi __repr__
 print(f"So trang: {len(book1)}") # Gọi __len__
@@ -4913,7 +4604,9 @@ sv1 = Student("Nguyen Van An", "SV001")
 sv2 = Student("Tran Thi Binh", "SV002")
 
 print(f"So sinh vien hien tai: {Student.student_count}")
-cmake
+```
+
+```cmake
 sv1.display_info()
 ```
 
@@ -4960,7 +4653,9 @@ class Employee:
 Employee.set_raise_amount(1.10)
 
 emp1 = Employee("An", 50000)
-python
+```
+
+```python
 emp2 = Employee.from_string("Binh-60000")
 
 emp1.display_info()
@@ -5007,7 +4702,9 @@ class MathUtils:
 print(f"10 la so chan: {MathUtils.is_even(10)}")
 print(f"7 la so nguyen to: {MathUtils.is_prime(7)}")
 print(f"5! = {MathUtils.factorial(5)}")
-txt
+```
+
+```txt
 Kết quả hiển thị:
 10 la so chan: True
 7 la so nguyen to: True
@@ -5054,7 +4751,9 @@ class Member:
             print(f"{self.name} da muon: {book.title}")
             return True
         else:
-python
+```
+
+```python
 print(f"Sach '{book.title}' khong co san")
     return False
 
@@ -5404,7 +5103,9 @@ arr3d = np.array([[1, 2], [3, 4]],
                  [[5, 6], [7, 8]]])
 print("\nMang 3D:")
 print(arr3d)
-yaml
+```
+
+```yaml
 Kết quả:
 Mang 1D: [1 2 3 4 5]
 Kieu: <class 'numpy.ndarray'>
@@ -5463,7 +5164,9 @@ Ma tran khong 3x4:
 [[0. 0. 0. 0.]
  [0. 0. 0. 0.]
  [0. 0. 0. 0.]]
-txt
+```
+
+```txt
 Ma tran mot 2x3:
 [[1. 1. 1.]
  [1. 1. 1.]]
@@ -5560,7 +5263,9 @@ print("nbytes (tong kich thuoc):", arr.nbytes) # 96 bytes
 Mang goc:
 [[ 1 2 3 4]
 [ 5 6 7 8]
-txt
+```
+
+```txt
 [ 9 10 11 12]]
 
 shape (kich thuoc): (3, 4)
@@ -5660,7 +5365,9 @@ print(matrix)
 
 ```txt
 Phan tu o hang 0, cot 1: 20
-txt
+```
+
+```txt
 Phan tu o hang 2, cot 2: 90
 Phan tu o hang 1, cot 0: 40
 Hang cuoi, cot cuoi: 90
@@ -5702,12 +5409,14 @@ Dao nguoc mang: [90 80 70 60 50 40 30 20 10  0]
 
 Với mảng 2 chiều, ta có thể cắt lát theo từng chiều một cách độc lập.
 
-```python
+```txt
 A = np.array([[10, 20, 30, 40],
          [50, 60, 70, 80],
          [90, 100, 110, 120],
          [130, 140, 150, 160]])
-python
+```
+
+```python
 print("Ma tran goc:")
 print(A)
 
@@ -5752,7 +5461,9 @@ Ma tran con 2x2 (trai tren):
 
 Ma tran con 2x3 (giua):
 [[ 60 70 80]
-json
+```
+
+```json
 [100 110 120]]
 ```
 
@@ -5859,7 +5570,9 @@ Mat na boolean: [False True False True False False True False]
 Cac phan tu > 20: [22 31 42]
 Cac phan tu < 15: [8 7 11]
 Phan tu trong khoang [10, 25]: [15 22 19 11]
-yaml
+```
+
+```yaml
 So chan: [22 8 42]
 So le: [15 31 19 7 11]
 ```
@@ -6059,7 +5772,9 @@ print("Kich thuoc C:", C1.shape)
 
 ```txt
 np.dot (A, B):
-txt
+```
+
+```txt
 [[ 58 64]
 [139 154]]
 
@@ -6105,7 +5820,9 @@ Ma tran goc:
 [[1 2 3]
  [4 5 6]]
 Kich thuoc: (2, 3)
-txt
+```
+
+```txt
 Chuyen vi (transpose):
 [[1 4]
 ```
@@ -6142,7 +5859,9 @@ print(A_inv)
 I = A @ A_inv
 print("\nA @ A^(-1):")
 print(I)
-txt
+```
+
+```txt
 Kết quả:
 Ma tran A:
 [[4 7]
@@ -6359,7 +6078,9 @@ print("Tong theo dong (axis=1):", np.sum(data, axis=1))
 print("\nTrung bình toan bo:", np.mean(data))
 print("Trung bình theo cot:", np.mean(data, axis=0))
 print("Trung bình theo dong:", np.mean(data, axis=1))
-python
+```
+
+```python
 # Min, Max
 print("\nGia tri nho nhat:", np.min(data))
 print("Gia tri lon nhat:", np.max(data))
@@ -6461,10 +6182,14 @@ cumprod = np.cumprod(arr)
 print("Tich tich luy:", cumprod)
 
 # Với ma trận
-txt
+```
+
+```txt
 Tong tich luy: [ 1 3 6 10 15]
 Tich tich luy: [ 1 2 6 24 120]
-python
+```
+
+```python
 matrix = np.array([[1, 2, 3],
               [4, 5, 6]])
 print("\nTong tich luy theo cot:")
@@ -6499,7 +6224,9 @@ print(np.sort(matrix, axis=1))
 
 print("\nSap xep theo cot:")
 print(np.sort(matrix, axis=0))
-txt
+```
+
+```txt
 Gia tri duy nhat: [1 2 3 4 5]
 
 Gia tri: [1 2 3 4 5]
@@ -6549,7 +6276,9 @@ NumPy cung cấp các hàm toán học áp dụng trên từng phần tử của
 
 ```python
 arr = np.array([1, 4, 9, 16, 25])
-python
+```
+
+```python
 # Căn bậc hai
 print("Căn bậc hai:", np.sqrt(arr))
 
@@ -6734,7 +6463,9 @@ Vertical stack:
 [[1 2]
     [3 4]
     [5 6]
-markdown
+```
+
+```markdown
 [7 8]]
 
 Horizontal stack:
@@ -7044,7 +6775,9 @@ print(rotated)
 # Nguồng hóa (thresholding)
 threshold = 128
 binary = (image > threshold).astype(np.uint8) * 255
-python
+```
+
+```python
 print("\nAnh nhi phan:")
 print(binary)
 ```
@@ -7092,7 +6825,9 @@ resistance = np.array([100.2, 103.5, 107.1, 110.8,
     114.2, 117.9, 121.5])  # Ohm
 
 # Tạo ma trận cho hồi quy: [1, T]
-python
+```
+
+```python
 X = np.column_stack([np.ones(len(temperature)),
   temperature])
 y = resistance
@@ -7120,7 +6855,9 @@ print(f"R²: {r_squared:.4f}")
 
 ```txt
 He so hoi quy: R = 96.54 + 0.3127 * T
-txt
+```
+
+```txt
 Du doan dien tro tai 55°C: 113.74 Ohm
 R²: 0.9998
 ```
@@ -7282,7 +7019,7 @@ Trong đó $I_{1}, I_{2}, I_{3}$ là dòng điện (Ampere) tại các node.
 
 ## Mở rộng:
 
-• Tính công suất tiêu thụ tại mỗi node nếu điện trở tương ứng là $R_{1} = 2\Omega, R_{2} =$ 3Ω, $R_{3}=4\Omega$ (sử dụng công thức $P = I^{2} \times R)$
+• Tính công suất tiêu thụ tại mỗi node nếu điện trở tương ứng là $R_{1} = 2\Omega, R_{2} =$3Ω,$R_{3}=4\Omega$(sử dụng công thức$P = I^{2} \times R)$
 
 • Tính tổng công suất tiêu thụ của toàn mạch
 
@@ -7312,11 +7049,7 @@ print("Sai so:", np.allclose(check, b))
 
 ## Đáp án tham khảo cho Bài 7:
 
-$I_{1} \approx 5.09 \mathrm{~A}, I_{2} \approx 3.27 \mathrm{~A}, I_{3} \approx 3.09 \mathrm{~A}$
-
-• Định thức det(A) = 33
-
-$P_{1} \approx 51.8 \mathrm{~W}, P_{2} \approx 32.0 \mathrm{~W}, P_{3} \approx 38.2 \mathrm{~W}$
+$I_{1} \approx 5.09 \mathrm{~A}, I_{2} \approx 3.27 \mathrm{~A}, I_{3} \approx 3.09 \mathrm{~A}$• Định thức det(A) = 33$P_{1} \approx 51.8 \mathrm{~W}, P_{2} \approx 32.0 \mathrm{~W}, P_{3} \approx 38.2 \mathrm{~W}$
 
 ## CHƯƠNG 6. THƯ VIỆN NUMPY TRONG KỸ THUẬT
 
@@ -7450,7 +7183,9 @@ Scatter plot hiển thị mối quan hệ giữa hai biến liên tục, rất h
 ```txt
 # Tạo dữ liệu với correlation
 np.random.seed(42)
-python
+```
+
+```python
 n = 200
 x = np.random.randn(n)
 y = 2 * x + np.random.randn(n) * 0.5
@@ -7589,7 +7324,9 @@ axes[0, 1].plot(epochs, train_acc, label='Train Acc',
     linewidth=2)
 axes[0, 1].plot(epochs, val_acc, label='Val Acc',
     linewidth=2)
-python
+```
+
+```python
 axes[0, 1].set_xlabel('Epochs')
 axes[0, 1].set_ylabel('Accuracy')
 axes[0, 1].set_title('Training vs Validation Accuracy')
@@ -7750,7 +7487,9 @@ pairplot.fig.suptitle('Pairplot: Iris Dataset',
 
 plt.savefig('Hinh_ve/ch8_pairplot.png', dpi=300,
     bbox_inches='tight')
-txt
+```
+
+```txt
 plt.show()
 ```
 
@@ -7912,7 +7651,9 @@ Learning curves giúp chẩn đoán overfitting, underfitting và đánh giá tr
 ```txt
 # Tạo learning curves cho 3 scenarios
 epochs = np.arange(1, 101)
-python
+```
+
+```python
 # Scenario 1: Good fit
 train_loss_good = 2 * np.exp(-epochs/15) + 0.05
 val_loss_good = 2 * np.exp(-epochs/17) + 0.08
@@ -7956,7 +7697,9 @@ axes[1, 0].set_xlabel('Epochs')
 axes[1, 0].set_ylabel('Accuracy')
 axes[1, 0].legend()
 axes[1, 0].grid(True, alpha=0.3)
-python
+```
+
+```python
 # Overfitting
 axes[0, 1].plot(epochs, train_loss_over, label='Train',
     linewidth=2)
@@ -8001,14 +7744,18 @@ axes[1, 2].set_title('Underfitting: Accuracy', fontsize=12,
 axes[1, 2].set_xlabel('Epochs')
 axes[1, 2].set_ylabel('Accuracy')
 axes[1, 2].legend()
-python
+```
+
+```python
 axes[1, 2].grid(True, alpha=0.3)
 
 plt.tight_layout()
 plt.savefig('Hinh_ve/ch8_learning_curves.png', dpi=300,
     bbox_inches='tight')
 plt.show()
-yaml
+```
+
+```yaml
 Good Fit: Loss
 Overfitting: Loss
 Underfitting: Loss
@@ -8039,7 +7786,9 @@ sorted_features = [features[i] for i in indices]
 sorted_importances = importances[indices]
 
 fig, ax = plt.subplots(figsize=(10, 6))
-python
+```
+
+```python
 colors = plt.cm.viridis(np.linspace(0.3, 0.9,
     len(sorted_features)))
 bars = ax.barh(sorted_features, sorted_importances,
@@ -8071,7 +7820,9 @@ from sklearn.metrics import precision_recall_curve,
     average_precision_score
 
 # Giả lập dữ liệu imbalanced
-python
+```
+
+```python
 np.random.seed(42)
 y_true_imb = np.concatenate([np.ones(100), np.zeros(900)])
 y_scores_good = y_true_imb + np.random.normal(0, 0.3, 1000)
@@ -8142,7 +7893,9 @@ axes[0, 0].legend(fontsize=10)
 axes[0, 0].grid(True, alpha=0.3)
 
 # Accuracy
-python
+```
+
+```python
 axes[0, 1].plot(epochs, history['accuracy'], 'b-', label='Training Accuracy', linewidth=2)
 axes[0, 1].plot(epochs, history['val_accuracy'], 'r-', label='Validation Accuracy', linewidth=2)
 axes[0, 1].set_xlabel('Epoch', fontsize=11)
@@ -8187,7 +7940,9 @@ Mô tả kiến trúc neural network một cách trực quan.
 ```python
 # Visualization đơn giản cho NN architecture
 fig, ax = plt.subplots(figsize=(12, 8))
-txt
+```
+
+```txt
 Model Loss
 Model Accuracy
 Learning Rate Schedule
@@ -8253,7 +8008,9 @@ for idx, ax in enumerate(axes.flat):
     activation = np.random.rand(28, 28) * (idx + 1) / 8
     activation = activation * (activation > 0.3) #
     → ReLU-like
-python
+```
+
+```python
 im = ax.imshow(activation, cmap='hot',
     ↦ interpolation='nearest')
     ax.set_title(f'Filter {idx + 1}', fontsize=11)
@@ -8342,7 +8099,9 @@ def plot_learning_curves(history, figsize=(12, 5)):
 
     # Accuracy
     axes[1].plot(history['accuracy'], label='Train')
-python
+```
+
+```python
 axes[1].plot(history['val_accuracy'],
     label='Validation')
 axes[1].set_xlabel('Epoch')
@@ -8772,7 +8531,9 @@ t_eval = np.linspace(0, 10, 100)  # Các điểm muốn tính
     nghiệm
 
 sol = solve_ivp(decay_rate, t_span, [N0], t_eval=t_eval)
-python
+```
+
+```python
 # So sánh với nghiệm giải tích
 N_exact = N0 * np.exp(-lambda_decay * sol.t)
 
@@ -8817,7 +8578,9 @@ omega0 = 0
 y0 = [theta0, omega0]
 
 t_span = (0, 10)
-python
+```
+
+```python
 t_eval = np.linspace(0, 10, 500)
 
 sol = solve_ivp(pendulum, t_span, y0, t_eval=t_eval,
@@ -8862,7 +8625,9 @@ def lotka_volterra(t, z, alpha, beta, delta, gamma):
 
 # Tham số
 alpha = 1.0   # Tốc độ sinh con mỗi
-python
+```
+
+```python
 beta = 0.1    # Tốc độ sẵn môi tiêu diệt con mỗi
 delta = 0.075 # Hiệu suất chuyển đổi con mỗi → sẵn môi
 gamma = 1.5    # Tốc độ chết tự nhiên của sẵn môi
@@ -8916,27 +8681,23 @@ Tìm nghiệm của phương trình là một trong những bài toán cơ bản
 
 ## 8.5.1 Cơ sở Lý thuyết
 
-Bài toán tìm nghiệm phương trình $f(x) = 0$ được gọi là bài toán tìm điểm không (root-finding problem). Điểm $x^{*}$ được gọi là nghiệm (hoặc điểm không, root) của phương trình nếu $f(x^{*}) = 0$ . Về mặt hình học, nghiệm là giao điểm giữa đồ thị hàm số $y = f(x)$ và trục hoành.
+Bài toán tìm nghiệm phương trình $f(x) = 0$được gọi là bài toán tìm điểm không (root-finding problem). Điểm$x^{*}$được gọi là nghiệm (hoặc điểm không, root) của phương trình nếu$f(x^{*}) = 0$. Về mặt hình học, nghiệm là giao điểm giữa đồ thị hàm số$y = f(x)$ và trục hoành.
 
 Các phương pháp số tìm nghiệm có thể phân thành hai loại chính:
 
-• **Phương pháp ngoặc (Bracketing methods)**: Yêu cầu hai điểm ban đầu a và b sao cho $f(a)\cdot f(b) <   0$ (hàm đổi dấu), đảm bảo tồn tại ít nhất một nghiệm trong khoảng $[a,b]$ . Phương pháp chia đôi (bisection) là đại diện tiêu biểu.
+• **Phương pháp ngoặc (Bracketing methods)**: Yêu cầu hai điểm ban đầu a và b sao cho $f(a)\cdot f(b) <   0$(hàm đổi dấu), đảm bảo tồn tại ít nhất một nghiệm trong khoảng$[a,b]$ . Phương pháp chia đôi (bisection) là đại diện tiêu biểu.
 
 • **Phương pháp lặp mở (Open methods)**: Chỉ cần một hoặc vài điểm xuất phát, sử dụng thông tin về đạo hàm để hội tụ nhanh hơn. Phương pháp Newton-Raphson là ví dụ điển hình.
 
 ## 8.5.2 Phương pháp Chia đôi (Bisection Method)
 
-Phương pháp chia đôi là thuật toán đơn giản và tin cậy nhất để tìm nghiệm. $\acute{\mathrm{Y}}$ tưởng dựa trên định lý giá trị trung gian: nếu hàm liên tục $f(x)$ đổi dấu trên $[a,b]$ , tức $f(a)\cdot f(b) <   0$ thì tồn tại ít nhất một nghiệm trong khoảng đó.
+Phương pháp chia đôi là thuật toán đơn giản và tin cậy nhất để tìm nghiệm. $\acute{\mathrm{Y}}$tưởng dựa trên định lý giá trị trung gian: nếu hàm liên tục$f(x)$đổi dấu trên$[a,b]$, tức$f(a)\cdot f(b) <   0$ thì tồn tại ít nhất một nghiệm trong khoảng đó.
 
 Thuật toán hoạt động như sau:
 
-1. Tính điểm giữa $c = \frac{a + b}{2}$
+1. Tính điểm giữa $c = \frac{a + b}{2}$2. Nếu$f(c) = 0$hoặc$\vert b - a\vert$ đủ nhỏ: dừng, trả vê c
 
-2. Nếu $f(c) = 0$ hoặc $\vert b - a\vert$ đủ nhỏ: dừng, trả vê c
-
-3. Nếu $f(a)\cdot f(c) <   0:$ nghiệm nằm trong $[a,c]$ , đặt $b = c$
-
-4. Ngược lại: nghiệm nằm trong $[c,b]$ , đặt $a = c$
+3. Nếu $f(a)\cdot f(c) <   0:$nghiệm nằm trong$[a,c]$, đặt$b = c$4. Ngược lại: nghiệm nằm trong$[c,b]$, đặt$a = c$
 
 5. Quay lại bước 1
 
@@ -9000,7 +8761,7 @@ $$
 x _ {n + 1} = x _ {n} - \frac {f (x _ {n})}{f ^ {\prime} (x _ {n})}
 $$
 
-Phương pháp này có tốc độ hội tụ bậc hai (quadratic convergence): nếu $x_{n}$ gần nghiệm, sai số ở bước tiếp theo tỷ lệ với bình phương sai số hiện tại: $\left|x_{n + 1} - x^{*}\right|\propto \left|x_{n} - x^{*}\right|^{2}$ Điều này có nghĩa số chữ số chính xác tăng gấp đôi sau mỗi bước lặp khi gần nghiệm.
+Phương pháp này có tốc độ hội tụ bậc hai (quadratic convergence): nếu $x_{n}$gần nghiệm, sai số ở bước tiếp theo tỷ lệ với bình phương sai số hiện tại:$\left|x_{n + 1} - x^{*}\right|\propto \left|x_{n} - x^{*}\right|^{2}$ Điều này có nghĩa số chữ số chính xác tăng gấp đôi sau mỗi bước lặp khi gần nghiệm.
 
 Tuy nhiên, phương pháp Newton có nhược điểm:
 
@@ -9027,7 +8788,9 @@ print(f"Nghiệm (fsolve): x = {root_fsolve[0]:.10f}")
 
 # Phương pháp 2: newton (cần đạo hàm, hội tự nhanh hơn)
 def derivative(x):
-python
+```
+
+```python
 return -np.sin(x) - 1
 
 root_newton = newton(equation, 0.5, fprime=derivative)
@@ -9119,7 +8882,9 @@ ax.plot(x_parabola, y_parabola, 'r-', linewidth=2, label='x
 
 for sol in solutions:
     ax.plot(sol[0], sol[1], 'go', markersize=15)
-python
+```
+
+```python
 ax.annotate(f'({sol[0]:.2f}, {sol[1]:.2f})',
             xy=(sol[0], sol[1]), xytext=(sol[0]+0.3,
             ⋸ sol[1]+0.3),
@@ -9165,7 +8930,9 @@ def equilibrium(x):
     n_NH3 = x
 
     # Điều kiện vật lý: tất cả nông độ phải dương
-python
+```
+
+```python
 if n_N2 <= 0 or n_H2 <= 0 or n_NH3 <= 0:
     return 1e10  # Trả về giá trị lớn nếu không hợp lý
 
@@ -9194,7 +8961,7 @@ Nội suy (interpolation) là kỹ thuật ước lượng giá trị của hàm
 
 ## 8.6.1 Cơ sở Lý thuyết Nội suy
 
-Cho tập điểm dữ liệu $(x_{i},y_{i})$ với $i = 0,1,\dots,n,$ ta muốn tìm hàm f(x) sao cho $f(x_{i}) =$ yi với mọi i, và có thể tính f(x) tại bất kỳ x nào trong khoảng $[x_0, x_n]$ . Hàm f(x) được gọi là hàm nội suy.
+Cho tập điểm dữ liệu $(x_{i},y_{i})$với$i = 0,1,\dots,n,$ta muốn tìm hàm f(x) sao cho$f(x_{i}) =$yi với mọi i, và có thể tính f(x) tại bất kỳ x nào trong khoảng$[x_0, x_n]$ . Hàm f(x) được gọi là hàm nội suy.
 
 Các yêu cầu đối với hàm nội suy:
 
@@ -9296,7 +9063,9 @@ methods = [
     ('Quadratic', f_quadratic, axes[0, 1]),
     ('Cubic', f_cubic, axes[1, 0]),
     ('Cubic Spline', f_spline, axes[1, 1])
-python
+```
+
+```python
 ]
 for name, f_interp, ax in methods:
     y_interp = f_interp(x_plot)
@@ -9387,7 +9156,9 @@ ax2.set_title('Bẩn đồ Nhiệt độ sau Nội suy (100×100 điểm)',
 ax2.set_xlabel('Kinh độ', fontsize=11)
 ax2.set_ylabel('Vĩ độ', fontsize=11)
 ax2.legend(fontsize=10)
-python
+```
+
+```python
 plt.colorbar(c2, ax=ax2, label='Nhiệt độ (°C)')
 
 plt.tight_layout()
@@ -9432,7 +9203,9 @@ pressure_recovered = f_recover(time_full)
 # Visualization
 plt.figure(figsize=(14, 6))
 plt.plot(time_full, pressure_full, 'g-', linewidth=2,
-python
+```
+
+```python
 label='Dữ liệu đầy đủ (ground truth)', alpha=0.5)
 plt.plot(time_measured, pressure_measured, 'ro',
     markersize=6,
@@ -9462,9 +9235,7 @@ Kết quả cho thấy cubic spline khôi phục dữ liệu với độ chính 
 
 **Bài tập 1: Tích phân Ứng dụng** Tính diện tích hình phẳng giới hạn bởi các đường:
 
-- $y = x^{2}$
-
-- $y = 2x + 3$
+- $y = x^{2}$-$y = 2x + 3$
 
 Yêu cầu:
 
@@ -9486,7 +9257,7 @@ Với $R = 1000\Omega ,C = 10^{-6}F.$ , và điện áp đầu vào là sóng vu
 
 2. Giải phương trình với $V_{C}(0) = 0$ trên khoảng 50ms
 
-3. Vẽ đồ thị $V_{\mathrm{in}}(t)$ và $V_{C}(t)$ trên cùng một figure
+3. Vẽ đồ thị $V_{\mathrm{in}}(t)$và$V_{C}(t)$ trên cùng một figure
 
 4. Nhận xét về quá trình nạp và xả của tụ điện
 
@@ -9529,9 +9300,7 @@ $$
 \ddot {\theta} _ {2} = (\text {phương trình tương tự})
 $$
 
-1. Chuyển về hệ bậc nhất với 4 biến: $[\theta_{1},\omega_{1},\theta_{2},\omega_{2}]$
-
-2. Giải với điều kiện ban đầu: $\theta_{1} = 90, \theta_{2} = -90, \omega_{1} = \omega_{2} = 0$
+1. Chuyển về hệ bậc nhất với 4 biến: $[\theta_{1},\omega_{1},\theta_{2},\omega_{2}]$2. Giải với điều kiện ban đầu:$\theta_{1} = 90, \theta_{2} = -90, \omega_{1} = \omega_{2} = 0$
 
 3. Vẽ quỹ đạo của hai khối nặng trong không gian 2D
 
@@ -9543,9 +9312,7 @@ $$
 \rho (r) = \rho_ {0} (1 + \alpha r ^ {2})
 $$
 
-với $\rho_0 = 7850 \mathrm{~kg} / \mathrm{m}^3$ (thép), $\alpha = 10 \mathrm{~m}^{-2}$ , độ dày đồng đều $h = 0.01\mathrm{m}$
-
-1. Thiết lập tích phân kép trong tọa độ cực: $M = \iint \rho (r)h  dA$
+với $\rho_0 = 7850 \mathrm{~kg} / \mathrm{m}^3$(thép),$\alpha = 10 \mathrm{~m}^{-2}$, độ dày đồng đều$h = 0.01\mathrm{m}$1. Thiết lập tích phân kép trong tọa độ cực:$M = \iint \rho (r)h  dA$
 
 2. Tính khối lượng bằng dblquad
 
@@ -9559,9 +9326,7 @@ $$
 \begin{array}{c} T _ {1} \cos \theta_ {1} + T _ {2} \cos \theta_ {2} + T _ {3} \cos \theta_ {3} = 0 \\ T _ {1} \sin \theta_ {1} + T _ {2} \sin \theta_ {2} + T _ {3} \sin \theta_ {3} = P \\ l _ {1} T _ {1} + l _ {2} T _ {2} - l _ {3} T _ {3} = 0 \end{array}
 $$
 
-với $l_{1} = l_{2} = l_{3} = 1\mathrm{m}$
-
-1. Giải hệ phương trình để tìm lực trong các thanh $(T_{1}, T_{2}, T_{3})$
+với $l_{1} = l_{2} = l_{3} = 1\mathrm{m}$1. Giải hệ phương trình để tìm lực trong các thanh$(T_{1}, T_{2}, T_{3})$
 
 2. Xác định thanh nào chịu kéo (dương), thanh nào chịu nén (âm)
 
@@ -9592,19 +9357,17 @@ $$
 m _ {2} \ddot {x} _ {2} = - k _ {2} (x _ {2} - x _ {1}) - c _ {2} \dot {x} _ {2} + F (t)
 $$
 
-Với $m_{1} = m_{2} = 1 \mathrm{~kg}, k_{1} = k_{2} = 100 \mathrm{~N/m}, c_{1} = c_{2} = 1 \mathrm{~N} \cdot \mathrm{s/m}$ , và lực kích thích $F(t) = 10\sin (5t)\mathrm{N}.$
+Với $m_{1} = m_{2} = 1 \mathrm{~kg}, k_{1} = k_{2} = 100 \mathrm{~N/m}, c_{1} = c_{2} = 1 \mathrm{~N} \cdot \mathrm{s/m}$, và lực kích thích$F(t) = 10\sin (5t)\mathrm{N}.$
 
 1. Chuyển về hệ bậc nhất 4 phương trình
 
-2. Giải với điều kiện ban đầu $x_{1} = x_{2} = \dot{x}_{1} = \dot{x}_{2} = 0$
-
-3. Vẽ biến thiên $x_{1}(t)$ và $x_{2}(t)$
+2. Giải với điều kiện ban đầu $x_{1} = x_{2} = \dot{x}_{1} = \dot{x}_{2} = 0$3. Vẽ biến thiên$x_{1}(t)$và$x_{2}(t)$
 
 4. Phân tích phổ tần số (FFT) của dao động
 
 5. Xác định tần số cộng hưởng
 
-**Bài tập 10: Tổng hợp (Nâng cao)** Bài toán tối ưu hóa quỹ đạo: Một vật được phóng lên với vận tốc ban đầu $v_{0}$ tại góc θ so với phương ngang. Vật chịu lực cản không khí tỷ lệ với vận tốc: $F_{d} = -bv$
+**Bài tập 10: Tổng hợp (Nâng cao)** Bài toán tối ưu hóa quỹ đạo: Một vật được phóng lên với vận tốc ban đầu $v_{0}$tại góc θ so với phương ngang. Vật chịu lực cản không khí tỷ lệ với vận tốc:$F_{d} = -bv$
 
 Phương trình chuyển động:
 
@@ -9695,7 +9458,9 @@ import math
 # Hinh chu nhat
 chieu_dai = 10
 chieu_rong = 5
-python
+```
+
+```python
 dien_tich_hcn = chieu_dai * chieu_rong
 chu_vi_hcn = 2 * (chieu_dai + chieu_rong)
 
@@ -9740,7 +9505,9 @@ elif n > 0:
     print(f" => {n} la so le duong")
 elif la_so_chan:
     print(f" => {n} la so chan khong duong")
-txt
+```
+
+```python
 else:
     print(f" => {n} la so le khong duong")
 ```
@@ -9838,7 +9605,9 @@ print(f"Diem TB: {sinh_vien[2]}")
 
 # Unpacking tuple
 ma_sv, ten, diem = sinh_vien
-txt
+```
+
+```python
 print(f"\nSinh vien {ten} (Ma: {ma_sv}) co diem TB: {diem}")
 ```
 
@@ -9981,7 +9750,9 @@ def thong_ke_file(ten_file):
 
             # Dem so dong
             so_dong = len(dong)
-python
+```
+
+```python
 # Dem so tu
 tu = noi_dung.split()
 so_tu = len(tu)
@@ -10026,7 +9797,9 @@ def la_so_nguyen_to(n):
     for i in range(3, int(math.sqrt(n)) + 1, 2):
         if n % i == 0:
             return False
-python
+```
+
+```python
 return True
 
 # Test
@@ -10115,7 +9888,9 @@ def fibonacci_iterative(n):
     return b
 
 # Test
-python
+```
+
+```python
 print("Giai thua:")
 for i in range(6):
     print(f" {i}! = {giai_thua(i)}")
@@ -10212,7 +9987,9 @@ def sap_xep_giam(danh_sach):
 
 # Test
 so_list = [5, -3, 8, 12, -7, 0, 15, 4, -1, 9]
-python
+```
+
+```python
 print("Danh sach goc:", so_list)
 print("\nThong ke:")
 stats = thong_ke_list(so_list)
@@ -10308,7 +10085,9 @@ def giai_phuong_trinh_bac_2(a, b, c):
     """Giai phuong trinh ax^2 + bx + c = 0"""
     if a == 0:
         if b == 0:
-python
+```
+
+```python
 return None # Vo nghiem hoac vo so nghiem
     return [-c / b] # Phuong trinh bac nhat
 
@@ -10402,7 +10181,9 @@ class SinhVien:
         """String representation"""
         dtb = self.tinh_diem_tb()
         xl = self.xep_loai()
-lua
+```
+
+```lua
 return f"SV {self.ma_sv} - {self.ho_ten} - DTB:
     ↦ {dtb:.2f} - {xl}"
 # Test
@@ -10447,7 +10228,9 @@ class HinhChuNhat(Hinh):
     def __init__(self, chieu_dai, chieu_rong):
         self.chieu_dai = chieu_dai
         self.chieu_rong = chieu_rong
-python
+```
+
+```python
 def dien_tich(self):
         return self.chieu_dai * self.chieu_rong
 
@@ -10492,7 +10275,9 @@ from datetime import datetime
 
 class TaiKhoan:
     """Class quan ly tai khoan ngan hang"""
-python
+```
+
+```python
 lai_suat_nam = 0.05  # Class variable: 5% per year
 
 def __init__(self, so_tai_khoan, chu_tai_khoan,
@@ -10536,7 +10321,9 @@ def chuyen_tien(self, tai_khoan_nhan, so_tien):
         print(f"Chuyen {so_tien:, .0f} VND thanh cong")
     else:
         print("Giao dich that bai!")
-python
+```
+
+```python
 def xem_so_du(self):
     """Xem so du tai khoan"""
     return self.__so_du
@@ -10719,7 +10506,9 @@ data2 = np.random.normal(120, 20, 1000)  # mean=120, std=20
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
 # Histogram
-python
+```
+
+```python
 ax1.hist(data1, bins=30, alpha=0.7, color='blue',
     edgecolor='black',
         label='Group 1')
@@ -10766,7 +10555,9 @@ def f1(x):
     return x**2
 
 def f2(x):
-python
+```
+
+```python
 return 2*x + 3
 
 # Tim giao diem
@@ -10862,7 +10653,9 @@ plt.plot(thang, nhiet_do, 'ko', markersize=8, label='Du lieu
     ↦ thuc te')
 plt.plot(thang_fine, nhiet_do_linear, 'b-', linewidth=2,
         label='Noi suy tuyen tinh')
-python
+```
+
+```python
 plt.plot(thang_fine, nhiet_do_cubic, 'r--', linewidth=2,
        label='Noi suy cubic')
 plt.plot(thang_fine, nhiet_do_spline, 'g-.', linewidth=2,
