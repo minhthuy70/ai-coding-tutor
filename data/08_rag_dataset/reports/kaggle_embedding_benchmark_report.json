@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-11-20T16:08:20.608014+00:00",
+  "input_file": "all_chunks.json",
+  "total_chunks_input": 5230,
+  "qwen3_text": {
+    "model_id": "Qwen/Qwen3-Embedding-0.6B",
+    "target_chunks": 4293,
+    "completed_vectors": 4293,
+    "dimension": 1024,
+    "pooling_mode": "last_token_pooling",
+    "padding_side": "left",
+    "status": "inferred_in_current_session",
+    "failures_count": 0,
+    "inference_time_sec": 231.07,
+    "peak_vram_gb": 9.32
+  },
+  "jina_code": {
+    "model_id": "jinaai/jina-embeddings-v2-base-code",
+    "target_chunks": 937,
+    "completed_vectors": 937,
+    "dimension": 768,
+    "pooling_mode": "attention_masked_mean_tokens",
+    "pooling_description": "Attention-Masked Mean Pooling (không sử dụng token weighting riêng)",
+    "status": "completed",
+    "failures_count": 0,
+    "inference_time_sec": 15.4,
+    "peak_vram_gb": 1.55
+  },
+  "overall": {
+    "total_embedded": 5230,
+    "success_rate": 100.0,
+    "id_collision_count": 0,
+    "status": "SUCCESS"
+  }
+}

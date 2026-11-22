@@ -1,0 +1,684 @@
+{
+  "model_name": "qwen3_text",
+  "model_id": "Qwen/Qwen3-Embedding-0.6B",
+  "dimension": 1024,
+  "dataset_fingerprint": "all_chunks_5230",
+  "last_updated": "2026-11-20T16:07:54.732036+00:00",
+  "batches": [
+    {
+      "batch_idx": 0,
+      "file": "batch_00000.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 1,
+      "file": "batch_00001.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 2,
+      "file": "batch_00002.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 3,
+      "file": "batch_00003.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 4,
+      "file": "batch_00004.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 5,
+      "file": "batch_00005.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 6,
+      "file": "batch_00006.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 7,
+      "file": "batch_00007.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 8,
+      "file": "batch_00008.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 9,
+      "file": "batch_00009.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 10,
+      "file": "batch_00010.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 11,
+      "file": "batch_00011.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 12,
+      "file": "batch_00012.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 13,
+      "file": "batch_00013.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 14,
+      "file": "batch_00014.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 15,
+      "file": "batch_00015.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 16,
+      "file": "batch_00016.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 17,
+      "file": "batch_00017.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 18,
+      "file": "batch_00018.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 19,
+      "file": "batch_00019.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 20,
+      "file": "batch_00020.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 21,
+      "file": "batch_00021.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 22,
+      "file": "batch_00022.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 23,
+      "file": "batch_00023.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 24,
+      "file": "batch_00024.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 25,
+      "file": "batch_00025.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 26,
+      "file": "batch_00026.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 27,
+      "file": "batch_00027.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 28,
+      "file": "batch_00028.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 29,
+      "file": "batch_00029.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 30,
+      "file": "batch_00030.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 31,
+      "file": "batch_00031.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 32,
+      "file": "batch_00032.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 33,
+      "file": "batch_00033.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 34,
+      "file": "batch_00034.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 35,
+      "file": "batch_00035.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 36,
+      "file": "batch_00036.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 37,
+      "file": "batch_00037.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 38,
+      "file": "batch_00038.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 39,
+      "file": "batch_00039.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 40,
+      "file": "batch_00040.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 41,
+      "file": "batch_00041.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 42,
+      "file": "batch_00042.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 43,
+      "file": "batch_00043.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 44,
+      "file": "batch_00044.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 45,
+      "file": "batch_00045.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 46,
+      "file": "batch_00046.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 47,
+      "file": "batch_00047.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 48,
+      "file": "batch_00048.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 49,
+      "file": "batch_00049.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 50,
+      "file": "batch_00050.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 51,
+      "file": "batch_00051.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 52,
+      "file": "batch_00052.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 53,
+      "file": "batch_00053.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 54,
+      "file": "batch_00054.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 55,
+      "file": "batch_00055.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 56,
+      "file": "batch_00056.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 57,
+      "file": "batch_00057.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 58,
+      "file": "batch_00058.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 59,
+      "file": "batch_00059.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 60,
+      "file": "batch_00060.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 61,
+      "file": "batch_00061.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 62,
+      "file": "batch_00062.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 63,
+      "file": "batch_00063.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 64,
+      "file": "batch_00064.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 65,
+      "file": "batch_00065.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 66,
+      "file": "batch_00066.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 67,
+      "file": "batch_00067.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 68,
+      "file": "batch_00068.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 69,
+      "file": "batch_00069.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 70,
+      "file": "batch_00070.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 71,
+      "file": "batch_00071.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 72,
+      "file": "batch_00072.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 73,
+      "file": "batch_00073.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 74,
+      "file": "batch_00074.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 75,
+      "file": "batch_00075.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 76,
+      "file": "batch_00076.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 77,
+      "file": "batch_00077.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 78,
+      "file": "batch_00078.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 79,
+      "file": "batch_00079.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 80,
+      "file": "batch_00080.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 81,
+      "file": "batch_00081.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 82,
+      "file": "batch_00082.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 83,
+      "file": "batch_00083.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 84,
+      "file": "batch_00084.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 85,
+      "file": "batch_00085.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 86,
+      "file": "batch_00086.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 87,
+      "file": "batch_00087.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 88,
+      "file": "batch_00088.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 89,
+      "file": "batch_00089.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 90,
+      "file": "batch_00090.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 91,
+      "file": "batch_00091.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 92,
+      "file": "batch_00092.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 93,
+      "file": "batch_00093.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 94,
+      "file": "batch_00094.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 95,
+      "file": "batch_00095.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 96,
+      "file": "batch_00096.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 97,
+      "file": "batch_00097.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 98,
+      "file": "batch_00098.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 99,
+      "file": "batch_00099.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 100,
+      "file": "batch_00100.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 101,
+      "file": "batch_00101.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 102,
+      "file": "batch_00102.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 103,
+      "file": "batch_00103.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 104,
+      "file": "batch_00104.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 105,
+      "file": "batch_00105.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 106,
+      "file": "batch_00106.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 107,
+      "file": "batch_00107.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 108,
+      "file": "batch_00108.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 109,
+      "file": "batch_00109.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 110,
+      "file": "batch_00110.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 111,
+      "file": "batch_00111.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 112,
+      "file": "batch_00112.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 113,
+      "file": "batch_00113.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 114,
+      "file": "batch_00114.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 115,
+      "file": "batch_00115.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 116,
+      "file": "batch_00116.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 117,
+      "file": "batch_00117.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 118,
+      "file": "batch_00118.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 119,
+      "file": "batch_00119.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 120,
+      "file": "batch_00120.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 121,
+      "file": "batch_00121.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 122,
+      "file": "batch_00122.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 123,
+      "file": "batch_00123.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 124,
+      "file": "batch_00124.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 125,
+      "file": "batch_00125.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 126,
+      "file": "batch_00126.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 127,
+      "file": "batch_00127.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 128,
+      "file": "batch_00128.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 129,
+      "file": "batch_00129.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 130,
+      "file": "batch_00130.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 131,
+      "file": "batch_00131.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 132,
+      "file": "batch_00132.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 133,
+      "file": "batch_00133.jsonl",
+      "records": 32
+    },
+    {
+      "batch_idx": 134,
+      "file": "batch_00134.jsonl",
+      "records": 5
+    }
+  ]
+}

@@ -1,48 +1,54 @@
+# Dependencies
 node_modules/
 .next/
 dist/
 build/
 *.tsbuildinfo
 
+# Environment variables (NEVER commit secrets to public repo)
 .env
 .env.*
 !.env.example
 
+# Logs
 *.log
 
+# Testing
 coverage/
 
+# IDE & OS files
 .vscode/
 .idea/
-
 .DS_Store
 Thumbs.db
 
+# Python
 __pycache__/
 *.py[cod]
-
 .venv/
 venv/
-
 .pytest_cache/
 
 # Docker
 docker-data/
 
-# Large datasets
+# Raw large datasets
 datasets/raw/*
 datasets/processed/*
 
-# Model files
+# Raw large model weights (DL checkpoints)
 *.pt
 *.pth
-*.bin
 *.safetensors
 *.gguf
 
 # Experiment outputs
 experiments/results/*
 
-# Archive & Output zips
+# Archive & Output zips (except LFS tracked tar.gz)
 *.zip
-*.tar.gz
+
+# Temporary scratch scripts & Kaggle execution artifacts
+scratch/
+notebooks/kaggle_output*/
+notebooks/kernel-metadata.json
