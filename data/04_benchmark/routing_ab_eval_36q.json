@@ -1,0 +1,405 @@
+[
+  {
+    "id": "Q01",
+    "category": "theory",
+    "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
+    "intent": "Kiểm tra kiến thức quy tắc Clean Code và quy ước đặt tên biến PEP8",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "PY_04_PEP8_Clean_Code_Specification_c2459",
+      "PY_04_PEP8_Clean_Code_Specification_c2460"
+    ],
+    "ground_truth_source": "PY_04_PEP8_Clean_Code_Specification.md"
+  },
+  {
+    "id": "Q02",
+    "category": "theory",
+    "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
+    "intent": "Khái niệm nền tảng bao bọc dữ liệu và trừu tượng hóa",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "Q03",
+    "category": "theory",
+    "query": "Định nghĩa và nguyên lý của phương pháp quy nạp cấu trúc (Structural Induction)?",
+    "intent": "Toán rời rạc và lý thuyết kiểu dữ liệu đệ quy",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0360",
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0356"
+    ],
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+  },
+  {
+    "id": "Q04",
+    "category": "theory",
+    "query": "Sự khác biệt giữa mutable và immutable object trong mô hình dữ liệu Python?",
+    "intent": "Quản lý bộ nhớ và tính bất biến của kiểu dữ liệu",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "PY_08_Official_Data_Model_and_Magic_Methods_c2981"
+    ],
+    "ground_truth_source": "PY_05_Official_Builtin_Functions_and_Types.md"
+  },
+  {
+    "id": "Q05",
+    "category": "theory",
+    "query": "Độ phức tạp Big-O trường hợp xấu nhất của thuật toán QuickSort là bao nhiêu?",
+    "intent": "Phân tích tiệm cận thuật toán sắp xếp",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1440",
+      "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722"
+    ],
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+  },
+  {
+    "id": "Q06",
+    "category": "theory",
+    "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong Python?",
+    "intent": "Lý thuyết OOP cơ bản trong Python",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "Q07",
+    "category": "theory",
+    "query": "Nguyên lý Generalized Product Rule trong bài toán đếm và tổ hợp là gì?",
+    "intent": "Toán rời rạc MIT về quy tắc nhân mở rộng",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1064"
+    ],
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+  },
+  {
+    "id": "Q08",
+    "category": "theory",
+    "query": "Quy tắc định danh biến (Identifier rules) trong Python không được phép chứa ký tự nào?",
+    "intent": "Cú pháp ngữ pháp cơ bản của Python",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3319"
+    ],
+    "ground_truth_source": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat.md"
+  },
+  {
+    "id": "Q09",
+    "category": "theory",
+    "query": "Mô hình dữ liệu Python quy định thứ tự phân giải phương thức (MRO) như thế nào?",
+    "intent": "Lý thuyết phân cấp đa kế thừa trong Python",
+    "expected_modality": "text",
+    "ground_truth_chunks": [
+      "PY_08_Official_Data_Model_and_Magic_Methods_c2980"
+    ],
+    "ground_truth_source": "PY_08_Official_Data_Model_and_Magic_Methods.md"
+  },
+  {
+    "id": "Q10",
+    "category": "code",
+    "query": "Viết hàm QuickSort đệ quy phân hoạch mảng trong Python",
+    "intent": "Mã nguồn thuật toán sắp xếp nhanh",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1441"
+    ],
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+  },
+  {
+    "id": "Q11",
+    "category": "code",
+    "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
+    "intent": "Mã nguồn thao tác mảng 2 chiều bằng comprehension",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1850"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q12",
+    "category": "code",
+    "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
+    "intent": "Mã nguồn quy hoạch động / ghi nhớ đệ quy",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1859"
+    ],
+    "ground_truth_source": "VI_PY_05_Giao_Trinh_Python_Tu_Co_Ban_Den_Machine_Learning.md"
+  },
+  {
+    "id": "Q13",
+    "category": "code",
+    "query": "Đoạn code duyệt cây nhị phân theo thứ tự Inorder traversal",
+    "intent": "Mã nguồn thuật toán cấu trúc dữ liệu cây",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0828"
+    ],
+    "ground_truth_source": "COMMON_01_MIT_Mathematics_for_CS_and_DSA.md"
+  },
+  {
+    "id": "Q14",
+    "category": "code",
+    "query": "Cú pháp dùng lambda function kết hợp với hàm filter và map",
+    "intent": "Mã nguồn functional programming trong Python",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1865"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q15",
+    "category": "code",
+    "query": "Ví dụ code thực hiện thuật toán tìm kiếm nhị phân Binary Search trên mảng đã sắp xếp",
+    "intent": "Mã nguồn tìm kiếm nhị phân",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4520"
+    ],
+    "ground_truth_source": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc.md"
+  },
+  {
+    "id": "Q16",
+    "category": "code",
+    "query": "Mã nguồn triển khai ngăn xếp (Stack) hoặc hàng đợi (Queue) bằng deque",
+    "intent": "Mã nguồn cấu trúc dữ liệu hàng đợi",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1877"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q17",
+    "category": "code",
+    "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
+    "intent": "Mã nguồn context manager đọc ghi file",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1914"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q18",
+    "category": "code",
+    "query": "Mã nguồn định nghĩa generator function sử dụng từ khóa yield",
+    "intent": "Mã nguồn hàm sinh dữ liệu generator",
+    "expected_modality": "code",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1955"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q19",
+    "category": "api",
+    "query": "Hàm any() trong Python hoạt động như thế nào và cú pháp gọi hàm?",
+    "intent": "Tài liệu API hàm built-in any()",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_05_Official_Builtin_Functions_and_Types_c2485"
+    ],
+    "ground_truth_source": "PY_05_Official_Builtin_Functions_and_Types.md"
+  },
+  {
+    "id": "Q20",
+    "category": "api",
+    "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn cơ sở dữ liệu",
+    "intent": "Tài liệu thư viện chuẩn sqlite3",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+      "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
+    ],
+    "ground_truth_source": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite.md"
+  },
+  {
+    "id": "Q21",
+    "category": "api",
+    "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json",
+    "intent": "Tài liệu thư viện json",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+      "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
+    ],
+    "ground_truth_source": "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON.md"
+  },
+  {
+    "id": "Q22",
+    "category": "api",
+    "query": "Cách sử dụng collections.defaultdict để tránh lỗi KeyError khi gom nhóm dữ liệu",
+    "intent": "Tài liệu cấu trúc dữ liệu collections",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_06_Official_Collections_and_Data_Structures_c2865"
+    ],
+    "ground_truth_source": "PY_06_Official_Collections_and_Data_Structures.md"
+  },
+  {
+    "id": "Q23",
+    "category": "api",
+    "query": "Cách tạo hoán vị và tổ hợp bằng itertools.permutations và itertools.combinations",
+    "intent": "Tài liệu mô-đun itertools",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_07_Official_Itertools_and_Functools_c2915"
+    ],
+    "ground_truth_source": "PY_07_Official_Itertools_and_Functools.md"
+  },
+  {
+    "id": "Q24",
+    "category": "api",
+    "query": "Ý nghĩa và cách dùng hàm zip() ghép cặp nhiều iterable trong Python",
+    "intent": "Tài liệu built-in zip",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_05_Official_Builtin_Functions_and_Types_c2480"
+    ],
+    "ground_truth_source": "PY_05_Official_Builtin_Functions_and_Types.md"
+  },
+  {
+    "id": "Q25",
+    "category": "api",
+    "query": "Cách sử dụng hàm enumerate() để lấy chỉ số index trong vòng lặp for",
+    "intent": "Tài liệu built-in enumerate",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_05_Official_Builtin_Functions_and_Types_c2480"
+    ],
+    "ground_truth_source": "PY_05_Official_Builtin_Functions_and_Types.md"
+  },
+  {
+    "id": "Q26",
+    "category": "api",
+    "query": "Phương thức dict.get(key, default) khác gì so với truy cập dict[key] thông thường?",
+    "intent": "Tài liệu kiểu dữ liệu dict",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_05_Official_Builtin_Functions_and_Types_c2810"
+    ],
+    "ground_truth_source": "PY_05_Official_Builtin_Functions_and_Types.md"
+  },
+  {
+    "id": "Q27",
+    "category": "api",
+    "query": "Cú pháp sử dụng Union và Optional trong mô-đun typing của Python",
+    "intent": "Tài liệu hệ thống kiểu type hinting",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_09_Official_Type_Hints_and_Typing_System_c3191",
+      "PY_09_Official_Type_Hints_and_Typing_System_c3192"
+    ],
+    "ground_truth_source": "PY_09_Official_Type_Hints_and_Typing_System.md"
+  },
+  {
+    "id": "Q28",
+    "category": "hybrid",
+    "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào kèm ví dụ?",
+    "intent": "Lý thuyết OOP và mã nguồn constructor class",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "Q29",
+    "category": "hybrid",
+    "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python kèm mã nguồn",
+    "intent": "Lý thuyết kế thừa và cú pháp super()",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020"
+    ],
+    "ground_truth_source": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP.md"
+  },
+  {
+    "id": "Q30",
+    "category": "hybrid",
+    "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception trong Python",
+    "intent": "Lý thuyết xử lý lỗi và code ngoại lệ tự định nghĩa",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1924"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q31",
+    "category": "hybrid",
+    "query": "Cách viết một hàm Decorator tùy chỉnh nhận tham số trong Python kèm giải thích Closure",
+    "intent": "Lý thuyết decorator/closure và code triển khai",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1989"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q32",
+    "category": "hybrid",
+    "query": "Sự khác biệt giữa phương thức __str__ và __repr__ trong Python Data Model",
+    "intent": "Lý thuyết chuyển đổi chuỗi và code minh họa magic methods",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_08_Official_Data_Model_and_Magic_Methods_c3054"
+    ],
+    "ground_truth_source": "PY_08_Official_Data_Model_and_Magic_Methods.md"
+  },
+  {
+    "id": "Q33",
+    "category": "hybrid",
+    "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__",
+    "intent": "Lý thuyết quản lý tài nguyên và code context manager",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
+    ],
+    "ground_truth_source": "PY_08_Official_Data_Model_and_Magic_Methods.md"
+  },
+  {
+    "id": "Q34",
+    "category": "hybrid",
+    "query": "Kỹ thuật gỡ lỗi cú pháp và xử lý mã lỗi tty trong Interactive Mode Python",
+    "intent": "Lý thuyết chế độ tương tác shell và code minh họa",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1836",
+      "PY_01_Official_Tutorial_c1841"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  },
+  {
+    "id": "Q35",
+    "category": "hybrid",
+    "query": "Cách áp dụng TypeVar và Generic class để tạo lớp dữ liệu an toàn kiểu trong Python",
+    "intent": "Lý thuyết generic typing và code ví dụ",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_09_Official_Type_Hints_and_Typing_System_c3154"
+    ],
+    "ground_truth_source": "PY_09_Official_Type_Hints_and_Typing_System.md"
+  },
+  {
+    "id": "Q36",
+    "category": "hybrid",
+    "query": "Quy tắc escape ký tự và xử lý đa dòng trong Python Strings kèm ví dụ code",
+    "intent": "Lý thuyết chuỗi ký tự và ví dụ cú pháp dấu nháy",
+    "expected_modality": "hybrid",
+    "ground_truth_chunks": [
+      "PY_01_Official_Tutorial_c1846"
+    ],
+    "ground_truth_source": "PY_01_Official_Tutorial.md"
+  }
+]
