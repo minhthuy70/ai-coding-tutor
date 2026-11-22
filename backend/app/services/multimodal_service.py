@@ -11,49 +11,19 @@ import re
 import logging
 from typing import List, Dict, Any, Optional
 from app.core.config import settings
+from app.services.file_extractor import file_extractor, ALLOWED_CODE_EXTENSIONS
 
 logger = logging.getLogger("MultimodalService")
 
-SUPPORTED_CODE_EXTS = {
-    ".py": "python",
-    ".cpp": "cpp",
-    ".cc": "cpp",
-    ".c": "c",
-    ".java": "java",
-    ".js": "javascript",
-    ".ts": "typescript",
-    ".html": "html",
-    ".css": "css",
-    ".sql": "sql",
-    ".txt": "text",
-    ".md": "markdown",
-    ".json": "json"
-}
+SUPPORTED_CODE_EXTS = ALLOWED_CODE_EXTENSIONS
 
 class MultimodalService:
     def __init__(self):
         self.gemini_api_key = settings.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY", "")
 
     def process_code_file(self, content_bytes: bytes, filename: str) -> Dict[str, Any]:
-        """Bóc tách nội dung từ file mã nguồn người dùng tải lên."""
-        ext = os.path.splitext(filename)[1].lower()
-        language = SUPPORTED_CODE_EXTS.get(ext, "text")
-        
-        try:
-            text_content = content_bytes.decode("utf-8")
-        except UnicodeDecodeError:
-            try:
-                text_content = content_bytes.decode("latin-1")
-            except Exception:
-                text_content = "[Không thể giải mã file nhị phân]"
-
-        formatted_block = f"### File mã nguồn: `{filename}`\n```{language}\n{text_content}\n```\n"
-        return {
-            "filename": filename,
-            "language": language,
-            "content": text_content,
-            "formatted_markdown": formatted_block
-        }
+        """Bóc tách nội dung từ file mã nguồn người dùng tải lên thông qua FileExtractor bảo mật."""
+        return file_extractor.extract_file(content_bytes, filename)
 
     async def process_image_vision(self, image_bytes: bytes, filename: str, mime_type: str = "image/png") -> Dict[str, Any]:
         """
