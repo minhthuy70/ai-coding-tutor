@@ -2,17 +2,23 @@ from typing import Tuple, Optional
 import redis.asyncio as aioredis
 from app.core.config import settings
 
-redis_client = aioredis.from_url(
-    settings.REDIS_URL,
-    encoding="utf-8",
-    decode_responses=True,
-    socket_timeout=3.0,
-    socket_connect_timeout=3.0,
-)
+redis_client = None
+try:
+    redis_client = aioredis.from_url(
+        settings.REDIS_URL,
+        encoding="utf-8",
+        decode_responses=True,
+        socket_timeout=3.0,
+        socket_connect_timeout=3.0,
+    )
+except Exception:
+    pass
 
 
 async def check_redis_connection() -> Tuple[bool, Optional[str]]:
     """Test Redis connection by executing ping()."""
+    if redis_client is None:
+        return False, "Redis client not initialized"
     try:
         response = await redis_client.ping()
         if response:

@@ -28,7 +28,10 @@ class Settings(BaseSettings):
     AI_PROVIDER: str = "gemini"
     GEMINI_API_KEY: str = ""
     GEMINI_MODEL: str = "gemini-1.5-flash"
-    CHROMA_DB_DIR: str = "./backend/chroma_data"
+    CHROMA_DB_DIR: str = "data/09_chromadb"
+    RAG_TOP_K: int = 4
+    RAG_RRF_K0: int = 60
+    RAG_BENCHMARK_EMBEDDINGS_PATH: str = "data/04_benchmark/benchmark_36q_query_embeddings.json"
 
     @field_validator("BACKEND_CORS_ORIGINS", mode="before")
     @classmethod
