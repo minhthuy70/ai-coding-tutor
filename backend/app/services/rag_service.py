@@ -23,12 +23,15 @@ warnings.filterwarnings("ignore", category=RuntimeWarning, module="opentelemetry
 
 # Safe telemetry fallback cho Windows Smart App Control
 if "grpc" not in sys.modules:
-    dummy_grpc = MagicMock()
-    dummy_grpc.__version__ = "1.85.3"
-    sys.modules["grpc"] = dummy_grpc
-    sys.modules["grpc._compression"] = dummy_grpc
-    sys.modules["grpc._cython"] = dummy_grpc
-    sys.modules["grpc._cython.cygrpc"] = dummy_grpc
+    try:
+        import grpc
+    except (ImportError, OSError):
+        dummy_grpc = MagicMock()
+        dummy_grpc.__version__ = "1.85.3"
+        sys.modules["grpc"] = dummy_grpc
+        sys.modules["grpc._compression"] = dummy_grpc
+        sys.modules["grpc._cython"] = dummy_grpc
+        sys.modules["grpc._cython.cygrpc"] = dummy_grpc
 
 import chromadb
 from app.core.config import settings

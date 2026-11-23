@@ -12,6 +12,7 @@ import logging
 from typing import List, Dict, Any, Optional
 from app.core.config import settings
 from app.services.file_extractor import file_extractor, ALLOWED_CODE_EXTENSIONS
+from app.services.image_extractor import image_extractor, ALLOWED_IMAGE_MIMES
 
 logger = logging.getLogger("MultimodalService")
 
@@ -26,50 +27,8 @@ class MultimodalService:
         return file_extractor.extract_file(content_bytes, filename)
 
     async def process_image_vision(self, image_bytes: bytes, filename: str, mime_type: str = "image/png") -> Dict[str, Any]:
-        """
-        Sử dụng Vision Model (Google Gemini 1.5 Flash Vision) để nhận diện code & lỗi từ ảnh chụp.
-        Nếu không có API Key, sử dụng fallback thông báo rõ ràng.
-        """
-        if not self.gemini_api_key:
-            logger.warning("Chưa cấu hình GEMINI_API_KEY. Sử dụng fallback mô phỏng cho ảnh.")
-            fallback_text = f"[Ảnh đính kèm `{filename}`: Đã tiếp nhận ảnh chụp lỗi/code. Vui lòng cấu hình GEMINI_API_KEY trong .env để kích hoạt AI Vision OCR tự động.]"
-            return {
-                "filename": filename,
-                "extracted_text": fallback_text,
-                "formatted_markdown": f"### Phân tích ảnh: `{filename}`\n{fallback_text}\n"
-            }
-
-        try:
-            import google.generativeai as genai
-            genai.configure(api_key=self.gemini_api_key)
-            model = genai.GenerativeModel(settings.GEMINI_MODEL)
-
-            vision_prompt = (
-                "Bạn là bộ trích xuất OCR chuyên sâu cho lập trình viên. Hãy quan sát ảnh chụp được gửi lên:\n"
-                "1. Nếu ảnh chứa mã nguồn (Code): Trích xuất chính xác 100% từng dòng code, giữ nguyên cấu trúc thụt lề, đặt trong khối ```<language>.\n"
-                "2. Nếu ảnh chứa thông báo lỗi / màn hình Terminal: Trích xuất loại lỗi (Error type), dòng phát sinh lỗi và Call Stack / Traceback.\n"
-                "3. Nếu ảnh là đề bài bài tập: Trích xuất yêu cầu, ràng buộc (constraints) và ví dụ I/O.\n"
-                "Trả về kết quả bằng định dạng Markdown rõ ràng, trung thực, không tự ý giải bài."
-            )
-
-            response = model.generate_content([
-                vision_prompt,
-                {"mime_type": mime_type, "data": image_bytes}
-            ])
-            extracted = response.text or "[Không phát hiện văn bản hoặc code trong ảnh]"
-            
-            return {
-                "filename": filename,
-                "extracted_text": extracted,
-                "formatted_markdown": f"### Phân tích từ ảnh chụp `{filename}`:\n{extracted}\n"
-            }
-        except Exception as e:
-            logger.error(f"Lỗi khi xử lý Vision API: {e}")
-            return {
-                "filename": filename,
-                "extracted_text": f"[Lỗi xử lý ảnh {filename}: {str(e)}]",
-                "formatted_markdown": f"### Phân tích ảnh `{filename}`:\n[Lỗi bóc tách ảnh: {str(e)}]\n"
-            }
+        """Sử dụng ImageExtractor chuyên sâu (Gemini 1.5 Flash Vision) để nhận diện code & lỗi từ ảnh chụp."""
+        return await image_extractor.extract_image(image_bytes, filename, mime_type)
 
     def build_unified_prompt(
         self,
