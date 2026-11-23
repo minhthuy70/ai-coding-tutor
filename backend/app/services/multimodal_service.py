@@ -9,10 +9,11 @@ Description:
 import os
 import re
 import logging
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple, Union
 from app.core.config import settings
 from app.services.file_extractor import file_extractor, ALLOWED_CODE_EXTENSIONS
 from app.services.image_extractor import image_extractor, ALLOWED_IMAGE_MIMES
+from app.services.query_synthesizer import query_synthesizer
 
 logger = logging.getLogger("MultimodalService")
 
@@ -34,39 +35,35 @@ class MultimodalService:
         self,
         prompt_text: str,
         files_data: List[Dict[str, Any]],
-        images_data: List[Dict[str, Any]]
+        images_data: List[Dict[str, Any]],
+        rag_chunks: Optional[List[Dict[str, Any]]] = None
     ) -> Dict[str, Any]:
         """
-        Tổng hợp tất cả đầu vào (Text + Files + Images) thành một Ngữ cảnh Thống nhất.
+        Tổng hợp tất cả đầu vào (Text + Files + Images + RAG Chunks) thành một Ngữ cảnh Thống nhất
+        thông qua QuerySynthesizer.
         """
-        sections = []
-        if prompt_text.strip():
-            sections.append(f"### Câu hỏi của sinh viên:\n{prompt_text.strip()}\n")
+        return query_synthesizer.build_unified_payload(
+            prompt=prompt_text,
+            files_data=files_data,
+            images_data=images_data,
+            rag_chunks=rag_chunks
+        )
 
-        if files_data:
-            sections.append("### Danh sách file code đính kèm:")
-            for f in files_data:
-                sections.append(f["formatted_markdown"])
-
-        if images_data:
-            sections.append("### Thông tin trích xuất từ ảnh chụp màn hình:")
-            for img in images_data:
-                sections.append(img["formatted_markdown"])
-
-        unified_context = "\n".join(sections)
-        
-        # Tạo chuỗi truy vấn ngắn gọn để search Vector DB
-        search_query = prompt_text
-        if not search_query and images_data:
-            # Lấy 200 ký tự đầu của ảnh trích xuất làm query
-            search_query = images_data[0]["extracted_text"][:200]
-        elif not search_query and files_data:
-            search_query = f"Lỗi trong mã nguồn {files_data[0]['filename']}"
-
-        return {
-            "search_query": search_query or "Lập trình cơ bản và xử lý lỗi",
-            "unified_context": unified_context
-        }
+    async def synthesize_and_retrieve(
+        self,
+        prompt: str = "",
+        code_files: Optional[List[Union[Dict[str, Any], Tuple[bytes, str]]]] = None,
+        image_files: Optional[List[Union[Dict[str, Any], Tuple[bytes, str, str]]]] = None,
+        rag_top_k: int = 4,
+        language_filter: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """Ủy quyền thực thi toàn bộ pipeline đa phương thức tới QuerySynthesizer."""
+        return await query_synthesizer.synthesize_and_retrieve(
+            prompt=prompt,
+            code_files=code_files,
+            image_files=image_files,
+            rag_top_k=rag_top_k,
+            language_filter=language_filter
+        )
 
 multimodal_service = MultimodalService()
-
