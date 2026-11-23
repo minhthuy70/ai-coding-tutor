@@ -13,8 +13,16 @@ async def lifespan(app: FastAPI):
     # Startup actions
     yield
     # Cleanup / Shutdown actions
-    await engine.dispose()
-    await redis_client.aclose()
+    if engine is not None:
+        try:
+            await engine.dispose()
+        except Exception:
+            pass
+    if redis_client is not None and hasattr(redis_client, "aclose"):
+        try:
+            await redis_client.aclose()
+        except Exception:
+            pass
 
 
 app = FastAPI(
