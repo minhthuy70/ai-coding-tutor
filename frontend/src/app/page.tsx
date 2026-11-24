@@ -9,21 +9,12 @@ import {
   Edit3, 
   Check, 
   X, 
-  ChevronDown, 
   Cpu, 
   Moon, 
   Sun, 
   Search, 
-  BarChart3, 
-  Sparkles,
-  Compass,
-  Trophy,
-  ShieldCheck,
-  Code2,
-  GraduationCap,
-  ScanSearch,
-  User as UserIcon,
-  Award
+  Sliders,
+  Database
 } from 'lucide-react';
 import { ChatConversation, ChatMessage, ChatAttachment, ModelSettings } from '@/types/chat';
 import { ChatSidebar } from '@/components/chat/ChatSidebar';
@@ -33,15 +24,6 @@ import { ImageLightbox } from '@/components/chat/ImageLightbox';
 import { DocumentViewerModal } from '@/components/chat/DocumentViewerModal';
 import { ShortcutsModal } from '@/components/chat/ShortcutsModal';
 import { SettingsModal } from '@/components/chat/SettingsModal';
-import { CodeSandboxModal } from '@/components/chat/CodeSandboxModal';
-import { PromptTemplatesModal } from '@/components/chat/PromptTemplatesModal';
-import { AnalyticsModal } from '@/components/chat/AnalyticsModal';
-import { LearningRoadmapModal } from '@/components/chat/LearningRoadmapModal';
-import { ProblemSetModal, CodingProblem } from '@/components/chat/ProblemSetModal';
-import { CodeQualityModal } from '@/components/chat/CodeQualityModal';
-import { InstructorDashboardModal } from '@/components/chat/InstructorDashboardModal';
-import { PlagiarismCheckerModal } from '@/components/chat/PlagiarismCheckerModal';
-import { UserProfileModal } from '@/components/chat/UserProfileModal';
 import { playSendSound, playCompleteSound } from '@/lib/soundEffects';
 import { ToastProvider, useToast } from '@/components/chat/ToastNotification';
 import { getSocraticAssistantResponse } from '@/lib/socraticEngine';
@@ -50,12 +32,6 @@ const LOCAL_STORAGE_KEY = 'ai_coding_tutor_chat_sessions_v2';
 const LOCAL_STORAGE_ACTIVE_KEY = 'ai_coding_tutor_active_chat_id_v2';
 const LOCAL_STORAGE_SETTINGS_KEY = 'ai_coding_tutor_settings_v1';
 const LOCAL_STORAGE_THEME_KEY = 'ai_coding_tutor_theme_v1';
-
-const AI_MODELS = [
-  { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash', badge: 'Cloud Free' },
-  { id: 'gpt-4o-mini', name: 'GPT-4o-mini', badge: 'Fallback' },
-  { id: 'ollama-llama3', name: 'Ollama Llama 3', badge: 'Local Offline' },
-];
 
 export default function HomePage() {
   return (
@@ -89,6 +65,35 @@ function HomePageInner() {
   });
 
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState<boolean>(true);
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  
+  // Essential Modals state
+  const [lightboxData, setLightboxData] = useState<{ url: string; name: string } | null>(null);
+  const [viewingDocAttachment, setViewingDocAttachment] = useState<ChatAttachment | null>(null);
+  const [isShortcutsOpen, setIsShortcutsOpen] = useState<boolean>(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
+  
+  // Header inline renaming state
+  const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);
+  const [headerTitleInput, setHeaderTitleInput] = useState<string>('');
+
+  // In-chat message search
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [injectedText, setInjectedText] = useState<string>('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const generationTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const streamIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Active conversation getter
+  const activeConversation = useMemo(() => {
+    return (
+      conversations.find((c) => c.id === activeConversationId) || conversations[0]
+    );
+  }, [conversations, activeConversationId]);
 
   // Load persisted state from localStorage safely on mount
   useEffect(() => {
@@ -109,85 +114,19 @@ function HomePageInner() {
         }
       }
 
-        const savedActive = localStorage.getItem(LOCAL_STORAGE_ACTIVE_KEY);
-        if (savedActive) {
-          setActiveConversationId(savedActive);
-        }
-
-        const savedSettings = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
-        if (savedSettings) {
-          setModelSettings(JSON.parse(savedSettings));
-        }
-
-        const savedSolved = localStorage.getItem('ai_coding_tutor_solved_problems_v1');
-        if (savedSolved) {
-          try {
-            setSolvedProblemIds(JSON.parse(savedSolved));
-          } catch {}
-        }
-
-        const savedRole = localStorage.getItem('ai_tutor_user_role');
-        if (savedRole === 'student' || savedRole === 'instructor') {
-          setUserRole(savedRole);
-        }
-      } catch (err) {
-        console.warn('Could not read from localStorage:', err);
+      const savedActive = localStorage.getItem(LOCAL_STORAGE_ACTIVE_KEY);
+      if (savedActive) {
+        setActiveConversationId(savedActive);
       }
-    }, []);
 
-    const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState<boolean>(true);
-    const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState<boolean>(false);
-    const [isGenerating, setIsGenerating] = useState<boolean>(false);
-    
-    // Modals state
-    const [lightboxData, setLightboxData] = useState<{ url: string; name: string } | null>(null);
-    const [viewingDocAttachment, setViewingDocAttachment] = useState<ChatAttachment | null>(null);
-    const [isShortcutsOpen, setIsShortcutsOpen] = useState<boolean>(false);
-    const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
-
-    // Upgraded Modals state: Code Sandbox, Prompt Templates, Analytics
-    const [isSandboxOpen, setIsSandboxOpen] = useState<boolean>(false);
-    const [sandboxCode, setSandboxCode] = useState<string>('');
-    const [sandboxLang, setSandboxLang] = useState<string>('python');
-    const [sandboxProblemTitle, setSandboxProblemTitle] = useState<string>('');
-    const [sandboxProblemDesc, setSandboxProblemDesc] = useState<string>('');
-    const [sandboxTestCases, setSandboxTestCases] = useState<Array<{id:number; name:string; input:string; expectedOutput:string}>>([]);
-    const [solvedProblemIds, setSolvedProblemIds] = useState<string[]>([]);
-    const [isPromptTemplatesOpen, setIsPromptTemplatesOpen] = useState<boolean>(false);
-    const [isAnalyticsOpen, setIsAnalyticsOpen] = useState<boolean>(false);
-    const [isRoadmapOpen, setIsRoadmapOpen] = useState<boolean>(false);
-    const [isProblemSetOpen, setIsProblemSetOpen] = useState<boolean>(false);
-    const [isCodeQualityOpen, setIsCodeQualityOpen] = useState<boolean>(false);
-    const [codeQualityCode, setCodeQualityCode] = useState<string>('');
-    const [codeQualityLang, setCodeQualityLang] = useState<string>('python');
-    const [isInstructorOpen, setIsInstructorOpen] = useState<boolean>(false);
-    const [isPlagiarismOpen, setIsPlagiarismOpen] = useState<boolean>(false);
-    const [isProfileOpen, setIsProfileOpen] = useState<boolean>(false);
-    const [userRole, setUserRole] = useState<'student' | 'instructor'>('student');
-    const [injectedText, setInjectedText] = useState<string>('');
-    
-    // Header inline renaming state
-    const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);
-  const [headerTitleInput, setHeaderTitleInput] = useState<string>('');
-
-  // Selected AI Model state
-  const [selectedModel, setSelectedModel] = useState(AI_MODELS[0]);
-  const [isModelDropdownOpen, setIsModelDropdownOpen] = useState(false);
-
-  // In-chat message search
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  const generationTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const streamIntervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Active conversation getter
-  const activeConversation = useMemo(() => {
-    return (
-      conversations.find((c) => c.id === activeConversationId) || conversations[0]
-    );
-  }, [conversations, activeConversationId]);
+      const savedSettings = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
+      if (savedSettings) {
+        setModelSettings(JSON.parse(savedSettings));
+      }
+    } catch (err) {
+      console.warn('Could not read from localStorage:', err);
+    }
+  }, []);
 
   // Persist conversations
   useEffect(() => {
@@ -241,14 +180,6 @@ function HomePageInner() {
 
     window.addEventListener('keydown', handleGlobalShortcuts);
     return () => window.removeEventListener('keydown', handleGlobalShortcuts);
-  }, []);
-
-  // Role toggle handler
-  const handleRoleChange = useCallback((role: 'student' | 'instructor') => {
-    setUserRole(role);
-    try {
-      localStorage.setItem('ai_tutor_user_role', role);
-    } catch {}
   }, []);
 
   // Rename a conversation
@@ -321,67 +252,6 @@ function HomePageInner() {
       });
     }
   }, [activeConversationId]);
-
-  // Code Sandbox handler
-  const handleRunCode = useCallback((code: string, language: string) => {
-    setSandboxCode(code);
-    setSandboxLang(language);
-    setSandboxProblemTitle('');
-    setSandboxProblemDesc('');
-    setSandboxTestCases([]);
-    setIsSandboxOpen(true);
-  }, []);
-
-  const handleSolveInSandbox = useCallback((problem: CodingProblem, language: string) => {
-    const starterCode = language === 'javascript'
-      ? (problem.starterCode.javascript || problem.starterCode.python)
-      : (problem.starterCode.python);
-    setSandboxCode(starterCode || '');
-    setSandboxLang(language);
-    setSandboxProblemTitle(`Bài tập #${problem.number}: ${problem.title}`);
-    setSandboxProblemDesc(problem.description);
-    setSandboxTestCases(problem.testCases);
-    setIsSandboxOpen(true);
-  }, []);
-
-  const handleProblemSolved = useCallback((problemTitle: string) => {
-    setSolvedProblemIds((prev) => {
-      if (!prev.includes(problemTitle)) {
-        const next = [...prev, problemTitle];
-        try {
-          localStorage.setItem('ai_coding_tutor_solved_problems_v1', JSON.stringify(next));
-        } catch {}
-        showToast({
-          type: 'success',
-          title: 'Vượt qua 100% Test Cases!',
-          message: `Chúc mừng bạn đã hoàn thành xuất sắc: "${problemTitle}" (+50 XP)`,
-          duration: 5000,
-        });
-        return next;
-      }
-      return prev;
-    });
-  }, [showToast]);
-
-  const handleOpenCodeQuality = useCallback((code?: string, language?: string) => {
-    setCodeQualityCode(code || sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n');
-    setCodeQualityLang(language || sandboxLang || 'python');
-    setIsCodeQualityOpen(true);
-  }, [sandboxCode, sandboxLang]);
-
-  const handleAskAIAboutCode = useCallback((code: string, language: string) => {
-    const formatted = `Hãy phân tích và hướng dẫn giải thích giúp tôi đoạn mã ${language.toUpperCase()} này:\n\n\`\`\`${language}\n${code}\n\`\`\``;
-    setInjectedText(formatted);
-  }, []);
-
-  const handleSelectPromptTemplate = useCallback((promptText: string) => {
-    setInjectedText(promptText);
-  }, []);
-
-  const handleStartLessonFromRoadmap = useCallback((lessonPrompt: string) => {
-    setInjectedText(lessonPrompt);
-    showToast({ type: 'info', title: 'Bắt đầu bài học Socratic', message: 'Câu hỏi đã được điền vào ô nhập. Nhấn Enter để gửi!', duration: 3000 });
-  }, [showToast]);
 
   const handleImportConversation = useCallback((imported: ChatConversation) => {
     setConversations((prev) => {
@@ -465,7 +335,6 @@ function HomePageInner() {
       timestamp: new Date().toISOString(),
     };
 
-    let convTitle = '';
     setConversations((prev) =>
       prev.map((conv) => {
         if (conv.id === activeConversationId) {
@@ -477,7 +346,6 @@ function HomePageInner() {
               newTitle = `Đính kèm: ${attachments[0].name}`;
             }
           }
-          convTitle = newTitle;
           return {
             ...conv,
             title: newTitle,
@@ -493,8 +361,8 @@ function HomePageInner() {
     playSendSound();
     setInjectedText('');
 
-    // Fetch response from Socratic Engine (Live Gemini, Ollama, or Built-in Pedagogical Matrix)
-    getSocraticAssistantResponse(text, attachments, modelSettings, selectedModel.name)
+    // Fetch response from Socratic Engine
+    getSocraticAssistantResponse(text, attachments, modelSettings, 'gemini-3-flash-preview')
       .then((aiResponse) => {
         const aiMsgId = `msg-ai-${Date.now()}`;
         const fullContent = aiResponse.content;
@@ -526,8 +394,8 @@ function HomePageInner() {
 
         // Typewriter character-by-character streaming
         let charIdx = 0;
-        const CHUNK = 5; // characters per tick
-        const SPEED = 16; // ms per tick
+        const CHUNK = 5;
+        const SPEED = 16;
 
         if (streamIntervalRef.current) clearInterval(streamIntervalRef.current);
 
@@ -563,18 +431,16 @@ function HomePageInner() {
         setIsGenerating(false);
         showToast({ type: 'error', title: 'Lỗi sinh phản hồi AI', message: err?.message || 'Không thể tạo câu trả lời' });
       });
-  }, [activeConversationId, selectedModel, modelSettings, showToast]);
+  }, [activeConversationId, modelSettings, showToast]);
 
   // Edit user message and regenerate from that point
   const handleEditUserMessage = useCallback((messageId: string, newContent: string) => {
-    // Find index of message
     const msgIdx = activeConversation.messages.findIndex((m) => m.id === messageId);
     if (msgIdx === -1) return;
 
     const targetMsg = activeConversation.messages[msgIdx];
     const attachments = targetMsg.attachments || [];
 
-    // Cut off messages after this one
     setConversations((prev) =>
       prev.map((conv) => {
         if (conv.id === activeConversationId) {
@@ -587,7 +453,6 @@ function HomePageInner() {
       })
     );
 
-    // Resend with new content
     setTimeout(() => {
       handleSendMessage(newContent, attachments);
     }, 50);
@@ -602,7 +467,7 @@ function HomePageInner() {
     showToast({ type: 'info', title: 'Đang tạo lại câu trả lời...', duration: 2500 });
     setIsGenerating(true);
 
-    getSocraticAssistantResponse(lastUserMsg.content, lastUserMsg.attachments || [], modelSettings, selectedModel.name)
+    getSocraticAssistantResponse(lastUserMsg.content, lastUserMsg.attachments || [], modelSettings, 'gemini-3-flash-preview')
       .then((aiResponse) => {
         const fullContent = aiResponse.content;
         const aiMsgId = `msg-ai-regen-${Date.now()}`;
@@ -662,7 +527,7 @@ function HomePageInner() {
         setIsGenerating(false);
         showToast({ type: 'error', title: 'Lỗi tạo lại phản hồi', message: err?.message });
       });
-  }, [activeConversation, activeConversationId, selectedModel, modelSettings, showToast]);
+  }, [activeConversation, activeConversationId, modelSettings, showToast]);
 
   // Filtered messages for in-chat search
   const filteredMessages = useMemo(() => {
@@ -690,7 +555,7 @@ function HomePageInner() {
   }, [isSearchOpen]);
 
   return (
-    <div className={`flex h-screen w-full overflow-hidden transition-colors duration-300 ${isDarkMode ? 'dark bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
+    <div className={`flex h-screen w-full overflow-hidden transition-colors duration-200 ${isDarkMode ? 'dark bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       {/* Lightbox Modal for Images */}
       <ImageLightbox
         imageUrl={lightboxData?.url || null}
@@ -720,94 +585,6 @@ function HomePageInner() {
         onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
       />
 
-      {/* Interactive Code Sandbox Modal */}
-      <CodeSandboxModal
-        isOpen={isSandboxOpen}
-        onClose={() => setIsSandboxOpen(false)}
-        initialCode={sandboxCode}
-        initialLanguage={sandboxLang}
-        onAskAIAboutCode={handleAskAIAboutCode}
-        problemTitle={sandboxProblemTitle}
-        problemDescription={sandboxProblemDesc}
-        initialTestCases={sandboxTestCases}
-        onOpenCodeQuality={handleOpenCodeQuality}
-        onProblemSolved={handleProblemSolved}
-      />
-
-      {/* Socratic Prompt Templates Modal */}
-      <PromptTemplatesModal
-        isOpen={isPromptTemplatesOpen}
-        onClose={() => setIsPromptTemplatesOpen(false)}
-        onSelectPrompt={handleSelectPromptTemplate}
-      />
-
-      {/* Analytics & Token Usage Modal */}
-      <AnalyticsModal
-        isOpen={isAnalyticsOpen}
-        onClose={() => setIsAnalyticsOpen(false)}
-        conversations={conversations}
-      />
-
-      {/* Learning Roadmap Modal */}
-      <LearningRoadmapModal
-        isOpen={isRoadmapOpen}
-        onClose={() => setIsRoadmapOpen(false)}
-        onStartLesson={handleStartLessonFromRoadmap}
-        onOpenPracticeInSandbox={(code, lang) => { setSandboxCode(code); setSandboxLang(lang); setSandboxProblemTitle(''); setSandboxTestCases([]); setIsSandboxOpen(true); setIsRoadmapOpen(false); }}
-      />
-
-      {/* Problem Set & Arena Modal */}
-      <ProblemSetModal
-        isOpen={isProblemSetOpen}
-        onClose={() => setIsProblemSetOpen(false)}
-        onSolveInSandbox={handleSolveInSandbox}
-        onAskAIHint={(prompt) => { setInjectedText(prompt); setIsProblemSetOpen(false); }}
-        solvedProblemIds={solvedProblemIds}
-      />
-
-      {/* Code Quality Analysis Modal */}
-      <CodeQualityModal
-        isOpen={isCodeQualityOpen}
-        onClose={() => setIsCodeQualityOpen(false)}
-        initialCode={codeQualityCode}
-        initialLanguage={codeQualityLang}
-        onApplyRefactoredCode={(code) => { setSandboxCode(code); setIsSandboxOpen(true); setIsCodeQualityOpen(false); }}
-        onAskAIAboutQuality={(prompt) => { setInjectedText(prompt); setIsCodeQualityOpen(false); }}
-      />
-
-      {/* Instructor Gradebook & Assignment Authoring Modal */}
-      <InstructorDashboardModal
-        isOpen={isInstructorOpen}
-        onClose={() => setIsInstructorOpen(false)}
-        onOpenProblemSet={() => {
-          setIsInstructorOpen(false);
-          setIsProblemSetOpen(true);
-        }}
-      />
-
-      {/* Code Plagiarism & Similarity Detection Engine Modal */}
-      <PlagiarismCheckerModal
-        isOpen={isPlagiarismOpen}
-        onClose={() => setIsPlagiarismOpen(false)}
-      />
-
-      {/* Student Profile & Gamification Achievements Modal */}
-      <UserProfileModal
-        isOpen={isProfileOpen}
-        onClose={() => setIsProfileOpen(false)}
-        solvedCount={solvedProblemIds.length}
-        userRole={userRole}
-        onRoleChange={handleRoleChange}
-        onOpenRoadmap={() => {
-          setIsProfileOpen(false);
-          setIsRoadmapOpen(true);
-        }}
-        onOpenProblemSet={() => {
-          setIsProfileOpen(false);
-          setIsProblemSetOpen(true);
-        }}
-      />
-
       {/* Left Sidebar */}
       <ChatSidebar
         conversations={conversations}
@@ -820,27 +597,17 @@ function HomePageInner() {
         onClearAll={handleClearAll}
         onOpenShortcuts={() => setIsShortcutsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
-        onOpenAnalytics={() => setIsAnalyticsOpen(true)}
         onImportConversation={handleImportConversation}
         isOpen={isDesktopSidebarOpen}
         onToggle={() => setIsDesktopSidebarOpen((prev) => !prev)}
         isMobileOpen={isMobileSidebarOpen}
         onCloseMobile={() => setIsMobileSidebarOpen(false)}
-        onOpenRoadmap={() => setIsRoadmapOpen(true)}
-        onOpenProblemSet={() => setIsProblemSetOpen(true)}
-        onOpenCodeQuality={() => { setCodeQualityCode(sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n'); setCodeQualityLang(sandboxLang); setIsCodeQualityOpen(true); }}
-        onOpenSandbox={() => { setSandboxCode('# Mở Sandbox trống để viết code mới\nprint("Xin chào, Gia sư AI!")'); setSandboxLang('python'); setSandboxProblemTitle(''); setSandboxTestCases([]); setIsSandboxOpen(true); }}
-        onOpenInstructor={() => setIsInstructorOpen(true)}
-        onOpenPlagiarism={() => setIsPlagiarismOpen(true)}
-        onOpenProfile={() => setIsProfileOpen(true)}
-        userRole={userRole}
-        solvedCount={solvedProblemIds.length}
       />
 
       {/* Main Chat Interface */}
-      <div className="flex-1 flex flex-col h-full min-w-0 bg-white dark:bg-slate-900 transition-colors duration-300">
-        {/* Top Navbar — glassmorphism */}
-        <header className="h-14 border-b border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl flex items-center justify-between px-4 shrink-0 z-10 shadow-sm">
+      <div className="flex-1 flex flex-col h-full min-w-0 bg-white dark:bg-slate-900 transition-colors duration-200">
+        {/* Top Navbar */}
+        <header className="h-14 border-b border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md flex items-center justify-between px-4 shrink-0 z-10">
           <div className="flex items-center gap-2 min-w-0">
             {/* Mobile menu trigger */}
             <button
@@ -908,188 +675,29 @@ function HomePageInner() {
                     type="button"
                     onClick={handleStartHeaderRename}
                     className="opacity-0 group-hover/title:opacity-100 rounded p-1 text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
-                    title="Đổi tên cuộc trò chuyện này"
+                    title="Đổi tên cuộc trò chuyện"
                   >
                     <Edit3 className="h-3.5 w-3.5" />
                   </button>
                 </div>
               )}
             </div>
+
+            {/* System Status Badges */}
+            <div className="hidden sm:flex items-center gap-1.5 ml-2">
+              <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 dark:border-blue-800/60 bg-blue-50 dark:bg-blue-950/40 px-2 py-0.5 text-[10px] font-semibold text-blue-700 dark:text-blue-300">
+                <Cpu className="h-3 w-3" />
+                Gemini 3 Flash
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:text-emerald-300">
+                <Database className="h-3 w-3" />
+                RAG 5,230 Chunks
+              </span>
+            </div>
           </div>
 
           {/* Right Header Controls */}
           <div className="flex items-center gap-1.5 sm:gap-2">
-            {/* Quick Studio Tools */}
-            <div className="hidden lg:flex items-center gap-1 mr-1 border-r border-slate-200 dark:border-slate-800 pr-2">
-              <button
-                type="button"
-                onClick={() => setIsRoadmapOpen(true)}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/70 dark:hover:bg-blue-950/50 transition border border-transparent hover:border-blue-200 dark:hover:border-blue-800/60"
-                title="Lộ trình học tập & Cây kỹ năng lập trình"
-              >
-                <Compass className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
-                <span>Lộ trình</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setIsProblemSetOpen(true)}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-amber-50/70 dark:hover:bg-amber-950/50 transition border border-transparent hover:border-amber-200 dark:hover:border-amber-800/60"
-                title="Kho bài tập thuật toán & Đấu trường code"
-              >
-                <Trophy className="h-3.5 w-3.5 text-amber-500" />
-                <span>Bài tập</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setSandboxCode('# Mở Code Sandbox trực tiếp\nprint("Hello, AI Coding Tutor!")');
-                  setSandboxLang('python');
-                  setSandboxProblemTitle('');
-                  setSandboxTestCases([]);
-                  setIsSandboxOpen(true);
-                }}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50/70 dark:hover:bg-emerald-950/50 transition border border-transparent hover:border-emerald-200 dark:hover:border-emerald-800/60"
-                title="Mở trình thực thi code & Sandbox test case"
-              >
-                <Code2 className="h-3.5 w-3.5 text-emerald-500" />
-                <span>Sandbox</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setCodeQualityCode(sandboxCode || '# Dán mã nguồn cần đánh giá vào đây\n');
-                  setCodeQualityLang(sandboxLang);
-                  setIsCodeQualityOpen(true);
-                }}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/70 dark:hover:bg-indigo-950/50 transition border border-transparent hover:border-indigo-200 dark:hover:border-indigo-800/60"
-                title="Kiểm tra chất lượng code, PEP 8 & Big-O"
-              >
-                <ShieldCheck className="h-3.5 w-3.5 text-indigo-500" />
-                <span>Soát lỗi</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setIsInstructorOpen(true)}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-50/70 dark:hover:bg-sky-950/50 transition border border-transparent hover:border-sky-200 dark:hover:border-sky-800/60"
-                title="Bảng điểm sinh viên & Quản lý lớp học Giảng viên"
-              >
-                <GraduationCap className="h-3.5 w-3.5 text-sky-500" />
-                <span>Bảng điểm GV</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setIsPlagiarismOpen(true)}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50/70 dark:hover:bg-rose-950/50 transition border border-transparent hover:border-rose-200 dark:hover:border-rose-800/60"
-                title="So trùng mã nguồn & Kiểm tra đạo văn"
-              >
-                <ScanSearch className="h-3.5 w-3.5 text-rose-500" />
-                <span>So trùng</span>
-              </button>
-            </div>
-
-            {/* User Profile & Badges Trigger */}
-            <button
-              type="button"
-              onClick={() => setIsProfileOpen(true)}
-              className="flex items-center gap-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-800/90 px-2.5 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-xs transition"
-              title="Xem Hồ sơ học viên & Huy hiệu thành tích"
-            >
-              <div className="h-5 w-5 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-[10px]">
-                {userRole === 'instructor' ? 'TS' : 'A'}
-              </div>
-              <span className="hidden xl:inline text-xs font-bold text-slate-800 dark:text-slate-100">
-                {userRole === 'instructor' ? 'TS. Trí' : 'An'}
-              </span>
-              <span className="rounded-full bg-amber-100 dark:bg-amber-900/60 px-1.5 py-0.5 text-[9px] font-bold text-amber-700 dark:text-amber-300 flex items-center gap-0.5">
-                <Award className="h-2.5 w-2.5" />
-                {solvedProblemIds.length * 50 + 250} XP
-              </span>
-            </button>
-
-            {/* Quick Dark Mode toggle */}
-            <button
-              type="button"
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="relative rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 p-2 text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 transition-all group overflow-hidden"
-              title={isDarkMode ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối'}
-            >
-              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-amber-400/10 to-blue-500/10 transition-opacity" />
-              {isDarkMode 
-                ? <Sun className="h-4 w-4 text-amber-400 drop-shadow-sm" /> 
-                : <Moon className="h-4 w-4 text-slate-600" />
-              }
-            </button>
-
-            {/* Model Selector Dropdown */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
-                className="flex items-center gap-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-sm transition-all"
-                title="Chọn mô hình AI thử nghiệm"
-              >
-                <Cpu className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
-                <span className="hidden sm:inline">{selectedModel.name}</span>
-                <span className="rounded-full bg-blue-100 dark:bg-blue-900/60 px-1.5 py-0.5 text-[9px] font-bold text-blue-700 dark:text-blue-300">
-                  {selectedModel.badge}
-                </span>
-                <ChevronDown className={`h-3 w-3 text-slate-400 transition-transform duration-200 ${isModelDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {isModelDropdownOpen && (
-                <div 
-                  className="absolute right-0 mt-2 w-56 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1.5 shadow-xl dark:shadow-black/40 z-20 animate-scale-in"
-                  onClick={() => setIsModelDropdownOpen(false)}
-                >
-                  <div className="px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
-                    Mô hình AI dự kiến
-                  </div>
-                  {AI_MODELS.map((model) => (
-                    <button
-                      key={model.id}
-                      type="button"
-                      onClick={() => setSelectedModel(model)}
-                      className={`flex w-full items-center justify-between rounded-xl px-2.5 py-2 text-xs font-medium transition-all ${
-                        selectedModel.id === model.id
-                          ? 'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-bold'
-                          : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700'
-                      }`}
-                    >
-                      <span>{model.name}</span>
-                      <span className="rounded-full bg-slate-100 dark:bg-slate-700 px-2 py-0.5 text-[9px] font-semibold text-slate-500 dark:text-slate-400">
-                        {model.badge}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Prompt Templates quick trigger */}
-            <button
-              type="button"
-              onClick={() => setIsPromptTemplatesOpen(true)}
-              className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800 p-2 text-slate-600 dark:text-slate-300 hover:text-amber-500 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-700 transition"
-              title="Kho mẫu câu hỏi Socratic & Thuật toán"
-            >
-              <Sparkles className="h-4 w-4 text-amber-500" />
-            </button>
-
-            {/* Analytics & Token Usage button */}
-            <button
-              type="button"
-              onClick={() => setIsAnalyticsOpen(true)}
-              className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800 p-2 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-white dark:hover:bg-slate-700 transition"
-              title="Thống kê hoạt động & Token"
-            >
-              <BarChart3 className="h-4 w-4 text-emerald-500" />
-            </button>
-
             {/* In-chat search toggle */}
             <button
               type="button"
@@ -1099,19 +707,42 @@ function HomePageInner() {
                   ? 'border-blue-400 bg-blue-50 dark:bg-blue-950 text-blue-600'
                   : 'border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700'
               }`}
-              title="Tìm kiếm trong hội thoại (Ctrl + F)"
+              title="Tìm kiếm trong cuộc trò chuyện (Ctrl + F)"
             >
               <Search className="h-4 w-4" />
+            </button>
+
+            {/* Dark Mode toggle */}
+            <button
+              type="button"
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className="rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 p-2 text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 transition"
+              title={isDarkMode ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối'}
+            >
+              {isDarkMode 
+                ? <Sun className="h-4 w-4 text-amber-400" /> 
+                : <Moon className="h-4 w-4 text-slate-600" />
+              }
+            </button>
+
+            {/* Settings Button */}
+            <button
+              type="button"
+              onClick={() => setIsSettingsOpen(true)}
+              className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800 p-2 text-slate-600 dark:text-slate-300 hover:text-blue-600 hover:bg-white dark:hover:bg-slate-700 transition"
+              title="Cài đặt AI Socratic"
+            >
+              <Sliders className="h-4 w-4" />
             </button>
 
             {/* New Chat quick button */}
             <button
               type="button"
               onClick={handleNewConversation}
-              className="flex items-center gap-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-2xs transition active:scale-95"
+              className="flex items-center gap-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 text-xs font-bold shadow-xs transition active:scale-95"
               title="Tạo cuộc trò chuyện mới (Ctrl + Shift + O)"
             >
-              <Plus className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
+              <Plus className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Đoạn chat mới</span>
             </button>
           </div>
@@ -1154,20 +785,6 @@ function HomePageInner() {
           onRegenerate={handleRegenerateResponse}
           onDeleteMessage={handleDeleteMessage}
           onEditUserMessage={handleEditUserMessage}
-          onRunCode={handleRunCode}
-          onOpenRoadmap={() => setIsRoadmapOpen(true)}
-          onOpenProblemSet={() => setIsProblemSetOpen(true)}
-          onOpenSandbox={() => {
-            setSandboxCode('# Mở Code Sandbox trực tiếp\nprint("Hello World!")');
-            setSandboxLang('python');
-            setSandboxProblemTitle('');
-            setSandboxTestCases([]);
-            setIsSandboxOpen(true);
-          }}
-          onOpenCodeQuality={handleOpenCodeQuality}
-          onOpenInstructor={() => setIsInstructorOpen(true)}
-          onOpenPlagiarism={() => setIsPlagiarismOpen(true)}
-          onOpenProfile={() => setIsProfileOpen(true)}
         />
 
         {/* Bottom Composer Box */}
@@ -1178,7 +795,6 @@ function HomePageInner() {
           isGenerating={isGenerating}
           onStopGenerating={handleStopGenerating}
           disabled={isSearchOpen && !!searchQuery}
-          onOpenPromptTemplates={() => setIsPromptTemplatesOpen(true)}
           externalInputText={injectedText}
         />
       </div>
