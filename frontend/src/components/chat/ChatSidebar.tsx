@@ -18,7 +18,8 @@ import {
   Upload,
   Printer,
   FileCode,
-  FileText
+  FileText,
+  BookOpen
 } from 'lucide-react';
 import { ChatConversation } from '@/types/chat';
 
@@ -33,6 +34,7 @@ interface ChatSidebarProps {
   onClearAll?: () => void;
   onOpenShortcuts: () => void;
   onOpenSettings: () => void;
+  onOpenInstructorKnowledge?: () => void;
   onImportConversation?: (imported: ChatConversation) => void;
   isOpen: boolean;
   onToggle: () => void;
@@ -51,6 +53,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
   onClearAll,
   onOpenShortcuts,
   onOpenSettings,
+  onOpenInstructorKnowledge,
   onImportConversation,
   isOpen,
   onToggle,
@@ -408,7 +411,22 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
       </div>
 
       {/* Bottom Footer Section */}
-      <div className="p-3 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-100/50 dark:bg-slate-900/50 space-y-1">
+      <div className="p-3 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-100/50 dark:bg-slate-900/50 space-y-1.5">
+        {onOpenInstructorKnowledge && (
+          <button
+            type="button"
+            onClick={() => {
+              onOpenInstructorKnowledge();
+              onCloseMobile();
+            }}
+            className="w-full flex items-center justify-center gap-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800/80 bg-emerald-50/80 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 py-2 text-xs font-bold transition shadow-2xs"
+            title="Dành cho Giảng viên: Kéo thả nạp thêm tài liệu giáo trình vào ChromaDB"
+          >
+            <BookOpen className="h-3.5 w-3.5" />
+            <span>Nạp giáo trình mới (GV)</span>
+          </button>
+        )}
+
         <div className="flex items-center justify-between text-xs font-medium text-slate-600 dark:text-slate-400">
           <button
             type="button"

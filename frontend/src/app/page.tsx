@@ -14,7 +14,8 @@ import {
   Sun, 
   Search, 
   Sliders,
-  Database
+  Database,
+  BookOpen
 } from 'lucide-react';
 import { ChatConversation, ChatMessage, ChatAttachment, ModelSettings } from '@/types/chat';
 import { ChatSidebar } from '@/components/chat/ChatSidebar';
@@ -24,6 +25,7 @@ import { ImageLightbox } from '@/components/chat/ImageLightbox';
 import { DocumentViewerModal } from '@/components/chat/DocumentViewerModal';
 import { ShortcutsModal } from '@/components/chat/ShortcutsModal';
 import { SettingsModal } from '@/components/chat/SettingsModal';
+import { InstructorKnowledgeModal } from '@/components/chat/InstructorKnowledgeModal';
 import { playSendSound, playCompleteSound } from '@/lib/soundEffects';
 import { ToastProvider, useToast } from '@/components/chat/ToastNotification';
 import { getSocraticAssistantResponse } from '@/lib/socraticEngine';
@@ -74,6 +76,8 @@ function HomePageInner() {
   const [viewingDocAttachment, setViewingDocAttachment] = useState<ChatAttachment | null>(null);
   const [isShortcutsOpen, setIsShortcutsOpen] = useState<boolean>(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
+  const [isInstructorKnowledgeOpen, setIsInstructorKnowledgeOpen] = useState<boolean>(false);
+  const [ragChunkCount, setRagChunkCount] = useState<number>(5230);
   
   // Header inline renaming state
   const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);
@@ -123,6 +127,16 @@ function HomePageInner() {
       if (savedSettings) {
         setModelSettings(JSON.parse(savedSettings));
       }
+
+      // Fetch dynamic RAG stats from Backend
+      fetch('http://localhost:8000/api/knowledge/stats')
+        .then((res) => (res.ok ? res.json() : null))
+        .then((data) => {
+          if (data && data.total_records) {
+            setRagChunkCount(data.total_records);
+          }
+        })
+        .catch(() => {});
     } catch (err) {
       console.warn('Could not read from localStorage:', err);
     }
@@ -585,6 +599,21 @@ function HomePageInner() {
         onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
       />
 
+      {/* Instructor Knowledge Ingestion Modal */}
+      <InstructorKnowledgeModal
+        isOpen={isInstructorKnowledgeOpen}
+        onClose={() => setIsInstructorKnowledgeOpen(false)}
+        onUploadSuccess={(newTotal) => {
+          setRagChunkCount(newTotal);
+          showToast({
+            type: 'success',
+            title: 'Kho tri thức đã cập nhật',
+            message: `Nạp giáo trình thành công! Tổng tri thức hiện tại: ${newTotal.toLocaleString()} chunks.`,
+            duration: 5000,
+          });
+        }}
+      />
+
       {/* Left Sidebar */}
       <ChatSidebar
         conversations={conversations}
@@ -597,6 +626,7 @@ function HomePageInner() {
         onClearAll={handleClearAll}
         onOpenShortcuts={() => setIsShortcutsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
+        onOpenInstructorKnowledge={() => setIsInstructorKnowledgeOpen(true)}
         onImportConversation={handleImportConversation}
         isOpen={isDesktopSidebarOpen}
         onToggle={() => setIsDesktopSidebarOpen((prev) => !prev)}
@@ -689,15 +719,30 @@ function HomePageInner() {
                 <Cpu className="h-3 w-3" />
                 Gemini 3 Flash
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:text-emerald-300">
+              <button
+                type="button"
+                onClick={() => setIsInstructorKnowledgeOpen(true)}
+                className="inline-flex items-center gap-1 rounded-full border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 transition cursor-pointer"
+                title="Bấm để xem chi tiết hoặc nạp thêm tài liệu giáo trình vào ChromaDB"
+              >
                 <Database className="h-3 w-3" />
-                RAG 5,230 Chunks
-              </span>
+                RAG {ragChunkCount.toLocaleString()} Chunks
+              </button>
             </div>
           </div>
 
           {/* Right Header Controls */}
           <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Instructor Knowledge Ingestion Button */}
+            <button
+              type="button"
+              onClick={() => setIsInstructorKnowledgeOpen(true)}
+              className="hidden md:flex items-center gap-1.5 rounded-xl border border-emerald-200/80 dark:border-emerald-800/80 bg-emerald-50/70 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 px-2.5 py-1.5 text-xs font-semibold shadow-2xs transition active:scale-95"
+              title="Dành cho Giảng viên: Kéo thả nạp thêm tệp giáo trình mới vào ChromaDB"
+            >
+              <BookOpen className="h-3.5 w-3.5" />
+              <span>Nạp giáo trình (GV)</span>
+            </button>
             {/* In-chat search toggle */}
             <button
               type="button"
