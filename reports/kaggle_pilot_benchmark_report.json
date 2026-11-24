@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-11-19T12:02:21.527092+00:00",
+  "audit_acceptance_status": "PILOT 160: ACCEPTED",
+  "audit_acceptance_timestamp": "2026-11-19T13:02:27Z",
+  "pilot_target": 160,
+  "pilot_a_qwen3": {
+    "model_id": "Qwen/Qwen3-Embedding-0.6B",
+    "modality": "text",
+    "expected_chunks": 120,
+    "completed_vectors": 120,
+    "dimension": 1024,
+    "pooling_mode": "last_token_pooling",
+    "padding_side": "left",
+    "status": "inferred_in_current_session",
+    "failures_count": 0,
+    "historical_reference_run": {
+      "note": "Số liệu đo đạc thực tế từ phiên chạy Pilot A thành công trước đó (9.68s, peak VRAM 6.74 GB)",
+      "inference_time_sec": 9.68,
+      "peak_vram_gb": 6.74
+    }
+  },
+  "pilot_b_jina": {
+    "model_id": "jinaai/jina-embeddings-v2-base-code",
+    "modality": "code",
+    "expected_chunks": 40,
+    "completed_vectors": 40,
+    "dimension": 768,
+    "status": "inferred_in_current_session",
+    "smoke_test_passed": true,
+    "pooling_mode": "attention_masked_mean_tokens",
+    "pooling_description": "Attention-Masked Mean Pooling (không sử dụng token weighting riêng)",
+    "inference_time_sec": 0.76,
+    "peak_vram_gb": 2.35,
+    "failures_count": 0,
+    "recommended_batch_size": 32
+  },
+  "audit_limitations": {
+    "safe_embeddings_forward": "Đã xác minh logic tương đương với thiết kế segment 0 của JinaBert; chưa thực hiện empirical parity test và chưa có runtime flag trực tiếp cho nhánh except",
+    "output_parity_status": "Chưa được kiểm chứng thực nghiệm độc lập (chỉ kiểm chứng tương đương mặt logic/kiến trúc)"
+  },
+  "overall": {
+    "total_pilot_embedded": 160,
+    "pilot_success_rate": 100.0,
+    "id_collision_count": 0,
+    "status": "ACCEPTED"
+  }
+}

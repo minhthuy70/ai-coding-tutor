@@ -1,0 +1,3253 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.05,
+            0.9,
+            0.07
+          ],
+          "level": 1,
+          "content": "# Official Python Documentation: Built-in Functions and Standard Types"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.053000000000000005,
+            0.9,
+            0.07
+          ],
+          "level": 2,
+          "content": "## Built-in functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.056,
+            0.9,
+            0.09
+          ],
+          "content": "The Python interpreter has a number of functions and types built into it that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.059000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "are always available.  They are listed here in alphabetical order."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.062,
+            0.9,
+            0.09
+          ],
+          "content": "+---------------------------------------------------------------------------------------------------+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.065,
+            0.9,
+            0.09
+          ],
+          "content": "|                                        Built-in Functions                                         |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.068,
+            0.9,
+            0.09
+          ],
+          "content": "+=========================+=======================+=======================+=========================+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "| |  **A**                | |  **E**              | |  **L**              | |  **R**                |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `abs()`          | |  `enumerate()`  | |  `len()`        | |  |func-range|_        |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.077,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `aiter()`        | |  `eval()`       | |  |func-list|_       | |  `repr()`         |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `all()`          | |  `exec()`       | |  `locals()`     | |  `reversed()`     |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.083,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `anext()`        | |                     | |                     | |  `round()`        |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08600000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `any()`          | |  **F**              | |  **M**              | |                       |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.089,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `ascii()`        | |  `filter()`     | |  `map()`        | |  **S**                |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.092,
+            0.9,
+            0.09
+          ],
+          "content": "| |                       | |  `float()`      | |  `max()`        | |  |func-set|_          |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.095,
+            0.9,
+            0.09
+          ],
+          "content": "| |  **B**                | |  `format()`     | |  |func-memoryview|_ | |  `setattr()`      |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.098,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `bin()`          | |  |func-frozendict|_ | |  `min()`        | |  `sentinel()`     |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.101,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `bool()`         | |  |func-frozenset|_  | |                     | |  `slice()`        |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `breakpoint()`   | |                     | |  **N**              | |  `sorted()`       |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "| |  |func-bytearray|_    | |  **G**              | |  `next()`       | |  `staticmethod()` |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11,
+            0.9,
+            0.09
+          ],
+          "content": "| |  |func-bytes|_        | |  `getattr()`    | |                     | |  |func-str|_          |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.113,
+            0.9,
+            0.09
+          ],
+          "content": "| |                       | |  `globals()`    | |  **O**              | |  `sum()`          |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.116,
+            0.9,
+            0.09
+          ],
+          "content": "| |  **C**                | |                     | |  `object()`     | |  `super()`        |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `callable()`     | |  **H**              | |  `oct()`        | |                       |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `chr()`          | |  `hasattr()`    | |  `open()`       | |  **T**                |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.125,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `classmethod()`  | |  `hash()`       | |  `ord()`        | |  |func-tuple|_        |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.128,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `compile()`      | |  `help()`       | |                     | |  `type()`         |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.131,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `complex()`      | |  `hex()`        | |  **P**              | |                       |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.134,
+            0.9,
+            0.09
+          ],
+          "content": "| |                       | |                     | |  `pow()`        | |  **V**                |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.137,
+            0.9,
+            0.09
+          ],
+          "content": "| |  **D**                | |  **I**              | |  `print()`      | |  `vars()`         |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `delattr()`      | |  `id()`         | |  `property()`   | |                       |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14300000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "| |  |func-dict|_         | |  `input()`      | |                     | |  **Z**                |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `dir()`          | |  `int()`        | |                     | |  `zip()`          |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.14900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "| |  `divmod()`       | |  `isinstance()` | |                     | |                       |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.15200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "| |                       | |  `issubclass()` | |                     | |  **_**                |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.155,
+            0.9,
+            0.09
+          ],
+          "content": "| |                       | |  `iter()`       | |                     | |  `__import__()`   |"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.158,
+            0.9,
+            0.09
+          ],
+          "content": "+-------------------------+-----------------------+-----------------------+-------------------------+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.161,
+            0.9,
+            0.09
+          ],
+          "content": "used, with replacement texts to make the output in the table consistent"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.164,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `abs(number, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.167,
+            0.9,
+            0.09
+          ],
+          "content": "Return the absolute value of a number.  The argument may be an"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.16999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "integer, a floating-point number, or an object implementing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.173,
+            0.9,
+            0.09
+          ],
+          "content": "`object.__abs__()`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.176,
+            0.9,
+            0.09
+          ],
+          "content": "If the argument is a complex number, its magnitude is returned."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.179,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `aiter(async_iterable, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.182,
+            0.9,
+            0.09
+          ],
+          "content": "aiter(callable, /, stop_value, *, stop_exception=StopAsyncIteration)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.185,
+            0.9,
+            0.09
+          ],
+          "content": "aiter(callable, /, *, stop_exception)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.188,
+            0.9,
+            0.09
+          ],
+          "content": "Return an `term` object."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.191,
+            0.9,
+            0.09
+          ],
+          "content": "The first argument is interpreted very differently"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.194,
+            0.9,
+            0.09
+          ],
+          "content": "depending on the presence of the other arguments."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.197,
+            0.9,
+            0.09
+          ],
+          "content": "Without other arguments,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.2,
+            0.9,
+            0.09
+          ],
+          "content": "the single argument must be an `term`,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.203,
+            0.9,
+            0.09
+          ],
+          "content": "and the result is equivalent to calling `x.__aiter__()`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "If *stop_value* or *stop_exception* is given,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.20900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "then the first argument must be a callable object."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "The asynchronous iterator created in this case"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "calls *callable* with no arguments and awaits the result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.21800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "for each call to its `object.__anext__()` method;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "if the awaited value is equal to *stop_value*,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "or if the call raises an exception matching *stop_exception*,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22699999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "`exc` will be raised,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.22999999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "otherwise the value will be returned."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.23299999999999998,
+            0.9,
+            0.09
+          ],
+          "content": "The callable is only called when the result of `object.__anext__()`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.236,
+            0.9,
+            0.09
+          ],
+          "content": "is awaited."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.239,
+            0.9,
+            0.09
+          ],
+          "content": "*stop_exception* is an exception class or a tuple of exception classes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.242,
+            0.9,
+            0.09
+          ],
+          "content": "If *stop_value* is not specified,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.245,
+            0.9,
+            0.09
+          ],
+          "content": "the iteration stops only when the callable raises an exception."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.248,
+            0.9,
+            0.09
+          ],
+          "content": "If the callable raises `exc`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.251,
+            0.9,
+            0.09
+          ],
+          "content": "which does not match *stop_exception*,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.254,
+            0.9,
+            0.09
+          ],
+          "content": "it is replaced with a `exc`,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.257,
+            0.9,
+            0.09
+          ],
+          "content": "as for asynchronous generators (see `pep`)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.26,
+            0.9,
+            0.09
+          ],
+          "content": "For example, reading fixed-size chunks from an asynchronous stream"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.263,
+            0.9,
+            0.09
+          ],
+          "content": "until the end of file is reached"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.266,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.269,
+            0.9,
+            0.09
+          ],
+          "content": "from functools import partial"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.272,
+            0.9,
+            0.09
+          ],
+          "content": "async for chunk in aiter(partial(reader.read, 1024), b''):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.275,
+            0.9,
+            0.09
+          ],
+          "content": "process_chunk(chunk)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.278,
+            0.9,
+            0.09
+          ],
+          "content": "Or consuming an :class:`asyncio.Queue` until it is shut down::"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.281,
+            0.9,
+            0.09
+          ],
+          "content": "from asyncio import QueueShutDown"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28400000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "async for item in aiter(queue.get, stop_exception=QueueShutDown):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.28700000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "process_item(item)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.29,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.10"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.293,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.16"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.296,
+            0.9,
+            0.09
+          ],
+          "content": "Added the *stop_value* and *stop_exception* parameters."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.299,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.302,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `all(iterable, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.305,
+            0.9,
+            0.09
+          ],
+          "content": "Return `True` if all elements of the *iterable* are true (or if the iterable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.308,
+            0.9,
+            0.09
+          ],
+          "content": "is empty).  Equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.311,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.314,
+            0.9,
+            0.09
+          ],
+          "content": "def all(iterable):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.317,
+            0.9,
+            0.09
+          ],
+          "content": "for element in iterable:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.32,
+            0.9,
+            0.09
+          ],
+          "content": "if not element:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.323,
+            0.9,
+            0.09
+          ],
+          "content": "return False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.326,
+            0.9,
+            0.09
+          ],
+          "content": "return True"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.329,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.332,
+            0.9,
+            0.09
+          ],
+          "content": "anext(async_iterator, default, /)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.335,
+            0.9,
+            0.09
+          ],
+          "content": "When awaited, return the next item from the given :term:`asynchronous"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.338,
+            0.9,
+            0.09
+          ],
+          "content": "iterator`, or *default* if given and the iterator is `term`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.34099999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "This is the async variant of the `next()` builtin, and behaves"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.344,
+            0.9,
+            0.09
+          ],
+          "content": "similarly."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.347,
+            0.9,
+            0.09
+          ],
+          "content": "This calls the `object.__anext__()` method of *async_iterator*,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.35,
+            0.9,
+            0.09
+          ],
+          "content": "returning an `term`. Awaiting this returns the next value of the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.353,
+            0.9,
+            0.09
+          ],
+          "content": "iterator. If *default* is given, it is returned if the iterator is exhausted,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.356,
+            0.9,
+            0.09
+          ],
+          "content": "otherwise `exc` is raised."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.359,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.10"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.362,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `any(iterable, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.365,
+            0.9,
+            0.09
+          ],
+          "content": "Return `True` if any element of the *iterable* is true.  If the iterable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.368,
+            0.9,
+            0.09
+          ],
+          "content": "is empty, return ``False``.  Equivalent to"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.371,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.374,
+            0.9,
+            0.09
+          ],
+          "content": "def any(iterable):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.377,
+            0.9,
+            0.09
+          ],
+          "content": "for element in iterable:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.38,
+            0.9,
+            0.09
+          ],
+          "content": "if element:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.383,
+            0.9,
+            0.09
+          ],
+          "content": "return True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.386,
+            0.9,
+            0.09
+          ],
+          "content": "return False"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.389,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.392,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `ascii(object, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.395,
+            0.9,
+            0.09
+          ],
+          "content": "As `repr()`, return a string containing a printable representation of an"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.398,
+            0.9,
+            0.09
+          ],
+          "content": "object, but escape the non-ASCII characters in the string returned by"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.401,
+            0.9,
+            0.09
+          ],
+          "content": "`repr()` using `\\x`, `\\u`, or `\\U` escapes.  This generates a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.40399999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "similar to that returned by `repr()` in Python 2."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.407,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `bin(integer, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.41,
+            0.9,
+            0.09
+          ],
+          "content": "Convert an integer number to a binary string prefixed with \"0b\". The result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.413,
+            0.9,
+            0.09
+          ],
+          "content": "is a valid Python expression. If *integer* is not a Python `class` object, it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.416,
+            0.9,
+            0.09
+          ],
+          "content": "has to define an `object.__index__()` method that returns an integer. Some"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.419,
+            0.9,
+            0.09
+          ],
+          "content": "examples:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.422,
+            0.9,
+            0.09
+          ],
+          "content": ">>> bin(3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.425,
+            0.9,
+            0.09
+          ],
+          "content": "'0b11'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.428,
+            0.9,
+            0.09
+          ],
+          "content": ">>> bin(-10)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.431,
+            0.9,
+            0.09
+          ],
+          "content": "'-0b1010'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.434,
+            0.9,
+            0.09
+          ],
+          "content": "If the prefix \"0b\" is desired or not, you can use either of the following ways."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.437,
+            0.9,
+            0.09
+          ],
+          "content": ">>> format(14, '#b'), format(14, 'b')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.44,
+            0.9,
+            0.09
+          ],
+          "content": "('0b1110', '1110')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.443,
+            0.9,
+            0.09
+          ],
+          "content": ">>> f'{14:#b}', f'{14:b}'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.446,
+            0.9,
+            0.09
+          ],
+          "content": "('0b1110', '1110')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.449,
+            0.9,
+            0.09
+          ],
+          "content": "See also `enum.bin()` to represent negative values as twos-complement."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.452,
+            0.9,
+            0.09
+          ],
+          "content": "See also `format()` for more information."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.455,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Class: `bool(object=False, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.458,
+            0.9,
+            0.09
+          ],
+          "content": "Return a Boolean value, i.e. one of `True` or `False`.  The argument"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.461,
+            0.9,
+            0.09
+          ],
+          "content": "is converted using the standard `ref`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.464,
+            0.9,
+            0.09
+          ],
+          "content": "If the argument is false"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.46699999999999997,
+            0.9,
+            0.09
+          ],
+          "content": "or omitted, this returns `False`; otherwise, it returns `True`.  The"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.47,
+            0.9,
+            0.09
+          ],
+          "content": "`class` class is a subclass of `class` (see `ref`)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.473,
+            0.9,
+            0.09
+          ],
+          "content": "It cannot be subclassed further.  Its only instances are `False` and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.476,
+            0.9,
+            0.09
+          ],
+          "content": "`True` (see `ref`)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.479,
+            0.9,
+            0.09
+          ],
+          "content": ".. index:: pair: Boolean; type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.482,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.7"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.485,
+            0.9,
+            0.09
+          ],
+          "content": "The parameter is now positional-only."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.488,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `breakpoint(*args, **kws)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.491,
+            0.9,
+            0.09
+          ],
+          "content": "This function drops you into the debugger at the call site.  Specifically,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.494,
+            0.9,
+            0.09
+          ],
+          "content": "it calls `sys.breakpointhook()`, passing `args` and `kws` straight"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.497,
+            0.9,
+            0.09
+          ],
+          "content": "through.  By default, `sys.breakpointhook()` calls"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5,
+            0.9,
+            0.09
+          ],
+          "content": "`pdb.set_trace()` expecting no arguments.  In this case, it is"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.503,
+            0.9,
+            0.09
+          ],
+          "content": "purely a convenience function so you don't have to explicitly import"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.506,
+            0.9,
+            0.09
+          ],
+          "content": "`mod` or type as much code to enter the debugger.  However,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.509,
+            0.9,
+            0.09
+          ],
+          "content": "`sys.breakpointhook()` can be set to some other function and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.512,
+            0.9,
+            0.09
+          ],
+          "content": "`breakpoint()` will automatically call that, allowing you to drop into"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.515,
+            0.9,
+            0.09
+          ],
+          "content": "the debugger of choice."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.518,
+            0.9,
+            0.09
+          ],
+          "content": "If `sys.breakpointhook()` is not accessible, this function will"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.521,
+            0.9,
+            0.09
+          ],
+          "content": "raise `exc`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.524,
+            0.9,
+            0.09
+          ],
+          "content": "By default, the behavior of `breakpoint()` can be changed with"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.527,
+            0.9,
+            0.09
+          ],
+          "content": "the :envvar:`PYTHONBREAKPOINT` environment variable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.53,
+            0.9,
+            0.09
+          ],
+          "content": "See `sys.breakpointhook()` for usage details."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.533,
+            0.9,
+            0.09
+          ],
+          "content": "Note that this is not guaranteed if `sys.breakpointhook()`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.536,
+            0.9,
+            0.09
+          ],
+          "content": "has been replaced."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.539,
+            0.9,
+            0.09
+          ],
+          "content": ".. audit-event:: builtins.breakpoint breakpointhook breakpoint"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.542,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.7"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.545,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Class: `bytearray(source=b'')`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.548,
+            0.9,
+            0.09
+          ],
+          "content": "bytearray(source, encoding, errors='strict')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.551,
+            0.9,
+            0.09
+          ],
+          "content": "Return a new array of bytes.  The `class` class is a mutable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.554,
+            0.9,
+            0.09
+          ],
+          "content": "sequence of integers in the range 0 <= x < 256.  It has most of the usual"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.557,
+            0.9,
+            0.09
+          ],
+          "content": "methods of mutable sequences, described in `ref`, as well"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.56,
+            0.9,
+            0.09
+          ],
+          "content": "as most methods that the `class` type has, see `ref`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5630000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The optional *source* parameter can be used to initialize the array in a few"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5660000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "different ways:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5690000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "* If it is a *string*, you must also give the *encoding* (and optionally,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5720000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "*errors*) parameters; `bytearray()` then converts the string to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5750000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "bytes using `str.encode()`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5780000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "* If it is an *integer*, the array will have that size and will be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5810000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "initialized with null bytes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5840000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "* If it is an object conforming to the `ref`,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5870000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "a read-only buffer of the object will be used to initialize the bytes array."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5900000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "* If it is an *iterable*, it must be an iterable of integers in the range"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5930000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`0 <= x < 256`, which are used as the initial contents of the array."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5960000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Without an argument, an array of size 0 is created."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.5990000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "See also `ref` and `ref`."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.6020000000000001,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Class: `bytes(source=b'')`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6050000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "bytes(source, encoding, errors='strict')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6080000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Return a new \"bytes\" object which is an immutable sequence of integers in"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6110000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "the range `0 <= x < 256`.  `class` is an immutable version of"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6140000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`class` -- it has the same non-mutating methods and the same"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6170000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "indexing and slicing behavior."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6200000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Accordingly, constructor arguments are interpreted as for `bytearray()`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6230000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Bytes objects can also be created with literals, see `ref`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6260000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "See also `ref`, `ref`, and `ref`."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.629,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `callable(object, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.632,
+            0.9,
+            0.09
+          ],
+          "content": "Return `const` if the *object* argument appears callable,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.635,
+            0.9,
+            0.09
+          ],
+          "content": "`const` if not.  If this returns `True`, it is still possible that a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.638,
+            0.9,
+            0.09
+          ],
+          "content": "call fails, but if it is `False`, calling *object* will never succeed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.641,
+            0.9,
+            0.09
+          ],
+          "content": "Note that classes are callable (calling a class returns a new instance);"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.644,
+            0.9,
+            0.09
+          ],
+          "content": "instances are callable if their class has a `object.__call__()` method."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.647,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionadded:: 3.2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.65,
+            0.9,
+            0.09
+          ],
+          "content": "This function was first removed in Python 3.0 and then brought back"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.653,
+            0.9,
+            0.09
+          ],
+          "content": "in Python 3.2."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.656,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `chr(codepoint, /)`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.659,
+            0.9,
+            0.09
+          ],
+          "content": "Return the string representing a character with the specified Unicode code point."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.662,
+            0.9,
+            0.09
+          ],
+          "content": "For example, `chr(97)` returns the string `'a'`, while"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.665,
+            0.9,
+            0.09
+          ],
+          "content": "`chr(8364)` returns the string `'€'`. This is the inverse of `ord()`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.668,
+            0.9,
+            0.09
+          ],
+          "content": "The valid range for the argument is from 0 through 1,114,111 (0x10FFFF in"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.671,
+            0.9,
+            0.09
+          ],
+          "content": "base 16).  `exc` will be raised if it is outside that range."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.674,
+            0.9,
+            0.09
+          ],
+          "content": "Transform a method into a class method."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.677,
+            0.9,
+            0.09
+          ],
+          "content": "A class method receives the class as an implicit first argument, just like an"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.68,
+            0.9,
+            0.09
+          ],
+          "content": "instance method receives the instance. To declare a class method, use this"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.683,
+            0.9,
+            0.09
+          ],
+          "content": "idiom"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.686,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6890000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "class C:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6920000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "@classmethod"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6950000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "def f(cls, arg1, arg2): ..."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.6980000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The ``@classmethod`` form is a function :term:`decorator` -- see"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7010000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ":ref:`function` for details."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7040000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "A class method can be called either on the class (such as ``C.f()``) or on an instance (such"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7070000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "as ``C().f()``).  The instance is ignored except for its class. If a class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7100000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "method is called for a derived class, the derived class object is passed as the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7130000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "implied first argument."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7160000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Class methods are different than C++ or Java static methods. If you want those,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7190000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "see :func:`staticmethod` in this section."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7220000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "For more information on class methods, see :ref:`types`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7250000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7280000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Class methods can now wrap other :term:`descriptors <descriptor>` such as"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7310000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ":func:`property`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7340000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. versionchanged:: 3.10"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7370000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "Class methods now inherit the method attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7400000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "(:attr:`~function.__module__`, :attr:`~function.__name__`,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7430000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ":attr:`~function.__qualname__`, :attr:`~function.__doc__` and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7460000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ":attr:`~function.__annotations__`) and have a new ``__wrapped__``"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7490000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "attribute."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.7520000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ".. deprecated-removed:: 3.11 3.13"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.755,
+            0.9,
+            0.09
+          ],
+          "content": "Class methods can no longer wrap other :term:`descriptors <descriptor>` such as"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.758,
+            0.9,
+            0.09
+          ],
+          "content": ":func:`property`."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.761,
+            0.9,
+            0.15
+          ],
+          "content": "```"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.764,
+            0.9,
+            0.07
+          ],
+          "level": 3,
+          "content": "### Function: `compile(source, filename, mode, flags=0, \\`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.767,
+            0.9,
+            0.09
+          ],
+          "content": "dont_inherit=False, optimize=-1, \\"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.77,
+            0.9,
+            0.09
+          ],
+          "content": "*, module=None)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.773,
+            0.9,
+            0.09
+          ],
+          "content": "Compile the *source* into a code or AST object.  Code objects can be executed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.776,
+            0.9,
+            0.09
+          ],
+          "content": "by `exec()` or `eval()`.  *source* can either be a normal string, a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.779,
+            0.9,
+            0.09
+          ],
+          "content": "byte string, or an AST object.  Refer to the `mod` module documentation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.782,
+            0.9,
+            0.09
+          ],
+          "content": "for information on how to work with AST objects."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.785,
+            0.9,
+            0.09
+          ],
+          "content": "The *filename* argument should give the file from which the code was read;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.788,
+            0.9,
+            0.09
+          ],
+          "content": "pass some recognizable value if it wasn't read from a file (`'<string>'` is"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.791,
+            0.9,
+            0.09
+          ],
+          "content": "commonly used)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.794,
+            0.9,
+            0.09
+          ],
+          "content": "The *mode* argument specifies what kind of code must be compiled; it can be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.797,
+            0.9,
+            0.09
+          ],
+          "content": "`'exec'` if *source* consists of a sequence of statements, `'eval'` if it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8,
+            0.9,
+            0.09
+          ],
+          "content": "consists of a single expression, or `'single'` if it consists of a single"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.803,
+            0.9,
+            0.09
+          ],
+          "content": "interactive statement (in the latter case, expression statements that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.806,
+            0.9,
+            0.09
+          ],
+          "content": "evaluate to something other than `None` will be printed)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.809,
+            0.9,
+            0.09
+          ],
+          "content": "It can also be `'func_type'` if *source* consists of a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.812,
+            0.9,
+            0.09
+          ],
+          "content": "function type signature, for example `(int) -> str`; see"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8150000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`ast.parse()` for more information. This mode requires passing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8180000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`data` in *flags*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8210000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "The optional arguments *flags* and *dont_inherit* control which"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8240000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`ref` should be activated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8270000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "and which `ref` should be allowed. If neither"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "is present (or both are zero) the code is compiled with the same flags that"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8330000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "affect the code that is calling `compile()`. If the *flags*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8360000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "argument is given and *dont_inherit* is not (or is zero) then the compiler"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8390000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "options and the future statements specified by the *flags* argument are used"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8420000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "in addition to those that would be used anyway. If *dont_inherit* is a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8450000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "non-zero integer then the *flags* argument is it -- the flags (future"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.8480000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "features and compiler options) in the surrounding code are ignored."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.051000000000000004,
+            0.9,
+            0.09
+          ],
+          "content": "Compiler options and future statements are specified by bits which can be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.054000000000000006,
+            0.9,
+            0.09
+          ],
+          "content": "bitwise ORed together to specify multiple options. The bitfield required to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.05700000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "specify a given future feature can be found as the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06000000000000001,
+            0.9,
+            0.09
+          ],
+          "content": ":attr:`~__future__._Feature.compiler_flag` attribute on the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06300000000000001,
+            0.9,
+            0.09
+          ],
+          "content": "`class` instance in the `mod` module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06600000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "`ref` can be found in `mod`"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.06900000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "module, with `PyCF_` prefix."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07200000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "The argument *optimize* specifies the optimization level of the compiler; the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07500000000000002,
+            0.9,
+            0.09
+          ],
+          "content": "default value of `-1` selects the optimization level of the interpreter as"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.07800000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "given by :option:`-O` options.  Explicit levels are `0` (no optimization;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08100000000000003,
+            0.9,
+            0.09
+          ],
+          "content": "`__debug__` is true), `1` (asserts are removed, `__debug__` is false)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08399999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "or `2` (docstrings are removed too)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08699999999999992,
+            0.9,
+            0.09
+          ],
+          "content": "The optional argument *module* specifies the module name."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.08999999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "It is needed to unambiguous `ref` syntax warnings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09299999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "by module name."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09599999999999993,
+            0.9,
+            0.09
+          ],
+          "content": "This function raises `exc` if the compiled source is invalid,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.09899999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "including a *source* containing a null character or that cannot be decoded;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10199999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "`exc` if *mode* or *flags* is invalid,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10499999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "or if a string *source* contains surrogate characters;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.10799999999999994,
+            0.9,
+            0.09
+          ],
+          "content": "`exc` or `exc` if *source* is too complex"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11099999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "to parse or compile,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11399999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "for example an expression with many thousands of nested operators;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11699999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "and `exc` if *source* is too large."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.11999999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "If you want to parse Python code into its AST representation, see"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12299999999999996,
+            0.9,
+            0.09
+          ],
+          "content": "`ast.parse()`."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12599999999999995,
+            0.9,
+            0.09
+          ],
+          "content": ".. audit-event:: compile source,filename compile"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.12899999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "Raises an `ref` `compile` with arguments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.13199999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "`source` and `filename`. This event may also be raised by implicit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.13499999999999995,
+            0.9,
+            0.09
+          ],
+          "content": "compilation."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.13799999999999996,
+            0.9,
+            0.09
+          ],
+          "content": ".. note"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.05,
+            0.14099999999999996,
+            0.9,
+            0.15
+          ],
+          "content": "```python"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.1.7"
+    },
+    "document": {
+      "producer_application": "Python Official Documentation",
+      "page_count": 45,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 40,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 41,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 42,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 43,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        },
+        {
+          "page_idx": 44,
+          "width_pt": 595.28,
+          "height_pt": 841.89
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

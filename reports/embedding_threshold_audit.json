@@ -1,0 +1,98 @@
+{
+  "audit_metadata": {
+    "dataset_path": "data/06_rag_dataset/chunks/all_chunks.json",
+    "total_chunks": 5230,
+    "code_example_count": 864,
+    "mixed_chunks_count": 872,
+    "pure_text_chunks_count": 3494
+  },
+  "comparison_table": {
+    "threshold_50_percent": {
+      "threshold_value": 0.5,
+      "code_example_chunks": 864,
+      "mixed_qualifying_chunks": 73,
+      "total_code_chunks": 937,
+      "total_text_chunks": 4293,
+      "code_percentage": 17.92,
+      "text_percentage": 82.08
+    },
+    "threshold_48_27_percent": {
+      "threshold_value": 0.4827,
+      "code_example_chunks": 864,
+      "mixed_qualifying_chunks": 79,
+      "total_code_chunks": 943,
+      "total_text_chunks": 4287,
+      "code_percentage": 18.03,
+      "text_percentage": 81.97
+    }
+  },
+  "borderline_chunks_count": 6,
+  "borderline_chunks_list": [
+    {
+      "chunk_id": "PY_01_Official_Tutorial_c1967",
+      "content_type": "debugging_error",
+      "has_code": true,
+      "code_char_ratio": 0.493468,
+      "total_chars": 1684,
+      "code_chars": 831,
+      "source_file": "PY_01_Official_Tutorial.md",
+      "section_path": "BRIEF TOUR OF THE STANDARD LIBRARY — PART II > 11.6 Weak References",
+      "content_preview": "> [Ngữ cảnh: BRIEF TOUR OF THE STANDARD LIBRARY — PART II > 11.6 Weak References]  ## 11.6 Weak References  Python does automatic memory management (reference counting for most objects and garbage collection to eliminate cycles). The memory is freed "
+    },
+    {
+      "chunk_id": "PY_03_Debugging_and_Common_Errors_c2159",
+      "content_type": "debugging_error",
+      "has_code": true,
+      "code_char_ratio": 0.494662,
+      "total_chars": 1405,
+      "code_chars": 695,
+      "source_file": "PY_03_Debugging_and_Common_Errors.md",
+      "section_path": "Case study: interface design > 4.7 Refactoring",
+      "content_preview": "> [Ngữ cảnh: Case study: interface design > 4.7 Refactoring]  ## 4.7 Refactoring  When I wrote circle, I was able to re-use polygon because a many-sided polygon is a good approximation of a circle. But arc is not as cooperative; we can’t use polygon "
+    },
+    {
+      "chunk_id": "PY_03_Debugging_and_Common_Errors_c2179",
+      "content_type": "debugging_error",
+      "has_code": true,
+      "code_char_ratio": 0.482759,
+      "total_chars": 1189,
+      "code_chars": 574,
+      "source_file": "PY_03_Debugging_and_Common_Errors.md",
+      "section_path": "Conditionals and recursion > 5.12. Debugging",
+      "content_preview": "> [Ngữ cảnh: Conditionals and recursion > 5.12. Debugging]  ## 5.12. Debugging  Before getting input from the user, it is a good idea to print a prompt telling the user what to input. raw\\_input can take a prompt as an argument:  ```txt >>> name = ra"
+    },
+    {
+      "chunk_id": "PY_03_Debugging_and_Common_Errors_c2353",
+      "content_type": "exercise",
+      "has_code": true,
+      "code_char_ratio": 0.493012,
+      "total_chars": 1288,
+      "code_chars": 635,
+      "source_file": "PY_03_Debugging_and_Common_Errors.md",
+      "section_path": "inside class Time:",
+      "content_preview": "> [Ngữ cảnh: inside class Time:]  # inside class Time: ```  ```python def __add__(self, other):     seconds = self.time_to_int() + other.time_to_int()     return int_to_time(seconds) ```  And here is how you could use it:  ```txt >>> start = Time(9, "
+    },
+    {
+      "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2669",
+      "content_type": "debugging_error",
+      "has_code": true,
+      "code_char_ratio": 0.4875,
+      "total_chars": 640,
+      "code_chars": 312,
+      "source_file": "PY_05_Official_Builtin_Functions_and_Types.md",
+      "section_path": "Official Python Documentation: Built-in Functions and Standard Types > Text Sequence Type --- :class:`str` > Method: `str.index(sub[, start[, end]])`",
+      "content_preview": "> [Ngữ cảnh: Official Python Documentation: Built-in Functions and Standard Types > Text Sequence Type --- :class:`str` > Method: `str.index(sub[, start[, end]])`]  ### Method: `str.index(sub[, start[, end]])`     Like `str.find()`, but raise `exc` w"
+    },
+    {
+      "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2691",
+      "content_type": "debugging_error",
+      "has_code": true,
+      "code_char_ratio": 0.492447,
+      "total_chars": 662,
+      "code_chars": 326,
+      "source_file": "PY_05_Official_Builtin_Functions_and_Types.md",
+      "section_path": "Official Python Documentation: Built-in Functions and Standard Types > Text Sequence Type --- :class:`str` > Method: `str.rindex(sub[, start[, end]])`",
+      "content_preview": "> [Ngữ cảnh: Official Python Documentation: Built-in Functions and Standard Types > Text Sequence Type --- :class:`str` > Method: `str.rindex(sub[, start[, end]])`]  ### Method: `str.rindex(sub[, start[, end]])`     Like `rfind()` but raises `exc` wh"
+    }
+  ]
+}

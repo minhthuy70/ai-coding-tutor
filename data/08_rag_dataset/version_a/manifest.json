@@ -1,0 +1,19 @@
+{
+  "version": "Version A (Actual Routing)",
+  "routing_strategy": "Content-Type & Code Ratio Threshold = 0.50 (Initial)",
+  "total_chunks": 5230,
+  "collections": {
+    "qwen3_text": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "dimension": 1024,
+      "count": 4851,
+      "file": "qwen3_text/qwen3_text_vectors.jsonl"
+    },
+    "jina_code": {
+      "model": "jinaai/jina-embeddings-v2-base-code",
+      "dimension": 768,
+      "count": 379,
+      "file": "jina_code/jina_code_vectors.jsonl"
+    }
+  }
+}
