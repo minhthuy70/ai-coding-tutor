@@ -49,9 +49,14 @@ app.add_middleware(
 )
 
 # Mount Routers
-# /api/health as specified in Day 1 requirements
-app.include_router(health_router, prefix=settings.API_V1_STR)
-app.include_router(tutor_router, prefix=settings.API_V1_STR)
+# /api and /api/v1 prefix compatibility
+app.include_router(health_router, prefix="/api")
+app.include_router(tutor_router, prefix="/api")
+if settings.API_V1_STR != "/api":
+    app.include_router(health_router, prefix=settings.API_V1_STR)
+    app.include_router(tutor_router, prefix=settings.API_V1_STR)
+app.include_router(health_router, prefix="/api/v1")
+app.include_router(tutor_router, prefix="/api/v1")
 
 
 @app.get("/")

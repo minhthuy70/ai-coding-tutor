@@ -645,8 +645,8 @@ export async function getSocraticAssistantResponse(
   settings: ModelSettings,
   selectedModelName: string
 ): Promise<SocraticEngineResult> {
-  // 0. Nếu người dùng chọn dùng FastAPI Backend + RAG ChromaDB
-  if (settings.aiProvider === 'backend_rag') {
+  // 0. Mặc định hoặc nếu người dùng chọn FastAPI Backend + RAG ChromaDB
+  if (settings.aiProvider === 'backend_rag' || !settings.aiProvider || settings.aiProvider === 'built_in_socratic') {
     try {
       return await callBackendRAG(userText, attachments, settings);
     } catch (err: any) {

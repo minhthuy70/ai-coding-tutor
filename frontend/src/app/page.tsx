@@ -85,6 +85,7 @@ function HomePageInner() {
     temperature: 0.7,
     maxTokens: 2048,
     persona: 'socratic',
+    aiProvider: 'backend_rag',
   });
 
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);

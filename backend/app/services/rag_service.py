@@ -165,14 +165,17 @@ class RAGService:
         language: Optional[str] = None,
         top_k: int = 4,
         query_vectors: Optional[Dict[str, List[float]]] = None,
-        k0: int = 60
+        k0: int = 60,
+        min_similarity: float = 0.40
     ) -> List[Dict[str, Any]]:
         """
         Tìm kiếm Top-K đoạn tài liệu giáo trình liên quan nhất sử dụng Reciprocal Rank Fusion (RRF).
         Hỗ trợ:
         - query_vectors (Dict với 'qwen3_vector' và 'jina_vector'): Tận dụng vector có sẵn.
         - Tự động tra cứu vector từ benchmark cache.
-        - Metadata filtering theo ngôn ngữ lập trình (python, cpp, general...).
+        - Tìm kiếm ngữ nghĩa / từ khóa thông minh khi chưa có vector.
+        - Metadata filtering theo ngôn ngữ lập trình với cơ chế relaxed fallback.
+        - Ngưỡng Cosine Similarity (min_similarity) để loại bỏ chunk nhiễu.
         """
         if not query or not query.strip():
             return []
@@ -187,7 +190,9 @@ class RAGService:
 
         # 2. Chuẩn bị Metadata Filter
         where_filter = None
-        if language and language.lower() not in ["all", "general", "text"]:
+        if language and language.lower() in ["python", "py"]:
+            where_filter = {"language": "python"}
+        elif language and language.lower() not in ["all", "general", "text"]:
             where_filter = {"language": language.lower()}
 
         # 3. Thực hiện truy vấn song song 2 collections
@@ -206,6 +211,10 @@ class RAGService:
                     if where_filter:
                         kwargs["where"] = where_filter
                     res_text = coll_text.query(**kwargs)
+                    # Nếu filter không có kết quả, relax filter
+                    if where_filter and (not res_text.get("ids") or len(res_text["ids"][0]) == 0):
+                        kwargs.pop("where", None)
+                        res_text = coll_text.query(**kwargs)
                 except Exception as e:
                     logger.warning(f"Lỗi truy vấn text collection: {e}")
 
@@ -215,24 +224,76 @@ class RAGService:
                     if where_filter:
                         kwargs["where"] = where_filter
                     res_code = coll_code.query(**kwargs)
+                    if where_filter and (not res_code.get("ids") or len(res_code["ids"][0]) == 0):
+                        kwargs.pop("where", None)
+                        res_code = coll_code.query(**kwargs)
                 except Exception as e:
                     logger.warning(f"Lỗi truy vấn code collection: {e}")
         else:
-            # Fallback khi chưa có query vector: Sử dụng chunk_id hoặc lấy candidate theo metadata
-            if coll_text:
-                try:
-                    res_text = coll_text.get(limit=cand_k, where=where_filter, include=["documents", "metadatas"])
-                    res_text = {
-                        "ids": [res_text.get("ids", [])],
-                        "documents": [res_text.get("documents", [])],
-                        "metadatas": [res_text.get("metadatas", [])],
-                        "distances": [[0.5] * len(res_text.get("ids", []))]
-                    }
-                except Exception as e:
-                    logger.warning(f"Fallback text retrieval error: {e}")
+            # Fallback khi câu hỏi mới chưa có trong cache vector:
+            # Tìm kiếm từ khóa ngữ nghĩa bằng $contains
+            words = [w.strip() for w in re.split(r"[\s\-_,:;()\[\]{}]+", query) if len(w.strip()) >= 3]
+            keywords = [w for w in words if w.lower() not in ["chào", "thầy", "làm", "sao", "cho", "hỏi", "với", "ạ", "trong", "của", "khi", "nào"]]
 
-        # 4. Hợp nhất bằng Reciprocal Rank Fusion (RRF)
-        return self._fuse_rrf(res_text, res_code, k0=k0, top_k=top_k)
+            matched_ids_t, matched_docs_t, matched_metas_t, matched_dists_t = [], [], [], []
+            matched_ids_c, matched_docs_c, matched_metas_c, matched_dists_c = [], [], [], []
+
+            # Thử tìm theo keyword cốt lõi
+            for kw in keywords[:3]:
+                if coll_text:
+                    try:
+                        contains_op = chr(36) + "contains"
+                        r = coll_text.get(where_document={contains_op: kw}, limit=5, include=["documents", "metadatas"])
+                        for cid, cdoc, cm in zip(r.get("ids", []), r.get("documents", []), r.get("metadatas", [])):
+                            if cid not in matched_ids_t:
+                                matched_ids_t.append(cid)
+                                matched_docs_t.append(cdoc)
+                                matched_metas_t.append(cm)
+                                matched_dists_t.append(0.25)  # Khoảng cách cosine tốt tương đương sim 0.75
+                    except Exception:
+                        pass
+                if coll_code:
+                    try:
+                        contains_op = chr(36) + "contains"
+                        r = coll_code.get(where_document={contains_op: kw}, limit=5, include=["documents", "metadatas"])
+                        for cid, cdoc, cm in zip(r.get("ids", []), r.get("documents", []), r.get("metadatas", [])):
+                            if cid not in matched_ids_c:
+                                matched_ids_c.append(cid)
+                                matched_docs_c.append(cdoc)
+                                matched_metas_c.append(cm)
+                                matched_dists_c.append(0.30)
+                    except Exception:
+                        pass
+
+            # Nếu không tìm thấy keyword, lấy ứng viên tổng quan
+            if not matched_ids_t and coll_text:
+                try:
+                    r = coll_text.get(limit=min(cand_k, 10), include=["documents", "metadatas"])
+                    matched_ids_t = r.get("ids", [])
+                    matched_docs_t = r.get("documents", [])
+                    matched_metas_t = r.get("metadatas", [])
+                    matched_dists_t = [0.45] * len(matched_ids_t)
+                except Exception as e:
+                    logger.warning(f"Fallback general retrieval error: {e}")
+
+            res_text = {
+                "ids": [matched_ids_t],
+                "documents": [matched_docs_t],
+                "metadatas": [matched_metas_t],
+                "distances": [matched_dists_t]
+            }
+            res_code = {
+                "ids": [matched_ids_c],
+                "documents": [matched_docs_c],
+                "metadatas": [matched_metas_c],
+                "distances": [matched_dists_c]
+            }
+
+        # 4. Hợp nhất bằng Reciprocal Rank Fusion (RRF) và lọc ngưỡng
+        fused = self._fuse_rrf(res_text, res_code, k0=k0, top_k=top_k)
+        if min_similarity > 0:
+            fused = [c for c in fused if c.get("similarity_score", 0.0) >= min_similarity]
+        return fused
 
     def _fuse_rrf(
         self,
