@@ -10,6 +10,7 @@ Description:
 
 import os
 import re
+import asyncio
 import logging
 from typing import List, Dict, Any, Optional
 
@@ -50,7 +51,7 @@ class TutorService:
         if self.api_key:
             try:
                 import google.generativeai as genai
-                genai.configure(api_key=self.api_key)
+                genai.configure(api_key=self.api_key, transport="rest")
                 self._genai_client = genai.GenerativeModel(
                     model_name=self.model_name,
                     system_instruction=SOCRATIC_SYSTEM_PROMPT,
@@ -183,7 +184,7 @@ class TutorService:
         if self._genai_client:
             try:
                 user_content = payload["unified_context"]
-                response = await self._genai_client.generate_content_async(user_content)
+                response = await asyncio.to_thread(self._genai_client.generate_content, user_content)
                 reply_text = response.text
 
                 # Tạo danh sách câu hỏi gợi ý

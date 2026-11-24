@@ -270,7 +270,7 @@ class ImageExtractor:
         # 3. Gọi Google Gemini 1.5 Flash Vision
         else:
             try:
-                genai.configure(api_key=self.api_key)
+                genai.configure(api_key=self.api_key, transport="rest")
                 model = genai.GenerativeModel(settings.GEMINI_MODEL)
 
                 vision_prompt = (
