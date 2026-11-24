@@ -122,6 +122,35 @@ class TestRAGService:
         single_result = rag_service.search("QuickSort", top_k=1)
         assert len(single_result) <= 1
 
+    def test_07_auto_detect_language(self):
+        """Kiểm tra tính năng tự động nhận diện ngôn ngữ lập trình của RAGService."""
+        assert rag_service.auto_detect_language("Cú pháp def __init__(self) trong Python") == "python"
+        assert rag_service.auto_detect_language("Cách dùng std::cout và vector<int> con trỏ") == "cpp"
+        assert rag_service.auto_detect_language("public static void main(String[] args)") == "java"
+        assert rag_service.auto_detect_language("Giải thích khái niệm độ phức tạp Big-O") is None
+
+    def test_08_query_expansion(self):
+        """Kiểm tra tính năng mở rộng từ khóa học thuật chuẩn (Query Expansion)."""
+        expanded_oop = rag_service.expand_query("khái niệm oop")
+        assert "lập trình hướng đối tượng" in expanded_oop or "OOP" in expanded_oop
+        assert "kế thừa" in expanded_oop
+
+        expanded_qs = rag_service.expand_query("thuật toán quicksort")
+        assert "sắp xếp nhanh" in expanded_qs
+        assert "pivot" in expanded_qs
+
+    def test_09_unseen_query_fallback_search(self):
+        """Kiểm tra cơ chế fallback và đa từ khóa đối với câu hỏi sinh viên chưa từng có trong cache."""
+        unseen_query = "cách định nghĩa hàm đệ quy có điều kiện dừng base case"
+        results = rag_service.search(query=unseen_query, top_k=3)
+
+        assert len(results) > 0, "Fallback retrieval phải tìm thấy tài liệu phù hợp"
+        top_hit = results[0]
+        assert "chunk_id" in top_hit
+        assert "content" in top_hit and len(top_hit["content"]) > 0
+        assert top_hit["similarity_score"] >= 0.40, f"Điểm similarity phải đạt ngưỡng chất lượng: {top_hit['similarity_score']}"
+        assert top_hit["rank"] == 1
+
 
 if __name__ == "__main__":
     pytest.main(["-v", __file__])
