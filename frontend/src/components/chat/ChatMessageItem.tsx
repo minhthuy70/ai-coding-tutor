@@ -484,24 +484,9 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
 
           {/* Assistant Action Bar */}
           {!isUser && !message.isStreaming && (
-            <div className="mt-3 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 bg-gradient-to-br from-slate-50 to-white dark:from-slate-800/60 dark:to-slate-800/40 p-3.5 shadow-sm">
-              {/* Demo notice */}
-              <div className="flex items-start gap-2.5 mb-3">
-                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-950/50">
-                  <AlertTriangle className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-slate-700 dark:text-slate-300 leading-snug">
-                    Giao diện thử nghiệm
-                  </p>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed mt-0.5">
-                    Chưa kết nối LLM/RAG. Sau khi hoàn thiện UI, sẽ tích hợp Gemini, OpenAI và Vector DB.
-                  </p>
-                </div>
-              </div>
-
+            <div className="mt-3 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 bg-gradient-to-br from-slate-50 to-white dark:from-slate-800/60 dark:to-slate-800/40 p-3 shadow-xs">
               {/* Action Toolbar */}
-              <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200 dark:border-slate-700/60">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-1">
                   {/* Copy Button */}
                   <button

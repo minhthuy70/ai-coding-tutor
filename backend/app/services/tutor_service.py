@@ -13,6 +13,9 @@ import re
 import asyncio
 import logging
 from typing import List, Dict, Any, Optional
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from app.core.config import settings
 from app.services.rag_service import rag_service
@@ -43,7 +46,7 @@ NGUYÊN TẮC HOẠT ĐỘNG BẮT BUỘC:
 class TutorService:
     def __init__(self):
         self.api_key = settings.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY", "")
-        self.model_name = settings.GEMINI_MODEL or "gemini-1.5-flash"
+        self.model_name = settings.GEMINI_MODEL or "gemini-3-flash-preview"
         self._init_llm()
 
     def _init_llm(self):

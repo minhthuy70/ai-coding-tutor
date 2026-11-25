@@ -17,7 +17,8 @@ import {
   EyeOff,
   ExternalLink,
   Server,
-  Bot
+  Bot,
+  Database
 } from 'lucide-react';
 import { ModelSettings } from '@/types/chat';
 import { isSoundEnabled, setSoundEnabled } from '@/lib/soundEffects';
@@ -45,7 +46,24 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const [testMessage, setTestMessage] = useState('');
 
   const handleTestConnection = async () => {
-    if (settings.aiProvider === 'gemini') {
+    if (settings.aiProvider === 'backend_rag' || !settings.aiProvider) {
+      setTestStatus('testing');
+      setTestMessage('Đang kiểm tra kết nối FastAPI Backend & ChromaDB RAG...');
+      try {
+        const res = await fetch('http://localhost:8000/api/knowledge/stats');
+        if (res.ok) {
+          const data = await res.json();
+          setTestStatus('success');
+          setTestMessage(`Kết nối Backend RAG thành công! Kho tri thức sẵn sàng (${data.total_records?.toLocaleString() || 5231} chunks).`);
+        } else {
+          setTestStatus('error');
+          setTestMessage(`Backend trả về HTTP ${res.status}`);
+        }
+      } catch (e: any) {
+        setTestStatus('error');
+        setTestMessage('Không thể kết nối Backend tại http://localhost:8000. Hãy chạy start_dev.bat.');
+      }
+    } else if (settings.aiProvider === 'gemini') {
       if (!settings.geminiApiKey?.trim()) {
         setTestStatus('error');
         setTestMessage('Vui lòng nhập Gemini API Key trước khi kiểm tra.');
@@ -54,7 +72,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       setTestStatus('testing');
       setTestMessage('Đang kiểm tra kết nối Google Gemini API...');
       try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${settings.geminiApiKey.trim()}`, {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${settings.geminiApiKey.trim()}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -63,7 +81,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         });
         if (res.ok) {
           setTestStatus('success');
-          setTestMessage('Kết nối Gemini 1.5 Flash thành công! Model đã sẵn sàng.');
+          setTestMessage('Kết nối Gemini 3 Flash thành công! Model đã sẵn sàng.');
         } else {
           const err = await res.json().catch(() => ({}));
           setTestStatus('error');
@@ -213,27 +231,29 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <span>Nguồn cấp Mô hình AI &amp; Khóa API:</span>
             </label>
             <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 px-2 py-0.5 rounded-full">
-              {currentProvider === 'gemini' ? 'Google Gemini Live' : currentProvider === 'ollama' ? 'Ollama Local' : 'Socratic Built-in'}
+              {currentProvider === 'backend_rag' ? 'FastAPI RAG (Khuyên dùng)' : currentProvider === 'gemini' ? 'Google Gemini Live' : currentProvider === 'ollama' ? 'Ollama Local' : 'Socratic Built-in'}
             </span>
           </div>
 
           {/* Provider selector tabs */}
-          <div className="grid grid-cols-3 gap-1.5 pt-1">
+          <div className="grid grid-cols-2 gap-1.5 pt-1">
             <button
               type="button"
               onClick={() => {
-                onUpdateSettings({ ...settings, aiProvider: 'built_in_socratic' });
+                onUpdateSettings({ ...settings, aiProvider: 'backend_rag' });
                 setTestStatus('idle');
               }}
-              className={`p-2 rounded-xl text-center border text-xs font-semibold transition flex flex-col items-center gap-1 ${
-                currentProvider === 'built_in_socratic'
-                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 shadow-2xs'
+              className={`p-2.5 rounded-xl text-left border text-xs font-semibold transition flex items-center gap-2 ${
+                currentProvider === 'backend_rag' || !settings.aiProvider
+                  ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 shadow-2xs'
                   : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
               }`}
             >
-              <Bot className="h-4 w-4" />
-              <span className="text-[11px] leading-tight">Gia sư Tích hợp</span>
-              <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-bold">100% Free</span>
+              <Database className="h-4 w-4 text-emerald-600 shrink-0" />
+              <div>
+                <div className="text-[11px] leading-tight font-bold">FastAPI + RAG ChromaDB</div>
+                <div className="text-[9px] text-emerald-600 dark:text-emerald-400 font-medium">Gemini 3 Flash & 5.2k Chunks</div>
+              </div>
             </button>
 
             <button
@@ -242,15 +262,36 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 onUpdateSettings({ ...settings, aiProvider: 'gemini' });
                 setTestStatus('idle');
               }}
-              className={`p-2 rounded-xl text-center border text-xs font-semibold transition flex flex-col items-center gap-1 ${
+              className={`p-2.5 rounded-xl text-left border text-xs font-semibold transition flex items-center gap-2 ${
                 currentProvider === 'gemini'
                   ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 shadow-2xs'
                   : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
               }`}
             >
-              <Sparkles className="h-4 w-4 text-amber-500" />
-              <span className="text-[11px] leading-tight">Google Gemini</span>
-              <span className="text-[9px] text-blue-600 dark:text-blue-400 font-bold">Cloud API</span>
+              <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
+              <div>
+                <div className="text-[11px] leading-tight font-bold">Google Gemini Trực tiếp</div>
+                <div className="text-[9px] text-blue-600 dark:text-blue-400 font-medium">Client API Key</div>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                onUpdateSettings({ ...settings, aiProvider: 'built_in_socratic' });
+                setTestStatus('idle');
+              }}
+              className={`p-2.5 rounded-xl text-left border text-xs font-semibold transition flex items-center gap-2 ${
+                currentProvider === 'built_in_socratic'
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 shadow-2xs'
+                  : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
+              }`}
+            >
+              <Bot className="h-4 w-4 text-blue-600 shrink-0" />
+              <div>
+                <div className="text-[11px] leading-tight font-bold">Bộ máy Cục bộ</div>
+                <div className="text-[9px] text-slate-500 font-medium">100% Offline Free</div>
+              </div>
             </button>
 
             <button
@@ -259,15 +300,17 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 onUpdateSettings({ ...settings, aiProvider: 'ollama' });
                 setTestStatus('idle');
               }}
-              className={`p-2 rounded-xl text-center border text-xs font-semibold transition flex flex-col items-center gap-1 ${
+              className={`p-2.5 rounded-xl text-left border text-xs font-semibold transition flex items-center gap-2 ${
                 currentProvider === 'ollama'
                   ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 shadow-2xs'
                   : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50'
               }`}
             >
-              <Server className="h-4 w-4 text-violet-500" />
-              <span className="text-[11px] leading-tight">Ollama Local</span>
-              <span className="text-[9px] text-slate-500 font-bold">Offline</span>
+              <Server className="h-4 w-4 text-violet-500 shrink-0" />
+              <div>
+                <div className="text-[11px] leading-tight font-bold">Ollama Local</div>
+                <div className="text-[9px] text-slate-500 font-medium">Local Server</div>
+              </div>
             </button>
           </div>
 

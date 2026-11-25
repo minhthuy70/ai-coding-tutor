@@ -125,7 +125,11 @@ function HomePageInner() {
 
       const savedSettings = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
       if (savedSettings) {
-        setModelSettings(JSON.parse(savedSettings));
+        const parsed = JSON.parse(savedSettings);
+        if (!parsed.aiProvider || parsed.aiProvider === 'built_in_socratic') {
+          parsed.aiProvider = 'backend_rag';
+        }
+        setModelSettings(parsed);
       }
 
       // Fetch dynamic RAG stats from Backend
