@@ -32,7 +32,7 @@ class Settings(BaseSettings):
     # AI & RAG Configuration
     AI_PROVIDER: str = "gemini"
     GEMINI_API_KEY: str = ""
-    GEMINI_MODEL: str = "gemini-1.5-flash"
+    GEMINI_MODEL: str = "gemini-3-flash-preview"
     CHROMA_DB_DIR: str = "data/09_chromadb"
     RAG_TOP_K: int = 4
     RAG_RRF_K0: int = 60

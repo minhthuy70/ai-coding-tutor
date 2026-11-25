@@ -183,44 +183,62 @@ class TutorService:
             detected_language=detected_lang
         )
 
-        # 4. Gọi LLM Engine hoặc Socratic Fallback
-        if not self._genai_client and (self.api_key or settings.GEMINI_API_KEY):
-            self.api_key = self.api_key or settings.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY", "")
-            self._init_llm()
+        # 4. Gọi LLM Engine (với cơ chế Multi-Model Resilience: Gemini 3 Flash & Gemini 3.5 Flash)
+        if not self.api_key and (settings.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY")):
+            self.api_key = settings.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY", "")
 
-        if self._genai_client:
-            try:
-                user_content = payload["unified_context"]
-                response = await asyncio.to_thread(self._genai_client.generate_content, user_content)
-                reply_text = response.text
+        if self.api_key:
+            import google.generativeai as genai
+            genai.configure(api_key=self.api_key, transport="rest")
+            
+            # Danh sách mô hình tối ưu theo thứ tự ưu tiên
+            candidate_models = [self.model_name]
+            for alt in ["gemini-3-flash-preview", "gemini-3.5-flash"]:
+                if alt not in candidate_models:
+                    candidate_models.append(alt)
 
-                # Tạo danh sách câu hỏi gợi ý
-                follow_ups = [
-                    "Thầy có thể gợi ý thêm về điều kiện biên không?",
-                    "Làm sao để tối ưu độ phức tạp thuật toán này?",
-                    "Tài liệu giáo trình đề cập phương pháp giải nào tương tự?"
-                ]
+            for m_name in candidate_models:
+                try:
+                    client = genai.GenerativeModel(
+                        model_name=m_name,
+                        system_instruction=SOCRATIC_SYSTEM_PROMPT,
+                        generation_config={
+                            "temperature": 0.2,
+                            "top_p": 0.95,
+                            "max_output_tokens": 2048,
+                        }
+                    )
+                    user_content = payload["unified_context"]
+                    response = await asyncio.to_thread(client.generate_content, user_content)
+                    reply_text = response.text
 
-                formatted_sources = [
-                    {
-                        "content": c.get("content", ""),
-                        "source": c.get("source", "Giáo trình tiêu chuẩn"),
-                        "section": c.get("section", "Kiến thức trọng tâm"),
-                        "language": c.get("language", "general"),
-                        "similarity_score": c.get("similarity_score", 0.85)
+                    # Tạo danh sách câu hỏi gợi ý
+                    follow_ups = [
+                        "Thầy có thể gợi ý thêm về điều kiện biên không?",
+                        "Làm sao để tối ưu độ phức tạp thuật toán này?",
+                        "Tài liệu giáo trình đề cập phương pháp giải nào tương tự?"
+                    ]
+
+                    formatted_sources = [
+                        {
+                            "content": c.get("content", ""),
+                            "source": c.get("source", "Giáo trình tiêu chuẩn"),
+                            "section": c.get("section", "Kiến thức trọng tâm"),
+                            "language": c.get("language", "general"),
+                            "similarity_score": c.get("similarity_score", 0.85)
+                        }
+                        for c in rag_chunks
+                    ]
+
+                    return {
+                        "reply": reply_text,
+                        "sources": formatted_sources,
+                        "follow_ups": follow_ups
                     }
-                    for c in rag_chunks
-                ]
+                except Exception as e:
+                    logger.warning(f"Mô hình {m_name} tạm thời gặp sự cố ({e}), tự động chuyển sang mô hình tiếp theo...")
 
-                return {
-                    "reply": reply_text,
-                    "sources": formatted_sources,
-                    "follow_ups": follow_ups
-                }
-            except Exception as e:
-                logger.error(f"Lỗi khi gọi Gemini API ({e}), chuyển sang chế độ Socratic Fallback.")
-
-        # Fallback an toàn khi offline hoặc Gemini API gặp sự cố
+        # Fallback an toàn khi offline hoặc toàn bộ kết nối Gemini gặp sự cố
         return self._build_socratic_fallback(
             prompt=prompt,
             detected_language=detected_lang,
