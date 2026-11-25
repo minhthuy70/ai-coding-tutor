@@ -126,7 +126,7 @@ function HomePageInner() {
       const savedSettings = localStorage.getItem(LOCAL_STORAGE_SETTINGS_KEY);
       if (savedSettings) {
         const parsed = JSON.parse(savedSettings);
-        if (!parsed.aiProvider || parsed.aiProvider === 'built_in_socratic') {
+        if (!parsed.aiProvider || parsed.aiProvider === 'built_in_socratic' || parsed.aiProvider === 'gemini') {
           parsed.aiProvider = 'backend_rag';
         }
         setModelSettings(parsed);
@@ -402,6 +402,8 @@ function HomePageInner() {
                     isDemoNotice: false,
                     isStreaming: true,
                     suggestedFollowUps: aiResponse.followUps,
+                    sources: aiResponse.sources,
+                    modelUsed: aiResponse.modelBadge,
                   },
                 ],
               };
@@ -506,6 +508,8 @@ function HomePageInner() {
                   isDemoNotice: false,
                   isStreaming: true,
                   suggestedFollowUps: aiResponse.followUps,
+                  sources: aiResponse.sources,
+                  modelUsed: aiResponse.modelBadge,
                 },
               ],
             };

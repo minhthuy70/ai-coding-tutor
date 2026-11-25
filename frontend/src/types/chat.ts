@@ -10,6 +10,14 @@ export interface ChatAttachment {
   fileContent?: string; // Text content for code/document preview
 }
 
+export interface RAGSource {
+  content: string;
+  source: string;
+  section: string;
+  language?: string;
+  similarity_score: number;
+}
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'assistant';
@@ -21,6 +29,7 @@ export interface ChatMessage {
   modelUsed?: string;
   suggestedFollowUps?: string[];
   isStreaming?: boolean;
+  sources?: RAGSource[];
 }
 
 export interface ChatConversation {

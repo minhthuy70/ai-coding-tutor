@@ -6,13 +6,14 @@
  * 3. Bộ máy tri thức sư phạm Socratic ngoại tuyến (Built-in Knowledge Engine)
  */
 
-import { ChatAttachment, ModelSettings } from '@/types/chat';
+import { ChatAttachment, ModelSettings, RAGSource } from '@/types/chat';
 import { sendMultimodalChat } from '@/lib/api';
 
 export interface SocraticEngineResult {
   content: string;
   followUps: string[];
   modelBadge: string;
+  sources?: RAGSource[];
 }
 
 // System Prompts for Different Pedagogical Personas
@@ -625,6 +626,7 @@ async function callBackendRAG(
   return {
     modelBadge: 'FastAPI + RAG ChromaDB',
     content: finalContent,
+    sources: res.sources,
     followUps:
       res.suggestedFollowUps && res.suggestedFollowUps.length > 0
         ? res.suggestedFollowUps
@@ -645,12 +647,36 @@ export async function getSocraticAssistantResponse(
   settings: ModelSettings,
   selectedModelName: string
 ): Promise<SocraticEngineResult> {
-  // 0. Mặc định hoặc nếu người dùng chọn FastAPI Backend + RAG ChromaDB
-  if (settings.aiProvider === 'backend_rag' || !settings.aiProvider || settings.aiProvider === 'built_in_socratic') {
+  // 0. Luôn ưu tiên kết nối FastAPI Backend + RAG ChromaDB
+  // Vì Backend đã tích hợp mô hình Gemini 3 Flash kết hợp 5,231 chunks tri thức chuẩn hóa
+  if (
+    settings.aiProvider === 'backend_rag' ||
+    !settings.aiProvider ||
+    settings.aiProvider === 'built_in_socratic' ||
+    settings.aiProvider === 'gemini'
+  ) {
     try {
       return await callBackendRAG(userText, attachments, settings);
     } catch (err: any) {
-      console.warn('Backend RAG call failed, falling back to built-in Socratic engine:', err);
+      console.warn('Backend RAG call failed, checking fallback options:', err);
+      // Nếu người dùng có cấu hình Gemini API Key và muốn dùng trực tiếp khi backend offline
+      if (settings.aiProvider === 'gemini' && settings.geminiApiKey?.trim()) {
+        try {
+          const liveContent = await callGeminiAPI(userText, attachments, settings);
+          return {
+            modelBadge: `Gemini 3 Flash (Direct API)`,
+            content: liveContent,
+            followUps: [
+              'Giải thích chi tiết hơn về đoạn code trên',
+              'Đưa ra các test case biên để kiểm thử',
+              'Tối ưu độ phức tạp thời gian và không gian',
+            ],
+          };
+        } catch (geminiErr: any) {
+          console.warn('Direct Gemini API also failed:', geminiErr);
+        }
+      }
+
       const fallback = generateBuiltInSocraticResponse(userText, attachments, settings, selectedModelName);
       return {
         ...fallback,
@@ -658,30 +684,8 @@ export async function getSocraticAssistantResponse(
       };
     }
   }
-  // 1. Nếu người dùng chọn dùng Gemini và đã cung cấp API key
-  if (settings.aiProvider === 'gemini' && settings.geminiApiKey?.trim()) {
-    try {
-      const liveContent = await callGeminiAPI(userText, attachments, settings);
-      return {
-        modelBadge: `Gemini 1.5 Flash (Cloud Live)`,
-        content: liveContent,
-        followUps: [
-          'Giải thích chi tiết hơn về đoạn code trên',
-          'Đưa ra các test case biên để kiểm thử',
-          'Tối ưu độ phức tạp thời gian và không gian'
-        ]
-      };
-    } catch (err: any) {
-      console.warn('Gemini API call failed, falling back to built-in Socratic engine:', err);
-      const fallback = generateBuiltInSocraticResponse(userText, attachments, settings, selectedModelName);
-      return {
-        ...fallback,
-        content: `> ⚠️ **Thông báo kết nối API:** Không thể kết nối tới Gemini API (${err?.message || 'Lỗi mạng hoặc API key chưa đúng'}). Hệ thống đã tự động chuyển sang **Bộ máy Socratic Cục bộ** để phục vụ bạn ngay lập tức.\n\n---\n\n${fallback.content}`
-      };
-    }
-  }
 
-  // 2. Nếu người dùng chọn dùng Ollama
+  // 1. Nếu người dùng chọn dùng Ollama
   if (settings.aiProvider === 'ollama') {
     try {
       const ollamaContent = await callOllamaAPI(userText, settings);

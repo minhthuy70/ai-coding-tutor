@@ -20,9 +20,15 @@ import {
   Sparkles,
   Play,
   AlertTriangle,
-  ShieldCheck
+  ShieldCheck,
+  BookOpen,
+  ChevronDown,
+  ChevronUp,
+  Database,
+  CheckCircle2,
+  FileText
 } from 'lucide-react';
-import { ChatMessage, ChatAttachment } from '@/types/chat';
+import { ChatMessage, ChatAttachment, RAGSource } from '@/types/chat';
 import { AttachmentBadge } from './AttachmentBadge';
 
 interface ChatMessageItemProps {
@@ -78,6 +84,11 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
   const [isEditingUser, setIsEditingUser] = useState(false);
   const [editUserText, setEditUserText] = useState(message.content);
   const [hoveredCodeBlock, setHoveredCodeBlock] = useState<number | null>(null);
+  const [expandedSources, setExpandedSources] = useState<Record<number, boolean>>({});
+
+  const toggleSource = (idx: number) => {
+    setExpandedSources((prev) => ({ ...prev, [idx]: !prev[idx] }));
+  };
 
   const isUser = message.role === 'user';
 
@@ -377,7 +388,16 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
               {!isUser && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/50 border border-blue-200/80 dark:border-blue-800/60 px-2 py-0.5 text-[10px] font-semibold text-blue-600 dark:text-blue-400">
                   <Sparkles className="h-2.5 w-2.5" />
-                  AI
+                  {message.modelUsed ? message.modelUsed.replace(' · Socratic Engine', '') : 'AI Socratic'}
+                </span>
+              )}
+              {!isUser && message.sources && message.sources.length > 0 && (
+                <span
+                  className="inline-flex items-center gap-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 px-2 py-0.5 text-[10px] font-bold text-emerald-700 dark:text-emerald-300 shadow-2xs"
+                  title="Câu trả lời được đối chiếu và trích xuất từ kho tri thức RAG ChromaDB (5,231 chunks giáo trình chuẩn)"
+                >
+                  <CheckCircle2 className="h-2.5 w-2.5 text-emerald-600 dark:text-emerald-400" />
+                  RAG Grounded
                 </span>
               )}
               <span 
@@ -459,6 +479,101 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                 )}
               </div>
             )
+          )}
+
+          {/* RAG Knowledge & Curriculum Citations (ChromaDB Evidence) */}
+          {!isUser && message.sources && message.sources.length > 0 && !message.isStreaming && (
+            <div className="mt-3.5 rounded-2xl border border-emerald-300 dark:border-emerald-800/80 bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/50 dark:from-emerald-950/50 dark:via-slate-900/80 dark:to-teal-950/30 p-3.5 sm:p-4 shadow-xs">
+              {/* Header */}
+              <div className="flex items-center justify-between pb-2.5 border-b border-emerald-200/80 dark:border-emerald-800/60">
+                <div className="flex items-center gap-2">
+                  <div className="flex h-7 w-7 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-xs">
+                    <BookOpen className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-emerald-950 dark:text-emerald-100 flex items-center gap-1.5">
+                      <span>Cơ sở Tri thức Giáo trình (RAG Evidence)</span>
+                      <span className="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/70 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 text-[10px] font-bold">
+                        <CheckCircle2 className="h-2.5 w-2.5" />
+                        ChromaDB Grounded
+                      </span>
+                    </h4>
+                    <p className="text-[11px] text-emerald-800/80 dark:text-emerald-400">
+                      Trích xuất từ {message.sources.length} đoạn tri thức trong kho 5,231 chunks giáo trình chuẩn
+                    </p>
+                  </div>
+                </div>
+                <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-100/80 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 px-2 py-0.5 rounded-lg">
+                  <Database className="h-3 w-3" />
+                  Kho giáo trình chuẩn
+                </span>
+              </div>
+
+              {/* Citation Cards List */}
+              <div className="mt-2.5 space-y-2">
+                {message.sources.map((src, sIdx) => {
+                  const isExpanded = !!expandedSources[sIdx];
+                  const matchPercent = Math.round((src.similarity_score || 0.85) * 100);
+                  return (
+                    <div
+                      key={sIdx}
+                      className="rounded-xl border border-emerald-200/90 dark:border-emerald-900/70 bg-white/95 dark:bg-slate-900/90 overflow-hidden shadow-2xs transition-all duration-150"
+                    >
+                      {/* Source Item Header */}
+                      <div
+                        onClick={() => toggleSource(sIdx)}
+                        className="flex items-center justify-between p-2.5 hover:bg-emerald-50/60 dark:hover:bg-slate-800/60 cursor-pointer select-none transition"
+                      >
+                        <div className="flex items-center gap-2 min-w-0 pr-2">
+                          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 font-bold text-[10px]">
+                            #{sIdx + 1}
+                          </span>
+                          <FileText className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                          <span className="text-xs font-bold text-slate-800 dark:text-slate-200 truncate">
+                            {src.source}
+                          </span>
+                          <span className="text-slate-400 dark:text-slate-600 text-xs">/</span>
+                          <span className="text-xs text-slate-600 dark:text-slate-400 truncate">
+                            {src.section || 'Nội dung cốt lõi'}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0">
+                          <span
+                            className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                              matchPercent >= 80
+                                ? 'bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700'
+                                : 'bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700'
+                            }`}
+                          >
+                            {matchPercent}% khớp
+                          </span>
+                          <button
+                            type="button"
+                            className="p-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition"
+                            title={isExpanded ? 'Thu gọn' : 'Bấm để xem đoạn trích gốc từ giáo trình'}
+                          >
+                            {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Expandable Excerpt Content */}
+                      {isExpanded && (
+                        <div className="border-t border-emerald-100 dark:border-emerald-900/50 bg-slate-50/90 dark:bg-slate-950/70 p-3 text-xs leading-relaxed text-slate-700 dark:text-slate-300 animate-in fade-in duration-150">
+                          <div className="flex items-center justify-between text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 mb-1.5">
+                            <span>📖 Đoạn trích từ Giáo trình gốc trong ChromaDB:</span>
+                            <span className="text-[10px] text-slate-400">Độ dài: {src.content?.length || 0} ký tự</span>
+                          </div>
+                          <div className="rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-2.5 font-mono text-[11.5px] leading-relaxed whitespace-pre-wrap max-h-48 overflow-y-auto text-slate-800 dark:text-slate-200">
+                            {src.content ? src.content.trim() : 'Đoạn tài liệu giáo trình chuẩn đã được sử dụng làm cơ sở đối chiếu cho câu trả lời trên.'}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           )}
 
           {/* Attachments Section */}

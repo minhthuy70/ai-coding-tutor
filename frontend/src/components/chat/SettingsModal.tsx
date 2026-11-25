@@ -252,7 +252,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <Database className="h-4 w-4 text-emerald-600 shrink-0" />
               <div>
                 <div className="text-[11px] leading-tight font-bold">FastAPI + RAG ChromaDB</div>
-                <div className="text-[9px] text-emerald-600 dark:text-emerald-400 font-medium">Gemini 3 Flash & 5.2k Chunks</div>
+                <div className="text-[9px] text-emerald-600 dark:text-emerald-400 font-medium">Có Trích dẫn RAG 5,231 Chunks</div>
               </div>
             </button>
 
@@ -271,7 +271,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <Sparkles className="h-4 w-4 text-amber-500 shrink-0" />
               <div>
                 <div className="text-[11px] leading-tight font-bold">Google Gemini Trực tiếp</div>
-                <div className="text-[9px] text-blue-600 dark:text-blue-400 font-medium">Client API Key</div>
+                <div className="text-[9px] text-slate-500 dark:text-slate-400 font-medium">Client API Key (Không RAG)</div>
               </div>
             </button>
 

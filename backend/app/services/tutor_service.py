@@ -184,6 +184,10 @@ class TutorService:
         )
 
         # 4. Gọi LLM Engine hoặc Socratic Fallback
+        if not self._genai_client and (self.api_key or settings.GEMINI_API_KEY):
+            self.api_key = self.api_key or settings.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY", "")
+            self._init_llm()
+
         if self._genai_client:
             try:
                 user_content = payload["unified_context"]
@@ -216,7 +220,7 @@ class TutorService:
             except Exception as e:
                 logger.error(f"Lỗi khi gọi Gemini API ({e}), chuyển sang chế độ Socratic Fallback.")
 
-        # Fallback an toàn
+        # Fallback an toàn khi offline hoặc Gemini API gặp sự cố
         return self._build_socratic_fallback(
             prompt=prompt,
             detected_language=detected_lang,
