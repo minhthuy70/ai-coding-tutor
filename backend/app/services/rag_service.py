@@ -147,6 +147,79 @@ class RAGService:
             "benchmark_cached_queries": len(self._benchmark_embeddings)
         }
 
+    @staticmethod
+    def auto_detect_language(query: str) -> Optional[str]:
+        """
+        Tự động nhận diện ngôn ngữ lập trình từ ngữ cảnh câu hỏi hoặc đoạn code của sinh viên.
+        Hỗ trợ: Python, C/C++, Java. Trả về None nếu là câu hỏi kiến trúc/thuật toán tổng quát.
+        """
+        if not query:
+            return None
+        q = query.lower()
+
+        py_indicators = [
+            "python", "def ", "def(", "self.", "list comprehension", "dict", "tuple",
+            "pep8", "pep 8", "__init__", "lambda", "elif", "pandas", "numpy",
+            "import ", "django", "flask", "fastapi", "pip ", "yield", "raise valueerror"
+        ]
+        cpp_indicators = [
+            "c++", "cpp", "std::", "cout", "cin", "vector<", "malloc", "free",
+            "con trỏ", "pointer", "nullptr", "sizeof", "include <", "struct ", "con tro"
+        ]
+        java_indicators = [
+            "java", "public static void main", "system.out.println", "jvm",
+            "arraylist", "string[]", "extends ", "implements ", "hashmap<"
+        ]
+
+        # Đếm số lượng dấu hiệu
+        score_py = sum(1 for w in py_indicators if w in q)
+        score_cpp = sum(1 for w in cpp_indicators if w in q)
+        score_java = sum(1 for w in java_indicators if w in q)
+
+        scores = [("python", score_py), ("cpp", score_cpp), ("java", score_java)]
+        scores.sort(key=lambda x: x[1], reverse=True)
+
+        if scores[0][1] > 0:
+            return scores[0][0]
+        return None
+
+    @staticmethod
+    def expand_query(query: str) -> str:
+        """
+        Mở rộng câu hỏi ngắn hoặc khái niệm cốt lõi bằng các thuật ngữ học thuật chính thống
+        (Query Expansion) nhằm tối đa hóa độ phủ thu hồi (Recall) trong không gian vector.
+        """
+        if not query:
+            return ""
+
+        expansions = {
+            "oop": "lập trình hướng đối tượng OOP object oriented programming đóng gói kế thừa đa hình trừu tượng class object",
+            "pep8": "pep8 coding style chuẩn quy ước định dạng code python cấu trúc",
+            "quicksort": "thuật toán sắp xếp nhanh quicksort pivot phân hoạch divide and conquer O(n log n)",
+            "mergesort": "thuật toán sắp xếp trộn mergesort chia để trị divide and conquer O(n log n)",
+            "dfs": "tìm kiếm theo chiều sâu depth first search dfs ngăn xếp stack đồ thị đồ thị có hướng vô hướng",
+            "bfs": "tìm kiếm theo chiều rộng breadth first search bfs hàng đợi queue đồ thị đường đi ngắn nhất",
+            "đệ quy": "đệ quy recursion bài toán cơ sở base case ngăn xếp gọi hàm call stack tràn bộ nhớ",
+            "con trỏ": "con trỏ pointer địa chỉ ô nhớ cấp phát bộ nhớ động dereference tham chiếu",
+            "danh sách liên kết": "danh sách liên kết linked list node liên kết đơn liên kết đôi con trỏ next head tail",
+            "bảng băm": "bảng băm hash table hash map hàm băm băm địa chỉ mở xử lý va chạm collision",
+            "cây nhị phân": "cây nhị phân binary search tree bst duyệt cây inorder preorder postorder cây cân bằng",
+            "độ phức tạp": "độ phức tạp thời gian thuật toán Big-O time complexity không gian space complexity tiệm cận",
+            "list comprehension": "list comprehension cú pháp tạo danh sách tinh gọn list biến đổi lồng nhau python",
+            "generator": "generator hàm sinh yield iterator lazy evaluation tiết kiệm bộ nhớ",
+            "decorator": "decorator hàm bao wrapper function @ cú pháp mở rộng chức năng python"
+        }
+
+        q_lower = query.lower()
+        matched_expansions = []
+        for key, exp in expansions.items():
+            if key in q_lower:
+                matched_expansions.append(exp)
+
+        if matched_expansions:
+            return f"{query} {' '.join(matched_expansions)}"
+        return query
+
     def _match_cached_vector(self, query: str) -> Optional[Dict[str, List[float]]]:
         """Kiểm tra xem câu hỏi có trùng khớp hoặc rất gần với câu hỏi chuẩn trong benchmark không."""
         q_clean = query.strip().lower()
@@ -185,17 +258,26 @@ class RAGService:
             logger.warning("Cả 2 ChromaDB collections đều chưa sẵn sàng.")
             return []
 
-        # 1. Chuẩn bị Vector truy vấn
+        # 1. Tự động nhận diện ngôn ngữ nếu người dùng chưa chỉ định rõ
+        effective_language = language
+        if not effective_language:
+            effective_language = self.auto_detect_language(query)
+
+        # 2. Chuẩn bị Vector truy vấn (kiểm tra query gốc và query mở rộng)
         q_vectors = query_vectors or self._match_cached_vector(query)
+        if not q_vectors:
+            expanded_q = self.expand_query(query)
+            if expanded_q != query:
+                q_vectors = self._match_cached_vector(expanded_q)
 
-        # 2. Chuẩn bị Metadata Filter
+        # 3. Chuẩn bị Metadata Filter
         where_filter = None
-        if language and language.lower() in ["python", "py"]:
+        if effective_language and effective_language.lower() in ["python", "py"]:
             where_filter = {"language": "python"}
-        elif language and language.lower() not in ["all", "general", "text"]:
-            where_filter = {"language": language.lower()}
+        elif effective_language and effective_language.lower() not in ["all", "general", "text"]:
+            where_filter = {"language": effective_language.lower()}
 
-        # 3. Thực hiện truy vấn song song 2 collections
+        # 4. Thực hiện truy vấn song song 2 collections
         res_text = {"ids": [[]], "documents": [[]], "metadatas": [[]], "distances": [[]]}
         res_code = {"ids": [[]], "documents": [[]], "metadatas": [[]], "distances": [[]]}
 
@@ -230,49 +312,69 @@ class RAGService:
                 except Exception as e:
                     logger.warning(f"Lỗi truy vấn code collection: {e}")
         else:
-            # Fallback khi câu hỏi mới chưa có trong cache vector:
-            # Tìm kiếm từ khóa ngữ nghĩa bằng $contains
-            words = [w.strip() for w in re.split(r"[\s\-_,:;()\[\]{}]+", query) if len(w.strip()) >= 3]
-            keywords = [w for w in words if w.lower() not in ["chào", "thầy", "làm", "sao", "cho", "hỏi", "với", "ạ", "trong", "của", "khi", "nào"]]
+            # Fallback nâng cao cho câu hỏi mới / chưa có vector:
+            # Kết hợp mở rộng từ khóa, lọc theo ngôn ngữ và chấm điểm khớp từ khóa (Multi-token Weighted Scoring)
+            expanded_q = self.expand_query(query)
+            all_kw = extract_keywords(f"{query} {expanded_q}")
+            primary_keywords = [kw for kw in all_kw if len(kw) >= 3][:6]
 
             matched_ids_t, matched_docs_t, matched_metas_t, matched_dists_t = [], [], [], []
             matched_ids_c, matched_docs_c, matched_metas_c, matched_dists_c = [], [], [], []
+            contains_op = chr(36) + "contains"
 
-            # Thử tìm theo keyword cốt lõi
-            for kw in keywords[:3]:
+            for kw in primary_keywords:
+                # Text collection
                 if coll_text:
                     try:
-                        contains_op = chr(36) + "contains"
-                        r = coll_text.get(where_document={contains_op: kw}, limit=5, include=["documents", "metadatas"])
+                        get_kwargs = {"where_document": {contains_op: kw}, "limit": 6, "include": ["documents", "metadatas"]}
+                        if where_filter:
+                            get_kwargs["where"] = where_filter
+                        r = coll_text.get(**get_kwargs)
+                        if not r.get("ids") and where_filter:
+                            get_kwargs.pop("where", None)
+                            r = coll_text.get(**get_kwargs)
                         for cid, cdoc, cm in zip(r.get("ids", []), r.get("documents", []), r.get("metadatas", [])):
                             if cid not in matched_ids_t:
+                                doc_lower = (cdoc or "").lower()
+                                hit_count = sum(1 for k in primary_keywords if k.lower() in doc_lower)
                                 matched_ids_t.append(cid)
                                 matched_docs_t.append(cdoc)
                                 matched_metas_t.append(cm)
-                                matched_dists_t.append(0.25)  # Khoảng cách cosine tốt tương đương sim 0.75
-                    except Exception:
-                        pass
+                                dist = max(0.12, 0.35 - (0.05 * min(hit_count, 4)))
+                                matched_dists_t.append(dist)
+                    except Exception as e:
+                        logger.debug(f"Fallback search text error for {kw}: {e}")
+
+                # Code collection
                 if coll_code:
                     try:
-                        contains_op = chr(36) + "contains"
-                        r = coll_code.get(where_document={contains_op: kw}, limit=5, include=["documents", "metadatas"])
+                        get_kwargs = {"where_document": {contains_op: kw}, "limit": 4, "include": ["documents", "metadatas"]}
+                        if where_filter:
+                            get_kwargs["where"] = where_filter
+                        r = coll_code.get(**get_kwargs)
+                        if not r.get("ids") and where_filter:
+                            get_kwargs.pop("where", None)
+                            r = coll_code.get(**get_kwargs)
                         for cid, cdoc, cm in zip(r.get("ids", []), r.get("documents", []), r.get("metadatas", [])):
                             if cid not in matched_ids_c:
+                                doc_lower = (cdoc or "").lower()
+                                hit_count = sum(1 for k in primary_keywords if k.lower() in doc_lower)
                                 matched_ids_c.append(cid)
                                 matched_docs_c.append(cdoc)
                                 matched_metas_c.append(cm)
-                                matched_dists_c.append(0.30)
-                    except Exception:
-                        pass
+                                dist = max(0.15, 0.38 - (0.05 * min(hit_count, 4)))
+                                matched_dists_c.append(dist)
+                    except Exception as e:
+                        logger.debug(f"Fallback search code error for {kw}: {e}")
 
-            # Nếu không tìm thấy keyword, lấy ứng viên tổng quan
+            # Nếu không tìm thấy keyword nào, lấy ứng viên tổng quan
             if not matched_ids_t and coll_text:
                 try:
                     r = coll_text.get(limit=min(cand_k, 10), include=["documents", "metadatas"])
                     matched_ids_t = r.get("ids", [])
                     matched_docs_t = r.get("documents", [])
                     matched_metas_t = r.get("metadatas", [])
-                    matched_dists_t = [0.45] * len(matched_ids_t)
+                    matched_dists_t = [0.35] * len(matched_ids_t)
                 except Exception as e:
                     logger.warning(f"Fallback general retrieval error: {e}")
 
@@ -289,7 +391,7 @@ class RAGService:
                 "distances": [matched_dists_c]
             }
 
-        # 4. Hợp nhất bằng Reciprocal Rank Fusion (RRF) và lọc ngưỡng
+        # 5. Hợp nhất bằng Reciprocal Rank Fusion (RRF) và lọc ngưỡng
         fused = self._fuse_rrf(res_text, res_code, k0=k0, top_k=top_k)
         if min_similarity > 0:
             fused = [c for c in fused if c.get("similarity_score", 0.0) >= min_similarity]
