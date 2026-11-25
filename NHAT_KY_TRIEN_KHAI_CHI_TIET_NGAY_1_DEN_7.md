@@ -2,6 +2,11 @@
 ## HỆ THỐNG TRỢ GIẢNG LẬP TRÌNH THÔNG MINH ĐA PHƯƠNG THỨC (AI-POWERED CODING TUTOR & MULTIMODAL RAG)
 ### BẢN NGHIỆM THU HOÀN THÀNH TOÀN DIỆN MILESTONE 1 (TUẦN 1: KHO TRI THỨC RAG CHÍNH THỐNG)
 
+> [!NOTE]
+> **Tài liệu này đã được nâng cấp và tích hợp toàn diện thành bản báo cáo hoàn chỉnh 14 Ngày:**  
+> 👉 Xem tài liệu đầy đủ tại: [NHAT_KY_TRIEN_KHAI_CHI_TIET_NGAY_1_DEN_14.md](file:///d:/CNTT2311/HK9/DOAN4/ai-coding-tutor/NHAT_KY_TRIEN_KHAI_CHI_TIET_NGAY_1_DEN_14.md)  
+> 👉 Hướng dẫn khởi chạy nhanh 1-click & kịch bản Demo: [QUICKSTART_RAG_TUTOR.md](file:///d:/CNTT2311/HK9/DOAN4/ai-coding-tutor/QUICKSTART_RAG_TUTOR.md)
+
 > **Tác giả / Người thực hiện:** Nhóm Phát Triển Dự Án AI Coding Tutor  
 > **Repository:** [https://github.com/minhthuy70/ai-coding-tutor](https://github.com/minhthuy70/ai-coding-tutor)  
 > **Thời điểm cập nhật:** 2026-11-24 23:30 (GMT+7)  

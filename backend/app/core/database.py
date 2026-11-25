@@ -1,6 +1,9 @@
 from typing import Tuple, Optional
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
-from sqlalchemy import text
+try:
+    from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+    from sqlalchemy import text
+except Exception:
+    create_async_engine, async_sessionmaker, AsyncSession, text = None, None, None, None
 from app.core.config import settings
 
 engine = None

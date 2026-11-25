@@ -52,6 +52,12 @@ services:
       DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres_dev_password}@postgres:5432/${POSTGRES_DB:-ai_coding_tutor}
       REDIS_URL: redis://${REDIS_HOST:-redis}:6379/0
       BACKEND_CORS_ORIGINS: '["http://localhost:3000","http://127.0.0.1:3000"]'
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3-flash-preview}
+      CHROMA_DB_DIR: data/09_chromadb
+      RAG_BENCHMARK_EMBEDDINGS_PATH: data/04_benchmark/benchmark_36q_query_embeddings.json
+    volumes:
+      - ./data:/app/data
     ports:
       - "8000:8000"
     depends_on:

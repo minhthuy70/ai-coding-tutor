@@ -1,5 +1,8 @@
 from typing import Tuple, Optional
-import redis.asyncio as aioredis
+try:
+    import redis.asyncio as aioredis
+except Exception:
+    aioredis = None
 from app.core.config import settings
 
 redis_client = None
