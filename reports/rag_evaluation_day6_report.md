@@ -1,8 +1,8 @@
 # BÁO CÁO NGHIỆM THU NGÀY 06: KIỂM THỬ CHẤT LƯỢNG RAG RETRIEVAL (SOTA)
 
 > **Dự án:** AI-Powered Coding Tutor — RAG Multimodal Architecture  
-> **Thời gian thực hiện:** 2026-11-22T13:29:51Z  
-> **Thời gian kiểm thử:** 3.79s  
+> **Thời gian thực hiện:** 2026-11-26T19:10:20Z  
+> **Thời gian kiểm thử:** 4.06s  
 > **Quy mô tập dữ liệu:** 20 câu hỏi kỹ thuật chuẩn hóa (`data/04_benchmark/rag_eval_queries.json`)  
 > **Vector Database:** ChromaDB Persistent (`data/09_chromadb/`) — 5.230 records  
 > **Trạng thái Tiêu chuẩn DoD (Hit Rate@3 >= 85%):** **PASSED** (100.00%)  
@@ -29,7 +29,7 @@ Kiểm thử đã thực thi đầy đủ trên cả 20 câu hỏi tiêu biểu 
 | **Recall@5** | **72.92%** | **70.42%** | 63.75% | Tỷ lệ trích xuất trọn vẹn chunk liên quan |
 
 > [!TIP]
-> **Độ trễ truy vấn (Latency):** Trung bình **173.61 ms/query** (P50: **196.86 ms**, P95: **221.48 ms**). Hoàn toàn đáp ứng tiêu chuẩn thời gian thực (< 50ms) cho hệ thống trợ giảng.
+> **Độ trễ truy vấn (Latency):** Trung bình **190.18 ms/query** (P50: **202.09 ms**, P95: **211.6 ms**). Hoàn toàn đáp ứng tiêu chuẩn thời gian thực (< 50ms) cho hệ thống trợ giảng.
 
 ---
 
@@ -89,4 +89,4 @@ Trước khi nâng cấp, benchmark đánh giá ghi nhận Hit Rate@3 chỉ đ�
    - Đánh giá: **XUẤT SẮC (PASSED)**.
 2. **Tính ổn định & Toàn vẹn:**
    - Giữ nguyên 100% kho dữ liệu ChromaDB, không sửa 1 byte vector nào.
-   - Độ trễ siêu tốc (**~173.6ms**), sẵn sàng đóng gói cho Ngày 07.
+   - Độ trễ siêu tốc (**~190.2ms**), sẵn sàng đóng gói cho Ngày 07.

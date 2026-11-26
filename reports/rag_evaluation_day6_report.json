@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-11-22T13:29:51Z",
+  "timestamp": "2026-11-26T19:10:20Z",
   "task": "DAY_06_RAG_RETRIEVAL_EVALUATION_ENHANCED",
-  "benchmark_file": "D:\\GITHUB\\ai-coding-tutor\\data\\04_benchmark\\rag_eval_queries.json",
+  "benchmark_file": "D:\\CNTT2311\\HK9\\DOAN4\\ai-coding-tutor\\data\\04_benchmark\\rag_eval_queries.json",
   "total_queries": 20,
-  "execution_time_seconds": 3.79,
+  "execution_time_seconds": 4.06,
   "latency_stats": {
-    "avg_ms": 173.61,
-    "p50_ms": 196.86,
-    "p95_ms": 221.48
+    "avg_ms": 190.18,
+    "p50_ms": 202.09,
+    "p95_ms": 211.6
   },
   "dod_target_hit_at_3": 0.85,
   "dod_actual_hit_at_3": 1.0,
@@ -168,10 +168,10 @@
         "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
         "target_language": "python",
         "ground_truth": [
-          "PY_04_PEP8_Clean_Code_Specification_c2459",
           "PY_04_PEP8_Clean_Code_Specification_c2460",
+          "PY_04_PEP8_Clean_Code_Specification_c2470",
           "PY_04_PEP8_Clean_Code_Specification_c2469",
-          "PY_04_PEP8_Clean_Code_Specification_c2470"
+          "PY_04_PEP8_Clean_Code_Specification_c2459"
         ],
         "retrieved_top5": [
           {
@@ -235,9 +235,9 @@
         "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677"
         ],
         "retrieved_top5": [
           {
@@ -431,8 +431,8 @@
         "target_language": "python",
         "ground_truth": [
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704"
         ],
         "retrieved_top5": [
           {
@@ -562,8 +562,8 @@
         "target_language": "python",
         "ground_truth": [
           "PY_01_Official_Tutorial_c1880",
-          "PY_01_Official_Tutorial_c1850",
-          "PY_02_DataStructures_and_OOP_Classes_c2062"
+          "PY_02_DataStructures_and_OOP_Classes_c2062",
+          "PY_01_Official_Tutorial_c1850"
         ],
         "retrieved_top5": [
           {
@@ -669,11 +669,11 @@
           },
           {
             "rank": 5,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c4330",
+            "chunk_id": "PY_01_Official_Tutorial_c1894",
             "score": 0.015873015873015872,
             "details": {
               "qwen_rank": 3,
-              "qwen_dist": 0.378024697303772
+              "qwen_dist": 0.38492047786712646
             }
           }
         ],
@@ -693,8 +693,8 @@
         "target_language": "python",
         "ground_truth": [
           "PY_06_Official_Collections_and_Data_Structures_c2861",
-          "PY_01_Official_Tutorial_c1877",
-          "PY_06_Official_Collections_and_Data_Structures_c2862"
+          "PY_06_Official_Collections_and_Data_Structures_c2862",
+          "PY_01_Official_Tutorial_c1877"
         ],
         "retrieved_top5": [
           {
@@ -758,10 +758,10 @@
         "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
         "target_language": "python",
         "ground_truth": [
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404",
           "PY_01_Official_Tutorial_c1914",
-          "PY_01_Official_Tutorial_c1926",
           "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4443",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404"
+          "PY_01_Official_Tutorial_c1926"
         ],
         "retrieved_top5": [
           {
@@ -889,8 +889,8 @@
         "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
         ],
         "retrieved_top5": [
           {
@@ -954,8 +954,8 @@
         "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036"
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
         ],
         "retrieved_top5": [
           {
@@ -1149,8 +1149,8 @@
         "target_language": "python",
         "ground_truth": [
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689"
         ],
         "retrieved_top5": [
           {
@@ -1280,9 +1280,9 @@
         "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class?",
         "target_language": "python",
         "ground_truth": [
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519",
           "PY_01_Official_Tutorial_c1924",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531"
         ],
         "retrieved_top5": [
           {
@@ -1477,10 +1477,10 @@
         "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
         "target_language": "python",
         "ground_truth": [
-          "PY_04_PEP8_Clean_Code_Specification_c2459",
           "PY_04_PEP8_Clean_Code_Specification_c2460",
+          "PY_04_PEP8_Clean_Code_Specification_c2470",
           "PY_04_PEP8_Clean_Code_Specification_c2469",
-          "PY_04_PEP8_Clean_Code_Specification_c2470"
+          "PY_04_PEP8_Clean_Code_Specification_c2459"
         ],
         "retrieved_top5": [
           {
@@ -1544,9 +1544,9 @@
         "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677"
         ],
         "retrieved_top5": [
           {
@@ -1698,29 +1698,29 @@
           },
           {
             "rank": 3,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1004",
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1723",
             "score": 0.015873015873015872,
             "details": {
               "qwen_rank": 3,
-              "qwen_dist": 0.4255080819129944
+              "qwen_dist": 0.5373848676681519
             }
           },
           {
             "rank": 4,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1009",
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1726",
             "score": 0.015625,
             "details": {
               "qwen_rank": 4,
-              "qwen_dist": 0.47395390272140503
+              "qwen_dist": 0.5765719413757324
             }
           },
           {
             "rank": 5,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1005",
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1724",
             "score": 0.015384615384615385,
             "details": {
               "qwen_rank": 5,
-              "qwen_dist": 0.47399991750717163
+              "qwen_dist": 0.6203597187995911
             }
           }
         ],
@@ -1740,8 +1740,8 @@
         "target_language": "python",
         "ground_truth": [
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704"
         ],
         "retrieved_top5": [
           {
@@ -1811,47 +1811,47 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1658",
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722",
             "score": 0.01639344262295082,
             "details": {
               "qwen_rank": 1,
-              "qwen_dist": 0.540560781955719
+              "qwen_dist": 0.6690207719802856
             }
           },
           {
             "rank": 2,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1700",
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1725",
             "score": 0.016129032258064516,
             "details": {
               "qwen_rank": 2,
-              "qwen_dist": 0.548897385597229
+              "qwen_dist": 0.7102420926094055
             }
           },
           {
             "rank": 3,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1684",
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1724",
             "score": 0.015873015873015872,
             "details": {
               "qwen_rank": 3,
-              "qwen_dist": 0.5597760677337646
+              "qwen_dist": 0.7200711965560913
             }
           },
           {
             "rank": 4,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1659",
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1723",
             "score": 0.015625,
             "details": {
               "qwen_rank": 4,
-              "qwen_dist": 0.5693840980529785
+              "qwen_dist": 0.7369691729545593
             }
           },
           {
             "rank": 5,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0009",
+            "chunk_id": "COMMON_04_MITRE_CWE_Top_25_Vulnerabilities_c1814",
             "score": 0.015384615384615385,
             "details": {
               "qwen_rank": 5,
-              "qwen_dist": 0.5701596736907959
+              "qwen_dist": 0.8007577657699585
             }
           }
         ],
@@ -1871,8 +1871,8 @@
         "target_language": "python",
         "ground_truth": [
           "PY_01_Official_Tutorial_c1880",
-          "PY_01_Official_Tutorial_c1850",
-          "PY_02_DataStructures_and_OOP_Classes_c2062"
+          "PY_02_DataStructures_and_OOP_Classes_c2062",
+          "PY_01_Official_Tutorial_c1850"
         ],
         "retrieved_top5": [
           {
@@ -1978,11 +1978,11 @@
           },
           {
             "rank": 5,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c4330",
+            "chunk_id": "PY_01_Official_Tutorial_c1894",
             "score": 0.015873015873015872,
             "details": {
               "qwen_rank": 3,
-              "qwen_dist": 0.378024697303772
+              "qwen_dist": 0.38492047786712646
             }
           }
         ],
@@ -2002,8 +2002,8 @@
         "target_language": "python",
         "ground_truth": [
           "PY_06_Official_Collections_and_Data_Structures_c2861",
-          "PY_01_Official_Tutorial_c1877",
-          "PY_06_Official_Collections_and_Data_Structures_c2862"
+          "PY_06_Official_Collections_and_Data_Structures_c2862",
+          "PY_01_Official_Tutorial_c1877"
         ],
         "retrieved_top5": [
           {
@@ -2067,10 +2067,10 @@
         "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
         "target_language": "python",
         "ground_truth": [
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404",
           "PY_01_Official_Tutorial_c1914",
-          "PY_01_Official_Tutorial_c1926",
           "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4443",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404"
+          "PY_01_Official_Tutorial_c1926"
         ],
         "retrieved_top5": [
           {
@@ -2198,8 +2198,8 @@
         "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
         ],
         "retrieved_top5": [
           {
@@ -2263,8 +2263,8 @@
         "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036"
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
         ],
         "retrieved_top5": [
           {
@@ -2458,8 +2458,8 @@
         "target_language": "python",
         "ground_truth": [
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689"
         ],
         "retrieved_top5": [
           {
@@ -2589,9 +2589,9 @@
         "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class?",
         "target_language": "python",
         "ground_truth": [
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519",
           "PY_01_Official_Tutorial_c1924",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531"
         ],
         "retrieved_top5": [
           {
@@ -2786,10 +2786,10 @@
         "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
         "target_language": "python",
         "ground_truth": [
-          "PY_04_PEP8_Clean_Code_Specification_c2459",
           "PY_04_PEP8_Clean_Code_Specification_c2460",
+          "PY_04_PEP8_Clean_Code_Specification_c2470",
           "PY_04_PEP8_Clean_Code_Specification_c2469",
-          "PY_04_PEP8_Clean_Code_Specification_c2470"
+          "PY_04_PEP8_Clean_Code_Specification_c2459"
         ],
         "retrieved_top5": [
           {
@@ -2827,17 +2827,6 @@
           },
           {
             "rank": 4,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c4407",
-            "score": 0.9380665528493062,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.386899471282959,
-              "kw_score": 14.0,
-              "combined": 0.9380665528493062
-            }
-          },
-          {
-            "rank": 5,
             "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4511",
             "score": 0.928253374107922,
             "details": {
@@ -2845,6 +2834,17 @@
               "vec_dist": 0.3354135751724243,
               "kw_score": 8.0,
               "combined": 0.928253374107922
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3639",
+            "score": 0.9248491995630427,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.3246837854385376,
+              "kw_score": 7.0,
+              "combined": 0.9248491995630427
             }
           }
         ],
@@ -2863,9 +2863,9 @@
         "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677"
         ],
         "retrieved_top5": [
           {
@@ -3030,46 +3030,46 @@
           },
           {
             "rank": 2,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1004",
-            "score": 0.8508021292462911,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1725",
+            "score": 0.6744425056079283,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.4255080819129944,
-              "kw_score": 9.0,
-              "combined": 0.8508021292462911
+              "vec_dist": 0.40873515605926514,
+              "kw_score": 1.0,
+              "combined": 0.6744425056079283
             }
           },
           {
             "rank": 3,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1002",
-            "score": 0.7937008199468221,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1726",
+            "score": 0.5552615332644407,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.4826093912124634,
-              "kw_score": 9.0,
-              "combined": 0.7937008199468221
+              "vec_dist": 0.5765719413757324,
+              "kw_score": 2.0,
+              "combined": 0.5552615332644407
             }
           },
           {
             "rank": 4,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1048",
-            "score": 0.7932257709279622,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1723",
+            "score": 0.5457927939990416,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.48308444023132324,
-              "kw_score": 9.0,
-              "combined": 0.7932257709279622
+              "vec_dist": 0.5373848676681519,
+              "kw_score": 1.0,
+              "combined": 0.5457927939990416
             }
           },
           {
             "rank": 5,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1005",
-            "score": 0.7896670317731747,
+            "chunk_id": "COMMON_04_MITRE_CWE_Top_25_Vulnerabilities_c1814",
+            "score": 0.49302390214559544,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.47399991750717163,
-              "kw_score": 8.0,
-              "combined": 0.7896670317731747
+              "vec_dist": 0.7001086473464966,
+              "kw_score": 4.0,
+              "combined": 0.49302390214559544
             }
           }
         ],
@@ -3089,8 +3089,8 @@
         "target_language": "python",
         "ground_truth": [
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704"
         ],
         "retrieved_top5": [
           {
@@ -3170,57 +3170,57 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0009",
-            "score": 0.6229728758012961,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1725",
+            "score": 0.3729355690577879,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.5701596736907959,
-              "kw_score": 4.0,
-              "combined": 0.6229728758012961
+              "vec_dist": 0.7102420926094055,
+              "kw_score": 1.0,
+              "combined": 0.3729355690577879
             }
           },
           {
             "rank": 2,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1684",
-            "score": 0.6065792556006222,
+            "chunk_id": "COMMON_04_MITRE_CWE_Top_25_Vulnerabilities_c1814",
+            "score": 0.33107570887021465,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.5597760677337646,
-              "kw_score": 3.0,
-              "combined": 0.6065792556006222
+              "vec_dist": 0.8007577657699585,
+              "kw_score": 2.0,
+              "combined": 0.33107570887021465
             }
           },
           {
             "rank": 3,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1681",
-            "score": 0.5880201573569088,
+            "chunk_id": "COMMON_02_Big_O_Complexity_Cheat_Sheet_c1722",
+            "score": 0.33097922801971436,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.578335165977478,
-              "kw_score": 3.0,
-              "combined": 0.5880201573569088
+              "vec_dist": 0.6690207719802856,
+              "kw_score": 0.0,
+              "combined": 0.33097922801971436
             }
           },
           {
             "rank": 4,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1700",
-            "score": 0.5829360890429441,
+            "chunk_id": "COMMON_04_MITRE_CWE_Top_25_Vulnerabilities_c1813",
+            "score": 0.3291209745448057,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.548897385597229,
+              "vec_dist": 0.8027125000953674,
               "kw_score": 2.0,
-              "combined": 0.5829360890429441
+              "combined": 0.3291209745448057
             }
           },
           {
             "rank": 5,
-            "chunk_id": "COMMON_01_MIT_Mathematics_for_CS_and_DSA_c1688",
-            "score": 0.5796261131441306,
+            "chunk_id": "COMMON_04_MITRE_CWE_Top_25_Vulnerabilities_c1812",
+            "score": 0.283977460404089,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.6135064363479614,
-              "kw_score": 4.0,
-              "combined": 0.5796261131441306
+              "vec_dist": 0.8823778629302979,
+              "kw_score": 3.0,
+              "combined": 0.283977460404089
             }
           }
         ],
@@ -3240,8 +3240,8 @@
         "target_language": "python",
         "ground_truth": [
           "PY_01_Official_Tutorial_c1880",
-          "PY_01_Official_Tutorial_c1850",
-          "PY_02_DataStructures_and_OOP_Classes_c2062"
+          "PY_02_DataStructures_and_OOP_Classes_c2062",
+          "PY_01_Official_Tutorial_c1850"
         ],
         "retrieved_top5": [
           {
@@ -3391,8 +3391,8 @@
         "target_language": "python",
         "ground_truth": [
           "PY_06_Official_Collections_and_Data_Structures_c2861",
-          "PY_01_Official_Tutorial_c1877",
-          "PY_06_Official_Collections_and_Data_Structures_c2862"
+          "PY_06_Official_Collections_and_Data_Structures_c2862",
+          "PY_01_Official_Tutorial_c1877"
         ],
         "retrieved_top5": [
           {
@@ -3466,10 +3466,10 @@
         "query": "Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python",
         "target_language": "python",
         "ground_truth": [
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404",
           "PY_01_Official_Tutorial_c1914",
-          "PY_01_Official_Tutorial_c1926",
           "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4443",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3404"
+          "PY_01_Official_Tutorial_c1926"
         ],
         "retrieved_top5": [
           {
@@ -3485,17 +3485,6 @@
           },
           {
             "rank": 2,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c4199",
-            "score": 0.8477395283894673,
-            "details": {
-              "source": "jina_code",
-              "vec_dist": 0.47722649574279785,
-              "kw_score": 14.0,
-              "combined": 0.8477395283894673
-            }
-          },
-          {
-            "rank": 3,
             "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4578",
             "score": 0.8337562008142207,
             "details": {
@@ -3506,7 +3495,7 @@
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2540",
             "score": 0.8329769246874018,
             "details": {
@@ -3517,7 +3506,7 @@
             }
           },
           {
-            "rank": 5,
+            "rank": 4,
             "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4589",
             "score": 0.8233261604579725,
             "details": {
@@ -3525,6 +3514,17 @@
               "vec_dist": 0.46442127227783203,
               "kw_score": 10.0,
               "combined": 0.8233261604579725
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5167",
+            "score": 0.8185870266042599,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.4450799226760864,
+              "kw_score": 8.0,
+              "combined": 0.8185870266042599
             }
           }
         ],
@@ -3617,8 +3617,8 @@
         "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
         ],
         "retrieved_top5": [
           {
@@ -3692,8 +3692,8 @@
         "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036"
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
         ],
         "retrieved_top5": [
           {
@@ -3917,8 +3917,8 @@
         "target_language": "python",
         "ground_truth": [
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689"
         ],
         "retrieved_top5": [
           {
@@ -4068,9 +4068,9 @@
         "query": "Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class?",
         "target_language": "python",
         "ground_truth": [
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519",
           "PY_01_Official_Tutorial_c1924",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3519"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3531"
         ],
         "retrieved_top5": [
           {
