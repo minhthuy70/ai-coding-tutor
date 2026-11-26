@@ -1,98 +1,193 @@
-# TÀI LIỆU TOÀN DIỆN THUYẾT TRÌNH BẢO VỆ ĐỒ ÁN TRƯỚC HỘI ĐỒNG
-## HỆ THỐNG TRỢ GIẢNG LẬP TRÌNH THÔNG MINH ĐA PHƯƠNG THỨC (AI-POWERED CODING TUTOR & MULTIMODAL RAG)
+# TÀI LIỆU NỘI DUNG THUYẾT TRÌNH BẢO VỆ ĐỒ ÁN TỐT NGHIỆP
+## ĐỀ TÀI: AI-POWERED CODING TUTOR – HỆ THỐNG TRỢ GIẢNG LẬP TRÌNH THÔNG MINH ỨNG DỤNG RAG VÀ AI ĐA PHƯƠNG THỨC
+
+> **Phiên bản tài liệu:** 2.0 (Bản hoàn thiện kỹ thuật sau kiểm toán thực tế mã nguồn và dữ liệu)  
+> **Đơn vị thực hiện:** Nhóm Đồ án Tốt nghiệp CNTT  
+> **Mục đích tài liệu:** Cung cấp nội dung chuẩn xác, có căn cứ thực nghiệm để chuyển tiếp trực tiếp thành các slide PowerPoint (PPT) phục vụ buổi bảo vệ trước Hội đồng.
 
 ---
 
-# PHẦN 1: TẠI SAO CẦN THỰC HIỆN DỰ ÁN? (TÍNH CẤP THIẾT & BỐI CẢNH THỰC TẾ)
+# PHẦN 1: TỔNG QUAN & TÍNH CẤP THIẾT CỦA ĐỀ TÀI (MOTIVATION & PROBLEM STATEMENT)
 
 ```
 ┌────────────────────────────────────────┐       ┌────────────────────────────────────────┐
-│     THỰC TRẠNG GIẢNG DẠY HIỆN NAY      │       │     NHU CẦU CẤP THIẾT CỦA ĐỀ TÀI       │
+│     THỰC TRẠNG GIẢNG DẠY & TỰ HỌC      │       │     MỤC TIÊU GIẢI PHÁP CỦA ĐỒ ÁN       │
 ├────────────────────────────────────────┤       ├────────────────────────────────────────┤
-│ ⚠️ Sinh viên bế tắc khi tự debug ở nhà │  ──>  │ ✅ Cần Trợ giảng Sư phạm AI 24/7       │
-│ ⚠️ ChatGPT mớm code, triệt tiêu tư duy │  ──>  │ ✅ Cần AI gợi mở, không viết code sẵn  │
-│ ⚠️ AI trôi nổi dùng cú pháp lệch chuẩn │  ──>  │ ✅ Cần AI neo chặt vào giáo trình khoa│
-│ ⚠️ Giảng viên mù tịt về lỗi của cả lớp │  ──>  │ ✅ Cần Dashboard báo cáo lỗi học tập   │
+│ ⚠️ Sinh viên bế tắc khi tự debug ở nhà │  ──>  │ ✅ Trợ giảng Sư phạm AI hỗ trợ 24/7    │
+│ ⚠️ ChatGPT sinh code giải hộ hoàn toàn │  ──>  │ ✅ Phương pháp Socratic gợi mở tư duy  │
+│ ⚠️ AI tổng quát dễ bịa cú pháp, lệch đề│  ──>  │ ✅ RAG neo chặt giáo trình chính thống │
+│ ⚠️ Lỗi lập trình kèm ảnh terminal/code │  ──>  │ ✅ Pipeline xử lý đầu vào đa phương thức│
 └────────────────────────────────────────┘       └────────────────────────────────────────┘
 ```
 
-### 1. Bế tắc của sinh viên khi tự học lập trình tại nhà (The Homework Debugging Barrier)
-* **Đặc thù môn học:** Các môn lập trình cơ sở (Lập trình C/C++, Python, Cấu trúc dữ liệu & Giải thuật) có độ dốc học tập (learning curve) rất lớn. Sinh viên năm nhất - năm hai thường xuyên đối mặt với các khái niệm trừu tượng: con trỏ, cấp phát động, quản lý bộ nhớ Heap/Stack, đệ quy.
-* **Nỗi cô đơn khi làm bài tập:** Khi thực hành code lúc nửa đêm tại nhà, sinh viên gặp các lỗi runtime kinh điển như `Segmentation Fault`, `Memory Leak`, `IndexError` mà không có giảng viên hay trợ giảng túc trực để giải đáp. Việc bế tắc hàng giờ đồng hồ trước một dòng lỗi vô hình khiến sinh viên nản chí, sợ học lập trình và tỷ lệ rớt môn các môn này ở các trường đại học luôn ở mức cao.
+### 1.1. Bối cảnh đào tạo lập trình cơ sở & Khó khăn của sinh viên
+* **Đặc thù môn học nền tảng:** Các môn học lập trình cơ sở như Lập trình C/C++, Lập trình Python, Cấu trúc dữ liệu & Giải thuật đóng vai trò quyết định nền tảng tư duy của sinh viên ngành Công nghệ Thông tin. Tuy nhiên, các môn học này có độ dốc học tập (learning curve) rất lớn do chứa nhiều khái niệm trừu tượng: con trỏ, cấp phát và giải phóng bộ nhớ động, độ phức tạp thuật toán, đệ quy.
+* **Rào cản tự sửa lỗi (The Debugging Barrier):** Trong quá trình làm bài tập tại nhà ngoài giờ lên lớp, sinh viên thường xuyên gặp các lỗi biên dịch hoặc lỗi thực thi kinh điển (`Segmentation Fault`, `Memory Leak`, `IndexError`). Khi không có giảng viên hoặc trợ giảng trực tiếp hỗ trợ, sinh viên mất nhiều giờ bế tắc trước các thông báo lỗi trừu tượng, dễ dẫn đến tâm lý nản chí và suy giảm kết quả học tập.
 
-### 2. Mặt trái nguy hại của các AI tạo sinh thương mại (The Dark Side of Commercial AI in Coding Education)
-* **Hiện tượng "Mớm code / Làm bài hộ":** Sự bùng nổ của ChatGPT, GitHub Copilot hay Claude mang lại sự tiện lợi, nhưng lại tạo ra hệ lụy nghiêm trọng trong giáo dục. Khi sinh viên gặp lỗi, các AI này sẽ viết lại nguyên cả hàm code hoàn chỉnh. Sinh viên chỉ việc Copy - Paste nộp bài.
-* **Hậu quả học thuật:** Sinh viên nộp bài tập về nhà 10/10 điểm, nhưng khi bước vào phòng thi viết trên giấy hoặc thi thực hành máy cô lập không có Internet thì bị 0 điểm. Sinh viên hoàn toàn mất đi phản xạ tư duy thuật toán và kỹ năng tự sửa lỗi (debugging) - kỹ năng sống còn của một kỹ sư phần mềm.
-* **Thầy cô rơi vào thế bị động:** Giảng viên không thể cấm sinh viên dùng AI ở nhà, nhưng cũng bất lực trong việc kiểm soát mức độ lạm dụng AI của sinh viên.
+### 1.2. Thách thức từ việc sử dụng các mô hình AI tạo sinh thương mại (ChatGPT, GitHub Copilot)
+* **Hiện tượng "Làm bài hộ / Mớm code" (Spoon-feeding):** Sự phổ biến của các công cụ như ChatGPT hay GitHub Copilot giúp sinh viên tìm kiếm câu trả lời nhanh chóng. Tuy nhiên, các công cụ này thường tự động sinh lại toàn bộ đoạn mã nguồn hoàn chỉnh. Sinh viên dễ rơi vào thói quen sao chép - dán (copy-paste) mà không hiểu bản chất thuật toán và không rèn luyện được kỹ năng tự gỡ lỗi (debugging).
+* **Vấn đề ảo giác (Hallucination) và lệch chuẩn giáo trình:** Các mô hình ngôn ngữ lớn thương mại được huấn luyện trên dữ liệu Internet mở rộng lớn, thường đưa ra các cú pháp nâng cao hoặc thư viện ngoài không được phép sử dụng trong phạm vi môn học (ví dụ: sinh viên năm nhất học con trỏ thô trong C++ nhưng AI lại sinh mã nguồn C++20 sử dụng `std::unique_ptr` hoặc các thư viện chuẩn nâng cao).
 
-### 3. Nhu cầu cấp thiết về một Giải pháp AI Sư phạm Chuẩn mực cho Nhà trường (The Need for an Institutional AI Tutor)
-* **Xu thế không thể đảo ngược:** Nhà trường không thể bài trừ AI, mà bắt buộc phải có một giải pháp **"Sống chung với AI một cách có kiểm soát"**.
-* **Định vị của đề tài:** Dự án này ra đời để giải quyết bài toán đó: Xây dựng một **Trợ giảng AI chuẩn mực Sư phạm (Socratic AI Tutor)** cài đặt nội bộ cho Nhà trường. AI không làm bài hộ mà đóng vai trò người thầy dẫn dắt, giải thích bản chất lỗi dựa trên đúng cuốn giáo trình của trường, và buộc sinh viên phải tự tay sửa từng dòng code của chính mình.
-
----
-
-# PHẦN 2: DỰ ÁN NÀY DÙNG ĐỂ LÀM GÌ? (ỨNG DỤNG THỰC TẾ)
-
-Dự án này là một **"Hệ sinh thái Trợ giảng Lập trình Thông minh & Quản lý Học tập Đa phương thức"**, được thiết kế để triển khai nội bộ cho Khoa Công nghệ Thông tin tại các trường Đại học:
-
-* **Đối với Sinh viên (Trợ giảng số 24/7):**
-  * Khi sinh viên làm bài tập hoặc thực hành code ở nhà lúc nửa đêm bị lỗi: Sinh viên chỉ cần **quăng file code (`.py`, `.cpp`, `.sql`)** hoặc **chụp ảnh màn hình Terminal báo lỗi** tải lên.
-  * Hệ thống sẽ đọc ảnh lỗi (Vision OCR) + đọc mã nguồn + tra cứu đúng giáo trình đại học của trường, sau đó **đặt câu hỏi gợi mở, phân tích nguyên nhân để sinh viên tự tìm ra chỗ sai và tự sửa**.
-* **Đối với Giảng viên & Nhà trường (Công cụ Quản trị Đào tạo & Báo cáo chất lượng):**
-  * Đóng vai trò như một bảng điều khiển trung tâm giúp Giảng viên **nắm bắt được bức tranh toàn cảnh về năng lực học tập của cả lớp**: biết sinh viên đang mắc kẹt ở đâu, giới hạn phạm vi tài liệu theo từng tuần học, và giám sát tính trung thực học thuật.
+### 1.3. Mục tiêu và định vị của đề tài
+* **Xây dựng Trợ giảng AI theo phương pháp Sư phạm Socratic:** Hệ thống không đưa ra mã nguồn sửa sẵn, mà đóng vai trò người trợ giảng định hướng: phân tích hiện tượng lỗi, giải thích nguyên nhân và đặt câu hỏi gợi mở để người học tự tìm ra giải pháp.
+* **Đảm bảo tính chính xác học thuật bằng kỹ thuật RAG (Retrieval-Augmented Generation):** Neo chặt ngữ cảnh câu trả lời vào kho tài liệu giáo trình đại học chính thống, có trích dẫn nguồn cụ thể để sinh viên đối chiếu.
+* **Tiếp nhận dữ liệu đa phương thức (Multimodal):** Hỗ trợ sinh viên gửi câu hỏi văn bản kết hợp tệp mã nguồn (`.py`, `.cpp`, `.sql`) và ảnh chụp màn hình Terminal thông báo lỗi.
 
 ---
 
-# PHẦN 3: NÓ GIẢI QUYẾT ĐƯỢC GÌ MÀ CÁC AI KHÁC (ChatGPT, GitHub Copilot, NotebookLM) CHƯA LÀM ĐƯỢC?
+# PHẦN 2: MỤC TIÊU VÀ ĐỐI TƯỢNG SỬ DỤNG (SCOPE & USE CASES)
 
-Khi đưa các AI thông thường vào môi trường giáo dục đại học, cả sinh viên và giảng viên đều gặp phải **5 "NỖI ĐAU" LỚN** mà các công cụ như ChatGPT hay Copilot hoàn toàn bất lực:
+### 2.1. Đối tượng sử dụng và phạm vi đề tài
+* **Đối tượng người dùng chính:** Sinh viên ngành CNTT đang theo học các học phần lập trình cơ sở (C/C++, Python, Cấu trúc dữ liệu & Giải thuật, CSDL).
+* **Phạm vi tri thức hiện tại:** Kho ngữ liệu giáo trình chính thống gồm 4 mảng kiến thức: Lập trình C/C++, Lập trình Python, Cấu trúc dữ liệu & Thuật toán, Cơ sở dữ liệu và Toán rời rạc.
+
+### 2.2. Yêu cầu hệ thống
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                 BẢNG YÊU CẦU HỆ THỐNG                                  │
+├──────────────────────────────────┬─────────────────────────────────────────────────────┤
+│ YÊU CẦU CHỨC NĂNG (FUNCTIONAL)   │ 1. Tiếp nhận câu hỏi dạng Text, File code và Ảnh lỗi│
+│                                  │ 2. Trích xuất text từ ảnh Terminal bằng Vision OCR │
+│                                  │ 3. Bóc tách và kiểm tra an toàn mã nguồn đính kèm   │
+│                                  │ 4. Tổng hợp truy vấn kỹ thuật (Query Synthesizer)   │
+│                                  │ 5. Truy xuất tri thức giáo trình từ ChromaDB (RAG)  │
+│                                  │ 6. Sinh phản hồi gợi mở Socratic kèm thẻ trích dẫn  │
+├──────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ YÊU CẦU PHI CHỨC NĂNG (NON-FUNC) │ 1. Độ trễ truy xuất vector (Retrieval Latency): <0.2s│
+│                                  │ 2. An toàn dữ liệu: Chặn Path Traversal, chặn binary│
+│                                  │ 3. Tính sẵn sàng: Cơ chế Fallback khi lỗi API quota │
+│                                  │ 4. Kiến trúc bất đồng bộ (Asynchronous I/O)         │
+│                                  │ 5. Đóng gói triển khai chuẩn hóa qua Docker Compose │
+└──────────────────────────────────┴─────────────────────────────────────────────────────┘
+```
+
+### 2.3. Use Case tổng quan của hệ thống
+
+```
+  [Sinh viên] ──(1) Gửi câu hỏi / Nộp code / Tải ảnh Terminal lỗi──> (Hệ thống AI Tutor)
+                                                                           │
+                                 ┌─────────────────────────────────────────┴─────────────────────────────────────────┐
+                                 ▼                                                   ▼                               ▼
+                      (Bóc tách mã nguồn & OCR)                          (Truy xuất Giáo trình RAG)       (Sinh phản hồi Socratic)
+                                 │                                                   │                               │
+                                 └─────────────────────────────────────────┬─────────────────────────────────────────┘
+                                                                           ▼
+  [Sinh viên] <──(2) Nhận phân tích lỗi + Câu hỏi gợi mở + Thẻ trích dẫn giáo trình chính thống───────────────────────┘
+```
+
+---
+
+# PHẦN 3: NGUYÊN LÝ & ĐIỂM KHÁC BIỆT CỦA HỆ THỐNG SO VỚI CÁC CÔNG CỤ HIỆN CÓ
+
+Khi so sánh với các công cụ AI phổ biến hiện nay, hệ thống tập trung giải quyết các bài toán đặc thù của môi trường giáo dục đại học:
 
 ```
 ┌────────────────────────────────────────┐       ┌────────────────────────────────────────┐
-│     CHATGPT / COPILOT / CUSTOM GPTS    │       │     HỆ THỐNG AI CODING TUTOR CỦA BẠN   │
+│     CHATGPT / COPILOT THÔNG THƯỜNG     │       │     HỆ THỐNG AI CODING TUTOR           │
 ├────────────────────────────────────────┤       ├────────────────────────────────────────┤
-│ ❌ Giải bài hộ, làm mất tư duy debug   │  VS   │ ✅ Gợi mở Sư phạm (Socratic Tutoring)  │
-│ ❌ Ảo giác kiến thức, sinh code lệch đề│       │ ✅ Neo chặt giáo trình (100% Hit@3 RAG)│
-│ ❌ Loãng ngữ cảnh khi gửi code + ảnh   │       │ ✅ Query Synthesizer chống pha loãng   │
-│ ❌ "Hộp đen cá nhân" (Thầy cô mù tịt) │       │ ✅ Bản đồ nhiệt lỗ hổng lớp học        │
-│ ❌ AI lôi kiến thức cuối kỳ giải đầu kỳ│       │ ✅ Khóa tài liệu theo tiến độ từng tuần│
+│ ❌ Sinh sẵn toàn bộ mã nguồn sửa lỗi   │  VS   │ ✅ Phương pháp Socratic gợi mở tư duy  │
+│ ❌ Dễ dùng cú pháp ngoài phạm vi môn   │       │ ✅ RAG neo chặt giáo trình của trường  │
+│ ❌ Nguy cơ loãng khi gửi kèm ảnh+code  │       │ ✅ Module Query Synthesizer cô đọng lỗi│
+│ ❌ Không có cơ sở trích dẫn tài liệu   │       │ ✅ Thẻ trích dẫn rõ tên sách, chương mục│
 └────────────────────────────────────────┘       └────────────────────────────────────────┘
 ```
 
-### 1. Vấn đề Sư phạm: Các AI khác "Mớm code, giải bài hộ" làm cùn mòn tư duy
-* **Hạn chế của ChatGPT/Copilot:** Sinh viên chỉ cần ném lỗi vào là AI viết lại nguyên cả hàm code hoàn chỉnh. Sinh viên Copy-Paste nộp bài đối phó $\rightarrow$ Không hiểu bản chất, mất kỹ năng tự sửa lỗi (debugging), đi thi viết giấy là rớt.
-* **Hệ thống của bạn giải quyết:** AI hoạt động theo **Phương pháp Sư phạm Socratic**: **Tuyệt đối không đưa code hoàn chỉnh**. Hệ thống chỉ ra dòng bị lỗi logic, giải thích bản chất nguyên nhân, và đặt câu hỏi gợi ý từng bước để sinh viên **tự tay gõ lại code của chính mình**.
+### 3.1. So sánh tiêu chí kỹ thuật và sư phạm
 
-### 2. Vấn đề Học thuật: Các AI khác bị "Ảo giác" và "Lệch chuẩn giáo trình thi"
-* **Hạn chế của ChatGPT:** Học từ toàn bộ Internet mở. Khi sinh viên năm nhất học C/C++ (yêu cầu dùng con trỏ thô, mảng động theo chuẩn môn học), ChatGPT lại sinh ra C++20 (`std::unique_ptr`, `vector`, `auto`) hoặc dùng thư viện ngoài bị cấm trong kỳ thi. Sinh viên mang đi chấm bị **0 điểm**.
-* **Hệ thống của bạn giải quyết:** Ứng dụng **RAG (Retrieval-Augmented Generation)** neo chặt vào **Kho 1.221 đoạn tri thức từ chính giáo trình đại học của trường** (đã qua bóc tách SOTA MinerU bảo toàn 100% code block). Khi trả lời, AI hiển thị thẻ trích dẫn rõ: *"Theo Giáo trình C++ ĐHQG, Chương 4, mục Cấp phát động..."*. Đảm bảo code sinh viên viết ra **đúng 100% barem chấm thi của khoa**.
+| Tiêu chuẩn đánh giá | ChatGPT / Claude thông thường | GitHub Copilot | Hệ thống AI Coding Tutor |
+| :--- | :--- | :--- | :--- |
+| **Mục đích thiết kế** | Trợ lý hội thoại đa năng | Tự động hoàn thành code cho lập trình viên | **Trợ giảng sư phạm chuyên sâu cho giáo dục** |
+| **Cách tiếp cận sửa lỗi** | Viết lại hàm code hoàn chỉnh | Gợi ý dòng code kế tiếp | **Chỉ điểm nguyên nhân, gợi ý để người học tự sửa** |
+| **Cơ sở tri thức (Knowledge Base)** | Dữ liệu Internet mở (tiềm ẩn lỗi thời/lệch chuẩn) | Kho mã nguồn công khai trên GitHub | **Giáo trình chính thống lưu trữ trong Vector DB** |
+| **Khả năng kiểm chứng** | Không có nguồn trích dẫn đối soát | Không có | **Hiển thị thẻ trích dẫn (Tên giáo trình, chương, đoạn)** |
+| **Xử lý đa phương thức** | Nhận diện đa mục đích tổng quát | Hỗ trợ văn bản và mã nguồn | **Trích xuất chuyên sâu: AST code + Terminal OCR** |
+| **Chi phí triển khai** | Tài khoản thương mại định kỳ | Bản quyền theo tháng | **Kiến trúc tối ưu: RAG cục bộ + LLM Flash API** |
 
-### 3. Vấn đề Kỹ thuật: Các AI khác bị "Pha loãng ngữ cảnh" khi gửi vừa ảnh vừa code
-* **Hạn chế của ChatGPT/Claude:** Khi sinh viên vừa gửi câu hỏi, vừa đính kèm file code 200 dòng, vừa gửi ảnh Terminal (chứa cả path dài, log hệ thống), AI thông thường bị hiện tượng *"Lost in the middle"* (loãng ngữ cảnh) — trả lời lan man hoặc bỏ qua lỗi chính.
-* **Hệ thống của bạn giải quyết:** Xây dựng riêng module **Query Synthesizer (Chống pha loãng truy vấn)**:
-  * Trích xuất chính xác mã ngoại lệ từ ảnh Terminal OCR (`IndexError`, `Memory Leak`, `Segmentation Fault`).
-  * Trích xuất hàm bị lỗi từ tệp nguồn.
-  * Cô đọng thành từ khóa kỹ thuật chuẩn mực để truy vấn đúng bài học lý thuyết trước khi sinh viên nhận câu trả lời.
-
-### 4. Vấn đề Quản lý: Các AI khác là "Hộp đen cá nhân", Giảng viên hoàn toàn mù tịt
-* **Hạn chế của ChatGPT / Custom GPT:** Sinh viên hỏi gì thì chỉ sinh viên đó và OpenAI biết. Giảng viên **không hề biết** sinh viên về nhà có hiểu bài không, đang bị kẹt ở phần nào, cho đến khi chấm thi giữa kỳ thì cả lớp đã trượt hàng loạt.
-* **Hệ thống của bạn giải quyết:** Toàn bộ dữ liệu lỗi được ghi nhận tại cơ sở dữ liệu nội bộ (PostgreSQL) để cung cấp **"Bản đồ nhiệt lỗ hổng kiến thức" (Classroom Error Heatmap) cho Giảng viên**:
-  * Báo cáo định lượng: *"Tuần này 65% sinh viên mắc lỗi rò rỉ bộ nhớ ở bài tập số 3"*. Giảng viên biết ngay để dành 15 phút đầu giờ lên lớp giảng lại phần đó.
-  * Cảnh báo sớm các sinh viên yếu, liên tục mắc lỗi cú pháp để trợ giảng kèm cặp kịp thời.
-
-### 5. Vấn đề Kiểm soát & Bảo mật: Khóa tài liệu theo tuần và Bảo mật đề thi (On-Premise)
-* **Hạn chế của ChatGPT / NotebookLM:**
-  * Nếu nạp tài liệu vào ChatGPT, sinh viên làm bài tập Tuần 2 nhưng AI lại lôi kiến thức Tuần 10 ra giải hộ $\rightarrow$ Phá nát lộ trình sư phạm.
-  * Ngân hàng đề thi nội bộ của trường **không thể tải lên OpenAI** vì vi phạm bảo mật dữ liệu.
-* **Hệ thống của bạn giải quyết:**
-  * **Khóa tri thức theo tiến độ (Curriculum Scoping):** Nhờ bộ lọc metadata ChromaDB, Giảng viên có quyền cấu hình: *"Bài tập này AI chỉ được dùng tri thức từ Chương 1 đến Chương 3"*. AI tuyệt đối không được dùng kiến thức vượt rào.
-  * **Chủ quyền dữ liệu (Docker On-Premise):** Toàn bộ hệ thống đóng gói chạy nội bộ trên máy chủ của trường, không sợ rò rỉ đề thi ra ngoài Internet.
+### 3.2. Phương pháp Sư phạm Socratic (Định hướng tư duy)
+Hệ thống sử dụng System Instruction được cấu hình chặt chẽ để kiểm soát hành vi phản hồi của mô hình ngôn ngữ:
+* **Nguyên tắc 1:** Tuyệt đối không cung cấp giải pháp mã nguồn hoàn chỉnh ngay từ lượt tương tác đầu tiên.
+* **Nguyên tắc 2:** Phân tích triệu chứng lỗi dựa trên đầu vào của sinh viên (dòng phát sinh lỗi, điều kiện dừng, trạng thái bộ nhớ).
+* **Nguyên tắc 3:** Đặt từ 1 đến 2 câu hỏi dẫn dắt để sinh viên tự kiểm tra giá trị biến hoặc điều kiện biên.
+* **Nguyên tắc 4:** Đối chiếu với đoạn tri thức tương ứng được RAG truy xuất từ giáo trình để người học tự đọc hiểu.
 
 ---
 
-# PHẦN 4: NHÓM ĐÃ NGHIÊN CỨU VÀ XÂY DỰNG HỆ THỐNG NHƯ THẾ NÀO? (4 GIAI ĐOẠN CHI TIẾT)
+# PHẦN 4: KIẾN TRÚC HỆ THỐNG & BIỆN LUẬN CÔNG NGHỆ (SYSTEM ARCHITECTURE & TECH STACK)
 
-Nhóm tiếp cận dự án theo quy trình Nghiên cứu & Phát triển Kỹ thuật (R&D) bài bản kéo dài qua 14 mốc kỹ thuật (Milestones), chia thành 4 giai đoạn cốt lõi:
+### 4.1. Kiến trúc phân tầng tổng thể (Layered Architecture)
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. TẦNG TRÌNH DIỄN (PRESENTATION LAYER)                                                │
+│    - Next.js 14 (App Router) + TypeScript + Tailwind CSS                               │
+│    - Giao diện Chat đa phương thức: Input Text, Upload Code (.py, .cpp, .sql), Upload Ảnh│
+│    - Hiển thị phản hồi định dạng Markdown, Code Block và Thẻ trích dẫn (Citations)      │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │ HTTP REST API (FastAPI)
+┌───────────────────────────────────────────▼────────────────────────────────────────────┐
+│ 2. TẦNG DỊCH VỤ VÀ ĐIỀU PHỐI (BACKEND & AI ORCHESTRATION LAYER)                       │
+│    - FastAPI Engine (Python 3.11, Asynchronous I/O)                                   │
+│    - FileExtractor: Bóc tách mã nguồn an toàn (chặn Path Traversal, lọc đuôi mở rộng)   │
+│    - ImageExtractor: Tiền xử lý ảnh (Resize, Contrast) + Vision OCR Terminal           │
+│    - QuerySynthesizer: Rút trích Exception Name & Hàm lỗi, chống pha loãng truy vấn    │
+│    - TutorService: Điều phối luồng RAG + LLM Socratic Engine                           │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                     ┌──────────────────────┴──────────────────────┐
+                     ▼                                             ▼
+┌─────────────────────────────────────────┐   ┌──────────────────────────────────────────┐
+│ 3. TẦNG DỮ LIỆU VECTOR & TÀI LIỆU (RAG) │   │ 4. TẦNG MÔ HÌNH SUY LUẬN (LLM ENGINE)    │
+│    - ChromaDB Persistent (Local Vector) │   │    - Mô hình chính: Gemini 3 Flash       │
+│    - Dual Collections (5.230 vectors):  │   │    - Cơ chế Multi-Model Resilience:      │
+│      * qwen3_text: 4.293 chunks lý thuyết│   │      gemini-3-flash-preview             │
+│      * jina_code: 937 chunks mã nguồn   │   │      --> gemini-3.5-flash                │
+│    - Thuật toán xếp hạng: RRF (k0=60)   │   │      --> Socratic Fallback nội bộ        │
+└─────────────────────────────────────────┘   └──────────────────────────────────────────┘
+```
+
+### 4.2. Biện luận lựa chọn công nghệ và phân tích đánh đổi (Trade-offs)
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                 MA TRẬN BIỆN LUẬN CÔNG NGHỆ CỦA DỰ ÁN                                  │
+├──────────────────────┬─────────────────────────────┬───────────────────────────┬───────────────────────┤
+│ THÀNH PHẦN KIẾN TRÚC │ CÔNG NGHỆ ĐƯỢC CHỌN         │ CÔNG NGHỆ SO SÁNH / THỬ   │ LÝ DO KỸ THUẬT & ĐÁNH ĐỔI│
+├──────────────────────┼─────────────────────────────┼───────────────────────────┼───────────────────────┤
+│ 1. PDF Layout Parser │ MinerU (Layout-LM Vision)   │ PyPDF, PDFPlumber         │ PyPDF làm gãy ranh giới   │
+│                      │                             │                           │ khối code và mất thụt lề │
+│ 2. Vector Database   │ ChromaDB (Local Persistent) │ Pinecone, Milvus Cluster  │ ChromaDB nhúng gọn nhẹ,   │
+│                      │                             │                           │ không tốn phí dịch vụ    │
+│ 3. Dual Embedding    │ Qwen3 (Text) + Jina (Code)  │ Single Embedding Model    │ Tách biệt không gian vector│
+│                      │ 1024-d / 768-d              │ đơn lẻ                    │ tăng độ khớp theo ngữ cảnh│
+│ 4. LLM Generation    │ Gemini 3 Flash API          │ GPT-4o, Llama 3 Local     │ Tốc độ <2s, chi phí thấp;  │
+│                      │ (+ Fallback Engine)         │                           │ Llama đòi hỏi GPU đắt đỏ │
+│ 5. Backend Engine    │ FastAPI (Asynchronous I/O)  │ Flask, Django Sync        │ Hỗ trợ I/O bất đồng bộ    │
+│                      │                             │                           │ xử lý đồng thời nhiều kết nối│
+│ 6. Container hóa     │ Docker Compose              │ Cài đặt thủ công từng app │ Đóng gói đồng bộ môi trường│
+└──────────────────────┴─────────────────────────────┴───────────────────────────┴───────────────────────┘
+```
+
+* **1. Bộ bóc tách PDF (MinerU vs PyPDF):** Thử nghiệm ban đầu với `PyPDF` và `PDFPlumber` cho thấy tỷ lệ lỗi cấu trúc cao đối với sách lập trình (mất thụt lề của Python, bảng độ phức tạp bị vỡ cột). Dự án sử dụng MinerU với mô hình thị giác Layout-LM giúp bảo toàn 100% định dạng khối mã nguồn và công thức toán học LaTeX.
+* **2. Cơ sở dữ liệu Vector (ChromaDB vs Cloud Vector DB):** Thay vì sử dụng các dịch vụ SaaS đám mây thương mại (như Pinecone tốn phí định kỳ), hệ thống sử dụng ChromaDB triển khai cục bộ qua Persistent Client, tốc độ truy xuất đạt **~160 ms/truy vấn**, hỗ trợ metadata filtering linh hoạt theo ngôn ngữ và tài liệu.
+* **3. Kiến trúc Embedding Dual-Collection (Qwen3-Embedding & Jina-Code):** Nhóm áp dụng mô hình nhúng kép:
+  * Collection `qwen3_text` sử dụng `Qwen/Qwen3-Embedding-0.6B` (1024 chiều) chuyên trách văn bản lý thuyết và giải thích khái niệm.
+  * Collection `jina_code` sử dụng `jinaai/jina-embeddings-v2-base-code` (768 chiều) chuyên trách cấu trúc mã nguồn và thuật toán.
+  * Hai tập kết quả được hợp nhất bằng thuật toán **Reciprocal Rank Fusion (RRF)** với hằng số $k_0 = 60$.
+* **4. Lựa chọn Mô hình Ngôn ngữ (Gemini 3 Flash & Multi-Model Resilience):** Mô hình Gemini 3 Flash được lựa chọn do có độ trễ suy luận thấp (< 2 giây), cửa sổ ngữ cảnh lớn và hỗ trợ tốt xử lý ảnh đa phương thức với chi phí token tối ưu. Hệ thống cài đặt cơ chế dự phòng tự động chuyển đổi mô hình (Gemini 3 Flash $\rightarrow$ Gemini 3.5 Flash $\rightarrow$ Socratic Fallback nội bộ) để đảm bảo hệ thống không bị gián đoạn khi gặp lỗi kết nối hoặc quota API.
+
+### 4.3. Mô hình triển khai Hybrid và phạm vi bảo mật thực tế
+* **Kiến trúc triển khai thực tế là mô hình Lai (Hybrid Architecture):**
+  * **Thành phần chạy On-Premise / Cục bộ:** Toàn bộ Backend (FastAPI), Cơ sở dữ liệu Vector (ChromaDB với 5.230 vectors), Bộ trích xuất mã nguồn (FileExtractor), Bộ tiền xử lý ảnh (ImageExtractor), Thuật toán chống pha loãng (QuerySynthesizer) và Frontend (Next.js) đều được đóng gói và vận hành cục bộ thông qua Docker Compose.
+  * **Thành phần sử dụng Cloud API:** Bước sinh phản hồi Socratic cuối cùng gọi thông qua Google Gemini API.
+* **Lưu ý bảo mật khách quan:** Dữ liệu ngữ cảnh hợp nhất (gồm prompt của sinh viên, mã nguồn đính kèm và trích đoạn lỗi terminal) được gửi tới endpoint của Google Gemini để sinh phản hồi. Do đó, hệ thống hiện tại **chưa phải là mô hình cô lập hoàn toàn (Air-gapped 100% On-premise)**.
+* **Định hướng bảo mật trong tương lai:** Để đáp ứng yêu cầu bảo mật tuyệt đối cho dữ liệu thi cử nội bộ, giải pháp tiếp theo là thay thế endpoint Gemini API bằng mô hình mã nguồn mở chạy On-Premise hoàn toàn (như Qwen2.5-Coder hoặc Llama-3-Instruct thông qua vLLM / Ollama trên máy chủ trang bị GPU chuyên dụng).
+
+---
+
+# PHẦN 5: QUY TRÌNH NGHIÊN CỨU & XÂY DỰNG HỆ THỐNG RAG ĐA PHƯƠNG THỨC
+
+Quy trình nghiên cứu và triển khai kỹ thuật được thực hiện tuần tự qua 4 giai đoạn chính:
 
 ```
 ┌──────────────────────┐     ┌──────────────────────┐     ┌──────────────────────┐     ┌──────────────────────┐
@@ -102,225 +197,144 @@ Nhóm tiếp cận dự án theo quy trình Nghiên cứu & Phát triển Kỹ t
 └──────────────────────┘     └──────────────────────┘     └──────────────────────┘     └──────────────────────┘
 ```
 
-### GIAI ĐOẠN 1: THU THẬP, BÓC TÁCH DỮ LIỆU SOTA & CHUNKING NGỮ CẢNH (NGÀY 01 – NGÀY 04)
-*Mục tiêu: Xây dựng kho tri thức giáo trình đại học chuẩn hóa, sạch sẽ, bảo toàn 100% cấu trúc code và toán học.*
-* **1. Chuẩn bị kho dữ liệu giáo trình chính thống & Môi trường (Ngày 01):**
-  * Thu thập và thẩm định các giáo trình chuẩn mực: Cấu trúc dữ liệu & Giải thuật, Lập trình C++, Lập trình Python, Cơ sở dữ liệu.
-  * Thiết lập hạ tầng lưu trữ MinIO Object Storage, môi trường Python 3.11, và cấu trúc thư mục dữ liệu đa tầng (`data/01_raw` đến `data/09_chromadb`).
-* **2. Bóc tách bố cục PDF phức tạp bằng MinerU (Layout-LM) (Ngày 02):**
-  * Khảo sát và loại bỏ các parser truyền thống (PyPDF, PDFPlumber) vì làm vỡ khối code và mất thụt lề (indentation).
-  * Ứng dụng mô hình thị giác MinerU để bóc tách chính xác 100% các khối code đa dòng, công thức toán học LaTeX và các bảng biểu cấu trúc phức tạp sang định dạng Markdown.
-* **3. Pipeline làm sạch và chuẩn hóa dữ liệu SOTA V3.0 (Ngày 03):**
-  * Xây dựng bộ lọc regex đa tầng khử số trang thừa, header/footer lặp lại, sửa lỗi ngắt dòng trong khối lệnh code block.
-  * Chuẩn hóa đồng nhất định dạng Markdown và bảng mã UTF-8 cho toàn bộ kho tài liệu.
-* **4. Chunking Engine V3.0 – AST-Aware & Anthropic Contextual Retrieval (Ngày 04):**
-  * Loại bỏ phương pháp cắt đoạn cố định theo số ký tự (Fixed-size chunking làm gãy nửa chừng hàm code).
-  * Cắt đoạn thông minh theo ranh giới hàm/lớp (AST-Aware), kết hợp kỹ thuật Contextual Retrieval của Anthropic: tự động gắn bối cảnh chương mục cấp cao vào đầu mỗi chunk (Ví dụ: `[Tài liệu: C++ | Chương 4: Con trỏ & Cấp phát động | Mục: Thu hồi bộ nhớ]`). Giải quyết triệt để vấn đề mất ngữ cảnh khi tìm kiếm vector.
+### Giai đoạn 1: Chuẩn bị dữ liệu giáo trình, bóc tách và phân đoạn ngữ cảnh
+1. **Thu thập giáo trình chính thống:** Tuyển chọn và thẩm định các giáo trình chuẩn mực về C/C++, Python, Cấu trúc dữ liệu & Giải thuật và Cơ sở dữ liệu.
+2. **Bóc tách bố cục bằng MinerU:** Chuyển đổi toàn bộ tài liệu PDF sang Markdown chuẩn, bảo toàn cấu trúc phân cấp tiêu đề, các khối mã nguồn đa dòng và công thức toán học.
+3. **Làm sạch dữ liệu đa tầng:** Sử dụng bộ lọc biểu thức chính quy (Regex) loại bỏ số trang, tiêu đề đầu trang/chân trang lặp lại và chuẩn hóa bảng mã UTF-8.
+4. **Phân đoạn ngữ cảnh (Contextual Chunking):** Phân chia đoạn dựa trên ranh giới ngữ nghĩa (tiêu đề chương mục, ranh giới hàm/lớp), đồng thời bổ sung thông tin ngữ cảnh cấp cao (`section_path`, `source_file`, `language`) vào metadata của từng chunk để tránh hiện tượng mất ngữ cảnh khi tìm kiếm vector.
+
+### Giai đoạn 2: Tạo không gian Vector Dual-Collection và Kiểm định chất lượng truy xuất
+1. **Embedding và nạp dữ liệu ChromaDB:** Chuyển hóa toàn bộ kho tri thức thành **5.230 chunks** lưu trữ tại `data/09_chromadb`:
+   * Collection `qwen3_text`: 4.293 chunks văn bản lý thuyết (1024 chiều).
+   * Collection `jina_code`: 937 chunks mã nguồn và thuật toán (768 chiều).
+2. **Đo đạc Benchmark Ground Truth:** Xây dựng bộ 20 câu hỏi kiểm định canonical (`rag_eval_queries.json`) đối soát trực tiếp với ground truth ID chunk, kiểm thử song song 3 chiến lược truy vấn (Baseline RRF, Metadata Filtered, Lexical-Semantic Rescoring).
+3. **Đóng gói dịch vụ RAGService:** Tích hợp tính năng tự động nhận diện ngôn ngữ lập trình từ câu hỏi và tự động mở rộng truy vấn (Query Expansion).
+
+### Giai đoạn 3: Xây dựng Pipeline Đa phương thức và Module chống pha loãng truy vấn
+1. **Xử lý tệp mã nguồn (FileExtractor):** Tiếp nhận và bóc tách các tệp mã nguồn (`.py`, `.cpp`, `.sql`, `.java`), áp dụng cơ chế xác thực an toàn: chặn tấn công duyệt thư mục (Path Traversal), chặn tệp nhị phân giả mạo và giới hạn kích thước tối đa 5MB.
+2. **Xử lý hình ảnh lỗi Terminal (ImageExtractor):** Tiền xử lý kích thước (tối đa 1600px), cân bằng độ tương phản, áp dụng mô hình Vision để đọc chính xác font Monospace và trích xuất chuỗi Callstack lỗi từ ảnh chụp màn hình.
+3. **Kỹ thuật chống pha loãng truy vấn (QuerySynthesizer):**
+   * *Hiện tượng pha loãng (Query Dilution):* Khi sinh viên gửi đồng thời câu hỏi, file code 200 dòng và ảnh màn hình, việc nhồi toàn bộ văn bản vào vector search sẽ tạo ra độ nhiễu lớn từ các dòng log hệ thống và đường dẫn tệp.
+   * *Giải pháp:* Thuật toán rút trích trọng tâm: phân tách chính xác tên ngoại lệ (`IndexError`, `NullPointerException`, `Segmentation Fault`), vị trí hàm lỗi và ngôn ngữ lập trình để tạo thành câu truy vấn kỹ thuật tinh gọn trước khi gọi RAG.
+
+### Giai đoạn 4: Tích hợp Socratic Engine, Kiểm thử toàn diện và Đóng gói
+1. **Cấu hình Socratic Engine:** Tích hợp System Instruction chuẩn mực sư phạm vào mô hình Gemini 3 Flash, thiết lập fallback phản hồi cục bộ khi mất kết nối mạng.
+2. **Kiểm thử tự động hóa:** Xây dựng bộ 33 Unit Tests và 30 kịch bản tích hợp End-to-End kiểm tra toàn bộ luồng nghiệp vụ.
+3. **Đóng gói Docker Compose:** Hoàn thiện tệp `docker-compose.yml` tích hợp Backend, ChromaDB volume và Frontend, sẵn sàng khởi chạy đồng bộ.
 
 ---
 
-### GIAI ĐOẠN 2: VECTOR EMBEDDING, CHROMADB INGESTION & KIỂM ĐỊNH BENCHMARK 100% HIT@3 (NGÀY 05 – NGÀY 07)
-*Mục tiêu: Đưa tri thức vào không gian vector và đo kiểm toán học chất lượng tìm kiếm trước khi tích hợp vào AI.*
-* **1. Embedding Dual-Space trên Kaggle GPU & Ingestion ChromaDB (Ngày 05):**
-  * Thử nghiệm và đánh giá các mô hình embedding mã nguồn mở và thương mại.
-  * Chuyển hóa toàn bộ giáo trình thành **1.221 chunks tri thức chuẩn hóa** và lưu trữ vào Vector Database **ChromaDB**.
-  * Thiết lập hệ thống metadata đa chiều: `language`, `course`, `chapter`, `source_file`, `doc_type` phục vụ lọc kiến thức chính xác.
-* **2. Xây dựng Bộ Kiểm định Retrieval (Ground Truth Benchmark) (Ngày 06):**
-  * Thiết kế bộ 36 câu hỏi kiểm định thực tế và câu hỏi "bẫy" bao phủ toàn bộ các chủ đề lập trình.
-  * Xây dựng ma trận Ground Truth đối soát khắt khe từng câu hỏi với đúng ID chunk trong cơ sở dữ liệu.
-  * Tinh chỉnh thuật toán truy vấn, đạt chỉ số hoàn hảo: **100% Hit@3** (tri thức cần tìm luôn nằm trong top 3 kết quả) và **MRR (Mean Reciprocal Rank) = 0.94**.
-* **3. Đóng gói RAGService, Query Expansion & Bộ Unit Test tự động (Ngày 07):**
-  * Đóng gói dịch vụ `RAGService` độc lập với tính năng tự động phát hiện ngôn ngữ lập trình (Auto-detect Language) và tự động mở rộng truy vấn (Query Expansion).
-  * Viết bộ kiểm thử tự động xác minh toàn bộ hàm tìm kiếm vector chạy ổn định trong < 0.2s.
+# PHẦN 6: KẾT QUẢ THỰC NGHIỆM VÀ KIỂM CHỨNG CHẤT LƯỢNG (EVALUATION & VERIFICATION)
 
----
-
-### GIAI ĐOẠN 3: PHÁT TRIỂN PIPELINE ĐA PHƯƠNG THỨC & THUẬT TOÁN CHỐNG PHA LOÃNG TRUY VẤN (NGÀY 08 – NGÀY 10)
-*Mục tiêu: Cho phép hệ thống tiếp nhận cùng lúc Text + File Code + Ảnh Terminal mà không bị nhiễu ngữ cảnh.*
-* **1. Xây dựng File Extractor Engine an toàn (Ngày 08):**
-  * Xây dựng module tiếp nhận và bóc tách nội dung mã nguồn đa ngôn ngữ (`.py`, `.cpp`, `.sql`, `.java`, `.cs`).
-  * Tích hợp cơ chế phòng thủ bảo mật nghiêm ngặt: chặn tấn công Path Traversal, chặn tệp nhị phân giả mạo mã nguồn, giới hạn dung lượng và kiểm tra bảng mã ký tự.
-* **2. Xây dựng Image Extractor Engine & Vision OCR Terminal (Ngày 09):**
-  * Module tiền xử lý ảnh: chuẩn hóa kích thước, tăng cường độ tương phản và lọc nhiễu cho ảnh chụp màn hình máy tính/điện thoại.
-  * Sử dụng mô hình Vision AI chuyên dụng để bóc tách chính xác font chữ Monospace, trích xuất nguyên vẹn khối mã nguồn và các dòng Callstack lỗi trong Terminal.
-* **3. Đột phá nghiên cứu - Query Synthesizer (Chống pha loãng truy vấn) (Ngày 10):**
-  * *Vấn đề kỹ thuật:* Khi sinh viên vừa gửi câu hỏi, vừa gửi code dài, vừa gửi ảnh Terminal, vector search bị nhiễu bởi các đường dẫn file và log rác.
-  * *Giải pháp của nhóm:* Thiết kế thuật toán Query Synthesizer bóc tách trọng tâm: chỉ lấy **Tên ngoại lệ (Exception Name: `IndexError`, `NullPointerException`, `Segmentation Fault`)**, **Mã lỗi** và **Hàm logic bị sai** từ file code để tổng hợp thành một truy vấn kỹ thuật tinh gọn. Nhờ đó, RAG tìm trúng 100% bài học giáo trình liên quan mà không bị pha loãng.
-
----
-
-### GIAI ĐOẠN 4: THIẾT KẾ TRỢ GIẢNG SƯ PHẠM SOCRATIC, CONTAINER HÓA & KIỂM THỬ TOÀN DIỆN (NGÀY 11 – NGÀY 14)
-*Mục tiêu: Định hình phương pháp sư phạm cho AI, kiểm thử toàn diện 30 kịch bản thực tế và đóng gói triển khai On-Premise.*
-* **1. Prompt Engineering Sư phạm (Socratic Tutoring System) (Ngày 11):**
-  * Thiết kế bộ System Prompt chuẩn mực sư phạm: Cấm viết code sửa sẵn, bắt buộc phân tích nguyên nhân gốc rễ, đặt câu hỏi gợi mở để người học tự tư duy, và bắt buộc gắn thẻ trích dẫn giáo trình (Tên sách, Chương, Mục).
-* **2. Nâng cấp Mô hình Gemini 3 Flash & Cơ chế Tự phục hồi Đa tầng (Ngày 12):**
-  * Tích hợp mô hình thế hệ mới **Gemini 3 Flash** với độ trễ phản hồi cực thấp (< 2s) và khả năng suy luận logic xuất sắc.
-  * Xây dựng cơ chế tự phục hồi đa tầng (Multi-model Fallback: Gemini 3 Flash $\rightarrow$ Gemini 2.5 Flash $\rightarrow$ Gemini 1.5 Flash), đảm bảo hệ thống duy trì hoạt động 24/7 ngay cả khi một model gặp sự cố quota.
-* **3. Kiểm thử Tích hợp Toàn diện 30 Kịch bản Thực tế (Ngày 13):**
-  * Xây dựng và thực thi bộ kiểm thử E2E qua FastAPI TestClient bao phủ 30 tình huống thực tế của sinh viên:
-    * 10 kịch bản câu hỏi lý thuyết, độ phức tạp thuật toán và cú pháp.
-    * 10 kịch bản nộp tệp mã nguồn (.py, .cpp, .sql) chứa lỗi logic, rò rỉ bộ nhớ, đệ quy vô hạn.
-    * 10 kịch bản gửi ảnh chụp màn hình Terminal OCR chứa đủ loại lỗi ngoại lệ.
-  * **Kết quả:** Vượt qua **30/30 kịch bản thực tế (100% Pass)**.
-* **4. Đóng gói Docker Compose, Hướng dẫn 1-Click & Hoàn thiện Báo cáo (Ngày 14):**
-  * Chuẩn hóa `docker-compose.yml` tích hợp trọn gói Backend, ChromaDB volume và cấu hình môi trường, sẵn sàng triển khai On-Premise tại máy chủ trường.
-  * Biên soạn tài liệu khởi chạy nhanh `QUICKSTART_RAG_TUTOR.md` với tập lệnh 1-click `start_dev.bat` và hoàn thiện Báo cáo Kỹ thuật toàn diện 14 ngày.
-
----
-
-# PHẦN 5: CÔNG NGHỆ ĐƯỢC SỬ DỤNG CÓ HỢP LÝ KHÔNG? (BIỆN LUẬN CÔNG NGHỆ & TRADE-OFFS CHI TIẾT)
-
-Mọi công nghệ nhóm lựa chọn trong kiến trúc hệ thống đều được cân nhắc kỹ lưỡng dựa trên 3 tiêu chí: **Độ chính xác học thuật**, **Hiệu năng chịu tải cho sinh viên**, và **Tính khả thi về mặt chi phí trong trường học**.
-
-```
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                 MA TRẬN BIỆN LUẬN CÔNG NGHỆ CỦA DỰ ÁN                                  │
-├──────────────────────┬─────────────────────────────┬───────────────────────────┬───────────────────────┤
-│ THÀNH PHẦN KIẾN TRÚC │ CÔNG NGHỆ ĐƯỢC CHỌN         │ CÔNG NGHỆ THAY THẾ BỊ LOẠI│ LÝ DO LOẠI BỎ & ĐÁNH ĐỔI │
-├──────────────────────┼─────────────────────────────┼───────────────────────────┼───────────────────────┤
-│ 1. PDF Layout Parser │ MinerU (Vision Layout-LM)   │ PyPDF, PDFPlumber         │ PyPDF làm vỡ code & toán│
-│ 2. Vector Database   │ ChromaDB (Local In-process) │ Pinecone, Milvus Cluster  │ Pinecone đắt, Milvus nặng│
-│ 3. LLM & Vision OCR  │ Gemini 3 Flash (+ Fallback) │ GPT-4o, Llama-3 Local     │ GPT-4o đắt, Llama cần GPU│
-│ 4. Backend Engine    │ FastAPI (Asynchronous I/O)  │ Flask, Django Sync        │ Flask nghẽn khi chịu tải│
-│ 5. Đóng gói & Deploy │ Docker Compose On-Premise   │ Cloud SaaS công cộng      │ Cloud lộ đề thi nội bộ  │
-└──────────────────────┴─────────────────────────────┴───────────────────────────┴───────────────────────┘
-```
-
-### 1. Tại sao chọn MinerU (Layout-LM) thay vì PyPDF hay PDFPlumber?
-* **Thực nghiệm thất bại với công nghệ cũ:** Các thư viện truyền thống như `PyPDF`, `PDFPlumber`, `pypdf2` chỉ quét ký tự thô theo tọa độ x-y. Khi gặp giáo trình lập trình:
-  * Chúng làm gãy các dòng code thụt lề (indentation) - thứ sống còn của Python.
-  * Chúng làm biến dạng các bảng biểu phân tích độ phức tạp thuật toán và công thức toán học LaTeX.
-* **Ưu thế của MinerU:** MinerU sử dụng mô hình thị giác Layout-LM chuyên dụng bóc tách bố cục trang:
-  * Nhận diện chính xác 100% ranh giới khối mã nguồn (code block), bảo toàn toàn bộ ký tự trắng và dấu thụt lề.
-  * Tự động chuyển đổi công thức toán phức tạp sang cú pháp LaTeX chuẩn và giữ nguyên vẹn cấu trúc bảng biểu sang định dạng Markdown.
-
-### 2. Tại sao chọn ChromaDB thay vì Pinecone hay Milvus?
-* **Nhược điểm của Pinecone:** Là dịch vụ đám mây độc quyền đóng kín, tính phí theo tháng rất đắt đỏ, đòi hỏi gửi toàn bộ dữ liệu ra server nước ngoài (vi phạm bảo mật dữ liệu của trường), độ trễ mạng Internet cao.
-* **Nhược điểm của Milvus / ElasticSearch:** Quá cồng kềnh, tiêu tốn tối thiểu 8GB - 16GB RAM chỉ để duy trì cụm cluster, cấu hình phức tạp, không phù hợp để đóng gói gọn nhẹ cho nhà trường tự host.
-* **Ưu thế vượt trội của ChromaDB:**
-  * Mã nguồn mở hoàn toàn, nhúng trực tiếp (in-memory/embedded sqlite) hoặc chạy container siêu nhẹ (< 300MB RAM).
-  * Tốc độ truy xuất cực nhanh: **< 0.2 giây** cho tập 1.221 chunks tri thức.
-  * Hỗ trợ Metadata Filtering linh hoạt (lọc theo môn, theo chương, theo ngôn ngữ), hoàn toàn miễn phí và không phụ thuộc bất kỳ bên thứ ba nào.
-
-### 3. Tại sao chọn Gemini 3 Flash kết hợp Fallback đa tầng thay vì GPT-4o hay Llama 3 Local?
-* **Nhược điểm của GPT-4o / Claude 3.5 Sonnet:** Chi phí token quá cao. Một trường đại học với 2.000 sinh viên sử dụng hàng ngày sẽ tiêu tốn hàng nghìn USD tiền API mỗi tháng - một rào cản tài chính bất khả thi.
-* **Nhược điểm của Llama 3 chạy Local:** Đòi hỏi nhà trường phải đầu tư máy chủ trang bị dàn GPU khủng (Nvidia A100/H100 với VRAM 48GB-80GB, giá hàng trăm triệu đồng). Hơn nữa, khả năng đọc ảnh màn hình Terminal OCR của các mô hình Vision open-source cỡ nhỏ còn rất kém và chậm.
-* **Ưu thế của Gemini 3 Flash:**
-  * **Tốc độ siêu nhanh:** Thời gian suy luận dưới 2 giây, hỗ trợ cơ chế phản hồi theo luồng (Streaming).
-  * **Xử lý Vision OCR bản địa xuất sắc:** Nhận diện cực nét font chữ đơn cách (Monospace) trên ảnh chụp Terminal mờ hoặc ảnh chụp điện thoại.
-  * **Cửa sổ ngữ cảnh khổng lồ:** Lên tới 1 triệu tokens, cho phép nạp thoải mái cả file code lớn cùng nhiều chunks giáo trình mà không bị tràn bộ nhớ.
-  * **Chi phí cực thấp:** Tiết kiệm hơn 90% so với GPT-4o.
-* **Cơ chế tự phục hồi đa tầng (Multi-model Fallback Architecture):** Để giải quyết triệt để nỗi lo lỗi quota API, nhóm thiết kế kiến trúc tự động chuyển mạch:
-  $$\text{Gemini 3 Flash (Ưu tiên số 1)} \xrightarrow{\text{lỗi quota}} \text{Gemini 2.5 Flash} \xrightarrow{\text{lỗi}} \text{Gemini 1.5 Flash}$$
-  Nhờ đó, hệ thống đảm bảo duy trì độ sẵn sàng 99.9% cho sinh viên 24/7.
-
-### 4. Tại sao chọn FastAPI (Asyncio) + Redis thay vì Flask hay Django?
-* **Hạn chế của Flask/Django:** Hoạt động theo cơ chế đồng bộ (Synchronous I/O). Khi nhiều sinh viên cùng lúc tải ảnh Terminal lên để AI xử lý Vision OCR (mất khoảng 1-2 giây), toàn bộ luồng xử lý bị nghẽn (blocking), khiến các sinh viên khác phải chờ đợi rất lâu.
-* **Ưu thế của FastAPI:** Xây dựng trên nền tảng Starlette và Pydantic với cơ chế bất đồng bộ (Asynchronous `async/await`), cho phép một tiến trình xử lý hàng nghìn kết nối đồng thời mà không bị nghẽn I/O.
-* **Tích hợp Redis Caching:** Lưu trữ đệm các câu hỏi lý thuyết phổ biến, giúp trả kết quả tức thì (< 0.05 giây) mà không cần gọi lại LLM.
-
-### 5. Tại sao chọn Docker Compose On-Premise?
-* Cho phép toàn bộ hệ sinh thái (FastAPI Backend, ChromaDB, Redis, Frontend) được dựng lên chỉ bằng **1 lệnh duy nhất** (`docker compose up -d`).
-* **Bảo toàn dữ liệu nội bộ:** Ngân hàng đề thi, tài liệu giáo trình và thông tin học tập của sinh viên được lưu trữ 100% trong máy chủ của trường, không có bất kỳ dữ liệu nhạy cảm nào bị rò rỉ ra ngoài Internet.
-
----
-
-# PHẦN 6: SẢN PHẨM THỰC TẾ HOẠT ĐỘNG RA SAO? (LUỒNG VẬN HÀNH & KỊCH BẢN THỰC TẾ)
-
-### 1. Luồng vận hành End-to-End 5 bước của hệ thống:
-
-```
-[Sinh viên gửi: Câu hỏi + File Code (.cpp/.py) + Ảnh Terminal lỗi]
-                           │
-                           ▼
-[BƯỚC 1: Pipeline Đa phương thức: File Extractor + Vision OCR Terminal]
-                           │
-                           ▼
-[BƯỚC 2: Query Synthesizer: Trích xuất Exception Name + Hàm lỗi -> Tạo truy vấn tinh gọn]
-                           │
-                           ▼
-[BƯỚC 3: ChromaDB Retrieval: Truy xuất Top-3 chunks giáo trình chính xác theo môn/ngôn ngữ]
-                           │
-                           ▼
-[BƯỚC 4: Gemini 3 Flash Socratic Engine: Kết hợp Ngữ cảnh RAG + System Prompt Sư phạm]
-                           │
-                           ▼
-[BƯỚC 5: Trả về giao diện: Gợi ý tư duy từng bước + Thẻ trích dẫn Giáo trình/Chương/Mục]
-```
-
-### 2. Ba kịch bản thực tế vận hành chuẩn mực (Đã kiểm thử E2E 100% Pass):
-
-#### Kịch bản 1: Câu hỏi lý thuyết & phân tích độ phức tạp thuật toán (Text Only)
-* **Đầu vào sinh viên:** Nhập câu hỏi: *"Tại sao thuật toán QuickSort có trường hợp xấu nhất là O(n^2) và người ta khắc phục điều đó như thế nào?"*
-* **Xử lý hệ thống:** RAG truy xuất chính xác chunk tri thức trong Giáo trình Cấu trúc dữ liệu & Giải thuật về giải thuật phân hoạch Lomuto/Hoare.
-* **Phản hồi của AI:** AI giải thích hiện tượng chọn Pivot lệch khi mảng đã sắp xếp sẵn, và gợi ý người học tìm hiểu kỹ thuật chọn chốt trung vị của 3 phần tử (Median-of-Three). Kèm thẻ trích dẫn giáo trình rõ ràng.
-
-#### Kịch bản 2: Bắt lỗi rò rỉ bộ nhớ con trỏ C++ (Source Code Attachment)
-* **Đầu vào sinh viên:** Tải lên tệp `leak.cpp` chứa đoạn mã cấp phát động `new int[100]` nhưng kết thúc hàm không gọi `delete[]`.
-* **Xử lý hệ thống:** File Extractor bóc tách AST, phát hiện hàm `processData()` có lệnh cấp phát `new` nhưng thiếu `delete[]`.
-* **Phản hồi của AI (Chuẩn Socratic):** AI **không sửa code hộ**, mà hỏi gợi mở:
-  > *"Bạn hãy quan sát dòng 5 nơi mảng động `int* arr` được cấp phát trên vùng nhớ Heap. Khi hàm `processData()` kết thúc, vùng nhớ này đã được thu hồi chưa? Nếu chương trình chạy lặp lại 1.000 lần thì điều gì sẽ xảy ra với bộ nhớ RAM?"*
-  Kèm thẻ trích dẫn: `[Giáo trình C++ | Chương 4: Con trỏ và Quản lý bộ nhớ]`.
-
-#### Kịch bản 3: Xử lý ảnh chụp màn hình Terminal OCR lỗi `IndexError` (Vision OCR)
-* **Đầu vào sinh viên:** Chụp ảnh màn hình Terminal báo lỗi: `IndexError: list index out of range` ở dòng 14 trong vòng lặp `for i in range(len(arr) + 1)`.
-* **Xử lý hệ thống:**
-  * Vision OCR đọc chính xác stack trace từ ảnh.
-  * Query Synthesizer trích xuất Exception `IndexError` và điều kiện biên `len(arr) + 1`.
-* **Phản hồi của AI:** AI giải thích: *"Trong Python, chỉ số mảng bắt đầu từ 0 đến len(arr) - 1. Khi bạn duyệt tới len(arr) + 1 thì điều gì sẽ xảy ra ở phần tử cuối cùng?"* $\rightarrow$ Hướng dẫn sinh viên tự sửa `range(len(arr))`.
-
----
-
-# PHẦN 7: KẾT QUẢ ĐẠT ĐƯỢC CÓ ĐƯỢC KIỂM CHỨNG KHÔNG? (ĐỐI SOÁT ĐỊNH LƯỢNG & METRICS)
-
-Toàn bộ kết quả của dự án đều được đo lường minh bạch bằng các **chỉ số toán học định lượng** và **bộ kiểm thử tự động hóa**:
+Hệ thống được đánh giá khách quan thông qua hai bộ số liệu thực nghiệm: **Kiểm định chất lượng truy xuất RAG** và **Kiểm thử tự động hóa toàn trình (Automated Testing)**.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                              BẢNG TỔNG HỢP KIỂM CHỨNG HỆ THỐNG                         │
+│                              BẢNG TỔNG HỢP SỐ LIỆU THỰC NGHIỆM                         │
 ├──────────────────────────────────┬──────────────────────┬──────────────────────────────┤
-│ HẠNG MỤC ĐO LƯỜNG                │ KẾT QUẢ ĐẠT ĐƯỢC     │ Ý NGHĨA KỸ THUẬT             │
+│ CHỈ SỐ ĐO LƯỜNG                  │ KẾT QUẢ XÁC MINH     │ CĂN CỨ VÀ PHƯƠNG PHÁP ĐO     │
 ├──────────────────────────────────┼──────────────────────┼──────────────────────────────┤
-│ 1. Kho tri thức chuẩn hóa        │ 1.221 Chunks tri thức│ Bóc tách SOTA bằng MinerU    │
-│ 2. Tỷ lệ chính xác Retrieval     │ 100% Hit@3           │ Tài liệu đúng luôn nằm Top 3 │
-│ 3. Chỉ số Mean Reciprocal Rank   │ MRR = 0.94 / 1.00    │ Đa số tài liệu nằm vị trí 1  │
-│ 4. Unit Tests tự động            │ 33 / 33 PASSED (100%)│ Kiểm tra bảo mật & module    │
-│ 5. End-to-End Scenarios Tests    │ 30 / 30 PASSED (100%)│ 10 Text + 10 Code + 10 OCR   │
-│ 6. Thời gian tìm kiếm Vector     │ < 0.2 giây           │ Truy vấn ChromaDB siêu tốc   │
-│ 7. Thời gian phản hồi toàn trình │ < 2.5 giây           │ Kèm cả OCR và LLM Streaming  │
+│ 1. Quy mô cơ sở dữ liệu Vector   │ 5.230 chunks vector  │ data/09_chromadb             │
+│    - qwen3_text (Văn bản lý thuyết)│ 4.293 chunks (1024-d)│ Qwen/Qwen3-Embedding-0.6B    │
+│    - jina_code (Mã nguồn/thuật toán)│ 937 chunks (768-d)   │ jina-embeddings-v2-base-code │
+│ 2. Retrieval Hit Rate@3          │ 100.00% (20/20 câu)  │ reports/rag_evaluation_day6  │
+│ 3. Retrieval Hit Rate@1          │ 80.00% (16/20 câu)   │ reports/rag_evaluation_day6  │
+│ 4. Mean Reciprocal Rank (MRR@5)  │ 0.8833               │ reports/rag_evaluation_day6  │
+│ 5. Độ trễ trung bình truy xuất   │ ~160 ms / truy vấn   │ Đo đạc trên môi trường local │
+│ 6. Unit Tests tự động            │ 33 / 33 PASSED (100%)│ tests/test_rag, file, image  │
+│ 7. End-to-End Integration Tests  │ 30 / 30 PASSED (100%)│ tests/test_day13_e2e         │
+│ 8. Tổng số kịch bản kiểm thử     │ 63 / 63 PASSED (100%)│ Thực thi qua Pytest          │
 └──────────────────────────────────┴──────────────────────┴──────────────────────────────┘
 ```
 
-### 1. Bộ kiểm định Retrieval trên 36 câu hỏi Benchmark (Ground Truth đối soát)
-* Nhóm xây dựng ma trận kiểm định gồm **36 câu hỏi thực tế và câu hỏi "bẫy"** bao phủ toàn bộ giáo trình.
-* Mỗi câu hỏi được gán cứng Ground Truth (ID chunk chuẩn cần tìm).
-* **Kết quả thực nghiệm:** Đạt **100% Hit@3** (100% câu hỏi đều tìm thấy tài liệu chuẩn trong 3 kết quả đầu tiên) và **MRR = 0.94**, chứng minh kho tri thức RAG hoạt động chính xác tuyệt đối.
+### 6.1. Chi tiết kiểm định chất lượng RAG Retrieval (DoD Milestone 1)
+* **Tập dữ liệu đánh giá:** 20 câu hỏi kiểm chuẩn (`rag_eval_queries.json`) phân bổ đều trên 4 nhóm năng lực lập trình:
+  * `theory` (5 câu): Khái niệm hướng đối tượng, quy chuẩn PEP 8, tính bất biến của dữ liệu.
+  * `code` (5 câu): Cú pháp giải thuật, đệ quy, quản lý tài nguyên.
+  * `api` (5 câu): Thư viện chuẩn, hàm tích hợp sẵn, xử lý dữ liệu.
+  * `hybrid` (5 câu): Tích hợp lý thuyết và mã nguồn phức hợp.
+* **Kết quả đo lường:**
+  * **Hit Rate@3 = 100.00%:** Trong toàn bộ 20 câu hỏi kiểm định, tài liệu tham chiếu chuẩn xác đều xuất hiện trong Top 3 kết quả tìm kiếm.
+  * **Hit Rate@1 = 80.00%:** Có 16/20 câu hỏi tìm thấy tài liệu đúng ngay ở vị trí xếp hạng đầu tiên.
+  * **MRR@5 = 0.8833:** Điểm xếp hạng nghịch đảo trung bình đạt mức cao, phản ánh độ chính xác của thuật toán RRF trong việc đưa tài liệu phù hợp lên đầu.
 
-### 2. Bộ kiểm thử tự động hóa 63 bài test Pytest (Automated Test Suite)
-* **33 Unit Tests:** Kiểm tra tính năng bóc tách file an toàn, phòng chống Path Traversal, kiểm tra giới hạn dung lượng ảnh, kiểm tra thuật toán Query Synthesizer và RAGService.
-* **30 End-to-End Scenarios Tests:** Mô phỏng 30 tình huống thực tế sinh viên gửi yêu cầu qua FastAPI TestClient:
-  * 10 kịch bản câu hỏi lý thuyết, độ phức tạp thuật toán và cú pháp.
-  * 10 kịch bản nộp tệp mã nguồn (.py, .cpp, .sql) chứa lỗi logic, rò rỉ bộ nhớ, đệ quy vô hạn.
-  * 10 kịch bản gửi ảnh chụp màn hình Terminal OCR chứa đủ loại lỗi ngoại lệ.
-* **Toàn bộ 63/63 tests đều vượt qua thành công (100% Pass).**
+### 6.2. Kết quả bộ kiểm thử tự động hóa (63 bài test Pytest)
+* **Bộ 33 Unit Tests (Thực thi trong ~4.1s):**
+  * `test_rag_service.py` (9 tests): Kiểm tra khởi tạo 5.230 vectors, tìm kiếm RRF, lọc metadata, fallback câu hỏi mới.
+  * `test_file_extractor.py` (8 tests): Kiểm tra bóc tách đa ngôn ngữ, giới hạn 5MB, ngăn chặn Path Traversal, chặn tệp giả mạo.
+  * `test_image_extractor.py` (8 tests): Kiểm tra nhận diện định dạng ảnh, tiền xử lý kích thước, OCR trích xuất lỗi terminal.
+  * `test_query_synthesizer.py` (8 tests): Kiểm tra cơ chế chống pha loãng truy vấn, nhận diện ngôn ngữ, cấu trúc payload hợp nhất.
+* **Bộ 30 End-to-End Scenarios Tests (Thực thi trong ~30.5s):**
+  * 10 kịch bản câu hỏi lý thuyết thuật toán và cú pháp thuần văn bản.
+  * 10 kịch bản gửi kèm mã nguồn lỗi thực tế (Memory leak C++, đệ quy vô hạn, SQL injection, off-by-one).
+  * 10 kịch bản gửi ảnh chụp màn hình terminal chứa lỗi runtime (`IndexError`, `ZeroDivisionError`, `Segmentation Fault`).
+* **Tổng kết:** **63/63 bài kiểm thử đạt 100%**, xác nhận tính ổn định của toàn bộ luồng xử lý từ tiếp nhận dữ liệu đến sinh kết quả.
 
-### 3. Đánh giá tính chuẩn mực Sư phạm (Pedagogical Compliance)
-* 100% các câu trả lời sinh ra đều tuân thủ nghiêm ngặt nguyên tắc Socratic: **Không bao giờ viết code sửa sẵn**, luôn đặt câu hỏi gợi mở tư duy và **luôn hiển thị thẻ trích dẫn giáo trình chính thống**.
+### 6.3. Minh chứng 3 kịch bản vận hành thực tế
+1. **Kịch bản 1 (Lý thuyết):** Sinh viên hỏi: *"Tại sao QuickSort có trường hợp xấu nhất $O(n^2)$?"* $\rightarrow$ Hệ thống trích xuất giáo trình Cấu trúc dữ liệu & Giải thuật, giải thích hiện tượng chọn Pivot lệch và gợi ý sinh viên tìm hiểu kỹ thuật chọn chốt trung vị của 3 phần tử (Median-of-Three).
+2. **Kịch bản 2 (Đính kèm mã nguồn C++):** Sinh viên nộp tệp mã nguồn cấp phát mảng động `new int[100]` nhưng không gọi `delete[]`. $\rightarrow$ Hệ thống nhận diện hàm xử lý bộ nhớ, không sửa code hộ mà đặt câu hỏi gợi ý sinh viên kiểm tra việc thu hồi vùng nhớ Heap trước khi kết thúc hàm.
+3. **Kịch bản 3 (Đính kèm ảnh Terminal OCR):** Sinh viên gửi ảnh chụp màn hình lỗi `IndexError: list index out of range`. $\rightarrow$ Hệ thống nhận diện exception, đối chiếu giáo trình Python và hướng dẫn sinh viên kiểm tra điều kiện biên của vòng lặp duyệt mảng.
 
 ---
 
-# PHẦN 8: DỰ ÁN CÓ HẠN CHẾ GÌ VÀ HƯỚNG PHÁT TRIỂN RA SAO? (ĐÁNH GIÁ KHÁCH QUAN & LỘ TRÌNH)
+# PHẦN 7: HIỆN TRẠNG TRIỂN KHAI, HẠN CHẾ VÀ HƯỚNG PHÁT TRIỂN (STATUS, LIMITATIONS & ROADMAP)
 
-### 1. Ba hạn chế thực tế hiện tại của hệ thống:
-* **Hạn chế 1 (Chất lượng ảnh đầu vào chụp từ điện thoại):** Nếu sinh viên chụp ảnh màn hình bằng điện thoại ở góc quá nghiêng (méo hình học 3D), bị lóa sáng đèn trần hoặc rung tay mờ nét, độ chính xác nhận diện ký tự OCR có thể giảm, đòi hỏi sinh viên phải nhập thêm text bổ trợ.
-* **Hạn chế 2 (Phạm vi môn học):** Hiện tại hệ thống mới tập trung xây dựng kho tri thức cho 4 môn nền tảng (C++, Python, CTDL&GT, CSDL), chưa bao phủ toàn bộ các môn chuyên ngành năm 3-4 (Mạng máy tính, Hệ điều hành, Trí tuệ nhân tạo).
-* **Hạn chế 3 (Môi trường thực thi code trực tiếp):** Chưa tích hợp trình biên dịch sandbox chạy code trực tiếp trên web (Code Runner / Online Judge) để sinh viên bấm nút test code ngay tại chỗ sau khi được AI gợi ý.
+Để đảm bảo tính trung thực học thuật trước Hội đồng, các tính năng được phân định rõ ràng giữa **kết quả đã hoàn thành**, **thành phần đang phát triển (UI Prototype)** và **định hướng tương lai**:
 
-### 2. Hướng phát triển trong tương lai (Lộ trình mở rộng):
-* **Ngắn hạn (3 – 6 tháng tới):**
-  * **Tích hợp WebAssembly / Docker Sandbox:** Cho phép sinh viên bấm nút "Chạy thử code" an toàn ngay trong khung chat để đối soát kết quả theo thời gian thực mà không sợ mã độc phá hoại máy chủ.
-  * **Hoàn thiện Giao diện Web Dashboard cho Giảng viên:** Cung cấp biểu đồ nhiệt trực quan (Error Heatmap) hiển thị tỷ lệ lỗi của cả lớp theo tuần, kèm công cụ 1-click để thầy cô khóa/mở tài liệu theo tiến độ giảng dạy.
-* **Dài hạn (6 – 12 tháng tới):**
-  * **Mở rộng kho tri thức toàn bộ khóa học:** Nạp toàn bộ giáo trình các môn chuyên ngành của Khoa CNTT.
-  * **Tính năng Auto-Ingestion:** Cho phép Giảng viên chỉ cần kéo thả Slide bài giảng PPTX hoặc PDF mới lên là hệ thống tự động bóc tách MinerU và cập nhật vào ChromaDB trong vòng 3 phút.
-  * **Tích hợp sâu vào hệ thống LMS:** Kết nối API đồng bộ dữ liệu với Moodle, Canvas hoặc Blackboard của nhà trường.
+### 7.1. Bảng phân loại trạng thái triển khai tính năng thực tế
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                 BẢNG ĐỐI CHIẾU TRẠNG THÁI TRIỂN KHAI TÍNH NĂNG                         │
+├───────────────────────────────┬────────────────────────────┬───────────────────────────────────────────┤
+│ TÍNH NĂNG                     │ TRẠNG THÁI TRIỂN KHAI      │ MÔ TẢ HIỆN TRẠNG TRONG MÃ NGUỒN           │
+├───────────────────────────────┼────────────────────────────┼───────────────────────────────────────────┤
+│ 1. Multimodal RAG Engine      │ ✅ ĐÃ HOÀN THÀNH           │ 5.230 vectors, Dual-Collection RRF        │
+│ 2. Socratic Prompting & LLM   │ ✅ ĐÃ HOÀN THÀNH           │ Gemini 3 Flash + Socratic System Prompt   │
+│ 3. File & Image OCR Extractor │ ✅ ĐÃ HOÀN THÀNH           │ Bóc tách code an toàn + Vision OCR        │
+│ 4. Query Synthesizer          │ ✅ ĐÃ HOÀN THÀNH           │ Trích xuất lỗi, chống pha loãng ngữ cảnh  │
+│ 5. Kiểm thử tự động Pytest    │ ✅ ĐÃ HOÀN THÀNH           │ 63/63 tests passed (33 unit + 30 e2e)     │
+│ 6. Đóng gói Docker Compose    │ ✅ ĐÃ HOÀN THÀNH           │ docker-compose.yml chạy đồng bộ services  │
+│ 7. Giao diện Chat Sinh viên   │ ✅ ĐÃ HOÀN THÀNH           │ Next.js kết nối đầy đủ API Chat/Multimodal│
+├───────────────────────────────┼────────────────────────────┼───────────────────────────────────────────┤
+│ 8. Instructor Dashboard       │ 🟡 ĐANG PHÁT TRIỂN         │ Đã có giao diện mẫu (UI Prototype React),  │
+│                               │    (GIAO DIỆN MẪU / DEMO)  │ chưa có API tổng hợp dữ liệu từ PostgreSQL│
+│ 9. Classroom Error Heatmap    │ 🟡 ĐANG PHÁT TRIỂN         │ Bản đồ nhiệt hiển thị dữ liệu giả lập,    │
+│                               │    (GIAO DIỆN MẪU / DEMO)  │ Backend chưa có schema lưu trữ log lỗi    │
+│ 10. Metadata Filter theo Ngôn ngữ│ ✅ ĐÃ HOÀN THÀNH        │ Lọc metadata `language` trong ChromaDB    │
+│ 11. Khóa tài liệu theo Tuần học │ 🔵 ĐỊNH HƯỚNG PHÁT TRIỂN  │ Chưa có trường `week` trong metadata,     │
+│                               │    (ROADMAP)               │ đề xuất mở rộng từ bộ lọc `section_path`  │
+│ 12. Sandbox chạy code trực tiếp│ 🔵 ĐỊNH HƯỚNG PHÁT TRIỂN  │ Chưa có container sandbox thực thi mã     │
+│                               │    (ROADMAP)               │ sinh viên an toàn trên backend            │
+│ 13. Phân quyền Người dùng RBAC │ 🔵 ĐỊNH HƯỚNG PHÁT TRIỂN  │ Chưa triển khai hệ thống xác thực JWT     │
+│                               │    (ROADMAP)               │ và phân quyền Student/Instructor/Admin    │
+└───────────────────────────────┴────────────────────────────┴───────────────────────────────────────────┘
+```
+
+### 7.2. Các hạn chế kỹ thuật hiện tại
+* **1. Phụ thuộc vào Cloud API cho tầng sinh ngôn ngữ:** Mặc dù kho tri thức vector và toàn bộ pipeline tiền xử lý chạy cục bộ, bước sinh câu trả lời vẫn phụ thuộc vào Google Gemini API. Do đó, hệ thống yêu cầu kết nối Internet cho backend và dữ liệu câu hỏi được truyền ra ngoài máy chủ nội bộ.
+* **2. Chất lượng OCR đối với ảnh chụp thực tế phức tạp:** Mô hình Vision OCR hoạt động tối ưu với ảnh chụp màn hình máy tính (screenshot rõ nét). Đối với ảnh chụp từ điện thoại bị nghiêng góc 3D, lóa ánh sáng đèn hoặc mờ nét chữ, độ chính xác nhận diện ký tự đặc biệt trong mã nguồn có thể suy giảm.
+* **3. Chưa có môi trường thực thi mã nguồn an toàn (Execution Sandbox):** Hệ thống hiện phân tích lỗi dựa trên kỹ thuật bóc tách tĩnh (Static Analysis) và suy luận của LLM, chưa tích hợp máy chủ chấm bài hoặc môi trường cô lập để biên dịch và chạy thử mã nguồn thực tế của sinh viên.
+* **4. Phạm vi ngữ liệu giáo trình:** Dữ liệu hiện tập trung vào 4 học phần lập trình cơ sở của 2 năm đầu, chưa mở rộng ra toàn bộ chương trình đào tạo chuyên ngành.
+
+### 7.3. Hướng phát triển trong tương lai
+* **Triển khai mô hình ngôn ngữ On-Premise hoàn toàn:** Nghiên cứu tích hợp các mô hình mã nguồn mở chuyên biệt cho lập trình (như Qwen2.5-Coder hoặc Llama-3-Instruct) vận hành cục bộ thông qua vLLM trên máy chủ của trường, loại bỏ hoàn toàn việc gửi dữ liệu ra API bên thứ ba.
+* **Tích hợp Backend Execution Sandbox:** Xây dựng môi trường Docker/gVisor sandbox cô lập để hỗ trợ sinh viên bấm nút chạy thử code trực tiếp và nhận kết quả kiểm thử ngay trên giao diện web.
+* **Hoàn thiện hệ thống Quản lý Đào tạo (LMS Integration & Error Analytics):**
+  * Xây dựng cơ sở dữ liệu PostgreSQL lưu trữ lịch sử tương tác và nhật ký lỗi của từng sinh viên.
+  * Hiện thực hóa API tính toán bản đồ nhiệt lỗ hổng kiến thức (Classroom Error Heatmap) theo thời gian thực để hỗ trợ giảng viên theo dõi tiến độ học tập của lớp.
+  * Bổ sung trường `syllabus_week` vào metadata vector để hỗ trợ giảng viên khóa và mở tài liệu chính xác theo tuần học.
+  * Tích hợp chuẩn LTI (Learning Tools Interoperability) để kết nối đồng bộ với hệ thống LMS Moodle hoặc Canvas của nhà trường.
+
+---
+
+# PHẦN 8: KẾT LUẬN & ĐÓNG GÓP CỦA ĐỒ ÁN
+
+### 8.1. Các kết quả chính đã đạt được
+1. **Xây dựng hoàn chỉnh Pipeline RAG chuyên biệt cho giáo dục lập trình:** Thu thập, làm sạch và phân đoạn chuẩn hóa kho tài liệu giáo trình đại học thành 5.230 chunks vector đa không gian (Qwen3-Embedding & Jina-Code), đạt tỷ lệ truy xuất **100% Hit@3** trên bộ kiểm chuẩn 20 câu hỏi canonical.
+2. **Hiện thực hóa Phương pháp Sư phạm Socratic:** Thiết lập thành công cơ chế trợ giảng định hướng tư duy, kiên quyết không làm bài hộ, giúp sinh viên nâng cao năng lực tự học và tự gỡ lỗi.
+3. **Giải quyết bài toán đầu vào đa phương thức:** Xây dựng module trích xuất mã nguồn bảo mật kết hợp Vision OCR và thuật toán Query Synthesizer chống pha loãng truy vấn.
+4. **Kiểm chứng kỹ thuật nghiêm ngặt:** Toàn bộ hệ thống vượt qua **63/63 bài kiểm thử tự động (100% Pass)** và được đóng gói hoàn chỉnh bằng Docker Compose sẵn sàng triển khai.
+
+### 8.2. Ý nghĩa thực tiễn
+Đề tài cung cấp một giải pháp công nghệ giáo dục (EdTech) có tính ứng dụng cao, góp phần giải quyết mâu thuẫn giữa xu thế ứng dụng AI tạo sinh và yêu cầu giữ vững chất lượng đào tạo, rèn luyện tư duy độc lập cho sinh viên ngành Công nghệ Thông tin.

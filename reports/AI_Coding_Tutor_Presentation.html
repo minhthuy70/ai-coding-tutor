@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Coding Tutor • Motion Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #080c14;
+      --bg-card: rgba(26, 34, 52, 0.7);
+      --border-card: rgba(45, 58, 88, 0.6);
+      --text-white: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-body: #cbd5e1;
+      --cyan: #06b6d4;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --violet: #8b5cf6;
+      --rose: #f43f5e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Video-like ambient mesh background */
+    .ambient-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.25;
+      animation: floatMotion 20s infinite alternate ease-in-out;
+    }
+    .blob-1 {
+      top: -10%;
+      left: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    }
+    .blob-2 {
+      bottom: -15%;
+      right: -10%;
+      width: 55vw;
+      height: 55vw;
+      background: linear-gradient(135deg, #8b5cf6, #ec4899);
+      animation-delay: -7s;
+    }
+    .blob-3 {
+      top: 30%;
+      left: 40%;
+      width: 35vw;
+      height: 35vw;
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      animation-delay: -14s;
+    }
+
+    @keyframes floatMotion {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(80px, 60px) scale(1.1); }
+      100% { transform: translate(-60px, -40px) scale(0.95); }
+    }
+
+    /* Top Progress Bar */
+    .progress-bar-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      z-index: 100;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #06b6d4, #10b981, #8b5cf6);
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Main Stage */
+    .stage {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 60px 80px 60px;
+    }
+
+    .slide-viewport {
+      width: 100%;
+      max-width: 1400px;
+      height: 100%;
+      max-height: 820px;
+      position: relative;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transform: scale(0.96) translateY(20px);
+      pointer-events: none;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Header styling */
+    .slide-header {
+      margin-bottom: 24px;
+    }
+    .category-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .slide-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-white);
+      line-height: 1.2;
+    }
+    .slide-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* Card Layouts */
+    .slide-content {
+      flex: 1;
+      display: flex;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(6, 182, 212, 0.5);
+    }
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--card-accent, var(--cyan));
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+    .card-badge {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--card-accent, var(--cyan));
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .card-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .card-list li {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--text-body);
+      position: relative;
+      padding-left: 20px;
+    }
+    .card-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--card-accent, var(--cyan));
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    /* Stat Cards */
+    .stat-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .stat-card {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      backdrop-filter: blur(16px);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+    .stat-val {
+      font-size: 2.5rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--stat-col, var(--emerald));
+      line-height: 1.1;
+    }
+    .stat-lbl {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-top: 6px;
+    }
+    .stat-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* 4-Step Process layout */
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      backdrop-filter: blur(16px);
+      border-radius: 18px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .step-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--step-color, var(--cyan));
+      margin-bottom: 12px;
+    }
+    .step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 10px;
+    }
+    .step-desc {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+
+    /* Hero Slide */
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      padding: 40px;
+      background: radial-gradient(circle at center, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+      border-radius: 28px;
+      border: 1px solid rgba(6, 182, 212, 0.25);
+    }
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #ffffff 40%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .hero-sub {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--emerald);
+      margin-bottom: 28px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .tag-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #c4b5fd;
+    }
+
+    /* Bottom Control Bar */
+    .control-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 100;
+    }
+
+    .brand-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .dot-live {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 0.4; transform: scale(0.9); }
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-white);
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-nav:hover {
+      background: rgba(6, 182, 212, 0.2);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .btn-nav.active {
+      background: var(--cyan);
+      color: #0b0f19;
+      border-color: var(--cyan);
+    }
+
+    .counter-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--cyan);
+      padding: 0 12px;
+    }
+
+    /* Slide Thumbnails Drawer */
+    .drawer {
+      position: absolute;
+      bottom: 64px;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 16px 30px;
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      z-index: 90;
+      transform: translateY(100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .drawer.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .thumb-item {
+      flex: 0 0 160px;
+      height: 90px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 10px;
+      padding: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+    .thumb-item:hover, .thumb-item.active {
+      border-color: var(--cyan);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+      transform: scale(1.04);
+    }
+    .thumb-num {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--cyan);
+    }
+    .thumb-title {
+      font-size: 0.75rem;
+      color: var(--text-white);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Moving Blobs -->
+  <div class="ambient-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Stage -->
+  <div class="stage">
+    <div class="slide-viewport" id="slideViewport">
+      <!-- Slides dynamically rendered here -->
+    </div>
+  </div>
+
+  <!-- Thumbnails Drawer -->
+  <div class="drawer" id="drawer">
+    <!-- Thumbnails dynamically rendered -->
+  </div>
+
+  <!-- Bottom Control Bar -->
+  <div class="control-bar">
+    <div class="brand-indicator">
+      <div class="dot-live"></div>
+      <span>AI-Powered Coding Tutor • Đồ án Tốt nghiệp 2026</span>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn-nav" id="btnPrev" title="Phím Mũi Tên Trái">◀ Trước</button>
+      <div class="counter-display" id="counterDisplay">01 / 34</div>
+      <button class="btn-nav" id="btnNext" title="Phím Mũi Tên Phải / Space">Sau ▶</button>
+      <button class="btn-nav" id="btnAutoplay" title="Chế độ Tự động Chạy Như Video (Phím P)">▶ Auto-Play (Video)</button>
+      <button class="btn-nav" id="btnDrawer" title="Danh sách 34 Slides (Phím M)">☰ Slides</button>
+      <button class="btn-nav" id="btnFullscreen" title="Toàn Màn Hình (Phím F)">⛶ Toàn màn hình</button>
+    </div>
+  </div>
+
+  <script>
+    const slidesData = [{"id": 1, "category": "BÁO CÁO THUYẾT TRÌNH BẢO VỆ ĐỒ ÁN TỐT NGHIỆP", "title": "AI-POWERED CODING TUTOR", "subtitle": "Hệ thống Trợ giảng Lập trình Thông minh ứng dụng RAG và AI Đa phương thức", "layout": "hero", "badge": "EDTECH & AI 2026", "accent": "#06B6D4", "meta": ["Sinh viên thực hiện: Nhóm Đồ án Tốt nghiệp CNTT", "Giảng viên hướng dẫn: Hội đồng Đánh giá & Phản biện", "Chuyên ngành: Kỹ thuật Phần mềm & Trí tuệ Nhân tạo", "Năm bảo vệ: 2026"], "tags": ["Gemini 3 Flash", "Multimodal RAG", "Socratic Method", "ChromaDB (5.230 Chunks)", "Docker Compose"]}, {"id": 2, "category": "TỔNG QUAN", "title": "Mục lục Báo cáo Thuyết trình (Agenda)", "subtitle": "Lộ trình 8 chuyên đề báo cáo bảo vệ trước Hội đồng", "layout": "two_cards", "accent": "#10B981", "card1": {"title": "KHỐI 1: TỔNG QUAN & NGUYÊN LÝ SƯ PHẠM", "badge": "MỤC 1 - 4", "accent": "#06B6D4", "items": ["Phần 1: Tổng quan & Tính cấp thiết đề tài", "Phần 2: Mục tiêu & Đối tượng sử dụng hệ thống", "Phần 3: Nguyên lý & Điểm khác biệt so với AI khác", "Phần 4: Kiến trúc hệ thống & Biện luận công nghệ"]}, "card2": {"title": "KHỐI 2: THỰC NGHIỆM & ĐÁNH GIÁ KỸ THUẬT", "badge": "MỤC 5 - 8", "accent": "#10B981", "items": ["Phần 5: Quy trình R&D 4 giai đoạn kỹ thuật bài bản", "Phần 6: Kết quả thực nghiệm & Kiểm chứng chất lượng", "Phần 7: Hiện trạng triển khai, Hạn chế & Lộ trình", "Phần 8: Kết luận & Đóng góp cốt lõi của đề tài"]}}, {"id": 3, "category": "PHẦN 1 • TÍNH CẤP THIẾT", "title": "Bối cảnh Đào tạo & Khó khăn khi Tự học Lập trình", "subtitle": "Rào cản gỡ lỗi (The Debugging Barrier) của sinh viên năm 1-2", "layout": "three_cards", "accent": "#F43F5E", "card1": {"title": "Độ dốc học tập lớn", "badge": "ĐẶC THÙ", "accent": "#06B6D4", "items": ["Các môn cơ sở (C/C++, Python, CTDL&GT) mang tính quyết định tư duy.", "Nhiều khái niệm trừu tượng: con trỏ, heap/stack, cấp phát động, đệ quy.", "Khó hình dung luồng thực thi trong bộ nhớ khi mới bắt đầu."]}, "card2": {"title": "Rào cản gỡ lỗi (Debugging)", "badge": "BẾ TẮC", "accent": "#F43F5E", "items": ["Làm bài tập ở nhà lúc nửa đêm thường gặp lỗi runtime kinh điển.", "Lỗi vô hình: Segmentation Fault, Memory Leak, IndexError.", "Không có giảng viên hay trợ giảng túc trực để hỗ trợ tức thời."]}, "card3": {"title": "Hệ quả đào tạo", "badge": "HỆ LỤY", "accent": "#F59E0B", "items": ["Mất hàng giờ bế tắc trước các thông báo lỗi tiếng Anh trừu tượng.", "Dẫn đến tâm lý chán nản, sợ viết mã nguồn và ngại thực hành.", "Tỷ lệ rớt môn lập trình cơ sở tại các trường luôn ở mức cao."]}}, {"id": 4, "category": "PHẦN 1 • TÍNH CẤP THIẾT", "title": "Mặt trái của AI Tạo sinh: Vấn đề 'Mớm Code / Giải Hộ'", "subtitle": "Hệ lụy của việc lạm dụng ChatGPT / Copilot trong học tập", "layout": "two_cards", "accent": "#F43F5E", "card1": {"title": "Hành vi của ChatGPT / Copilot", "badge": "THỰC TRẠNG", "accent": "#F43F5E", "items": ["Sinh viên gửi đề bài hoặc lỗi vào, AI viết lại 100% mã nguồn hoàn chỉnh.", "Đút sẵn code tận miệng thay vì hướng dẫn sinh viên tìm nguyên nhân.", "Tạo thói quen sao chép - dán (copy-paste) bài làm một cách thụ động.", "Người học không cần đọc lại tài liệu giáo trình hay suy ngẫm giải thuật."]}, "card2": {"title": "Tác hại đối với Năng lực Sinh viên", "badge": "HẬU QUẢ", "accent": "#F59E0B", "items": ["Bài tập về nhà nộp đạt 10/10 điểm nhưng không hiểu bản chất thuật toán.", "Khi vào phòng thi viết giấy hoặc thi máy cô lập (không Internet) thì bị điểm liệt.", "Hoàn toàn mất đi phản xạ tư duy phản biện và kỹ năng tự debug.", "Giảng viên rơi vào thế bị động: Không cấm được AI nhưng cũng không kiểm soát được."]}}, {"id": 5, "category": "PHẦN 1 • TÍNH CẤP THIẾT", "title": "Thách thức về Tính Chính xác: Ảo giác & Lệch chuẩn Giáo trình", "subtitle": "Nguy cơ trôi nổi và không thể kiểm chứng của AI thông thường", "layout": "two_cards", "accent": "#F59E0B", "card1": {"title": "Hiện tượng Ảo giác & Cú pháp Lệch chuẩn", "badge": "LỆCH CHUẨN", "accent": "#F43F5E", "items": ["LLM thương mại học từ toàn bộ Internet mở, tiềm ẩn nhiều mã nguồn lỗi thời.", "Thường sinh cú pháp nâng cao ngoài phạm vi chuẩn đầu ra môn học.", "Ví dụ: Sinh viên năm nhất học con trỏ thô C++, AI lại sinh C++20 dùng std::unique_ptr.", "Dùng thư viện cấm trong kỳ thi, sinh viên mang đi chấm thi bị 0 điểm."]}, "card2": {"title": "Nhu cầu cấp thiết về AI Sư phạm Chuẩn mực", "badge": "NHU CẦU ĐỀ TÀI", "accent": "#06B6D4", "items": ["Nhà trường không thể bài trừ AI, nhưng phải sống chung có kiểm soát.", "Cần một công cụ AI 'nói có sách, mách có chứng' neo chặt giáo trình chuẩn.", "Cần giải pháp buộc sinh viên tự tay sửa code dựa trên định hướng sư phạm.", "Cần tiếp nhận dữ liệu thực tế của sinh viên: file code và ảnh màn hình terminal."]}}, {"id": 6, "category": "PHẦN 1 • TỔNG QUAN", "title": "Mục tiêu và Định vị Giải pháp của AI Coding Tutor", "subtitle": "3 Trụ cột cốt lõi tạo nên giá trị đột phá của hệ thống", "layout": "three_cards", "accent": "#06B6D4", "card1": {"title": "1. Phương pháp Socratic", "badge": "SƯ PHẠM", "accent": "#10B981", "items": ["Trợ giảng AI kiên nhẫn, không đưa mã nguồn hoàn chỉnh có sẵn.", "Phân tích hiện tượng lỗi, giải thích bản chất gốc rễ.", "Đặt câu hỏi gợi mở để người học tự tư duy và tự tay gõ lại code."]}, "card2": {"title": "2. Multimodal RAG Grounding", "badge": "HỌC THUẬT", "accent": "#06B6D4", "items": ["Neo chặt ngữ cảnh vào 5.230 chunks giáo trình chính thống.", "Chống ảo giác (Hallucination) tuyệt đối trong phạm vi môn học.", "Hiển thị thẻ trích dẫn giáo trình minh bạch (tên sách, chương mục)."]}, "card3": {"title": "3. Tiếp nhận Đa phương thức", "badge": "KỸ THUẬT", "accent": "#8B5CF6", "items": ["Xử lý đồng thời câu hỏi Text, File mã nguồn (.py, .cpp, .sql).", "Vision OCR đọc ảnh chụp màn hình Terminal báo lỗi font Monospace.", "Query Synthesizer chống pha loãng truy vấn RAG."]}}, {"id": 7, "category": "PHẦN 2 • PHẠM VI", "title": "Đối tượng Sử dụng & Phạm vi Tri thức Hệ thống", "subtitle": "Giới hạn phạm vi đề tài và tập ngữ liệu được chuẩn hóa", "layout": "two_cards", "accent": "#10B981", "card1": {"title": "Đối tượng Người dùng Hệ thống", "badge": "ĐỐI TƯỢNG", "accent": "#06B6D4", "items": ["Sinh viên CNTT năm 1 - 2: Đang học các môn lập trình nền tảng, cần trợ giảng 24/7.", "Giảng viên & Trợ giảng: Định hướng theo dõi các lỗi phổ biến mà sinh viên hay mắc phải.", "Khoa & Nhà trường: Triển khai nội bộ hỗ trợ giảng dạy theo chuẩn giáo trình."]}, "card2": {"title": "Phạm vi Ngữ liệu Giáo trình Hiện tại", "badge": "PHẠM VI TRI THỨC", "accent": "#10B981", "items": ["Lập trình C / C++: Cú pháp, con trỏ, mảng động, quản lý bộ nhớ Heap/Stack.", "Lập trình Python: Cấu trúc dữ liệu built-in, OOP, ngoại lệ, cú pháp PEP 8.", "Cấu trúc dữ liệu & Giải thuật: Độ phức tạp Big-O, sắp xếp, tìm kiếm, đệ quy.", "Cơ sở dữ liệu & Toán rời rạc: Cú pháp SQL, quan hệ, suy diễn cấu trúc."]}}, {"id": 8, "category": "PHẦN 2 • YÊU CẦU", "title": "Bảng Yêu cầu Hệ thống (System Requirements)", "subtitle": "Đặc tả các tiêu chuẩn chức năng và phi chức năng nghiêm ngặt", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Yêu cầu Chức năng (Functional)", "badge": "CHỨC NĂNG", "accent": "#06B6D4", "items": ["Tiếp nhận đa phương thức: Text prompt, File code (.py, .cpp, .sql), Ảnh terminal.", "Vision OCR trích xuất chính xác Callstack và Exception name từ ảnh chụp.", "Query Synthesizer: Rút trích lỗi kỹ thuật, chống pha loãng truy vấn.", "RAG Retrieval: Truy xuất Top-K chunks giáo trình chính thống từ ChromaDB.", "Socratic Tutor: Sinh phản hồi gợi mở tư duy kèm thẻ trích dẫn giáo trình."]}, "card2": {"title": "Yêu cầu Phi chức năng (Non-Functional)", "badge": "PHI CHỨC NĂNG", "accent": "#10B981", "items": ["Độ trễ truy xuất vector (Retrieval Latency): Dưới 0.2 giây (~160ms thực tế).", "An toàn dữ liệu: Chặn Path Traversal, chặn tệp binary giả mạo, kiểm tra UTF-8.", "Độ sẵn sàng (Resilience): Cơ chế Multi-model Fallback khi gặp sự cố quota API.", "Kiến trúc bất đồng bộ (Asynchronous I/O): FastAPI xử lý nhiều kết nối đồng thời.", "Đóng gói chuẩn hóa: Docker Compose sẵn sàng triển khai trên máy chủ trường."]}}, {"id": 9, "category": "PHẦN 2 • USE CASE", "title": "Sơ đồ Tương tác Use Case Tổng quan của Hệ thống", "subtitle": "Luồng tương tác chuẩn giữa Sinh viên và Trợ giảng AI", "layout": "three_cards", "accent": "#8B5CF6", "card1": {"title": "1. Đầu vào Sinh viên", "badge": "INPUT", "accent": "#06B6D4", "items": ["Gửi câu hỏi lý thuyết hoặc thắc mắc cú pháp.", "Đính kèm tệp mã nguồn (.py, .cpp, .sql) đang viết dở.", "Tải ảnh chụp màn hình Terminal thông báo lỗi runtime."]}, "card2": {"title": "2. Xử lý & Điều phối AI", "badge": "PIPELINE", "accent": "#8B5CF6", "items": ["FileExtractor bóc tách AST & ImageExtractor OCR ảnh.", "QuerySynthesizer tổng hợp truy vấn tinh gọn.", "ChromaDB tìm kiếm Top-3 chunks giáo trình qua RRF.", "Gemini 3 Flash áp dụng System Instruction Socratic."]}, "card3": {"title": "3. Kết quả Nhận được", "badge": "OUTPUT", "accent": "#10B981", "items": ["Lời chào sư phạm & ghi nhận ngôn ngữ lập trình.", "Chỉ rõ vị trí sự cố và triệu chứng lỗi logic.", "Đặt câu hỏi gợi ý để người học tự kiểm tra điều kiện biên.", "Thẻ trích dẫn giáo trình (Tên sách, Chương, Mục) để tra cứu."]}}, {"id": 10, "category": "PHẦN 3 • SO SÁNH", "title": "Điểm khác biệt Cốt lõi: AI Coding Tutor vs Công cụ Hiện có", "subtitle": "So sánh trực diện mục tiêu sư phạm và khả năng kiểm chứng học thuật", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "ChatGPT / GitHub Copilot", "badge": "AI THƯƠNG MẠI", "accent": "#F43F5E", "items": ["Mục đích: Viết code nhanh cho lập trình viên đi làm.", "Giải bài hộ: Đút sẵn code sửa lỗi hoàn chỉnh -> Triệt tiêu tư duy tự học.", "Tri thức mở: Dễ sinh cú pháp vượt rào, sai barem thi của khoa.", "Pha loãng ngữ cảnh: Nạp code dài + ảnh dễ bị bỏ sót lỗi chính.", "Không có kiểm chứng: Không có thẻ trích dẫn sách giáo trình."]}, "card2": {"title": "Hệ thống AI Coding Tutor", "badge": "AI CODING TUTOR", "accent": "#10B981", "items": ["Mục đích: Trợ giảng sư phạm chuyên biệt cho giáo dục đại học.", "Phương pháp Socratic: Chỉ ra bản chất lỗi, gợi mở để sinh viên tự sửa.", "Tri thức chuẩn hóa: Neo chặt 5.230 chunks giáo trình chính thống.", "Query Synthesizer: Rút trích exception name chống loãng truy vấn.", "Minh bạch học thuật: Hiển thị thẻ trích dẫn rõ tên sách, chương, đoạn."]}}, {"id": 11, "category": "PHẦN 3 • SO SÁNH", "title": "Ma trận Đối soát Tiêu chí Kỹ thuật và Sư phạm", "subtitle": "Bảng đối chiếu 3 nhóm tiêu chí then chốt", "layout": "three_cards", "accent": "#F59E0B", "card1": {"title": "Tiêu chí Sư phạm", "badge": "PHƯƠNG PHÁP", "accent": "#06B6D4", "items": ["ChatGPT: Mớm bài, làm hộ 100%.", "Copilot: Tự gõ code tiếp theo.", "AI Coding Tutor: Socratic Method - Bắt buộc sinh viên tự tay gõ lại code."]}, "card2": {"title": "Tiêu chí Kiến thức & Đối soát", "badge": "NGUỒN GỐC", "accent": "#10B981", "items": ["ChatGPT: Toàn bộ Internet (dễ ảo giác).", "Copilot: GitHub public code.", "AI Coding Tutor: Kho giáo trình đại học chính thống (100% Hit@3 canonical)."]}, "card3": {"title": "Tiêu chí Chi phí & Quản lý", "badge": "TRIỂN KHAI", "accent": "#F59E0B", "items": ["ChatGPT: Phải mua Plus $20/tháng.", "Copilot: Bản quyền $10/tháng.", "AI Coding Tutor: Kiến trúc tối ưu, Vector DB chạy local, Docker On-Premise."]}}, {"id": 12, "category": "PHẦN 3 • SOCRATIC", "title": "Phương pháp Sư phạm Socratic: Quy trình 4 Bước Gợi mở", "subtitle": "Thiết kế sư phạm giúp sinh viên xây dựng tư duy giải quyết vấn đề", "layout": "four_steps", "accent": "#10B981", "steps": [{"num": "01", "title": "Ghi nhận", "desc": "Chào hỏi ân cần, ghi nhận ngôn ngữ lập trình của sinh viên, xác định vị trí phát sinh sự cố.", "color": "#06B6D4"}, {"num": "02", "title": "Chỉ điểm", "desc": "Mô tả hiện tượng và triệu chứng lỗi logic (vượt biên mảng, con trỏ treo, rò rỉ bộ nhớ).", "color": "#F59E0B"}, {"num": "03", "title": "Gợi mở", "desc": "Đặt 1-2 câu hỏi dẫn dắt trọng tâm, gợi ý sinh viên kiểm tra điều kiện biên hoặc đặt print.", "color": "#8B5CF6"}, {"num": "04", "title": "Đối chiếu", "desc": "Dẫn trích đoạn giáo trình chuẩn RAG để sinh viên tự đọc hiểu nguyên lý và tự sửa mã nguồn.", "color": "#10B981"}]}, {"id": 13, "category": "PHẦN 4 • KIẾN TRÚC", "title": "Kiến trúc Phân tầng Tổng thể Hệ thống (Layered Architecture)", "subtitle": "4 Tầng phân tách trách nhiệm rõ ràng, khả năng mở rộng cao", "layout": "four_steps", "accent": "#06B6D4", "steps": [{"num": "L1", "title": "Presentation", "desc": "Next.js 14 App Router, TypeScript, Tailwind CSS, Chat đa phương thức Text/Code/Ảnh.", "color": "#06B6D4"}, {"num": "L2", "title": "Backend Orchestration", "desc": "FastAPI Async, FileExtractor an toàn, ImageExtractor Vision OCR, QuerySynthesizer.", "color": "#10B981"}, {"num": "L3", "title": "Data & Vector RAG", "desc": "ChromaDB Persistent (5.230 vectors), Qwen3 1024-d, Jina-Code 768-d, Thuật toán RRF k0=60.", "color": "#8B5CF6"}, {"num": "L4", "title": "LLM Inference", "desc": "Gemini 3 Flash, Multi-model Fallback (3 Flash -> 3.5 Flash -> Socratic Fallback nội bộ).", "color": "#F59E0B"}]}, {"id": 14, "category": "PHẦN 4 • CÔNG NGHỆ", "title": "Biện luận Công nghệ: Bộ Bóc tách Bố cục PDF (MinerU vs PyPDF)", "subtitle": "Bảo toàn hoàn hảo khối mã nguồn và công thức toán học", "layout": "two_cards", "accent": "#10B981", "card1": {"title": "Hạn chế của PyPDF / PDFPlumber", "badge": "CÔNG NGHỆ CŨ", "accent": "#F43F5E", "items": ["Chỉ quét text thô theo tọa độ x-y cơ học.", "Làm vỡ các khối mã nguồn đa dòng, mất thụt lề (indentation) của Python.", "Làm biến dạng bảng biểu phân tích độ phức tạp thuật toán.", "Mất toàn bộ ký hiệu công thức toán học LaTeX."]}, "card2": {"title": "Ưu thế Vượt trội của MinerU (Layout-LM)", "badge": "LỰA CHỌN MINERU", "accent": "#10B981", "items": ["Sử dụng mô hình thị giác AI chuyên dụng nhận diện layout trang.", "Bảo toàn 100% ranh giới khối code block, ký tự trắng và dấu thụt lề.", "Chuyển đổi công thức toán phức tạp sang cú pháp LaTeX chuẩn.", "Xuất Markdown đồng nhất bảng mã UTF-8 phục vụ pipeline chunking."]}}, {"id": 15, "category": "PHẦN 4 • CÔNG NGHỆ", "title": "Biện luận Công nghệ: Cơ sở Dữ liệu Vector (ChromaDB)", "subtitle": "Gọn nhẹ, tốc độ cao, hỗ trợ metadata filter và không mất phí định kỳ", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Nhược điểm của Cloud Vector DB (Pinecone/Milvus)", "badge": "GIẢI PHÁP THAY THẾ", "accent": "#F43F5E", "items": ["Pinecone: Đắt đỏ, tính phí định kỳ, phụ thuộc hoàn toàn vào cloud nước ngoài.", "Milvus Cluster: Quá cồng kềnh, tiêu tốn 8-16GB RAM, khó triển khai gọn nhẹ.", "Độ trễ mạng Internet cao, nguy cơ vi phạm bảo mật dữ liệu nội bộ."]}, "card2": {"title": "Ưu thế của ChromaDB Local Persistent", "badge": "LỰA CHỌN CHROMADB", "accent": "#10B981", "items": ["Mã nguồn mở hoàn toàn, nhúng trực tiếp hoặc chạy container siêu nhẹ (<300MB RAM).", "Tốc độ truy xuất cục bộ cực nhanh: ~160 ms / query với 5.230 vectors.", "Hỗ trợ Metadata Filtering linh hoạt theo ngôn ngữ, tài liệu, chương mục.", "Dữ liệu vector lưu trữ an toàn trong máy chủ trường, không mất phí định kỳ."]}}, {"id": 16, "category": "PHẦN 4 • CÔNG NGHỆ", "title": "Biện luận Công nghệ: Kiến trúc Nhúng kép Dual-Collection & RRF", "subtitle": "Tách biệt không gian vector và hợp nhất xếp hạng phi tham số", "layout": "two_cards", "accent": "#8B5CF6", "card1": {"title": "Kiến trúc Dual Collections", "badge": "DUAL EMBEDDING", "accent": "#06B6D4", "items": ["qwen3_text (4.293 chunks): Dùng Qwen/Qwen3-Embedding-0.6B (1024 chiều) chuyên trách lý thuyết.", "jina_code (937 chunks): Dùng jinaai/jina-embeddings-v2-base-code (768 chiều) chuyên trách mã nguồn.", "Lý do: Tách biệt không gian vector giúp tăng độ khớp chính xác cho từng loại câu hỏi."]}, "card2": {"title": "Thuật toán Hợp nhất RRF (k0 = 60)", "badge": "HỢP NHẤT XẾP HẠNG", "accent": "#8B5CF6", "items": ["Reciprocal Rank Fusion (RRF) kết hợp xếp hạng từ cả 2 collection:", "RRF(d) = 1/(60 + r_text(d)) + 1/(60 + r_code(d))", "Ưu điểm: Không bị ảnh hưởng bởi độ lệch thang đo khoảng cách giữa 2 model khác nhau.", "Đảm bảo tài liệu được cả 2 mô hình đánh giá cao luôn đứng đầu danh sách."]}}, {"id": 17, "category": "PHẦN 4 • CÔNG NGHỆ", "title": "Biện luận Công nghệ: LLM Inference & Cơ chế Tự phục hồi", "subtitle": "Tốc độ phản hồi dưới 2s và độ sẵn sàng 24/7", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Tại sao chọn Gemini 3 Flash?", "badge": "GEMINI 3 FLASH", "accent": "#06B6D4", "items": ["Tốc độ suy luận siêu tốc: Thời gian phản hồi dưới 2 giây, hỗ trợ Streaming.", "Vision OCR bản địa xuất sắc: Nhận diện rõ font Monospace trên ảnh terminal.", "Cửa sổ ngữ cảnh khổng lồ 1 triệu tokens: Nạp thoải mái cả code lớn và RAG chunks.", "Chi phí token tối ưu: Rẻ hơn 90% so với GPT-4o, phù hợp triển khai giáo dục."]}, "card2": {"title": "Cơ chế Tự phục hồi Đa tầng (Multi-Model Resilience)", "badge": "RESILIENCE", "accent": "#10B981", "items": ["Xử lý triệt để nguy cơ gián đoạn do sự cố mạng hoặc quota API:", "1. Ưu tiên số 1: gemini-3-flash-preview.", "2. Tự động chuyển mạch 2: gemini-3.5-flash.", "3. Fallback nội bộ: Socratic Fallback Engine tự sinh gợi ý từ RAG chunks.", "Đảm bảo hệ thống duy trì hoạt động 24/7 không bao giờ sập trước sinh viên."]}}, {"id": 18, "category": "PHẦN 4 • BẢO MẬT", "title": "Mô hình Triển khai Hybrid & An toàn Dữ liệu Thực tế", "subtitle": "Đánh giá khách quan ranh giới dữ liệu giữa On-Premise và Cloud API", "layout": "two_cards", "accent": "#F59E0B", "card1": {"title": "Thành phần Chạy On-Premise Cục bộ", "badge": "LOCAL ON-PREMISE", "accent": "#10B981", "items": ["Vector Database ChromaDB (5.230 vectors) lưu trữ 100% trên ổ cứng local.", "Pipeline bóc tách FileExtractor & tiền xử lý ImageExtractor chạy nội bộ.", "Module QuerySynthesizer chống loãng truy vấn chạy cục bộ.", "Backend FastAPI & Frontend Next.js đóng gói qua Docker Compose."]}, "card2": {"title": "Thành phần Cloud API & Đánh giá Khách quan", "badge": "CLOUD & ROADMAP", "accent": "#F59E0B", "items": ["Bước sinh phản hồi Socratic cuối cùng gọi qua Google Gemini API.", "Đánh giá khách quan: Chưa phải Air-gapped 100% vì prompt và code gửi lên cloud.", "Định hướng bảo mật tuyệt đối cho đề thi: Thay thế Gemini API bằng mô hình mã nguồn mở chạy local (Qwen2.5-Coder qua vLLM / Ollama)."]}}, {"id": 19, "category": "PHẦN 5 • QUY TRÌNH", "title": "Quy trình Nghiên cứu & Phát triển (R&D) 4 Giai đoạn", "subtitle": "Lộ trình 14 ngày kỹ thuật triển khai bài bản", "layout": "four_steps", "accent": "#06B6D4", "steps": [{"num": "G1", "title": "Dữ liệu SOTA (N1-4)", "desc": "MinerU Layout Parsing, Pipeline làm sạch V3.0, AST-aware Chunking & Contextual Retrieval.", "color": "#06B6D4"}, {"num": "G2", "title": "Vector & Benchmark (N5-7)", "desc": "Dual-Embedding GPU, Ingestion 5.230 chunks vào ChromaDB, Benchmark 20 câu 100% Hit@3.", "color": "#10B981"}, {"num": "G3", "title": "Multimodal (N8-10)", "desc": "FileExtractor an toàn, ImageExtractor Vision OCR, QuerySynthesizer chống loãng truy vấn.", "color": "#8B5CF6"}, {"num": "G4", "title": "Socratic & Deploy (N11-14)", "desc": "System Prompt Socratic, Multi-model Fallback, 63 Pytests đạt 100%, Đóng gói Docker Compose.", "color": "#F59E0B"}]}, {"id": 20, "category": "PHẦN 5 • GIAI ĐOẠN 1", "title": "Giai đoạn 1: Bóc tách Tài liệu SOTA & Chunking Ngữ cảnh", "subtitle": "Xây dựng kho tri thức giáo trình chuẩn mực, bảo toàn cấu trúc", "layout": "three_cards", "accent": "#06B6D4", "card1": {"title": "1. Bóc tách MinerU", "badge": "PARSING SOTA", "accent": "#06B6D4", "items": ["Chuyển đổi toàn bộ PDF giáo trình sang Markdown chuẩn.", "Bảo toàn cấu trúc phân cấp tiêu đề, ranh giới code block và công thức toán.", "Loại bỏ hoàn toàn lỗi gãy dòng thụt lề của công cụ cũ."]}, "card2": {"title": "2. Làm sạch Đa tầng V3.0", "badge": "CLEANING", "accent": "#10B981", "items": ["Bộ lọc Regex khử số trang thừa, header/footer lặp lại.", "Sửa lỗi ngắt dòng bất thường trong khối lệnh code.", "Chuẩn hóa đồng nhất định dạng Markdown và bảng mã UTF-8."]}, "card3": {"title": "3. Contextual Chunking", "badge": "CHUNKING", "accent": "#8B5CF6", "items": ["Cắt đoạn theo ranh giới hàm/lớp (AST-aware) thay vì cắt cơ học theo số ký tự.", "Gắn bối cảnh chương mục cấp cao vào đầu mỗi chunk.", "Giải quyết triệt để vấn đề mất ngữ cảnh khi tìm kiếm vector."]}}, {"id": 21, "category": "PHẦN 5 • GIAI ĐOẠN 2", "title": "Giai đoạn 2: Vector hóa Dual-Collection & Kiểm định Benchmark", "subtitle": "Thống kê kho tri thức 5.230 vectors tại data/09_chromadb", "layout": "stats_plus_card", "accent": "#10B981", "stat1": {"val": "5.230", "lbl": "Tổng Chunks Vector", "sub": "data/09_chromadb", "col": "#06B6D4"}, "stat2": {"val": "4.293", "lbl": "qwen3_text (1024-d)", "sub": "Chunks lý thuyết", "col": "#10B981"}, "stat3": {"val": "937", "lbl": "jina_code (768-d)", "sub": "Chunks mã nguồn", "col": "#8B5CF6"}, "main_card": {"title": "Đóng gói RAGService & Bộ đệm Benchmark Embeddings", "badge": "RAG SERVICE", "accent": "#06B6D4", "items": ["Xây dựng dịch vụ RAGService hỗ trợ truy vấn song song Dual-Collection kết hợp thuật toán RRF k0=60.", "Nạp sẵn bộ đệm 36 benchmark query embeddings (benchmark_36q_query_embeddings.json) tăng tốc truy vấn.", "Tích hợp tự động nhận diện ngôn ngữ lập trình từ câu hỏi và mở rộng truy vấn (Query Expansion)."]}}, {"id": 22, "category": "PHẦN 5 • GIAI ĐOẠN 3", "title": "Giai đoạn 3: Xây dựng Pipeline Đa phương thức An toàn", "subtitle": "Xử lý tệp mã nguồn và ảnh màn hình terminal an toàn", "layout": "two_cards", "accent": "#8B5CF6", "card1": {"title": "FileExtractor Engine", "badge": "BÓC TÁCH CODE", "accent": "#06B6D4", "items": ["Tiếp nhận và bóc tách mã nguồn đa ngôn ngữ: .py, .cpp, .sql, .java.", "Cơ chế phòng thủ an ninh nghiêm ngặt:", "• Chặn tấn công duyệt thư mục (Path Traversal, '..', null bytes).", "• Chặn tệp nhị phân độc hại giả mạo mã nguồn (Magic byte inspection).", "• Giới hạn kích thước tối đa 5MB và xác thực bảng mã UTF-8."]}, "card2": {"title": "ImageExtractor Engine (Vision OCR)", "badge": "VISION OCR", "accent": "#8B5CF6", "items": ["Xử lý ảnh chụp màn hình máy tính hoặc điện thoại.", "Tiền xử lý ảnh: Chuẩn hóa kích thước tối đa 1600px, tăng cường độ tương phản.", "Vision OCR chuyên biệt: Trích xuất chính xác font chữ đơn cách (Monospace).", "Bóc tách nguyên vẹn các dòng mã nguồn và thông báo lỗi / Callstack terminal."]}}, {"id": 23, "category": "PHẦN 5 • GIAI ĐOẠN 3", "title": "Đột phá Kỹ thuật: Query Synthesizer (Chống Pha loãng Truy vấn)", "subtitle": "Giải quyết bài toán loãng ngữ cảnh khi nạp đồng thời code và ảnh", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Vấn đề Pha loãng Truy vấn (Query Dilution)", "badge": "THÁCH THỨC", "accent": "#F43F5E", "items": ["Khi sinh viên gửi đồng thời câu hỏi + file code 200 dòng + ảnh terminal lỗi.", "Nếu nhồi toàn bộ văn bản vào vector search, truy vấn sẽ bị nhiễu nghiêm trọng.", "Các đường dẫn thư mục dài, dòng log hệ thống và mã phụ làm lệch vector tìm kiếm.", "Hậu quả: RAG tìm ra các bài giảng không liên quan đến lỗi cốt lõi."]}, "card2": {"title": "Giải pháp của Query Synthesizer", "badge": "GIẢI PHÁP ĐỘT PHÁ", "accent": "#10B981", "items": ["Thuật toán bóc tách trọng tâm thông minh:", "1. Tách chính xác Tên ngoại lệ (Exception Name: IndexError, Memory Leak, v.v.).", "2. Tách vị trí dòng lỗi và hàm logic bị sai từ tệp nguồn.", "3. Tổng hợp thành một câu truy vấn kỹ thuật tinh gọn trước khi gọi ChromaDB.", "Kết quả: RAG tìm trúng 100% bài giảng lý thuyết liên quan mà không bị nhiễu."]}}, {"id": 24, "category": "PHẦN 5 • GIAI ĐOẠN 4", "title": "Giai đoạn 4: Tích hợp Socratic Engine & Đóng gói Docker", "subtitle": "Hoàn thiện hành vi sư phạm và đóng gói triển khai chuẩn hóa", "layout": "two_cards", "accent": "#10B981", "card1": {"title": "System Instruction Socratic Chuẩn mực", "badge": "SOCRATIC ENGINE", "accent": "#10B981", "items": ["Cấu hình hành vi sư phạm nghiêm ngặt cho mô hình Gemini 3 Flash:", "• Bắt buộc neo chặt vào tài liệu giáo trình chính thống từ RAG.", "• Tuyệt đối không sinh mã nguồn hoàn chỉnh sửa hộ cho sinh viên.", "• Áp dụng quy trình 4 bước sư phạm: Ghi nhận -> Chỉ điểm -> Gợi mở -> Đối chiếu.", "• Luôn đính kèm thẻ trích dẫn giáo trình rõ ràng."]}, "card2": {"title": "Đóng gói Triển khai Docker Compose", "badge": "DOCKERIZATION", "accent": "#06B6D4", "items": ["Chuẩn hóa tệp docker-compose.yml tích hợp trọn gói:", "• Backend FastAPI + Volume dữ liệu ./data:/app/data.", "• Cơ sở dữ liệu Vector ChromaDB Persistent vận hành cục bộ.", "• Frontend Next.js giao diện sinh viên.", "Khởi chạy 1-click qua start_dev.bat hoặc docker compose up -d."]}}, {"id": 25, "category": "PHẦN 6 • KẾT QUẢ", "title": "Kết quả Thực nghiệm 1: Đo lường Chất lượng RAG Retrieval", "subtitle": "Đánh giá trên 20 câu hỏi canonical theo 4 nhóm năng lực", "layout": "stats_plus_card", "accent": "#10B981", "stat1": {"val": "100%", "lbl": "Hit Rate@3", "sub": "20/20 câu canonical", "col": "#10B981"}, "stat2": {"val": "80.0%", "lbl": "Hit Rate@1", "sub": "16/20 câu đứng vị trí 1", "col": "#06B6D4"}, "stat3": {"val": "0.8833", "lbl": "MRR@5 Score", "sub": "Nghịch đảo thứ hạng", "col": "#8B5CF6"}, "main_card": {"title": "Phân bổ 20 Câu hỏi Kiểm định Canonical theo 4 Nhóm Năng lực", "badge": "BENCHMARK ĐỐI SOÁT KHẮT KHE", "accent": "#06B6D4", "items": ["theory (5 câu): Khái niệm OOP, Clean code PEP 8, Mutable vs Immutable, Big-O QuickSort, Encapsulation.", "code (5 câu): QuickSort đệ quy, List Comprehension 2D, Fibonacci memoization, Stack/Queue deque, with open.", "api (5 câu): any() generator, sqlite3.execute, json.loads vs load, collections.defaultdict, typing.Union.", "hybrid (5 câu): __init__ constructor, Kế thừa super(), Ngoại lệ try-except, Context Manager __enter__/__exit__."]}}, {"id": 26, "category": "PHẦN 6 • KẾT QUẢ", "title": "Kết quả Thực nghiệm 2: Bộ Kiểm thử Tự động Pytest (63/63 Tests)", "subtitle": "100% Pass trên toàn bộ các bài test tự động hóa", "layout": "stats_plus_card", "accent": "#10B981", "stat1": {"val": "33 / 33", "lbl": "Unit Tests PASSED", "sub": "Thời gian: 4.09s", "col": "#10B981"}, "stat2": {"val": "30 / 30", "lbl": "E2E Scenarios PASSED", "sub": "Thời gian: 30.53s", "col": "#06B6D4"}, "stat3": {"val": "100%", "lbl": "Tổng Tỷ lệ Pass", "sub": "63 / 63 bài kiểm thử", "col": "#8B5CF6"}, "main_card": {"title": "Tổng kết Bộ Kiểm thử Tự động Hóa Bảo chứng Chất lượng", "badge": "AUTOMATED TESTING", "accent": "#10B981", "items": ["33 Unit Tests: Kiểm tra khởi tạo ChromaDB, tìm kiếm RRF, bóc tách đa ngôn ngữ, lọc file binary, kiểm tra kích thước ảnh, OCR mockup, QuerySynthesizer rút trích lỗi và chống loãng truy vấn.", "30 Kịch bản E2E thực tế: 10 câu hỏi lý thuyết thuật toán + 10 tệp mã nguồn lỗi (Memory leak, đệ quy vô hạn, SQL injection, off-by-one) + 10 ảnh terminal OCR (IndexError, ZeroDivisionError, v.v.)."]}}, {"id": 27, "category": "PHẦN 6 • DEMO", "title": "Demo Thực tế Kịch bản 1: Câu hỏi Lý thuyết QuickSort O(n^2)", "subtitle": "Kịch bản Text-only: Phân tích thuật toán và gợi mở Socratic", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Đầu vào của Sinh viên", "badge": "INPUT", "accent": "#06B6D4", "items": ["Câu hỏi Text: 'Tại sao thuật toán QuickSort có trường hợp xấu nhất là O(n^2) và trong thực tế người ta khắc phục điều này như thế nào?'", "Phương thức: Text-only Chat qua API /tutor/chat.", "Ngôn ngữ tự động nhận diện: Cấu trúc dữ liệu & Thuật toán."]}, "card2": {"title": "Phản hồi Chuẩn mực từ Hệ thống", "badge": "OUTPUT SOCRATIC", "accent": "#10B981", "items": ["RAG Retrieval: Truy xuất chính xác mục Phân hoạch trong Giáo trình CTDL&GT.", "Giải thích bản chất: Phân tích hiện tượng chọn phần tử chốt (Pivot) lệch khi mảng đã sắp xếp sẵn dẫn đến cây đệ quy suy biến thành O(n^2).", "Gợi ý Socratic: Hướng dẫn tìm hiểu kỹ thuật chọn chốt trung vị của 3 phần tử (Median-of-Three) và kỹ thuật phân hoạch ngẫu nhiên.", "Thẻ trích dẫn: [Giáo trình CTDL&GT | Chương: Sắp xếp phân hoạch]."]}}, {"id": 28, "category": "PHẦN 6 • DEMO", "title": "Demo Thực tế Kịch bản 2: Bắt lỗi Rò rỉ Bộ nhớ Con trỏ C++", "subtitle": "Kịch bản File Attachment: Phát hiện lỗi cấp phát động heap", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Đầu vào Tệp Mã nguồn (leak.cpp)", "badge": "CODE ATTACHMENT", "accent": "#06B6D4", "items": ["Sinh viên nộp tệp C++ cấp phát mảng động new int[100] nhưng không giải phóng:", "void processData() {", "    int* arr = new int[100];", "    for(int i = 0; i < 100; i++) arr[i] = i * 2;", "    // Quên delete[] arr;", "}", "Câu hỏi kèm: 'Hàm này của em chạy ổn không ạ?'"]}, "card2": {"title": "Phản hồi Socratic Định hướng", "badge": "OUTPUT SOCRATIC", "accent": "#10B981", "items": ["FileExtractor bóc tách hàm processData() phát hiện lệnh new nhưng thiếu delete[].", "AI KHÔNG viết code hộ, mà đặt câu hỏi:", "'Bạn hãy quan sát vùng nhớ Heap cấp phát bằng new int[100] ở dòng 5. Khi hàm kết thúc, vùng nhớ này đã được thu hồi chưa? Nếu lặp lại 1.000 lần thì điều gì xảy ra?'", "Thẻ trích dẫn: [Giáo trình C++ | Chương 4: Con trỏ và Quản lý bộ nhớ Heap]."]}}, {"id": 29, "category": "PHẦN 6 • DEMO", "title": "Demo Thực tế Kịch bản 3: Xử lý Ảnh Terminal OCR (IndexError)", "subtitle": "Kịch bản Multimodal Vision: Đọc lỗi màn hình và truy xuất giáo trình", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Đầu vào Ảnh chụp Màn hình Terminal", "badge": "TERMINAL SCREENSHOT", "accent": "#06B6D4", "items": ["Sinh viên gửi ảnh chụp terminal báo lỗi Python:", "File 'solution.py', line 14:", "  for i in range(len(arr) + 1):", "      print(arr[i])", "IndexError: list index out of range", "Ảnh có độ phân giải thực tế chụp từ máy tính."]}, "card2": {"title": "Xử lý OCR & Phản hồi Socratic", "badge": "OUTPUT SOCRATIC", "accent": "#10B981", "items": ["Vision OCR đọc chính xác Exception Name và dòng lệnh for i in range(len(arr)+1).", "QuerySynthesizer trích xuất từ khóa IndexError và điều kiện biên.", "Phản hồi Socratic:", "'Trong Python chỉ số mảng bắt đầu từ 0 đến len(arr)-1. Khi bạn duyệt tới len(arr)+1 thì điều gì sẽ xảy ra ở phần tử cuối cùng?'", "Thẻ trích dẫn: [Giáo trình Python | Kiểu dữ liệu danh sách List]."]}}, {"id": 30, "category": "PHẦN 7 • HIỆN TRẠNG", "title": "Bảng Phân loại Trạng thái Triển khai Tính năng Thực tế", "subtitle": "Phân định minh bạch giữa hoàn thành, prototype và định hướng", "layout": "three_cards", "accent": "#10B981", "card1": {"title": "Đã Hoàn thành (100% Verified)", "badge": "HOÀN THÀNH", "accent": "#10B981", "items": ["Multimodal RAG Engine (5.230 chunks vector, Dual RRF).", "Socratic Prompting & Gemini 3 Flash.", "FileExtractor & ImageExtractor OCR.", "QuerySynthesizer chống pha loãng.", "63/63 Pytests kiểm thử tự động.", "Đóng gói Docker Compose & Giao diện Chat."]}, "card2": {"title": "Đang Phát triển (UI Prototype)", "badge": "UI PROTOTYPE", "accent": "#F59E0B", "items": ["Instructor Dashboard: Giao diện mẫu React quản lý bài tập & điểm số.", "Classroom Error Heatmap: Bản đồ nhiệt hiển thị demo, Backend chưa có schema PostgreSQL lưu trữ log lỗi.", "Đang ở giai đoạn hoàn thiện tầng dữ liệu."]}, "card3": {"title": "Định hướng Tương lai (Roadmap)", "badge": "ROADMAP", "accent": "#06B6D4", "items": ["Khóa tài liệu theo tuần học (bổ sung trường syllabus_week vào metadata).", "Backend Code Execution Sandbox (môi trường container chạy thử mã nguồn an toàn).", "Xác thực người dùng JWT & Phân quyền RBAC (Student, Lecturer, Admin)."]}}, {"id": 31, "category": "PHẦN 7 • HẠN CHẾ", "title": "Đánh giá Khách quan: Các Hạn chế Kỹ thuật Hiện tại", "subtitle": "Nhìn nhận trung thực các rào cản cần khắc phục", "layout": "two_cards", "accent": "#F43F5E", "card1": {"title": "Hạn chế về Kiến trúc & Dữ liệu", "badge": "KIẾN TRÚC & DỮ LIỆU", "accent": "#F59E0B", "items": ["1. Phụ thuộc vào Cloud API (Gemini): Mặc dù RAG và tiền xử lý chạy local, bước sinh phản hồi vẫn gọi cloud, chưa phải air-gapped 100%.", "2. Phạm vi ngữ liệu: Mới tập trung vào 4 môn lập trình cơ sở của 2 năm đầu, chưa mở rộng ra toàn bộ chương trình chuyên ngành."]}, "card2": {"title": "Hạn chế về Tính năng & OCR", "badge": "TÍNH NĂNG & OCR", "accent": "#F43F5E", "items": ["3. Chất lượng OCR đối với ảnh chụp điện thoại: Ảnh nghiêng góc 3D, lóa đèn có thể giảm độ chính xác đọc ký tự đặc biệt.", "4. Chưa có Sandbox chạy code trực tiếp: Hệ thống phân tích lỗi dựa trên AST và LLM tĩnh, chưa biên dịch và thực thi code thực tế."]}}, {"id": 32, "category": "PHẦN 7 • LỘ TRÌNH", "title": "Lộ trình Phát triển Tương lai (Roadmap Mở rộng)", "subtitle": "Định hướng phát triển ngắn hạn và dài hạn", "layout": "two_cards", "accent": "#06B6D4", "card1": {"title": "Kế hoạch Ngắn hạn (3 – 6 tháng tới)", "badge": "NGẮN HẠN", "accent": "#06B6D4", "items": ["1. Triển khai Local LLM On-Premise: Tích hợp Qwen2.5-Coder hoặc Llama-3-Instruct qua vLLM / Ollama trên máy chủ trường.", "2. Tích hợp Backend Execution Sandbox: Dựng container Docker cô lập để sinh viên bấm nút chạy thử code trực tiếp trên web.", "3. Hoàn thiện PostgreSQL Error Analytics: Lưu vết lịch sử và tính toán Bản đồ nhiệt lỗi lớp học theo thời gian thực."]}, "card2": {"title": "Kế hoạch Dài hạn (6 – 12 tháng tới)", "badge": "DÀI HẠN", "accent": "#10B981", "items": ["1. Mở rộng kho tri thức toàn bộ khóa học: Nạp toàn bộ giáo trình các môn chuyên ngành của Khoa CNTT.", "2. Tính năng Auto-Ingestion: Giảng viên chỉ cần kéo thả Slide PPTX / PDF mới lên là tự động bóc tách và nạp vào ChromaDB.", "3. Tích hợp sâu vào LMS: Kết nối chuẩn LTI với Moodle, Canvas hoặc Blackboard của nhà trường."]}}, {"id": 33, "category": "PHẦN 8 • KẾT LUẬN", "title": "Kết luận & Đóng góp Cốt lõi của Đồ án Tốt nghiệp", "subtitle": "4 Thành tựu kỹ thuật và sư phạm nổi bật đã đạt được", "layout": "four_steps", "accent": "#10B981", "steps": [{"num": "01", "title": "Pipeline RAG Giáo dục", "desc": "Bóc tách chuẩn SOTA MinerU, kho tri thức 5.230 chunks vector, đạt 100% Hit@3 trên 20 câu canonical.", "color": "#06B6D4"}, {"num": "02", "title": "Phương pháp Socratic", "desc": "Định hình phong cách sư phạm không làm bài hộ, bắt buộc sinh viên tự tư duy và tự debug.", "color": "#10B981"}, {"num": "03", "title": "Đột phá Multimodal", "desc": "Tiếp nhận Text, Code, Ảnh Terminal; Query Synthesizer chống pha loãng truy vấn; bảo mật an toàn.", "color": "#8B5CF6"}, {"num": "04", "title": "Kiểm chứng Toàn diện", "desc": "63/63 Pytests đạt 100%, đóng gói Docker Compose sẵn sàng triển khai thực tế với giá trị EdTech cao.", "color": "#F59E0B"}]}, {"id": 34, "category": "KẾT THÚC BÁO CÁO", "title": "Lời Cảm ơn & Phiên Hỏi - Đáp (Q&A)", "subtitle": "Hệ thống Trợ giảng Lập trình Thông minh (AI-Powered Coding Tutor)", "layout": "hero", "badge": "PHIÊN HỎI - ĐÁP", "accent": "#10B981", "meta": ["XIN TRÂN TRỌNG CẢM ƠN QUÝ THẦY CÔ VÀ HỘI ĐỒNG!", "Nhóm em xin sẵn sàng lắng nghe ý kiến nhận xét và giải đáp các câu hỏi từ Hội đồng."], "tags": ["Q&A Session", "AI Coding Tutor 2026", "Hội đồng Đánh giá Đồ án"]}];
+    let currentIndex = 0;
+    let autoplayInterval = null;
+    const viewport = document.getElementById('slideViewport');
+    const drawer = document.getElementById('drawer');
+    const progressBar = document.getElementById('progressBar');
+    const counterDisplay = document.getElementById('counterDisplay');
+    const btnAutoplay = document.getElementById('btnAutoplay');
+
+    // Web Audio synthesizer for smooth click/slide sounds
+    let audioCtx = null;
+    function playBeep(freq = 600, duration = 0.04) {
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.value = freq;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    // Render Slide Contents
+    function renderSlides() {
+      viewport.innerHTML = '';
+      drawer.innerHTML = '';
+
+      slidesData.forEach((s, idx) => {
+        const slideEl = document.createElement('div');
+        slideEl.className = 'slide' + (idx === 0 ? ' active' : '');
+        slideEl.id = `slide-${idx}`;
+
+        if (s.layout === 'hero') {
+          slideEl.innerHTML = `
+            <div class="hero-container">
+              <div class="category-badge">${s.badge}</div>
+              <h1 class="hero-title">${s.title}</h1>
+              <div class="hero-sub">${s.subtitle}</div>
+              <div class="hero-meta">
+                ${s.meta.map(m => `<div>${m}</div>`).join('')}
+              </div>
+              <div class="hero-tags">
+                ${s.tags.map(t => `<span class="tag-badge">${t}</span>`).join('')}
+              </div>
+            </div>
+          `;
+        } else if (s.layout === 'two_cards') {
+          slideEl.innerHTML = `
+            <div class="slide-header">
+              <div class="category-badge">${s.category}</div>
+              <h2 class="slide-title">${s.title}</h2>
+              <div class="slide-subtitle">${s.subtitle}</div>
+            </div>
+            <div class="slide-content">
+              <div class="glass-card" style="flex:1; --card-accent: ${s.card1.accent};">
+                <div class="card-header">
+                  <div class="card-title">${s.card1.title}</div>
+                  <div class="card-badge">${s.card1.badge}</div>
+                </div>
+                <ul class="card-list">
+                  ${s.card1.items.map(i => `<li>${i}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="glass-card" style="flex:1; --card-accent: ${s.card2.accent};">
+                <div class="card-header">
+                  <div class="card-title">${s.card2.title}</div>
+                  <div class="card-badge">${s.card2.badge}</div>
+                </div>
+                <ul class="card-list">
+                  ${s.card2.items.map(i => `<li>${i}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          `;
+        } else if (s.layout === 'three_cards') {
+          slideEl.innerHTML = `
+            <div class="slide-header">
+              <div class="category-badge">${s.category}</div>
+              <h2 class="slide-title">${s.title}</h2>
+              <div class="slide-subtitle">${s.subtitle}</div>
+            </div>
+            <div class="slide-content">
+              <div class="glass-card" style="flex:1; --card-accent: ${s.card1.accent};">
+                <div class="card-header">
+                  <div class="card-title">${s.card1.title}</div>
+                  <div class="card-badge">${s.card1.badge}</div>
+                </div>
+                <ul class="card-list">
+                  ${s.card1.items.map(i => `<li>${i}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="glass-card" style="flex:1; --card-accent: ${s.card2.accent};">
+                <div class="card-header">
+                  <div class="card-title">${s.card2.title}</div>
+                  <div class="card-badge">${s.card2.badge}</div>
+                </div>
+                <ul class="card-list">
+                  ${s.card2.items.map(i => `<li>${i}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="glass-card" style="flex:1; --card-accent: ${s.card3.accent};">
+                <div class="card-header">
+                  <div class="card-title">${s.card3.title}</div>
+                  <div class="card-badge">${s.card3.badge}</div>
+                </div>
+                <ul class="card-list">
+                  ${s.card3.items.map(i => `<li>${i}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          `;
+        } else if (s.layout === 'four_steps') {
+          slideEl.innerHTML = `
+            <div class="slide-header">
+              <div class="category-badge">${s.category}</div>
+              <h2 class="slide-title">${s.title}</h2>
+              <div class="slide-subtitle">${s.subtitle}</div>
+            </div>
+            <div class="step-grid">
+              ${s.steps.map(st => `
+                <div class="step-card" style="--step-color: ${st.color};">
+                  <div class="step-num">${st.num}</div>
+                  <div class="step-title">${st.title}</div>
+                  <div class="step-desc">${st.desc}</div>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else if (s.layout === 'stats_plus_card') {
+          slideEl.innerHTML = `
+            <div class="slide-header">
+              <div class="category-badge">${s.category}</div>
+              <h2 class="slide-title">${s.title}</h2>
+              <div class="slide-subtitle">${s.subtitle}</div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-card" style="--stat-col: ${s.stat1.col};">
+                <div class="stat-val">${s.stat1.val}</div>
+                <div class="stat-lbl">${s.stat1.lbl}</div>
+                <div class="stat-sub">${s.stat1.sub}</div>
+              </div>
+              <div class="stat-card" style="--stat-col: ${s.stat2.col};">
+                <div class="stat-val">${s.stat2.val}</div>
+                <div class="stat-lbl">${s.stat2.lbl}</div>
+                <div class="stat-sub">${s.stat2.sub}</div>
+              </div>
+              <div class="stat-card" style="--stat-col: ${s.stat3.col};">
+                <div class="stat-val">${s.stat3.val}</div>
+                <div class="stat-lbl">${s.stat3.lbl}</div>
+                <div class="stat-sub">${s.stat3.sub}</div>
+              </div>
+            </div>
+            <div class="glass-card" style="--card-accent: ${s.main_card.accent};">
+              <div class="card-header">
+                <div class="card-title">${s.main_card.title}</div>
+                <div class="card-badge">${s.main_card.badge}</div>
+              </div>
+              <ul class="card-list">
+                ${s.main_card.items.map(i => `<li>${i}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+        }
+
+        viewport.appendChild(slideEl);
+
+        // Thumbnail Drawer Item
+        const thumb = document.createElement('div');
+        thumb.className = 'thumb-item' + (idx === 0 ? ' active' : '');
+        thumb.id = `thumb-${idx}`;
+        thumb.innerHTML = `
+          <div class="thumb-num">SLIDE ${String(idx + 1).padStart(2, '0')}</div>
+          <div class="thumb-title">${s.title}</div>
+        `;
+        thumb.onclick = () => goToSlide(idx);
+        drawer.appendChild(thumb);
+      });
+
+      updateNavigation();
+    }
+
+    function goToSlide(index) {
+      if (index < 0 || index >= slidesData.length) return;
+      playBeep(520, 0.05);
+
+      document.querySelectorAll('.slide').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active'));
+
+      currentIndex = index;
+      const targetSlide = document.getElementById(`slide-${currentIndex}`);
+      const targetThumb = document.getElementById(`thumb-${currentIndex}`);
+
+      if (targetSlide) targetSlide.classList.add('active');
+      if (targetThumb) {
+        targetThumb.classList.add('active');
+        targetThumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+
+      updateNavigation();
+    }
+
+    function updateNavigation() {
+      const percent = ((currentIndex + 1) / slidesData.length) * 100;
+      progressBar.style.width = percent + '%';
+      counterDisplay.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(slidesData.length).padStart(2, '0')}`;
+    }
+
+    function nextSlide() {
+      if (currentIndex < slidesData.length - 1) {
+        goToSlide(currentIndex + 1);
+      } else if (autoplayInterval) {
+        goToSlide(0); // Loop in autoplay
+      }
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        goToSlide(currentIndex - 1);
+      }
+    }
+
+    function toggleAutoplay() {
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
+        btnAutoplay.classList.remove('active');
+        btnAutoplay.innerHTML = '▶ Auto-Play (Video)';
+      } else {
+        btnAutoplay.classList.add('active');
+        btnAutoplay.innerHTML = '⏸ Tạm dừng';
+        playBeep(750, 0.08);
+        autoplayInterval = setInterval(() => {
+          nextSlide();
+        }, 6500); // 6.5s per slide like a video
+      }
+    }
+
+    // Event Listeners
+    document.getElementById('btnNext').onclick = nextSlide;
+    document.getElementById('btnPrev').onclick = prevSlide;
+    btnAutoplay.onclick = toggleAutoplay;
+
+    document.getElementById('btnDrawer').onclick = () => {
+      drawer.classList.toggle('open');
+      playBeep(450, 0.04);
+    };
+
+    document.getElementById('btnFullscreen').onclick = () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    };
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'Space') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key.toLowerCase() === 'p') {
+        toggleAutoplay();
+      } else if (e.key.toLowerCase() === 'm') {
+        drawer.classList.toggle('open');
+      } else if (e.key.toLowerCase() === 'f') {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+      }
+    });
+
+    // Initialize
+    renderSlides();
+  </script>
+</body>
+</html>
