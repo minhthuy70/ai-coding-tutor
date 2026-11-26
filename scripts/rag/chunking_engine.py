@@ -54,7 +54,7 @@ def count_tokens(text: str) -> int:
 def detect_language_from_filename(filename: str) -> str:
     """Tự động phân loại ngôn ngữ và chủ đề tài liệu từ tên file."""
     fn = filename.lower()
-    if fn.startswith("py_") or "python" in fn or "pep8" in fn:
+    if fn.startswith("py_") or fn.startswith("en_py_") or fn.startswith("vi_py_") or "python" in fn or "pep8" in fn:
         return "python"
     elif fn.startswith("cpp_") or "c++" in fn or "cpp" in fn or "stl" in fn or "pointer" in fn:
         return "cpp"
@@ -289,9 +289,16 @@ def split_by_headings_with_path(content: str) -> List[Dict[str, Any]]:
     """
     Tách tài liệu dựa trên cây phân cấp tiêu đề (#, ##, ###, ####),
     duy trì heading stack để tạo đường dẫn section_path đầy đủ.
+    Đặc biệt: Bỏ qua các dấu # nằm bên trong khối code block để tránh cắt đứt mã nguồn.
     """
+    code_spans = [m.span() for m in re.finditer(r'```[a-zA-Z0-9_\+\#-]*\n[\s\S]*?```', content, re.MULTILINE)]
+
+    def is_inside_code(pos: int) -> bool:
+        return any(start <= pos < end for start, end in code_spans)
+
     heading_pattern = re.compile(r'^(#{1,4})\s+(.+)$', re.MULTILINE)
-    matches = list(heading_pattern.finditer(content))
+    raw_matches = list(heading_pattern.finditer(content))
+    matches = [m for m in raw_matches if not is_inside_code(m.start())]
 
     if not matches:
         return [{
@@ -555,9 +562,19 @@ def process_chunking():
 
                 chunk_data = {
                     "id": chunk_id,
+                    "chunk_id": chunk_id,
                     "text": full_chunk_text,
+                    "source": filename,
+                    "language": language,
+                    "topic": sec_path,
+                    "section_title": sec_title,
+                    "has_code": has_code,
+                    "token_count": token_count,
                     "metadata": {
+                        "chunk_id": chunk_id,
+                        "source": filename,
                         "source_file": filename,
+                        "topic": sec_path,
                         "section_title": sec_title,
                         "section_path": sec_path,
                         "section_depth": sec_depth,

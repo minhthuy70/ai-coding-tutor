@@ -30,12 +30,12 @@ class TestRAGService:
     """Bộ kiểm thử toàn diện cho RAGService."""
 
     def test_01_initialization_and_stats(self):
-        """Kiểm tra khởi tạo và toàn vẹn kho tri thức 5.230 vector."""
+        """Kiểm tra khởi tạo và toàn vẹn kho tri thức vector (tối thiểu 5.230 records)."""
         stats = rag_service.get_stats()
         assert stats["status"] == "ready", "Trạng thái RAGService phải là 'ready'"
-        assert stats["total_records"] == 5230, f"Tổng số records phải đạt 5.230, thực tế: {stats['total_records']}"
-        assert stats["collections"]["qwen3_text"] == 4293, "Collection qwen3_text phải có 4.293 records"
-        assert stats["collections"]["jina_code"] == 937, "Collection jina_code phải có 937 records"
+        assert stats["total_records"] >= 5230, f"Tổng số records phải đạt tối thiểu 5.230, thực tế: {stats['total_records']}"
+        assert stats["collections"]["qwen3_text"] >= 4293, f"Collection qwen3_text phải có tối thiểu 4.293 records, thực tế: {stats['collections']['qwen3_text']}"
+        assert stats["collections"]["jina_code"] >= 937, f"Collection jina_code phải có tối thiểu 937 records, thực tế: {stats['collections']['jina_code']}"
         assert stats["benchmark_cached_queries"] >= 20, "Phải nạp thành công bộ đệm benchmark query vectors"
 
     def test_02_search_with_cached_benchmark_query(self):

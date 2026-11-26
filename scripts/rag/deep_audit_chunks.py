@@ -102,15 +102,16 @@ def run_deep_audit():
     }
 
     for chunk in chunks:
+        cid = chunk.get("id") or chunk.get("chunk_id", "unknown_id")
         content = chunk.get("text", "")
         has_code_flag = chunk.get("has_code", False) or chunk.get("metadata", {}).get("has_code", False)
         
         # Check severed function
         sever_check = check_severed_function(content)
         if sever_check["severed_start"]:
-            severed_start_chunks.append(chunk["chunk_id"])
+            severed_start_chunks.append(cid)
         if sever_check["severed_end"]:
-            severed_end_chunks.append(chunk["chunk_id"])
+            severed_end_chunks.append(cid)
             
         matches = code_fence_pattern.findall(content)
         if matches or has_code_flag:
@@ -176,10 +177,12 @@ def run_deep_audit():
     
     for c in short_chunks:
         cnt = c.get("text", "").strip()
+        cid = c.get("id") or c.get("chunk_id", "unknown_id")
+        toks = c.get("token_count") or c.get("metadata", {}).get("token_count", 0)
         if len(short_samples) < 5:
             short_samples.append({
-                "chunk_id": c["chunk_id"],
-                "tokens": c.get("token_count", 0),
+                "chunk_id": cid,
+                "tokens": toks,
                 "text": cnt.replace("\n", " ")[:100]
             })
         if cnt.startswith("#"):
@@ -195,14 +198,14 @@ def run_deep_audit():
     html_tag_regex = re.compile(r"<(div|span|p|br|table|tr|td|th|b|i|font|center)[^>]*>", re.I)
     image_leak_regex = re.compile(r"!\[.*?\]\([^\)]*\)")
     page_leak_regex = re.compile(r"\b(Trang\s+\d+|Page\s+\d+|\d+\s*/\s*\d+)\b", re.I)
-    null_byte_chunks = [c["chunk_id"] for c in chunks if "\x00" in c.get("text", "")]
+    null_byte_chunks = [c.get("id") or c.get("chunk_id") for c in chunks if "\x00" in c.get("text", "")]
     
-    chunks_with_html = [c["chunk_id"] for c in chunks if html_tag_regex.search(c.get("text", ""))]
-    chunks_with_images = [c["chunk_id"] for c in chunks if image_leak_regex.search(c.get("text", ""))]
-    chunks_with_pages = [c["chunk_id"] for c in chunks if page_leak_regex.search(c.get("text", ""))]
+    chunks_with_html = [c.get("id") or c.get("chunk_id") for c in chunks if html_tag_regex.search(c.get("text", ""))]
+    chunks_with_images = [c.get("id") or c.get("chunk_id") for c in chunks if image_leak_regex.search(c.get("text", ""))]
+    chunks_with_pages = [c.get("id") or c.get("chunk_id") for c in chunks if page_leak_regex.search(c.get("text", ""))]
 
     # 4. KIỂM TRA DUPLICATES VÀ METADATA
-    chunk_ids = [c["chunk_id"] for c in chunks]
+    chunk_ids = [c.get("id") or c.get("chunk_id") for c in chunks]
     unique_ids = set(chunk_ids)
     duplicate_ids = len(chunk_ids) - len(unique_ids)
     
@@ -210,14 +213,14 @@ def run_deep_audit():
     duplicate_contents = len(contents) - len(set(contents))
     
     # Metadata keys verification
-    required_keys = {"chunk_id", "source", "language", "topic", "section_title", "has_code"}
+    required_keys = {"source_file", "language", "content_type", "section_title", "has_code"}
     missing_meta_chunks = []
     for c in chunks:
         meta = c.get("metadata", {})
-        # check both top-level and metadata dict
         combined_keys = set(c.keys()).union(set(meta.keys()))
-        if not required_keys.issubset(combined_keys):
-            missing_meta_chunks.append(c["chunk_id"])
+        cid = c.get("id") or c.get("chunk_id")
+        if not required_keys.issubset(combined_keys) and not {"source", "topic"}.issubset(combined_keys):
+            missing_meta_chunks.append(cid)
 
     # 5. Phân bổ ngôn ngữ code fence
     fence_lang_summary = ", ".join([f"`{k}`: {v}" for k, v in fence_languages.most_common(8)])

@@ -298,7 +298,11 @@ class RAGService:
                         kwargs.pop("where", None)
                         res_text = coll_text.query(**kwargs)
                 except Exception as e:
-                    logger.warning(f"Lỗi truy vấn text collection: {e}")
+                    logger.warning(f"Lỗi truy vấn text collection có filter ({e}), fallback truy vấn không filter")
+                    try:
+                        res_text = coll_text.query(query_embeddings=[qwen_vec], n_results=cand_k, include=["documents", "metadatas", "distances"])
+                    except Exception as e2:
+                        logger.warning(f"Lỗi truy vấn text collection fallback: {e2}")
 
             if coll_code and jina_vec:
                 try:
@@ -310,7 +314,11 @@ class RAGService:
                         kwargs.pop("where", None)
                         res_code = coll_code.query(**kwargs)
                 except Exception as e:
-                    logger.warning(f"Lỗi truy vấn code collection: {e}")
+                    logger.warning(f"Lỗi truy vấn code collection có filter ({e}), fallback truy vấn không filter")
+                    try:
+                        res_code = coll_code.query(query_embeddings=[jina_vec], n_results=cand_k, include=["documents", "metadatas", "distances"])
+                    except Exception as e2:
+                        logger.warning(f"Lỗi truy vấn code collection fallback: {e2}")
         else:
             # Fallback nâng cao cho câu hỏi mới / chưa có vector:
             # Kết hợp mở rộng từ khóa, lọc theo ngôn ngữ và chấm điểm khớp từ khóa (Multi-token Weighted Scoring)

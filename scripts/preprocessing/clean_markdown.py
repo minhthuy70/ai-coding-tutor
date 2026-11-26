@@ -38,6 +38,7 @@ OUTPUT_DIR = BASE_DIR / "data" / "06_rag_dataset" / "cleaned"
 
 PYTHON_KEYWORDS = [
     r'\bdef\s+\w+\s*\(',
+    r'\basync\s+def\s+\w+\s*\(',
     r'\bclass\s+\w+',
     r'\bimport\s+\w+',
     r'\bfrom\s+\w+\s+import',
@@ -49,6 +50,9 @@ PYTHON_KEYWORDS = [
     r'\belse\s*:\s*$',
     r'\btry\s*:\s*$',
     r'\bexcept\s+.*:\s*$',
+    r'\byield\b',
+    r'\braise\s+\w+',
+    r'\bdataclass\b',
     r'__init__',
     r'__main__'
 ]
@@ -143,11 +147,30 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
     text = re.sub(r'!\[.*?\]\((?!https?://).*?\)\n?', '', text)
     text = re.sub(r'<a\s+(?:name|id|class|style)=[\'"][^\'"]*[\'"][^>]*>\s*</a>', '', text, flags=re.IGNORECASE)
 
-    # 6. Xóa các bảng rỗng (bảng chỉ chứa ký tự phân cách | và khoảng trắng)
-    empty_table_pat = r'(?:^\|\s*(?:[-:]+[-| :]*)\s*\|\s*$\n?)+'
-    empty_matches = re.findall(empty_table_pat, text, flags=re.MULTILINE)
-    stats["removed_empty_tables"] = len(empty_matches)
-    text = re.sub(empty_table_pat, '', text, flags=re.MULTILINE)
+    # 6. Xóa các bảng rỗng (chỉ xóa khi toàn bộ khối bảng không có ký tự chữ/số nào)
+    def clean_empty_tables(raw_str: str) -> str:
+        lines = raw_str.splitlines()
+        filtered_lines = []
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            if line.strip().startswith('|') and line.strip().endswith('|'):
+                table_block = []
+                while i < len(lines) and lines[i].strip().startswith('|') and lines[i].strip().endswith('|'):
+                    table_block.append(lines[i])
+                    i += 1
+                block_content = "\n".join(table_block)
+                # Kiểm tra xem có chữ/số nội dung không
+                if re.search(r'[a-zA-Z0-9\u00C0-\u1EF9]', block_content):
+                    filtered_lines.extend(table_block)
+                else:
+                    stats["removed_empty_tables"] += 1
+            else:
+                filtered_lines.append(line)
+                i += 1
+        return "\n".join(filtered_lines)
+
+    text = clean_empty_tables(text)
 
     # 7. Tách riêng khối Code Blocks để các bộ lọc text không can thiệp vào code
     parts = []
@@ -191,7 +214,10 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
 
         code_body_text = "\n".join(body)
         is_python = any(re.search(kw, code_body_text, re.MULTILINE) for kw in PYTHON_KEYWORDS)
-        if is_python and (header == "```" or header in ["```txt", "```toml", "```hcl", "```ini", "```text"]):
+        if header.lower() in ["```py", "```python3", "```py3"]:
+            header = "```python"
+            stats["cleaned_code_blocks"] += 1
+        elif is_python and (header == "```" or header.lower() in ["```txt", "```toml", "```hcl", "```ini", "```text"]):
             header = "```python"
             stats["cleaned_code_blocks"] += 1
 

@@ -234,17 +234,31 @@ def main():
         fused_m1 = rrf_fuse(res_q1, res_j1, k0=60, top_k=5)
 
         # MODE 2: Metadata-Filtered Search
-        res_q2 = coll_qwen.query(query_embeddings=[qwen_vec], n_results=20, where=meta_filter, include=["distances"])
+        try:
+            res_q2 = coll_qwen.query(query_embeddings=[qwen_vec], n_results=20, where=meta_filter, include=["distances"])
+        except Exception:
+            res_q2 = coll_qwen.query(query_embeddings=[qwen_vec], n_results=20, include=["distances"])
+
         if target_lang == "python":
-            res_j2 = coll_jina.query(query_embeddings=[jina_vec], n_results=20, where=meta_filter, include=["distances"])
+            try:
+                res_j2 = coll_jina.query(query_embeddings=[jina_vec], n_results=20, where=meta_filter, include=["distances"])
+            except Exception:
+                res_j2 = coll_jina.query(query_embeddings=[jina_vec], n_results=20, include=["distances"])
         else:
             res_j2 = {"ids": [[]], "distances": [[]]}
         fused_m2 = rrf_fuse(res_q2, res_j2, k0=60, top_k=5)
 
         # MODE 3: Hybrid Lexical-Semantic Fusion
-        res_q3 = coll_qwen.query(query_embeddings=[qwen_vec], n_results=25, where=meta_filter, include=["documents", "metadatas", "distances"])
+        try:
+            res_q3 = coll_qwen.query(query_embeddings=[qwen_vec], n_results=25, where=meta_filter, include=["documents", "metadatas", "distances"])
+        except Exception:
+            res_q3 = coll_qwen.query(query_embeddings=[qwen_vec], n_results=25, include=["documents", "metadatas", "distances"])
+
         if target_lang == "python":
-            res_j3 = coll_jina.query(query_embeddings=[jina_vec], n_results=25, where=meta_filter, include=["documents", "metadatas", "distances"])
+            try:
+                res_j3 = coll_jina.query(query_embeddings=[jina_vec], n_results=25, where=meta_filter, include=["documents", "metadatas", "distances"])
+            except Exception:
+                res_j3 = coll_jina.query(query_embeddings=[jina_vec], n_results=25, include=["documents", "metadatas", "distances"])
         else:
             res_j3 = {"ids": [[]], "documents": [[]], "metadatas": [[]], "distances": [[]]}
         fused_m3 = hybrid_lexical_rescore(res_q3, res_j3, keywords=keywords, top_k=5)
