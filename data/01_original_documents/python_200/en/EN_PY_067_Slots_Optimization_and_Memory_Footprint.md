@@ -1,0 +1,292 @@
+<!-- page: 1 -->
+# EN_PY_067: Optimizing Memory with __slots__: PyObject Memory Footprint and Attribute Dicts
+
+**Authoritative Source**: Python Software Foundation (CPython 3.12 Official Documentation & Language Reference)  
+**Authors**: Guido van Rossum, Raymond Hettinger, Vinay Sajip, A.M. Kuchling, and CPython Core Developers  
+**Domain**: Optimization | **Target Audience**: Computer Science Undergraduate & Advanced Developers  
+**Language Specification**: Python 3.12 (CPython Standard Implementation)
+
+---
+
+## Technical Overview & Formal Specification
+
+important that the emulation only be implemented to the degree that it
+makes sense for the object being modelled.  For example, some
+sequences may work well with retrieval of individual elements, but
+extracting a slice may not make sense.  (One example of this is the
+"NodeList" interface in the W3C’s Document Object Model.)
+
+
+3.3.1. Basic customization
+--------------------------
+
+object.__new__(cls[, ...])
+
+```python
+Called to create a new instance of class *cls*.  "__new__()" is a
+static method (special-cased so you need not declare it as such)
+that takes the class of which an instance was requested as its
+first argument.  The remaining arguments are those passed to the
+object constructor expression (the call to the class).  The return
+value of "__new__()" should be the new object instance (usually an
+instance of *cls*).
+
+Typical implementations create a new instance of the class by
+invoking the superclass’s "__new__()" method using
+"super().__new__(cls[, ...])" with appropriate arguments and then
+modifying the newly created instance as necessary before returning
+it.
+
+If "__new__()" is invoked during object construction and it returns
+an instance of *cls*, then the new instance’s "__init__()" method
+will be invoked like "__init__(self[, ...])", where *self* is the
+new instance and the remaining arguments are the same as were
+passed to the object constructor.
+
+If "__new__()" does not return an instance of *cls*, then the new
+instance’s "__init__()" method will not be invoked.
+
+"__new__()" is intended mainly to allow subclasses of immutable
+types (like int, str, or tuple) to customize instance creation.  It
+is also commonly overridden in custom metaclasses in order to
+customize class creation.
+
+```
+
+<!-- page: 2 -->
+
+object.__init__(self[, ...])
+
+   Called after the instance has been created (by "__new__()"), but
+   before it is returned to the caller.  The arguments are those
+```python
+passed to the class constructor expression.  If a base class has an
+"__init__()" method, the derived class’s "__init__()" method, if
+any, must explicitly call it to ensure proper initialization of the
+base class part of the instance; for example:
+"super().__init__([args...])".
+
+Because "__new__()" and "__init__()" work together in constructing
+objects ("__new__()" to create it, and "__init__()" to customize
+it), no non-"None" value may be returned by "__init__()"; doing so
+will cause a "TypeError" to be raised at runtime.
+
+```
+object.__del__(self)
+
+   Called when the instance is about to be destroyed.  This is also
+   called a finalizer or (improperly) a destructor.  If a base class
+   has a "__del__()" method, the derived class’s "__del__()" method,
+```python
+if any, must explicitly call it to ensure proper deletion of the
+base class part of the instance.
+
+It is possible (though not recommended!) for the "__del__()" method
+to postpone destruction of the instance by creating a new reference
+to it.  This is called object *resurrection*.  It is
+implementation-dependent whether "__del__()" is called a second
+time when a resurrected object is about to be destroyed; the
+current *CPython* implementation only calls it once.
+
+It is not guaranteed that "__del__()" methods are called for
+objects that still exist when the interpreter exits.
+"weakref.finalize" provides a straightforward way to register a
+cleanup function to be called when an object is garbage collected.
+
+Note:
+
+  "del x" doesn’t directly call "x.__del__()" — the former
+  decrements the reference count for "x" by one, and the latter is
+  only called when "x"’s reference count reaches zero.
+
+**CPython implementation detail:** It is possible for a reference
+cycle to prevent the reference count of an object from going to
+zero.  In this case, the cycle will be later detected and deleted
+by the *cyclic garbage collector*.  A common cause of reference
+cycles is when an exception has been caught in a local variable.
+The frame’s locals then reference the exception, which references
+its own traceback, which references the locals of all frames caught
+in the traceback.
+
+See also: Documentation for the "gc" module.
+
+Warning:
+
+  Due to the precarious circumstances under which "__del__()"
+  methods are invoked, exceptions that occur during their execution
+  are ignored, and a warning is printed to "sys.stderr" instead.
+  In particular:
+
+  * "__del__()" can be invoked when arbitrary code is being
+    executed, including from any arbitrary thread.  If "__del__()"
+    needs to take a lock or invoke any other blocking resource, it
+    may deadlock as the resource may already be taken by the code
+    that gets interrupted to execute "__del__()".
+
+  * "__del__()" can be executed during interpreter shutdown.  As a
+    consequence, the global variables it needs to access (including
+    other modules) may already have been deleted or set to "None".
+    Python guarantees that globals whose name begins with a single
+    underscore are deleted from their module before other globals
+    are deleted; if no other references to such globals exist, this
+    may help in assuring that imported modules are still available
+    at the time when the "__del__()" method is called.
+
+```
+
+<!-- page: 3 -->
+
+object.__repr__(self)
+
+   Called by the "repr()" built-in function to compute the “official”
+   string representation of an object.  If at all possible, this
+   should look like a valid Python expression that could be used to
+```python
+recreate an object with the same value (given an appropriate
+environment).  If this is not possible, a string of the form
+"<...some useful description...>" should be returned. The return
+value must be a string object. If a class defines "__repr__()" but
+not "__str__()", then "__repr__()" is also used when an “informal”
+string representation of instances of that class is required.
+
+This is typically used for debugging, so it is important that the
+representation is information-rich and unambiguous. A default
+implementation is provided by the "object" class itself.
+
+```
+object.__str__(self)
+
+   Called by "str(object)", the default "__format__()" implementation,
+```python
+and the built-in function "print()", to compute the “informal” or
+nicely printable string representation of an object.  The return
+value must be a str object.
+
+This method differs from "object.__repr__()" in that there is no
+expectation that "__str__()" return a valid Python expression: a
+more convenient or concise representation can be used.
+
+The default implementation defined by the built-in type "object"
+calls "object.__repr__()".
+
+```
+object.__bytes__(self)
+
+   Called by bytes to compute a byte-string representation of an
+```python
+object. This should return a "bytes" object. The "object" class
+itself does not provide this method.
+
+```
+object.__format__(self, format_spec)
+
+   Called by the "format()" built-in function, and by extension,
+
+<!-- page: 4 -->
+
+   evaluation of formatted string literals and the "str.format()"
+   method, to produce a “formatted” string representation of an
+   object. The *format_spec* argument is a string that contains a
+   description of the formatting options desired. The interpretation
+   of the *format_spec* argument is up to the type implementing
+   "__format__()", however most classes will either delegate
+   formatting to one of the built-in types, or use a similar
+   formatting option syntax.
+
+```python
+See Format Specification Mini-Language for a description of the
+standard formatting syntax.
+
+The return value must be a string object.
+
+The default implementation by the "object" class should be given an
+empty *format_spec* string. It delegates to "__str__()".
+
+Changed in version 3.4: The __format__ method of "object" itself
+raises a "TypeError" if passed any non-empty string.
+
+Changed in version 3.7: "object.__format__(x, '')" is now
+equivalent to "str(x)" rather than "format(str(x), '')".
+
+```
+object.__lt__(self, other)
+object.__le__(self, other)
+object.__eq__(self, other)
+object.__ne__(self, other)
+object.__gt__(self, other)
+object.__ge__(self, other)
+
+   These are the so-called “rich comparison” methods. The
+   correspondence between operator symbols and method names is as
+   follows: "x<y" calls "x.__lt__(y)", "x<=y" calls "x.__le__(y)",
+   "x==y" calls "x.__eq__(y)", "x!=y" calls "x.__ne__(y)", "x>y" calls
+   "x.__gt__(y)", and "x>=y" calls "x.__ge__(y)".
+
+```python
+A rich comparison method may return the singleton "NotImplemented"
+if it does not implement the operation for a given pair of
+arguments. By convention, "False" and "True" are returned for a
+successful comparison. However, these methods can return any value,
+so if the comparison operator is used in a Boolean context (e.g.,
+in the condition of an "if" statement), Python will call "bool()"
+on the value to determine if the result is true or false.
+
+By default, "object" implements "__eq__()" by using "is", returning
+"NotImplemented" in the case of a false comparison: "True if x is y
+else NotImplemented". For "__ne__()", by default it delegates to
+"__eq__()" and inverts the result unless it is "NotImplemented".
+There are no other implied relationships among the comparison
+operators or default implementations; for example, the truth of
+"(x<y or x==y)" does not imply "x<=y". To automatically generate
+ordering operations from a single root operation, see
+"functools.total_ordering()".
+
+By default, the "object" class provides implementations consistent
+with Value comparisons: equality compares according to object
+identity, and order comparisons raise "TypeError". Each default
+method may generate these results directly, but may also return
+"NotImplemented".
+
+See the paragraph on "__hash__()" for some important notes on
+creating *hashable* objects which support custom comparison
+operations and are usable as dictionary keys.
+
+There are no swapped-argument versions of these methods (to be used
+when the left argument does not support the operation but the right
+argument does); rather, "__lt__()" and "__gt__()" are each other’s
+reflection, "__le__()" and "__ge__()" are each other’s reflection,
+and "__eq__()" and "__ne__()" are their own reflection. If the
+operands are of different types, and the right operand’s type is a
+direct or indirect subclass of the left operand’s type, the
+reflected method of the right operand has priority, otherwise the
+left operand’s method has priority.  Virtual subclassing is not
+considered.
+
+When no appropriate method returns any value other than
+"NotImplemented", the "==" and "!=" operators will fall back to
+"is" and "is not", respectively.
+
+```
+
+<!-- page: 5 -->
+
+object.__hash__(self)
+
+```python
+Called by built-in function "hash()" and for operations on members
+of hashed collections including "set", "frozenset", and "dict".
+The "__hash__()" method should return an integer. The only required
+property is that objects which compare equal have the same hash
+value; it is advised to mix together the hash values of the
+components of the object that also play a part in comparison of
+objects by packing them into a tuple and hashing the tuple.
+Example:
+
+   def __hash__(self):
+       return hash((self.name, self.nick, self.color))
+
+Note:
+
+  "hash()" truncates the value returned from an object’s custom
+  "__hash__()" method to the size of a "Py_ssize_t".  This is
+```

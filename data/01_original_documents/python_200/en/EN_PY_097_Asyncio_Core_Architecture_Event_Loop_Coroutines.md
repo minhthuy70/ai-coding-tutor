@@ -1,0 +1,148 @@
+<!-- page: 1 -->
+# EN_PY_097: asyncio Module: Coroutines, Tasks, Event Loop Architecture, and async/await
+
+**Authoritative Source**: Python Software Foundation (CPython 3.12 Official Documentation & Language Reference)  
+**Authors**: Guido van Rossum, Raymond Hettinger, Vinay Sajip, A.M. Kuchling, and CPython Core Developers  
+**Domain**: Concurrency | **Target Audience**: Computer Science Undergraduate & Advanced Developers  
+**Language Specification**: Python 3.12 (CPython Standard Implementation)
+
+---
+
+## Technical Overview & Formal Specification
+
+"asyncio" — Asynchronous I/O
+****************************
+
+======================================================================
+
+
+Hello World!
+^^^^^^^^^^^^
+
+```python
+import asyncio
+
+async def main():
+    print('Hello ...')
+    await asyncio.sleep(1)
+    print('... World!')
+
+asyncio.run(main())
+
+```
+asyncio is a library to write **concurrent** code using the
+**async/await** syntax.
+
+asyncio is used as a foundation for multiple Python asynchronous
+frameworks that provide high-performance network and web-servers,
+database connection libraries, distributed task queues, etc.
+
+asyncio is often a perfect fit for IO-bound and high-level
+**structured** network code.
+
+asyncio provides a set of **high-level** APIs to:
+
+* run Python coroutines concurrently and have full control over their
+  execution;
+
+<!-- page: 2 -->
+
+
+* perform network IO and IPC;
+
+* control subprocesses;
+
+* distribute tasks via queues;
+
+* synchronize concurrent code;
+
+Additionally, there are **low-level** APIs for *library and framework
+developers* to:
+
+* create and manage event loops, which provide asynchronous APIs for
+  networking, running subprocesses, handling OS signals, etc;
+
+* implement efficient protocols using transports;
+
+* bridge callback-based libraries and code with async/await syntax.
+
+Availability: not Emscripten, not WASI.
+
+This module does not work or is not available on WebAssembly platforms
+"wasm32-emscripten" and "wasm32-wasi". See WebAssembly platforms for
+more information.
+
+-[ asyncio REPL ]-
+
+You can experiment with an "asyncio" concurrent context in the REPL:
+
+   $ python -m asyncio
+   asyncio REPL ...
+   Use "await" directly instead of "asyncio.run()".
+```python
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import asyncio
+>>> await asyncio.sleep(10, result='hello')
+'hello'
+
+```
+Raises an auditing event "cpython.run_stdin" with no arguments.
+
+Changed in version 3.12.5: (also 3.11.10, 3.10.15, 3.9.20, and 3.8.20)
+Emits audit events.
+
+-[ Reference ]-
+
+<!-- page: 3 -->
+
+
+
+High-level APIs
+^^^^^^^^^^^^^^^
+
+* Runners
+
+* Coroutines and Tasks
+
+* Streams
+
+* Synchronization Primitives
+
+* Subprocesses
+
+* Queues
+
+* Exceptions
+
+
+Low-level APIs
+^^^^^^^^^^^^^^
+
+* Event Loop
+
+* Futures
+
+* Transports and Protocols
+
+* Policies
+
+* Platform Support
+
+* Extending
+
+
+Guides and Tutorials
+^^^^^^^^^^^^^^^^^^^^
+
+* High-level API Index
+
+* Low-level API Index
+
+* Developing with asyncio
+
+
+<!-- page: 4 -->
+
+Note:
+
+  The source code for asyncio can be found in Lib/asyncio/.
