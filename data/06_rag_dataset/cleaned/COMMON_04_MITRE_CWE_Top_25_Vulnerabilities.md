@@ -27,10 +27,12 @@
 	                </a>
 
 	<a href="/about/new_to_cwe.html" title="New to CWE click here logo"><img src="/images/new_to_cwe/new_to_cwe_click_here.png" height="90" border="0" alt="New to CWE? click here!" style="text-align:center"/></a>
+
 	<a href="/topHW/index.html" title="CWE Most Important Hardware Weaknesses"> <img src="/images/mihw_logo.svg" width="90" border="0" alt="CWE Most Important Hardware Weaknesses" style="vertical-align:bottom"/></a>
+
 	<a href="/top25/" title="CWE Top 25"><img src="/images/cwe_top_25_logo_simple.svg" width="90" border="0" alt="CWE Top 25 Most Dangerous Weaknesses" style="vertical-align:bottom"/></a>
 
-	<!--End Masthead div-->
+<!--End Masthead div-->
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
@@ -52,6 +54,7 @@
 		</td>
 	</tr>
 </table>
+
  <!--//HeaderBar-->
 
 <hr width="100%" size="1" style="clear:both" color="#000000" />
@@ -157,7 +160,8 @@
 
 <table width="300" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #32498D;">
 <tr style="background-color:#32498D; color:#ffffff;">
-<td width="100%" style="padding:1px 5px 1px 5px; border-bottom:1px solid #000000">CWE Glossary Definition</td>
+<td width="100%" style="padding:1px 5px 1px 5px; border-bottom:1px solid #000000">CWE Glossary Definition
+</td>
 <td nowrap="nowrap" style="padding:1px; border-bottom:1px solid #000000" valign="top"><a href="javascript:styledPopupClose();"><img src="/images/layout/close.gif" border="0"  alt="x"></a></td>
 </tr>
 <tr><td colspan="2" style="background: url(/images/layout/ylgradient.jpg); background-repeat: repeat-x repeat-y; padding:5px; background-color:#FFFFCC; " valign="top">
@@ -172,13 +176,18 @@
 <br>
 
 <a href="/top25/index.html">Top 25 Home</a>
+
 Share via: <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=http://cwe.mitre.org/top25/archive/2023/2023_top25_list.html"><img src="/images/twitter.jpg" width="20" height="20" style="position: relative; top:3px;" alt="Share via Twitter" title="Twitter"></a>
 <a href="#tableView">View in table format</a>
+
 <a href="/top25/archive/2023/2023_key_insights.html">Key Insights</a>
+
 <a href="/top25/archive/2023/2023_methodology.html">Methodology</a>
+
 <br />
 
 2023 CWE Top 25
+
 <a class="popupclose" href="#top25list">&times;</a>
 
 <table id="Detail" style="margin-left:auto; margin-right:auto;" border="2" cellpadding="2" cellspacing="2">
@@ -700,7 +709,8 @@ November 11, 2024
 
     <table width="100%" cellpadding="0" cellspacing="0" border="0" class="ltgreybackground" style="clear:both">
       <tr>
-        <td colspan="3" id="line">&nbsp;</td>
+        <td colspan="3" id="line">&nbsp;
+</td>
       </tr>
       <tr>
         <td valign="middle" nowrap="nowrap">

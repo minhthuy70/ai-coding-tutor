@@ -214,6 +214,7 @@ class Diem:
 • See also: [http://docs.python.org/ref/customization.html](http://docs.python.org/ref/customization.html)
 
 | Operator | Class Method |
+| --- | --- |
 | - | __sub__(self, other) |
 | + | __add__(self, other) |
 | * | __mul__(self, other) |
@@ -222,9 +223,11 @@ class Diem:
 Unary Operators
 
 | - | __neg__(self) |
+| --- | --- |
 | + | __pos__(self) |
 
 | Operator | Class Method |
+| --- | --- |
 | == | __eq__(self, other) |
 | != | __ne__(self, other) |
 | &lt; | __lt__(self, other) |
@@ -258,9 +261,9 @@ Unary Operators
 
 ## – Example:
 
+```python
 class BankAccount:
 
-```python
 def deposit(self, amount):
     if amount < 0:
         raise ValueError("negative amount")
@@ -297,9 +300,7 @@ class Diem3D(Diem):
     def __init__(self, x, y, z):
         Diem.__init__(self, x, y)
         self.z = z
-```
-
-```python
+python
 def dich_chuyen(self, dx, dy, dz):
     Diem.dich_chuyen(self, dx, dy)
     self.z += dz

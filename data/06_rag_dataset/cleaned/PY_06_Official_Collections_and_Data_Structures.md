@@ -101,12 +101,17 @@ scanning the mappings last to first
      ['music', 'art', 'opera']
 
  This gives the same ordering as a series of :meth:`dict.update` calls
- starting with the last mapping::
+ starting with the last mapping:
 
-     >>> combined = baseline.copy()
-     >>> combined.update(adjustments)
-     >>> list(combined)
-     ['music', 'art', 'opera']
+```
+
+python
+>>> combined = baseline.copy()
+>>> combined.update(adjustments)
+>>> list(combined)
+['music', 'art', 'opera']
+
+```
 
  .. versionchanged:: 3.9
     Added support for ``|`` and ``|=`` operators, specified in :pep:`584`.
@@ -489,11 +494,12 @@ or subtracting from an empty counter.
   Section 4.6.3, Exercise 19*.
 
 * To enumerate all distinct multisets of a given size over a given set of
-  elements, see :func:`itertools.combinations_with_replacement`::
-
-     map(Counter, combinations_with_replacement('ABC', 2)) # --> AA AB AC BB BC CC
+  elements, see :func:`itertools.combinations_with_replacement`:
 
 ```
+
+python
+map(Counter, combinations_with_replacement('ABC', 2)) # --> AA AB AC BB BC CC
 
 ### :class:`deque` objects
 
@@ -1143,12 +1149,17 @@ fields:
 
 * See :class:`typing.NamedTuple` for a way to add type hints for named
   tuples.  It also provides an elegant notation using the :keyword:`class`
-  keyword::
+  keyword:
 
-      class Component(NamedTuple):
-          part_number: int
-          weight: float
-          description: Optional[str] = None
+```
+
+python
+class Component(NamedTuple):
+    part_number: int
+    weight: float
+    description: Optional[str] = None
+
+```
 
 * See :meth:`types.SimpleNamespace` for a mutable namespace based on an
   underlying dictionary instead of a tuple.

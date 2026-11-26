@@ -174,13 +174,9 @@ SELECT \* FROM HocVien ORDER BY HoTen SELECT \* FROM HocVien ORDER BY DienThoai 
 
 ```python
 import sqlite3
-```
-
-```txt
+txt
 MyDB = sqlite3.connect('N:\\NhatNgheDb.db')
-```
-
-```txt
+txt
 C = MyDB.cursor()
 ```
 
@@ -220,14 +216,10 @@ Sử dụng hàm **commit()**để lưu các thay đổi và sử dụng <u>hàm
 ```txt
 #insert data into our table
 c.execute('''INSERT INTO HocVien VALUES ('001','Hien','Luong','1/1/1981','11W')''')
-```
-
-```txt
+txt
 #Save changes using the commit() function
 MyDB.commit()
-```
-
-```txt
+txt
 #Close the database connection
 MyDB.close()
 ```
@@ -242,13 +234,9 @@ products = (
 
 ```javascript
 (1, 'Ti vi', 1234),
-```
-
-```javascript
+javascript
 (2, 'Máy giặt', 5712),
-```
-
-```csv
+csv
 (3, 'Điều hòa', 9000),
 ```
 
@@ -258,9 +246,7 @@ products = (
 
 ```javascript
 (6, 'Hummer', 41400),
-```
-
-```javascript
+javascript
 (7, 'Volkswagen', 21600)
 ```
 

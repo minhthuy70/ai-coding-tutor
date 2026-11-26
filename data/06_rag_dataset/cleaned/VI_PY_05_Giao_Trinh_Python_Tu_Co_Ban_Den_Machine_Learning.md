@@ -275,6 +275,7 @@ Trong Python, biến được khởi tạo tự động khi gán giá trị. Pyt
 Dựa trên nền tảng Python Basic, dưới đây là bảng tổng hợp các kiểu dữ liệu cốt lõi thường xuyên được sử dụng:
 
 | Tên | Kiểu dữ liệu | Ví dụ |
+| --- | --- | --- |
 | str | Kiểu chuỗi (string) | a = 'Thien Thanh' |
 | int | Kiểu số nguyên | a = 79 |
 | float | Kiểu số thực | a = 7.6 |
@@ -303,6 +304,7 @@ Toán tử là thành phần không thể thiếu để thực hiện các phép
 ## 2.2.1 Toán tử cơ bản
 
 | Tên toán tử | Ký hiệu | Ví dụ | Kết quả |
+| --- | --- | --- | --- |
 | Cộng | + | 3 + 7 | 10 |
 | Trừ | - | 7 - 2 | 5 |
 | Nhân | * | 2 * 7 | 14 |
@@ -318,6 +320,7 @@ Bảng 2.2: Các toán tử số học cơ bản
 Để mã nguồn ngắn gọn hơn, Python hỗ trợ các toán tử gán mở rộng kết hợp phép tính và phép gán:
 
 | Tên toán tử | Ký hiệu | Ví dụ | Kết quả |
+| --- | --- | --- | --- |
 | Cộng | += | a = 7; a += 3 | 10 |
 | Trừ | -= | b = 9; b -= 4 | 5 |
 | Nhân | *= | a = 2; a *= 7 | 14 |
@@ -335,6 +338,8 @@ Bảng 2.3: Các toán tử gán mở rộng
 Listing 2.2: Import thư viện math
 
 | import math |
+| --- |
+
 ## 2.3.1 Các hằng số toán học
 
 • Hằng số Euler (E): math.e ≈ 2.718
@@ -344,6 +349,7 @@ Listing 2.2: Import thư viện math
 ## 2.3.2 Các hàm toán học thường dùng
 
 | Tên hàm (Toán học) | Mã lệnh Python |
+| --- | --- |
 | ln(x) | math.log(math.e) |
 | log<sub>2</sub>(x) | math.log2(3) |
 | e<sup>x</sup> | math.exp(3) |
@@ -379,11 +385,9 @@ print("List sau khi cap nhat:", features)
 
 Listing 2.4: Sử dụng cấu trúc điều kiện
 
-```txt
-score = 0.85
-```
-
 ```python
+score = 0.85
+python
 if score >= 0.8:
     print("Mo hinh dat do chinh xac cao")
 else:
@@ -536,9 +540,7 @@ class SimpleLinearRegression:
         denominator = sum((X[i] - mean_x) ** 2 for i in range(n))
 
         if denominator == 0:
-```
-
-```python
+python
 raise ValueError("Bao loi: Phuong sai cua X bang 0, khong
     the tinh toan.")
 
@@ -699,9 +701,7 @@ data_vnm = {
 df_mock = pd.DataFrame(data_vnm)
 
 df_mock.to_csv('vinamilk_stock.csv', index=False)
-```
-
-```lua
+lua
 CHƯƠNG 4. X smile DUI LIỆU VỚI NUMPY VÀ PANDAS (NUMPY & PANDAS) 16
 
 print("Đã ạo thành công file 'vinamilk_stock.csv' trong uth ụmc êhin ạti"))
@@ -827,6 +827,7 @@ Hình 5.2: Sáu pha của CRISP-DM. Pha “Chuẩn bị dữ liệu” là nơi 
 Theo Han, Kamber và Pei (Data Mining: Concepts and Techniques), tiền xử lý dữ liệu gồm bốn nhóm tác vụ chính:
 
 | Nhóm tác vụ | Nội dung |
+| --- | --- |
 | Làm sạch dữ liệu | Xử lý giá trị thiếu (Simple / KNN / Iterative Imputer), dữ liệu nhiễu, ngoại lai (IQR, LOF), dữ liệu sai định dạng. |
 | Tích hợp dữ liệu | Gộp dữ liệu từ nhiều nguồn, xử lý trùng lặp và mâu thuẫn. |
 | Biến đổi dữ liệu | Mã hóa (Label/One Hot Encoder), vector hóa văn bản (Count/TF-IDF), chuẩn hóa thang đo (các Scaler). |
@@ -843,6 +844,7 @@ Toàn bộ kỹ thuật trong chương được cài đặt bằng thư viện *
 Điểm mạnh của scikit-learn là **giao diện thống nhất** (Buitinck và cộng sự, 2013): mọi bộ biến đổi (transformer) đều có ba phương thức:
 
 | Phương thức | Ý nghĩa |
+| --- | --- |
 | fit(X) | Học các tham số từ dữ liệu (từ điển nhãn, min/max, trung bình, độ lệch chuẩn…). |
 | transform(X) | Áp dụng các tham số đã học để biến đổi dữ liệu. |
 | fit_transform(X) | Gộp hai bước trên (chỉ dùng trên tập huấn luyện). |
@@ -857,6 +859,7 @@ Bảng 5.2: Giao diện chung của các bộ biến đổi trong scikit-learn
 Trước khi chọn kỹ thuật, cần xác định **thang đo** của từng biến. Stevens (1946) phân biệt bốn thang đo: định danh (nominal), thứ bậc (ordinal), khoảng (interval) và tỉ lệ (ratio). Trong thực hành ML, ta gom thành các nhóm sau:
 
 | Kiểu dữ liệu | Đặc điểm | Ví dụ | Phép biến đổi |
+| --- | --- | --- | --- |
 | Định danh (nominal) | Các giá trị chỉ khác nhau, không có thứ tự | màu sắc, khu phố | One Hot Encoder |
 | Thứ bậc (ordinal) | Có thứ tự nhưng khoảng cách không rõ ràng | kém &lt; TB &lt; tốt | Ordinal Encoder |
 | Nhãn đầu ra (target) | Biến cần dự đoán trong phân lớp | "spam"/"ham" | Label Encoder |
@@ -874,6 +877,7 @@ Dữ liệu thiếu xuất hiện trong hầu hết các bộ dữ liệu thực
 Donald Rubin (1976) đặt nền móng lý thuyết cho bài toán dữ liệu thiếu khi phân biệt ba cơ chế thiếu:
 
 | Cơ chế | Ý nghĩa | Ví dụ |
+| --- | --- | --- |
 | MCAR - Missing | Việcthiếuhoàntoànngẫunhiên, | Phiếu khảo sát bị thất lạc |
 | Completely At | không phụ thuộc vào biến nào | ngẫu nhiên |
 | Random |  |  |
@@ -963,6 +967,7 @@ $$
 **Ví dụ 5.3** (Chạy tay KNN Imputer với k = 3). Điền ba ô thiếu trong Bảng 5.5.
 
 | STT | x<sub>1</sub> | x<sub>2</sub> | x<sub>3</sub> |
+| --- | --- | --- | --- |
 | 1 | 7 | 6 | 4 |
 | 2 | ? | 4 | 5 |
 | 3 | 1 | 5 | ? |
@@ -982,6 +987,7 @@ $$
 Bước 3 – lấy trung bình của k = 3 láng giềng gần nhất (dòng 3, 1, 5): $x_{1} = \frac{1 + 7 + 8}{3}\approx 5,333.$ Làm tương tự cho hai ô còn lại, ta được bảng tổng hợp:
 
 | Ô cần điền | Điểm q | Khoảng cách đến các dòng | 3 láng giềng | Giá trị điền |
+| --- | --- | --- | --- | --- |
 | x<sub>1</sub>, dòng 2 | (x2,x3) =(4,5) | d<sub>1</sub> = 2,236; d<sub>3</sub> = 1,414; d<sub>4</sub> = 5,385; d<sub>5</sub> = 4,243 | 3, 1, 5 | 1+73+8 ≈ 5,333 |
 | x<sub>3</sub>, dòng 3 | (x<sub>1</sub>,x<sub>2</sub>) =(1,5) | d<sub>1</sub> = 6,083; d<sub>2</sub> = 1,414; d<sub>4</sub> = 4,472; d<sub>5</sub> = 9,899 | 2, 4, 1 | 5+73+4 ≈ 5,333 |
 | x<sub>2</sub>, dòng 5 | (x1,x3) =(8,8) | d<sub>1</sub> = 4,123; d<sub>2</sub> = 4,243; d<sub>3</sub> = 9,899; d<sub>4</sub> = 5,099 | 1, 2, 4 | 6+43+9 ≈ 6,333 |
@@ -1033,6 +1039,7 @@ Simple Imputer bỏ qua quan hệ giữa các cột; KNN Imputer khai thác quan
 Bộ hồi quy ở bước 2 có thể là bất kỳ mô hình nào. Trong ví dụ dưới đây ta dùng hồi quy tuyến tính, giải bằng phương trình chuẩn $\boldsymbol{\beta} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y}$(Chương **??**); cột đầu tiên của X toàn số 1 ứng với hệ số chặn$\beta_{0}$**Ví dụ 5.4** (Chạy tay một vòng Iterative Imputer). Điền ba ô thiếu trong Bảng 5.7 theo thứ tự cột$x_{1}\rightarrow x_{2}\rightarrow x_{3}$
 
 | STT | x<sub>1</sub> | x<sub>2</sub> | x<sub>3</sub> |
+| --- | --- | --- | --- |
 | 1 | 3 | 7 | 1 |
 | 2 | ? | 4 | 8 |
 | 3 | 6 | 3 | 7 |
@@ -1074,6 +1081,7 @@ Thay dòng 5 $(x_{1} = 1, x_{2} = 9)$: $x_{3} = 9,7807 + 0,3487 \times 1 - 1,400
 Kết thúc vòng thứ nhất: $x_{1}\approx 5,32;x_{2}\approx 4,47;x_{3}\approx -2,47.$**Phân tích kết quả: bài toán điều kiện xấu.** Giá trị$x_{3}\approx -2,47$nằm **ngoài** miền quan sát [1; 8] của cột$x_{3}$— một dấu hiệu cảnh báo. Nguyên nhân nằm ở bốn dòng dùng để hồi quy ở bước 4: tổng$x_{1} + x_{2}$của chúng lần lượt là 10; 9,32; 9; 9,47, , tức hai đặc trưng gần như phụ thuộc tuyến tính (**đa cộng tuyến**). Khi đó$\mathbf{X}^{\top}\mathbf{X}$gần suy biến: số điều kiện của nó vào khoảng$1,8\times 10^{6}$và phần tử lớn nhất của$(\mathbf{X}^{\top}\mathbf{X})^{-1}$ lên tới khoảng 9505. Hệ quả là nghiệm cực kỳ nhạy với sai số làm tròn ở các bước trước:
 
 | x<sub>1</sub> (dòng 2) | x<sub>2</sub> (dòng 4) | β<sub>0</sub> | β<sub>1</sub> | β<sub>2</sub> | x<sub>3</sub> (dòng 5) |
+| --- | --- | --- | --- | --- | --- |
 | 5,31553… (đủ chữ số) | 4,46889… | 9,781 | 0,349 | -1,400 | -2,47 |
 | 5,316 | 4,469 | 8,852 | 0,460 | -1,316 | -2,53 |
 | 5,32 | 4,47 | 1,242 | 1,375 | -0,624 | -3,00 |
@@ -1116,9 +1124,7 @@ print(imp.fit_transform(X).round(4))
 # Mac dinh BayesianRidge, 10 vong, gioi han mien gia tri theo du lieu
     quan sat
 lo, hi = np.nanmin(X, axis=0), np.nanmax(X, axis=0)
-```
-
-```python
+python
 imp = IterativeImputer(max_iter=10, min_value=lo, max_value=hi,
     random_state=0)
 print(imp.fit_transform(X).round(3))
@@ -1127,6 +1133,7 @@ print(imp.fit_transform(X).round(3))
 ```
 
 | Bộ điền | Ý tưởng | Ưu điểm | Nhược điểm |
+| --- | --- | --- | --- |
 | SimpleImputer | Thống kê của chính cột (mean, median, mode) | Nhanh, đơn giản, ổn định | Bỏ qua quan hệ giữa các cột; làm giảm phương sai |
 | KNNImputer | Trung bình của k láng giềng theo khoảng cách nan-Euclid | Tận dụng sự tương đồng giữa các bản ghi | Chậmvớidữliệulớn; cần chuẩn hóa thang đo |
 | IterativeImputer | Hồi quy lặp từng cột theo các cột còn lại (MICE) | Khai thác quan hệ đa biến | Chậm; có thể ngoại suy phi thực tế; cần kiểm tra kết quả |
@@ -1195,6 +1202,7 @@ Phép lấy max trong khoảng cách tiếp cận có tác dụng **làm trơn**
 **Ví dụ 5.5** (Tính tay LOF với k = 3). Cho 5 điểm A(0, 0), B(1, 0), C(0, 1), D(1, 1) và E(5, 4) với ma trận khoảng cách Euclid trong Bảng 5.10.
 
 |  | A | B | C | D | E |
+| --- | --- | --- | --- | --- | --- |
 | A | 0 | 1 | 1 | 1,414 | 6,403 |
 | B | 1 | 0 | 1,414 | 1 | 5,657 |
 | C | 1 | 1,414 | 0 | 1 | 5,831 |
@@ -1208,6 +1216,7 @@ Bảng 5.10: Khoảng cách giữa 5 điểm của ví dụ LOF
 **Bước 2 – khoảng cách tiếp cận.** Chẳng hạn reach-dist(A, B) = max{k-dist(B), d(A, B)} = max{1,414; 1} = 1,414: dù A chỉ cách B một đơn vị, khoảng cách tiếp cận vẫn là 1,414. Với E, các khoảng cách thật đều lớn hơn k-khoảng cách của láng giềng nên được giữ nguyên. **Bước 3 – mật độ và hệ số LOF** được tổng hợp trong Bảng 5.11.
 
 | Điểm | 3 láng giềng | reach-dist | TB reach-dist | lrd | LOF | Nhãn |
+| --- | --- | --- | --- | --- | --- | --- |
 | A | B,C,D | 1,414; 1,414; 1,414 | 1,414 | 0,7071 | 1,000 | 1 |
 | B | A,D,C | 1,414; 1,414; 1,414 | 1,414 | 0,7071 | 1,000 | 1 |
 | C | A,D,B | 1,414; 1,414; 1,414 | 1,414 | 0,7071 | 1,000 | 1 |
@@ -1253,9 +1262,11 @@ gán cho mỗi nhãn một số nguyên duy nhất. Kết quả là một **từ
 **Ví dụ 5.6.** Cho dãy đầu vào gồm 7 phần tử: red, green, blue, red, green, red, orange. Duyệt dãy từ trái sang phải, mỗi khi gặp một nhãn **mới** ta cấp cho nó số tiếp theo:
 
 | Input | red | green | blue | red | green | red | orange |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Output | 0 | 1 | 2 | 0 | 1 | 0 | 3 |
 
 | Diction | ary |
+| --- | --- |
 | red | 0 |
 | green | 1 |
 | blue | 2 |
@@ -1353,6 +1364,7 @@ nên không còn thứ tự giả. Đây là lý do One Hot Encoder là lựa ch
 **Ví dụ 5.7.** Cho dãy 9 phần tử (chỉ số 0–8): red, blue, red, red, blue, white, red, white, orange. Từ điển theo thứ tự xuất hiện là {red: 0, blue: 1, white: 2, orange: 3}, do đó mỗi phần tử trở thành một vector 4 chiều:
 
 | Chỉ số | Input | red (0) | blue (1) | white (2) | orange (3) |
+| --- | --- | --- | --- | --- | --- |
 | 0 | red | 1 | 0 | 0 | 0 |
 | 1 | blue | 0 | 1 | 0 | 0 |
 | 2 | red | 1 | 0 | 0 | 0 |
@@ -1412,9 +1424,7 @@ data = np.array(["red", "blue", "red", "red", "blue",
 
 ohe = OneHotEncoder(handle_unknown="ignore")
 X = ohe.fit_transform(data)      # ket qua la ma tran thua (sparse)
-```
-
-```python
+python
 print(ohe.get_feature_names_out())
 # ['x0_blue' 'x0_orange' 'x0_red' 'x0_white'] (sap xep alphabet)
 print(X.toarray()[:3])
@@ -1438,6 +1448,7 @@ print(pd.get_dummies(pd.Series(data.ravel()), dtype=int).head(3))
 • **Nhãn chưa từng gặp** ở tập kiểm tra: dùng handle\_unknown="ignore" để tránh lỗi khi triển khai.
 
 | Tiêu chí | Label / Ordinal Encoder | One Hot Encoder |
+| --- | --- | --- |
 | Số cột sinh ra | 1 | K (số nhãn) |
 | Tạo thứ tự giả | Có | Không |
 | Phù hợp với | Biến mục tiêu; đặc trưng thứ bậc; mô hình cây | Đặc trưng định danh; KNN, K-Means, SVM, mô hình tuyến tính |
@@ -1466,6 +1477,7 @@ trong đó tf(t, d) (term frequency) là số lần từ t xuất hiện trong d
 Từ vựng (sắp xếp alphabet) gồm M = 9 từ: and, are, cats, dogs, friends, house, in, outside, the.
 
 |  | and | are | cats | dogs | friends | house | in | outside | the |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | d<sub>1</sub> | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 2 |
 | d<sub>2</sub> | 1 | 1 | 0 | 1 | 0 | 1 | 1 | 1 | 2 |
 | d<sub>3</sub> | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
@@ -1504,6 +1516,7 @@ $$
 Với $d_{1}\colon\|\mathbf{x}_{d_{1}}\|_{2}^{2}=1+1+1+1+2^{2}=8,$, nên các số 1 trở thành$1 / \sqrt{8} \approx 0,3536$và số 2 trở thành$2 / \sqrt{8}\approx 0,7071$. Tương tự$\| \mathbf{x}_{d_2}\| _2 = \sqrt{10}\mathrm{và}\| \mathbf{x}_{d_3}\| _2 = \sqrt{6}:$
 
 |  | and | are | cats | dogs | friends | house | in | outside | the |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | d<sub>1</sub> | 0 | 0.3536 | 0.3536 | 0 | 0 | 0.3536 | 0.3536 | 0 | 0.7071 |
 | d<sub>2</sub> | 0.3162 | 0.3162 | 0 | 0.3162 | 0 | 0.3162 | 0.3162 | 0.3162 | 0.6325 |
 | d<sub>3</sub> | 0.4082 | 0.4082 | 0.4082 | 0.4082 | 0.4082 | 0 | 0 | 0 | 0.4082 |
@@ -1559,6 +1572,7 @@ Hình 5.7: Ma trận TF-IDF với IDF không làm trơn (giá trị 1,40547 và 
 **Chuẩn hóa L2 và độ tương đồng cosine.** Mặc định TfidfVectorizer còn chuẩn hóa L2 từng hàng. Áp dụng cho ma trận làm trơn ở Bảng 5.18:
 
 |  | and | are | cats | dogs | friends | house | in | outside | the |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | d<sub>1</sub> | 0 | 0.3166 | 0.4077 | 0 | 0 | 0.4077 | 0.4077 | 0 | 0.6333 |
 | d<sub>2</sub> | 0.3382 | 0.2626 | 0 | 0.3382 | 0 | 0.3382 | 0.3382 | 0.4447 | 0.5252 |
 | d<sub>3</sub> | 0.4105 | 0.3188 | 0.4105 | 0.4105 | 0.5397 | 0 | 0 | 0 | 0.3188 |
@@ -1610,6 +1624,7 @@ print(cosine_similarity(X).round(4))
 ```
 
 | Cấu hình | use_idf | smooth_idf | norm |
+| --- | --- | --- | --- |
 | Đếm từ thuần túy | False | - | None |
 | Đếm từ chuẩn hóa L2 | False | - | "l2" |
 | TF-IDF thô | True | False | None |
@@ -1678,6 +1693,7 @@ trong đó $Q_{1}, Q_{3}$ là các phân vị 25% và 75%. Trung vị và khoả
 **Ví dụ 5.10.** Cho cột $x = (2,4,6,8,30)$, trong đó 30 là một ngoại lai. Các đại lượng cần thiết: min = 2, max = 30, max$|x| = 30, \mu = 10, \sigma = \sqrt{104} \approx 10, 198,$, median$= 6,Q_{1} = 4,Q_{3} = 8,$ IQR = 4.
 
 | x | MinMax | MaxAbs | Standard | Robust |
+| --- | --- | --- | --- | --- |
 | 2 | 0.0000 | 0.0667 | -0.7845 | -1.0 |
 | 4 | 0.0714 | 0.1333 | -0.5883 | -0.5 |
 | 6 | 0.1429 | 0.2000 | -0.3922 | 0.0 |
@@ -1701,9 +1717,7 @@ for scaler in [MinMaxScaler(), MaxAbsScaler(),
                    StandardScaler(), RobustScalerSalary):
     print(type(scaler).__name__, scaler.fit_transform(x).ravel().
         round(4))
-```
-
-```txt
+txt
 # MinMaxScaler      [0.       0.0714 0.1429 0.2143 1.     ]
 # MaxAbsScaler      [0.0667 0.1333 0.2       0.2667 1.     ]
 # StandardScaler [-0.7845 -0.5883 -0.3922 -0.1961 1.9612]
@@ -1713,6 +1727,7 @@ for scaler in [MinMaxScaler(), MaxAbsScaler(),
 Hình 5.8: Phân phối của một đặc trưng trước và sau khi áp dụng bốn bộ chuẩn hóa (gợi ý: vẽ histogram hoặc boxplot bằng matplotlib).
 
 | Bộ chuẩn hóa | Miền giá trị | Bền với ngoại lai | Khi nào dùng |
+| --- | --- | --- | --- |
 | MinMaxScaler | [0,1] | Không | Cần miền cố định (ảnh, mạng nơ-ron), dữ liệu ít ngoại lai |
 | MaxAbsScaler | [-1,1] | Không | Ma trận thưa (TF-IDF), dữ liệu đã tâm ở 0 |
 | StandardScaler | Không giới hạn | Trung bình | Mặc định cho mô hình tuyến tính, SVM, PCA |
@@ -1798,6 +1813,7 @@ for name, m in models.items():
 ```
 
 | Cách xử lý | Recall | Precision | F1 |
+| --- | --- | --- | --- |
 | Không xử lý | 0,486 | 0,807 | 0,589 |
 | class_weight="balanced" | 0,838 | 0,437 | 0,572 |
 | SMOTE trong pipeline | 0,838 | 0,441 | 0,575 |
@@ -1829,6 +1845,7 @@ Bộ dữ liệu **Ames Housing** do Dean De Cock (Đại học Truman State) c�
 File data/AmesHousing.txt (phân tách bằng ký tự tab) gồm **2930 dòng** và **82 cột**: hai cột định danh bản ghi (Order, PID), biến mục tiêu SalePrice (giá bán, USD) và 79 biến mô tả căn nhà. Đây là bộ dữ liệu lý tưởng cho chương này vì nó chứa **đủ mọi kiểu dữ liệu** đã học:
 
 | Kiểu | Ví dụ cột | Giá trị mẫu |
+| --- | --- | --- |
 | Định danh | MS Zoning, Neighborhood, Street, Bldg Type | RL, RM, FV; NAmes, Gilbert; Pave, Grvl |
 | Định danh mã hóa bằng số | MS SubClass | 020, 060, 120 (mã loại nhà, không phải đại lượng) |
 | Thứ bậc | Exter Qual, Kitchen Qual, Bsmt Qual | Po &lt; Fa &lt; TA &lt; Gd &lt; Ex |
@@ -1879,14 +1896,10 @@ print(missing[missing > 0].sort_values(ascending=False))
 df.loc[df["Garage Yr Blt"] > 2010, "Garage Yr Blt"] = None
 df = df[df["Gr Liv Area"] <= 4000]
 print(df.shape)
-```
-
-```lua
+lua
 print(df["Exter Qual"].value_counts())
 print(df[["Lot Area", "Gr Liv Area", "SalePrice"]].describe())
-```
-
-```ini
+ini
 [Chỗ chèn hình]
 images/ch-preprocessing-ames-outliers.png
 ```
@@ -1926,9 +1939,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 preprocess = ColumnTransformer([
     ("nom", Pipeline([
-```
-
-```python
+python
 ("impute", SimpleImputer(strategy="most_frequent")),
         ("onehot", OneHotEncoder(handle_unknown="ignore")),
     ]), nominal),
@@ -2107,9 +2118,7 @@ from sklearn.linear_model import LinearRegression
 # 1. Tao du lieu gia dinh
 X = np.array([[1], [2], [3], [4], [5]])
 y = np.array([2.1, 3.9, 6.1, 8.2, 9.9])
-```
-
-```python
+python
 # 2. Khoi tao va huan luyen mo hình
 model = LinearRegression()
 model.fit(X, y)
@@ -2186,6 +2195,7 @@ KNN (K-Nearest Neighbors) được Evelyn Fix và Joseph Hodges đề xuất nă
 Ví dụ 7.1 (Tính tay KNN phân lớp). Cho 5 mẫu huấn luyện có hai đặc trưng $x_{1}, x_{2}$và nhãn$y\in \{0,1\}$(Bång 7.1) . Dự đoán nhãn của mẫu mới$\mathbf{q} = (2,4)$với khoảng cách Euclid$d =$ $\sqrt{(x_1 - 2)^2 + (x_2 - 4)^2}$
 
 | ST1T | x<sub>7</sub><sup>1</sup> | x<sub>6</sub><sup>2</sup> | y<sub>0</sub> | K√ho5ả<sup>2</sup>n+g2c<sup>2</sup>ác=h√đế2n9q≈=5,(328,54) | Thứ4hạng |
+| --- | --- | --- | --- | --- | --- |
 | 2 | 2 | 4 | 1 | √0<sup>2</sup> + 0<sup>2</sup> = 0 | 1 |
 | 3 | 1 | 5 | 1 | √1<sup>2</sup> + 1<sup>2</sup> = √2 ≈ 1,414 | 2 |
 | 4 | 3 | 9 | 1 | √1<sup>2</sup> + 5<sup>2</sup> = √26 ≈ 5,099 | 3 |
@@ -2236,6 +2246,7 @@ $$
 **Ví dụ 7.4** (Tính tay KNN hồi quy với $K = 4)$. Cùng 5 mẫu như Bảng 7.1 nhưng y là số thực. Dự đoán cho$\mathbf{q} = (3,4)$
 
 | ST1T | x<sub>7</sub><sup>1</sup> | x<sub>6</sub><sup>2</sup> | <sub>7</sub>y,3 | √4<sup>2</sup> +d(2q<sup>2</sup>,x≈<sub>i</sub>)4,472 | w<sub>i</sub> = 1/d0,224 |
+| --- | --- | --- | --- | --- | --- |
 | 2 | 2 | 4 | 5,4 | √1<sup>2</sup> + 0<sup>2</sup> = 1 | 1 |
 | 3 | 1 | 5 | 4,2 | √2<sup>2</sup> + 1<sup>2</sup> ≈ 2,236 | 0,447 |
 | 4 | 3 | 9 | 5,1 | √0<sup>2</sup> + 5<sup>2</sup> = 5 | 0,2 |
@@ -2265,9 +2276,7 @@ from sklearn.neighbors import KNeighborsClassifier
 knn = make_pipeline(StandardScaler(), KNeighborsClassifier(
     n_neighbors=5))
 knn.fit(X_train, y_train)
-```
-
-```python
+python
 print("Accuracy:", knn.score(X_test, y_test))
 
 # Cac vi du tinh tay o tren
@@ -2353,6 +2362,7 @@ $$
 và dự đoán $\hat{y} = 1$khi xác suất ≥ 0,5, , tức khi$\mathbf{w}^{\top}\mathbf{x} + b\geq 0.$ Do đó biên quyết định là một **siêu phẳng**.
 
 | z | -2 | 0 | 1 | 2 |
+| --- | --- | --- | --- | --- |
 | σ(z) | 0.1192 | 0.5 | 0.7311 | 0.8808 |
 
 Bảng 7.3: Một số giá trị của hàm sigmoid
@@ -2504,9 +2514,7 @@ models = {
         (max_iter=1000)),
     "DecisionTree": DecisionTreeClassifier(max_depth=3, random_state
         =42),
-```
-
-```python
+python
 "SVM":            make_pipeline(StandardScaler(), SVC()),
 }
 for name, m in models.items():
@@ -2515,6 +2523,7 @@ for name, m in models.items():
 ```
 
 | Thuật toán | Biên quyết định | Cần chuẩn hóa | Ưu điểm | Nhược điểm |
+| --- | --- | --- | --- | --- |
 | KNN | Linh hoạt | Có | Đơn giản, không cần huấn luyện | Chậm khi dự đoán, kém ở số chiều cao |
 | Naive Bayes | Tuyến tính/bậc 2 | Không | Rất nhanh, tốt với văn bản | Giả định độc lập, xác suất quá tự tin |
 | Logistic Regression | Tuyến tính | Có | Cho xác suất, dễ diễn giải | Không nắm bắt phi tuyến nếu không tạo đặc trưng |
@@ -2644,6 +2653,7 @@ Xác suất một điểm **không** được chọn vào một mẫu bootstrap 
 Năm 2001, Breiman đề xuất **Random Forest**: bagging cây quyết định, và thêm một nguồn ngẫu nhiên — **tại mỗi nút**, chỉ xét một tập con ngẫu nhiên gồm m đặc trưng để chọn phép chia (thường m =√d cho phân lớp). Nhờ vậy, dù có một đặc trưng rất mạnh, không phải cây nào cũng dùng nó ở gốc; các cây ít tương quan hơn và phương sai của rừng giảm mạnh.
 
 | Tham số | Ý nghĩa |
+| --- | --- |
 | n_estimators | Số cây; càng nhiều càng ổn định (không gây quá khớp), chỉ tốn thời gian. |
 | max_features | Số đặc trưng xét ở mỗi nút ("sqrt", "log2", số thực); nhỏ ⇒ cây đa dạng hơn. |
 | max_depth, min_samples_leaf | Giới hạn độ sâu và kích thước lá của từng cây. |
@@ -2682,9 +2692,7 @@ perm = permutation_importance(rf, X_test, y_test, n_repeats=10,
     random_state=0)
 print(pd.Series(perm.importances_mean, index=data.feature_names)
     .sort_values(ascending=False).head(5))
-```
-
-```ini
+ini
 [Chô chèn hình]
 images/ch-ensemble-rf-importance.png
 ```
@@ -2829,6 +2837,7 @@ print("Voting:", vote.score(X_test, y_test), "Stacking:", stack.score
 ## 8.6 Tổng kết so sánh
 
 | Phương pháp | Chiến lược | Giảm chủ yếu | Ưu điểm | Nhược điểm |
+| --- | --- | --- | --- | --- |
 | Bagging / Random Forest | Song song | Phương sai | Ổn định, ít cần tinh chỉnh, có OOB | Mô hình lớn, khó diễn giải |
 | AdaBoost | Tuần tự | Độ chệch | Đơn giản, lý thuyết đẹp | Nhạy nhiễu và ngoại lai |
 | Gradient Boosting / XGBoost | Tuần tự | Độ chệch (và phương sai nhờ chính quy hóa) | Độ chính xác cao nhất trên dữ liệu bảng | Nhiều tham số, dễ quá khớp nếu không dừng sớm |
@@ -2905,6 +2914,7 @@ Sau khi học xong chương này, người học có khả năng:
 “Giống nhau” được đo bằng **khoảng cách**, nên mọi lưu ý ở Chương 5 đều áp dụng: phải **chuẩn hóa thang đo** và **mã hóa One Hot** các biến định danh; nếu không, đặc trưng có thang đo lớn sẽ quyết định toàn bộ kết quả phân cụm.
 
 | Họ thuật toán | Ý tưởng | Đại diện |
+| --- | --- | --- |
 | Phân hoạch | Chia thành K cụm, tối ưu một hàm mục tiêu | K-Means, K-Medoids |
 | Phân cấp | Xây dựng cây gộp/tách cụm lồng nhau | Agglomerative (single, complete, average, Ward) |
 | Dựa trên mật độ | Cụm là vùng dày đặc, ngăn cách bởi vùng thưa | DBSCAN, OPTICS, Mean-shift |
@@ -2939,6 +2949,7 @@ Mỗi bước đều không làm tăng J, nên thuật toán luôn hội tụ �
 **Vòng 1 – bước gán:**
 
 | Điểm | Tọa độ | d(·,µ<sub>1</sub>) | d(·,µ<sub>2</sub>) | Cụm |
+| --- | --- | --- | --- | --- |
 | P<sub>1</sub> | (22, 10) | 0.00 | 53.00 | 1 |
 | P<sub>2</sub> | (25, 15) | 5.83 | 47.17 | 1 |
 | P<sub>3</sub> | (45, 50) | 46.14 | 7.07 | 2 |
@@ -3026,6 +3037,7 @@ Phân cụm phân cấp bắt nguồn từ ngành phân loại học số (numer
 Khoảng cách giữa hai cụm A, B được định nghĩa bởi **tiêu chí liên kết** (linkage):
 
 | Liên kết | Công thức | Đặc điểm |
+| --- | --- | --- |
 | Single | min<sub>a</sub>∈A,b∈B <sup>d</sup>(a,b) | Tạo cụm dài, hình dạng tùy ý; dễ bị "hiệu ứng chuỗi" |
 | Complete | max<sub>a</sub>∈A,b∈B <sup>d</sup>(a,b) | Cụm gọn, đường kính nhỏ |
 | Average | trung bình mọi cặp d(a,b) | Cân bằng giữa hai loại trên |
@@ -3087,6 +3099,7 @@ Một cụm là tập lớn nhất các điểm **liên thông mật độ**: b�
 **Ví dụ 9.3** (Chạy tay DBSCAN). Cho 9 điểm (đánh số từ 0 theo Python), ε = 2, MinPts = 3:
 
 | Điểm | Tọa độ | ε-lân cận | \|N<sub>ε</sub>\| | Loại |
+| --- | --- | --- | --- | --- |
 | 0 | (2, 10) | {0} | 1 | Nhiễu |
 | 1 | (2, 5) | {1} | 1 | Nhiễu |
 | 2 | (8, 4) | {2, 4, 5} | 3 | Lõi |
@@ -3112,9 +3125,7 @@ print(dbscan.labels_)          # [-1 -1 0 1 0 0 -1 1 1]
 
 print(dbscan.core_sample_indices_)   # [2 4 5 7]
 print(dbscan.components_)         # toa do cac diem loi
-```
-
-```txt
+txt
 [Chỗ chèn hình]
 images/ch-clustering-dbscan.png
 ```
@@ -3152,6 +3163,7 @@ print("So cum tim duoc:", len(ms.cluster_centers_))
 ## 9.6 So sánh và ứng dụng
 
 | Thuật toán | Cần biết K | Hình dạng cụm | Phát hiện nhiễu | Tham số chính | Quy mô dữ liệu |
+| --- | --- | --- | --- | --- | --- |
 | K-Means | Có | Cầu, đều nhau | Không | K | Rất lớn |
 | Phân cấp | Không (cắt cây) | Tùy liên kết | Không | linkage, ngưỡng cắt | Nhỏ - vừa |
 | DBSCAN | Không | Tùy ý | Có | eps,min_samples | Vừa - lớn |
@@ -3174,9 +3186,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
 # customers: DataFrame cac cot so (tuoi, thu nhap, so lan mua, tong chi tieu)
-```
-
-```python
+python
 seg = make_pipeline(StandardScaler(), KMeans(n_clusters=4, n_init=10,
     random_state=0))
 labels = seg.fit_predict(customers)
@@ -3266,6 +3276,7 @@ Khi số chiều d tăng:
 • **Chi phí** lưu trữ và tính toán tăng; không thể trực quan hóa trên 3 chiều.
 
 | Hướng tiếp cận | Ý tưởng | Ví dụ |
+| --- | --- | --- |
 | Lựa chọn đặc trưng | Giữ lại một tập con các cột gốc | Lọc theo phương sai, |
 | (feature selection) |  | tương quan, Lasso, SelectKBest |
 | Trích xuất đặc trưng | Tạo cột mới là tổ hợp tuyến | PCA, SVD, LDA |
@@ -3463,9 +3474,7 @@ for ax, k in zip(axes, [5, 20, 50, 512]):
     ax.set_title(f"k = {k}");
 ax.axis("off")
 plt.show()
-```
-
-```txt
+txt
 [Chỗ chèn hình]
 images/ch-reduce-svd-image.png
 ```
@@ -3520,6 +3529,7 @@ Giải bài toán tối ưu bằng nhân tử Lagrange cho **Cw** = λw: các th
 **Ví dụ 10.6** (Tính tay PCA). Giảm 5 điểm hai chiều trong Bảng 10.2 xuống còn một chiều.
 
 | x<sub>1</sub> | 3 5 0 1 2 |
+| --- | --- |
 | x<sub>2</sub> | 6 4 2 0 3 |
 
 Bảng 10.2: Dữ liệu ví dụ PCA
@@ -3589,9 +3599,7 @@ Z = pca.transform(X)                 # [2.8491 2.5216 -2.1493
        -3.0973 -0.1241]
 X_rec = pca.inverse_transform(Z)      # tai tao (nam tren duong
        PC1)
-```
-
-```txt
+txt
 [Chô chèn hình]
 images/ch-reduce-pca-2d.png
 ```
@@ -3627,9 +3635,7 @@ plt.ylabel("Phuong sai tich luy"); plt.show()
 Z = PCA(n_components=2).fit_transform(digits.data)
 plt.scatter(Z[:, 0], Z[:, 1], c=digits.target, cmap="tab10", s=8)
 plt.colorbar(); plt.show()
-```
-
-```ini
+ini
 [Chô chèn hình]
 images/ch-reduce-pca-variance.png
 ```
@@ -3766,6 +3772,7 @@ $$
 Ta không biết D, nên chỉ có thể **ước lượng** $R(f)$ bằng trung bình mất mát trên một tập dữ liệu **độc lập** với quá trình huấn luyện. Lỗi trên tập huấn luyện luôn là ước lượng **quá lạc quan**.
 
 | Tình trạng | Lỗi train | Lỗi test | Cách khắc phục |
+| --- | --- | --- | --- |
 | Dưới khớp (underfitting) | Cao | Cao | Mô hình phức tạp hơn, thêm đặc trưng, giảm điều chuẩn |
 | Vừa khớp | Thấp | Thấp | - |
 | Quá khớp (overfitting) | Rất thấp | Cao | Thêm dữ liệu, điều chuẩn, giảm độ phức tạp, ensemble |
@@ -3829,6 +3836,7 @@ images/ch-validation-kfold.png
 Hình 11.2: Sơ đồ kiểm định chéo 5-fold: mỗi lượt một fold (tô đậm) làm tập kiểm định.
 
 | Bộ chia | Khi nào dùng |
+| --- | --- |
 | KFold | Hồi quy, dữ liệu độc lập cùng phân phối |
 | StratifiedKFold | Phân lớp (mặc định của cross_val_score khi mô hình là bộ phân lớp), đặc biệt khi lớp mất cân bằng |
 | GroupKFold | Nhiều mẫu từ cùng một đối tượng (bệnh nhân, khách hàng): mọi mẫu của một nhóm phải nằm cùng phía |
@@ -3847,9 +3855,7 @@ from sklearn.linear_model import LogisticRegression
 
 model = make_pipeline(StandardScaler(), LogisticRegression(max_iter
 =1000))
-```
-
-```python
+python
 CV = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 scores = cross_val_score(model, X_tmp, y_tmp, cv=cv, scoring="accuracy")
 print(scores.round(4), scores.mean().round(4), scores.std().round(4))
@@ -3868,12 +3874,14 @@ print({k: v.mean().round(4) for k, v in res.items() if "test" in k})
 Với bài toán hai lớp (lớp **dương** là lớp ta quan tâm: có bệnh, thư rác, gian lận …), mọi dự đoán rơi vào một trong bốn ô:
 
 |  | Dự đoán dương | Dự đoán âm |
+| --- | --- | --- |
 | Thực tế dương | TP (True Positive) | FN (False Negative) |
 | Thực tế âm | FP (False Positive) | TN (True Negative) |
 
 Bảng 11.3: Ma trận nhầm lẫn (confusion matrix)
 
 | Độ đo | Công thức | Ý nghĩa |
+| --- | --- | --- |
 | Accuracy | TP+TTNP++TFNP+FN | Tỉ lệ dự đoán đúng |
 | Precision | TPT+PFP | Trong các mẫu báo dương, bao nhiêu là dương thật |
 | Recall (Sensitivity) | TPT+PFN | Trong các mẫu dương thật, tìm ra được bao nhiêu |
@@ -3941,9 +3949,7 @@ print("AUC:", roc_auc_score(y_test, y_score))
 
 ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
 RocCurveDisplay.from_predictions(y_test, y_score)
-```
-
-```txt
+txt
 [Chỗ chèn hình]
 images/ch-validation-roc.png
 ```
@@ -3955,6 +3961,7 @@ Với dữ liệu mất cân bằng nặng, đường **Precision – Recall** v
 ## 11.4 Độ đo cho bài toán hồi quy
 
 | Độ đo | Công thức | Ghi chú |
+| --- | --- | --- |
 | MAE | $\frac{1}{n} \sum \|y_i - \hat{y}_i\|$| Cùng đơn vị với$y$, ít nhạy với ngoại lai |
 | MSE | $\frac{1}{n} \sum (y_i - \hat{y}_i)^2$ | Phạt nặng sai số lớn |
 | RMSE | $\sqrt{\text{MSE}}$| Cùng đơn vị với$y$ |
@@ -4022,9 +4029,7 @@ rand = RandomizedSearchCV(pipe, {"svc__C": loguniform(1e-2, 1e3),
                 =0, n_jobs=-1)
 rand.fit(X_tmp, y_tmp)
 print(rand.best_params_)
-```
-
-```ini
+ini
 [Chỗ chèn hình]
 images/ch-validation-grid-heatmap.png
 ```
@@ -4146,6 +4151,7 @@ Sau khi học xong chương này, người học có khả năng:
 ## 12.1 Lịch sử phát triển
 
 | Năm | Sự kiện |
+| --- | --- |
 | 1943 | McCulloch và Pitts đề xuất mô hình toán học đầu tiên của nơ-ron sinh học: nơ-ron ngưỡng với đầu vào nhị phân. |
 | 1949 | Donald Hebb nêu quy tắc học "các nơ-ron cùng kích hoạt thì liên kết mạnh lên". |
 | 1958 | Frank Rosenblatt công bố Perceptron - mô hình nơ-ron đầu tiên có thuật toán học trọng số từ dữ liệu, cài đặt trên phần cứng Mark I. |
@@ -4186,6 +4192,7 @@ Hình 12.1: Cấu trúc perceptron: đầu vào, trọng sô, tổng có trọng
 Ví dụ 12.1 (Perceptron cho hàm AND). Chọn w = (1, 1), b = −1,5:
 
 | x<sub>1</sub> | x<sub>2</sub> | z = x<sub>1</sub> + x<sub>2</sub> - 1,5 | yˆ | AND | XOR |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 0 | -1,5 | 0 | 0 | 0 |
 | 0 | 1 | -0,5 | 0 | 0 | 1 |
 | 1 | 0 | -0,5 | 0 | 0 | 1 |
@@ -4216,9 +4223,7 @@ class Perceptron:
         if errors == 0:          # hoi tu
             break
         return self
-```
-
-```python
+python
 def predict(self, X):
         return (np.dot(X, self.w) + self.b >= 0).astype(int)
 
@@ -4254,6 +4259,7 @@ Hình 12.2: Mạng MLP với lớp đầu vào, hai lớp ẩn và lớp đầu 
 ## 12.3.2 Hàm kích hoạt
 
 | Hàm | Công thức | Đạo hàm | Ghi chú |
+| --- | --- | --- | --- |
 | Sigmoid | σ(z) = 1<sub>+</sub>1e-z | σ(1 - σ) | Đầu ra (0,1); bão hòa ⇒ triệt tiêu gradient |
 | Tanh | tanhz | 1 - tanh<sup>2</sup> z | Đầu ra (-1,1), tâm 0 |
 | ReLU | max(0,z) | ⊮[z > 0] | Mặc định cho lớp ẩn (Nair &amp; Hinton, 2010); nhanh |
@@ -4267,6 +4273,7 @@ Hình 12.3: Đồ thị các hàm kích hoạt sigmoid, tanh, ReLU và Leaky ReL
 ## 12.3.3 Hàm mất mát và lớp đầu ra
 
 | Bài toán | Lớp đầu ra | Hàm mất mát |
+| --- | --- | --- |
 | Hồi quy | 1 nơ-ron, tuyến tính | MSE |
 | Phân lớp nhị phân | 1 nơ-ron, sigmoid | Binary cross-entropy |
 | Phân lớp K lớp | K nơ-ron, softmax | Categorical cross-entropy - k <sup>y</sup><sub>k</sub> <sup>logy</sup>ˆ<sub>k</sub> |
@@ -4425,9 +4432,7 @@ Listing 12.5: MLPRegressor dự đoán giá nhà Ames
 ```python
 from sklearn.neural_network import MLPRegressor
 from sklearn.compose import TransformedTargetRegressor
-```
-
-```julia
+julia
 # preprocess: ColumnTransformer da xay dung o Chuong Tien xu ly du
     lieu
 reg = make_pipeline(preprocess,
@@ -4475,9 +4480,7 @@ Listing 12.7: Vòng lặp huấn luyện tối giản với PyTorch
 ```python
 import torch
 from torch import nn
-```
-
-```python
+python
 net = nn.Sequential(nn.Linear(64, 128), nn.ReLU(), nn.Linear(128, 10)
 )
 opt = torch.optim.Adam(net.parameters(), lr=1e-3)
@@ -4492,6 +4495,7 @@ for epoch in range(100):
 ```
 
 | Loại dữ liệu | Kiến trúc phù hợp | Ví dụ ứng dụng |
+| --- | --- | --- |
 | Dạng bảng | MLP; thường thua Gradient Boosting (Chương 8) | Dự đoán giá, rủi ro tín dụng |
 | Ảnh | CNN, Vision Transformer | Phân loại ảnh, phát hiện đối tượng |
 | Chuỗi, văn bản | RNN/LSTM, Transformer | Dịch máy, phân tích cảm xúc, LLM |

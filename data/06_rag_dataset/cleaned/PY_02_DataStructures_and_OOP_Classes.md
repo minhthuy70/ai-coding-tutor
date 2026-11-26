@@ -88,28 +88,30 @@ of the methods of list objects:
 
    Return a shallow copy of the list.  Similar to ``a[:]``.
 
-An example that uses most of the list methods::
+An example that uses most of the list methods:
 
-    >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
-    >>> fruits.count('apple')
-    2
-    >>> fruits.count('tangerine')
-    0
-    >>> fruits.index('banana')
-    3
-    >>> fruits.index('banana', 4)  # Find next banana starting at position 4
-    6
-    >>> fruits.reverse()
-    >>> fruits
-    ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
-    >>> fruits.append('grape')
-    >>> fruits
-    ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
-    >>> fruits.sort()
-    >>> fruits
-    ['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
-    >>> fruits.pop()
-    'pear'
+```python
+>>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+>>> fruits.count('apple')
+2
+>>> fruits.count('tangerine')
+0
+>>> fruits.index('banana')
+3
+>>> fruits.index('banana', 4)  # Find next banana starting at position 4
+6
+>>> fruits.reverse()
+>>> fruits
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
+>>> fruits.append('grape')
+>>> fruits
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
+>>> fruits.sort()
+>>> fruits
+['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
+>>> fruits.pop()
+'pear'
+```
 
 You might have noticed that methods like ``insert``, ``remove`` or ``sort`` that
 only modify the list have no return value printed -- they return the default
@@ -1181,68 +1183,74 @@ Class and Instance Variables
 
 Generally speaking, instance variables are for data unique to each instance
 and class variables are for attributes and methods shared by all instances
-of the class::
+of the class:
 
-    class Dog:
+```python
+class Dog:
 
-        kind = 'canine'         # class variable shared by all instances
+    kind = 'canine'         # class variable shared by all instances
 
-        def __init__(self, name):
-            self.name = name    # instance variable unique to each instance
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
 
-    >>> d = Dog('Fido')
-    >>> e = Dog('Buddy')
-    >>> d.kind                  # shared by all dogs
-    'canine'
-    >>> e.kind                  # shared by all dogs
-    'canine'
-    >>> d.name                  # unique to d
-    'Fido'
-    >>> e.name                  # unique to e
-    'Buddy'
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.kind                  # shared by all dogs
+'canine'
+>>> e.kind                  # shared by all dogs
+'canine'
+>>> d.name                  # unique to d
+'Fido'
+>>> e.name                  # unique to e
+'Buddy'
+```
 
 As discussed in :ref:`tut-object`, shared data can have possibly surprising
 effects involving :term:`mutable` objects such as lists and dictionaries.
 For example, the *tricks* list in the following code should not be used as a
 class variable because just a single list would be shared by all *Dog*
-instances::
+instances:
 
-    class Dog:
+```python
+class Dog:
 
-        tricks = []             # mistaken use of a class variable
+    tricks = []             # mistaken use of a class variable
 
-        def __init__(self, name):
-            self.name = name
+    def __init__(self, name):
+        self.name = name
 
-        def add_trick(self, trick):
-            self.tricks.append(trick)
+    def add_trick(self, trick):
+        self.tricks.append(trick)
 
-    >>> d = Dog('Fido')
-    >>> e = Dog('Buddy')
-    >>> d.add_trick('roll over')
-    >>> e.add_trick('play dead')
-    >>> d.tricks                # unexpectedly shared by all dogs
-    ['roll over', 'play dead']
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.add_trick('roll over')
+>>> e.add_trick('play dead')
+>>> d.tricks                # unexpectedly shared by all dogs
+['roll over', 'play dead']
+```
 
-Correct design of the class should use an instance variable instead::
+Correct design of the class should use an instance variable instead:
 
-    class Dog:
+```python
+class Dog:
 
-        def __init__(self, name):
-            self.name = name
-            self.tricks = []    # creates a new empty list for each dog
+    def __init__(self, name):
+        self.name = name
+        self.tricks = []    # creates a new empty list for each dog
 
-        def add_trick(self, trick):
-            self.tricks.append(trick)
+    def add_trick(self, trick):
+        self.tricks.append(trick)
 
-    >>> d = Dog('Fido')
-    >>> e = Dog('Buddy')
-    >>> d.add_trick('roll over')
-    >>> e.add_trick('play dead')
-    >>> d.tricks
-    ['roll over']
-    >>> e.tricks
-    ['play dead']
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.add_trick('roll over')
+>>> e.add_trick('play dead')
+>>> d.tricks
+['roll over']
+>>> e.tricks
+['play dead']
+```
 
 .. _tut-remarks:
 
@@ -1252,19 +1260,21 @@ Random Remarks
 .. These should perhaps be placed more carefully...
 
 If the same attribute name occurs in both an instance and in a class,
-then attribute lookup prioritizes the instance::
+then attribute lookup prioritizes the instance:
 
-    >>> class Warehouse:
-    ...    purpose = 'storage'
-    ...    region = 'west'
-    ...
-    >>> w1 = Warehouse()
-    >>> print(w1.purpose, w1.region)
-    storage west
-    >>> w2 = Warehouse()
-    >>> w2.region = 'east'
-    >>> print(w2.purpose, w2.region)
-    storage east
+```python
+>>> class Warehouse:
+...    purpose = 'storage'
+...    region = 'west'
+...
+>>> w1 = Warehouse()
+>>> print(w1.purpose, w1.region)
+storage west
+>>> w2 = Warehouse()
+>>> w2.region = 'east'
+>>> print(w2.purpose, w2.region)
+storage east
+```
 
 Data attributes may be referenced by methods as well as by ordinary users
 ("clients") of an object.  In other words, classes are not usable to implement
@@ -1518,23 +1528,27 @@ Odds and Ends
 
 Sometimes it is useful to have a data type similar to the Pascal "record" or C
 "struct", bundling together a few named data items. The idiomatic approach
-is to use :mod:`dataclasses` for this purpose::
+is to use :mod:`dataclasses` for this purpose:
 
-    from dataclasses import dataclass
+```python
+from dataclasses import dataclass
 
-    @dataclass
-    class Employee:
-        name: str
-        dept: str
-        salary: int
+@dataclass
+class Employee:
+    name: str
+    dept: str
+    salary: int
+```
 
-::
+:
 
-    >>> john = Employee('john', 'computer lab', 1000)
-    >>> john.dept
-    'computer lab'
-    >>> john.salary
-    1000
+```python
+>>> john = Employee('john', 'computer lab', 1000)
+>>> john.dept
+'computer lab'
+>>> john.salary
+1000
+```
 
 A piece of Python code that expects a particular abstract data type can often be
 passed a class that emulates the methods of that data type instead.  For

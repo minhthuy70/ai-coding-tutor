@@ -912,17 +912,11 @@ SyntaxError: invalid syntax
 
 ```txt
 >>> more@ = 1000000
-```
-
-```txt
+txt
 SyntaxError: invalid syntax
-```
-
-```txt
+txt
 >>> class = 'Advanced Theoretical Zymurgy'
-```
-
-```txt
+txt
 SyntaxError: invalid syntax
 ```
 
@@ -933,6 +927,7 @@ It turns out that class is one of Python’s **keywords**. The interpreter uses 
 Python 2 has 31 keywords:
 
 | and | del | from | not | while |
+| --- | --- | --- | --- | --- |
 | as | elif | global | or | with |
 | assert | else | if | pass | yield |
 | break | except | import | print |  |
@@ -1026,9 +1021,7 @@ produces the output
 2
 The assignment statement produces no output.
 Exercise 2.1. Type the following statements in the Python interpreter to see what they do:
-```
-
-```txt
+txt
 5
 x = 5
 x + 1
@@ -1235,9 +1228,7 @@ int can convert floating-point values to integers, but it doesn't round off; it 
 -2
 
 float converts integers and strings to floating-point numbers:
-```
-
-```txt
+txt
 >>> float(32)
 32.0
 >>> float('3.14159')
@@ -1683,18 +1674,6 @@ Solution: [http: // thinkpython. com/ code/ do\_ four. py .](http://thinkpython.
 
 1. Write a function that draws a grid like the following:
 
-| + | - | - | - | - | + | - | - | - | - | + |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| + | - | - | - | - | + | - | - | - | - | + |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| \| |  |  |  |  | \| |  |  |  | \| |  |  |
-| + | - | - | - | - | - | + | - | - | - | - | + |
-
 Hint: to print more than one value on a line, you can print a comma-separated sequence:
 
 print '+', '-'
@@ -1871,9 +1850,7 @@ def square(t, length):
     for i in range(4):
         fd(t, length)
         lt(t)
-```
-
-```txt
+txt
 square(bob, 100)
 ```
 
@@ -1889,9 +1866,7 @@ def polygon(t, n, length):
     for i in range(n):
         fd(t, length)
         lt(t, angle)
-```
-
-```txt
+txt
 polygon(bob, 7, 70)
 ```
 
@@ -2123,7 +2098,7 @@ Also, you can extract the right-most digit or digits from a number. For example,
 
 A **boolean expression** is an expression that is either true or false. The following examples use the operator ==, which compares two operands and produces True if they are equal and False otherwise:
 
-```txt
+```python
 >>> 5 == 5
 True
 >>> 5 == 6
@@ -2133,9 +2108,7 @@ True and False are special values that belong to the type bool; they are not str
 <type 'bool'>
 >>> type(False)
 <type 'bool'>
-```
-
-```python
+txt
 if x < 0:
     pass          # need to handle negative values!
 ```
@@ -2230,9 +2203,7 @@ if x == y:
     print 'x and y are equal'
 else:
     if x < y:
-```
-
-```python
+python
 print 'x is less than y'
 else:
     print 'x is greater than y'
@@ -2426,9 +2397,7 @@ Syntax errors are usually easy to find, but there are a few gotchas. Whitespace 
   File "<stdin>", line 1
     y = 6
     ^
-```
-
-```typescript
+typescript
 IndentationError: unexpected indent
 ```
 
@@ -2805,11 +2774,9 @@ If you can write a recursive definition of something, you can usually write a Py
 
 ```python
 def factorial(n):
-```
 
-If the argument happens to be 0, all we have to do is return 1:
+    If the argument happens to be 0, all we have to do is return 1:
 
-```python
 def factorial(n):
     if n == 0:
         return 1
@@ -3008,9 +2975,7 @@ def b(z):
     prod = a(z, z)
     print z, prod
     return prod
-```
-
-```python
+python
 def a(x, y):
     x = x + 1
     return x * y
@@ -3074,9 +3039,7 @@ As you may have discovered, it is legal to make more than one assignment to the 
 
 ```txt
 bruce = 5
-```
-
-```txt
+txt
 print bruce,
 ```
 
@@ -3190,9 +3153,7 @@ while True:
     if line == 'done':
         break
     print line
-```
-
-```txt
+txt
 print 'Done!'
 ```
 
@@ -3491,9 +3452,7 @@ Figure 8.1: Slice indices.
 ```python
 prefixes = 'JKLMNOPQ'
 suffix = 'ack'
-```
-
-```python
+txt
 for letter in prefixes:
     print letter + suffix
 The output is:
@@ -3671,16 +3630,14 @@ The documentation uses a syntax that might be confusing. For example, in find(su
 
 The word in is a boolean operator that takes two strings and returns True if the first appears as a substring in the second:
 
-```txt
+```python
 >>> 'a' in 'banana'
 True
 >>> 'seed' in 'banana'
 False
-```
 
-For example, the following function prints all the letters from word1 that also appear in word2:
+    For example, the following function prints all the letters from word1 that also appear in word2:
 
-```python
 def in_both(word1, word2):
     for letter in word1:
         if letter in word2:
@@ -3855,16 +3812,12 @@ def any lowerscase1(s):
             return True
         else:
             return False
-```
-
-```python
+python
 def any_lowercase2(s):
     for c in s:
         if 'c'.islower():
             return 'True'
-```
-
-```python
+python
 else:
     return 'False'
 
@@ -4218,9 +4171,7 @@ The in operator also works on lists.
 True
 >>> 'Brie' in cheeses
 False
-```
-
-```txt
+txt
 The + operator concatenates lists:
 >>> a = [1, 2, 3]
 >>> b = [4, 5, 6]
@@ -4396,9 +4347,7 @@ Another common operation is to select some of the elements from a list and retur
 def only_upper(t):
     res = []
     for s in t:
-```
-
-```python
+python
 if s.isupper():
         res.append(s)
 return res
@@ -4611,16 +4560,12 @@ It is important to distinguish between operations that modify lists and operatio
 ```python
 >>> t1 = [1, 2]
 >>> t2 = t1.append(3)
-```
-
-```txt
+txt
 >>> print t1
 [1, 2, 3]
 >>> print t2
 None
-```
-
-```c
+c
 >>> t3 = t1 + [4]
 >>> print t3
 [1, 2, 3, 4]
@@ -4981,9 +4926,7 @@ Here is an example of a successful reverse lookup:
 >>> k = reverse_lookup(h, 2)
 >>> print k
 r
-```
-
-```txt
+txt
 And an unsuccessful one:
 ```
 
@@ -5114,11 +5057,9 @@ In the previous example, known is created outside the function, so it belongs to
 
 It is common to use global variables for **flags**; that is, boolean variables that indicate (“flag”) whether a condition is true. For example, some programs use a flag named verbose to control the level of detail in the output:
 
-```txt
-verbose = True
-```
-
 ```python
+verbose = True
+python
 def example1():
     if verbose:
         print 'Running example1'
@@ -5126,11 +5067,9 @@ def example1():
 
 If you try to reassign a global variable, you might be surprised. The following example is supposed to keep track of whether the function has been called:
 
-```txt
-been_called = False
-```
-
 ```python
+been_called = False
+python
 def example2():
     been_called = True          # WRONG
 ```
@@ -5139,11 +5078,9 @@ But if you run it you will see that the value of been\_called doesn’t change. 
 
 To reassign a global variable inside a function you have to **declare** the global variable before you use it:
 
-```txt
-been_called = False
-```
-
 ```python
+been_called = False
+python
 def example2():
     global been_called
     been_called = True
@@ -5153,11 +5090,9 @@ The global statement tells the interpreter something like, “In this function, 
 
 Here’s an example that tries to update a global variable:
 
-```txt
-count = 0
-```
-
 ```python
+count = 0
+python
 def example3():
     count = count + 1          # WRONG
 ```
@@ -5172,9 +5107,7 @@ def example3():
     count += 1
 
 If the global value is mutable, you can modify it without declaring it:
-```
-
-```python
+python
 def example5():
     global known
     known = dict()
@@ -5182,11 +5115,9 @@ def example5():
 
 ## 11.7. Long integers
 
-```txt
-known = {0:0, 1:1}
-```
-
 ```python
+known = {0:0, 1:1}
+python
 def example4():
     known[2] = 1
 ```
@@ -5334,9 +5265,7 @@ If the argument is a sequence (string, list or tuple), the result is a tuple wit
 ('l', 'u', 'p', 'i', 'n', 's')
 Because tuple is the name of a built-in function, you should avoid using it as a variable name.
 Most list operators also work on tuples. The bracket operator indexes an element:
-```
-
-```python
+python
 >>> t = ('a', 'b', 'c', 'd', 'e')
 >>> print t[0]
 'a'
@@ -5455,9 +5384,7 @@ But if you scatter the tuple, it works:
 (2, 1)
 Exercise 12.1. Many of the built-in functions use variable-length argument tuples. For example,
 max and min can take any number of arguments:
-```
-
-```txt
+txt
 >>> max(1,2,3)
 3
 But sum does not.
@@ -5498,30 +5425,24 @@ for letter, number in t:
 
 Each time through the loop, Python selects the next tuple in the list and assigns the elements to letter and number. The output of this loop is:
 
-```txt
+```python
 0 a
 1 b
 2 c
-```
 
-If you combine zip, for and tuple assignment, you get a useful idiom for traversing two (or more) sequences at the same time. For example, has\_match takes two sequences, t1 and t2, and returns True if there is an index i such that t1[i] == t2[i]:
+    If you combine zip, for and tuple assignment, you get a useful idiom for traversing two (or more) sequences at the same time. For example, has\_match takes two sequences, t1 and t2, and returns True if there is an index i such that t1[i] == t2[i]:
 
-```python
 def has_match(t1, t2):
     for x, y in zip(t1, t2):
         if x == y:
             return True
     return False
-```
 
-If you need to traverse the elements of a sequence and their indices, you can use the built-in function enumerate:
+    If you need to traverse the elements of a sequence and their indices, you can use the built-in function enumerate:
 
-```python
 for index, element in enumerate('abc'):
     print index, element
-```
-
-```txt
+txt
 0 a
 2 c
 1 b
@@ -5878,9 +5799,7 @@ def process_line(line, hist):
         word = word.lower()
 
         hist[word] = hist.get(word, 0) + 1
-```
-
-```python
+python
 hist = process_file('emma.txt')
 ```
 
@@ -5911,9 +5830,7 @@ Here is some code to print the results:
 ```python
 print 'Total number of words:', total_words(hist)
 print 'Number of different words:', different_words(hist)
-```
-
-```txt
+txt
 And the results:
 Total number of words: 161080
 Number of different words: 7214
@@ -6014,9 +5931,7 @@ def random_word(h):
     t = []
     for word, freq in h.items():
         t.extend([word] * freq)
-```
-
-```lua
+lua
 return random.choice(t)
 ```
 
@@ -6048,9 +5963,7 @@ One way to measure these kinds of relationships is Markov analysis, which charac
 
 ```txt
 Half a bee, philosophically, Must, ipso facto, half not be. But half the bee has got to be Vis a vis, its entity. D'you see?
-```
-
-```txt
+txt
 But can a bee be said to be Or not to be an entire bee When half the bee is not a bee Due to some ancient injury?
 ```
 
@@ -6323,9 +6236,7 @@ To demonstrate these functions, the following example "walks" through a director
 def walk(dirname):
     for name in os.listdir(dirname):
         path = os.path.join(dirname, name)
-```
-
-```python
+python
 if os.path.isfile(path):
     print path
 else:
@@ -6486,6 +6397,8 @@ For example, the Unix command ls -l normally displays the contents of the curren
 
 The argument is a string that contains a shell command. The return value is an object that behaves just like an open file. You can read the output from the ls process one line at a time with readline or get the whole thing at once with read:
 
+  <sup>1</sup>popen is deprecated now, which means we are supposed to stop using it and start using the subprocess module. But for simple cases, I find subprocess more complicated than necessary. So I am going to keep using popen until they take it away.
+
 ```txt
 >>> res = fp.read()
 When you are done, you close the pipe like a file:
@@ -6534,13 +6447,9 @@ def linecount(filename):
     for line in open(filename):
         count += 1
     return count
-```
-
-```txt
+txt
 print linecount('wc.py')
-```
-
-```txt
+txt
 >>> print wc
 <module 'wc' from 'wc.py'>
 ```
@@ -6777,9 +6686,7 @@ Here is the class definition:
 ```python
 class Rectangle(object):
     """Represents a rectangle.
-```
-
-```python
+python
 attributes: width, height, corner.
 """
 ```
@@ -6841,9 +6748,7 @@ You can also write functions that modify objects. For example, grow\_rectangle t
 def grow_rectangle(rect, dwidth, dheight):
     rect.width += dwidth
     rect.height += dheight
-```
-
-```python
+python
 >>> p1 = Point()
 >>> p1.x = 3.0
 >>> p1.y = 4.0
@@ -6893,9 +6798,7 @@ Figure 15.3: Object diagram.
 
 ```txt
 >>> box2 = copy.copy(box)
-```
-
-```txt
+txt
 >>> box2 is box
 ```
 
@@ -7118,9 +7021,7 @@ if sum.second >= 60:
 if sum.minute >= 60:
     sum.minute -= 60
     sum.hour += 1
-```
-
-```txt
+txt
 return sum
 ```
 
@@ -7320,9 +7221,7 @@ In Chapter 16, we defined a class named Time and in Exercise 16.1, you wrote a f
 ```python
 class Time(object):
     """Represents the time of day.""""
-```
-
-```python
+python
 def print_time(time):
     print '%.2d:%.2d:%.2d' % (time.hour, time.minute, time.second)
 ```
@@ -7421,12 +7320,10 @@ TypeError: increment() takes exactly 2 arguments (3 given)
 
 The error message is initially confusing, because there are only two arguments in parentheses. But the subject is also considered an argument, so all together that’s three.
 
-```txt
+```python
 self.hour = hour
 stores the value of the parameter hour as an attribute of self.
-```
-
-```python
+python
 def is_after(self, other):
         return self.time_to_int() > other.time_to_int()
 To use this method, you have to invoke it on one object and pass the other as an argument:
@@ -7447,9 +7344,7 @@ The init method (short for “initialization”) is a special method that gets i
 
 ```python
 # inside class Time:
-```
-
-```python
+python
 def __init__(self, hour=0, minute=0, second=0):
     self.hour = hour
     self.minute = minute
@@ -7473,9 +7368,7 @@ If you provide two arguments, they override hour and minute.
 09:45:00
 And if you provide three arguments, they override all three default values.
 Exercise 17.2. Write an init method for the Point class that takes x and y as optional parameters and assigns them to the corresponding attributes.
-```
-
-```txt
+txt
 17.6. The __str__ method
 ```
 
@@ -7510,9 +7403,7 @@ Here is what the definition might look like:
 
 ```python
 # inside class Time:
-```
-
-```python
+python
 def __add__(self, other):
     seconds = self.time_to_int() + other.time_to_int()
     return int_to_time(seconds)
@@ -7582,9 +7473,7 @@ The problem is, instead of asking the Time object to add an integer, Python is a
 
 ```python
 # inside class Time:
-```
-
-```python
+python
 def __radd__(self, other):
         return self.__add__(other)
 And here's how it's used:
@@ -7803,9 +7692,7 @@ The class definition for Card looks like this:
 ```python
 class Card(object):
     """Represents a standard playing card.""""
-```
-
-```python
+python
 def __init__(self, suit=0, rank=2):
     self.suit = suit
     self.rank = rank
@@ -7873,9 +7760,7 @@ With that decided, we can write \_\_cmp\_\_:
 
 ```python
 # inside class Card:
-```
-
-```python
+python
 def __cmp__(self, other):
     # check the suits
     if self.suit > other.suit: return 1
@@ -7912,9 +7797,9 @@ Now that we have Cards, the next step is to define Decks. Since a deck is made u
 
 The following is a class definition for Deck. The init method creates the attribute cards and generates the standard set of fifty-two cards:
 
+```python
 class Deck(object):
 
-```python
 def __init__(self):
     self.cards = []
     for suit in range(4):
@@ -7964,9 +7849,7 @@ To deal cards, we would like a method that removes a card from the deck and retu
 
 ```python
 #inside class Deck:
-```
-
-```python
+python
 def pop_card(self):
     return self.cards.pop()
 ```
@@ -7990,9 +7873,7 @@ As another example, we can write a Deck method named shuffle using the function 
 
 ```python
 # inside class Deck:
-```
-
-```python
+python
 def shuffle(self):
     random.shuffle(self.cards)
 ```
@@ -8028,9 +7909,7 @@ If we provide an init method in the Hand class, it overrides the one in the Deck
 
 ```python
 # inside class Hand:
-```
-
-```python
+python
 def __init__(self, label (^:'):
     self.cards = []
     self.label = label
@@ -8062,9 +7941,7 @@ A natural next step is to encapsulate this code in a method called move\_cards:
 
 ```python
 #inside class Deck:
-```
-
-```python
+python
 def move_cards(self, hand, num):
     for i in range(num):
         hand.add_card(self.pop_card())
@@ -8161,31 +8038,23 @@ To run multiple analyses, and keep them separate, we can encapsulate the state o
 
 ```python
 class Markov(object):
-```
-
-```python
+python
 def __init__(self):
         self.suffix_map = {}
         self.prefix = ()
 Next, we transform the functions into methods. For example, here's process_word:
-```
-
-```python
+python
 def process_word(self, word, order=2):
     if len(self.prefix) < order:
         self.prefix += (word,)
         return
-```
-
-```python
+python
 try:
     self.suffix_map[self.prefix].append(word)
 except KeyError:
     # if there is no entry for this prefix, make one
     self.suffix_map[self.prefix] = [word]
-```
-
-```python
+python
 self.prefix = shift(self.prefix, word)
 ```
 
@@ -8525,13 +8394,9 @@ At the top level, this GUI contains two widgets—a Canvas and a Frame—arrange
 
 ```python
 class SimpleTurtleWorld(TurtleWorld):
-```
-
-```python
+python
 """This class is identical to TurtleWorld, but the code that lays out the GUI is simplified for explanatory purposes.""""
-```
-
-```python
+python
 def setup(self):
     self.row()
     ...
@@ -8602,9 +8467,7 @@ The last two widgets are a Text widget and a Button:
 self.te_code = self.te(width=25, height=10)
 self.te_code.insert(END, 'world.clear()\n')
 self.te_code.insert(END, 'bob = Turtle(world)\n')
-```
-
-```python
+python
 self.bu(text='Run code', command=self.run_text)
 ```
 
@@ -8637,9 +8500,7 @@ mb creates the Menubutton. Initially, the text on the button is the name of the 
 
 ```python
 for color in colors:
-```
-
-```txt
+txt
 g.mi(mb, text=color, command=Callable(set_color, color))
 ```
 
@@ -8705,9 +8566,9 @@ make\_text gets the contents of the Entry and displays it as a Text item in the 
 
 It is also possible to create bindings for Canvas items. The following is a class definition for Draggable, which is a child class of Item that provides bindings that implement dragand-drop capability.
 
+```python
 class Draggable(Item):
 
-```python
 def __init__(self, item):
     self.canvas = item.canvas
     self.tag = item.tag
@@ -8736,18 +8597,12 @@ drag computes how far the object has moved relative to the starting place, updat
 ```python
 def drag(self, event):
     dx = event.x - self.dragx
-```
-
-```txt
+txt
 dy = event.y - self.dragy
-```
-
-```txt
+txt
 self.dragx = event.x
 self.dragy = event.y
-```
-
-```txt
+txt
 self.move(dx, dy)
 ```
 
@@ -8779,9 +8634,7 @@ For example, when you are setting up a callback, it is a common error to call th
 ```python
 def the_callback():
     print 'Called.'
-```
-
-```txt
+txt
 g.bu(text='This is wrong!', command=the_callback())
 ```
 
@@ -9213,6 +9066,7 @@ Suppose you have analyzed two algorithms and expressed their run times in terms 
 The following table shows the run time of these algorithms for different problem sizes:
 
 | Input | Run time of | Run time of |
+| --- | --- | --- |
 | size | Algorithm A | Algorithm B |
 | 10 | 1 001 | 111 |
 | 100 | 10 001 | 10 101 |
@@ -9355,9 +9209,7 @@ For now, I assume that each key only appears once. The simplest implementation o
 
 ```python
 class LinearMap(object):
-```
-
-```python
+python
 def __init__(self):
     self.items = []
 
@@ -9385,9 +9237,7 @@ One way to improve LinearMap is to break the list of key-value pairs into smalle
 
 ```python
 class BetterMap(object):
-```
-
-```python
+python
 def __init__(self, n=100):
     self.maps = []
     for i in range(n):
@@ -9423,9 +9273,7 @@ Here is an implementation of a hashtable:
 
 ```python
 class HashMap(object):
-```
-
-```python
+python
 def __init__(self):
     self.maps = BetterMap(2)
     self.num = 0
@@ -9547,9 +9395,7 @@ def countdown(n):
     else:
         print n
         countdown(n-1)
-```
-
-```lua
+lua
 lumpy = Lumpy()
 lumpy.make_reference()
 countdown(3)
@@ -9639,9 +9485,7 @@ But if you are passing functions and classes as parameters, you might want them 
 ```python
 import copy
 from swampy.Lumpy import Lumpy
-```
-
-```python
+python
 lumpy = Lumpy()
 lumpy.make_reference()
 
@@ -9656,9 +9500,7 @@ def instantiate(constructor):
     obj = constructor()
     lumpy.object_diagram()
     return obj
-```
-
-```txt
+txt
 point = instantiate(Point)
 ```
 
@@ -9680,9 +9522,7 @@ Here’s an example that shows a HAS-A relationship. You can download it from [h
 
 ```python
 from swampy.Lumpy import Lumpy
-```
-
-```python
+python
 lumpy = Lumpy()
 lumpy.make_reference()
 

@@ -130,12 +130,12 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
     )
     text = broken_code_pagebreak_pat.sub(r'\n    \1\n', text)
 
-    # 3.5. Ghép khai báo class/def mồ côi nằm lẻ loi trước ```python vào bên trong code block
+    # 3.5. Ghép khai báo class/def mồ côi nằm lẻ loi trước ```python vào bên trong code block (chỉ khi không đi liền sau ```)
     strict_orphaned_pat = re.compile(
-        r'(?:python\s*\n+)?((?:class\s+[A-Za-z_]\w*(?:\([^)]*\))?|def\s+[A-Za-z_]\w*\([^)]*\)):\s*)\n+```(?:python|py)?\n',
+        r'(?<!`)\n\n((?:class\s+[A-Za-z_]\w*(?:\([^)]*\))?|def\s+[A-Za-z_]\w*\([^)]*\)):\s*)\n+```(?:python|py)?\n',
         re.IGNORECASE
     )
-    text = strict_orphaned_pat.sub(r'```python\n\1\n', text)
+    text = strict_orphaned_pat.sub(r'\n\n```python\n\1\n', text)
 
     # 4. Xóa watermark và tiêu đề lặp lại vô nghĩa
     watermark_pat = r'^\s*(?:DRAFT|CONFIDENTIAL|INTERNAL USE ONLY|BẢN THẢO)\s*$'
@@ -177,6 +177,15 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
     code_block_pattern = re.compile(r'(```[a-zA-Z0-9_\+\#-]*\n[\s\S]*?```)', re.MULTILINE)
     last_end = 0
 
+    def balance_prose_dollars(p: str) -> str:
+        p_safe = p.replace(r'\$', '__ESC_DOLLAR__')
+        single_d = len(re.findall(r'(?<!\$)\$(?!\$)', p_safe))
+        if single_d % 2 != 0:
+            p_safe = re.sub(r'(?<!\$)\$(?=\s|[a-zA-Z0-9_\-"\'\(\)])', r'\$', p_safe)
+            if len(re.findall(r'(?<!\$)\$(?!\$)', p_safe)) % 2 != 0:
+                p_safe = re.sub(r'(?<!\\)(?<!\$)\$(?!\$)', r'\$', p_safe)
+        return p_safe.replace('__ESC_DOLLAR__', r'\$')
+
     for match in code_block_pattern.finditer(text):
         start, end = match.span()
         pre_text = text[last_end:start]
@@ -202,6 +211,9 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
         math_spaces = len(re.findall(r'(?<!\$)\$\s+[^\$\n]+?\s+\$(?!\$)', pre_text))
         stats["normalized_math_spaces"] += math_spaces
         pre_text = re.sub(r'(?<!\$)\$\s+([^\$\n]+?)\s+\$(?!\$)', r'$\1$', pre_text)
+
+        # C2. Cân bằng KaTeX dollar trong prose
+        pre_text = balance_prose_dollars(pre_text)
 
         parts.append(pre_text)
 
@@ -244,6 +256,9 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
     stats["normalized_math_spaces"] += math_spaces
     post_text = re.sub(r'(?<!\$)\$\s+([^\$\n]+?)\s+\$(?!\$)', r'$\1$', post_text)
 
+    # 7.5. Bảo đảm tính cân bằng của KaTeX dollars trong văn bản ngoài code block
+    post_text = balance_prose_dollars(post_text)
+
     parts.append(post_text)
     text = "".join(parts)
 
@@ -251,6 +266,12 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
     cleaned_lines = [line.rstrip() for line in text.splitlines()]
     text = "\n".join(cleaned_lines)
     text = re.sub(r'\n{3,}', '\n\n', text)
+
+    # 9. Bảo đảm 100% cân bằng cặp thẻ code block (fences)
+    fences = len(re.findall(r'^```', text, flags=re.MULTILINE))
+    if fences % 2 != 0:
+        text = text.rstrip() + "\n```\n"
+
     cleaned_text = text.strip()
 
     stats["cleaned_chars"] = len(cleaned_text)

@@ -196,6 +196,7 @@ Bảng 1.1 tóm tắt đặc điểm bộ nhớ và phạm vi biểu diễn củ
 Bảng 1.1: So sánh các kiểu dữ liệu cơ bản trong Python
 
 | Kiểu dữ liệu | Bộ nhớ (xấp xỉ) | Phạm vi biểu diễn | Ghi chú |
+| --- | --- | --- | --- |
 | int | ∼28 byte | Không giới hạn | Tăng theo độ lớn giá trị |
 | float | 8 byte | ±1.8 × 10308 | Sai số làm tròn |
 | bool | ∼28 byte | True / False | Kiểu logic |
@@ -553,6 +554,7 @@ data = [10, 20, 30, 40, 50]
 Cách Python gán chỉ mục dương cho các phần tử có thể được minh họa như sau:
 
 | Chỉ mục | 0 | 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- | --- | --- |
 | Giá trị | 10 | 20 | 30 | 40 | 50 |
 
 Khi sử dụng chỉ mục dương, Python sẽ truy cập phần tử tính từ đầu tập hợp.
@@ -572,6 +574,7 @@ Bên cạnh chỉ mục dương, Python còn hỗ trợ **chỉ mục âm**. Ch�
 Với danh sách data ở trên, cách Python gán chỉ mục âm có thể được minh họa như sau:
 
 | Chỉ mục âm | -5 | -4 | -3 | -2 | -1 |
+| --- | --- | --- | --- | --- | --- |
 | Giá trị | 10 | 20 | 30 | 40 | 50 |
 
 Ví dụ truy cập bằng chỉ mục âm:
@@ -1064,9 +1067,7 @@ print(f"{ 'Tin':<10}{9.0:>6}")
 
 ```txt
 Mon hoc Diem
-```
-
-```txt
+txt
 Toan 8.5
 Ly 7.5
 Tin 9.0
@@ -1542,6 +1543,7 @@ Biểu thức logic là biểu thức khi được đánh giá sẽ cho kết qu
 Các toán tử so sánh dùng để so sánh hai giá trị và trả về kết quả Boolean.
 
 | Toán tử | Ý nghĩa |
+| --- | --- |
 | == | Bằng nhau |
 | != | Khác nhau |
 | > | Lớn hơn |
@@ -1568,6 +1570,7 @@ True
 Python cung cấp các toán tử dùng để kiểm tra sự tồn tại của phần tử trong một tập hợp.
 
 | Toán tử | Ý nghĩa |
+| --- | --- |
 | in | Phần tử thuộc tập hợp |
 | not in | Phần tử không thuộc tập hợp |
 
@@ -1601,9 +1604,7 @@ print(a is b)
 print(bool(0))
 print(bool(" "))
 print(bool([]))
-```
-
-```txt
+txt
 True
 False
 ```
@@ -1641,6 +1642,7 @@ Mọi giá trị khác đều được coi là True.
 Python cung cấp ba toán tử logic cơ bản:
 
 | Toán tử | Ý nghĩa |
+| --- | --- |
 | and | Và |
 | or | Hoặc |
 | not | Phủ định |
@@ -1650,6 +1652,7 @@ Python cung cấp ba toán tử logic cơ bản:
 **Toán tử AND**
 
 | A | B | A and B |
+| --- | --- | --- |
 | True | True | True |
 | True | False | False |
 | False | True | False |
@@ -1658,6 +1661,7 @@ Python cung cấp ba toán tử logic cơ bản:
 ## Toán tử OR
 
 | A | B | A or B |
+| --- | --- | --- |
 | True | True | True |
 | True | False | True |
 | False | True | True |
@@ -1666,6 +1670,7 @@ Python cung cấp ba toán tử logic cơ bản:
 **Toán tử NOT**
 
 | A | not A |
+| --- | --- |
 | True | False |
 | False | True |
 
@@ -2285,9 +2290,7 @@ while i <= 3:
 
 ```txt
 1 1
-```
-
-```csv
+csv
 1 2
 1 3
 2 1
@@ -3563,6 +3566,7 @@ Mặc dù list comprehension rất mạnh mẽ, cần tránh lạm dụng với 
 ## 4.10.10 So sánh các phương pháp xử lý tập hợp
 
 | Phương pháp | Đặc điểm |
+| --- | --- |
 | map() | Biến đổi từng phần tử, trả về iterator |
 | filter() | Lọc phần tử theo điều kiện, trả về iterator |
 | reduce() | Rút gọn thành một giá trị duy nhất |
@@ -3962,9 +3966,7 @@ class Student:
         print(f"Tuoi: {self.age}")
         print(f"Chuyen nganh: {self.major}")
         print(f"GPA: {self.gpa}")
-```
-
-```python
+python
 def update_gpa(self, new_gpa):
         if 0.0 <= new_gpa <= 4.0:
             self.gpa = new_gpa
@@ -3989,13 +3991,9 @@ Ten: Nguyen Van An
 Tuoi: 20
 Chuyen nganh: Computer Science
 GPA: 0.0
-```
-
-```txt
+txt
 Cap nhat GPA thanh cong: 3.5
-```
-
-```yaml
+yaml
 Ten: Nguyen Van An
 Tuoí: 20
 Chuyen nganh: Computer Science
@@ -4017,9 +4015,7 @@ class Rectangle:
 
     def calculate_perimeter(self):
         return 2 * (self.width + self.height)
-```
-
-```python
+python
 def is_square(self):
         return self.width == self.height
 
@@ -4039,9 +4035,7 @@ print(f"\nLa hinh vuong: {square.is_square()}")
 Dien tich: 50
 Chu vi: 30
 La hình vuong: False
-```
-
-```txt
+txt
 La hình vuong: True
 ```
 
@@ -4260,9 +4254,7 @@ class Student(Person):
 person = Person("Nguyen Van A", 30)
 print("Thong tin person:")
 person.display_info()
-```
-
-```python
+python
 print("\nThong tin student:")
 student = Student("Tran Thi B", 20, "SV001", "Computer
     Science")
@@ -4275,9 +4267,7 @@ student.display_info()
 Thong tin person:
 Ten: Nguyen Van A
 Tuoí: 30
-```
-
-```txt
+txt
 Thong tin student:
 Ten: Tran Thi B
 Tuoi: 20
@@ -4312,9 +4302,7 @@ class Mammal(Animal):
 class Dog(Mammal):
     def __init__(self, name, fur_color, breed):
         super().__init__(name, fur_color)
-```
-
-```python
+python
 self.breed = breed
 
     def speak(self):
@@ -4413,9 +4401,7 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
-```
-
-```python
+python
 return self.width * self.height
 
 class Triangle(Shape):
@@ -4462,9 +4448,7 @@ class Vector2D:
         return Vector2D(self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
-```
-
-```python
+python
 return Vector2D(self.x - other.x, self.y - other.y)
 
 def __str__(self):
@@ -4485,9 +4469,7 @@ print(f"v1 - v2 = {v4}")
 
 print(f"v1 == v2: {v1 == v2}")
 print(f"v1 == v1: {v1 == v1}")
-```
-
-```txt
+txt
 Kết quả hiển thị:
 v1 + v2 = Vector2D(4, 6)
 v1 - v2 = Vector2D(2, 2)
@@ -4553,9 +4535,7 @@ class Book:
 book1 = Book("Python Programming", "John Smith", 300)
 book2 = Book("Data Science", "Jane Doe", 250)
 book3 = Book("Python Programming", "John Smith", 300)
-```
-
-```python
+python
 print(book1)                      # Gọi __str__
 print(repr(book2))                 # Gọi __repr__
 print(f"So trang: {len(book1)}") # Gọi __len__
@@ -4604,9 +4584,7 @@ sv1 = Student("Nguyen Van An", "SV001")
 sv2 = Student("Tran Thi Binh", "SV002")
 
 print(f"So sinh vien hien tai: {Student.student_count}")
-```
-
-```cmake
+cmake
 sv1.display_info()
 ```
 
@@ -4653,9 +4631,7 @@ class Employee:
 Employee.set_raise_amount(1.10)
 
 emp1 = Employee("An", 50000)
-```
-
-```python
+python
 emp2 = Employee.from_string("Binh-60000")
 
 emp1.display_info()
@@ -4702,9 +4678,7 @@ class MathUtils:
 print(f"10 la so chan: {MathUtils.is_even(10)}")
 print(f"7 la so nguyen to: {MathUtils.is_prime(7)}")
 print(f"5! = {MathUtils.factorial(5)}")
-```
-
-```txt
+txt
 Kết quả hiển thị:
 10 la so chan: True
 7 la so nguyen to: True
@@ -4751,9 +4725,7 @@ class Member:
             print(f"{self.name} da muon: {book.title}")
             return True
         else:
-```
-
-```python
+python
 print(f"Sach '{book.title}' khong co san")
     return False
 
@@ -5103,9 +5075,7 @@ arr3d = np.array([[1, 2], [3, 4]],
                  [[5, 6], [7, 8]]])
 print("\nMang 3D:")
 print(arr3d)
-```
-
-```yaml
+yaml
 Kết quả:
 Mang 1D: [1 2 3 4 5]
 Kieu: <class 'numpy.ndarray'>
@@ -5164,9 +5134,7 @@ Ma tran khong 3x4:
 [[0. 0. 0. 0.]
  [0. 0. 0. 0.]
  [0. 0. 0. 0.]]
-```
-
-```txt
+txt
 Ma tran mot 2x3:
 [[1. 1. 1.]
  [1. 1. 1.]]
@@ -5263,9 +5231,7 @@ print("nbytes (tong kich thuoc):", arr.nbytes) # 96 bytes
 Mang goc:
 [[ 1 2 3 4]
 [ 5 6 7 8]
-```
-
-```txt
+txt
 [ 9 10 11 12]]
 
 shape (kich thuoc): (3, 4)
@@ -5365,9 +5331,7 @@ print(matrix)
 
 ```txt
 Phan tu o hang 0, cot 1: 20
-```
-
-```txt
+txt
 Phan tu o hang 2, cot 2: 90
 Phan tu o hang 1, cot 0: 40
 Hang cuoi, cot cuoi: 90
@@ -5409,14 +5373,12 @@ Dao nguoc mang: [90 80 70 60 50 40 30 20 10  0]
 
 Với mảng 2 chiều, ta có thể cắt lát theo từng chiều một cách độc lập.
 
-```txt
+```python
 A = np.array([[10, 20, 30, 40],
          [50, 60, 70, 80],
          [90, 100, 110, 120],
          [130, 140, 150, 160]])
-```
-
-```python
+python
 print("Ma tran goc:")
 print(A)
 
@@ -5461,9 +5423,7 @@ Ma tran con 2x2 (trai tren):
 
 Ma tran con 2x3 (giua):
 [[ 60 70 80]
-```
-
-```json
+json
 [100 110 120]]
 ```
 
@@ -5570,9 +5530,7 @@ Mat na boolean: [False True False True False False True False]
 Cac phan tu > 20: [22 31 42]
 Cac phan tu < 15: [8 7 11]
 Phan tu trong khoang [10, 25]: [15 22 19 11]
-```
-
-```yaml
+yaml
 So chan: [22 8 42]
 So le: [15 31 19 7 11]
 ```
@@ -5772,9 +5730,7 @@ print("Kich thuoc C:", C1.shape)
 
 ```txt
 np.dot (A, B):
-```
-
-```txt
+txt
 [[ 58 64]
 [139 154]]
 
@@ -5820,9 +5776,7 @@ Ma tran goc:
 [[1 2 3]
  [4 5 6]]
 Kich thuoc: (2, 3)
-```
-
-```txt
+txt
 Chuyen vi (transpose):
 [[1 4]
 ```
@@ -5859,9 +5813,7 @@ print(A_inv)
 I = A @ A_inv
 print("\nA @ A^(-1):")
 print(I)
-```
-
-```txt
+txt
 Kết quả:
 Ma tran A:
 [[4 7]
@@ -6078,9 +6030,7 @@ print("Tong theo dong (axis=1):", np.sum(data, axis=1))
 print("\nTrung bình toan bo:", np.mean(data))
 print("Trung bình theo cot:", np.mean(data, axis=0))
 print("Trung bình theo dong:", np.mean(data, axis=1))
-```
-
-```python
+python
 # Min, Max
 print("\nGia tri nho nhat:", np.min(data))
 print("Gia tri lon nhat:", np.max(data))
@@ -6182,14 +6132,10 @@ cumprod = np.cumprod(arr)
 print("Tich tich luy:", cumprod)
 
 # Với ma trận
-```
-
-```txt
+txt
 Tong tich luy: [ 1 3 6 10 15]
 Tich tich luy: [ 1 2 6 24 120]
-```
-
-```python
+python
 matrix = np.array([[1, 2, 3],
               [4, 5, 6]])
 print("\nTong tich luy theo cot:")
@@ -6224,9 +6170,7 @@ print(np.sort(matrix, axis=1))
 
 print("\nSap xep theo cot:")
 print(np.sort(matrix, axis=0))
-```
-
-```txt
+txt
 Gia tri duy nhat: [1 2 3 4 5]
 
 Gia tri: [1 2 3 4 5]
@@ -6276,9 +6220,7 @@ NumPy cung cấp các hàm toán học áp dụng trên từng phần tử của
 
 ```python
 arr = np.array([1, 4, 9, 16, 25])
-```
-
-```python
+python
 # Căn bậc hai
 print("Căn bậc hai:", np.sqrt(arr))
 
@@ -6463,9 +6405,7 @@ Vertical stack:
 [[1 2]
     [3 4]
     [5 6]
-```
-
-```markdown
+markdown
 [7 8]]
 
 Horizontal stack:
@@ -6775,9 +6715,7 @@ print(rotated)
 # Nguồng hóa (thresholding)
 threshold = 128
 binary = (image > threshold).astype(np.uint8) * 255
-```
-
-```python
+python
 print("\nAnh nhi phan:")
 print(binary)
 ```
@@ -6825,9 +6763,7 @@ resistance = np.array([100.2, 103.5, 107.1, 110.8,
     114.2, 117.9, 121.5])  # Ohm
 
 # Tạo ma trận cho hồi quy: [1, T]
-```
-
-```python
+python
 X = np.column_stack([np.ones(len(temperature)),
   temperature])
 y = resistance
@@ -6855,9 +6791,7 @@ print(f"R²: {r_squared:.4f}")
 
 ```txt
 He so hoi quy: R = 96.54 + 0.3127 * T
-```
-
-```txt
+txt
 Du doan dien tro tai 55°C: 113.74 Ohm
 R²: 0.9998
 ```
@@ -7183,9 +7117,7 @@ Scatter plot hiển thị mối quan hệ giữa hai biến liên tục, rất h
 ```txt
 # Tạo dữ liệu với correlation
 np.random.seed(42)
-```
-
-```python
+python
 n = 200
 x = np.random.randn(n)
 y = 2 * x + np.random.randn(n) * 0.5
@@ -7324,9 +7256,7 @@ axes[0, 1].plot(epochs, train_acc, label='Train Acc',
     linewidth=2)
 axes[0, 1].plot(epochs, val_acc, label='Val Acc',
     linewidth=2)
-```
-
-```python
+python
 axes[0, 1].set_xlabel('Epochs')
 axes[0, 1].set_ylabel('Accuracy')
 axes[0, 1].set_title('Training vs Validation Accuracy')
@@ -7487,9 +7417,7 @@ pairplot.fig.suptitle('Pairplot: Iris Dataset',
 
 plt.savefig('Hinh_ve/ch8_pairplot.png', dpi=300,
     bbox_inches='tight')
-```
-
-```txt
+txt
 plt.show()
 ```
 
@@ -7651,9 +7579,7 @@ Learning curves giúp chẩn đoán overfitting, underfitting và đánh giá tr
 ```txt
 # Tạo learning curves cho 3 scenarios
 epochs = np.arange(1, 101)
-```
-
-```python
+python
 # Scenario 1: Good fit
 train_loss_good = 2 * np.exp(-epochs/15) + 0.05
 val_loss_good = 2 * np.exp(-epochs/17) + 0.08
@@ -7697,9 +7623,7 @@ axes[1, 0].set_xlabel('Epochs')
 axes[1, 0].set_ylabel('Accuracy')
 axes[1, 0].legend()
 axes[1, 0].grid(True, alpha=0.3)
-```
-
-```python
+python
 # Overfitting
 axes[0, 1].plot(epochs, train_loss_over, label='Train',
     linewidth=2)
@@ -7744,18 +7668,14 @@ axes[1, 2].set_title('Underfitting: Accuracy', fontsize=12,
 axes[1, 2].set_xlabel('Epochs')
 axes[1, 2].set_ylabel('Accuracy')
 axes[1, 2].legend()
-```
-
-```python
+python
 axes[1, 2].grid(True, alpha=0.3)
 
 plt.tight_layout()
 plt.savefig('Hinh_ve/ch8_learning_curves.png', dpi=300,
     bbox_inches='tight')
 plt.show()
-```
-
-```yaml
+yaml
 Good Fit: Loss
 Overfitting: Loss
 Underfitting: Loss
@@ -7786,9 +7706,7 @@ sorted_features = [features[i] for i in indices]
 sorted_importances = importances[indices]
 
 fig, ax = plt.subplots(figsize=(10, 6))
-```
-
-```python
+python
 colors = plt.cm.viridis(np.linspace(0.3, 0.9,
     len(sorted_features)))
 bars = ax.barh(sorted_features, sorted_importances,
@@ -7820,9 +7738,7 @@ from sklearn.metrics import precision_recall_curve,
     average_precision_score
 
 # Giả lập dữ liệu imbalanced
-```
-
-```python
+python
 np.random.seed(42)
 y_true_imb = np.concatenate([np.ones(100), np.zeros(900)])
 y_scores_good = y_true_imb + np.random.normal(0, 0.3, 1000)
@@ -7893,9 +7809,7 @@ axes[0, 0].legend(fontsize=10)
 axes[0, 0].grid(True, alpha=0.3)
 
 # Accuracy
-```
-
-```python
+python
 axes[0, 1].plot(epochs, history['accuracy'], 'b-', label='Training Accuracy', linewidth=2)
 axes[0, 1].plot(epochs, history['val_accuracy'], 'r-', label='Validation Accuracy', linewidth=2)
 axes[0, 1].set_xlabel('Epoch', fontsize=11)
@@ -7940,9 +7854,7 @@ Mô tả kiến trúc neural network một cách trực quan.
 ```python
 # Visualization đơn giản cho NN architecture
 fig, ax = plt.subplots(figsize=(12, 8))
-```
-
-```txt
+txt
 Model Loss
 Model Accuracy
 Learning Rate Schedule
@@ -8008,9 +7920,7 @@ for idx, ax in enumerate(axes.flat):
     activation = np.random.rand(28, 28) * (idx + 1) / 8
     activation = activation * (activation > 0.3) #
     → ReLU-like
-```
-
-```python
+python
 im = ax.imshow(activation, cmap='hot',
     ↦ interpolation='nearest')
     ax.set_title(f'Filter {idx + 1}', fontsize=11)
@@ -8099,9 +8009,7 @@ def plot_learning_curves(history, figsize=(12, 5)):
 
     # Accuracy
     axes[1].plot(history['accuracy'], label='Train')
-```
-
-```python
+python
 axes[1].plot(history['val_accuracy'],
     label='Validation')
 axes[1].set_xlabel('Epoch')
@@ -8531,9 +8439,7 @@ t_eval = np.linspace(0, 10, 100)  # Các điểm muốn tính
     nghiệm
 
 sol = solve_ivp(decay_rate, t_span, [N0], t_eval=t_eval)
-```
-
-```python
+python
 # So sánh với nghiệm giải tích
 N_exact = N0 * np.exp(-lambda_decay * sol.t)
 
@@ -8578,9 +8484,7 @@ omega0 = 0
 y0 = [theta0, omega0]
 
 t_span = (0, 10)
-```
-
-```python
+python
 t_eval = np.linspace(0, 10, 500)
 
 sol = solve_ivp(pendulum, t_span, y0, t_eval=t_eval,
@@ -8625,9 +8529,7 @@ def lotka_volterra(t, z, alpha, beta, delta, gamma):
 
 # Tham số
 alpha = 1.0   # Tốc độ sinh con mỗi
-```
-
-```python
+python
 beta = 0.1    # Tốc độ sẵn môi tiêu diệt con mỗi
 delta = 0.075 # Hiệu suất chuyển đổi con mỗi → sẵn môi
 gamma = 1.5    # Tốc độ chết tự nhiên của sẵn môi
@@ -8788,9 +8690,7 @@ print(f"Nghiệm (fsolve): x = {root_fsolve[0]:.10f}")
 
 # Phương pháp 2: newton (cần đạo hàm, hội tự nhanh hơn)
 def derivative(x):
-```
-
-```python
+python
 return -np.sin(x) - 1
 
 root_newton = newton(equation, 0.5, fprime=derivative)
@@ -8882,9 +8782,7 @@ ax.plot(x_parabola, y_parabola, 'r-', linewidth=2, label='x
 
 for sol in solutions:
     ax.plot(sol[0], sol[1], 'go', markersize=15)
-```
-
-```python
+python
 ax.annotate(f'({sol[0]:.2f}, {sol[1]:.2f})',
             xy=(sol[0], sol[1]), xytext=(sol[0]+0.3,
             ⋸ sol[1]+0.3),
@@ -8930,9 +8828,7 @@ def equilibrium(x):
     n_NH3 = x
 
     # Điều kiện vật lý: tất cả nông độ phải dương
-```
-
-```python
+python
 if n_N2 <= 0 or n_H2 <= 0 or n_NH3 <= 0:
     return 1e10  # Trả về giá trị lớn nếu không hợp lý
 
@@ -9063,9 +8959,7 @@ methods = [
     ('Quadratic', f_quadratic, axes[0, 1]),
     ('Cubic', f_cubic, axes[1, 0]),
     ('Cubic Spline', f_spline, axes[1, 1])
-```
-
-```python
+python
 ]
 for name, f_interp, ax in methods:
     y_interp = f_interp(x_plot)
@@ -9156,9 +9050,7 @@ ax2.set_title('Bẩn đồ Nhiệt độ sau Nội suy (100×100 điểm)',
 ax2.set_xlabel('Kinh độ', fontsize=11)
 ax2.set_ylabel('Vĩ độ', fontsize=11)
 ax2.legend(fontsize=10)
-```
-
-```python
+python
 plt.colorbar(c2, ax=ax2, label='Nhiệt độ (°C)')
 
 plt.tight_layout()
@@ -9203,9 +9095,7 @@ pressure_recovered = f_recover(time_full)
 # Visualization
 plt.figure(figsize=(14, 6))
 plt.plot(time_full, pressure_full, 'g-', linewidth=2,
-```
-
-```python
+python
 label='Dữ liệu đầy đủ (ground truth)', alpha=0.5)
 plt.plot(time_measured, pressure_measured, 'ro',
     markersize=6,
@@ -9280,6 +9170,7 @@ Cho $M = \pi /4\mathrm{v}\grave{\mathrm{a}}e = 0.3:$
 **Bài tập 4: Nội suy - Dữ liệu Nhiệt độ** Cho dữ liệu nhiệt độ trung bình tháng tại Hà Nội (°C):
 
 | Tháng | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Nhiệt độ | 17 | 18 | 21 | 25 | 29 | 30 | 30 | 29 | 28 | 25 | 22 | 18 |
 
 1. Nội suy tuyến tính, cubic, và cubic spline
@@ -9335,6 +9226,7 @@ với $l_{1} = l_{2} = l_{3} = 1\mathrm{m}$1. Giải hệ phương trình để 
 **Bài tập 8: Nội suy 2D - Bản đồ Địa hình** Cho độ cao (m) tại 9 điểm trên lưới $(x,y)$
 
 | y \\x | 0 | 50 | 100 |
+| --- | --- | --- | --- |
 | 0 | 100 | 120 | 140 |
 | 50 | 110 | 150 | 170 |
 | 100 | 105 | 130 | 145 |
@@ -9458,9 +9350,7 @@ import math
 # Hinh chu nhat
 chieu_dai = 10
 chieu_rong = 5
-```
-
-```python
+python
 dien_tich_hcn = chieu_dai * chieu_rong
 chu_vi_hcn = 2 * (chieu_dai + chieu_rong)
 
@@ -9505,9 +9395,7 @@ elif n > 0:
     print(f" => {n} la so le duong")
 elif la_so_chan:
     print(f" => {n} la so chan khong duong")
-```
-
-```python
+txt
 else:
     print(f" => {n} la so le khong duong")
 ```
@@ -9605,9 +9493,7 @@ print(f"Diem TB: {sinh_vien[2]}")
 
 # Unpacking tuple
 ma_sv, ten, diem = sinh_vien
-```
-
-```python
+txt
 print(f"\nSinh vien {ten} (Ma: {ma_sv}) co diem TB: {diem}")
 ```
 
@@ -9750,9 +9636,7 @@ def thong_ke_file(ten_file):
 
             # Dem so dong
             so_dong = len(dong)
-```
-
-```python
+python
 # Dem so tu
 tu = noi_dung.split()
 so_tu = len(tu)
@@ -9797,9 +9681,7 @@ def la_so_nguyen_to(n):
     for i in range(3, int(math.sqrt(n)) + 1, 2):
         if n % i == 0:
             return False
-```
-
-```python
+python
 return True
 
 # Test
@@ -9888,9 +9770,7 @@ def fibonacci_iterative(n):
     return b
 
 # Test
-```
-
-```python
+python
 print("Giai thua:")
 for i in range(6):
     print(f" {i}! = {giai_thua(i)}")
@@ -9987,9 +9867,7 @@ def sap_xep_giam(danh_sach):
 
 # Test
 so_list = [5, -3, 8, 12, -7, 0, 15, 4, -1, 9]
-```
-
-```python
+python
 print("Danh sach goc:", so_list)
 print("\nThong ke:")
 stats = thong_ke_list(so_list)
@@ -10085,9 +9963,7 @@ def giai_phuong_trinh_bac_2(a, b, c):
     """Giai phuong trinh ax^2 + bx + c = 0"""
     if a == 0:
         if b == 0:
-```
-
-```python
+python
 return None # Vo nghiem hoac vo so nghiem
     return [-c / b] # Phuong trinh bac nhat
 
@@ -10181,9 +10057,7 @@ class SinhVien:
         """String representation"""
         dtb = self.tinh_diem_tb()
         xl = self.xep_loai()
-```
-
-```lua
+lua
 return f"SV {self.ma_sv} - {self.ho_ten} - DTB:
     ↦ {dtb:.2f} - {xl}"
 # Test
@@ -10228,9 +10102,7 @@ class HinhChuNhat(Hinh):
     def __init__(self, chieu_dai, chieu_rong):
         self.chieu_dai = chieu_dai
         self.chieu_rong = chieu_rong
-```
-
-```python
+python
 def dien_tich(self):
         return self.chieu_dai * self.chieu_rong
 
@@ -10275,9 +10147,7 @@ from datetime import datetime
 
 class TaiKhoan:
     """Class quan ly tai khoan ngan hang"""
-```
-
-```python
+python
 lai_suat_nam = 0.05  # Class variable: 5% per year
 
 def __init__(self, so_tai_khoan, chu_tai_khoan,
@@ -10321,9 +10191,7 @@ def chuyen_tien(self, tai_khoan_nhan, so_tien):
         print(f"Chuyen {so_tien:, .0f} VND thanh cong")
     else:
         print("Giao dich that bai!")
-```
-
-```python
+python
 def xem_so_du(self):
     """Xem so du tai khoan"""
     return self.__so_du
@@ -10506,9 +10374,7 @@ data2 = np.random.normal(120, 20, 1000)  # mean=120, std=20
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
 # Histogram
-```
-
-```python
+python
 ax1.hist(data1, bins=30, alpha=0.7, color='blue',
     edgecolor='black',
         label='Group 1')
@@ -10555,9 +10421,7 @@ def f1(x):
     return x**2
 
 def f2(x):
-```
-
-```python
+python
 return 2*x + 3
 
 # Tim giao diem
@@ -10653,9 +10517,7 @@ plt.plot(thang, nhiet_do, 'ko', markersize=8, label='Du lieu
     ↦ thuc te')
 plt.plot(thang_fine, nhiet_do_linear, 'b-', linewidth=2,
         label='Noi suy tuyen tinh')
-```
-
-```python
+python
 plt.plot(thang_fine, nhiet_do_cubic, 'r--', linewidth=2,
        label='Noi suy cubic')
 plt.plot(thang_fine, nhiet_do_spline, 'g-.', linewidth=2,

@@ -1827,24 +1827,29 @@ for a read-only attribute with the same name, and it sets the docstring for
    copy of the property with the corresponding accessor function set to the
    decorated function.  This is best explained with an example:
 
-   .. testcode::
+   .. testcode:
 
-      class C:
-          def __init__(self):
-              self._x = None
+```
 
-          @property
-          def x(self):
-              """I'm the 'x' property."""
-              return self._x
+python
+class C:
+    def __init__(self):
+        self._x = None
 
-          @x.setter
-          def x(self, value):
-              self._x = value
+    @property
+    def x(self):
+        """I'm the 'x' property."""
+        return self._x
 
-          @x.deleter
-          def x(self):
-              del self._x
+    @x.setter
+    def x(self, value):
+        self._x = value
+
+    @x.deleter
+    def x(self):
+        del self._x
+
+```
 
    This code is exactly equivalent to the first example.  Be sure to give the
    additional functions the same name as the original property (``x`` in this
@@ -2380,17 +2385,27 @@ approaches to dealing with this issue:
 
 * By default, :func:`zip` stops when the shortest iterable is :term:`exhausted`.
   It will ignore the remaining items in the longer iterables, cutting off
-  the result to the length of the shortest iterable::
+  the result to the length of the shortest iterable:
 
-     >>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))
-     [(0, 'fee'), (1, 'fi'), (2, 'fo')]
+```
+
+python
+>>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))
+[(0, 'fee'), (1, 'fi'), (2, 'fo')]
+
+```
 
 * :func:`zip` is often used in cases where the iterables are assumed to be
   of equal length.  In such cases, it's recommended to use the ``strict=True``
-  option. Its output is the same as regular :func:`zip`::
+  option. Its output is the same as regular :func:`zip`:
 
-     >>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))
-     [('a', 1), ('b', 2), ('c', 3)]
+```
+
+python
+>>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))
+[('a', 1), ('b', 2), ('c', 3)]
+
+```python
 
   Unlike the default behavior, it raises a :exc:`ValueError` if one iterable
   is :term:`exhausted` before the others:
@@ -2430,15 +2445,20 @@ Tips and tricks:
   iterator. This has the effect of dividing the input into n-length chunks.
 
 * :func:`zip` in conjunction with the ``*`` operator can be used to unzip a
-  list::
+  list:
 
-     >>> x = [1, 2, 3]
-     >>> y = [4, 5, 6]
-     >>> list(zip(x, y))
-     [(1, 4), (2, 5), (3, 6)]
-     >>> x2, y2 = zip(*zip(x, y))
-     >>> x == list(x2) and y == list(y2)
-     True
+```
+
+python
+>>> x = [1, 2, 3]
+>>> y = [4, 5, 6]
+>>> list(zip(x, y))
+[(1, 4), (2, 5), (3, 6)]
+>>> x2, y2 = zip(*zip(x, y))
+>>> x == list(x2) and y == list(y2)
+True
+
+```
 
 .. versionchanged:: 3.10
    Added the ``strict`` argument.
@@ -3035,12 +3055,17 @@ excluding the sign and leading zeros
  rounded logarithm, then ``k = 1 + int(log(abs(x), 2))``.
  If ``x`` is zero, then ``x.bit_length()`` returns ``0``.
 
- Equivalent to::
+ Equivalent to:
 
-     def bit_length(self):
-         s = bin(self)       # binary representation:  bin(-37) --> '-0b100101'
-         s = s.lstrip('-0b') # remove leading zeros and minus sign
-         return len(s)       # len('100101') --> 6
+```
+
+python
+def bit_length(self):
+    s = bin(self)       # binary representation:  bin(-37) --> '-0b100101'
+    s = s.lstrip('-0b') # remove leading zeros and minus sign
+    return len(s)       # len('100101') --> 6
+
+```
 
  .. versionadded:: 3.1
 
@@ -3062,10 +3087,15 @@ Example
      >>> (-n).bit_count()
      3
 
- Equivalent to::
+ Equivalent to:
 
-     def bit_count(self):
-         return bin(self).count("1")
+```
+
+python
+def bit_count(self):
+    return bin(self).count("1")
+
+```
 
  .. versionadded:: 3.10
 
@@ -3111,17 +3141,22 @@ single byte object
  However, when using the default arguments, don't try
  to convert a value greater than 255 or you'll get an :exc:`OverflowError`.
 
- Equivalent to::
+ Equivalent to:
 
-     def to_bytes(n, length=1, byteorder='big', signed=False):
-         if byteorder == 'little':
-             order = range(length)
-         elif byteorder == 'big':
-             order = reversed(range(length))
-         else:
-             raise ValueError("byteorder must be either 'little' or 'big'")
+```
 
-         return bytes((n >> i*8) & 0xff for i in order)
+python
+def to_bytes(n, length=1, byteorder='big', signed=False):
+    if byteorder == 'little':
+        order = range(length)
+    elif byteorder == 'big':
+        order = reversed(range(length))
+    else:
+        raise ValueError("byteorder must be either 'little' or 'big'")
+
+    return bytes((n >> i*8) & 0xff for i in order)
+
+```
 
  .. versionadded:: 3.2
  .. versionchanged:: 3.11
@@ -4899,12 +4934,13 @@ See also :meth:`rfind` and :meth:`index`.
 
    The :meth:`~str.find` method should be used only if you need to know the
    position of *sub*.  To check if *sub* is a substring or not, use the
-   :keyword:`in` operator::
-
-      >>> 'Py' in 'Python'
-      True
+   :keyword:`in` operator:
 
 ```
+
+python
+>>> 'Py' in 'Python'
+True
 
 ### Method: `str.format(*args, **kwargs)`
 
@@ -5810,25 +5846,35 @@ For example
 The algorithm uses a simple language-independent definition of a word as
 groups of consecutive letters.  The definition works in many contexts but
 it means that apostrophes in contractions and possessives form word
-boundaries, which may not be the desired result::
+boundaries, which may not be the desired result:
 
-     >>> "they're bill's friends from the UK".title()
-     "They'Re Bill'S Friends From The Uk"
+```
+
+python
+>>> "they're bill's friends from the UK".title()
+"They'Re Bill'S Friends From The Uk"
+
+```
 
 The :func:`string.capwords` function does not have this problem, as it
 splits words on spaces only.
 
 Alternatively, a workaround for apostrophes can be constructed using regular
-expressions::
+expressions:
 
-     >>> import re
-     >>> def titlecase(s):
-     ...     return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",
-     ...                   lambda mo: mo.group(0).capitalize(),
-     ...                   s)
-     ...
-     >>> titlecase("they're bill's friends.")
-     "They're Bill's Friends."
+```
+
+python
+>>> import re
+>>> def titlecase(s):
+...     return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",
+...                   lambda mo: mo.group(0).capitalize(),
+...                   s)
+...
+>>> titlecase("they're bill's friends.")
+"They're Bill's Friends."
+
+```
 
 See also :meth:`istitle` and :meth:`capitalize`.
 
@@ -6745,10 +6791,15 @@ The *suffix* may be any :term:`bytes-like object`.
 
    The :meth:`~bytes.find` method should be used only if you need to know the
    position of *sub*.  To check if *sub* is a substring or not, use the
-   :keyword:`in` operator::
+   :keyword:`in` operator:
 
-      >>> b'Py' in b'Python'
-      True
+```
+
+python
+>>> b'Py' in b'Python'
+True
+
+```
 
 .. versionchanged:: 3.3
    Also accept an integer in the range 0 to 255 as the subsequence.
@@ -7434,22 +7485,32 @@ All other byte values are uncased.
 The algorithm uses a simple language-independent definition of a word as
 groups of consecutive letters.  The definition works in many contexts but
 it means that apostrophes in contractions and possessives form word
-boundaries, which may not be the desired result::
+boundaries, which may not be the desired result:
 
-     >>> b"they're bill's friends from the UK".title()
-     b"They'Re Bill'S Friends From The Uk"
+```
 
-A workaround for apostrophes can be constructed using regular expressions::
+python
+>>> b"they're bill's friends from the UK".title()
+b"They'Re Bill'S Friends From The Uk"
 
-     >>> import re
-     >>> def titlecase(s):
-     ...     return re.sub(rb"[A-Za-z]+('[A-Za-z]+)?",
-     ...                   lambda mo: mo.group(0)[0:1].upper() +
-     ...                              mo.group(0)[1:].lower(),
-     ...                   s)
-     ...
-     >>> titlecase(b"they're bill's friends.")
-     b"They're Bill's Friends."
+```
+
+A workaround for apostrophes can be constructed using regular expressions:
+
+```
+
+python
+>>> import re
+>>> def titlecase(s):
+...     return re.sub(rb"[A-Za-z]+('[A-Za-z]+)?",
+...                   lambda mo: mo.group(0)[0:1].upper() +
+...                              mo.group(0)[1:].lower(),
+...                   s)
+...
+>>> titlecase(b"they're bill's friends.")
+b"They're Bill's Friends."
+
+```
 
 .. note::
 
@@ -7857,39 +7918,49 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
    respective format codes are interpreted using :mod:`struct` syntax.
 
    For the subset of :mod:`struct` format strings currently supported by
-   :meth:`tolist`, ``v`` and ``w`` are equal if ``v.tolist() == w.tolist()``::
+   :meth:`tolist`, ``v`` and ``w`` are equal if ``v.tolist() == w.tolist()``:
 
-      >>> import array
-      >>> a = array.array('I', [1, 2, 3, 4, 5])
-      >>> b = array.array('d', [1.0, 2.0, 3.0, 4.0, 5.0])
-      >>> c = array.array('b', [5, 3, 1])
-      >>> x = memoryview(a)
-      >>> y = memoryview(b)
-      >>> x == a == y == b
-      True
-      >>> x.tolist() == a.tolist() == y.tolist() == b.tolist()
-      True
-      >>> z = y[::-2]
-      >>> z == c
-      True
-      >>> z.tolist() == c.tolist()
-      True
+```
+
+python
+>>> import array
+>>> a = array.array('I', [1, 2, 3, 4, 5])
+>>> b = array.array('d', [1.0, 2.0, 3.0, 4.0, 5.0])
+>>> c = array.array('b', [5, 3, 1])
+>>> x = memoryview(a)
+>>> y = memoryview(b)
+>>> x == a == y == b
+True
+>>> x.tolist() == a.tolist() == y.tolist() == b.tolist()
+True
+>>> z = y[::-2]
+>>> z == c
+True
+>>> z.tolist() == c.tolist()
+True
+
+```
 
    If either format string is not supported by the :mod:`struct` module,
    then the objects will always compare as unequal (even if the format
-   strings and buffer contents are identical)::
+   strings and buffer contents are identical):
 
-      >>> from ctypes import BigEndianStructure, c_long
-      >>> class BEPoint(BigEndianStructure):
-      ...     _fields_ = [("x", c_long), ("y", c_long)]
-      ...
-      >>> point = BEPoint(100, 200)
-      >>> a = memoryview(point)
-      >>> b = memoryview(point)
-      >>> a == point
-      False
-      >>> a == b
-      False
+```
+
+python
+>>> from ctypes import BigEndianStructure, c_long
+>>> class BEPoint(BigEndianStructure):
+...     _fields_ = [("x", c_long), ("y", c_long)]
+...
+>>> point = BEPoint(100, 200)
+>>> a = memoryview(point)
+>>> b = memoryview(point)
+>>> a == point
+False
+>>> a == b
+False
+
+```
 
    Note that, as with floating-point numbers, ``v is w`` does *not* imply
    ``v == w`` for memoryview objects.
@@ -7901,13 +7972,18 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
 .. method:: tobytes(order='C')
 
    Return the data in the buffer as a bytestring.  This is equivalent to
-   calling the :class:`bytes` constructor on the memoryview. ::
+   calling the :class:`bytes` constructor on the memoryview. :
 
-      >>> m = memoryview(b"abc")
-      >>> m.tobytes()
-      b'abc'
-      >>> bytes(m)
-      b'abc'
+```
+
+python
+>>> m = memoryview(b"abc")
+>>> m.tobytes()
+b'abc'
+>>> bytes(m)
+b'abc'
+
+```
 
    For non-contiguous arrays the result is equal to the flattened list
    representation with all elements converted to bytes. :meth:`tobytes`
@@ -7925,11 +8001,16 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
             hex(sep, bytes_per_sep=1)
 
    Return a string object containing two hexadecimal digits for each
-   byte in the buffer. ::
+   byte in the buffer. :
 
-      >>> m = memoryview(b"abc")
-      >>> m.hex()
-      '616263'
+```
+
+python
+>>> m = memoryview(b"abc")
+>>> m.hex()
+'616263'
+
+```
 
    .. versionadded:: 3.5
 
@@ -7940,15 +8021,20 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
 
 .. method:: tolist()
 
-   Return the data in the buffer as a list of elements. ::
+   Return the data in the buffer as a list of elements. :
 
-      >>> memoryview(b'abc').tolist()
-      [97, 98, 99]
-      >>> import array
-      >>> a = array.array('d', [1.1, 2.2, 3.3])
-      >>> m = memoryview(a)
-      >>> m.tolist()
-      [1.1, 2.2, 3.3]
+```
+
+python
+>>> memoryview(b'abc').tolist()
+[97, 98, 99]
+>>> import array
+>>> a = array.array('d', [1.1, 2.2, 3.3])
+>>> m = memoryview(a)
+>>> m.tolist()
+[1.1, 2.2, 3.3]
+
+```
 
    .. versionchanged:: 3.3
       :meth:`tolist` now supports all single character native formats in
@@ -7958,19 +8044,24 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
 .. method:: toreadonly()
 
    Return a readonly version of the memoryview object.  The original
-   memoryview object is unchanged. ::
+   memoryview object is unchanged. :
 
-      >>> m = memoryview(bytearray(b'abc'))
-      >>> mm = m.toreadonly()
-      >>> mm.tolist()
-      [97, 98, 99]
-      >>> mm[0] = 42
-      Traceback (most recent call last):
-        File "<stdin>", line 1, in <module>
-      TypeError: cannot modify read-only memory
-      >>> m[0] = 43
-      >>> mm.tolist()
-      [43, 98, 99]
+```
+
+python
+>>> m = memoryview(bytearray(b'abc'))
+>>> mm = m.toreadonly()
+>>> mm.tolist()
+[97, 98, 99]
+>>> mm[0] = 42
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot modify read-only memory
+>>> m[0] = 43
+>>> mm.tolist()
+[43, 98, 99]
+
+```
 
    .. versionadded:: 3.8
 
@@ -7984,26 +8075,36 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
 
    After this method has been called, any further operation on the view
    raises a :class:`ValueError` (except :meth:`release` itself which can
-   be called multiple times)::
+   be called multiple times):
 
-      >>> m = memoryview(b'abc')
-      >>> m.release()
-      >>> m[0]
-      Traceback (most recent call last):
-        File "<stdin>", line 1, in <module>
-      ValueError: operation forbidden on released memoryview object
+```
+
+python
+>>> m = memoryview(b'abc')
+>>> m.release()
+>>> m[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: operation forbidden on released memoryview object
+
+```
 
    The context management protocol can be used for a similar effect,
-   using the ``with`` statement::
+   using the ``with`` statement:
 
-      >>> with memoryview(b'abc') as m:
-      ...     m[0]
-      ...
-      97
-      >>> m[0]
-      Traceback (most recent call last):
-        File "<stdin>", line 1, in <module>
-      ValueError: operation forbidden on released memoryview object
+```
+
+python
+>>> with memoryview(b'abc') as m:
+...     m[0]
+...
+97
+>>> m[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: operation forbidden on released memoryview object
+
+```
 
    .. versionadded:: 3.2
 
@@ -8029,79 +8130,84 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
    as the original length.
    Note that all byte lengths may depend on the operating system.
 
-   Cast 1D/long to 1D/unsigned bytes::
+   Cast 1D/long to 1D/unsigned bytes:
 
-      >>> import array
-      >>> a = array.array('l', [1,2,3])
-      >>> x = memoryview(a)
-      >>> x.format
-      'l'
-      >>> x.itemsize
-      8
-      >>> len(x)
-      3
-      >>> x.nbytes
-      24
-      >>> y = x.cast('B')
-      >>> y.format
-      'B'
-      >>> y.itemsize
-      1
-      >>> len(y)
-      24
-      >>> y.nbytes
-      24
+```
 
-   Cast 1D/unsigned bytes to 1D/char::
+python
+>>> import array
+>>> a = array.array('l', [1,2,3])
+>>> x = memoryview(a)
+>>> x.format
+'l'
+>>> x.itemsize
+8
+>>> len(x)
+3
+>>> x.nbytes
+24
+>>> y = x.cast('B')
+>>> y.format
+'B'
+>>> y.itemsize
+1
+>>> len(y)
+24
+>>> y.nbytes
+24
 
-      >>> b = bytearray(b'zyz')
-      >>> x = memoryview(b)
-      >>> x[0] = b'a'
-      Traceback (most recent call last):
-        ...
-      TypeError: memoryview: invalid type for format 'B'
-      >>> y = x.cast('c')
-      >>> y[0] = b'a'
-      >>> b
-      bytearray(b'ayz')
+   Cast 1D/unsigned bytes to 1D/char:
 
-   Cast 1D/bytes to 3D/ints to 1D/signed char::
+>>> b = bytearray(b'zyz')
+>>> x = memoryview(b)
+>>> x[0] = b'a'
+Traceback (most recent call last):
+  ...
+TypeError: memoryview: invalid type for format 'B'
+>>> y = x.cast('c')
+>>> y[0] = b'a'
+>>> b
+bytearray(b'ayz')
 
-      >>> import struct
-      >>> buf = struct.pack("i"*12, *list(range(12)))
-      >>> x = memoryview(buf)
-      >>> y = x.cast('i', shape=[2,2,3])
-      >>> y.tolist()
-      [[[0, 1, 2], [3, 4, 5]], [[6, 7, 8], [9, 10, 11]]]
-      >>> y.format
-      'i'
-      >>> y.itemsize
-      4
-      >>> len(y)
-      2
-      >>> y.nbytes
-      48
-      >>> z = y.cast('b')
-      >>> z.format
-      'b'
-      >>> z.itemsize
-      1
-      >>> len(z)
-      48
-      >>> z.nbytes
-      48
+   Cast 1D/bytes to 3D/ints to 1D/signed char:
 
-   Cast 1D/unsigned long to 2D/unsigned long::
+>>> import struct
+>>> buf = struct.pack("i"*12, *list(range(12)))
+>>> x = memoryview(buf)
+>>> y = x.cast('i', shape=[2,2,3])
+>>> y.tolist()
+[[[0, 1, 2], [3, 4, 5]], [[6, 7, 8], [9, 10, 11]]]
+>>> y.format
+'i'
+>>> y.itemsize
+4
+>>> len(y)
+2
+>>> y.nbytes
+48
+>>> z = y.cast('b')
+>>> z.format
+'b'
+>>> z.itemsize
+1
+>>> len(z)
+48
+>>> z.nbytes
+48
 
-      >>> buf = struct.pack("L"*6, *list(range(6)))
-      >>> x = memoryview(buf)
-      >>> y = x.cast('L', shape=[2,3])
-      >>> len(y)
-      2
-      >>> y.nbytes
-      48
-      >>> y.tolist()
-      [[0, 1, 2], [3, 4, 5]]
+   Cast 1D/unsigned long to 2D/unsigned long:
+
+>>> buf = struct.pack("L"*6, *list(range(6)))
+>>> x = memoryview(buf)
+>>> y = x.cast('L', shape=[2,3])
+>>> len(y)
+2
+>>> y.nbytes
+48
+>>> y.tolist()
+[[0, 1, 2], [3, 4, 5]]
+
+```
 
    .. versionadded:: 3.3
 
@@ -8131,12 +8237,17 @@ There are also several readonly attributes available:
 
 .. attribute:: obj
 
-   The underlying object of the memoryview::
+   The underlying object of the memoryview:
 
-      >>> b  = bytearray(b'xyz')
-      >>> m = memoryview(b)
-      >>> m.obj is b
-      True
+```
+
+python
+>>> b  = bytearray(b'xyz')
+>>> m = memoryview(b)
+>>> m.obj is b
+True
+
+```
 
    .. versionadded:: 3.3
 
@@ -8144,44 +8255,49 @@ There are also several readonly attributes available:
 
    ``nbytes == product(shape) * itemsize == len(m.tobytes())``. This is
    the amount of space in bytes that the array would use in a contiguous
-   representation. It is not necessarily equal to ``len(m)``::
+   representation. It is not necessarily equal to ``len(m)``:
 
-      >>> import array
-      >>> a = array.array('i', [1,2,3,4,5])
-      >>> m = memoryview(a)
-      >>> len(m)
-      5
-      >>> m.nbytes
-      20
-      >>> y = m[::2]
-      >>> len(y)
-      3
-      >>> y.nbytes
-      12
-      >>> len(y.tobytes())
-      12
+```
 
-   Multi-dimensional arrays::
+python
+>>> import array
+>>> a = array.array('i', [1,2,3,4,5])
+>>> m = memoryview(a)
+>>> len(m)
+5
+>>> m.nbytes
+20
+>>> y = m[::2]
+>>> len(y)
+3
+>>> y.nbytes
+12
+>>> len(y.tobytes())
+12
 
-      >>> import struct
-      >>> buf = struct.pack("d"*12, *[1.5*x for x in range(12)])
-      >>> x = memoryview(buf)
-      >>> y = x.cast('d', shape=[3,4])
-      >>> y.tolist()
-      [[0.0, 1.5, 3.0, 4.5], [6.0, 7.5, 9.0, 10.5], [12.0, 13.5, 15.0, 16.5]]
-      >>> len(y)
-      3
-      >>> y.nbytes
-      96
+   Multi-dimensional arrays:
 
-   Interpret a flat buffer as a Fortran-contiguous (column-major) array::
+>>> import struct
+>>> buf = struct.pack("d"*12, *[1.5*x for x in range(12)])
+>>> x = memoryview(buf)
+>>> y = x.cast('d', shape=[3,4])
+>>> y.tolist()
+[[0.0, 1.5, 3.0, 4.5], [6.0, 7.5, 9.0, 10.5], [12.0, 13.5, 15.0, 16.5]]
+>>> len(y)
+3
+>>> y.nbytes
+96
 
-      >>> buf = bytes(range(6))
-      >>> y = memoryview(buf).cast('B', shape=[3, 2], order='F')
-      >>> y.f_contiguous
-      True
-      >>> y.tolist()
-      [[0, 3], [1, 4], [2, 5]]
+   Interpret a flat buffer as a Fortran-contiguous (column-major) array:
+
+>>> buf = bytes(range(6))
+>>> y = memoryview(buf).cast('B', shape=[3, 2], order='F')
+>>> y.f_contiguous
+True
+>>> y.tolist()
+[[0, 3], [1, 4], [2, 5]]
+
+```
 
    .. versionadded:: 3.3
 
@@ -8205,16 +8321,21 @@ There are also several readonly attributes available:
 
 .. attribute:: itemsize
 
-   The size in bytes of each element of the memoryview::
+   The size in bytes of each element of the memoryview:
 
-      >>> import array, struct
-      >>> m = memoryview(array.array('H', [32000, 32001, 32002]))
-      >>> m.itemsize
-      2
-      >>> m[0]
-      32000
-      >>> struct.calcsize('H') == m.itemsize
-      True
+```
+
+python
+>>> import array, struct
+>>> m = memoryview(array.array('H', [32000, 32001, 32002]))
+>>> m.itemsize
+2
+>>> m[0]
+32000
+>>> struct.calcsize('H') == m.itemsize
+True
+
+```
 
 .. attribute:: ndim
 
@@ -8627,18 +8748,23 @@ mapping types should support too):
    returned or raised by the ``__missing__(key)`` call.
    No other operations or methods invoke :meth:`~object.__missing__`. If
    :meth:`~object.__missing__` is not defined, :exc:`KeyError` is raised.
-   :meth:`~object.__missing__` must be a method; it cannot be an instance variable::
+   :meth:`~object.__missing__` must be a method; it cannot be an instance variable:
 
-       >>> class Counter(dict):
-       ...     def __missing__(self, key):
-       ...         return 0
-       ...
-       >>> c = Counter()
-       >>> c['red']
-       0
-       >>> c['red'] += 1
-       >>> c['red']
-       1
+```
+
+python
+>>> class Counter(dict):
+...     def __missing__(self, key):
+...         return 0
+...
+>>> c = Counter()
+>>> c['red']
+0
+>>> c['red'] += 1
+>>> c['red']
+1
+
+```python
 
    The example above shows part of the implementation of
    :class:`collections.Counter`.
@@ -8753,11 +8879,16 @@ mapping types should support too):
    :ref:`documentation of view objects <dict-views>`.
 
    An equality comparison between two distinct ``dict.values()`` views
-   will always return ``False``, even for views of the same dictionary::
+   will always return ``False``, even for views of the same dictionary:
 
-      >>> d = {'a': 1}
-      >>> d.values() == d.values()
-      False
+```
+
+python
+>>> d = {'a': 1}
+>>> d.values() == d.values()
+False
+
+```
 
 .. describe:: d | other
 
@@ -9388,9 +9519,14 @@ enables cleaner type hinting syntax compared to subscripting `class`.
 
     (int | str) | float == int | str | float
 
-* Redundant types are removed::
+* Redundant types are removed:
 
-    int | str | int == int | str
+```
+
+python
+int | str | int == int | str
+
+```
 
 * When comparing unions, the order is ignored::
 

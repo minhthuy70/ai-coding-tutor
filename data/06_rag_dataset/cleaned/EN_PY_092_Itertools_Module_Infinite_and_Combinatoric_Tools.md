@@ -1,0 +1,498 @@
+# EN_PY_092: itertools Module: Infinite Iterators, Combinatoric Generators (combinations, permutations)
+
+**Authoritative Source**: Python Software Foundation (CPython 3.12 Official Documentation & Language Reference)
+**Authors**: Guido van Rossum, Raymond Hettinger, Vinay Sajip, A.M. Kuchling, and CPython Core Developers
+**Domain**: Standard Library | **Target Audience**: Computer Science Undergraduate & Advanced Developers
+**Language Specification**: Python 3.12 (CPython Standard Implementation)
+
+---
+
+## Technical Overview & Formal Specification
+
+"itertools" — Functions creating iterators for efficient looping
+****************************************************************
+
+======================================================================
+
+This module implements a number of *iterator* building blocks inspired
+by constructs from APL, Haskell, and SML.  Each has been recast in a
+form suitable for Python.
+
+The module standardizes a core set of fast, memory efficient tools
+that are useful by themselves or in combination.  Together, they form
+an “iterator algebra” making it possible to construct specialized
+tools succinctly and efficiently in pure Python.
+
+For instance, SML provides a tabulation tool: "tabulate(f)" which
+produces a sequence "f(0), f(1), ...".  The same effect can be
+achieved in Python by combining "map()" and "count()" to form "map(f,
+count())".
+
+These tools and their built-in counterparts also work well with the
+high-speed functions in the "operator" module.  For example, the
+multiplication operator can be mapped across two vectors to form an
+efficient dot-product: "sum(starmap(operator.mul, zip(vec1, vec2,
+strict=True)))".
+
+**Infinite iterators:**
+
++--------------------+-------------------+---------------------------------------------------+-------------------------------------------+
+| Iterator           | Arguments         | Results                                           | Example                                   |
+|====================|===================|===================================================|===========================================|
+| "count()"          | [start[, step]]   | start, start+step, start+2*step, …                | "count(10) → 10 11 12 13 14 ..."          |
++--------------------+-------------------+---------------------------------------------------+-------------------------------------------+
+| "cycle()"          | p                 | p0, p1, … plast, p0, p1, …                        | "cycle('ABCD') → A B C D A B C D ..."     |
++--------------------+-------------------+---------------------------------------------------+-------------------------------------------+
+
+| "repeat()"         | elem [,n]         | elem, elem, elem, … endlessly or up to n times    | "repeat(10, 3) → 10 10 10"                |
++--------------------+-------------------+---------------------------------------------------+-------------------------------------------+
+
+**Iterators terminating on the shortest input sequence:**
+
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| Iterator                     | Arguments                    | Results                                           | Example                                                       |
+|==============================|==============================|===================================================|===============================================================|
+| "accumulate()"               | p [,func]                    | p0, p0+p1, p0+p1+p2, …                            | "accumulate([1,2,3,4,5]) → 1 3 6 10 15"                       |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "batched()"                  | p, n                         | (p0, p1, …, p_n-1), …                             | "batched('ABCDEFG', n=3) → ABC DEF G"                         |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "chain()"                    | p, q, …                      | p0, p1, … plast, q0, q1, …                        | "chain('ABC', 'DEF') → A B C D E F"                           |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "chain.from_iterable()"      | iterable                     | p0, p1, … plast, q0, q1, …                        | "chain.from_iterable(['ABC', 'DEF']) → A B C D E F"           |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "compress()"                 | data, selectors              | (d[0] if s[0]), (d[1] if s[1]), …                 | "compress('ABCDEF', [1,0,1,0,1,1]) → A C E F"                 |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "dropwhile()"                | predicate, seq               | seq[n], seq[n+1], starting when predicate fails   | "dropwhile(lambda x: x<5, [1,4,6,3,8]) → 6 3 8"               |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "filterfalse()"              | predicate, seq               | elements of seq where predicate(elem) fails       | "filterfalse(lambda x: x<5, [1,4,6,3,8]) → 6 8"               |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "groupby()"                  | iterable[, key]              | sub-iterators grouped by value of key(v)          |                                                               |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "islice()"                   | seq, [start,] stop [, step]  | elements from seq[start:stop:step]                | "islice('ABCDEFG', 2, None) → C D E F G"                      |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "pairwise()"                 | iterable                     | (p[0], p[1]), (p[1], p[2])                        | "pairwise('ABCDEFG') → AB BC CD DE EF FG"                     |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "starmap()"                  | func, seq                    | func(*seq[0]), func(*seq[1]), …                   | "starmap(pow, [(2,5), (3,2), (10,3)]) → 32 9 1000"            |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "takewhile()"                | predicate, seq               | seq[0], seq[1], until predicate fails             | "takewhile(lambda x: x<5, [1,4,6,3,8]) → 1 4"                 |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "tee()"                      | it, n                        | it1, it2, … itn  splits one iterator into n       |                                                               |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+| "zip_longest()"              | p, q, …                      | (p[0], q[0]), (p[1], q[1]), …                     | "zip_longest('ABCD', 'xy', fillvalue='-') → Ax By C- D-"      |
++------------------------------+------------------------------+---------------------------------------------------+---------------------------------------------------------------+
+
+**Combinatoric iterators:**
+
++------------------------------------------------+----------------------+---------------------------------------------------------------+
+| Iterator                                       | Arguments            | Results                                                       |
+|================================================|======================|===============================================================|
+| "product()"                                    | p, q, … [repeat=1]   | cartesian product, equivalent to a nested for-loop            |
++------------------------------------------------+----------------------+---------------------------------------------------------------+
+| "permutations()"                               | p[, r]               | r-length tuples, all possible orderings, no repeated elements |
+
++------------------------------------------------+----------------------+---------------------------------------------------------------+
+| "combinations()"                               | p, r                 | r-length tuples, in sorted order, no repeated elements        |
++------------------------------------------------+----------------------+---------------------------------------------------------------+
+| "combinations_with_replacement()"              | p, r                 | r-length tuples, in sorted order, with repeated elements      |
++------------------------------------------------+----------------------+---------------------------------------------------------------+
+
++------------------------------------------------+---------------------------------------------------------------+
+| Examples                                       | Results                                                       |
+|================================================|===============================================================|
+| "product('ABCD', repeat=2)"                    | "AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD"             |
++------------------------------------------------+---------------------------------------------------------------+
+| "permutations('ABCD', 2)"                      | "AB AC AD BA BC BD CA CB CD DA DB DC"                         |
++------------------------------------------------+---------------------------------------------------------------+
+| "combinations('ABCD', 2)"                      | "AB AC AD BC BD CD"                                           |
++------------------------------------------------+---------------------------------------------------------------+
+| "combinations_with_replacement('ABCD', 2)"     | "AA AB AC AD BB BC BD CC CD DD"                               |
++------------------------------------------------+---------------------------------------------------------------+
+
+Itertool Functions
+==================
+
+The following module functions all construct and return iterators.
+Some provide streams of infinite length, so they should only be
+accessed by functions or loops that truncate the stream.
+
+itertools.accumulate(iterable[, function, *, initial=None])
+
+   Make an iterator that returns accumulated sums or accumulated
+
+```python
+results from other binary functions.
+
+The *function* defaults to addition.  The *function* should accept
+two arguments, an accumulated total and a value from the
+*iterable*.
+
+If an *initial* value is provided, the accumulation will start with
+that value and the output will have one more element than the input
+iterable.
+
+Roughly equivalent to:
+
+   def accumulate(iterable, function=operator.add, *, initial=None):
+       'Return running totals'
+       # accumulate([1,2,3,4,5]) → 1 3 6 10 15
+       # accumulate([1,2,3,4,5], initial=100) → 100 101 103 106 110 115
+       # accumulate([1,2,3,4,5], operator.mul) → 1 2 6 24 120
+
+       iterator = iter(iterable)
+       total = initial
+       if initial is None:
+           try:
+               total = next(iterator)
+           except StopIteration:
+               return
+
+       yield total
+       for element in iterator:
+           total = function(total, element)
+           yield total
+
+The *function* argument can be set to "min()" for a running
+minimum, "max()" for a running maximum, or "operator.mul()" for a
+running product.  Amortization tables can be built by accumulating
+interest and applying payments:
+
+   >>> data = [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]
+   >>> list(accumulate(data, max))              # running maximum
+   [3, 4, 6, 6, 6, 9, 9, 9, 9, 9]
+   >>> list(accumulate(data, operator.mul))     # running product
+   [3, 12, 72, 144, 144, 1296, 0, 0, 0, 0]
+
+   # Amortize a 5% loan of 1000 with 10 annual payments of 90
+   >>> update = lambda balance, payment: round(balance * 1.05) - payment
+   >>> list(accumulate(repeat(90, 10), update, initial=1_000))
+   [1000, 960, 918, 874, 828, 779, 728, 674, 618, 559, 497]
+
+See "functools.reduce()" for a similar function that returns only
+the final accumulated value.
+
+Added in version 3.2.
+
+Changed in version 3.3: Added the optional *function* parameter.
+
+Changed in version 3.8: Added the optional *initial* parameter.
+
+```
+
+itertools.batched(iterable, n)
+
+```python
+Batch data from the *iterable* into tuples of length *n*. The last
+batch may be shorter than *n*.
+
+Loops over the input iterable and accumulates data into tuples up
+to size *n*.  The input is consumed lazily, just enough to fill a
+batch. The result is yielded as soon as the batch is full or when
+the input iterable is exhausted:
+
+   >>> flattened_data = ['roses', 'red', 'violets', 'blue', 'sugar', 'sweet']
+   >>> unflattened = list(batched(flattened_data, 2))
+   >>> unflattened
+   [('roses', 'red'), ('violets', 'blue'), ('sugar', 'sweet')]
+
+Roughly equivalent to:
+
+   def batched(iterable, n):
+       # batched('ABCDEFG', 3) → ABC DEF G
+       if n < 1:
+           raise ValueError('n must be at least one')
+       iterator = iter(iterable)
+       while batch := tuple(islice(iterator, n)):
+           yield batch
+
+Added in version 3.12.
+
+```
+
+itertools.chain(*iterables)
+
+```python
+Make an iterator that returns elements from the first iterable
+until it is exhausted, then proceeds to the next iterable, until
+all of the iterables are exhausted.  Used for treating consecutive
+sequences as a single sequence. Roughly equivalent to:
+
+   def chain(*iterables):
+       # chain('ABC', 'DEF') → A B C D E F
+       for iterable in iterables:
+           yield from iterable
+
+```
+
+classmethod chain.from_iterable(iterable)
+
+```python
+Alternate constructor for "chain()".  Gets chained inputs from a
+single iterable argument that is evaluated lazily.  Roughly
+equivalent to:
+
+   def from_iterable(iterables):
+       # chain.from_iterable(['ABC', 'DEF']) → A B C D E F
+       for iterable in iterables:
+           yield from iterable
+
+```
+
+itertools.combinations(iterable, r)
+
+```python
+Return *r* length subsequences of elements from the input
+*iterable*.
+
+The output is a subsequence of "product()" keeping only entries
+that are subsequences of the *iterable*.  The length of the output
+is given by "math.comb()" which computes "n! / r! / (n - r)!" when
+"0 ≤ r ≤ n" or zero when "r > n".
+
+The combination tuples are emitted in lexicographic order according
+to the order of the input *iterable*. If the input *iterable* is
+sorted, the output tuples will be produced in sorted order.
+
+Elements are treated as unique based on their position, not on
+their value.  If the input elements are unique, there will be no
+repeated values within each combination.
+
+Roughly equivalent to:
+
+   def combinations(iterable, r):
+       # combinations('ABCD', 2) → AB AC AD BC BD CD
+       # combinations(range(4), 3) → 012 013 023 123
+
+       pool = tuple(iterable)
+       n = len(pool)
+       if r > n:
+           return
+       indices = list(range(r))
+
+       yield tuple(pool[i] for i in indices)
+       while True:
+           for i in reversed(range(r)):
+               if indices[i] != i + n - r:
+                   break
+           else:
+               return
+           indices[i] += 1
+           for j in range(i+1, r):
+               indices[j] = indices[j-1] + 1
+           yield tuple(pool[i] for i in indices)
+
+```
+
+itertools.combinations_with_replacement(iterable, r)
+
+```python
+Return *r* length subsequences of elements from the input
+*iterable* allowing individual elements to be repeated more than
+once.
+
+The output is a subsequence of "product()" that keeps only entries
+that are subsequences (with possible repeated elements) of the
+*iterable*.  The number of subsequence returned is "(n + r - 1)! /
+r! / (n - 1)!" when "n > 0".
+
+The combination tuples are emitted in lexicographic order according
+to the order of the input *iterable*. if the input *iterable* is
+sorted, the output tuples will be produced in sorted order.
+
+Elements are treated as unique based on their position, not on
+their value.  If the input elements are unique, the generated
+combinations will also be unique.
+
+Roughly equivalent to:
+
+   def combinations_with_replacement(iterable, r):
+       # combinations_with_replacement('ABC', 2) → AA AB AC BB BC CC
+
+       pool = tuple(iterable)
+       n = len(pool)
+       if not n and r:
+           return
+       indices = [0] * r
+
+       yield tuple(pool[i] for i in indices)
+       while True:
+           for i in reversed(range(r)):
+               if indices[i] != n - 1:
+                   break
+           else:
+               return
+           indices[i:] = [indices[i] + 1] * (r - i)
+           yield tuple(pool[i] for i in indices)
+
+Added in version 3.1.
+
+```
+
+itertools.compress(data, selectors)
+
+```python
+Make an iterator that returns elements from *data* where the
+corresponding element in *selectors* is true.  Stops when either
+the *data* or *selectors* iterables have been exhausted.  Roughly
+equivalent to:
+
+   def compress(data, selectors):
+       # compress('ABCDEF', [1,0,1,0,1,1]) → A C E F
+       return (datum for datum, selector in zip(data, selectors) if selector)
+
+Added in version 3.1.
+
+```
+
+itertools.count(start=0, step=1)
+
+   Make an iterator that returns evenly spaced values beginning with
+
+```python
+*start*. Can be used with "map()" to generate consecutive data
+points or with "zip()" to add sequence numbers.  Roughly equivalent
+to:
+
+   def count(start=0, step=1):
+       # count(10) → 10 11 12 13 14 ...
+       # count(2.5, 0.5) → 2.5 3.0 3.5 ...
+       n = start
+       while True:
+           yield n
+           n += step
+
+When counting with floating-point numbers, better accuracy can
+sometimes be achieved by substituting multiplicative code such as:
+"(start + step * i for i in count())".
+
+Changed in version 3.1: Added *step* argument and allowed non-
+integer arguments.
+
+```
+
+itertools.cycle(iterable)
+
+```python
+Make an iterator returning elements from the *iterable* and saving
+a copy of each.  When the iterable is exhausted, return elements
+from the saved copy.  Repeats indefinitely.  Roughly equivalent to:
+
+   def cycle(iterable):
+       # cycle('ABCD') → A B C D A B C D A B C D ...
+       saved = []
+       for element in iterable:
+           yield element
+           saved.append(element)
+       while saved:
+           for element in saved:
+               yield element
+
+This itertool may require significant auxiliary storage (depending
+on the length of the iterable).
+
+```
+
+itertools.dropwhile(predicate, iterable)
+
+```python
+Make an iterator that drops elements from the *iterable* while the
+*predicate* is true and afterwards returns every element.  Roughly
+equivalent to:
+
+   def dropwhile(predicate, iterable):
+       # dropwhile(lambda x: x<5, [1,4,6,3,8]) → 6 3 8
+
+       iterator = iter(iterable)
+       for x in iterator:
+           if not predicate(x):
+               yield x
+               break
+
+       for x in iterator:
+           yield x
+
+Note this does not produce *any* output until the predicate first
+becomes false, so this itertool may have a lengthy start-up time.
+
+```
+
+itertools.filterfalse(predicate, iterable)
+
+```python
+Make an iterator that filters elements from the *iterable*
+returning only those for which the *predicate* returns a false
+value.  If *predicate* is "None", returns the items that are false.
+Roughly equivalent to:
+
+   def filterfalse(predicate, iterable):
+       # filterfalse(lambda x: x<5, [1,4,6,3,8]) → 6 8
+       if predicate is None:
+           predicate = bool
+       for x in iterable:
+           if not predicate(x):
+               yield x
+
+```
+
+itertools.groupby(iterable, key=None)
+
+```python
+Make an iterator that returns consecutive keys and groups from the
+*iterable*. The *key* is a function computing a key value for each
+element.  If not specified or is "None", *key* defaults to an
+identity function and returns the element unchanged.  Generally,
+the iterable needs to already be sorted on the same key function.
+
+The operation of "groupby()" is similar to the "uniq" filter in
+Unix.  It generates a break or new group every time the value of
+the key function changes (which is why it is usually necessary to
+have sorted the data using the same key function).  That behavior
+differs from SQL’s GROUP BY which aggregates common elements
+regardless of their input order.
+
+The returned group is itself an iterator that shares the underlying
+iterable with "groupby()".  Because the source is shared, when the
+"groupby()" object is advanced, the previous group is no longer
+visible.  So, if that data is needed later, it should be stored as
+a list:
+
+   groups = []
+   uniquekeys = []
+   data = sorted(data, key=keyfunc)
+   for k, g in groupby(data, keyfunc):
+       groups.append(list(g))      # Store group iterator as a list
+       uniquekeys.append(k)
+
+"groupby()" is roughly equivalent to:
+
+   def groupby(iterable, key=None):
+       # [k for k, g in groupby('AAAABBBCCDAABBB')] → A B C D A B
+       # [list(g) for k, g in groupby('AAAABBBCCD')] → AAAA BBB CC D
+
+       keyfunc = (lambda x: x) if key is None else key
+       iterator = iter(iterable)
+       exhausted = False
+
+       def _grouper(target_key):
+           nonlocal curr_value, curr_key, exhausted
+           yield curr_value
+           for curr_value in iterator:
+               curr_key = keyfunc(curr_value)
+               if curr_key != target_key:
+                   return
+               yield curr_value
+           exhausted = True
+
+       try:
+           curr_value = next(iterator)
+       except StopIteration:
+           return
+       curr_key = keyfunc(curr_value)
+
+       while not exhausted:
+           target_key = curr_key
+           curr_group = _grouper(target_key)
+           yield curr_key, curr_group
+           if curr_key == target_key:
+               for _ in curr_group:
+                   pass
+```

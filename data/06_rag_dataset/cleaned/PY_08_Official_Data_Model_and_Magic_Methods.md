@@ -1295,11 +1295,16 @@ single: __firstlineno__ (class attribute)
     ``X.__bases__`` will be exactly equal to ``(A, B, C)``.
 
 * - .. attribute:: type.__base__
-  - .. impl-detail::
+  - .. impl-detail:
 
-       The single base class in the inheritance chain that is responsible
-       for the memory layout of instances. This attribute corresponds to
-       :c:member:`~PyTypeObject.tp_base` at the C level.
+```
+
+python
+The single base class in the inheritance chain that is responsible
+for the memory layout of instances. This attribute corresponds to
+:c:member:`~PyTypeObject.tp_base` at the C level.
+
+```python
 
 * - .. attribute:: type.__doc__
   - The class's documentation string, or ``None`` if undefined.
@@ -1316,21 +1321,26 @@ single: __firstlineno__ (class attribute)
     :func:`annotationlib.get_annotations` instead of accessing this
     attribute directly.
 
-    .. warning::
+    .. warning:
 
-       Accessing the :attr:`!__annotations__` attribute directly
-       on a class object may return annotations for the wrong class, specifically
-       in certain cases where the class, its base class, or a metaclass
-       is defined under ``from __future__ import annotations``.
-       See :pep:`749 <749#pep749-metaclasses>` for details.
+```
 
-       This attribute does not exist on certain builtin classes. On
-       user-defined classes without ``__annotations__``, it is an
-       empty dictionary.
+python
+Accessing the :attr:`!__annotations__` attribute directly
+   on a class object may return annotations for the wrong class, specifically
+   in certain cases where the class, its base class, or a metaclass
+   is defined under ``from __future__ import annotations``.
+   See :pep:`749 <749#pep749-metaclasses>` for details.
 
-    .. versionchanged:: 3.14
-       Annotations are now :ref:`lazily evaluated <lazy-evaluation>`.
-       See :pep:`649`.
+   This attribute does not exist on certain builtin classes. On
+   user-defined classes without ``__annotations__``, it is an
+   empty dictionary.
+
+.. versionchanged:: 3.14
+   Annotations are now :ref:`lazily evaluated <lazy-evaluation>`.
+   See :pep:`649`.
+
+```python
 
 * - .. method:: type.__annotate__
   - The :term:`annotate function` for this class, or ``None``
@@ -2315,10 +2325,15 @@ and :class:`frozendict`. The ``__hash__()`` method should return an integer.
 The only required property is that objects which compare equal have the same
 hash value; it is advised to mix together the hash values of the components
 of the object that also play a part in comparison of objects by packing them
-into a tuple and hashing the tuple. Example::
+into a tuple and hashing the tuple. Example:
 
-    def __hash__(self):
-        return hash((self.name, self.nick, self.color))
+```
+
+python
+def __hash__(self):
+    return hash((self.name, self.nick, self.color))
+
+```python
 
 .. note::
 
@@ -2846,14 +2861,19 @@ created. The object has been assigned to *name* in that class
 
 If the class variable is assigned after the class is created,
 :meth:`__set_name__` will not be called automatically.
-If needed, :meth:`__set_name__` can be called directly::
+If needed, :meth:`__set_name__` can be called directly:
 
-    class A:
-       pass
+```
 
-    c = C()
-    A.x = c                  # The hook is not called
-    c.__set_name__(A, 'x')   # Manually invoke the hook
+python
+class A:
+   pass
+
+c = C()
+A.x = c                  # The hook is not called
+c.__set_name__(A, 'x')   # Manually invoke the hook
+
+```
 
 See :ref:`class-object-creation` for more details.
 
@@ -3384,13 +3404,18 @@ considered to be false in a Boolean context.
 
    Slicing is handled by :meth:`!__getitem__`, :meth:`~object.__setitem__`,
    and :meth:`~object.__delitem__`.
-   A call like ::
+   A call like :
 
-      a[1:2] = b
+```
 
-   is translated to ::
+python
+a[1:2] = b
 
-      a[slice(1, 2, None)] = b
+   is translated to :
+
+a[slice(1, 2, None)] = b
+
+```python
 
    and so forth. Missing slice items are always filled in with ``None``.
 

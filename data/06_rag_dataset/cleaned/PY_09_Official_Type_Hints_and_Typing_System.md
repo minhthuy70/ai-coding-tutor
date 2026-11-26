@@ -1279,22 +1279,42 @@ These can be used as types in annotations. They all support subscription using
     Union[Union[int, str], float] == Union[int, str, float]
 
   However, this does not apply to unions referenced through a type
-  alias, to avoid forcing evaluation of the underlying :class:`TypeAliasType`::
+  alias, to avoid forcing evaluation of the underlying :class:`TypeAliasType`:
 
-    type A = Union[int, str]
-    Union[A, float] != Union[int, str, float]
+```
 
-* Unions of a single argument vanish, e.g.::
+python
+type A = Union[int, str]
+Union[A, float] != Union[int, str, float]
 
-    Union[int] == int  # The constructor actually returns int
+```
 
-* Redundant arguments are skipped, e.g.::
+* Unions of a single argument vanish, e.g.:
 
-    Union[int, str, int] == Union[int, str] == int | str
+```
 
-* When comparing unions, the argument order is ignored, e.g.::
+python
+Union[int] == int  # The constructor actually returns int
 
-    Union[int, str] == Union[str, int]
+```
+
+* Redundant arguments are skipped, e.g.:
+
+```
+
+python
+Union[int, str, int] == Union[int, str] == int | str
+
+```
+
+* When comparing unions, the argument order is ignored, e.g.:
+
+```
+
+python
+Union[int, str] == Union[str, int]
+
+```
 
 * You cannot subclass or instantiate a ``Union``.
 
@@ -1659,21 +1679,31 @@ Duplicated metadata elements are not removed::
 
 ``Annotated`` can be used with nested and generic aliases:
 
-  .. testcode::
+  .. testcode:
 
-     @dataclass
-     class MaxLen:
-         value: int
+```
 
-     type Vec[T] = Annotated[list[tuple[T, T]], MaxLen(10)]
+python
+@dataclass
+class MaxLen:
+    value: int
 
-     # When used in a type annotation, a type checker will treat "V" the same as
-     # ``Annotated[list[tuple[int, int]], MaxLen(10)]``:
-     type V = Vec[int]
+type Vec[T] = Annotated[list[tuple[T, T]], MaxLen(10)]
 
-``Annotated`` cannot be used with an unpacked :class:`TypeVarTuple`::
+# When used in a type annotation, a type checker will treat "V" the same as
+# ``Annotated[list[tuple[int, int]], MaxLen(10)]``:
+type V = Vec[int]
 
-     type Variadic[*Ts] = Annotated[*Ts, Ann1] = Annotated[T1, T2, T3, ..., Ann1]  # NOT valid
+```
+
+``Annotated`` cannot be used with an unpacked :class:`TypeVarTuple`:
+
+```
+
+python
+type Variadic[*Ts] = Annotated[*Ts, Ann1] = Annotated[T1, T2, T3, ..., Ann1]  # NOT valid
+
+```
 
 where ``T1``, ``T2``, ... are :class:`TypeVars <TypeVar>`. This is invalid as
 only one type should be passed to Annotated.
@@ -1681,44 +1711,64 @@ only one type should be passed to Annotated.
 By default, :func:`get_type_hints` strips the metadata from annotations.
 Pass ``include_extras=True`` to have the metadata preserved:
 
-  .. doctest::
+  .. doctest:
 
-     >>> from typing import Annotated, get_type_hints
-     >>> def func(x: Annotated[int, "metadata"]) -> None: pass
-     ...
-     >>> get_type_hints(func)
-     {'x': <class 'int'>, 'return': <class 'NoneType'>}
-     >>> get_type_hints(func, include_extras=True)
-     {'x': typing.Annotated[int, 'metadata'], 'return': <class 'NoneType'>}
+```
+
+python
+>>> from typing import Annotated, get_type_hints
+>>> def func(x: Annotated[int, "metadata"]) -> None: pass
+...
+>>> get_type_hints(func)
+{'x': <class 'int'>, 'return': <class 'NoneType'>}
+>>> get_type_hints(func, include_extras=True)
+{'x': typing.Annotated[int, 'metadata'], 'return': <class 'NoneType'>}
+
+```
 
 At runtime, the metadata associated with an ``Annotated`` type can be
 retrieved via the :attr:`!__metadata__` attribute:
 
-  .. doctest::
+  .. doctest:
 
-     >>> from typing import Annotated
-     >>> X = Annotated[int, "very", "important", "metadata"]
-     >>> X
-     typing.Annotated[int, 'very', 'important', 'metadata']
-     >>> X.__metadata__
-     ('very', 'important', 'metadata')
+```
+
+python
+>>> from typing import Annotated
+>>> X = Annotated[int, "very", "important", "metadata"]
+>>> X
+typing.Annotated[int, 'very', 'important', 'metadata']
+>>> X.__metadata__
+('very', 'important', 'metadata')
+
+```
 
 If you want to retrieve the original type wrapped by ``Annotated``, use the
 :attr:`!__origin__` attribute:
 
-  .. doctest::
+  .. doctest:
 
-     >>> from typing import Annotated, get_origin
-     >>> Password = Annotated[str, "secret"]
-     >>> Password.__origin__
-     <class 'str'>
+```
+
+python
+>>> from typing import Annotated, get_origin
+>>> Password = Annotated[str, "secret"]
+>>> Password.__origin__
+<class 'str'>
+
+```
 
 Note that using :func:`get_origin` will return ``Annotated`` itself:
 
-  .. doctest::
+  .. doctest:
 
-     >>> get_origin(Password)
-     typing.Annotated
+```
+
+python
+>>> get_origin(Password)
+typing.Annotated
+
+```
 
 .. seealso::
 
@@ -1804,28 +1854,33 @@ function:
 3. If the return value is ``False``, the type of its argument
    is narrowed to exclude ``NarrowedType``.
 
-For example::
+For example:
 
-     from typing import assert_type, final, TypeIs
+```
 
-     class Parent: pass
-     class Child(Parent): pass
-     @final
-     class Unrelated: pass
+python
+from typing import assert_type, final, TypeIs
 
-     def is_parent(val: object) -> TypeIs[Parent]:
-         return isinstance(val, Parent)
+class Parent: pass
+class Child(Parent): pass
+@final
+class Unrelated: pass
 
-     def run(arg: Child | Unrelated):
-         if is_parent(arg):
-             # Type of ``arg`` is narrowed to the intersection
-             # of ``Parent`` and ``Child``, which is equivalent to
-             # ``Child``.
-             assert_type(arg, Child)
-         else:
-             # Type of ``arg`` is narrowed to exclude ``Parent``,
-             # so only ``Unrelated`` is left.
-             assert_type(arg, Unrelated)
+def is_parent(val: object) -> TypeIs[Parent]:
+    return isinstance(val, Parent)
+
+def run(arg: Child | Unrelated):
+    if is_parent(arg):
+        # Type of ``arg`` is narrowed to the intersection
+        # of ``Parent`` and ``Child``, which is equivalent to
+        # ``Child``.
+        assert_type(arg, Child)
+    else:
+        # Type of ``arg`` is narrowed to exclude ``Parent``,
+        # so only ``Unrelated`` is left.
+        assert_type(arg, Unrelated)
+
+```python
 
 The type inside ``TypeIs`` must be consistent with the type of the
 function's argument; if it is not, static type checkers will raise
@@ -2565,33 +2620,48 @@ be decided.
 
    The name of the type alias:
 
-   .. doctest::
+   .. doctest:
 
-      >>> type Alias = int
-      >>> Alias.__name__
-      'Alias'
+```
+
+python
+>>> type Alias = int
+>>> Alias.__name__
+'Alias'
+
+```
 
 .. attribute:: __qualname__
 
    The :term:`qualified name` of the type alias:
 
-   .. doctest::
+   .. doctest:
 
-     >>> class Class:
-     ...     type Alias = int
-     ...
-     >>> Class.Alias.__qualname__
-     'Class.Alias'
+```
+
+python
+>>> class Class:
+...     type Alias = int
+...
+>>> Class.Alias.__qualname__
+'Class.Alias'
+
+```
 
    .. versionadded:: 3.15
 
 .. attribute:: __module__
 
-   The name of the module in which the type alias was defined::
+   The name of the module in which the type alias was defined:
 
-      >>> type Alias = int
-      >>> Alias.__module__
-      '__main__'
+```
+
+python
+>>> type Alias = int
+>>> Alias.__module__
+'__main__'
+
+```
 
    This attribute is writable.
 
@@ -2604,14 +2674,19 @@ be decided.
    The type parameters of the type alias, or an empty tuple if the alias is
    not generic:
 
-   .. doctest::
+   .. doctest:
 
-      >>> type ListOrSet[T] = list[T] | set[T]
-      >>> ListOrSet.__type_params__
-      (T,)
-      >>> type NotGeneric = int
-      >>> NotGeneric.__type_params__
-      ()
+```
+
+python
+>>> type ListOrSet[T] = list[T] | set[T]
+>>> ListOrSet.__type_params__
+(T,)
+>>> type NotGeneric = int
+>>> NotGeneric.__type_params__
+()
+
+```
 
 .. attribute:: __value__
 
@@ -2619,18 +2694,23 @@ be decided.
    so names used in the definition of the alias are not resolved until the
    ``__value__`` attribute is accessed:
 
-   .. doctest::
+   .. doctest:
 
-      >>> type Mutually = Recursive
-      >>> type Recursive = Mutually
-      >>> Mutually
-      Mutually
-      >>> Recursive
-      Recursive
-      >>> Mutually.__value__
-      Recursive
-      >>> Recursive.__value__
-      Mutually
+```
+
+python
+>>> type Mutually = Recursive
+>>> type Recursive = Mutually
+>>> Mutually
+Mutually
+>>> Recursive
+Recursive
+>>> Mutually.__value__
+Recursive
+>>> Recursive.__value__
+Mutually
+
+```
 
 .. method:: evaluate_value
 
@@ -2640,20 +2720,25 @@ be decided.
    but the method object can be passed to :func:`annotationlib.call_evaluate_function`
    to evaluate the value in a different format:
 
-   .. doctest::
+   .. doctest:
 
-      >>> type Alias = undefined
-      >>> Alias.__value__
-      Traceback (most recent call last):
-      ...
-      NameError: name 'undefined' is not defined
-      >>> from annotationlib import Format, call_evaluate_function
-      >>> Alias.evaluate_value(Format.VALUE)
-      Traceback (most recent call last):
-      ...
-      NameError: name 'undefined' is not defined
-      >>> call_evaluate_function(Alias.evaluate_value, Format.FORWARDREF)
-      ForwardRef('undefined')
+```
+
+python
+>>> type Alias = undefined
+>>> Alias.__value__
+Traceback (most recent call last):
+...
+NameError: name 'undefined' is not defined
+>>> from annotationlib import Format, call_evaluate_function
+>>> Alias.evaluate_value(Format.VALUE)
+Traceback (most recent call last):
+...
+NameError: name 'undefined' is not defined
+>>> call_evaluate_function(Alias.evaluate_value, Format.FORWARDREF)
+ForwardRef('undefined')
+
+```
 
    .. versionadded:: 3.14
 
@@ -2692,9 +2777,14 @@ Usage
         name: str
         id: int
 
-This is equivalent to::
+This is equivalent to:
 
-    Employee = collections.namedtuple('Employee', ['name', 'id'])
+```
+
+python
+Employee = collections.namedtuple('Employee', ['name', 'id'])
+
+```python
 
 To give a field a default value, you can assign to it in the class body::
 
@@ -2729,17 +2819,22 @@ API.)
        key: T
        group: list[T]
 
-Backward-compatible usage::
+Backward-compatible usage:
 
-    # For creating a generic NamedTuple on Python 3.11
-    T = TypeVar("T")
+```
 
-    class Group(NamedTuple, Generic[T]):
-        key: T
-        group: list[T]
+python
+# For creating a generic NamedTuple on Python 3.11
+T = TypeVar("T")
 
-    # A functional syntax is also supported
-    Employee = NamedTuple('Employee', [('name', str), ('id', int)])
+class Group(NamedTuple, Generic[T]):
+    key: T
+    group: list[T]
+
+# A functional syntax is also supported
+Employee = NamedTuple('Employee', [('name', str), ('id', int)])
+
+```python
 
 .. versionchanged:: 3.6
    Added support for :pep:`526` variable annotation syntax.
@@ -2891,24 +2986,34 @@ is only runtime-checkable if it is explicitly marked as such, regardless of clas
 
 This decorator raises :exc:`TypeError` when applied to a non-protocol class.
 
-.. note::
+.. note:
 
-     :deco:`!runtime_checkable` will check only the presence of the required
-     methods or attributes, not their type signatures or types.
-     For example, :class:`ssl.SSLObject`
-     is a class, therefore it passes an :func:`issubclass`
-     check against :ref:`Callable <annotating-callables>`. However, the
-     ``ssl.SSLObject.__init__`` method exists only to raise a
-     :exc:`TypeError` with a more informative message, therefore making
-     it impossible to call (instantiate) :class:`ssl.SSLObject`.
+```
 
-.. note::
+python
+:deco:`!runtime_checkable` will check only the presence of the required
+methods or attributes, not their type signatures or types.
+For example, :class:`ssl.SSLObject`
+is a class, therefore it passes an :func:`issubclass`
+check against :ref:`Callable <annotating-callables>`. However, the
+``ssl.SSLObject.__init__`` method exists only to raise a
+:exc:`TypeError` with a more informative message, therefore making
+it impossible to call (instantiate) :class:`ssl.SSLObject`.
 
-     An :func:`isinstance` check against a runtime-checkable protocol can be
-     surprisingly slow compared to an ``isinstance()`` check against
-     a non-protocol class. Consider using alternative idioms such as
-     :func:`hasattr` calls for structural checks in performance-sensitive
-     code.
+```
+
+.. note:
+
+```
+
+python
+An :func:`isinstance` check against a runtime-checkable protocol can be
+surprisingly slow compared to an ``isinstance()`` check against
+a non-protocol class. Consider using alternative idioms such as
+:func:`hasattr` calls for structural checks in performance-sensitive
+code.
+
+```python
 
 .. versionadded:: 3.8
 
@@ -3113,18 +3218,23 @@ and the following attributes:
    ``Point2D.__total__`` gives the value of the ``total`` argument.
    Example:
 
-   .. doctest::
+   .. doctest:
 
-      >>> from typing import TypedDict
-      >>> class Point2D(TypedDict): pass
-      >>> Point2D.__total__
-      True
-      >>> class Point2D(TypedDict, total=False): pass
-      >>> Point2D.__total__
-      False
-      >>> class Point3D(Point2D): pass
-      >>> Point3D.__total__
-      True
+```
+
+python
+>>> from typing import TypedDict
+>>> class Point2D(TypedDict): pass
+>>> Point2D.__total__
+True
+>>> class Point2D(TypedDict, total=False): pass
+>>> Point2D.__total__
+False
+>>> class Point3D(Point2D): pass
+>>> Point3D.__total__
+True
+
+```python
 
    This attribute reflects *only* the value of the ``total`` argument
    to the current ``TypedDict`` class, not whether the class is semantically
@@ -3152,29 +3262,39 @@ and the following attributes:
    inheriting from it in another ``TypedDict`` with a different value for
    ``total``:
 
-   .. doctest::
+   .. doctest:
 
-      >>> class Point2D(TypedDict, total=False):
-      ...     x: int
-      ...     y: int
-      ...
-      >>> class Point3D(Point2D):
-      ...     z: int
-      ...
-      >>> Point3D.__required_keys__ == frozenset({'z'})
-      True
-      >>> Point3D.__optional_keys__ == frozenset({'x', 'y'})
-      True
+```
+
+python
+>>> class Point2D(TypedDict, total=False):
+...     x: int
+...     y: int
+...
+>>> class Point3D(Point2D):
+...     z: int
+...
+>>> Point3D.__required_keys__ == frozenset({'z'})
+True
+>>> Point3D.__optional_keys__ == frozenset({'x', 'y'})
+True
+
+```
 
    .. versionadded:: 3.9
 
-   .. note::
+   .. note:
 
-      If ``from __future__ import annotations`` is used or if annotations
-      are given as strings, annotations are not evaluated when the
-      ``TypedDict`` is defined. Therefore, the runtime introspection that
-      ``__required_keys__`` and ``__optional_keys__`` rely on may not work
-      properly, and the values of the attributes may be incorrect.
+```
+
+python
+If ``from __future__ import annotations`` is used or if annotations
+are given as strings, annotations are not evaluated when the
+``TypedDict`` is defined. Therefore, the runtime introspection that
+``__required_keys__`` and ``__optional_keys__`` rely on may not work
+properly, and the values of the attributes may be incorrect.
+
+```python
 
 .. attribute:: __readonly_keys__
 
@@ -3325,14 +3445,19 @@ emits an error if the value is not of the specified type
         assert_type(name, int)  # type checker error
 
 This function is useful for ensuring the type checker's understanding of a
-script is in line with the developer's intentions::
+script is in line with the developer's intentions:
 
-    def complex_function(arg: object):
-        # Do some complex type-narrowing logic,
-        # after which we hope the inferred type will be `int`
-        ...
-        # Test whether the type checker correctly understands our function
-        assert_type(arg, int)
+```
+
+python
+def complex_function(arg: object):
+    # Do some complex type-narrowing logic,
+    # after which we hope the inferred type will be `int`
+    ...
+    # Test whether the type checker correctly understands our function
+    assert_type(arg, int)
+
+```
 
 .. versionadded:: 3.11
 

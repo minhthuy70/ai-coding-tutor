@@ -1,0 +1,378 @@
+# EN_PY_083: Logging HOWTO: Basic Logging Tutorial, Levels (DEBUG to CRITICAL)
+
+**Authoritative Source**: Python Software Foundation (CPython 3.12 Official Documentation & Language Reference)
+**Authors**: Guido van Rossum, Raymond Hettinger, Vinay Sajip, A.M. Kuchling, and CPython Core Developers
+**Domain**: Systems | **Target Audience**: Computer Science Undergraduate & Advanced Developers
+**Language Specification**: Python 3.12 (CPython Standard Implementation)
+
+---
+
+## Technical Overview & Formal Specification
+
+Logging HOWTO
+*************
+
+Author:
+   Vinay Sajip <vinay_sajip at red-dove dot com>
+
+This page contains tutorial information. For links to reference
+information and a logging cookbook, please see Other resources.
+
+Basic Logging Tutorial
+======================
+
+Logging is a means of tracking events that happen when some software
+runs. The software’s developer adds logging calls to their code to
+indicate that certain events have occurred. An event is described by a
+descriptive message which can optionally contain variable data (i.e.
+data that is potentially different for each occurrence of the event).
+Events also have an importance which the developer ascribes to the
+event; the importance can also be called the *level* or *severity*.
+
+When to use logging
+-------------------
+
+You can access logging functionality by creating a logger via "logger
+= getLogger(__name__)", and then calling the logger’s "debug()",
+"info()", "warning()", "error()" and "critical()" methods. To
+determine when to use logging, and to see which logger methods to use
+when, see the table below. It states, for each of a set of common
+tasks, the best tool to use for that task.
+
++---------------------------------------+----------------------------------------+
+| Task you want to perform              | The best tool for the task             |
+
+|=======================================|========================================|
+| Display console output for ordinary   | "print()"                              |
+| usage of a command line script or     |                                        |
+| program                               |                                        |
++---------------------------------------+----------------------------------------+
+| Report events that occur during       | A logger’s "info()" (or "debug()"      |
+| normal operation of a program (e.g.   | method for very detailed output for    |
+| for status monitoring or fault        | diagnostic purposes)                   |
+| investigation)                        |                                        |
++---------------------------------------+----------------------------------------+
+| Issue a warning regarding a           | "warnings.warn()" in library code if   |
+| particular runtime event              | the issue is avoidable and the client  |
+|                                       | application should be modified to      |
+|                                       | eliminate the warning  A logger’s      |
+|                                       | "warning()" method if there is nothing |
+|                                       | the client application can do about    |
+|                                       | the situation, but the event should    |
+|                                       | still be noted                         |
++---------------------------------------+----------------------------------------+
+| Report an error regarding a           | Raise an exception                     |
+| particular runtime event              |                                        |
++---------------------------------------+----------------------------------------+
+| Report suppression of an error        | A logger’s "error()", "exception()" or |
+| without raising an exception (e.g.    | "critical()" method as appropriate for |
+| error handler in a long-running       | the specific error and application     |
+| server process)                       | domain                                 |
++---------------------------------------+----------------------------------------+
+
+The logger methods are named after the level or severity of the events
+they are used to track. The standard levels and their applicability
+are described below (in increasing order of severity):
+
++----------------+-----------------------------------------------+
+| Level          | When it’s used                                |
+|================|===============================================|
+| "DEBUG"        | Detailed information, typically of interest   |
+|                | only when diagnosing problems.                |
++----------------+-----------------------------------------------+
+| "INFO"         | Confirmation that things are working as       |
+|                | expected.                                     |
++----------------+-----------------------------------------------+
+| "WARNING"      | An indication that something unexpected       |
+|                | happened, or indicative of some problem in    |
+|                | the near future (e.g. ‘disk space low’). The  |
+|                | software is still working as expected.        |
+
++----------------+-----------------------------------------------+
+| "ERROR"        | Due to a more serious problem, the software   |
+|                | has not been able to perform some function.   |
++----------------+-----------------------------------------------+
+| "CRITICAL"     | A serious error, indicating that the program  |
+|                | itself may be unable to continue running.     |
++----------------+-----------------------------------------------+
+
+The default level is "WARNING", which means that only events of this
+level and above will be tracked, unless the logging package is
+configured to do otherwise.
+
+Events that are tracked can be handled in different ways. The simplest
+way of handling tracked events is to print them to the console.
+Another common way is to write them to a disk file.
+
+A simple example
+----------------
+
+A very simple example is:
+
+```python
+import logging
+logging.warning('Watch out!')  # will print a message to the console
+logging.info('I told you so')  # will not print anything
+
+```
+
+If you type these lines into a script and run it, you’ll see:
+
+   WARNING:root:Watch out!
+
+printed out on the console. The "INFO" message doesn’t appear because
+the default level is "WARNING". The printed message includes the
+indication of the level and the description of the event provided in
+the logging call, i.e. ‘Watch out!’. The actual output can be
+formatted quite flexibly if you need that; formatting options will
+also be explained later.
+
+Notice that in this example, we use functions directly on the
+"logging" module, like "logging.debug", rather than creating a logger
+and calling functions on it. These functions operation on the root
+logger, but can be useful as they will call "basicConfig()" for you if
+it has not been called yet, like in this example.  In larger programs
+you’ll usually want to control the logging configuration explicitly
+
+however - so for that reason as well as others, it’s better to create
+loggers and call their methods.
+
+Logging to a file
+-----------------
+
+A very common situation is that of recording logging events in a file,
+so let’s look at that next. Be sure to try the following in a newly
+started Python interpreter, and don’t just continue from the session
+described above:
+
+```python
+import logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
+logger.debug('This message should go to the log file')
+logger.info('So should this')
+logger.warning('And this, too')
+logger.error('And non-ASCII stuff, too, like Øresund and Malmö')
+
+```
+
+Changed in version 3.9: The *encoding* argument was added. In earlier
+Python versions, or if not specified, the encoding used is the default
+value used by "open()". While not shown in the above example, an
+*errors* argument can also now be passed, which determines how
+encoding errors are handled. For available values and the default, see
+the documentation for "open()".
+
+And now if we open the file and look at what we have, we should find
+the log messages:
+
+   DEBUG:__main__:This message should go to the log file
+   INFO:__main__:So should this
+   WARNING:__main__:And this, too
+   ERROR:__main__:And non-ASCII stuff, too, like Øresund and Malmö
+
+This example also shows how you can set the logging level which acts
+as the threshold for tracking. In this case, because we set the
+threshold to "DEBUG", all of the messages were printed.
+
+If you want to set the logging level from a command-line option such
+as:
+
+   --log=INFO
+
+and you have the value of the parameter passed for "--log" in some
+variable *loglevel*, you can use:
+
+   getattr(logging, loglevel.upper())
+
+to get the value which you’ll pass to "basicConfig()" via the *level*
+argument. You may want to error check any user input value, perhaps as
+in the following example:
+
+```python
+# assuming loglevel is bound to the string value obtained from the
+# command line argument. Convert to upper case to allow the user to
+# specify --log=DEBUG or --log=debug
+numeric_level = getattr(logging, loglevel.upper(), None)
+if not isinstance(numeric_level, int):
+    raise ValueError('Invalid log level: %s' % loglevel)
+logging.basicConfig(level=numeric_level, ...)
+
+```
+
+The call to "basicConfig()" should come *before* any calls to a
+logger’s methods such as "debug()", "info()", etc. Otherwise, that
+logging event may not be handled in the desired manner.
+
+If you run the above script several times, the messages from
+successive runs are appended to the file *example.log*. If you want
+each run to start afresh, not remembering the messages from earlier
+runs, you can specify the *filemode* argument, by changing the call in
+the above example to:
+
+   logging.basicConfig(filename='example.log', filemode='w', level=logging.DEBUG)
+
+The output will be the same as before, but the log file is no longer
+appended to, so the messages from earlier runs are lost.
+
+Logging variable data
+---------------------
+
+To log variable data, use a format string for the event description
+message and append the variable data as arguments. For example:
+
+```python
+import logging
+logging.warning('%s before you %s', 'Look', 'leap!')
+
+```
+
+will display:
+
+   WARNING:root:Look before you leap!
+
+As you can see, merging of variable data into the event description
+message uses the old, %-style of string formatting. This is for
+backwards compatibility: the logging package pre-dates newer
+formatting options such as "str.format()" and "string.Template". These
+newer formatting options *are* supported, but exploring them is
+outside the scope of this tutorial: see Using particular formatting
+styles throughout your application for more information.
+
+Changing the format of displayed messages
+-----------------------------------------
+
+To change the format which is used to display messages, you need to
+specify the format you want to use:
+
+```python
+import logging
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+logging.debug('This message should appear on the console')
+logging.info('So should this')
+logging.warning('And this, too')
+
+```
+
+which would print:
+
+   DEBUG:This message should appear on the console
+   INFO:So should this
+   WARNING:And this, too
+
+Notice that the ‘root’ which appeared in earlier examples has
+disappeared. For a full set of things that can appear in format
+strings, you can refer to the documentation for LogRecord attributes,
+but for simple usage, you just need the *levelname* (severity),
+*message* (event description, including variable data) and perhaps to
+display when the event occurred. This is described in the next
+section.
+
+Displaying the date/time in messages
+------------------------------------
+
+To display the date and time of an event, you would place
+‘%(asctime)s’ in your format string:
+
+```python
+import logging
+logging.basicConfig(format='%(asctime)s %(message)s')
+logging.warning('is when this event was logged.')
+
+```
+
+which should print something like this:
+
+   2010-12-12 11:41:42,612 is when this event was logged.
+
+The default format for date/time display (shown above) is like ISO8601
+or **RFC 3339**. If you need more control over the formatting of the
+date/time, provide a *datefmt* argument to "basicConfig", as in this
+example:
+
+```python
+import logging
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+logging.warning('is when this event was logged.')
+
+```
+
+which would display something like this:
+
+   12/12/2010 11:46:36 AM is when this event was logged.
+
+The format of the *datefmt* argument is the same as supported by
+"time.strftime()".
+
+Next Steps
+----------
+
+That concludes the basic tutorial. It should be enough to get you up
+and running with logging. There’s a lot more that the logging package
+offers, but to get the best out of it, you’ll need to invest a little
+more of your time in reading the following sections. If you’re ready
+for that, grab some of your favourite beverage and carry on.
+
+If your logging needs are simple, then use the above examples to
+incorporate logging into your own scripts, and if you run into
+problems or don’t understand something, please post a question on the
+comp.lang.python Usenet group (available at
+
+https://groups.google.com/g/comp.lang.python) and you should receive
+help before too long.
+
+Still here? You can carry on reading the next few sections, which
+provide a slightly more advanced/in-depth tutorial than the basic one
+above. After that, you can take a look at the Logging Cookbook.
+
+Advanced Logging Tutorial
+=========================
+
+The logging library takes a modular approach and offers several
+categories of components: loggers, handlers, filters, and formatters.
+
+* Loggers expose the interface that application code directly uses.
+
+* Handlers send the log records (created by loggers) to the
+  appropriate destination.
+
+* Filters provide a finer grained facility for determining which log
+  records to output.
+
+* Formatters specify the layout of log records in the final output.
+
+Log event information is passed between loggers, handlers, filters and
+formatters in a "LogRecord" instance.
+
+Logging is performed by calling methods on instances of the "Logger"
+class (hereafter called *loggers*). Each instance has a name, and they
+are conceptually arranged in a namespace hierarchy using dots
+(periods) as separators. For example, a logger named ‘scan’ is the
+parent of loggers ‘scan.text’, ‘scan.html’ and ‘scan.pdf’. Logger
+names can be anything you want, and indicate the area of an
+application in which a logged message originates.
+
+A good convention to use when naming loggers is to use a module-level
+logger, in each module which uses logging, named as follows:
+
+   logger = logging.getLogger(__name__)
+
+This means that logger names track the package/module hierarchy, and
+it’s intuitively obvious where events are logged just from the logger
+name.
+
+The root of the hierarchy of loggers is called the root logger. That’s
+
+the logger used by the functions "debug()", "info()", "warning()",
+"error()" and "critical()", which just call the same-named method of
+the root logger. The functions and the methods have the same
+signatures. The root logger’s name is printed as ‘root’ in the logged
+output.
+
+It is, of course, possible to log messages to different destinations.
+Support is included in the package for writing log messages to files,
+HTTP GET/POST locations, email via SMTP, generic sockets, queues, or
+OS-specific logging mechanisms such as syslog or the Windows NT event
+log. Destinations are served by *handler* classes. You can create your
+own log destination class if you have special requirements not met by
+any of the built-in handler classes.

@@ -288,6 +288,7 @@ Security-related activities start early and continue throughout the application 
 Figure 1.2 on the next page shows how security activities span the various **activities** of the application development life cycle.
 
 |  | Requirements and Analysis | Architecture and Design | Development | Testing | Deployment | Maintenance |
+| --- | --- | --- | --- | --- | --- | --- |
 | Security Objectives |  |  |  |  |  |  |
 | Design Guidelines |  |  |  |  |  |  |
 | Threat Modeling |  |  |  |  |  |  |
@@ -393,6 +394,7 @@ Security objectives are unique for each application. However, there is a set of 
 Table 2.1. Application Vulnerabilities and Potential Problems
 
 | Objective Category | Questions to Ask |
+| --- | --- |
 | Tangible assets to protect | Are there user accounts and passwords to protect?Is there confidential user information (such as credit card numbers) that needs to be protected?Is there sensitive intellectual property that needs to be protected?Can this system be used as a conduit to access other corporate assets that need to be protected? |
 | Intangible assets to protect | Are there corporate values that could be compromised by an attack on this system?Is there potential for an attack that may be embarrassing, although not otherwise damaging? |
 | Compliance requirements | Are there corporate security policies that must be adhered to?Is there security legislation you must comply with?Is there privacy legislation you must comply with?Are there standards you must adhere to?Are there constraints forced upon you by your deployment environment? |
@@ -451,6 +453,7 @@ Once you understand the potential vulnerabilities you can derive security object
 Table 2.3 Objectives Derived from Functional Requirements
 
 | Original Requirement Administrator must be able to add users and change user permis-sions through an ad-ministrator interface. | Derived Security Objectives C - Protect user names and permissions from disclosure to a non-administrator I - Restrict non-administrator from adding users and changing user permissions A - Application is available so that the administrator is able to add users and change user permissions |
+| --- | --- |
 | Each application server must be able to serve 1000 concurrent users. | A - Application server is available for users |
 | Registered users must be able to purchase books from the Web user interface | C - Protect registered user credentials and other sensitive information from non-administrators and non-registered users I - Restrict non-registered user from purchasing books from the Web user-interface I - Restrict registered users from obtaining books for the wrong price A - Web user interface is available for registered users to purchase books |
 
@@ -495,6 +498,7 @@ Table 3.1 lists the set of vulnerability categories that is common to most appli
 Table 3.1. Application Vulnerabilities and Potential Problems
 
 | Vulnerability Category Input / Data Validation | Potential Problem Due to Bad Design Insertion of malicious strings in user interface elements or public APIs. These attacks include command execution, cross - site scripting (XSS), SQL injection, and buffer overflow. Results can range from information disclosure to elevation of privilege and arbitrary code execution. |
+| --- | --- |
 | Authentication | Identity spoofing, password cracking, elevation of privileges, and unauthorized access. |
 | Authorization | Access to confidential or restricted data, data tampering, and execution of unauthorized operations. |
 | Configuration Management | Unauthorized access to administration interfaces, ability to update configuration data, and unauthorized access to user accounts and account profiles. |
@@ -534,6 +538,7 @@ Design guidelines are best practices associated with specific known vulnerabilit
 Table 3.2. Design Guidelines for Your Application
 
 | Category Input / Data Validation | Guidelines Do not trust input; consider centralized input validation. Do not rely on client-side validation. Be careful with canonicalization issues. Constrain, reject, and sanitize input. Validate for type, length, format, and range. |
+| --- | --- |
 | Authentication | Use strong passwords. Support password expiration periods and account disablement. Do not store credentials (use one-way hashes with salt). Encrypt communication channels to protect authentication tokens. |
 | Authorization | Use least privileged accounts. Consider authorization granularity. Enforce separation of privileges. Restrict user access to system-level resources. |
 | Configuration Management | Use least privileged process and service accounts. Do not store credentials in clear text. Use strong authentication and authorization on administration interfaces. Do not use the Local Security Authority (LSA). Secure the communication channel for remote administration. |
@@ -639,6 +644,7 @@ Table 4.1 summarizes the threat modeling activity and shows the input and output
 Table 4.1: Activity Summary with Input and Output
 
 | Input | Step | Output |
+| --- | --- | --- |
 | Business requirementsSecurity policiesCompliance requirements | Step 1: Identify security objectives | Key security objectives |
 | Deployment diagramsUse casesFunctional specifications | Step 2: Create an application overview | Whiteboard-style diagram with end-to-end deployment scenarioKey scenariosRolesTechnologiesApplication security mechanisms |
 | Deployment diagramsUse casesFunctional specificationsData flow diagrams | Step 3: Decompose your application | Trust boundariesEntry pointsExit pointsData flows |
@@ -652,6 +658,7 @@ The patterns & practices threat modeling approach is optimized to help you ident
 Table 4.2: Key Concepts
 
 | Concept | Description |
+| --- | --- |
 | Modeling to reduce risk | Use threat modeling to identify when and where you should apply effort to eliminate or reduce a potential threat. Avoid wasted effort by threat modeling to clarify the areas of most risk. |
 | Incremental rendering | Perform threat modeling iteratively. You should not be too concerned about missing details in any single iteration — instead focus on making each iteration productive. |
 | Context precision | Understand application use cases and roles in order to identify threats and vulnerabilities that are specific to your application. Different application types, application usage, and roles can yield different threats and vulnerabilities. |
@@ -716,6 +723,7 @@ Patterns & practices security guidance includes checklists for each major applic
 ## Deployment and Infrastructure Considerations
 
 | Check | Description |
+| --- | --- |
 |  | The design identifies, and accommodates the company security policy. |
 |  | Restrictions imposed by infrastructure security (including available services, protocols, and firewall restrictions) are identified. |
 |  | The design recognizes and accommodates restrictions imposed by hosting environments (including application isolation requirements). |
@@ -731,6 +739,7 @@ Patterns & practices security guidance includes checklists for each major applic
 ## Input / Data Validation
 
 | Check | Description |
+| --- | --- |
 |  | All entry points and trust boundaries are identified by the design. |
 |  | Input validation is applied whenever input is received from outside the current trust boundary. |
 |  | The design assumes that user input is malicious. |
@@ -742,6 +751,7 @@ Patterns & practices security guidance includes checklists for each major applic
 |  | Input file names and file paths are avoided where possible. |
 
 | Check | Description |
+| --- | --- |
 |  | The design addresses potential SQL injection issues. |
 |  | The design addresses potential cross-site scripting issues. |
 |  | The design does not rely on client-side validation. |
@@ -796,6 +806,7 @@ Table 6.1 summarizes the security code review activity and shows the input and o
 Table 6.1: Activity Summary with Input and Output
 
 | Input ● Security Requirements ● Code (including list of changes since last review) ● Constraints | Step Step 1. Identify code review objectives | Output ● Code review objectives |
+| --- | --- | --- |
 | ● Code ● Code review objectives | Step 2. Perform preliminary scan | ● Vulnerability list (false positives filtered out) ● List of flagged areas |
 | ● Code ● Code review objectives ● List of flagged areas | Step 3. Review code for security issues | ● Vulnerability list |
 | ● Code ● Code review objectives | Step 4. Review code for security issues unique to the application architecture | ● Vulnerability list |
@@ -831,6 +842,7 @@ Each question list is organized into a set of hotspots or trouble areas that are
 Table 6.2: Hotspots
 
 | Hotspot SQL Injection | What to look for in code A SQL injection attack occurs when un-trusted input can modify the logic of a SQL query in unexpected ways. As you are work through the code, ensure that any input that is used in a SQL query is validated, or make sure that the SQL queries are parameterized. |
+| --- | --- |
 | Cross Site Scripting | Cross-site scripting occurs when an attacker manages to input script code into an application so that it is echoed back and executed in the security context of the application. This allows an attacker to steal user information, including forms data and cookies. This vulnerability could be present whenever a Web application echoes unfiltered user input back to Web content. |
 | Data Access | Look for improper storage of database connection strings and proper use of authentication to the database. |
 | Input/Data Validation | Look for client-side validation that is not backed by server-side validation, poor validation techniques, and reliance on file names or other insecure mechanisms to make security decisions. |
@@ -840,6 +852,7 @@ Table 6.2: Hotspots
 | Unsafe code | Pay particularly close attention to any code compiled with the /unsafe switch. This code will not be given all of the protection normal managed code is given. Look for potential buffer overflows, array out of bound errors, integer underflow and overflow, as well as data truncation errors. |
 
 | Hotspot | What to look for in code |
+| --- | --- |
 | Unmanaged code | In addition to the checks performed for unsafe code, also scan unmanaged code looking for the use of dangerous APIs, such as strcpy and strcat. Be sure to review any interop calls and the unmanaged code itself to make sure that bad assumptions are not made as execution control passes from managed to unmanaged code. |
 | Hard-coded secrets | Look for hard-coded secrets by examining the code for variable names such as “key”, “password”, “pwd”, “secret”, “hash”, and “salt”. |
 | Poor error handling | Look for functions with missing error handlers or empty catch blocks. |
@@ -930,6 +943,7 @@ Patterns & practices security guidance includes server security categories for e
 Table 7.1 Server Security Categories
 
 | Category | Practices |
+| --- | --- |
 | Patches and Updates | Patching and updating your server software is a critical first step. |
 | Accounts | Accounts allow authenticated users to access a computer. These accounts must be audited. Configure accounts with least privilege to help prevent elevation of privilege. Remove any accounts that you do not need. Help to prevent brute force and dictionary attacks by using strong password policies, and then use auditing and alerts to detect logon failures. |
 | Auditing and Logging | Auditing is one of your most important tools for identifying intruders, attacks in progress, and evidence of attacks that have occurred. Configure auditing for your server. Event and system logs also help you to troubleshoot security problems. |

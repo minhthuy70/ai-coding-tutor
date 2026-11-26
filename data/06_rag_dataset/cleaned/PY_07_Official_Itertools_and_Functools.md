@@ -2258,42 +2258,52 @@ functions with side-effects, functions that need to create
 distinct mutable objects on each call (such as generators and async functions),
 or impure functions such as time() or random().
 
-Example of an LRU cache for static web content::
+Example of an LRU cache for static web content:
 
-     @lru_cache(maxsize=32)
-     def get_pep(num):
-         'Retrieve text of a Python Enhancement Proposal'
-         resource = f'https://peps.python.org/pep-{num:04d}'
-         try:
-             with urllib.request.urlopen(resource) as s:
-                 return s.read()
-         except urllib.error.HTTPError:
-             return 'Not Found'
+```
 
-     >>> for n in 8, 290, 308, 320, 8, 218, 320, 279, 289, 320, 9991:
-     ...     pep = get_pep(n)
-     ...     print(n, len(pep))
+python
+@lru_cache(maxsize=32)
+def get_pep(num):
+    'Retrieve text of a Python Enhancement Proposal'
+    resource = f'https://peps.python.org/pep-{num:04d}'
+    try:
+        with urllib.request.urlopen(resource) as s:
+            return s.read()
+    except urllib.error.HTTPError:
+        return 'Not Found'
 
-     >>> get_pep.cache_info()
-     CacheInfo(hits=3, misses=8, maxsize=32, currsize=8)
+>>> for n in 8, 290, 308, 320, 8, 218, 320, 279, 289, 320, 9991:
+...     pep = get_pep(n)
+...     print(n, len(pep))
+
+>>> get_pep.cache_info()
+CacheInfo(hits=3, misses=8, maxsize=32, currsize=8)
+
+```
 
 Example of efficiently computing
 `Fibonacci numbers <https://en.wikipedia.org/wiki/Fibonacci_number>`_
 using a cache to implement a
 `dynamic programming <https://en.wikipedia.org/wiki/Dynamic_programming>`_
-technique::
+technique:
 
-     @lru_cache(maxsize=None)
-     def fib(n):
-         if n < 2:
-             return n
-         return fib(n-1) + fib(n-2)
+```
 
-     >>> [fib(n) for n in range(16)]
-     [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+python
+@lru_cache(maxsize=None)
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-1) + fib(n-2)
 
-     >>> fib.cache_info()
-     CacheInfo(hits=28, misses=16, maxsize=None, currsize=16)
+>>> [fib(n) for n in range(16)]
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+
+>>> fib.cache_info()
+CacheInfo(hits=28, misses=16, maxsize=None, currsize=16)
+
+```
 
 .. versionadded:: 3.2
 

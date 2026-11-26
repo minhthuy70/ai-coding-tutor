@@ -46,6 +46,7 @@ json.dumps(pythonDictionary)
 ## Map Python type to json
 
 | Python | JSON |
+| --- | --- |
 | dict | object |
 | list, tuple | array |
 | str | string |
@@ -59,6 +60,7 @@ json.dumps(pythonDictionary)
 ## Map JSON to python
 
 | JSON | Python |
+| --- | --- |
 | object | dict |
 | array | list |
 | string | str |
@@ -80,12 +82,10 @@ json.dumps(pythonDictionary)
 
 import json, requests
 
-```txt
+```python
 result = requests.get('https://dummyjson.com/products')
 pythondict = result.json()
-```
-
-```python
+txt
 print(json.dumps(pythondict, indent=4))
 print(list(pythondict.keys()))
 ```
@@ -167,6 +167,7 @@ WD\_PARAGRAPH\_ALIGNMENT
 ## Spread sheet and corresponding CSV file
 
 | Name | Exam1 | Exam2 | Final Exam | Overall Grade |
+| --- | --- | --- | --- | --- |
 | Bill | 75.00 | 100.00 | 50.00 | 75.00 |
 | Fred | 50.00 | 50.00 | 50.00 | 50.00 |
 | Irving | 0.00 | 0.00 | 0.00 | 0.00 |
@@ -218,9 +219,7 @@ Average,,,,56.25
 import csv
 workbook_file = open('Workbook1.csv','r')
 workbook_reader = csv.reader(workbook_file)
-```
-
-```python
+python
 for row in workbook_reader:
     print(row)
 ```
@@ -288,6 +287,7 @@ print(df)
 ```
 
 |  | A | B | C | D |
+| --- | --- | --- | --- | --- |
 | 1 | Name | Phone | BirthDate | Salary |
 | 2 | Henry | 909223456 | 4/23/1999 | 1500 |
 | 3 | Peter | 909189345 | 11/22/2000 | 999 |
@@ -378,18 +378,14 @@ Eile Edit View Navigate Code Refactor Run Iools VCS Window Help FileFactory-Exce
 # Tạo một file excel cùng 1 sheet
 workbook = xlsxwriter.Workbook('demo.xlsx')
 worksheet = workbook.add_worksheet()
-```
-
-```python
+python
 # thiết lập các cột cho file
 worksheet.set_column('A:A', 5)
 worksheet.set_column('B:B', 15)
 worksheet.set_column('C:C', 20)
 worksheet.set_column('D:D', 15)
 worksheet.set_column('E:E', 15)
-```
-
-```python
+python
 # định dạng tiêu đề cột in đậm
 bold = workbook.add_format({'bold': True})
 ```
