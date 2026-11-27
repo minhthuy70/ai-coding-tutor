@@ -1,0 +1,156 @@
+# 🎯 KỊCH BẢN DEMO HỆ THỐNG TRỢ GIẢNG AI SOCRATIC (AI CODING TUTOR)
+
+> **Tài liệu hướng dẫn thực hành Demo trực tiếp trên giao diện Web (`http://localhost:3000`)**  
+> Dành cho buổi Báo cáo Tiến độ, Demo Đồ án tốt nghiệp và Vấn đáp Hội đồng.
+
+---
+
+## 📌 CHUẨN BỊ TRƯỚC KHI DEMO
+
+1. **Khởi động hệ thống:**
+   - Mở terminal chạy file: `start_dev.bat` (hoặc mở 2 terminal chạy Backend `uvicorn app.main:app --port 8000` và Frontend `npm run dev`).
+   - Mở trình duyệt truy cập: `http://localhost:3000`.
+   - Kiểm tra thanh header: Hiển thị `Gemini 3 Flash` và `RAG 11,731 Chunks`.
+
+2. **Thư mục tài nguyên demo có sẵn:**
+   - Mã nguồn mẫu: `demo_samples/code_files/`
+   - Ảnh chụp terminal lỗi: `demo_samples/terminal_images/`
+
+---
+
+## 🎬 4 KỊCH BẢN DEMO TIÊU BIỂU (TỪ CƠ BẢN ĐẾN ĐA PHƯƠNG THỨC)
+
+---
+
+### KỊCH BẢN 1: HỎI ĐÁP LÝ THUYẾT & THUẬT TOÁN (TEXT ONLY)
+*Mục tiêu: Chứng minh RAG truy xuất chính xác giáo trình chuẩn và AI giải thích theo phương pháp Socratic, phân tích Big-O.*
+
+#### 🔹 Trường hợp 1.1: Khác biệt cấu trúc dữ liệu kinh điển (List vs Tuple)
+* **Nội dung nhập vào Chat:**
+  ```text
+  Phân biệt List và Tuple trong Python về tính biến đổi (mutability) và hiệu năng bộ nhớ. Khi nào nên dùng loại nào?
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. Phân tích rõ: List là `mutable` (cho phép thêm/sửa/xóa), Tuple là `immutable` (bất biến, tối ưu bộ nhớ hơn).
+  2. Đặt câu hỏi gợi mở Socratic: Khi lưu trữ tọa độ địa lý `(latitude, longitude)` hoặc danh sách sinh viên có thể thay đổi, em sẽ chọn cấu trúc nào?
+  3. **Khối RAG Evidence:** Trích dẫn từ giáo trình chuẩn CPython (`PY_01_Official_Tutorial.md` hoặc `PY_06_Official_Collections_and_Data_Structures.md`). Bấm *"Xem đoạn trích"* để đối chiếu tài liệu gốc.
+
+#### 🔹 Trường hợp 1.2: Tối ưu thuật toán & Độ phức tạp Big-O (Two Sum / Binary Search)
+* **Nội dung nhập vào Chat:**
+  ```text
+  Tại sao thuật toán Tìm kiếm Nhị phân (Binary Search) lại đạt độ phức tạp O(log n), và điều kiện bắt buộc của mảng đầu vào là gì?
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. Dẫn dắt nguyên lý "chia để trị" (mỗi bước giảm một nửa không gian tìm kiếm).
+  2. Nhấn mạnh điều kiện mảng phải được **sắp xếp thứ tự trước**.
+  3. Đặt câu hỏi thử thách: Nếu mảng chưa sắp xếp, tổng thời gian sắp xếp rồi tìm kiếm nhị phân có tối ưu hơn tìm kiếm tuần tự $O(n)$ không?
+
+---
+
+### KỊCH BẢN 2: ĐÍNH KÈM FILE MÃ NGUỒN CÓ LỖI (CODE ATTACHMENT)
+*Mục tiêu: Chứng minh AI bóc tách file code (.py, .cpp), chỉ ra vị trí nghi vấn nhưng không viết hộ lời giải hoàn chỉnh.*
+
+#### 🔹 Trường hợp 2.1: Lỗi duyệt mảng vượt biên (Off-by-one Error)
+* **Tệp đính kèm:** Kéo thả tệp `demo_samples/code_files/04_off_by_one_index.py` vào ô chat.
+* **Nội dung nhập:**
+  ```text
+  Thầy ơi, đoạn code này của em duyệt danh sách học sinh nhưng cứ chạy đến cuối là bị lỗi IndexError, em sai ở đâu ạ?
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. Nhận diện file đính kèm `04_off_by_one_index.py`.
+  2. Phát hiện vòng lặp `for i in range(len(students) + 1):`.
+  3. Hỏi gợi mở Socratic:
+     - *"Chỉ số index của một mảng có $N$ phần tử trong Python chạy từ mấy đến mấy?"*
+     - *"Khi `i = len(students)`, giá trị đó có còn nằm trong mảng `students` không?"*
+  4. Trích dẫn RAG từ tài liệu về Sequences và Indexing.
+
+#### 🔹 Trường hợp 2.2: Lỗi cạm bẫy Mutable Default Argument
+* **Tệp đính kèm:** Kéo thả `demo_samples/code_files/03_mutable_default_argument.py`.
+* **Nội dung nhập:**
+  ```text
+  Tại sao mỗi lần em gọi hàm append_item() thì danh sách lại tích lũy kết quả của các lần gọi trước thay vì tạo danh sách mới?
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. Nhận diện lỗi kinh điển `target_list=[]` được khởi tạo đúng 1 lần khi định nghĩa hàm.
+  2. Hướng dẫn tư duy: Thay vì dùng mutable object làm default, trong Python chuẩn PEP 8 lập trình viên thường dùng `target_list=None` rồi xử lý thế nào trong thân hàm?
+
+#### 🔹 Trường hợp 2.3: Rò rỉ bộ nhớ trong C++ (Memory Leak)
+* **Tệp đính kèm:** Kéo thả `demo_samples/code_files/05_cpp_memory_leak.cpp`.
+* **Nội dung nhập:**
+  ```text
+  Chương trình C++ này của em chạy một lúc thì RAM ngốn rất nhiều, có nguy cơ rò rỉ bộ nhớ ở đâu ạ?
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. Chỉ ra cặp lệnh `new[]` thiếu `delete[]` bên trong vòng lặp 10,000 lần.
+  2. Viện dẫn nguyên tắc quản lý tài nguyên RAII trong C++.
+
+---
+
+### KỊCH BẢN 3: ĐÍNH KÈM ẢNH CHỤP MÀN HÌNH TERMINAL (VISION OCR)
+*Mục tiêu: Chứng minh tính năng Vision OCR trích xuất thông tin lỗi từ ảnh chụp, đối chiếu RAG và giải thích nguyên nhân.*
+
+#### 🔹 Trường hợp 3.1: Ảnh chụp Terminal lỗi IndexError
+* **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/01_terminal_index_error.png` vào ô chat.
+* **Nội dung nhập:**
+  ```text
+  Em chạy code thì màn hình terminal báo lỗi đỏ như trong ảnh, thầy xem giúp em với ạ
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. Hệ thống OCR tự động đọc dòng: `IndexError: list index out of range` tại dòng lệnh `print(students[i])`.
+  2. AI giải thích ý nghĩa lỗi: Chương trình đang cố gắng truy cập vào một vị trí (index) không tồn tại trong danh sách.
+  3. Gợi ý sinh viên dùng `print(len(students))` hoặc kiểm tra lại chỉ số kết thúc của vòng lặp.
+
+#### 🔹 Trường hợp 3.2: Ảnh chụp Terminal lỗi Tràn đệ quy (RecursionError)
+* **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/02_terminal_recursion_error.png`.
+* **Nội dung nhập:**
+  ```text
+  Terminal báo lỗi RecursionError lặp đi lặp lại như hình, em phải sửa thế nào?
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. OCR nhận diện: `RecursionError: maximum recursion depth exceeded in comparison`.
+  2. Phân tích hiện tượng: Hàm tự gọi chính nó vô hạn lần mà không chạm tới điều kiện dừng (Base Case).
+  3. Đặt câu hỏi: Đối với bài toán tính Fibonacci, với $n = 0$ hoặc $n = 1$ thì kết quả là bao nhiêu mà không cần đệ quy tiếp?
+
+#### 🔹 Trường hợp 3.3: Ảnh chụp Terminal lỗi TypeError (Cộng chuỗi với số)
+* **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/03_terminal_type_error.png`.
+* **Nội dung nhập:**
+  ```text
+  Ảnh terminal này báo lỗi gì vậy thầy?
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. OCR nhận diện: `TypeError: can only concatenate str (not "int") to str`.
+  2. Gợi ý: Trong Python, ép kiểu dữ liệu tường minh bằng hàm gì trước khi nối chuỗi (hoặc dùng f-string)?
+
+---
+
+### KỊCH BẢN 4: ĐA PHƯƠNG THỨC TỔNG HỢP (CODE + ẢNH + CÂU HỎI)
+*Mục tiêu: Thể hiện đỉnh cao của hệ thống: Tiếp nhận đồng thời cả file mã nguồn và ảnh terminal chụp lỗi cùng lúc.*
+
+* **Tệp đính kèm:**
+  1. Kéo thả file: `demo_samples/code_files/02_infinite_recursion_fibonacci.py`
+  2. Kéo thả ảnh: `demo_samples/terminal_images/02_terminal_recursion_error.png`
+* **Nội dung nhập:**
+  ```text
+  Em gửi thầy cả đoạn code và ảnh chụp terminal khi chạy. Thầy chỉ giúp em điều kiện cơ sở cần bổ sung là gì nhé!
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. Header tin nhắn hiển thị huy hiệu: Đính kèm 2 tệp (1 file code + 1 ảnh).
+  2. AI đọc code và đối chiếu với thông báo lỗi trong ảnh.
+  3. Xác định rõ: Hàm `fib(n)` đang gọi `fib(n-1) + fib(n-2)` mà không có `if n <= 1: return n`.
+  4. Gợi mở sinh viên thêm điều kiện biên và thử lại trên code sandbox.
+
+---
+
+## 💡 MẸO TRÌNH DIỄN KHI DEMO TRƯỚC HỘI ĐỒNG
+
+1. **Nhấn mạnh tính năng RAG Grounding:**
+   - Sau khi AI trả lời, hãy cuộn chuột xuống khối **`📚 Cơ sở Tri thức Giáo trình (RAG Evidence)`** màu xanh lục.
+   - Bấm vào nút **"Xem đoạn trích"** để mở đoạn văn bản gốc trong giáo trình (11,731 chunks) nhằm chứng minh câu trả lời không phải là bịa đặt (hallucination).
+
+2. **Nhấn mạnh tính Socratic (Không giải hộ):**
+   - Chỉ ra cho hội đồng thấy: AI không viết nguyên lời giải hoàn chỉnh mà đặt câu hỏi gợi mở, giúp người học phát triển tư duy thuật toán độc lập.
+
+3. **Thử nghiệm các tính năng phụ trợ trên giao diện:**
+   - Bấm vào nút **"Đọc to"** (Text-to-Speech) để AI phát âm câu trả lời bằng tiếng Việt.
+   - Bấm vào các **Gợi ý câu hỏi tiếp theo (Follow-up chips)** để AI tiếp tục đào sâu bài toán.
+   - Bấm nút **"Soát lỗi" (Code Quality)** hoặc **"Chạy" (Sandbox)** trên khối code để minh họa môi trường IDE mini tích hợp.
