@@ -25,21 +25,25 @@
 ### KỊCH BẢN 1: HỎI ĐÁP LÝ THUYẾT & THUẬT TOÁN (TEXT ONLY)
 *Mục tiêu: Chứng minh RAG truy xuất chính xác giáo trình chuẩn và AI giải thích theo phương pháp Socratic, phân tích Big-O.*
 
+> 💡 **Mẹo:** Bạn có thể bấm nút **Demo 1-chạm** phía trên khung chat để tự động điền, không cần gõ phím!
+
 #### 🔹 Trường hợp 1.1: Khác biệt cấu trúc dữ liệu kinh điển (List vs Tuple)
-* **Nội dung nhập vào Chat:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Phân biệt List và Tuple trong Python về tính biến đổi (mutability) và hiệu năng bộ nhớ. Khi nào nên dùng loại nào?
+  List khác gì Tuple vậy thầy?
   ```
+  *(Hoặc bấm nút: `[List vs Tuple]` trên hàng Demo 1-chạm)*
 * **Kỳ vọng AI phản hồi:**
   1. Phân tích rõ: List là `mutable` (cho phép thêm/sửa/xóa), Tuple là `immutable` (bất biến, tối ưu bộ nhớ hơn).
   2. Đặt câu hỏi gợi mở Socratic: Khi lưu trữ tọa độ địa lý `(latitude, longitude)` hoặc danh sách sinh viên có thể thay đổi, em sẽ chọn cấu trúc nào?
   3. **Khối RAG Evidence:** Trích dẫn từ giáo trình chuẩn CPython (`PY_01_Official_Tutorial.md` hoặc `PY_06_Official_Collections_and_Data_Structures.md`). Bấm *"Xem đoạn trích"* để đối chiếu tài liệu gốc.
 
-#### 🔹 Trường hợp 1.2: Tối ưu thuật toán & Độ phức tạp Big-O (Two Sum / Binary Search)
-* **Nội dung nhập vào Chat:**
+#### 🔹 Trường hợp 1.2: Tối ưu thuật toán & Độ phức tạp Big-O (Binary Search)
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Tại sao thuật toán Tìm kiếm Nhị phân (Binary Search) lại đạt độ phức tạp O(log n), và điều kiện bắt buộc của mảng đầu vào là gì?
+  Binary search hoạt động thế nào?
   ```
+  *(Hoặc bấm nút: `[Binary Search]` trên hàng Demo 1-chạm)*
 * **Kỳ vọng AI phản hồi:**
   1. Dẫn dắt nguyên lý "chia để trị" (mỗi bước giảm một nửa không gian tìm kiếm).
   2. Nhấn mạnh điều kiện mảng phải được **sắp xếp thứ tự trước**.
@@ -52,10 +56,11 @@
 
 #### 🔹 Trường hợp 2.1: Lỗi duyệt mảng vượt biên (Off-by-one Error)
 * **Tệp đính kèm:** Kéo thả tệp `demo_samples/code_files/04_off_by_one_index.py` vào ô chat.
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Thầy ơi, đoạn code này của em duyệt danh sách học sinh nhưng cứ chạy đến cuối là bị lỗi IndexError, em sai ở đâu ạ?
+  Sao code này bị IndexError ạ?
   ```
+  *(Hoặc bấm nút: `[Lỗi IndexError]` trên hàng Demo 1-chạm)*
 * **Kỳ vọng AI phản hồi:**
   1. Nhận diện file đính kèm `04_off_by_one_index.py`.
   2. Phát hiện vòng lặp `for i in range(len(students) + 1):`.
@@ -66,9 +71,9 @@
 
 #### 🔹 Trường hợp 2.2: Lỗi cạm bẫy Mutable Default Argument
 * **Tệp đính kèm:** Kéo thả `demo_samples/code_files/03_mutable_default_argument.py`.
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Tại sao mỗi lần em gọi hàm append_item() thì danh sách lại tích lũy kết quả của các lần gọi trước thay vì tạo danh sách mới?
+  Sao hàm này dồn kết quả cũ ạ?
   ```
 * **Kỳ vọng AI phản hồi:**
   1. Nhận diện lỗi kinh điển `target_list=[]` được khởi tạo đúng 1 lần khi định nghĩa hàm.
@@ -76,10 +81,11 @@
 
 #### 🔹 Trường hợp 2.3: Lỗi phạm vi biến cục bộ vs toàn cục (LEGB Scope & UnboundLocalError)
 * **Tệp đính kèm:** Kéo thả `demo_samples/code_files/05_unbound_local_scope_error.py`.
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Thầy ơi, biến counter em đã khai báo ở đầu file rồi, tại sao khi gọi hàm increment() thì Python lại báo lỗi UnboundLocalError: cannot access local variable 'counter' ạ?
+  Sao bị lỗi UnboundLocalError vậy ạ?
   ```
+  *(Hoặc bấm nút: `[Lỗi UnboundLocal]` trên hàng Demo 1-chạm)*
 * **Kỳ vọng AI phản hồi:**
   1. Nhận diện quy tắc phạm vi biến LEGB (Local, Enclosing, Global, Built-in) trong Python.
   2. Phân tích: Do trong hàm có toán tử gán `counter += 1`, Python tự động coi `counter` là biến cục bộ (Local), nhưng biến này chưa được gán giá trị trước khi đọc.
@@ -95,10 +101,11 @@
 
 #### 🔹 Trường hợp 3.1: Ảnh chụp Terminal lỗi IndexError
 * **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/01_terminal_index_error.png` vào ô chat.
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Em chạy code thì màn hình terminal báo lỗi đỏ như trong ảnh, thầy xem giúp em với ạ
+  Terminal trong ảnh báo lỗi gì vậy thầy?
   ```
+  *(Hoặc bấm nút: `[Terminal trong ảnh]` trên hàng Demo 1-chạm)*
 * **Kỳ vọng AI phản hồi:**
   1. Hệ thống OCR tự động đọc dòng: `IndexError: list index out of range` tại dòng lệnh `print(students[i])`.
   2. AI giải thích ý nghĩa lỗi: Chương trình đang cố gắng truy cập vào một vị trí (index) không tồn tại trong danh sách.
@@ -106,9 +113,9 @@
 
 #### 🔹 Trường hợp 3.2: Ảnh chụp Terminal lỗi Tràn đệ quy (RecursionError)
 * **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/02_terminal_recursion_error.png`.
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Terminal báo lỗi RecursionError lặp đi lặp lại như hình, em phải sửa thế nào?
+  Lỗi RecursionError trong ảnh sửa sao ạ?
   ```
 * **Kỳ vọng AI phản hồi:**
   1. OCR nhận diện: `RecursionError: maximum recursion depth exceeded in comparison`.
@@ -117,7 +124,7 @@
 
 #### 🔹 Trường hợp 3.3: Ảnh chụp Terminal lỗi TypeError (Cộng chuỗi với số)
 * **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/03_terminal_type_error.png`.
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
   Ảnh terminal này báo lỗi gì vậy thầy?
   ```
@@ -127,9 +134,9 @@
 
 #### 🔹 Trường hợp 3.4: Ảnh chụp Terminal lỗi Phạm vi biến (UnboundLocalError)
 * **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/05_terminal_unboundlocal_error.png`.
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Terminal báo lỗi UnboundLocalError như ảnh, thầy giải thích giúp em nhé!
+  Ảnh này bị lỗi gì vậy thầy?
   ```
 * **Kỳ vọng AI phản hồi:**
   1. OCR nhận diện: `UnboundLocalError: cannot access local variable 'counter' where it is not associated with a value`.
@@ -143,9 +150,9 @@
 * **Tệp đính kèm:**
   1. Kéo thả file: `demo_samples/code_files/02_infinite_recursion_fibonacci.py`
   2. Kéo thả ảnh: `demo_samples/terminal_images/02_terminal_recursion_error.png`
-* **Nội dung nhập:**
+* **Câu hỏi cực ngắn (dễ nhớ):**
   ```text
-  Em gửi thầy cả đoạn code và ảnh chụp terminal khi chạy. Thầy chỉ giúp em điều kiện cơ sở cần bổ sung là gì nhé!
+  Xem giúp em code và ảnh lỗi này!
   ```
 * **Kỳ vọng AI phản hồi:**
   1. Header tin nhắn hiển thị huy hiệu: Đính kèm 2 tệp (1 file code + 1 ảnh).

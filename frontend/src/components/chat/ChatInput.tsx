@@ -39,6 +39,15 @@ const ALLOWED_DOC_EXTS = [
   'py', 'json', 'csv', 'sql', 'xml', 'yaml', 'yml'
 ];
 
+const QUICK_DEMO_PROMPTS = [
+  { label: 'List vs Tuple', prompt: 'List khác gì Tuple vậy thầy?' },
+  { label: 'Binary Search', prompt: 'Binary search hoạt động thế nào?' },
+  { label: 'Lỗi IndexError', prompt: 'Sao code này bị IndexError ạ?' },
+  { label: 'Lỗi UnboundLocal', prompt: 'Sao bị lỗi UnboundLocalError vậy ạ?' },
+  { label: 'Terminal trong ảnh', prompt: 'Terminal trong ảnh báo lỗi gì vậy thầy?' },
+  { label: 'Tối ưu chạy chậm', prompt: 'Hàm này chạy chậm quá, sửa sao ạ?' },
+];
+
 export const ChatInput: React.FC<ChatInputProps> = ({
   onSendMessage,
   onViewImage,
@@ -427,6 +436,28 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           </ul>
         </div>
       )}
+
+      {/* Quick Demo 1-Click Chips */}
+      <div className="mb-2 flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 text-xs">
+        <span className="shrink-0 flex items-center gap-1 text-[11px] font-semibold text-slate-400 dark:text-slate-500 mr-1 select-none">
+          <Sparkles className="h-3 w-3 text-amber-500" />
+          <span>Demo 1-chạm:</span>
+        </span>
+        {QUICK_DEMO_PROMPTS.map((item, idx) => (
+          <button
+            key={idx}
+            type="button"
+            onClick={() => {
+              setInputText(item.prompt);
+              textareaRef.current?.focus();
+            }}
+            className="shrink-0 px-2.5 py-1 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/90 hover:bg-blue-50 dark:hover:bg-blue-950/60 hover:border-blue-300 dark:hover:border-blue-700 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 text-[11px] font-medium transition active:scale-95 shadow-2xs"
+            title={`Bấm để tự điền câu hỏi ngắn: "${item.prompt}"`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
 
       {/* Main Composer Box */}
       <div
