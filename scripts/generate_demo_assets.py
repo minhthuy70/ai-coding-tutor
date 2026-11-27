@@ -9,7 +9,7 @@ img_dir = demo_dir / 'terminal_images'
 code_dir.mkdir(parents=True, exist_ok=True)
 img_dir.mkdir(parents=True, exist_ok=True)
 
-# 1. Tạo các file code mẫu
+# 1. Tạo các file code mẫu (100% PYTHON)
 samples = {
     '01_bubble_sort_inefficient.py': '''def bubble_sort(arr):
     n = len(arr)
@@ -53,22 +53,16 @@ for i in range(len(students) + 1):
     print(f'Học sinh {i + 1}: {students[i]}')
 ''',
 
-    '05_cpp_memory_leak.cpp': '''#include <iostream>
+    '05_unbound_local_scope_error.py': '''counter = 0
 
-void process_data() {
-    for (int i = 0; i < 10000; i++) {
-        // Lỗi: Cấp phát động bằng new nhưng không dùng delete[] để giải phóng
-        int* buffer = new int[500];
-        buffer[0] = i;
-    }
-}
+def increment():
+    # Lỗi kinh điển trong Python: UnboundLocalError
+    # Khi cố gắng thay đổi biến counter bên ngoài hàm mà thiếu từ khóa 'global'
+    counter += 1
+    return counter
 
-int main() {
-    std::cout << "Dang xu ly du lieu..." << std::endl;
-    process_data();
-    std::cout << "Xu ly xong!" << std::endl;
-    return 0;
-}
+print("Giá trị ban đầu:", counter)
+print("Sau khi tăng:", increment())
 ''',
 
     '06_sql_injection_concatenation.py': '''import sqlite3
@@ -76,7 +70,7 @@ int main() {
 def find_user_by_username(user_input):
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
-    # Lỗi bảo mật nghiêm trọng: Nối chuỗi trực tiếp vào câu lệnh SQL
+    # Lỗi bảo mật nghiêm trọng: Nối chuỗi trực tiếp vào câu lệnh SQL trong ứng dụng Python
     query = f"SELECT * FROM accounts WHERE username = '{user_input}'"
     print('Executing query:', query)
     cursor.execute(query)
@@ -90,9 +84,15 @@ result = find_user_by_username("admin' OR '1'='1")
 for name, content in samples.items():
     file_path = code_dir / name
     file_path.write_text(content.strip(), encoding='utf-8')
-    print('Created code file:', file_path)
+    print('Created Python code file:', file_path)
 
-# 2. Tạo các ảnh terminal lỗi chân thực
+# Xóa file C++ cũ nếu còn tồn tại
+old_cpp_file = code_dir / '05_cpp_memory_leak.cpp'
+if old_cpp_file.exists():
+    old_cpp_file.unlink()
+    print('Removed obsolete file:', old_cpp_file)
+
+# 2. Tạo các ảnh terminal lỗi Python chân thực (Vision OCR)
 def create_terminal_image(filename, header, code_snippet, error_msg, exit_code='1'):
     width = 750
     height = 220
@@ -104,7 +104,7 @@ def create_terminal_image(filename, header, code_snippet, error_msg, exit_code='
     d.ellipse([14, 11, 24, 21], fill=(239, 68, 68)) # red
     d.ellipse([32, 11, 42, 21], fill=(245, 158, 11)) # yellow
     d.ellipse([50, 11, 60, 21], fill=(16, 185, 129)) # green
-    d.text((width // 2 - 80, 9), 'Terminal - bash (python)', fill=(156, 163, 175))
+    d.text((width // 2 - 80, 9), 'Terminal - bash (python 3.11)', fill=(156, 163, 175))
     
     # Body text
     y = 48
@@ -120,7 +120,7 @@ def create_terminal_image(filename, header, code_snippet, error_msg, exit_code='
     
     out_path = img_dir / filename
     img.save(out_path)
-    print('Created terminal image:', out_path)
+    print('Created Python terminal image:', out_path)
 
 create_terminal_image(
     '01_terminal_index_error.png',
@@ -151,11 +151,16 @@ create_terminal_image(
 )
 
 create_terminal_image(
-    '05_terminal_cpp_segfault.png',
-    'Segmentation fault (core dumped) in ./binary_tree_search',
-    'Thread 1 "app" received signal SIGSEGV, Segmentation fault.',
-    '0x0000555555555189 in TreeNode::insert(int) () at tree.cpp:34',
-    exit_code='139'
+    '05_terminal_unboundlocal_error.png',
+    'Traceback (most recent call last): File "counter.py", line 6, in increment',
+    'counter += 1',
+    "UnboundLocalError: cannot access local variable 'counter' where it is not associated with a value"
 )
 
-print('All demo assets generated successfully in demo_samples/')
+# Xóa ảnh C++ cũ nếu còn tồn tại
+old_cpp_img = img_dir / '05_terminal_cpp_segfault.png'
+if old_cpp_img.exists():
+    old_cpp_img.unlink()
+    print('Removed obsolete image:', old_cpp_img)
+
+print('All 100% Python demo assets generated successfully in demo_samples/')

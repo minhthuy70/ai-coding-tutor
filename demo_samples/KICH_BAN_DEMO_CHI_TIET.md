@@ -48,7 +48,7 @@
 ---
 
 ### KỊCH BẢN 2: ĐÍNH KÈM FILE MÃ NGUỒN CÓ LỖI (CODE ATTACHMENT)
-*Mục tiêu: Chứng minh AI bóc tách file code (.py, .cpp), chỉ ra vị trí nghi vấn nhưng không viết hộ lời giải hoàn chỉnh.*
+*Mục tiêu: Chứng minh AI bóc tách file code Python (.py), chỉ ra vị trí nghi vấn nhưng không viết hộ lời giải hoàn chỉnh.*
 
 #### 🔹 Trường hợp 2.1: Lỗi duyệt mảng vượt biên (Off-by-one Error)
 * **Tệp đính kèm:** Kéo thả tệp `demo_samples/code_files/04_off_by_one_index.py` vào ô chat.
@@ -74,15 +74,19 @@
   1. Nhận diện lỗi kinh điển `target_list=[]` được khởi tạo đúng 1 lần khi định nghĩa hàm.
   2. Hướng dẫn tư duy: Thay vì dùng mutable object làm default, trong Python chuẩn PEP 8 lập trình viên thường dùng `target_list=None` rồi xử lý thế nào trong thân hàm?
 
-#### 🔹 Trường hợp 2.3: Rò rỉ bộ nhớ trong C++ (Memory Leak)
-* **Tệp đính kèm:** Kéo thả `demo_samples/code_files/05_cpp_memory_leak.cpp`.
+#### 🔹 Trường hợp 2.3: Lỗi phạm vi biến cục bộ vs toàn cục (LEGB Scope & UnboundLocalError)
+* **Tệp đính kèm:** Kéo thả `demo_samples/code_files/05_unbound_local_scope_error.py`.
 * **Nội dung nhập:**
   ```text
-  Chương trình C++ này của em chạy một lúc thì RAM ngốn rất nhiều, có nguy cơ rò rỉ bộ nhớ ở đâu ạ?
+  Thầy ơi, biến counter em đã khai báo ở đầu file rồi, tại sao khi gọi hàm increment() thì Python lại báo lỗi UnboundLocalError: cannot access local variable 'counter' ạ?
   ```
 * **Kỳ vọng AI phản hồi:**
-  1. Chỉ ra cặp lệnh `new[]` thiếu `delete[]` bên trong vòng lặp 10,000 lần.
-  2. Viện dẫn nguyên tắc quản lý tài nguyên RAII trong C++.
+  1. Nhận diện quy tắc phạm vi biến LEGB (Local, Enclosing, Global, Built-in) trong Python.
+  2. Phân tích: Do trong hàm có toán tử gán `counter += 1`, Python tự động coi `counter` là biến cục bộ (Local), nhưng biến này chưa được gán giá trị trước khi đọc.
+  3. Đặt câu hỏi gợi mở:
+     - *"Trong Python, từ khóa nào cho phép một hàm truy cập và cập nhật biến ở phạm vi toàn cục (Global)?"*
+     - *"Theo chuẩn thiết kế Clean Code, liệu việc truyền tham số và return kết quả (Pure Function) có an toàn hơn việc lạm dụng biến toàn cục không?"*
+  4. Trích dẫn RAG từ Giáo trình chuẩn Python về Scopes và Namespaces.
 
 ---
 
@@ -119,7 +123,17 @@
   ```
 * **Kỳ vọng AI phản hồi:**
   1. OCR nhận diện: `TypeError: can only concatenate str (not "int") to str`.
-  2. Gợi ý: Trong Python, ép kiểu dữ liệu tường minh bằng hàm gì trước khi nối chuỗi (hoặc dùng f-string)?
+  2. Gợi ý: Trong Python, ép kiểu dữ liệu tường minh bằng hàm `str()` như thế nào hoặc dùng f-string cú pháp ra sao?
+
+#### 🔹 Trường hợp 3.4: Ảnh chụp Terminal lỗi Phạm vi biến (UnboundLocalError)
+* **Tệp đính kèm:** Kéo thả ảnh `demo_samples/terminal_images/05_terminal_unboundlocal_error.png`.
+* **Nội dung nhập:**
+  ```text
+  Terminal báo lỗi UnboundLocalError như ảnh, thầy giải thích giúp em nhé!
+  ```
+* **Kỳ vọng AI phản hồi:**
+  1. OCR nhận diện: `UnboundLocalError: cannot access local variable 'counter' where it is not associated with a value`.
+  2. Giải thích cơ chế ràng buộc tên biến (Name Binding) trong hàm Python theo chuẩn tài liệu chính thống.
 
 ---
 

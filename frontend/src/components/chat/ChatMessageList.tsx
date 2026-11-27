@@ -32,7 +32,7 @@ const suggestions = [
     icon: HelpCircle,
     title: 'Phương pháp sư phạm Socratic',
     desc: 'Hỏi gợi mở từng bước, suy luận thuật toán mà không tiết lộ mã giải ngay lập tức',
-    query: 'Tôi đang bị lỗi Segmentation Fault khi thao tác với con trỏ trong C++, bạn có thể gợi ý nguyên nhân giúp tôi không?',
+    query: 'Tôi đang bị lỗi UnboundLocalError khi thay đổi biến trong hàm Python, bạn có thể gợi mở giúp tôi không?',
     gradient: 'from-blue-500 to-indigo-600',
     badge: 'Socratic Tutor',
   },
@@ -46,16 +46,16 @@ const suggestions = [
   },
   {
     icon: FileText,
-    title: 'Đính kèm tệp mã nguồn (.py, .cpp)',
+    title: 'Đính kèm tệp mã nguồn Python (.py)',
     desc: 'Kéo thả hoặc tải lên tệp mã nguồn đầy đủ để trợ giảng phân tích bối cảnh',
-    query: 'Tôi chuẩn bị gửi tệp mã nguồn để nhờ bạn xem giúp phần thuật toán.',
+    query: 'Tôi chuẩn bị gửi tệp mã nguồn Python để nhờ bạn xem giúp phần thuật toán.',
     gradient: 'from-emerald-500 to-teal-600',
     badge: 'Đa phương thức',
   },
   {
     icon: BookOpen,
     title: 'Tra cứu kiến thức chuẩn (RAG)',
-    desc: 'Hỏi đáp các khái niệm CTDL & Giải thuật, tham chiếu từ 5,200+ chunks tài liệu',
+    desc: 'Hỏi đáp các khái niệm CTDL & Giải thuật, tham chiếu từ 11,700+ chunks giáo trình Python',
     query: 'So sánh độ phức tạp thời gian và không gian giữa QuickSort và MergeSort trong trường hợp xấu nhất.',
     gradient: 'from-purple-500 to-violet-600',
     badge: 'RAG Knowledge',
@@ -63,9 +63,9 @@ const suggestions = [
 ];
 
 const TYPING_PHRASES = [
-  'Hỏi bất kỳ điều gì về lập trình & giải thuật...',
+  'Hỏi bất kỳ điều gì về lập trình Python & thuật toán...',
   'Dán ảnh chụp màn hình terminal lỗi để phân tích...',
-  'Kéo thả file code (.py, .cpp, .java) để trao đổi...',
+  'Kéo thả file code Python (.py) để trao đổi...',
   'Khám phá gợi mở theo phương pháp Socratic...',
 ];
 

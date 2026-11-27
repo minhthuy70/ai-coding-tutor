@@ -78,7 +78,7 @@ class TutorService:
         files_data: Optional[List[Dict[str, Any]]] = None
     ) -> Dict[str, Any]:
         """Tạo phản hồi chuẩn Socratic khi chạy offline hoặc chưa cấu hình Gemini API Key."""
-        lang_display = (detected_language or "lập trình").upper()
+        lang_display = (detected_language or "Python").upper()
         sections = []
 
         # Lời chào & ghi nhận

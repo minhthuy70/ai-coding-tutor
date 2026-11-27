@@ -88,18 +88,16 @@ export const InstructorKnowledgeModal: React.FC<InstructorKnowledgeModalProps> =
 
   const handleFileSelected = (file: File) => {
     const ext = file.name.split('.').pop()?.toLowerCase();
-    const allowed = ['pdf', 'txt', 'md', 'docx', 'py', 'cpp', 'c', 'java', 'js', 'json'];
+    const allowed = ['pdf', 'txt', 'md', 'docx', 'py', 'json'];
     if (!allowed.includes(ext || '')) {
-      alert(`Định dạng .${ext} chưa được hỗ trợ. Vui lòng chọn tệp .pdf, .txt, .md, .docx, .py, .cpp`);
+      alert(`Định dạng .${ext} chưa được hỗ trợ. Vui lòng chọn tệp .pdf, .txt, .md, .docx, .py`);
       return;
     }
     setSelectedFile(file);
     setUploadResult(null);
 
-    // Tự động đoán topic và language
-    if (ext === 'py') setLanguage('python');
-    else if (ext === 'cpp' || ext === 'c') setLanguage('cpp');
-    else if (ext === 'java') setLanguage('java');
+    // Mặc định ngôn ngữ tài liệu là Python
+    setLanguage('python');
   };
 
   const handleStartIngest = async () => {
@@ -230,7 +228,7 @@ export const InstructorKnowledgeModal: React.FC<InstructorKnowledgeModalProps> =
             <input
               ref={fileInputRef}
               type="file"
-              accept=".pdf,.txt,.md,.docx,.py,.cpp,.c,.java,.js"
+              accept=".pdf,.txt,.md,.docx,.py"
               className="hidden"
               onChange={(e) => {
                 if (e.target.files && e.target.files[0]) {
@@ -260,7 +258,7 @@ export const InstructorKnowledgeModal: React.FC<InstructorKnowledgeModalProps> =
                   Kéo thả tệp giáo trình vào đây hoặc <span className="text-emerald-600 dark:text-emerald-400">duyệt tệp</span>
                 </p>
                 <p className="text-[11px] text-slate-400 mt-1">
-                  Hỗ trợ: PDF (.pdf), Markdown (.md), Text (.txt), Word (.docx), Mã nguồn (.py, .cpp, .java)
+                  Hỗ trợ: PDF (.pdf), Markdown (.md), Text (.txt), Word (.docx), Mã nguồn Python (.py)
                 </p>
               </div>
             )}
@@ -277,10 +275,8 @@ export const InstructorKnowledgeModal: React.FC<InstructorKnowledgeModalProps> =
                 onChange={(e) => setLanguage(e.target.value)}
                 className="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-xs text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
               >
+                <option value="python">Ngôn ngữ Python (Chuẩn)</option>
                 <option value="general">Lý thuyết chung & Giải thuật (DSA)</option>
-                <option value="python">Ngôn ngữ Python</option>
-                <option value="cpp">Ngôn ngữ C / C++</option>
-                <option value="java">Ngôn ngữ Java</option>
               </select>
             </div>
 

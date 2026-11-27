@@ -36,8 +36,7 @@ const MAX_DOC_SIZE_BYTES = 20 * 1024 * 1024;   // 20MB
 const ALLOWED_IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'webp', 'bmp', 'gif'];
 const ALLOWED_DOC_EXTS = [
   'pdf', 'txt', 'md', 'docx', 'doc', 
-  'py', 'cpp', 'c', 'h', 'java', 'js', 'ts', 'jsx', 'tsx', 
-  'json', 'csv', 'sql', 'xml', 'yaml', 'yml'
+  'py', 'json', 'csv', 'sql', 'xml', 'yaml', 'yml'
 ];
 
 export const ChatInput: React.FC<ChatInputProps> = ({
@@ -216,7 +215,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
       };
 
       // Read text/code content for preview if it's a code/text document
-      if (!isImg && file.size < 2 * 1024 * 1024 && ['py', 'cpp', 'c', 'h', 'java', 'js', 'ts', 'jsx', 'tsx', 'txt', 'md', 'json', 'sql', 'xml', 'yaml', 'yml'].includes(ext)) {
+      if (!isImg && file.size < 2 * 1024 * 1024 && ['py', 'txt', 'md', 'json', 'sql', 'xml', 'yaml', 'yml'].includes(ext)) {
         const reader = new FileReader();
         reader.onload = () => {
           if (typeof reader.result === 'string') {
@@ -532,7 +531,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
             ref={fileInputRef}
             type="file"
             multiple
-            accept=".png,.jpg,.jpeg,.webp,.pdf,.txt,.md,.docx,.doc,.py,.cpp,.c,.h,.java,.js,.ts,.jsx,.tsx,.json,.csv,.sql"
+            accept=".png,.jpg,.jpeg,.webp,.pdf,.txt,.md,.docx,.doc,.py,.json,.csv,.sql"
             onChange={handleFileInputChange}
             className="hidden"
           />

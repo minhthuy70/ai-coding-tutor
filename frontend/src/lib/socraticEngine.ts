@@ -36,7 +36,7 @@ Phong cách của bạn:
 
   strict_reviewer: `Bạn là Chuyên gia Rà soát Mã nguồn Chuẩn mực (Clean Code & Security Reviewer).
 Phong cách của bạn:
-1. Đánh giá nghiêm ngặt theo chuẩn PEP 8 (với Python), Google C++ Style Guide hoặc chuẩn ECMAScript.
+1. Đánh giá nghiêm ngặt theo chuẩn PEP 8 (Python Clean Code).
 2. Phát hiện Code Smells: hàm quá dài, biến toàn cục, magic numbers, catch Exception quá rộng.
 3. Rà soát bảo mật: SQL Injection, tràn bộ đệm, rò rỉ bộ nhớ, hardcoded secrets.
 4. Đưa ra phiên bản Refactored Code rõ ràng kèm giải thích lý do cải tiến.`,
@@ -176,7 +176,7 @@ Chào bạn! Đây là bài toán kinh điển kiểm tra tư duy tối ưu cấ
 ---
 
 #### 2. 🔍 Gợi ý thuật toán (Two Sum với Hash Map)
-Thay vì tìm kiếm tuyến tính, ta sử dụng một bảng băm (Dictionary trong Python hoặc \`unordered_map\` trong C++):
+Thay vì tìm kiếm tuyến tính, ta sử dụng một bảng băm (Dictionary trong Python):
 * **Key**: Giá trị của phần tử \`num\`.
 * **Value**: Chỉ số \`index\` của phần tử đó trong mảng.
 * Khi duyệt qua từng số, ta tính \`complement = target - num\`:
@@ -213,7 +213,7 @@ print("Kết quả:", two_sum([2, 7, 11, 15], 9)) # Output: [0, 1]
 > ❓ **Thử thách tiếp theo:** Nếu mảng đầu vào **đã được sắp xếp tăng dần**, bạn có thể giải bài này với bộ nhớ phụ $O(1)$ bằng kỹ thuật **Hai con trỏ (Two Pointers)** không?`,
       followUps: [
         'Hướng dẫn giải Two Sum bằng kỹ thuật Two Pointers O(1) bộ nhớ',
-        'Cách viết bài toán này bằng ngôn ngữ C++ với std::unordered_map',
+        'Tối ưu tìm kiếm bằng Set hoặc defaultdict trong Python',
         'Phân tích trường hợp xấu nhất Worst-Case của Hash Table khi bị xung đột hash'
       ]
     };
@@ -277,7 +277,7 @@ print(is_valid_parentheses("((("))    # False
 * **Bộ nhớ (Space)**: $O(n)$ trong trường hợp xấu nhất toàn dấu mở ngoặc (ví dụ \`"(((((("\`).`,
       followUps: [
         'Cần xử lý thế nào nếu chuỗi có thêm ký tự chữ cái và toán tử?',
-        'Cách cài đặt bài toán này bằng Stack trong C++ (std::stack)',
+        'Cách sử dụng collections.deque làm Stack hiệu năng cao trong Python',
         'Gợi ý cách mở rộng cho bài toán tìm chuỗi ngoặc hợp lệ dài nhất (Longest Valid Parentheses)'
       ]
     };
@@ -328,62 +328,73 @@ print("Mảng sau sắp xếp:", sorted_arr)
 * **Sắp xếp mảng nhỏ**: Khi kích thước mảng con $\\le 16$, chuyển sang **Insertion Sort** để giảm chi phí gọi hàm đệ quy.`,
       followUps: [
         'Phân tích chi tiết trường hợp xấu nhất O(n²) của QuickSort',
-        'Cách cài đặt MergeSort với mảng phụ trong C++',
+        'Phân tích tính ổn định (Stability) của Timsort trong Python',
         'Tại sao Python sử dụng thuật toán Timsort thay vì QuickSort thuần túy?'
       ]
     };
   }
 
-  // 4. Segmentation Fault / Memory Leak / C++ Pointers
-  if (p.includes('segmentation fault') || p.includes('segfault') || p.includes('memory leak') || p.includes('con trỏ') || p.includes('pointer')) {
+  // 4. Scope / UnboundLocalError / Mutable Default Argument / Python Scoping
+  if (p.includes('unboundlocal') || p.includes('scope') || p.includes('phạm vi biến') || p.includes('global') || p.includes('nonlocal') || p.includes('mutable default') || p.includes('biến toàn cục')) {
     return {
-      modelBadge: `${selectedModelName} · Debug & Security`,
-      content: `### 🚨 Chẩn đoán Lỗi: Segmentation Fault & Quản lý Bộ nhớ C/C++
+      modelBadge: `${selectedModelName} · Python Scope & Debug`,
+      content: `### 🚨 Chẩn đoán Lỗi: Phạm vi Biến (LEGB Scope) & Tham Chiếu trong Python
 
-Lỗi **Segmentation Fault (core dumped)** xảy ra khi chương trình cố gắng truy cập vào vùng bộ nhớ mà hệ điều hành không cho phép.
-
----
-
-#### 1. 🔍 4 Nguyên nhân phổ biến nhất:
-1. **Giải tham chiếu con trỏ NULL (Null Pointer Dereference)**:
-   \`\`\`cpp
-   int* ptr = nullptr;
-   *ptr = 10; // 💥 CRASH ngay lập tức!
-   \`\`\`
-2. **Truy cập mảng vượt chỉ số (Out-of-bounds Array Access)**:
-   \`\`\`cpp
-   int arr[5];
-   arr[100] = 42; // Ghi đè vào vùng nhớ khác!
-   \`\`\`
-3. **Con trỏ lơ lửng (Dangling Pointer)**: Sử dụng vùng nhớ sau khi đã gọi \`free()\` hoặc \`delete\`.
-4. **Tràn ngăn xếp (Stack Overflow)**: Đệ quy vô hạn hoặc khai báo mảng cục bộ quá lớn trên Stack (\`int arr[10000000];\`).
+Lỗi **UnboundLocalError: cannot access local variable where it is not associated with a value** là một trong những cạm bẫy kinh điển nhất của ngôn ngữ Python.
 
 ---
 
-#### 2. 🛠️ Quy trình Debug từng bước:
-1. **Biên dịch kèm cờ Debug & AddressSanitizer**:
-   \`\`\`bash
-   g++ -g -fsanitize=address main.cpp -o main
-   ./main
-   \`\`\`
-   *(Trình biên dịch sẽ in ra chính xác dòng code gây ra lỗi cùng biểu đồ bộ nhớ)*
-2. **Sử dụng GDB để xác định vị trí Crash**:
-   \`\`\`bash
-   gdb ./main
-   (gdb) run
-   (gdb) backtrace # Lệnh bt để xem call stack tại điểm crash
-   \`\`\`
+#### 1. 🔍 Nguyên nhân cốt lõi (Quy tắc LEGB):
+Python phân giải tên biến theo thứ tự ưu tiên: **L**ocal $\\rightarrow$ **E**nclosing $\\rightarrow$ **G**lobal $\\rightarrow$ **B**uilt-in.
+
+* Khi trong thân hàm xuất hiện **toán tử gán** (như \`x = ...\` hoặc \`x += 1\`), Python tự động coi \`x\` là **biến cục bộ (Local)** trong toàn bộ hàm đó.
+* Nếu bạn đọc giá trị của \`x\` trước khi thực hiện phép gán, Python sẽ quăng lỗi \`UnboundLocalError\` vì biến cục bộ chưa được cấp phát giá trị:
+\`\`\`python
+counter = 0
+
+def increment():
+    counter += 1  # ❌ UnboundLocalError! Python coi counter là Local nhưng chưa có giá trị
+    return counter
+\`\`\`
 
 ---
 
-#### 3. 🛡️ Cách phòng ngừa hiện đại (Modern C++):
-* Thay vì con trỏ thô (\`raw pointer\`) và \`malloc/free\`, luôn ưu tiên:
-  * \`std::vector\` thay cho mảng tĩnh C.
-  * \`std::unique_ptr\` hoặc \`std::shared_ptr\` để bộ nhớ tự giải phóng theo nguyên lý **RAII**.`,
+#### 2. 🛠️ Cách khắc phục chuẩn mực (Clean Code Python):
+
+1. **Cách 1: Tránh biến toàn cục bằng Pure Function (Khuyến nghị chuẩn Clean Code)**:
+\`\`\`python
+def increment(count: int) -> int:
+    return count + 1  # ✅ Hàm thuần khiết, dễ viết Unit Test và không có side-effects
+\`\`\`
+
+2. **Cách 2: Sử dụng từ khóa \`global\` (Khi bắt buộc phải thay đổi trạng thái module)**:
+\`\`\`python
+counter = 0
+
+def increment():
+    global counter  # ✅ Khai báo rõ ràng muốn sửa biến Global
+    counter += 1
+    return counter
+\`\`\`
+
+3. **Cách 3: Đóng gói vào Class / Dataclass (OOP Python)**:
+\`\`\`python
+class Counter:
+    def __init__(self):
+        self.value = 0
+    def increment(self):
+        self.value += 1
+\`\`\`
+
+---
+
+#### 3. 🛡️ Cạm bẫy tương tự cần lưu ý: Mutable Default Argument
+* Tránh khai báo: \`def append_item(val, target_list=[]):\`
+* Chuẩn PEP 8: \`def append_item(val, target_list=None):\` và kiểm tra \`if target_list is None: target_list = []\`.`,
       followUps: [
-        'Hướng dẫn cài đặt và sử dụng công cụ kiểm tra rò rỉ Valgrind',
-        'Cách chuyển đổi con trỏ thô C sang std::unique_ptr trong C++11',
-        'Khác nhau giữa cấp phát trên Stack và Heap'
+        'Quy tắc phân giải biến LEGB (Local, Enclosing, Global, Built-in) chi tiết',
+        'Sự khác biệt giữa từ khóa global và nonlocal trong Python',
+        'Phân biệt phép so sánh "is" (so sánh địa chỉ bộ nhớ id) và "==" (so sánh giá trị)'
       ]
     };
   }
@@ -403,14 +414,16 @@ Tìm kiếm nhị phân là thuật toán kinh điển giúp giảm số phép s
 
 ---
 
-#### 2. ⚠️ Lỗi tràn số nguyên kinh điển (Integer Overflow Bug):
-Nhiều lập trình viên viết:
-\`\`\`cpp
-int mid = (left + right) / 2; // ❌ CÓ THỂ TRÀN SỐ NGUYÊN nếu left + right > 2^31 - 1
+#### 2. ⚠️ Lỗi phép chia thực vs chia nguyên trong Python:
+Nhiều bạn mới học Python thường quen viết toán tử \`/\`:
+\`\`\`python
+mid = (left + right) / 2  # ❌ TRẢ VỀ KIỂU FLOAT (ví dụ 2.5)
+# Dẫn đến lỗi: TypeError: list indices must be integers or slices, not float!
 \`\`\`
-Công thức chuẩn mực an toàn:
-\`\`\`cpp
-int mid = left + (right - left) / 2; // ✅ Luôn an toàn!
+Công thức chuẩn mực trong Python:
+\`\`\`python
+mid = (left + right) // 2  # ✅ Phép chia nguyên (Floor Division)
+# Hoặc phòng ngừa tràn số lý thuyết: mid = left + (right - left) // 2
 \`\`\`
 
 ---
@@ -508,7 +521,7 @@ for s in shapes:
       followUps: [
         'Giải thích chi tiết 5 nguyên lý SOLID qua ví dụ code',
         'Cách sử dụng Dataclasses trong Python 3.7+ để tối giản boilerplate code',
-        'Phân biệt Abstract Class và Interface trong Java / C++'
+        'Module abc và decorator @abstractmethod để xây dựng Interface trong Python'
       ]
     };
   }

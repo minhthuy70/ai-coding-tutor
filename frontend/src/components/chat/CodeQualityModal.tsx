@@ -382,7 +382,7 @@ export const CodeQualityModal: React.FC<CodeQualityModalProps> = ({
         {/* Footer Actions */}
         <div className="px-6 py-4 border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
           <span className="text-xs text-slate-400">
-            Dựa trên chuẩn PEP 8 (Python), Google Style Guide (C++) và ESLint Clean Code
+            Dựa trên chuẩn PEP 8 (Python) và Clean Code Architecture
           </span>
 
           <div className="flex items-center gap-2.5 w-full sm:w-auto">

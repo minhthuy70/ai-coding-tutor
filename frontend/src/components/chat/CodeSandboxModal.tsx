@@ -572,14 +572,7 @@ Thực thi thành công đoạn mã.`);
               onChange={(e) => setLanguage(e.target.value)}
               className="rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             >
-              <option value="python">Python 3.11</option>
-              <option value="javascript">JavaScript (ES6+)</option>
-              <option value="typescript">TypeScript</option>
-              <option value="cpp">C++ 20 (GCC)</option>
-              <option value="c">C (Clang)</option>
-              <option value="java">Java 17 OpenJDK</option>
-              <option value="sql">SQL Query</option>
-              <option value="html">HTML5 / Web</option>
+              <option value="python">Python 3.11 (Standard Environment)</option>
             </select>
 
             <button

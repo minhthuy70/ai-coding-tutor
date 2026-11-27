@@ -220,11 +220,11 @@ binary_search()`,
       { id: 2, name: 'Test 2 (Không tìm thấy)', input: '2\n-1 0 3 5 9 12', expectedOutput: '-1' },
       { id: 3, name: 'Test 3 (Phần tử đầu tiên)', input: '-1\n-1 0 3 5 9 12', expectedOutput: '0' }
     ],
-    hintPrompt: 'Hãy hướng dẫn tôi tư duy Binary Search (Chia để trị). Tại sao mỗi lần so sánh ta lại có thể loại bỏ được một nửa không gian tìm kiếm? Cách tính mid = (left + right) // 2 có nguy cơ tràn số trong C++ không?',
+    hintPrompt: 'Hãy hướng dẫn tôi tư duy Binary Search (Chia để trị). Tại sao mỗi lần so sánh ta lại có thể loại bỏ được một nửa không gian tìm kiếm? Trong Python ta nên dùng phép chia // hay / để tính chỉ số mid?',
     hints: {
       level1: 'Mảng đã được sắp xếp tăng dần! Nếu ta so sánh phần tử cần tìm `target` với phần tử nằm chính giữa `nums[mid]`, ta có thể chắc chắn loại bỏ 50% số phần tử còn lại mà không cần kiểm tra từng số.',
       level2: 'Dùng hai con trỏ `left = 0, right = len(nums) - 1`:\n- Trong khi `left <= right`: tính `mid = (left + right) // 2`.\n- Nếu `nums[mid] == target`: in ra `mid` và kết thúc.\n- Nếu `nums[mid] < target`: thu hẹp tìm kiếm sang nửa phải `left = mid + 1`.\n- Ngược lại: thu hẹp sang nửa trái `right = mid - 1`.',
-      level3: 'Độ phức tạp: O(log n) thời gian, O(1) bộ nhớ. Lưu ý cho C++/Java: phép cộng `(left + right)` có nguy cơ Integer Overflow nếu giá trị lớn; giải pháp chuẩn là `mid = left + (right - left) / 2`.'
+      level3: 'Độ phức tạp: O(log n) thời gian, O(1) bộ nhớ. Lưu ý trong Python: luôn sử dụng phép chia nguyên `//` (ví dụ `mid = (left + right) // 2`). Nếu dùng phép chia `/`, kết quả sẽ là số thực (float) dẫn đến lỗi TypeError: list indices must be integers.'
     }
   },
   {

@@ -258,10 +258,8 @@ class RAGService:
             logger.warning("Cả 2 ChromaDB collections đều chưa sẵn sàng.")
             return []
 
-        # 1. Tự động nhận diện ngôn ngữ nếu người dùng chưa chỉ định rõ
-        effective_language = language
-        if not effective_language:
-            effective_language = self.auto_detect_language(query)
+        # 1. Tự động nhận diện ngôn ngữ nếu người dùng chưa chỉ định rõ (mặc định ưu tiên Python)
+        effective_language = language or self.auto_detect_language(query) or "python"
 
         # 2. Chuẩn bị Vector truy vấn (kiểm tra query gốc và query mở rộng)
         q_vectors = query_vectors or self._match_cached_vector(query)

@@ -67,10 +67,10 @@ const TEMPLATES: PromptTemplate[] = [
   {
     id: 'debug-2',
     category: 'debug',
-    title: 'Bắt lỗi Segmentation Fault & Dangling Pointer C++',
+    title: 'Bắt lỗi Phạm vi Biến (LEGB Scope & UnboundLocalError)',
     icon: 'shield',
-    description: 'Rà soát lỗi con trỏ, mảng vượt chỉ số và cấp phát động.',
-    prompt: 'Tôi đang viết code C/C++ và bị lỗi Segmentation Fault (Core Dumped). Hãy kiểm tra giúp tôi các lỗi truy cập mảng ngoài phạm vi (Out of bounds), con trỏ rác (Dangling pointer) hoặc vùng nhớ chưa malloc/new.'
+    description: 'Rà soát phạm vi biến cục bộ (Local), toàn cục (Global) và từ khóa global/nonlocal.',
+    prompt: 'Tôi đang viết code Python và gặp lỗi UnboundLocalError: cannot access local variable where it is not associated with a value. Hãy phân tích giúp tôi quy tắc LEGB Scope trong Python và hướng dẫn cách khắc phục theo hướng Clean Code.'
   },
   {
     id: 'test-1',
@@ -78,15 +78,15 @@ const TEMPLATES: PromptTemplate[] = [
     title: 'Sinh 5 bộ Test Cases hiểm & Edge Cases',
     icon: 'check',
     description: 'Kiểm thử mảng rỗng, giá trị âm, số cực đại, dãy đối xứng.',
-    prompt: 'Hãy tạo cho tôi 5 bộ test cases (gồm Input và Expected Output) bao gồm cả trường hợp thông thường và các trường hợp biên hiểm hóc (Edge cases: n = 0, mảng rỗng, số nguyên âm, số cực đại INT_MAX) cho bài toán sau:'
+    prompt: 'Hãy tạo cho tôi 5 bộ test cases (gồm Input và Expected Output) bao gồm cả trường hợp thông thường và các trường hợp biên hiểm hóc (Edge cases: n = 0, mảng rỗng, số nguyên âm, số cực đại float(\'inf\')) cho bài toán sau:'
   },
   {
     id: 'clean-1',
     category: 'cleancode',
-    title: 'Rà soát chuẩn Clean Code & PEP 8 / Google Style',
+    title: 'Rà soát chuẩn Clean Code & PEP 8 Python',
     icon: 'check',
     description: 'Chuẩn hóa đặt tên biến, tách hàm con và loại bỏ code smells.',
-    prompt: 'Hãy review đoạn code này theo nguyên tắc Clean Code và chuẩn phong cách (PEP 8 cho Python / Google Style cho C++). Gợi ý cách đặt tên biến rõ nghĩa và tách hàm con nhỏ gọn hơn.'
+    prompt: 'Hãy review đoạn code này theo nguyên tắc Clean Code và chuẩn phong cách PEP 8 cho Python. Gợi ý cách đặt tên biến rõ nghĩa và tách hàm con nhỏ gọn hơn.'
   }
 ];
 

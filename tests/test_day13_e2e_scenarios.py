@@ -4,7 +4,7 @@ Author: AI Coding Tutor Team
 Description:
     Bộ kiểm thử tích hợp toàn diện 30 kịch bản thực tế của Ngày 13:
     - 10 kịch bản câu hỏi lý thuyết / thuật toán / cú pháp (Text Only)
-    - 10 kịch bản câu hỏi kết hợp tệp mã nguồn (.py, .cpp, .sql)
+    - 10 kịch bản câu hỏi kết hợp tệp mã nguồn (.py, .sql)
     - 10 kịch bản câu hỏi kết hợp ảnh chụp màn hình lỗi Terminal (Vision OCR)
 """
 
@@ -58,9 +58,9 @@ class TestDay13EndToEndScenarios:
         assert data["status"] == "success"
         assert len(data["reply"]) > 50
 
-    def test_t02_cpp_pointer_memory(self):
-        """Kịch bản T02: Quản lý bộ nhớ con trỏ C++."""
-        resp = client.post("/api/tutor/multimodal-chat", data={"prompt": "Làm sao để tránh dangling pointer và memory leak khi quản lý con trỏ trong C++?", "language": "cpp"})
+    def test_t02_python_legb_scope(self):
+        """Kịch bản T02: Phạm vi biến LEGB trong Python."""
+        resp = client.post("/api/tutor/multimodal-chat", data={"prompt": "Quy tắc phạm vi biến LEGB (Local, Enclosing, Global, Built-in) trong Python hoạt động như thế nào?", "language": "python"})
         assert resp.status_code == 200
         assert resp.json()["status"] == "success"
 
@@ -138,13 +138,13 @@ class TestDay13EndToEndScenarios:
         assert resp.status_code == 200
         assert resp.json()["status"] == "success"
 
-    def test_f03_cpp_memory_leak(self):
-        """Kịch bản F03: Rò rỉ bộ nhớ C++ trong vòng lặp."""
-        code = b"#include <iostream>\nint main() {\n    for (int i = 0; i < 1000; i++) {\n        int* arr = new int[500];\n        // do something\n    }\n    return 0;\n}\n"
+    def test_f03_unbound_local_error(self):
+        """Kịch bản F03: Lỗi UnboundLocalError trong hàm Python."""
+        code = b"counter = 0\ndef increment():\n    counter += 1\n    return counter\nprint(increment())\n"
         resp = client.post(
             "/api/tutor/multimodal-chat",
-            data={"prompt": "Chương trình C++ này có nguy cơ rò rỉ bộ nhớ (memory leak) ở đâu?", "language": "cpp"},
-            files=[("code_files", ("leak.cpp", code, "text/x-c++"))]
+            data={"prompt": "Tại sao biến counter khai báo ở đầu file nhưng trong hàm increment() lại báo lỗi UnboundLocalError?", "language": "python"},
+            files=[("code_files", ("counter.py", code, "text/x-python"))]
         )
         assert resp.status_code == 200
         assert resp.json()["status"] == "success"
@@ -296,12 +296,12 @@ class TestDay13EndToEndScenarios:
         assert resp.status_code == 200
         assert resp.json()["status"] == "success"
 
-    def test_i07_terminal_segmentation_fault(self):
-        """Kịch bản I07: Ảnh chụp terminal lỗi Segmentation fault C++."""
-        img_bytes = create_synthetic_terminal_image("Runtime Crash Detected:", "./my_program", "Segmentation fault (core dumped)")
+    def test_i07_terminal_unbound_local_error(self):
+        """Kịch bản I07: Ảnh chụp terminal lỗi UnboundLocalError."""
+        img_bytes = create_synthetic_terminal_image("Traceback (most recent call last):", "counter += 1", "UnboundLocalError: cannot access local variable 'counter'")
         resp = client.post(
             "/api/tutor/multimodal-chat",
-            data={"prompt": "Chương trình C++ của em bị crash như hình", "language": "cpp"},
+            data={"prompt": "Terminal báo lỗi UnboundLocalError như ảnh, chỉ giúp em với", "language": "python"},
             files=[("image_files", ("terminal_err07.png", img_bytes, "image/png"))]
         )
         assert resp.status_code == 200
