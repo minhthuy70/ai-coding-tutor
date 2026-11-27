@@ -19,6 +19,20 @@
 
 ---
 
+## 📚 BẢNG DEMO TÍNH NĂNG NẠP GIÁO TRÌNH (GV INGESTION)
+
+Thư mục lưu sẵn 5 file: `demo_samples/instructor_curriculums/`
+
+| # | Định dạng file | Tên file giáo trình chuẩn | Thao tác nạp trên web | Câu hỏi ngắn kiểm chứng ngay (Dưới 8 từ) | Kết quả AI trích xuất |
+| :---: | :---: | :--- | :--- | :--- | :--- |
+| **1** | 📄 **PDF** | `01_giao_trinh_quy_hoach_dong_dp.pdf` | Bấm nút **"Nạp giáo trình (GV)"** $\rightarrow$ Kéo file `.pdf` vào $\rightarrow$ Bấm Nạp | 👉 `Quy hoạch động trong Python là gì?` | AI trích dẫn đúng bài giảng PDF: Balo 0/1, Memoization & Tabulation |
+| **2** | 📝 **DOCX** | `02_bai_giang_oop_ke_thua_da_hinh.docx` | Bấm nút **"Nạp giáo trình (GV)"** $\rightarrow$ Kéo file `.docx` vào $\rightarrow$ Bấm Nạp | 👉 `Kế thừa trong OOP Python hoạt động sao?` | AI trích dẫn đúng bảng Word: Quan hệ IS-A, abstractmethod & super() |
+| **3** | 📑 **TXT** | `03_chuyen_de_xu_ly_ngoai_le_pep8.txt` | Bấm nút **"Nạp giáo trình (GV)"** $\rightarrow$ Kéo file `.txt` vào $\rightarrow$ Bấm Nạp | 👉 `Khối try except finally chạy thế nào?` | AI trích dẫn đúng quy tắc PEP 8 và Context Manager `with` |
+| **4** | 📋 **MD** | `04_cau_truc_du_lieu_heap_priority_queue.md` | Bấm nút **"Nạp giáo trình (GV)"** $\rightarrow$ Kéo file `.md` vào $\rightarrow$ Bấm Nạp | 👉 `Cấu trúc Heap trong Python dùng module nào?` | AI trích dẫn bảng Big-O và module `heapq` từ file Markdown |
+| **5** | 🐍 **PY** | `05_thuat_toan_do_thi_bfs_dfs.py` | Bấm nút **"Nạp giáo trình (GV)"** $\rightarrow$ Kéo file `.py` vào $\rightarrow$ Bấm Nạp | 👉 `BFS và DFS duyệt đồ thị khác nhau sao?` | AI trích xuất module mã nguồn: `collections.deque` FIFO vs Call Stack |
+
+---
+
 ## 🎯 3 BƯỚC THAO TÁC THẦN TỐC KHI TRÌNH DIỄN:
 
 1. **Kéo thả** file (nếu có) vào ô chat.

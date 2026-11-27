@@ -1,0 +1,22 @@
+CHUYÊN ĐỀ: KỸ THUẬT XỬ LÝ NGOẠI LỆ (EXCEPTION HANDLING) & CLEAN CODE PEP 8
+
+1. NGUYÊN TẮC HOẠT ĐỘNG CỦA KHỐI TRY - EXCEPT - ELSE - FINALLY:
+Trong Python, luồng xử lý ngoại lệ được điều khiển bởi 4 mệnh đề chính:
+- try: Chứa đoạn mã có nguy cơ phát sinh lỗi trong quá trình thực thi.
+- except: Khối lệnh xử lý khi ngoại lệ xuất hiện. Phải bắt đúng loại ngoại lệ cụ thể (ví dụ ValueError, KeyError, IndexError), tuyệt đối tránh 'except:' trần trụi.
+- else: Chỉ thực thi khi khối try chạy thành công mà KHÔNG phát sinh bất kỳ ngoại lệ nào.
+- finally: Luôn luôn được thực thi trong mọi tình huống (kể cả khi có lệnh return hoặc lỗi chưa được xử lý), thường dùng để giải phóng tài nguyên.
+
+2. CẠM BẪY PHỔ BIẾN CẦN TRÁNH TRONG PYTHON:
+a. Bắt ngoại lệ quá rộng (Broad Exception Catching):
+   Viết 'except Exception as e:' mà không kiểm tra loại lỗi sẽ vô tình nuốt cả lỗi cú pháp, phím ngắt Ctrl+C (KeyboardInterrupt) hoặc lỗi logic bộ nhớ.
+b. Thiếu ngữ cảnh lỗi:
+   Khi bọc lại lỗi, hãy sử dụng cú pháp 'raise CustomError(...) from original_err' để giữ lại chuỗi Traceback nguyên bản.
+
+3. QUẢN LÝ TÀI NGUYÊN BẰNG CONTEXT MANAGER (WITH STATEMENT):
+Thay vì tự tay đóng tệp hoặc giải phóng kết nối trong khối finally, chuẩn PEP 8 khuyến khích sử dụng câu lệnh 'with':
+```python
+with open('data.json', 'r', encoding='utf-8') as file:
+    content = file.read()
+# Tệp tin được tự động đóng ngay cả khi có Exception xảy ra nhờ phương thức __exit__.
+```

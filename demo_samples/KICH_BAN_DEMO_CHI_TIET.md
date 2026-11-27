@@ -162,6 +162,31 @@
 
 ---
 
+### KỊCH BẢN 5: NẠP GIÁO TRÌNH MỚI CHO GIẢNG VIÊN (INSTRUCTOR INGESTION)
+*Mục tiêu: Chứng minh tính năng động (Dynamic Knowledge Base): Giảng viên có thể nạp thêm tài liệu bài giảng mới (.pdf, .docx, .txt, .md, .py) và AI cập nhật tri thức ngay lập tức để dạy cho sinh viên.*
+
+* **Tài nguyên mẫu có sẵn tại:** `demo_samples/instructor_curriculums/`
+  1. `01_giao_trinh_quy_hoach_dong_dp.pdf` (Tài liệu PDF về Quy hoạch động)
+  2. `02_bai_giang_oop_ke_thua_da_hinh.docx` (Tài liệu Word về OOP Kế thừa & Đa hình)
+  3. `03_chuyen_de_xu_ly_ngoai_le_pep8.txt` (Tài liệu Text về Ngoại lệ & Context Manager)
+  4. `04_cau_truc_du_lieu_heap_priority_queue.md` (Tài liệu Markdown về Cây Heap)
+  5. `05_thuat_toan_do_thi_bfs_dfs.py` (Mã nguồn Python giải thuật BFS & DFS)
+
+* **Các bước thao tác trực tiếp:**
+  1. Nhìn lên góc trên bên phải màn hình, bấm nút **"Nạp giáo trình (GV)"** (nút màu xanh lá có biểu tượng cuốn sách).
+  2. Kéo thả file `01_giao_trinh_quy_hoach_dong_dp.pdf` (hoặc `02_bai_giang_oop_ke_thua_da_hinh.docx`) vào khung nạp.
+  3. Bấm nút **"Bắt đầu nạp tri thức"**. Hệ thống chạy pipeline bóc tách, cắt chunk, embedding và lưu vào ChromaDB trong vòng 1 giây.
+  4. Màn hình báo thành công: *Đã bổ sung các đoạn tri thức mới vào kho tri thức RAG*.
+  5. Đóng modal, quay lại ô Chat và nhập câu hỏi kiểm chứng:
+     ```text
+     Quy hoạch động trong Python là gì?
+     ```
+* **Kỳ vọng AI phản hồi:**
+  - AI giải thích nguyên lý chia bài toán con, Memoization và Tabulation.
+  - Khối **RAG Evidence** hiển thị trực tiếp dẫn chứng trích từ file vừa nạp: `01_giao_trinh_quy_hoach_dong_dp.pdf` (Độ khớp > 75%)!
+
+---
+
 ## 💡 MẸO TRÌNH DIỄN KHI DEMO TRƯỚC HỘI ĐỒNG
 
 1. **Nhấn mạnh tính năng RAG Grounding:**
