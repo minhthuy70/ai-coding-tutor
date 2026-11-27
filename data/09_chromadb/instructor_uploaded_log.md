@@ -456,3 +456,89 @@ Do phuc tap thoi gian: O(n * W).
 
 ---
 
+### Dòng tri thức mới: `inst_01_giao_trinh_quy_hoach_dong_d_1795722803_000`
+
+- **Tệp nguồn (Filename)**: `01_giao_trinh_quy_hoach_dong_dp.pdf`
+- **Chủ đề (Topic)**: `Giáo trình chuẩn`
+- **Collection RAG**: `jina_code` (Ngôn ngữ: `python`)
+- **Thời gian nạp**: `2026-11-27T02:53:23.072999` (Chunk 1/2)
+
+**Nội dung đoạn trích đã chunk & vector hóa:**
+```markdown
+GIAO TRINH CHUYEN DE: THUAT TOAN QUY HOACH DONG (DYNAMIC PROGRAMMING)
+Bo mon: Khoa hoc May tinh & Ky thuat Lap trinh Python
+1. NGUYEN LY COT LOI CUA QUY HOACH DONG
+Quy hoach dong (Dynamic Programming - DP) la mot ky thuat thiet ke giai thuat
+dung de giai quyet cac bai toan toi uu bang cach phan ra bai toan lon thanh cac
+bai toan con nho hon. Hai dieu kien tien quyet de ap dung Quy hoach dong:
+a. Cau truc con toi uu (Optimal Substructure):
+   Nghiem toi uu cua bai toan lon duoc tao thanh tu nghiem toi uu cua cac bai toan con. b. Cac bai toan con goi nhau (Overlapping Subproblems):
+   Qua trinh de quy goi di goi lai cung mot bai toan con nhieu lan. Thay vi tinh lai,
+   ta luu ket qua vao bang nho. 2. HAI PHUONG PHAP TIEP CAN TRONG PYTHON:
+- Top-Down voi Memoization (Ghi nho de quy):
+  Khoi tao mang hoac dictionary luu tru ket qua cua cac trang thai da giai. - Bottom-Up voi Tabulation (Lap bang quy hoach dong):
+  Khoi tao bang dp[] tu trang thai co so va lap tuan tu den trang thai ket qua dp[n]. 3. BAI TOAN KINH DIEN: BALO 0/1 (0/1 KNAPSACK PROBLEM)
+Cho n do vat co trong luong w[i] va gia tri v[i]. Balo co suc chua toi da W.
+```
+
+---
+
+### Dòng tri thức mới: `inst_01_giao_trinh_quy_hoach_dong_d_1795722803_001`
+
+- **Tệp nguồn (Filename)**: `01_giao_trinh_quy_hoach_dong_dp.pdf`
+- **Chủ đề (Topic)**: `Giáo trình chuẩn`
+- **Collection RAG**: `jina_code` (Ngôn ngữ: `python`)
+- **Thời gian nạp**: `2026-11-27T02:53:23.072999` (Chunk 2/2)
+
+**Nội dung đoạn trích đã chunk & vector hóa:**
+```markdown
+Hay chon tap do vat sao cho tong gia tri la lon nhat ma khong vuot qua W. Cong thuc truy hoi:
+dp[i][j] = max(dp[i-1][j], dp[i-1][j - w[i]] + v[i])  (neu j >= w[i])
+Do phuc tap thoi gian: O(n * W).
+```
+
+---
+
+### Dòng tri thức mới: `inst_01_giao_trinh_quy_hoach_dong_d_1795722846_000`
+
+- **Tệp nguồn (Filename)**: `01_giao_trinh_quy_hoach_dong_dp.pdf`
+- **Chủ đề (Topic)**: `Giáo trình chuẩn`
+- **Collection RAG**: `jina_code` (Ngôn ngữ: `python`)
+- **Thời gian nạp**: `2026-11-27T02:54:06.806189` (Chunk 1/2)
+
+**Nội dung đoạn trích đã chunk & vector hóa:**
+```markdown
+GIAO TRINH CHUYEN DE: THUAT TOAN QUY HOACH DONG (DYNAMIC PROGRAMMING)
+Bo mon: Khoa hoc May tinh & Ky thuat Lap trinh Python
+1. NGUYEN LY COT LOI CUA QUY HOACH DONG
+Quy hoach dong (Dynamic Programming - DP) la mot ky thuat thiet ke giai thuat
+dung de giai quyet cac bai toan toi uu bang cach phan ra bai toan lon thanh cac
+bai toan con nho hon. Hai dieu kien tien quyet de ap dung Quy hoach dong:
+a. Cau truc con toi uu (Optimal Substructure):
+   Nghiem toi uu cua bai toan lon duoc tao thanh tu nghiem toi uu cua cac bai toan con. b. Cac bai toan con goi nhau (Overlapping Subproblems):
+   Qua trinh de quy goi di goi lai cung mot bai toan con nhieu lan. Thay vi tinh lai,
+   ta luu ket qua vao bang nho. 2. HAI PHUONG PHAP TIEP CAN TRONG PYTHON:
+- Top-Down voi Memoization (Ghi nho de quy):
+  Khoi tao mang hoac dictionary luu tru ket qua cua cac trang thai da giai. - Bottom-Up voi Tabulation (Lap bang quy hoach dong):
+  Khoi tao bang dp[] tu trang thai co so va lap tuan tu den trang thai ket qua dp[n]. 3. BAI TOAN KINH DIEN: BALO 0/1 (0/1 KNAPSACK PROBLEM)
+Cho n do vat co trong luong w[i] va gia tri v[i]. Balo co suc chua toi da W.
+```
+
+---
+
+### Dòng tri thức mới: `inst_01_giao_trinh_quy_hoach_dong_d_1795722846_001`
+
+- **Tệp nguồn (Filename)**: `01_giao_trinh_quy_hoach_dong_dp.pdf`
+- **Chủ đề (Topic)**: `Giáo trình chuẩn`
+- **Collection RAG**: `jina_code` (Ngôn ngữ: `python`)
+- **Thời gian nạp**: `2026-11-27T02:54:06.806189` (Chunk 2/2)
+
+**Nội dung đoạn trích đã chunk & vector hóa:**
+```markdown
+Hay chon tap do vat sao cho tong gia tri la lon nhat ma khong vuot qua W. Cong thuc truy hoi:
+dp[i][j] = max(dp[i-1][j], dp[i-1][j - w[i]] + v[i])  (neu j >= w[i])
+Do phuc tap thoi gian: O(n * W).
+```
+
+---
+

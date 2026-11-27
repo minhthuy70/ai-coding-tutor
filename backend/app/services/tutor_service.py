@@ -23,6 +23,7 @@ from app.services.query_synthesizer import query_synthesizer
 
 logger = logging.getLogger("TutorService")
 
+
 SOCRATIC_SYSTEM_PROMPT = """Bạn là "Socratic Python Tutor" - Trợ giảng lập trình Python thông minh, ân cần và kiên nhẫn của trường Đại học.
 Mục tiêu cao nhất của bạn là giúp sinh viên TỰ PHÁT HIỆN LỖI và HIỂU BẢN CHẤT THUẬT TOÁN trong ngôn ngữ Python, tuyệt đối không đưa ra lời giải hoàn chỉnh ngay từ đầu.
 

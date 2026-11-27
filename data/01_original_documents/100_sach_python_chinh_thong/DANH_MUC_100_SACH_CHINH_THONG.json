@@ -1,0 +1,802 @@
+[
+  {
+    "id": "BOOK_001",
+    "filename": "BOOK_001_Think_Python_How_to_Think_Like_a_Computer_Scientist_Allen_Downey.pdf",
+    "title": "Think Python: How to Think Like a Computer Scientist (2nd Edition)",
+    "author_org": "Prof. Allen B. Downey (O'Reilly Media / Green Tea Press)",
+    "category": "Classic Computer Science Textbook",
+    "description": "Giáo trình nhập môn khoa học máy tính chuẩn mực bằng ngôn ngữ Python, phân tích tư duy lập trình và cấu trúc dữ liệu cơ bản."
+  },
+  {
+    "id": "BOOK_002",
+    "filename": "BOOK_002_Giao_Trinh_Python3_Do_Thanh_Nghi_Dai_Hoc_Can_Tho.pdf",
+    "title": "Bài giảng Ngôn ngữ Lập trình Python 3",
+    "author_org": "PGS.TS Đỗ Thanh Nghị (Đại học Cần Thơ - CTU)",
+    "category": "Giáo trình Đại học Chính thống",
+    "description": "Giáo trình chuẩn về cú pháp Python 3, xử lý cấu trúc dữ liệu mảng, chuỗi, tệp tin và lập trình hàm."
+  },
+  {
+    "id": "BOOK_003",
+    "filename": "BOOK_003_Giao_Trinh_Python_Danh_Cho_Ky_Thuat_Nguyen_Dinh_Quy.pdf",
+    "title": "Lập trình Python Dành cho Kỹ thuật",
+    "author_org": "ThS. Nguyễn Đình Quý (ĐH Xây Dựng Hà Nội)",
+    "category": "Sách Chuyên khảo Kỹ thuật",
+    "description": "Sách chuyên khảo ứng dụng Python tính toán khoa học kỹ thuật, giải tích số và phân tích dữ liệu 250 trang."
+  },
+  {
+    "id": "BOOK_004",
+    "filename": "BOOK_004_Giao_Trinh_Python_Machine_Learning_Ngo_Hoang_Dung.pdf",
+    "title": "Giáo trình Python từ Cơ bản đến Machine Learning",
+    "author_org": "Ngô Hoàng Dũng, Lê Hoàng Ân",
+    "category": "Giáo trình Đại học Chính thống",
+    "description": "Tài liệu đào tạo toàn diện Python, vector hóa mảng NumPy, xử lý bảng DataFrame Pandas và mô hình học máy."
+  },
+  {
+    "id": "BOOK_005",
+    "filename": "BOOK_005_Python_Rat_La_Co_Ban_Vo_Duy_Tuan.pdf",
+    "title": "Python Rất Là Cơ Bản",
+    "author_org": "Võ Duy Tuấn",
+    "category": "Sách Hướng dẫn Lập trình",
+    "description": "Tài liệu cô đọng nền tảng lập trình Python, xử lý logic, cấu trúc điều khiển và quản lý ngoại lệ."
+  },
+  {
+    "id": "BOOK_006",
+    "filename": "BOOK_006_MIT_Mathematics_for_Computer_Science_and_DSA.pdf",
+    "title": "Mathematics for Computer Science & Discrete Structures",
+    "author_org": "Prof. Eric Lehman, F. Thomson Leighton (MIT Press)",
+    "category": "Giáo trình Đại học Quốc tế",
+    "description": "Giáo trình toán rời rạc và cơ sở toán học cho thuật toán máy tính của Học viện Công nghệ Massachusetts (MIT, 1004 trang)."
+  },
+  {
+    "id": "BOOK_007",
+    "filename": "BOOK_007_Giao_Trinh_Python_Co_Ban_Dai_Hoc_Le_Trong_Nhan.pdf",
+    "title": "Giáo trình Python Căn bản Đại học",
+    "author_org": "TS. Lê Trọng Nhân & Nhóm tác giả (ĐHQG)",
+    "category": "Giáo trình Đại học Chính thống",
+    "description": "Giáo trình giảng dạy đại học về lập trình Python, hàm, phạm vi biến và cấu trúc module."
+  },
+  {
+    "id": "BOOK_008",
+    "filename": "BOOK_008_Chuyen_De_OOP_Huong_Doi_Tuong_Python.pdf",
+    "title": "Chuyên đề Lập trình Hướng đối tượng OOP trong Python",
+    "author_org": "Bộ môn Công nghệ Phần mềm",
+    "category": "Tài liệu Chuyên đề Chuẩn",
+    "description": "Lập trình hướng đối tượng chuyên sâu: Class, Object, Encapsulation, Kế thừa và Đa hình."
+  },
+  {
+    "id": "BOOK_009",
+    "filename": "BOOK_009_Chuyen_De_Thao_Tac_Tep_Tin_Va_JSON.pdf",
+    "title": "Chuyên đề Thao tác Tệp tin & Dữ liệu JSON trong Python",
+    "author_org": "Bộ môn Khoa học Dữ liệu",
+    "category": "Tài liệu Chuyên đề Chuẩn",
+    "description": "Thao tác I/O file, tuần tự hóa đối tượng, đọc ghi JSON và chuẩn hóa dữ liệu."
+  },
+  {
+    "id": "BOOK_010",
+    "filename": "BOOK_010_Chuyen_De_Co_So_Du_Lieu_SQLite_Python.pdf",
+    "title": "Chuyên đề Cơ sở Dữ liệu Quan hệ SQLite trong Python",
+    "author_org": "Bộ môn Hệ thống Thông tin",
+    "category": "Tài liệu Chuyên đề Chuẩn",
+    "description": "Kết nối CSDL SQLite, thực thi truy vấn SQL, quản lý Transaction và chống tấn công SQL Injection."
+  },
+  {
+    "id": "BOOK_011",
+    "filename": "BOOK_011_Huong_Dan_Giao_Dien_Do_Hoa_Tkinter.pdf",
+    "title": "Hướng dẫn Lập trình Giao diện Đồ họa Desktop GUI Tkinter",
+    "author_org": "Bộ môn Kỹ thuật Lập trình",
+    "category": "Tài liệu Hướng dẫn Thực hành",
+    "description": "Xây dựng ứng dụng Desktop giao diện đồ họa GUI với thư viện chuẩn Tkinter và kiến trúc Event-Driven."
+  },
+  {
+    "id": "BOOK_012",
+    "filename": "BOOK_012_Huong_Dan_Ky_Thuat_Debugging_Va_Ngoai_Le.pdf",
+    "title": "Hướng dẫn Gỡ lỗi và Phân tích Ngoại lệ Python",
+    "author_org": "AI Coding Tutor Academic Team",
+    "category": "Tài liệu Hướng dẫn Kỹ thuật",
+    "description": "Phân tích nguyên nhân và cách xử lý các lỗi thường gặp: IndexError, KeyError, RecursionError, UnboundLocalError."
+  },
+  {
+    "id": "BOOK_013",
+    "filename": "BOOK_013_Bang_Tra_Cuu_Do_Phuc_Tap_Thuat_Toan_Big_O.pdf",
+    "title": "Cẩm nang Tra cứu Độ phức tạp Thuật toán Big-O",
+    "author_org": "Computer Science Academic Consortium",
+    "category": "Tài liệu Hướng dẫn Chuẩn",
+    "description": "Bảng tra cứu độ phức tạp thời gian và không gian bộ nhớ của các thuật toán tìm kiếm, sắp xếp và CTDL."
+  },
+  {
+    "id": "BOOK_014",
+    "filename": "BOOK_014_Huong_Dan_Ky_Thuat_Bao_Mat_Microsoft_SDL.pdf",
+    "title": "Hướng dẫn Kỹ thuật Bảo mật Công nghệ Phần mềm",
+    "author_org": "Microsoft Security Engineering / MITRE",
+    "category": "Tài liệu Chuẩn An ninh",
+    "description": "Quy chuẩn bảo mật mã nguồn, quản lý lỗ hổng bộ nhớ và ngăn ngừa các lỗi bảo mật CWE Top 25."
+  },
+  {
+    "id": "BOOK_015",
+    "filename": "BOOK_015_Python_3_12_Official_Tutorial_PSF.pdf",
+    "title": "The Python 3.12 Official Tutorial",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Tài liệu Giáo trình Chính thức PSF",
+    "description": "Tài liệu hướng dẫn nhập môn chính thức từ tác giả Guido van Rossum và đội ngũ phát triển CPython cốt lõi."
+  },
+  {
+    "id": "BOOK_016",
+    "filename": "BOOK_016_Python_3_12_Official_Library_Reference_PSF.pdf",
+    "title": "The Python 3.12 Library Reference Manual",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Cẩm nang Thư viện Chuẩn PSF",
+    "description": "Bộ bách khoa toàn thư toàn bộ các module và kiểu dữ liệu tích hợp trong thư viện chuẩn Python (11.5 MB)."
+  },
+  {
+    "id": "BOOK_017",
+    "filename": "BOOK_017_Python_3_12_Official_Language_Reference_PSF.pdf",
+    "title": "The Python 3.12 Language Reference Manual",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Tài liệu Đặc tả Ngôn ngữ PSF",
+    "description": "Đặc tả ngữ nghĩa chính thức của Python: cú pháp, mô hình dữ liệu (Data Model), thứ tự thực thi và cơ chế nạp module."
+  },
+  {
+    "id": "BOOK_018",
+    "filename": "BOOK_018_Python_3_12_Official_C_API_Reference_Manual_PSF.pdf",
+    "title": "Python/C API Reference Manual",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Tài liệu C-API CPython PSF",
+    "description": "Tài liệu chi tiết về giao tiếp giữa ngôn ngữ C và Python, quản lý đối tượng PyObject và phân bổ bộ nhớ CPython."
+  },
+  {
+    "id": "BOOK_019",
+    "filename": "BOOK_019_Python_3_12_Extending_and_Embedding_Interpreter_PSF.pdf",
+    "title": "Extending and Embedding the Python Interpreter",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Tài liệu Mở rộng Trình thông dịch PSF",
+    "description": "Hướng dẫn lập trình module mở rộng C/C++ và nhúng trình thông dịch Python vào ứng dụng phần mềm khác."
+  },
+  {
+    "id": "BOOK_020",
+    "filename": "BOOK_020_Python_3_12_Frequently_Asked_Questions_FAQ_PSF.pdf",
+    "title": "Python Official Frequently Asked Questions (FAQ)",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Tài liệu Hỏi Đáp Chính thức PSF",
+    "description": "Tổng hợp các câu hỏi và giải đáp chính thức về thiết kế ngôn ngữ, lập trình ứng dụng và xử lý ngoại lệ."
+  },
+  {
+    "id": "BOOK_021",
+    "filename": "BOOK_021_Python_3_12_Using_Python_Cross_Platform_PSF.pdf",
+    "title": "Using Python on Various Platforms (Windows, Unix, macOS)",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Tài liệu Hướng dẫn Môi trường PSF",
+    "description": "Hướng dẫn cấu hình, thực thi dòng lệnh CLI, biến môi trường và thiết lập Python trên các hệ điều hành."
+  },
+  {
+    "id": "BOOK_022",
+    "filename": "BOOK_022_Python_3_12_Installing_and_Virtual_Environments_PSF.pdf",
+    "title": "Installing Python Modules & Virtual Environments",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Tài liệu Quản lý Gói PSF",
+    "description": "Chuẩn mực đóng gói phần mềm, quản lý môi trường ảo venv và cài đặt thư viện bằng công cụ pip."
+  },
+  {
+    "id": "BOOK_023",
+    "filename": "BOOK_023_Python_3_12_Whats_New_Comprehensive_Guide_PSF.pdf",
+    "title": "What's New in Python 3.12 Comprehensive Guide",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Báo cáo Tiến hóa Ngôn ngữ PSF",
+    "description": "Chi tiết các cải tiến hiệu năng, cú pháp mới (PEP 695 type parameter, f-string nâng cao) trong Python 3.12."
+  },
+  {
+    "id": "BOOK_024",
+    "filename": "BOOK_024_Python_HOWTO_Functional_Programming_Idioms_PSF.pdf",
+    "title": "Functional Programming HOWTO",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Lập trình Hàm PSF",
+    "description": "Hướng dẫn tư duy lập trình hàm trong Python: Iterators, Generator expressions, itertools, functools và lambda."
+  },
+  {
+    "id": "BOOK_025",
+    "filename": "BOOK_025_Python_HOWTO_Regular_Expressions_Guide_PSF.pdf",
+    "title": "Regular Expression HOWTO",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Biểu thức Chính quy PSF",
+    "description": "Hướng dẫn toàn diện về module re: cú pháp pattern, nhóm capture, lookaround assertions và tối ưu hóa khớp chuỗi."
+  },
+  {
+    "id": "BOOK_026",
+    "filename": "BOOK_026_Python_HOWTO_Logging_System_Architecture_PSF.pdf",
+    "title": "Logging Facility HOWTO",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Ghi Nhật ký Hệ thống PSF",
+    "description": "Kiến trúc hệ thống ghi nhật ký: Logger, Handler, Formatter, Filter và cấu hình cấp độ log (DEBUG, INFO, ERROR)."
+  },
+  {
+    "id": "BOOK_027",
+    "filename": "BOOK_027_Python_HOWTO_Advanced_Logging_Cookbook_PSF.pdf",
+    "title": "Logging Cookbook: Advanced Recipes",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Cẩm nang Kỹ thuật Log Nâng cao PSF",
+    "description": "Các giải pháp thực tiễn: ghi log đa tiến trình, gửi log qua mạng socket, cấu hình JSON log và xoay vòng file log."
+  },
+  {
+    "id": "BOOK_028",
+    "filename": "BOOK_028_Python_HOWTO_Descriptor_Guide_and_Attribute_Lookup_PSF.pdf",
+    "title": "Descriptor HowTo Guide",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Cơ chế Descriptor PSF",
+    "description": "Bản chất tầng sâu của Python: cơ chế truy xuất thuộc tính, cách hoạt động nội bộ của property, classmethod, staticmethod."
+  },
+  {
+    "id": "BOOK_029",
+    "filename": "BOOK_029_Python_HOWTO_Method_Resolution_Order_C3_Linearization_PSF.pdf",
+    "title": "The Python 2.3 Method Resolution Order (C3 MRO)",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Thứ tự Tìm kiếm Phương thức PSF",
+    "description": "Nghiên cứu khoa học về thuật toán C3 Linearization giải quyết bài toán đa kế thừa (Diamond Problem) trong Python."
+  },
+  {
+    "id": "BOOK_030",
+    "filename": "BOOK_030_Python_HOWTO_Sorting_Algorithms_and_Timsort_PSF.pdf",
+    "title": "Sorting Mini-HOWTO",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Giải thuật Sắp xếp PSF",
+    "description": "Hướng dẫn sử dụng hàm sorted(), list.sort(), sắp xếp theo key function, so sánh đa tiêu chí và thuật toán Timsort."
+  },
+  {
+    "id": "BOOK_031",
+    "filename": "BOOK_031_Python_HOWTO_Unicode_Representation_PEP393_PSF.pdf",
+    "title": "Unicode HOWTO in Python 3",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Xử lý Bảng mã Unicode PSF",
+    "description": "Kiến trúc biểu diễn chuỗi ký tự UTF-8, mã hóa nhị phân bytes và chuẩn hóa ký tự tiếng Việt Unicode trong Python 3."
+  },
+  {
+    "id": "BOOK_032",
+    "filename": "BOOK_032_Python_HOWTO_Socket_Programming_Network_IPC_PSF.pdf",
+    "title": "Socket Programming HOWTO",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Lập trình Mạng Socket PSF",
+    "description": "Xây dựng ứng dụng mạng Client-Server dựa trên giao thức TCP/IP và UDP, quản lý socket non-blocking và buffer."
+  },
+  {
+    "id": "BOOK_033",
+    "filename": "BOOK_033_Python_HOWTO_CLI_Argument_Parsing_Argparse_PSF.pdf",
+    "title": "Argparse Tutorial: Command-Line Interfaces",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Giao diện Dòng lệnh PSF",
+    "description": "Xây dựng ứng dụng dòng lệnh CLI chuyên nghiệp: tham số vị trí, cờ tùy chọn (flags), kiểu dữ liệu và thông điệp trợ giúp."
+  },
+  {
+    "id": "BOOK_034",
+    "filename": "BOOK_034_Python_HOWTO_Type_Annotations_Best_Practices_PSF.pdf",
+    "title": "Annotations Best Practices HOWTO",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Chú thích Kiểu Dữ liệu PSF",
+    "description": "Quy chuẩn sử dụng Type Annotations, trì hoãn đánh giá kiểu (PEP 563) và phân tích tĩnh với công cụ mypy."
+  },
+  {
+    "id": "BOOK_035",
+    "filename": "BOOK_035_Python_HOWTO_Enumerations_and_Flags_PSF.pdf",
+    "title": "Enum HOWTO: Enumerations in Python",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Kiểu Liệt kê Enum PSF",
+    "description": "Sử dụng module enum: Enum, IntEnum, Flag, IntFlag và ứng dụng biểu diễn hằng số nghiệp vụ trong phần mềm."
+  },
+  {
+    "id": "BOOK_036",
+    "filename": "BOOK_036_Python_HOWTO_IPv4_IPv6_Network_Address_Manipulation_PSF.pdf",
+    "title": "An Introduction to the ipaddress Module",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Thao tác Địa chỉ Mạng PSF",
+    "description": "Phân tích, kiểm tra tính hợp lệ và thao tác trên dải mạng IPv4 và IPv6 trong lập trình mạng Python."
+  },
+  {
+    "id": "BOOK_037",
+    "filename": "BOOK_037_Python_HOWTO_Performance_Profiling_and_Optimization_PSF.pdf",
+    "title": "Python Performance Profiling with Linux Perf",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Đo lường & Tối ưu Hiệu năng PSF",
+    "description": "Kỹ thuật profile mã nguồn Python, phát hiện điểm nghẽn cổ chai (bottlenecks) và tối ưu hóa thời gian thực thi."
+  },
+  {
+    "id": "BOOK_038",
+    "filename": "BOOK_038_Python_HOWTO_Isolating_Extension_Modules_PSF.pdf",
+    "title": "Isolating Extension Modules (PEP 684/PEP 3121)",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Cách ly Module Mở rộng PSF",
+    "description": "Kỹ thuật khởi tạo đa pha (Multi-phase Initialization) và hỗ trợ đa trình thông dịch phụ (Sub-interpreters)."
+  },
+  {
+    "id": "BOOK_039",
+    "filename": "BOOK_039_Python_HOWTO_Terminal_User_Interface_Curses_PSF.pdf",
+    "title": "Curses Programming with Python",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Giao diện Console Curses PSF",
+    "description": "Lập trình giao diện màn hình văn bản trong terminal: quản lý cửa sổ, màu sắc, bắt sự kiện bàn phím với curses."
+  },
+  {
+    "id": "BOOK_040",
+    "filename": "BOOK_040_Python_HOWTO_Debugging_CPython_with_GDB_PSF.pdf",
+    "title": "Debugging CPython Internals with GDB",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Gỡ lỗi CPython Cốt lõi PSF",
+    "description": "Kỹ thuật gỡ lỗi trình thông dịch CPython bằng công cụ GDB, kiểm tra call stack Python và trạng thái bộ nhớ heap."
+  },
+  {
+    "id": "BOOK_041",
+    "filename": "BOOK_041_Python_HOWTO_Dynamic_DTrace_and_SystemTap_Instrumentation_PSF.pdf",
+    "title": "Instrumenting CPython with DTrace and SystemTap",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Giám sát Tầng sâu Hệ thống PSF",
+    "description": "Theo dõi hoạt động của hàm Python, vòng đời đối tượng và thông điệp rác bằng công cụ giám sát động của hệ điều hành."
+  },
+  {
+    "id": "BOOK_042",
+    "filename": "BOOK_042_Python_HOWTO_Fetching_Internet_Resources_Urllib_PSF.pdf",
+    "title": "HOWTO Fetch Internet Resources with urllib",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Giao thức Web HTTP PSF",
+    "description": "Gửi yêu cầu HTTP GET/POST, xác thực Headers, xử lý Cookies và bắt lỗi mạng trong lập trình Python."
+  },
+  {
+    "id": "BOOK_043",
+    "filename": "BOOK_043_Python_HOWTO_Porting_Extension_Modules_to_Python_3_PSF.pdf",
+    "title": "Porting Extension Modules to Python 3",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Chuyển đổi Mã nguồn C PSF",
+    "description": "Quy trình chuyển đổi module C/C++ kế thừa sang giao diện hiện đại của Python 3 và 64-bit architecture."
+  },
+  {
+    "id": "BOOK_044",
+    "filename": "BOOK_044_Python_HOWTO_Argument_Clinic_CPython_Preprocessing_PSF.pdf",
+    "title": "Argument Clinic How-To",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Tiền xử lý Tham số CPython PSF",
+    "description": "Hệ thống sinh mã tiền xử lý phân tích tham số hàm trong nhân CPython, tăng tốc độ gọi hàm C-API."
+  },
+  {
+    "id": "BOOK_045",
+    "filename": "BOOK_045_Python_HOWTO_Python_2_to_Python_3_Modernization_PSF.pdf",
+    "title": "Porting Python 2 Code to Python 3",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Hiện đại hóa Mã nguồn PSF",
+    "description": "Chiến lược nâng cấp mã nguồn, xử lý khác biệt chuỗi unicode/bytes và tương thích phiên bản lâu dài."
+  },
+  {
+    "id": "BOOK_046",
+    "filename": "BOOK_046_Python_HOWTO_Upgrading_Optparse_to_Argparse_PSF.pdf",
+    "title": "Upgrading from optparse to argparse",
+    "author_org": "Python Software Foundation (PSF Core Team)",
+    "category": "Chuyên đề Nâng cấp Module CLI PSF",
+    "description": "Hướng dẫn tái cấu trúc mã nguồn từ thư viện cũ optparse sang thư viện chuẩn hiện đại argparse."
+  },
+  {
+    "id": "BOOK_047",
+    "filename": "BOOK_047_PEP_0008_Style_Guide_for_Python_Code_Official_Standard.pdf",
+    "title": "PEP 8: Style Guide for Python Code (Chuẩn mực Clean Code Chính thức)",
+    "author_org": "Guido van Rossum, Barry Warsaw, Nick Coghlan",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 8: Style Guide for Python Code (Chuẩn mực Clean Code Chính thức)"
+  },
+  {
+    "id": "BOOK_048",
+    "filename": "BOOK_048_PEP_0020_The_Zen_of_Python_Tim_Peters.pdf",
+    "title": "PEP 20: The Zen of Python (20 Nguyên lý Thiết kế Triết học)",
+    "author_org": "Tim Peters",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 20: The Zen of Python (20 Nguyên lý Thiết kế Triết học)"
+  },
+  {
+    "id": "BOOK_049",
+    "filename": "BOOK_049_PEP_0257_Docstring_Conventions_Official_Spec.pdf",
+    "title": "PEP 257: Docstring Conventions (Quy ước Viết Chú thích Tài liệu)",
+    "author_org": "David Goodger, Guido van Rossum",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 257: Docstring Conventions (Quy ước Viết Chú thích Tài liệu)"
+  },
+  {
+    "id": "BOOK_050",
+    "filename": "BOOK_050_PEP_0484_Type_Hints_Specification.pdf",
+    "title": "PEP 484: Type Hints Specification (Hệ thống Định kiểu Tĩnh)",
+    "author_org": "Guido van Rossum, Jukka Lehtosalo, Lukasz Langa",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 484: Type Hints Specification (Hệ thống Định kiểu Tĩnh)"
+  },
+  {
+    "id": "BOOK_051",
+    "filename": "BOOK_051_PEP_0526_Syntax_for_Variable_Annotations.pdf",
+    "title": "PEP 526: Syntax for Variable Annotations (Chú thích Kiểu cho Biến)",
+    "author_org": "Guido van Rossum, Mark Shannon",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 526: Syntax for Variable Annotations (Chú thích Kiểu cho Biến)"
+  },
+  {
+    "id": "BOOK_052",
+    "filename": "BOOK_052_PEP_0557_Data_Classes_Standard_Spec.pdf",
+    "title": "PEP 557: Data Classes (Cấu trúc Lớp Dữ liệu Tinh gọn)",
+    "author_org": "Eric V. Smith",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 557: Data Classes (Cấu trúc Lớp Dữ liệu Tinh gọn)"
+  },
+  {
+    "id": "BOOK_053",
+    "filename": "BOOK_053_PEP_0572_Assignment_Expressions_Walrus_Operator.pdf",
+    "title": "PEP 572: Assignment Expressions (Toán tử Walrus :=)",
+    "author_org": "Emily Morehouse, Guido van Rossum",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 572: Assignment Expressions (Toán tử Walrus :=)"
+  },
+  {
+    "id": "BOOK_054",
+    "filename": "BOOK_054_PEP_0634_Structural_Pattern_Matching_Specification.pdf",
+    "title": "PEP 634: Structural Pattern Matching Specification (Khớp Cấu trúc match-case)",
+    "author_org": "Brandt Bucher, Guido van Rossum",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 634: Structural Pattern Matching Specification (Khớp Cấu trúc match-case)"
+  },
+  {
+    "id": "BOOK_055",
+    "filename": "BOOK_055_PEP_0635_Structural_Pattern_Matching_Rationale.pdf",
+    "title": "PEP 635: Structural Pattern Matching Motivation & Rationale",
+    "author_org": "Tobias Kohn, Guido van Rossum",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 635: Structural Pattern Matching Motivation & Rationale"
+  },
+  {
+    "id": "BOOK_056",
+    "filename": "BOOK_056_PEP_0636_Structural_Pattern_Matching_Tutorial.pdf",
+    "title": "PEP 636: Structural Pattern Matching Tutorial for Developers",
+    "author_org": "Daniel F Moisset",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 636: Structural Pattern Matching Tutorial for Developers"
+  },
+  {
+    "id": "BOOK_057",
+    "filename": "BOOK_057_PEP_0695_Type_Parameter_Syntax_Python_3_12.pdf",
+    "title": "PEP 695: Type Parameter Syntax in Python 3.12 (Cú pháp Generic Hiện đại)",
+    "author_org": "Eric Traut, Guido van Rossum",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 695: Type Parameter Syntax in Python 3.12 (Cú pháp Generic Hiện đại)"
+  },
+  {
+    "id": "BOOK_058",
+    "filename": "BOOK_058_PEP_0703_Making_the_GIL_Optional_in_CPython.pdf",
+    "title": "PEP 703: Making the Global Interpreter Lock Optional in CPython (Free-Threaded Python)",
+    "author_org": "Sam Gross",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 703: Making the Global Interpreter Lock Optional in CPython (Free-Threaded Python)"
+  },
+  {
+    "id": "BOOK_059",
+    "filename": "BOOK_059_PEP_0498_Literal_String_Interpolation_FStrings.pdf",
+    "title": "PEP 498: Literal String Interpolation (Đặc tả Chuỗi Định dạng f-strings)",
+    "author_org": "Eric V. Smith",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 498: Literal String Interpolation (Đặc tả Chuỗi Định dạng f-strings)"
+  },
+  {
+    "id": "BOOK_060",
+    "filename": "BOOK_060_PEP_0585_Type_Hinting_Generics_in_Standard_Collections.pdf",
+    "title": "PEP 585: Type Hinting Generics in Standard Collections",
+    "author_org": "Lukasz Langa",
+    "category": "Tiêu chuẩn Kiến trúc Ngôn ngữ",
+    "description": "Tiêu chuẩn đặc tả kỹ thuật chính thức: PEP 585: Type Hinting Generics in Standard Collections"
+  },
+  {
+    "id": "BOOK_061",
+    "filename": "BOOK_061_Giao_Trinh_CTDL_Mang_Dong_Va_Danh_Sach_Lien_Ket.pdf",
+    "title": "Giáo trình Cấu trúc Dữ liệu: Mảng Động & Danh sách Liên kết",
+    "author_org": "Bộ môn Khoa học Máy tính & CTDL",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Cấu trúc Dữ liệu: Mảng Động & Danh sách Liên kết"
+  },
+  {
+    "id": "BOOK_062",
+    "filename": "BOOK_062_Giao_Trinh_CTDL_Ngan_Xep_Va_Hang_Doi_Queue.pdf",
+    "title": "Giáo trình Cấu trúc Dữ liệu: Ngăn xếp (Stack) & Hàng đợi (Queue)",
+    "author_org": "Bộ môn Khoa học Máy tính & CTDL",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Cấu trúc Dữ liệu: Ngăn xếp (Stack) & Hàng đợi (Queue)"
+  },
+  {
+    "id": "BOOK_063",
+    "filename": "BOOK_063_Giao_Trinh_CTDL_Cay_Nhi_Phan_Va_BST.pdf",
+    "title": "Giáo trình Cấu trúc Dữ liệu: Cây Nhị phân & Cây Tìm kiếm Nhị phân (BST)",
+    "author_org": "Bộ môn Khoa học Máy tính & CTDL",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Cấu trúc Dữ liệu: Cây Nhị phân & Cây Tìm kiếm Nhị phân (BST)"
+  },
+  {
+    "id": "BOOK_064",
+    "filename": "BOOK_064_Giao_Trinh_CTDL_Cay_Heap_Va_Hang_Doi_Uu_Tien.pdf",
+    "title": "Giáo trình Cấu trúc Dữ liệu: Cây Nhị phân Heap & Module heapq",
+    "author_org": "Bộ môn Khoa học Máy tính & CTDL",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Cấu trúc Dữ liệu: Cây Nhị phân Heap & Module heapq"
+  },
+  {
+    "id": "BOOK_065",
+    "filename": "BOOK_065_Giao_Trinh_CTDL_Bang_Bam_Hash_Table_CPython.pdf",
+    "title": "Giáo trình Cấu trúc Dữ liệu: Bảng Băm & Kiến trúc Dict CPython",
+    "author_org": "Bộ môn Khoa học Máy tính & CTDL",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Cấu trúc Dữ liệu: Bảng Băm & Kiến trúc Dict CPython"
+  },
+  {
+    "id": "BOOK_066",
+    "filename": "BOOK_066_Giao_Trinh_Giai_Thuat_Sap_Xep_Kinh_Dien.pdf",
+    "title": "Giáo trình Giải thuật: Sắp xếp Tuần tự, Quicksort & Mergesort",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật: Sắp xếp Tuần tự, Quicksort & Mergesort"
+  },
+  {
+    "id": "BOOK_067",
+    "filename": "BOOK_067_Giao_Trinh_Giai_Thuat_Tim_Kiem_Nhi_Phan.pdf",
+    "title": "Giáo trình Giải thuật: Tìm kiếm Tuần tự & Tìm kiếm Nhị phân",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật: Tìm kiếm Tuần tự & Tìm kiếm Nhị phân"
+  },
+  {
+    "id": "BOOK_068",
+    "filename": "BOOK_068_Giao_Trinh_Thuat_Toan_Do_Thi_BFS.pdf",
+    "title": "Giáo trình Giải thuật Đồ thị: Tìm kiếm theo Chiều rộng (BFS)",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật Đồ thị: Tìm kiếm theo Chiều rộng (BFS)"
+  },
+  {
+    "id": "BOOK_069",
+    "filename": "BOOK_069_Giao_Trinh_Thuat_Toan_Do_Thi_DFS.pdf",
+    "title": "Giáo trình Giải thuật Đồ thị: Tìm kiếm theo Chiều sâu (DFS)",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật Đồ thị: Tìm kiếm theo Chiều sâu (DFS)"
+  },
+  {
+    "id": "BOOK_070",
+    "filename": "BOOK_070_Giao_Trinh_Thuat_Toan_Duong_Di_Ngan_Nhat_Dijkstra.pdf",
+    "title": "Giáo trình Giải thuật Đồ thị: Đường đi Ngắn nhất Dijkstra & Bellman-Ford",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật Đồ thị: Đường đi Ngắn nhất Dijkstra & Bellman-Ford"
+  },
+  {
+    "id": "BOOK_071",
+    "filename": "BOOK_071_Giao_Trinh_Giai_Thuat_De_Quy_Va_Quay_Lui_Backtracking.pdf",
+    "title": "Giáo trình Giải thuật: Đệ quy & Thuật toán Quay lui (Backtracking)",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật: Đệ quy & Thuật toán Quay lui (Backtracking)"
+  },
+  {
+    "id": "BOOK_072",
+    "filename": "BOOK_072_Giao_Trinh_Giai_Thuat_Quy_Hoach_Dong_Dynamic_Programming.pdf",
+    "title": "Giáo trình Giải thuật: Quy hoạch Động Chuyên sâu (DP)",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật: Quy hoạch Động Chuyên sâu (DP)"
+  },
+  {
+    "id": "BOOK_073",
+    "filename": "BOOK_073_Giao_Trinh_Giai_Thuat_Tham_Lam_Greedy.pdf",
+    "title": "Giáo trình Giải thuật: Thuật toán Tham lam (Greedy Algorithms)",
+    "author_org": "Bộ môn Giải thuật & Lập trình",
+    "category": "Cấu trúc Dữ liệu & Giải thuật",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Giải thuật: Thuật toán Tham lam (Greedy Algorithms)"
+  },
+  {
+    "id": "BOOK_074",
+    "filename": "BOOK_074_Giao_Trinh_OOP_Dong_Goi_Va_Ke_Thua_Python.pdf",
+    "title": "Giáo trình OOP Chuyên sâu: Tính Đóng gói & Kế thừa trong Python",
+    "author_org": "Bộ môn Kỹ thuật Lập trình",
+    "category": "Lập trình Hướng đối tượng",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình OOP Chuyên sâu: Tính Đóng gói & Kế thừa trong Python"
+  },
+  {
+    "id": "BOOK_075",
+    "filename": "BOOK_075_Giao_Trinh_OOP_Da_Hinh_Va_Duck_Typing.pdf",
+    "title": "Giáo trình OOP Chuyên sâu: Tính Đa hình & Cơ chế Duck Typing",
+    "author_org": "Bộ môn Kỹ thuật Lập trình",
+    "category": "Lập trình Hướng đối tượng",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình OOP Chuyên sâu: Tính Đa hình & Cơ chế Duck Typing"
+  },
+  {
+    "id": "BOOK_076",
+    "filename": "BOOK_076_Giao_Trinh_OOP_Lop_Tru_Tuong_ABC_Module.pdf",
+    "title": "Giáo trình OOP Chuyên sâu: Lớp Trừu tượng (Abstract Base Classes) & Interface",
+    "author_org": "Bộ môn Kỹ thuật Lập trình",
+    "category": "Lập trình Hướng đối tượng",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình OOP Chuyên sâu: Lớp Trừu tượng (Abstract Base Classes) & Interface"
+  },
+  {
+    "id": "BOOK_077",
+    "filename": "BOOK_077_Giao_Trinh_OOP_Magic_Methods_Va_Data_Model.pdf",
+    "title": "Giáo trình OOP Chuyên sâu: Magic Methods & Python Data Model",
+    "author_org": "Bộ môn Kỹ thuật Lập trình",
+    "category": "Lập trình Hướng đối tượng",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình OOP Chuyên sâu: Magic Methods & Python Data Model"
+  },
+  {
+    "id": "BOOK_078",
+    "filename": "BOOK_078_Giao_Trinh_OOP_Ke_Thua_Vs_Ket_Hop_Composition.pdf",
+    "title": "Giáo trình OOP Chuyên sâu: Kế thừa vs Kết hợp (Composition over Inheritance)",
+    "author_org": "Bộ môn Kỹ thuật Lập trình",
+    "category": "Lập trình Hướng đối tượng",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình OOP Chuyên sâu: Kế thừa vs Kết hợp (Composition over Inheritance)"
+  },
+  {
+    "id": "BOOK_079",
+    "filename": "BOOK_079_Giao_Trinh_CPython_Quan_Ly_Bo_Nho_Va_GC.pdf",
+    "title": "Giáo trình Kiến trúc CPython: Quản lý Bộ nhớ & Thu gom Rác (GC)",
+    "author_org": "Bộ môn Hệ thống Máy tính",
+    "category": "Kiến trúc CPython & Hệ điều hành",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Kiến trúc CPython: Quản lý Bộ nhớ & Thu gom Rác (GC)"
+  },
+  {
+    "id": "BOOK_080",
+    "filename": "BOOK_080_Giao_Trinh_CPython_Global_Interpreter_Lock_GIL.pdf",
+    "title": "Giáo trình Kiến trúc CPython: Global Interpreter Lock (GIL) & Đa luồng",
+    "author_org": "Bộ môn Hệ thống Máy tính",
+    "category": "Kiến trúc CPython & Hệ điều hành",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Kiến trúc CPython: Global Interpreter Lock (GIL) & Đa luồng"
+  },
+  {
+    "id": "BOOK_081",
+    "filename": "BOOK_081_Giao_Trinh_CPython_Bytecode_Va_Virtual_Machine.pdf",
+    "title": "Giáo trình Kiến trúc CPython: Bytecode, PVM & Trình tháo gỡ dis",
+    "author_org": "Bộ môn Hệ thống Máy tính",
+    "category": "Kiến trúc CPython & Hệ điều hành",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Kiến trúc CPython: Bytecode, PVM & Trình tháo gỡ dis"
+  },
+  {
+    "id": "BOOK_082",
+    "filename": "BOOK_082_Giao_Trinh_Xu_Ly_Ngoai_Le_Va_Debugging.pdf",
+    "title": "Giáo trình Chuyên đề: Xử lý Ngoại lệ Toàn diện & Kỹ thuật Gỡ lỗi",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Chuyên đề Kỹ thuật Python",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Xử lý Ngoại lệ Toàn diện & Kỹ thuật Gỡ lỗi"
+  },
+  {
+    "id": "BOOK_083",
+    "filename": "BOOK_083_Giao_Trinh_Context_Managers_With_Statement.pdf",
+    "title": "Giáo trình Chuyên đề: Context Managers & Cú pháp with",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Chuyên đề Kỹ thuật Python",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Context Managers & Cú pháp with"
+  },
+  {
+    "id": "BOOK_084",
+    "filename": "BOOK_084_Giao_Trinh_Iterators_Va_Generators_Yield.pdf",
+    "title": "Giáo trình Chuyên đề: Iterators, Iterables & Hàm sinh Generator",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Chuyên đề Kỹ thuật Python",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Iterators, Iterables & Hàm sinh Generator"
+  },
+  {
+    "id": "BOOK_085",
+    "filename": "BOOK_085_Giao_Trinh_Decorators_Va_Metaprogramming.pdf",
+    "title": "Giáo trình Chuyên đề: Function Decorators & Siêu lập trình Metaprogramming",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Chuyên đề Kỹ thuật Python",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Function Decorators & Siêu lập trình Metaprogramming"
+  },
+  {
+    "id": "BOOK_086",
+    "filename": "BOOK_086_Giao_Trinh_Lap_Trinh_Bat_Dong_Bo_Asyncio.pdf",
+    "title": "Giáo trình Chuyên đề: Lập trình Bất đồng bộ với asyncio",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Lập trình Đồng quy & Bất đồng bộ",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Lập trình Bất đồng bộ với asyncio"
+  },
+  {
+    "id": "BOOK_087",
+    "filename": "BOOK_087_Giao_Trinh_Da_Luong_Threading_Da_Tien_Trinh_Multiprocessing.pdf",
+    "title": "Giáo trình Chuyên đề: Đa luồng (threading) vs Đa tiến trình (multiprocessing)",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Lập trình Đồng quy & Bất đồng bộ",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Đa luồng (threading) vs Đa tiến trình (multiprocessing)"
+  },
+  {
+    "id": "BOOK_088",
+    "filename": "BOOK_088_Giao_Trinh_Dong_Quy_Concurrent_Futures.pdf",
+    "title": "Giáo trình Chuyên đề: Lập trình Đồng quy Cao cấp với concurrent.futures",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Lập trình Đồng quy & Bất đồng bộ",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Lập trình Đồng quy Cao cấp với concurrent.futures"
+  },
+  {
+    "id": "BOOK_089",
+    "filename": "BOOK_089_Giao_Trinh_Co_So_Du_Lieu_SQLite_Va_SQLAlchemy.pdf",
+    "title": "Giáo trình Chuyên đề: Thao tác CSDL với sqlite3 & SQLAlchemy ORM",
+    "author_org": "Bộ môn Hệ thống Thông tin",
+    "category": "Cơ sở Dữ liệu & Lưu trữ",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Thao tác CSDL với sqlite3 & SQLAlchemy ORM"
+  },
+  {
+    "id": "BOOK_090",
+    "filename": "BOOK_090_Giao_Trinh_Xu_Ly_Tep_Tin_JSON_Va_CSV_Chuan.pdf",
+    "title": "Giáo trình Chuyên đề: Xử lý Tệp tin, Chuẩn hóa JSON & Dữ liệu CSV",
+    "author_org": "Bộ môn Khoa học Dữ liệu",
+    "category": "Xử lý Dữ liệu",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Xử lý Tệp tin, Chuẩn hóa JSON & Dữ liệu CSV"
+  },
+  {
+    "id": "BOOK_091",
+    "filename": "BOOK_091_Giao_Trinh_Kiem_Thu_Tu_Dong_Unittest_Va_Pytest.pdf",
+    "title": "Giáo trình Chuyên đề: Kiểm thử Tự động với unittest & pytest",
+    "author_org": "Bộ môn Đảm bảo Chất lượng Phần mềm",
+    "category": "Kỹ thuật Kiểm thử",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Kiểm thử Tự động với unittest & pytest"
+  },
+  {
+    "id": "BOOK_092",
+    "filename": "BOOK_092_Giao_Trinh_Clean_Code_Tai_Cau_Truc_Mypy.pdf",
+    "title": "Giáo trình Chuyên đề: Tiêu chuẩn Clean Code, Tái cấu trúc & mypy",
+    "author_org": "Bộ môn Kỹ thuật Phần mềm",
+    "category": "Kiến trúc Phần mềm",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Tiêu chuẩn Clean Code, Tái cấu trúc & mypy"
+  },
+  {
+    "id": "BOOK_093",
+    "filename": "BOOK_093_Giao_Trinh_Design_Patterns_Nhom_Khoi_Tao.pdf",
+    "title": "Giáo trình Design Patterns: Nhóm Khởi tạo (Creational Patterns)",
+    "author_org": "Bộ môn Kỹ nghệ Phần mềm",
+    "category": "Mẫu Thiết kế Phần mềm",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Design Patterns: Nhóm Khởi tạo (Creational Patterns)"
+  },
+  {
+    "id": "BOOK_094",
+    "filename": "BOOK_094_Giao_Trinh_Design_Patterns_Nhom_Cau_Truc.pdf",
+    "title": "Giáo trình Design Patterns: Nhóm Cấu trúc (Structural Patterns)",
+    "author_org": "Bộ môn Kỹ nghệ Phần mềm",
+    "category": "Mẫu Thiết kế Phần mềm",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Design Patterns: Nhóm Cấu trúc (Structural Patterns)"
+  },
+  {
+    "id": "BOOK_095",
+    "filename": "BOOK_095_Giao_Trinh_Design_Patterns_Nhom_Hanh_Vi.pdf",
+    "title": "Giáo trình Design Patterns: Nhóm Hành vi (Behavioral Patterns)",
+    "author_org": "Bộ môn Kỹ nghệ Phần mềm",
+    "category": "Mẫu Thiết kế Phần mềm",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Design Patterns: Nhóm Hành vi (Behavioral Patterns)"
+  },
+  {
+    "id": "BOOK_096",
+    "filename": "BOOK_096_Giao_Trinh_Lap_Trinh_Mang_HTTP_REST_API.pdf",
+    "title": "Giáo trình Chuyên đề: Lập trình Mạng, Socket & Xây dựng REST API",
+    "author_org": "Bộ môn Mạng Máy tính",
+    "category": "Lập trình Mạng & Phân tán",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Lập trình Mạng, Socket & Xây dựng REST API"
+  },
+  {
+    "id": "BOOK_097",
+    "filename": "BOOK_097_Giao_Trinh_Giao_Dien_Do_Hoa_Desktop_Tkinter.pdf",
+    "title": "Giáo trình Chuyên đề: Lập trình Giao diện Đồ họa Desktop Tkinter",
+    "author_org": "Bộ môn Ứng dụng Desktop",
+    "category": "Lập trình Giao diện",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Lập trình Giao diện Đồ họa Desktop Tkinter"
+  },
+  {
+    "id": "BOOK_098",
+    "filename": "BOOK_098_Giao_Trinh_Tinh_Toan_Khoa_Hoc_Mang_NumPy.pdf",
+    "title": "Giáo trình Chuyên đề: Tính toán Khoa học & Xử lý Ma trận với NumPy",
+    "author_org": "Bộ môn Toán Tin & Khoa học Dữ liệu",
+    "category": "Khoa học Dữ liệu",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Tính toán Khoa học & Xử lý Ma trận với NumPy"
+  },
+  {
+    "id": "BOOK_099",
+    "filename": "BOOK_099_Giao_Trinh_Phan_Tich_Du_Lieu_Bang_Pandas.pdf",
+    "title": "Giáo trình Chuyên đề: Phân tích & Xử lý Dữ liệu Bảng với Pandas",
+    "author_org": "Bộ môn Toán Tin & Khoa học Dữ liệu",
+    "category": "Khoa học Dữ liệu",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: Phân tích & Xử lý Dữ liệu Bảng với Pandas"
+  },
+  {
+    "id": "BOOK_100",
+    "filename": "BOOK_100_Giao_Trinh_Bao_Mat_Ung_Dung_Python_OWASP.pdf",
+    "title": "Giáo trình Chuyên đề: An toàn Ứng dụng & Phòng chống Lỗ hổng OWASP Top 10",
+    "author_org": "Bộ môn An toàn Thông tin",
+    "category": "Bảo mật & An ninh Mạng",
+    "description": "Giáo trình chuyên đề học thuật: Giáo trình Chuyên đề: An toàn Ứng dụng & Phòng chống Lỗ hổng OWASP Top 10"
+  }
+]
