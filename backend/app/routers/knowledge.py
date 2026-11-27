@@ -11,6 +11,7 @@ Description:
 
 import os
 import re
+import json
 import uuid
 import logging
 from datetime import datetime
@@ -271,6 +272,39 @@ async def upload_curriculum(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Lỗi khi lưu trữ tri thức vào ChromaDB: {str(e)}"
         )
+
+    # 5b. Đồng bộ ghi các dòng mới ra file dữ liệu JSONL & Markdown để người dùng mở xem trực tiếp
+    try:
+        log_jsonl = chroma_path / "instructor_uploaded_log.jsonl"
+        log_md = chroma_path / "instructor_uploaded_log.md"
+        with open(log_jsonl, "a", encoding="utf-8") as f_jsonl:
+            for cid, doc, meta in zip(ids, documents, metadatas):
+                rec = {
+                    "id": cid,
+                    "collection": coll_name,
+                    "filename": meta.get("filename"),
+                    "topic": meta.get("topic"),
+                    "language": meta.get("language"),
+                    "chunk_index": meta.get("chunk_index"),
+                    "total_chunks": meta.get("total_chunks"),
+                    "created_at": meta.get("created_at"),
+                    "content": doc
+                }
+                f_jsonl.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+        with open(log_md, "a", encoding="utf-8") as f_md:
+            for cid, doc, meta in zip(ids, documents, metadatas):
+                f_md.write(f"### Dòng tri thức mới: `{cid}`\n\n")
+                f_md.write(f"- **Tệp nguồn (Filename)**: `{meta.get('filename')}`\n")
+                f_md.write(f"- **Chủ đề (Topic)**: `{meta.get('topic')}`\n")
+                f_md.write(f"- **Collection RAG**: `{coll_name}` (Ngôn ngữ: `{meta.get('language')}`)\n")
+                f_md.write(f"- **Thời gian nạp**: `{meta.get('created_at')}` (Chunk {meta.get('chunk_index', 0) + 1}/{meta.get('total_chunks', 1)})\n\n")
+                f_md.write("**Nội dung đoạn trích đã chunk & vector hóa:**\n")
+                f_md.write("```markdown\n")
+                f_md.write(doc.strip() + "\n")
+                f_md.write("```\n\n---\n\n")
+    except Exception as log_err:
+        logger.warning(f"Không thể ghi log chunk ra file: {log_err}")
 
     # 6. Đếm tổng số lượng records mới
     total_in_coll = coll.count()
