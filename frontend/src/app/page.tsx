@@ -77,7 +77,7 @@ function HomePageInner() {
   const [isShortcutsOpen, setIsShortcutsOpen] = useState<boolean>(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
   const [isInstructorKnowledgeOpen, setIsInstructorKnowledgeOpen] = useState<boolean>(false);
-  const [ragChunkCount, setRagChunkCount] = useState<number>(5230);
+  const [ragChunkCount, setRagChunkCount] = useState<number>(11731);
   
   // Header inline renaming state
   const [isEditingHeaderTitle, setIsEditingHeaderTitle] = useState<boolean>(false);

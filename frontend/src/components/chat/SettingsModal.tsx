@@ -54,7 +54,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         if (res.ok) {
           const data = await res.json();
           setTestStatus('success');
-          setTestMessage(`Kết nối Backend RAG thành công! Kho tri thức sẵn sàng (${data.total_records?.toLocaleString() || 5231} chunks).`);
+          setTestMessage(`Kết nối Backend RAG thành công! Kho tri thức sẵn sàng (${data.total_records?.toLocaleString() || 11731} chunks).`);
         } else {
           setTestStatus('error');
           setTestMessage(`Backend trả về HTTP ${res.status}`);
@@ -252,7 +252,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <Database className="h-4 w-4 text-emerald-600 shrink-0" />
               <div>
                 <div className="text-[11px] leading-tight font-bold">FastAPI + RAG ChromaDB</div>
-                <div className="text-[9px] text-emerald-600 dark:text-emerald-400 font-medium">Có Trích dẫn RAG 5,231 Chunks</div>
+                <div className="text-[9px] text-emerald-600 dark:text-emerald-400 font-medium">Có Trích dẫn RAG 11,731 Chunks</div>
               </div>
             </button>
 

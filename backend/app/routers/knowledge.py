@@ -178,7 +178,7 @@ async def get_knowledge_stats():
         logger.error(f"Lỗi kiểm tra stats ChromaDB: {e}")
         return {
             "status": "error",
-            "total_records": 5230,
+            "total_records": 11731,
             "message": str(e)
         }
 

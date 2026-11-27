@@ -648,7 +648,7 @@ export async function getSocraticAssistantResponse(
   selectedModelName: string
 ): Promise<SocraticEngineResult> {
   // 0. Luôn ưu tiên kết nối FastAPI Backend + RAG ChromaDB
-  // Vì Backend đã tích hợp mô hình Gemini 3 Flash kết hợp 5,231 chunks tri thức chuẩn hóa
+  // Vì Backend đã tích hợp mô hình Gemini 3 Flash kết hợp 11,731 chunks tri thức chuẩn hóa
   if (
     settings.aiProvider === 'backend_rag' ||
     !settings.aiProvider ||

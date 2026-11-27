@@ -499,7 +499,7 @@ export const ChatMessageItem: React.FC<ChatMessageItemProps> = ({
                       </span>
                     </h4>
                     <p className="text-[11px] text-emerald-800/80 dark:text-emerald-400">
-                      Trích xuất từ {message.sources.length} đoạn tri thức trong kho 5,231 chunks giáo trình chuẩn
+                      Trích xuất từ {message.sources.length} đoạn tri thức trong kho 11,731 chunks giáo trình chuẩn
                     </p>
                   </div>
                 </div>
