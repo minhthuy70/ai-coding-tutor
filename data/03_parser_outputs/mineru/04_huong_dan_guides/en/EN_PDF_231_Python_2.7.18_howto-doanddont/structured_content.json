@@ -1,0 +1,1123 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.232,
+            0.121,
+            0.886,
+            0.181
+          ],
+          "level": 1,
+          "content": "Idioms and Anti-Idioms in Python Release 2.7.18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.493,
+            0.217,
+            0.885,
+            0.262
+          ],
+          "content": "Guido van Rossum\nand the Python development team"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.779,
+            0.3,
+            0.885,
+            0.316
+          ],
+          "content": "May 20, 2020"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.322,
+            0.885,
+            0.339
+          ],
+          "content": "Python Software Foundation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.338,
+            0.885,
+            0.355
+          ],
+          "content": "Email: docs@python.org"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.375,
+            0.224,
+            0.397
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.113,
+            0.42,
+            0.886,
+            0.615
+          ],
+          "content": "- Language Constructs You Should Not Use\n- 1.1 from module import \\* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2\n- 1.2 Unadorned exec, execfile() and friends . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3\n- 1.3 from module import name1, name2 . . . . . . . . . . . . . . . . . . . . . . . 3\n- 1.4 except: .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ... 4\n- Exceptions\n- Using the Batteries\n- Using Backslash to Continue Statements\n- Index"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.155,
+            0.654,
+            0.306,
+            0.67
+          ],
+          "level": 2,
+          "content": "Author Moshe Zadka"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.676,
+            0.414,
+            0.694
+          ],
+          "content": "This document is placed in the public domain."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.714,
+            0.189,
+            0.73
+          ],
+          "level": 2,
+          "content": "Abstract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.744,
+            0.875,
+            0.778
+          ],
+          "content": "This document can be considered a companion to the tutorial. It shows how to use Python, and even more importantly, how not to use Python."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.621,
+            0.112
+          ],
+          "level": 2,
+          "content": "1 Language Constructs You Should Not Use"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.164
+          ],
+          "content": "While Python has relatively few gotchas compared to other languages, it still has some constructs which are only useful in corner cases, or are plain dangerous."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.189,
+            0.356,
+            0.207
+          ],
+          "level": 2,
+          "content": "1.1 from module import \\*"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.224,
+            0.331,
+            0.24
+          ],
+          "level": 2,
+          "content": "Inside Function Definitions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.255,
+            0.886,
+            0.331
+          ],
+          "content": "from module import \\* is invalid inside function definitions. While many versions of Python do not check for the invalidity, it does not make it more valid, no more than having a smart lawyer makes a man innocent. Do not use it like that ever. Even in versions where it was accepted, it made the function execution slower, because the compiler could not be certain which names were local and which were global. In Python 2.1 this construct causes warnings, and sometimes even errors."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.356,
+            0.246,
+            0.372
+          ],
+          "level": 2,
+          "content": "At Module Level"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.388,
+            0.886,
+            0.449
+          ],
+          "content": "While it is valid to use from module import \\* at module level it is usually a bad idea. For one, this loses an important property Python otherwise has — you can know where each toplevel name is defined by a simple “search” function in your favourite editor. You also open yourself to trouble in the future, if some module grows additional functions or classes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.456,
+            0.593,
+            0.472
+          ],
+          "content": "One of the most awful questions asked on the newsgroup is why this code:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.481,
+            0.248,
+            0.511
+          ],
+          "sub_type": "code",
+          "content": "```python\nf = open(\"www\")\nf.read()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.526,
+            0.885,
+            0.573
+          ],
+          "content": "does not work. Of course, it works just fine (assuming you have a file called “www”.) But it does not work if somewhere in the module, the statement from os import \\* is present. The os module has a function called open() which returns an integer. While it is very useful, shadowing a builtin is one of its least useful properties."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.579,
+            0.885,
+            0.625
+          ],
+          "content": "Remember, you can never know for sure what names a module exports, so either take what you need — from module import name1, name2, or keep them in the module and access on a per-need basis — import module; print module.name."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.65,
+            0.276,
+            0.665
+          ],
+          "level": 2,
+          "content": "When It Is Just Fine"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.681,
+            0.578,
+            0.696
+          ],
+          "content": "There are situations in which from module import \\* is just fine:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.705,
+            0.881,
+            0.72
+          ],
+          "content": "\\- The interactive prompt. For example, from math import \\* makes Python an amazing scientific calculator."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.727,
+            0.525,
+            0.742
+          ],
+          "content": "\\- When extending a module in C with a module in Python."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.75,
+            0.559,
+            0.765
+          ],
+          "content": "\\- When the module advertises itself as from import \\* safe."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.492,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.553,
+            0.108
+          ],
+          "level": 2,
+          "content": "1.2 Unadorned exec, execfile() and friends"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.886,
+            0.17
+          ],
+          "content": "The word “unadorned” refers to the use without an explicit dictionary, in which case those constructs evaluate code in the current environment. This is dangerous for the same reasons from import \\* is dangerous — it might step over variables you are counting on and mess up things for the rest of your code. Simply do not do that."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.176,
+            0.213,
+            0.191
+          ],
+          "content": "Bad examples:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.2,
+            0.514,
+            0.303
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> for name in sys.argv[1:]:\n>>>     exec \"%s=1\" % name\n>>> def func(s, **kw):\n>>>     for var, val in kw.items():\n>>>         exec \"s.%s=val\" % var  # invalid!\n>>> execfile(\"handler.py\")\n>>> handle()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.315,
+            0.222,
+            0.331
+          ],
+          "content": "Good examples:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.339,
+            0.426,
+            0.484
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> d = {}\n>>> for name in sys.argv[1:]:\n>>>     d[name] = 1\n>>> def func(s, **kw):\n>>>     for var, val in kw.items():\n>>>         setattr(s, var, val)\n>>> d={}\n>>> execfile(\"handle.py\", d, d)\n>>> handle = d['handle']\n>>> handle()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.515,
+            0.484,
+            0.533
+          ],
+          "level": 2,
+          "content": "1.3 from module import name1, name2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.548,
+            0.886,
+            0.624
+          ],
+          "content": "This is a “don’t” which is much weaker than the previous “don’t”s but is still something you should not do if you don’t have good reasons to do that. The reason it is usually a bad idea is because you suddenly have an object which lives in two separate namespaces. When the binding in one namespace changes, the binding in the other will not, so there will be a discrepancy between them. This happens when, for example, one module is reloaded, or changes the definition of a function at runtime."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.631,
+            0.206,
+            0.647
+          ],
+          "content": "Bad example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.655,
+            0.384,
+            0.758
+          ],
+          "sub_type": "code",
+          "content": "```python\n# foo.py\na = 1\n\n# bar.py\nfrom foo import a\nif something():\n    a = 2 # danger: foo.a != a\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.77,
+            0.216,
+            0.787
+          ],
+          "content": "Good example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.795,
+            0.25,
+            0.897
+          ],
+          "sub_type": "code",
+          "content": "```python\n# foo.py\na = 1\n\n# bar.py\nimport foo\nif something():\n    foo.a = 2\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.09,
+            0.225,
+            0.109
+          ],
+          "level": 2,
+          "content": "1.4 except:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.885,
+            0.155
+          ],
+          "content": "Python has the except: clause, which catches all exceptions. Since every error in Python raises an exception, using except: can make many programming errors look like runtime problems, which hinders the debugging process."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.16,
+            0.512,
+            0.177
+          ],
+          "content": "The following code shows a great example of why this is bad:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.185,
+            0.489,
+            0.245
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    foo = opne(\"file\") # misspelled \"open\"\nexcept:\n    sys.exit(\"could not open file!\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.258,
+            0.886,
+            0.305
+          ],
+          "content": "The second line triggers a NameError, which is caught by the except clause. The program will exit, and the error message the program prints will make you think the problem is the readability of \"file\" when in fact the real error has nothing to do with \"file\"."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.312,
+            0.335,
+            0.328
+          ],
+          "content": "A better way to write the above is"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.336,
+            0.424,
+            0.396
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    foo = opne(\"file\")\nexcept IOError:\n    sys.exit(\"could not open file\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.409,
+            0.885,
+            0.44
+          ],
+          "content": "When this is run, Python will produce a traceback showing the NameError, and it will be immediately apparent what needs to be fixed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.447,
+            0.886,
+            0.54
+          ],
+          "content": "Because except: catches all exceptions, including SystemExit, KeyboardInterrupt, and GeneratorExit (which is not an error and should not normally be caught by user code), using a bare except: is almost never a good idea. In situations where you need to catch all “normal” errors, such as in a framework that runs callbacks, you can catch the base class for all normal exceptions, Exception. Unfortunately in Python 2.x it is possible for third-party code to raise exceptions that do not inherit from Exception, so in Python 2.x there are some cases where you may have to use a bare except: and manually re-raise the exceptions you don’t want to catch."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.568,
+            0.271,
+            0.59
+          ],
+          "level": 2,
+          "content": "2 Exceptions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.61,
+            0.885,
+            0.641
+          ],
+          "content": "Exceptions are a useful feature of Python. You should learn to raise them whenever something unexpected occurs, and catch them only where you can do something about them."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.647,
+            0.39,
+            0.664
+          ],
+          "content": "The following is a very popular anti-idiom"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.673,
+            0.399,
+            0.746
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef get_status(file):\n    if not os.path.exists(file):\n        print \"file not found\"\n        sys.exit(1)\n    return open(file).readline()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.759,
+            0.886,
+            0.837
+          ],
+          "content": "Consider the case where the file gets deleted between the time the call to os.path.exists() is made and the time open() is called. In that case the last line will raise an IOError. The same thing would happen if file exists but has no read permission. Since testing this on a normal machine on existent and non-existent files makes it seem bugless, the test results will seem fine, and the code will get shipped. Later an unhandled IOError (or perhaps some other EnvironmentError) escapes to the user, who gets to watch the ugly traceback."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.842,
+            0.368,
+            0.858
+          ],
+          "content": "Here is a somewhat better way to do it."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.098,
+            0.565,
+            0.185
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef get_status(file):\n    try:\n        return open(file).readline()\n    except EnvironmentError as err:\n        print \"Unable to open file: {}\".format(err)\n        sys.exit(1)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.198,
+            0.885,
+            0.231
+          ],
+          "content": "In this version, either the file gets opened and the line is read (so it works even on flaky NFS or SMB connections), or an error message is printed that provides all the available information on why the open failed, and the application is aborted."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.236,
+            0.885,
+            0.269
+          ],
+          "content": "However, even this version of get\\_status() makes too many assumptions — that it will only be used in a short running script, and not, say, in a long running server. Sure, the caller could do something like"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.277,
+            0.362,
+            0.336
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    status = get_status(log)\nexcept SystemExit:\n    status = None\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.35,
+            0.885,
+            0.381
+          ],
+          "content": "But there is a better way. You should try to use as few except clauses in your code as you can — the ones you do use will usually be inside calls which should always succeed, or a catch-all in a main function."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.387,
+            0.498,
+            0.403
+          ],
+          "content": "So, an even better version of get\\_status() is probably"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.413,
+            0.397,
+            0.443
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef get_status(file):\n    return open(file).readline()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.457,
+            0.884,
+            0.489
+          ],
+          "content": "The caller can deal with the exception if it wants (for example, if it tries several files in a loop), or just let the exception filter upwards to its caller."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.495,
+            0.885,
+            0.542
+          ],
+          "content": "But the last version still has a serious problem — due to implementation details in CPython, the file would not be closed when an exception is raised until the exception handler finishes; and, worse, in other implementations (e.g., Jython) it might not be closed at all regardless of whether or not an exception is raised."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.548,
+            0.885,
+            0.579
+          ],
+          "content": "The best version of this function uses the open() call as a context manager, which will ensure that the file gets closed as soon as the function returns:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.589,
+            0.362,
+            0.633
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef get_status(file):\n    with open(file) as fp:\n        return fp.readline()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.669,
+            0.36,
+            0.691
+          ],
+          "level": 2,
+          "content": "3 Using the Batteries"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.712,
+            0.885,
+            0.758
+          ],
+          "content": "Every so often, people seem to be writing stuff in the Python library again, usually poorly. While the occasional module has a poor interface, it is usually much better to use the rich standard library and data types that come with Python than inventing your own."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.765,
+            0.885,
+            0.796
+          ],
+          "content": "A useful module very few people know about is os.path. It always has the correct path arithmetic for your operating system, and will usually be much better than whatever you come up with yourself."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.802,
+            0.184,
+            0.818
+          ],
+          "content": "Compare:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.827,
+            0.38,
+            0.886
+          ],
+          "sub_type": "code",
+          "content": "```txt\n# ugh!\nreturn dir�\"/\"+file\n# better\nreturn os.path.join(dir, file)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.092,
+            0.684,
+            0.108
+          ],
+          "content": "More useful functions in os.path: basename(), dirname() and splitext()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.115,
+            0.885,
+            0.177
+          ],
+          "content": "There are also many useful built-in functions people seem not to be aware of for some reason: min() and max() can find the minimum/maximum of any sequence with comparable semantics, for example, yet many people write their own max()/min(). Another highly useful function is reduce() which can be used to repeatedly apply a binary operation to a sequence, reducing it to a single value. For example, compute a factorial with a series of multiply operations:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.185,
+            0.459,
+            0.244
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> n = 4\n>>> import operator\n>>> reduce(operator.mul, range(1, n+1))\n24\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.257,
+            0.884,
+            0.29
+          ],
+          "content": "When it comes to parsing numbers, note that float(), int() and long() all accept string arguments and will reject ill-formed strings by raising an ValueError."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.318,
+            0.606,
+            0.34
+          ],
+          "level": 2,
+          "content": "4 Using Backslash to Continue Statements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.36,
+            0.885,
+            0.391
+          ],
+          "content": "Since Python treats a newline as a statement terminator, and since statements are often more than is comfortable to put in one line, many people do:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.4,
+            0.585,
+            0.446
+          ],
+          "sub_type": "code",
+          "content": "```python\nif foo.bar()['first'][0] == baz.quux(1, 2)[5:9] and \\\n    calculate_number(10, 20) != forbulate(500, 360):\n        pass\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.46,
+            0.885,
+            0.491
+          ],
+          "content": "You should realize that this is dangerous: a stray space after the \\ would make this line wrong, and stray spaces are notoriously hard to see in editors. In this case, at least it would be a syntax error, but if the code was:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.5,
+            0.591,
+            0.53
+          ],
+          "sub_type": "code",
+          "content": "```javascript\nvalue = foo.bar()['first'][0]*baz.quux(1, 2)[5:9] \\\n+ calculate_number(10, 20)*forbulate(500, 360)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.545,
+            0.338,
+            0.56
+          ],
+          "content": "then it would just be subtly wrong."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.567,
+            0.596,
+            0.583
+          ],
+          "content": "It is usually much better to use the implicit continuation inside parenthesis:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.59,
+            0.291,
+            0.605
+          ],
+          "content": "This version is bulletproof:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.615,
+            0.599,
+            0.646
+          ],
+          "sub_type": "code",
+          "content": "```python\nvalue = (foo.bar()['first'][0]*baz.quux(1, 2)[5:9]\n            + calculate_number(10, 20)*forbulate(500, 360))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.11,
+            0.183,
+            0.13
+          ],
+          "level": 2,
+          "content": "Index"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.143,
+            0.135,
+            0.162
+          ],
+          "level": 2,
+          "content": "B"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.167,
+            0.244,
+            0.182
+          ],
+          "content": "bare except,4"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.192,
+            0.134,
+            0.21
+          ],
+          "level": 2,
+          "content": "E"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.217,
+            0.208,
+            0.245
+          ],
+          "content": "except\n    bare,4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Idioms and Anti-Idioms in Python",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2020-05-20T04:59:23-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 7,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

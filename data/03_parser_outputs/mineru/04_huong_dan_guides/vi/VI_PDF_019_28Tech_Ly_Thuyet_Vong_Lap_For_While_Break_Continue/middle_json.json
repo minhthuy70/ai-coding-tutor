@@ -1,0 +1,4983 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:44:09",
+      "producer_application": "FPDF 1.7",
+      "page_count": 18,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.258,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.127,
+            0.431,
+            0.432,
+            0.563
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÒNG LẶP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.651,
+            0.307,
+            0.903,
+            0.753
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "《>"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.991
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.135,
+            0.505,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range(): a) Vòng lặp for:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.062,
+            0.337,
+            0.127,
+            0.451
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.062,
+                0.337,
+                0.127,
+                0.451
+              ],
+              "image_path": "images/page_1_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.134,
+            0.345,
+            0.602,
+            0.505
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trong ngôn ngữ lập trình Python có chút khác so với các ngôn ngữ lập trình như C/C++, Java,..."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.064,
+            0.541,
+            0.126,
+            0.654
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.064,
+                0.541,
+                0.126,
+                0.654
+              ],
+              "image_path": "images/page_1_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.129,
+            0.539,
+            0.602,
+            0.81
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thay vì duyệt qua các giá trị số thì Python sẽ lặp trên các iterable (list, tuple, string, set…). Thứ tự duyệt sẽ theo thứ tự xuất hiện trong iterable. Để thực hiện vòng lặp for ta sử dụng built-in function là range()."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.619,
+            0.269,
+            0.95,
+            0.817
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.619,
+                0.269,
+                0.95,
+                0.817
+              ],
+              "image_path": "images/page_1_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.012,
+            0.93,
+            0.036,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.135,
+            0.506,
+            0.203
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.036,
+            0.21,
+            0.246,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Vòng lặp for:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.177,
+            0.253,
+            0.816,
+            0.882
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.177,
+                0.253,
+                0.816,
+                0.882
+              ],
+              "image_path": "images/page_2_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.18,
+            0.493,
+            0.306,
+            0.619
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "be indented"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.403,
+            0.549,
+            0.523,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "statement"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.358,
+            0.66,
+            0.429,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "else:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.402,
+            0.716,
+            0.523,
+            0.764
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "statement"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.012,
+            0.93,
+            0.035,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.037,
+            0.135,
+            0.505,
+            0.202
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.211,
+            0.249,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.465,
+            0.237,
+            0.532,
+            0.355
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.465,
+                0.237,
+                0.532,
+                0.355
+              ],
+              "image_path": "images/page_3_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.204,
+            0.356,
+            0.8,
+            0.467
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm range() sẽ sinh ra một dãy số và bạn sẽ sử dụng vòng for để duyệt qua từng số trong dãy đã sinh ra."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.116,
+            0.547,
+            0.603,
+            0.604
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cú pháp:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " range (start, stop, step)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.112,
+            0.654,
+            0.852,
+            0.827
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Các tham số: start:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Giá trị bắt đầu của dãy số (mặc định là 0). "
+            },
+            {
+              "type": "text",
+              "content": "stop:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Giá trị cuối cùng của dãy số (cận này không được lấy). "
+            },
+            {
+              "type": "text",
+              "content": "step:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Bước nhảy của dãy số (mặc định là 1)."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.013,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.505,
+            0.202
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.038,
+            0.211,
+            0.249,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.062,
+            0.311,
+            0.131,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.072,
+            0.389,
+            0.1,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.141,
+            0.403,
+            0.396,
+            0.449
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "start = 0, stop = 5, step = 1",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.093,
+            0.48,
+            0.442,
+            0.571
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(5):print('28tech', end = ' ')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.235,
+            0.604,
+            0.313,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.114,
+            0.666,
+            0.43,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech 28tech 28tech 28 tech 28tech"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.53,
+            0.311,
+            0.601,
+            0.386
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.54,
+            0.387,
+            0.568,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.61,
+            0.402,
+            0.865,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "start = 0, stop = 5, step = 1",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.562,
+            0.479,
+            0.91,
+            0.571
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(0, 5, 1):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.703,
+            0.604,
+            0.782,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.583,
+            0.666,
+            0.897,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech 28tech 28tech 28 tech 28tech"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.015,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 18,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.505,
+            0.202
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.038,
+            0.211,
+            0.249,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.062,
+            0.311,
+            0.131,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.072,
+            0.389,
+            0.1,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.141,
+            0.403,
+            0.396,
+            0.449
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "start = 2, stop = 5, step = 1",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.093,
+            0.479,
+            0.442,
+            0.571
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(2, 5):print('28tech', end = ' ')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.231,
+            0.605,
+            0.31,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.178,
+            0.667,
+            0.364,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech 28tech 28tech"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.53,
+            0.311,
+            0.601,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.539,
+            0.387,
+            0.568,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.603,
+            0.402,
+            0.873,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "start = 1, stop = 11, step = 2",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.561,
+            0.479,
+            0.852,
+            0.571
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(1, 11, 2): print(i, end = ' ')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.703,
+            0.604,
+            0.782,
+            0.642
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.702,
+            0.666,
+            0.779,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 3 5 7 9"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.016,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 18,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.014,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.134,
+            0.504,
+            0.202
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.21,
+            0.25,
+            0.272
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Hàm range():",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.037,
+            0.311,
+            0.106,
+            0.384
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.045,
+            0.387,
+            0.074,
+            0.42
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.15,
+            0.399,
+            0.338,
+            0.447
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In ra các ước của N",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 8,
+          "bbox": [
+            0.067,
+            0.455,
+            0.155,
+            0.495
+          ],
+          "image_path": "images/page_6_equation_8.jpg",
+          "content": "n = 1 0 0"
+        },
+        {
+          "type": "equation",
+          "index": 9,
+          "bbox": [
+            0.067,
+            0.496,
+            0.382,
+            0.635
+          ],
+          "image_path": "images/page_6_equation_9.jpg",
+          "content": "\\begin{array}{l} \\text {for i in range(1, 100, 1):} \\\\ \\text {if n \\% i == 0:} \\\\ \\text {print(i, end = '')} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.205,
+            0.66,
+            0.283,
+            0.699
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.164,
+            0.722,
+            0.33,
+            0.763
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 2 4 5 10 20 25 50"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.459,
+            0.194,
+            0.529,
+            0.301
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE 00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.545,
+            0.25,
+            0.873,
+            0.344
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Duyệt các bội không âm của 3 nhỏ hơn hoặc bằng N",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 14,
+          "bbox": [
+            0.498,
+            0.343,
+            0.574,
+            0.383
+          ],
+          "image_path": "images/page_6_equation_14.jpg",
+          "content": "n = 3 1"
+        },
+        {
+          "type": "equation",
+          "index": 15,
+          "bbox": [
+            0.498,
+            0.385,
+            0.79,
+            0.477
+          ],
+          "image_path": "images/page_6_equation_15.jpg",
+          "content": "\\begin{array}{l} \\text {for i in range(0, 31, 3):} \\\\ \\text {print(i, end = '')} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.499,
+            0.475,
+            0.583,
+            0.52
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.498,
+            0.52,
+            0.632,
+            0.561
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Cach khac"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 18,
+          "bbox": [
+            0.498,
+            0.563,
+            0.951,
+            0.657
+          ],
+          "image_path": "images/page_6_equation_18.jpg",
+          "content": "\\begin{array}{l} \\text {for i in range(0, 31):} \\\\ \\text {if i \\% 3 == 0: print(i, end = '')} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.69,
+            0.696,
+            0.769,
+            0.737
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.615,
+            0.758,
+            0.859,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0 3 6 9 12 15 18 21 24 27 30 0 3 6 9 12 15 18 21 24 27 30"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 21,
+          "bbox": [
+            0.011,
+            0.926,
+            0.036,
+            0.981
+          ],
+          "content": []
+        },
+        {
+          "type": "footer",
+          "index": 22,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 23,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.505,
+            0.203
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.038,
+            0.211,
+            0.249,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.063,
+            0.358,
+            0.121,
+            0.401
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "QUIZ"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.121,
+            0.447,
+            0.412,
+            0.537
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(1, 10, 3): print(i, end = ' ')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.235,
+            0.604,
+            0.313,
+            0.642
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.254,
+            0.668,
+            0.29,
+            0.706
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "???",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.521,
+            0.358,
+            0.579,
+            0.402
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "QUIZ"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.58,
+            0.446,
+            0.871,
+            0.537
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(1, 10, 0): print(i, end = ' ')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.694,
+            0.604,
+            0.772,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.713,
+            0.668,
+            0.749,
+            0.706
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "???",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.116,
+            0.481,
+            0.187,
+            0.586
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.116,
+                0.481,
+                0.187,
+                0.586
+              ],
+              "image_path": "images/page_8_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.007,
+            0.019,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 3,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.135,
+            0.504,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Vòng lặp for và hàm range():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.038,
+            0.211,
+            0.334,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "c) Vòng for lồng nhau:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.05,
+            0.283,
+            0.099,
+            0.369
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.05,
+                0.283,
+                0.099,
+                0.369
+              ],
+              "image_path": "images/page_8_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.105,
+            0.281,
+            0.95,
+            0.477
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Vòng for lồng nhau (Nested loop) xuất hiện khi một câu lệnh bên trong vòng for này lại là một vòng for khác. Để hiểu được cách hoạt động của vòng for các bạn chỉ cần nhớ rằng mỗi vòng lặp của vòng for bên ngoài thì toàn bộ vòng for con bên trong sẽ được thực hiện."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.483,
+            0.186,
+            0.554
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.172,
+            0.581,
+            0.624,
+            0.764
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(3): print('Vong for ngoai khi i = ', i) for j in range(2): print(i, j)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 10,
+          "bbox": [
+            0.705,
+            0.548,
+            0.784,
+            0.587
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.657,
+            0.596,
+            0.82,
+            0.885
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Vong for ngoai khi i = 0 0 0 0 1 Vong for ngoai khi i = 1 1 0 1 1 Vong for ngoai khi i = 2 2 0 2 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.019,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.136,
+            0.493,
+            0.198
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Câu lệnh break và continue:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.211,
+            0.281,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Câu lệnh break:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.049,
+            0.289,
+            0.1,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.049,
+                0.289,
+                0.1,
+                0.375
+              ],
+              "image_path": "images/page_9_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.106,
+            0.289,
+            0.945,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Câu lệnh break được sử dụng để kết thúc vòng lặp ngay lập tức, vòng lặp for sẽ kết thúc ngay tại thời điểm gặp câu lệnh break và tiếp tục các câu lệnh bên dưới vòng for. Thông thường thì câu lệnh break sẽ đi kèm theo một điều kiện kích hoạt."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.137,
+            0.515,
+            0.208,
+            0.621
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE 00"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.187,
+            0.616,
+            0.538,
+            0.842
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(5): print(i, end = ' ') if i == 3: break print('28tech', end = ' ') print('Ket thuc')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.658,
+            0.686,
+            0.738,
+            0.725
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.558,
+            0.747,
+            0.847,
+            0.785
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0 28tech 1 28tech 2 28tech 3 Ket thuc"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.009,
+            0.929,
+            0.043,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.136,
+            0.493,
+            0.197
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Câu lệnh break và continue:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.038,
+            0.211,
+            0.321,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Câu lệnh continue:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.05,
+            0.289,
+            0.1,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.05,
+                0.289,
+                0.1,
+                0.375
+              ],
+              "image_path": "images/page_10_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.107,
+            0.289,
+            0.944,
+            0.449
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Câu lệnh continue được dùng để bỏ qua lần lặp hiện tại và quay trở lại luôn vòng lặp tiếp theo. Các câu lệnh bên dưới continue ở trong vòng lặp sẽ được bỏ qua."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.22,
+            0.465,
+            0.292,
+            0.541
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.266,
+            0.571,
+            0.532,
+            0.787
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(5): print('28tech') continue print('python')"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.609,
+            0.545,
+            0.689,
+            0.584
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.618,
+            0.608,
+            0.682,
+            0.646
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.619,
+            0.649,
+            0.682,
+            0.685
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.619,
+            0.689,
+            0.682,
+            0.725
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.619,
+            0.729,
+            0.682,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.619,
+            0.769,
+            0.682,
+            0.806
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.008,
+            0.929,
+            0.04,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 17,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.136,
+            0.307,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Vòng lặp while:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.036,
+            0.211,
+            0.502,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Vòng lặp while, break, continue :",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.465,
+            0.268,
+            0.533,
+            0.386
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.465,
+                0.268,
+                0.533,
+                0.386
+              ],
+              "image_path": "images/page_11_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.148,
+            0.387,
+            0.849,
+            0.606
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While được sử dụng khi bạn muốn thực hiện một tác vụ vô thời hạn, cho đến khi một điều kiện cụ thể được đáp ứng. Đây là một vòng lặp được kiểm soát theo điều kiện và thường sử dụng dụng khi chưa biết trước số lượng vòng lặp."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.444,
+            0.659,
+            0.556,
+            0.715
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CÚ PHÁP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.32,
+            0.73,
+            0.658,
+            0.811
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "while condition: #code when condtion is True"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.321,
+            0.811,
+            0.377,
+            0.847
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "else:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.371,
+            0.85,
+            0.687,
+            0.89
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "#code while condition is False"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.009,
+            0.929,
+            0.043,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.067,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.136,
+            0.308,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Vòng lặp while:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.036,
+            0.209,
+            0.504,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Vòng lặp while, break, continue :",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.169,
+            0.462,
+            0.298,
+            0.593
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Loop body must be indented"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.355,
+            0.402,
+            0.565,
+            0.449
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "while condition:"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.401,
+            0.463,
+            0.524,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "statement"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.402,
+            0.521,
+            0.524,
+            0.572
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "statement"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.356,
+            0.64,
+            0.427,
+            0.686
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "else:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.388,
+            0.701,
+            0.512,
+            0.748
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "statement"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 11,
+          "bbox": [
+            0.168,
+            0.456,
+            0.824,
+            0.873
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 11,
+              "bbox": [
+                0.168,
+                0.456,
+                0.824,
+                0.873
+              ],
+              "image_path": "images/page_12_image_11.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.602,
+            0.207,
+            0.795,
+            0.341
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Condition Any expression that evaluates to true or false"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.645,
+            0.467,
+            0.822,
+            0.602
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Loop body"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.636,
+            0.676,
+            0.821,
+            0.811
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Else caluse condition becomes false"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.009,
+            0.929,
+            0.043,
+            0.974
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 17,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.018,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.135,
+            0.307,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Vòng lặp while:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.209,
+            0.503,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Vòng lặp while, break, continue :",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " 00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 5,
+          "bbox": [
+            0.114,
+            0.375,
+            0.178,
+            0.415
+          ],
+          "image_path": "images/page_13_equation_5.jpg",
+          "content": "n = 1"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.252,
+            0.609,
+            0.331,
+            0.649
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.191,
+            0.658,
+            0.376,
+            0.867
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.191,
+                0.658,
+                0.376,
+                0.867
+              ],
+              "content": "1\n2\n3\n4\nFollowing statement"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.525,
+            0.224,
+            0.596,
+            0.297
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.572,
+            0.309,
+            0.869,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.572,
+                0.309,
+                0.869,
+                0.597
+              ],
+              "content": "n = 1\nwhile n < 5:\n    print(n)\n    n += 1\nelse:\n    print('End')\nprint('Following statement')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 10,
+          "bbox": [
+            0.694,
+            0.609,
+            0.774,
+            0.649
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.636,
+            0.66,
+            0.818,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.636,
+                0.66,
+                0.818,
+                0.907
+              ],
+              "content": "1\n2\n3\n4\nEnd\nFollowing statement"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.009,
+            0.928,
+            0.043,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.067,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.136,
+            0.307,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Vòng lặp while:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.211,
+            0.503,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Vòng lặp while, break, continue :",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.062,
+            0.312,
+            0.131,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.071,
+            0.389,
+            0.1,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.399,
+            0.423,
+            0.451
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Tính tổng chữ số của số nguyên",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 8,
+          "bbox": [
+            0.094,
+            0.481,
+            0.203,
+            0.521
+          ],
+          "image_path": "images/page_14_equation_8.jpg",
+          "content": "n = 1 2 3 4 5"
+        },
+        {
+          "type": "equation",
+          "index": 9,
+          "bbox": [
+            0.093,
+            0.526,
+            0.249,
+            0.57
+          ],
+          "image_path": "images/page_14_equation_9.jpg",
+          "content": "\\text {sum\\_digit} = 0"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.341,
+            0.479,
+            0.42,
+            0.518
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.339,
+            0.534,
+            0.427,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sum : 15"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 12,
+          "bbox": [
+            0.138,
+            0.614,
+            0.363,
+            0.659
+          ],
+          "image_path": "images/page_14_equation_12.jpg",
+          "content": "\\text {sum\\_digit} + = n \\% 10"
+        },
+        {
+          "type": "equation",
+          "index": 13,
+          "bbox": [
+            0.139,
+            0.66,
+            0.239,
+            0.701
+          ],
+          "image_path": "images/page_14_equation_13.jpg",
+          "content": "n / / = 1 0"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.543,
+            0.387,
+            0.573,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 15,
+          "bbox": [
+            0.619,
+            0.4,
+            0.866,
+            0.451
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lật ngược một số nguyên"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "equation",
+          "index": 16,
+          "bbox": [
+            0.566,
+            0.481,
+            0.676,
+            0.521
+          ],
+          "image_path": "images/page_14_equation_16.jpg",
+          "content": "n = 1 2 3 4 5"
+        },
+        {
+          "type": "equation",
+          "index": 17,
+          "bbox": [
+            0.567,
+            0.528,
+            0.653,
+            0.565
+          ],
+          "image_path": "images/page_14_equation_17.jpg",
+          "content": "\\text{rev} = \\emptyset"
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.814,
+            0.479,
+            0.894,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.565,
+            0.57,
+            0.719,
+            0.611
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "while n != 0:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.802,
+            0.534,
+            0.907,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "rev : 54321"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 21,
+          "bbox": [
+            0.612,
+            0.615,
+            0.882,
+            0.656
+          ],
+          "image_path": "images/page_14_equation_21.jpg",
+          "content": "\\text{rev} = \\text{rev} * 10 + n \\% 10"
+        },
+        {
+          "type": "equation",
+          "index": 22,
+          "bbox": [
+            0.613,
+            0.659,
+            0.711,
+            0.7
+          ],
+          "image_path": "images/page_14_equation_22.jpg",
+          "content": "n / / = 1 0"
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.566,
+            0.702,
+            0.788,
+            0.749
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print('rev :', rev)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 24,
+          "bbox": [
+            0.009,
+            0.929,
+            0.044,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 25,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 26,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.231,
+            0.431,
+            0.571,
+            0.798
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.231,
+                0.431,
+                0.571,
+                0.798
+              ],
+              "content": "i = 1\nwhile i <= 4:\n    print(i)\n    if i == 3: break\n    i += 1\nelse:\n    print('End')\nprint('Following statement')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.007,
+            0.018,
+            0.067,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 3,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.035,
+            0.135,
+            0.308,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Vòng lặp while:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.036,
+            0.21,
+            0.503,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Vòng lặp while, break, continue :",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.316,
+            0.336,
+            0.693,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Câu lệnh break sẽ làm else trong while không được thực hiện"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.653,
+            0.507,
+            0.735,
+            0.549
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.009,
+            0.929,
+            0.043,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.018,
+            0.067,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.135,
+            0.308,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Vòng lặp while:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.036,
+            0.21,
+            0.503,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) Vòng lặp while, break, continue :",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.399,
+            0.336,
+            0.61,
+            0.394
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Câu lệnh continue"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.228,
+            0.393,
+            0.559,
+            0.809
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.228,
+                0.393,
+                0.559,
+                0.809
+              ],
+              "content": "i = 1\nwhile i <= 4:\n    print('28tech')\n    i += 1\n    continue\n    print('python')\nelse:\n    print('End')\nprint('Following statement')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.642,
+            0.467,
+            0.723,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.583,
+            0.52,
+            0.748,
+            0.768
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.583,
+                0.52,
+                0.748,
+                0.768
+              ],
+              "content": "28tech\n28tech\n28tech\n28tech\nEnd\nFollowing statement"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.008,
+            0.929,
+            0.042,
+            0.976
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.136,
+            0.307,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Vòng lặp while:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.209,
+            0.325,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Vòng lặp vĩnh viễn:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.277,
+            0.157,
+            0.363
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.107,
+                0.277,
+                0.157,
+                0.363
+              ],
+              "image_path": "images/page_17_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.169,
+            0.293,
+            0.871,
+            0.349
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Để tạo 1 vòng lặp vĩnh viễn thì bạn chỉ cần để điều kiện là True."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.062,
+            0.369,
+            0.131,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.073,
+            0.453,
+            0.45,
+            0.912
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.073,
+                0.453,
+                0.45,
+                0.912
+              ],
+              "content": "Vòng lặp sẽ lặp vĩnh viễn cho tới khi\nbạn nhập xấu là 28tech\nwhile True:\n    str = input('Enter your\npassword :')\n    if str == '28tech':\n        print('OK')\n        break\n    else:\n        print('NOT OK')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.566,
+            0.515,
+            0.87,
+            0.61
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Yêu cầu nhập lại khi người dùng nhập 1 số nguyên âm hoặc số 0",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.504,
+            0.648,
+            0.944,
+            0.834
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "while True: n = int(input('Enter a positive number :')) if n > 0: break print(n)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.01,
+            0.929,
+            0.041,
+            0.973
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://inprotected.com?utm_source=signature",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "8"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "i"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.036,
+            0.949,
+            0.102,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "nprotected.com"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

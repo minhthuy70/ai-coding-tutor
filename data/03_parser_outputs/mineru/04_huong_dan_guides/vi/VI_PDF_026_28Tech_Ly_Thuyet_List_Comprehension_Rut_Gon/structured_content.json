@@ -1,0 +1,1808 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.13
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.044,
+            0.256,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.049,
+            0.465,
+            0.495,
+            0.535
+          ],
+          "level": 2,
+          "content": "LIST COMPREHENSION"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.648,
+            0.293,
+            0.903,
+            0.753
+          ],
+          "level": 2,
+          "content": "二<1>"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.979
+          ],
+          "content": "1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.991
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.115
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.929,
+            0.017,
+            0.985,
+            0.112
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.184,
+            0.343,
+            0.779,
+            0.659
+          ],
+          "content": "Comprehension là một cách nhanh chóng để có thể tạo một cấu trúc dữ liệu từ iterable. Nó có thể kết hợp với điều kiện và vòng lặp để rút gọn cú pháp. List comprehension sẽ giúp code của bạn Pythonic hơn."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.95,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.145,
+            0.504,
+            0.212
+          ],
+          "level": 2,
+          "content": "1. Cú pháp và các ví dụ cơ bản:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.435,
+            0.28,
+            0.564,
+            0.345
+          ],
+          "level": 2,
+          "content": "CÚ PHÁP"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.305,
+            0.407,
+            0.694,
+            0.469
+          ],
+          "level": 2,
+          "content": "[Expression for var in iterable]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.514,
+            0.85,
+            0.571
+          ],
+          "content": "hàm lambda.**Expression:** Biểu thức được thực hiện mỗi khi vòng lặp thực thi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.583,
+            0.591,
+            0.638
+          ],
+          "content": "**Var:** Một biến là một item trong iterable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.651,
+            0.74,
+            0.707
+          ],
+          "content": "**Iterable:** Collections chứa các object (list, tuple, str...)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.145,
+            0.504,
+            0.212
+          ],
+          "level": 2,
+          "content": "1. Cú pháp và các ví dụ cơ bản:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.464,
+            0.302,
+            0.535,
+            0.363
+          ],
+          "content": "**VÍ DỤ**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.408,
+            0.129,
+            0.513
+          ],
+          "content": "00 EXAMPLE 00"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.148,
+            0.453,
+            0.411,
+            0.507
+          ],
+          "level": 2,
+          "content": "ách đơn giản để định nghĩa một hàCopy từ một list đã có:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.511,
+            0.469,
+            0.602
+          ],
+          "content": "hàa = [\"python\", \"apple\", \"28tech\"] b = [x for x in a]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.603,
+            0.183,
+            0.647
+          ],
+          "content": "print(b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.288,
+            0.617,
+            0.367,
+            0.655
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.662,
+            0.42,
+            0.703
+          ],
+          "content": "['python', 'apple', '28tech']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.496,
+            0.379,
+            0.561,
+            0.483
+          ],
+          "content": "00 EXAMPLE 00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.561,
+            0.421,
+            0.894,
+            0.516
+          ],
+          "content": "**Tạo một list giá trị bình phương** bda thường được gọi dưới cái tên toán tử l**của các phần tử của một list đã có:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.529,
+            0.731,
+            0.575
+          ],
+          "content": "a = [1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.574,
+            0.811,
+            0.619
+          ],
+          "content": "b = [x \\*\\* 2 for x in a]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.543,
+            0.619,
+            0.639,
+            0.665
+          ],
+          "content": "print(b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.763,
+            0.639,
+            0.849,
+            0.727
+          ],
+          "content": "**OUTPUT** [1, 4, 9, 16]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "4"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.145,
+            0.504,
+            0.212
+          ],
+          "level": 2,
+          "content": "1. Cú pháp và các ví dụ cơ bản:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.408,
+            0.129,
+            0.515
+          ],
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.463,
+            0.437,
+            0.624
+          ],
+          "content": "ch đơn giản để định nghĩa một hTạo một list từ range: a = [x \\*\\* 3 for x in range(5)] print(a)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.607,
+            0.394,
+            0.699
+          ],
+          "content": "**OUTPUT** [0, 1, 8, 27, 64]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.463,
+            0.301,
+            0.536,
+            0.365
+          ],
+          "content": "**VÍ DỤ**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.5,
+            0.407,
+            0.567,
+            0.515
+          ],
+          "content": "EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.609,
+            0.459,
+            0.826,
+            0.515
+          ],
+          "content": "ường được gọi dưới cái tên **Tạo một list từ str:**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.573,
+            0.521,
+            0.717,
+            0.564
+          ],
+          "content": "s = \" 2 8 \\text {tech}\"",
+          "image_source": "images/page_4_equation_10.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.573,
+            0.566,
+            0.786,
+            0.612
+          ],
+          "content": "a = [x for x in s]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.573,
+            0.611,
+            0.67,
+            0.658
+          ],
+          "content": "print(a)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.744,
+            0.625,
+            0.825,
+            0.665
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.713,
+            0.671,
+            0.853,
+            0.714
+          ],
+          "content": "['2', '8', 't', 'e', 'c', 'h']"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.144,
+            0.505,
+            0.212
+          ],
+          "level": 2,
+          "content": "1. Cú pháp và các ví dụ cơ bản:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.391,
+            0.131,
+            0.499
+          ],
+          "content": "EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.443,
+            0.441,
+            0.538
+          ],
+          "content": "ể**Tạo một list trị tuyệt đối của các phần tử của một list đã có:**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.094,
+            0.542,
+            0.399,
+            0.588
+          ],
+          "content": "a = [ 1, 2, - 3, 4, - 5, - 1 0 ]",
+          "image_source": "images/page_5_equation_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.095,
+            0.587,
+            0.364,
+            0.633
+          ],
+          "content": "b = [abs(x) for x in a]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.096,
+            0.632,
+            0.192,
+            0.679
+          ],
+          "content": "print(b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.3,
+            0.652,
+            0.382,
+            0.692
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.698,
+            0.399,
+            0.741
+          ],
+          "content": "[1, 2, 3, 4, 5, 10]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.463,
+            0.225,
+            0.536,
+            0.289
+          ],
+          "content": "**VÍ DỤ**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.501,
+            0.302,
+            0.568,
+            0.373
+          ],
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.524,
+            0.372,
+            0.901,
+            0.423
+          ],
+          "content": "**Kết hợp hàm với list comprehension:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.544,
+            0.428,
+            0.714,
+            0.472
+          ],
+          "content": "def digitSum(n):"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.586,
+            0.473,
+            0.666,
+            0.508
+          ],
+          "content": "\\text {sum} = \\theta",
+          "image_source": "images/page_5_equation_15.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.585,
+            0.509,
+            0.725,
+            0.549
+          ],
+          "content": "while n != 0:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.626,
+            0.549,
+            0.768,
+            0.589
+          ],
+          "content": "\\text {sum} + = n \\% 10",
+          "image_source": "images/page_5_equation_17.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.813,
+            0.547,
+            0.893,
+            0.587
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.626,
+            0.591,
+            0.717,
+            0.63
+          ],
+          "content": "n / / = 1 0",
+          "image_source": "images/page_5_equation_19.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.805,
+            0.592,
+            0.898,
+            0.635
+          ],
+          "content": "[6, 4, 2, 8, 6]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.585,
+            0.633,
+            0.697,
+            0.671
+          ],
+          "content": "return sum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.544,
+            0.707,
+            0.83,
+            0.752
+          ],
+          "content": "$a = [123, 31, 20, 503, 114]$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.544,
+            0.75,
+            0.839,
+            0.793
+          ],
+          "content": "b = [digitSum(x) for x in a]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.545,
+            0.79,
+            0.633,
+            0.833
+          ],
+          "content": "print(b)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.93,
+            0.035,
+            0.978
+          ],
+          "content": "6"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.035,
+            0.146,
+            0.453,
+            0.211
+          ],
+          "level": 2,
+          "content": "2. List comp với câu lệnh if:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.052,
+            0.225,
+            0.108,
+            0.325
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.223,
+            0.927,
+            0.331
+          ],
+          "content": "Khi sử dụng list comprehension bạn có thể sử dụng mệnh đề if để lọc dữ liệu phù hợp."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.436,
+            0.322,
+            0.564,
+            0.385
+          ],
+          "level": 2,
+          "content": "CÚ PHÁP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.425,
+            0.719,
+            0.481
+          ],
+          "content": "[Expression for var in iterable if\\_clause]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.044,
+            0.557,
+            0.109,
+            0.662
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE 00"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.109,
+            0.611,
+            0.381,
+            0.667
+          ],
+          "level": 2,
+          "content": "Lọc ra các số không âm"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.075,
+            0.677,
+            0.402,
+            0.818
+          ],
+          "content": "\\begin{array}{l} \\text {a = [1, 2, 3, -5, 3, -4, 0]} \\\\ \\text {b = [x for x in a if x >= 0]} \\\\ \\text {print(b)} \\end{array}",
+          "image_source": "images/page_6_equation_10.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.457,
+            0.591,
+            0.52,
+            0.626
+          ],
+          "content": "EXAMPLE"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.558,
+            0.605,
+            0.859,
+            0.661
+          ],
+          "level": 2,
+          "content": "Lọc các số chẵn từ 0 tới n:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.487,
+            0.665,
+            0.563,
+            0.704
+          ],
+          "content": "n = 1 0",
+          "image_source": "images/page_6_equation_13.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.829,
+            0.365,
+            0.873
+          ],
+          "content": "[1, 2, 3, 3, 0]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.487,
+            0.753,
+            0.582,
+            0.798
+          ],
+          "content": "print(a)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.698,
+            0.773,
+            0.78,
+            0.814
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.691,
+            0.818,
+            0.784,
+            0.861
+          ],
+          "content": "[0, 2, 4, 6, 8]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.93,
+            0.034,
+            0.979
+          ],
+          "content": "7"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.035,
+            0.146,
+            0.501,
+            0.209
+          ],
+          "level": 2,
+          "content": "3. Nested List comprehension:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.053,
+            0.212,
+            0.109,
+            0.311
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.234,
+            0.775,
+            0.292
+          ],
+          "content": "Biểu thức bên trong list comp có thể là một list comp khác."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.316,
+            0.708,
+            0.371
+          ],
+          "content": "[expression for var in iterable]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.513,
+            0.838,
+            0.567
+          ],
+          "content": "[expression for var in iterable for var in iterable]"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.089,
+            0.589,
+            0.158,
+            0.695
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.162,
+            0.642,
+            0.814,
+            0.905
+          ],
+          "content": "Đưa mọi phần tử trong nested list thành một list (flatten): a = [[1, 2, 3], [4, 5], [6, 7, 8]] b = [x for small\\_list in a for x in small\\_list] print(b) **OUTPUT** [1, 2, 3, 4, 5, 6, 7, 8]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": "8"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.018,
+            0.067,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.146,
+            0.658,
+            0.209
+          ],
+          "level": 2,
+          "content": "4. List comprehension với map + lambda:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.223,
+            0.091,
+            0.323
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_4.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.355,
+            0.109,
+            0.422
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.093,
+            0.225,
+            0.446,
+            0.359
+          ],
+          "content": "Khi sử dụng các hàm có sẵn thì sử dụng map sẽ nhanh gọn hơn so với listcomp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.427,
+            0.08,
+            0.455
+          ],
+          "content": "00"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.134,
+            0.439,
+            0.378,
+            0.685
+          ],
+          "content": "\\begin{array}{l} \\text {s = \"28tech\"} \\\\ \\text {a = list(map(ord, s))} \\\\ \\text {print(a)} \\\\ \\text {\\#Listcomp} \\\\ \\text {b = [ord(x) for x in s]} \\\\ \\text {print(b)} \\end{array}",
+          "image_source": "images/page_8_equation_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.208,
+            0.712,
+            0.287,
+            0.751
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.151,
+            0.766,
+            0.344,
+            0.843
+          ],
+          "content": "[50, 56, 116, 101, 99, 104] [50, 56, 116, 101, 99, 104]"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.475,
+            0.226,
+            0.53,
+            0.325
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.532,
+            0.225,
+            0.927,
+            0.405
+          ],
+          "content": "Tuy nhiên khi apply một hàm khác các hàm có sẵn thì sự kết hợp của listcomp với lambda sẽ ngắn gọn hơn so với sự kết hợp của lambda vs map."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.488,
+            0.405,
+            0.554,
+            0.472
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.499,
+            0.477,
+            0.525,
+            0.506
+          ],
+          "content": "hon."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.553,
+            0.459,
+            0.679,
+            0.5
+          ],
+          "content": "ambda thường đưa = range(5)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.55,
+            0.656,
+            0.916,
+            0.739
+          ],
+          "content": "c = list(map(lambda x : x \\*\\* 2, a)) print(c)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.743,
+            0.8,
+            0.784
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.708,
+            0.796,
+            0.81,
+            0.876
+          ],
+          "content": "[0, 1, 4, 9, 16] [0, 1, 4, 9, 16]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": "9"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.147,
+            0.517,
+            0.207
+          ],
+          "level": 2,
+          "content": "5. List comprehension với filter:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.041,
+            0.212,
+            0.097,
+            0.311
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.235,
+            0.546,
+            0.341
+          ],
+          "content": "Lọc ra những số chẵn bằng listcomp và filter kết hợp vs lambda."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.348,
+            0.107,
+            0.42
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.05,
+            0.422,
+            0.076,
+            0.45
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.438,
+            0.531,
+            0.721
+          ],
+          "content": "a = range(10) m c c#listcomp even = [x for x in a if x % 2 == 0] print(even) #map c = list(filter(lambda x : x % 2 == 0, a)) print(c)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.719,
+            0.331,
+            0.758
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.235,
+            0.774,
+            0.347,
+            0.866
+          ],
+          "content": "[0, 2, 4, 6, 8] [0, 2, 4, 6, 8]"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.592,
+            0.283,
+            0.918,
+            0.822
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_11.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.008,
+            0.929,
+            0.041,
+            0.973
+          ],
+          "content": "10so"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.044,
+            0.95,
+            0.106,
+            0.971
+          ],
+          "content": "protection.com"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:42:10",
+      "producer_application": "FPDF 1.7",
+      "page_count": 10,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

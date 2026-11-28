@@ -1,0 +1,1299 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.223,
+            0.121,
+            0.886,
+            0.181
+          ],
+          "level": 1,
+          "content": "Curses Programming with Python Release 3.6.15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.217,
+            0.885,
+            0.262
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.724,
+            0.3,
+            0.884,
+            0.317
+          ],
+          "content": "**September 05, 2021**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.322,
+            0.885,
+            0.339
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.685,
+            0.339,
+            0.885,
+            0.355
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.375,
+            0.224,
+            0.397
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.112,
+            0.42,
+            0.886,
+            0.617
+          ],
+          "content": "- 1 **What is curses?** 2\n- 1.1 The Python curses module 2\n- **2 Starting and ending a curses application** 2\n- **3 Windows and Pads** 4\n- **4 Displaying Text** 5\n- 4.1 Attributes and Color 6\n- **5 User Input** 7\n- **6 For More Information** 8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.155,
+            0.651,
+            0.434,
+            0.669
+          ],
+          "content": "**Author** A.M. Kuchling, Eric S. Raymond"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.155,
+            0.675,
+            0.251,
+            0.691
+          ],
+          "content": "**Release** 2.04"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.712,
+            0.189,
+            0.729
+          ],
+          "level": 2,
+          "content": "Abstract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.742,
+            0.756,
+            0.76
+          ],
+          "content": "This document describes how to use the curses extension module to control text-mode displays."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.326,
+            0.111
+          ],
+          "level": 2,
+          "content": "1 What is curses?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.194
+          ],
+          "content": "The curses library supplies a terminal-independent screen-painting and keyboard-handling facility for text-based terminals; such terminals include VT100s, the Linux console, and the simulated terminal provided by various programs. Display terminals support various control codes to perform common operations such as moving the cursor, scrolling the screen, and erasing areas. Different terminals use widely differing codes, and often have their own minor quirks."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.2,
+            0.886,
+            0.263
+          ],
+          "content": "In a world of graphical displays, one might ask “why bother”? It’s true that character-cell display terminals are an obsolete technology, but there are niches in which being able to do fancy things with them are still valuable. One niche is on smallfootprint or embedded Unixes that don’t run an X server. Another is tools such as OS installers and kernel configurators that may have to run before any graphical support is available."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.268,
+            0.886,
+            0.345
+          ],
+          "content": "The curses library provides fairly basic functionality, providing the programmer with an abstraction of a display containing multiple non-overlapping windows of text. The contents of a window can be changed in various ways—adding text, erasing it, changing its appearance—and the curses library will figure out what control codes need to be sent to the terminal to produce the right output. curses doesn’t provide many user-interface concepts such as buttons, checkboxes, or dialogs; if you need such features, consider a user interface library such as [Urwid](https://pypi.org/project/urwid/)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.351,
+            0.886,
+            0.444
+          ],
+          "content": "The curses library was originally written for BSD Unix; the later System V versions of Unix from AT&T added many enhancements and new functions. BSD curses is no longer maintained, having been replaced by ncurses, which is an open-source implementation of the AT&T interface. If you’re using an open-source Unix such as Linux or FreeBSD, your system almost certainly uses ncurses. Since most current commercial Unix versions are based on System V code, all the functions described here will probably be available. The older versions of curses carried by some proprietary Unixes may not support everything, though."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.449,
+            0.885,
+            0.496
+          ],
+          "content": "The Windows version of Python doesn’t include the curses module. A ported version called [UniCurses](https://pypi.org/project/UniCurses) is available. You could also try [the Console module](http://effbot.org/zone/console-index.htm) written by Fredrik Lundh, which doesn’t use the same API as curses but provides cursor-addressable text output and full support for mouse and keyboard input."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.521,
+            0.408,
+            0.539
+          ],
+          "level": 2,
+          "content": "1.1 The Python curses module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.555,
+            0.886,
+            0.616
+          ],
+          "content": "The Python module is a fairly simple wrapper over the C functions provided by curses; if you’re already familiar with curses programming in C, it’s really easy to transfer that knowledge to Python. The biggest difference is that the Python interface makes things simpler by merging different C functions such as addstr(), mvaddstr(), and mvwaddstr() into a single addstr() method. You’ll see this covered in more detail later."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.622,
+            0.886,
+            0.669
+          ],
+          "content": "This HOWTO is an introduction to writing text-mode programs with curses and Python. It doesn’t attempt to be a complete guide to the curses API; for that, see the Python library guide’s section on ncurses, and the C manual pages for ncurses. It will, however, give you the basic ideas."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.698,
+            0.601,
+            0.72
+          ],
+          "level": 2,
+          "content": "2 Starting and ending a curses application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.74,
+            0.886,
+            0.801
+          ],
+          "content": "Before doing anything, curses must be initialized. This is done by calling the initscr() function, which will determine the terminal type, send any required setup codes to the terminal, and create various internal data structures. If successful, initscr() returns a window object representing the entire screen; this is usually called stdscr after the name of the corresponding C variable."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.81,
+            0.336,
+            0.84
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport curses\nstdscr = curses.initscr()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.855,
+            0.885,
+            0.887
+          ],
+          "content": "Usually curses applications turn off automatic echoing of keys to the screen, in order to be able to read keys and only display them under certain circumstances. This requires calling the noecho() function."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.099,
+            0.248,
+            0.115
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncurses.noecho()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.129,
+            0.885,
+            0.161
+          ],
+          "content": "Applications will also commonly need to react to keys instantly, without requiring the Enter key to be pressed; this is called cbreak mode, as opposed to the usual buffered input mode."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.17,
+            0.248,
+            0.186
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncurses.cbreak()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.2,
+            0.885,
+            0.263
+          ],
+          "content": "Terminals usually return special keys, such as the cursor keys or navigation keys such as Page Up and Home, as a multibyte escape sequence. While you could write your application to expect such sequences and process them accordingly, curses can do it for you, returning a special value such as curses.KEY\\_LEFT. To get curses to do the job, you’ll have to enable keypad mode."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.272,
+            0.282,
+            0.288
+          ],
+          "sub_type": "code",
+          "content": "```txt\nstdscr.keypad(True)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.302,
+            0.662,
+            0.319
+          ],
+          "content": "Terminating a curses application is much easier than starting one. You’ll need to call:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.328,
+            0.292,
+            0.372
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncurses.nocbreak()\nstdscr.keypad(False)\ncurses.echo()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.386,
+            0.884,
+            0.419
+          ],
+          "content": "to reverse the curses-friendly terminal settings. Then call the endwin() function to restore the terminal to its original operating mode."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.427,
+            0.248,
+            0.444
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncurses.endwin()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.458,
+            0.885,
+            0.52
+          ],
+          "content": "A common problem when debugging a curses application is to get your terminal messed up when the application dies without restoring the terminal to its previous state. In Python this commonly happens when your code is buggy and raises an uncaught exception. Keys are no longer echoed to the screen when you type them, for example, which makes using the shell difficult."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.525,
+            0.881,
+            0.557
+          ],
+          "content": "In Python you can avoid these complications and make debugging much easier by importing the curses.wrapper() function and using it like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.565,
+            0.725,
+            0.777
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom curses import wrapper\n\ndef main(stdscr):\n    # Clear screen\n    stdscr.clear()\n\n    # This raises ZeroDivisionError when i == 10.\n    for i in range(0, 11):\n        v = i-10\n        stdscr.addstr(i, 0, '10 divided by {} is {}'.format(v, 10/v))\n\n    stdscr.refresh()\n    stdscr.getkey()\n\nwrapper(main)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.79,
+            0.886,
+            0.87
+          ],
+          "content": "The wrapper() function takes a callable object and does the initializations described above, also initializing colors if color support is present. wrapper() then runs your provided callable. Once the callable returns, wrapper() will restore the original state of the terminal. The callable is called inside a try…except that catches exceptions, restores the state of the terminal, and then re-raises the exception. Therefore your terminal won’t be left in a funny state on exception and you’ll be able to read the exception’s message and traceback."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.361,
+            0.111
+          ],
+          "level": 2,
+          "content": "3 Windows and Pads"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.164
+          ],
+          "content": "Windows are the basic abstraction in curses. A window object represents a rectangular area of the screen, and supports methods to display text, erase it, allow the user to input strings, and so forth."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.17,
+            0.886,
+            0.232
+          ],
+          "content": "The stdscr object returned by the initscr() function is a window object that covers the entire screen. Many programs may need only this single window, but you might wish to divide the screen into smaller windows, in order to redraw or clear them separately. The newwin() function creates a new window of a given size, returning the new window object."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.24,
+            0.574,
+            0.286
+          ],
+          "sub_type": "code",
+          "content": "```python\nbegin_x = 20; begin_y = 7\nheight = 5; width = 40\nwin = curses.newwin(height, width, begin_y, begin_x)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.299,
+            0.886,
+            0.362
+          ],
+          "content": "Note that the coordinate system used in curses is unusual. Coordinates are always passed in the order y,x, and the top-left corner of a window is coordinate (0,0). This breaks the normal convention for handling coordinates where the x coordinate comes first. This is an unfortunate difference from most other computer applications, but it’s been part of curses since it was first written, and it’s too late to change things now."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.367,
+            0.886,
+            0.413
+          ],
+          "content": "Your application can determine the size of the screen by using the curses.LINES and curses.COLS variables to obtain the y and x sizes. Legal coordinates will then extend from (0,0) to (curses.LINES - 1, curses.COLS - 1)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.42,
+            0.885,
+            0.452
+          ],
+          "content": "When you call a method to display or erase text, the effect doesn’t immediately show up on the display. Instead you must call the refresh() method of window objects to update the screen."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.458,
+            0.886,
+            0.52
+          ],
+          "content": "This is because curses was originally written with slow 300-baud terminal connections in mind; with these terminals, minimizing the time required to redraw the screen was very important. Instead curses accumulates changes to the screen and displays them in the most efficient manner when you call refresh(). For example, if your program displays some text in a window and then clears the window, there’s no need to send the original text because they’re never visible."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.525,
+            0.887,
+            0.588
+          ],
+          "content": "In practice, explicitly telling curses to redraw a window doesn’t really complicate programming with curses much. Most programs go into a flurry of activity, and then pause waiting for a keypress or some other action on the part of the user. All you have to do is to be sure that the screen has been redrawn before pausing to wait for user input, by first calling stdscr.refresh() or the refresh() method of some other relevant window."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.594,
+            0.886,
+            0.641
+          ],
+          "content": "A pad is a special case of a window; it can be larger than the actual display screen, and only a portion of the pad displayed at a time. Creating a pad requires the pad’s height and width, while refreshing a pad requires giving the coordinates of the on-screen area where a subsection of the pad will be displayed."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.648,
+            0.727,
+            0.847
+          ],
+          "sub_type": "code",
+          "content": "```python\npad = curses.newpad(100, 100)\n# These loops fill the pad with letters; addch() is\n# explained in the next section\nfor y in range(0, 99):\n    for x in range(0, 99):\n        pad.addch(y,x, ord('a') + (x*x+y*y) % 26)\n\n# Displays a section of the pad in the middle of the screen.\n# (0,0) : coordinate of upper-left corner of pad area to display.\n# (5,5) : coordinate of upper-left corner of window area to be filled\n#         with pad content.\n# (20, 75) : coordinate of lower-right corner of window area to be\n#         : filled with pad content.\npad.refresh( 0,0, 5,5, 20,75)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.86,
+            0.886,
+            0.908
+          ],
+          "content": "The refresh() call displays a section of the pad in the rectangle extending from coordinate (5,5) to coordinate (20,75) on the screen; the upper left corner of the displayed section is coordinate (0,0) on the pad. Beyond that difference, pads are exactly like ordinary windows and support the same methods."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.885,
+            0.124
+          ],
+          "content": "If you have multiple windows and pads on screen there is a more efficient way to update the screen and prevent annoying screen flicker as each part of the screen gets updated. refresh() actually does two things:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.13,
+            0.885,
+            0.16
+          ],
+          "content": "1) Calls the noutrefresh() method of each window to update an underlying data structure representing the desired state of the screen."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.167,
+            0.885,
+            0.198
+          ],
+          "content": "2) Calls the function doupdate() function to change the physical screen to match the desired state recorded in the data structure."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.205,
+            0.882,
+            0.237
+          ],
+          "content": "Instead you can call noutrefresh() on a number of windows to update the data structure, and then call doupdate() to update the screen."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.265,
+            0.32,
+            0.287
+          ],
+          "level": 2,
+          "content": "4 Displaying Text"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.308,
+            0.886,
+            0.369
+          ],
+          "content": "From a C programmer’s point of view, curses may sometimes look like a twisty maze of functions, all subtly different. For example, addstr() displays a string at the current cursor location in the stdscr window, while mvaddstr() moves to a given y,x coordinate first before displaying the string. waddstr() is just like addstr(), but allows specifying a window to use instead of using stdscr by default. mvwaddstr() allows specifying both a window and a coordinate."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.375,
+            0.885,
+            0.407
+          ],
+          "content": "Fortunately the Python interface hides all these details. stdscr is a window object like any other, and methods such as addstr() accept multiple argument forms. Usually there are four different forms."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.165,
+            0.422,
+            0.834,
+            0.503
+          ],
+          "content": "| Form | Description |\n| --- | --- |\n| str or ch | Display the string str or character ch at the current position |\n| str or ch, attr | Display the string str or character ch, using attribute attr at the current position |\n| y, x, str or ch | Move to position y,x within the window, and display str or ch |\n| y, x, str or ch, attr | Move to position y,x within the window, and display str or ch, using attribute attr |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.521,
+            0.885,
+            0.552
+          ],
+          "content": "Attributes allow displaying text in highlighted forms such as boldface, underline, reverse code, or in color. They’ll be explained in more detail in the next subsection."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.559,
+            0.886,
+            0.606
+          ],
+          "content": "The addstr() method takes a Python string or bytestring as the value to be displayed. The contents of bytestrings are sent to the terminal as-is. Strings are encoded to bytes using the value of the window’s encoding attribute; this defaults to the default system encoding as returned by locale.getpreferredencoding()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.612,
+            0.885,
+            0.629
+          ],
+          "content": "The addch() methods take a character, which can be either a string of length 1, a bytestring of length 1, or an integer."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.635,
+            0.885,
+            0.681
+          ],
+          "content": "Constants are provided for extension characters; these constants are integers greater than 255. For example, ACS\\_PLMINUS is a +/- symbol, and ACS\\_ULCORNER is the upper left corner of a box (handy for drawing borders). You can also use the appropriate Unicode character."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.688,
+            0.886,
+            0.763
+          ],
+          "content": "Windows remember where the cursor was left after the last operation, so if you leave out the y,x coordinates, the string or character will be displayed wherever the last operation left off. You can also move the cursor with the move(y,x) method. Because some terminals always display a flashing cursor, you may want to ensure that the cursor is positioned in some location where it won’t be distracting; it can be confusing to have the cursor blinking at some apparently random location."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.771,
+            0.886,
+            0.832
+          ],
+          "content": "If your application doesn’t need a blinking cursor at all, you can call curs\\_set(False) to make it invisible. For compatibility with older curses versions, there’s a leaveok(bool) function that’s a synonym for curs\\_set(). When bool is true, the curses library will attempt to suppress the flashing cursor, and you won’t need to worry about leaving it in odd locations."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.347,
+            0.108
+          ],
+          "level": 2,
+          "content": "4.1 Attributes and Color"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.885,
+            0.17
+          ],
+          "content": "Characters can be displayed in different ways. Status lines in a text-based application are commonly shown in reverse video, or a text viewer may need to highlight certain words. curses supports this by allowing you to specify an attribute for each cell on the screen."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.176,
+            0.886,
+            0.237
+          ],
+          "content": "An attribute is an integer, each bit representing a different attribute. You can try to display text with multiple attribute bits set, but curses doesn’t guarantee that all the possible combinations are available, or that they’re all visually distinct. That depends on the ability of the terminal being used, so it’s safest to stick to the most commonly available attributes, listed here."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.306,
+            0.253,
+            0.692,
+            0.365
+          ],
+          "content": "| Attribute | Description |\n| --- | --- |\n| A_BLINK | Blinking text |\n| A_BOLD | Extra bright or bold text |\n| A_DIM | Half bright text |\n| A_REVERSE | Reverse-video text |\n| A_STANDOUT | The best highlighting mode available |\n| A_UNDERLINE | Underlined text |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_table_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.38,
+            0.666,
+            0.397
+          ],
+          "content": "So, to display a reverse-video status line on the top line of the screen, you could code:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.405,
+            0.539,
+            0.45
+          ],
+          "sub_type": "code",
+          "content": "```python\nstdscr.addstr(0, 0, \"Current mode: Typing mode\",\n                       curses.A_REVERSE)\nstdscr.refresh()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.464,
+            0.885,
+            0.495
+          ],
+          "content": "The curses library also supports color on those terminals that provide it. The most common such terminal is probably the Linux console, followed by color xterms."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.502,
+            0.886,
+            0.579
+          ],
+          "content": "To use color, you must call the start\\_color() function soon after calling initscr(), to initialize the default color set (the curses.wrapper() function does this automatically). Once that’s done, the has\\_colors() function returns TRUE if the terminal in use can actually display color. (Note: curses uses the American spelling ‘color’, instead of the Canadian/British spelling ‘colour’. If you’re used to the British spelling, you’ll have to resign yourself to misspelling it for the sake of these functions.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.584,
+            0.886,
+            0.645
+          ],
+          "content": "The curses library maintains a finite number of color pairs, containing a foreground (or text) color and a background color. You can get the attribute value corresponding to a color pair with the color\\_pair() function; this can be bitwise-OR’ed with other attributes such as A\\_REVERSE, but again, such combinations are not guaranteed to work on all terminals."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.652,
+            0.503,
+            0.669
+          ],
+          "content": "An example, which displays a line of text using color pair 1:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.676,
+            0.555,
+            0.707
+          ],
+          "sub_type": "code",
+          "content": "```python\nstdscr.addstr(\"Pretty text\", curses.color_pair(1))\nstdscr.refresh()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.722,
+            0.885,
+            0.768
+          ],
+          "content": "As I said before, a color pair consists of a foreground and background color. The init\\_pair(n, f, b) function changes the definition of color pair n, to foreground color f and background color b. Color pair 0 is hard-wired to white on black, and cannot be changed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.775,
+            0.885,
+            0.821
+          ],
+          "content": "Colors are numbered, and start\\_color() initializes 8 basic colors when it activates color mode. They are: 0:black, 1:red, 2:green, 3:yellow, 4:blue, 5:magenta, 6:cyan, and 7:white. The curses module defines named constants for each of these colors: curses.COLOR\\_BLACK, curses.COLOR\\_RED, and so forth."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.827,
+            0.726,
+            0.844
+          ],
+          "content": "Let’s put all this together. To change color 1 to red text on a white background, you would call:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.851,
+            0.618,
+            0.868
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncurses.init_pair(1, curses.COLOR_RED, curses.COLOR_WHITE)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.882,
+            0.885,
+            0.914
+          ],
+          "content": "When you change a color pair, any text already displayed using that color pair will change to the new colors. You can also display new text in this color with:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.099,
+            0.591,
+            0.115
+          ],
+          "sub_type": "code",
+          "content": "```txt\nstdscr.addstr(0,0, \"RED ALERT!\", curses.color_pair(1))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.129,
+            0.886,
+            0.207
+          ],
+          "content": "Very fancy terminals can change the definitions of the actual colors to a given RGB value. This lets you change color 1, which is usually red, to purple or blue or any other color you like. Unfortunately, the Linux console doesn’t support this, so I’m unable to try it out, and can’t provide any examples. You can check if your terminal can do this by calling can\\_change\\_color(), which returns True if the capability is there. If you’re lucky enough to have such a talented terminal, consult your system’s man pages for more information."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.235,
+            0.264,
+            0.257
+          ],
+          "level": 2,
+          "content": "5 User Input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.277,
+            0.884,
+            0.309
+          ],
+          "content": "The C curses library offers only very simple input mechanisms. Python’s curses module adds a basic text-input widget. (Other libraries such as [Urwid](https://pypi.org/project/urwid/) have more extensive collections of widgets.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.315,
+            0.479,
+            0.331
+          ],
+          "content": "There are two methods for getting input from a window:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.337,
+            0.885,
+            0.369
+          ],
+          "content": "• getch() refreshes the screen and then waits for the user to hit a key, displaying the key if echo() has been called earlier. You can optionally specify a coordinate to which the cursor should be moved before pausing."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.376,
+            0.885,
+            0.42
+          ],
+          "content": "• getkey() does the same thing but converts the integer to a string. Individual characters are returned as 1- character strings, and special keys such as function keys return longer strings containing a key name such as KEY\\_UP or ^G."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.428,
+            0.886,
+            0.505
+          ],
+          "content": "It’s possible to not wait for the user using the nodelay() window method. After nodelay(True), getch() and getkey() for the window become non-blocking. To signal that no input is ready, getch() returns curses.ERR (a value of -1) and getkey() raises an exception. There’s also a halfdelay() function, which can be used to (in effect) set a timer on each getch(); if no input becomes available within a specified delay (measured in tenths of a second), curses raises an exception."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.511,
+            0.886,
+            0.573
+          ],
+          "content": "The getch() method returns an integer; if it’s between 0 and 255, it represents the ASCII code of the key pressed. Values greater than 255 are special keys such as Page Up, Home, or the cursor keys. You can compare the value returned to constants such as curses.KEY\\_PPAGE, curses.KEY\\_HOME, or curses.KEY\\_LEFT. The main loop of your program may look something like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.581,
+            0.437,
+            0.696
+          ],
+          "sub_type": "code",
+          "content": "```python\nwhile True:\n    c = stdscr.getch()\n    if c == ord('p'):\n        PrintDocument()\n    elif c == ord('q'):\n        break  # Exit the while loop\n    elif c == curses.KEY_HOME:\n        x = y = 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.709,
+            0.885,
+            0.772
+          ],
+          "content": "The curses.ascii module supplies ASCII class membership functions that take either integer or 1-character string arguments; these may be useful in writing more readable tests for such loops. It also supplies conversion functions that take either integer or 1-character-string arguments and return the same type. For example, curses.ascii.ctrl() returns the control character corresponding to its argument."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.777,
+            0.886,
+            0.824
+          ],
+          "content": "There’s also a method to retrieve an entire string, getstr(). It isn’t used very often, because its functionality is quite limited; the only editing keys available are the backspace key and the Enter key, which terminates the string. It can optionally be limited to a fixed number of characters."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.832,
+            0.648,
+            0.892
+          ],
+          "sub_type": "code",
+          "content": "```python\ncurses.echo()                      # Enable echoing of characters\n\n# Get a 15-character string, with the cursor on the top lines = stdscr.getstr(0,0, 15)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.886,
+            0.139
+          ],
+          "content": "The curses.textpad module supplies a text box that supports an Emacs-like set of keybindings. Various methods of the Textbox class support editing with input validation and gathering the edit results either with or without trailing spaces. Here’s an example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.147,
+            0.689,
+            0.388
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport curses\nfrom curses.textpad import Textbox, rectangle\n\ndef main(stdscr):\n    stdscr.addstr(0, 0, \"Enter IM message: (hit Ctrl-G to send)\")\n\n    editwin = curses.newwin(5,30, 2,1)\n    rectangle(stdscr, 1,0, 1+5+1, 1+30+1)\n    stdscr.refresh()\n\n    box = Textbox(editwin)\n\n    # Let the user edit until Ctrl-G is struck.\n    box.edit()\n\n    # Get resulting contents\n    message = box.gather()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.4,
+            0.582,
+            0.416
+          ],
+          "content": "See the library documentation on curses.textpad for more details."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.445,
+            0.384,
+            0.465
+          ],
+          "level": 2,
+          "content": "6 For More Information"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.487,
+            0.885,
+            0.533
+          ],
+          "content": "This HOWTO doesn’t cover some advanced topics, such as reading the contents of the screen or capturing mouse events from an xterm instance, but the Python library page for the curses module is now reasonably complete. You should browse it next."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.54,
+            0.885,
+            0.587
+          ],
+          "content": "If you’re in doubt about the detailed behavior of the curses functions, consult the manual pages for your curses implementation, whether it’s ncurses or a proprietary Unix vendor’s. The manual pages will document any quirks, and provide complete lists of all the functions, attributes, and ACS\\_\\* characters available to you."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.592,
+            0.886,
+            0.655
+          ],
+          "content": "Because the curses API is so large, some functions aren’t supported in the Python interface. Often this isn’t because they’re difficult to implement, but because no one has needed them yet. Also, Python doesn’t yet support the menu library associated with ncurses. Patches adding support for these would be welcome; see [the Python Developer’s Guide](https://devguide.python.org/) to learn more about submitting patches to Python."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.66,
+            0.631,
+            0.677
+          ],
+          "content": "• [Writing Programs with NCURSES](http://invisible-island.net/ncurses/ncurses-intro.html): a lengthy tutorial for C programmers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.684,
+            0.304,
+            0.699
+          ],
+          "content": "• [The ncurses man page](http://linux.die.net/man/3/ncurses)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.706,
+            0.274,
+            0.721
+          ],
+          "content": "• [The ncurses FAQ](http://invisible-island.net/ncurses/ncurses.faq.html)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.728,
+            0.824,
+            0.745
+          ],
+          "content": "• [“Use curses… don’t swear”](https://www.youtube.com/watch?v=eN1eZtjLEnU): video of a PyCon 2013 talk on controlling terminals using curses or Urwid."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.751,
+            0.885,
+            0.781
+          ],
+          "content": "• [“Console Applications with Urwid”](http://www.pyvideo.org/video/1568/console-applications-with-urwid): video of a PyCon CA 2012 talk demonstrating some applications written using Urwid."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Curses Programming with Python",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2021-09-05T22:29:26-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 8,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

@@ -1,0 +1,1955 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Sorting HOW TO",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2023-06-28T11:02:58-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20190824)",
+      "page_count": 6,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.544,
+            0.115,
+            0.884,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sorting HOW TO Release 3.7.17"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.478,
+            0.204,
+            0.881,
+            0.248
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Guido van Rossum and the Python development team",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.765,
+            0.282,
+            0.881,
+            0.298
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "June 28, 2023",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.646,
+            0.303,
+            0.881,
+            0.319
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Software Foundation",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.676,
+            0.319,
+            0.881,
+            0.335
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Email: docs@python.org",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.353,
+            0.23,
+            0.374
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Contents"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "index",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.395,
+            0.883,
+            0.61
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1 Sorting Basics",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 1  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "2 Key Functions",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "3 Operator Module Functions",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 3  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4 Ascending and Descending",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 3  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "5 Sort Stability and Complex Sorts",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 3  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "6 The Old Way Using Decorate-Sort-Undecorate",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 4  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "7 The Old Way Using the cmp Parameter",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 4  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "8 Odd and Ends",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.158,
+            0.637,
+            0.482,
+            0.653
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Author",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Andrew Dalke and Raymond Hettinger"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.158,
+            0.658,
+            0.248,
+            0.673
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Release 0.1"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.68,
+            0.877,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python lists have a built-in list.sort() method that modifies the list in-place. There is also a sorted() built-in function that builds a new sorted list from an iterable."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.117,
+            0.715,
+            0.661,
+            0.731
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In this document, we explore the various techniques for sorting data using Python."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 11,
+          "bbox": [
+            0.118,
+            0.758,
+            0.319,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 Sorting Basics"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.116,
+            0.797,
+            0.774,
+            0.813
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A simple ascending sort is very easy: just call the sorted() function. It returns a new sorted list:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 13,
+          "bbox": [
+            0.116,
+            0.82,
+            0.365,
+            0.851
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 13,
+              "bbox": [
+                0.116,
+                0.82,
+                0.365,
+                0.851
+              ],
+              "content": ">>> sorted([5, 2, 3, 1, 4])\n[1, 2, 3, 4, 5]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.116,
+            0.863,
+            0.88,
+            0.894
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "You can also use the list.sort() method. It modifies the list in-place (and returns None to avoid confusion). Usually it’s less convenient than sorted() - but if you don’t need the original list, it’s slightly more efficient."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.493,
+            0.94,
+            0.505,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.116,
+            0.091,
+            0.328,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.116,
+                0.091,
+                0.328,
+                0.148
+              ],
+              "content": ">>> a = [5, 2, 3, 1, 4]\n>>> a.sort()\n>>> a\n[1, 2, 3, 4, 5]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.116,
+            0.16,
+            0.881,
+            0.191
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Another difference is that the list.sort() method is only defined for lists. In contrast, the sorted() function accepts any iterable."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.198,
+            0.589,
+            0.228
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.117,
+                0.198,
+                0.589,
+                0.228
+              ],
+              "content": ">>> sorted({1: 'D', 2: 'B', 3: 'B', 4: 'E', 5: 'A'})\n[1, 2, 3, 4, 5]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.262,
+            0.316,
+            0.282
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2 Key Functions"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.302,
+            0.881,
+            0.331
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Both list.sort() and sorted() have a key parameter to specify a function to be called on each list element prior to making comparisons."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.337,
+            0.495,
+            0.353
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For example, here’s a case-insensitive string comparison:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.36,
+            0.752,
+            0.391
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.117,
+                0.36,
+                0.752,
+                0.391
+              ],
+              "content": ">>> sorted(\"This is a test string from Andrew\".split(), key=str.lower)\n['a', 'Andrew', 'from', 'is', 'string', 'test', 'This']"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.403,
+            0.882,
+            0.433
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The value of the key parameter should be a function that takes a single argument and returns a key to use for sorting purposes. This technique is fast because the key function is called exactly once for each input record."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.439,
+            0.79,
+            0.455
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A common pattern is to sort complex objects using some of the object’s indices as keys. For example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.461,
+            0.792,
+            0.558
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.115,
+                0.461,
+                0.792,
+                0.558
+              ],
+              "content": ">>> student_tuples = [\n...        ('john', 'A', 15),\n...        ('jane', 'B', 12),\n...        ('dave', 'B', 10),\n... ]\n>>> sorted(student_tuples, key=lambda student: student[2])  # sort by age\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.118,
+            0.569,
+            0.615,
+            0.585
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The same technique works for objects with named attributes. For example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.115,
+            0.593,
+            0.644,
+            0.689
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.115,
+                0.593,
+                0.644,
+                0.689
+              ],
+              "content": ">>> class Student:\n...     def __init__(self, name, grade, age):\n...         self.name = name\n...         self.grade = grade\n...         self.age = age\n...     def __repr__(self):\n...         return repr((self.name, self.grade, self.age))"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.116,
+            0.702,
+            0.811,
+            0.799
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.116,
+                0.702,
+                0.811,
+                0.799
+              ],
+              "content": ">>> student_objects = [\n...     Student('john', 'A', 15),\n...     Student('jane', 'B', 12),\n...     Student('dave', 'B', 10),\n... ]\n>>> sorted(student_objects, key=lambda student: student.age)  # sort by age\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.085,
+            0.467,
+            0.105
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3 Operator Module Functions"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.124,
+            0.883,
+            0.168
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The key-function patterns shown above are very common, so Python provides convenience functions to make accessor functions easier and faster. The operator module has itemgetter(), attrgetter(), and a methodcaller() function."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.174,
+            0.583,
+            0.19
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using those functions, the above examples become simpler and faster:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.198,
+            0.547,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.116,
+                0.198,
+                0.547,
+                0.215
+              ],
+              "content": ">>> from operator import itemgetter, attrgetter"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.229,
+            0.635,
+            0.26
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.116,
+                0.229,
+                0.635,
+                0.26
+              ],
+              "content": ">>> sorted(student_tuples, key=itemgetter(2))\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.274,
+            0.635,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.116,
+                0.274,
+                0.635,
+                0.304
+              ],
+              "content": ">>> sorted(student_objects, key=attrgetter('age'))\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.316,
+            0.817,
+            0.333
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The operator module functions allow multiple levels of sorting. For example, to sort by grade then by age:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.117,
+            0.34,
+            0.635,
+            0.37
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.117,
+                0.34,
+                0.635,
+                0.37
+              ],
+              "content": ">>> sorted(student_tuples, key=itemgetter(1,2))\n[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.385,
+            0.652,
+            0.415
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.117,
+                0.385,
+                0.652,
+                0.415
+              ],
+              "content": ">>> sorted(student_objects, key=attrgetter('grade', 'age'))\n[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.117,
+            0.449,
+            0.467,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4 Ascending and Descending"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.488,
+            0.88,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Both list.sort() and sorted() accept a reverse parameter with a boolean value. This is used to flag descending sorts. For example, to get the student data in reverse age order:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.116,
+            0.526,
+            0.652,
+            0.556
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.116,
+                0.526,
+                0.652,
+                0.556
+              ],
+              "content": ">>> sorted(student_tuples, key=itemgetter(2), reverse=True)\n[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.117,
+            0.57,
+            0.697,
+            0.6
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.117,
+                0.57,
+                0.697,
+                0.6
+              ],
+              "content": ">>> sorted(student_objects, key=attrgetter('age'), reverse=True)\n[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 13,
+          "bbox": [
+            0.117,
+            0.634,
+            0.527,
+            0.655
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5 Sort Stability and Complex Sorts"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.115,
+            0.674,
+            0.881,
+            0.703
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sorts are guaranteed to be "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://en.wikipedia.org/wiki/Sorting_algorithm#Stability",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "stable"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": ". That means that when multiple records have the same key, their original order is preserved."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 15,
+          "bbox": [
+            0.116,
+            0.711,
+            0.671,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 15,
+              "bbox": [
+                0.116,
+                0.711,
+                0.671,
+                0.755
+              ],
+              "content": ">>> data = [('red', 1), ('blue', 1), ('red', 2), ('blue', 2)]\n>>> sorted(data, key=itemgetter(0))\n[('blue', 1), ('blue', 2), ('red', 1), ('red', 2)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.117,
+            0.767,
+            0.881,
+            0.796
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Notice how the two records for blue retain their original order so that ('blue', 1) is guaranteed to precede ('blue', 2)."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.116,
+            0.802,
+            0.881,
+            0.833
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This wonderful property lets you build complex sorts in a series of sorting steps. For example, to sort the student data by descending grade and then ascending age, do the age sort first and then sort again using grade:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 18,
+          "bbox": [
+            0.117,
+            0.84,
+            0.865,
+            0.897
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 18,
+              "bbox": [
+                0.117,
+                0.84,
+                0.865,
+                0.897
+              ],
+              "content": ">>> s = sorted(student_objects, key=attrgetter('age'))      # sort on secondary key\n>>> sorted(s, key=attrgetter('grade'), reverse=True)       # now sort on primary\n→key, descending\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 19,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.115,
+            0.087,
+            0.882,
+            0.116
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://en.wikipedia.org/wiki/Timsort",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Timsort"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": " algorithm used in Python does multiple sorts efficiently because it can take advantage of any ordering already present in a dataset."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.143,
+            0.682,
+            0.163
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6 The Old Way Using Decorate-Sort-Undecorate"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.183,
+            0.565,
+            0.198
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This idiom is called Decorate-Sort-Undecorate after its three steps:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.143,
+            0.204,
+            0.657,
+            0.218
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• First, the initial list is decorated with new values that control the sort order."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.144,
+            0.225,
+            0.397,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Second, the decorated list is sorted."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.143,
+            0.246,
+            0.845,
+            0.262
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Finally, the decorations are removed, creating a list that contains only the initial values in the new order."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.268,
+            0.594,
+            0.283
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For example, to sort the student data by grade using the DSU approach:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.115,
+            0.291,
+            0.844,
+            0.36
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.115,
+                0.291,
+                0.844,
+                0.36
+              ],
+              "content": ">>> decorated = [(student.grade, i, student) for i, student in enumerate(student objects)]\n>>> decorated.sort()\n>>> [student for grade, i, student in decorated]          # undecorate\n[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.115,
+            0.373,
+            0.881,
+            0.402
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This idiom works because tuples are compared lexicographically; the first items are compared; if they are the same then the second items are compared, and so on."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.408,
+            0.872,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "It is not strictly necessary in all cases to include the index i in the decorated list, but including it gives two benefits:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.143,
+            0.43,
+            0.804,
+            0.445
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The sort is stable – if two items have the same key, their order will be preserved in the sorted list."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.144,
+            0.451,
+            0.882,
+            0.494
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The original items do not have to be comparable because the ordering of the decorated tuples will be determined by at most the first two items. So for example the original list could contain complex numbers which cannot be sorted directly."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.116,
+            0.501,
+            0.881,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Another name for this idiom is "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://en.wikipedia.org/wiki/Schwartzian_transform",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Schwartzian transform"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", after Randal L. Schwartz, who popularized it among Perl programmers."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.116,
+            0.536,
+            0.669,
+            0.552
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Now that Python sorting provides key-functions, this technique is not often needed."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 14,
+          "bbox": [
+            0.116,
+            0.579,
+            0.598,
+            0.599
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7 The Old Way Using the cmp Parameter"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.115,
+            0.618,
+            0.883,
+            0.662
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Many constructs given in this HOWTO assume Python 2.4 or later. Before that, there was no sorted() builtin and list.sort() took no keyword arguments. Instead, all of the Py2.x versions supported a cmp parameter to handle user specified comparison functions."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.115,
+            0.668,
+            0.881,
+            0.698
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In Py3.0, the cmp parameter was removed entirely (as part of a larger effort to simplify and unify the language, eliminating the conflict between rich comparisons and the __cmp__() magic method)."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.115,
+            0.703,
+            0.882,
+            0.748
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In Py2.x, sort allowed an optional function which can be called for doing the comparisons. That function should take two arguments to be compared and then return a negative value for less-than, return zero if they are equal, or return a positive value for greater-than. For example, we can do:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 18,
+          "bbox": [
+            0.116,
+            0.755,
+            0.553,
+            0.811
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 18,
+              "bbox": [
+                0.116,
+                0.755,
+                0.553,
+                0.811
+              ],
+              "content": ">>> def numeric_compare(x, y):\n...     return x - y\n>>> sorted([5, 2, 4, 1, 3], cmp=numeric_compare)\n[1, 2, 3, 4, 5]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.117,
+            0.824,
+            0.447,
+            0.839
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Or you can reverse the order of comparison with:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 20,
+          "bbox": [
+            0.116,
+            0.847,
+            0.553,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 20,
+              "bbox": [
+                0.116,
+                0.847,
+                0.553,
+                0.904
+              ],
+              "content": ">>> def reverse_numeric(x, y):\n...     return y - x\n>>> sorted([5, 2, 4, 1, 3], cmp=reverse_numeric)\n[5, 4, 3, 2, 1]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 21,
+          "bbox": [
+            0.493,
+            0.94,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.086,
+            0.881,
+            0.117
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "When porting code from Python 2.x to 3.x, the situation can arise when you have the user supplying a comparison function and you need to convert that to a key function. The following wrapper makes that easy to do:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.119,
+            0.125,
+            0.576,
+            0.362
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.119,
+                0.125,
+                0.576,
+                0.362
+              ],
+              "content": "def cmp_to_key(mycmp):\n    'Convert a cmp= function into a key= function'\n    class K:\n        def __init__(self, obj, *args):\n            self.obj = obj\n        def __lt__(self, other):\n            return mycmp(self.obj, other.obj) < 0\n        def __gt__(self, other):\n            return mycmp(self.obj, other.obj) > 0\n        def __eq__(self, other):\n            return mycmp(self.obj, other.obj) == 0\n        def __le__(self, other):\n            return mycmp(self.obj, other.obj) <= 0\n        def __ge__(self, other):\n            return mycmp(self.obj, other.obj) >= 0\n        def __ne__(self, other):\n            return mycmp(self.obj, other.obj) != 0\n    return K"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.375,
+            0.57,
+            0.391
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "To convert to a key function, just wrap the old comparison function:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.398,
+            0.661,
+            0.428
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.117,
+                0.398,
+                0.661,
+                0.428
+              ],
+              "content": ">>> sorted([5, 2, 4, 1, 3], key=cmp_to_key(reverse_numeric))\n[5, 4, 3, 2, 1]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "erlang"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.441,
+            0.881,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In Python 3.2, the functools.cmp_to_key() function was added to the functools module in the standard library."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.497,
+            0.313,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8 Odd and Ends"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.144,
+            0.537,
+            0.881,
+            0.566
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• For locale aware sorting, use locale.strxfrm() for a key function or locale.strcoll() for a comparison function."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.145,
+            0.573,
+            0.881,
+            0.615
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The reverse parameter still maintains sort stability (so that records with equal keys retain the original order). Interestingly, that effect can be simulated without the parameter by using the builtin reversed() function twice:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.157,
+            0.624,
+            0.878,
+            0.707
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.157,
+                0.624,
+                0.878,
+                0.707
+              ],
+              "content": ">>> data = [('red', 1), ('blue', 1), ('red', 2), ('blue', 2)]\n>>> standard_way = sorted(data, key=itemgetter(0), reverse=True)\n>>> double_reversed = list(reversed(sorted(reversed(data), key=itemgetter(0))))\n>>> assert standard_way == double_reversed\n>>> standard_way\n[('red', 1), ('red', 2), ('blue', 1), ('blue', 2)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.145,
+            0.72,
+            0.881,
+            0.749
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The sort routines are guaranteed to use __lt__() when making comparisons between two objects. So, it is easy to add a standard sort order to a class by defining an __lt__() method:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 10,
+          "bbox": [
+            0.158,
+            0.758,
+            0.715,
+            0.799
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 10,
+              "bbox": [
+                0.158,
+                0.758,
+                0.715,
+                0.799
+              ],
+              "content": ">>> Student.__lt__ = lambda self, other: self.age < other.age\n>>> sorted(student_objects)\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.145,
+            0.812,
+            0.882,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Key functions need not depend directly on the objects being sorted. A key function can also access external resources. For instance, if the student grades are stored in a dictionary, they can be used to sort a separate list of student names:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.157,
+            0.865,
+            0.651,
+            0.894
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.157,
+                0.865,
+                0.651,
+                0.894
+              ],
+              "content": ">>> students = ['dave', 'john', 'jane']\n>>> newgrades = {'john': 'F', 'jane':'A', 'dave': 'C'}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.748,
+            0.894,
+            0.88,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.16,
+            0.104,
+            0.586,
+            0.13
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ">>>",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " sorted(students, key=newgrades.__getitem__) ['jane', 'dave', 'john']"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.712,
+            0.088,
+            0.881,
+            0.099
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 2,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

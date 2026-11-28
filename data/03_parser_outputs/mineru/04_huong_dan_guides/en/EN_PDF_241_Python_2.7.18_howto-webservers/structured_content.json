@@ -1,0 +1,1871 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.274,
+            0.121,
+            0.886,
+            0.182
+          ],
+          "level": 1,
+          "content": "HOWTO Use Python in the web Release 2.7.18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.217,
+            0.885,
+            0.263
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.3,
+            0.885,
+            0.317
+          ],
+          "content": "**May 20, 2020**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.322,
+            0.885,
+            0.339
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.685,
+            0.338,
+            0.885,
+            0.355
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.375,
+            0.225,
+            0.398
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.112,
+            0.42,
+            0.888,
+            0.72
+          ],
+          "content": "- **1 The Low-Level View** 2\n- 1.1 Common Gateway Interface 2\n- 1.2 mod\\_python 4\n- 1.3 FastCGI and SCGI 5\n- 1.4 mod\\_wsgi 6\n- **2 Step back: WSGI** 6\n- 2.1 WSGI Servers 6\n- 2.2 Case study: MoinMoin 7\n- 3 **Model-View-Controller** 7\n- 4 **Ingredients for Websites** 8\n- 4.1 Templates 8\n- 4.2 Data persistence 9\n- **5 Frameworks** 9\n- 5.1 Some notable frameworks 10\n- **Index 12**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.757,
+            0.311,
+            0.774
+          ],
+          "content": "**Author** Marek Kubica"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.795,
+            0.191,
+            0.811
+          ],
+          "level": 2,
+          "content": "Abstract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.825,
+            0.878,
+            0.86
+          ],
+          "content": "This document shows how Python fits into the web. It presents some ways to integrate Python with a web server, and general practices useful for developing web sites."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.878,
+            0.886,
+            0.911
+          ],
+          "content": "Programming for the Web has become a hot topic since the rise of “Web 2.0”, which focuses on user-generated content on web sites. It has always been possible to use Python for creating web sites, but it was a rather tedious task. Therefore,"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.886,
+            0.153
+          ],
+          "continues_prev": true,
+          "content": "many frameworks and helper tools have been created to assist developers in creating faster and more robust sites. This HOWTO describes some of the methods used to combine Python with a web server to create dynamic content. It is not meant as a complete introduction, as this topic is far too broad to be covered in one single document. However, a short overview of the most popular libraries is provided."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.16,
+            0.181,
+            0.175
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.182,
+            0.886,
+            0.228
+          ],
+          "content": "While this HOWTO tries to give an overview of Python in the web, it cannot always be as up to date as desired. Web development in Python is rapidly moving forward, so the wiki page on [Web Programming](https://wiki.python.org/moin/WebProgramming) may be more in sync with recent development."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.258,
+            0.371,
+            0.277
+          ],
+          "level": 2,
+          "content": "1 The Low-Level View"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.3,
+            0.885,
+            0.347
+          ],
+          "content": "When a user enters a web site, their browser makes a connection to the site’s web server (this is called the request). The server looks up the file in the file system and sends it back to the user’s browser, which displays it (this is the response). This is roughly how the underlying protocol, HTTP, works."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.353,
+            0.886,
+            0.43
+          ],
+          "content": "Dynamic web sites are not based on files in the file system, but rather on programs which are run by the web server when a request comes in, and which generate the content that is returned to the user. They can do all sorts of useful things, like display the postings of a bulletin board, show your email, configure software, or just display the current time. These programs can be written in any programming language the server supports. Since most servers support Python, it is easy to use Python to create dynamic web sites."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.436,
+            0.886,
+            0.482
+          ],
+          "content": "Most HTTP servers are written in C or C++, so they cannot execute Python code directly – a bridge is needed between the server and the program. These bridges, or rather interfaces, define how programs interact with the server. There have been numerous attempts to create the best possible interface, but there are only a few worth mentioning."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.488,
+            0.885,
+            0.52
+          ],
+          "content": "Not every web server supports every interface. Many web servers only support old, now-obsolete interfaces; however, they can often be extended using third-party modules to support newer ones."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.545,
+            0.417,
+            0.563
+          ],
+          "level": 2,
+          "content": "1.1 Common Gateway Interface"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.579,
+            0.886,
+            0.639
+          ],
+          "content": "This interface, most commonly referred to as “CGI”, is the oldest, and is supported by nearly every web server out of the box. Programs using CGI to communicate with their web server need to be started by the server for every request. So, every request starts a new Python interpreter – which takes some time to start up – thus making the whole interface only usable for low load situations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.646,
+            0.884,
+            0.678
+          ],
+          "content": "The upside of CGI is that it is simple – writing a Python program which uses CGI is a matter of about three lines of code. This simplicity comes at a price: it does very few things to help the developer."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.684,
+            0.884,
+            0.715
+          ],
+          "content": "Writing CGI programs, while still possible, is no longer recommended. With WSGI, a topic covered later in this document, it is possible to write programs that emulate CGI, so they can be run as CGI if no better option is available."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.722,
+            0.181,
+            0.736
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.745,
+            0.765,
+            0.76
+          ],
+          "content": "The Python standard library includes some modules that are helpful for creating plain CGI programs:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.767,
+            0.446,
+            0.783
+          ],
+          "content": "• cgi – Handling of user input in CGI scripts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.79,
+            0.885,
+            0.82
+          ],
+          "content": "• cgitb – Displays nice tracebacks when errors happen in CGI applications, instead of presenting a “500 Internal Server Error” message"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.827,
+            0.781,
+            0.844
+          ],
+          "content": "The Python wiki features a page on [CGI scripts](https://wiki.python.org/moin/CgiScripts) with some additional information about CGI in Python."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.091,
+            0.342,
+            0.109
+          ],
+          "level": 2,
+          "content": "Simple script for testing CGI"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.123,
+            0.744,
+            0.14
+          ],
+          "content": "To test whether your web server works with CGI, you can use this short and simple CGI program:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.147,
+            0.524,
+            0.305
+          ],
+          "sub_type": "code",
+          "content": "```txt\n#!/usr/bin/env python\n# -*- coding: UTF-8 -*-\n\n# enable debugging\nimport cgitb\ncgitb.enable()\n\nprint \"Content-Type: text/plain;charset=utf-8\"\nprint\n\nprint \"Hello World!\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.318,
+            0.884,
+            0.35
+          ],
+          "content": "Depending on your web server configuration, you may need to save this code with a .py or .cgi extension. Additionally, this file may also need to be in a cgi-bin folder, for security reasons."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.355,
+            0.886,
+            0.432
+          ],
+          "content": "You might wonder what the cgitb line is about. This line makes it possible to display a nice traceback instead of just crashing and displaying an “Internal Server Error” in the user’s browser. This is useful for debugging, but it might risk exposing some confidential data to the user. You should not use cgitb in production code for this reason. You should always catch exceptions, and display proper error pages – end-users don’t like to see nondescript “Internal Server Errors” in their browsers."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.457,
+            0.391,
+            0.473
+          ],
+          "level": 2,
+          "content": "Setting up CGI on your own server"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.488,
+            0.885,
+            0.534
+          ],
+          "content": "If you don’t have your own web server, this does not apply to you. You can check whether it works as-is, and if not you will need to talk to the administrator of your web server. If it is a big host, you can try filing a ticket asking for Python support."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.541,
+            0.886,
+            0.633
+          ],
+          "content": "If you are your own administrator or want to set up CGI for testing purposes on your own computers, you have to configure it by yourself. There is no single way to configure CGI, as there are many web servers with different configuration options. Currently the most widely used free web server is [Apache HTTPd](http://httpd.apache.org/), or Apache for short. Apache can be easily installed on nearly every system using the system’s package management tool. [lighttpd](http://www.lighttpd.net) is another alternative and is said to have better performance. On many systems this server can also be installed using the package management tool, so manually compiling the web server may not be needed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.639,
+            0.885,
+            0.67
+          ],
+          "content": "• On Apache you can take a look at the [Dynamic Content with CGI](http://httpd.apache.org/docs/2.2/howto/cgi.html) tutorial, where everything is described. Most of the time it is enough just to set +ExecCGI. The tutorial also describes the most common gotchas that might arise."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.677,
+            0.886,
+            0.709
+          ],
+          "content": "• On lighttpd you need to use the [CGI module](http://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModCGI), which can be configured in a straightforward way. It boils down to setting cgi.assign properly."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.732,
+            0.399,
+            0.749
+          ],
+          "level": 2,
+          "content": "Common problems with CGI scripts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.764,
+            0.885,
+            0.796
+          ],
+          "content": "Using CGI sometimes leads to small annoyances while trying to get these scripts to run. Sometimes a seemingly correct script does not work as expected, the cause being some small hidden problem that’s difficult to spot."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.802,
+            0.363,
+            0.818
+          ],
+          "content": "Some of these potential problems are:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.824,
+            0.886,
+            0.886
+          ],
+          "content": "• The Python script is not marked as executable. When CGI scripts are not executable most web servers will let the user download it, instead of running it and sending the output to the user. For CGI scripts to run properly on Unix-like operating systems, the +x bit needs to be set. Using chmod a+x your\\_script.py may solve this problem."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.092,
+            0.886,
+            0.184
+          ],
+          "content": "• On a Unix-like system, The line endings in the program file must be Unix style line endings. This is important because the web server checks the first line of the script (called shebang) and tries to run the program specified there. It gets easily confused by Windows line endings (Carriage Return & Line Feed, also called CRLF), so you have to convert the file to Unix line endings (only Line Feed, LF). This can be done automatically by uploading the file via FTP in text mode instead of binary mode, but the preferred way is just telling your editor to save the files with Unix line endings. Most editors support this."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.19,
+            0.886,
+            0.237
+          ],
+          "content": "• Your web server must be able to read the file, and you need to make sure the permissions are correct. On unix-like systems, the server often runs as user and group www-data, so it might be worth a try to change the file ownership, or making the file world readable by using chmod a+r your\\_script.py."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.243,
+            0.885,
+            0.275
+          ],
+          "content": "• The web server must know that the file you’re trying to access is a CGI script. Check the configuration of your web server, as it may be configured to expect a specific file extension for CGI scripts."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.281,
+            0.886,
+            0.358
+          ],
+          "content": "• On Unix-like systems, the path to the interpreter in the shebang (#!/usr/bin/env python) must be correct. This line calls /usr/bin/env to find Python, but it will fail if there is no /usr/bin/env, or if Python is not in the web server’s path. If you know where your Python is installed, you can also use that full path. The commands whereis python and type -p python could help you find where it is installed. Once you know the path, you can change the shebang accordingly: #!/usr/bin/python."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.363,
+            0.886,
+            0.41
+          ],
+          "content": "• The file must not contain a BOM (Byte Order Mark). The BOM is meant for determining the byte order of UTF-16 and UTF-32 encodings, but some editors write this also into UTF-8 files. The BOM interferes with the shebang line, so be sure to tell your editor not to write the BOM."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.417,
+            0.885,
+            0.448
+          ],
+          "content": "• If the web server is using mod\\_python, mod\\_python may be having problems. mod\\_python is able to handle CGI scripts by itself, but it can also be a source of issues."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.473,
+            0.274,
+            0.491
+          ],
+          "level": 2,
+          "content": "1.2 mod\\_python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.506,
+            0.887,
+            0.629
+          ],
+          "content": "People coming from PHP often find it hard to grasp how to use Python in the web. Their first thought is mostly [mod\\_python](http://modpython.org/), because they think that this is the equivalent to mod\\_php. Actually, there are many differences. What mod\\_python does is embed the interpreter into the Apache process, thus speeding up requests by not having to start a Python interpreter for each request. On the other hand, it is not “Python intermixed with HTML” in the way that PHP is often intermixed with HTML. The Python equivalent of that is a template engine. mod\\_python itself is much more powerful and provides more access to Apache internals. It can emulate CGI, work in a “Python Server Pages” mode (similar to JSP) which is “HTML intermingled with Python”, and it has a “Publisher” which designates one file to accept all requests and decide what to do with them."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.635,
+            0.887,
+            0.742
+          ],
+          "content": "mod\\_python does have some problems. Unlike the PHP interpreter, the Python interpreter uses caching when executing files, so changes to a file will require the web server to be restarted. Another problem is the basic concept – Apache starts child processes to handle the requests, and unfortunately every child process needs to load the whole Python interpreter even if it does not use it. This makes the whole web server slower. Another problem is that, because mod\\_python is linked against a specific version of libpython, it is not possible to switch from an older version to a newer (e.g. 2.4 to 2.5) without recompiling mod\\_python. mod\\_python is also bound to the Apache web server, so programs written for mod\\_python cannot easily run on other web servers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.748,
+            0.886,
+            0.795
+          ],
+          "content": "These are the reasons why mod\\_python should be avoided when writing new programs. In some circumstances it still might be a good idea to use mod\\_python for deployment, but WSGI makes it possible to run WSGI programs under mod\\_python as well."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.328,
+            0.107
+          ],
+          "level": 2,
+          "content": "1.3 FastCGI and SCGI"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.886,
+            0.2
+          ],
+          "content": "FastCGI and SCGI try to solve the performance problem of CGI in another way. Instead of embedding the interpreter into the web server, they create long-running background processes. There is still a module in the web server which makes it possible for the web server to “speak” with the background process. As the background process is independent of the server, it can be written in any language, including Python. The language just needs to have a library which handles the communication with the webserver."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.206,
+            0.886,
+            0.253
+          ],
+          "content": "The difference between FastCGI and SCGI is very small, as SCGI is essentially just a “simpler FastCGI”. As the web server support for SCGI is limited, most people use FastCGI instead, which works the same way. Almost everything that applies to SCGI also applies to FastCGI as well, so we’ll only cover the latter."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.259,
+            0.885,
+            0.289
+          ],
+          "content": "These days, FastCGI is never used directly. Just like mod\\_python, it is only used for the deployment of WSGI applications."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.315,
+            0.269,
+            0.331
+          ],
+          "level": 2,
+          "content": "Setting up FastCGI"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.346,
+            0.398,
+            0.362
+          ],
+          "content": "Each web server requires a specific module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.369,
+            0.885,
+            0.415
+          ],
+          "content": "• Apache has both [mod\\_fastcgi](http://www.fastcgi.com/drupal/) and [mod\\_fcgid](https://httpd.apache.org/mod_fcgid/). mod\\_fastcgi is the original one, but it has some licensing issues, which is why it is sometimes considered non-free. mod\\_fcgid is a smaller, compatible alternative. One of these modules needs to be loaded by Apache."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.422,
+            0.585,
+            0.438
+          ],
+          "content": "• lighttpd ships its own [FastCGI module](http://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModFastCGI) as well as an [SCGI module](http://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModSCGI)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.445,
+            0.346,
+            0.46
+          ],
+          "content": "• [nginx](http://nginx.org/) also supports [FastCGI](https://www.nginx.com/resources/wiki/start/topics/examples/simplepythonfcgi/)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.467,
+            0.786,
+            0.484
+          ],
+          "content": "Once you have installed and configured the module, you can test it with the following WSGI-application:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.491,
+            0.754,
+            0.731
+          ],
+          "sub_type": "code",
+          "content": "```python\n#!/usr/bin/env python\n# -*- coding: UTF-8 -*-\n\nfrom cgi import escape\nimport sys, os\nfrom flup.server.fcgi import WSGIServer\n\ndef app(environ, start_response):\n    start_response('200 OK', [('Content-Type', 'text/html')])\n\n    yield '<h1>FastCGI Environment</h1>'\n    yield '<table>'\n    for k, v in sorted(environ.items()):\n        yield '<tr><th>%s</th><td>%s</td></tr>' % (escape(k), escape(v))\n    yield '</table>'\nWSGIServer(app).run()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.744,
+            0.836,
+            0.761
+          ],
+          "content": "This is a simple WSGI application, but you need to install [flup](https://pypi.org/project/flup/1.0) first, as flup handles the low level FastCGI access."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.767,
+            0.181,
+            0.782
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.79,
+            0.885,
+            0.837
+          ],
+          "content": "There is some documentation on [setting up Django with WSGI](https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/), most of which can be reused for other WSGI-compliant frameworks and libraries. Only the manage.py part has to be changed, the example used here can be used instead. Django does more or less the exact same thing."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.09,
+            0.253,
+            0.109
+          ],
+          "level": 2,
+          "content": "1.4 mod\\_wsgi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.124,
+            0.886,
+            0.2
+          ],
+          "content": "[mod\\_wsgi](http://code.google.com/p/modwsgi/) is an attempt to get rid of the low level gateways. Given that FastCGI, SCGI, and mod\\_python are mostly used to deploy WSGI applications, mod\\_wsgi was started to directly embed WSGI applications into the Apache web server. mod\\_wsgi is specifically designed to host WSGI applications. It makes the deployment of WSGI applications much easier than deployment using other low level methods, which need glue code. The downside is that mod\\_wsgi is limited to the Apache web server; other servers would need their own implementations of mod\\_wsgi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.206,
+            0.886,
+            0.251
+          ],
+          "content": "mod\\_wsgi supports two modes: embedded mode, in which it integrates with the Apache process, and daemon mode, which is more FastCGI-like. Unlike FastCGI, mod\\_wsgi handles the worker-processes by itself, which makes administration easier."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.281,
+            0.336,
+            0.302
+          ],
+          "level": 2,
+          "content": "2 Step back: WSGI"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.323,
+            0.885,
+            0.355
+          ],
+          "content": "WSGI has already been mentioned several times, so it has to be something important. In fact it really is, and now it is time to explain it."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.361,
+            0.886,
+            0.422
+          ],
+          "content": "The Web Server Gateway Interface, or WSGI for short, is defined in [**PEP 333**](https://www.python.org/dev/peps/pep-0333) and is currently the best way to do Python web programming. While it is great for programmers writing frameworks, a normal web developer does not need to get in direct contact with it. When choosing a framework for web development it is a good idea to choose one which supports WSGI."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.43,
+            0.886,
+            0.521
+          ],
+          "content": "The big benefit of WSGI is the unification of the application programming interface. When your program is compatible with WSGI – which at the outer level means that the framework you are using has support for WSGI – your program can be deployed via any web server interface for which there are WSGI wrappers. You do not need to care about whether the application user uses mod\\_python or FastCGI or mod\\_wsgi – with WSGI your application will work on any gateway interface. The Python standard library contains its own WSGI server, wsgiref, which is a small web server that can be used for testing."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.527,
+            0.886,
+            0.635
+          ],
+          "content": "A really great WSGI feature is middleware. Middleware is a layer around your program which can add various functionality to it. There is quite a bit of [middleware](https://wsgi.readthedocs.org/en/latest/libraries.html) already available. For example, instead of writing your own session management (HTTP is a stateless protocol, so to associate multiple HTTP requests with a single user your application must create and manage such state via a session), you can just download middleware which does that, plug it in, and get on with coding the unique parts of your application. The same thing with compression – there is existing middleware which handles compressing your HTML using gzip to save on your server’s bandwidth. Authentication is another problem that is easily solved using existing middleware."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.64,
+            0.886,
+            0.672
+          ],
+          "content": "Although WSGI may seem complex, the initial phase of learning can be very rewarding because WSGI and the associated middleware already have solutions to many problems that might arise while developing web sites."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.697,
+            0.288,
+            0.715
+          ],
+          "level": 2,
+          "content": "2.1 WSGI Servers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.73,
+            0.886,
+            0.777
+          ],
+          "content": "The code that is used to connect to various low level gateways like CGI or mod\\_python is called a WSGI server. One of these servers is flup, which supports FastCGI and SCGI, as well as [AJP](https://en.wikipedia.org/wiki/Apache_JServ_Protocol). Some of these servers are written in Python, as flup is, but there also exist others which are written in C and can be used as drop-in replacements."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.783,
+            0.886,
+            0.815
+          ],
+          "content": "There are many servers already available, so a Python web application can be deployed nearly anywhere. This is one big advantage that Python has compared with other web technologies."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.821,
+            0.181,
+            0.835
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.843,
+            0.885,
+            0.874
+          ],
+          "content": "A good overview of WSGI-related code can be found in the [WSGI homepage](https://wsgi.readthedocs.org/), which contains an extensive list of [WSGI servers](https://wsgi.readthedocs.org/en/latest/servers.html) which can be used by any application supporting WSGI."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.881,
+            0.822,
+            0.897
+          ],
+          "content": "You might be interested in some WSGI-supporting modules already contained in the standard library, namely:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.092,
+            0.502,
+            0.108
+          ],
+          "content": "• wsgiref – some tiny utilities and servers for WSGI"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.133,
+            0.367,
+            0.151
+          ],
+          "level": 2,
+          "content": "2.2 Case study: MoinMoin"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.167,
+            0.884,
+            0.198
+          ],
+          "content": "What does WSGI give the web application developer? Let’s take a look at an application that’s been around for a while, which was written in Python without using WSGI."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.205,
+            0.885,
+            0.236
+          ],
+          "content": "One of the most widely used wiki software packages is [MoinMoin](https://moinmo.in/). It was created in 2000, so it predates WSGI by about three years. Older versions needed separate code to run on CGI, mod\\_python, FastCGI and standalone."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.242,
+            0.886,
+            0.288
+          ],
+          "content": "It now includes support for WSGI. Using WSGI, it is possible to deploy MoinMoin on any WSGI compliant server, with no additional glue code. Unlike the pre-WSGI versions, this could include WSGI servers that the authors of MoinMoin know nothing about."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.317,
+            0.396,
+            0.337
+          ],
+          "level": 2,
+          "content": "3 Model-View-Controller"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.36,
+            0.886,
+            0.436
+          ],
+          "content": "The term MVC is often encountered in statements such as “framework foo supports MVC”. MVC is more about the overall organization of code, rather than any particular API. Many web frameworks use this model to help the developer bring structure to their program. Bigger web applications can have lots of code, so it is a good idea to have an effective structure right from the beginning. That way, even users of other frameworks (or even other languages, since MVC is not Python-specific) can easily understand the code, given that they are already familiar with the MVC structure."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.443,
+            0.345,
+            0.458
+          ],
+          "content": "MVC stands for three components:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.465,
+            0.885,
+            0.497
+          ],
+          "content": "• The model. This is the data that will be displayed and modified. In Python frameworks, this component is often represented by the classes used by an object-relational mapper."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.503,
+            0.885,
+            0.535
+          ],
+          "content": "• The view. This component’s job is to display the data of the model to the user. Typically this component is implemented via templates."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.541,
+            0.885,
+            0.572
+          ],
+          "content": "• The controller. This is the layer between the user and the model. The controller reacts to user actions (like opening some specific URL), tells the model to modify the data if necessary, and tells the view code what to display,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.578,
+            0.885,
+            0.61
+          ],
+          "content": "While one might think that MVC is a complex design pattern, in fact it is not. It is used in Python because it has turned out to be useful for creating clean, maintainable web sites."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.63,
+            0.885,
+            0.694
+          ],
+          "content": "**Note:** While not all Python frameworks explicitly support MVC, it is often trivial to create a web site which uses the MVC pattern by separating the data logic (the model) from the user interaction logic (the controller) and the templates (the view). That’s why it is important not to write unnecessary Python code in the templates – it works against the MVC model and creates chaos in the code base, making it harder to understand and modify."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.715,
+            0.181,
+            0.73
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.737,
+            0.885,
+            0.768
+          ],
+          "content": "The English Wikipedia has an article about the [Model-View-Controller pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller). It includes a long list of web frameworks for various programming languages."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.424,
+            0.112
+          ],
+          "level": 2,
+          "content": "4 Ingredients for Websites"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.133,
+            0.886,
+            0.194
+          ],
+          "content": "Websites are complex constructs, so tools have been created to help web developers make their code easier to write and more maintainable. Tools like these exist for all web frameworks in all languages. Developers are not forced to use these tools, and often there is no “best” tool. It is worth learning about the available tools because they can greatly simplify the process of developing a web site."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.2,
+            0.181,
+            0.215
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.223,
+            0.885,
+            0.254
+          ],
+          "content": "There are far more components than can be presented here. The Python wiki has a page about these components, called [Web Components](https://wiki.python.org/moin/WebComponents)."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.28,
+            0.255,
+            0.298
+          ],
+          "level": 2,
+          "content": "4.1 Templates"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.313,
+            0.885,
+            0.36
+          ],
+          "content": "Mixing of HTML and Python code is made possible by a few libraries. While convenient at first, it leads to horribly unmaintainable code. That’s why templates exist. Templates are, in the simplest case, just HTML files with placeholders. The HTML is sent to the user’s browser after filling in the placeholders."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.365,
+            0.504,
+            0.382
+          ],
+          "content": "Python already includes two ways to build simple templates:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.39,
+            0.776,
+            0.504
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> template = \"<html><body><h1>Hello %s!</h1></body></html>\"\n>>> print template % \"Reader\"\n<html><body><h1>Hello Reader!</h1></body></html>\n\n>>> from string import Template\n>>> template = Template(\"<html><body><h1>Hello ${name}</h1></body></html>\")\n>>> print template.substitute(dict(name='Dinsdale'))\n<html><body><h1>Hello Dinsdale!</h1></body></html>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.519,
+            0.886,
+            0.551
+          ],
+          "content": "To generate complex HTML based on non-trivial model data, conditional and looping constructs like Python’s for and if are generally needed. Template engines support templates of this complexity."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.557,
+            0.885,
+            0.604
+          ],
+          "content": "There are a lot of template engines available for Python which can be used with or without a framework. Some of these define a plain-text programming language which is easy to learn, partly because it is limited in scope. Others use XML, and the template output is guaranteed to be always be valid XML. There are many other variations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.61,
+            0.886,
+            0.641
+          ],
+          "content": "Some frameworks ship their own template engine or recommend one in particular. In the absence of a reason to use a different template engine, using the one provided by or recommended by the framework is a good idea."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.647,
+            0.335,
+            0.663
+          ],
+          "content": "Popular template engines include:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.67,
+            0.199,
+            0.685
+          ],
+          "content": "• [Mako](http://www.makotemplates.org/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.692,
+            0.205,
+            0.707
+          ],
+          "content": "• [Genshi](http://genshi.edgewall.org/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.715,
+            0.191,
+            0.731
+          ],
+          "content": "• [Jinja](http://jinja.pocoo.org/)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.738,
+            0.18,
+            0.752
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.76,
+            0.885,
+            0.808
+          ],
+          "content": "There are many template engines competing for attention, because it is pretty easy to create them in Python. The page [Templating](https://wiki.python.org/moin/Templating) in the wiki lists a big, ever-growing number of these. The three listed above are considered “second generation” template engines and are a good place to start."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.315,
+            0.108
+          ],
+          "level": 2,
+          "content": "4.2 Data persistence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.124,
+            0.885,
+            0.169
+          ],
+          "content": "Data persistence, while sounding very complicated, is just about storing data. This data might be the text of blog entries, the postings on a bulletin board or the text of a wiki page. There are, of course, a number of different ways to store information on a web server."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.176,
+            0.886,
+            0.237
+          ],
+          "content": "Often, relational database engines like [MySQL](http://www.mysql.com/) or [PostgreSQL](http://www.postgresql.org/) are used because of their good performance when handling very large databases consisting of millions of entries. There is also a small database engine called [SQLite](http://www.sqlite.org/), which is bundled with Python in the sqlite3 module, and which uses only one file. It has no other dependencies. For smaller sites SQLite is just enough."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.244,
+            0.886,
+            0.305
+          ],
+          "content": "Relational databases are queried using a language called [SQL](https://en.wikipedia.org/wiki/SQL). Python programmers in general do not like SQL too much, as they prefer to work with objects. It is possible to save Python objects into a database using a technology called [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) (Object Relational Mapping). ORM translates all object-oriented access into SQL code under the hood, so the developer does not need to think about it. Most frameworks use ORMs, and it works quite well."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.312,
+            0.885,
+            0.343
+          ],
+          "content": "A second possibility is storing data in normal, plain text files (some times called “flat files”). This is very easy for simple sites, but can be difficult to get right if the web site is performing many updates to the stored data."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.35,
+            0.886,
+            0.426
+          ],
+          "content": "A third possibility are object oriented databases (also called “object databases”). These databases store the object data in a form that closely parallels the way the objects are structured in memory during program execution. (By contrast, ORMs store the object data as rows of data in tables and relations between those rows.) Storing the objects directly has the advantage that nearly all objects can be saved in a straightforward way, unlike in relational databases where some objects are very hard to represent."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.433,
+            0.885,
+            0.478
+          ],
+          "content": "Frameworks often give hints on which data storage method to choose. It is usually a good idea to stick to the data store recommended by the framework unless the application has special requirements better satisfied by an alternate storage mechanism."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.486,
+            0.18,
+            0.5
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.509,
+            0.885,
+            0.539
+          ],
+          "content": "• [Persistence Tools](https://wiki.python.org/moin/PersistenceTools) lists possibilities on how to save data in the file system. Some of these modules are part of the standard library"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.546,
+            0.604,
+            0.562
+          ],
+          "content": "• [Database Programming](https://wiki.python.org/moin/DatabaseProgramming) helps with choosing a method for saving data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.569,
+            0.864,
+            0.585
+          ],
+          "content": "• [SQLAlchemy](http://www.sqlalchemy.org/), the most powerful OR-Mapper for Python, and [Elixir](https://pypi.org/project/Elixir), which makes SQLAlchemy easier to use"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.591,
+            0.426,
+            0.607
+          ],
+          "content": "• [SQLObject](http://www.sqlobject.org/), another popular OR-Mapper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.614,
+            0.471,
+            0.629
+          ],
+          "content": "• [ZODB](https://launchpad.net/zodb) and [Durus](https://www.mems-exchange.org/software/), two object oriented databases"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.659,
+            0.285,
+            0.678
+          ],
+          "level": 2,
+          "content": "5 Frameworks"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.701,
+            0.886,
+            0.778
+          ],
+          "content": "The process of creating code to run web sites involves writing code to provide various services. The code to provide a particular service often works the same way regardless of the complexity or purpose of the web site in question. Abstracting these common solutions into reusable code produces what are called “frameworks” for web development. Perhaps the most well-known framework for web development is Ruby on Rails, but Python has its own frameworks. Some of these were partly inspired by Rails, or borrowed ideas from Rails, but many existed a long time before Rails."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.784,
+            0.886,
+            0.876
+          ],
+          "content": "Originally Python web frameworks tended to incorporate all of the services needed to develop web sites as a giant, integrated set of tools. No two web frameworks were interoperable: a program developed for one could not be deployed on a different one without considerable re-engineering work. This led to the development of “minimalist” web frameworks that provided just the tools to communicate between the Python code and the http protocol, with all other services to be added on top via separate components. Some ad hoc standards were developed that allowed for limited interoperability between frameworks, such as a standard that allowed different template engines to be used interchangeably."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.882,
+            0.886,
+            0.913
+          ],
+          "content": "Since the advent of WSGI, the Python web framework world has been evolving toward interoperability based on the WSGI standard. Now many web frameworks, whether “full stack” (providing all the tools one needs to deploy the most"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.885,
+            0.123
+          ],
+          "continues_prev": true,
+          "content": "complex web sites) or minimalist, or anything in between, are built from collections of reusable components that can be used with more than one framework."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.13,
+            0.886,
+            0.161
+          ],
+          "content": "The majority of users will probably want to select a “full stack” framework that has an active community. These frameworks tend to be well documented, and provide the easiest path to producing a fully functional web site in minimal time."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.186,
+            0.404,
+            0.204
+          ],
+          "level": 2,
+          "content": "5.1 Some notable frameworks"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.219,
+            0.885,
+            0.251
+          ],
+          "content": "There are an incredible number of frameworks, so they cannot all be covered here. Instead we will briefly touch on some of the most popular."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.275,
+            0.176,
+            0.292
+          ],
+          "level": 2,
+          "content": "Django"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.307,
+            0.886,
+            0.399
+          ],
+          "content": "[Django](https://www.djangoproject.com/) is a framework consisting of several tightly coupled elements which were written from scratch and work together very well. It includes an ORM which is quite powerful while being simple to use, and has a great online administration interface which makes it possible to edit the data in the database with a browser. The template engine is text-based and is designed to be usable for page designers who cannot write Python. It supports template inheritance and filters (which work like Unix pipes). Django has many handy features bundled, such as creation of RSS feeds or generic views, which make it possible to create web sites almost without writing any Python code."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.405,
+            0.885,
+            0.451
+          ],
+          "content": "It has a big, international community, the members of which have created many web sites. There are also a lot of add-on projects which extend Django’s normal functionality. This is partly due to Django’s well written [online documentation](https://docs.djangoproject.com/) and the [Django book](http://www.djangobook.com/)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.472,
+            0.885,
+            0.505
+          ],
+          "content": "**Note:** Although Django is an MVC-style framework, it names the elements differently, which is described in the [Django FAQ](https://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names)."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.543,
+            0.214,
+            0.559
+          ],
+          "level": 2,
+          "content": "TurboGears"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.575,
+            0.886,
+            0.637
+          ],
+          "content": "Another popular web framework for Python is [TurboGears](http://www.turbogears.org/). TurboGears takes the approach of using already existing components and combining them with glue code to create a seamless experience. TurboGears gives the user flexibility in choosing components. For example the ORM and template engine can be changed to use packages different from those used by default."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.643,
+            0.885,
+            0.69
+          ],
+          "content": "The documentation can be found in the [TurboGears documentation](https://turbogears.readthedocs.org/), where links to screencasts can be found. Turbo-Gears has also an active user community which can respond to most related questions. There is also a [TurboGears book](http://turbogears.org/1.0/docs/TGBooks.html) published, which is a good starting point."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.695,
+            0.885,
+            0.728
+          ],
+          "content": "The newest version of TurboGears, version 2.0, moves even further in direction of WSGI support and a component-based architecture. TurboGears 2 is based on the WSGI stack of another popular component-based web framework, [Pylons](http://www.pylonsproject.org/)."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.751,
+            0.161,
+            0.768
+          ],
+          "level": 2,
+          "content": "Zope"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.783,
+            0.887,
+            0.906
+          ],
+          "content": "The Zope framework is one of the “old original” frameworks. Its current incarnation in Zope2 is a tightly integrated full-stack framework. One of its most interesting feature is its tight integration with a powerful object database called the [ZODB](https://launchpad.net/zodb) (Zope Object Database). Because of its highly integrated nature, Zope wound up in a somewhat isolated ecosystem: code written for Zope wasn’t very usable outside of Zope, and vice-versa. To solve this problem the Zope 3 effort was started. Zope 3 re-engineers Zope as a set of more cleanly isolated components. This effort was started before the advent of the WSGI standard, but there is WSGI support for Zope 3 from the [Repoze](http://repoze.org/) project. Zope components have many years of production use behind them, and the Zope 3 project gives access to these components to the wider Python community. There is even a separate framework based on the Zope components: [Grok](http://grok.zope.org/)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.093,
+            0.885,
+            0.123
+          ],
+          "content": "Zope is also the infrastructure used by the [Plone](https://plone.org/) content management system, one of the most powerful and popular content management systems available."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.148,
+            0.324,
+            0.163
+          ],
+          "level": 2,
+          "content": "Other notable frameworks"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.18,
+            0.862,
+            0.195
+          ],
+          "content": "Of course these are not the only frameworks that are available. There are many other frameworks worth mentioning."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.203,
+            0.886,
+            0.263
+          ],
+          "content": "Another framework that’s already been mentioned is [Pylons](http://www.pylonsproject.org/). Pylons is much like TurboGears, but with an even stronger emphasis on flexibility, which comes at the cost of being more difficult to use. Nearly every component can be exchanged, which makes it necessary to use the documentation of every single component, of which there are many. Pylons builds upon [Paste](http://pythonpaste.org/), an extensive set of tools which are handy for WSGI."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.27,
+            0.785,
+            0.285
+          ],
+          "content": "And that’s still not everything. The most up-to-date information can always be found in the Python wiki."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.293,
+            0.181,
+            0.307
+          ],
+          "level": 2,
+          "content": "See also:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.316,
+            0.519,
+            0.33
+          ],
+          "content": "The Python wiki contains an extensive list of [web frameworks](https://wiki.python.org/moin/WebFrameworks)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.338,
+            0.844,
+            0.353
+          ],
+          "content": "Most frameworks also have their own mailing lists and IRC channels, look out for these on the projects’ web sites."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.936,
+            0.51,
+            0.949
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.11,
+            0.184,
+            0.131
+          ],
+          "level": 2,
+          "content": "Index"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.142,
+            0.135,
+            0.161
+          ],
+          "level": 2,
+          "content": "P"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.166,
+            0.394,
+            0.198
+          ],
+          "content": "Python Enhancement Proposals PEP 333, 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.512,
+            0.949
+          ],
+          "content": "12"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "HOWTO Use Python in the web",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2020-05-20T05:02:17-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 12,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

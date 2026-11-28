@@ -1,0 +1,759 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.121,
+            0.121,
+            0.886,
+            0.181
+          ],
+          "level": 1,
+          "content": "Porting Extension Modules to Python 3 Release 2.7.18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.217,
+            0.885,
+            0.262
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.779,
+            0.3,
+            0.885,
+            0.316
+          ],
+          "content": "**May 20, 2020**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.322,
+            0.885,
+            0.339
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.338,
+            0.885,
+            0.355
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.375,
+            0.224,
+            0.397
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.112,
+            0.42,
+            0.887,
+            0.614
+          ],
+          "content": "- **1 Conditional compilation** 2\n- **2 Changes to Object APIs** 2\n- 2.1 str/unicode Unification 2\n- 2.2 long/int Unification 3\n- **3 Module initialization and state** 3\n- **4 CObject replaced with Capsule** 5\n- **5 Other options** 8\n- **Index** 9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.155,
+            0.651,
+            0.336,
+            0.668
+          ],
+          "content": "**author** Benjamin Peterson"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.689,
+            0.878,
+            0.769
+          ],
+          "content": "**Abstract** Although changing the C-API was not one of Python 3’s objectives, the many Python-level changes made leaving Python 2’s API intact impossible. In fact, some changes such as int() and long() unification are more obvious on the C level. This document endeavors to document incompatibilities and how they can be worked around."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.413,
+            0.112
+          ],
+          "level": 2,
+          "content": "1 Conditional compilation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.163
+          ],
+          "content": "The easiest way to compile only some code for Python 3 is to check if PY\\_MAJOR\\_VERSION is greater than or equal to 3."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.172,
+            0.341,
+            0.216
+          ],
+          "sub_type": "code",
+          "content": "```c\n#if PY_MAJOR_VERSION >= 3\n#define IS_PY3K\n#endif\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.231,
+            0.722,
+            0.247
+          ],
+          "content": "API functions that are not present can be aliased to their equivalents within conditional blocks."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.275,
+            0.413,
+            0.298
+          ],
+          "level": 2,
+          "content": "2 Changes to Object APIs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.318,
+            0.707,
+            0.335
+          ],
+          "content": "Python 3 merged together some types with similar functions while cleanly separating others."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.359,
+            0.369,
+            0.377
+          ],
+          "level": 2,
+          "content": "2.1 str/unicode Unification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.392,
+            0.886,
+            0.485
+          ],
+          "content": "Python 3’s str() type is equivalent to Python 2’s unicode(); the C functions are called PyUnicode\\_\\* for both. The old 8-bit string type has become bytes(), with C functions called PyBytes\\_\\*. Python 2.6 and later provide a compatibility header, bytesobject.h, mapping PyBytes names to PyString ones. For best compatibility with Python 3, PyUnicode should be used for textual data and PyBytes for binary data. It’s also important to remember that PyBytes and PyUnicode in Python 3 are not interchangeable like PyString and PyUnicode are in Python 2. The following example shows best practices with regards to PyUnicode, PyString, and PyBytes."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.492,
+            0.635,
+            0.898
+          ],
+          "sub_type": "code",
+          "content": "```c\n#include \"stdlib.h\"\n#include \"Python.h\"\n#include \"bytesobject.h\"\n\n/* text example */\nstatic PyObject *\nsay_hello(PyObject *self, PyObject *args) {\n    PyObject *name, *result;\n\n    if (!PyArg_ParseTuple(args, \"U:say_hello\", &name))\n        return NULL;\n\n    result = PyUnicode_FromFormat(\"Hello, %S!\", name);\n    return result;\n}\n\n/* just a forward */\nstatic char * do_encode(PyObject */\n\n/* bytes example */\nstatic PyObject *\nencode_object(PyObject *self, PyObject *args) {\n    char *encoded;\n    PyObject *result, *myobj;\n\n    if (!PyArg_ParseTuple(args, \"O:encode_object\", &myobj))\n        return NULL;\n\n    encoded = do_encode(myobj);\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.898,
+            0.884,
+            0.911
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.106,
+            0.479,
+            0.196
+          ],
+          "sub_type": "code",
+          "content": "```objectivec\nif (encoded == NULL)\n        return NULL;\n    result = PyBytes_FromString(encoded);\n    free(encoded);\n    return result;\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.107
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.227,
+            0.334,
+            0.246
+          ],
+          "level": 2,
+          "content": "2.2 long/int Unification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.261,
+            0.885,
+            0.293
+          ],
+          "content": "Python 3 has only one integer type, int(). But it actually corresponds to Python 2’s long() type—the int() type used in Python 2 was removed. In the C-API, PyInt\\_\\* functions are replaced by their PyLong\\_\\* equivalents."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.322,
+            0.482,
+            0.342
+          ],
+          "level": 2,
+          "content": "3 Module initialization and state"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.363,
+            0.886,
+            0.411
+          ],
+          "content": "Python 3 has a revamped extension module initialization system. (See [**PEP 3121**](https://www.python.org/dev/peps/pep-3121).) Instead of storing module state in globals, they should be stored in an interpreter specific structure. Creating modules that act correctly in both Python 2 and Python 3 is tricky. The following simple example demonstrates how."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.417,
+            0.766,
+            0.894
+          ],
+          "sub_type": "code",
+          "content": "```c\n#include \"Python.h\"\n\nstruct module_state {\n    PyObject *error;\n};\n\n#if PY_MAJOR_VERSION >= 3\n#define GETSTATE(m) ((struct module_state*)PyModule_GetState(m))\n#else\n#define GETSTATE(m) (&_state)\nstatic struct module_state _state;\n#endif\n\nstatic PyObject *\nerror_out(PyObject *m) {\n    struct module_state *st = GETSTATE(m);\n    PyErr_SetString(st->error, \"something bad happened\");\n    return NULL;\n}\n\nstatic PyMethodDef myextension_methods[] = {\n    {\"error_out\", (PyCFunction)error_out, METH_NOARGS, NULL},\n    {NULL, NULL}\n};\n\n#if PY_MAJOR_VERSION >= 3\n\nstatic int myextension_traverse(PyObject *m, visitproc visit, void *arg) {\n    Py_VISIT(GETSTATE(m)->error);\n    return 0;\n}\n\nstatic int myextension_clear(PyObject *m) {\n    Py_CLEAR(GETSTATE(m)->error);\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.893,
+            0.884,
+            0.906
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.106
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.107,
+            0.866,
+            0.778
+          ],
+          "sub_type": "code",
+          "content": "```c\nreturn 0;\n}\n\nstatic struct PyModuleDef moduledef = {\n    PyModuleDef_HEAD_INIT,\n    \"myextension\",\n    NULL,\n    sizeof(struct module_state),\n    myextension_methods,\n    NULL,\n    myextension_traverse,\n    myextension_clear,\n    NULL\n};\n\n#define INITERROR return NULL\n\nPyMODINIT_FUNC\nPyInit_myextension(void)\n\n#else\n#define INITERROR return\n\nvoid\ninitmyextension(void)\n#endif\n{\n#if PY_MAJOR_VERSION >= 3\n    PyObject *module = PyModule_Create(&moduledef);\n#else\n    PyObject *module = Py_InitModule(\"myextension\", myextension_methods);\n#endif\n\n    if (module == NULL)\n        INITERROR;\n    struct module_state *st = GETSTATE(module);\n\n    st->error = PyErr_NewException(\"myextension.Error\", NULL, NULL);\n    if (st->error == NULL) {\n        Py_DECREF(module);\n        INITERROR;\n    }\n\n#if PY_MAJOR_VERSION >= 3\n    return module;\n#endif\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.948
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.492,
+            0.112
+          ],
+          "level": 2,
+          "content": "4 CObject replaced with Capsule"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.133,
+            0.885,
+            0.194
+          ],
+          "content": "The Capsule object was introduced in Python 3.1 and 2.7 to replace CObject. CObjects were useful, but the CObject API was problematic: it didn’t permit distinguishing between valid CObjects, which allowed mismatched CObjects to crash the interpreter, and some of its APIs relied on undefined behavior in C. (For further reading on the rationale behind Capsules, please see [bpo-5630](https://bugs.python.org/issue5630).)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.2,
+            0.886,
+            0.277
+          ],
+          "content": "If you’re currently using CObjects, and you want to migrate to 3.1 or newer, you’ll need to switch to Capsules. CObject was deprecated in 3.1 and 2.7 and completely removed in Python 3.2. If you only support 2.7, or 3.1 and above, you can simply switch to Capsule. If you need to support Python 3.0, or versions of Python earlier than 2.7, you’ll have to support both CObjects and Capsules. (Note that Python 3.0 is no longer supported, and it is not recommended for production use.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.283,
+            0.886,
+            0.33
+          ],
+          "content": "The following example header file capsulethunk.h may solve the problem for you. Simply write your code against the Capsule API and include this header file after Python.h. Your code will automatically use Capsules in versions of Python with Capsules, and switch to CObjects when Capsules are unavailable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.336,
+            0.885,
+            0.382
+          ],
+          "content": "capsulethunk.h simulates Capsules using CObjects. However, CObject provides no place to store the capsule’s “name”. As a result the simulated Capsule objects created by capsulethunk.h behave slightly differently from real Capsules. Specifically:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.389,
+            0.594,
+            0.405
+          ],
+          "content": "• The name parameter passed in to PyCapsule\\_New() is ignored."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.412,
+            0.884,
+            0.443
+          ],
+          "content": "• The name parameter passed in to PyCapsule\\_IsValid() and PyCapsule\\_GetPointer() is ignored, and no error checking of the name is performed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.45,
+            0.492,
+            0.465
+          ],
+          "content": "• PyCapsule\\_GetName() always returns NULL."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.473,
+            0.885,
+            0.518
+          ],
+          "content": "• PyCapsule\\_SetName() always raises an exception and returns failure. (Since there’s no way to store a name in a CObject, noisy failure of PyCapsule\\_SetName() was deemed preferable to silent failure here. If this is inconvenient, feel free to modify your local copy as you see fit.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.525,
+            0.885,
+            0.555
+          ],
+          "content": "You can find capsulethunk.h in the Python source distribution as [Doc/includes/capsulethunk.h](https://github.com/python/cpython/tree/2.7/Doc/includes/capsulethunk.h). We also include it here for your convenience:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.563,
+            0.709,
+            0.898
+          ],
+          "sub_type": "code",
+          "content": "```c\n#ifndef __CAPSULETHUNK_H\n#define __CAPSULETHUNK_H\n\n#if (      (PY_VERSION_HEX <  0x02070000) \\\n    || ((PY_VERSION_HEX >= 0x03000000) \\\n    && (PY_VERSION_HEX <  0x03010000)) )\n\n#define __PyCapsule_GetField(capsule, field, default_value) \\\n    ( PyCapsule_CheckExact(capsule) \\\n        ? (((PyCObject *)capsule)->field) \\\n        : (default_value) \\\n    ) \\\n\n#define __PyCapsule_SetField(capsule, field, value) \\\n    ( PyCapsule_CheckExact(capsule) \\\n        ? (((PyCObject *)capsule)->field = value), 1 \\\n        : 0 \\\n    ) \\\n\n#define PyCapsule_Type PyCObject_Type\n\n#define PyCapsule_CheckExact(capsule) (PyCObject_Check(capsule))\n#define PyCapsule_IsValid(capsule, name) (PyCObject_Check(capsule))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.898,
+            0.884,
+            0.91
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.106
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.106,
+            0.819,
+            0.899
+          ],
+          "sub_type": "code",
+          "content": "```c\n#define PyCapsule_New(pointer, name, destructor) \\\n    (PyCObject_FromVoidPtr(pointer, destructor))\n\n#define PyCapsule_GetPointer(capsule, name) \\\n    (PyCObject_AsVoidPtr(capsule))\n\n/* Don't call PyCObject_SetPointer here, it fails if there's a destructor */\n#define PyCapsule_SetPointer(capsule, pointer) \\\n    __PyCapsule_SetField(capsule, cobject, pointer)\n\n#define PyCapsule_GetDestructor(capsule) \\\n    __PyCapsule_GetField(capsule, destructor)\n\n#define PyCapsule_SetDestructor(capsule, dtor) \\\n    __PyCapsule_SetField(capsule, destructor, dtor)\n\n/*\n * Sorry, there's simply no place\n *to store a Capsule \"name\" in a CObject.\n */\n#define PyCapsule_GetName(capsule) NULL\n\nstatic int\nPyCapsule_SetName(PyObject *capsule, const char *unused)\n{\n    unused = unused;\n    PyErr_SetString(PyExc_NotImplementedError,\n        \"can't use PyCapsule_SetName with CObjects\");\n    return 1;\n}\n\n#define PyCapsule_GetContext(capsule) \\\n    __PyCapsule_GetField(capsule, descr)\n\n#define PyCapsule_SetContext(capsule, context) \\\n    __PyCapsule_SetField(capsule, descr, context)\n\nstatic void *\nPyCapsule_Import(const char *name, int no_block)\n{\n    PyObject *object = NULL;\n    void *return_value = NULL;\n    char *trace;\n    size_t name_length = (strlen(name) + 1) * sizeof(char);\n    char *name_dup = (char *)PyMem_MALLOC(name_length);\n\n    if (!name_dup) {\n        return NULL;\n    }\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.898,
+            0.884,
+            0.911
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.106
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.112,
+            0.732,
+            0.846
+          ],
+          "sub_type": "code",
+          "content": "```c\nmemcpy(name_dup, name, name_length);\n\ntrace = name_dup;\nwhile (trace) {\n    char *dot = strchr(trace, '.');\n    if (dot) {\n        *dot++ = '\\0';\n    }\n\n    if (object == NULL) {\n        if (no_block) {\n            object = PyImport_ImportModuleNoBlock(trace);\n        } else {\n            object = PyImport_ImportModule(trace);\n            if (!object) {\n                PyErr_Format(PyExc_ImportError,\n                    \"PyCapsule_Import could not \"\n                    \"import module \\\"%s\\\"\", trace);\n            }\n        }\n    } else {\n        PyObject *object2 = PyObject_GetAttrString(object, trace);\n        Py_DECREF(object);\n        object = object2;\n    }\n    if (!object) {\n        goto EXIT;\n    }\n\n    trace = dot;\n}\n\nif (PyCObject_Check(object)) {\n    PyCObject *cobject = (PyCObject *)object;\n    return_value = cobject->cobject;\n} else {\n    PyErr_Format(PyExc_AttributeError,\n                    \"PyCapsule_Import \\\"%s\\\" is not valid\",\n                    name);\n}\n\nEXIT:\n    Py_XDECREF(object);\n    if (name_dup) {\n        PyMem_FREE(name_dup);\n    }\n    return return_value;\n}\n\n#endif /* #if PY_VERSION_HEX < 0x02070000 */\n#endif /* __CAPSULETHUNK_H */\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.091,
+            0.3,
+            0.112
+          ],
+          "level": 2,
+          "content": "5 Other options"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.164
+          ],
+          "content": "If you are writing a new extension module, you might consider [Cython](http://cython.org/). It translates a Python-like language to C. The extension modules it creates are compatible with Python 3 and Python 2."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.11,
+            0.184,
+            0.131
+          ],
+          "level": 2,
+          "content": "Index"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.142,
+            0.135,
+            0.161
+          ],
+          "level": 2,
+          "content": "P"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.167,
+            0.393,
+            0.197
+          ],
+          "content": "Python Enhancement Proposals PEP 3121, 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "9"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Porting Extension Modules to Python 3",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2020-05-20T04:59:26-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 9,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

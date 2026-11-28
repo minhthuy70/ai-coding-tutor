@@ -1,0 +1,2775 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:41:45",
+      "producer_application": "FPDF 1.7",
+      "page_count": 13,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.257,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.073,
+            0.373,
+            0.47,
+            0.621
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "KẾ THỪA (INHERITANCE)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.651,
+            0.32,
+            0.9,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "<1>"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.931,
+            0.032,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.95,
+            0.947,
+            0.992
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.95,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.248,
+            0.199
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Đặt vấn đề:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.438,
+            0.211,
+            0.562,
+            0.281
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VẤN ĐỀ"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.101,
+            0.337,
+            0.633,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Giả sử phần mềm của bạn cần quản lý thông tin của những đối tượng Sinh Viên, Giáo Viên, Nhân Viên của một trường đại học."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.102,
+            0.5,
+            0.633,
+            0.609
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Các đối tượng này có những thuộc tính chung ví dụ như tên, tuổi, ngày sinh, địa chỉ."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.652,
+            0.259,
+            0.886,
+            0.651
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.652,
+                0.259,
+                0.886,
+                0.651
+              ],
+              "image_path": "images/page_1_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.163,
+            0.697,
+            0.247,
+            0.895
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.163,
+                0.697,
+                0.247,
+                0.895
+              ],
+              "image_path": "images/page_1_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.253,
+            0.764,
+            0.808,
+            0.876
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Vậy để có thể tránh được việc dư thừa code và tái sử dụng phần mềm thì hướng giải quyết là gì ?"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.013,
+            0.931,
+            0.036,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.249,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Đặt vấn đề:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.415,
+            0.236,
+            0.585,
+            0.312
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "GIẢI PHÁP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.25,
+            0.287,
+            0.332,
+            0.429
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.25,
+                0.287,
+                0.332,
+                0.429
+              ],
+              "image_path": "images/page_2_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.118,
+            0.437,
+            0.474,
+            0.638
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Xây dựng một lớp cơ sở (base class) chứa các thuộc tính chung của 3 lớp này, sau đó cho các lớp này kế thừa từ lớp cơ sở."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.667,
+            0.288,
+            0.748,
+            0.43
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.667,
+                0.288,
+                0.748,
+                0.43
+              ],
+              "image_path": "images/page_2_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.538,
+            0.444,
+            0.879,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Khi đó ta cần bổ sung các thuộc tính, phương thức của từng lớp dẫn xuất (derived class)."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.822,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.115
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.929,
+            0.017,
+            0.985,
+            0.112
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.17,
+            0.319,
+            0.827,
+            0.695
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lớp trong Python có thể mở rộng, tạo một lớp mới từ một lớp cũ mà vẫn bảo toàn được những đặc điểm của lớp cũ. Quá trình này gọi là kế thừa, kế thừa liên quan tới các khái niệm như lớp cha (base class hoặc super class), lớp con (derived class hoặc sub class)."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.95,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.135,
+            0.331,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Cú pháp kế thừa:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.064,
+            0.282,
+            0.438,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.064,
+                0.282,
+                0.438,
+                0.863
+              ],
+              "image_path": "images/page_4_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.617,
+            0.185,
+            0.738,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CÚ PHÁP:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.51,
+            0.273,
+            0.86,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class BaseClass: class DerivedClass(BaseClass):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.638,
+            0.436,
+            0.717,
+            0.496
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.462,
+            0.477,
+            0.521,
+            0.54
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.492,
+            0.579,
+            0.858,
+            0.701
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Person: def __init__(self): print('Person constructor')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.492,
+            0.737,
+            0.87,
+            0.86
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Student(Person): def __init__(self): print('Student constructor')"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.015,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.822,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.135,
+            0.328,
+            0.197
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Ví dụ về kế thừa:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.04,
+            0.209,
+            0.096,
+            0.309
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.04,
+                0.209,
+                0.096,
+                0.309
+              ],
+              "image_path": "images/page_5_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.101,
+            0.21,
+            0.909,
+            0.317
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Khi lớp con kế thừa lớp cha, lớp con sẽ có các thuộc tính, phương thức tương tự như lớp cha."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.454,
+            0.295,
+            0.552,
+            0.353
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ 1:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.245,
+            0.34,
+            0.751,
+            0.921
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.245,
+                0.34,
+                0.751,
+                0.921
+              ],
+              "image_path": "images/page_5_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.559,
+            0.727,
+            0.64,
+            0.768
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.542,
+            0.777,
+            0.655,
+            0.859
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hello 28tech Hello 28tech"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.015,
+            0.93,
+            0.035,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.302,
+            0.392,
+            0.561,
+            0.895
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.302,
+                0.392,
+                0.561,
+                0.895
+              ],
+              "content": "class Person:\n    count = 0\n    def __init__(self):\n        self.count += 1\n    def getCount(self):\n        return self.count\nclass Student(Person):\n    def change(self):\n        self.count += 1\nif __name__ == '__main__':\n    s = Student()\n    print(s.getCount())\n    s.change()\n    print(s.getCount())"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 3,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.035,
+            0.135,
+            0.328,
+            0.197
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Ví dụ về kế thừa:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.041,
+            0.209,
+            0.096,
+            0.309
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.041,
+                0.209,
+                0.096,
+                0.309
+              ],
+              "image_path": "images/page_6_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.1,
+            0.211,
+            0.907,
+            0.317
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Khi lớp con kế thừa lớp cha, lớp con sẽ có các thuộc tính, phương thức tương tự như lớp cha."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.454,
+            0.295,
+            0.552,
+            0.352
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ 2:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.592,
+            0.561,
+            0.676,
+            0.693
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " 1 2"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.013,
+            0.93,
+            0.034,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.137,
+            0.27,
+            0.199
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Subclassing:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.041,
+            0.209,
+            0.096,
+            0.308
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.041,
+                0.209,
+                0.096,
+                0.308
+              ],
+              "image_path": "images/page_7_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.1,
+            0.211,
+            0.928,
+            0.357
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thông thường lớp con sẽ có thêm những thuộc tính mới so với lớp cha, tuy nhiên để tránh dư thừa code, bạn có thể gọi hàm khởi tạo của lớp cha trong hàm khởi tạo của lớp con để khởi tạo các thuộc tính mà lớp con kế thừa từ lớp cha."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.205,
+            0.409,
+            0.802,
+            0.898
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.205,
+                0.409,
+                0.802,
+                0.898
+              ],
+              "content": "class Person:\n    def __init__(self, name, birth):\n        self.name = name\n        self.birth = birth\nclass Student(Person):\n    def __init__(self, name, birth, gpa):\n        Person.__init__(self, name, birth)\n        self.gpa = gpa\n    def display(self):\n        print(f'{self.name} {self.birth} {self.gpa:.2f}')\nif __name__ == '__main__':\n    s = Student('28tech', '01/01/2022', 2.5)\n    s.display()"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.695,
+            0.569,
+            0.91,
+            0.673
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " 28tech 01/01/2022 2.50"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.137,
+            0.27,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Subclassing:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.041,
+            0.201,
+            0.096,
+            0.3
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.041,
+                0.201,
+                0.096,
+                0.3
+              ],
+              "image_path": "images/page_8_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.101,
+            0.219,
+            0.89,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Bạn cũng thể gọi hàm của lớp cha ở lớp con thông qua "
+            },
+            {
+              "type": "text",
+              "content": "từ khóa super()",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.475,
+            0.297,
+            0.554,
+            0.357
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.249,
+            0.401,
+            0.582,
+            0.541
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Person: def __init__(self, name, birth): self.name = name self.birth = birth"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.248,
+            0.542,
+            0.455,
+            0.578
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Student(Person):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.282,
+            0.576,
+            0.628,
+            0.685
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self, name, birth, gpa): super().__init__(name, birth) self.gpa = gpa"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.718,
+            0.539,
+            0.799,
+            0.579
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.654,
+            0.597,
+            0.863,
+            0.64
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech 01/01/2022 2.50"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.283,
+            0.684,
+            0.774,
+            0.76
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def display(self): print(f'{self.name} {self.birth} {self.gpa:.2f}')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.247,
+            0.755,
+            0.656,
+            0.867
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if __name == main s = Student('28tech', '01/01/2022', 2.5) s.display()"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.014,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.137,
+            0.259,
+            0.194
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Ghi đè hàm:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.202,
+            0.2,
+            0.286,
+            0.352
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.202,
+                0.2,
+                0.286,
+                0.352
+              ],
+              "image_path": "images/page_9_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.059,
+            0.369,
+            0.436,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trong trường hợp lớp con và lớp cha có phương thức cùng tên, khi đó bạn đang ghi đè phương thức này."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.67,
+            0.199,
+            0.753,
+            0.351
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.67,
+                0.199,
+                0.753,
+                0.351
+              ],
+              "image_path": "images/page_9_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.483,
+            0.36,
+            0.939,
+            0.537
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thông thường phương thức này ở lớp con sẽ được cài đặt một cách chi tiết hơn và có thể gọi phương thức tương ứng ở lớp cha để tránh dư thừa code."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.335,
+            0.525,
+            0.589,
+            0.947
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.335,
+                0.525,
+                0.589,
+                0.947
+              ],
+              "image_path": "images/page_9_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.007,
+            0.93,
+            0.04,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.136,
+            0.26,
+            0.194
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Ghi đè hàm:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.22,
+            0.219,
+            0.324,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lớp cha:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.317,
+            0.433,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Person: def __init__(self, name, birth): self.name = name self.birth = birth def show(self): return f'{self.name} {self.birth}'"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.214,
+            0.577,
+            0.319,
+            0.629
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lớp con:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.068,
+            0.673,
+            0.351,
+            0.783
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Student(Person): def __init__(self, name, birth, gpa): super().__init__(name, birth) self.gpa = gpa"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.089,
+            0.781,
+            0.466,
+            0.839
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def show(self): return Person.show(self) + ' ' + f'{self.gpa:.2f}'"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.691,
+            0.347,
+            0.765,
+            0.401
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.545,
+            0.444,
+            0.908,
+            0.606
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if __name == main__' t = Person('Nam', '22/12/2002') print(t.show()) s = Student('28tech', '01/01/2022', 2.5) print(s.show())"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 11,
+          "bbox": [
+            0.682,
+            0.64,
+            0.763,
+            0.679
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.624,
+            0.691,
+            0.813,
+            0.764
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nam 22/12/2002 28tech 01/01/2022 2.50"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.006,
+            0.931,
+            0.038,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.822,
+            0.95,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.135,
+            0.337,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6. Các kiểu kế thừa:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.036,
+            0.205,
+            0.481,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Đa kế thừa - Multiple Inheritance:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.038,
+            0.265,
+            0.872,
+            0.319
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Một lớp có thể cùng kế thừa nhiều lớp khác nhau được gọi là đa kế thừa."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.466,
+            0.339,
+            0.54,
+            0.393
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.304,
+            0.328,
+            0.692,
+            0.922
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.304,
+                0.328,
+                0.692,
+                0.922
+              ],
+              "image_path": "images/page_11_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.007,
+            0.931,
+            0.039,
+            0.976
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.337,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6. Các kiểu kế thừa:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.205,
+            0.608,
+            0.258
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Kế thừa nhiều mức - Multilevel inheritance:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.038,
+            0.265,
+            0.864,
+            0.317
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Khi lớp con lại có một lớp con khác kế thừa nó ta có kế thừa nhiều mức."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.466,
+            0.339,
+            0.54,
+            0.393
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.304,
+            0.335,
+            0.692,
+            0.923
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.304,
+                0.335,
+                0.692,
+                0.923
+              ],
+              "image_path": "images/page_12_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.008,
+            0.932,
+            0.037,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13s"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.038,
+            0.95,
+            0.106,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "oprotection.com"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

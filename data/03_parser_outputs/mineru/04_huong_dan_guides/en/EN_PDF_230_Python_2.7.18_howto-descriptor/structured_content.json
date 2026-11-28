@@ -1,0 +1,1219 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.399,
+            0.122,
+            0.886,
+            0.182
+          ],
+          "level": 1,
+          "content": "Descriptor HowTo Guide Release 2.7.18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.217,
+            0.885,
+            0.262
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.3,
+            0.885,
+            0.317
+          ],
+          "content": "**May 20, 2020**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.322,
+            0.885,
+            0.339
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.685,
+            0.338,
+            0.885,
+            0.355
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.375,
+            0.224,
+            0.398
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.112,
+            0.419,
+            0.887,
+            0.645
+          ],
+          "content": "- **1 Abstract** 2\n- **2 Definition and Introduction** 2\n- 3 **Descriptor Protocol** 2\n- **4 Invoking Descriptors** 3\n- **5 Descriptor Example** 4\n- 6 **Properties** 4\n- **7 Functions and Methods** 6\n- **8 Static Methods and Class Methods** 7"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.677,
+            0.382,
+            0.717
+          ],
+          "content": "**Author** Raymond Hettinger **Contact** &lt;python at rcn dot com&gt;"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.123,
+            0.737,
+            0.192,
+            0.754
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.182,
+            0.095,
+            0.271,
+            0.11
+          ],
+          "content": "– Properties"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.182,
+            0.117,
+            0.353,
+            0.132
+          ],
+          "content": "– Functions and Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.182,
+            0.14,
+            0.419,
+            0.155
+          ],
+          "content": "– Static Methods and Class Methods"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.197,
+            0.241,
+            0.216
+          ],
+          "level": 2,
+          "content": "1 Abstract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.239,
+            0.885,
+            0.285
+          ],
+          "content": "Defines descriptors, summarizes the protocol, and shows how descriptors are called. Examines a custom descriptor and several built-in python descriptors including functions, properties, static methods, and class methods. Shows how each works by giving a pure Python equivalent and a sample application."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.292,
+            0.885,
+            0.323
+          ],
+          "content": "Learning about descriptors not only provides access to a larger toolset, it creates a deeper understanding of how Python works and an appreciation for the elegance of its design."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.352,
+            0.446,
+            0.372
+          ],
+          "level": 2,
+          "content": "2 Definition and Introduction"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.394,
+            0.885,
+            0.44
+          ],
+          "content": "In general, a descriptor is an object attribute with “binding behavior”, one whose attribute access has been overridden by methods in the descriptor protocol. Those methods are \\_\\_get\\_\\_(), \\_\\_set\\_\\_(), and \\_\\_delete\\_\\_(). If any of those methods are defined for an object, it is said to be a descriptor."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.447,
+            0.886,
+            0.539
+          ],
+          "content": "The default behavior for attribute access is to get, set, or delete the attribute from an object’s dictionary. For instance, a.x has a lookup chain starting with a.\\_\\_dict\\_\\_['x'], then type(a).\\_\\_dict\\_\\_['x'], and continuing through the base classes of type(a) excluding metaclasses. If the looked-up value is an object defining one of the descriptor methods, then Python may override the default behavior and invoke the descriptor method instead. Where this occurs in the precedence chain depends on which descriptor methods were defined. Note that descriptors are only invoked for new style objects or classes (a class is new style if it inherits from object or type)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.545,
+            0.886,
+            0.592
+          ],
+          "content": "Descriptors are a powerful, general purpose protocol. They are the mechanism behind properties, methods, static methods, class methods, and super(). They are used throughout Python itself to implement the new style classes introduced in version 2.2. Descriptors simplify the underlying C-code and offer a flexible set of new tools for everyday Python programs."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.112,
+            0.62,
+            0.366,
+            0.641
+          ],
+          "level": 2,
+          "content": "3 Descriptor Protocol"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.662,
+            0.56,
+            0.676
+          ],
+          "content": "descr.\\_\\_get\\_\\_(self, obj, type=None) --> value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.685,
+            0.512,
+            0.699
+          ],
+          "content": "descr.\\_\\_set\\_\\_(self, obj, value) --> None"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.707,
+            0.473,
+            0.721
+          ],
+          "content": "descr.\\_\\_delete\\_\\_(self, obj) --> None"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.729,
+            0.885,
+            0.76
+          ],
+          "content": "That is all there is to it. Define any of these methods and an object is considered a descriptor and can override default behavior upon being looked up as an attribute."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.767,
+            0.885,
+            0.798
+          ],
+          "content": "If an object defines both \\_\\_get\\_\\_() and \\_\\_set\\_\\_(), it is considered a data descriptor. Descriptors that only define \\_\\_get\\_\\_() are called non-data descriptors (they are typically used for methods but other uses are possible)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.805,
+            0.886,
+            0.85
+          ],
+          "content": "Data and non-data descriptors differ in how overrides are calculated with respect to entries in an instance’s dictionary. If an instance’s dictionary has an entry with the same name as a data descriptor, the data descriptor takes precedence. If an instance’s dictionary has an entry with the same name as a non-data descriptor, the dictionary entry takes precedence."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.857,
+            0.886,
+            0.902
+          ],
+          "content": "To make a read-only data descriptor, define both \\_\\_get\\_\\_() and \\_\\_set\\_\\_() with the \\_\\_set\\_\\_() raising an AttributeError when called. Defining the \\_\\_set\\_\\_() method with an exception raising placeholder is enough to make it a data descriptor."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.492,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.381,
+            0.112
+          ],
+          "level": 2,
+          "content": "4 Invoking Descriptors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.133,
+            0.706,
+            0.148
+          ],
+          "content": "A descriptor can be called directly by its method name. For example, d.\\_\\_get\\_\\_(obj)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.156,
+            0.885,
+            0.201
+          ],
+          "content": "Alternatively, it is more common for a descriptor to be invoked automatically upon attribute access. For example, obj. d looks up d in the dictionary of obj. If d defines the method \\_\\_get\\_\\_(), then d.\\_\\_get\\_\\_(obj) is invoked according to the precedence rules listed below."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.208,
+            0.885,
+            0.239
+          ],
+          "content": "The details of invocation depend on whether obj is an object or a class. Either way, descriptors only work for new style objects and classes. A class is new style if it is a subclass of object."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.246,
+            0.885,
+            0.322
+          ],
+          "content": "For objects, the machinery is in object.\\_\\_getattribute\\_\\_() which transforms b.x into type(b). dict\\_\\_['x'].\\_\\_get\\_\\_(b, type(b)). The implementation works through a precedence chain that gives data descriptors priority over instance variables, instance variables priority over non-data descriptors, and assigns lowest priority to \\_\\_getattr\\_\\_() if provided. The full C implementation can be found in PyObject\\_GenericGetAttr() in [Objects/object.c](https://github.com/python/cpython/tree/2.7/Objects/object.c)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.329,
+            0.882,
+            0.36
+          ],
+          "content": "For classes, the machinery is in type.\\_\\_getattribute\\_\\_() which transforms B.x into B.\\_\\_dict\\_\\_['x']. \\_\\_get\\_\\_(None, B). In pure Python, it looks like:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.368,
+            0.586,
+            0.456
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __getattribute__(self, key):\n    \"Emulate type_getattro() in Objects/typeobject.c\"\n    v = object.__getattribute__(self, key)\n    if hasattr(v, '__get__'):\n        return v.__get__(None, self)\n    return v\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.47,
+            0.37,
+            0.485
+          ],
+          "content": "The important points to remember are:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.493,
+            0.586,
+            0.507
+          ],
+          "content": "• descriptors are invoked by the \\_\\_getattribute\\_\\_() method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.515,
+            0.632,
+            0.53
+          ],
+          "content": "• overriding \\_\\_getattribute\\_\\_() prevents automatic descriptor calls"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.538,
+            0.661,
+            0.553
+          ],
+          "content": "• \\_\\_getattribute\\_\\_() is only available with new style classes and objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.56,
+            0.885,
+            0.59
+          ],
+          "content": "• object.\\_\\_getattribute\\_\\_() and type.\\_\\_getattribute\\_\\_() make different calls to \\_\\_get\\_\\_()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.598,
+            0.502,
+            0.612
+          ],
+          "content": "• data descriptors always override instance dictionaries."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.621,
+            0.571,
+            0.635
+          ],
+          "content": "• non-data descriptors may be overridden by instance dictionaries."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.644,
+            0.885,
+            0.705
+          ],
+          "content": "The object returned by super() also has a custom \\_\\_getattribute\\_\\_() method for invoking descriptors. The call super(B, obj).m() searches obj.\\_\\_class\\_\\_.\\_\\_mro\\_\\_ for the base class A immediately following B and then returns A.\\_\\_dict\\_\\_['m'].\\_\\_get\\_\\_(obj, B). If not a descriptor, m is returned unchanged. If not in the dictionary, m reverts to a search using object.\\_\\_getattribute\\_\\_()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.711,
+            0.885,
+            0.757
+          ],
+          "content": "Note, in Python 2.2, super(B, obj).m() would only invoke \\_\\_get\\_\\_() if m was a data descriptor. In Python 2.3, non-data descriptors also get invoked unless an old-style class is involved. The implementation details are in super\\_getattro() in [Objects/typeobject.c](https://github.com/python/cpython/tree/2.7/Objects/typeobject.c)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.764,
+            0.886,
+            0.825
+          ],
+          "content": "The details above show that the mechanism for descriptors is embedded in the \\_\\_getattribute\\_\\_() methods for object, type, and super(). Classes inherit this machinery when they derive from object or if they have a meta-class providing similar functionality. Likewise, classes can turn-off descriptor invocation by overriding \\_\\_getattribute\\_\\_()."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.366,
+            0.113
+          ],
+          "level": 2,
+          "content": "5 Descriptor Example"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.18
+          ],
+          "content": "The following code creates a class whose objects are data descriptors which print a message for each get or set. Overriding \\_getattribute\\_\\_() is alternate approach that could do this for every attribute. However, this descriptor is useful for monitoring just a few chosen attributes:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.187,
+            0.627,
+            0.635
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass RevealAccess(object):\n    \"\"\"A data descriptor that sets and returns values\n        normally and prints a message logging their access.\n    \"\"\"\n\n    def __init__(self, initval=None, name='var'):\n        self.val = initval\n        self.name = name\n\n    def __get__(self, obj, objtype):\n        print 'Retrieving', self.name\n        return self.val\n\n    def __set__(self, obj, val):\n        print 'Updating', self.name\n        self.val = val\n\n>>> class MyClass(object):\n...     x = RevealAccess(10, 'var \"x'\")\n...     y = 5\n...\n>>> m = MyClass()\n>>> m.x\nRetrieving var \"x\"\n10\n>>> m.x = 20\nUpdating var \"x\"\n>>> m.x\nRetrieving var \"x\"\n20\n>>> m.y\n5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.648,
+            0.885,
+            0.695
+          ],
+          "content": "The protocol is simple and offers exciting possibilities. Several use cases are so common that they have been packaged into individual function calls. Properties, bound and unbound methods, static methods, and class methods are all based on the descriptor protocol."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.723,
+            0.262,
+            0.745
+          ],
+          "level": 2,
+          "content": "6 Properties"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.765,
+            0.883,
+            0.797
+          ],
+          "content": "Calling property() is a succinct way of building a data descriptor that triggers function calls upon access to an attribute. Its signature is:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.806,
+            0.76,
+            0.823
+          ],
+          "sub_type": "code",
+          "content": "```erlang\nproperty(fget=None, fset=None, fdel=None, doc=None) -> property attribute\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.836,
+            0.576,
+            0.853
+          ],
+          "content": "The documentation shows a typical use to define a managed attribute x:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.862,
+            0.428,
+            0.893
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass C(object):\n    def getx(self): return self.__x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.895,
+            0.884,
+            0.906
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.148,
+            0.11,
+            0.635,
+            0.153
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef setx(self, value): self._x = value\ndef delx(self): del self._x\nx = property(getx, setx, delx, \"I'm the 'x' property.\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.107
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.167,
+            0.836,
+            0.184
+          ],
+          "content": "To see how property() is implemented in terms of the descriptor protocol, here is a pure Python equivalent:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.192,
+            0.706,
+            0.694
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Property(object):\n    \"Emulate PyProperty_Type() in Objects/descrobject.c\"\n\n    def __init__(self, fget=None, fset=None, fdel=None, doc=None):\n        self.fget = fget\n        self.fset = fset\n        self.fdel = fdel\n        if doc is None and fget is not None:\n            doc = fget.__doc__\n        self.__doc__ = doc\n\n    def __get__(self, obj, objtype=None):\n        if obj is None:\n            return self\n        if self.fget is None:\n            raise AttributeError(\"unreadable attribute\")\n        return self.fget(obj)\n\n    def __set__(self, obj, value):\n        if self.fset is None:\n            raise AttributeError(\"can't set attribute\")\n        self.fset(obj, value)\n\n    def __delete__(self, obj):\n        if self.fdel is None:\n            raise AttributeError(\"can't delete attribute\")\n        self.fdel(obj)\n\n    def getter(self, fget):\n        return type(self)(fget, self.fset, self.fdel, self.__doc')\n\n    def setter(self, fset):\n        return type(self)(self.fget, fset, self.fdel, self.__doc')\n\n    def deleter(self, fdel):\n        return type(self)(self.fget, self.fset, fdel, self.__doc_)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.707,
+            0.885,
+            0.738
+          ],
+          "content": "The property() builtin helps whenever a user interface has granted attribute access and then subsequent changes require the intervention of a method."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.745,
+            0.886,
+            0.808
+          ],
+          "content": "For instance, a spreadsheet class may grant access to a cell value through Cell('b10').value. Subsequent improvements to the program require the cell to be recalculated on every access; however, the programmer does not want to affect existing client code accessing the attribute directly. The solution is to wrap access to the value attribute in a property data descriptor:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.813,
+            0.586,
+            0.899
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Cell(object):\n    . . .\n    def getvalue(self):\n        \"Recalculate the cell before returning value\"\n        self.recalc()\n        return self._value\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.898,
+            0.884,
+            0.911
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.107
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.149,
+            0.11,
+            0.381,
+            0.125
+          ],
+          "sub_type": "code",
+          "content": "```javascript\nvalue = property(getvalue)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.162,
+            0.411,
+            0.183
+          ],
+          "level": 2,
+          "content": "7 Functions and Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.205,
+            0.885,
+            0.236
+          ],
+          "content": "Python’s object oriented features are built upon a function based environment. Using non-data descriptors, the two are merged seamlessly."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.242,
+            0.886,
+            0.289
+          ],
+          "content": "Class dictionaries store methods as functions. In a class definition, methods are written using def and lambda, the usual tools for creating functions. The only difference from regular functions is that the first argument is reserved for the object instance. By Python convention, the instance reference is called self but may be called this or any other variable name."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.295,
+            0.886,
+            0.342
+          ],
+          "content": "To support method calls, functions include the \\_\\_get\\_\\_() method for binding methods during attribute access. This means that all functions are non-data descriptors which return bound or unbound methods depending whether they are invoked from an object or a class. In pure python, it works like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.35,
+            0.638,
+            0.424
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Function(object):\n    . . .\n    def __get__(self, obj, objtype=None):\n        \"Simulate func_descr_get() in Objects/funcobject.c\"\n        return typesMethodType(self, obj, objtype)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.437,
+            0.609,
+            0.453
+          ],
+          "content": "Running the interpreter shows how the function descriptor works in practice:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.461,
+            0.7,
+            0.618
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class D(object):\n...     def f(self, x):\n...         return x\n...\n>>> d = D()\n>>> D.__dict__['f']  # Stored internally as a function\n<function f at 0x00C45070>\n>>> D.f                  # Get from a class becomes an unbound method\n<unbound method D.f>\n>>> d.f                  # Get from an instance becomes a bound method\n<bound method D.f of <__main__.D object at 0x00B18C90>>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.632,
+            0.885,
+            0.679
+          ],
+          "content": "The output suggests that bound and unbound methods are two different types. While they could have been implemented that way, the actual C implementation of PyMethod\\_Type in [Objects/classobject.c](https://github.com/python/cpython/tree/2.7/Objects/classobject.c) is a single object with two different representations depending on whether the im\\_self field is set or is NULL (the C equivalent of None)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.685,
+            0.885,
+            0.747
+          ],
+          "content": "Likewise, the effects of calling a method object depend on the im\\_self field. If set (meaning bound), the original function (stored in the im\\_func field) is called as expected with the first argument set to the instance. If unbound, all of the arguments are passed unchanged to the original function. The actual C implementation of instancemethod\\_call() is only slightly more complex in that it includes some type checking."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.536,
+            0.111
+          ],
+          "level": 2,
+          "content": "8 Static Methods and Class Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.884,
+            0.149
+          ],
+          "content": "Non-data descriptors provide a simple mechanism for variations on the usual patterns of binding functions into methods."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.155,
+            0.884,
+            0.201
+          ],
+          "content": "To recap, functions have a \\_\\_get\\_\\_() method so that they can be converted to a method when accessed as attributes. The non-data descriptor transforms an obj.f(\\*args) call into f(obj, \\*args). Calling klass.f(\\*args) becomes f(\\*args)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.208,
+            0.55,
+            0.224
+          ],
+          "content": "This chart summarizes the binding and its two most useful variants:"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.268,
+            0.24,
+            0.731,
+            0.305
+          ],
+          "content": "| Transformation | Called from an Object | Called from a Class |\n| --- | --- | --- |\n| function | f(obj, *args) | f(*args) |\n| staticmethod | f(*args) | f(*args) |\n| classmethod | f(type(obj), *args) | f(klass, *args) |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_table_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.322,
+            0.885,
+            0.368
+          ],
+          "content": "Static methods return the underlying function without changes. Calling either c.f or C.f is the equivalent of a direct lookup into object.\\_\\_getattribute\\_\\_(c, \"f\") or object.\\_\\_getattribute\\_\\_(C, \"f\"). As a result, the function becomes identically accessible from either an object or a class."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.375,
+            0.688,
+            0.39
+          ],
+          "content": "Good candidates for static methods are methods that do not reference the self variable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.397,
+            0.886,
+            0.474
+          ],
+          "content": "For instance, a statistics package may include a container class for experimental data. The class provides normal methods for computing the average, mean, median, and other descriptive statistics that depend on the data. However, there may be useful functions which are conceptually related but do not depend on the data. For instance, erf(x) is handy conversion routine that comes up in statistical work but does not directly depend on a particular dataset. It can be called either from an object or the class: s.erf(1.5) --> .9332 or Sample.erf(1.5) --> .9332."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.48,
+            0.764,
+            0.497
+          ],
+          "content": "Since staticmethods return the underlying function with no changes, the example calls are unexciting:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.504,
+            0.354,
+            0.633
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class E(object):\n...     def f(x):\n...         print x\n...     f = staticmethod(f)\n...\n>>> print E.f(3)\n3\n>>> print E().f(3)\n3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.647,
+            0.806,
+            0.663
+          ],
+          "content": "Using the non-data descriptor protocol, a pure Python version of staticmethod() would look like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.67,
+            0.638,
+            0.786
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass StaticMethod(object):\n    \"Emulate PyStaticMethod_Type() in Objects/funcobject.c\"\n\n    def __init__(self, f):\n        self.f = f\n\n    def __get__(self, obj, objtype=None):\n        return self.f\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.799,
+            0.885,
+            0.83
+          ],
+          "content": "Unlike static methods, class methods prepend the class reference to the argument list before calling the function. This format is the same for whether the caller is an object or a class:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.839,
+            0.446,
+            0.898
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class E(object):\n...     def f(klass, x):\n...         return klass.__name__, x\n...     f = classmethod(f)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.898,
+            0.884,
+            0.911
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.107,
+            0.275,
+            0.181
+          ],
+          "sub_type": "code",
+          "content": "```txt\n...\n>>> print E.f(3)\n('E', 3)\n>>> print E().f(3)\n('E', 3)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.107
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.195,
+            0.883,
+            0.242
+          ],
+          "content": "This behavior is useful whenever the function only needs to have a class reference and does not care about any underlying data. One use for classmethods is to create alternate class constructors. In Python 2.3, the classmethod dict. fromkeys() creates a new dictionary from a list of keys. The pure Python equivalent is:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.25,
+            0.62,
+            0.379
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Dict(object):\n    . . .\n    def fromkeys(klass, iterable, value=None):\n        \"Emulate dict_fromkeys() in Objects/dictobject.c\"\n        d = klass()\n        for key in iterable:\n            d[key] = value\n        return d\n    fromkeys = classmethod(fromkeys)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.392,
+            0.538,
+            0.409
+          ],
+          "content": "Now a new dictionary of unique keys can be constructed like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.419,
+            0.601,
+            0.449
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> Dict.fromkeys('abracadabra')\n{'a': None, 'r': None, 'b': None, 'c': None, 'd': None}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.462,
+            0.796,
+            0.479
+          ],
+          "content": "Using the non-data descriptor protocol, a pure Python version of classmethod() would look like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.487,
+            0.629,
+            0.657
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass ClassMethod(object):\n    \"Emulate PyClassMethod_Type() in Objects/funcobject.c\"\n\n    def __init__(self, f):\n        self.f = f\n\n    def __get__(self, obj, klass=None):\n        if klass is None:\n            klass = type(obj)\n        def newfunc(*args):\n            return self.f(klass, *args)\n        return newfunc\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Descriptor HowTo Guide",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2020-05-20T05:02:52-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 8,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

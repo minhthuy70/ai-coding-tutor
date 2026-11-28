@@ -1,0 +1,2113 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:42:46",
+      "producer_application": "FPDF 1.7",
+      "page_count": 8,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.258,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.067,
+            0.441,
+            0.477,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MAP VÀ FILTER"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.651,
+            0.319,
+            0.903,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "<1>"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.037,
+            0.146,
+            0.176,
+            0.214
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Map():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.465,
+            0.143,
+            0.534,
+            0.263
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.465,
+                0.143,
+                0.534,
+                0.263
+              ],
+              "image_path": "images/page_1_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.223,
+            0.265,
+            0.781,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Map()",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " là một hàm trong Python có chức năng apply một hàm có sẵn cho mọi phần tử trong 1 iterable (list, tuple, str...)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.435,
+            0.467,
+            0.564,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "rong Python. LamCÚ PHÁP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.338,
+            0.578,
+            0.66,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "map(function, iterable…)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.094,
+            0.666,
+            0.89,
+            0.723
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Function:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Hàm sẽ được sử dụng để apply với các phần tử trong iterable."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.094,
+            0.734,
+            0.614,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Iterable:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Các iterable ví dụ như list, tuple, str..."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.094,
+            0.797,
+            0.879,
+            0.905
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Giá trị trả về:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " map trả về một đối tượng thuộc lớp map. Các bạn nên ép sang list để sử dụng."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.822,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.146,
+            0.177,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Map():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.063,
+            0.26,
+            0.129,
+            0.333
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.335,
+            0.449,
+            0.505
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Apply một hàm tự định nghĩa: def add(n): h đơn giản để định nghĩreturn n + 100"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.112,
+            0.547,
+            0.445,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if _name__ == main_ a = range(5) b = list(map(add, a)) print(b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.232,
+            0.765,
+            0.313,
+            0.805
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.165,
+            0.811,
+            0.375,
+            0.857
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[100, 101, 102, 103, 104]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.463,
+            0.209,
+            0.536,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.496,
+            0.319,
+            0.565,
+            0.425
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE 00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.549,
+            0.459,
+            0.882,
+            0.664
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "mbif ường đname gọi == ái tên tomain \"28tech\" b = list(map(ord, s)) print(b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.596,
+            0.695,
+            0.817,
+            0.789
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " [50, 56, 116, 101, 99, 104]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.146,
+            0.177,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Map():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.061,
+            0.335,
+            0.129,
+            0.407
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.07,
+            0.41,
+            0.099,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.14,
+            0.401,
+            0.411,
+            0.508
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Đọc 1 mảng số nguyên từ",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " ách đơn giản để định nghĩa một h"
+            },
+            {
+              "type": "text",
+              "content": "input và chuyển vào list:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.082,
+            0.523,
+            0.49,
+            0.651
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if name == main__': a = list(map(int, input().split())) print(a)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.156,
+            0.686,
+            0.22,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "INPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " 1 2 3 5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.333,
+            0.686,
+            0.419,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " [1, 2, 3, 5]"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.463,
+            0.192,
+            0.536,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.505,
+            0.265,
+            0.572,
+            0.333
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.513,
+            0.335,
+            0.917,
+            0.518
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trong trường hợp hàm apply trong map ngắn gọn bạn có thể thay thế bằng lambda def square(n): mbda thường được return n ** 2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.519,
+            0.551,
+            0.931,
+            0.803
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if _name__ == '__main a = [1, 2, 3, 5] b = list(map(square, a)) print(b) c = list(map(lambda x : x ** 2, a)) print(c) "
+            },
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.711,
+            0.81,
+            0.807,
+            0.897
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[1, 4, 9, 25] [1, 4, 9, 25]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.014,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 17,
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.146,
+            0.177,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Map():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.044,
+            0.261,
+            0.111,
+            0.333
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.05,
+            0.334,
+            0.436,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Áp dụng map với nhiều iterable: def add(a, b): cách đơn giản để địreturn a + b"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.079,
+            0.547,
+            0.443,
+            0.865
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if name == main a = [1, 2, 3, 4] b = [2, 3, 5, 4] c = list(map(add, a, b)) print(c) "
+            },
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " [3, 5, 8, 8]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.463,
+            0.209,
+            0.536,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.498,
+            0.319,
+            0.565,
+            0.393
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.535,
+            0.392,
+            0.891,
+            0.507
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Áp dụng map với nhiều",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Lambda thường được gọi dưới cái tên toán tử l"
+            },
+            {
+              "type": "text",
+              "content": "iterable sử dụng trong lambda:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.495,
+            0.509,
+            0.944,
+            0.715
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ambda.if __name__ == '__main__': a = [1, 2, 3, 4] b = [2, 3, 5, 4] c = list(map(lambda x, y : x + y, a, b)) print(c)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.76,
+            0.705,
+            0.845,
+            0.798
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " [3, 5, 8, 8]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.015,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.145,
+            0.189,
+            0.212
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Filter():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.465,
+            0.143,
+            0.534,
+            0.262
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.465,
+                0.143,
+                0.534,
+                0.262
+              ],
+              "image_path": "images/page_5_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.222,
+            0.263,
+            0.782,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Filter()",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " được sử dụng để trích xuất các phần tử trong một iterable khi apply một hàm nào đó với phần tử đó mà hàm trả về giá trị là True."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.435,
+            0.467,
+            0.565,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "rong Python. Lamhà l bdCÚ PHÁP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.347,
+            0.578,
+            0.65,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "filter(function, iterable)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.094,
+            0.666,
+            0.89,
+            0.723
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Function:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Hàm sẽ được sử dụng để apply với các phần tử trong iterable."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.094,
+            0.734,
+            0.612,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Iterable:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Các iterable ví dụ như list, tuple, str…"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.094,
+            0.797,
+            0.902,
+            0.903
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Giá trị trả về:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " filter trả về một đối tượng của lớp filter, bạn nên ép nó sang list hoặc tuple."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.016,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.822,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.145,
+            0.189,
+            0.213
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Filter():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.062,
+            0.261,
+            0.13,
+            0.334
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "品EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.071,
+            0.334,
+            0.445,
+            0.507
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lọc ra các số chẵn trong list: def even(n): ách đơn giản để định nghĩa mreturn n % 2 == 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.096,
+            0.551,
+            0.47,
+            0.752
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if name == main a = [1, 2, 3, 4, 5] b = list(filter(even, a)) print(b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.283,
+            0.765,
+            0.365,
+            0.859
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " [2, 4]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.463,
+            0.209,
+            0.537,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.495,
+            0.265,
+            0.561,
+            0.335
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.501,
+            0.335,
+            0.89,
+            0.392
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lọc ra các số nguyên tố trong list:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.517,
+            0.405,
+            0.9,
+            0.625
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math def prime(n): mbda thường được gọi dưới cái tên toán tử lafor i in range(2, math.isqrt(n) + 1): if n % i == 0: return False return n > 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.518,
+            0.651,
+            0.808,
+            0.806
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if name == main__': a = [20, 10, 17, 7, 29, 19] b = list(filter(prime, a)) print(b) OUT"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.755,
+            0.779,
+            0.873,
+            0.873
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " [17, 7, 29, 19]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.013,
+            0.931,
+            0.034,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.823,
+            0.949,
+            0.948,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.147,
+            0.188,
+            0.212
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Filter():"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.062,
+            0.348,
+            0.129,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.463,
+            0.258,
+            0.535,
+            0.319
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VÍ DỤ",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.196,
+            0.417,
+            0.487,
+            0.478
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Áp dụng filter với lambda",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.091,
+            0.487,
+            0.589,
+            0.67
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if __name == _main__': a = [20, 10, 17, 7, 29, 19] b = list(filter(lambda x : x >= 15, a)) print(b) OUTPUT"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.286,
+            0.651,
+            0.412,
+            0.741
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[20, 17, 29, 19]"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 10,
+          "bbox": [
+            0.607,
+            0.388,
+            0.922,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 10,
+              "bbox": [
+                0.607,
+                0.388,
+                0.922,
+                0.781
+              ],
+              "image_path": "images/page_7_image_10.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.015,
+            0.932,
+            0.032,
+            0.973
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.035,
+            0.95,
+            0.102,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "hyperlink",
+              "url": "https://inprotected.com?utm_source=signature",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "inprotected",
+                  "styles": [
+                    "superscript"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": ".com"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

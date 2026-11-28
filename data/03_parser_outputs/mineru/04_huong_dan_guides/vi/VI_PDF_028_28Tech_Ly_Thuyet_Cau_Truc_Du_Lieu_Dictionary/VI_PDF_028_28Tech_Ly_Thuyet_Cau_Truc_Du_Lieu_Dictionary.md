@@ -1,0 +1,564 @@
+<!-- page: 1 -->
+
+## DICTIONARY
+
+## <1>
+
+<!-- page: 2 -->
+
+![](images/page_1_image_3.jpg)
+
+Dictionaries là một cấu trúc dữ liệu thuộc dạng associative array hay hashmap.
+
+![](images/page_1_image_5.jpg)
+
+Bạn có thể tưởng tượng dict (viết tắt) là một cấu trúc dữ liệu mã mỗi phần tử của nó sẽ là một ánh xạ từ một khóa (key) sang một giá trị tương ứng (value).
+
+![](images/page_1_image_7.jpg)
+
+## ambda là mVí dụ:
+
+## ản để địnKeys
+
+'name'
+
+thường đư**Values**
+
+'28tech'
+
+'job'
+
+'dev'
+
+'city'
+
+'HCM'
+
+'salary'
+
+'500'
+
+'web'
+
+'28tech.com.vn'
+
+<!-- page: 3 -->
+
+## 1. Tạo dict:
+
+![](images/page_2_image_4.jpg)
+
+Để tạo dict bạn liệt kê các cặp key:value phân cách nhau bởi dấu phẩy và đặt giữa đóng mở ngoặc nhọn. Mỗi cặp key:value được đặt cách nhau dấu :
+
+## Tạo dict lưu thông tin
+
+```txt
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'salary' : 500,
+    'web' : '28tech.com.vn',
+    'city' : 'HCM'
+}
+```
+
+![](images/page_2_image_8.jpg)
+
+<!-- page: 4 -->
+
+## 1. Tạo dict:
+
+## Tạo dict bằng dict() constructor
+
+Bạn có thể tạo ra dict bằng cách convert cặp 2 giá trị thành một item của dict, khi đó giá trị thứ nhất làm key, giá trị thứ 2 làm value.
+
+1.0 EXAMPLE
+
+00
+
+a = [['name', '28tech'], ['job', 'dev'], ('web', '28tech.com.vn')] b = dict(a) print(b) **OUTPUT**
+
+{'name': '28tech', 'job': 'dev', 'web': '28tech.com.vn'}
+
+<!-- page: 5 -->
+
+## 1. Tạo dict:
+
+## Tạo dict bằng hàm zip()
+
+## 00 EXAMPLE
+
+a = ['name', 'job', 'web']
+b = ['28tech', 'dev', '28tech.com.vn']
+c = dict(zip(a, b))
+print(c)
+
+**OUTPUT**
+
+{'name': '28tech', 'job': 'dev', 'web': '28tech.com.vn'}
+
+## Tạo dict bằng hàm fronkey
+
+## 1品EXAMPLE
+
+0
+
+da thường được gọi dưới ca = ['a', 'b', 'c'] defaultValue = 0 b = dict.fromkeys(a, defaultValue) print(b) OUTPUT T
+
+{'a': 0, 'b': 0, 'c': 0}
+
+<!-- page: 6 -->
+
+## 2. Các tính chất quan trọng của dict:
+
+![](images/page_5_image_4.jpg)
+
+**Key trong dict là duy nhất:** Dict không thể chứa 2 key giống nhau, trong trường hợp bạn gán nhiều value cho cùng 1 key thì dict sẽ giữ lại value cuối cùng bạn gán cho key đó.
+
+```python
+a = {'name' : '28tech', 'job' : 'dev', 'name' : '27tech'}
+print(a)
+OUTPUT
+{'name': '27tech', 'job': 'dev'}
+```
+
+<!-- page: 7 -->
+
+## 2. Các tính chất quan trọng của dict:
+
+![](images/page_6_image_4.jpg)
+
+**Key phải là object không thể thay đổi (immutable):** Bạn có thể lựa chọn tuple, str, int… làm key còn value có thể là bất kì object nào.
+
+a = {(1, 2) : 'abc', 'name' : '28tech', 3 : 4} ểprint(a) n. Lambda**OUTPUT**
+
+hàm lambda.{(1, 2): 'abc', 'name': '28tech', 3: 4}
+
+**OUTPUT**
+
+TypeError: unhashable type: 'list'
+
+<!-- page: 8 -->
+
+## 3. Truy cập phần tử:
+
+![](images/page_7_image_4.jpg)
+
+Để truy cập value thông qua key ta dùng cú pháp : **dict[key]**, tuy nhiên nếu bạn sử dụng một giá trị không phải là key trong dict sẽ dẫn đến lỗi.
+
+```txt
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'salary' : 500,
+    'web' : '28tech.com.vn',
+    'city' : 'HCM'
+}
+print(infor['name'])
+print(infor['web'])
+```
+
+<!-- page: 9 -->
+
+## 3. Truy cập phần tử:
+
+![](images/page_8_image_4.jpg)
+
+Để tránh xảy ra lỗi khi truy cập vào một key không nằm trong dict các bạn có thể sử dụng **hàm get(),** hàm này sẽ trả về None nếu key bạn truy cập không nằm trong dict.
+
+```txt
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'salary' : 500,
+    'web' : '28tech.com.vn',
+    'city' : 'HCM'
+}
+print(infor.get('name'))
+print(infor.get('address'))
+```
+
+<!-- page: 10 -->
+
+## 4.Duyệt dict():
+
+![](images/page_9_image_4.jpg)
+
+**Lấy key, value, item trong list:** Bạn có thể sử dụng phương thức keys(), values(), items() trong dict để lấy về bộ key, value, hoặc items() trong dict. 3 phương thức này đều trả về iterable object, bạn có thể convert nó sang list.
+
+```python
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+}
+a = list(infor.keys())
+b = list(infor.values())
+c = list(infor.items())
+print(a)
+print(b)
+print(c)
+```
+
+```txt
+['name', 'job']
+['28tech', 'dev']
+[('name', '28tech'), ('job', 'dev')]
+```
+
+<!-- page: 11 -->
+
+## 4. Duyệt dict():
+
+## 00 EXAMPLE 0
+
+## Duyệt dict mặc định
+
+```javascript
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'salary' : 500,
+    'web' : '28tech.com.vn',
+    'city' : 'HCM'
+```
+
+## for x in infor: print(x, end = ' ')
+
+## OUTPUT
+
+name job salary web city
+
+![](images/page_10_image_10.jpg)
+
+<!-- page: 12 -->
+
+## 4. Duyệt dict():
+
+## Duyệt các cặp key, value trong dict
+
+00 EXAMPLE 00
+
+```javascript
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'salary' : 500,
+    'web' : '28tech.com.vn',
+    'city' : 'HCM'
+```
+
+for x in infor: print(x, infor[x], sep = '->')
+
+## OUTPUT
+
+name->28tech job->dev salary->500 web->28tech.com.vn city->HCM
+
+00 EXAMPLE
+
+```javascript
+'name' : '28tech',
+    'job' : 'dev',
+    'salary' : 500,
+    'web' : '28tech.com.vn',
+    'city' : 'HCM'
+```
+
+for (key, value) in infor.items(): print(key + '->' + str(value))
+
+## OUTPUT
+
+name->28tech job->dev salary->500 web->28tech.com.vn city->HCM
+
+<!-- page: 13 -->
+
+## 4. Duyệt dict():
+
+## Duyệt các value trong dict
+
+## EXAMPLE
+
+infor = {t cách đơn giản để định 'name' : '28tech', 'job' : 'dev', salary' : 500, 'web' : '28tech.com.vn', 'city' : 'HCM'
+
+for x in infor.values(): print(x)
+
+## hàm lamOUTPUT
+
+28tech dev 500 28tech.com.vn HCM
+
+## hường được gọi dưới cái tên toán tử lambd
+
+<!-- page: 14 -->
+
+## 5. Thêm và sửa dict:
+
+![](images/page_13_image_4.jpg)
+
+Để thêm cặp key:value vào dict bạn sử dụng cú pháp dict[key] = value. Nếu key đã nằm trong dict thì câu lệnh trên sẽ cập nhật value mới cho key.
+
+![](images/page_13_image_6.jpg)
+
+## Thêm item
+
+```txt
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+}
+infor['web'] = '28tech.com.vn'
+print(infor)
+```
+
+**OUTPUT**
+
+```yaml
+{'name': '28tech', 'job': 'dev', 'web': '28tech.com.vn'}
+```
+
+00 EXAMPLE 0
+
+## Thay đổi giá trị của value thông qua key
+
+```txt
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+}
+infor['name'] = '27tech'
+print(infor)
+```
+
+**OUTPUT**
+
+{'name': '27tech', 'job': 'dev'}
+
+<!-- page: 15 -->
+
+## 6. Xóa phần tử trong dict:
+
+![](images/page_14_image_5.jpg)
+
+Xóa phần tử thông qua key bằng **hàm pop().**
+
+```javascript
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'web' : '28tech.com.vn'
+```
+
+```lua
+infor.pop('job')
+print(infor)
+```
+
+**OUTPUT**
+
+{'name': '28tech', 'web': '28tech.com.vn'}
+
+**Chú ý:** Sử dụng **hàm pop()** với key không tồn tại trong dict sẽ gây lỗi Keyerror.
+
+![](images/page_14_image_12.jpg)
+
+Nếu bạn không cần giá trị value của item cần xóa bạn có thể sử dụng **hàm del.**
+
+```txt
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'web' : '28tech.com.vn'
+}
+del infor['job']
+print(infor)
+```
+
+**OUTPUT**
+
+{'name': '28tech', 'web': '28tech.com.vn'}
+
+**Chú ý:** Sử dụng **hàm del()** với key không tồn tại trong dict sẽ gây lỗi Keyerror.
+
+<!-- page: 16 -->
+
+![](images/page_15_image_0.jpg)
+
+![](images/page_15_image_1.jpg)
+
+## 6. Xóa phần tử trong dict:
+
+Xóa phần tử ngẫu nhiên bằng **hàm popitem().**
+
+```javascript
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'web' : '28tech.com.vn'
+```
+
+```lua
+a = infor.popitem()
+print(a)
+print(infor)
+```
+
+**OUTPUT**
+
+```javascript
+('web', '28tech.com.vn')
+{'name': '28tech', 'job': 'dev'}
+```
+
+Sử dụng **hàm clear()** để xóa mọi phần tử trong dict.
+
+```javascript
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'web' : '28tech.com.vn'
+```
+
+infor.clear() print(len(infor))
+
+**OUTPUT** 0
+
+<!-- page: 17 -->
+
+## 7. Kiểm tra sự tồn tại của key, value:
+
+![](images/page_16_image_4.jpg)
+
+![](images/page_16_image_6.jpg)
+
+Các bạn có thể sử dụng toán tử in để kiểm tra sự tồn tại của một key hoặc value nào đó trong dict.
+
+```javascript
+infor = {
+    'name' : '28tech',
+    'job' : 'dev',
+    'web' : '28tech.com.vn'
+```
+
+print('job' in infor) print('28tech' in infor.values())
+
+## OUTPUT
+
+True True
+
+![](images/page_16_image_12.jpg)
+
+<!-- page: 18 -->
+
+## 8. Trộn 2 dict:
+
+![](images/page_17_image_4.jpg)
+
+Để trộn 2 dict với nhau bạn có thể sử dụng **hàm update().**
+
+## 00 EXAMPLE
+
+```txt
+'name' : '28tech',
+'job' : 'dev'
+```
+
+```txt
+b = {'web' : '28tech.com.vn', 'salary' : 500}
+```
+
+a.update(b)
+
+for key, value in a.items(): print(key, value)
+
+## OUTPUT
+
+name 28tech job dev web 28tech.com.vn salary 500
+
+![](images/page_17_image_13.jpg)
+
+<!-- page: 19 -->
+
+## 9. Một số ví dụ với dict:
+
+![](images/page_18_image_4.jpg)
+
+Với dict bạn có thể sử dụng vào những bài toán liên quan tới tần suất, đếm, đánh dấu…
+
+## Đếm tần suất xuất hiện của phần tử trong mảng
+
+```python
+a = [1, 3, 2, 1, 2, 3, 1, 0]
+d = dict({})
+for x in a :
+    if x in d:
+        d[x] += 1
+    else:
+        d[x] = 1
+for val, fre in d.items():
+    print(val, fre)
+```
+
+## OUTPUT
+
+**Tìm từ xuất hiện nhiều nhất trong câu, nếu có nhiều từ có cùng số lần xuất hiện thì in ra từ có thứ tự từ điển nhỏ nhất.**
+
+```python
+s = "28tech 28tech abc abc python c++ java"
+d = dict({})
+for x in s.split():
+    if x in d: d[x] += 1
+    else: d[x] = 1
+b = list(d.items())
+b.sort(key = lambda x : (-x[1], x[0]))
+print(b[0][0], b[0][1])
+```
+
+<!-- page: 20 -->
+
+## 10. Dict comprehension:
+
+![](images/page_19_image_4.jpg)
+
+Tương tự như list comp, dict comp là một cách gọn nhẹ giúp tạo ra một dict giúp code của bạn chuẩn Pythonic hơn.
+
+**CÚ PHÁP:** {key : value for var in iterable}
+
+## 00 EXAMPLE
+
+$$
+\begin{array}{l} \text {a = [1, 2, 3, 4]} \\ \text {d1 = dict(\{\})} \\ \text {for x in a:} \\ \quad \text {d1[x] = x ** 2} \end{array}
+$$
+
+00
+
+$$
+\begin{array}{l} \text {s = 'abc'} \\ \text {d = \{x:x*3 for x in s\}} \\ \text {print(d)} \end{array}
+$$
+
+$$
+\begin{array}{l} \text {\#dict comp} \\ \text {d2 = \{x:x**2 for x in a\}} \\ \text {print(d1)} \\ \text {print(d2)} \end{array}
+$$
+
+d: d[x]**OUTPUT**
+
+{'a': 'aaa', 'b': 'bbb', 'c': 'ccc'}
+
+{1: 1, 2: 4, 3: 9, 4: 16} {1: 1, 2: 4, 3: 9, 4: 16}
+
+<!-- page: 21 -->
+
+## 10. Dict comprehension:
+
+**CÚ PHÁP:** {key : value for var in iterable}
+
+00 EXAMPLE
+
+s = ["28tech", "PyThon", "JaVA", "C++"] d = {x.lower() : x.upper() for x in s} iả để đ h hĩ  hà  Pfor key, val in d.items(): print(key, val)
+
+**OUTPUT**
+
+28tech 28TECH python PYTHON java JAVA c++ C++
+
+00 EXAMPLE
+
+s = {'job' : 'dev', 'name' : '28tech', 'web' : '28tech', 'salary' : 500} selected = ['name', 'job'] d = {x : s[x] for x in selected} OUTPUT print(d)
+
+{'name': '28tech', 'job': 'dev'}

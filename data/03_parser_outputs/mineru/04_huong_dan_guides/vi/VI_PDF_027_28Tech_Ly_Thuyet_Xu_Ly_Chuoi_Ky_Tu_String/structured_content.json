@@ -1,0 +1,2405 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.13
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.044,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.159,
+            0.439,
+            0.384,
+            0.536
+          ],
+          "level": 2,
+          "content": "STRING"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.652,
+            0.32,
+            0.9,
+            0.755
+          ],
+          "level": 2,
+          "content": "二<1>"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.932,
+            0.031,
+            0.979
+          ],
+          "content": "1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.991
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.929,
+            0.018,
+            0.985,
+            0.112
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.202,
+            0.374,
+            0.797,
+            0.627
+          ],
+          "content": "Xâu kí tự là là chuỗi các kí tự được đặt giữa dấu nháy đơn hoặc nháy kép. Xâu trong Python được hỗ trợ một tập các công cụ xử lý cực kì mạnh mẽ."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.95,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.018,
+            0.067,
+            0.125
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.149,
+            0.24,
+            0.212
+          ],
+          "level": 2,
+          "content": "1. Tạo string:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.223,
+            0.091,
+            0.323
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.093,
+            0.225,
+            0.46,
+            0.361
+          ],
+          "content": "Để tạo string ta đặt nội dung của xâu giữa dấu nháy đơn hoặc dấu nháy kép. Xâu có thể có hoặc không có kí tự."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.354,
+            0.109,
+            0.421
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.427,
+            0.079,
+            0.456
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.431,
+            0.401,
+            0.565
+          ],
+          "content": "s = '28tech' #single quotes là một cách đơn giản đ định nghĩa một ht = \"python\" #double quotes #Multiline string"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.085,
+            0.566,
+            0.171,
+            0.605
+          ],
+          "content": "u = \"\"",
+          "image_source": "images/page_2_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.617,
+            0.195,
+            0.724
+          ],
+          "content": "cuoc song tuoi dep \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.6,
+            0.362,
+            0.64
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.657,
+            0.379,
+            0.699
+          ],
+          "content": "28tech python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.743,
+            0.214,
+            0.834
+          ],
+          "content": "print(s, t) print(u)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.739,
+            0.346,
+            0.814
+          ],
+          "content": "cuoc song tuoi dep"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.488,
+            0.146,
+            0.787,
+            0.21
+          ],
+          "level": 2,
+          "content": "2. str() constructor:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.49,
+            0.226,
+            0.544,
+            0.325
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_16.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.224,
+            0.942,
+            0.36
+          ],
+          "content": "Bạn có thể chuyển đổi hầu hết các đối tượng trong Python sang xâu kí tự bằng hàm khởi tạo str()."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.495,
+            0.355,
+            0.562,
+            0.423
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.505,
+            0.43,
+            0.532,
+            0.461
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.43,
+            0.693,
+            0.473
+          ],
+          "content": "s = str(100)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.55,
+            0.475,
+            0.727,
+            0.517
+          ],
+          "content": "ambda thường được gọit = str(100.20)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.55,
+            0.519,
+            0.922,
+            0.615
+          ],
+          "content": "u = str(10 + 28j) print(type(s), type(t), type(u))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.687,
+            0.635,
+            0.765,
+            0.675
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.691,
+            0.878,
+            0.732
+          ],
+          "content": "&lt;class 'str'&gt; &lt;class 'str'&gt; &lt;class 'str'&gt;"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.978
+          ],
+          "content": "3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.109
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.034,
+            0.146,
+            0.747,
+            0.212
+          ],
+          "level": 2,
+          "content": "3. Truy cập kí tự thông qua chỉ số và duyệt xâu:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.037,
+            0.223,
+            0.091,
+            0.323
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.095,
+            0.227,
+            0.921,
+            0.335
+          ],
+          "content": "Để truy cập vào các kí tự trong string, ta dùng chỉ số bắt đầu tử 0, ngoài ra Python còn hỗ trợ chỉ số âm (negative index)."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.112,
+            0.373,
+            0.887,
+            0.56
+          ],
+          "content": "| Index | 0 | 1 | 2 | 3 | 4 | 5 |\n| --- | --- | --- | --- | --- | --- | --- |\n| một cácSh đơn g | iản để 2 định ng | hĩa một8 hàm tr | ong PytThon. La | mbda tEhường đ | ược gọCi dưới c | ái tên tHoán tử l |\n| Neg index | -6 | -5 | hàm l-a4mbda. | -3 | -2 | -1 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_table_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.299,
+            0.602,
+            0.366,
+            0.674
+          ],
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.309,
+            0.677,
+            0.334,
+            0.706
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.339,
+            0.683,
+            0.483,
+            0.82
+          ],
+          "content": "s = \"28TECH\" print(s[1]) print(s[-2])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.676,
+            0.624,
+            0.716
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.736,
+            0.597,
+            0.834
+          ],
+          "content": "8 C"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "4"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.034,
+            0.143,
+            0.748,
+            0.213
+          ],
+          "level": 2,
+          "content": "3. Truy cập kí tự thông qua chỉ số và duyệt xâu:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.147,
+            0.32,
+            0.417,
+            0.422
+          ],
+          "content": "**Bạn có thể sử dụng string slicing tương tự như list**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.079,
+            0.429,
+            0.145,
+            0.499
+          ],
+          "content": "00 là một"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.501,
+            0.115,
+            0.531
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.513,
+            0.285,
+            0.697
+          ],
+          "content": "s = \"28TECH\" print(s[1:4]) print(s[2:]) print(s[::-1])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.333,
+            0.513,
+            0.414,
+            0.555
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.33,
+            0.571,
+            0.407,
+            0.692
+          ],
+          "content": "8TE TECH HCET82"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.69,
+            0.245,
+            0.8,
+            0.297
+          ],
+          "content": "**Duyệt xâu**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.3,
+            0.618,
+            0.373
+          ],
+          "content": "1日EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.375,
+            0.586,
+            0.406
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.598,
+            0.383,
+            0.907,
+            0.657
+          ],
+          "content": "s = \"28tech dsa\" for x in s : g được gọi dưới cái tên toán tprint(x, end = ' ') print() for i in range(len(s)): print(s[i], end = ' '"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.714,
+            0.675,
+            0.795,
+            0.715
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.682,
+            0.729,
+            0.826,
+            0.811
+          ],
+          "content": "2 8 t e c h d s a 2 8 t e c h d s a"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.996
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.147,
+            0.38,
+            0.209
+          ],
+          "level": 2,
+          "content": "4. String is immutable:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.223,
+            0.091,
+            0.322
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.092,
+            0.226,
+            0.46,
+            0.405
+          ],
+          "content": "Bạn có thể truy cập các kí tự trong str thông qua chỉ số nhưng bạn không thể thay đổi được các kí tự đó bằng cách gán nó thành các kí tự hoặc xâu khác."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.079,
+            0.405,
+            0.146,
+            0.475
+          ],
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.477,
+            0.115,
+            0.507
+          ],
+          "content": "là m"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.184,
+            0.469,
+            0.328,
+            0.51
+          ],
+          "content": "s = \" 2 8 \\text {TECH}\"",
+          "image_source": "images/page_5_equation_8.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.185,
+            0.515,
+            0.305,
+            0.558
+          ],
+          "content": "s [ \\emptyset ] = \"\"",
+          "image_source": "images/page_5_equation_9.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.186,
+            0.56,
+            0.281,
+            0.604
+          ],
+          "content": "\\text {print} (s)",
+          "image_source": "images/page_5_equation_10.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.209,
+            0.623,
+            0.288,
+            0.661
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.677,
+            0.359,
+            0.751
+          ],
+          "content": "TypeError: 'str' object does not support item assignment"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.489,
+            0.145,
+            0.654,
+            0.205
+          ],
+          "level": 2,
+          "content": "5. Nối xâu:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.49,
+            0.226,
+            0.545,
+            0.325
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.225,
+            0.942,
+            0.359
+          ],
+          "content": "Trong Python để nối 2 xâu bạn có thể sử dụng toán tử +, để nhân bản xâu bạn có thể dùng toán tử \\*."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.553,
+            0.364,
+            0.62,
+            0.433
+          ],
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.438,
+            0.589,
+            0.467
+          ],
+          "content": "00"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.607,
+            0.437,
+            0.751,
+            0.479
+          ],
+          "content": "s = \" 2 8 \\text {tech}\"",
+          "image_source": "images/page_5_equation_18.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.606,
+            0.482,
+            0.751,
+            0.526
+          ],
+          "content": "t = \\text {``python''}",
+          "image_source": "images/page_5_equation_19.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.607,
+            0.527,
+            0.786,
+            0.568
+          ],
+          "content": "s = s + \\text {\"\"} + t",
+          "image_source": "images/page_5_equation_20.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.609,
+            0.572,
+            0.703,
+            0.615
+          ],
+          "content": "print(s)"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.608,
+            0.616,
+            0.705,
+            0.655
+          ],
+          "content": "a = \" a b\"",
+          "image_source": "images/page_5_equation_22.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.764,
+            0.597,
+            0.843,
+            0.635
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.609,
+            0.661,
+            0.716,
+            0.699
+          ],
+          "content": "b = a * 3",
+          "image_source": "images/page_5_equation_24.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.609,
+            0.705,
+            0.702,
+            0.749
+          ],
+          "content": "print(b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.744,
+            0.651,
+            0.855,
+            0.722
+          ],
+          "content": "28tech python ababab"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": "6"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.07,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.147,
+            0.277,
+            0.21
+          ],
+          "level": 2,
+          "content": "6. Hàm replace:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.223,
+            0.091,
+            0.323
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.094,
+            0.226,
+            0.55,
+            0.333
+          ],
+          "content": "**Hàm replace()** được sử dụng để thay thế 1 xâu cũ bằng một xâu mới."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.041,
+            0.349,
+            0.089,
+            0.435
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.092,
+            0.347,
+            0.541,
+            0.454
+          ],
+          "content": "**Chú ý:** Các hàm xử lý của str không thay đổi chính nó mà trả về xâu tương ứng."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.06,
+            0.474,
+            0.125,
+            0.541
+          ],
+          "level": 2,
+          "content": "à m EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.065,
+            0.537,
+            0.463,
+            0.715
+          ],
+          "content": "s = \"28tech python C++\" t = s.replace(\"python\", \"java\") print(s) OUTPUT print(t)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.71,
+            0.394,
+            0.782
+          ],
+          "content": "28tech python C++ 28tech java C++"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.544,
+            0.202,
+            0.93,
+            0.837
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_11.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.012,
+            0.929,
+            0.035,
+            0.98
+          ],
+          "content": "7"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.07,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.145,
+            0.384,
+            0.213
+          ],
+          "level": 2,
+          "content": "7. Hàm split() và join():"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.223,
+            0.091,
+            0.322
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.093,
+            0.227,
+            0.46,
+            0.371
+          ],
+          "content": "**split():** Tách các từ trong xâu, mặc định nếu hàm này không có tham số sẽ tách theo dấu cách."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.055,
+            0.366,
+            0.121,
+            0.432
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.437,
+            0.091,
+            0.467
+          ],
+          "content": "00"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.105,
+            0.43,
+            0.237,
+            0.471
+          ],
+          "content": "s = \" 2 8 \\text {tech}",
+          "image_source": "images/page_7_equation_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.431,
+            0.351,
+            0.475
+          ],
+          "content": "python"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.37,
+            0.429,
+            0.418,
+            0.469
+          ],
+          "content": "C + +",
+          "image_source": "images/page_7_equation_10.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.104,
+            0.474,
+            0.257,
+            0.519
+          ],
+          "content": "a = s. \\text {split} ()",
+          "image_source": "images/page_7_equation_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.519,
+            0.201,
+            0.563
+          ],
+          "content": "print(a)"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.105,
+            0.562,
+            0.374,
+            0.607
+          ],
+          "content": "t = \" 2 8 \\text {tech, python, C++}\"",
+          "image_source": "images/page_7_equation_13.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.105,
+            0.607,
+            0.293,
+            0.652
+          ],
+          "content": "b = t. \\text {split}\",\")",
+          "image_source": "images/page_7_equation_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.652,
+            0.201,
+            0.697
+          ],
+          "content": "print(b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.727,
+            0.293,
+            0.767
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.781,
+            0.342,
+            0.823
+          ],
+          "content": "['28tech', 'python', 'C++']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.822,
+            0.342,
+            0.865
+          ],
+          "content": "['28tech', 'python', 'C++']"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.49,
+            0.226,
+            0.546,
+            0.325
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_19.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.232,
+            0.957,
+            0.331
+          ],
+          "content": "**join():** Kết hợp các từ rời rạc thành 1 xâu được phân cách bởi kí tự cho trước"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.5,
+            0.333,
+            0.568,
+            0.403
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.405,
+            0.536,
+            0.437
+          ],
+          "content": "0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.411,
+            0.9,
+            0.458
+          ],
+          "content": "s = [\"28tech\", \"python\", \"C++\"]"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.54,
+            0.457,
+            0.717,
+            0.503
+          ],
+          "content": "t = \\text {','.join(s)}",
+          "image_source": "images/page_7_equation_24.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.503,
+            0.637,
+            0.547
+          ],
+          "content": ".print(t)"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.541,
+            0.546,
+            0.728,
+            0.591
+          ],
+          "content": "\\mathrm{u} = ^ {\\prime} \\#\\#\\'. \\text {join(s)}",
+          "image_source": "images/page_7_equation_26.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.591,
+            0.636,
+            0.637
+          ],
+          "content": "print(u)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.625,
+            0.822,
+            0.666
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.681,
+            0.681,
+            0.882,
+            0.763
+          ],
+          "content": "28tech,python,C++ 28tech##python##C++"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.033,
+            0.975
+          ],
+          "content": "8"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.018,
+            0.067,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.147,
+            0.472,
+            0.206
+          ],
+          "level": 2,
+          "content": "8. Các hàm case conversion:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.032,
+            0.281,
+            0.359,
+            0.331
+          ],
+          "content": "• **upper():** Chuyển sang in hoa."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.032,
+            0.344,
+            0.391,
+            0.395
+          ],
+          "content": "• **lower():** Chuyển sang in thường."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.032,
+            0.407,
+            0.494,
+            0.458
+          ],
+          "content": "• **capitalize():** Viết hoa chữ cái đầu của xâu."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.031,
+            0.471,
+            0.504,
+            0.571
+          ],
+          "content": "bda là một cách đơn giản để định nghĩa một hàm trong Pyt**swapcase():** Chuyển chữ hoa thành thường và ngược lại."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.032,
+            0.583,
+            0.508,
+            0.684
+          ],
+          "content": "**title():** Viết hoa chữ cái đầu của từng từ,các kí tự còn lại viết thường"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.814,
+            0.346,
+            0.894,
+            0.386
+          ],
+          "level": 2,
+          "content": "OUTPUT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.757,
+            0.399,
+            0.942,
+            0.583
+          ],
+          "content": "28TECH JAVA PYTHON 28tech java python i cái tên toán tử lamb28tEch JavA pYtHON 28Tech Java Python 28tech java python"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": "9"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.145,
+            0.34,
+            0.205
+          ],
+          "level": 2,
+          "content": "9. Kiểm tra xâu con:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.223,
+            0.091,
+            0.322
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.091,
+            0.225,
+            0.496,
+            0.473
+          ],
+          "content": "Để kiểm tra xâu con có thể sử dụng **toán tử in** hoặc **hàm find**, hàm find sẽ trả về chỉ số nhỏ nhất của xâu con nếu nó tồn tại trong xâu lớn, trả về -1 nếu không tìm thấy xâu con."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.046,
+            0.459,
+            0.114,
+            0.559
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.507,
+            0.399,
+            0.912
+          ],
+          "content": "s = \"28tech dsa 28tech\" if \"28tech\" in s: print('FOUND') print(s.find(\"28tech\")) print(s.find(\"C++\")) **OUTPUT** FOUND 0 -1"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.516,
+            0.215,
+            0.915,
+            0.906
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_8.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.009,
+            0.929,
+            0.043,
+            0.975
+          ],
+          "content": "10"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.822,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.147,
+            0.315,
+            0.21
+          ],
+          "level": 2,
+          "content": "10. String format :"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.207,
+            0.092,
+            0.305
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.095,
+            0.231,
+            0.71,
+            0.287
+          ],
+          "content": "Trong Python có 3 cách nhúng biến vào trong xâu kí tự."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.165,
+            0.369,
+            0.832,
+            0.423
+          ],
+          "content": "**-% string formatting : %s : xâu kí tự, %d : số nguyên, %f : Số float**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.202,
+            0.438,
+            0.27,
+            0.506
+          ],
+          "content": "00 giản để"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.268,
+            0.505,
+            0.71,
+            0.551
+          ],
+          "content": "hàm lambda.s = '%s is %d years old' % ('CR7', 37)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.268,
+            0.551,
+            0.582,
+            0.595
+          ],
+          "content": "t = 'Pi = %.2f' % (3.14159)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.27,
+            0.596,
+            0.365,
+            0.639
+          ],
+          "content": "print(s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.27,
+            0.641,
+            0.366,
+            0.685
+          ],
+          "content": "print(t)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.633,
+            0.581,
+            0.714,
+            0.62
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.637,
+            0.751,
+            0.708
+          ],
+          "content": "CR7 is 37 years old Pi = 3.14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.007,
+            0.929,
+            0.04,
+            0.977
+          ],
+          "content": "11"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.147,
+            0.306,
+            0.21
+          ],
+          "level": 2,
+          "content": "10. String format:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.207,
+            0.093,
+            0.306
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.094,
+            0.231,
+            0.71,
+            0.287
+          ],
+          "content": "Trong Python có 3 cách nhúng biến vào trong xâu kí tự."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.379,
+            0.35,
+            0.43
+          ],
+          "content": "**-str.format()**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.049,
+            0.443,
+            0.114,
+            0.513
+          ],
+          "content": "00 bda là"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.526,
+            0.501,
+            0.605
+          ],
+          "content": "s = '{0} is {1} years old !'.format('CR7', 37) print(s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.605,
+            0.356,
+            0.645
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.665,
+            0.403,
+            0.707
+          ],
+          "content": "CR7 is 37 years old"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.703,
+            0.351,
+            0.798,
+            0.402
+          ],
+          "content": "**-f-String**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.405,
+            0.623,
+            0.512
+          ],
+          "content": "0 EXAMPLE"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.571,
+            0.518,
+            0.701,
+            0.558
+          ],
+          "content": "\\text {name} = \\text {\"CR7\"}",
+          "image_source": "images/page_11_equation_13.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.573,
+            0.561,
+            0.66,
+            0.599
+          ],
+          "content": "\\text{age} = 37",
+          "image_source": "images/page_11_equation_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.571,
+            0.596,
+            0.926,
+            0.695
+          ],
+          "content": "s = f'{name} is {age} years old !' print(s) **OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.692,
+            0.715,
+            0.859,
+            0.759
+          ],
+          "content": "CR7 is 37 years old"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.011,
+            0.929,
+            0.041,
+            0.972
+          ],
+          "content": "1[2](https://inprotected.com?utm_source=signature)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.02,
+            0.95,
+            0.102,
+            0.971
+          ],
+          "content": "[inprotected.com](https://inprotected.com?utm_source=signature)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:43:49",
+      "producer_application": "FPDF 1.7",
+      "page_count": 12,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

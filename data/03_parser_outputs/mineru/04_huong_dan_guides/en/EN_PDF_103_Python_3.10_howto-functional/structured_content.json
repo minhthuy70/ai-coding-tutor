@@ -1,0 +1,3419 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.223,
+            0.114,
+            0.883,
+            0.171
+          ],
+          "level": 1,
+          "content": "Functional Programming HOWTO Release 3.10.15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.485,
+            0.205,
+            0.882,
+            0.247
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.718,
+            0.282,
+            0.881,
+            0.298
+          ],
+          "content": "**September 09, 2024**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.65,
+            0.303,
+            0.881,
+            0.319
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.68,
+            0.319,
+            0.881,
+            0.334
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.353,
+            0.228,
+            0.374
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.115,
+            0.395,
+            0.885,
+            0.892
+          ],
+          "content": "- **1 Introduction** 2\n- 1.1 Formal provability 3\n- 1.2 Modularity 3\n- 1.3 Ease of debugging and testing 3\n- 1.4 Composability 4\n- 2 **Iterators** 4\n- 2.1 Data Types That Support Iterators 5\n- 3 **Generator expressions and list comprehensions** 6\n- **4 Generators** 7\n- 4.1 Passing values into a generator 9\n- **5 Built-in functions 10**\n- **6 The itertools module 12**\n- 6.1 Creating new iterators 12\n- 6.2 Calling functions on elements 13\n- 6.3 Selecting elements 13\n- 6.4 Combinatoric functions 14\n- 6.5 Grouping elements 15\n- **7 The functools module 15**\n- 7.1 The operator module 17\n- **8 Small functions and the lambda expression 17**\n- **9 Revision History and Acknowledgements 18**\n- **10 References 18**\n- 10.1 General 18\n- 10.2 Python-specific 19\n- 10.3 Python documentation 19\n- **Index 20**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.087,
+            0.33,
+            0.101
+          ],
+          "content": "**Author** A. M. Kuchling"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.159,
+            0.108,
+            0.258,
+            0.122
+          ],
+          "level": 2,
+          "content": "Release 0.32"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.129,
+            0.882,
+            0.174
+          ],
+          "content": "In this document, we’ll take a tour of Python’s features suitable for implementing programs in a functional style. After an introduction to the concepts of functional programming, we’ll look at language features such as iterators and generators and relevant library modules such as itertools and functools."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.201,
+            0.287,
+            0.219
+          ],
+          "level": 2,
+          "content": "1 Introduction"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.24,
+            0.881,
+            0.269
+          ],
+          "content": "This section explains the basic concept of functional programming; if you’re just interested in learning about Python language features, skip to the next section on Iterators."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.275,
+            0.66,
+            0.291
+          ],
+          "content": "Programming languages support decomposing problems in several different ways:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.297,
+            0.882,
+            0.326
+          ],
+          "content": "• Most programming languages are **procedural**: programs are lists of instructions that tell the computer what to do with the program’s input. C, Pascal, and even Unix shells are procedural languages."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.333,
+            0.883,
+            0.39
+          ],
+          "content": "• In **declarative** languages, you write a specification that describes the problem to be solved, and the language implementation figures out how to perform the computation efficiently. SQL is the declarative language you’re most likely to be familiar with; a SQL query describes the data set you want to retrieve, and the SQL engine decides whether to scan tables or use indexes, which subclauses should be performed first, etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.396,
+            0.883,
+            0.453
+          ],
+          "content": "• **Object-oriented** programs manipulate collections of objects. Objects have internal state and support methods that query or modify this internal state in some way. Smalltalk and Java are object-oriented languages. C++ and Python are languages that support object-oriented programming, but don’t force the use of object-oriented features."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.46,
+            0.883,
+            0.503
+          ],
+          "content": "• **Functional** programming decomposes a problem into a set of functions. Ideally, functions only take inputs and produce outputs, and don’t have any internal state that affects the output produced for a given input. Wellknown functional languages include the ML family (Standard ML, OCaml, and other variants) and Haskell."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.51,
+            0.883,
+            0.596
+          ],
+          "content": "The designers of some computer languages choose to emphasize one particular approach to programming. This often makes it difficult to write programs that use a different approach. Other languages are multi-paradigm languages that support several different approaches. Lisp, C++, and Python are multi-paradigm; you can write programs or libraries that are largely procedural, object-oriented, or functional in all of these languages. In a large program, different sections might be written using different approaches; the GUI might be object-oriented while the processing logic is procedural or functional, for example."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.602,
+            0.883,
+            0.675
+          ],
+          "content": "In a functional program, input flows through a set of functions. Each function operates on its input and produces some output. Functional style discourages functions with side effects that modify internal state or make other changes that aren’t visible in the function’s return value. Functions that have no side effects at all are called **purely functional**. Avoiding side effects means not using data structures that get updated as a program runs; every function’s output must only depend on its input."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.68,
+            0.882,
+            0.738
+          ],
+          "content": "Some languages are very strict about purity and don’t even have assignment statements such as a=3 or c = a + b, but it’s difficult to avoid all side effects, such as printing to the screen or writing to a disk file. Another example is a call to the print() or time.sleep() function, neither of which returns a useful value. Both are called only for their side effects of sending some text to the screen or pausing execution for a second."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.743,
+            0.883,
+            0.801
+          ],
+          "content": "Python programs written in functional style usually won’t go to the extreme of avoiding all I/O or all assignments; instead, they’ll provide a functional-appearing interface but will use non-functional features internally. For example, the implementation of a function will still use assignments to local variables, but won’t modify global variables or have other side effects."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.807,
+            0.883,
+            0.88
+          ],
+          "content": "Functional programming can be considered the opposite of object-oriented programming. Objects are little capsules containing some internal state along with a collection of method calls that let you modify this state, and programs consist of making the right set of state changes. Functional programming wants to avoid state changes as much as possible and works with data flowing between functions. In Python you might combine the two approaches by writing functions that take and return instances representing objects in your application (e-mail messages, transactions, etc.)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.886,
+            0.883,
+            0.915
+          ],
+          "content": "Functional design may seem like an odd constraint to work under. Why should you avoid objects and side effects? There are theoretical and practical advantages to the functional style:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.087,
+            0.29,
+            0.101
+          ],
+          "content": "• Formal provability."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.109,
+            0.242,
+            0.122
+          ],
+          "content": "• Modularity."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.129,
+            0.265,
+            0.144
+          ],
+          "content": "• Composability."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.15,
+            0.366,
+            0.166
+          ],
+          "content": "• Ease of debugging and testing."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.189,
+            0.332,
+            0.207
+          ],
+          "level": 2,
+          "content": "1.1 Formal provability"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.221,
+            0.832,
+            0.236
+          ],
+          "content": "A theoretical benefit is that it’s easier to construct a mathematical proof that a functional program is correct."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.242,
+            0.883,
+            0.301
+          ],
+          "content": "For a long time researchers have been interested in finding ways to mathematically prove programs correct. This is different from testing a program on numerous inputs and concluding that its output is usually correct, or reading a program’s source code and concluding that the code looks right; the goal is instead a rigorous proof that a program produces the right result for all possible inputs."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.306,
+            0.883,
+            0.378
+          ],
+          "content": "The technique used to prove programs correct is to write down **invariants**, properties of the input data and of the program’s variables that are always true. For each line of code, you then show that if invariants X and Y are true **before** the line is executed, the slightly different invariants X’ and Y’ are true **after** the line is executed. This continues until you reach the end of the program, at which point the invariants should match the desired conditions on the program’s output."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.383,
+            0.883,
+            0.428
+          ],
+          "content": "Functional programming’s avoidance of assignments arose because assignments are difficult to handle with this technique; assignments can break invariants that were true before the assignment without producing any new invariants that can be propagated onward."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.434,
+            0.883,
+            0.507
+          ],
+          "content": "Unfortunately, proving programs correct is largely impractical and not relevant to Python software. Even trivial programs require proofs that are several pages long; the proof of correctness for a moderately complicated program would be enormous, and few or none of the programs you use daily (the Python interpreter, your XML parser, your web browser) could be proven correct. Even if you wrote down or generated a proof, there would then be the question of verifying the proof; maybe there’s an error in it, and you wrongly believe you’ve proved the program correct."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.529,
+            0.262,
+            0.546
+          ],
+          "level": 2,
+          "content": "1.2 Modularity"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.56,
+            0.883,
+            0.618
+          ],
+          "content": "A more practical benefit of functional programming is that it forces you to break apart your problem into small pieces. Programs are more modular as a result. It’s easier to specify and write a small function that does one thing than a large function that performs a complicated transformation. Small functions are also easier to read and to check for errors."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.642,
+            0.451,
+            0.66
+          ],
+          "level": 2,
+          "content": "1.3 Ease of debugging and testing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.673,
+            0.509,
+            0.689
+          ],
+          "content": "Testing and debugging a functional-style program is easier."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.695,
+            0.881,
+            0.739
+          ],
+          "content": "Debugging is simplified because functions are generally small and clearly specified. When a program doesn’t work, each function is an interface point where you can check that the data are correct. You can look at the intermediate inputs and outputs to quickly isolate the function that’s responsible for a bug."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.745,
+            0.883,
+            0.788
+          ],
+          "content": "Testing is easier because each function is a potential subject for a unit test. Functions don’t depend on system state that needs to be replicated before running a test; instead you only have to synthesize the right input and then check that the output matches expectations."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.084,
+            0.297,
+            0.102
+          ],
+          "level": 2,
+          "content": "1.4 Composability"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.883,
+            0.174
+          ],
+          "content": "As you work on a functional-style program, you’ll write a number of functions with varying inputs and outputs. Some of these functions will be unavoidably specialized to a particular application, but others will be useful in a wide variety of programs. For example, a function that takes a directory path and returns all the XML files in the directory, or a function that takes a filename and returns its contents, can be applied to many different situations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.18,
+            0.882,
+            0.21
+          ],
+          "content": "Over time you’ll form a personal library of utilities. Often you’ll assemble new programs by arranging existing functions in a new configuration and writing a few functions specialized for the current task."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.236,
+            0.244,
+            0.255
+          ],
+          "level": 2,
+          "content": "2 Iterators"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.276,
+            0.881,
+            0.304
+          ],
+          "content": "I’ll start by looking at a Python language feature that’s an important foundation for writing functional-style programs: iterators."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.311,
+            0.883,
+            0.382
+          ],
+          "content": "An iterator is an object representing a stream of data; this object returns the data one element at a time. A Python iterator must support a method called \\_\\_next\\_\\_() that takes no arguments and always returns the next element of the stream. If there are no more elements in the stream, \\_\\_next\\_\\_() must raise the StopIteration exception. Iterators don’t have to be finite, though; it’s perfectly reasonable to write an iterator that produces an infinite stream of data."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.389,
+            0.883,
+            0.446
+          ],
+          "content": "The built-in iter() function takes an arbitrary object and tries to return an iterator that will return the object’s contents or elements, raising TypeError if the object doesn’t support iteration. Several of Python’s built-in data types support iteration, the most common being lists and dictionaries. An object is called iterable if you can get an iterator for it."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.453,
+            0.504,
+            0.468
+          ],
+          "content": "You can experiment with the iteration interface manually:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.475,
+            0.458,
+            0.674
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> L = [1, 2, 3]\n>>> it = iter(L)\n>>> it\n<...iterator object at ...>\n>>> it.__next__() # same as next(it)\n1\n>>> next(it)\n2\n>>> next(it)\n3\n>>> next(it)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nStopIteration\n>>>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.687,
+            0.883,
+            0.731
+          ],
+          "content": "Python expects iterable objects in several different contexts, the most important being the for statement. In the statement for X in Y, Y must be an iterator or some object for which iter() can create an iterator. These two statements are equivalent:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.737,
+            0.293,
+            0.808
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in iter(obj):\n    print(i)\n\nfor i in obj:\n    print(i)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.82,
+            0.806,
+            0.836
+          ],
+          "content": "Iterators can be materialized as lists or tuples by using the list() or tuple() constructor functions:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.843,
+            0.326,
+            0.912
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> L = [1, 2, 3]\n>>> iterator = iter(L)\n>>> t = tuple(iterator)\n>>> t\n(1, 2, 3)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.94,
+            0.506,
+            0.951
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.086,
+            0.881,
+            0.116
+          ],
+          "content": "Sequence unpacking also supports iterators: if you know an iterator will return N elements, you can unpack them into an N-tuple:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.124,
+            0.321,
+            0.193
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> L = [1, 2, 3]\n>>> iterator = iter(L)\n>>> a, b, c = iterator\n>>> a, b, c\n(1, 2, 3)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.206,
+            0.883,
+            0.264
+          ],
+          "content": "Built-in functions such as max() and min() can take a single iterator argument and will return the largest or smallest element. The \"in\" and \"not in\" operators also support iterators: X in iterator is true if X is found in the stream returned by the iterator. You’ll run into obvious problems if the iterator is infinite; max(), min() will never return, and if the element X never appears in the stream, the \"in\" and \"not in\" operators won’t return either."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.27,
+            0.883,
+            0.329
+          ],
+          "content": "Note that you can only go forward in an iterator; there’s no way to get the previous element, reset the iterator, or make a copy of it. Iterator objects can optionally provide these additional capabilities, but the iterator protocol only specifies the \\_\\_next\\_\\_() method. Functions may therefore consume all of the iterator’s output, and if you need to do something different with the same stream, you’ll have to create a new iterator."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.351,
+            0.484,
+            0.369
+          ],
+          "level": 2,
+          "content": "2.1 Data Types That Support Iterators"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.382,
+            0.882,
+            0.412
+          ],
+          "content": "We’ve already seen how lists and tuples support iterators. In fact, any Python sequence type, such as strings, will automatically support creation of an iterator."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.418,
+            0.726,
+            0.434
+          ],
+          "content": "Calling iter() on a dictionary returns an iterator that will loop over the dictionary’s keys:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.441,
+            0.764,
+            0.654
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> m = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6,\n...       'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}\n>>> for key in m:\n...     print(key, m[key])\nJan 1\nFeb 2\nMar 3\nApr 4\nMay 5\nJun 6\nJul 7\nAug 8\nSep 9\nOct 10\nNov 11\nDec 12\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.666,
+            0.882,
+            0.696
+          ],
+          "content": "Note that starting with Python 3.7, dictionary iteration order is guaranteed to be the same as the insertion order. In earlier versions, the behaviour was unspecified and could vary between implementations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.702,
+            0.882,
+            0.746
+          ],
+          "content": "Applying iter() to a dictionary always loops over the keys, but dictionaries have methods that return other iterators. If you want to iterate over values or key/value pairs, you can explicitly call the values() or items() methods to get an appropriate iterator."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.751,
+            0.804,
+            0.767
+          ],
+          "content": "The dict() constructor can accept an iterator that returns a finite stream of (key, value) tuples:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.774,
+            0.779,
+            0.818
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> L = [('Italy', 'Rome'), ('France', 'Paris'), ('US', 'Washington DC')]\n>>> dict(iter(L))\n{'Italy': 'Rome', 'France': 'Paris', 'US': 'Washington DC'}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.83,
+            0.881,
+            0.86
+          ],
+          "content": "Files also support iteration by calling the readline() method until there are no more lines in the file. This means you can read each line of a file like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.868,
+            0.413,
+            0.911
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor line in file:\n    # do something for each line\n    ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.086,
+            0.689,
+            0.102
+          ],
+          "content": "Sets can take their contents from an iterable and let you iterate over the set’s elements:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.109,
+            0.374,
+            0.23
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> S = {2, 3, 5, 7, 11, 13}\n>>> for i in S:\n...     print(i)\n2\n3\n5\n7\n11\n13\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.265,
+            0.695,
+            0.285
+          ],
+          "level": 2,
+          "content": "3 Generator expressions and list comprehensions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.304,
+            0.882,
+            0.349
+          ],
+          "content": "Two common operations on an iterator’s output are 1) performing some operation for every element, 2) selecting a subset of elements that meet some condition. For example, given a list of strings, you might want to strip off trailing whitespace from each line or extract all the strings containing a given substring."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.354,
+            0.883,
+            0.399
+          ],
+          "content": "List comprehensions and generator expressions (short form: “listcomps” and “genexps”) are a concise notation for such operations, borrowed from the functional programming language Haskell ([https://www.haskell.org/](https://www.haskell.org/)). You can strip all the whitespace from a stream of strings with the following code:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.406,
+            0.626,
+            0.502
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> line_list = ['  line 1\\n', 'line 2  \\n', ' \\n', '']\n\n>>> # Generator expression -- returns iterator\n>>> stripped_iter = (line.strip() for line in line_list)\n\n>>> # List comprehension -- returns list\n>>> stripped_list = [line.strip() for line in line_list]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.513,
+            0.565,
+            0.529
+          ],
+          "content": "You can select only certain elements by adding an \"if\" condition:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.537,
+            0.618,
+            0.567
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> stripped_list = [line.strip() for line in line_list\n...                 if line != \"\"]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.579,
+            0.882,
+            0.638
+          ],
+          "content": "With a list comprehension, you get back a Python list; stripped\\_list is a list containing the resulting lines, not an iterator. Generator expressions return an iterator that computes the values as necessary, not needing to materialize all the values at once. This means that list comprehensions aren’t useful if you’re working with iterators that return an infinite stream or a very large amount of data. Generator expressions are preferable in these situations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.643,
+            0.881,
+            0.674
+          ],
+          "content": "Generator expressions are surrounded by parentheses (“()”) and list comprehensions are surrounded by square brackets (“[]”). Generator expressions have the form:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.12,
+            0.681,
+            0.44,
+            0.802
+          ],
+          "sub_type": "code",
+          "content": "```python\n( expression for expr in sequence1\n        if condition1\n        for expr2 in sequence2\n        if condition2\n        for expr3 in sequence3\n        ...\n        if condition3\n        for exprN in sequenceN\n        if conditionN )\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.814,
+            0.849,
+            0.83
+          ],
+          "content": "Again, for a list comprehension only the outside brackets are different (square brackets instead of parentheses)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.835,
+            0.882,
+            0.866
+          ],
+          "content": "The elements of the generated output will be the successive values of expression. The if clauses are all optional; if present, expression is only evaluated and added to the result when condition is true."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.871,
+            0.882,
+            0.903
+          ],
+          "content": "Generator expressions always have to be written inside parentheses, but the parentheses signalling a function call also count. If you want to create an iterator that will be immediately passed to a function you can write:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.092,
+            0.625,
+            0.109
+          ],
+          "sub_type": "code",
+          "content": "```lua\nobj_total = sum(obj.count for obj in list_all_objects())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.121,
+            0.881,
+            0.18
+          ],
+          "content": "The for...in clauses contain the sequences to be iterated over. The sequences do not have to be the same length, because they are iterated over from left to right, **not** in parallel. For each element in sequence1, sequence2 is looped over from the beginning. sequence3 is then looped over for each resulting pair of elements from sequence1 and sequence2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.186,
+            0.848,
+            0.201
+          ],
+          "content": "To put it another way, a list comprehension or generator expression is equivalent to the following Python code:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.208,
+            0.538,
+            0.382
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor expr1 in sequence1:\n    if not (condition1):\n        continue     # Skip this element\n    for expr2 in sequence2:\n        if not (condition2):\n            continue     # Skip this element\n        ...\n        for exprN in sequenceN:\n            if not (conditionN):\n                continue     # Skip this element\n\n            # Output the value of\n            # the expression.\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.395,
+            0.882,
+            0.438
+          ],
+          "content": "This means that when there are multiple for...in clauses but no if clauses, the length of the resulting output will be equal to the product of the lengths of all the sequences. If you have two lists of length 3, the output list is 9 elements long:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.445,
+            0.482,
+            0.529
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> seq1 = 'abc'\n>>> seq2 = (1, 2, 3)\n>>> [(x, y) for x in seq1 for y in seq2]\n[('a', 1), ('a', 2), ('a', 3),\n('b', 1), ('b', 2), ('b', 3),\n('c', 1), ('c', 2), ('c', 3)]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.541,
+            0.881,
+            0.572
+          ],
+          "content": "To avoid introducing an ambiguity into Python’s grammar, if expression is creating a tuple, it must be surrounded with parentheses. The first list comprehension below is a syntax error, while the second one is correct:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.578,
+            0.445,
+            0.636
+          ],
+          "sub_type": "code",
+          "content": "```txt\n# Syntax error\n[x, y for x in seq1 for y in seq2]\n# Correct\n[(x, y) for x in seq1 for y in seq2]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.669,
+            0.276,
+            0.688
+          ],
+          "level": 2,
+          "content": "4 Generators"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.708,
+            0.881,
+            0.738
+          ],
+          "content": "Generators are a special class of functions that simplify the task of writing iterators. Regular functions compute a value and return it, but generators return an iterator that returns a stream of values."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.743,
+            0.883,
+            0.83
+          ],
+          "content": "You’re doubtless familiar with how regular function calls work in Python or C. When you call a function, it gets a private namespace where its local variables are created. When the function reaches a return statement, the local variables are destroyed and the value is returned to the caller. A later call to the same function creates a new private namespace and a fresh set of local variables. But, what if the local variables weren’t thrown away on exiting a function? What if you could later resume the function where it left off? This is what generators provide; they can be thought of as resumable functions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.836,
+            0.465,
+            0.852
+          ],
+          "content": "Here’s the simplest example of a generator function:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.859,
+            0.346,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> def generate_ints(N):\n...     for i in range(N):\n...         yield i\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.087,
+            0.881,
+            0.116
+          ],
+          "content": "Any function containing a yield keyword is a generator function; this is detected by Python’s bytecode compiler which compiles the function specially as a result."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.122,
+            0.882,
+            0.195
+          ],
+          "content": "When you call a generator function, it doesn’t return a single value; instead it returns a generator object that supports the iterator protocol. On executing the yield expression, the generator outputs the value of i, similar to a return statement. The big difference between yield and a return statement is that on reaching a yield the generator’s state of execution is suspended and local variables are preserved. On the next call to the generator’s \\_\\_next\\_\\_() method, the function will resume executing."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.2,
+            0.536,
+            0.215
+          ],
+          "content": "Here’s a sample usage of the generate\\_ints() generator:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.223,
+            0.485,
+            0.41
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> gen = generate_ints(3)\n>>> gen\n<generator object generate_ints at ...>\n>>> next(gen)\n0\n>>> next(gen)\n1\n>>> next(gen)\n2\n>>> next(gen)\nTraceback (most recent call last):\n  File \"stdin\", line 1, in <module>\n  File \"stdin\", line 2, in generate_ints\nStopIteration\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.422,
+            0.826,
+            0.438
+          ],
+          "content": "You could equally write for i in generate\\_ints(5), or a, b, c = generate\\_ints(3)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.444,
+            0.882,
+            0.488
+          ],
+          "content": "Inside a generator function, return value causes StopIteration(value) to be raised from the \\_next\\_\\_() method. Once this happens, or the bottom of the function is reached, the procession of values ends and the generator cannot yield any further values."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.493,
+            0.882,
+            0.552
+          ],
+          "content": "You could achieve the effect of generators manually by writing your own class and storing all the local variables of the generator as instance variables. For example, returning a list of integers could be done by setting self.count to 0, and having the \\_\\_next\\_\\_() method increment self.count and return it. However, for a moderately complicated generator, writing a corresponding class can be much messier."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.557,
+            0.882,
+            0.588
+          ],
+          "content": "The test suite included with Python’s library, [Lib/test/test\\_generators.py](https://github.com/python/cpython/tree/3.10/Lib/test/test_generators.py), contains a number of more interesting examples. Here’s one generator that implements an in-order traversal of a tree using generators recursively."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.594,
+            0.689,
+            0.73
+          ],
+          "sub_type": "code",
+          "content": "```python\n# A recursive generator that generates Tree leaves in in-order.\ndef inorder(t):\n    if t:\n        for x in inorder(t.left):\n            yield x\n\n        yield t.label\n\n        for x in inorder(t.right):\n            yield x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.742,
+            0.882,
+            0.786
+          ],
+          "content": "Two other examples in test\\_generators.py produce solutions for the N-Queens problem (placing N queens on an NxN chess board so that no queen threatens another) and the Knight’s Tour (finding a route that takes a knight to every square of an NxN chessboard without visiting any square twice)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.085,
+            0.459,
+            0.102
+          ],
+          "level": 2,
+          "content": "4.1 Passing values into a generator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.882,
+            0.174
+          ],
+          "content": "In Python 2.4 and earlier, generators only produced output. Once a generator’s code was invoked to create an iterator, there was no way to pass any new information into the function when its execution is resumed. You could hack together this ability by making the generator look at a global variable or by passing in some mutable object that callers then modify, but these approaches are messy."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.18,
+            0.881,
+            0.209
+          ],
+          "content": "In Python 2.5 there’s a simple way to pass values into a generator. yield became an expression, returning a value that can be assigned to a variable or otherwise operated on:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.217,
+            0.255,
+            0.235
+          ],
+          "sub_type": "code",
+          "content": "```lisp\nval = (yield i)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.247,
+            0.882,
+            0.291
+          ],
+          "content": "I recommend that you **always** put parentheses around a yield expression when you’re doing something with the returned value, as in the above example. The parentheses aren’t always necessary, but it’s easier to always add them instead of having to remember when they’re needed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.296,
+            0.882,
+            0.341
+          ],
+          "content": "([**PEP 342**](https://www.python.org/dev/peps/pep-0342) explains the exact rules, which are that a yield-expression must always be parenthesized except when it occurs at the top-level expression on the right-hand side of an assignment. This means you can write val = yield i but have to use parentheses when there’s an operation, as in val = (yield i) + 12.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.346,
+            0.882,
+            0.389
+          ],
+          "content": "Values are sent into a generator by calling its send(value) method. This method resumes the generator’s code and the yield expression returns the specified value. If the regular \\_\\_next\\_\\_() method is called, the yield returns None."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.396,
+            0.77,
+            0.412
+          ],
+          "content": "Here’s a simple counter that increments by 1 and allows changing the value of the internal counter."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.419,
+            0.512,
+            0.542
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef counter(maximum):\n    i = 0\n    while i < maximum:\n        val = (yield i)\n        # If value provided, change counter\n        if val is not None:\n            i = val\n        else:\n            i += 1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.553,
+            0.437,
+            0.568
+          ],
+          "content": "And here’s an example of changing the counter:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.576,
+            0.44,
+            0.763
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> it = counter(10)\n>>> next(it)\n0\n>>> next(it)\n1\n>>> it.send(8)\n8\n>>> next(it)\n9\n>>> next(it)\nTraceback (most recent call last):\n  File \"t.py\", line 15, in <module>\n    it.next()\nStopIteration\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.775,
+            0.882,
+            0.818
+          ],
+          "content": "Because yield will often be returning None, you should always check for this case. Don’t just use its value in expressions unless you’re sure that the send() method will be the only method used to resume your generator function."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.825,
+            0.567,
+            0.84
+          ],
+          "content": "In addition to send(), there are two other methods on generators:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.847,
+            0.882,
+            0.876
+          ],
+          "content": "• throw(value) is used to raise an exception inside the generator; the exception is raised by the yield expression where the generator’s execution is paused."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.882,
+            0.883,
+            0.912
+          ],
+          "content": "• close() raises a GeneratorExit exception inside the generator to terminate the iteration. On receiving this exception, the generator’s code must either raise GeneratorExit or StopIteration; catching the"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.087,
+            0.881,
+            0.116
+          ],
+          "continues_prev": true,
+          "content": "exception and doing anything else is illegal and will trigger a RuntimeError. close() will also be called by Python’s garbage collector when the generator is garbage-collected."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.123,
+            0.88,
+            0.151
+          ],
+          "content": "If you need to run cleanup code when a GeneratorExit occurs, I suggest using a try: ... finally: suite instead of catching GeneratorExit."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.158,
+            0.882,
+            0.186
+          ],
+          "content": "The cumulative effect of these changes is to turn generators from one-way producers of information into both producers and consumers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.193,
+            0.882,
+            0.237
+          ],
+          "content": "Generators also become **coroutines**, a more generalized form of subroutines. Subroutines are entered at one point and exited at another point (the top of the function, and a return statement), but coroutines can be entered, exited, and resumed at many different points (the yield statements)."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.264,
+            0.343,
+            0.283
+          ],
+          "level": 2,
+          "content": "5 Built-in functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.303,
+            0.584,
+            0.318
+          ],
+          "content": "Let’s look in more detail at built-in functions often used with iterators."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.324,
+            0.83,
+            0.34
+          ],
+          "content": "Two of Python’s built-in functions, map() and filter() duplicate the features of generator expressions:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.346,
+            0.863,
+            0.376
+          ],
+          "content": "**map(f, iterA, iterB, ...) returns an iterator over the sequence** f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], iterB[2]),"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.385,
+            0.378,
+            0.413
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> def upper(s):\n...     return s.upper()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.428,
+            0.596,
+            0.484
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> list(map(upper, ['sentence', 'fragment']))['SENTENCE', 'FRAGMENT']\n>>> [upper(s) for s in ['sentence', 'fragment']]['SENTENCE', 'FRAGMENT']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.497,
+            0.575,
+            0.512
+          ],
+          "content": "You can of course achieve the same effect with a list comprehension."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.519,
+            0.882,
+            0.562
+          ],
+          "content": "filter(predicate, iter) returns an iterator over all the sequence elements that meet a certain condition, and is similarly duplicated by list comprehensions. A **predicate** is a function that returns the truth value of some condition; for use with filter(), the predicate must take a single value."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.57,
+            0.367,
+            0.6
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> def is_even(x):\n...     return (x % 2) == 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.615,
+            0.444,
+            0.645
+          ],
+          "sub_type": "code",
+          "content": "```erlang\n>>> list(filter(is_even, range(10)))\n[0, 2, 4, 6, 8]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.657,
+            0.441,
+            0.673
+          ],
+          "content": "This can also be written as a list comprehension:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.681,
+            0.516,
+            0.711
+          ],
+          "sub_type": "code",
+          "content": "```erlang\n>>> list(x for x in range(10) if is_even(x))\n[0, 2, 4, 6, 8]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.723,
+            0.881,
+            0.753
+          ],
+          "content": "enumerate(iter, start=0) counts off the elements in the iterable returning 2-tuples containing the count (from start) and each element."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.761,
+            0.635,
+            0.829
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> for item in enumerate(['subject', 'verb', 'object']):\n...     print(item)\n(0, 'subject')\n(1, 'verb')\n(2, 'object')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.843,
+            0.881,
+            0.871
+          ],
+          "content": "enumerate() is often used when looping through a list and recording the indexes at which certain conditions are met:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.091,
+            0.508,
+            0.148
+          ],
+          "sub_type": "code",
+          "content": "```python\nf = open('data.txt', 'r')\nfor i, line in enumerate(f):\n    if line.strip() == '':\n        print('Blank line at line #%i' % i)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.161,
+            0.882,
+            0.204
+          ],
+          "content": "sorted(iterable, key=None, reverse=False) collects all the elements of the iterable into a list, sorts the list, and returns the sorted result. The key and reverse arguments are passed through to the constructed list’s sort() method."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.212,
+            0.571,
+            0.335
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> import random\n>>> # Generate 8 random numbers between [0, 10000)\n>>> rand_list = random.sample(range(10000), 8)\n>>> rand_list\n[769, 7953, 9828, 6431, 8442, 9878, 6213, 2207]\n>>> sorted(rand_list)\n[769, 2207, 6213, 6431, 7953, 8442, 9828, 9878]\n>>> sorted(rand_list, reverse=True)\n[9878, 9828, 8442, 7953, 6431, 6213, 2207, 769]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.346,
+            0.55,
+            0.362
+          ],
+          "content": "(For a more detailed discussion of sorting, see the sortinghowto.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.368,
+            0.881,
+            0.398
+          ],
+          "content": "The any(iter) and all(iter) built-ins look at the truth values of an iterable’s contents. any() returns True if any element in the iterable is a true value, and all() returns True if all of the elements are true values:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.404,
+            0.284,
+            0.565
+          ],
+          "sub_type": "code",
+          "content": "```prolog\n>>> any([0, 1, 0])\nTrue\n>>> any([0, 0, 0])\nFalse\n>>> any([1, 1, 1])\nTrue\n>>> all([0, 1, 0])\nFalse\n>>> all([0, 0, 0])\nFalse\n>>> all([1, 1, 1])\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.578,
+            0.774,
+            0.593
+          ],
+          "content": "zip(iterA, iterB, ...) takes one element from each iterable and returns them in a tuple:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.601,
+            0.429,
+            0.632
+          ],
+          "sub_type": "code",
+          "content": "```txt\nzip(['a', 'b', 'c'], (1, 2, 3)) => ('a', 1), ('b', 2), ('c', 3)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.644,
+            0.881,
+            0.674
+          ],
+          "content": "It doesn’t construct an in-memory list and exhaust all the input iterators before returning; instead tuples are constructed and returned only if they’re requested. (The technical term for this behaviour is [lazy evaluation](https://en.wikipedia.org/wiki/Lazy_evaluation).)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.679,
+            0.881,
+            0.71
+          ],
+          "content": "This iterator is intended to be used with iterables that are all of the same length. If the iterables are of different lengths, the resulting stream will be the same length as the shortest iterable."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.718,
+            0.385,
+            0.747
+          ],
+          "sub_type": "code",
+          "content": "```txt\nzip(['a', 'b'], (1, 2, 3)) => ('a', 1), ('b', 2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.759,
+            0.881,
+            0.79
+          ],
+          "content": "You should avoid doing this, though, because an element may be taken from the longer iterators and discarded. This means you can’t go on to use the iterators further because you risk skipping a discarded element."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.51,
+            0.952
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.085,
+            0.384,
+            0.105
+          ],
+          "level": 2,
+          "content": "6 The itertools module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.124,
+            0.881,
+            0.154
+          ],
+          "content": "The itertools module contains a number of commonly used iterators as well as functions for combining several iterators. This section will introduce the module’s contents by showing small examples."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.16,
+            0.466,
+            0.175
+          ],
+          "content": "The module’s functions fall into a few broad classes:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.182,
+            0.59,
+            0.197
+          ],
+          "content": "• Functions that create a new iterator based on an existing iterator."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.203,
+            0.601,
+            0.218
+          ],
+          "content": "• Functions for treating an iterator’s elements as function arguments."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.224,
+            0.521,
+            0.239
+          ],
+          "content": "• Functions for selecting portions of an iterator’s output."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.245,
+            0.452,
+            0.26
+          ],
+          "content": "• A function for grouping an iterator’s output."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.284,
+            0.371,
+            0.301
+          ],
+          "level": 2,
+          "content": "6.1 Creating new iterators"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.315,
+            0.881,
+            0.346
+          ],
+          "content": "itertools.count(start, step) returns an infinite stream of evenly spaced values. You can optionally supply the starting number, which defaults to 0, and the interval between numbers, which defaults to 1:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.353,
+            0.528,
+            0.435
+          ],
+          "sub_type": "code",
+          "content": "```javascript\nitertools.count() =>\n  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...\nitertools.count(10) =>\n  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, ...\nitertools.count(10, 5) =>\n  10, 15, 20, 25, 30, 35, 40, 45, 50, 55, ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.448,
+            0.881,
+            0.478
+          ],
+          "content": "itertools.cycle(iter) saves a copy of the contents of a provided iterable and returns a new iterator that returns its elements from first to last. The new iterator will repeat these elements infinitely."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.486,
+            0.438,
+            0.515
+          ],
+          "sub_type": "code",
+          "content": "```erlang\nitertools.cycle([1, 2, 3, 4, 5]) => 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.528,
+            0.881,
+            0.558
+          ],
+          "content": "itertools.repeat(elem, [n]) returns the provided element n times, or returns the element endlessly if n is not provided."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.566,
+            0.619,
+            0.622
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.repeat('abc') =>\n  abc, abc, abc, abc, abc, abc, abc, abc, abc, ...\nitertools.repeat('abc', 5) =>\n  abc, abc, abc, abc, abc\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.634,
+            0.881,
+            0.678
+          ],
+          "content": "itertools.chain(iterA, iterB, ...) takes an arbitrary number of iterables as input, and returns all the elements of the first iterator, then all the elements of the second, and so on, until all of the iterables have been exhausted."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.686,
+            0.537,
+            0.717
+          ],
+          "sub_type": "code",
+          "content": "```javascript\nitertools.chain(['a', 'b', 'c'], (1, 2, 3)) =>\n    a, b, c, 1, 2, 3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.729,
+            0.882,
+            0.788
+          ],
+          "content": "itertools.islice(iter, [start], stop, [step]) returns a stream that’s a slice of the iterator. With a single stop argument, it will return the first stop elements. If you supply a starting index, you’ll get stop-start elements, and if you supply a value for step, elements will be skipped accordingly. Unlike Python’s string and list slicing, you can’t use negative values for start, stop, or step."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.794,
+            0.474,
+            0.876
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.islice(range(10), 8) =>\n    0, 1, 2, 3, 4, 5, 6, 7\nitertools.islice(range(10), 2, 8) =>\n    2, 3, 4, 5, 6, 7\nitertools.islice(range(10), 2, 8, 2) =>\n    2, 4, 6\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.89,
+            0.883,
+            0.92
+          ],
+          "content": "itertools.tee(iter, [n]) replicates an iterator; it returns n independent iterators that will all return the contents of the source iterator. If you don’t supply a value for n, the default is 2. Replicating iterators requires saving"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.086,
+            0.881,
+            0.116
+          ],
+          "continues_prev": true,
+          "content": "some of the contents of the source iterator, so this can consume significant memory if the iterator is large and one of the new iterators is consumed more than the others."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.124,
+            0.455,
+            0.233
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.tee( itertools.count() ) =>\n  iterA, iterB\n\nwhere iterA ->\n    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...\n\nand   iterB ->\n    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.262,
+            0.443,
+            0.279
+          ],
+          "level": 2,
+          "content": "6.2 Calling functions on elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.293,
+            0.881,
+            0.337
+          ],
+          "content": "The operator module contains a set of functions corresponding to Python’s operators. Some examples are operator.add(a, b) (adds two values), operator.ne(a, b) (same as a != b), and operator. attrgetter('id') (returns a callable that fetches the .id attribute)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.343,
+            0.882,
+            0.373
+          ],
+          "content": "itertools.starmap(func, iter) assumes that the iterable will return a stream of tuples, and calls func using these tuples as the arguments:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.38,
+            0.743,
+            0.45
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.starmap(os.path.join,\n            [('/bin', 'python'), ('/usr', 'bin', 'java'),\n            ('/usr', 'bin', 'perl'), ('/usr', 'bin', 'ruby')]\n=> /bin/python, /usr/bin/java, /usr/bin/perl, /usr/bin/ruby\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.479,
+            0.342,
+            0.497
+          ],
+          "level": 2,
+          "content": "6.3 Selecting elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.511,
+            0.716,
+            0.525
+          ],
+          "content": "Another group of functions chooses a subset of an iterator’s elements based on a predicate."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.532,
+            0.881,
+            0.562
+          ],
+          "content": "itertools.filterfalse(predicate, iter) is the opposite of filter(), returning all elements for which the predicate returns false:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.57,
+            0.593,
+            0.6
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.filterfalse(is_even, itertools.count()) =>\n  1, 3, 5, 7, 9, 11, 13, 15, ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.612,
+            0.88,
+            0.642
+          ],
+          "content": "itertools.takewhile(predicate, iter) returns elements for as long as the predicate returns true. Once the predicate returns false, the iterator will signal the end of its results."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.649,
+            0.62,
+            0.757
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef less_than_10(x):\n    return x < 10\n\nitertools.takewhile(less_than_10, itertools.count()) =>\n    0, 1, 2, 3, 4, 5, 6, 7, 8, 9\n\nitertools.takewhile(is_even, itertools.count()) =>\n    0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.77,
+            0.881,
+            0.799
+          ],
+          "content": "itertools.dropwhile(predicate, iter) discards elements while the predicate returns true, and then returns the rest of the iterable’s results."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.808,
+            0.618,
+            0.877
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.dropwhile(less_than_10, itertools.count()) =>\n  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, ...\n\nitertools.dropwhile(is_even, itertools.count()) =>\n  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.89,
+            0.881,
+            0.92
+          ],
+          "content": "itertools.compress(data, selectors) takes two iterators and returns only those elements of data for which the corresponding element of selectors is true, stopping whenever either one is exhausted:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.091,
+            0.773,
+            0.123
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.compress([1, 2, 3, 4, 5], [True, True, False, False, True]) =>\n    1, 2, 5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.152,
+            0.383,
+            0.17
+          ],
+          "level": 2,
+          "content": "6.4 Combinatoric functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.183,
+            0.881,
+            0.213
+          ],
+          "content": "The itertools.combinations(iterable, r) returns an iterator giving all possible r-tuple combinations of the elements contained in iterable."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.22,
+            0.727,
+            0.355
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.combinations([1, 2, 3, 4, 5], 2) =>\n    (1, 2), (1, 3), (1, 4), (1, 5),\n    (2, 3), (2, 4), (2, 5),\n    (3, 4), (3, 5),\n    (4, 5)\n\nitertools.combinations([1, 2, 3, 4, 5], 3) =>\n    (1, 2, 3), (1, 2, 4), (1, 2, 5), (1, 3, 4), (1, 3, 5), (1, 4, 5),\n    (2, 3, 4), (2, 3, 5), (2, 4, 5),\n    (3, 4, 5)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.368,
+            0.881,
+            0.413
+          ],
+          "content": "The elements within each tuple remain in the same order as iterable returned them. For example, the number 1 is always before 2, 3, 4, or 5 in the examples above. A similar function, itertools.permutations(iterable, r=None), removes this constraint on the order, returning all possible arrangements of length r:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.419,
+            0.591,
+            0.568
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.permutations([1, 2, 3, 4, 5], 2) =>\n    (1, 2), (1, 3), (1, 4), (1, 5),\n    (2, 1), (2, 3), (2, 4), (2, 5),\n    (3, 1), (3, 2), (3, 4), (3, 5),\n    (4, 1), (4, 2), (4, 3), (4, 5),\n    (5, 1), (5, 2), (5, 3), (5, 4)\n\nitertools.permutations([1, 2, 3, 4, 5]) =>\n    (1, 2, 3, 4, 5), (1, 2, 3, 5, 4), (1, 2, 4, 3, 5),\n    ...\n    (5, 4, 3, 2, 1)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.579,
+            0.839,
+            0.595
+          ],
+          "content": "If you don’t supply a value for r the length of the iterable is used, meaning that all the elements are permuted."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.601,
+            0.881,
+            0.631
+          ],
+          "content": "Note that these functions produce all of the possible combinations by position and don’t require that the contents of iterable are unique:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.638,
+            0.589,
+            0.682
+          ],
+          "sub_type": "code",
+          "content": "```python\nitertools.permutations('aba', 3) =>\n    ('a', 'b', 'a'), ('a', 'a', 'b'), ('b', 'a', 'a'),\n    ('b', 'a', 'a'), ('a', 'a', 'b'), ('a', 'b', 'a')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.694,
+            0.834,
+            0.71
+          ],
+          "content": "The identical tuple ('a', 'a', 'b') occurs twice, but the two ‘a’ strings came from different positions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.716,
+            0.882,
+            0.76
+          ],
+          "content": "The itertools.combinations\\_with\\_replacement(iterable, r) function relaxes a different constraint: elements can be repeated within a single tuple. Conceptually an element is selected for the first position of each tuple and then is replaced before the second element is selected."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.767,
+            0.683,
+            0.85
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.combinations_with_replacement([1, 2, 3, 4, 5], 2) =>\n    (1, 1), (1, 2), (1, 3), (1, 4), (1, 5),\n    (2, 2), (2, 3), (2, 4), (2, 5),\n    (3, 3), (3, 4), (3, 5),\n    (4, 4), (4, 5),\n    (5, 5)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.084,
+            0.343,
+            0.102
+          ],
+          "level": 2,
+          "content": "6.5 Grouping elements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.882,
+            0.16
+          ],
+          "content": "The last function I’ll discuss, itertools.groupby(iter, key\\_func=None), is the most complicated. key\\_func(elem) is a function that can compute a key value for each element returned by the iterable. If you don’t supply a key function, the key is simply each element itself."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.165,
+            0.882,
+            0.196
+          ],
+          "content": "groupby() collects all the consecutive elements from the underlying iterable that have the same key value, and returns a stream of 2-tuples containing a key value and an iterator for the elements with that key."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.203,
+            0.753,
+            0.482
+          ],
+          "sub_type": "code",
+          "content": "```python\ncity_list = [('Decatur', 'AL'), ('Huntsville', 'AL'), ('Selma', 'AL'),\n            ('Anchorage', 'AK'), ('Nome', 'AK'),\n            ('Flagstaff', 'AZ'), ('Phoenix', 'AZ'), ('Tucson', 'AZ'),\n            ...\n        ]\n\ndef get_state(city_state):\n    return city_state[1]\n\nitertools.groupby(city_list, get_state) =>\n    ('AL', iterator-1),\n    ('AK', iterator-2),\n    ('AZ', iterator-3), ...\n\nwhere\niterator-1 =>\n    ('Decatur', 'AL'), ('Huntsville', 'AL'), ('Selma', 'AL')\niterator-2 =>\n    ('Anchorage', 'AK'), ('Nome', 'AK')\niterator-3 =>\n    ('Flagstaff', 'AZ'), ('Phoenix', 'AZ'), ('Tucson', 'AZ')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.493,
+            0.883,
+            0.537
+          ],
+          "content": "groupby() assumes that the underlying iterable’s contents will already be sorted based on the key. Note that the returned iterators also use the underlying iterable, so you have to consume the results of iterator-1 before requesting iterator-2 and its corresponding key."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.564,
+            0.398,
+            0.583
+          ],
+          "level": 2,
+          "content": "7 The functools module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.603,
+            0.881,
+            0.647
+          ],
+          "content": "The functools module in Python 2.5 contains some higher-order functions. A **higher-order function** takes one or more functions as input and returns a new function. The most useful tool in this module is the functools. partial() function."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.653,
+            0.883,
+            0.711
+          ],
+          "content": "For programs written in a functional style, you’ll sometimes want to construct variants of existing functions that have some of the parameters filled in. Consider a Python function f(a, b, c); you may wish to create a new function g(b, c) that’s equivalent to f(1, b, c); you’re filling in a value for one of f()’s parameters. This is called “partial function application”."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.717,
+            0.882,
+            0.761
+          ],
+          "content": "The constructor for partial() takes the arguments (function, arg1, arg2, ..., kwarg1=value1, kwarg2=value2). The resulting object is callable, so you can just call it to invoke function with the filled-in arguments."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.767,
+            0.36,
+            0.782
+          ],
+          "content": "Here’s a small but realistic example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.79,
+            0.748,
+            0.911
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport functools\n\ndef log(message, subsystem):\n    \"\"\"Write the contents of 'message' to the specified subsystem.\"\"\"\n    print('%s: %s' % (subsystem, message))\n    ...\n\nserver_log = functools.partial(log, subsystem='server')\nserver_log('Unable to open socket')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.087,
+            0.883,
+            0.188
+          ],
+          "content": "functools.reduce(func, iter, [initial\\_value]) cumulatively performs an operation on all the iterable’s elements and, therefore, can’t be applied to infinite iterables. func must be a function that takes two elements and returns a single value. functools.reduce() takes the first two elements A and B returned by the iterator and calculates func(A, B). It then requests the third element, C, calculates func(func(A, B), C), combines this result with the fourth element returned, and continues until the iterable is exhausted. If the iterable returns no values at all, a TypeError exception is raised. If the initial value is supplied, it’s used as a starting point and func(initial\\_value, A) is the first calculation."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.195,
+            0.656,
+            0.343
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> import operator, functools\n>>> functools.reduce(operator.concat, ['A', 'BB', 'C'])\n'ABBC'\n>>> functools.reduce(operator.concat, [])\nTraceback (most recent call last):\n...\nTypeError: reduce() of empty sequence with no initial value\n>>> functools.reduce(operator.mul, [1, 2, 3], 1)\n6\n>>> functools.reduce(operator.mul, [], 1)\n1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.355,
+            0.881,
+            0.385
+          ],
+          "content": "If you use operator.add() with functools.reduce(), you’ll add up all the elements of the iterable. This case is so common that there’s a special built-in called sum() to compute it:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.392,
+            0.581,
+            0.487
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> import functools, operator\n>>> functools.reduce(operator.add, [1, 2, 3, 4], 0)\n10\n>>> sum([1, 2, 3, 4])\n10\n>>> sum([])\n0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.5,
+            0.823,
+            0.516
+          ],
+          "content": "For many uses of functools.reduce(), though, it can be clearer to just write the obvious for loop:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.523,
+            0.608,
+            0.631
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport functools\n# Instead of:\nproduct = functools.reduce(operator.mul, [1, 2, 3], 1)\n\n# You can write:\nproduct = 1\nfor i in [1, 2, 3]:\n    product *= i\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.644,
+            0.882,
+            0.688
+          ],
+          "content": "A related function is itertools.accumulate(iterable, func=operator.add). It performs the same calculation, but instead of returning only the final result, accumulate() returns an iterator that also yields each partial result:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.695,
+            0.61,
+            0.766
+          ],
+          "sub_type": "code",
+          "content": "```txt\nitertools.accumulate([1, 2, 3, 4, 5]) =>\n  1, 3, 6, 10, 15\n\nitertools.accumulate([1, 2, 3, 4, 5], operator.mul) =>\n  1, 2, 6, 24, 120\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.084,
+            0.36,
+            0.102
+          ],
+          "level": 2,
+          "content": "7.1 The operator module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.882,
+            0.159
+          ],
+          "content": "The operator module was mentioned earlier. It contains a set of functions corresponding to Python’s operators. These functions are often useful in functional-style code because they save you from writing trivial functions that perform a single operation."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.165,
+            0.396,
+            0.18
+          ],
+          "content": "Some of the functions in this module are:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.187,
+            0.641,
+            0.201
+          ],
+          "content": "• Math operations: add(), sub(), mul(), floordiv(), abs(), …"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.209,
+            0.44,
+            0.223
+          ],
+          "content": "• Logical operations: not\\_(), truth()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.23,
+            0.508,
+            0.244
+          ],
+          "content": "• Bitwise operations: and\\_(), or\\_(), invert()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.251,
+            0.576,
+            0.265
+          ],
+          "content": "• Comparisons: eq(), ne(), lt(), le(), gt(), and ge()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.273,
+            0.415,
+            0.287
+          ],
+          "content": "• Object identity: is\\_(), is\\_not()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.293,
+            0.547,
+            0.308
+          ],
+          "content": "Consult the operator module’s documentation for a complete list."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.336,
+            0.64,
+            0.356
+          ],
+          "level": 2,
+          "content": "8 Small functions and the lambda expression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.375,
+            0.881,
+            0.404
+          ],
+          "content": "When writing functional-style programs, you’ll often need little functions that act as predicates or that combine elements in some way."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.41,
+            0.836,
+            0.426
+          ],
+          "content": "If there’s a Python built-in or a module function that’s suitable, you don’t need to define a new function at all:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.435,
+            0.571,
+            0.463
+          ],
+          "sub_type": "code",
+          "content": "```python\nstripped_lines = [line.strip() for line in lines]\nexisting_files = filter(os.path.exists, file_list)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.477,
+            0.881,
+            0.521
+          ],
+          "content": "If the function you need doesn’t exist, you need to write it. One way to write small functions is to use the lambda expression. lambda takes a number of parameters and an expression combining these parameters, and creates an anonymous function that returns the value of the expression:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.528,
+            0.644,
+            0.572
+          ],
+          "sub_type": "code",
+          "content": "```python\nadder = lambda x, y: x+y\n\nprint_assign = lambda name, value: name + '=' + str(value)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.584,
+            0.684,
+            0.599
+          ],
+          "content": "An alternative is to just use the def statement and define a function in the usual way:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.607,
+            0.428,
+            0.677
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef adder(x, y):\n    return x + y\n\ndef print_assign(name, value):\n    return name + '=' + str(value)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.69,
+            0.774,
+            0.704
+          ],
+          "content": "Which alternative is preferable? That’s a style question; my usual course is to avoid using lambda."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.711,
+            0.882,
+            0.77
+          ],
+          "content": "One reason for my preference is that lambda is quite limited in the functions it can define. The result has to be computable as a single expression, which means you can’t have multiway if... elif... else comparisons or try... except statements. If you try to do too much in a lambda statement, you’ll end up with an overly complicated expression that’s hard to read. Quick, what’s the following code doing?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.777,
+            0.709,
+            0.806
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport functools\ntotal = functools.reduce(lambda a, b: (0, a[1] + b[1]), items)[1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.82,
+            0.881,
+            0.849
+          ],
+          "content": "You can figure it out, but it takes time to disentangle the expression to figure out what’s going on. Using a short nested def statements makes things a little bit better:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.857,
+            0.346,
+            0.9
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport functools\ndef combine(a, b):\n    return 0, a[1] + b[1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.748,
+            0.9,
+            0.881,
+            0.912
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.098,
+            0.51,
+            0.132
+          ],
+          "sub_type": "code",
+          "content": "```txt\ntotal = functools.reduce(combine, items)[1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.087,
+            0.881,
+            0.1
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.144,
+            0.511,
+            0.159
+          ],
+          "content": "But it would be best of all if I had simply used a for loop:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.168,
+            0.284,
+            0.21
+          ],
+          "sub_type": "code",
+          "content": "```python\ntotal = 0\nfor a, b in items:\n    total += b\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.223,
+            0.455,
+            0.239
+          ],
+          "content": "Or the sum() built-in and a generator expression:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.247,
+            0.409,
+            0.263
+          ],
+          "sub_type": "code",
+          "content": "```txt\ntotal = sum(b for a, b in items)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.276,
+            0.655,
+            0.292
+          ],
+          "content": "Many uses of functools.reduce() are clearer when written as for loops."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.298,
+            0.707,
+            0.313
+          ],
+          "content": "Fredrik Lundh once suggested the following set of rules for refactoring uses of lambda:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.319,
+            0.331,
+            0.333
+          ],
+          "content": "1. Write a lambda function."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.341,
+            0.568,
+            0.355
+          ],
+          "content": "2. Write a comment explaining what the heck that lambda does."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.362,
+            0.786,
+            0.377
+          ],
+          "content": "3. Study the comment for a while, and think of a name that captures the essence of the comment."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.383,
+            0.533,
+            0.398
+          ],
+          "content": "4. Convert the lambda to a def statement, using that name."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.405,
+            0.314,
+            0.419
+          ],
+          "content": "5. Remove the comment."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.425,
+            0.756,
+            0.441
+          ],
+          "content": "I really like these rules, but you’re free to disagree about whether this lambda-free style is better."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.468,
+            0.616,
+            0.489
+          ],
+          "level": 2,
+          "content": "9 Revision History and Acknowledgements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.507,
+            0.882,
+            0.551
+          ],
+          "content": "The author would like to thank the following people for offering suggestions, corrections and assistance with various drafts of this article: Ian Bicking, Nick Coghlan, Nick Efford, Raymond Hettinger, Jim Jewett, Mike Krell, Leandro Lameiro, Jussi Salmela, Collin Winter, Blake Winton."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.557,
+            0.349,
+            0.572
+          ],
+          "content": "Version 0.1: posted June 30 2006."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.578,
+            0.424,
+            0.594
+          ],
+          "content": "Version 0.11: posted July 1 2006. Typo fixes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.6,
+            0.736,
+            0.616
+          ],
+          "content": "Version 0.2: posted July 10 2006. Merged genexp and listcomp sections into one. Typo fixes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.621,
+            0.601,
+            0.637
+          ],
+          "content": "Version 0.21: Added more references suggested on the tutor mailing list."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.642,
+            0.881,
+            0.672
+          ],
+          "content": "Version 0.30: Adds a section on the functional module written by Collin Winter; adds short section on the operator module; a few other edits."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.119,
+            0.7,
+            0.293,
+            0.718
+          ],
+          "level": 2,
+          "content": "10 References"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.74,
+            0.247,
+            0.757
+          ],
+          "level": 2,
+          "content": "10.1 General"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.771,
+            0.883,
+            0.843
+          ],
+          "content": "**Structure and Interpretation of Computer Programs**, by Harold Abelson and Gerald Jay Sussman with Julie Sussman. Full text at [https://mitpress.mit.edu/sicp/](https://mitpress.mit.edu/sicp/). In this classic textbook of computer science, chapters 2 and 3 discuss the use of sequences and streams to organize the data flow inside a program. The book uses Scheme for its examples, but many of the design approaches described in these chapters are applicable to functional-style Python code."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.85,
+            0.882,
+            0.879
+          ],
+          "content": "[https://www.defmacro.org/ramblings/fp.html](https://www.defmacro.org/ramblings/fp.html): A general introduction to functional programming that uses Java examples and has a lengthy historical introduction."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.885,
+            0.882,
+            0.914
+          ],
+          "content": "[https://en.wikipedia.org/wiki/Functional\\_programming](https://en.wikipedia.org/wiki/Functional_programming): General Wikipedia entry describing functional programming."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.087,
+            0.533,
+            0.101
+          ],
+          "content": "[https://en.wikipedia.org/wiki/Coroutine](https://en.wikipedia.org/wiki/Coroutine): Entry for coroutines."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.108,
+            0.611,
+            0.124
+          ],
+          "content": "[https://en.wikipedia.org/wiki/Currying](https://en.wikipedia.org/wiki/Currying): Entry for the concept of currying."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.146,
+            0.32,
+            0.164
+          ],
+          "level": 2,
+          "content": "10.2 Python-specific"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.178,
+            0.881,
+            0.208
+          ],
+          "content": "[https://gnosis.cx/TPiP/](https://gnosis.cx/TPiP/): The first chapter of David Mertz’s book Text Processing in Python discusses functional programming for text processing, in the section titled “Utilizing Higher-Order Functions in Text Processing”."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.214,
+            0.881,
+            0.243
+          ],
+          "content": "Mertz also wrote a 3-part series of articles on functional programming for IBM’s DeveloperWorks site; see [part 1](https://developer.ibm.com/articles/l-prog/), [part 2](https://developer.ibm.com/tutorials/l-prog2/), and [part 3](https://developer.ibm.com/tutorials/l-prog3/),"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.266,
+            0.387,
+            0.283
+          ],
+          "level": 2,
+          "content": "10.3 Python documentation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.298,
+            0.423,
+            0.312
+          ],
+          "content": "Documentation for the itertools module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.32,
+            0.423,
+            0.333
+          ],
+          "content": "Documentation for the functools module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.341,
+            0.414,
+            0.355
+          ],
+          "content": "Documentation for the operator module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.362,
+            0.358,
+            0.376
+          ],
+          "content": "[**PEP 289**](https://www.python.org/dev/peps/pep-0289): “Generator Expressions”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.383,
+            0.787,
+            0.398
+          ],
+          "content": "[**PEP 342**](https://www.python.org/dev/peps/pep-0342): “Coroutines via Enhanced Generators” describes the new generator features in Python 2.5."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.103,
+            0.186,
+            0.123
+          ],
+          "level": 2,
+          "content": "Index"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.134,
+            0.139,
+            0.151
+          ],
+          "level": 2,
+          "content": "P"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.156,
+            0.404,
+            0.2
+          ],
+          "content": "Python Enhancement Proposals PEP 289, 19 PEP 342, 9, 19"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.488,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "20"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Functional Programming HOWTO",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2024-09-09T13:36:17-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20220710)",
+      "page_count": 20,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

@@ -1,0 +1,683 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.345,
+            0.115,
+            0.883,
+            0.166
+          ],
+          "level": 1,
+          "content": "Annotations Best Practices Release 3.10.15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.487,
+            0.201,
+            0.881,
+            0.242
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.718,
+            0.278,
+            0.882,
+            0.294
+          ],
+          "content": "**September 09, 2024**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.65,
+            0.299,
+            0.881,
+            0.315
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.681,
+            0.314,
+            0.881,
+            0.329
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.349,
+            0.228,
+            0.37
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.115,
+            0.392,
+            0.883,
+            0.541
+          ],
+          "content": "- **1 Accessing The Annotations Dict Of An Object In Python 3.10 And Newer** 2\n- **2 Accessing The Annotations Dict Of An Object In Python 3.9 And Older** 2\n- **3 Manually Un-Stringizing Stringized Annotations** 3\n- **4 Best Practices For \\_\\_annotations\\_\\_ In Any Python Version** 3\n- **5 \\_\\_annotations\\_\\_ Quirks** 4\n- **Index** 5"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.159,
+            0.58,
+            0.319,
+            0.597
+          ],
+          "level": 2,
+          "content": "author Larry Hastings"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.127,
+            0.617,
+            0.195,
+            0.631
+          ],
+          "level": 2,
+          "content": "Abstract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.643,
+            0.874,
+            0.79
+          ],
+          "content": "This document is designed to encapsulate the best practices for working with annotations dicts. If you write Python code that examines \\_\\_annotations\\_\\_ on Python objects, we encourage you to follow the guidelines described below. The document is organized into four sections: best practices for accessing the annotations of an object in Python versions 3.10 and newer, best practices for accessing the annotations of an object in Python versions 3.9 and older, other best practices for \\_\\_annotations\\_\\_ that apply to any Python version, and quirks of annotations\\_\\_ Note that this document is specifically about working with \\_\\_annotations\\_\\_, not uses for annotations. If you’re looking for information on how to use “type hints” in your code, please see the typing module."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.084,
+            0.881,
+            0.125
+          ],
+          "level": 2,
+          "content": "1 Accessing The Annotations Dict Of An Object In Python 3.10 And Newer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.156,
+            0.146,
+            0.841,
+            0.203
+          ],
+          "content": "Python 3.10 adds a new function to the standard library: inspect.get\\_annotations(). In Python versions 3.10 and newer, calling this function is the best practice for accessing the annotations dict of any object that supports annotations. This function can also “un-stringize” stringized annotations for you."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.156,
+            0.21,
+            0.841,
+            0.283
+          ],
+          "content": "If for some reason inspect.get\\_annotations() isn’t viable for your use case, you may access the \\_\\_annotations\\_\\_ data member manually. Best practice for this changed in Python 3.10 as well: as of Python 3.10, o.\\_\\_annotations\\_\\_ is guaranteed to always work on Python functions, classes, and modules. If you’re certain the object you’re examining is one of these three specific objects, you may simply use o.\\_\\_annotations\\_\\_ to get at the object’s annotations dict."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.288,
+            0.841,
+            0.346
+          ],
+          "content": "However, other types of callables–for example, callables created by functools.partial()–may not have an \\_\\_annotations\\_\\_ attribute defined. When accessing the \\_\\_annotations\\_\\_ of a possibly unknown object, best practice in Python versions 3.10 and newer is to call getattr() with three arguments, for example getattr(o, '\\_\\_annotations\\_\\_', None)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.352,
+            0.841,
+            0.396
+          ],
+          "content": "Before Python 3.10, accessing \\_\\_annotations\\_\\_ on a class that defines no annotations but that has a parent class with annotations would return the parent’s \\_\\_annotations\\_\\_. In Python 3.10 and newer, the child class’s annotations will be an empty dict instead."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.423,
+            0.881,
+            0.463
+          ],
+          "level": 2,
+          "content": "2 Accessing The Annotations Dict Of An Object In Python 3.9 And Older"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.483,
+            0.84,
+            0.527
+          ],
+          "content": "In Python 3.9 and older, accessing the annotations dict of an object is much more complicated than in newer versions. The problem is a design flaw in these older versions of Python, specifically to do with class annotations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.533,
+            0.84,
+            0.577
+          ],
+          "content": "Best practice for accessing the annotations dict of other objects–functions, other callables, and modules– is the same as best practice for 3.10, assuming you aren’t calling inspect.get\\_annotations(): you should use three-argument getattr() to access the object’s \\_\\_annotations\\_\\_ attribute."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.583,
+            0.84,
+            0.641
+          ],
+          "content": "Unfortunately, this isn’t best practice for classes. The problem is that, since \\_\\_annotations\\_\\_ is optional on classes, and because classes can inherit attributes from their base classes, accessing the annotations\\_\\_ attribute of a class may inadvertently return the annotations dict of a base class. As an example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.649,
+            0.433,
+            0.756
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Base:\n    a: int = 3\n    b: str = 'abc'\n\nclass Derived(Base):\n    pass\n\nprint(Derived.__annotations__)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.158,
+            0.77,
+            0.58,
+            0.785
+          ],
+          "content": "This will print the annotations dict from Base, not Derived."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.791,
+            0.841,
+            0.862
+          ],
+          "content": "Your code will have to have a separate code path if the object you’re examining is a class (isinstance(o, type)). In that case, best practice relies on an implementation detail of Python 3.9 and before: if a class has annotations defined, they are stored in the class’s \\_\\_dict\\_\\_ dictionary. Since the class may or may not have annotations defined, best practice is to call the get method on the class dict."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.869,
+            0.84,
+            0.898
+          ],
+          "content": "To put it all together, here is some sample code that safely accesses the \\_\\_annotations\\_\\_ attribute on an arbitrary object in Python 3.9 and before:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.492,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.157,
+            0.092,
+            0.604,
+            0.148
+          ],
+          "sub_type": "code",
+          "content": "```python\nif isinstance(o, type):\n    ann = o.__dict__.get('__annotations__', None)\nelse:\n    ann = getattr(o, '__annotations__', None)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.161,
+            0.84,
+            0.19
+          ],
+          "content": "After running this code, ann should be either a dictionary or None. You’re encouraged to double-check the type of ann using isinstance() before further examination."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.197,
+            0.84,
+            0.226
+          ],
+          "content": "Note that some exotic or malformed type objects may not have a \\_\\_dict\\_\\_ attribute, so for extra safety you may also wish to use getattr() to access \\_\\_dict\\_\\_."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.253,
+            0.687,
+            0.273
+          ],
+          "level": 2,
+          "content": "3 Manually Un-Stringizing Stringized Annotations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.156,
+            0.293,
+            0.839,
+            0.335
+          ],
+          "content": "In situations where some annotations may be “stringized”, and you wish to evaluate those strings to produce the Python values they represent, it really is best to call inspect.get\\_annotations() to do this work for you."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.342,
+            0.84,
+            0.4
+          ],
+          "content": "If you’re using Python 3.9 or older, or if for some reason you can’t use inspect. get\\_annotations(), you’ll need to duplicate its logic. You’re encouraged to examine the implementation of inspect.get\\_annotations() in the current Python version and follow a similar approach."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.406,
+            0.72,
+            0.421
+          ],
+          "content": "In a nutshell, if you wish to evaluate a stringized annotation on an arbitrary object o:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.179,
+            0.428,
+            0.715,
+            0.442
+          ],
+          "content": "• If o is a module, use o.\\_\\_dict\\_\\_ as the globals when calling eval()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.449,
+            0.839,
+            0.478
+          ],
+          "content": "• If o is a class, use sys.modules[o.\\_\\_module\\_\\_].\\_\\_dict\\_\\_ as the globals, and dict(vars(o)) as the locals, when calling eval()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.485,
+            0.837,
+            0.528
+          ],
+          "content": "• If o is a wrapped callable using functools.update\\_wrapper(), functools. wraps(), or functools.partial(), iteratively unwrap it by accessing either o. \\_wrapped\\_\\_ or o.func as appropriate, until you have found the root unwrapped function."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.534,
+            0.828,
+            0.549
+          ],
+          "content": "• If o is a callable (but not a class), use o.\\_\\_globals\\_\\_ as the globals when calling eval()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.555,
+            0.841,
+            0.613
+          ],
+          "content": "However, not all string values used as annotations can be successfully turned into Python values by eval(). String values could theoretically contain any valid string, and in practice there are valid use cases for type hints that require annotating with string values that specifically can’t be evaluated. For example:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.619,
+            0.729,
+            0.634
+          ],
+          "content": "• [**PEP 604**](https://www.python.org/dev/peps/pep-0604) union types using |, before support for this was added to Python 3.10."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.64,
+            0.84,
+            0.669
+          ],
+          "content": "• Definitions that aren’t needed at runtime, only imported when typing.TYPE\\_CHECKING is true."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.676,
+            0.841,
+            0.72
+          ],
+          "content": "If eval() attempts to evaluate such values, it will fail and raise an exception. So, when designing a library API that works with annotations, it’s recommended to only attempt to evaluate string values when explicitly requested to by the caller."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.747,
+            0.84,
+            0.767
+          ],
+          "level": 2,
+          "content": "4 Best Practices For \\_\\_annotations\\_\\_ In Any Python Version"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.787,
+            0.881,
+            0.815
+          ],
+          "content": "• You should avoid assigning to the \\_\\_annotations\\_\\_ member of objects directly. Let Python manage setting \\_\\_annotations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.822,
+            0.88,
+            0.85
+          ],
+          "content": "• If you do assign directly to the \\_\\_annotations\\_\\_ member of an object, you should always set it to a dict object."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.858,
+            0.881,
+            0.886
+          ],
+          "content": "• If you directly access the \\_\\_annotations\\_\\_ member of an object, you should ensure that it’s a dictionary before attempting to examine its contents."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.894,
+            0.545,
+            0.907
+          ],
+          "content": "• You should avoid modifying \\_\\_annotations\\_\\_ dicts."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.087,
+            0.661,
+            0.101
+          ],
+          "content": "• You should avoid deleting the \\_\\_annotations\\_\\_ attribute of an object."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.13,
+            0.449,
+            0.149
+          ],
+          "level": 2,
+          "content": "\\_annotations\\_\\_ Quirks"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.155,
+            0.168,
+            0.841,
+            0.255
+          ],
+          "content": "In all versions of Python 3, function objects lazy-create an annotations dict if no annotations are defined on that object. You can delete the \\_\\_annotations\\_\\_ attribute using del fn. annotations\\_\\_, but if you then access fn.\\_\\_annotations\\_\\_ the object will create a new empty dict that it will store and return as its annotations. Deleting the annotations on a function before it has lazily created its annotations dict will throw an AttributeError; using del fn. annotations\\_\\_ twice in a row is guaranteed to always throw an AttributeError."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.261,
+            0.832,
+            0.276
+          ],
+          "content": "Everything in the above paragraph also applies to class and module objects in Python 3.10 and newer."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.282,
+            0.84,
+            0.354
+          ],
+          "content": "In all versions of Python 3, you can set \\_\\_annotations\\_\\_ on a function object to None. However, subsequently accessing the annotations on that object using fn.\\_\\_annotations\\_\\_ will lazy-create an empty dictionary as per the first paragraph of this section. This is not true of modules and classes, in any Python version; those objects permit setting \\_\\_annotations\\_\\_ to any Python value, and will retain whatever value is set."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.156,
+            0.36,
+            0.84,
+            0.404
+          ],
+          "content": "If Python stringizes your annotations for you (using from \\_\\_future\\_\\_ import annotations), and you specify a string as an annotation, the string will itself be quoted. In effect the annotation is quoted twice. For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.413,
+            0.472,
+            0.468
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom __future__ import annotations\ndef foo(a: \"str\"): pass\n\nprint(foo.__annotations__)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.481,
+            0.84,
+            0.51
+          ],
+          "content": "This prints {'a': \"'str'\"}. This shouldn’t really be considered a “quirk”; it’s mentioned here simply because it might be surprising."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.952
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.103,
+            0.186,
+            0.124
+          ],
+          "level": 2,
+          "content": "Index"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.133,
+            0.405,
+            0.186
+          ],
+          "content": "P Python Enhancement Proposals PEP 604, 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "5"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Annotations Best Practices",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2024-09-09T13:35:38-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20220710)",
+      "page_count": 5,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

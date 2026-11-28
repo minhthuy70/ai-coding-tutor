@@ -1,0 +1,2341 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Instrumenting CPython with DTrace and SystemTap",
+      "authors": [
+        "Guido van Rossum and the Python development team"
+      ],
+      "created_at": "2024-12-03T20:42:37+01:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20211117)",
+      "page_count": 7,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.161,
+            0.114,
+            0.881,
+            0.179
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Instrumenting CPython with DTrace and SystemTap"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.739,
+            0.183,
+            0.883,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Release 3.12.8",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.252,
+            0.233,
+            0.882,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Guido van Rossum and the Python development team",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.722,
+            0.29,
+            0.882,
+            0.306
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "December 03, 2024",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.645,
+            0.311,
+            0.881,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Software Foundation",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.677,
+            0.327,
+            0.881,
+            0.342
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Email: docs@python.org",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.362,
+            0.23,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Contents"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "index",
+          "index": 7,
+          "bbox": [
+            0.115,
+            0.401,
+            0.883,
+            0.561
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1 Enabling the static markers",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "2 Static DTrace probes",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 3  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "3 Static SystemTap markers",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 4  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4 "
+                },
+                {
+                  "type": "text",
+                  "content": "Available static markers",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 5  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "5 SystemTap Tapsets",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 6  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "6 Examples",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.158,
+            0.593,
+            0.305,
+            0.623
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "author",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " David Malcolm"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.158,
+            0.629,
+            0.296,
+            0.658
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "author",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Łukasz Langa"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.115,
+            0.664,
+            0.882,
+            0.695
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DTrace and SystemTap are monitoring tools, each providing a way to inspect what the processes on a computer system are doing. They both use domain-specific languages allowing a user to write scripts which:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.143,
+            0.7,
+            0.433,
+            0.715
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• filter which processes are to be observed"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.144,
+            0.721,
+            0.437,
+            0.737
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• gather data from the processes of interest"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.144,
+            0.743,
+            0.349,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• generate reports on the data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.115,
+            0.763,
+            0.881,
+            0.794
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "As of Python 3.6, CPython can be built with embedded “markers”, also known as “probes”, that can be observed by a DTrace or SystemTap script, making it easier to monitor what the CPython processes on a system are doing."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.115,
+            0.799,
+            0.883,
+            0.844
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CPython implementation detail:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " DTrace markers are implementation details of the CPython interpreter. No guarantees are made about probe compatibility between versions of CPython. DTrace scripts can stop working or work incorrectly without warning when changing CPython versions."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 16,
+          "bbox": [
+            0.493,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.118,
+            0.085,
+            0.466,
+            0.105
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 Enabling the static markers"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.117,
+            0.881,
+            0.147
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "macOS comes with built-in support for DTrace. On Linux, in order to build CPython with the embedded markers for SystemTap, the SystemTap development tools must be installed."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.153,
+            0.401,
+            0.168
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "On a Linux machine, this can be done via:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.177,
+            0.42,
+            0.195
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.117,
+                0.177,
+                0.42,
+                0.195
+              ],
+              "content": "\\$ yum install systemtap-sdt-devel"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.118,
+            0.209,
+            0.14,
+            0.221
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "or:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.231,
+            0.484,
+            0.248
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.117,
+                0.231,
+                0.484,
+                0.248
+              ],
+              "content": "\\$ sudo apt-get install systemtap-sdt-dev"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.262,
+            0.64,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CPython must then be configured with the --with-dtrace option:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.285,
+            0.42,
+            0.303
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.118,
+                0.285,
+                0.42,
+                0.303
+              ],
+              "content": "checking for --with-dtrace... yes"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.316,
+            0.881,
+            0.346
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "On macOS, you can list available DTrace probes by running a Python process in the background and listing all probes made available by the Python provider:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.353,
+            0.878,
+            0.556
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.116,
+                0.353,
+                0.878,
+                0.556
+              ],
+              "content": "$ python3.6 -q &\n$ sudo dtrace -l -P python$!  # or: dtrace -l -m python3.6\n\nID   PROVIDER        MODULE          FUNCTION NAME\n29564 python18035     python3.6         _PyEval_EvalFrameDefault function-entry\n29565 python18035     python3.6             dtrace_function_entry function-entry\n29566 python18035     python3.6         _PyEval_EvalFrameDefault function-\n→return\n29567 python18035     python3.6         dtrace_function_return function-\n→return\n29568 python18035     python3.6             collect gc-done\n29569 python18035     python3.6             collect gc-start\n29570 python18035     python3.6         _PyEval_EvalFrameDefault line\n29571 python18035     python3.6         maybe_dtrace_line line"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.117,
+            0.568,
+            0.881,
+            0.598
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "On Linux, you can verify if the SystemTap static markers are present in the built binary by seeing if it contains a “.note.stapsdt” section."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.117,
+            0.607,
+            0.7,
+            0.638
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.117,
+                0.607,
+                0.7,
+                0.638
+              ],
+              "content": "$ readelf -S ./python | grep .note.stapsdt\n[30] .note.stapsdt          NOTE           000000000000000 00308d78"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "powershell"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.116,
+            0.651,
+            0.881,
+            0.681
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "If you’ve built Python as a shared library (with the --enable-shared configure option), you need to look instead within the shared library. For example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 13,
+          "bbox": [
+            0.118,
+            0.69,
+            0.7,
+            0.72
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 13,
+              "bbox": [
+                0.118,
+                0.69,
+                0.7,
+                0.72
+              ],
+              "content": "$ readelf -S libpython3.3dm.so.1.0 | grep .note.stapsdt\n[29] .note.stapsdt          NOTE           0000000000000000 00365b68"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.117,
+            0.733,
+            0.456,
+            0.749
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sufficiently modern readelf can print the metadata:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 15,
+          "bbox": [
+            0.117,
+            0.758,
+            0.828,
+            0.905
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 15,
+              "bbox": [
+                0.117,
+                0.758,
+                0.828,
+                0.905
+              ],
+              "content": "$ readelf -n ./python\n\nDisplaying notes found at file offset 0x00000254 with length 0x00000020:\n    Owner          Data size          Description\n    GNU            0x00000010          NT_GNU_ABI_TAG (ABI version tag)\n        OS: Linux, ABI: 2.6.32\n\nDisplaying notes found at file offset 0x00000274 with length 0x00000024:\n    Owner          Data size          Description\n    GNU            0x00000014          NT_GNU_BUILD_ID (unique build ID)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.748,
+            0.903,
+            0.88,
+            0.915
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.711,
+            0.087,
+            0.881,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.119,
+            0.101,
+            0.804,
+            0.574
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.119,
+                0.101,
+                0.804,
+                0.574
+              ],
+              "content": "→bitstring)\n    Build ID: df924a2b08a7e89f6e11251d4602022977af2670\n\nDisplaying notes found at file offset 0x002d6c30 with length 0x00000144:\n    Owner          Data size          Description\n    stapsdt         0x00000031          NT_STAPSDT (SystemTap probe)\n→descriptors)\n    Provider: python\n    Name: gc__start\n    Location: 0x00000000004371c3, Base: 0x000000000630ce2, Semaphore:\n→0x00000000008d6bf6\n    Arguments: -4@%ebx\n    stapsdt         0x00000030          NT_STAPSDT (SystemTap probe)\n→descriptors)\n    Provider: python\n    Name: gc__done\n    Location: 0x0000000004374e1, Base: 0x000000000630ce2, Semaphore:\n→0x0000000008d6bf8\n    Arguments: -8@%rax\n    stapsdt         0x00000045          NT_STAPSDT (SystemTap probe)\n→descriptors)\n    Provider: python\n    Name: function__entry\n    Location: 0x00000000053db6c, Base: 0x000000000630ce2, Semaphore:\n→0x000000008d6be8\n    Arguments: 8@%rbp 8@%r12 -4@%eax\n    stapsdt         0x00000046          NT_STAPSDT (SystemTap probe)\n→descriptors)\n    Provider: python\n    Name: function__return\n    Location: 0x0000000053dba8, Base: 0x0000000630ce2, Semaphore:\n→0x00000008d6bea\n    Arguments: 8@%rbp 8@%r12 -4@%eax"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "asm"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.115,
+            0.586,
+            0.881,
+            0.617
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The above metadata contains information for SystemTap describing how it can patch strategically placed machine code instructions to enable the tracing hooks used by a SystemTap script."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.636,
+            0.394,
+            0.655
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2 Static DTrace probes"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.667,
+            0.882,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The following example DTrace script can be used to show the call/return hierarchy of a Python script, only tracing within the invocation of a function called “start”. In other words, import-time function invocations are not going to be listed:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.718,
+            0.6,
+            0.906
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.116,
+                0.718,
+                0.6,
+                0.906
+              ],
+              "content": "self int indent;\n\npython\\$target:::function-entry\n/copyinstr(arg1) == \"start\"/>\n{\n    self->trace = 1;\n}\n\npython\\$target:::function-entry\n/self->trace/\n{\n    printf(\"%d\\t%*s:\", timestamp, 15, probename);\n    printf(\"%*s\", self->indent, \"\");"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.748,
+            0.904,
+            0.88,
+            0.917
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.712,
+            0.087,
+            0.88,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.116,
+            0.097,
+            0.84,
+            0.362
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.116,
+                0.097,
+                0.84,
+                0.362
+              ],
+              "content": "printf(\"%s:%s:%d\\n\", basename(copyinstr(arg0)), copyinstr(arg1), arg2);\n    self->indent++;\n}\n\npython\\$target:::function-return\n/self->trace/\n{\n    self->indent--;\n    printf(\"%d\\t%*s:\", timestamp, 15, probename);\n    printf(\"%*s\", self->indent, \"\");\n    printf(\"%s:%s:%d\\n\", basename(copyinstr(arg0)), copyinstr(arg1), arg2);\n}\n\npython\\$target:::function-return\n/copyinstr(arg1) == \"start\"/>\n{\n    self->trace = 0;\n}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.373,
+            0.296,
+            0.389
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "It can be invoked like this:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.398,
+            0.637,
+            0.414
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.117,
+                0.398,
+                0.637,
+                0.414
+              ],
+              "content": "\\$ sudo dtrace -q -s call_stack.d -c \"python3.6 script.py\""
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.118,
+            0.428,
+            0.294,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The output looks like this:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.452,
+            0.686,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.116,
+                0.452,
+                0.686,
+                0.711
+              ],
+              "content": "function-entry:call_stack.py:start:23\nfunction-entry: call_stack.py:function_1:1\nfunction-entry: call_stack.py:function_3:9\nfunction-return: call_stack.py:function_3:10\nfunction-return: call_stack.py:function_1:2\nfunction-entry: call_stack.py:function_2:5\nfunction-entry: call_stack.py:function_1:1\nfunction-entry: call_stack.py:function_3:9\nfunction-return: call_stack.py:function_3:10\nfunction-return: call_stack.py:function_1:2\nfunction-return: call_stack.py:function_2:6\nfunction-entry: call_stack.py:function_3:9\nfunction-return: call_stack.py:function_3:10\nfunction-entry: call_stack.py:function_4:13\nfunction-return: call_stack.py:function_4:14\nfunction-entry: call_stack.py:function_5:18\nfunction-return: call_stack.py:function_5:21\nfunction-return:call_stack.py:start:28"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "javascript"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.737,
+            0.454,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3 Static SystemTap markers"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.77,
+            0.881,
+            0.799
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The low-level way to use the SystemTap integration is to use the static markers directly. This requires you to explicitly state the binary file containing them."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.805,
+            0.779,
+            0.821
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For example, this SystemTap script can be used to show the call/return hierarchy of a Python script:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.117,
+            0.829,
+            0.565,
+            0.903
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.117,
+                0.829,
+                0.565,
+                0.903
+              ],
+              "content": "probe process(\"python\").mark(\"function__entry\") {\n    filename = user_string($arg1);\n    funcname = user_string($arg2);\n    lineno = $arg3;"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.748,
+            0.903,
+            0.879,
+            0.915
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.493,
+            0.94,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.099,
+            0.646,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.117,
+                0.099,
+                0.646,
+                0.277
+              ],
+              "content": "printf(\"%s => %s in %s:%d\\\\n\",\n        thread_indent(1), funcname, filename,lineno);\n}\n\nprobe process(\"python\").mark(\"function__return\") {\n    filename = user_string($arg1);\n    funcname = user_string($arg2);\n   lineno = $arg3;\n\n    printf(\"%s <= %s in %s:%d\\\\n\",\n        thread_indent(-1), funcname, filename,lineno);\n}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.712,
+            0.087,
+            0.881,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.118,
+            0.288,
+            0.296,
+            0.303
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "It can be invoked like this:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.118,
+            0.311,
+            0.366,
+            0.358
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.118,
+                0.311,
+                0.366,
+                0.358
+              ],
+              "content": "$ stap \\\nshow-call-hierarchy.stp \\\n-c \"./python test.py\""
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.119,
+            0.371,
+            0.295,
+            0.386
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The output looks like this:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.115,
+            0.393,
+            0.703,
+            0.484
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.115,
+                0.393,
+                0.703,
+                0.484
+              ],
+              "content": "python(8274):\npython(8274):\npython(8274):\npython(8274):\npython(8274):\npython(8274):\npython(8274):"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.496,
+            0.276,
+            0.51
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "where the columns are:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.144,
+            0.517,
+            0.435,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• time in microseconds since start of script"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.144,
+            0.539,
+            0.293,
+            0.552
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• name of executable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.144,
+            0.56,
+            0.265,
+            0.574
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• PID of process"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.117,
+            0.581,
+            0.612,
+            0.596
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "and the remainder indicates the call/return hierarchy as the script executes."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.115,
+            0.602,
+            0.881,
+            0.632
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For a --enable-shared build of CPython, the markers are contained within the libpython shared library, and the probe’s dotted path needs to reflect this. For example, this line from the above example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.117,
+            0.64,
+            0.564,
+            0.657
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.117,
+                0.64,
+                0.564,
+                0.657
+              ],
+              "content": "probe process(\"python\").mark(\"function__entry\") {"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "javascript"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.117,
+            0.67,
+            0.253,
+            0.685
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "should instead read:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 14,
+          "bbox": [
+            0.117,
+            0.694,
+            0.862,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 14,
+              "bbox": [
+                0.117,
+                0.694,
+                0.862,
+                0.711
+              ],
+              "content": "probe process(\"python\").library(\"libpython3.6dm.so.1.0\").mark(\"function__entry\") {"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.118,
+            0.725,
+            0.393,
+            0.74
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(assuming a debug build of CPython 3.6)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 16,
+          "bbox": [
+            0.117,
+            0.76,
+            0.427,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4 Available static markers"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.118,
+            0.795,
+            0.617,
+            0.808
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "function__entry(str filename, str funcname, int lineno)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.157,
+            0.811,
+            0.881,
+            0.84
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This marker indicates that execution of a Python function has begun. It is only triggered for pure-Python (bytecode) functions."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.157,
+            0.847,
+            0.881,
+            0.876
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The filename, function name, and line number are provided back to the tracing script as positional arguments, which must be accessed using $arg1, $arg2, $arg3:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.181,
+            0.883,
+            0.724,
+            0.897
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• $arg1 : (const char *) filename, accessible using user_string($arg1)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.181,
+            0.904,
+            0.762,
+            0.919
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• $arg2 : (const char *) function name, accessible using user_string($arg2)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 22,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.181,
+            0.087,
+            0.372,
+            0.102
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.181,
+                0.087,
+                0.372,
+                0.102
+              ],
+              "content": "- \\$arg3 : int line number"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.118,
+            0.109,
+            0.627,
+            0.122
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "function__return(str filename, str funcname, int lineno)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.155,
+            0.126,
+            0.881,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This marker is the converse of function__entry(), and indicates that execution of a Python function has ended (either via return, or via an exception). It is only triggered for pure-Python (bytecode) functions."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.158,
+            0.162,
+            0.547,
+            0.176
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The arguments are the same as for function__entry()"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.117,
+            0.184,
+            0.519,
+            0.197
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "line(str filename, str funcname, int lineno)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.156,
+            0.2,
+            0.882,
+            0.229
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This marker indicates a Python line is about to be executed. It is the equivalent of line-by-line tracing with a Python profiler. It is not triggered within C functions."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.158,
+            0.236,
+            0.552,
+            0.251
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The arguments are the same as for function__entry()."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.117,
+            0.259,
+            0.346,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "gc__start(int generation)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.157,
+            0.275,
+            0.879,
+            0.303
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fires when the Python interpreter starts a garbage collection cycle. arg0 is the generation to scan, like gc. collect()."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.117,
+            0.312,
+            0.337,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "gc__done(long collected)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.157,
+            0.328,
+            0.881,
+            0.343
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fires when the Python interpreter finishes a garbage collection cycle. arg0 is the number of collected objects."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 11,
+          "bbox": [
+            0.118,
+            0.351,
+            0.491,
+            0.364
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import__find__load__start(str modulename)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.158,
+            0.368,
+            0.756,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fires before importlib attempts to find and load the module. arg0 is the module name."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.159,
+            0.389,
+            0.306,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Added in version 3.7."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 14,
+          "bbox": [
+            0.118,
+            0.411,
+            0.581,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import__find__load__done(str modulename, int found)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.157,
+            0.428,
+            0.882,
+            0.456
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fires after importlib’s find_and_load function is called. arg0 is the module name, arg1 indicates if module was successfully loaded."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.16,
+            0.463,
+            0.306,
+            0.477
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Added in version 3.7."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 17,
+          "bbox": [
+            0.117,
+            0.486,
+            0.382,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "audit(str event, void *tuple)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.157,
+            0.502,
+            0.881,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fires when sys.audit() or PySys_Audit() is called. arg0 is the event name as C string, arg1 is a PyObject pointer to a tuple object."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.159,
+            0.537,
+            0.305,
+            0.552
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Added in version 3.8."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 20,
+          "bbox": [
+            0.117,
+            0.573,
+            0.38,
+            0.594
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5 SystemTap Tapsets"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.115,
+            0.605,
+            0.881,
+            0.634
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The higher-level way to use the SystemTap integration is to use a “tapset”: SystemTap’s equivalent of a library, which hides some of the lower-level details of the static markers."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.117,
+            0.641,
+            0.526,
+            0.655
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Here is a tapset file, based on a non-shared build of CPython:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 23,
+          "bbox": [
+            0.116,
+            0.663,
+            0.779,
+            0.897
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 23,
+              "bbox": [
+                0.116,
+                0.663,
+                0.779,
+                0.897
+              ],
+              "content": "/*\n    Provide a higher-level wrapping around the function__entry and\n    function__return markers:\n\\*/\nprobe python.function.entry = process(\"python\").mark(\"function__entry\")\n{\n    filename = user_string($arg1);\n    funcname = user_string($arg2);\n    lineno = $arg3;\n    frameptr = $arg4\n}\nprobe python.function.return = process(\"python\").mark(\"function__return\")\n{\n    filename = user_string($arg1);\n    funcname = user_string($arg2);\n    lineno = $arg3;"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.748,
+            0.895,
+            0.88,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 25,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.116,
+            0.099,
+            0.304,
+            0.134
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.116,
+                0.099,
+                0.304,
+                0.134
+              ],
+              "content": "frameptr = \\$arg4\n}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "hcl"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.711,
+            0.087,
+            0.88,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.146,
+            0.881,
+            0.176
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "If this file is installed in SystemTap’s tapset directory (e.g. /usr/share/systemtap/tapset), then these additional probepoints become available:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.183,
+            0.762,
+            0.197
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python.function.entry(str filename, str funcname, int lineno, frameptr)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.155,
+            0.199,
+            0.881,
+            0.229
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This probe point indicates that execution of a Python function has begun. It is only triggered for pure-Python (bytecode) functions."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.236,
+            0.771,
+            0.251
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python.function.return(str filename, str funcname, int lineno, frameptr)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.157,
+            0.253,
+            0.882,
+            0.296
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This probe point is the converse of python.function.return, and indicates that execution of a Python function has ended (either via return, or via an exception). It is only triggered for pure-Python (bytecode) functions."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.117,
+            0.317,
+            0.262,
+            0.337
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6 Examples"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.349,
+            0.881,
+            0.378
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This SystemTap script uses the tapset above to more cleanly implement the example given above of tracing the Python function-call hierarchy, without needing to directly name the static markers:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.385,
+            0.626,
+            0.548
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.116,
+                0.385,
+                0.626,
+                0.548
+              ],
+              "content": "probe python.function.entry\n{\n    printf(\"%s => %s in %s:%d\\n\",\n        thread_indent(1), funcname, filename,lineno);\n}\n\nprobe python.function.return\n{\n    printf(\"%s <= %s in %s:%d\\n\",\n        thread_indent(-1), funcname, filename,lineno);\n}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.559,
+            0.881,
+            0.59
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The following script uses the tapset above to provide a top-like view of all running CPython code, showing the top 20 most frequently entered bytecode frames, each second, across the whole system:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.116,
+            0.597,
+            0.764,
+            0.858
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.116,
+                0.597,
+                0.764,
+                0.858
+              ],
+              "content": "global fn_calls;\n\nprobe python.function.entry\n{\n    fn_calls[pid(), filename, funcname,lineno] += 1;\n}\n\nprobe timer.ms(1000) {\n    printf(\"\\033[2J\\033[1;1H\") /* clear screen */\n    printf(\"%6s %80s %6s %30s %6s\\n\",\n        \"PID\", \"FILENAME\", \"LINE\", \"FUNCTION\", \"CALLS\")\n    foreach ([pid, filename, funcname,lineno] in fn_calls- limit 20) {\n        printf(\"%6d %80s %6d %30s %6d\\n\",\n            pid, filename,lineno, funcname,\n            fn_calls[pid, filename, funcname,lineno]);\n    }\n    delete fn_calls;\n}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

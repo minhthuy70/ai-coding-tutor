@@ -1,0 +1,147 @@
+<!-- page: 1 -->
+
+## MAP VÀ FILTER
+
+## <1>
+
+<!-- page: 2 -->
+
+## 1. Map():
+
+![](images/page_1_image_3.jpg)
+
+**Map()** là một hàm trong Python có chức năng apply một hàm có sẵn cho mọi phần tử trong 1 iterable (list, tuple, str...)
+
+## rong Python. LamCÚ PHÁP
+
+## map(function, iterable…)
+
+**Function:** Hàm sẽ được sử dụng để apply với các phần tử trong iterable.
+
+**Iterable:** Các iterable ví dụ như list, tuple, str...
+
+**Giá trị trả về:** map trả về một đối tượng thuộc lớp map. Các bạn nên ép sang list để sử dụng.
+
+<!-- page: 3 -->
+
+## 1. Map():
+
+1 EXAMPLE
+
+Apply một hàm tự định nghĩa: def add(n): h đơn giản để định nghĩreturn n + 100
+
+if \_name\_\_ == main\_ a = range(5) b = list(map(add, a)) print(b)
+
+**OUTPUT**
+
+[100, 101, 102, 103, 104]
+
+**VÍ DỤ**
+
+00 EXAMPLE 00
+
+mbif ường đname gọi == ái tên tomain "28tech" b = list(map(ord, s)) print(b)
+
+**OUTPUT** [50, 56, 116, 101, 99, 104]
+
+<!-- page: 4 -->
+
+## 1. Map():
+
+00 EXAMPLE
+
+00
+
+**Đọc 1 mảng số nguyên từ** ách đơn giản để định nghĩa một h**input và chuyển vào list:**
+
+if name == main\_\_': a = list(map(int, input().split())) print(a)
+
+**INPUT** 1 2 3 5 **OUTPUT** [1, 2, 3, 5]
+
+**VÍ DỤ**
+
+00 EXAMPLE
+
+Trong trường hợp hàm apply trong map ngắn gọn bạn có thể thay thế bằng lambda def square(n): mbda thường được return n \*\* 2
+
+if \_name\_\_ == '\_\_main a = [1, 2, 3, 5] b = list(map(square, a)) print(b) c = list(map(lambda x : x \*\* 2, a)) print(c) **OUTPUT**
+
+[1, 4, 9, 25] [1, 4, 9, 25]
+
+<!-- page: 5 -->
+
+## 1. Map():
+
+EXAMPLE
+
+Áp dụng map với nhiều iterable: def add(a, b): cách đơn giản để địreturn a + b
+
+if name == main a = [1, 2, 3, 4] b = [2, 3, 5, 4] c = list(map(add, a, b)) print(c) **OUTPUT** [3, 5, 8, 8]
+
+**VÍ DỤ**
+
+EXAMPLE
+
+**Áp dụng map với nhiều** Lambda thường được gọi dưới cái tên toán tử l**iterable sử dụng trong lambda:**
+
+ambda.if \_\_name\_\_ == '\_\_main\_\_': a = [1, 2, 3, 4] b = [2, 3, 5, 4] c = list(map(lambda x, y : x + y, a, b)) print(c)
+
+**OUTPUT** [3, 5, 8, 8]
+
+<!-- page: 6 -->
+
+## 2. Filter():
+
+![](images/page_5_image_4.jpg)
+
+**Filter()** được sử dụng để trích xuất các phần tử trong một iterable khi apply một hàm nào đó với phần tử đó mà hàm trả về giá trị là True.
+
+## rong Python. Lamhà l bdCÚ PHÁP
+
+## filter(function, iterable)
+
+**Function:** Hàm sẽ được sử dụng để apply với các phần tử trong iterable.
+
+**Iterable:** Các iterable ví dụ như list, tuple, str…
+
+**Giá trị trả về:** filter trả về một đối tượng của lớp filter, bạn nên ép nó sang list hoặc tuple.
+
+<!-- page: 7 -->
+
+## 2. Filter():
+
+品EXAMPLE
+
+Lọc ra các số chẵn trong list: def even(n): ách đơn giản để định nghĩa mreturn n % 2 == 0
+
+if name == main a = [1, 2, 3, 4, 5] b = list(filter(even, a)) print(b)
+
+**OUTPUT** [2, 4]
+
+**VÍ DỤ**
+
+00 EXAMPLE
+
+**Lọc ra các số nguyên tố trong list:**
+
+import math def prime(n): mbda thường được gọi dưới cái tên toán tử lafor i in range(2, math.isqrt(n) + 1): if n % i == 0: return False return n > 1
+
+if name == main\_\_': a = [20, 10, 17, 7, 29, 19] b = list(filter(prime, a)) print(b) OUT
+
+**OUTPUT** [17, 7, 29, 19]
+
+<!-- page: 8 -->
+
+## 2. Filter():
+
+00 EXAMPLE
+
+**VÍ DỤ**
+
+**Áp dụng filter với lambda**
+
+if \_\_name == \_main\_\_': a = [20, 10, 17, 7, 29, 19] b = list(filter(lambda x : x >= 15, a)) print(b) OUTPUT
+
+[20, 17, 29, 19]
+
+![](images/page_7_image_10.jpg)

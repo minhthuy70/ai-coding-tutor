@@ -1,0 +1,209 @@
+## ĐỘ PHỨC TẠP CỦA THUẬT TOÁN (TIME COMPLEXITY)
+
+## 一<1>
+
+## Đánh giá một thuật toán
+
+Độ phức tạp về thời gian (time complexity) và độ phức tạp về không gian (space complexity) là 2 yếu tố để quyết định một thuật toán có thích hợp để giải quyết một bài toán nào đó hay không.
+
+Trong đó độ phức tạp về thời gian được quan tâm nhiều hơn khi các bạn tham gia vào các contest về lập trình.
+
+Độ phức tạp thời gian là thời gian mà thuật toán của bạn cần để thực thi, nó là một hàm của input, tức là dựa vào đầu vào ta sẽ tính toán số lượng thao tác mà thuật toán cần thực thi từ đó tính ra được thời gian thực thi của thuật toán.
+
+![](images/page_1_image_7.jpg)
+
+## Trên các trang chấm bài online
+
+Giới hạn thời gian của bài toán là **1 - 2s** đối với:
+
+![](images/page_2_image_4.jpg)
+
+![](images/page_2_image_5.jpg)
+
+C/C++
+
+Giới hạn thời gian của một bài toán là **4s** đối với:
+
+![](images/page_2_image_8.jpg)
+
+![](images/page_2_image_9.jpg)
+
+Python
+
+Thông thường **1s** các bạn có thể thực hiện được từ **10^8 - 5.10^8** phép toán.
+
+![](images/page_2_image_12.jpg)
+
+## 1. Tính toán độ phức tạp và kí hiệu Big O:
+
+**BIG O NOTION**
+
+![](images/page_3_image_5.jpg)
+
+Tính toán số lượng phép toán được thực hiện trong mỗi lần thuật toán được khởi chạy dựa trên input đầu vào của bài toán.
+
+![](images/page_3_image_7.jpg)
+
+Kí hiệu **Big O** mô tả trường hợp tệ nhất của thuật toán thông qua một hàm của input đầu vào n.
+
+![](images/page_3_image_9.jpg)
+
+Độ phức tạp của thuật toán càng nhỏ thì thuật toán chạy càng nhanh
+
+![](images/page_3_image_11.jpg)
+
+Thông qua kí hiệu của **Big O** ta có thể mô tả độ phức tạp của thuật toán là O(f(n))
+
+## 1. Tính toán độ phức tạp và kí hiệu Big O:
+
+**Ví dụ mô tả độ phức tạp của thuật toán là O(f(n)):** O(n), O(1), O(logn), O(nlogn), O(n^2), O(n!)
+
+**Chú ý:** Trong trường hợp hàm f(n) có chứa hằng số và các bậc khác nhau của n thì ta chọn bậc cao nhất để đại diện cho hàm f(n). VD: O(n^2 +2n +3) được thay bằng O(n^2).
+
+![](images/page_4_image_5.jpg)
+
+**2. Một số ví dụ về phân tích độ phức tạp của thuật toán: a) Độ phức tạp của các phép toán và nhập xuất:**
+
+**Code sau có độ phức tạp là O(1) vì nó thực thi một số phép toán cố định**
+
+$$
+\begin{array}{l} \text {a, b, c = 100, 200, 300} \\ \text {sum = a + b + c} \\ \text {print(sum)} \\ \text {tich = a * b * c} \\ \text {print(tich)} \end{array}
+$$
+
+![](images/page_5_image_7.jpg)
+
+**Chú ý:** Các phép toán như +, -, \*, /, % hay các phép gán, so sánh và nhập xuất đều được coi là O(1).
+
+## 2. Một số ví dụ về phân tích độ phức tạp của thuật toán:
+
+## b) Độ phức tạp của vòng lặp:
+
+![](images/page_6_image_5.jpg)
+
+Độ phức tạp của vòng lặp lồng nhau chính là số lượng của lặp của vòng lặp nhân với độ phức tạp của code bên trong vòng lặp.
+
+## Code sau đều có độ phức tạp là O(n)
+
+## 00 EXAMPLE 00
+
+n = 1000
+for i in range(n):
+    #0(1) code
+
+## 00 EXAMPLE
+
+$$
+\begin{array}{l} \text {n = 1000} \\ \text {i = 1} \\ \text {while i < = n:} \\ \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \end{array}
+$$
+
+$$
+n = 1 0 0 0 0
+$$
+
+for i in range(3 \* n + 2804):
+    print(i)
+
+**2. Một số ví dụ về phân tích độ phức tạp của thuật toán:**
+
+**b) Độ phức tạp của vòng lặp:**
+
+**Code sau có độ phức tạp là O(nlogn), trong đó độ phức tạp của hàm nguyên tố là O(sqrt(n))**
+
+```python
+import math
+#0(n)
+def ngto1(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return n > 1
+
+#0(sqrt(n))
+def ngto2(n):
+    for i in range(2, math.isqrt(n) + 1):
+        if n % i == 0:
+            return False
+    return n > 1
+```
+
+## 2. Một số ví dụ về phân tích độ phức tạp của thuật toán:
+
+## c) Độ phức tạp của vòng lặp lồng nhau:
+
+![](images/page_8_image_5.jpg)
+
+Trong trường hợp thuật toán của bạn sử dụng vòng lặp lồng nhau, độ phức tạp của thuật toán được tính bằng cách nhân số lần lặp của từng vòng lặp với nhau.
+
+## Code sau có độ phức tạp là O(n\*m) hay O(n^2)
+
+## 00 EXAMPLE
+
+00
+
+$$
+n = 1 0 0 0
+$$
+
+$$
+m = 3 0 0 0
+$$
+
+$$
+\# 0 (n * m)
+$$
+
+## Code sau có độ phức tạp là O(n^3)
+
+## 00 EXAMPLE
+
+```python
+n = 1000
+m = 3000
+k = 5000
+#0(n * m * k)
+for i in range(n):
+    for j in range(m):
+        for l in range(k):
+            #0(1) code
+```
+
+## CHÚ Ý
+
+Các bạn càng sử dụng nhiều vòng lặp lồng nhau thì thuật toán sẽ càng lớn và thời gian chạy càng lâu.
+
+## 2. Một số ví dụ về phân tích độ phức tạp của thuật toán:
+
+## d) Độ phức tạp khi chương trình chứa nhiều khối thực thi:
+
+![](images/page_9_image_5.jpg)
+
+Trong trường hợp thuật toán của bạn có nhiều khối thực thi thì độ phức tạp của thuật toán sẽ được xét bằng với độ phức tạp của khối có độ phức tạp lớn nhất
+
+## Code sau có độ phức tạp là O(n^2)
+
+```python
+n, m = map(int, input().split())
+#0(n^2)
+for i in range(n):
+    for j in range(m):
+        print(i, j)
+#0(n)
+for i in range(n + 29):
+    print(i)
+```
+
+## 3. Một vài độ phức tạp thường gặp:
+
+| Thao tác, thuật toán | Độ phức tạp |
+| --- | --- |
+| Sử dụng công thức toán học để tìm ra ngay lời giải | O(1) |
+| Tìm kiếm nhị phân | O(logn) |
+| Các thao tác của set, map, hàng đợi ưu tiên | O(logn) |
+| Kiểm tra số nguyên tố, phân tích thừa số nguyên tố | O(sqrt(n) |
+| Đọc n số từ input | O(n) |
+| Duyệt qua mảng | O(n) |
+| Hàm sort trong thư viện | O(nlogn) |
+| Sàng số nguyên tố | O(nloglogn) |
+| Duyệt các tập con cỡ k của tập có n phần tử | O(n^k) |
+| Duyệt mọi tập con | O(2^n) |
+| Duyệt mọi hoán vị | O(n!) |

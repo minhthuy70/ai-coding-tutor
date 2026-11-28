@@ -1,0 +1,1597 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.258,
+            0.131
+          ],
+          "content": "28TECH 28TECH Become A Better Developer"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.445,
+            0.501,
+            0.527
+          ],
+          "level": 2,
+          "content": "LAMBDA FUNCTION"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.651,
+            0.316,
+            0.901,
+            0.755
+          ],
+          "level": 2,
+          "content": "一<1>"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": "1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.024,
+            0.036,
+            0.057,
+            0.107
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.111
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.184,
+            0.373,
+            0.778,
+            0.623
+          ],
+          "content": "Lambda là một trong những tính năng cực kì mạnh mẽ, quan trọng và thú vị của ngôn ngữ lập trình Python, tuy nhiên kiến thức này thường bị hiểu sai hoặc hiểu thiếu."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.95,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": "000"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.146,
+            0.295,
+            0.21
+          ],
+          "level": 2,
+          "content": "1. Lambda là gì ?"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.043,
+            0.233,
+            0.099,
+            0.333
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.233,
+            0.916,
+            0.343
+          ],
+          "content": "Lambda là một cách đơn giản để định nghĩa một hàm trong Python. Lambda thường được gọi dưới cái tên toán tử lambda hoặc hàm lambda."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.043,
+            0.371,
+            0.1,
+            0.471
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.373,
+            0.916,
+            0.589
+          ],
+          "content": "Lambda là một cách để định nghĩa hàm vô danh (anonymous), một hàm mà không cần tên hàm. Nó được sử dụng khi bạn cần xây dựng những.hà l bdhàm chỉ bao gồm 1 câu lệnh, khi đó việc sử dụng keyword def để định nghĩa hàm là quá thừa thãi và dài dòng."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.444,
+            0.658,
+            0.555,
+            0.715
+          ],
+          "level": 2,
+          "content": "CÚ PHÁP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.317,
+            0.761,
+            0.68,
+            0.813
+          ],
+          "content": "lambda parameters : expression"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.139,
+            0.295,
+            0.205
+          ],
+          "level": 2,
+          "content": "1. Lambda là gì ?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.351,
+            0.197,
+            0.648,
+            0.257
+          ],
+          "level": 2,
+          "content": "Ví dụ về hàm và lambda"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.103,
+            0.269,
+            0.173,
+            0.375
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.198,
+            0.311,
+            0.375,
+            0.369
+          ],
+          "content": "**Xây dựng hàm:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.192,
+            0.378,
+            0.384,
+            0.471
+          ],
+          "content": "def func(n): return 2 \\* n"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.192,
+            0.511,
+            0.368,
+            0.606
+          ],
+          "content": "print(func(10)) print(func(20))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.246,
+            0.622,
+            0.327,
+            0.757
+          ],
+          "content": "**OUTPUT** 20 40"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.527,
+            0.271,
+            0.593,
+            0.376
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_10.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.609,
+            0.317,
+            0.807,
+            0.377
+          ],
+          "content": "**Sử dụng lambda:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.56,
+            0.407,
+            0.858,
+            0.456
+          ],
+          "content": "func = lambda x : x \\* 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.504,
+            0.753,
+            0.607
+          ],
+          "content": "print(func(10)) print(func(20))"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.168,
+            0.802,
+            0.219,
+            0.892
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.668,
+            0.622,
+            0.748,
+            0.665
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.693,
+            0.677,
+            0.723,
+            0.757
+          ],
+          "content": "20 40"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.795,
+            0.824,
+            0.907
+          ],
+          "content": "**Chú ý:** Trong biểu thức lambda, các bạn không cần câu lệnh return, lambda tự động trả về giá trị cho bạn."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": "4"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.044,
+            0.256,
+            0.112
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.109
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.145,
+            0.466,
+            0.205
+          ],
+          "level": 2,
+          "content": "2. Các tính chất của lambda:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.096,
+            0.269,
+            0.905,
+            0.322
+          ],
+          "content": "• **Lambda không thể chứa các câu lệnh:** Ví dụ như return, assest, pass…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.337,
+            0.565,
+            0.388
+          ],
+          "content": "**Lambda chỉ chứa 1 biểu thức duy nhất**."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.405,
+            0.905,
+            0.513
+          ],
+          "content": "**IIFE : Immediately Invoked Function Expression:** Biểu thức lambda có ột cách đơn giản để định nghĩa một hàthể được gọi ngay lập tức"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.296,
+            0.571,
+            0.699,
+            0.884
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_7.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.035,
+            0.145,
+            0.481,
+            0.205
+          ],
+          "level": 2,
+          "content": "3. Lambda với nhiều tham số:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.053,
+            0.226,
+            0.108,
+            0.325
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.223,
+            0.929,
+            0.331
+          ],
+          "content": "Bạn có thể gửi bao nhiêu tham số tùy ý, chỉ cần phân cách giữa các tham số bằng dấu phẩy."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.162,
+            0.362,
+            0.229,
+            0.433
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.421,
+            0.657,
+            0.477
+          ],
+          "content": "**Viết lambda tính tổng của 3 số**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.204,
+            0.49,
+            0.58,
+            0.579
+          ],
+          "content": "hàm lambda.sum = lambda x, y, z : x + y + z print(sum(100, 200, 300))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.204,
+            0.62,
+            0.781,
+            0.668
+          ],
+          "content": "print((lambda x, y, z : x + y + z)(100, 200, 300))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.441,
+            0.699,
+            0.521,
+            0.737
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.016,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": "6"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.145,
+            0.486,
+            0.21
+          ],
+          "level": 2,
+          "content": "4. Truyền đối số cho Lambda:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.144,
+            0.245,
+            0.379,
+            0.298
+          ],
+          "level": 2,
+          "content": "Positional argument"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.074,
+            0.331,
+            0.449,
+            0.421
+          ],
+          "content": "sum = lambda x, y, z : x + y + z print(sum(100, 200, 300))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.446,
+            0.292,
+            0.485
+          ],
+          "content": "ể**OUTPUT**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.625,
+            0.245,
+            0.843,
+            0.299
+          ],
+          "level": 2,
+          "content": "Keyword argument"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.331,
+            0.91,
+            0.421
+          ],
+          "content": "sum = lambda x, y, z: x + y + z\nprint(sum(10, z = 20, y = 30))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.446,
+            0.764,
+            0.486
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.396,
+            0.583,
+            0.6,
+            0.635
+          ],
+          "level": 2,
+          "content": "Default argument"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.668,
+            0.748,
+            0.758
+          ],
+          "content": "sum = lambda x, y = 20, z = 30 : x + y + z print(sum(10))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.784,
+            0.529,
+            0.824
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.012,
+            0.929,
+            0.035,
+            0.98
+          ],
+          "content": "7"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.175,
+            0.348,
+            0.24
+          ],
+          "level": 2,
+          "content": "5. Lambda và map():"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.252,
+            0.091,
+            0.351
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.093,
+            0.254,
+            0.447,
+            0.391
+          ],
+          "content": "**Hàm map()** trong Python có 2 đối số là một hàm và 1 list, map áp dụng hàm này với các phần tử trong list."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.427,
+            0.108,
+            0.496
+          ],
+          "level": 2,
+          "content": "00 mbda là"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.052,
+            0.501,
+            0.078,
+            0.529
+          ],
+          "content": "00"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.061,
+            0.529,
+            0.429,
+            0.65
+          ],
+          "content": "\\begin{array}{l} \\text {a = [1, 2, 3, 4, 5]} \\\\ \\text {b = list(map(lambda x : x ** 2, a))} \\\\ \\text {print(b)} \\end{array}",
+          "image_source": "images/page_7_equation_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.204,
+            0.669,
+            0.284,
+            0.709
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.181,
+            0.721,
+            0.305,
+            0.765
+          ],
+          "content": "[1, 4, 9, 16, 25]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.473,
+            0.174,
+            0.79,
+            0.239
+          ],
+          "level": 2,
+          "content": "6. Lambda và filter():"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.476,
+            0.252,
+            0.529,
+            0.351
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_12.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.532,
+            0.252,
+            0.945,
+            0.431
+          ],
+          "content": "**Hàm filter()** tương tự như hàm map, khi apply các hàm trong filter với từng phần tử trong list mà giá trị của hàm trả về True thì filter lọc ra các phần tử này."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.484,
+            0.427,
+            0.551,
+            0.496
+          ],
+          "level": 2,
+          "content": "00 thon. L"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.494,
+            0.5,
+            0.521,
+            0.529
+          ],
+          "content": "amb"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.529,
+            0.901,
+            0.652
+          ],
+          "content": "a = [1, 2, -3, -4, 5]\nb = list(filter(lambda x : x > 0, a))\nprint(b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.69,
+            0.67,
+            0.769,
+            0.767
+          ],
+          "content": "**OUTPUT** [1, 2, 5]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.975
+          ],
+          "content": "8"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.07,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.147,
+            0.342,
+            0.205
+          ],
+          "level": 2,
+          "content": "7. If else và lambda:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.236,
+            0.092,
+            0.335
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.258,
+            0.541,
+            0.313
+          ],
+          "content": "Bạn có thể kết hợp if else trong lambda."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.044,
+            0.364,
+            0.108,
+            0.431
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.053,
+            0.436,
+            0.078,
+            0.463
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.471,
+            0.498,
+            0.551
+          ],
+          "content": "da là một cách đơn giản để định nghĩa một hàm trong PytfindMax = lambda x, y : x if x > y else y print(findMax(100, 200))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.246,
+            0.583,
+            0.322,
+            0.618
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.637,
+            0.301,
+            0.671
+          ],
+          "content": "200"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.547,
+            0.246,
+            0.966,
+            0.749
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_11.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.033,
+            0.976
+          ],
+          "content": "9"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.147,
+            0.547,
+            0.209
+          ],
+          "level": 2,
+          "content": "8. List comprehension và lambda:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.219,
+            0.222,
+            0.287,
+            0.327
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.279,
+            0.747,
+            0.404
+          ],
+          "content": "change = lambda l : [x for x in l if x >= 0] a = [1, 2, -3, -4, 5, -10, 12] print(change(a))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.396,
+            0.593,
+            0.434
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.506,
+            0.447,
+            0.598,
+            0.491
+          ],
+          "content": "L bd[1, 2, 5, 12]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.084,
+            0.551,
+            0.151,
+            0.655
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.649,
+            0.901,
+            0.725
+          ],
+          "content": "flatten = lambda big\\_list : [item for small\\_list in big\\_list for item in small\\_list] a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.722,
+            0.291,
+            0.76
+          ],
+          "content": "print(flatten(a))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.624,
+            0.725,
+            0.703,
+            0.763
+          ],
+          "content": "**OUTPUT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.777,
+            0.751,
+            0.819
+          ],
+          "content": "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.008,
+            0.929,
+            0.041,
+            0.973
+          ],
+          "content": "10in"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.043,
+            0.95,
+            0.102,
+            0.971
+          ],
+          "content": "protected.com"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:42:03",
+      "producer_application": "FPDF 1.7",
+      "page_count": 10,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

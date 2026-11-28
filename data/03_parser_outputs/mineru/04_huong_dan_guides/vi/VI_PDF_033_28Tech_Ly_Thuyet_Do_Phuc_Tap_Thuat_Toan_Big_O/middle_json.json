@@ -1,0 +1,2571 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:41:24",
+      "producer_application": "FPDF 1.7",
+      "page_count": 11,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.258,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.053,
+            0.349,
+            0.486,
+            0.647
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ĐỘ PHỨC TẠP CỦA THUẬT TOÁN (TIME COMPLEXITY)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.651,
+            0.319,
+            0.902,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "一<1>"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.95,
+            0.947,
+            0.992
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.931,
+            0.014,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.044,
+            0.164,
+            0.368,
+            0.229
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Đánh giá một thuật toán"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.043,
+            0.251,
+            0.482,
+            0.416
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Độ phức tạp về thời gian (time complexity) và độ phức tạp về không gian (space complexity) là 2 yếu tố để quyết định một thuật toán có thích hợp để giải quyết một bài toán nào đó hay không."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.043,
+            0.455,
+            0.482,
+            0.577
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trong đó độ phức tạp về thời gian được quan tâm nhiều hơn khi các bạn tham gia vào các contest về lập trình."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.042,
+            0.623,
+            0.483,
+            0.827
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Độ phức tạp thời gian là thời gian mà thuật toán của bạn cần để thực thi, nó là một hàm của input, tức là dựa vào đầu vào ta sẽ tính toán số lượng thao tác mà thuật toán cần thực thi từ đó tính ra được thời gian thực thi của thuật toán."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.5,
+            0.02,
+            0.976,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.5,
+                0.02,
+                0.976,
+                0.933
+              ],
+              "image_path": "images/page_1_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.95,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.258,
+            0.128
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.262,
+            0.2,
+            0.73,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trên các trang chấm bài online"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.042,
+            0.365,
+            0.322,
+            0.471
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Giới hạn thời gian của bài toán là "
+            },
+            {
+              "type": "text",
+              "content": "1 - 2s",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " đối với:"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.502,
+            0.163,
+            0.646
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.087,
+                0.502,
+                0.163,
+                0.646
+              ],
+              "image_path": "images/page_2_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.189,
+            0.497,
+            0.268,
+            0.647
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.189,
+                0.497,
+                0.268,
+                0.647
+              ],
+              "image_path": "images/page_2_image_5.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 6,
+              "bbox": [
+                0.145,
+                0.659,
+                0.234,
+                0.71
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "C/C++"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.355,
+            0.365,
+            0.649,
+            0.473
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Giới hạn thời gian của một bài toán là "
+            },
+            {
+              "type": "text",
+              "content": "4s",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " đối với:"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.383,
+            0.514,
+            0.45,
+            0.667
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.383,
+                0.514,
+                0.45,
+                0.667
+              ],
+              "image_path": "images/page_2_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 9,
+          "bbox": [
+            0.53,
+            0.515,
+            0.617,
+            0.666
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 9,
+              "bbox": [
+                0.53,
+                0.515,
+                0.617,
+                0.666
+              ],
+              "image_path": "images/page_2_image_9.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 10,
+              "bbox": [
+                0.529,
+                0.675,
+                0.624,
+                0.732
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Python"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.674,
+            0.366,
+            0.963,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thông thường "
+            },
+            {
+              "type": "text",
+              "content": "1s",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " các bạn có thể thực hiện được từ "
+            },
+            {
+              "type": "text",
+              "content": "10^8 - 5.10^8",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " phép toán."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 12,
+          "bbox": [
+            0.769,
+            0.54,
+            0.872,
+            0.721
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 12,
+              "bbox": [
+                0.769,
+                0.54,
+                0.872,
+                0.721
+              ],
+              "image_path": "images/page_2_image_12.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.012,
+            0.93,
+            0.035,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.822,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.658,
+            0.203
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Tính toán độ phức tạp và kí hiệu Big O:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.373,
+            0.283,
+            0.598,
+            0.352
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BIG O NOTION",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.08,
+            0.41,
+            0.148,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.08,
+                0.41,
+                0.148,
+                0.519
+              ],
+              "image_path": "images/page_3_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.036,
+            0.521,
+            0.233,
+            0.767
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Tính toán số lượng phép toán được thực hiện trong mỗi lần thuật toán được khởi chạy dựa trên input đầu vào của bài toán."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.317,
+            0.516,
+            0.384,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.317,
+                0.516,
+                0.384,
+                0.627
+              ],
+              "image_path": "images/page_3_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.265,
+            0.64,
+            0.476,
+            0.847
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Kí hiệu "
+            },
+            {
+              "type": "text",
+              "content": "Big O",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " mô tả trường hợp tệ nhất của thuật toán thông qua một hàm của input đầu vào n."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 9,
+          "bbox": [
+            0.585,
+            0.517,
+            0.651,
+            0.629
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 9,
+              "bbox": [
+                0.585,
+                0.517,
+                0.651,
+                0.629
+              ],
+              "image_path": "images/page_3_image_9.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.534,
+            0.633,
+            0.711,
+            0.801
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Độ phức tạp của thuật toán càng nhỏ thì thuật toán chạy càng nhanh"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 11,
+          "bbox": [
+            0.824,
+            0.411,
+            0.89,
+            0.52
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 11,
+              "bbox": [
+                0.824,
+                0.411,
+                0.89,
+                0.52
+              ],
+              "image_path": "images/page_3_image_11.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.758,
+            0.525,
+            0.957,
+            0.694
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thông qua kí hiệu của "
+            },
+            {
+              "type": "text",
+              "content": "Big O",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " ta có thể mô tả độ phức tạp của thuật toán là O(f(n))"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.109
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.037,
+            0.135,
+            0.657,
+            0.203
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Tính toán độ phức tạp và kí hiệu Big O:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.07,
+            0.359,
+            0.628,
+            0.471
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ mô tả độ phức tạp của thuật toán là O(f(n)):",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " O(n), O(1), O(logn), O(nlogn), O(n^2), O(n!)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.07,
+            0.491,
+            0.625,
+            0.708
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chú ý:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Trong trường hợp hàm f(n) có chứa hằng số và các bậc khác nhau của n thì ta chọn bậc cao nhất để đại diện cho hàm f(n). VD: O(n^2 +2n +3) được thay bằng O(n^2)."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.661,
+            0.344,
+            0.91,
+            0.757
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.661,
+                0.344,
+                0.91,
+                0.757
+              ],
+              "image_path": "images/page_4_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.014,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.019,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.034,
+            0.133,
+            0.874,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Một số ví dụ về phân tích độ phức tạp của thuật toán: a) Độ phức tạp của các phép toán và nhập xuất:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.286,
+            0.312,
+            0.714,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Code sau có độ phức tạp là O(1) vì nó thực thi một số phép toán cố định",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 6,
+          "bbox": [
+            0.361,
+            0.504,
+            0.634,
+            0.735
+          ],
+          "image_path": "images/page_5_equation_6.jpg",
+          "content": "\\begin{array}{l} \\text {a, b, c = 100, 200, 300} \\\\ \\text {sum = a + b + c} \\\\ \\text {print(sum)} \\\\ \\text {tich = a * b * c} \\\\ \\text {print(tich)} \\end{array}"
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.193,
+            0.781,
+            0.256,
+            0.895
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.193,
+                0.781,
+                0.256,
+                0.895
+              ],
+              "image_path": "images/page_5_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.267,
+            0.794,
+            0.832,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chú ý:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Các phép toán như +, -, *, /, % hay các phép gán, so sánh và nhập xuất đều được coi là O(1)."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.135,
+            0.873,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Một số ví dụ về phân tích độ phức tạp của thuật toán:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.211,
+            0.417,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Độ phức tạp của vòng lặp:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.04,
+            0.285,
+            0.104,
+            0.407
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.04,
+                0.285,
+                0.104,
+                0.407
+              ],
+              "image_path": "images/page_6_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.11,
+            0.292,
+            0.927,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Độ phức tạp của vòng lặp lồng nhau chính là số lượng của lặp của vòng lặp nhân với độ phức tạp của code bên trong vòng lặp."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.292,
+            0.477,
+            0.706,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Code sau đều có độ phức tạp là O(n)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.042,
+            0.595,
+            0.101,
+            0.687
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE 00"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.088,
+            0.679,
+            0.278,
+            0.796
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "n = 1000\nfor i in range(n):\n    #0(1) code"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 10,
+          "bbox": [
+            0.33,
+            0.596,
+            0.387,
+            0.657
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "equation",
+          "index": 11,
+          "bbox": [
+            0.373,
+            0.66,
+            0.526,
+            0.823
+          ],
+          "image_path": "images/page_6_equation_11.jpg",
+          "content": "\\begin{array}{l} \\text {n = 1000} \\\\ \\text {i = 1} \\\\ \\text {while i < = n:} \\\\ \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\quad \\end{array}"
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        },
+        {
+          "type": "equation",
+          "index": 13,
+          "bbox": [
+            0.649,
+            0.683,
+            0.747,
+            0.719
+          ],
+          "image_path": "images/page_6_equation_13.jpg",
+          "content": "n = 1 0 0 0 0"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.649,
+            0.721,
+            0.95,
+            0.803
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for i in range(3 * n + 2804):\n    print(i)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.013,
+            0.931,
+            0.034,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.034,
+            0.133,
+            0.874,
+            0.202
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Một số ví dụ về phân tích độ phức tạp của thuật toán:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.21,
+            0.418,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b) Độ phức tạp của vòng lặp:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.237,
+            0.284,
+            0.762,
+            0.394
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Code sau có độ phức tạp là O(nlogn), trong đó độ phức tạp của hàm nguyên tố là O(sqrt(n))",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.271,
+            0.411,
+            0.714,
+            0.934
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.271,
+                0.411,
+                0.714,
+                0.934
+              ],
+              "content": "import math\n#0(n)\ndef ngto1(n):\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return n > 1\n\n#0(sqrt(n))\ndef ngto2(n):\n    for i in range(2, math.isqrt(n) + 1):\n        if n % i == 0:\n            return False\n    return n > 1"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.018,
+            0.066,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.135,
+            0.874,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Một số ví dụ về phân tích độ phức tạp của thuật toán:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.21,
+            0.553,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "c) Độ phức tạp của vòng lặp lồng nhau:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.044,
+            0.275,
+            0.1,
+            0.377
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.044,
+                0.275,
+                0.1,
+                0.377
+              ],
+              "image_path": "images/page_8_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.105,
+            0.279,
+            0.918,
+            0.381
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trong trường hợp thuật toán của bạn sử dụng vòng lặp lồng nhau, độ phức tạp của thuật toán được tính bằng cách nhân số lần lặp của từng vòng lặp với nhau."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.059,
+            0.422,
+            0.319,
+            0.515
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Code sau có độ phức tạp là O(n*m) hay O(n^2)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.049,
+            0.529,
+            0.106,
+            0.589
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.057,
+            0.593,
+            0.079,
+            0.616
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 10,
+          "bbox": [
+            0.079,
+            0.607,
+            0.167,
+            0.643
+          ],
+          "image_path": "images/page_8_equation_10.jpg",
+          "content": "n = 1 0 0 0"
+        },
+        {
+          "type": "equation",
+          "index": 11,
+          "bbox": [
+            0.078,
+            0.647,
+            0.168,
+            0.683
+          ],
+          "image_path": "images/page_8_equation_11.jpg",
+          "content": "m = 3 0 0 0"
+        },
+        {
+          "type": "equation",
+          "index": 12,
+          "bbox": [
+            0.078,
+            0.685,
+            0.174,
+            0.725
+          ],
+          "image_path": "images/page_8_equation_12.jpg",
+          "content": "\\# 0 (n * m)"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 13,
+          "bbox": [
+            0.375,
+            0.419,
+            0.636,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Code sau có độ phức tạp là O(n^3)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 14,
+          "bbox": [
+            0.361,
+            0.509,
+            0.418,
+            0.568
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 15,
+          "bbox": [
+            0.366,
+            0.57,
+            0.648,
+            0.883
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 15,
+              "bbox": [
+                0.366,
+                0.57,
+                0.648,
+                0.883
+              ],
+              "content": "n = 1000\nm = 3000\nk = 5000\n#0(n * m * k)\nfor i in range(n):\n    for j in range(m):\n        for l in range(k):\n            #0(1) code"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 16,
+          "bbox": [
+            0.781,
+            0.481,
+            0.847,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CHÚ Ý"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.673,
+            0.565,
+            0.958,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Các bạn càng sử dụng nhiều vòng lặp lồng nhau thì thuật toán sẽ càng lớn và thời gian chạy càng lâu."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 18,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        },
+        {
+          "type": "footer",
+          "index": 20,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.135,
+            0.873,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Một số ví dụ về phân tích độ phức tạp của thuật toán:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.211,
+            0.789,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "d) Độ phức tạp khi chương trình chứa nhiều khối thực thi:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.044,
+            0.275,
+            0.099,
+            0.376
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.044,
+                0.275,
+                0.099,
+                0.376
+              ],
+              "image_path": "images/page_9_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.105,
+            0.279,
+            0.914,
+            0.38
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trong trường hợp thuật toán của bạn có nhiều khối thực thi thì độ phức tạp của thuật toán sẽ được xét bằng với độ phức tạp của khối có độ phức tạp lớn nhất"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.313,
+            0.419,
+            0.703,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Code sau có độ phức tạp là O(n^2)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.286,
+            0.501,
+            0.713,
+            0.917
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.286,
+                0.501,
+                0.713,
+                0.917
+              ],
+              "content": "n, m = map(int, input().split())\n#0(n^2)\nfor i in range(n):\n    for j in range(m):\n        print(i, j)\n#0(n)\nfor i in range(n + 29):\n    print(i)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.009,
+            0.929,
+            0.043,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.065,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.016,
+            0.984,
+            0.109
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.035,
+            0.135,
+            0.567,
+            0.203
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Một vài độ phức tạp thường gặp:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 4,
+          "bbox": [
+            0.065,
+            0.21,
+            0.934,
+            0.919
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 4,
+              "bbox": [
+                0.065,
+                0.21,
+                0.934,
+                0.919
+              ],
+              "image_path": "images/page_10_table_4.jpg",
+              "content": "<table><tbody><tr><td>Thao tác, thuật toán</td><td>Độ phức tạp</td></tr><tr><td>Sử dụng công thức toán học để tìm ra ngay lời giải</td><td>O(1)</td></tr><tr><td>Tìm kiếm nhị phân</td><td>O(logn)</td></tr><tr><td>Các thao tác của set, map, hàng đợi ưu tiên</td><td>O(logn)</td></tr><tr><td>Kiểm tra số nguyên tố, phân tích thừa số nguyên tố</td><td>O(sqrt(n)</td></tr><tr><td>Đọc n số từ input</td><td>O(n)</td></tr><tr><td>Duyệt qua mảng</td><td>O(n)</td></tr><tr><td>Hàm sort trong thư viện</td><td>O(nlogn)</td></tr><tr><td>Sàng số nguyên tố</td><td>O(nloglogn)</td></tr><tr><td>Duyệt các tập con cỡ k của tập có n phần tử</td><td>O(n^k)</td></tr><tr><td>Duyệt mọi tập con</td><td>O(2^n)</td></tr><tr><td>Duyệt mọi hoán vị</td><td>O(n!)</td></tr></tbody></table>"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.009,
+            0.929,
+            0.039,
+            0.974
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://soprotection.com?utm_source=signature",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "so"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.04,
+            0.949,
+            0.106,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "protection.com"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

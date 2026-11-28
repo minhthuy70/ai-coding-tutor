@@ -1,0 +1,433 @@
+## VÒNG LẶP
+
+## 《>
+
+## 1. Vòng lặp for và hàm range(): a) Vòng lặp for:
+
+![](images/page_1_image_4.jpg)
+
+Trong ngôn ngữ lập trình Python có chút khác so với các ngôn ngữ lập trình như C/C++, Java,...
+
+![](images/page_1_image_6.jpg)
+
+Thay vì duyệt qua các giá trị số thì Python sẽ lặp trên các iterable (list, tuple, string, set…). Thứ tự duyệt sẽ theo thứ tự xuất hiện trong iterable. Để thực hiện vòng lặp for ta sử dụng built-in function là range().
+
+![](images/page_1_image_8.jpg)
+
+## 1. Vòng lặp for và hàm range():
+
+## a) Vòng lặp for:
+
+![](images/page_2_image_5.jpg)
+
+be indented
+
+statement
+
+else:
+
+statement
+
+## 1. Vòng lặp for và hàm range():
+
+## b) Hàm range():
+
+![](images/page_3_image_4.jpg)
+
+Hàm range() sẽ sinh ra một dãy số và bạn sẽ sử dụng vòng for để duyệt qua từng số trong dãy đã sinh ra.
+
+**Cú pháp:** range (start, stop, step)
+
+**Các tham số: start:** Giá trị bắt đầu của dãy số (mặc định là 0). **stop:** Giá trị cuối cùng của dãy số (cận này không được lấy). **step:** Bước nhảy của dãy số (mặc định là 1).
+
+## 1. Vòng lặp for và hàm range():
+
+## b) Hàm range():
+
+00 EXAMPLE
+
+00
+
+**start = 0, stop = 5, step = 1**
+
+for i in range(5):print('28tech', end = ' ')
+
+**OUTPUT**
+
+28tech 28tech 28tech 28 tech 28tech
+
+00 EXAMPLE
+
+00
+
+**start = 0, stop = 5, step = 1**
+
+for i in range(0, 5, 1):
+
+**OUTPUT**
+
+28tech 28tech 28tech 28 tech 28tech
+
+## 1. Vòng lặp for và hàm range():
+
+## b) Hàm range():
+
+00 EXAMPLE
+
+00
+
+**start = 2, stop = 5, step = 1**
+
+for i in range(2, 5):print('28tech', end = ' ')
+
+**OUTPUT**
+
+28tech 28tech 28tech
+
+00 EXAMPLE
+
+00
+
+**start = 1, stop = 11, step = 2**
+
+for i in range(1, 11, 2): print(i, end = ' ')
+
+**OUTPUT**
+
+1 3 5 7 9
+
+## 1. Vòng lặp for và hàm range():
+
+**b) Hàm range():**
+
+00 EXAMPLE
+
+00
+
+**In ra các ước của N**
+
+$$
+n = 1 0 0
+$$
+
+$$
+\begin{array}{l} \text {for i in range(1, 100, 1):} \\ \text {if n \% i == 0:} \\ \text {print(i, end = '')} \end{array}
+$$
+
+**OUTPUT**
+
+1 2 4 5 10 20 25 50
+
+00 EXAMPLE 00
+
+**Duyệt các bội không âm của 3 nhỏ hơn hoặc bằng N**
+
+$$
+n = 3 1
+$$
+
+$$
+\begin{array}{l} \text {for i in range(0, 31, 3):} \\ \text {print(i, end = '')} \end{array}
+$$
+
+print()
+
+\# Cach khac
+
+$$
+\begin{array}{l} \text {for i in range(0, 31):} \\ \text {if i \% 3 == 0: print(i, end = '')} \end{array}
+$$
+
+**OUTPUT**
+
+0 3 6 9 12 15 18 21 24 27 30 0 3 6 9 12 15 18 21 24 27 30
+
+## 1. Vòng lặp for và hàm range():
+
+## b) Hàm range():
+
+QUIZ
+
+for i in range(1, 10, 3): print(i, end = ' ')
+
+**OUTPUT**
+
+**???**
+
+QUIZ
+
+for i in range(1, 10, 0): print(i, end = ' ')
+
+**OUTPUT**
+
+**???**
+
+![](images/page_8_image_0.jpg)
+
+## 1. Vòng lặp for và hàm range():
+
+## c) Vòng for lồng nhau:
+
+![](images/page_8_image_6.jpg)
+
+Vòng for lồng nhau (Nested loop) xuất hiện khi một câu lệnh bên trong vòng for này lại là một vòng for khác. Để hiểu được cách hoạt động của vòng for các bạn chỉ cần nhớ rằng mỗi vòng lặp của vòng for bên ngoài thì toàn bộ vòng for con bên trong sẽ được thực hiện.
+
+## 00 EXAMPLE
+
+for i in range(3): print('Vong for ngoai khi i = ', i) for j in range(2): print(i, j)
+
+## OUTPUT
+
+Vong for ngoai khi i = 0 0 0 0 1 Vong for ngoai khi i = 1 1 0 1 1 Vong for ngoai khi i = 2 2 0 2 1
+
+## 2. Câu lệnh break và continue:
+
+## a) Câu lệnh break:
+
+![](images/page_9_image_5.jpg)
+
+Câu lệnh break được sử dụng để kết thúc vòng lặp ngay lập tức, vòng lặp for sẽ kết thúc ngay tại thời điểm gặp câu lệnh break và tiếp tục các câu lệnh bên dưới vòng for. Thông thường thì câu lệnh break sẽ đi kèm theo một điều kiện kích hoạt.
+
+## 00 EXAMPLE 00
+
+for i in range(5): print(i, end = ' ') if i == 3: break print('28tech', end = ' ') print('Ket thuc')
+
+**OUTPUT**
+
+0 28tech 1 28tech 2 28tech 3 Ket thuc
+
+## 2. Câu lệnh break và continue:
+
+## b) Câu lệnh continue:
+
+![](images/page_10_image_5.jpg)
+
+Câu lệnh continue được dùng để bỏ qua lần lặp hiện tại và quay trở lại luôn vòng lặp tiếp theo. Các câu lệnh bên dưới continue ở trong vòng lặp sẽ được bỏ qua.
+
+00 EXAMPLE
+
+for i in range(5): print('28tech') continue print('python')
+
+## OUTPUT
+
+28tech
+
+28tech
+
+28tech
+
+28tech
+
+28tech
+
+## 3. Vòng lặp while:
+
+**a) Vòng lặp while, break, continue :**
+
+![](images/page_11_image_5.jpg)
+
+While được sử dụng khi bạn muốn thực hiện một tác vụ vô thời hạn, cho đến khi một điều kiện cụ thể được đáp ứng. Đây là một vòng lặp được kiểm soát theo điều kiện và thường sử dụng dụng khi chưa biết trước số lượng vòng lặp.
+
+## CÚ PHÁP
+
+while condition: #code when condtion is True
+
+else:
+
+#code while condition is False
+
+## 3. Vòng lặp while:
+
+**a) Vòng lặp while, break, continue :**
+
+Loop body must be indented while condition:
+
+statement
+
+statement
+
+else:
+
+statement
+
+![](images/page_12_image_11.jpg)
+
+Condition Any expression that evaluates to true or false
+
+Loop body
+
+Else caluse condition becomes false
+
+## 3. Vòng lặp while:
+
+**a) Vòng lặp while, break, continue :** 00 EXAMPLE
+
+$$
+n = 1
+$$
+
+## OUTPUT
+
+```txt
+1
+2
+3
+4
+Following statement
+```
+
+## 00 EXAMPLE
+
+```python
+n = 1
+while n < 5:
+    print(n)
+    n += 1
+else:
+    print('End')
+print('Following statement')
+```
+
+## OUTPUT
+
+```txt
+1
+2
+3
+4
+End
+Following statement
+```
+
+## 3. Vòng lặp while:
+
+**a) Vòng lặp while, break, continue :**
+
+00 EXAMPLE
+
+00
+
+**Tính tổng chữ số của số nguyên**
+
+$$
+n = 1 2 3 4 5
+$$
+
+$$
+\text {sum\_digit} = 0
+$$
+
+**OUTPUT**
+
+Sum : 15
+
+$$
+\text {sum\_digit} + = n \% 10
+$$
+
+$$
+n / / = 1 0
+$$
+
+00
+
+## Lật ngược một số nguyên
+
+$$
+n = 1 2 3 4 5
+$$
+
+$$
+\text{rev} = \emptyset
+$$
+
+**OUTPUT**
+
+while n != 0:
+
+rev : 54321
+
+$$
+\text{rev} = \text{rev} * 10 + n \% 10
+$$
+
+$$
+n / / = 1 0
+$$
+
+print('rev :', rev)
+
+```python
+i = 1
+while i <= 4:
+    print(i)
+    if i == 3: break
+    i += 1
+else:
+    print('End')
+print('Following statement')
+```
+
+## 3. Vòng lặp while:
+
+**a) Vòng lặp while, break, continue :**
+
+## Câu lệnh break sẽ làm else trong while không được thực hiện
+
+**OUTPUT**
+
+## 3. Vòng lặp while:
+
+**a) Vòng lặp while, break, continue :**
+
+## Câu lệnh continue
+
+```python
+i = 1
+while i <= 4:
+    print('28tech')
+    i += 1
+    continue
+    print('python')
+else:
+    print('End')
+print('Following statement')
+```
+
+## OUTPUT
+
+```txt
+28tech
+28tech
+28tech
+28tech
+End
+Following statement
+```
+
+## 3. Vòng lặp while:
+
+## b) Vòng lặp vĩnh viễn:
+
+![](images/page_17_image_5.jpg)
+
+Để tạo 1 vòng lặp vĩnh viễn thì bạn chỉ cần để điều kiện là True.
+
+## 00 EXAMPLE
+
+```python
+Vòng lặp sẽ lặp vĩnh viễn cho tới khi
+bạn nhập xấu là 28tech
+while True:
+    str = input('Enter your
+password :')
+    if str == '28tech':
+        print('OK')
+        break
+    else:
+        print('NOT OK')
+```
+
+**Yêu cầu nhập lại khi người dùng nhập 1 số nguyên âm hoặc số 0**
+
+while True: n = int(input('Enter a positive number :')) if n > 0: break print(n)

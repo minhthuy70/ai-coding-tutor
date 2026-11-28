@@ -1,0 +1,1931 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:40:45",
+      "producer_application": "FPDF 1.7",
+      "page_count": 9,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.258,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.042,
+            0.396,
+            0.493,
+            0.594
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MỘT SỐ HÀM TOÁN HỌC PHỔ BIẾN"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.651,
+            0.319,
+            0.9,
+            0.756
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "<1>"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.465,
+            0.165,
+            0.533,
+            0.284
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.465,
+                0.165,
+                0.533,
+                0.284
+              ],
+              "image_path": "images/page_1_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.19,
+            0.285,
+            0.813,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Để sử dụng các hàm toán học trong module ta import modulo math vào chương trình. Để nắm được các hàm, giá trị mà module này cung cấp các bạn có thể in ra bằng câu lệnh print(help(math))."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.367,
+            0.597,
+            0.648,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math print (help(math))"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.013,
+            0.93,
+            0.036,
+            0.981
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.823,
+            0.942,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.07,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.138,
+            0.225,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Hàm sqrt:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.29,
+            0.242,
+            0.709,
+            0.352
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm sqrt",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " tính căn bậc 2 của một số và trả về số ở dạng float."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.256,
+            0.405,
+            0.324,
+            0.48
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.266,
+            0.483,
+            0.293,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.346,
+            0.489,
+            0.502,
+            0.538
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.345,
+            0.542,
+            0.637,
+            0.592
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can1 = math.sqrt(100)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.345,
+            0.596,
+            0.623,
+            0.701
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can2 = math.sqrt(13) print(can1,can2)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.447,
+            0.729,
+            0.525,
+            0.767
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.365,
+            0.781,
+            0.608,
+            0.823
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10.0 3.605551275463989"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.013,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.07,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.137,
+            0.234,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Hàm isqrt:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.269,
+            0.233,
+            0.711,
+            0.344
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm isqrt",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " tính căn bậc 2 của một số nhưng làm tròn xuống số int gần nhất."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.712,
+            0.309,
+            0.733,
+            0.348
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.712,
+                0.309,
+                0.733,
+                0.348
+              ],
+              "image_path": "images/page_3_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.265,
+            0.453,
+            0.292,
+            0.484
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.363,
+            0.485,
+            0.52,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.363,
+            0.537,
+            0.668,
+            0.588
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can1 = math.isqrt(100)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.363,
+            0.592,
+            0.654,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can2 = math.isqrt(13)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.362,
+            0.645,
+            0.586,
+            0.696
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(can1,can2)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.445,
+            0.748,
+            0.523,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.462,
+            0.801,
+            0.507,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.014,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.07,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.138,
+            0.228,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Hàm pow:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.304,
+            0.239,
+            0.694,
+            0.348
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm pow(a,b)",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " trả về a lũy thừa b ở dạng float."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.277,
+            0.474,
+            0.304,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.349,
+            0.494,
+            0.628,
+            0.653
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math res = math.pow(2,10) print(res)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.444,
+            0.697,
+            0.521,
+            0.735
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.45,
+            0.75,
+            0.517,
+            0.789
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1024.0"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.15,
+            0.397,
+            0.22,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.15,
+                0.397,
+                0.22,
+                0.503
+              ],
+              "image_path": "images/page_5_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 3,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.036,
+            0.137,
+            0.341,
+            0.194
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Hàm ceil và floor:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.158,
+            0.239,
+            0.838,
+            0.354
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm ceil(a)",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " trả về số nguyên gần a nhất khi làm tròn lên. "
+            },
+            {
+              "type": "text",
+              "content": "Hàm floor(a)",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " trả về số nguyên gần a nhất khi làm tròn xuống."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.251,
+            0.503,
+            0.795,
+            0.663
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math print(math.ceil(3.6), math.ceil(2.3)) print(math.floor(3.6), math.floor(2.3))"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.444,
+            0.699,
+            0.522,
+            0.735
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.466,
+            0.759,
+            0.499,
+            0.795
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.016,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.137,
+            0.337,
+            0.194
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Hàm fabs và abs:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.19,
+            0.239,
+            0.816,
+            0.349
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm fabs",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " trả về trị tuyệt đối của một số ở dạng số thực, các bạn cũng có thể dùng built-in function là abs."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.349,
+            0.494,
+            0.642,
+            0.654
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math print(math.fabs(-50)) print(abs(-50))"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.443,
+            0.696,
+            0.523,
+            0.836
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " 50.0 50"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.013,
+            0.929,
+            0.035,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.07,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.137,
+            0.22,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6. Hàm gcd:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.206,
+            0.267,
+            0.776,
+            0.324
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm gcd(a,b)",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " trả về ước chung lớn nhất của a và b."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.277,
+            0.474,
+            0.305,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.349,
+            0.495,
+            0.669,
+            0.655
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math print(math.gcd(50,30)) print(math.gcd(-50,30))"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.443,
+            0.697,
+            0.522,
+            0.836
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " 10 10"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.015,
+            0.931,
+            0.033,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.709,
+            0.301,
+            0.73,
+            0.336
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.709,
+                0.301,
+                0.73,
+                0.336
+              ],
+              "image_path": "images/page_8_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.07,
+            0.044,
+            0.256,
+            0.112
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 3,
+          "bbox": [
+            0.93,
+            0.015,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.137,
+            0.29,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7. Hàm factorial:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.271,
+            0.268,
+            0.703,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Hàm factorial(n)",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " trả về giai thừa của n."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.268,
+            0.397,
+            0.335,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.268,
+                0.397,
+                0.335,
+                0.503
+              ],
+              "image_path": "images/page_8_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.34,
+            0.523,
+            0.688,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math print(math.factorial(10))"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.444,
+            0.697,
+            0.522,
+            0.735
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.439,
+            0.753,
+            0.525,
+            0.791
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3628800"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.015,
+            0.932,
+            0.031,
+            0.974
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.034,
+            0.95,
+            0.102,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "hyperlink",
+              "url": "https://inprotected.com?utm_source=signature",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "inprotected",
+                  "styles": [
+                    "superscript"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": ".com"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

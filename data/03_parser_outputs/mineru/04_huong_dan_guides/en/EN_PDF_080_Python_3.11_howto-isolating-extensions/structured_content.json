@@ -1,0 +1,1732 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.325,
+            0.115,
+            0.883,
+            0.171
+          ],
+          "level": 1,
+          "content": "Isolating Extension Modules Release 3.11.10"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.203,
+            0.881,
+            0.225
+          ],
+          "level": 2,
+          "content": "Guido van Rossum and the Python development team"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.718,
+            0.26,
+            0.882,
+            0.277
+          ],
+          "content": "**September 10, 2024**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.649,
+            0.281,
+            0.882,
+            0.297
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.681,
+            0.297,
+            0.882,
+            0.312
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.332,
+            0.228,
+            0.353
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.115,
+            0.374,
+            0.885,
+            0.727
+          ],
+          "content": "- **1 Who should read this** 2\n- **2 Background** 2\n- 2.1 Enter Per-Module State 2\n- 2.2 Isolated Module Objects 2\n- 2.3 Surprising Edge Cases 3\n- 3 **Making Modules Safe with Multiple Interpreters** 3\n- 3.1 Managing Global State 3\n- 3.2 Managing Per-Module State 4\n- 3.3 Opt-Out: Limiting to One Module Object per Process 4\n- 3.4 Module State Access from Functions 4\n- **4 Heap Types** 5\n- 4.1 Changing Static Types to Heap Types 5\n- 4.2 Defining Heap Types 5\n- 4.3 Garbage-Collection Protocol 6\n- 4.4 Module State Access from Classes 7\n- 4.5 Module State Access from Regular Methods 8\n- 4.6 Module State Access from Slot Methods, Getters and Setters 9\n- 4.7 Lifetime of the Module State 9\n- **5 Open Issues** 9\n- 5.1 Per-Class Scope 10\n- 5.2 Lossless Conversion to Heap Types 10"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.779,
+            0.195,
+            0.794
+          ],
+          "level": 2,
+          "content": "Abstract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.807,
+            0.874,
+            0.852
+          ],
+          "content": "Traditionally, state belonging to Python extension modules was kept in C static variables, which have processwide scope. This document describes problems of such per-process state and shows a safer way: per-module state."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.857,
+            0.872,
+            0.903
+          ],
+          "content": "The document also describes how to switch to per-module state where possible. This transition involves allocating space for that state, potentially switching from static types to heap types, and—perhaps most importantly— accessing per-module state from code."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.085,
+            0.391,
+            0.104
+          ],
+          "level": 2,
+          "content": "1 Who should read this"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.124,
+            0.882,
+            0.155
+          ],
+          "content": "This guide is written for maintainers of C-API extensions who would like to make that extension safer to use in applications where Python itself is used as a library."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.181,
+            0.288,
+            0.201
+          ],
+          "level": 2,
+          "content": "2 Background"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.221,
+            0.881,
+            0.251
+          ],
+          "content": "An interpreter is the context in which Python code runs. It contains configuration (e.g. the import path) and runtime state (e.g. the set of imported modules)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.257,
+            0.882,
+            0.285
+          ],
+          "content": "Python supports running multiple interpreters in one process. There are two cases to think about—users may run interpreters:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.292,
+            0.736,
+            0.307
+          ],
+          "content": "• in sequence, with several Py\\_InitializeEx()/Py\\_FinalizeEx() cycles, and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.314,
+            0.855,
+            0.328
+          ],
+          "content": "• in parallel, managing “sub-interpreters” using Py\\_NewInterpreter()/Py\\_EndInterpreter()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.335,
+            0.882,
+            0.378
+          ],
+          "content": "Both cases (and combinations of them) would be most useful when embedding Python within a library. Libraries generally shouldn’t make assumptions about the application that uses them, which include assuming a process-wide “main Python interpreter”."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.384,
+            0.883,
+            0.457
+          ],
+          "content": "Historically, Python extension modules don’t handle this use case well. Many extension modules (and even some stdlib modules) use per-process global state, because C static variables are extremely easy to use. Thus, data that should be specific to an interpreter ends up being shared between interpreters. Unless the extension developer is careful, it is very easy to introduce edge cases that lead to crashes when a module is loaded in more than one interpreter in the same process."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.462,
+            0.882,
+            0.492
+          ],
+          "content": "Unfortunately, per-interpreter state is not easy to achieve. Extension authors tend to not keep multiple interpreters in mind when developing, and it is currently cumbersome to test the behavior."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.515,
+            0.381,
+            0.532
+          ],
+          "level": 2,
+          "content": "2.1 Enter Per-Module State"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.547,
+            0.883,
+            0.605
+          ],
+          "content": "Instead of focusing on per-interpreter state, Python’s C API is evolving to better support the more granular per-module state. This means that C-level data is be attached to a module object. Each interpreter creates its own module object, keeping the data separate. For testing the isolation, multiple module objects corresponding to a single extension can even be loaded in a single interpreter."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.611,
+            0.883,
+            0.655
+          ],
+          "content": "Per-module state provides an easy way to think about lifetime and resource ownership: the extension module will initialize when a module object is created, and clean up when it’s freed. In this regard, a module is just like any other PyObject\\*; there are no “on interpreter shutdown” hooks to think—or forget—about."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.661,
+            0.882,
+            0.705
+          ],
+          "content": "Note that there are use cases for different kinds of “globals”: per-process, per-interpreter, per-thread or per-task state. With per-module state as the default, these are still possible, but you should treat them as exceptional cases: if you need them, you should give them additional care and testing. (Note that this guide does not cover them.)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.727,
+            0.391,
+            0.745
+          ],
+          "level": 2,
+          "content": "2.2 Isolated Module Objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.759,
+            0.882,
+            0.788
+          ],
+          "content": "The key point to keep in mind when developing an extension module is that several module objects can be created from a single shared library. For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.795,
+            0.567,
+            0.892
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> import sys\n>>> import binascii\n>>> old_binascii = binascii\n>>> del sys.modules['binascii']\n>>> import binascii  # create a new module object\n>>> old_binascii == binascii\nFalse\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.087,
+            0.882,
+            0.145
+          ],
+          "content": "As a rule of thumb, the two modules should be completely independent. All objects and state specific to the module should be encapsulated within the module object, not shared with other module objects, and cleaned up when the module object is deallocated. Since this just is a rule of thumb, exceptions are possible (see Managing Global State), but they will need more thought and attention to edge cases."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.15,
+            0.882,
+            0.18
+          ],
+          "content": "While some modules could do with less stringent restrictions, isolated modules make it easier to set clear expectations and guidelines that work across a variety of use cases."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.203,
+            0.38,
+            0.221
+          ],
+          "level": 2,
+          "content": "2.3 Surprising Edge Cases"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.235,
+            0.883,
+            0.293
+          ],
+          "content": "Note that isolated modules do create some surprising edge cases. Most notably, each module object will typically not share its classes and exceptions with other similar modules. Continuing from the example above, note that old\\_binascii.Error and binascii.Error are separate objects. In the following code, the exception is not caught:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.3,
+            0.526,
+            0.435
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> old_binascii.Error == binascii.Error\nFalse\n>>> try:\n...     old_binascii.unhexlify(b'qwertyuiop')\n... except binascii.Error:\n...     print('boo')\n...\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\nbinascii.Error: Non-hexadecimal digit found\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.447,
+            0.825,
+            0.463
+          ],
+          "content": "This is expected. Notice that pure-Python modules behave the same way: it is a part of how Python works."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.469,
+            0.878,
+            0.498
+          ],
+          "content": "The goal is to make extension modules safe at the C level, not to make hacks behave intuitively. Mutating sys. modules “manually” counts as a hack."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.526,
+            0.685,
+            0.546
+          ],
+          "level": 2,
+          "content": "3 Making Modules Safe with Multiple Interpreters"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.566,
+            0.377,
+            0.584
+          ],
+          "level": 2,
+          "content": "3.1 Managing Global State"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.598,
+            0.881,
+            0.627
+          ],
+          "content": "Sometimes, the state associated with a Python module is not specific to that module, but to the entire process (or something else “more global” than a module). For example:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.634,
+            0.476,
+            0.648
+          ],
+          "content": "• The readline module manages the terminal."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.655,
+            0.643,
+            0.67
+          ],
+          "content": "• A module running on a circuit board wants to control the on-board LED."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.676,
+            0.882,
+            0.72
+          ],
+          "content": "In these cases, the Python module should provide access to the global state, rather than own it. If possible, write the module so that multiple copies of it can access the state independently (along with other libraries, whether for Python or other languages). If that is not possible, consider explicit locking."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.726,
+            0.883,
+            0.768
+          ],
+          "content": "If it is necessary to use process-global state, the simplest way to avoid issues with multiple interpreters is to explicitly prevent a module from being loaded more than once per process—see Opt-Out: Limiting to One Module Object per Process."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.952
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.084,
+            0.424,
+            0.102
+          ],
+          "level": 2,
+          "content": "3.2 Managing Per-Module State"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.882,
+            0.145
+          ],
+          "content": "To use per-module state, use multi-phase extension module initialization. This signals that your module supports multiple interpreters correctly."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.151,
+            0.883,
+            0.21
+          ],
+          "content": "Set PyModuleDef.m\\_size to a positive number to request that many bytes of storage local to the module. Usually, this will be set to the size of some module-specific struct, which can store all of the module’s C-level state. In particular, it is where you should put pointers to classes (including exceptions, but excluding static types) and settings (e.g. csv’s field\\_size\\_limit) which the C code needs to function."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.229,
+            0.882,
+            0.273
+          ],
+          "content": "**Note:** Another option is to store state in the module’s \\_\\_dict\\_\\_, but you must avoid crashing when users modify dict\\_\\_ from Python code. This usually means error- and type-checking at the C level, which is easy to get wrong and hard to test sufficiently."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.279,
+            0.745,
+            0.295
+          ],
+          "content": "However, if module state is not needed in C code, storing it in \\_\\_dict\\_\\_ only is a good idea."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.315,
+            0.883,
+            0.373
+          ],
+          "content": "If the module state includes PyObject pointers, the module object must hold references to those objects and implement the module-level hooks m\\_traverse, m\\_clear and m\\_free. These work like tp\\_traverse, tp\\_clear and tp\\_free of a class. Adding them will require some work and make the code longer; this is the price for modules which can be unloaded cleanly."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.378,
+            0.882,
+            0.408
+          ],
+          "content": "An example of a module with per-module state is currently available as [xxlimited](https://github.com/python/cpython/blob/master/Modules/xxlimited.c); example module initialization shown at the bottom of the file."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.431,
+            0.66,
+            0.45
+          ],
+          "level": 2,
+          "content": "3.3 Opt-Out: Limiting to One Module Object per Process"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.463,
+            0.883,
+            0.493
+          ],
+          "content": "A non-negative PyModuleDef.m\\_size signals that a module supports multiple interpreters correctly. If this is not yet the case for your module, you can explicitly make your module loadable only once per process. For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.499,
+            0.781,
+            0.675
+          ],
+          "sub_type": "code",
+          "content": "```c\nstatic int loaded = 0;\n\nstatic int\nexec_module(PyObject* module)\n{\n    if (loaded) {\n        PyErr_SetString(PyExc_IrrortError,\n                                \"cannot load module more than once per process\");\n        return -1;\n    }\n    loaded = 1;\n    // ... rest of initialization\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.704,
+            0.51,
+            0.721
+          ],
+          "level": 2,
+          "content": "3.4 Module State Access from Functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.735,
+            0.882,
+            0.765
+          ],
+          "content": "Accessing the state from module-level functions is straightforward. Functions get the module object as their first argument; for extracting the state, you can use PyModule\\_GetState:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.773,
+            0.672,
+            0.895
+          ],
+          "sub_type": "code",
+          "content": "```c\nstatic PyObject *\nfunc(PyObject *module, PyObject *args)\n{\n    my_struct *state = (my_struct*)PyModule_GetState(module);\n    if (state == NULL) {\n        return NULL;\n    }\n    // ... rest of logic\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.94,
+            0.506,
+            0.951
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.1,
+            0.881,
+            0.131
+          ],
+          "content": "**Note:** PyModule\\_GetState may return NULL without setting an exception if there is no module state, i.e. PyModuleDef.m\\_size was zero. In your own module, you’re in control of m\\_size, so this is easy to prevent."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.171,
+            0.286,
+            0.192
+          ],
+          "level": 2,
+          "content": "4 Heap Types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.211,
+            0.882,
+            0.241
+          ],
+          "content": "Traditionally, types defined in C code are static; that is, static PyTypeObject structures defined directly in code and initialized using PyType\\_Ready()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.246,
+            0.883,
+            0.291
+          ],
+          "content": "Such types are necessarily shared across the process. Sharing them between module objects requires paying attention to any state they own or access. To limit the possible issues, static types are immutable at the Python level: for example, you can’t set str.myattribute = 123."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.296,
+            0.883,
+            0.355
+          ],
+          "content": "**CPython implementation detail:** Sharing truly immutable objects between interpreters is fine, as long as they don’t provide access to mutable objects. However, in CPython, every Python object has a mutable implementation detail: the reference count. Changes to the refcount are guarded by the GIL. Thus, code that shares any Python objects across interpreters implicitly depends on CPython’s current, process-wide GIL."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.36,
+            0.883,
+            0.404
+          ],
+          "content": "Because they are immutable and process-global, static types cannot access “their” module state. If any method of such a type requires access to module state, the type must be converted to a heap-allocated type, or heap type for short. These correspond more closely to classes created by Python’s class statement."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.41,
+            0.583,
+            0.426
+          ],
+          "content": "For new modules, using heap types by default is a good rule of thumb."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.448,
+            0.52,
+            0.467
+          ],
+          "level": 2,
+          "content": "4.1 Changing Static Types to Heap Types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.481,
+            0.882,
+            0.539
+          ],
+          "content": "Static types can be converted to heap types, but note that the heap type API was not designed for “lossless” conversion from static types—that is, creating a type that works exactly like a given static type. So, when rewriting the class definition in a new API, you are likely to unintentionally change a few details (e.g. pickleability or inherited slots). Always test the details that are important to you."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.544,
+            0.77,
+            0.56
+          ],
+          "content": "Watch out for the following two points in particular (but note that this is not a comprehensive list):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.566,
+            0.881,
+            0.595
+          ],
+          "content": "• Unlike static types, heap type objects are mutable by default. Use the Py\\_TPFLAGS\\_IMMUTABLETYPE flag to prevent mutability."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.601,
+            0.882,
+            0.631
+          ],
+          "content": "• Heap types inherit tp\\_new by default, so it may become possible to instantiate them from Python code. You can prevent this with the Py\\_TPFLAGS\\_DISALLOW\\_INSTANTIATION flag."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.653,
+            0.36,
+            0.672
+          ],
+          "level": 2,
+          "content": "4.2 Defining Heap Types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.685,
+            0.881,
+            0.716
+          ],
+          "content": "Heap types can be created by filling a PyType\\_Spec structure, a description or “blueprint” of a class, and calling PyType\\_FromModuleAndSpec() to construct a new class object."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.735,
+            0.882,
+            0.779
+          ],
+          "content": "**Note:** Other functions, like PyType\\_FromSpec(), can also create heap types, but PyType\\_FromModuleAndSpec() associates the module with the class, allowing access to the module state from methods."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.798,
+            0.881,
+            0.829
+          ],
+          "content": "The class should generally be stored in both the module state (for safe access from C) and the module’s \\_\\_dict\\_\\_ (for access from Python code)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.952
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.084,
+            0.43,
+            0.102
+          ],
+          "level": 2,
+          "content": "4.3 Garbage-Collection Protocol"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.881,
+            0.145
+          ],
+          "content": "Instances of heap types hold a reference to their type. This ensures that the type isn’t destroyed before all its instances are, but may result in reference cycles that need to be broken by the garbage collector."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.151,
+            0.881,
+            0.18
+          ],
+          "content": "To avoid memory leaks, instances of heap types must implement the garbage collection protocol. That is, heap types should:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.187,
+            0.44,
+            0.202
+          ],
+          "content": "• Have the Py\\_TPFLAGS\\_HAVE\\_GC flag."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.209,
+            0.881,
+            0.237
+          ],
+          "content": "• Define a traverse function using Py\\_tp\\_traverse, which visits the type (e.g. using Py\\_VISIT(Py\\_TYPE(self)))."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.243,
+            0.882,
+            0.272
+          ],
+          "content": "Please refer to the the documentation of Py\\_TPFLAGS\\_HAVE\\_GC and tp\\_traverse for additional considerations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.279,
+            0.882,
+            0.309
+          ],
+          "content": "The API for defining heap types grew organically, leaving it somewhat awkward to use in its current state. The following sections will guide you through common issues."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.331,
+            0.424,
+            0.347
+          ],
+          "level": 2,
+          "content": "tp\\_traverse in Python 3.8 and lower"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.361,
+            0.881,
+            0.391
+          ],
+          "content": "The requirement to visit the type from tp\\_traverse was added in Python 3.9. If you support Python 3.8 and lower, the traverse function must not visit the type, so it must be more complicated:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.398,
+            0.715,
+            0.494
+          ],
+          "sub_type": "code",
+          "content": "```c\nstatic int my_traverse(PyObject *self, visitproc visit, void *arg)\n{\n    if (Py_Version >= 0x03090000) {\n        Py_VISIT(Py_TYPE(self));\n    }\n    return 0;\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.506,
+            0.687,
+            0.522
+          ],
+          "content": "Unfortunately, Py\\_Version was only added in Python 3.11. As a replacement, use:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.528,
+            0.511,
+            0.543
+          ],
+          "content": "• PY\\_VERSION\\_HEX, if not using the stable ABI, or"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.55,
+            0.752,
+            0.565
+          ],
+          "content": "• sys.version\\_info (via PySys\\_GetObject() and PyArg\\_ParseTuple())."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.587,
+            0.323,
+            0.604
+          ],
+          "level": 2,
+          "content": "Delegating tp\\_traverse"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.617,
+            0.882,
+            0.647
+          ],
+          "content": "If your traverse function delegates to the tp\\_traverse of its base class (or another type), ensure that Py\\_TYPE(self) is visited only once. Note that only heap type are expected to visit the type in tp\\_traverse."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.652,
+            0.435,
+            0.668
+          ],
+          "content": "For example, if your traverse function includes:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.676,
+            0.435,
+            0.693
+          ],
+          "sub_type": "code",
+          "content": "```txt\nbase->tp_traverse(self, visit, arg)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.705,
+            0.526,
+            0.721
+          ],
+          "content": "…and base may be a static type, then it should also include:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.728,
+            0.68,
+            0.824
+          ],
+          "sub_type": "code",
+          "content": "```cpp\nif (base->tp_flags & Py_TPFLAGS_HEAPTYPE) {\n    // a heap type's tp_traverse already visited Py_TYPE(self)\n} else {\n    if (Py_Version >= 0x03090000) {\n        Py_VISIT(Py_TYPE(self));\n    }\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.836,
+            0.674,
+            0.853
+          ],
+          "content": "It is not necessary to handle the type’s reference count in tp\\_new and tp\\_clear."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.086,
+            0.295,
+            0.102
+          ],
+          "level": 2,
+          "content": "Defining tp\\_dealloc"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.116,
+            0.534,
+            0.13
+          ],
+          "content": "If your type has a custom tp\\_dealloc function, it needs to:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.137,
+            0.648,
+            0.152
+          ],
+          "content": "• call PyObject\\_GC\\_UnTrack() before any fields are invalidated, and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.159,
+            0.444,
+            0.173
+          ],
+          "content": "• decrement the reference count of the type."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.18,
+            0.882,
+            0.209
+          ],
+          "content": "To keep the type valid while tp\\_free is called, the type’s refcount needs to be decremented after the instance is deallocated. For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.218,
+            0.473,
+            0.326
+          ],
+          "sub_type": "code",
+          "content": "```c\nstatic void my_dealloc(PyObject *self)\n{\n    PyObject_GC_UnTrack(self);\n    ...\n    PyTypeObject *type = Py_TYPE(self);\n    type->tp_free(self);\n    Py_DECREF(type);\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.338,
+            0.882,
+            0.366
+          ],
+          "content": "The default tp\\_dealloc function does this, so if your type does not override tp\\_dealloc you don’t need to add it."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.391,
+            0.312,
+            0.406
+          ],
+          "level": 2,
+          "content": "Not overriding tp\\_free"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.42,
+            0.871,
+            0.436
+          ],
+          "content": "The tp\\_free slot of a heap type must be set to PyObject\\_GC\\_Del(). This is the default; do not override it."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.458,
+            0.319,
+            0.474
+          ],
+          "level": 2,
+          "content": "Avoiding PyObject\\_New"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.488,
+            0.565,
+            0.503
+          ],
+          "content": "GC-tracked objects need to be allocated using GC-aware functions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.51,
+            0.558,
+            0.524
+          ],
+          "content": "If you use use PyObject\\_New() or PyObject\\_NewVar():"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.531,
+            0.878,
+            0.56
+          ],
+          "content": "• Get and call type’s tp\\_alloc slot, if possible. That is, replace TYPE \\*o = PyObject\\_New(TYPE, typeobj) with:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.569,
+            0.524,
+            0.584
+          ],
+          "sub_type": "code",
+          "content": "```javascript\nTYPE *o = typeobj->tp_alloc(typeobj, 0);\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.598,
+            0.881,
+            0.626
+          ],
+          "content": "Replace o = PyObject\\_NewVar(TYPE, typeobj, size) with the same, but use size instead of the 0."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.634,
+            0.882,
+            0.663
+          ],
+          "content": "• If the above is not possible (e.g. inside a custom tp\\_alloc), call PyObject\\_GC\\_New() or PyObject\\_GC\\_NewVar():"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.157,
+            0.671,
+            0.614,
+            0.714
+          ],
+          "sub_type": "code",
+          "content": "```txt\nTYPE *o = PyObject_GC_New(TYPE, typeobj);\nTYPE *o = PyObject_GC_NewVar(TYPE, typeobj, size);\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.744,
+            0.492,
+            0.761
+          ],
+          "level": 2,
+          "content": "4.4 Module State Access from Classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.776,
+            0.883,
+            0.818
+          ],
+          "content": "If you have a type object defined with PyType\\_FromModuleAndSpec(), you can call PyType\\_GetModule() to get the associated module, and then PyModule\\_GetState() to get the module’s state."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.826,
+            0.882,
+            0.855
+          ],
+          "content": "To save a some tedious error-handling boilerplate code, you can combine these two steps with PyType\\_GetModuleState(), resulting in:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.091,
+            0.654,
+            0.149
+          ],
+          "sub_type": "code",
+          "content": "```c\nmy_struct *state = (my_struct*)PyType_GetModuleState(type);\nif (state === NULL) {\n    return NULL;\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.177,
+            0.579,
+            0.195
+          ],
+          "level": 2,
+          "content": "4.5 Module State Access from Regular Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.209,
+            0.882,
+            0.252
+          ],
+          "content": "Accessing the module-level state from methods of a class is somewhat more complicated, but is possible thanks to API introduced in Python 3.9. To get the state, you need to first get the defining class, and then get the module state from it."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.259,
+            0.881,
+            0.289
+          ],
+          "content": "The largest roadblock is getting the class a method was defined in, or that method’s “defining class” for short. The defining class can have a reference to the module it is part of."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.295,
+            0.881,
+            0.324
+          ],
+          "content": "Do not confuse the defining class with Py\\_TYPE(self). If the method is called on a subclass of your type, Py\\_TYPE(self) will refer to that subclass, which may be defined in different module than yours."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.343,
+            0.881,
+            0.374
+          ],
+          "content": "**Note:** The following Python code can illustrate the concept. Base.get\\_defining\\_class returns Base even if type(self) == Sub:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.381,
+            0.421,
+            0.504
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Base:\n    def get_type_of_self(self):\n        return type(self)\n\n    def get_defining_class(self):\n        return __class_\n\nclass Sub(Base):\n    pass\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.529,
+            0.874,
+            0.559
+          ],
+          "content": "For a method to get its “defining class”, it must use the METH\\_METHOD | METH\\_FASTCALL METH\\_KEYWORDS calling convention and the corresponding PyCMethod signature:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.565,
+            0.765,
+            0.649
+          ],
+          "sub_type": "code",
+          "content": "```txt\nPyObject *PyCMethod(\n    PyObject *self,          // object the method was called on\n    PyTypeObject *defining_class,  // defining class\n    PyObject *const *args,       // C array of arguments\n    Py_ssize_t nargs,           // length of \"args\"\n    PyObject *kwnames)        // NULL, or dict of keyword arguments\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.661,
+            0.869,
+            0.678
+          ],
+          "content": "Once you have the defining class, call PyType\\_GetModuleState() to get the state of its associated module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.682,
+            0.209,
+            0.697
+          ],
+          "content": "For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.704,
+            0.78,
+            0.906
+          ],
+          "sub_type": "code",
+          "content": "```c\nstatic PyObject *\nexample_method(PyObject *self,\n    PyTypeObject *defining_class,\n    PyObject *const *args,\n    Py_ssize_t nargs,\n    PyObject *kwnames)\n{\n    my_struct *state = (my_struct*)PyType_GetModuleState(defining_class);\n    if (state === NULL) {\n        return NULL;\n    }\n    ... // rest of logic\n}\n\nPyDoc_STRVAR(example_method_doc, \"...\");\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.748,
+            0.904,
+            0.88,
+            0.916
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.092,
+            0.883,
+            0.211
+          ],
+          "sub_type": "code",
+          "content": "```c\nstatic PyMethodDef my_methods[] = {\n    {\"example_method\",\n        (PyCFunction)(void(*)(void))example_method,\n        METH_METHOD|METH_FASTCALL|METH_KEYWORDS,\n        example_method_doc}\n    {NULL},\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.087,
+            0.881,
+            0.101
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.239,
+            0.738,
+            0.257
+          ],
+          "level": 2,
+          "content": "4.6 Module State Access from Slot Methods, Getters and Setters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.285,
+            0.353,
+            0.301
+          ],
+          "content": "**Note:** This is new in Python 3.11."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.321,
+            0.881,
+            0.365
+          ],
+          "content": "Slot methods—the fast C equivalents for special methods, such as nb\\_add for \\_\\_add\\_\\_ or tp\\_new for initialization—have a very simple API that doesn’t allow passing in the defining class, unlike with PyCMethod. The same goes for getters and setters defined with PyGetSetDef."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.371,
+            0.881,
+            0.4
+          ],
+          "content": "To access the module state in these cases, use the PyType\\_GetModuleByDef() function, and pass in the module definition. Once you have the module, call PyModule\\_GetState() to get the state:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.407,
+            0.744,
+            0.478
+          ],
+          "sub_type": "code",
+          "content": "```objectivec\nPyObject *module = PyType_GetModuleByDef(Py_TYPE(self), &module_def);\nmy_struct *state = (my_struct*)PyModule_GetState(module);\nif (state === NULL) {\n    return NULL;\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.49,
+            0.881,
+            0.52
+          ],
+          "content": "PyType\\_GetModuleByDef() works by searching the method resolution order (i.e. all superclasses) for the first superclass that has a corresponding module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.539,
+            0.881,
+            0.584
+          ],
+          "content": "**Note:** In very exotic cases (inheritance chains spanning multiple modules created from the same definition), PyType\\_GetModuleByDef() might not return the module of the true defining class. However, it will always return a module with the same definition, ensuring a compatible C memory layout."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.621,
+            0.428,
+            0.638
+          ],
+          "level": 2,
+          "content": "4.7 Lifetime of the Module State"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.652,
+            0.881,
+            0.682
+          ],
+          "content": "When a module object is garbage-collected, its module state is freed. For each pointer to (a part of) the module state, you must hold a reference to the module object."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.688,
+            0.881,
+            0.732
+          ],
+          "content": "Usually this is not an issue, because types created with PyType\\_FromModuleAndSpec(), and their instances, hold a reference to the module. However, you must be careful in reference counting when you reference module state from other places, such as callbacks for external libraries."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.759,
+            0.291,
+            0.779
+          ],
+          "level": 2,
+          "content": "5 Open Issues"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.798,
+            0.572,
+            0.814
+          ],
+          "content": "Several issues around per-module state and heap types are still open."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.819,
+            0.666,
+            0.835
+          ],
+          "content": "Discussions about improving the situation are best held on the [capi-sig mailing list](https://mail.python.org/mailman3/lists/capi-sig.python.org/)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.085,
+            0.32,
+            0.101
+          ],
+          "level": 2,
+          "content": "5.1 Per-Class Scope"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.883,
+            0.159
+          ],
+          "content": "It is currently (as of Python 3.11) not possible to attach state to individual types without relying on CPython implementation details (which may change in the future—perhaps, ironically, to allow a proper solution for per-class scope)."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.183,
+            0.503,
+            0.201
+          ],
+          "level": 2,
+          "content": "5.2 Lossless Conversion to Heap Types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.215,
+            0.882,
+            0.244
+          ],
+          "content": "The heap type API was not designed for “lossless” conversion from static types; that is, creating a type that works exactly like a given static type."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "10"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Isolating Extension Modules",
+      "authors": [
+        "Guido van Rossum and the Python development team"
+      ],
+      "created_at": "2024-09-10T05:48:27-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20220710)",
+      "page_count": 10,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

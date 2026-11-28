@@ -1,0 +1,2838 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:42:20",
+      "producer_application": "FPDF 1.7",
+      "page_count": 11,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.019,
+            0.258,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.064,
+            0.433,
+            0.483,
+            0.541
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LIST SLICING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.651,
+            0.319,
+            0.903,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "<1>"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.991
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 2,
+          "bbox": [
+            0.465,
+            0.073,
+            0.534,
+            0.191
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 2,
+              "bbox": [
+                0.465,
+                0.073,
+                0.534,
+                0.191
+              ],
+              "image_path": "images/page_1_image_2.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.224,
+            0.193,
+            0.779,
+            0.355
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python list slicing",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " là một kỹ thuật giúp các bạn có thể truy cập vào 1 khoảng các phần tử trong list thông qua toán tử."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.367,
+            0.431,
+            0.631,
+            0.495
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sử dụng list slicing:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.124,
+            0.533,
+            0.877,
+            0.635
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Với toán tử:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Bạn có thể xác định chỉ số bắt đầu, chỉ số kết thúc, bước nhảy của các phần tử trong list mà bạn muốn cắt ra."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.125,
+            0.647,
+            0.468,
+            0.698
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cú pháp:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " List[start, stop, step]."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.125,
+            0.709,
+            0.876,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Giá trị trả về:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Một list chứa các phần tử trong List bắt đầu từ chỉ số start, kết thúc ở chỉ số stop - 1 với bước nhảy là step. Nếu không chỉ rõ step thì giá trị của step mặc định là 1."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.135,
+            0.498,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Slicing với chỉ số không âm:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.257,
+            0.546,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.32,
+            0.384,
+            0.672,
+            0.653
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a = [2, 3, 1, 5, 7, 4, 3]\nb = a[0 : 4 : 1]\nprint(b)\nc = a[0 : 4]\nprint(c)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.46,
+            0.683,
+            0.54,
+            0.722
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.454,
+            0.739,
+            0.546,
+            0.834
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[2, 3, 1, 5] [2, 3, 1, 5]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.139,
+            0.5,
+            0.205
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Slicing với chỉ số không âm:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.038,
+            0.223,
+            0.092,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.038,
+                0.223,
+                0.092,
+                0.323
+              ],
+              "image_path": "images/page_3_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.095,
+            0.225,
+            0.497,
+            0.495
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nếu không có tham số stop thì mặc định giá trị của stop sẽ là chỉ số cuối cùng trong mảng, nếu không có tham số start thì giá trị mặc định của start sẽ là 0."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.062,
+            0.518,
+            0.129,
+            0.624
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE 00"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.134,
+            0.572,
+            0.427,
+            0.623
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a = [2, 3, 1, 5, 7, 4, 3]"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 8,
+          "bbox": [
+            0.135,
+            0.619,
+            0.266,
+            0.664
+          ],
+          "image_path": "images/page_3_equation_8.jpg",
+          "content": "b = a [ 3 : ]"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.135,
+            0.665,
+            0.231,
+            0.708
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(b)"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 10,
+          "bbox": [
+            0.133,
+            0.707,
+            0.266,
+            0.799
+          ],
+          "image_path": "images/page_3_equation_10.jpg",
+          "content": "\\begin{array}{l} \\text {c = a[:4]} \\\\ \\text {print(c)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.316,
+            0.639,
+            0.397,
+            0.681
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 12,
+          "bbox": [
+            0.314,
+            0.688,
+            0.398,
+            0.775
+          ],
+          "image_path": "images/page_3_equation_12.jpg",
+          "content": "\\begin{array}{c} \\hline [ 5, 7, 4, 3 ] \\\\ [ 2, 3, 1, 5 ] \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.54,
+            0.197,
+            0.609,
+            0.303
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE 0D"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 14,
+          "bbox": [
+            0.598,
+            0.251,
+            0.927,
+            0.476
+          ],
+          "image_path": "images/page_3_equation_14.jpg",
+          "content": "\\begin{array}{l} \\text {Bước nhảy là 2:} \\\\ \\text {a = [2, 3, 1, 5, 7, 4, 3]} \\\\ \\text {b = a[0 : 5 : 2]} \\\\ \\text {print(b)} \\end{array}\\quad \\begin{array}{l} \\text {OUTPUT} \\\\ \\text {[2, 1, 7]} \\end{array}"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 15,
+          "bbox": [
+            0.715,
+            0.552,
+            0.794,
+            0.609
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chú ý:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.567,
+            0.627,
+            0.939,
+            0.846
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nếu start quá nhỏ (nhỏ hơn 0) hoặc stop quá lớn thì chỉ start sẽ bắt đầu từ 0 và stop sẽ kết thúc tại len của list."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 18,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.994
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.109
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.141,
+            0.398,
+            0.205
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Slicing với chỉ số âm:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 4,
+          "bbox": [
+            0.092,
+            0.259,
+            0.906,
+            0.389
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 4,
+              "bbox": [
+                0.092,
+                0.259,
+                0.906,
+                0.389
+              ],
+              "image_path": "images/page_4_table_4.jpg",
+              "content": "<table><tbody><tr><td>a</td><td>2</td><td>3</td><td>1</td><td>5</td><td>7</td><td>4</td><td>3</td></tr><tr><td>Negative index</td><td>-7</td><td>-6</td><td>-5</td><td>-4</td><td>-3</td><td>-2</td><td>-1</td></tr></tbody></table>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.07,
+            0.478,
+            0.137,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.238,
+            0.533,
+            0.316,
+            0.588
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ :",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 7,
+          "bbox": [
+            0.13,
+            0.597,
+            0.421,
+            0.644
+          ],
+          "image_path": "images/page_4_equation_7.jpg",
+          "content": "a = [ 2, 3, 1, 5, 7, 4, 3 ]"
+        },
+        {
+          "type": "equation",
+          "index": 8,
+          "bbox": [
+            0.13,
+            0.643,
+            0.295,
+            0.686
+          ],
+          "image_path": "images/page_4_equation_8.jpg",
+          "content": "b = a [ - 4: - 1 ]"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.13,
+            0.687,
+            0.226,
+            0.732
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.334,
+            0.659,
+            0.414,
+            0.698
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.339,
+            0.71,
+            0.403,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[5, 7, 4]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.504,
+            0.439,
+            0.572,
+            0.544
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.608,
+            0.487,
+            0.815,
+            0.596
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Kết hợp chỉ số âm và chỉ số dương:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 14,
+          "bbox": [
+            0.558,
+            0.604,
+            0.851,
+            0.651
+          ],
+          "image_path": "images/page_4_equation_14.jpg",
+          "content": "a = [ 2, 3, 1, 5, 7, 4, 3 ]"
+        },
+        {
+          "type": "equation",
+          "index": 15,
+          "bbox": [
+            0.559,
+            0.651,
+            0.711,
+            0.693
+          ],
+          "image_path": "images/page_4_equation_15.jpg",
+          "content": "b = a [ 1: - 2 ]"
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.559,
+            0.694,
+            0.653,
+            0.739
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.749,
+            0.675,
+            0.834,
+            0.772
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " [3, 1, 5, 7]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 18,
+          "bbox": [
+            0.015,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 20,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.07,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.143,
+            0.294,
+            0.207
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Lật ngược list:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.042,
+            0.226,
+            0.097,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.042,
+                0.226,
+                0.097,
+                0.325
+              ],
+              "image_path": "images/page_5_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.227,
+            0.495,
+            0.387
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Để lật ngược list các bạn chỉ cần bỏ trống phần start và stop, phần step có giá trị là -1."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.042,
+            0.399,
+            0.106,
+            0.467
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.052,
+            0.473,
+            0.077,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.078,
+            0.495,
+            0.457,
+            0.539
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a = [2, 3, 1, \"python\", \"28tech\"]"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 9,
+          "bbox": [
+            0.079,
+            0.542,
+            0.205,
+            0.583
+          ],
+          "image_path": "images/page_5_equation_9.jpg",
+          "content": "b = a [: := - 1 ]"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.079,
+            0.586,
+            0.171,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.305,
+            0.577,
+            0.382,
+            0.612
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.241,
+            0.634,
+            0.445,
+            0.676
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "['28tech', 'python', 1, 3, 2]"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 13,
+          "bbox": [
+            0.568,
+            0.166,
+            0.885,
+            0.815
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 13,
+              "bbox": [
+                0.568,
+                0.166,
+                0.885,
+                0.815
+              ],
+              "image_path": "images/page_5_image_13.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.016,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.067,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.016,
+            0.984,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.037,
+            0.141,
+            0.832,
+            0.208
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Thay đổi giá trị của nhiều phần tử trong một đoạn:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.043,
+            0.219,
+            0.099,
+            0.319
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.043,
+                0.219,
+                0.099,
+                0.319
+              ],
+              "image_path": "images/page_6_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.22,
+            0.916,
+            0.324
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Bạn có thể thay đổi hoặc xóa 1 loạt các phần tử trong 1 đoạn xác định bằng list slicing. Chú ý các bạn chỉ có thể gán 1 iterable cho slice mà bạn cắt ra."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.295,
+            0.359,
+            0.703,
+            0.469
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ: Thay đổi các phần tử từ chỉ số 2 tới chỉ số 4 bằng 1 phần tử mới"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.106,
+            0.483,
+            0.173,
+            0.554
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.525,
+            0.484,
+            0.593,
+            0.554
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.557,
+            0.143,
+            0.587
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 10,
+          "bbox": [
+            0.154,
+            0.578,
+            0.413,
+            0.715
+          ],
+          "image_path": "images/page_6_equation_10.jpg",
+          "content": "\\begin{array}{l} \\text {a = [2, 3, 1, 5, 1, 2]} \\\\ \\text {a[2:5] = [\"28tech\"]} \\\\ \\text {print(a)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.241,
+            0.731,
+            0.321,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.213,
+            0.788,
+            0.35,
+            0.832
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[2, 3, '28tech', 2]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.534,
+            0.557,
+            0.562,
+            0.587
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 14,
+          "bbox": [
+            0.561,
+            0.579,
+            0.843,
+            0.715
+          ],
+          "image_path": "images/page_6_equation_14.jpg",
+          "content": "\\begin{array}{l} \\text {a = [2, 3, 1, 5, 1, 2]} \\\\ \\text {a[2:5] = [100, 200, 300]} \\\\ \\text {print(a)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.672,
+            0.73,
+            0.753,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.621,
+            0.788,
+            0.807,
+            0.833
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[2, 3, 100, 200, 300, 2]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.013,
+            0.931,
+            0.034,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 18,
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.07,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.039,
+            0.142,
+            0.486,
+            0.206
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Chèn và xóa với list slicing:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.161,
+            0.306,
+            0.369,
+            0.357
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thêm vào đầu list",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 5,
+          "bbox": [
+            0.119,
+            0.393,
+            0.398,
+            0.552
+          ],
+          "image_path": "images/page_7_equation_5.jpg",
+          "content": "\\begin{array}{l} \\text {a = ['x', 'y', 'z']} \\\\ \\text {a[:0] = [10, 20, 30]} \\\\ \\text {print(a)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.22,
+            0.581,
+            0.298,
+            0.619
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.176,
+            0.639,
+            0.342,
+            0.683
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[10, 20, 30, 'x', 'y', 'z']"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.63,
+            0.306,
+            0.842,
+            0.357
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thêm vào cuối list",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 9,
+          "bbox": [
+            0.57,
+            0.393,
+            0.919,
+            0.553
+          ],
+          "image_path": "images/page_7_equation_9.jpg",
+          "content": "\\begin{array}{l} \\text {a = ['x', 'y', 'z']} \\\\ \\text {a[len(a):] = [10, 20, 30]} \\\\ \\text {print(a)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.692,
+            0.581,
+            0.771,
+            0.618
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.647,
+            0.639,
+            0.814,
+            0.683
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "['x', 'y', 'z', 10, 20, 30]"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.142,
+            0.486,
+            0.207
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Chèn và xóa với list slicing:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.392,
+            0.305,
+            0.608,
+            0.361
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thêm vào giữa list"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.105,
+            0.406,
+            0.172,
+            0.481
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.481,
+            0.143,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 7,
+          "bbox": [
+            0.147,
+            0.503,
+            0.427,
+            0.639
+          ],
+          "image_path": "images/page_8_equation_7.jpg",
+          "content": "\\begin{array}{l} \\text {a = ['x', 'y', 'z']} \\\\ \\text {a[1:1] = [100, 200, 300]} \\\\ \\text {print(a)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.241,
+            0.655,
+            0.321,
+            0.694
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.181,
+            0.712,
+            0.381,
+            0.757
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "['x', 100, 200, 300, 'y', 'z']"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.524,
+            0.407,
+            0.592,
+            0.48
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.534,
+            0.481,
+            0.561,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 12,
+          "bbox": [
+            0.562,
+            0.503,
+            0.844,
+            0.64
+          ],
+          "image_path": "images/page_8_equation_12.jpg",
+          "content": "\\begin{array}{l} \\text {a = ['x', 'y', 'z', 't']} \\\\ \\text {a[1:2] = [100, 200, 300]} \\\\ \\text {print(a)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.672,
+            0.655,
+            0.752,
+            0.694
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.615,
+            0.712,
+            0.813,
+            0.757
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "['x', 100, 200, 300, 'z', 't']"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 17,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.044,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.142,
+            0.486,
+            0.206
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Chèn và xóa với list slicing:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.199,
+            0.287,
+            0.409,
+            0.341
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Xóa nhiều phần tử",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.081,
+            0.379,
+            0.532,
+            0.611
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Xóa các phần tử từ chỉ số 1 tới chỉ số 3 a = ['x', 'y', 'z', 't', 'u', 'v'] a[1:4] = [] print(a)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.26,
+            0.638,
+            0.338,
+            0.675
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.259,
+            0.696,
+            0.338,
+            0.739
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "['x', 'u', 'v']"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.573,
+            0.261,
+            0.943,
+            0.836
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.573,
+                0.261,
+                0.943,
+                0.836
+              ],
+              "image_path": "images/page_9_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.007,
+            0.928,
+            0.042,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.142,
+            0.514,
+            0.209
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6. Copy một list (shallow copy):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.257,
+            0.546,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ví dụ:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.271,
+            0.381,
+            0.726,
+            0.642
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a = ['x', 'y', 'z', 't', 'u', 'v'] b = a[:] print(b) print(b == a) print(b is a)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.46,
+            0.661,
+            0.539,
+            0.699
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.429,
+            0.717,
+            0.58,
+            0.838
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "['x', 'y', 'z', 't', 'u', 'v'] True False"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.007,
+            0.929,
+            0.039,
+            0.973
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11s"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.039,
+            0.951,
+            0.106,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "oprotection.com"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

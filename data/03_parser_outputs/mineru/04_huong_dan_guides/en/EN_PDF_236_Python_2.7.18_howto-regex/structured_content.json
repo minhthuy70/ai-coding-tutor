@@ -1,0 +1,3326 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.326,
+            0.121,
+            0.887,
+            0.182
+          ],
+          "level": 1,
+          "content": "Regular Expression HOWTO Release 2.7.18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.217,
+            0.885,
+            0.263
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.3,
+            0.885,
+            0.317
+          ],
+          "content": "**May 20, 2020**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.322,
+            0.886,
+            0.339
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.685,
+            0.339,
+            0.885,
+            0.355
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.375,
+            0.224,
+            0.398
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.111,
+            0.419,
+            0.888,
+            0.865
+          ],
+          "content": "- **1 Introduction** 2\n- **2 Simple Patterns** 2\n- 2.1 Matching Characters 2\n- 2.2 Repeating Things 3\n- **3 Using Regular Expressions** 4\n- 3.1 Compiling Regular Expressions 4\n- 3.2 The Backslash Plague 5\n- 3.3 Performing Matches 5\n- 3.4 Module-Level Functions 7\n- 3.5 Compilation Flags 8\n- **4 More Pattern Power** 9\n- 4.1 More Metacharacters 9\n- 4.2 Grouping 11\n- 4.3 Non-capturing and Named Groups 12\n- 4.4 Lookahead Assertions 14\n- **5 Modifying Strings 15**\n- 5.1 Splitting Strings 15\n- 5.2 Search and Replace 16\n- **6 Common Problems 17**\n- 6.1 Use String Methods 17\n- 6.2 match() versus search() 18\n- 6.3 Greedy versus Non-Greedy 18\n- 6.4 Using re.VERBOSE 19\n- **7 Feedback 19**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.155,
+            0.092,
+            0.426,
+            0.107
+          ],
+          "content": "Author A.M. Kuchling <[amk@amk.ca](mailto:amk@amk.ca)>"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.13,
+            0.189,
+            0.145
+          ],
+          "level": 2,
+          "content": "Abstract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.16,
+            0.876,
+            0.193
+          ],
+          "content": "This document is an introductory tutorial to using regular expressions in Python with the re module. It provides a gentler introduction than the corresponding section in the Library Reference."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.235,
+            0.282,
+            0.255
+          ],
+          "level": 2,
+          "content": "1 Introduction"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.277,
+            0.885,
+            0.323
+          ],
+          "content": "The re module was added in Python 1.5, and provides Perl-style regular expression patterns. Earlier versions of Python came with the regex module, which provided Emacs-style patterns. The regex module was removed completely in Python 2.5."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.33,
+            0.886,
+            0.422
+          ],
+          "content": "Regular expressions (called REs, or regexes, or regex patterns) are essentially a tiny, highly specialized programming language embedded inside Python and made available through the re module. Using this little language, you specify the rules for the set of possible strings that you want to match; this set might contain English sentences, or e-mail addresses, or TeX commands, or anything you like. You can then ask questions such as “Does this string match the pattern?”, or “Is there a match for the pattern anywhere in this string?”. You can also use REs to modify a string or to split it apart in various ways."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.428,
+            0.886,
+            0.49
+          ],
+          "content": "Regular expression patterns are compiled into a series of bytecodes which are then executed by a matching engine written in C. For advanced use, it may be necessary to pay careful attention to how the engine will execute a given RE, and write the RE in a certain way in order to produce bytecode that runs faster. Optimization isn’t covered in this document, because it requires that you have a good understanding of the matching engine’s internals."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.496,
+            0.886,
+            0.558
+          ],
+          "content": "The regular expression language is relatively small and restricted, so not all possible string processing tasks can be done using regular expressions. There are also tasks that can be done with regular expressions, but the expressions turn out to be very complicated. In these cases, you may be better off writing Python code to do the processing; while Python code will be slower than an elaborate regular expression, it will also probably be more understandable."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.587,
+            0.325,
+            0.607
+          ],
+          "level": 2,
+          "content": "2 Simple Patterns"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.628,
+            0.885,
+            0.66
+          ],
+          "content": "We’ll start by learning about the simplest possible regular expressions. Since regular expressions are used to operate on strings, we’ll begin with the most common task: matching characters."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.666,
+            0.885,
+            0.698
+          ],
+          "content": "For a detailed explanation of the computer science underlying regular expressions (deterministic and non-deterministic finite automata), you can refer to almost any textbook on writing compilers."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.722,
+            0.352,
+            0.74
+          ],
+          "level": 2,
+          "content": "2.1 Matching Characters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.756,
+            0.886,
+            0.801
+          ],
+          "content": "Most letters and characters will simply match themselves. For example, the regular expression test will match the string test exactly. (You can enable a case-insensitive mode that would let this RE match Test or TEST as well; more about this later.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.809,
+            0.885,
+            0.855
+          ],
+          "content": "There are exceptions to this rule; some characters are special metacharacters, and don’t match themselves. Instead, they signal that some out-of-the-ordinary thing should be matched, or they affect other portions of the RE by repeating them or changing their meaning. Much of this document is devoted to discussing various metacharacters and what they do."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.862,
+            0.794,
+            0.878
+          ],
+          "content": "Here’s a complete list of the metacharacters; their meanings will be discussed in the rest of this HOWTO."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.096,
+            0.355,
+            0.116
+          ],
+          "sub_type": "code",
+          "content": "```txt\n. ^ \\$ * + ? { } [ ] \\ | ( )\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.13,
+            0.886,
+            0.206
+          ],
+          "content": "The first metacharacters we’ll look at are [ and ]. They’re used for specifying a character class, which is a set of characters that you wish to match. Characters can be listed individually, or a range of characters can be indicated by giving two characters and separating them by a '-'. For example, [abc] will match any of the characters a, b, or c; this is the same as [a-c], which uses a range to express the same set of characters. If you wanted to match only lowercase letters, your RE would be [a-z]."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.213,
+            0.885,
+            0.244
+          ],
+          "content": "Metacharacters are not active inside classes. For example, [akm\\$] will match any of the characters 'a', 'k', 'm' , or ' \\$ ' ; ' \\$ ' is usually a metacharacter, but inside a character class it’s stripped of its special nature."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.25,
+            0.886,
+            0.297
+          ],
+          "content": "You can match the characters not listed within the class by complementing the set. This is indicated by including a '^' as the first character of the class. For example, [^5] will match any character except '5'. If the caret appears elsewhere in a character class, it does not have special meaning. For example: [5^] will match either a '5' or a '^'."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.303,
+            0.886,
+            0.365
+          ],
+          "content": "Perhaps the most important metacharacter is the backslash, \\. As in Python string literals, the backslash can be followed by various characters to signal various special sequences. It’s also used to escape all the metacharacters so you can still match them in patterns; for example, if you need to match a [ or \\, you can precede them with a backslash to remove their special meaning: \\[ or \\\\."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.37,
+            0.886,
+            0.433
+          ],
+          "content": "Some of the special sequences beginning with '\\' represent predefined sets of characters that are often useful, such as the set of digits, the set of letters, or the set of anything that isn’t whitespace. The following predefined special sequences are a subset of those available. The equivalent classes are for byte string patterns. For a complete list of sequences and expanded class definitions for Unicode string patterns, see the last part of Regular Expression Syntax."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.439,
+            0.559,
+            0.455
+          ],
+          "content": "**\\d** Matches any decimal digit; this is equivalent to the class [0-9]."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.462,
+            0.607,
+            0.477
+          ],
+          "content": "**\\D** Matches any non-digit character; this is equivalent to the class [^0-9]."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.485,
+            0.686,
+            0.5
+          ],
+          "content": "**\\s** Matches any whitespace character; this is equivalent to the class [ \\t\\n\\r\\f\\v]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.507,
+            0.726,
+            0.522
+          ],
+          "content": "**\\S** Matches any non-whitespace character; this is equivalent to the class [^ \\t\\n\\r\\f\\v]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.53,
+            0.694,
+            0.545
+          ],
+          "content": "**\\w** Matches any alphanumeric character; this is equivalent to the class [a-zA-Z0-9\\_]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.552,
+            0.734,
+            0.568
+          ],
+          "content": "**\\W** Matches any non-alphanumeric character; this is equivalent to the class [^a-zA-Z0-9\\_]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.575,
+            0.885,
+            0.605
+          ],
+          "content": "These sequences can be included inside a character class. For example, [\\s, .] is a character class that will match any whitespace character, or ',' or '.'."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.612,
+            0.885,
+            0.644
+          ],
+          "content": "The final metacharacter in this section is .. It matches anything except a newline character, and there’s an alternate mode (re.DOTALL) where it will match even a newline. '.' is often used where you want to match “any character”."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.668,
+            0.323,
+            0.688
+          ],
+          "level": 2,
+          "content": "2.2 Repeating Things"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.702,
+            0.886,
+            0.763
+          ],
+          "content": "Being able to match varying sets of characters is the first thing regular expressions can do that isn’t already possible with the methods available on strings. However, if that was the only additional capability of regexes, they wouldn’t be much of an advance. Another capability is that you can specify that portions of the RE must be repeated a certain number of times."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.77,
+            0.885,
+            0.802
+          ],
+          "content": "The first metacharacter for repeating things that we’ll look at is \\*. \\* doesn’t match the literal character \\*; instead, it specifies that the previous character can be matched zero or more times, instead of exactly once."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.808,
+            0.886,
+            0.855
+          ],
+          "content": "For example, ca\\*t will match ct (0 a characters), cat (1 a), caaat (3 a characters), and so forth. The RE engine has various internal limitations stemming from the size of C’s int type that will prevent it from matching over 2 billion a characters; you probably don’t have enough memory to construct a string that large, so you shouldn’t run into that limit."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.86,
+            0.884,
+            0.892
+          ],
+          "content": "Repetitions such as \\* are greedy; when repeating a RE, the matching engine will try to repeat it as many times as possible. If later portions of the pattern don’t match, the matching engine will then back up and try again with fewer repetitions."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.886,
+            0.138
+          ],
+          "content": "A step-by-step example will make this more obvious. Let’s consider the expression a[bcd]\\*b. This matches the letter 'a', zero or more letters from the class [bcd], and finally ends with a 'b'. Now imagine matching this RE against the string abcbd."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.138,
+            0.153,
+            0.861,
+            0.281
+          ],
+          "content": "| Step | Matched | Explanation |\n| --- | --- | --- |\n| 1 | a | The a in the RE matches. |\n| 2 | abcbd | The engine matches [bcd]*, going as far as it can, which is to the end of the string. |\n| 3 | Failure | The engine tries to match b, but the current position is at the end of the string, so it fails. |\n| 4 | abcb | Back up, so that [bcd]* matches one less character. |\n| 5 | Failure | Try b again, but the current position is at the last character, which is a 'd'. |\n| 6 | abc | Back up again, so that [bcd]* is only matching bc. |\n| 6 | abcb | Try b again. This time the character at the current position is 'b', so it succeeds. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_table_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.3,
+            0.886,
+            0.361
+          ],
+          "content": "The end of the RE has now been reached, and it has matched abcb. This demonstrates how the matching engine goes as far as it can at first, and if no match is found it will then progressively back up and retry the rest of the RE again and again. It will back up until it has tried zero matches for [bcd]\\*, and if that subsequently fails, the engine will conclude that the string doesn’t match the RE at all."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.368,
+            0.886,
+            0.415
+          ],
+          "content": "Another repeating metacharacter is +, which matches one or more times. Pay careful attention to the difference between \\* and +; \\* matches zero or more times, so whatever’s being repeated may not be present at all, while + requires at least one occurrence. To use a similar example, ca+t will match cat (1 a), caaat (3 a’s), but won’t match ct."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.421,
+            0.885,
+            0.452
+          ],
+          "content": "There are two more repeating qualifiers. The question mark character, ?, matches either once or zero times; you can think of it as marking something as being optional. For example, home-?brew matches either homebrew or home-brew."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.459,
+            0.886,
+            0.504
+          ],
+          "content": "The most complicated repeated qualifier is {m,n}, where m and n are decimal integers. This qualifier means there must be at least m repetitions, and at most n. For example, a/{1,3}b will match a/b, a//b , and a///b . It won’t match ab, which has no slashes, or a////b, which has four."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.511,
+            0.886,
+            0.557
+          ],
+          "content": "You can omit either m or n; in that case, a reasonable value is assumed for the missing value. Omitting m is interpreted as a lower limit of 0, while omitting n results in an upper bound of infinity — actually, the upper bound is the 2-billion limit mentioned earlier, but that might as well be infinity."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.564,
+            0.886,
+            0.61
+          ],
+          "content": "Readers of a reductionist bent may notice that the three other qualifiers can all be expressed using this notation. {0,} is the same as \\*, {1,} is equivalent to +, and {0,1} is the same as ?. It’s better to use \\*, +, or ? when you can, simply because they’re shorter and easier to read."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.639,
+            0.452,
+            0.661
+          ],
+          "level": 2,
+          "content": "3 Using Regular Expressions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.681,
+            0.885,
+            0.727
+          ],
+          "content": "Now that we’ve looked at some simple regular expressions, how do we actually use them in Python? The re module provides an interface to the regular expression engine, allowing you to compile REs into objects and then perform matches with them."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.753,
+            0.454,
+            0.772
+          ],
+          "level": 2,
+          "content": "3.1 Compiling Regular Expressions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.786,
+            0.885,
+            0.817
+          ],
+          "content": "Regular expressions are compiled into pattern objects, which have methods for various operations such as searching for pattern matches or performing string substitutions."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.825,
+            0.419,
+            0.885
+          ],
+          "sub_type": "code",
+          "content": "```typescript\n>>> import re\n>>> p = re.compile('ab*')\n>>> p\n<_sre.SRE_Pattern object at 0x...>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.885,
+            0.124
+          ],
+          "content": "re.compile() also accepts an optional flags argument, used to enable various special features and syntax variations. We’ll go over the available settings later, but for now a single example will do:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.131,
+            0.468,
+            0.15
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile('ab*', re.IGNORECASE)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.162,
+            0.886,
+            0.225
+          ],
+          "content": "The RE is passed to re.compile() as a string. REs are handled as strings because regular expressions aren’t part of the core Python language, and no special syntax was created for expressing them. (There are applications that don’t need REs at all, so there’s no need to bloat the language specification by including them.) Instead, the re module is simply a C extension module included with Python, just like the socket or zlib modules."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.23,
+            0.885,
+            0.248
+          ],
+          "content": "Putting REs in strings keeps the Python language simpler, but has one disadvantage which is the topic of the next section."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.27,
+            0.365,
+            0.289
+          ],
+          "level": 2,
+          "content": "3.2 The Backslash Plague"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.305,
+            0.886,
+            0.351
+          ],
+          "content": "As stated earlier, regular expressions use the backslash character ('\\') to indicate special forms or to allow special characters to be used without invoking their special meaning. This conflicts with Python’s usage of the same character for the same purpose in string literals."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.357,
+            0.886,
+            0.434
+          ],
+          "content": "Let’s say you want to write a RE that matches the string \\section, which might be found in a LaTeX file. To figure out what to write in the program code, start with the desired string to be matched. Next, you must escape any backslashes and other metacharacters by preceding them with a backslash, resulting in the string \\\\section. The resulting string that must be passed to re.compile() must be \\\\section. However, to express this as a Python string literal, both backslashes must be escaped again."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.282,
+            0.449,
+            0.716,
+            0.514
+          ],
+          "content": "| Characters | Stage |\n| --- | --- |\n| \\\\section | Text string to be matched |\n| \\\\\\\\section | Escaped backslash for re.compile() |\n| \"\\\\\\\\\\\\\\\\section\" | Escaped backslashes for a string literal |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.531,
+            0.885,
+            0.578
+          ],
+          "content": "In short, to match a literal backslash, one has to write '\\\\\\\\' as the RE string, because the regular expression must be \\\\, and each backslash must be expressed as \\\\ inside a regular Python string literal. In REs that feature backslashes repeatedly, this leads to lots of repeated backslashes and makes the resulting strings difficult to understand."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.584,
+            0.886,
+            0.645
+          ],
+          "content": "The solution is to use Python’s raw string notation for regular expressions; backslashes are not handled in any special way in a string literal prefixed with 'r', so r\"\\n\" is a two-character string containing '\\' and 'n', while \"\\n\" is a one-character string containing a newline. Regular expressions will often be written in Python code using this raw string notation."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.355,
+            0.661,
+            0.644,
+            0.725
+          ],
+          "content": "| Regular String | Raw string |\n| --- | --- |\n| \"ab*\" | r\"ab*\" |\n| \"\\\\\\\\\\\\\\\\section\" | r\"\\\\\\\\section\" |\n| \"\\\\\\\\w+\\\\\\\\s+\\\\\\\\1\" | r\"\\\\w+\\\\s+\\\\1\" |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_10.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.755,
+            0.348,
+            0.773
+          ],
+          "level": 2,
+          "content": "3.3 Performing Matches"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.788,
+            0.885,
+            0.82
+          ],
+          "content": "Once you have an object representing a compiled regular expression, what do you do with it? Pattern objects have several methods and attributes. Only the most significant ones will be covered here; consult the re docs for a complete listing"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.184,
+            0.834,
+            0.815,
+            0.915
+          ],
+          "content": "| Method/Attribute | Purpose |\n| --- | --- |\n| match() | Determine if the RE matches at the beginning of the string. |\n| search() | Scan through a string, looking for any location where this RE matches. |\n| findall() | Find all substrings where the RE matches, and returns them as a list. |\n| finditer() | Find all substrings where the RE matches, and returns them as an iterator. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_13.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.885,
+            0.124
+          ],
+          "content": "match() and search() return None if no match can be found. If they’re successful, a match object instance is returned, containing information about the match: where it starts and ends, the substring it matched, and more."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.13,
+            0.886,
+            0.192
+          ],
+          "content": "You can learn about this by interactively experimenting with the re module. If you have Tkinter available, you may also want to look at [Tools/scripts/redemo.py](https://github.com/python/cpython/tree/2.7/Tools/scripts/redemo.py), a demonstration program included with the Python distribution. It allows you to enter REs and strings, and displays whether the RE matches or fails. redemo.py can be quite useful when trying to debug a complicated RE. Phil Schwartz’s [Kodos](http://kodos.sourceforge.net/) is also an interactive tool for developing and testing RE patterns."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.197,
+            0.885,
+            0.229
+          ],
+          "content": "This HOWTO uses the standard Python interpreter for its examples. First, run the Python interpreter, import the re module, and compile a RE:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.238,
+            0.468,
+            0.31
+          ],
+          "sub_type": "code",
+          "content": "```txt\nPython 2.2.2 (#1, Feb 10 2003, 12:57:01)\n>>> import re\n>>> p = re.compile('[a-z]+')\n>>> p  #doctest: +ELLIPSIS\n<_sre.SRE_Pattern object at 0x...>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.325,
+            0.885,
+            0.372
+          ],
+          "content": "Now, you can try matching various strings against the RE [a-z]+. An empty string shouldn’t match at all, since + means ‘one or more repetitions’. match() should return None in this case, which will cause the interpreter to print no output. You can explicitly print the result of match() to make this clear."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.38,
+            0.301,
+            0.424
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p.match(\"\")\n>>> print p.match(\"\")\nNone\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.438,
+            0.885,
+            0.47
+          ],
+          "content": "Now, let’s try it on a string that it should match, such as tempo. In this case, match() will return a match object, so you should store the result in a variable for later use."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.479,
+            0.399,
+            0.524
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> m = p.match('tempo')\n>>> m\n<_sre.SRE_Match object at 0x...>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.537,
+            0.885,
+            0.57
+          ],
+          "content": "Now you can query the match object for information about the matching string. match object instances also have several methods and attributes; the most important ones are:"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.216,
+            0.585,
+            0.781,
+            0.665
+          ],
+          "content": "| Method/Attribute | Purpose |\n| --- | --- |\n| group() | Return the string matched by the RE |\n| start() | Return the starting position of the match |\n| end() | Return the ending position of the match |\n| span() | Return a tuple containing the (start, end) positions of the match |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_table_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.683,
+            0.461,
+            0.7
+          ],
+          "content": "Trying these methods will soon clarify their meaning:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.708,
+            0.31,
+            0.796
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> m.group()\n'tempo'\n>>> m.start(), m.end()\n(0, 5)\n>>> m.span()\n(0, 5)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.81,
+            0.886,
+            0.872
+          ],
+          "content": "group() returns the substring that was matched by the RE. start() and end() return the starting and ending index of the match. span() returns both start and end indexes in a single tuple. Since the match() method only checks if the RE matches at the start of a string, start() will always be zero. However, the search() method of patterns scans through the string, so the match may not start at zero in that case."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.097,
+            0.472,
+            0.213
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print p.match('::: message')\nNone\n>>> m = p.search('::: message'); print m\n<_sre.SRE_Match object at 0x...>\n>>> m.group()\n'message'\n>>> m.span()\n(4, 11)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.226,
+            0.885,
+            0.257
+          ],
+          "content": "In actual programs, the most common style is to store the match object in a variable, and then check if it was None. This usually looks like:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.265,
+            0.433,
+            0.352
+          ],
+          "sub_type": "code",
+          "content": "```python\np = re.compile( ... )\nm = p.match( 'string goes here' )\nif m:\n    print 'Match found: ', m.group()\nelse:\n    print 'No match'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.366,
+            0.809,
+            0.383
+          ],
+          "content": "Two pattern methods return all of the matches for a pattern. findall() returns a list of matching strings:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.39,
+            0.775,
+            0.436
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile('\\d+')\n>>> p.findall('12 drummers drumming, 11 pipers piping, 10 lords a-leaping')\n['12', '11', '10']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.449,
+            0.885,
+            0.481
+          ],
+          "content": "findall() has to create the entire list before it can be returned as the result. The finditer() method returns a sequence of match object instances as an iterator.<sup>1</sup>"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.488,
+            0.679,
+            0.617
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> iterator = p.finditer('12 drummers drumming, 11 ... 10 ...')\n>>> iterator\n<callable-iterator object at 0x...>\n>>> for match in iterator:\n...     print match.span()\n...\n(0, 2)\n(22, 24)\n(29, 31)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.648,
+            0.382,
+            0.666
+          ],
+          "level": 2,
+          "content": "3.4 Module-Level Functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.682,
+            0.885,
+            0.743
+          ],
+          "content": "You don’t have to create a pattern object and call its methods; the re module also provides top-level functions called match(), search(), findall(), sub(), and so forth. These functions take the same arguments as the corresponding pattern method, with the RE string added as the first argument, and still return either None or a match object instance."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.75,
+            0.653,
+            0.81
+          ],
+          "sub_type": "code",
+          "content": "```diff\n>>> print re.match(r'From\\s+', 'Fromage amk')\nNone\n>>> re.match(r'From\\s+', 'From amk Thu May 14 19:12:10 1998')\n<_sre.SRE_Match object at 0x...>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.824,
+            0.885,
+            0.855
+          ],
+          "content": "Under the hood, these functions simply create a pattern object for you and call the appropriate method on it. They also store the compiled object in a cache, so future calls using the same RE are faster."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.862,
+            0.885,
+            0.894
+          ],
+          "content": "Should you use these module-level functions, or should you get the pattern and call its methods yourself? That choice depends on how frequently the RE will be used, and on your personal coding style. If the RE is being used at only"
+        },
+        {
+          "type": "page_footnote",
+          "bbox": [
+            0.132,
+            0.898,
+            0.286,
+            0.913
+          ],
+          "content": "<sup>1</sup>Introduced in Python 2.2.2."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.886,
+            0.153
+          ],
+          "continues_prev": true,
+          "content": "one point in the code, then the module functions are probably more convenient. If a program contains a lot of regular expressions, or re-uses the same ones in several locations, then it might be worthwhile to collect all the definitions in one place, in a section of code that compiles all the REs ahead of time. To take an example from the standard library, here’s an extract from the deprecated xmllib module:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.162,
+            0.399,
+            0.221
+          ],
+          "sub_type": "code",
+          "content": "```lua\nref = re.compile( ... )\nentityref = re.compile( ... )\ncharref = re.compile( ... )\nstarttagopen = re.compile( ... )\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.235,
+            0.885,
+            0.266
+          ],
+          "content": "I generally prefer to work with the compiled object, even for one-time uses, but few people will be as much of a purist about this as I am."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.291,
+            0.328,
+            0.31
+          ],
+          "level": 2,
+          "content": "3.5 Compilation Flags"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.325,
+            0.886,
+            0.387
+          ],
+          "content": "Compilation flags let you modify some aspects of how regular expressions work. Flags are available in the re module under two names, a long name such as IGNORECASE and a short, one-letter form such as I. (If you’re familiar with Perl’s pattern modifiers, the one-letter forms use the same letters; the short form of re.VERBOSE is re.X, for example.) Multiple flags can be specified by bitwise OR-ing them; re.I | re.M sets both the I and M flags, for example."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.393,
+            0.686,
+            0.41
+          ],
+          "content": "Here’s a table of the available flags, followed by a more detailed explanation of each one."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.121,
+            0.424,
+            0.876,
+            0.536
+          ],
+          "content": "| Flag | Meaning |\n| --- | --- |\n| DOTALL, S | Make . match any character, including newlines |\n| IGNORECASE, I | Do case-insensitive matches |\n| LOCALE, L | Do a locale-aware match |\n| MULTILINE, M | Multi-line matching, affecting ^ and $ |\n| VERBOSE, X | Enable verbose REs, which can be organized more cleanly and understandably. |\n| UNICODE, U | Makes several escapes like \\\\w, \\\\b, \\\\s and \\\\d dependent on the Unicode character database. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_table_6.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.549,
+            0.129,
+            0.561
+          ],
+          "level": 2,
+          "content": "I"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.563,
+            0.219,
+            0.576
+          ],
+          "level": 2,
+          "content": "IGNORECASE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.577,
+            0.886,
+            0.624
+          ],
+          "content": "Perform case-insensitive matching; character class and literal strings will match letters by ignoring case. For example, [A-Z] will match lowercase letters, too, and Spam will match Spam, spam, or spAM. This lowercasing doesn’t take the current locale into account; it will if you also set the LOCALE flag."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.632,
+            0.13,
+            0.644
+          ],
+          "level": 2,
+          "content": "L"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.646,
+            0.179,
+            0.659
+          ],
+          "level": 2,
+          "content": "LOCALE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.66,
+            0.544,
+            0.676
+          ],
+          "content": "Make \\w, \\W, \\b, and \\B, dependent on the current locale."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.683,
+            0.886,
+            0.775
+          ],
+          "content": "Locales are a feature of the C library intended to help in writing programs that take account of language differences. For example, if you’re processing French text, you’d want to be able to write \\w+ to match words, but \\w only matches the character class [A-Za-z]; it won’t match 'é' or 'ç'. If your system is configured properly and a French locale is selected, certain C functions will tell the program that 'é' should also be considered a letter. Setting the LOCALE flag when compiling a regular expression will cause the resulting compiled object to use these C functions for \\w; this is slower, but also enables \\w+ to match French words as you’d expect."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.782,
+            0.131,
+            0.795
+          ],
+          "level": 2,
+          "content": "M"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.796,
+            0.209,
+            0.81
+          ],
+          "level": 2,
+          "content": "MULTILINE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.812,
+            0.741,
+            0.828
+          ],
+          "content": "(^ and \\$ haven’t been explained yet; they’ll be introduced in section More Metacharacters.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.834,
+            0.886,
+            0.91
+          ],
+          "content": "Usually ^ matches only at the beginning of the string, and \\$ matches only at the end of the string and immediately before the newline (if any) at the end of the string. When this flag is specified, ^ matches at the beginning of the string and at the beginning of each line within the string, immediately following each newline. Similarly, the \\$ metacharacter matches either at the end of the string and at the end of each line (immediately preceding each newline)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.093,
+            0.129,
+            0.105
+          ],
+          "level": 2,
+          "content": "S"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.109,
+            0.179,
+            0.121
+          ],
+          "level": 2,
+          "content": "DOTALL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.122,
+            0.885,
+            0.154
+          ],
+          "content": "Makes the '.' special character match any character at all, including a newline; without this flag, '.' will match anything except a newline."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.161,
+            0.13,
+            0.173
+          ],
+          "level": 2,
+          "content": "U"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.175,
+            0.189,
+            0.189
+          ],
+          "level": 2,
+          "content": "UNICODE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.19,
+            0.802,
+            0.207
+          ],
+          "content": "Make \\w, \\W, \\b, \\B, \\d, \\D, \\s and \\S dependent on the Unicode character properties database."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.213,
+            0.131,
+            0.226
+          ],
+          "level": 2,
+          "content": "X"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.229,
+            0.189,
+            0.242
+          ],
+          "level": 2,
+          "content": "VERBOSE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.243,
+            0.886,
+            0.32
+          ],
+          "content": "This flag allows you to write regular expressions that are more readable by granting you more flexibility in how you can format them. When this flag has been specified, whitespace within the RE string is ignored, except when the whitespace is in a character class or preceded by an unescaped backslash; this lets you organize and indent the RE more clearly. This flag also lets you put comments within a RE that will be ignored by the engine; comments are marked by a '#' that’s neither in a character class or preceded by an unescaped backslash."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.325,
+            0.706,
+            0.342
+          ],
+          "content": "For example, here’s a RE that uses re.VERBOSE; see how much easier it is to read?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.152,
+            0.349,
+            0.669,
+            0.48
+          ],
+          "sub_type": "code",
+          "content": "```python\ncharref = re.compile(r\"\"\"\n    &[#]                      # Start of a numeric entity reference\n    (\n        0[0-7]+          # Octal form\n        | [0-9]+           # Decimal form\n        | x[0-9a-fA-F]+   # Hexadecimal form\n    )\n    ;                           # Trailing semicolon\n    \"\"\", re.VERBOSE)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.155,
+            0.493,
+            0.523,
+            0.51
+          ],
+          "content": "Without the verbose setting, the RE would look like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.154,
+            0.517,
+            0.51,
+            0.564
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncharref = re.compile(\"&#(0[0-7]+\"\n              \"|[0-9]+\"\n              \"|x[0-9a-fA-F]+);\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.577,
+            0.885,
+            0.609
+          ],
+          "content": "In the above example, Python’s automatic concatenation of string literals has been used to break up the RE into smaller pieces, but it’s still more difficult to understand than the version using re.VERBOSE."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.637,
+            0.369,
+            0.658
+          ],
+          "level": 2,
+          "content": "4 More Pattern Power"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.68,
+            0.884,
+            0.711
+          ],
+          "content": "So far we’ve only covered a part of the features of regular expressions. In this section, we’ll cover some new metacharacters, and how to use groups to retrieve portions of the text that was matched."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.736,
+            0.356,
+            0.754
+          ],
+          "level": 2,
+          "content": "4.1 More Metacharacters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.769,
+            0.789,
+            0.785
+          ],
+          "content": "There are some metacharacters that we haven’t covered yet. Most of them will be covered in this section."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.792,
+            0.886,
+            0.869
+          ],
+          "content": "Some of the remaining metacharacters to be discussed are zero-width assertions. They don’t cause the engine to advance through the string; instead, they consume no characters at all, and simply succeed or fail. For example, \\b is an assertion that the current position is located at a word boundary; the position isn’t changed by the \\b at all. This means that zerowidth assertions should never be repeated, because if they match once at a given location, they can obviously be matched an infinite number of times."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.092,
+            0.886,
+            0.139
+          ],
+          "content": "| Alternation, or the “or” operator. If A and B are regular expressions, A|B will match any string that matches either A or B. | has very low precedence in order to make it work reasonably when you’re alternating multi-character strings. Crow|Servo will match either Crow or Servo, not Cro, a 'w' or an 'S', and ervo."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.145,
+            0.669,
+            0.161
+          ],
+          "content": "To match a literal '|', use \\|, or enclose it inside a character class, as in [|]."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.167,
+            0.885,
+            0.199
+          ],
+          "content": "^ Matches at the beginning of lines. Unless the MULTILINE flag has been set, this will only match at the beginning of the string. In MULTILINE mode, this also matches immediately after each newline within the string."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.205,
+            0.844,
+            0.222
+          ],
+          "content": "For example, if you wish to match the word From only at the beginning of a line, the RE to use is ^From."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.154,
+            0.23,
+            0.622,
+            0.29
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print re.search('^From', 'From Here to Eternity')\n<_sre.SRE_Match object at 0x...>\n>>> print re.search('^From', 'Reciting From Memory')\nNone\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.303,
+            0.885,
+            0.334
+          ],
+          "content": "\\$ Matches at the end of a line, which is defined as either the end of the string, or any location followed by a newline character."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.154,
+            0.342,
+            0.491,
+            0.429
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print re.search('\\$', '{block}')\n<_sre.SRE_Match object at 0x...>\n>>> print re.search('\\$', '{block} ')\nNone\n>>> print re.search('\\$', '{block}\\n')\n<_sre.SRE_Match object at 0x...>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.443,
+            0.665,
+            0.459
+          ],
+          "content": "To match a literal '\\$', use \\$ or enclose it inside a character class, as in [\\$]."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.466,
+            0.885,
+            0.512
+          ],
+          "content": "**\\A** Matches only at the start of the string. When not in MULTILINE mode, \\A and ^ are effectively the same. In MULTILINE mode, they’re different: \\A still matches only at the beginning of the string, but ^ may match at any location inside the string that follows a newline character."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.518,
+            0.385,
+            0.535
+          ],
+          "content": "**\\Z** Matches only at the end of the string."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.541,
+            0.885,
+            0.587
+          ],
+          "content": "**\\b** Word boundary. This is a zero-width assertion that matches only at the beginning or end of a word. A word is defined as a sequence of alphanumeric characters, so the end of a word is indicated by whitespace or a non-alphanumeric character."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.594,
+            0.885,
+            0.625
+          ],
+          "content": "The following example matches class only when it’s a complete word; it won’t match when it’s contained inside another word."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.154,
+            0.632,
+            0.579,
+            0.735
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile(r'\\bclass\\b')\n>>> print p.search('no class at all')\n<_sre.SRE_Match object at 0x...>\n>>> print p.search('the declassified algorithm')\nNone\n>>> print p.search('one subclass is')\nNone\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.748,
+            0.885,
+            0.825
+          ],
+          "content": "There are two subtleties you should remember when using this special sequence. First, this is the worst collision between Python’s string literals and regular expression sequences. In Python’s string literals, \\b is the backspace character, ASCII value 8. If you’re not using raw strings, then Python will convert the \\b to a backspace, and your RE won’t match as you expect it to. The following example looks the same as our previous RE, but omits the 'r' in front of the RE string."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.153,
+            0.833,
+            0.517,
+            0.907
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile('\\bclass\\b')\n>>> print p.search('no class at all')\nNone\n>>> print p.search('\\b' + 'class' + '\\b')\n<_sre.SRE_Match object at 0x...>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.092,
+            0.885,
+            0.124
+          ],
+          "content": "Second, inside a character class, where there’s no use for this assertion, \\b represents the backspace character, for compatibility with Python’s string literals."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.13,
+            0.886,
+            0.16
+          ],
+          "content": "**\\B** Another zero-width assertion, this is the opposite of \\b, only matching when the current position is not at a word boundary."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.185,
+            0.245,
+            0.205
+          ],
+          "level": 2,
+          "content": "4.2 Grouping"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.219,
+            0.886,
+            0.267
+          ],
+          "content": "Frequently you need to obtain more information than just whether the RE matched or not. Regular expressions are often used to dissect strings by writing a RE divided into several subgroups which match different components of interest. For example, an RFC-822 header line is divided into a header name and a value, separated by a ':', like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.275,
+            0.521,
+            0.334
+          ],
+          "sub_type": "code",
+          "content": "```txt\nFrom: author@example.com\nUser-Agent: Thunderbird 1.5.0.9 (X11/20061227)\nMIME-Version: 1.0\nTo: editor@example.com\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.347,
+            0.885,
+            0.379
+          ],
+          "content": "This can be handled by writing a regular expression which matches an entire header line, and has one group which matches the header name, and another group which matches the header’s value."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.385,
+            0.886,
+            0.446
+          ],
+          "content": "Groups are marked by the '(', ')' metacharacters. '(' and ')' have much the same meaning as they do in mathematical expressions; they group together the expressions contained inside them, and you can repeat the contents of a group with a repeating qualifier, such as \\*, +, ?, or {m,n}. For example, (ab)\\* will match zero or more repetitions of ab."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.455,
+            0.451,
+            0.501
+          ],
+          "sub_type": "code",
+          "content": "```coffeescript\n>>> p = re.compile('(ab)*')\n>>> print p.match('ababababab').span()\n(0, 10)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.514,
+            0.885,
+            0.577
+          ],
+          "content": "Groups indicated with '(', ')' also capture the starting and ending index of the text that they match; this can be retrieved by passing an argument to group(), start(), end(), and span(). Groups are numbered starting with 0. Group 0 is always present; it’s the whole RE, so match object methods all have group 0 as their default argument. Later we’ll see how to express groups that don’t capture the span of text that they match."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.585,
+            0.345,
+            0.671
+          ],
+          "sub_type": "code",
+          "content": "```coffeescript\n>>> p = re.compile('(a)b')\n>>> m = p.match('ab')\n>>> m.group()\n'ab'\n>>> m.group(0)\n'ab'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.685,
+            0.885,
+            0.718
+          ],
+          "content": "Subgroups are numbered from left to right, from 1 upward. Groups can be nested; to determine the number, just count the opening parenthesis characters, going from left to right."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.725,
+            0.38,
+            0.839
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile('(a(b)c)d')\n>>> m = p.match('abcd')\n>>> m.group(0)\n'abcd'\n>>> m.group(1)\n'abc'\n>>> m.group(2)\n'b'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.854,
+            0.885,
+            0.885
+          ],
+          "content": "group() can be passed multiple group numbers at a time, in which case it will return a tuple containing the corresponding values for those groups."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.936,
+            0.51,
+            0.949
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.097,
+            0.274,
+            0.129
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> m.group(2,1,2)\n('b', 'abc', 'b')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.143,
+            0.885,
+            0.174
+          ],
+          "content": "The groups() method returns a tuple containing the strings for all the subgroups, from 1 up to however many there are."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.184,
+            0.239,
+            0.215
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> m.groups()\n('abc', 'b')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.228,
+            0.886,
+            0.291
+          ],
+          "content": "Backreferences in a pattern allow you to specify that the contents of an earlier capturing group must also be found at the current location in the string. For example, \\1 will succeed if the exact contents of group 1 can be found at the current position, and fails otherwise. Remember that Python’s string literals also use a backslash followed by numbers to allow including arbitrary characters in a string, so be sure to use a raw string when incorporating backreferences in a RE."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.297,
+            0.534,
+            0.314
+          ],
+          "content": "For example, the following RE detects doubled words in a string."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.321,
+            0.53,
+            0.367
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile(r'\\b(\\w+)\\s+\\1\\b')\n>>> p.search('Paris in the the spring').group()\n'the the'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.38,
+            0.886,
+            0.413
+          ],
+          "content": "Backreferences like this aren’t often useful for just searching through a string — there are few text formats which repeat data in this way — but you’ll soon find out that they’re very useful when performing string substitutions."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.437,
+            0.479,
+            0.456
+          ],
+          "level": 2,
+          "content": "4.3 Non-capturing and Named Groups"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.47,
+            0.885,
+            0.517
+          ],
+          "content": "Elaborate REs may use many groups, both to capture substrings of interest, and to group and structure the RE itself. In complex REs, it becomes difficult to keep track of the group numbers. There are two features which help with this problem. Both of them use a common syntax for regular expression extensions, so we’ll look at that first."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.523,
+            0.886,
+            0.6
+          ],
+          "content": "Perl 5 added several additional features to standard regular expressions, and the Python re module supports most of them. It would have been difficult to choose new single-keystroke metacharacters or new special sequences beginning with \\ to represent the new features without making Perl’s regular expressions confusingly different from standard REs. If you chose & as a new metacharacter, for example, old expressions would be assuming that & was a regular character and wouldn’t have escaped it by writing \\& or [&]."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.606,
+            0.886,
+            0.669
+          ],
+          "content": "The solution chosen by the Perl developers was to use (?...) as the extension syntax. ? immediately after a parenthesis was a syntax error because the ? would have nothing to repeat, so this didn’t introduce any compatibility problems. The characters immediately after the ? indicate what extension is being used, so (?=foo) is one thing (a positive lookahead assertion) and (?:foo) is something else (a non-capturing group containing the subexpression foo)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.674,
+            0.886,
+            0.751
+          ],
+          "content": "Python adds an extension syntax to Perl’s extension syntax. If the first character after the question mark is a P, you know that it’s an extension that’s specific to Python. Currently there are two such extensions: (?P&lt;name&gt;...) defines a named group, and (?P=name) is a backreference to a named group. If future versions of Perl 5 add similar features using a different syntax, the re module will be changed to support the new syntax, while preserving the Python-specific syntax for compatibility’s sake."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.757,
+            0.886,
+            0.82
+          ],
+          "content": "Now that we’ve looked at the general extension syntax, we can return to the features that simplify working with groups in complex REs. Since groups are numbered from left to right and a complex expression may use many groups, it can become difficult to keep track of the correct numbering. Modifying such a complex RE is annoying, too: insert a new group near the beginning and you change the numbers of everything that follows it."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.825,
+            0.885,
+            0.872
+          ],
+          "content": "Sometimes you’ll want to use a group to collect a part of a regular expression, but aren’t interested in retrieving the group’s contents. You can make this fact explicit by using a non-capturing group: (?:...), where you can replace the ... with any other regular expression."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.512,
+            0.949
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.097,
+            0.441,
+            0.185
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> m = re.match(\"[abc]+\", \"abc\")\n>>> m.groups()\n('c',)\n>>> m = re.match((\"?:[abc]+\", \"abc\")\n>>> m.groups()\n()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.198,
+            0.886,
+            0.29
+          ],
+          "content": "Except for the fact that you can’t retrieve the contents of what the group matched, a non-capturing group behaves exactly the same as a capturing group; you can put anything inside it, repeat it with a repetition metacharacter such as \\*, and nest it within other groups (capturing or non-capturing). (?:...) is particularly useful when modifying an existing pattern, since you can add new groups without changing how all the other groups are numbered. It should be mentioned that there’s no performance difference in searching between capturing and non-capturing groups; neither form is any faster than the other."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.297,
+            0.884,
+            0.314
+          ],
+          "content": "A more significant feature is named groups: instead of referring to them by numbers, groups can be referenced by a name."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.32,
+            0.886,
+            0.397
+          ],
+          "content": "The syntax for a named group is one of the Python-specific extensions: (?P&lt;name&gt;...). name is, obviously, the name of the group. Named groups also behave exactly like capturing groups, and additionally associate a name with a group. The match object methods that deal with capturing groups all accept either integers that refer to the group by number or strings that contain the desired group’s name. Named groups are still given numbers, so you can retrieve information about a group in two ways:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.404,
+            0.556,
+            0.491
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> p = re.compile(r'(?P<word>\\b\\w+\\b)')\n>>> m = p.search( '(((( Lots of punctuation )))' )\n>>> m.group('word')\n'Lots'\n>>> m.group(1)\n'Lots'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.505,
+            0.884,
+            0.537
+          ],
+          "content": "Named groups are handy because they let you use easily-remembered names, instead of having to remember numbers. Here’s an example RE from the imaplib module:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.545,
+            0.751,
+            0.632
+          ],
+          "sub_type": "code",
+          "content": "```python\nInternalDate = re.compile(r'INTERNALDATE \"''\n    r'(?P<day>[ 123][0-9])-(?P<mon>[A-Z][a-z][a-z])-'\n    r'(?P<year>[0-9][0-9][0-9][0-9])'\n    r' (?P<hour>[0-9][0-9]):(?P<min>[0-9][0-9]):(?P<sec>[0-9][0-9])'\n    r' (?P<zonen)[-+])(?P<zoneh>[0-9][0-9])(?P<zonem>[0-9][0-9])'\n    r'\"')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.645,
+            0.842,
+            0.662
+          ],
+          "content": "It’s obviously much easier to retrieve m.group('zonem'), instead of having to remember to retrieve group 9."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.668,
+            0.886,
+            0.731
+          ],
+          "content": "The syntax for backreferences in an expression such as (...)\\1 refers to the number of the group. There’s naturally a variant that uses the group name instead of the number. This is another Python extension: (?P=name) indicates that the contents of the group called name should again be matched at the current point. The regular expression for finding doubled words, \\b(\\w+)\\s+\\1\\b can also be written as \\b(?P&lt;word&gt;\\w+)\\s+(?P=word)\\b:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.739,
+            0.573,
+            0.784
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> p = re.compile(r'\\b(?P<word>\\w+)\\s+(?P=word)\\b')\n>>> p.search('Paris in the the spring').group()\n'the the'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.368,
+            0.108
+          ],
+          "level": 2,
+          "content": "4.4 Lookahead Assertions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.885,
+            0.154
+          ],
+          "content": "Another zero-width assertion is the lookahead assertion. Lookahead assertions are available in both positive and negative form, and look like this:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.161,
+            0.886,
+            0.208
+          ],
+          "content": "**(?=...)** Positive lookahead assertion. This succeeds if the contained regular expression, represented here by ..., successfully matches at the current location, and fails otherwise. But, once the contained expression has been tried, the matching engine doesn’t advance at all; the rest of the pattern is tried right where the assertion started."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.213,
+            0.886,
+            0.245
+          ],
+          "content": "**(?!...)** Negative lookahead assertion. This is the opposite of the positive assertion; it succeeds if the contained expression doesn’t match at the current position in the string."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.251,
+            0.886,
+            0.298
+          ],
+          "content": "To make this concrete, let’s look at a case where a lookahead is useful. Consider a simple pattern to match a filename and split it apart into a base name and an extension, separated by a .. For example, in news.rc, news is the base name, and rc is the filename’s extension."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.305,
+            0.382,
+            0.321
+          ],
+          "content": "The pattern to match this is quite simple:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.327,
+            0.198,
+            0.342
+          ],
+          "sub_type": "code",
+          "content": "```txt\n.*[.].*$\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.35,
+            0.886,
+            0.396
+          ],
+          "content": "Notice that the . needs to be treated specially because it’s a metacharacter; I’ve put it inside a character class. Also notice the trailing \\$; this is added to ensure that all the rest of the string must be included in the extension. This regular expression matches foo.bar and autoexec.bat and sendmail.cf and printers.conf."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.402,
+            0.885,
+            0.433
+          ],
+          "content": "Now, consider complicating the problem a bit; what if you want to match filenames where the extension is not bat? Some incorrect attempts:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.44,
+            0.885,
+            0.472
+          ],
+          "content": ".\\*[.][^b].\\*\\$ The first attempt above tries to exclude bat by requiring that the first character of the extension is not a b. This is wrong, because the pattern also doesn’t match foo.bar."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.478,
+            0.394,
+            0.494
+          ],
+          "sub_type": "code",
+          "content": "```txt\n.*[.]([^b]..|.[^a].|..[^t])$\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.5,
+            0.886,
+            0.563
+          ],
+          "content": "The expression gets messier when you try to patch up the first solution by requiring one of the following cases to match: the first character of the extension isn’t b; the second character isn’t a; or the third character isn’t t. This accepts foo. bar and rejects autoexec.bat, but it requires a three-letter extension and won’t accept a filename with a two-letter extension such as sendmail.cf. We’ll complicate the pattern again in an effort to fix it."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.569,
+            0.452,
+            0.585
+          ],
+          "sub_type": "code",
+          "content": "```txt\n.*[.]([^b].?.?|.[^a]?.?|...?[^t]?)$\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.591,
+            0.885,
+            0.622
+          ],
+          "content": "In the third attempt, the second and third letters are all made optional in order to allow matching extensions shorter than three characters, such as sendmail.cf."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.629,
+            0.885,
+            0.661
+          ],
+          "content": "The pattern’s getting really complicated now, which makes it hard to read and understand. Worse, if the problem changes and you want to exclude both bat and exe as extensions, the pattern would get even more complicated and confusing."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.667,
+            0.458,
+            0.683
+          ],
+          "content": "A negative lookahead cuts through all this confusion:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.689,
+            0.886,
+            0.751
+          ],
+          "content": ".\\*[.](?!bat\\$)[^.]\\*\\$ The negative lookahead means: if the expression bat doesn’t match at this point, try the rest of the pattern; if bat\\$ does match, the whole pattern will fail. The trailing \\$ is required to ensure that something like sample.batch, where the extension only starts with bat, will be allowed. The [^.]\\* makes sure that the pattern works when there are multiple dots in the filename."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.757,
+            0.886,
+            0.788
+          ],
+          "content": "Excluding another filename extension is now easy; simply add it as an alternative inside the assertion. The following pattern excludes filenames that end in either bat or exe:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.795,
+            0.355,
+            0.811
+          ],
+          "sub_type": "code",
+          "content": "```txt\n.*[.](?!bat\\$|exe\\$)[^.]*\\$\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.345,
+            0.113
+          ],
+          "level": 2,
+          "content": "5 Modifying Strings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.165
+          ],
+          "content": "Up to this point, we’ve simply performed searches against a static string. Regular expressions are also commonly used to modify strings in various ways, using the following pattern methods:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.127,
+            0.179,
+            0.869,
+            0.245
+          ],
+          "sub_type": "code",
+          "content": "```txt\nMethod/Attribute Purpose\nsplit() Split the string into a list, splitting it wherever the RE matches\nsub() Find all substrings where the RE matches, and replace them with a different string\nsubn() Does the same thing as sub(), but returns the new string and the number of replacements\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.274,
+            0.309,
+            0.293
+          ],
+          "level": 2,
+          "content": "5.1 Splitting Strings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.307,
+            0.885,
+            0.367
+          ],
+          "content": "The split() method of a pattern splits a string apart wherever the RE matches, returning a list of the pieces. It’s similar to the split() method of strings but provides much more generality in the delimiters that you can split by; split() only supports splitting by whitespace or by a fixed string. As you’d expect, there’s a module-level re.split() function, too."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.373,
+            0.325,
+            0.392
+          ],
+          "content": ".**split**(string[, maxsplit=0 ])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.148,
+            0.39,
+            0.886,
+            0.422
+          ],
+          "content": "Split string by the matches of the regular expression. If capturing parentheses are used in the RE, then their contents will also be returned as part of the resulting list. If maxsplit is nonzero, at most maxsplit splits are performed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.428,
+            0.886,
+            0.475
+          ],
+          "content": "You can limit the number of splits made, by passing a value for maxsplit. When maxsplit is nonzero, at most maxsplit splits will be made, and the remainder of the string is returned as the final element of the list. In the following example, the delimiter is any sequence of non-alphanumeric characters."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.483,
+            0.742,
+            0.557
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile(r'\\W+')\n>>> p.split('This is a test, short and sweet, of split().')\n['This', 'is', 'a', 'test', 'short', 'and', 'sweet', 'of', 'split', '']\n>>> p.split('This is a test, short and sweet, of split().', 3)\n['This', 'is', 'a', 'test, short and sweet, of split().']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.57,
+            0.885,
+            0.615
+          ],
+          "content": "Sometimes you’re not only interested in what the text between delimiters is, but also need to know what the delimiter was. If capturing parentheses are used in the RE, then their values are also returned as part of the list. Compare the following calls:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.624,
+            0.592,
+            0.712
+          ],
+          "sub_type": "code",
+          "content": "```coffeescript\n>>> p = re.compile(r'\\W+')\n>>> p2 = re.compile(r'(\\W+)')\n>>> p.split('This... is a test.')\n['This', 'is', 'a', 'test', '']\n>>> p2.split('This... is a test.')\n['This', '... ', 'is', ' ', 'a', ' ', 'test', '.', '']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.725,
+            0.848,
+            0.742
+          ],
+          "content": "The module-level function re.split() adds the RE to be used as the first argument, but is otherwise the same."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.75,
+            0.541,
+            0.838
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> re.split('[\\W]+', 'Words, words, words.')\n['Words', 'words', 'words', '']\n>>> re.split('[[\\W]+)', 'Words, words, words.')\n['Words', ', ', 'words', ', ', 'words', '.', '']\n>>> re.split('[\\W]+', 'Words, words, words.', 1)\n['Words', 'words, words.']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.089,
+            0.345,
+            0.109
+          ],
+          "level": 2,
+          "content": "5.2 Search and Replace"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.885,
+            0.155
+          ],
+          "content": "Another common task is to find all the matches for a pattern, and replace them with a different string. The sub() method takes a replacement value, which can be either a string or a function, and the string to be processed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.159,
+            0.372,
+            0.176
+          ],
+          "content": ".**sub**(replacement, string[, count=0 ])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.175,
+            0.885,
+            0.208
+          ],
+          "content": "Returns the string obtained by replacing the leftmost non-overlapping occurrences of the RE in string by the replacement replacement. If the pattern isn’t found, string is returned unchanged."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.213,
+            0.886,
+            0.245
+          ],
+          "content": "The optional argument count is the maximum number of pattern occurrences to be replaced; count must be a non-negative integer. The default value of 0 means to replace all occurrences."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.251,
+            0.784,
+            0.268
+          ],
+          "content": "Here’s a simple example of using the sub() method. It replaces colour names with the word colour:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.276,
+            0.609,
+            0.349
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> p = re.compile('(blue|white|red)')\n>>> p.sub('colour', 'blue socks and red shoes')\n'colour socks and colour shoes'\n>>> p.sub('colour', 'blue socks and red shoes', count=1)\n'colour socks and red shoes'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.362,
+            0.885,
+            0.395
+          ],
+          "content": "The subn() method does the same work, but returns a 2-tuple containing the new string value and the number of replacements that were performed:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.402,
+            0.538,
+            0.476
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile('(blue|white|red)')\n>>> p.subn('colour', 'blue socks and red shoes')\n('colour socks and colour shoes', 2)\n>>> p.subn('colour', 'no colours at all')\n('no colours at all', 0)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.489,
+            0.631,
+            0.506
+          ],
+          "content": "Empty matches are replaced only when they’re not adjacent to a previous match."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.514,
+            0.327,
+            0.558
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile('x*')\n>>> p.sub('-', 'abxd')\n'-a-b-d-'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.572,
+            0.886,
+            0.635
+          ],
+          "content": "If replacement is a string, any backslash escapes in it are processed. That is, \\n is converted to a single newline character, \\r is converted to a carriage return, and so forth. Unknown escapes such as \\j are left alone. Backreferences, such as \\6, are replaced with the substring matched by the corresponding group in the RE. This lets you incorporate portions of the original text in the resulting replacement string."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.641,
+            0.886,
+            0.671
+          ],
+          "content": "This example matches the word section followed by a string enclosed in {, }, and changes section to subsection:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.68,
+            0.653,
+            0.726
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> p = re.compile('section{ ( [^}]* ) }', re.VERBOSE)\n>>> p.sub(r'subsection{\\1}', 'section{First} section{second}')\n'subsection{First} subsection{second}'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.74,
+            0.886,
+            0.817
+          ],
+          "content": "There’s also a syntax for referring to named groups as defined by the (?P&lt;name&gt;...) syntax. \\g&lt;name&gt; will use the substring matched by the group named name, and \\g&lt;number&gt; uses the corresponding group number. \\g<2> is therefore equivalent to \\2, but isn’t ambiguous in a replacement string such as \\g<2>0. (\\20 would be interpreted as a reference to group 20, not a reference to group 2 followed by the literal character '0'.) The following substitutions are all equivalent, but use all three variations of the replacement string."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.825,
+            0.661,
+            0.897
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p = re.compile('section{ (?P<name> [^}]* ) }', re.VERBOSE)\n>>> p.sub(r'subsection{\\1}', 'section{First}')\n'subsection{First}'\n>>> p.sub(r'subsection{\\g<1>}','section{First}')\n'subsection{First}'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.898,
+            0.884,
+            0.911
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.936,
+            0.511,
+            0.949
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.109,
+            0.565,
+            0.139
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> p.sub(r'subsection{\\g<name>}','section{First}')\n'subsection{First}'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.107
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.153,
+            0.886,
+            0.201
+          ],
+          "content": "replacement can also be a function, which gives you even more control. If replacement is a function, the function is called for every non-overlapping occurrence of pattern. On each call, the function is passed a match object argument for the match and can use this information to compute the desired replacement string and return it."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.207,
+            0.687,
+            0.223
+          ],
+          "content": "In the following example, the replacement function translates decimals into hexadecimal:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.23,
+            0.707,
+            0.347
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> def hexrepl(match):\n...     \"Return the hex string for a decimal number\"\n...     value = int(match.group())\n...     return hex(value)\n...\n>>> p = re.compile(r'\\d+')\n>>> p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code.')\n'Call 0xffd2 for printing, 0xc000 for user code.'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.36,
+            0.885,
+            0.421
+          ],
+          "content": "When using the module-level re.sub() function, the pattern is passed as the first argument. The pattern may be provided as an object or as a string; if you need to specify regular expression flags, you must either use a pattern object as the first parameter, or use embedded modifiers in the pattern string, e.g. sub(\"(?i)b+\", \"x\", \"bbbb BBBB\") returns 'x x'."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.45,
+            0.361,
+            0.47
+          ],
+          "level": 2,
+          "content": "6 Common Problems"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.492,
+            0.885,
+            0.524
+          ],
+          "content": "Regular expressions are a powerful tool for some applications, but in some ways their behaviour isn’t intuitive and at times they don’t behave the way you may expect them to. This section will point out some of the most common pitfalls."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.548,
+            0.343,
+            0.567
+          ],
+          "level": 2,
+          "content": "6.1 Use String Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.582,
+            0.886,
+            0.66
+          ],
+          "content": "Sometimes using the re module is a mistake. If you’re matching a fixed string, or a single character class, and you’re not using any re features such as the IGNORECASE flag, then the full power of regular expressions may not be required. Strings have several methods for performing operations with fixed strings and they’re usually much faster, because the implementation is a single small C loop that’s been optimized for the purpose, instead of the large, more generalized regular expression engine."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.665,
+            0.886,
+            0.743
+          ],
+          "content": "One example might be replacing a single fixed string with another one; for example, you might replace word with deed. re.sub() seems like the function to use for this, but consider the replace() method. Note that replace() will also replace word inside words, turning swordfish into sdeedfish, but the naive RE word would have done that, too. (To avoid performing the substitution on parts of words, the pattern would have to be \\bword\\b, in order to require that word have a word boundary on either side. This takes the job beyond replace()’s abilities.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.748,
+            0.886,
+            0.795
+          ],
+          "content": "Another common task is deleting every occurrence of a single character from a string or replacing it with another single character. You might do this with something like re.sub('\\n', ' ', S), but translate() is capable of doing both tasks and will be faster than any regular expression operation can be."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.8,
+            0.886,
+            0.831
+          ],
+          "content": "In short, before turning to the re module, consider whether your problem can be solved with a faster and simpler string method."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.378,
+            0.109
+          ],
+          "level": 2,
+          "content": "6.2 match() versus search()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.886,
+            0.17
+          ],
+          "content": "The match() function only checks if the RE matches at the beginning of the string while search() will scan forward through the string for a match. It’s important to keep this distinction in mind. Remember, match() will only report a successful match which will start at 0; if the match wouldn’t start at zero, match() will not report it."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.178,
+            0.555,
+            0.237
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print re.match('super', 'superstition').span()\n(0, 5)\n>>> print re.match('super', 'insuperable')\nNone\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.25,
+            0.766,
+            0.268
+          ],
+          "content": "On the other hand, search() will scan forward through the string, reporting the first match it finds."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.276,
+            0.563,
+            0.335
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print re.search('super', 'superstition').span()\n(0, 5)\n>>> print re.search('super', 'insuperable').span()\n(2, 7)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.349,
+            0.886,
+            0.427
+          ],
+          "content": "Sometimes you’ll be tempted to keep using re.match(), and just add .\\* to the front of your RE. Resist this temptation and use re.search() instead. The regular expression compiler does some analysis of REs in order to speed up the process of looking for a match. One such analysis figures out what the first character of a match must be; for example, a pattern starting with Crow must match starting with a 'C'. The analysis lets the engine quickly scan through the string looking for the starting character, only trying the full match if a 'C' is found."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.432,
+            0.885,
+            0.464
+          ],
+          "content": "Adding .\\* defeats this optimization, requiring scanning to the end of the string and then backtracking to find a match for the rest of the RE. Use re.search() instead."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.488,
+            0.413,
+            0.507
+          ],
+          "level": 2,
+          "content": "6.3 Greedy versus Non-Greedy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.522,
+            0.885,
+            0.57
+          ],
+          "content": "When repeating a regular expression, as in a\\*, the resulting action is to consume as much of the pattern as possible. This fact often bites you when you’re trying to match a pair of balanced delimiters, such as the angle brackets surrounding an HTML tag. The naive pattern for matching a single HTML tag doesn’t work because of the greedy nature of .\\*."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.577,
+            0.485,
+            0.677
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> s = '<html><head><title>Title</title>'\n>>> len(s)\n32\n>>> print re.match('<.*>', s).span()\n(0, 32)\n>>> print re.match('<.*>', s).group()\n<html><head><title>Title</title>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.691,
+            0.885,
+            0.753
+          ],
+          "content": "The RE matches the '<' in &lt;html&gt;, and the .\\* consumes the rest of the string. There’s still more left in the RE, though, and the > can’t match at the end of the string, so the regular expression engine has to backtrack character by character until it finds a match for the >. The final match extends from the '<' in &lt;html&gt; to the '>' in &lt;/title&gt;, which isn’t what you want."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.76,
+            0.886,
+            0.807
+          ],
+          "content": "In this case, the solution is to use the non-greedy qualifiers \\*?, +?, ??, or {m,n}?, which match as little text as possible. In the above example, the '>' is tried immediately after the first '<' matches, and when it fails, the engine advances a character at a time, retrying the '>' at every step. This produces just the right result:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.815,
+            0.451,
+            0.845
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print re.match('<.*?>', s).group()\n<html>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.859,
+            0.885,
+            0.892
+          ],
+          "content": "(Note that parsing HTML or XML with regular expressions is painful. Quick-and-dirty patterns will handle common cases, but HTML and XML have special cases that will break the obvious regular expression; by the time you’ve written"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.885,
+            0.123
+          ],
+          "continues_prev": true,
+          "content": "a regular expression that handles all of the possible cases, the patterns will be very complicated. Use an HTML or XML parser module for such tasks.)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.148,
+            0.336,
+            0.167
+          ],
+          "level": 2,
+          "content": "6.4 Using re.VERBOSE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.182,
+            0.886,
+            0.228
+          ],
+          "content": "By now you’ve probably noticed that regular expressions are a very compact notation, but they’re not terribly readable. REs of moderate complexity can become lengthy collections of backslashes, parentheses, and metacharacters, making them difficult to read and understand."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.235,
+            0.885,
+            0.266
+          ],
+          "content": "For such REs, specifying the re.VERBOSE flag when compiling the regular expression can be helpful, because it allows you to format the regular expression more clearly."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.272,
+            0.886,
+            0.349
+          ],
+          "content": "The re.VERBOSE flag has several effects. Whitespace in the regular expression that isn’t inside a character class is ignored. This means that an expression such as dog | cat is equivalent to the less readable dog|cat, but [a b] will still match the characters 'a', 'b', or a space. In addition, you can also put comments inside a RE; comments extend from a # character to the next newline. When used with triple-quoted strings, this enables REs to be formatted more neatly:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.356,
+            0.657,
+            0.472
+          ],
+          "sub_type": "code",
+          "content": "```python\npat = re.compile(r\"\"\"\n\\s*                      # Skip leading whitespace\n(?P<header>[^:]+)    # Header name\n\\s* :                    # Whitespace, and a colon\n(?P<value>.*?)      # The header's value -- *? used to\n                                # lose the following trailing whitespace\n\\s*$                     # Trailing whitespace to end-of-line\n\"\"\"\", re.VERBOSE)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.485,
+            0.315,
+            0.502
+          ],
+          "content": "This is far more readable than:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.511,
+            0.67,
+            0.528
+          ],
+          "sub_type": "code",
+          "content": "```javascript\npat = re.compile(r\"\\s*(?P<header>[^:]+) \\s*: (?P<value>.*?) \\s*$\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.565,
+            0.256,
+            0.585
+          ],
+          "level": 2,
+          "content": "7 Feedback"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.607,
+            0.885,
+            0.652
+          ],
+          "content": "Regular expressions are a complicated topic. Did this document help you understand them? Were there parts that were unclear, or Problems you encountered that weren’t covered here? If so, please send suggestions for improvements to the author."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.66,
+            0.887,
+            0.736
+          ],
+          "content": "The most complete book on regular expressions is almost certainly Jeffrey Friedl’s Mastering Regular Expressions, published by O’Reilly. Unfortunately, it exclusively concentrates on Perl and Java’s flavours of regular expressions, and doesn’t contain any Python material at all, so it won’t be useful as a reference for programming in Python. (The first edition covered Python’s now-removed regex module, which won’t help you much.) Consider checking it out from your library."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "19"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Regular Expression HOWTO",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2020-05-20T05:02:25-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 19,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

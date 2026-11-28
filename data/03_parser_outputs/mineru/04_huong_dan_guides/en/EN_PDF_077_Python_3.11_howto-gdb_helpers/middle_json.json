@@ -1,0 +1,2236 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Debugging C API extensions and CPython Internals with GDB",
+      "authors": [
+        "Guido van Rossum and the Python development team"
+      ],
+      "created_at": "2024-09-10T05:48:11-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20220710)",
+      "page_count": 9,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.229,
+            0.114,
+            0.883,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Debugging C API extensions and CPython Internals with GDB Release 3.11.10"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.262,
+            0.233,
+            0.881,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Guido van Rossum and the Python development team",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.718,
+            0.29,
+            0.881,
+            0.307
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "September 10, 2024",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.649,
+            0.312,
+            0.881,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Software Foundation",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.681,
+            0.327,
+            0.882,
+            0.342
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Email: docs@python.org",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.361,
+            0.229,
+            0.383
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Contents"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "index",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.404,
+            0.883,
+            0.617
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Prerequisites",
+                  "styles": [
+                    "bold"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Setup with Python built from source 2"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Setup for Python from a Linux distro 2"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Using the Debug build and Development mode"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Using the python-gdb extension"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Pretty-printers 3"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "py-list 4"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "py-up and py-down 5"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "py-bt 6"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "py-print 7"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "py-locals 7"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Use with GDB commands"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.115,
+            0.655,
+            0.882,
+            0.685
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This document explains how the Python GDB extension, python-gdb.py, can be used with the GDB debugger to debug CPython extensions and the CPython interpreter itself."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.115,
+            0.69,
+            0.883,
+            0.735
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "When debugging low-level problems such as crashes or deadlocks, a low-level debugger, such as GDB, is useful to diagnose and correct the issue. By default, GDB (or any of its front-ends) doesn’t support high-level information specific to the CPython interpreter."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.74,
+            0.882,
+            0.785
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The python-gdb.py extension adds CPython interpreter information to GDB. The extension helps introspect the stack of currently executing Python functions. Given a Python object represented by a PyObject* pointer, the extension surfaces the type and value of the object."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.115,
+            0.79,
+            0.881,
+            0.82
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Developers who are working on CPython extensions or tinkering with parts of CPython that are written in C can use this document to learn how to use the python-gdb.py extension with GDB."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.115,
+            0.839,
+            0.881,
+            0.87
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " This document assumes that you are familiar with the basics of GDB and the CPython C API. It consolidates guidance from the "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://devguide.python.org",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "devguide"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": " and the "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://wiki.python.org/moin/DebuggingWithGdb",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Python wiki"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.494,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.118,
+            0.085,
+            0.3,
+            0.105
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 Prerequisites"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.117,
+            0.124,
+            0.242,
+            0.139
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "You need to have:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.143,
+            0.146,
+            0.881,
+            0.175
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• GDB 7 or later. (For earlier versions of GDB, see Misc/gdbinit in the CPython sources. Note that this file will be removed in Python 3.12.)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.143,
+            0.182,
+            0.755,
+            0.197
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• GDB-compatible debugging information for Python and any extension you are debugging."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.144,
+            0.203,
+            0.396,
+            0.218
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The python-gdb.py extension."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.115,
+            0.224,
+            0.881,
+            0.254
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The extension is built with Python, but might be distributed separately or not at all. Below, we include tips for a few common systems as examples. Note that even if the instructions match your system, they might be outdated."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.277,
+            0.503,
+            0.294
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1.1 Setup with Python built from source"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.115,
+            0.308,
+            0.882,
+            0.339
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "When you build CPython from source, debugging information should be available, and the build should add a python-gdb.py file to the root directory of your repository."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.115,
+            0.344,
+            0.881,
+            0.374
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "To activate support, you must add the directory containing python-gdb.py to GDB’s “auto-load-safe-path”. If you haven’t done this, recent versions of GDB will print out a warning with instructions on how to do this."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.393,
+            0.882,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " If you do not see instructions for your version of GDB, put this in your configuration file (~/.gdbinit or ~/.config/gdb/gdbinit):"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 10,
+          "bbox": [
+            0.117,
+            0.432,
+            0.484,
+            0.448
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 10,
+              "bbox": [
+                0.117,
+                0.432,
+                0.484,
+                0.448
+              ],
+              "content": "add-auto-load-safe-path /path/to/cpython"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.117,
+            0.461,
+            0.441,
+            0.476
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "You can also add multiple paths, separated by :."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.118,
+            0.513,
+            0.508,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1.2 Setup for Python from a Linux distro"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.116,
+            0.546,
+            0.88,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Most Linux systems provide debug information for the system Python in a package called python-debuginfo, python-dbg or similar. For example:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.144,
+            0.581,
+            0.216,
+            0.594
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Fedora:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 15,
+          "bbox": [
+            0.196,
+            0.605,
+            0.508,
+            0.633
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 15,
+              "bbox": [
+                0.196,
+                0.605,
+                0.508,
+                0.633
+              ],
+              "content": "sudo dnf install gdb\nsudo dnf debuginfo-install python3"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "batch"
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.145,
+            0.647,
+            0.218,
+            0.661
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Ubuntu:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 17,
+          "bbox": [
+            0.197,
+            0.67,
+            0.49,
+            0.687
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 17,
+              "bbox": [
+                0.197,
+                0.67,
+                0.49,
+                0.687
+              ],
+              "content": "sudo apt install gdb python3-dbg"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.116,
+            0.699,
+            0.881,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "On several recent Linux systems, GDB can download debugging symbols automatically using debuginfod. However, this will not install the python-gdb.py extension; you generally do need to install the debug info package separately."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 19,
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.116,
+            0.085,
+            0.68,
+            0.106
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2 Using the Debug build and Development mode"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.116,
+            0.125,
+            0.393,
+            0.14
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For easier debugging, you might want to:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.143,
+            0.146,
+            0.881,
+            0.176
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Use a debug build of Python. (When building from source, use configure --with-pydebug. On Linux distros, install and run a package like python-debug or python-dbg, if available.)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.143,
+            0.182,
+            0.48,
+            0.196
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Use the runtime development mode (-X dev)."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.202,
+            0.882,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Both enable extra assertions and disable some optimizations. Sometimes this hides the bug you are trying to find, but in most cases they make the process easier."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.26,
+            0.527,
+            0.28
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3 Using the python-gdb extension"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.299,
+            0.882,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "When the extension is loaded, it provides two main features: pretty printers for Python values, and additional commands."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.117,
+            0.352,
+            0.299,
+            0.369
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.1 Pretty-printers"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.383,
+            0.674,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This is what a GDB backtrace looks like (truncated) when this extension is enabled:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.405,
+            0.877,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.115,
+                0.405,
+                0.877,
+                0.75
+              ],
+              "content": "#0  0x000000000041a6b1 in PyObject_Malloc (nbytes=Cannot access memory at address\n  →0x7ffffff7fefe8\n) at Objects/obmalloc.c:748\n#1  0x000000000041b7c0 in _PyObject_DebugMallocApi (id=111 'o', nbytes=24) at\n  →Objects/obmalloc.c:1445\n#2  0x000000000041b717 in _PyObject_DebugMalloc (nbytes=24) at Objects/obmalloc.\n  →c:1412\n#3  0x000000000044060a in _PyUnicode_New (length=11) at Objects/unicodeobject.c:346\n#4  0x00000000004466aa in PyUnicodeUCS2_DecodeUTF8Stateful (s=0x5c2b8d \"__lltrace__\n  →\", size=11, errors=0x0, consumed=\n    0x0) at Objects/unicodeobject.c:2531\n#5  0x0000000000446647 in PyUnicodeUCS2_DecodeUTF8 (s=0x5c2b8d \"__lltrace__\",\n  →size=11, errors=0x0)\n    at Objects/unicodeobject.c:2495\n#6  0x0000000000440d1b in PyUnicodeUCS2_FromStringAndSize (u=0x5c2b8d \"__lltrace__\n  →\", size=11)\n    at Objects/unicodeobject.c:551\n#7  0x0000000000440d94 in PyUnicodeUCS2_FromString (u=0x5c2b8d \"__lltrace__\") at\n  →Objects/unicodeobject.c:569\n#8  0x0000000000584abd in PyDict_GetItemString (v=\n    {'Yuck': <type at remote 0xad4730>, '__builtins__': <module at remote_\n  →0x7ffff7fd5ee8>, '__file__': 'Lib/test/crashers/nasty_eq_vs_dict.py', '__package_\n  →': None, 'y': <Yuck(i=0) at remote 0xaacd80>, 'dict': {0: 0, 1: 1, 2: 2, 3: 3},\n  →'__cached__': None, '__name__': '__main__', 'z': <Yuck(i=0) at remote 0xaace60>,\n  →'__doc__': None}, key=\n    0x5c2b8d \"__lltrace__\") at Objects/dictobject.c:2171"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.762,
+            0.881,
+            0.792
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Notice how the dictionary argument to PyDict_GetItemString is displayed as its repr(), rather than an opaque PyObject * pointer."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.116,
+            0.797,
+            0.882,
+            0.827
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The extension works by supplying a custom printing routine for values of type PyObject *. If you need to access lower-level details of an object, then cast the value to a pointer of the appropriate type. For example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.117,
+            0.835,
+            0.781,
+            0.901
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.117,
+                0.835,
+                0.781,
+                0.901
+              ],
+              "content": "(gdb) p globals\n\\$1 = {'__builtins__': <module at remote 0x7ffff7fb1868>, '__name__':\n'__main__', 'ctypes': <module at remote 0x7ffff7f14360>, '__doc__': None,\n'__package__': None}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.748,
+            0.905,
+            0.88,
+            0.916
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.711,
+            0.087,
+            0.88,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.117,
+            0.1,
+            0.798,
+            0.275
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.117,
+                0.1,
+                0.798,
+                0.275
+              ],
+              "content": "(gdb) p *(PyDictObject*)globals\n\\$2 = {ob_refcnt = 3, ob_type = 0x3dbdf85820, ma_fill = 5, ma_used = 5,\nma_mask = 7, ma_table = 0x63d0f8, ma_lookup = 0x3dbdc7ea70\n<lookdict_string>, ma_smalltable = {{me_hash = 7065186196740147912,\nme_key = '__builtins__', me_value = <module at remote 0x7ffff7fb1868>},\n{me_hash = -368181376027291943, me_key = '__name__',\nme_value ='__main__'}, {me_hash = 0, me_key = 0x0, me_value = 0x0},\n{me_hash = 0, me_key = 0x0, me_value = 0x0},\n{me_hash = -9177857982131165996, me_key = 'ctypes',\nme_value = <module at remote 0x7ffff7f14360>},\n{me_hash = -8518757509529533123, me_key = '__doc__', me_value = None},\n{me_hash = 0, me_key = 0x0, me_value = 0x0}, {\n    me_hash = 6614918939584953775, me_key = '__package__', me_value = None}}}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.287,
+            0.841,
+            0.303
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note that the pretty-printers do not actually call repr(). For basic types, they try to match its result closely."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.308,
+            0.882,
+            0.353
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An area that can be confusing is that the custom printer for some types look a lot like GDB’s built-in printer for standard types. For example, the pretty-printer for a Python int (PyLongObject*) gives a representation that is not distinguishable from one of a regular machine-level integer:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.359,
+            0.374,
+            0.429
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.116,
+                0.359,
+                0.374,
+                0.429
+              ],
+              "content": "(gdb) p some_machine_integer\n$3 = 42\n\n(gdb) p some_python_integer\n$4 = 42"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.442,
+            0.602,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The internal structure can be revealed with a cast to PyLongObject*:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.158,
+            0.463,
+            0.84,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(gdb) p (PyLongObject)some_python_integer $5 = {ob_base = {ob_base = {ob_refcnt = 8, ob_type = 0x3dad39f5e0}, ob_size = 1}, ob_digit = {42}}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.498,
+            0.881,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A similar confusion can arise with the str type, where the output looks a lot like gdb’s built-in printer for char *:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.119,
+            0.521,
+            0.347,
+            0.551
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.119,
+                0.521,
+                0.347,
+                0.551
+              ],
+              "content": "(gdb) p ptr_to_python_str\n$6 = '__builtins__'"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.564,
+            0.881,
+            0.594
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The pretty-printer for str instances defaults to using single-quotes (as does Python’s repr for strings) whereas the standard printer for char * values uses double-quotes and contains a hexadecimal address:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 10,
+          "bbox": [
+            0.118,
+            0.602,
+            0.365,
+            0.631
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 10,
+              "bbox": [
+                0.118,
+                0.602,
+                0.365,
+                0.631
+              ],
+              "content": "(gdb) p ptr_to_char_star\n$7 = 0x6d72c0 \"hello world\""
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.118,
+            0.644,
+            0.711,
+            0.66
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Again, the implementation details can be revealed with a cast to PyUnicodeObject*:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.115,
+            0.667,
+            0.79,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.115,
+                0.667,
+                0.79,
+                0.711
+              ],
+              "content": "(gdb) p * (PyUnicodeObject*)$6\n$8 = {ob_base = {ob_refcnt = 33, ob_type = 0x3dad3a95a0}, length = 12,\nstr = 0x7ffff2128500, hash = 7065186196740147912, state = 1, defenc = 0x0}"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 13,
+          "bbox": [
+            0.117,
+            0.74,
+            0.243,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.2 py-list"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.157,
+            0.772,
+            0.839,
+            0.801
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The extension adds a py-list command, which lists the Python source code (if any) for the current frame in the selected thread. The current line is marked with a “>”:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 15,
+          "bbox": [
+            0.158,
+            0.808,
+            0.517,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 15,
+              "bbox": [
+                0.158,
+                0.808,
+                0.517,
+                0.904
+              ],
+              "content": "(gdb) py-list\n  901          if options.profile:\n    902            options.profile = False\n    903            profile_me()\n    904            return\n  905\n>906           u = UI()"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.706,
+            0.904,
+            0.839,
+            0.917
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.156,
+            0.087,
+            0.84,
+            0.172
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.156,
+                0.087,
+                0.84,
+                0.172
+              ],
+              "content": "(continued from previous page)\n    if not u.quit:\n        try:\n            gtk.main()\n        except KeyboardInterrupt:\n            # properly quit on a keyboard interrupt..."
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.157,
+            0.183,
+            0.838,
+            0.214
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Use py-list START to list at a different line number within the Python source, and py-list START,END to list a specific range of lines within the Python source."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.236,
+            0.352,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.3 py-up and py-down"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.157,
+            0.268,
+            0.84,
+            0.297
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The py-up and py-down commands are analogous to GDB’s regular up and down commands, but try to move at the level of CPython frames, rather than C frames."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.157,
+            0.303,
+            0.841,
+            0.361
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "GDB is not always able to read the relevant frame information, depending on the optimization level with which CPython was compiled. Internally, the commands look for C frames that are executing the default frame evaluation function (that is, the core bytecode interpreter loop within CPython) and look up the value of the related PyFrameObject *."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.158,
+            0.367,
+            0.576,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "They emit the frame number (at the C level) within the thread."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.159,
+            0.388,
+            0.252,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.156,
+            0.409,
+            0.79,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.156,
+                0.409,
+                0.79,
+                0.56
+              ],
+              "content": "(gdb) py-up\n#37 Frame 0x9420b04, for file /usr/lib/python2.6/site-packages/\ngnome_sudoku/main.py, line 906, in start_game ()\n    u = UI()\n(gdb) py-up\n#40 Frame 0x948e82c, for file /usr/lib/python2.6/site-packages/\ngnome_sudoku/gnome_sudoku.py, line 22, in start_game(main=<module at>\n    remote 0xb771b7f4>)\n    main.start_game()\n(gdb) py-up\nUnable to find an older python frame"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.158,
+            0.572,
+            0.419,
+            0.587
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "so we’re at the top of the Python stack."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.157,
+            0.593,
+            0.84,
+            0.622
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The frame numbers correspond to those displayed by GDB’s standard backtrace command. The command skips C frames which are not executing Python code."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.159,
+            0.628,
+            0.285,
+            0.643
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Going back down:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.156,
+            0.649,
+            0.838,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.156,
+                0.649,
+                0.838,
+                0.904
+              ],
+              "content": "(gdb) py-down\n#37 Frame 0x9420b04, for file /usr/lib/python2.6/site-packages/gnome_  \n->sudoku/main.py, line 906, in start_game ()\n    u = UI()\n(gdb) py-down\n#34 (unable to read python frame information)\n(gdb) py-down\n#23 (unable to read python frame information)\n(gdb) py-down\n#19 (unable to read python frame information)\n(gdb) py-down\n#14 Frame 0x99262ac, for file /usr/lib/python2.6/site-packages/gnome_  \n->sudoku/game_selector.py, line 201, in run_swallowed_dialog (self=  \n-><NewOrSavedGameSelector(new_game_model=<gtk.ListStore at remote_  \n->0x98fab44>, puzzle=None, saved_games=[{'gsd.auto_fills': 0, 'tracking':  \n->{}, 'trackers': {}, 'notes': [], 'saved_at': 1270084485, 'game': '7 8 0_  \n->0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 0 0 0 4 7 9 2 0 0 0_  \n->9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0_  \n->0 0 0 0 4 5\\n7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5_"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.705,
+            0.903,
+            0.839,
+            0.915
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.155,
+            0.088,
+            0.839,
+            0.342
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.155,
+                0.088,
+                0.839,
+                0.342
+              ],
+              "content": "(continued from previous page)\n←1 8 3 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0\n←5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5', 'gsd.impossible_hints': 0, 'timer.__\n→absolute_start_time__': <float at remote 0x984b474>, 'gsd.hints': 0,\n→'timer.active_time': <float at remote 0x984b494>, 'timer.total_time':\n→<float at remote 0x984b464>}], dialog=<gtk.Dialog at remote 0x98faaa4>,,\n→saved_game_model=<gtk.ListStore at remote 0x98fad24>, sudoku_maker=\n→<SudokuMaker(terminated=False, played=[], batch_siz...(truncated)\nswallower.run_dialog(self.dialog)\n(gdb) py-down\n#11 Frame 0x9aead74, for file /usr/lib/python2.6/site-packages/gnome_\n→sudoku/dialog_swallower.py, line 48, in run_dialog (self=\n→<SwappableArea(running=<gtk.Dialog at remote 0x98faaa4>, main_page=0)-\n→at remote 0x98fa6e4>, d=<gtk.Dialog at remote 0x98faaa4>)\ngtk.main()\n(gdb) py-down\n#8 (unable to read python frame information)\n(gdb) py-down\nUnable to find a newer python frame"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.158,
+            0.352,
+            0.455,
+            0.367
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "and we’re at the bottom of the Python stack."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.391,
+            0.22,
+            0.409
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.4 py-bt"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.158,
+            0.422,
+            0.752,
+            0.46
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The py-bt command attempts to display a Python-level backtrace of the current thread. For example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.157,
+            0.465,
+            0.838,
+            0.902
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.157,
+                0.465,
+                0.838,
+                0.902
+              ],
+              "content": "(gdb) py-bt\n#8 (unable to read python frame information)\n#11 Frame 0x9aead74, for file /usr/lib/python2.6/site-packages/gnome_\nsudoku/dialog_swallower.py, line 48, in run_dialog (self=\n<SwappableArea(running=<gtk.Dialog at remote 0x98faaa4>, main_page=0) _\nat remote 0x98fa6e4>, d=<gtk.Dialog at remote 0x98faaa4>)\n    gtk.main()\n#14 Frame 0x99262ac, for file /usr/lib/python2.6/site-packages/gnome_\nsudoku/game_selector.py, line 201, in run_swallowed_dialog (self=\n<NewOrSavedGameSelector(new_game_model=<gtk.ListStore at remote _\n0x98fab44>, puzzle=None, saved_games=[{'gsd.auto_fills': 0, 'tracking':\n{}, 'trackers': {}, 'notes': [], 'saved_at': 1270084485, 'game': '7 8 0 _\n0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 0 0 0 4 7 9 2 0 0 0 _\n9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 5 0 4 0 6 0 0 2 1 0 _\n0 0 0 0 4 5\\n7 8 0 0 0 0 0 5 6 0 0 9 0 8 0 1 0 0 0 4 6 0 0 0 0 7 0 6 5 _\n1 8 3 4 7 9 2 0 0 0 9 0 1 0 0 0 3 9 7 6 0 0 0 1 8 0 6 0 0 0 0 2 8 0 0 0 _\n5 0 4 0 6 0 0 2 1 0 0 0 0 0 4 5', 'gsd.impossible_hints': 0, 'timer.__\nabsolute_start_time__': <float at remote 0x984b474>, 'gsd.hints': 0,\n'timer.active_time': <float at remote 0x984b494>, 'timer.total_time':\n<float at remote 0x984b464>}], dialog=<gtk.Dialog at remote 0x98faaa4>, _\nsaved_game_model=<gtk.ListStore at remote 0x98fad24>, sudoku_maker=\n<SudokuMaker(terminated=False, played=[], batch_siz...(truncated)\n    swallower.run_dialog(self.dialog)\n#19 (unable to read python frame information)\n#23 (unable to read python frame information)\n#34 (unable to read python frame information)\n#37 Frame 0x9420b04, for file /usr/lib/python2.6/site-packages/gnome_\nsudoku/main.py, line 906, in start_game ()\n    u = UI()\n#40 Frame 0x948e82c, for file /usr/lib/python2.6/site-packages/gnome_\nsudoku/gnome_sudoku.py, line 22, in start_game (main=<module at remote _\n0xb771b7f4>)\n    main.start_game()"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.158,
+            0.086,
+            0.789,
+            0.102
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The frame numbers correspond to those displayed by GDB’s standard backtrace command."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.117,
+            0.126,
+            0.256,
+            0.144
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.5 py-print"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.157,
+            0.156,
+            0.84,
+            0.186
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The py-print command looks up a Python name and tries to print it. It looks in locals within the current thread, then globals, then finally builtins:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.157,
+            0.194,
+            0.804,
+            0.317
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.157,
+                0.194,
+                0.804,
+                0.317
+              ],
+              "content": "(gdb) py-print self\nlocal 'self' = <SwappableArea(running=<gtk.Dialog at remote 0x98faaa4>,\nmain_page=0) at remote 0x98fa6e4>\n(gdb) py-print __name__\nglobal '__name__' = 'gnome_sudoku.dialog_swallower'\n(gdb) py-print len\nbuiltin 'len' = <built-in function len>\n(gdb) py-print scarlet_pimpernel\n'scarlet_pimpernel' not found"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.117,
+            0.346,
+            0.268,
+            0.363
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.6 py-locals"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.158,
+            0.377,
+            0.84,
+            0.407
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The py-locals command looks up all Python locals within the current Python frame in the selected thread, and prints their representations:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.157,
+            0.414,
+            0.731,
+            0.472
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.157,
+                0.414,
+                0.731,
+                0.472
+              ],
+              "content": "(gdb) py-locals\nself = <SwappableArea(running=<gtk.Dialog at remote 0x98faaa4>,\nmain_page=0) at remote 0x98fa6e4>\nd = <gtk.Dialog at remote 0x98faaa4>"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.117,
+            0.504,
+            0.44,
+            0.524
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4 Use with GDB commands"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.115,
+            0.544,
+            0.881,
+            0.574
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The extension commands complement GDB’s built-in commands. For example, you can use a frame numbers shown by py-bt with the frame command to go a specific frame within the selected thread, like this:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.58,
+            0.872,
+            0.794
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.116,
+                0.58,
+                0.872,
+                0.794
+              ],
+              "content": "(gdb) py-bt\n(output snipped)\n#68 Frame 0xaa4560, for file Lib/test/regrtest.py, line 1548, in <module> ()\n        main()\n(gdb) frame 68\n#68 0x00000000004cd1e6 in PyEval_EvalFrameEx (f=Frame 0xaa4560, for file Lib/test/\n    regrtest.py, line 1548, in <module> (), throwflag=0) at Python/ceval.c:2665\n2665\n            x = call_function(&sp, oparg);\n(gdb) py-list\n1543          # Run the tests in a context manager that temporary changes the CWD to\n    a\n1544          # temporary and writable directory. If it's not possible to create or\n1545          # change the CWD, the original CWD will be used. The original CWD is\n1546          # available from test_support.SAVEDCWD.\n1547          with test_support.temp_cwd(TESTCWD, quiet=True):\n>1548          main()"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.115,
+            0.807,
+            0.881,
+            0.836
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The info threads command will give you a list of the threads within the process, and you can use the thread command to select a different one:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.116,
+            0.842,
+            0.879,
+            0.903
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.116,
+                0.842,
+                0.879,
+                0.903
+              ],
+              "content": "(gdb) info threads\n  105 Thread 0x7fffefa18710 (LWP 10260) sem_wait () at ../nptl/sysdeps/unix/sysv/\n  linux/x86_64/sem_wait.S:86\n  104 Thread 0x7ffffdf5fe710 (LWP 10259) sem_wait () at ../nptl/sysdeps/unix/sysv/"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.748,
+            0.9,
+            0.881,
+            0.912
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.115,
+            0.087,
+            0.881,
+            0.145
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.115,
+                0.087,
+                0.881,
+                0.145
+              ],
+              "content": "(continued from previous page)\n    linux/x86_64/sem_wait.S:86\n* 1 Thread 0x7ffff7fe2700 (LWP 10145)  0x00000038e46d73e3 in select () at ../\n    sysdeps/unix/syscall-template.S:82"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.116,
+            0.157,
+            0.88,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "You can use thread apply all COMMAND or (t a a COMMAND for short) to run a command on all threads. With py-bt, this lets you see what every thread is doing at the Python level:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.115,
+            0.193,
+            0.881,
+            0.902
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.115,
+                0.193,
+                0.881,
+                0.902
+              ],
+              "content": "(gdb) t a a py-bt\n\nThread 105 (Thread 0x7fffffa18710 (LWP 10260)):\n#5 Frame 0x7fffd00019d0, for file /home/david/coding/python-svn/Lib/threading.py,\n    line 155, in _acquire_restore (self=<_RLock(_Verbose__verbose=False, _RLock__\n    owner=140737354016512, _RLock__block=<thread.lock at remote 0x858770>, _RLock__\n    count=1) at remote 0xd7ff40>, count_owner=(1, 140737213728528), count=1,\n    owner=140737213728528)\n        self.__block.acquire()\n#8 Frame 0x7fffac001640, for file /home/david/coding/python-svn/Lib/threading.py,\n    line 269, in wait (self=<_Condition(_Condition__lock=<_RLock(_Verbose__\n    verbose=False, _RLock__owner=140737354016512, _RLock__block=<thread.lock at\n    remote 0x858770>, _RLock__count=1) at remote 0xd7ff40>, acquire=<instancemethod\n    at remote 0xd80260>, _is_owned=<instancemethod at remote 0xd80160>, _release_\n    save=<instancemethod at remote 0xd803e0>, release=<instancemethod at remote\n    0xd802e0>, _acquire_restore=<instancemethod at remote 0xd7ee60>, _Verbose__\n    verbose=False, _Condition__waiters=[])) at remote 0xd7fd10>, timeout=None, waiter=\n    <thread.lock at remote 0x858a90>, saved_state=(1, 140737213728528))\n        self._acquire_restore(saved_state)\n#12 Frame 0x7ffffb8001a10, for file /home/david/coding/python-svn/Lib/test/lock_\n    tests.py, line 348, in f ()\n        cond.wait()\n#16 Frame 0x7ffffb8001c40, for file /home/david/coding/python-svn/Lib/test/lock_\n    tests.py, line 37, in task (tid=140737213728528)\n        f()\n\nThread 104 (Thread 0x7ffffdf5fe710 (LWP 10259)):\n#5 Frame 0x7fffe4001580, for file /home/david/coding/python-svn/Lib/threading.py,\n    line 155, in _acquire_restore (self=<_RLock(_Verbose__verbose=False, _RLock__\n    owner=140737354016512, _RLock__block=<thread.lock at remote 0x858770>, _RLock__\n    count=1) at remote  0xd7ff40>, count_owner=(1, 140736940992272), count=1,\n    owner=140736940992272)\n        self.__block.acquire()\n#8 Frame 0x7fffc8002090, for file /home/david/coding/python-svn/Lib/threading.py,\n    line 269, in wait (self=<_Condition(_Condition__lock=<_RLock(_Verbose__\n    verbose=False, _RLock__owner=140737354016512, _RLock__block=<thread.lock at\n    remote 0x858770>, _RLock__count= 1) at remote  0xd7ff40>, acquire=<instancemethod\n    at remote  0xd80260>, _is_owned=<instancemethod at remote  0xd80160>, _release_\n    save=<instancemethod at remote  0xd803e0>, release=<instancemethod at remote\n    0xd802e0>, _acquire_restore=<instancemethod at remote  0xd7ee60>, _Verbose__\n    verbose=False, _Condition__waiters=[])) at remote  0xd7fd10>, timeout=None, waiter=\n    <thread.lock at remote  0x858860>, saved_state=(1, 140736940992272))\n        self._acquire_restore(saved_state)\n#12 Frame 0x7fffac001c90, for file /home/david/coding/python-svn/Lib/test/lock_\n    tests.py, line 348, in f ()\n        cond.wait()\n#16 Frame 0x7fffac0011c0, for file /home/david/coding/python-svn/Lib/test/lock_\n    tests.py, line 37, in task (tid=140736940992272)\n        f()\n\nThread 1 (Thread 0x7ffff7fe2700 (LWP 10145)):\n#5 Frame 0xcb5380, for file /home/david/coding/python-svn/Lib/test/lock_tests.py,\n    line 16, in _wait ()\n        time.sleep(0.01)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.748,
+            0.902,
+            0.88,
+            0.913
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.71,
+            0.088,
+            0.88,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.119,
+            0.1,
+            0.877,
+            0.301
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.119,
+                0.1,
+                0.877,
+                0.301
+              ],
+              "content": "#8 Frame 0x7ffffd00024a0, for file /home/david/coding/python-svn/Lib/test/lock_tests.py, line 378, in _check_notify (self=<ConditionTests(_testMethodName='test_notify', _resultForDoCleanups=<TestResult(_original_stdout=<cStringIO.StringO at->remote 0xc191e0>, skipped=[], _mirrorOutput=False, testsRun=39, buffer=False, _original_stderr=<file at remote 0x7ffff7fc6340>, _stdout_buffer=<cStringIO.StringO at remote 0xc9c7f8>, _stderr_buffer=<cStringIO.StringO at remote_0xc9c790>, _moduleSetUpFailed=False, expectedFailures=[], errors=[], _previousTestClass=<type at remote 0x928310>, unexpectedSuccesses=[], failures=[], shouldStop=False, failfast=False) at remote 0xc185a0>, _threads=(0,), _cleanups=[], _type_equality_funcs=<type at remote 0x7eba00>: <instancemethod at->remote 0xd750e0>, <type at remote 0x7e7820>: <instancemethod at remote 0xd75160>, <type at remote 0x7e30e0>: <instancemethod at remote 0xd75060>, <type at remote_0x7e7d20>: <instancemethod at remote 0xd751e0>, <type at remote 0x7f19e0...>(truncated)\n    _wait()"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "page_number",
+          "index": 2,
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

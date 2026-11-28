@@ -1,0 +1,981 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:43:06",
+      "producer_application": "FPDF 1.7",
+      "page_count": 3,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.019,
+            0.257,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.096,
+            0.434,
+            0.467,
+            0.562
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "NHẬP INPUT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.651,
+            0.319,
+            0.903,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "<1>"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.153,
+            0.451,
+            0.22
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nhập dữ liệu với hàm input:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.16,
+            0.236,
+            0.426,
+            0.291
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cú pháp:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " input(prompt)"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.773,
+            0.238,
+            0.828,
+            0.275
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.773,
+                0.238,
+                0.828,
+                0.275
+              ],
+              "image_path": "images/page_1_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.159,
+            0.303,
+            0.834,
+            0.414
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Giá trị trả về:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " input() trả về xâu kí tự ở kiểu str, các bạn cần chú ý ép kiểu sang dữ liệu tương ứng của biến trong đề bài."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.059,
+            0.429,
+            0.127,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.069,
+            0.506,
+            0.096,
+            0.536
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.119,
+            0.518,
+            0.378,
+            0.657
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "n = input('Nhap so :') print(type(n)) print(n)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.105,
+            0.699,
+            0.167,
+            0.739
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "INPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.272,
+            0.699,
+            0.352,
+            0.737
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.121,
+            0.77,
+            0.151,
+            0.812
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.252,
+            0.747,
+            0.371,
+            0.833
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "<class 'str'> 20"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.51,
+            0.429,
+            0.539,
+            0.463
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.476,
+            0.465,
+            0.541,
+            0.5
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.483,
+            0.506,
+            0.511,
+            0.538
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.533,
+            0.499,
+            0.874,
+            0.751
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ép sang kiểu là số nguyên hoặc thực bằng hàm int(), float() n = int(input('Nhap so :')) print(type(n)) print(n)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.575,
+            0.776,
+            0.639,
+            0.875
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "INPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " 20"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.726,
+            0.771,
+            0.844,
+            0.895
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " <class 'int'> 20"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 20,
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 21,
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 22,
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "電"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.036,
+            0.153,
+            0.452,
+            0.22
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nhập dữ liệu với hàm input:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.403,
+            0.243,
+            0.599,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nhập nhiều số"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.175,
+            0.327,
+            0.615,
+            0.381
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Bước 1:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Nhập cả dòng bằng hàm input."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.175,
+            0.395,
+            0.819,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Bước 2:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Dùng hàm split để tách các số trong xâu input ra."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.175,
+            0.463,
+            0.796,
+            0.571
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Bước 3:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Sử dụng map để ép các xâu được tách ra trong input sang số int hoặc float tùy theo đầu bài."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.06,
+            0.573,
+            0.126,
+            0.644
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.067,
+            0.636,
+            0.422,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nhập 2 số trên một dòng a, b = map(int, input().split()) print(a, b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.151,
+            0.798,
+            0.207,
+            0.835
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "INPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.29,
+            0.798,
+            0.362,
+            0.835
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.475,
+            0.579,
+            0.544,
+            0.651
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 EXAMPLE"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.485,
+            0.641,
+            0.901,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "00 Nhập 4 số trên một dòng a, b, c, d = map(int, input().split()) print(a, b, c, d)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.153,
+            0.847,
+            0.205,
+            0.885
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10 20"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.3,
+            0.847,
+            0.353,
+            0.885
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10 20"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.58,
+            0.798,
+            0.638,
+            0.835
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "INPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.762,
+            0.798,
+            0.835,
+            0.835
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OUTPUT",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.558,
+            0.845,
+            0.663,
+            0.886
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10 20 30 40"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.747,
+            0.845,
+            0.851,
+            0.886
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10 20 30 40"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 20,
+          "bbox": [
+            0.014,
+            0.931,
+            0.033,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3i"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 21,
+          "bbox": [
+            0.036,
+            0.95,
+            0.102,
+            0.971
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "nprotected.com"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 22,
+          "bbox": [
+            0.823,
+            0.949,
+            0.948,
+            0.993
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 23,
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": []
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

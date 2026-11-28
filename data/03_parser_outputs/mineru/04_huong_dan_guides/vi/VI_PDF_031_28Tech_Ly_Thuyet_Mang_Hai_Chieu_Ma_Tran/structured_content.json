@@ -1,0 +1,2004 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.257,
+            0.131
+          ],
+          "content": "28TECH 28TECH Become A Better Developer"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.045,
+            0.432,
+            0.585,
+            0.549
+          ],
+          "level": 2,
+          "content": "MẢNG HAI CHIỀU"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.65,
+            0.301,
+            0.902,
+            0.754
+          ],
+          "level": 2,
+          "content": "<1>"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.932,
+            0.032,
+            0.98
+          ],
+          "content": "1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.115
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.929,
+            0.017,
+            0.985,
+            0.112
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.188,
+            0.289,
+            0.81,
+            0.579
+          ],
+          "content": "Trong Python để sử dụng mảng 2 hay nhiều chiều ta sử dụng nested list. Ở phần mảng 2 chiều này các bạn sẽ học về các bài toán cơ bản trên mảng 2 chiều như bài toán về hàng, cột, các phép toán trên ma trận, ma trận xoáy ốc…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.189,
+            0.58,
+            0.809,
+            0.699
+          ],
+          "content": "Để giải quyết các bài toán liên quan tới ma trận các bạn cũng sử dụng nested list trong Python."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.979
+          ],
+          "content": "2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.992
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.95,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": "000"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.125
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.145,
+            0.553,
+            0.211
+          ],
+          "level": 2,
+          "content": "1. Tạo mảng 2 chiều và nhập xuất:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.037,
+            0.215,
+            0.085,
+            0.3
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.093,
+            0.233,
+            0.92,
+            0.285
+          ],
+          "content": "Để khai báo mảng 2 chiều, ta cần chỉ rõ số lượng hàng, số lượng cột của ma trận."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.38,
+            0.315,
+            0.62,
+            0.417
+          ],
+          "level": 2,
+          "content": "Khai báo mảng 2 chiều có n hàng và m cột"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.162,
+            0.471,
+            0.809,
+            0.825
+          ],
+          "sub_type": "code",
+          "content": "```python\nn, m = 2, 3\na = [[0 for _ in range(m)] for _ in range(n)]\nfor i in range(n):\n    a[i] = list(map(int, input().split()))\nfor i in range(n):\n    for j in range(m):\n        print(a[i][j], end = ' ')\n    print()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.93,
+            0.035,
+            0.977
+          ],
+          "content": "3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.109
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.034,
+            0.145,
+            0.762,
+            0.211
+          ],
+          "level": 2,
+          "content": "2. Truy cập vào các phần tử trong mảng 2 chiều:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.044,
+            0.217,
+            0.099,
+            0.316
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.219,
+            0.9,
+            0.381
+          ],
+          "content": "Để truy cập vào phần tử trong mảng, các bạn dùng chỉ số hàng và chỉ số cột. Chỉ số hàng và cột của mảng 2 chiều được đánh số từ 0 tương tự như mảng 1 chiều."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.253,
+            0.415,
+            0.488,
+            0.837
+          ],
+          "content": "\\begin{array}{c c c c} & 0 & 1 & 2 \\\\ 0 & 1 & 2 & 3 \\\\ \\hline 1 & 4 & 5 & 6 \\\\ 2 & 7 & 8 & 9 \\end{array}",
+          "image_source": "images/page_3_equation_6.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.543,
+            0.583,
+            0.753,
+            0.743
+          ],
+          "content": "\\begin{array}{l} \\text {a[0][2] = 3} \\\\ \\text {a[2][1] = 8} \\end{array}",
+          "image_source": "images/page_3_equation_7.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "4"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.034,
+            0.145,
+            0.553,
+            0.207
+          ],
+          "content": "**3. Các bài toán trên mảng 2 chiều:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.215,
+            0.643,
+            0.277
+          ],
+          "content": "**a. Tìm phần tử lớn nhất, nhỏ nhất trong mảng:**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.303,
+            0.126,
+            0.372
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.375,
+            0.49,
+            0.623
+          ],
+          "content": "a = [[1, 2, 5], [3, 1, 0], [4, 1, 5]] min\\_val, max\\_val = 10\\*\\*18, -10\\*\\*18 for row in a: min\\_val = min(min\\_val, min(row)) max\\_val = max(max\\_val, max(row)) print(min\\_val, max\\_val)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.662,
+            0.339,
+            0.741
+          ],
+          "content": "**OUTPUT** 0 5"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.604,
+            0.305,
+            0.934,
+            0.789
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_8.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.014,
+            0.931,
+            0.035,
+            0.977
+          ],
+          "content": "5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.035,
+            0.145,
+            0.625,
+            0.277
+          ],
+          "content": "**3. Các bài toán trên mảng 2 chiều: b. Flatten mảng 2 chiều thành mảng 1 chiều:**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.303,
+            0.125,
+            0.373
+          ],
+          "level": 2,
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.402,
+            0.582,
+            0.695
+          ],
+          "content": "a = [[1, 2, 5], [3, 1, 0], [4, 1, 5]] b = [x for small\\_list in a for x in small\\_list] print(min(b)) print(max(b)) OUTPUT print(b) 05 [1, 2, 5, 3, 1, 0, 4, 1, 5]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.016,
+            0.931,
+            0.034,
+            0.977
+          ],
+          "content": "6"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.95,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.034,
+            0.145,
+            0.553,
+            0.207
+          ],
+          "content": "**3. Các bài toán trên mảng 2 chiều:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.215,
+            0.715,
+            0.277
+          ],
+          "content": "**c. Tính tổng từng hàng của ma trận (mảng 2 chiều):**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.092,
+            0.427,
+            0.527,
+            0.637
+          ],
+          "content": "a = [[1, 2, 5], [3, 1, 0], [4, 1, 5]] sum\\_row = [sum(row) for row in a] print(sum\\_row) **OUTPUT** 8 4 10"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.576,
+            0.311,
+            0.861,
+            0.816
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_6.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.012,
+            0.929,
+            0.035,
+            0.98
+          ],
+          "content": "7"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.035,
+            0.146,
+            0.494,
+            0.21
+          ],
+          "level": 2,
+          "content": "4. Các phép toán trên ma trận:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.217,
+            0.373,
+            0.275
+          ],
+          "level": 2,
+          "content": "a. Tạo ma trận chuyển vị:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.052,
+            0.285,
+            0.107,
+            0.383
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.283,
+            0.928,
+            0.389
+          ],
+          "content": "Ma trận chuyển vị của ma trận a cỡ nxm là ma trận b có cỡ mxn, trong đó các hàng của ma trận a trở thành các cột của ma trận b."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.161,
+            0.389,
+            0.808,
+            0.885
+          ],
+          "sub_type": "code",
+          "content": "```python\na = [[1, 2, 5],\n[3, 1, 0],\n[4, 1, 5]]\na_t = [[row[i] for row in a] for i in range(len(a))]\nprint(a_t)\nOUTPUT\n[[1, 3, 4],\n[2, 1, 1],\n[5, 0, 5]]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.015,
+            0.931,
+            0.034,
+            0.976
+          ],
+          "content": "8"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.067,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.986,
+            0.109
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.034,
+            0.146,
+            0.495,
+            0.21
+          ],
+          "level": 2,
+          "content": "4. Các phép toán trên ma trận:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.217,
+            0.355,
+            0.273
+          ],
+          "content": "**b. Cộng trử hai ma trận:**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.04,
+            0.281,
+            0.097,
+            0.385
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.096,
+            0.283,
+            0.958,
+            0.442
+          ],
+          "content": "Trong đại số tuyến tính, ma trận tương tự như một mảng 2 chiều gồm n hàng và m cột. Để 2 ma trận có thể cộng hoặc trừ cho nhau thì chúng phải có cùng số hàng và số cột."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.106,
+            0.456,
+            0.891,
+            0.648
+          ],
+          "content": "\\begin{array}{c c c} \\hline 1 & 2 & 0 \\\\ \\hline 0 & 4 & 1 \\\\ \\hline \\end{array} + \\begin{array}{c c c} \\hline 1 & 4 & 8 \\\\ \\hline 9 & 2 & 3 \\\\ \\hline \\end{array} = \\begin{array}{c c c} \\hline 2 & 6 & 8 \\\\ \\hline 9 & 6 & 4 \\\\ \\hline \\end{array}",
+          "image_source": "images/page_8_equation_6.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.106,
+            0.711,
+            0.892,
+            0.904
+          ],
+          "content": "\\begin{array}{c c c} \\hline 1 & 2 & 0 \\\\ \\hline 0 & 4 & 1 \\\\ \\hline \\end{array} - \\begin{array}{c c c} \\hline 1 & 4 & 8 \\\\ \\hline 9 & 2 & 3 \\\\ \\hline \\end{array} = \\begin{array}{c c c} \\hline 0 & - 2 & - 8 \\\\ \\hline - 9 & 2 & - 2 \\\\ \\hline \\end{array}",
+          "image_source": "images/page_8_equation_7.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.013,
+            0.929,
+            0.035,
+            0.978
+          ],
+          "content": "9"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.822,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.111
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.035,
+            0.145,
+            0.495,
+            0.211
+          ],
+          "level": 2,
+          "content": "4. Các phép toán trên ma trận:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.217,
+            0.354,
+            0.277
+          ],
+          "content": "**b. Cộng trừ hai ma trận:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.042,
+            0.365,
+            0.108,
+            0.437
+          ],
+          "content": "EXAMPLE"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.151,
+            0.294,
+            0.372,
+            0.395
+          ],
+          "level": 2,
+          "content": "Cộng 2 ma trận cùng cỡ n hàng m cột"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.049,
+            0.464,
+            0.478,
+            0.856
+          ],
+          "content": "n, m = 3, 3 a = [[1, 2, 5], [3, 1, 0], [4, 1, 5]] b = [[0, 1, 2], [1, 1, 1], [0, 1, 0]] c = [[0 for \\_ in range(m)] for \\_ in range(n)] for i in range(n): for j in range(m): c[i][j] = a[i][j] + b[i][j] print(c) **OUTPUT** [[1, 3, 7], [4, 2, 1], [4, 2, 5]]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.63,
+            0.294,
+            0.834,
+            0.395
+          ],
+          "level": 2,
+          "content": "Trừ 2 ma trận cùng cỡ n hàng m cột"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.365,
+            0.579,
+            0.439
+          ],
+          "content": "一品EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.52,
+            0.441,
+            0.549,
+            0.471
+          ],
+          "content": "00"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.521,
+            0.466,
+            0.948,
+            0.858
+          ],
+          "content": "n, m = 3, 3 a = [[1, 2, 5], [3, 1, 0], [4, 1, 5]] b = [[0, 1, 2], [1, 1, 1], [0, 1, 0]] c = [[0 for \\_ in range(m)] for \\_ in range(n)] for i in range(n): for j in range(m): c[i][j] = a[i][j] - b[i][j] print(c) **OUTPUT** [[1, 1, 3], [2, 0, -1], [4, 0, 5]]"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.009,
+            0.925,
+            0.047,
+            0.975
+          ],
+          "content": "10"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.822,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.933,
+            0.987,
+            0.995
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.066,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.109
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.146,
+            0.494,
+            0.211
+          ],
+          "level": 2,
+          "content": "4. Các phép toán trên ma trận:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.218,
+            0.306,
+            0.275
+          ],
+          "level": 2,
+          "content": "c. Nhân hai ma trận:"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.06,
+            0.327,
+            0.107,
+            0.414
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.331,
+            0.917,
+            0.493
+          ],
+          "content": "Giả sử có 2 ma trận a cỡ nxm, ma trận b cỡ pxq, để ma trận a có thể nhân với ma trận b thì số cột của ma trận a, tức là m phải bằng số hàng của ma trận b, tức là p."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.199,
+            0.529,
+            0.821,
+            0.611
+          ],
+          "level": 2,
+          "content": "a[n][m] x b[p][q] = c[n][q]"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.06,
+            0.641,
+            0.106,
+            0.729
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_image_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.644,
+            0.916,
+            0.809
+          ],
+          "content": "Khi đó m = p thì ma trận tích của a với b sẽ là ma trận c có cỡ nxq. Phần tử ở chỉ số (i, j) của ma trận tích c được tính bằng cách nhân từng cặp phần tử ở hàng i của ma trận a với các phần tử ở cột j của ma trận b."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.008,
+            0.925,
+            0.043,
+            0.975
+          ],
+          "content": "11"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.146,
+            0.495,
+            0.211
+          ],
+          "level": 2,
+          "content": "4. Các phép toán trên ma trận:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.218,
+            0.307,
+            0.274
+          ],
+          "level": 2,
+          "content": "c. Nhân hai ma trận:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.226,
+            0.304,
+            0.294,
+            0.373
+          ],
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.403,
+            0.273,
+            0.596,
+            0.325
+          ],
+          "level": 2,
+          "content": "Chương trình mẫu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.378,
+            0.738,
+            0.868
+          ],
+          "content": "n, m, p = map(int, input().split()) a, b = [0] \\* n, [0] \\* m for i in range(n): a[i] = list(map(int, input().split())) for i in range(m): b[i] = list(map(int, input().split())) c = [[0 for \\_ in range(n)] for \\_ in range(p)] for i in range(n): for j in range(p): for k in range(m): c[i][j] += a[i][k] \\* b[k][j] print(c)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.01,
+            0.925,
+            0.047,
+            0.975
+          ],
+          "content": "12"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.126
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.016,
+            0.985,
+            0.109
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.035,
+            0.145,
+            0.5,
+            0.213
+          ],
+          "level": 2,
+          "content": "5. Kỹ thuật duyệt các ô liền kề:"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.297,
+            0.239,
+            0.699,
+            0.895
+          ],
+          "content": "| i-1, j-1 | i-1, j | i-1, j+1 |\n| --- | --- | --- |\n| i, j-1 | i, j | i, j+1 |\n| i+1, j-1 | i+1, j | i+1, j+1 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_table_4.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.009,
+            0.925,
+            0.047,
+            0.974
+          ],
+          "content": "13"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.008,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.145,
+            0.499,
+            0.213
+          ],
+          "level": 2,
+          "content": "5. Kỹ thuật duyệt các ô liền kề:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.16,
+            0.305,
+            0.231,
+            0.412
+          ],
+          "content": "EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.337,
+            0.275,
+            0.661,
+            0.331
+          ],
+          "content": "**Duyệt 4 ô chung cạnh với ô (i,j)**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.217,
+            0.393,
+            0.256,
+            0.426
+          ],
+          "content": "a =",
+          "image_source": "images/page_13_equation_6.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.259,
+            0.427,
+            0.366,
+            0.553
+          ],
+          "content": "\\begin{array}{l} \\left[ \\begin{array}{c c c} 1, & 2, & 3 \\end{array} \\right], \\\\ \\left[ \\begin{array}{c c c} 4, & 5, & 6 \\end{array} \\right], \\\\ \\left[ \\begin{array}{c c c} 7, & 8, & 9 \\end{array} \\right] \\end{array}",
+          "image_source": "images/page_13_equation_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.419,
+            0.424,
+            0.5,
+            0.522
+          ],
+          "content": "**OUTPUT** 2 4 6 8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.584,
+            0.643,
+            0.797
+          ],
+          "content": "path = [[-1, 0], [0, -1], [0, 1], [1, 0]] i, j = 1, 1 # 5 for x in path: i1, j1 = i + x[0], j + x[1] print(a[i1][j1], end = ' ')"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.66,
+            0.452,
+            0.812,
+            0.698
+          ],
+          "content": "| 1 | 2 | 3 |\n| --- | --- | --- |\n| 4 | 5 | 6 |\n| 7 | 8 | 9 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_table_10.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.01,
+            0.925,
+            0.047,
+            0.974
+          ],
+          "content": "14"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.145,
+            0.499,
+            0.213
+          ],
+          "level": 2,
+          "content": "5. Kỹ thuật duyệt các ô liền kề:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.102,
+            0.307,
+            0.171,
+            0.377
+          ],
+          "content": "00 EXAMPLE"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.325,
+            0.275,
+            0.645,
+            0.331
+          ],
+          "level": 2,
+          "content": "Duyệt 8 ô chung đỉnh với ô (i,j)"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.137,
+            0.409,
+            0.27,
+            0.557
+          ],
+          "content": "\\begin{array}{r l} \\text {a} & = [ \\\\ & [ 1, 2, 3 ], \\\\ & [ 4, 5, 6 ], \\\\ & [ 7, 8, 9 ] \\end{array}",
+          "image_source": "images/page_14_equation_6.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.658,
+            0.376,
+            0.773,
+            0.56
+          ],
+          "content": "| 1 | 2 | 3 |\n| --- | --- | --- |\n| 4 | 5 | 6 |\n| 7 | 8 | 9 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_table_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.582,
+            0.845,
+            0.659
+          ],
+          "content": "path = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]i, j = 1, 1 # 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.504,
+            0.658,
+            0.642,
+            0.757
+          ],
+          "content": "**OUTPUT** 1 2 3 4 6 7 8 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.01,
+            0.925,
+            0.047,
+            0.975
+          ],
+          "content": "15"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.946,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": "28TECH"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.069,
+            0.043,
+            0.256,
+            0.113
+          ],
+          "content": "28TECH Become A Better Developer"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.93,
+            0.015,
+            0.985,
+            0.11
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.145,
+            0.499,
+            0.212
+          ],
+          "level": 2,
+          "content": "5. Kỹ thuật duyệt các ô liền kề:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.26,
+            0.237,
+            0.711,
+            0.29
+          ],
+          "level": 2,
+          "content": "Duyệt 8 ô xung quanh nước đi của quân mã"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.174,
+            0.391,
+            0.324,
+            0.579
+          ],
+          "content": "\\begin{array}{l} \\left[ 1, 2, 3, 4, 1 \\right], \\\\ \\left[ 5, 6, 7, 8, 0 \\right], \\\\ \\left[ 9, 3, 2, 6, 0 \\right], \\\\ \\left[ 1, 2, 1, 4, 4 \\right], \\\\ \\left[ 1, 2, 3, 5, 3 \\right] \\end{array}",
+          "image_source": "images/page_15_equation_5.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.574,
+            0.337,
+            0.747,
+            0.615
+          ],
+          "content": "| 1 | 2 | 3 | 4 | 1 |\n| --- | --- | --- | --- | --- |\n| 5 | 6 | 7 | 8 | 0 |\n| 9 | 3 | 2 | 6 | 0 |\n| 1 | 2 | 1 | 4 | 4 |\n| 1 | 2 | 3 | 5 | 3 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_table_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.639,
+            0.865,
+            0.831
+          ],
+          "content": "path = [[-2, -1], [-2, 1], [-1, -2], [-1, 2], [1, -2], [1, 2], [2, -1], [2, 1]] i, j = 2, 2 for x in path: OUTPUT i1, j1 = i + x[0], j + x[1] print(a[i1][j1], end = ' ') 2 4 5 0 1 4 2 5"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.01,
+            0.925,
+            0.045,
+            0.974
+          ],
+          "content": "1[6](https://inprotected.com?utm_source=signature)inp"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.047,
+            0.95,
+            0.102,
+            0.971
+          ],
+          "content": "rotected.com"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.823,
+            0.949,
+            0.947,
+            0.993
+          ],
+          "content": "28tech.com.vn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.949,
+            0.932,
+            0.987,
+            0.995
+          ],
+          "content": "電"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "created_at": "2022-12-31T08:42:35",
+      "producer_application": "FPDF 1.7",
+      "page_count": 16,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

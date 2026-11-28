@@ -1,0 +1,1711 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "An introduction to the ipaddress module",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2023-06-28T10:58:35-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20190824)",
+      "page_count": 6,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.227,
+            0.114,
+            0.884,
+            0.195
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An introduction to the ipaddress module Release 3.7.17"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.478,
+            0.23,
+            0.881,
+            0.272
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Guido van Rossum and the Python development team",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.766,
+            0.307,
+            0.882,
+            0.322
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "June 28, 2023",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.646,
+            0.328,
+            0.882,
+            0.344
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Software Foundation",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.677,
+            0.343,
+            0.881,
+            0.359
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Email: docs@python.org",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.378,
+            0.23,
+            0.399
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Contents"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "index",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.42,
+            0.884,
+            0.631
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1 "
+                },
+                {
+                  "type": "text",
+                  "content": "Creating Address/Network/Interface objects",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1.1 A Note on IP Versions . 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1.2 IP Host Addresses . 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1.3 Defining Networks . 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1.4 Host Interfaces . 3  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "2 "
+                },
+                {
+                  "type": "text",
+                  "content": "Inspecting Address/Network/Interface Objects",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 4  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "3 "
+                },
+                {
+                  "type": "text",
+                  "content": "Networks as lists of Addresses",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 5  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4 Comparisons",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 5  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "5 Using IP Addresses with other modules",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 6  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "6 "
+                },
+                {
+                  "type": "text",
+                  "content": "Getting more detail when instance creation fails",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.158,
+            0.666,
+            0.313,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "author",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Peter Moody "
+            },
+            {
+              "type": "text",
+              "content": "author",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Nick Coghlan"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.127,
+            0.724,
+            0.201,
+            0.739
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Overview"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.125,
+            0.751,
+            0.874,
+            0.797
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This document aims to provide a gentle introduction to the ipaddress module. It is aimed primarily at users that aren’t already familiar with IP networking terminology, but may also be useful to network engineers wanting an overview of how ipaddress represents IP network addressing concepts."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.494,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.085,
+            0.657,
+            0.105
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 Creating Address/Network/Interface objects"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.124,
+            0.881,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Since ipaddress is a module for inspecting and manipulating IP addresses, the first thing you’ll want to do is create some objects. You can use ipaddress to create objects from strings and integers."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.177,
+            0.373,
+            0.195
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1.1 A Note on IP Versions"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.115,
+            0.209,
+            0.883,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For readers that aren’t particularly familiar with IP addressing, it’s important to know that the Internet Protocol is currently in the process of moving from version 4 of the protocol to version 6. This transition is occurring largely because version 4 of the protocol doesn’t provide enough addresses to handle the needs of the whole world, especially given the increasing number of devices with direct connections to the internet."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.273,
+            0.883,
+            0.317
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Explaining the details of the differences between the two versions of the protocol is beyond the scope of this introduction, but readers need to at least be aware that these two versions exist, and it will sometimes be necessary to force the use of one version or the other."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.118,
+            0.34,
+            0.341,
+            0.357
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1.2 IP Host Addresses"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.372,
+            0.882,
+            0.416
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Addresses, often referred to as “host addresses” are the most basic unit when working with IP addressing. The simplest way to create addresses is to use the ipaddress.ip_address() factory function, which automatically determines whether to create an IPv4 or IPv6 address based on the passed in value:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.424,
+            0.472,
+            0.478
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.116,
+                0.424,
+                0.472,
+                0.478
+              ],
+              "content": ">>> ipaddress.ip_address('192.0.2.1')\nIPv4Address('192.0.2.1')\n>>> ipaddress.ip_address('2001:DB8::1')\nIPv6Address('2001:db8::1')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.492,
+            0.881,
+            0.521
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Addresses can also be created directly from integers. Values that will fit within 32 bits are assumed to be IPv4 addresses:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.529,
+            0.698,
+            0.585
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.115,
+                0.529,
+                0.698,
+                0.585
+              ],
+              "content": ">>> ipaddress.ip_address(3221225985)\nIPv4Address('192.0.2.1')\n>>> ipaddress.ip_address(42540766411282592856903984951653826561)\nIPv6Address('2001:db8::1')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.598,
+            0.881,
+            0.628
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "To force the use of IPv4 or IPv6 addresses, the relevant classes can be invoked directly. This is particularly useful to force creation of IPv6 addresses for small integers:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.116,
+            0.636,
+            0.373,
+            0.717
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.116,
+                0.636,
+                0.373,
+                0.717
+              ],
+              "content": ">>> ipaddress.ip_address(1)\nIPv4Address('0.0.0.1')\n>>> ipaddress.IPv4Address(1)\nIPv4Address('0.0.0.1')\n>>> ipaddress.IPv6Address(1)\nIPv6Address('::1')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.118,
+            0.748,
+            0.339,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1.3 Defining Networks"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.115,
+            0.78,
+            0.883,
+            0.852
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Host addresses are usually grouped together into IP networks, so ipaddress provides a way to create, inspect and manipulate network definitions. IP network objects are constructed from strings that define the range of host addresses that are part of that network. The simplest form for that information is a “network address/network prefix” pair, where the prefix defines the number of leading bits that are compared to determine whether or not an address is part of the network and the network address defines the expected value of those bits."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.117,
+            0.858,
+            0.779,
+            0.873
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "As for addresses, a factory function is provided that determines the correct IP version automatically:"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.116,
+            0.092,
+            0.499,
+            0.147
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.116,
+                0.092,
+                0.499,
+                0.147
+              ],
+              "content": ">>> ipaddress.ip_network('192.0.2.0/24')\nIPv4Network('192.0.2.0/24')\n>>> ipaddress.ip_network('2001:db8::0/96')\nIPv6Network('2001:db8::/96')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.161,
+            0.881,
+            0.205
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Network objects cannot have any host bits set. The practical effect of this is that 192.0.2.1/24 does not describe a network. Such definitions are referred to as interface objects since the ip-on-a-network notation is commonly used to describe network interfaces of a computer on a given network and are described further in the next section."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.211,
+            0.883,
+            0.241
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "By default, attempting to create a network object with host bits set will result in ValueError being raised. To request that the additional bits instead be coerced to zero, the flag strict=False can be passed to the constructor:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.248,
+            0.608,
+            0.33
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.116,
+                0.248,
+                0.608,
+                0.33
+              ],
+              "content": ">>> ipaddress.ip_network('192.0.2.1/24')\nTraceback (most recent call last):\n...\nValueError: 192.0.2.1/24 has host bits set\n>>> ipaddress.ip_network('192.0.2.1/24', strict=False)\nIPv4Network('192.0.2.0/24')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.342,
+            0.882,
+            0.387
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While the string form offers significantly more flexibility, networks can also be defined with integers, just like host addresses. In this case, the network is considered to contain only the single address identified by the integer, so the network prefix includes the entire network address:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.395,
+            0.698,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.116,
+                0.395,
+                0.698,
+                0.45
+              ],
+              "content": ">>> ipaddress.ip_network(3221225984)\nIPv4Network('192.0.2.0/32')\n>>> ipaddress.ip_network(42540766411282592856903984951653826560)\nIPv6Network('2001:db8::/128')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.463,
+            0.881,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "As with addresses, creation of a particular kind of network can be forced by calling the class constructor directly instead of using the factory function."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.516,
+            0.308,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1.4 Host Interfaces"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.115,
+            0.548,
+            0.883,
+            0.635
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "As mentioned just above, if you need to describe an address on a particular network, neither the address nor the network classes are sufficient. Notation like 192.0.2.1/24 is commonly used by network engineers and the people who write tools for firewalls and routers as shorthand for “the host 192.0.2.1 on the network 192.0. 2.0/24”, Accordingly, ipaddress provides a set of hybrid classes that associate an address with a particular network. The interface for creation is identical to that for defining network objects, except that the address portion isn’t constrained to being a network address."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.117,
+            0.642,
+            0.517,
+            0.697
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.117,
+                0.642,
+                0.517,
+                0.697
+              ],
+              "content": ">>> ipaddress.ip_interface('192.0.2.1/24')\nIPv4Interface('192.0.2.1/24')\n>>> ipaddress.ip_interface('2001:db8::1/96')\nIPv6Interface('2001:db8::1/96')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.711,
+            0.881,
+            0.74
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Integer inputs are accepted (as with networks), and use of a particular IP version can be forced by calling the relevant constructor directly."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.084,
+            0.684,
+            0.106
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2 Inspecting Address/Network/Interface Objects"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.116,
+            0.124,
+            0.882,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "You’ve gone to the trouble of creating an IPv(4|6)(Address|Network|Interface) object, so you probably want to get information about it. ipaddress tries to make doing this easy and intuitive."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.118,
+            0.16,
+            0.291,
+            0.175
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Extracting the IP version:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.115,
+            0.182,
+            0.545,
+            0.266
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.115,
+                0.182,
+                0.545,
+                0.266
+              ],
+              "content": ">>> addr4 = ipaddress.ip_address('192.0.2.1')\n>>> addr6 = ipaddress.ip_address('2001:db8::1')\n>>> addr6.version\n6\n>>> addr4.version\n4"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.118,
+            0.278,
+            0.392,
+            0.293
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Obtaining the network from an interface:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.115,
+            0.301,
+            0.589,
+            0.384
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.115,
+                0.301,
+                0.589,
+                0.384
+              ],
+              "content": ">>> host4 = ipaddress.ip_interface('192.0.2.1/24')\n>>> host4.network\nIPv4Network('192.0.2.0/24')\n>>> host6 = ipaddress.ip_interface('2001:db8::1/96')\n>>> host6.network\nIPv6Network('2001:db8::/96')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.395,
+            0.521,
+            0.412
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Finding out how many individual addresses are in a network:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.115,
+            0.419,
+            0.563,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.115,
+                0.419,
+                0.563,
+                0.501
+              ],
+              "content": ">>> net4 = ipaddress.ip_network('192.0.2.0/24')\n>>> net4.num_addresses\n256\n>>> net6 = ipaddress.ip_network('2001:db8::0/96')\n>>> net6.num_addresses\n4294967296"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.118,
+            0.514,
+            0.477,
+            0.53
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Iterating through the “usable” addresses on a network:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.537,
+            0.545,
+            0.685
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.116,
+                0.537,
+                0.545,
+                0.685
+              ],
+              "content": ">>> net4 = ipaddress.ip_network('192.0.2.0/24')\n>>> for x in net4.hosts():\n...     print(x)\n192.0.2.1\n192.0.2.2\n192.0.2.3\n192.0.2.4\n...\n192.0.2.252\n192.0.2.253\n192.0.2.254"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.117,
+            0.697,
+            0.881,
+            0.727
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Obtaining the netmask (i.e. set bits corresponding to the network prefix) or the hostmask (any bits that are not part of the netmask):"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.116,
+            0.735,
+            0.562,
+            0.869
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.116,
+                0.735,
+                0.562,
+                0.869
+              ],
+              "content": ">>> net4 = ipaddress.ip_network('192.0.2.0/24')\n>>> net4.netmask\nIPv4Address('255.255.255.0')\n>>> net4.hostmask\nIPv4Address('0.0.0.255')\n>>> net6 = ipaddress.ip_network('2001:db8::0/96')\n>>> net6.netmask\nIPv6Address('ffff:ffff:ffff:ffff:ffff:ffff::')\n>>> net6.hostmask\nIPv6Address('::ffff:ffff')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.118,
+            0.882,
+            0.377,
+            0.898
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Exploding or compressing the address:"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.091,
+            0.518,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.117,
+                0.091,
+                0.518,
+                0.2
+              ],
+              "content": ">>> addr6.exploded\n'2001:0db8:0000:0000:0000:0000:0000:0001'\n>>> addr6.compressed\n'2001:db8::1'\n>>> net6.exploded\n'2001:0db8:0000:0000:0000:0000:0000:0000/96'\n>>> net6.compressed\n'2001:db8::/96'"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "srt"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.212,
+            0.882,
+            0.257
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While IPv4 doesn’t support explosion or compression, the associated objects still provide the relevant properties so that version neutral code can easily ensure the most concise or most verbose form is used for IPv6 addresses while still correctly handling IPv4 addresses."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.284,
+            0.509,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3 Networks as lists of Addresses"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.323,
+            0.747,
+            0.339
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "It’s sometimes useful to treat networks as lists. This means it is possible to index them like this:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.346,
+            0.426,
+            0.454
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.116,
+                0.346,
+                0.426,
+                0.454
+              ],
+              "content": ">>> net4[1]\nIPv4Address('192.0.2.1')\n>>> net4[-1]\nIPv4Address('192.0.2.255')\n>>> net6[1]\nIPv6Address('2001:db8::1')\n>>> net6[-1]\nIPv6Address('2001:db8::ffff:ffff')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.467,
+            0.776,
+            0.483
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "It also means that network objects lend themselves to using the list membership test syntax like this:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.116,
+            0.491,
+            0.319,
+            0.521
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.116,
+                0.491,
+                0.319,
+                0.521
+              ],
+              "content": "if address in network:\n    # do something"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.533,
+            0.565,
+            0.549
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Containment testing is done efficiently based on the network prefix:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.557,
+            0.563,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.116,
+                0.557,
+                0.563,
+                0.626
+              ],
+              "content": ">>> addr4 = ipaddress.ip_address('192.0.2.1')\n>>> addr4 in ipaddress.ip_network('192.0.2.0/24')\nTrue\n>>> addr4 in ipaddress.ip_network('192.0.3.0/24')\nFalse"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.117,
+            0.66,
+            0.303,
+            0.68
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4 Comparisons"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.119,
+            0.699,
+            0.801,
+            0.715
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ipaddress provides some simple, hopefully intuitive ways to compare objects, where it makes sense:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.117,
+            0.723,
+            0.778,
+            0.752
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.117,
+                0.723,
+                0.778,
+                0.752
+              ],
+              "content": ">>> ipaddress.ip_address('192.0.2.1') < ipaddress.ip_address('192.0.2.2')\nTrue"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "html"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.118,
+            0.766,
+            0.804,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A TypeError exception is raised if you try to compare objects of different versions or different types."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.085,
+            0.608,
+            0.105
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5 Using IP Addresses with other modules"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.124,
+            0.88,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Other modules that use IP addresses (such as socket) usually won’t accept objects from this module directly. Instead, they must be coerced to an integer or string that the other module will accept:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.115,
+            0.162,
+            0.527,
+            0.23
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.115,
+                0.162,
+                0.527,
+                0.23
+              ],
+              "content": ">>> addr4 = ipaddress.ip_address('192.0.2.1')\n>>> str(addr4)\n'192.0.2.1'\n>>> int(addr4)\n3221225985"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.115,
+            0.265,
+            0.703,
+            0.286
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6 Getting more detail when instance creation fails"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.304,
+            0.883,
+            0.363
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "When creating address/network/interface objects using the version-agnostic factory functions, any errors will be reported as ValueError with a generic error message that simply says the passed in value was not recognized as an object of that type. The lack of a specific error is because it’s necessary to know whether the value is supposed to be IPv4 or IPv6 in order to provide more detail on why it has been rejected."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.115,
+            0.369,
+            0.881,
+            0.413
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "To support use cases where it is useful to have access to this additional detail, the individual class constructors actually raise the ValueError subclasses ipaddress.AddressValueError and ipaddress. NetmaskValueError to indicate exactly which part of the definition failed to parse correctly."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.418,
+            0.823,
+            0.434
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The error messages are significantly more detailed when using the class constructors directly. For example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.44,
+            0.836,
+            0.667
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.116,
+                0.44,
+                0.836,
+                0.667
+              ],
+              "content": ">>> ipaddress.ip_address(\"192.168.0.256\")\nTraceback (most recent call last):\n  ...\nValueError: '192.168.0.256' does not appear to be an IPv4 or IPv6 address\n>>> ipaddress.IPv4Address(\"192.168.0.256\")\nTraceback (most recent call last):\n  ...\nipaddress.AddressValueError: Octet 256 (> 255) not permitted in '192.168.0.256'\n\n>>> ipaddress.ip_network(\"192.168.0.1/64\")\nTraceback (most recent call last):\n  ...\nValueError: '192.168.0.1/64' does not appear to be an IPv4 or IPv6 network\n>>> ipaddress.IPv4Network(\"192.168.0.1/64\")\nTraceback (most recent call last):\n  ...\nipaddress.NetmaskValueError: '64' is not a valid netmask"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.68,
+            0.881,
+            0.71
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "However, both of the module specific exceptions have ValueError as their parent class, so if you’re not concerned with the particular type of error, you can still write code like the following:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.717,
+            0.644,
+            0.773
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.116,
+                0.717,
+                0.644,
+                0.773
+              ],
+              "content": "try:\n    network = ipaddress.IPv4Network(address)\nexcept ValueError:\n    print('address/netmask is invalid for IPv4:', address)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

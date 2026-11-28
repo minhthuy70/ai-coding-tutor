@@ -1,0 +1,1987 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.548,
+            0.122,
+            0.886,
+            0.178
+          ],
+          "level": 1,
+          "content": "Unicode HOWTO Release 3.6.15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.213,
+            0.885,
+            0.259
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.724,
+            0.296,
+            0.884,
+            0.313
+          ],
+          "content": "**September 05, 2021**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.319,
+            0.885,
+            0.335
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.685,
+            0.335,
+            0.885,
+            0.351
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.371,
+            0.224,
+            0.394
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.112,
+            0.417,
+            0.888,
+            0.746
+          ],
+          "content": "- **1 Introduction to Unicode** 2\n- 1.1 History of Character Codes 2\n- 1.2 Definitions 3\n- 1.3 Encodings 3\n- 1.4 References 4\n- 2 Python's Unicode Support 5\n- 2.1 The String Type 5\n- 2.2 Converting to Bytes 6\n- 2.3 Unicode Literals in Python Source Code 7\n- 2.4 Unicode Properties 7\n- 2.5 Unicode Regular Expressions 8\n- 2.6 References 8\n- **3 Reading and Writing Unicode Data** 9\n- 3.1 Unicode filenames 10\n- 3.2 Tips for Writing Unicode-aware Programs 10\n- 3.3 References 11\n- **4 Acknowledgements 12**\n- **Index 13**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.154,
+            0.786,
+            0.251,
+            0.802
+          ],
+          "level": 2,
+          "content": "Release 1.12"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.809,
+            0.886,
+            0.841
+          ],
+          "content": "This HOWTO discusses Python support for Unicode, and explains various problems that people commonly encounter when trying to work with Unicode."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.412,
+            0.111
+          ],
+          "level": 2,
+          "content": "1 Introduction to Unicode"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.134,
+            0.412,
+            0.152
+          ],
+          "level": 2,
+          "content": "1.1 History of Character Codes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.167,
+            0.885,
+            0.214
+          ],
+          "content": "In 1968, the American Standard Code for Information Interchange, better known by its acronym ASCII, was standardized. ASCII defined numeric codes for various characters, with the numeric values running from 0 to 127. For example, the lowercase letter ‘a’ is assigned 97 as its code value."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.22,
+            0.885,
+            0.282
+          ],
+          "content": "ASCII was an American-developed standard, so it only defined unaccented characters. There was an ‘e’, but no ‘é’ or ‘Í’. This meant that languages which required accented characters couldn’t be faithfully represented in ASCII. (Actually the missing accents matter for English, too, which contains words such as ‘naïve’ and ‘café’, and some publications have house styles which require spellings such as ‘coöperate’.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.288,
+            0.886,
+            0.32
+          ],
+          "content": "For a while people just wrote programs that didn’t display accents. In the mid-1980s an Apple II BASIC program written by a French speaker might have lines like these:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.329,
+            0.382,
+            0.358
+          ],
+          "sub_type": "code",
+          "content": "```txt\nPRINT \"MISE A JOUR TERMINEE\"\nPRINT \"PARAMETRES ENREGISTRES\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.373,
+            0.885,
+            0.404
+          ],
+          "content": "Those messages should contain accents (terminée, paramètre, enregistrés) and they just look wrong to someone who can read French."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.411,
+            0.886,
+            0.503
+          ],
+          "content": "In the 1980s, almost all personal computers were 8-bit, meaning that bytes could hold values ranging from 0 to 255. ASCII codes only went up to 127, so some machines assigned values between 128 and 255 to accented characters. Different machines had different codes, however, which led to problems exchanging files. Eventually various commonly used sets of values for the 128–255 range emerged. Some were true standards, defined by the International Organization for Standardization, and some were de facto conventions that were invented by one company or another and managed to catch on."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.509,
+            0.885,
+            0.541
+          ],
+          "content": "255 characters aren’t very many. For example, you can’t fit both the accented characters used in Western Europe and the Cyrillic alphabet used for Russian into the 128–255 range because there are more than 128 such characters."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.547,
+            0.885,
+            0.594
+          ],
+          "content": "You could write files using different codes (all your Russian files in a coding system called KOI8, all your French files in a different coding system called Latin1), but what if you wanted to write a French document that quotes some Russian text? In the 1980s people began to want to solve this problem, and the Unicode standardization effort began."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.6,
+            0.886,
+            0.676
+          ],
+          "content": "Unicode started out using 16-bit characters instead of 8-bit characters. 16 bits means you have 2^16 = 65,536 distinct values available, making it possible to represent many different characters from many different alphabets; an initial goal was to have Unicode contain the alphabets for every single human language. It turns out that even 16 bits isn’t enough to meet that goal, and the modern Unicode specification uses a wider range of codes, 0 through 1,114,111 ( 0x10FFFF in base 16)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.683,
+            0.885,
+            0.715
+          ],
+          "content": "There’s a related ISO standard, ISO 10646. Unicode and ISO 10646 were originally separate efforts, but the specifications were merged with the 1.1 revision of Unicode."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.72,
+            0.886,
+            0.768
+          ],
+          "content": "(This discussion of Unicode’s history is highly simplified. The precise historical details aren’t necessary for understanding how to use Unicode effectively, but if you’re curious, consult the Unicode consortium site listed in the References or the [Wikipedia entry for Unicode](https://en.wikipedia.org/wiki/Unicode#History) for more information.)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.258,
+            0.107
+          ],
+          "level": 2,
+          "content": "1.2 Definitions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.125,
+            0.885,
+            0.188
+          ],
+          "content": "A **character** is the smallest possible component of a text. ‘A’, ‘B’, ‘C’, etc., are all different characters. So are ‘È’ and ‘Í’. Characters are abstractions, and vary depending on the language or context you’re talking about. For example, the symbol for ohms (Ω) is usually drawn much like the capital letter omega (Ω) in the Greek alphabet (they may even be the same in some fonts), but these are two different characters that have different meanings."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.193,
+            0.885,
+            0.255
+          ],
+          "content": "The Unicode standard describes how characters are represented by **code points**. A code point is an integer value, usually denoted in base 16. In the standard, a code point is written using the notation U+12CA to mean the character with value 0x12ca (4,810 decimal). The Unicode standard contains a lot of tables listing characters and their corresponding code points:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.111,
+            0.26,
+            0.886,
+            0.339
+          ],
+          "sub_type": "code",
+          "content": "```csv\n'a'; LATIN SMALL LETTER A\n'b'; LATIN SMALL LETTER B\n'c'; LATIN SMALL LETTER C\n''; LEFT CURLY BRACKET\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.35,
+            0.885,
+            0.397
+          ],
+          "content": "Strictly, these definitions imply that it’s meaningless to say ‘this is character U+12CA’. U+12CA is a code point, which represents some particular character; in this case, it represents the character ‘ETHIOPIC SYLLABLE WI’. In informal contexts, this distinction between code points and characters will sometimes be forgotten."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.403,
+            0.886,
+            0.466
+          ],
+          "content": "A character is represented on a screen or on paper by a set of graphical elements that’s called a **glyph**. The glyph for an uppercase A, for example, is two diagonal strokes and a horizontal stroke, though the exact details will depend on the font being used. Most Python code doesn’t need to worry about glyphs; figuring out the correct glyph to display is generally the job of a GUI toolkit or a terminal’s font renderer."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.49,
+            0.257,
+            0.508
+          ],
+          "level": 2,
+          "content": "1.3 Encodings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.523,
+            0.885,
+            0.57
+          ],
+          "content": "To summarize the previous section: a Unicode string is a sequence of code points, which are numbers from 0 through 0x10FFFF (1,114,111 decimal). This sequence needs to be represented as a set of bytes (meaning, values from 0 through 255) in memory. The rules for translating a Unicode string into a sequence of bytes are called an **encoding**."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.575,
+            0.885,
+            0.607
+          ],
+          "content": "The first encoding you might think of is an array of 32-bit integers. In this representation, the string “Python” would look like this:"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.111,
+            0.612,
+            0.887,
+            0.664
+          ],
+          "content": "<table><tr><td colspan=\"4\">P</td><td colspan=\"4\">y</td><td colspan=\"4\">t</td><td colspan=\"4\">h</td><td colspan=\"4\">o</td><td colspan=\"4\">n</td></tr><tr><td>0x50</td><td>00</td><td>00</td><td>00</td><td>79</td><td>00</td><td>00</td><td>00</td><td>74</td><td>00</td><td>00</td><td>00</td><td>68</td><td>00</td><td>00</td><td>00</td><td>6f</td><td>00</td><td>00</td><td>00</td><td>6e</td><td>00</td><td>00</td><td>00</td></tr><tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_table_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.675,
+            0.638,
+            0.692
+          ],
+          "content": "This representation is straightforward but using it presents a number of problems."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.698,
+            0.566,
+            0.715
+          ],
+          "content": "1. It’s not portable; different processors order the bytes differently."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.72,
+            0.885,
+            0.797
+          ],
+          "content": "2. It’s very wasteful of space. In most texts, the majority of the code points are less than 127, or less than 255, so a lot of space is occupied by 0x00 bytes. The above string takes 24 bytes compared to the 6 bytes needed for an ASCII representation. Increased RAM usage doesn’t matter too much (desktop computers have gigabytes of RAM, and strings aren’t usually that large), but expanding our usage of disk and network bandwidth by a factor of 4 is intolerable."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.804,
+            0.885,
+            0.835
+          ],
+          "content": "3. It’s not compatible with existing C functions such as strlen(), so a new family of wide string functions would need to be used."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.842,
+            0.885,
+            0.896
+          ],
+          "content": "4. Many Internet standards are defined in terms of textual data, and can’t handle content with embedded zero bytes. Generally people don’t use this encoding, instead choosing other encodings that are more efficient and convenient. UTF-8 is probably the most commonly supported encoding; it will be discussed below."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.092,
+            0.885,
+            0.123
+          ],
+          "content": "Encodings don’t have to handle every possible Unicode character, and most encodings don’t. The rules for converting a Unicode string into the ASCII encoding, for example, are simple; for each code point:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.13,
+            0.663,
+            0.145
+          ],
+          "content": "1. If the code point is < 128, each byte is the same as the value of the code point."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.153,
+            0.885,
+            0.183
+          ],
+          "content": "2. If the code point is 128 or greater, the Unicode string can’t be represented in this encoding. (Python raises a UnicodeEncodeError exception in this case.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.19,
+            0.885,
+            0.237
+          ],
+          "content": "Latin-1, also known as ISO-8859-1, is a similar encoding. Unicode code points 0–255 are identical to the Latin-1 values, so converting to this encoding simply requires converting code points to byte values; if a code point larger than 255 is encountered, the string can’t be encoded into Latin-1."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.243,
+            0.886,
+            0.305
+          ],
+          "content": "Encodings don’t have to be simple one-to-one mappings like Latin-1. Consider IBM’s EBCDIC, which was used on IBM mainframes. Letter values weren’t in one block: ‘a’ through ‘i’ had values from 129 to 137, but ‘j’ through ‘r’ were 145 through 153. If you wanted to use EBCDIC as an encoding, you’d probably use some sort of lookup table to perform the conversion, but this is largely an internal detail."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.31,
+            0.886,
+            0.357
+          ],
+          "content": "UTF-8 is one of the most commonly used encodings. UTF stands for “Unicode Transformation Format”, and the ‘8’ means that 8-bit numbers are used in the encoding. (There are also a UTF-16 and UTF-32 encodings, but they are less frequently used than UTF-8.) UTF-8 uses the following rules:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.364,
+            0.639,
+            0.38
+          ],
+          "content": "1. If the code point is < 128, it’s represented by the corresponding byte value."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.386,
+            0.885,
+            0.416
+          ],
+          "content": "2. If the code point is >= 128, it’s turned into a sequence of two, three, or four bytes, where each byte of the sequence is between 128 and 255."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.424,
+            0.383,
+            0.44
+          ],
+          "content": "UTF-8 has several convenient properties:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.447,
+            0.402,
+            0.463
+          ],
+          "content": "1. It can handle any Unicode code point."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.47,
+            0.886,
+            0.515
+          ],
+          "content": "2. A Unicode string is turned into a sequence of bytes containing no embedded zero bytes. This avoids byte-ordering issues, and means UTF-8 strings can be processed by C functions such as strcpy() and sent through protocols that can’t handle zero bytes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.522,
+            0.462,
+            0.538
+          ],
+          "content": "3. A string of ASCII text is also valid UTF-8 text."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.545,
+            0.861,
+            0.56
+          ],
+          "content": "4. UTF-8 is fairly compact; the majority of commonly used characters can be represented with one or two bytes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.567,
+            0.884,
+            0.598
+          ],
+          "content": "5. If bytes are corrupted or lost, it’s possible to determine the start of the next UTF-8-encoded code point and resynchronize. It’s also unlikely that random 8-bit data will look like valid UTF-8."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.624,
+            0.265,
+            0.641
+          ],
+          "level": 2,
+          "content": "1.4 References"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.657,
+            0.885,
+            0.689
+          ],
+          "content": "The [Unicode Consortium site](http://www.unicode.org) has character charts, a glossary, and PDF versions of the Unicode specification. Be prepared for some difficult reading. [A chronology](http://www.unicode.org/history/) of the origin and development of Unicode is also available on the site."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.695,
+            0.884,
+            0.711
+          ],
+          "content": "To help understand the standard, Jukka Korpela has written [an introductory guide](https://www.cs.tut.fi/~jkorpela/unicode/guide.html) to reading the Unicode character tables."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.718,
+            0.885,
+            0.749
+          ],
+          "content": "Another [good introductory article](http://www.joelonsoftware.com/articles/Unicode.html) was written by Joel Spolsky. If this introduction didn’t make things clear to you, you should try reading this alternate article before continuing."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.755,
+            0.765,
+            0.772
+          ],
+          "content": "Wikipedia entries are often helpful; see the entries for “[character encoding](https://en.wikipedia.org/wiki/Character_encoding)” and [UTF-8](https://en.wikipedia.org/wiki/UTF-8), for example."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.948
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.442,
+            0.113
+          ],
+          "level": 2,
+          "content": "2 Python’s Unicode Support"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.717,
+            0.149
+          ],
+          "content": "Now that you’ve learned the rudiments of Unicode, we can look at Python’s Unicode features."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.173,
+            0.307,
+            0.193
+          ],
+          "level": 2,
+          "content": "2.1 The String Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.207,
+            0.885,
+            0.238
+          ],
+          "content": "Since Python 3.0, the language features a str type that contain Unicode characters, meaning any string created using \"unicode rocks!\", 'unicode rocks!', or the triple-quoted string syntax is stored as Unicode."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.245,
+            0.885,
+            0.261
+          ],
+          "content": "The default encoding for Python source code is UTF-8, so you can simply include a Unicode character in a string literal:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.269,
+            0.487,
+            0.357
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    with open('/tmp/input.txt', 'r') as f:\n        ...\nexcept OSError:\n    # 'File not found' error message.\n    print(\"Fichier non trouvé\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.37,
+            0.885,
+            0.401
+          ],
+          "content": "You can use a different encoding from UTF-8 by putting a specially-formatted comment as the first or second line of the source code:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.411,
+            0.41,
+            0.427
+          ],
+          "sub_type": "code",
+          "content": "```txt\n# -*- coding: <encoding name> -*-\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.442,
+            0.585,
+            0.458
+          ],
+          "content": "Side note: Python 3 also supports using Unicode characters in identifiers:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.467,
+            0.398,
+            0.512
+          ],
+          "sub_type": "code",
+          "content": "```python\nrépertoire = \"/tmp/records.log\"\nwith open(répertoire, \"w\") as f:\n    f.write(\"test\\n\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.525,
+            0.885,
+            0.573
+          ],
+          "content": "If you can’t enter a particular character in your editor or want to keep the source code ASCII-only for some reason, you can also use escape sequences in string literals. (Depending on your system, you may see the actual capital-delta glyph instead of a u escape.)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.58,
+            0.683,
+            0.668
+          ],
+          "sub_type": "code",
+          "content": "```perl\n>>> \"\\N{GREEK CAPITAL LETTER DELTA}\"  # Using the character name\n'\\u0394'\n>>> \"\\u0394\"                  # Using a 16-bit hex value\n'\\u0394'\n>>> \"\\U00000394\"          # Using a 32-bit hex value\n'\\u0394'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.682,
+            0.884,
+            0.713
+          ],
+          "content": "In addition, one can create a string using the decode() method of bytes. This method takes an encoding argument, such as UTF-8, and optionally an errors argument."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.72,
+            0.886,
+            0.782
+          ],
+          "content": "The errors argument specifies the response when the input string can’t be converted according to the encoding’s rules. Legal values for this argument are 'strict' (raise a UnicodeDecodeError exception), 'replace' (use U+FFFD, REPLACEMENT CHARACTER), 'ignore' (just leave the character out of the Unicode result), or 'backslashreplace' (inserts a \\xNN escape sequence). The following examples show the differences:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.789,
+            0.743,
+            0.89
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> b'\\x80abc'.decode(\"utf-8\", \"strict\")\nTraceback (most recent call last):\n...\nUnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 0:\n  invalid start byte\n>>> b'\\x80abc'.decode(\"utf-8\", \"replace\")\n'\\ufffdabc'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.89,
+            0.884,
+            0.904
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.108,
+            0.555,
+            0.167
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> b'\\x80abc'.decode(\"utf-8\", \"backslashreplace\")\n'\\\\x80abc'\n>>> b'\\x80abc'.decode(\"utf-8\", \"ignore\")\n'abc'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.107
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.18,
+            0.885,
+            0.229
+          ],
+          "content": "Encodings are specified as strings containing the encoding’s name. Python 3.2 comes with roughly 100 different encodings; see the Python Library Reference at standard-encodings for a list. Some encodings have multiple names; for example, 'latin-1', 'iso\\_8859\\_1' and '8859’ are all synonyms for the same encoding."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.234,
+            0.884,
+            0.282
+          ],
+          "content": "One-character Unicode strings can also be created with the chr() built-in function, which takes integers and returns a Unicode string of length 1 that contains the corresponding code point. The reverse operation is the built-in ord() function that takes a one-character Unicode string and returns the code point value:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.289,
+            0.266,
+            0.347
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> chr(57344)\n'\\ue000'\n>>> ord('\\ue000')\n57344\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.38,
+            0.343,
+            0.4
+          ],
+          "level": 2,
+          "content": "2.2 Converting to Bytes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.415,
+            0.885,
+            0.446
+          ],
+          "content": "The opposite method of bytes.decode() is str.encode(), which returns a bytes representation of the Unicode string, encoded in the requested encoding."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.452,
+            0.885,
+            0.515
+          ],
+          "content": "The errors parameter is the same as the parameter of the decode() method but supports a few more possible handlers. As well as 'strict', 'ignore', and 'replace' (which in this case inserts a question mark instead of the unencodable character), there is also 'xmlcharrefreplace' (inserts an XML character reference), backslashreplace (inserts a \\uNNNN escape sequence) and namereplace (inserts a \\N{...} escape sequence)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.52,
+            0.439,
+            0.536
+          ],
+          "content": "The following example shows the different results:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.544,
+            0.718,
+            0.798
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> u = chr(40960) + 'abcd' + chr(1972)\n>>> u.encode('utf-8')\nb'\\xea\\x80\\x80abcd\\xde\\xb4'\n>>> u.encode('ascii')\nTraceback (most recent call last):\n    ...\nUnicodeEncodeError: 'ascii' codec can't encode character '\\ua000' in\n    position 0: ordinal not in range(128)\n>>> u.encode('ascii', 'ignore')\nb'abcd'\n>>> u.encode('ascii', 'replace')\nb'?abcd?'\n>>> u.encode('ascii', 'xmlcharrefreplace')\nb'&#40960;abcd&#1972;'\n>>> u.encode('ascii', 'backslashreplace')\nb'\\ua000abcd\\u07b4'\n>>> u.encode('ascii', 'namereplace')\nb'\\N{YI SYLLABLE IT}abcd\\u07b4'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.811,
+            0.886,
+            0.874
+          ],
+          "content": "The low-level routines for registering and accessing the available encodings are found in the codecs module. Implementing new encodings also requires understanding the codecs module. However, the encoding and decoding functions returned by this module are usually more low-level than is comfortable, and writing new encodings is a specialized task, so the module won’t be covered in this HOWTO."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.533,
+            0.108
+          ],
+          "level": 2,
+          "content": "2.3 Unicode Literals in Python Source Code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.885,
+            0.155
+          ],
+          "content": "In Python source code, specific Unicode code points can be written using the \\u escape sequence, which is followed by four hex digits giving the code point. The \\U escape sequence is similar, but expects eight hex digits, not four:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.163,
+            0.674,
+            0.25
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> s = \"a\\xac\\u1234\\u20ac\\u00008000\"\n... #      ^^^^^ two-digit hex escape\n... #      ^^^^^^ four-digit Unicode escape\n... #      ^^^^^^^^^^ eight-digit Unicode escape\n>>> [ord(c) for c in s]\n[97, 172, 4660, 8364, 32768]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.264,
+            0.885,
+            0.311
+          ],
+          "content": "Using escape sequences for code points greater than 127 is fine in small doses, but becomes an annoyance if you’re using many accented characters, as you would in a program with messages in French or some other accent-using language. You can also assemble strings using the chr() built-in function, but this is even more tedious."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.317,
+            0.885,
+            0.362
+          ],
+          "content": "Ideally, you’d want to be able to write literals in your language’s natural encoding. You could then edit Python source code with your favorite editor which would display the accented characters naturally, and have the right characters used at runtime."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.369,
+            0.886,
+            0.401
+          ],
+          "content": "Python supports writing source code in UTF-8 by default, but you can use almost any encoding if you declare the encoding being used. This is done by including a special comment as either the first or second line of the source file:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.409,
+            0.34,
+            0.483
+          ],
+          "sub_type": "code",
+          "content": "```python\n#!/usr/bin/env python\n# -*- coding: latin-1 -*-\nu = 'abcdé'\nprint(ord(u[-1]))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.496,
+            0.886,
+            0.543
+          ],
+          "content": "The syntax is inspired by Emacs’s notation for specifying variables local to a file. Emacs supports many different variables, but Python only supports ‘coding’. The -\\*- symbols indicate to Emacs that the comment is special; they have no significance to Python but are a convention. Python looks for coding: name or coding=name in the comment."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.549,
+            0.885,
+            0.58
+          ],
+          "content": "If you don’t include such a comment, the default encoding used will be UTF-8 as already mentioned. See also [**PEP 263**](https://www.python.org/dev/peps/pep-0263) for more information."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.605,
+            0.338,
+            0.624
+          ],
+          "level": 2,
+          "content": "2.4 Unicode Properties"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.639,
+            0.886,
+            0.7
+          ],
+          "content": "The Unicode specification includes a database of information about code points. For each defined code point, the information includes the character’s name, its category, the numeric value if applicable (Unicode has characters representing the Roman numerals and fractions such as one-third and four-fifths). There are also properties related to the code point’s use in bidirectional text and other display-related properties."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.707,
+            0.885,
+            0.738
+          ],
+          "content": "The following program displays some information about several characters, and prints the numeric value of one particular character:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.747,
+            0.671,
+            0.89
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport unicodedata\n\nu = chr(233) + chr(0x0bf2) + chr(3972) + chr(6000) + chr(13231)\n\nfor i, c in enumerate(u):\n    print(i, '%04x' % ord(c), unicodedata.category(c), end=\" \")\n    print(unicodedata.name(c))\n\n# Get numeric value of second character\nprint(unicodedata.numeric(u[1]))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.092,
+            0.259,
+            0.108
+          ],
+          "content": "When run, this prints:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.116,
+            0.48,
+            0.203
+          ],
+          "sub_type": "code",
+          "content": "```txt\n0 00e9 L1 LATIN SMALL LETTER E WITH ACUTE\n1 0bf2 No TAMIL NUMBER ONE THOUSAND\n2 0f84 Mn TIBETAN MARK HALANTA\n3 1770 Lo TAGBANWA LETTER SA\n4 33af So SQUARE RAD OVER S SQUARED\n1000.0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.217,
+            0.886,
+            0.295
+          ],
+          "content": "The category codes are abbreviations describing the nature of the character. These are grouped into categories such as “Letter”, “Number”, “Punctuation”, or “Symbol”, which in turn are broken up into subcategories. To take the codes from the above output, 'Ll' means ‘Letter, lowercase’, 'No' means “Number, other”, 'Mn' is “Mark, nonspacing”, and 'So' is “Symbol, other”. See [the General Category Values section of the Unicode Character Database documentation](http://www.unicode.org/reports/tr44/#General_Category_Values) for a list of category codes."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.32,
+            0.436,
+            0.338
+          ],
+          "level": 2,
+          "content": "2.5 Unicode Regular Expressions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.352,
+            0.886,
+            0.414
+          ],
+          "content": "The regular expressions supported by the re module can be provided either as bytes or strings. Some of the special character sequences such as \\d and \\w have different meanings depending on whether the pattern is supplied as bytes or a string. For example, \\d will match the characters [0-9] in bytes but in strings will match any character that’s in the 'Nd' category."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.42,
+            0.682,
+            0.436
+          ],
+          "content": "The string in this example has the number 57 written in both Thai and Arabic numerals:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.445,
+            0.427,
+            0.532
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport re\np = re.compile(r'\\d+')\n\ns = \"Over \\u0e55\\u0e57 57 flavours\"\nm = p.search(s)\nprint(repr(m.group()))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.546,
+            0.883,
+            0.577
+          ],
+          "content": "When executed, \\d+ will match the Thai numerals and print them out. If you supply the re.ASCII flag to compile(), \\d+ will match the substring “57” instead."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.584,
+            0.885,
+            0.615
+          ],
+          "content": "Similarly, \\w matches a wide variety of Unicode characters but only [a-zA-Z0-9\\_] in bytes or if re.ASCII is supplied, and \\s will match either Unicode whitespace characters or [ \\t\\n\\r\\f\\v]."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.64,
+            0.265,
+            0.658
+          ],
+          "level": 2,
+          "content": "2.6 References"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.673,
+            0.551,
+            0.69
+          ],
+          "content": "Some good alternative discussions of Python’s Unicode support are:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.696,
+            0.495,
+            0.712
+          ],
+          "content": "• [Processing Text Files in Python 3](http://python-notes.curiousefficiency.org/en/latest/python3/text_file_processing.html), by Nick Coghlan."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.719,
+            0.591,
+            0.735
+          ],
+          "content": "• [Pragmatic Unicode](http://nedbatchelder.com/text/unipain.html), a PyCon 2012 presentation by Ned Batchelder."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.742,
+            0.558,
+            0.758
+          ],
+          "content": "The str type is described in the Python library reference at textseq."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.764,
+            0.457,
+            0.779
+          ],
+          "content": "The documentation for the unicodedata module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.787,
+            0.408,
+            0.802
+          ],
+          "content": "The documentation for the codecs module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.81,
+            0.885,
+            0.855
+          ],
+          "content": "Marc-André Lemburg gave [a presentation titled “Python and Unicode” (PDF slides)](https://downloads.egenix.com/python/Unicode-EPC2002-Talk.pdf) at EuroPython 2002. The slides are an excellent overview of the design of Python 2’s Unicode features (where the Unicode string type is called unicode and literals start with u)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.534,
+            0.113
+          ],
+          "level": 2,
+          "content": "3 Reading and Writing Unicode Data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.165
+          ],
+          "content": "Once you’ve written some code that works with Unicode data, the next problem is input/output. How do you get Unicode strings into your program, and how do you convert Unicode into a form suitable for storage or transmission?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.17,
+            0.886,
+            0.232
+          ],
+          "content": "It’s possible that you may not need to do anything depending on your input sources and output destinations; you should check whether the libraries used in your application support Unicode natively. XML parsers often return Unicode data, for example. Many relational databases also support Unicode-valued columns and can return Unicode values from an SQL query."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.238,
+            0.885,
+            0.285
+          ],
+          "content": "Unicode data is usually converted to a particular encoding before it gets written to disk or sent over a socket. It’s possible to do all the work yourself: open a file, read an 8-bit bytes object from it, and convert the bytes with bytes. decode(encoding). However, the manual approach is not recommended."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.29,
+            0.886,
+            0.383
+          ],
+          "content": "One problem is the multi-byte nature of encodings; one Unicode character can be represented by several bytes. If you want to read the file in arbitrary-sized chunks (say, 1024 or 4096 bytes), you need to write error-handling code to catch the case where only part of the bytes encoding a single Unicode character are read at the end of a chunk. One solution would be to read the entire file into memory and then perform the decoding, but that prevents you from working with files that are extremely large; if you need to read a 2 GiB file, you need 2 GiB of RAM. (More, really, since for at least a moment you’d need to have both the encoded string and its Unicode version in memory.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.389,
+            0.886,
+            0.466
+          ],
+          "content": "The solution would be to use the low-level decoding interface to catch the case of partial coding sequences. The work of implementing this has already been done for you: the built-in open() function can return a file-like object that assumes the file’s contents are in a specified encoding and accepts Unicode parameters for methods such as read() and write(). This works through open()’s encoding and errors parameters which are interpreted just like those in str.encode() and bytes.decode()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.472,
+            0.428,
+            0.489
+          ],
+          "content": "Reading Unicode from a file is therefore simple:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.498,
+            0.539,
+            0.542
+          ],
+          "sub_type": "code",
+          "content": "```python\nwith open('unicode.txt', encoding='utf-8') as f:\n    for line in f:\n        print(repr(line))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.555,
+            0.635,
+            0.573
+          ],
+          "content": "It’s also possible to open files in update mode, allowing both reading and writing:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.581,
+            0.575,
+            0.641
+          ],
+          "sub_type": "code",
+          "content": "```python\nwith open('test', encoding='utf-8', mode='w+') as f:\n    f.write('\\u4500 blah blah blah\\n')\n    f.seek(0)\n    print(repr(f.readline()[:1]))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.654,
+            0.886,
+            0.732
+          ],
+          "content": "The Unicode character U+FEFF is used as a byte-order mark (BOM), and is often written as the first character of a file in order to assist with autodetection of the file’s byte ordering. Some encodings, such as UTF-16, expect a BOM to be present at the start of a file; when such an encoding is used, the BOM will be automatically written as the first character and will be silently dropped when the file is read. There are variants of these encodings, such as ‘utf-16-le’ and ‘utf-16-be for little-endian and big-endian encodings, that specify one particular byte ordering and don’t skip the BOM."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.737,
+            0.885,
+            0.784
+          ],
+          "content": "In some areas, it is also convention to use a “BOM” at the start of UTF-8 encoded files; the name is misleading since UTF-8 is not byte-order dependent. The mark simply announces that the file is encoded in UTF-8. Use the ‘utf-8-sig codec to automatically skip the mark if present for reading such files."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.09,
+            0.331,
+            0.108
+          ],
+          "level": 2,
+          "content": "3.1 Unicode filenames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.123,
+            0.886,
+            0.2
+          ],
+          "content": "Most of the operating systems in common use today support filenames that contain arbitrary Unicode characters. Usually this is implemented by converting the Unicode string into some encoding that varies depending on the system. For example, Mac OS X uses UTF-8 while Windows uses a configurable encoding; on Windows, Python uses the name “mbcs” to refer to whatever the currently configured encoding is. On Unix systems, there will only be a filesystem encoding if you’ve set the LANG or LC\\_CTYPE environment variables; if you haven’t, the default encoding is UTF-8."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.206,
+            0.886,
+            0.268
+          ],
+          "content": "The sys.getfilesystemencoding() function returns the encoding to use on your current system, in case you want to do the encoding manually, but there’s not much reason to bother. When opening a file for reading or writing, you can usually just provide the Unicode string as the filename, and it will be automatically converted to the right encoding for you:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.277,
+            0.382,
+            0.321
+          ],
+          "sub_type": "code",
+          "content": "```python\nfilename = 'filename\\u4500abc'\nwith open(filename, 'w') as f:\n    f.write('blah\\n')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.335,
+            0.667,
+            0.351
+          ],
+          "content": "Functions in the os module such as os.stat() will also accept Unicode filenames."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.358,
+            0.886,
+            0.45
+          ],
+          "content": "The os.listdir() function returns filenames and raises an issue: should it return the Unicode version of filenames, or should it return bytes containing the encoded versions? os.listdir() will do both, depending on whether you provided the directory path as bytes or a Unicode string. If you pass a Unicode string as the path, filenames will be decoded using the filesystem’s encoding and a list of Unicode strings will be returned, while passing a byte path will return the filenames as bytes. For example, assuming the default filesystem encoding is UTF-8, running the following program:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.459,
+            0.326,
+            0.56
+          ],
+          "sub_type": "code",
+          "content": "```python\nfn = 'filename\\u4500abc'\nf = open(fn, 'w')\nf.close()\n\nimport os\nprint(os.listdir(b'.'))\nprint(os.listdir('.'))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.573,
+            0.336,
+            0.59
+          ],
+          "content": "will produce the following output:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.598,
+            0.407,
+            0.643
+          ],
+          "sub_type": "code",
+          "content": "```txt\namk:~$ python t.py\n[b'filename\\xe4\\x94\\x80abc', ...]\n['filename\\u4500abc', ...]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.657,
+            0.748,
+            0.673
+          ],
+          "content": "The first list contains UTF-8-encoded filenames, and the second list contains the Unicode versions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.68,
+            0.885,
+            0.711
+          ],
+          "content": "Note that on most occasions, the Unicode APIs should be used. The bytes APIs should only be used on systems where undecodable file names can be present, i.e. Unix systems."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.735,
+            0.547,
+            0.755
+          ],
+          "level": 2,
+          "content": "3.2 Tips for Writing Unicode-aware Programs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.77,
+            0.654,
+            0.786
+          ],
+          "content": "This section provides some suggestions on writing software that deals with Unicode."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.792,
+            0.288,
+            0.808
+          ],
+          "content": "The most important tip is:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.815,
+            0.845,
+            0.846
+          ],
+          "content": "Software should only work with Unicode strings internally, decoding the input data as soon as possible and encoding the output only at the end."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.852,
+            0.886,
+            0.9
+          ],
+          "content": "If you attempt to write processing functions that accept both Unicode and byte strings, you will find your program vulnerable to bugs wherever you combine the two different kinds of strings. There is no automatic encoding or decoding: if you do e.g. str + bytes, a TypeError will be raised."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.886,
+            0.17
+          ],
+          "content": "When using data coming from a web browser or some other untrusted source, a common technique is to check for illegal characters in a string before using the string in a generated command line or storing it in a database. If you’re doing this, be careful to check the decoded string, not the encoded bytes data; some encodings may have interesting properties, such as not being bijective or not being fully ASCII-compatible. This is especially true if the input data also specifies the encoding, since the attacker can then choose a clever way to hide malicious text in the encoded bytestream."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.193,
+            0.401,
+            0.21
+          ],
+          "level": 2,
+          "content": "Converting Between File Encodings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.225,
+            0.886,
+            0.256
+          ],
+          "content": "The StreamRecoder class can transparently convert between encodings, taking a stream that returns data in encoding #1 and behaving like a stream returning data in encoding #2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.262,
+            0.885,
+            0.293
+          ],
+          "content": "For example, if you have an input file f that’s in Latin-1, you can wrap it with a StreamRecoder to return bytes encoded in UTF-8:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.302,
+            0.662,
+            0.404
+          ],
+          "sub_type": "code",
+          "content": "```python\nnew_f = codecs.StreamRecorder(f,\n    # en/decoder: used by read() to encode its results and\n    # by write() to decode its input.\n    codecs.getencoder('utf-8'), codecs.getdecoder('utf-8'),\n    # reader/writer: used to read and write to the stream.\n    codecs.getreader('latin-1'), codecs.getwriter('latin-1') )\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.435,
+            0.358,
+            0.451
+          ],
+          "level": 2,
+          "content": "Files in an Unknown Encoding"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.466,
+            0.885,
+            0.513
+          ],
+          "content": "What can you do if you need to make a change to a file, but don’t know the file’s encoding? If you know the encoding is ASCII-compatible and only want to examine or modify the ASCII parts, you can open the file with the surrogateescape error handler:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.521,
+            0.742,
+            0.636
+          ],
+          "sub_type": "code",
+          "content": "```python\nwith open(fname, 'r', encoding=\"ascii\", errors=\"surrogateescape\") as f:\n    data = f.read()\n\n# make changes to the string 'data'\n\nwith open(fname + '.new', 'w',\n        encoding=\"ascii\", errors=\"surrogateescape\") as f:\n    f.write(data)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.65,
+            0.885,
+            0.697
+          ],
+          "content": "The surrogateescape error handler will decode any non-ASCII bytes as code points in the Unicode Private Use Area ranging from U+DC80 to U+DCFF. These private code points will then be turned back into the same bytes when the surrogateescape error handler is used when encoding the data and writing it back out."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.721,
+            0.265,
+            0.739
+          ],
+          "level": 2,
+          "content": "3.3 References"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.755,
+            0.885,
+            0.786
+          ],
+          "content": "One section of [Mastering Python 3 Input/Output](http://pyvideo.org/video/289/pycon-2010--mastering-python-3-i-o), a PyCon 2010 talk by David Beazley, discusses text processing and binary data handling."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.792,
+            0.885,
+            0.839
+          ],
+          "content": "The [PDF slides for Marc-André Lemburg’s presentation “Writing Unicode-aware Applications in Python”](https://downloads.egenix.com/python/LSM2005-Developing-Unicode-aware-applications-in-Python.pdf) discuss questions of character encodings as well as how to internationalize and localize an application. These slides cover Python 2.x only."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.845,
+            0.885,
+            0.876
+          ],
+          "content": "[The Guts of Unicode in Python](http://pyvideo.org/video/1768/the-guts-of-unicode-in-python) is a PyCon 2013 talk by Benjamin Peterson that discusses the internal Unicode representation in Python 3.3."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.936,
+            0.51,
+            0.949
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.091,
+            0.367,
+            0.111
+          ],
+          "level": 2,
+          "content": "4 Acknowledgements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.132,
+            0.885,
+            0.164
+          ],
+          "content": "The initial draft of this document was written by Andrew Kuchling. It has since been revised further by Alexander Belopolsky, Georg Brandl, Andrew Kuchling, and Ezio Melotti."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.17,
+            0.885,
+            0.216
+          ],
+          "content": "Thanks to the following people who have noted errors or offered suggestions on this article: Éric Araujo, Nicholas Bastin, Nick Coghlan, Marius Gedminas, Kent Johnson, Ken Krugler, Marc-André Lemburg, Martin von Löwis, Terry J. Reedy, Chad Whitacre."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.512,
+            0.949
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.11,
+            0.184,
+            0.131
+          ],
+          "level": 2,
+          "content": "Index"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.142,
+            0.135,
+            0.161
+          ],
+          "level": 2,
+          "content": "P"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.166,
+            0.394,
+            0.197
+          ],
+          "content": "Python Enhancement Proposals PEP 263, 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "13"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Unicode HOWTO",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2021-09-05T22:33:43-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 13,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

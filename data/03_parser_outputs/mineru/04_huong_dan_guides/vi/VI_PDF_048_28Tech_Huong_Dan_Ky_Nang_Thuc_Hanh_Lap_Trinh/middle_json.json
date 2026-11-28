@@ -1,0 +1,974 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "9Slide.vn",
+      "authors": [
+        "28TECH"
+      ],
+      "subject": "9Slide.vn",
+      "keywords": [
+        "28TECH"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2022-07-18T11:28:59+07:00",
+      "modified_at": "2022-07-18T11:28:59+07:00",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "Microsoft® PowerPoint® 2016",
+      "page_count": 9,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.257,
+            0.132
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 1,
+          "bbox": [
+            0.046,
+            0.18,
+            0.462,
+            0.818
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 1,
+              "bbox": [
+                0.046,
+                0.18,
+                0.462,
+                0.818
+              ],
+              "image_path": "images/page_0_image_1.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.529,
+            0.257,
+            0.898,
+            0.691
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "NỀN TẢNG CHẤM BÀI HHackerRank"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.925,
+            0.911,
+            0.976,
+            0.999
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.008,
+            0.018,
+            0.257,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.351,
+            0.149,
+            0.649,
+            0.307
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "NHỮNG KẾT QUẢ CHẤM BÀI"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 2,
+          "bbox": [
+            0.067,
+            0.339,
+            0.894,
+            0.827
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 2,
+              "bbox": [
+                0.067,
+                0.339,
+                0.894,
+                0.827
+              ],
+              "image_path": "images/page_1_table_2.jpg",
+              "content": "<table><tbody><tr><td>Kết quả</td><td>Ý nghĩa</td><td>Cách xử lý</td></tr><tr><td>Wrong Answer</td><td>Kết quả của bạn bị sai</td><td>Xem lại code của mình bị sai trong những trường hợp đặc biệt nào</td></tr><tr><td>Terminated due to timeout</td><td>Chạy quá thời gian</td><td>Cải thiện thuật toán để code chạy nhanh hơn</td></tr><tr><td>Compilation error</td><td>Biên dịch code bị lỗi, thường là do lỗi cú pháp hoặc bạn chưa chọn ngôn ngữ là C++</td><td>Hãy chạy thử trên máy của bạn, nếu nó đúng test mẫu thì hãy submit</td></tr></tbody></table>"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.925,
+            0.911,
+            0.975,
+            0.999
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Q"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "page_number",
+          "index": 0,
+          "bbox": [
+            0.917,
+            0.942,
+            0.924,
+            0.963
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.008,
+            0.019,
+            0.257,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.351,
+            0.149,
+            0.648,
+            0.307
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "NHỮNG KẾT QUẢ CHẤM BÀI"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 3,
+          "bbox": [
+            0.067,
+            0.339,
+            0.893,
+            0.859
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 3,
+              "bbox": [
+                0.067,
+                0.339,
+                0.893,
+                0.859
+              ],
+              "image_path": "images/page_2_table_3.jpg",
+              "content": "<table><tbody><tr><td>Kết quả</td><td>Ý nghĩa</td><td>Cách xử lý</td></tr><tr><td>Segmentation Fault</td><td>Bạn truy cập vào chỉ số của mảng không hợp lệ</td><td>Hãy đảm bảo bạn truy cập vào một chỉ số mảng hợp lệ</td></tr><tr><td>Accepted</td><td>Đúng</td><td>Code của bạn đã đúng</td></tr><tr><td>Runtime Error</td><td>Code của bạn sinh ra lỗi trong quá trình chạy, ví dụ : chia cho số 0</td><td>Tìm trường hợp đặc biệt dẫn tới code của bạn bị sai khi thực thi</td></tr></tbody></table>"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.925,
+            0.911,
+            0.974,
+            0.998
+          ],
+          "content": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.075,
+            0.272,
+            0.909,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Mỗi bài tập sẽ có nhiều trường hợp đầu vào khác nhau Mỗi bài tập đều có nhiều trường hợp (test case), code của bạn có thể đúng trong trường hợp đơn giản nhưng sai trong trường hợp khác, vì thế không có nghĩa bạn code ở máy của bạn đúng là bạn nộp bài cũng sẽ đúng. Code của bạn phải đúng 100% các test case thì mới được coi là đúng, sai ít nhất 1 test case cũng được coi là code sai."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.923,
+            0.911,
+            0.975,
+            0.999
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.917,
+            0.941,
+            0.925,
+            0.963
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.113
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.075,
+            0.366,
+            0.896,
+            0.617
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.Khi đọc xong yêu cầu, hãy chú ý vào giới hạn dữ liệu của biến để chọn kiểu dữ liệu cho phù hợp. Giới hạn của biến có thể biến 1 bài toán đơn giản thành phức tạp chỉ bằng cách làm cho biến có dải giá trị lớn hơn."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.923,
+            0.911,
+            0.974,
+            0.998
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.917,
+            0.941,
+            0.925,
+            0.964
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.074,
+            0.365,
+            0.905,
+            0.62
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Hãy chú ý yêu cầu về input ( đầu vào) và output ( đầu ra). Input chính là những gì bạn nhập từ bàn phím và output chính là những gì bạn in ra màn hình. Nếu code của bạn có input và output giống với test mẫu đề bài cho thì hãy nộp bài."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.923,
+            0.911,
+            0.974,
+            0.998
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.917,
+            0.941,
+            0.925,
+            0.964
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.074,
+            0.223,
+            0.896,
+            0.384
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Không in thừa các câu dẫn, ví dụ như : “Nhập a”, “Kết quả là”, “Dữ liệu không hợp lệ”, các câu dẫn này sẽ làm input và output của các bạn không giống như đề bài yêu cầu và sẽ bị máy chấm sai."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.074,
+            0.383,
+            0.895,
+            0.65
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chú ý kết quả in theo mẫu như thế nào thì hãy đảm bảo bạn in ra như vậy, ví dụ họ bắt in ra 2 số trên cùng 1 dòng mà bạn in trên 2 dòng thì sẽ bị đánh sai. Họ yêu cầu bạn in ra 2 số đằng sau dấu thập phân mà bạn in ra 3 số cũng bị đánh sai, họ phân cách nhau giữa 2 số bằng dấu phẩy mà bạn dùng dấu cách thì bị sai"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.074,
+            0.65,
+            0.88,
+            0.759
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nhìn chung vì nó là máy, nên bạn muốn đúng hãy đảm bảo sự chính xác tuyệt đối."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.924,
+            0.911,
+            0.974,
+            0.998
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Q"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.009,
+            0.019,
+            0.067,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.069,
+            0.043,
+            0.257,
+            0.114
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.075,
+            0.366,
+            0.906,
+            0.613
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Lập trình sử dụng online judge để chấm bài sẽ làm các bạn có tư duy tốt hơn, sự chính xác cao. Thời gian đầu sẽ hơi ức chế và dễ nản nhưng về lâu dài thì bạn sẽ không còn ngây thơ như lúc đầu nữa."
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.923,
+            0.911,
+            0.974,
+            0.998
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.916,
+            0.941,
+            0.925,
+            0.963
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.007,
+            0.018,
+            0.258,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28TECH 28TECH Become A Better Developer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.099,
+            0.187,
+            0.397,
+            0.309
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "KẾT THÚC"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.795,
+            0.955,
+            0.921,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28tech.com.vn"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.924,
+            0.911,
+            0.974,
+            0.999
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

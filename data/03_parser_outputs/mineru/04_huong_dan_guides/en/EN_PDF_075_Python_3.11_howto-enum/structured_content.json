@@ -1,0 +1,4195 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.594,
+            0.115,
+            0.883,
+            0.167
+          ],
+          "level": 2,
+          "content": "Enum HOWTO Release 3.11.10"
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.263,
+            0.2,
+            0.882,
+            0.222
+          ],
+          "level": 1,
+          "content": "Guido van Rossum and the Python development team"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.718,
+            0.257,
+            0.882,
+            0.273
+          ],
+          "content": "**September 10, 2024**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.649,
+            0.278,
+            0.882,
+            0.294
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.68,
+            0.293,
+            0.882,
+            0.309
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.328,
+            0.228,
+            0.349
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.116,
+            0.369,
+            0.885,
+            0.914
+          ],
+          "content": "- Programmatic access to enumeration members and their attributes 4\n- 2 Duplicating enum members and values 5\n- 3 Ensuring unique enumeration values 5\n- 4 Using automatic values 6\n- 5 Iteration 6\n- 6 Comparisons 7\n- 7 Allowed members and attributes of enumerations 7\n- 8 Restricted Enum subclassing 8\n- 9 Pickling 9\n- 10 Functional API 9\n- 11 Derived Enumerations 11\n- 11.1 IntEnum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11\n- 11.2 StrEnum . . . . . . . . . . . . . . . . . . . . . . . . . . 12\n- 11.3 IntFlag . . . . . . . . . . . . . . . . 12\n- 11.4 Flag . . . . . . . . . . . . . . 13\n- 11.5 Others 14\n- 12 When to use \\_\\_new\\_\\_() vs. \\_\\_init\\_\\_() 15\n- 12.1 Finer Points 15\n- 13 How are Enums and Flags different? 19\n- 13.1 Enum Classes 19\n- 13.2 Flag Classes **19**\n- 13.3 Enum Members (aka instances) 19\n- 13.4 Flag Members 19\n- **14 Enum Cookbook 19**\n- 14.1 Omitting values 20\n- 14.2 OrderedEnum 22\n- 14.3 DuplicateFreeEnum 22"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.94,
+            0.505,
+            0.952
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.183,
+            0.881,
+            0.214
+          ],
+          "content": "An Enum is a set of symbolic names bound to unique values. They are similar to global variables, but they offer a more useful repr(), grouping, type-safety, and a few other features."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.219,
+            0.881,
+            0.248
+          ],
+          "content": "They are most useful when you have a variable that can take one of a limited selection of values. For example, the days of the week:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.255,
+            0.349,
+            0.378
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import Enum\n>>> class Weekday (Enum):\n...     MONDAY = 1\n...     TUESDAY = 2\n...     WEDNESDAY = 3\n...     THURSDAY = 4\n...     FRIDAY = 5\n...     SATURDAY = 6\n...     SUNDAY = 7\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.39,
+            0.363,
+            0.406
+          ],
+          "content": "Or perhaps the RGB primary colors:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.413,
+            0.348,
+            0.484
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import Enum\n>>> class Color(Enum):\n...     RED = 1\n...     GREEN = 2\n...     BLUE = 3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.495,
+            0.745,
+            0.511
+          ],
+          "content": "As you can see, creating an Enum is as simple as writing a class that inherits from Enum itself."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.531,
+            0.334,
+            0.546
+          ],
+          "content": "**Note:** Case of Enum Members"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.552,
+            0.88,
+            0.583
+          ],
+          "content": "Because Enums are used to represent constants we recommend using UPPER\\_CASE names for members, and will be using that style in our examples."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.602,
+            0.881,
+            0.632
+          ],
+          "content": "Depending on the nature of the enum a member’s value may or may not be important, but either way that value can be used to get the corresponding member:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.64,
+            0.321,
+            0.668
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Weekday(3)\n<Weekday.WEDNESDAY: 3>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.682,
+            0.881,
+            0.712
+          ],
+          "content": "As you can see, the repr() of a member shows the enum name, the member name, and the value. The str() of a member shows only the enum name and member name:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.72,
+            0.363,
+            0.749
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print(Weekday.THURSDAY)\nWeekday.THURSDAY\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.762,
+            0.531,
+            0.778
+          ],
+          "content": "The type of an enumeration member is the enum it belongs to:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.785,
+            0.472,
+            0.843
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> type(Weekday.MONDAY)\n<enum 'Weekday'>\n>>> isinstance(Weekday.FRIDAY, Weekday)\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.854,
+            0.54,
+            0.87
+          ],
+          "content": "Enum members have an attribute that contains just their name:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.878,
+            0.399,
+            0.907
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print (Weekday.TUESDAY.name)\nTUESDAY\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.086,
+            0.448,
+            0.102
+          ],
+          "content": "Likewise, they have an attribute for their value:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.11,
+            0.366,
+            0.139
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Weekday.WEDNESDAY.value\n3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.152,
+            0.882,
+            0.224
+          ],
+          "content": "Unlike many languages that treat enumerations solely as name/value pairs, Python Enums can have behavior added. For example, datetime.date has two methods for returning the weekday: weekday() and isoweekday(). The difference is that one of them counts from 0-6 and the other from 1-7. Rather than keep track of that ourselves we can add a method to the Weekday enum to extract the day from the date instance and return the matching enum member:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.232,
+            0.418,
+            0.276
+          ],
+          "sub_type": "code",
+          "content": "```python\n@classmethod\ndef from_date(cls, date):\n    return cls(date.isowekday())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.288,
+            0.46,
+            0.304
+          ],
+          "content": "The complete Weekday enum now looks like this:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.31,
+            0.489,
+            0.473
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Weekday (Enum):\n...     MONDAY = 1\n...     TUESDAY = 2\n...     WEDNESDAY = 3\n...     THURSDAY = 4\n...     FRIDAY = 5\n...     SATURDAY = 6\n...     SUNDAY = 7\n...     #\n...     @classmethod\n...     def from_date(cls, date):\n...         return cls(date.isowekday())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.484,
+            0.42,
+            0.499
+          ],
+          "content": "Now we can find out what today is! Observe:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.507,
+            0.435,
+            0.551
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from datetime import date\n>>> Weekday.from_date(date.today())\n<Weekday.TUESDAY: 2>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.563,
+            0.637,
+            0.579
+          ],
+          "content": "Of course, if you’re reading this on some other day, you’ll see that day instead."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.585,
+            0.881,
+            0.615
+          ],
+          "content": "This Weekday enum is great if our variable only needs one day, but what if we need several? Maybe we’re writing a function to plot chores during a week, and don’t want to use a list – we could use a different type of Enum:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.622,
+            0.348,
+            0.745
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import Flag\n>>> class Weekday(Flag):\n...     MONDAY = 1\n...     TUESDAY = 2\n...     WEDNESDAY = 4\n...     THURSDAY = 8\n...     FRIDAY = 16\n...     SATURDAY = 32\n...     SUNDAY = 64\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.755,
+            0.713,
+            0.772
+          ],
+          "content": "We’ve changed two things: we’re inherited from Flag, and the values are all powers of 2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.777,
+            0.622,
+            0.793
+          ],
+          "content": "Just like the original Weekday enum above, we can have a single selection:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.8,
+            0.438,
+            0.844
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> first_week_day = Weekday.MONDAY\n>>> first_week_day\n<Weekday.MONDAY: 1>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.856,
+            0.62,
+            0.872
+          ],
+          "content": "But Flag also allows us to combine several members into a single variable:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.092,
+            0.546,
+            0.135
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> weekend = Weekday.SATURDAY | Weekday.SUNDAY\n>>> weekend\n<Weekday.SATURDAY|SUNDAY: 96>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.147,
+            0.406,
+            0.163
+          ],
+          "content": "You can even iterate over a Flag variable:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.17,
+            0.327,
+            0.227
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> for day in weekend:\n...     print(day)\nWeekday.SATURDAY\nWeekday.SUNDAY\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.239,
+            0.348,
+            0.254
+          ],
+          "content": "Okay, let’s get some chores set up:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.261,
+            0.806,
+            0.333
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> chores_for_ethan = {\n...     'feed the cat': Weekday.MONDAY | Weekday.WEDNESDAY | Weekday.FRIDAY,\n...     'do the dishes': Weekday.TUESDAY | Weekday.THURSDAY,\n...     'answer SO questions': Weekday.SATURDAY,\n...     }\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.344,
+            0.465,
+            0.36
+          ],
+          "content": "And a function to display the chores for a given day:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.366,
+            0.58,
+            0.449
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> def show_chores(chores, day):\n...     for chore, days in chores.items():\n...         if day in days:\n...             print(chore)\n>>> show_chores(chores_for_ethan, Weekday.SATURDAY)\nanswer SO questions\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.462,
+            0.877,
+            0.491
+          ],
+          "content": "In cases where the actual values of the members do not matter, you can save yourself some work and use auto() for the values:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.498,
+            0.438,
+            0.634
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import auto\n>>> class Weekday (Flag):\n...     MONDAY = auto()\n...     TUESDAY = auto()\n...     WEDNESDAY = auto()\n...     THURSDAY = auto()\n...     FRIDAY = auto()\n...     SATURDAY = auto()\n...     SUNDAY = auto()\n...     WEEKEND = SATURDAY | SUNDAY\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.667,
+            0.881,
+            0.707
+          ],
+          "level": 2,
+          "content": "1 Programmatic access to enumeration members and their attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.727,
+            0.881,
+            0.758
+          ],
+          "content": "Sometimes it’s useful to access members in enumerations programmatically (i.e. situations where Color.RED won’t do because the exact color is not known at program-writing time). Enum allows such access:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.764,
+            0.258,
+            0.821
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color(1)\n<Color.RED: 1>\n>>> Color(3)\n<Color.BLUE: 3>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.833,
+            0.54,
+            0.848
+          ],
+          "content": "If you want to access enum members by name, use item access:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.856,
+            0.282,
+            0.911
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color['RED']\n<Color.RED: 1>\n>>> Color['GREEN']\n<Color.GREEN: 2>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.94,
+            0.506,
+            0.951
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.086,
+            0.52,
+            0.102
+          ],
+          "content": "If you have an enum member and need its name or value:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.108,
+            0.321,
+            0.179
+          ],
+          "sub_type": "code",
+          "content": "```coffeescript\n>>> member = Color.RED\n>>> member.name\n'RED'\n>>> member.value\n1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.211,
+            0.593,
+            0.232
+          ],
+          "level": 2,
+          "content": "2 Duplicating enum members and values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.251,
+            0.507,
+            0.265
+          ],
+          "content": "Having two enum members with the same name is invalid:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.273,
+            0.484,
+            0.368
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Shape(Enum):\n...     SQUARE = 2\n...     SQUARE = 3\n...\nTraceback (most recent call last):\n...\nTypeError: 'SQUARE' already defined as 2\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.381,
+            0.881,
+            0.425
+          ],
+          "content": "However, an enum member can have other names associated with it. Given two entries A and B with the same value (and A defined first), B is an alias for the member A. By-value lookup of the value of A will return the member A. By-name lookup of A will return the member A. By-name lookup of B will also return the member A:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.431,
+            0.375,
+            0.593
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> class Shape(Enum):\n...     SQUARE = 2\n...     DIAMOND = 1\n...     CIRCLE = 3\n...     ALIAS_FOR_SQUARE = 2\n...\n>>> Shape.SQUARE\n<Shape.SQUARE: 2>\n>>> Shape.ALIAS_FOR_SQUARE\n<Shape.SQUARE: 2>\n>>> Shape(2)\n<Shape.SQUARE: 2>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.618,
+            0.881,
+            0.649
+          ],
+          "content": "**Note:** Attempting to create a member with the same name as an already defined attribute (another member, a method, etc.) or attempting to create an attribute with the same name as a member is not allowed."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.688,
+            0.567,
+            0.709
+          ],
+          "level": 2,
+          "content": "3 Ensuring unique enumeration values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.728,
+            0.881,
+            0.758
+          ],
+          "content": "By default, enumerations allow multiple names as aliases for the same value. When this behavior isn’t desired, you can use the unique() decorator:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.764,
+            0.748,
+            0.913
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import Enum, unique\n>>> @unique\n... class Mistake(Enum):\n...     ONE = 1\n...     TWO = 2\n...     THREE = 3\n...     FOUR = 3\n...\nTraceback (most recent call last):\n...\nValueError: duplicate values found in <enum 'Mistake'>: FOUR -> THREE\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.085,
+            0.414,
+            0.106
+          ],
+          "level": 2,
+          "content": "4 Using automatic values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.125,
+            0.466,
+            0.14
+          ],
+          "content": "If the exact value is unimportant you can use auto:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.147,
+            0.464,
+            0.256
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import Enum, auto\n>>> class Color(Enum):\n...     RED = auto()\n...     BLUE = auto()\n...     GREEN = auto()\n...\n>>> [member.value for member in Color]\n[1, 2, 3]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.268,
+            0.697,
+            0.283
+          ],
+          "content": "The values are chosen by \\_generate\\_next\\_value\\_(), which can be overridden:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.29,
+            0.726,
+            0.453
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class AutoName (Enum):\n...     def _generate_next_value_(name, start, count, last_values):\n...         return name\n...\n>>> class Ordinal (AutoName):\n...     NORTH = auto()\n...     SOUTH = auto()\n...     EAST = auto()\n...     WEST = auto()\n...\n>>> [member.value for member in Ordinal]\n['NORTH', 'SOUTH', 'EAST', 'WEST']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.478,
+            0.737,
+            0.494
+          ],
+          "content": "**Note:** The \\_generate\\_next\\_value\\_() method must be defined before any members."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.535,
+            0.241,
+            0.554
+          ],
+          "level": 2,
+          "content": "5 Iteration"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.574,
+            0.568,
+            0.59
+          ],
+          "content": "Iterating over the members of an enum does not provide the aliases:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.596,
+            0.873,
+            0.667
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> list(Shape)\n[<Shape.SQUARE: 2>, <Shape.DIAMOND: 1>, <Shape.CIRCLE: 3>]\n>>> list(Weekday)\n[<Weekday.MONDAY: 1>, <Weekday.TUESDAY: 2>, <Weekday.WEDNESDAY: 4>, <Weekday.\n↔THURSDAY: 8>, <Weekday.FRIDAY: 16>, <Weekday.SATURDAY: 32>, <Weekday.SUNDAY: 64>]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.678,
+            0.753,
+            0.694
+          ],
+          "content": "Note that the aliases Shape.ALIAS\\_FOR\\_SQUARE and Weekday.WEEKEND aren’t shown."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.7,
+            0.881,
+            0.729
+          ],
+          "content": "The special attribute \\_\\_members\\_\\_ is a read-only ordered mapping of names to members. It includes all names defined in the enumeration, including the aliases:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.737,
+            0.573,
+            0.833
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> for name, member in Shape.__members__.items():\n...     name, member\n...\n('SQUARE', <Shape.SQUARE: 2>)\n('DIAMOND', <Shape.DIAMOND: 1>)\n('CIRCLE', <Shape.CIRCLE: 3>)\n('ALIAS_FOR_SQUARE', <Shape.SQUARE: 2>)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.845,
+            0.881,
+            0.875
+          ],
+          "content": "The \\_\\_members\\_\\_ attribute can be used for detailed programmatic access to the enumeration members. For example, finding all the aliases:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.883,
+            0.834,
+            0.911
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> [name for name, member in Shape.__members__.items() if member.name != name]\n['ALIAS_FOR_SQUARE']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.1,
+            0.748,
+            0.116
+          ],
+          "content": "**Note:** Aliases for flags include values with multiple flags set, such as 3, and no flags set, i.e. 0."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.157,
+            0.3,
+            0.178
+          ],
+          "level": 2,
+          "content": "6 Comparisons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.197,
+            0.446,
+            0.212
+          ],
+          "content": "Enumeration members are compared by identity:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.219,
+            0.403,
+            0.303
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.RED is Color.RED\nTrue\n>>> Color.RED is Color.BLUE\nFalse\n>>> Color.RED is not Color.BLUE\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.315,
+            0.881,
+            0.344
+          ],
+          "content": "Ordered comparisons between enumeration values are not supported. Enum members are not integers (but see IntEnum below):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.352,
+            0.744,
+            0.409
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.RED < Color.BLUE\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: '<' not supported between instances of 'Color' and 'Color'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.421,
+            0.395,
+            0.437
+          ],
+          "content": "Equality comparisons are defined though:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.444,
+            0.375,
+            0.527
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.BLUE == Color.RED\nFalse\n>>> Color.BLUE != Color.RED\nTrue\n>>> Color.BLUE == Color.BLUE\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.54,
+            0.88,
+            0.569
+          ],
+          "content": "Comparisons against non-enumeration values will always compare not equal (again, IntEnum was explicitly designed to behave differently, see below):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.577,
+            0.294,
+            0.607
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.BLUE == 2\nFalse\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.635,
+            0.869,
+            0.667
+          ],
+          "content": "**Warning:** It is possible to reload modules – if a reloaded module contains enums, they will be recreated, and the new members may not compare identical/equal to the original members."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.705,
+            0.71,
+            0.724
+          ],
+          "level": 2,
+          "content": "7 Allowed members and attributes of enumerations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.743,
+            0.881,
+            0.788
+          ],
+          "content": "Most of the examples above use integers for enumeration values. Using integers is short and handy (and provided by default by the Functional API), but not strictly enforced. In the vast majority of use-cases, one doesn’t care what the actual value of an enumeration is. But if the value is important, enumerations can have arbitrary values."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.793,
+            0.88,
+            0.808
+          ],
+          "content": "Enumerations are Python classes, and can have methods and special methods as usual. If we have this enumeration:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.816,
+            0.457,
+            0.899
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Mood(Enum):\n...     FUNKY = 1\n...     HAPPY = 3\n...\n...     def describe(self):\n...         # self is the member here\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.748,
+            0.899,
+            0.88,
+            0.911
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.505,
+            0.951
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.099,
+            0.645,
+            0.237
+          ],
+          "sub_type": "code",
+          "content": "```python\nreturn self.name, self.value\n\n    def __str__(self):\n        return 'my custom str! {0}'.format(self.value)\n\n    @classmethod\n    def favorite_mood(cls):\n        # cls here is the enumeration\n        return cls.HAPPY\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.087,
+            0.881,
+            0.1
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.248,
+            0.161,
+            0.262
+          ],
+          "content": "Then:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.271,
+            0.344,
+            0.353
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> Mood.favorite_mood()\n<Mood.HAPPY: 3>\n>>> Mood.HAPPY.describe()\n('HAPPY', 3)\n>>> str(Mood.FUNKY)\n'my custom str! 1'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.365,
+            0.882,
+            0.423
+          ],
+          "content": "The rules for what is allowed are as follows: names that start and end with a single underscore are reserved by enum and cannot be used; all other attributes defined within an enumeration will become members of this enumeration, with the exception of special methods (\\_\\_str\\_\\_(), \\_\\_add\\_\\_(), etc.), descriptors (methods are also descriptors), and variable names listed in \\_ignore\\_."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.429,
+            0.881,
+            0.46
+          ],
+          "content": "Note: if your enumeration defines \\_\\_new\\_\\_() and/or \\_\\_init\\_\\_(), any value(s) given to the enum member will be passed into those methods. See Planet for an example."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.478,
+            0.881,
+            0.523
+          ],
+          "content": "**Note:** The \\_\\_new\\_\\_() method, if defined, is used during creation of the Enum members; it is then replaced by Enum’s \\_\\_new\\_\\_() which is used after class creation for lookup of existing members. See When to use \\_\\_new\\_\\_() vs. \\_\\_init\\_\\_() for more details."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.563,
+            0.482,
+            0.584
+          ],
+          "level": 2,
+          "content": "8 Restricted Enum subclassing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.603,
+            0.881,
+            0.632
+          ],
+          "content": "A new Enum class must have one base enum class, up to one concrete data type, and as many object-based mixin classes as needed. The order of these base classes is:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.64,
+            0.608,
+            0.67
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass EnumName([mix-in, ...], [data-type,] base-enum):\n    pass\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.682,
+            0.881,
+            0.697
+          ],
+          "content": "Also, subclassing an enumeration is allowed only if the enumeration does not define any members. So this is forbidden:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.704,
+            0.648,
+            0.788
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> class MoreColor(Color):\n...     PINK = 17\n...\nTraceback (most recent call last):\n...\nTypeError: <enum 'MoreColor'> cannot extend <enum 'Color'>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.799,
+            0.248,
+            0.814
+          ],
+          "content": "But this is allowed:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.821,
+            0.41,
+            0.906
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Foo(Enum):\n...     def some_behavior(self):\n...         pass\n...\n>>> class Bar(Foo):\n...     HAPPY = 1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.748,
+            0.904,
+            0.88,
+            0.916
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.099,
+            0.26,
+            0.133
+          ],
+          "sub_type": "code",
+          "content": "```txt\n... SAD = 2\n...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.087,
+            0.88,
+            0.101
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.143,
+            0.882,
+            0.189
+          ],
+          "content": "Allowing subclassing of enums that define members would lead to a violation of some important invariants of types and instances. On the other hand, it makes sense to allow sharing some common behavior between a group of enumerations. (See OrderedEnum for an example.)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.215,
+            0.239,
+            0.236
+          ],
+          "level": 2,
+          "content": "9 Pickling"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.254,
+            0.415,
+            0.27
+          ],
+          "content": "Enumerations can be pickled and unpickled:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.277,
+            0.536,
+            0.334
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from test.test_enum import Fruit\n>>> from pickle import dumps, loads\n>>> Fruit.TOMATO is loads(dumps(Fruit.TOMATO))\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.346,
+            0.881,
+            0.377
+          ],
+          "content": "The usual restrictions for pickling apply: picklable enums must be defined in the top level of a module, since unpickling requires them to be importable from that module."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.395,
+            0.762,
+            0.413
+          ],
+          "content": "**Note:** With pickle protocol version 4 it is possible to easily pickle enums nested in other classes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.431,
+            0.88,
+            0.461
+          ],
+          "content": "It is possible to modify how enum members are pickled/unpickled by defining \\_\\_reduce\\_ex\\_\\_() in the enumeration class. The default method is by-value, but enums with complicated values may want to use by-name:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.468,
+            0.557,
+            0.513
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> import enum\n>>> class MyEnum(enum.Enum):\n...     __reduce_ex__ = enum.pickle_by_enum_name\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.539,
+            0.719,
+            0.555
+          ],
+          "content": "**Note:** Using by-name for flags is not recommended, as unnamed aliases will not unpickle."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.119,
+            0.596,
+            0.328,
+            0.615
+          ],
+          "level": 2,
+          "content": "10 Functional API"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.635,
+            0.565,
+            0.651
+          ],
+          "content": "The Enum class is callable, providing the following functional API:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.657,
+            0.734,
+            0.755
+          ],
+          "sub_type": "code",
+          "content": "```coffeescript\n>>> Animal = Enum('Animal', 'ANT BEE CAT DOG')\n>>> Animal\n<enum 'Animal'>\n>>> Animal.ANT\n<Animal.ANT: 1>\n>>> list(Animal)\n[<Animal.ANT: 1>, <Animal.BEE: 2>, <Animal.CAT: 3>, <Animal.DOG: 4>]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.766,
+            0.881,
+            0.796
+          ],
+          "content": "The semantics of this API resemble namedtuple. The first argument of the call to Enum is the name of the enumeration."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.802,
+            0.883,
+            0.875
+          ],
+          "content": "The second argument is the source of enumeration member names. It can be a whitespace-separated string of names, a sequence of names, a sequence of 2-tuples with key/value pairs, or a mapping (e.g. dictionary) of names to values. The last two options enable assigning arbitrary values to enumerations; the others auto-assign increasing integers starting with 1 (use the start parameter to specify a different starting value). A new class derived from Enum is returned. In other words, the above assignment to Animal is equivalent to:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.091,
+            0.328,
+            0.175
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> class Animal (Enum):\n...     ANT = 1\n...     BEE = 2\n...     CAT = 3\n...     DOG = 4\n...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.186,
+            0.881,
+            0.216
+          ],
+          "content": "The reason for defaulting to 1 as the starting number and not 0 is that 0 is False in a boolean sense, but by default enum members all evaluate to True."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.222,
+            0.882,
+            0.281
+          ],
+          "content": "Pickling enums created with the functional API can be tricky as frame stack implementation details are used to try and figure out which module the enumeration is being created in (e.g. it will fail if you use a utility function in a separate module, and also may not work on IronPython or Jython). The solution is to specify the module name explicitly as follows:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.289,
+            0.689,
+            0.305
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> Animal = Enum('Animal', 'ANT BEE CAT DOG', module=__name__)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.334,
+            0.871,
+            0.365
+          ],
+          "content": "**Warning:** If module is not supplied, and Enum cannot determine what it is, the new Enum members will not be unpicklable; to keep errors closer to the source, pickling will be disabled."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.386,
+            0.881,
+            0.431
+          ],
+          "content": "The new pickle protocol 4 also, in some circumstances, relies on \\_\\_qualname\\_\\_ being set to the location where pickle will be able to find the class. For example, if the class was made available in class SomeData in the global scope:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.439,
+            0.788,
+            0.456
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Animal = Enum('Animal', 'ANT BEE CAT DOG', qualname='SomeData.Animal')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.468,
+            0.296,
+            0.484
+          ],
+          "content": "The complete signature is:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.491,
+            0.355,
+            0.613
+          ],
+          "sub_type": "code",
+          "content": "```typescript\nEnum(\n    value='NewEnumName',\n    names=<...>,\n    *,\n    module='...',\n    qualname='...',\n    type=<mixed-in class>,\n    start=1,\n)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.625,
+            0.533,
+            0.64
+          ],
+          "content": "• value: What the new enum class will record as its name."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.647,
+            0.881,
+            0.675
+          ],
+          "content": "• names: The enum members. This can be a whitespace- or comma-separated string (values will start at 1 unless otherwise specified):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.16,
+            0.684,
+            0.668,
+            0.701
+          ],
+          "sub_type": "code",
+          "content": "```txt\n'RED GREEN BLUE' | 'RED,GREEN,BLUE' | 'RED, GREEN, BLUE'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.714,
+            0.319,
+            0.729
+          ],
+          "content": "or an iterator of names:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.161,
+            0.737,
+            0.379,
+            0.754
+          ],
+          "sub_type": "code",
+          "content": "```javascript\n['RED', 'GREEN', 'BLUE']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.767,
+            0.403,
+            0.783
+          ],
+          "content": "or an iterator of (name, value) pairs:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.161,
+            0.79,
+            0.559,
+            0.807
+          ],
+          "sub_type": "code",
+          "content": "```txt\n[ ('CYAN', 4), ('MAGENTA', 5), ('YELLOW', 6)]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.821,
+            0.255,
+            0.836
+          ],
+          "content": "or a mapping:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.161,
+            0.844,
+            0.614,
+            0.86
+          ],
+          "sub_type": "code",
+          "content": "```json\n{'CHARTREUSE': 7, 'SEA_GREEN': 11, 'ROSEMARY': 42}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.873,
+            0.573,
+            0.888
+          ],
+          "content": "• module: name of module where new enum class can be found."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.894,
+            0.548,
+            0.909
+          ],
+          "content": "• qualname: where in module new enum class can be found."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.088,
+            0.421,
+            0.102
+          ],
+          "content": "• type: type to mix in to new enum class."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.109,
+            0.568,
+            0.123
+          ],
+          "content": "• start: number to start counting at if only names are passed in."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.129,
+            0.491,
+            0.144
+          ],
+          "content": "Changed in version 3.5: The start parameter was added."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.171,
+            0.415,
+            0.191
+          ],
+          "level": 2,
+          "content": "11 Derived Enumerations"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.212,
+            0.251,
+            0.228
+          ],
+          "level": 2,
+          "content": "11.1 IntEnum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.244,
+            0.881,
+            0.274
+          ],
+          "content": "The first variation of Enum that is provided is also a subclass of int. Members of an IntEnum can be compared to integers; by extension, integer enumerations of different types can also be compared to each other:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.28,
+            0.413,
+            0.483
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import IntEnum\n>>> class Shape(IntEnum):\n...     CIRCLE = 1\n...     SQUARE = 2\n...\n>>> class Request(IntEnum):\n...     POST = 1\n...     GET = 2\n...\n>>> Shape == 1\nFalse\n>>> Shape.CIRCLE == 1\nTrue\n>>> Shape.CIRCLE == Request.POST\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.493,
+            0.588,
+            0.508
+          ],
+          "content": "However, they still can’t be compared to standard Enum enumerations:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.516,
+            0.385,
+            0.652
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Shape (IntEnum):\n...     CIRCLE = 1\n...     SQUARE = 2\n...\n>>> class Color (Enum):\n...     RED = 1\n...     GREEN = 2\n...\n>>> Shape.CIRCLE == Color.RED\nFalse\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.664,
+            0.555,
+            0.678
+          ],
+          "content": "IntEnum values behave like integers in other ways you’d expect:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.686,
+            0.447,
+            0.769
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> int (Shape.CIRCLE)\n1\n>>> ['a', 'b', 'c'][Shape.CIRCLE]\n'b'\n>>> [i for i in range(Shape.SQUARE)]\n[0, 1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.51,
+            0.952
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.084,
+            0.255,
+            0.101
+          ],
+          "level": 2,
+          "content": "11.2 StrEnum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.115,
+            0.882,
+            0.146
+          ],
+          "content": "The second variation of Enum that is provided is also a subclass of str. Members of a StrEnum can be compared to strings; by extension, string enumerations of different types can also be compared to each other."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.15,
+            0.26,
+            0.166
+          ],
+          "content": "New in version 3.11."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.189,
+            0.238,
+            0.208
+          ],
+          "level": 2,
+          "content": "11.3 IntFlag"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.221,
+            0.882,
+            0.267
+          ],
+          "content": "The next variation of Enum provided, IntFlag, is also based on int. The difference being IntFlag members can be combined using the bitwise operators (&, |, ^, \\~) and the result is still an IntFlag member, if possible. Like IntEnum, IntFlag members are also integers and can be used wherever an int is used."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.285,
+            0.881,
+            0.338
+          ],
+          "content": "**Note:** Any operation on an IntFlag member besides the bit-wise operations will lose the IntFlag membership. Bit-wise operations that result in invalid IntFlag values will lose the IntFlag membership. See FlagBoundary for details."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.356,
+            0.252,
+            0.372
+          ],
+          "content": "New in version 3.6."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.377,
+            0.287,
+            0.393
+          ],
+          "content": "Changed in version 3.11."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.398,
+            0.286,
+            0.415
+          ],
+          "content": "Sample IntFlag class:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.422,
+            0.375,
+            0.597
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import IntFlag\n>>> class Perm(IntFlag):\n...     R = 4\n...     W = 2\n...     X = 1\n...\n>>> Perm.R | Perm.W\n<Perm.R|W: 6>\n>>> Perm.R + Perm.W\n6\n>>> RW = Perm.R | Perm.W\n>>> Perm.R in RW\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.608,
+            0.413,
+            0.623
+          ],
+          "content": "It is also possible to name the combinations:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.63,
+            0.339,
+            0.779
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> class Perm(IntFlag):\n...         R = 4\n...         W = 2\n...         X = 1\n...         RWX = 7\n>>> Perm.RWX\n<Perm.RWX: 7>\n>>> ~Perm.RWX\n<Perm: 0>\n>>> Perm(7)\n<Perm.RWX: 7>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.805,
+            0.881,
+            0.836
+          ],
+          "content": "**Note:** Named combinations are considered aliases. Aliases do not show up during iteration, but can be returned from by-value lookups."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.855,
+            0.287,
+            0.87
+          ],
+          "content": "Changed in version 3.11."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.876,
+            0.881,
+            0.906
+          ],
+          "content": "Another important difference between IntFlag and Enum is that if no flags are set (the value is 0), its boolean evaluation is False:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.091,
+            0.346,
+            0.148
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Perm.R & Perm.X\n<Perm: 0>\n>>> bool(Perm.R & Perm.X)\nFalse\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.161,
+            0.881,
+            0.191
+          ],
+          "content": "Because IntFlag members are also subclasses of int they can be combined with them (but may lose IntFlag membership:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.198,
+            0.25,
+            0.267
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Perm.X | 4\n<Perm.R|X: 5>\n\n>>> Perm.X + 8\n9\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.294,
+            0.733,
+            0.31
+          ],
+          "content": "**Note:** The negation operator, \\~, always returns an IntFlag member with a positive value:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.318,
+            0.565,
+            0.347
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> (~Perm.X).value == (Perm.R|Perm.W).value == 6\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.375,
+            0.426,
+            0.389
+          ],
+          "content": "IntFlag members can also be iterated over:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.398,
+            0.356,
+            0.428
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> list(RW)\n[<Perm.R: 4>, <Perm.W: 2>]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.44,
+            0.259,
+            0.455
+          ],
+          "content": "New in version 3.11."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.119,
+            0.479,
+            0.212,
+            0.497
+          ],
+          "level": 2,
+          "content": "11.4 Flag"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.51,
+            0.882,
+            0.569
+          ],
+          "content": "The last variation is Flag. Like IntFlag, Flag members can be combined using the bitwise operators (&, |, ^, \\~). Unlike IntFlag, they cannot be combined with, nor compared against, any other Flag enumeration, nor int. While it is possible to specify the values directly it is recommended to use auto as the value and let Flag select an appropriate value."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.575,
+            0.251,
+            0.59
+          ],
+          "content": "New in version 3.6."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.596,
+            0.881,
+            0.612
+          ],
+          "content": "Like IntFlag, if a combination of Flag members results in no flags being set, the boolean evaluation is False:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.619,
+            0.416,
+            0.754
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from enum import Flag, auto\n>>> class Color(Flag):\n...     RED = auto()\n...     BLUE = auto()\n...     GREEN = auto()\n...\n>>> Color.RED & Color.GREEN\n<Color: 0>\n>>> bool(Color.RED & Color.GREEN)\nFalse\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.766,
+            0.845,
+            0.782
+          ],
+          "content": "Individual flags should have values that are powers of two (1, 2, 4, 8, …), while combinations of flags will not:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.789,
+            0.43,
+            0.897
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color (Flag):\n...     RED = auto()\n...     BLUE = auto()\n...     GREEN = auto()\n...     WHITE = RED | BLUE | GREEN\n...\n>>> Color.WHITE\n<Color.WHITE: 7>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.086,
+            0.645,
+            0.102
+          ],
+          "content": "Giving a name to the “no flags set” condition does not change its boolean value:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.11,
+            0.32,
+            0.245
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color(Flag):\n...     BLACK = 0\n...     RED = auto()\n...     BLUE = auto()\n...     GREEN = auto()\n...\n>>> Color.BLACK\n<Color.BLACK: 0>\n>>> bool(Color.BLACK)\nFalse\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.257,
+            0.396,
+            0.272
+          ],
+          "content": "Flag members can also be iterated over:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.279,
+            0.438,
+            0.323
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> purple = Color.RED | Color.BLUE\n>>> list(purple)\n[<Color.RED: 1>, <Color.BLUE: 2>]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.336,
+            0.259,
+            0.351
+          ],
+          "content": "New in version 3.11."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.371,
+            0.882,
+            0.431
+          ],
+          "content": "**Note:** For the majority of new code, Enum and Flag are strongly recommended, since IntEnum and IntFlag break some semantic promises of an enumeration (by being comparable to integers, and thus by transitivity to other unrelated enumerations). IntEnum and IntFlag should be used only in cases where Enum and Flag will not do; for example, when integer constants are replaced with enumerations, or for interoperability with other systems."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.466,
+            0.236,
+            0.484
+          ],
+          "level": 2,
+          "content": "11.5 Others"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.498,
+            0.777,
+            0.513
+          ],
+          "content": "While IntEnum is part of the enum module, it would be very simple to implement independently:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.522,
+            0.347,
+            0.552
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass IntEnum(int, Enum):\n    pass\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.564,
+            0.881,
+            0.593
+          ],
+          "content": "This demonstrates how similar derived enumerations can be defined; for example a FloatEnum that mixes in float instead of int."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.6,
+            0.201,
+            0.614
+          ],
+          "content": "Some rules:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.621,
+            0.881,
+            0.65
+          ],
+          "content": "1. When subclassing Enum, mix-in types must appear before Enum itself in the sequence of bases, as in the IntEnum example above."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.656,
+            0.881,
+            0.686
+          ],
+          "content": "2. Mix-in types must be subclassable. For example, bool and range are not subclassable and will throw an error during Enum creation if used as the mix-in type."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.692,
+            0.882,
+            0.736
+          ],
+          "content": "3. While Enum can have members of any type, once you mix in an additional type, all the members must have values of that type, e.g. int above. This restriction does not apply to mix-ins which only add methods and don’t specify another type."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.742,
+            0.881,
+            0.771
+          ],
+          "content": "4. When another data type is mixed in, the value attribute is not the same as the enum member itself, although it is equivalent and will compare equal."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.778,
+            0.518,
+            0.793
+          ],
+          "content": "5. A data type is a mixin that defines \\_\\_new\\_\\_()."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.799,
+            0.881,
+            0.828
+          ],
+          "content": "6. %-style formatting: %s and %r call the Enum class’s \\_\\_str\\_\\_() and \\_\\_repr\\_\\_() respectively; other codes (such as %i or %h for IntEnum) treat the enum member as its mixed-in type."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.834,
+            0.849,
+            0.85
+          ],
+          "content": "7. Formatted string literals, str.format(), and format() will use the enum’s \\_\\_str\\_\\_() method."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.869,
+            0.881,
+            0.9
+          ],
+          "content": "**Note:** Because IntEnum, IntFlag, and StrEnum are designed to be drop-in replacements for existing constants, their \\_\\_str\\_\\_() method has been reset to their data types’ \\_\\_str\\_\\_() method."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.086,
+            0.63,
+            0.105
+          ],
+          "level": 2,
+          "content": "12 When to use \\_\\_new\\_\\_() vs. \\_\\_init\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.125,
+            0.882,
+            0.154
+          ],
+          "content": "\\_new\\_\\_() must be used whenever you want to customize the actual value of the Enum member. Any other modifications may go in either \\_\\_new\\_\\_() or \\_\\_init\\_\\_(), with \\_\\_init\\_\\_() being preferred."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.16,
+            0.833,
+            0.175
+          ],
+          "content": "For example, if you want to pass several items to the constructor, but only want one of them to be the value:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.182,
+            0.88,
+            0.461
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Coordinate(bytes, Enum):\n...     \"\"\"\n...    Coordinate with binary codes that can be indexed by the int code.\n...     \"\"\"\n...    def __new__(cls, value, label, unit):\n...         obj = bytes.__new__(cls, [value])\n...         obj._value_ = value\n...         obj.label = label\n...         obj.unit = unit\n...         return obj\n...     PX = (0, 'P.X', 'km')\n...     PY = (1, 'P.Y', 'km')\n...     VX = (2, 'V.X', 'km/s')\n...     VY = (3, 'V.Y', 'km/s')\n...\n\n>>> print(Coordinate['PY'])\nCoordinate.PY\n\n>>> print(Coordinate(3))\nCoordinate.VY\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.489,
+            0.869,
+            0.52
+          ],
+          "content": "**Warning:** Do not call super().\\_\\_new\\_\\_(), as the lookup-only \\_\\_new\\_\\_ is the one that is found; instead, use the data type directly."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.554,
+            0.288,
+            0.571
+          ],
+          "level": 2,
+          "content": "12.1 Finer Points"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.587,
+            0.371,
+            0.603
+          ],
+          "content": "**Supported \\_\\_dunder\\_\\_ names**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.617,
+            0.881,
+            0.631
+          ],
+          "content": "\\_\\_members\\_\\_ is a read-only ordered mapping of member\\_name:member items. It is only available on the class."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.638,
+            0.882,
+            0.668
+          ],
+          "content": "\\_new\\_\\_(), if specified, must create and return the enum members; it is also a very good idea to set the member’s \\_value\\_ appropriately. Once all the members are created it is no longer used."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.691,
+            0.351,
+            0.706
+          ],
+          "level": 2,
+          "content": "Supported \\_sunder\\_ names"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.721,
+            0.381,
+            0.735
+          ],
+          "content": "• \\_name\\_ – name of the member"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.742,
+            0.625,
+            0.756
+          ],
+          "content": "• \\_value\\_ – value of the member; can be set / modified in \\_\\_new\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.764,
+            0.725,
+            0.778
+          ],
+          "content": "• \\_missing\\_ – a lookup function used when a value is not found; may be overridden"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.785,
+            0.881,
+            0.813
+          ],
+          "content": "• \\_ignore\\_ – a list of names, either as a list or a str, that will not be transformed into members, and will be removed from the final class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.82,
+            0.882,
+            0.848
+          ],
+          "content": "• \\_order\\_ – used in Python 2/3 code to ensure member order is consistent (class attribute, removed during class creation)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.856,
+            0.882,
+            0.884
+          ],
+          "content": "• \\_generate\\_next\\_value\\_ – used by the Functional API and by auto to get an appropriate value for an enum member; may be overridden"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.1,
+            0.77,
+            0.116
+          ],
+          "content": "**Note:** For standard Enum classes the next value chosen is the last value seen incremented by one."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.122,
+            0.854,
+            0.138
+          ],
+          "content": "For Flag classes the next value chosen will be the next highest power-of-two, regardless of the last value seen."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.157,
+            0.645,
+            0.174
+          ],
+          "sub_type": "code",
+          "content": "```txt\nNew in version 3.6: _missing_, _order_, _generate_next_value_\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.178,
+            0.337,
+            0.195
+          ],
+          "content": "New in version 3.7: \\_ignore\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.199,
+            0.882,
+            0.23
+          ],
+          "content": "To help keep Python 2 / Python 3 code in sync an \\_order\\_ attribute can be provided. It will be checked against the actual order of the enumeration and raise an error if the two do not match:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.237,
+            0.547,
+            0.386
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color (Enum):\n...     _order_ = 'RED GREEN BLUE'\n...     RED = 1\n...     BLUE = 3\n...     GREEN = 2\n...\nTraceback (most recent call last):\n...\nTypeError: member order does not match _order_:\n['RED', 'BLUE', 'GREEN']\n['RED', 'GREEN', 'BLUE']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.411,
+            0.864,
+            0.428
+          ],
+          "content": "**Note:** In Python 2 code the \\_order\\_ attribute is necessary as definition order is lost before it can be recorded."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.12,
+            0.464,
+            0.256,
+            0.479
+          ],
+          "level": 2,
+          "content": "Private\\_\\_names"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.493,
+            0.655,
+            0.509
+          ],
+          "content": "Private names are not converted to enum members, but remain normal attributes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.515,
+            0.287,
+            0.531
+          ],
+          "content": "Changed in version 3.11."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.554,
+            0.273,
+            0.569
+          ],
+          "level": 2,
+          "content": "Enum member type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.583,
+            0.882,
+            0.626
+          ],
+          "content": "Enum members are instances of their enum class, and are normally accessed as EnumClass.member. In certain situations, such as writing custom enum behavior, being able to access one member directly from another is useful, and is supported."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.632,
+            0.279,
+            0.648
+          ],
+          "content": "Changed in version 3.5."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.671,
+            0.559,
+            0.687
+          ],
+          "level": 2,
+          "content": "Creating members that are mixed with other data types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.701,
+            0.881,
+            0.73
+          ],
+          "content": "When subclassing other data types, such as int or str, with an Enum, all values after the = are passed to that data type’s constructor. For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.736,
+            0.784,
+            0.808
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class MyEnum(IntEnum):          # help(int) -> int(x, base=10) -> integer\n...       example = '11', 16      # so x='11' and base=16\n...\n>>> MyEnum.example.value         # and hex(11) is...\n17\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.086,
+            0.479,
+            0.101
+          ],
+          "level": 2,
+          "content": "Boolean value of Enum classes and members"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.882,
+            0.16
+          ],
+          "content": "Enum classes that are mixed with non-Enum types (such as int, str, etc.) are evaluated according to the mixed-in type’s rules; otherwise, all members evaluate as True. To make your own enum’s boolean evaluation depend on the member’s value add the following to your class:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.168,
+            0.363,
+            0.197
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __bool__(self):\n    return bool(self.value)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.21,
+            0.421,
+            0.225
+          ],
+          "content": "Plain Enum classes always evaluate as True."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.249,
+            0.338,
+            0.263
+          ],
+          "level": 2,
+          "content": "Enum classes with methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.278,
+            0.877,
+            0.307
+          ],
+          "content": "If you give your enum subclass extra methods, like the Planet class below, those methods will show up in a dir() of the member, but not of the class:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.314,
+            0.878,
+            0.398
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> dir(Planet)\n['EARTH', 'JUPITER', 'MARS', 'MERCURY', 'NEPTUNE', 'SATURN', 'URANUS', 'VENUS', '_class__', '_doc__', '_members__', '_module__']\n>>> dir(Planet.EARTH)\n['__class__', '_doc__', '_module__', 'mass', 'name', 'radius', 'surface_gravity',\n'value']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.428,
+            0.355,
+            0.443
+          ],
+          "level": 2,
+          "content": "Combining members of Flag"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.457,
+            0.855,
+            0.472
+          ],
+          "content": "Iterating over a combination of Flag members will only return the members that are comprised of a single bit:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.479,
+            0.494,
+            0.643
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color(Flag):\n...     RED = auto()\n...     GREEN = auto()\n...     BLUE = auto()\n...     MAGENTA = RED | BLUE\n...     YELLOW = RED | GREEN\n...     CYAN = GREEN | BLUE\n...\n>>> Color(3)  # named combination\n<Color.YELLOW: 3>\n>>> Color(7)      # not named combination\n<Color.RED|GREEN|BLUE: 7>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.67,
+            0.334,
+            0.686
+          ],
+          "level": 2,
+          "content": "Flag and IntFlag minutia"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.7,
+            0.421,
+            0.715
+          ],
+          "content": "Using the following snippet for our examples:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.722,
+            0.431,
+            0.832
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color(IntFlag):\n...     BLACK = 0\n...     RED = 1\n...     GREEN = 2\n...     BLUE = 4\n...     PURPLE = RED | BLUE\n...     WHITE = RED | GREEN | BLUE\n...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.844,
+            0.268,
+            0.858
+          ],
+          "content": "the following are true:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.865,
+            0.351,
+            0.88
+          ],
+          "content": "• single-bit flags are canonical"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.887,
+            0.411,
+            0.901
+          ],
+          "content": "• multi-bit and zero-bit flags are aliases"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.087,
+            0.487,
+            0.102
+          ],
+          "content": "• only canonical flags are returned during iteration:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.159,
+            0.11,
+            0.623,
+            0.14
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> list(Color.WHITE)\n[<Color.RED: 1>, <Color.GREEN: 2>, <Color.BLUE: 4>]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.152,
+            0.801,
+            0.169
+          ],
+          "content": "• negating a flag or flag set returns a new flag/flag set with the corresponding positive integer value:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.177,
+            0.345,
+            0.245
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.BLUE\n<Color.BLUE: 4>\n\n>>> ~Color.BLUE\n<Color.RED|GREEN: 3>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.257,
+            0.604,
+            0.273
+          ],
+          "content": "• names of pseudo-flags are constructed from their members’ names:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.16,
+            0.282,
+            0.471,
+            0.309
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> (Color.RED | Color.GREEN).name\n'RED|GREEN'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.324,
+            0.557,
+            0.339
+          ],
+          "content": "• multi-bit flags, aka aliases, can be returned from operations:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.347,
+            0.414,
+            0.455
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.RED | Color.BLUE\n<Color.PURPLE: 5>\n\n>>> Color(7)  # or Color(-1)\n<Color.WHITE: 7>\n\n>>> Color(0)\n<Color.BLACK: 0>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.468,
+            0.781,
+            0.484
+          ],
+          "content": "• membership / containment checking: zero-valued flags are always considered to be contained:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.159,
+            0.491,
+            0.436,
+            0.521
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.BLACK in Color.WHITE\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.533,
+            0.682,
+            0.549
+          ],
+          "content": "otherwise, only if all bits of one flag are in the other flag will True be returned:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.158,
+            0.558,
+            0.445,
+            0.626
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> Color.PURPLE in Color.WHITE\nTrue\n\n>>> Color.GREEN in Color.PURPLE\nFalse\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.639,
+            0.881,
+            0.667
+          ],
+          "content": "There is a new boundary mechanism that controls how out-of-range / invalid bits are handled: STRICT, CONFORM, EJECT, and KEEP:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.675,
+            0.606,
+            0.689
+          ],
+          "content": "• STRICT –> raises an exception when presented with invalid values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.696,
+            0.432,
+            0.71
+          ],
+          "content": "• CONFORM –> discards any invalid bits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.717,
+            0.642,
+            0.732
+          ],
+          "content": "• EJECT –> lose Flag status and become a normal int with the given value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.738,
+            0.354,
+            0.752
+          ],
+          "content": "• KEEP –> keep the extra bits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.76,
+            0.406,
+            0.774
+          ],
+          "content": "– keeps Flag status and extra bits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.781,
+            0.443,
+            0.796
+          ],
+          "content": "– extra bits do not show up in iteration"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.18,
+            0.802,
+            0.461,
+            0.817
+          ],
+          "content": "– extra bits do show up in repr() and str()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.824,
+            0.881,
+            0.853
+          ],
+          "content": "The default for Flag is STRICT, the default for IntFlag is EJECT, and the default for \\_convert\\_ is KEEP (see ssl.Options for an example of when KEEP is needed)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.085,
+            0.575,
+            0.105
+          ],
+          "level": 2,
+          "content": "13 How are Enums and Flags different?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.125,
+            0.88,
+            0.139
+          ],
+          "content": "Enums have a custom metaclass that affects many aspects of both derived Enum classes and their instances (members)."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.163,
+            0.308,
+            0.18
+          ],
+          "level": 2,
+          "content": "13.1 Enum Classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.195,
+            0.882,
+            0.254
+          ],
+          "content": "The EnumType metaclass is responsible for providing the \\_\\_contains\\_\\_(), \\_\\_dir\\_\\_(), \\_\\_iter\\_\\_() and other methods that allow one to do things with an Enum class that fail on a typical class, such as list(Color) or some\\_enum\\_var in Color. EnumType is responsible for ensuring that various other methods on the final Enum class are correct (such as \\_\\_new\\_\\_(), \\_\\_getnewargs\\_\\_(), \\_\\_str\\_\\_() and \\_\\_repr\\_\\_())."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.276,
+            0.294,
+            0.294
+          ],
+          "level": 2,
+          "content": "13.2 Flag Classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.307,
+            0.883,
+            0.352
+          ],
+          "content": "Flags have an expanded view of aliasing: to be canonical, the value of a flag needs to be a power-of-two value, and not a duplicate name. So, in addition to the Enum definition of alias, a flag with no value (a.k.a. 0) or with more than one power-of-two value (e.g. 3) is considered an alias."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.375,
+            0.472,
+            0.392
+          ],
+          "level": 2,
+          "content": "13.3 Enum Members (aka instances)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.406,
+            0.883,
+            0.45
+          ],
+          "content": "The most interesting thing about enum members is that they are singletons. EnumType creates them all while it is creating the enum class itself, and then puts a custom \\_\\_new\\_\\_() in place to ensure that no new ones are ever instantiated by returning only the existing member instances."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.473,
+            0.308,
+            0.491
+          ],
+          "level": 2,
+          "content": "13.4 Flag Members"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.505,
+            0.882,
+            0.534
+          ],
+          "content": "Flag members can be iterated over just like the Flag class, and only the canonical members will be returned. For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.543,
+            0.582,
+            0.572
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> list(Color)\n[<Color.RED: 1>, <Color.GREEN: 2>, <Color.BLUE: 4>]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.585,
+            0.513,
+            0.6
+          ],
+          "content": "(Note that BLACK, PURPLE, and WHITE do not show up.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.606,
+            0.842,
+            0.622
+          ],
+          "content": "Inverting a flag member returns the corresponding positive value, rather than a negative value — for example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.63,
+            0.313,
+            0.659
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> ~Color.RED\n<Color.GREEN|BLUE: 6>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.672,
+            0.839,
+            0.689
+          ],
+          "content": "Flag members have a length corresponding to the number of power-of-two values they contain. For example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.696,
+            0.31,
+            0.727
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> len(Color.PURPLE)\n2\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.76,
+            0.354,
+            0.779
+          ],
+          "level": 2,
+          "content": "14 Enum Cookbook"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.8,
+            0.883,
+            0.843
+          ],
+          "content": "While Enum, IntEnum, StrEnum, Flag, and IntFlag are expected to cover the majority of use-cases, they cannot cover them all. Here are recipes for some different types of enumerations that can be used directly, or as examples for creating one’s own."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.119,
+            0.085,
+            0.32,
+            0.102
+          ],
+          "level": 2,
+          "content": "14.1 Omitting values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.116,
+            0.881,
+            0.145
+          ],
+          "content": "In many use-cases, one doesn’t care what the actual value of an enumeration is. There are several ways to define this type of simple enumeration:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.151,
+            0.401,
+            0.165
+          ],
+          "content": "• use instances of auto for the value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.173,
+            0.415,
+            0.187
+          ],
+          "content": "• use instances of object as the value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.195,
+            0.397,
+            0.209
+          ],
+          "content": "• use a descriptive string as the value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.216,
+            0.759,
+            0.23
+          ],
+          "content": "• use a tuple as the value and a custom \\_\\_new\\_\\_() to replace the tuple with an int value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.237,
+            0.881,
+            0.266
+          ],
+          "content": "Using any of these methods signifies to the user that these values are not important, and also enables one to add, remove, or reorder members without having to renumber the remaining members."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.289,
+            0.214,
+            0.304
+          ],
+          "sub_type": "code",
+          "content": "```txt\nUsing auto\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.319,
+            0.316,
+            0.334
+          ],
+          "content": "Using auto would look like:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.341,
+            0.319,
+            0.437
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color(Enum):\n...     RED = auto()\n...     BLUE = auto()\n...     GREEN = auto()\n...\n>>> Color.GREEN\n<Color.GREEN: 3>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.467,
+            0.233,
+            0.482
+          ],
+          "level": 2,
+          "content": "Using object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.496,
+            0.336,
+            0.512
+          ],
+          "content": "Using object would look like:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.116,
+            0.519,
+            0.475,
+            0.615
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color(Enum):\n...     RED = object()\n...     GREEN = object()\n...     BLUE = object()\n...\n>>> Color.GREEN\n<Color.GREEN: <object object at 0x...>>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.627,
+            0.69,
+            0.643
+          ],
+          "content": "This is also a good example of why you might want to write your own \\_\\_repr\\_\\_():"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.651,
+            0.743,
+            0.772
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color(Enum):\n...     RED = object()\n...     GREEN = object()\n...     BLUE = object()\n...     def __repr__(self):\n...         return \"<%s.%s>\" % (self.__class__.__name__, self._name__)\n...\n>>> Color.GREEN\n<Color.GREEN>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.488,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.085,
+            0.327,
+            0.103
+          ],
+          "level": 2,
+          "content": "Using a descriptive string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.115,
+            0.406,
+            0.131
+          ],
+          "content": "Using a string as the value would look like:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.138,
+            0.357,
+            0.236
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Color(Enum):\n...     RED = 'stop'\n...     GREEN = 'go'\n...     BLUE = 'too fast!'\n...\n>>> Color.GREEN\n<Color.GREEN: 'go'>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.263,
+            0.339,
+            0.28
+          ],
+          "sub_type": "code",
+          "content": "```txt\nUsing a custom __new__()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.293,
+            0.495,
+            0.31
+          ],
+          "content": "Using an auto-numbering \\_\\_new\\_\\_() would look like:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.316,
+            0.521,
+            0.504
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class AutoNumber(Enum):\n...     def __new__(cls):\n...         value = len(cls.__members__) + 1\n...         obj = object.__new__(cls)\n...         obj._value_ = value\n...         return obj\n\n>>> class Color(AutoNumber):\n...     RED = ()\n...     GREEN = ()\n...     BLUE = ()\n...\n>>> Color.GREEN\n<Color.GREEN: 2>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.516,
+            0.64,
+            0.531
+          ],
+          "content": "To make a more general purpose AutoNumber, add \\*args to the signature:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.537,
+            0.792,
+            0.636
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class AutoNumber(Enum):\n...     def __new__(cls, *args):      # this is the only change from above\n...             value = len(cls.__members__) + 1\n...             obj = object.__new__(cls)\n...             obj._value_ = value\n...             return obj\n...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.646,
+            0.861,
+            0.662
+          ],
+          "content": "Then when you inherit from AutoNumber you can write your own \\_\\_init\\_\\_ to handle any extra arguments:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.669,
+            0.675,
+            0.845
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Swatch(AutoNumber):\n...     def __init__(self, pantone='unknown'):\n...         self.pantone = pantone\n...     AUBURN = '3497'\n...     SEA_GREEN = '1246'\n...     BLEACHED_CORAL = () # New color, no Pantone code yet!\n...\n>>> Swatch.SEA_GREEN\n<Swatch.SEA_GREEN: 2>\n>>> Swatch.SEA_GREEN.pantone\n'1246'\n>>> Swatch.BLEACHED_CORAL.pantone\n'unknown'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.87,
+            0.881,
+            0.901
+          ],
+          "content": "**Note:** The \\_\\_new\\_\\_() method, if defined, is used during creation of the Enum members; it is then replaced by Enum’s \\_\\_new\\_\\_() which is used after class creation for lookup of existing members."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.488,
+            0.939,
+            0.51,
+            0.952
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.125,
+            0.092,
+            0.874,
+            0.153
+          ],
+          "sub_type": "code",
+          "content": "```txt\nWarning: Do not call super() .__new__(), as the lookup-only __new__ is the one that is found; instead, use the data type directly - e.g.:\nobj = int.__new__(cls, value)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.185,
+            0.305,
+            0.203
+          ],
+          "level": 2,
+          "content": "14.2 OrderedEnum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.216,
+            0.882,
+            0.246
+          ],
+          "content": "An ordered enumeration that is not based on IntEnum and so maintains the normal Enum invariants (such as not being comparable to other enumerations):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.252,
+            0.881,
+            0.608
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class OrderedEnum(Enum):\n...     def __ge__(self, other):\n...         if self.__class__ is other.__class__: \n...             return self.value >= other.value\n...         return NotImplemented\n...     def __gt__(self, other):\n...         if self.__class__ is other.__class__: \n...             return self.value > other.value\n...         return NotImplemented\n...     def __le__(self, other):\n...         if self.__class__ is other.__class__: \n...             return self.value <= other.value\n...         return NotImplemented\n...     def __lt__(self, other):\n...         if self.__class__ is other.__class__: \n...             return self.value < other.value\n...         return NotImplemented\n...\n>>> class Grade(OrderedEnum):\n...     A = 5\n...     B = 4\n...     C = 3\n...     D = 2\n...     F = 1\n...\n>>> Grade.C < Grade.A\nTrue\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.119,
+            0.638,
+            0.359,
+            0.655
+          ],
+          "level": 2,
+          "content": "14.3 DuplicateFreeEnum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.67,
+            0.65,
+            0.684
+          ],
+          "content": "Raises an error if a duplicate member value is found instead of creating an alias:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.691,
+            0.793,
+            0.906
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class DuplicateFreeEnum(Enum):\n...     def __init__(self, *args):\n...         cls = self.__class__\n...         if any(self.value == e.value for e in cls):\n...             a = self.name\n...             e = cls(self.value).name\n...             raise ValueError(\n...                 \"aliases not allowed in DuplicateFreeEnum: %r --> %r\"\n...                 % (a, e))\n...\n>>> class Color(DuplicateFreeEnum):\n...     RED = 1\n...     GREEN = 2\n...     BLUE = 3\n...     GRENE = 2\n...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.748,
+            0.904,
+            0.88,
+            0.917
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.488,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.087,
+            0.88,
+            0.147
+          ],
+          "sub_type": "code",
+          "content": "```txt\n(continued from previous page)\nTraceback (most recent call last):\n...\nValueError: aliases not allowed in DuplicateFreeEnum: 'GRENE' --> 'GREEN'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.17,
+            0.88,
+            0.202
+          ],
+          "content": "**Note:** This is a useful example for subclassing Enum to add or change other behaviors as well as disallowing aliases. If the only desired change is disallowing aliases, the unique() decorator can be used instead."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.119,
+            0.238,
+            0.233,
+            0.255
+          ],
+          "level": 2,
+          "content": "14.4 Planet"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.269,
+            0.846,
+            0.286
+          ],
+          "content": "If \\_\\_new\\_\\_() or \\_\\_init\\_\\_() is defined, the value of the enum member will be passed to those methods:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.293,
+            0.681,
+            0.584
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> class Planet (Enum):\n...     MERCURY = (3.303e+23, 2.4397e6)\n...     VENUS   = (4.869e+24, 6.0518e6)\n...     EARTH   = (5.976e+24, 6.37814e6)\n...     MARS    = (6.421e+23, 3.3972e6)\n...     JUPITER = (1.9e+27,    7.1492e7)\n...     SATURN  = (5.688e+26, 6.0268e7)\n...     URANUS  = (8.686e+25, 2.5559e7)\n...     NEPTUNE = (1.024e+26, 2.4746e7)\n...     def __init__(self, mass, radius):\n...         self.mass = mass      # in kilograms\n...         self.radius = radius   # in meters\n...     @property\n...     def surface_gravity(self):\n...         # universal gravitational constant  (m3 kg-1 s-2)\n...         G = 6.67300E-11\n...         return G * self.mass / (self.radius * self.radius)\n...\n>>> Planet.EARTH.value\n(5.976e+24, 6378140.0)\n>>> Planet.EARTH.surface_gravity\n9.802652743337129\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.119,
+            0.613,
+            0.282,
+            0.631
+          ],
+          "level": 2,
+          "content": "14.5 TimePeriod"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.645,
+            0.473,
+            0.661
+          ],
+          "content": "An example to show the \\_ignore\\_ attribute in use:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.667,
+            0.877,
+            0.844
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> from datetime import timedelta\n>>> class Period(timedelta, Enum):\n...     \"different lengths of time\"\n...     _ignore_ = 'Period i'\n...     Period = vars()\n...     for i in range(367):\n...         Period['day_%d' % i] = i\n...\n>>> list(Period)[:2]\n[<Period.day_0: datetime.timedelta(0)>, <Period.day_1: datetime.timedelta(days=1)>]\n>>> list(Period)[-2:]\n[<Period.day_365: datetime.timedelta(days=365)>, <Period.day_366: datetime.\n←timedelta(days=366)>]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.488,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.085,
+            0.432,
+            0.106
+          ],
+          "level": 2,
+          "content": "15 Subclassing EnumType"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.125,
+            0.881,
+            0.154
+          ],
+          "content": "While most enum needs can be met by customizing Enum subclasses, either with class decorators or custom functions, EnumType can be subclassed to provide a different Enum experience."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.488,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": "24"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Enum HOWTO",
+      "authors": [
+        "Guido van Rossum and the Python development team"
+      ],
+      "created_at": "2024-09-10T05:47:57-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20220710)",
+      "page_count": 24,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

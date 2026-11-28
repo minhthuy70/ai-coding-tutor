@@ -1,0 +1,1537 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.216,
+            0.12,
+            0.887,
+            0.207
+          ],
+          "level": 1,
+          "content": "HOWTO Fetch Internet Resources Using The urllib Package Release 3.6.15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.242,
+            0.886,
+            0.287
+          ],
+          "content": "**Guido van Rossum and the Python development team**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.724,
+            0.325,
+            0.884,
+            0.342
+          ],
+          "content": "**September 05, 2021**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.347,
+            0.885,
+            0.364
+          ],
+          "content": "**Python Software Foundation**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.685,
+            0.363,
+            0.885,
+            0.38
+          ],
+          "content": "**Email: docs@python.org**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.4,
+            0.224,
+            0.423
+          ],
+          "level": 2,
+          "content": "Contents"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.111,
+            0.443,
+            0.888,
+            0.798
+          ],
+          "content": "- **1 Introduction** 2\n- **2 Fetching URLs** 2\n- 2.1 Data 3\n- 2.2 Headers 4\n- **3 Handling Exceptions** 5\n- 3.1 URLError 5\n- 3.2 HTTPError 5\n- 3.3 Wrapping it Up 7\n- **4 info and geturl** 8\n- **5 Openers and Handlers** 8\n- **6 Basic Authentication** 9\n- **7 Proxies 10**\n- **8 Sockets and Layers 10**\n- **9 Footnotes 11**\n- **Index 12**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.155,
+            0.832,
+            0.313,
+            0.849
+          ],
+          "level": 2,
+          "content": "Author [Michael Foord](http://www.voidspace.org.uk/python/index.shtml)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.87,
+            0.878,
+            0.888
+          ],
+          "content": "**Note:** There is a French translation of an earlier revision of this HOWTO, available at [urllib2 - Le Manuel manquant](http://www.voidspace.org.uk/python/articles/urllib2_francais.shtml)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.505,
+            0.949
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.09,
+            0.283,
+            0.111
+          ],
+          "level": 2,
+          "content": "1 Introduction"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.121,
+            0.143,
+            0.674,
+            0.243
+          ],
+          "sub_type": "code",
+          "content": "```txt\nRelated Articles\nYou may also find useful the following article on fetching web resources with Python:\n• Basic Authentication\n    A tutorial on Basic Authentication, with examples in Python.\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.259,
+            0.886,
+            0.321
+          ],
+          "content": "**urllib.request** is a Python module for fetching URLs (Uniform Resource Locators). It offers a very simple interface, in the form of the urlopen function. This is capable of fetching URLs using a variety of different protocols. It also offers a slightly more complex interface for handling common situations - like basic authentication, cookies, proxies and so on. These are provided by objects called handlers and openers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.327,
+            0.886,
+            0.374
+          ],
+          "content": "urllib.request supports fetching URLs for many “URL schemes” (identified by the string before the \":\" in URL - for example \"ftp\" is the URL scheme of \"ftp://python.org/\") using their associated network protocols (e.g. FTP, HTTP). This tutorial focuses on the most common case, HTTP."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.38,
+            0.886,
+            0.458
+          ],
+          "content": "For straightforward situations urlopen is very easy to use. But as soon as you encounter errors or non-trivial cases when opening HTTP URLs, you will need some understanding of the HyperText Transfer Protocol. The most comprehensive and authoritative reference to HTTP is [**RFC 2616**](https://tools.ietf.org/html/rfc2616.html). This is a technical document and not intended to be easy to read. This HOWTO aims to illustrate using urllib, with enough detail about HTTP to help you through. It is not intended to replace the urllib.request docs, but is supplementary to them."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.485,
+            0.312,
+            0.507
+          ],
+          "level": 2,
+          "content": "2 Fetching URLs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.527,
+            0.446,
+            0.544
+          ],
+          "content": "The simplest way to use urllib.request is as follows:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.552,
+            0.663,
+            0.597
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport urllib.request\nwith urllib.request.urlopen('http://python.org/') as response:\n    html = response.read()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.612,
+            0.882,
+            0.644
+          ],
+          "content": "If you wish to retrieve a resource via URL and store it in a temporary location, you can do so via the shutil. copyfileobj() and tempfile.NamedTemporaryFile() functions:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.65,
+            0.672,
+            0.794
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport shutil\nimport tempfile\nimport urllib.request\n\nwith urllib.request.urlopen('http://python.org/') as response:\n    with tempfile.NamedTemporaryFile(delete=False) as tmp_file:\n        shutil.copyfileobj(response, tmp_file)\n\nwith open(tmp_file.name) as html:\n    pass\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.807,
+            0.884,
+            0.839
+          ],
+          "content": "Many uses of urllib will be that simple (note that instead of an ‘http:’ URL we could have used a URL starting with ‘ftp:’, ‘file:’, etc.). However, it’s the purpose of this tutorial to explain the more complicated cases, concentrating on HTTP."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.845,
+            0.887,
+            0.908
+          ],
+          "content": "HTTP is based on requests and responses - the client makes requests and servers send responses. urllib.request mirrors this with a Request object which represents the HTTP request you are making. In its simplest form you create a Request object that specifies the URL you want to fetch. Calling urlopen with this Request object returns a response object for the URL requested. This response is a file-like object, which means you can for example call .read() on the response:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.097,
+            0.635,
+            0.171
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport urllib.request\n\nreq = urllib.request.Request('http://www.voidspace.org.uk')\nwith urllib.request.urlopen(req) as response:\n    the_page = response.read()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.184,
+            0.885,
+            0.216
+          ],
+          "content": "Note that urllib.request makes use of the same Request interface to handle all URL schemes. For example, you can make an FTP request like so:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.226,
+            0.556,
+            0.242
+          ],
+          "sub_type": "code",
+          "content": "```python\nreq = urllib.request.Request('ftp://example.com/')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.255,
+            0.886,
+            0.304
+          ],
+          "content": "In the case of HTTP, there are two extra things that Request objects allow you to do: First, you can pass data to be sent to the server. Second, you can pass extra information (“metadata”) about the data or the about request itself, to the server - this information is sent as HTTP “headers”. Let’s look at each of these in turn."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.327,
+            0.199,
+            0.345
+          ],
+          "level": 2,
+          "content": "2.1 Data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.361,
+            0.886,
+            0.454
+          ],
+          "content": "Sometimes you want to send data to a URL (often the URL will refer to a CGI (Common Gateway Interface) script or other web application). With HTTP, this is often done using what’s known as a **POST** request. This is often what your browser does when you submit a HTML form that you filled in on the web. Not all POSTs have to come from forms: you can use a POST to transmit arbitrary data to your own application. In the common case of HTML forms, the data needs to be encoded in a standard way, and then passed to the Request object as the data argument. The encoding is done using a function from the urllib.parse library."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.46,
+            0.592,
+            0.646
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport urllib.parse\nimport urllib.request\n\nurl = 'http://www.someserver.com/cgi-bin/register.cgi'\nvalues = {'name' : 'Michael Foord',\n           'location' : 'Northampton',\n           'language' : 'Python' }\n\ndata = urllib.parse.urlencode(values)\ndata = data.encode('ascii') # data should be bytes\nreq = urllib.request.Request(url, data)\nwith urllib.request.urlopen(req) as response:\n    the_page = response.read()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.659,
+            0.884,
+            0.69
+          ],
+          "content": "Note that other encodings are sometimes required (e.g. for file upload from HTML forms - see [HTML Specification, Form Submission](https://www.w3.org/TR/REC-html40/interact/forms.html#h-17.13) for more details)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.696,
+            0.886,
+            0.789
+          ],
+          "content": "If you do not pass the data argument, urllib uses a **GET** request. One way in which GET and POST requests differ is that POST requests often have “side-effects”: they change the state of the system in some way (for example by placing an order with the website for a hundredweight of tinned spam to be delivered to your door). Though the HTTP standard makes it clear that POSTs are intended to always cause side-effects, and GET requests never to cause side-effects, nothing prevents a GET request from having side-effects, nor a POST requests from having no side-effects. Data can also be passed in an HTTP GET request by encoding it in the URL itself."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.795,
+            0.269,
+            0.81
+          ],
+          "content": "This is done as follows:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.819,
+            0.434,
+            0.894
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> import urllib.request\n>>> import urllib.parse\n>>> data = {}\n>>> data['name'] = 'Somebody Here'\n>>> data['location'] = 'Northampton'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.893,
+            0.884,
+            0.907
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.107,
+            0.62,
+            0.21
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> data['language'] = 'Python'\n>>> url_values = urllib.parse.urlencode(data)\n>>> print(url_values)  # The order may differ from below.\nname=Somebody+Here&language=Python&location=Northampton\n>>> url = 'http://www.example.com/example.cgi'\n>>> full_url = url + '?' + url_values\n>>> data = urllib.request.urlopen(full_url)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.107
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.223,
+            0.722,
+            0.24
+          ],
+          "content": "Notice that the full URL is created by adding a ? to the URL, followed by the encoded values."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.264,
+            0.236,
+            0.281
+          ],
+          "level": 2,
+          "content": "2.2 Headers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.297,
+            0.775,
+            0.314
+          ],
+          "content": "We’ll discuss here one particular HTTP header, to illustrate how to add headers to your HTTP request."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.32,
+            0.886,
+            0.398
+          ],
+          "content": "Some websites<sup>1</sup> dislike being browsed by programs, or send different versions to different browsers<sup>2</sup>. By default urllib identifies itself as Python-urllib/x.y (where x and y are the major and minor version numbers of the Python release, e.g. Python-urllib/2.5), which may confuse the site, or just plain not work. The way a browser identifies itself is through the User-Agent header<sup>3</sup>. When you create a Request object you can pass a dictionary of headers in. The following example makes the same request as above, but identifies itself as a version of Internet Explorer<sup>4</sup>."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.405,
+            0.603,
+            0.618
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport urllib.parse\nimport urllib.request\n\nurl = 'http://www.someserver.com/cgi-bin/register.cgi'\nuser_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'\nvalues = {'name': 'Michael Foord',\n            'location': 'Northampton',\n            'language': 'Python' }\nheaders = {'User-Agent': user_agent}\n\ndata = urllib.parse.urlencode(values)\ndata = data.encode('ascii')\nreq = urllib.request.Request(url, data, headers)\nwith urllib.request.urlopen(req) as response:\n    the_page = response.read()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.63,
+            0.886,
+            0.662
+          ],
+          "content": "The response also has two useful methods. See the section on info and geturl which comes after we have a look at what happens when things go wrong."
+        },
+        {
+          "type": "page_footnote",
+          "bbox": [
+            0.132,
+            0.669,
+            0.251,
+            0.683
+          ],
+          "content": "1 Google for example."
+        },
+        {
+          "type": "page_footnote",
+          "bbox": [
+            0.122,
+            0.681,
+            0.885,
+            0.706
+          ],
+          "content": "2 Browser sniffing is a very bad practice for website design - building sites using web standards is much more sensible. Unfortunately a lot of sites till send different versions to different browsers."
+        },
+        {
+          "type": "page_footnote",
+          "bbox": [
+            0.131,
+            0.706,
+            0.711,
+            0.72
+          ],
+          "content": "3 The user agent for MSIE 6 is ‘Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)’"
+        },
+        {
+          "type": "page_footnote",
+          "bbox": [
+            0.131,
+            0.718,
+            0.574,
+            0.733
+          ],
+          "content": "4 For details of more HTTP request headers, see [Quick Reference to HTTP Headers](https://www.cs.tut.fi/~jkorpela/http.html)."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.379,
+            0.113
+          ],
+          "level": 2,
+          "content": "3 Handling Exceptions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.133,
+            0.885,
+            0.163
+          ],
+          "content": "urlopen raises URLError when it cannot handle a response (though as usual with Python APIs, built-in exceptions such as ValueError, TypeError etc. may also be raised)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.17,
+            0.677,
+            0.186
+          ],
+          "content": "HTTPError is the subclass of URLError raised in the specific case of HTTP URLs."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.193,
+            0.577,
+            0.209
+          ],
+          "content": "The exception classes are exported from the urllib.error module."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.233,
+            0.246,
+            0.251
+          ],
+          "level": 2,
+          "content": "3.1 URLError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.267,
+            0.886,
+            0.314
+          ],
+          "content": "Often, URLError is raised because there is no network connection (no route to the specified server), or the specified server doesn’t exist. In this case, the exception raised will have a ‘reason’ attribute, which is a tuple containing an error code and a text error message."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.111,
+            0.323,
+            0.688,
+            0.434
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> req = urllib.request.Request('http://www.pretend_server.org')\n>>> try: urllib.request.urlopen(req)\n... except urllib.error.URLError as e:\n...     print(e.reason)\n...\n(4, 'getaddrinfo failed')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.464,
+            0.258,
+            0.482
+          ],
+          "level": 2,
+          "content": "3.2 HTTPError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.498,
+            0.887,
+            0.575
+          ],
+          "content": "Every HTTP response from the server contains a numeric “status code”. Sometimes the status code indicates that the server is unable to fulfil the request. The default handlers will handle some of these responses for you (for example, if the response is a “redirection” that requests the client fetch the document from a different URL, urllib will handle that for you). For those it can’t handle, urlopen will raise an HTTPError. Typical errors include ‘404’ (page not found), ‘403 (request forbidden), and ‘401’ (authentication required)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.58,
+            0.589,
+            0.596
+          ],
+          "content": "See section 10 of [**RFC 2616**](https://tools.ietf.org/html/rfc2616.html) for a reference on all the HTTP error codes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.603,
+            0.885,
+            0.62
+          ],
+          "content": "The HTTPError instance raised will have an integer ‘code’ attribute, which corresponds to the error sent by the server."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.645,
+            0.215,
+            0.66
+          ],
+          "level": 2,
+          "content": "Error Codes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.675,
+            0.884,
+            0.707
+          ],
+          "content": "Because the default handlers handle redirects (codes in the 300 range), and codes in the 100–299 range indicate success, you will usually only see error codes in the 400–599 range."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.714,
+            0.885,
+            0.745
+          ],
+          "content": "http.server.BaseHTTPRequestHandler.responses is a useful dictionary of response codes in that shows all the response codes used by [**RFC 2616**](https://tools.ietf.org/html/rfc2616.html). The dictionary is reproduced here for convenience"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.754,
+            0.649,
+            0.897
+          ],
+          "sub_type": "code",
+          "content": "```python\n# Table mapping response codes to messages; entries have the\n# form {code: (shortmessage, longmessage)}.\nresponses = {\n    100: ('Continue', 'Request received, please continue'),\n    101: ('Switching Protocols',\n        'Switching to new protocol; obey Upgrade header'),\n    200: ('OK', 'Request fulfilled, document follows'),\n    201: ('Created', 'Document created, URL follows'),\n    202: ('Accepted',\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.897,
+            0.885,
+            0.909
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.106
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.138,
+            0.107,
+            0.844,
+            0.9
+          ],
+          "sub_type": "code",
+          "content": "```txt\n'Request accepted, processing continues off-line'),\n203: ('Non-Authoritative Information', 'Request fulfilled from cache'),\n204: ('No Content', 'Request fulfilled, nothing follows'),\n205: ('Reset Content', 'Clear input form for further input.'),\n206: ('Partial Content', 'Partial content follows.'),\n\n300: ('Multiple Choices',\n    'Object has several resources -- see URI list'),\n301: ('Moved Permanently', 'Object moved permanently -- see URI list'),\n302: ('Found', 'Object moved temporarily -- see URI list'),\n303: ('See Other', 'Object moved -- see Method and URL list'),\n304: ('Not Modified',\n    'Document has not changed since given time'),\n305: ('Use Proxy',\n    'You must use proxy specified in Location to access this '\n    'resource.'),\n307: ('Temporary Redirect',\n    'Object moved temporarily -- see URI list'),\n\n400: ('Bad Request',\n    'Bad request syntax or unsupported method'),\n401: ('Unauthorized',\n    'No permission -- see authorization schemes'),\n402: ('Payment Required',\n    'No payment -- see charging schemes'),\n403: ('Forbidden',\n    'Request forbidden -- authorization will not help'),\n404: ('Not Found', 'Nothing matches the given URI'),\n405: ('Method Not Allowed',\n    'Specified method is invalid for this server.'),\n406: ('Not Acceptable', 'URI not available in preferred format.'),\n407: ('Proxy Authentication Required', 'You must authenticate with '\n    'this proxy before proceeding.'),\n408: ('Request Timeout', 'Request timed out; try again later.'),\n409: ('Conflict', 'Request conflict.'),\n410: ('Gone',\n    'URI no longer exists and has been permanently removed.'),\n411: ('Length Required', 'Client must specify Content-Length.'),\n412: ('Precondition Failed', 'Precondition in headers is false.'),\n413: ('Request Entity Too Large', 'Entity is too large.'),\n414: ('Request-URI Too Long', 'URI is too long.'),\n415: ('Unsupported Media Type', 'Entity body in unsupported format.'),\n416: ('Requested Range Not Satisfiable',\n    'Cannot satisfy request range.'),\n417: ('Expectation Failed',\n    'Expect condition could not be satisfied.'),\n\n500: ('Internal Server Error', 'Server got itself in trouble'),\n501: ('Not Implemented',\n    'Server does not support this operation'),\n502: ('Bad Gateway', 'Invalid responses from another server/proxy.'),\n503: ('Service Unavailable',\n    'The server cannot process the request due to a high load'),\n504: ('Gateway Timeout',\n    'The gateway server did not receive a timely response'),\n505: ('HTTP Version Not Supported', 'Cannot fulfill request.'),\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.885,
+            0.139
+          ],
+          "content": "When an error is raised the server responds by returning an HTTP error code and an error page. You can use the HTTPError instance as a response on the page returned. This means that as well as the code attribute, it also has read, geturl, and info, methods as returned by the urllib.response module:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.145,
+            0.742,
+            0.331
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> req = urllib.request.Request('http://www.python.org/fish.html')\n>>> try:\n...     urllib.request.urlopen(req)\n... except urllib.error.HTTPError as e:\n...     print(e.code)\n...     print(e.read())\n...\n404\nb'<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\\n\\n\\n<html\n  ...\n  <title>Page Not Found</title>\\n\n  ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.36,
+            0.297,
+            0.381
+          ],
+          "level": 2,
+          "content": "3.3 Wrapping it Up"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.395,
+            0.885,
+            0.426
+          ],
+          "content": "So if you want to be prepared for HTTPError or URLError there are two basic approaches. I prefer the second approach."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.45,
+            0.195,
+            0.466
+          ],
+          "level": 2,
+          "content": "Number 1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.482,
+            0.593,
+            0.668
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom urllib.request import Request, urlopen\nfrom urllib.error import URLError, HTTPError\nreq = Request(someurl)\ntry:\n    response = urlopen(req)\nexcept HTTPError as e:\n    print('The server couldn\\'t fulfill the request.')\n    print('Error code: ', e.code)\nexcept URLError as e:\n    print('We failed to reach a server.')\n    print('Reason: ', e.reason)\nelse:\n    # everything is fine\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.695,
+            0.884,
+            0.712
+          ],
+          "content": "**Note:** The except HTTPError must come first, otherwise except URLError will also catch an HTTPError."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.75,
+            0.197,
+            0.765
+          ],
+          "level": 2,
+          "content": "Number 2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.782,
+            0.512,
+            0.898
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom urllib.request import Request, urlopen\nfrom urllib.error import URLError\nreq = Request(someurl)\ntry:\n    response = urlopen(req)\nexcept URLError as e:\n    if hasattr(e, 'reason'):\n        print('We failed to reach a server.')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.755,
+            0.898,
+            0.884,
+            0.911
+          ],
+          "content": "(continues on next page)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.494,
+            0.936,
+            0.506,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.107,
+            0.628,
+            0.197
+          ],
+          "sub_type": "code",
+          "content": "```python\nprint('Reason: ', e.reason)\nelif hasattr(e, 'code'):\n    print('The server couldn\\'t fulfill the request.')\n    print('Error code: ', e.code)\nelse:\n    # everything is fine\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.093,
+            0.885,
+            0.106
+          ],
+          "content": "(continued from previous page)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.232,
+            0.309,
+            0.253
+          ],
+          "level": 2,
+          "content": "4 info and geturl"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.273,
+            0.885,
+            0.304
+          ],
+          "content": "The response returned by urlopen (or the HTTPError instance) has two useful methods info() and geturl() and is defined in the module urllib.response.."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.311,
+            0.885,
+            0.342
+          ],
+          "content": "**geturl** - this returns the real URL of the page fetched. This is useful because urlopen (or the opener object used) may have followed a redirect. The URL of the page fetched may not be the same as the URL requested."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.349,
+            0.885,
+            0.38
+          ],
+          "content": "**info** - this returns a dictionary-like object that describes the page fetched, particularly the headers sent by the server. It is currently an http.client.HTTPMessage instance."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.386,
+            0.885,
+            0.419
+          ],
+          "content": "Typical headers include ‘Content-length’, ‘Content-type’, and so on. See the [Quick Reference to HTTP Headers](https://www.cs.tut.fi/~jkorpela/http.html) for a useful listing of HTTP headers with brief explanations of their meaning and use."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.447,
+            0.399,
+            0.468
+          ],
+          "level": 2,
+          "content": "5 Openers and Handlers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.489,
+            0.886,
+            0.565
+          ],
+          "content": "When you fetch a URL you use an opener (an instance of the perhaps confusingly-named urllib.request. OpenerDirector). Normally we have been using the default opener - via urlopen - but you can create custom openers. Openers use handlers. All the “heavy lifting” is done by the handlers. Each handler knows how to open URLs for a particular URL scheme (http, ftp, etc.), or how to handle an aspect of URL opening, for example HTTP redirections or HTTP cookies."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.572,
+            0.885,
+            0.603
+          ],
+          "content": "You will want to create openers if you want to fetch URLs with specific handlers installed, for example to get an opener that handles cookies, or to get an opener that does not handle redirections."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.61,
+            0.883,
+            0.641
+          ],
+          "content": "To create an opener, instantiate an OpenerDirector, and then call . add\\_handler(some\\_handler\\_instance) repeatedly."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.648,
+            0.885,
+            0.693
+          ],
+          "content": "Alternatively, you can use build\\_opener, which is a convenience function for creating opener objects with a single function call. build\\_opener adds several handlers by default, but provides a quick way to add more and/or override the default handlers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.7,
+            0.885,
+            0.73
+          ],
+          "content": "Other sorts of handlers you might want to can handle proxies, authentication, and other common but slightly specialised situations."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.738,
+            0.885,
+            0.769
+          ],
+          "content": "install\\_opener can be used to make an opener object the (global) default opener. This means that calls to urlopen will use the opener you have installed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.776,
+            0.885,
+            0.807
+          ],
+          "content": "Opener objects have an open method, which can be called directly to fetch urls in the same way as the urlopen function: there’s no need to call install\\_opener, except as a convenience."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.379,
+            0.112
+          ],
+          "level": 2,
+          "content": "6 Basic Authentication"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.132,
+            0.885,
+            0.178
+          ],
+          "content": "To illustrate creating and installing a handler we will use the HTTPBasicAuthHandler. For a more detailed discussion of this subject – including an explanation of how Basic Authentication works - see the [Basic Authentication Tutorial](http://www.voidspace.org.uk/python/articles/authentication.shtml)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.185,
+            0.886,
+            0.231
+          ],
+          "content": "When authentication is required, the server sends a header (as well as the 401 error code) requesting authentication. This specifies the authentication scheme and a ‘realm’. The header looks like: WWW-Authenticate: SCHEME realm=\"REALM\"."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.24,
+            0.142,
+            0.255
+          ],
+          "content": "e.g."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.264,
+            0.506,
+            0.28
+          ],
+          "sub_type": "code",
+          "content": "```txt\nWWW-Authenticate: Basic realm=\"cPanel Users\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.294,
+            0.886,
+            0.341
+          ],
+          "content": "The client should then retry the request with the appropriate name and password for the realm included as a header in the request. This is ‘basic authentication’. In order to simplify this process we can create an instance of HTTPBasicAuthHandler and an opener to use this handler."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.347,
+            0.886,
+            0.44
+          ],
+          "content": "The HTTPBasicAuthHandler uses an object called a password manager to handle the mapping of URLs and realms to passwords and usernames. If you know what the realm is (from the authentication header sent by the server), then you can use a HTTPPasswordMgr. Frequently one doesn’t care what the realm is. In that case, it is convenient to use HTTPPasswordMgrWithDefaultRealm. This allows you to specify a default username and password for a URL. This will be supplied in the absence of you providing an alternative combination for a specific realm. We indicate this by providing None as the realm argument to the add\\_password method."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.445,
+            0.885,
+            0.476
+          ],
+          "content": "The top-level URL is the first URL that requires authentication. URLs “deeper” than the URL you pass to .add\\_password() will also match."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.111,
+            0.484,
+            0.696,
+            0.755
+          ],
+          "sub_type": "code",
+          "content": "```python\n# create a password manager\npassword_mgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()\n\n# Add the username and password.\n# If we knew the realm, we could use it instead of None.\ntop_level_url = \"http://example.com/foo/\"\npassword_mgr.add_password(None, top_level_url, username, password)\n\nhandler = urllib.request.HTTPBasicAuthHandler(password_mgr)\n\n# create \"opener\" (OpenerDirector instance)\nopener = urllib.request.build_opener(handler)\n\n# use the opener to fetch a URL\nopener.open(a_url)\n\n# Install the opener.\n# Now all calls to urllib.request.urlopen use our opener.\nurllib.request.install_opener(opener)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.78,
+            0.886,
+            0.844
+          ],
+          "content": "**Note:** In the above example we only supplied our HTTPBasicAuthHandler to build\\_opener. By default openers have the handlers for normal situations – ProxyHandler (if a proxy setting such as an http\\_proxy environment variable is set), UnknownHandler, HTTPHandler, HTTPDefaultErrorHandler, HTTPRedirectHandler, FTPHandler, FileHandler, DataHandler, HTTPErrorProcessor."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.864,
+            0.886,
+            0.912
+          ],
+          "content": "top\\_level\\_url is in fact either a full URL (including the ‘http:’ scheme component and the hostname and optionally the port number) e.g. \"http://example.com/\" or an “authority” (i.e. the hostname, optionally including the port number) e.g. \"example.com\" or \"example.com:8080\" (the latter example includes a port number). The"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.493,
+            0.935,
+            0.506,
+            0.949
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.092,
+            0.884,
+            0.123
+          ],
+          "continues_prev": true,
+          "content": "authority, if present, must NOT contain the “userinfo” component - for example \"joe:password@example.com\" is not correct."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.152,
+            0.231,
+            0.173
+          ],
+          "level": 2,
+          "content": "7 Proxies"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.195,
+            0.886,
+            0.257
+          ],
+          "content": "**urllib** will auto-detect your proxy settings and use those. This is through the ProxyHandler, which is part of the normal handler chain when a proxy setting is detected. Normally that’s a good thing, but there are occasions when it may not be helpful<sup>5</sup>. One way to do this is to setup our own ProxyHandler, with no proxies defined. This is done using similar steps to setting up a [Basic Authentication](http://www.voidspace.org.uk/python/articles/authentication.shtml) handler:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.265,
+            0.6,
+            0.31
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> proxy_support = urllib.request.ProxyHandler({})\n>>> opener = urllib.request.build_opener(proxy_support)\n>>> urllib.request.install_opener(opener)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.338,
+            0.885,
+            0.371
+          ],
+          "content": "**Note:** Currently urllib.request does not support fetching of https locations through a proxy. However, this can be enabled by extending urllib.request as shown in the recipe<sup>6</sup>."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.406,
+            0.885,
+            0.44
+          ],
+          "content": "**Note:** HTTP\\_PROXY will be ignored if a variable REQUEST\\_METHOD is set; see the documentation on getproxies()."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.482,
+            0.368,
+            0.504
+          ],
+          "level": 2,
+          "content": "8 Sockets and Layers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.524,
+            0.885,
+            0.555
+          ],
+          "content": "The Python support for fetching resources from the web is layered. urllib uses the http.client library, which in turn uses the socket library."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.561,
+            0.886,
+            0.624
+          ],
+          "content": "As of Python 2.3 you can specify how long a socket should wait for a response before timing out. This can be useful in applications which have to fetch web pages. By default the socket module has no timeout and can hang. Currently, the socket timeout is not exposed at the http.client or urllib.request levels. However, you can set the default timeout globally for all sockets using"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.632,
+            0.7,
+            0.789
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport socket\nimport urllib.request\n\n# timeout in seconds\ntimeout = 10\nsocket.setdefaulttimeout(timeout)\n\n# this call to urllib.request.urlopen now uses the default timeout\n# we have set in the socket module\nreq = urllib.request.Request('http://www.voidspace.org.uk')\nresponse = urllib.request.urlopen(req)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_footnote",
+          "bbox": [
+            0.114,
+            0.83,
+            0.885,
+            0.864
+          ],
+          "content": "<sup>5</sup>In my case I have to use a proxy to access the internet at work. If you attempt to fetch localhost URLs through this proxy it blocks them. IE is set to use the proxy, which urllib picks up on. In order to test scripts with a localhost server, I have to prevent urllib from using the proxy. urllib opener for SSL proxy (CONNECT method): ASPN Cookbook Recipe. 6 urllib opener for SSL proxy (CONNECT method): ASPN Cookbook Recipe"
+        },
+        {
+          "type": "page_footnote",
+          "bbox": [
+            0.13,
+            0.856,
+            0.544,
+            0.87
+          ],
+          "content": ""
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.511,
+            0.949
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.091,
+            0.26,
+            0.11
+          ],
+          "level": 2,
+          "content": "9 Footnotes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.133,
+            0.467,
+            0.148
+          ],
+          "content": "This document was reviewed and revised by John Lee."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.936,
+            0.51,
+            0.949
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.11,
+            0.183,
+            0.13
+          ],
+          "level": 2,
+          "content": "Index"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.143,
+            0.315,
+            0.199
+          ],
+          "content": "E environment variable http\\_proxy, 9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.207,
+            0.235,
+            0.246
+          ],
+          "content": "H http\\_proxy, 9"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.255,
+            0.136,
+            0.273
+          ],
+          "level": 2,
+          "content": "R"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.279,
+            0.264,
+            0.309
+          ],
+          "content": "RFC RFC 2616, 2, 5"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.489,
+            0.935,
+            0.512,
+            0.949
+          ],
+          "content": "12"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "HOWTO Fetch Internet Resources Using The urllib Package",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2021-09-05T22:32:12-00:00",
+      "creator_application": "LaTeX with hyperref package",
+      "producer_application": "XeTeX 0.99998",
+      "page_count": 12,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

@@ -1,0 +1,3240 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Argparse Tutorial",
+      "authors": [
+        "Guido van Rossum, and the Python development team"
+      ],
+      "created_at": "2024-09-09T00:55:42-00:00",
+      "creator_application": "LaTeX with hyperref",
+      "producer_application": "xdvipdfmx (20220710)",
+      "page_count": 12,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 595,
+          "height_pt": 842
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 595,
+          "height_pt": 842
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.535,
+            0.115,
+            0.883,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Argparse Tutorial Release 3.9.20"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.486,
+            0.204,
+            0.882,
+            0.247
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Guido van Rossum and the Python development team",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.717,
+            0.281,
+            0.882,
+            0.298
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "September 09, 2024",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.649,
+            0.303,
+            0.881,
+            0.319
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Software Foundation",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.68,
+            0.318,
+            0.882,
+            0.334
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Email: docs@python.org",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.353,
+            0.228,
+            0.374
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Contents"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "index",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.394,
+            0.883,
+            0.608
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "1 Concepts",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "2 The basics",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 2  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "3 Introducing Positional arguments",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 3  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4 Introducing Optional arguments",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 5  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.1 Short options 6  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "5 Combining Positional and Optional arguments",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": " 6  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "6 Getting a little more advanced 10",
+                  "styles": [
+                    "bold"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": "  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "6.1 Conflicting options 11  "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "7 Conclusion 12",
+                  "styles": [
+                    "bold"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.158,
+            0.639,
+            0.38,
+            0.654
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "author Tshepang Lekhonkhobe"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.66,
+            0.881,
+            0.691
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This tutorial is intended to be a gentle introduction to argparse, the recommended command-line parsing module in the Python standard library."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.71,
+            0.881,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " There are two other modules that fulfill the same task, namely getopt (an equivalent for getopt() from the C language) and the deprecated optparse. Note also that argparse is based on optparse, and therefore very similar in terms of usage."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.494,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.118,
+            0.086,
+            0.258,
+            0.105
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 Concepts"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.115,
+            0.124,
+            0.881,
+            0.153
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Let’s show the sort of functionality that we are going to explore in this introductory tutorial by making use of the "
+            },
+            {
+              "type": "text",
+              "content": "ls",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " command:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.115,
+            0.161,
+            0.78,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.115,
+                0.161,
+                0.78,
+                0.375
+              ],
+              "content": "\\$ ls\ncpython devguide prog.py pypy rm-unused-function.patch\n\\$ ls pypy\nctypes_configure demo dotviewer include lib_pypy lib-python ...\n\\$ ls -l\ntotal 20\ndrwxr-xr-x 19 wena wena 4096 Feb 18 18:51 cpython\ndrwxr-xr-x 4 wena wena 4096 Feb 8 12:04 devguide\n-rwxr-xr-x 1 wena wena 535 Feb 19 00:05 prog.py\ndrwxr-xr-x 14 wena wena 4096 Feb 7 00:59 pypy\n-rw-r--r-- 1 wena wena 741 Feb 18 01:01 rm-unused-function.patch\n\\$ ls --help\nUsage: ls [OPTION]... [FILE]...\nList information about the FILEs (the current directory by default).\nSort entries alphabetically if none of -cftuvSUX nor --sort is specified.\n..."
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.387,
+            0.482,
+            0.402
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A few concepts we can learn from the four commands:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.143,
+            0.408,
+            0.881,
+            0.437
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The "
+            },
+            {
+              "type": "text",
+              "content": "ls",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " command is useful when run without any options at all. It defaults to displaying the contents of the current directory."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.144,
+            0.444,
+            0.883,
+            0.516
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• If we want beyond what it provides by default, we tell it a bit more. In this case, we want it to display a different directory, pypy. What we did is specify what is known as a positional argument. It’s named so because the program should know what to do with the value, solely based on where it appears on the command line. This concept is more relevant to a command like "
+            },
+            {
+              "type": "text",
+              "content": "cp",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", whose most basic usage is cp SRC DEST. The first position is what you want copied, and the second position is where you want it copied to."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.144,
+            0.522,
+            0.881,
+            0.552
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Now, say we want to change behaviour of the program. In our example, we display more info for each file instead of just showing the file names. The -l in that case is known as an optional argument."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.144,
+            0.558,
+            0.881,
+            0.587
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• That’s a snippet of the help text. It’s very useful in that you can come across a program you have never used before, and can figure out how it works simply by reading its help text."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.614,
+            0.272,
+            0.634
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2 The basics"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.653,
+            0.576,
+            0.669
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Let us start with a very simple example which does (almost) nothing:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 10,
+          "bbox": [
+            0.117,
+            0.677,
+            0.427,
+            0.72
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 10,
+              "bbox": [
+                0.117,
+                0.677,
+                0.427,
+                0.72
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.parse_args()"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.118,
+            0.732,
+            0.393,
+            0.749
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Following is a result of running the code:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.116,
+            0.756,
+            0.566,
+            0.891
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.116,
+                0.756,
+                0.566,
+                0.891
+              ],
+              "content": "$ python3 prog.py\n$ python3 prog.py --help\nusage: prog.py [-h]\n\noptional arguments:\n  -h, --help show this help message and exit\n$ python3 prog.py --verbose\nusage: prog.py [-h]\nprog.py: error: unrecognized arguments: --verbose\n$ python3 prog.py foo"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.748,
+            0.891,
+            0.881,
+            0.903
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.493,
+            0.939,
+            0.507,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.101,
+            0.511,
+            0.132
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.117,
+                0.101,
+                0.511,
+                0.132
+              ],
+              "content": "usage: prog.py [-h]\nprog.py: error: unrecognized arguments: foo"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "yaml"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.71,
+            0.087,
+            0.88,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.118,
+            0.145,
+            0.297,
+            0.159
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Here is what is happening:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.143,
+            0.166,
+            0.765,
+            0.18
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Running the script without any options results in nothing displayed to stdout. Not so useful."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.143,
+            0.187,
+            0.881,
+            0.217
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The second one starts to display the usefulness of the argparse module. We have done almost nothing, but already we get a nice help message."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.144,
+            0.222,
+            0.882,
+            0.265
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The --help option, which can also be shortened to -h, is the only option we get for free (i.e. no need to specify it). Specifying anything else results in an error. But even then, we do get a useful usage message, also for free."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.116,
+            0.293,
+            0.527,
+            0.314
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3 Introducing Positional arguments"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.333,
+            0.207,
+            0.348
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An example:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.356,
+            0.427,
+            0.426
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.117,
+                0.356,
+                0.427,
+                0.426
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"echo\")\nargs = parser.parse_args()\nprint(args.echo)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.119,
+            0.438,
+            0.27,
+            0.453
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And running the code:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 10,
+          "bbox": [
+            0.115,
+            0.461,
+            0.646,
+            0.635
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 10,
+              "bbox": [
+                0.115,
+                0.461,
+                0.646,
+                0.635
+              ],
+              "content": "$ python3 prog.py\nusage: prog.py [-h] echo\nprog.py: error: the following arguments are required: echo\n$ python3 prog.py --help\nusage: prog.py [-h] echo\n\npositional arguments:\n  echo\n\noptional arguments:\n  -h, --help  show this help message and exit\n$ python3 prog.py foo\nfoo"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 11,
+          "bbox": [
+            0.117,
+            0.647,
+            0.291,
+            0.663
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Here is what’s happening:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.143,
+            0.668,
+            0.881,
+            0.698
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• We’ve added the add_argument() method, which is what we use to specify which command-line options the program is willing to accept. In this case, I’ve named it echo so that it’s in line with its function."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.144,
+            0.704,
+            0.544,
+            0.719
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Calling our program now requires us to specify an option."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.144,
+            0.726,
+            0.853,
+            0.74
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The parse_args() method actually returns some data from the options specified, in this case, echo."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.144,
+            0.747,
+            0.881,
+            0.789
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The variable is some form of ‘magic’ that argparse performs for free (i.e. no need to specify which variable that value is stored in). You will also notice that its name matches the string argument given to the method, echo."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.115,
+            0.796,
+            0.882,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note however that, although the help display looks nice and all, it currently is not as helpful as it can be. For example we see that we got echo as a positional argument, but we don’t know what it does, other than by guessing or by reading the source code. So, let’s make it a bit more useful:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 17,
+          "bbox": [
+            0.117,
+            0.848,
+            0.698,
+            0.891
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 17,
+              "bbox": [
+                0.117,
+                0.848,
+                0.698,
+                0.891
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"echo\", help=\"echo the string you use here\")"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.748,
+            0.892,
+            0.88,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 19,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.1,
+            0.354,
+            0.133
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.117,
+                0.1,
+                0.354,
+                0.133
+              ],
+              "content": "args = parser.parse_args()\nprint(args.echo)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.711,
+            0.087,
+            0.881,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.119,
+            0.145,
+            0.202,
+            0.159
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And we get:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.167,
+            0.528,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.116,
+                0.167,
+                0.528,
+                0.277
+              ],
+              "content": "$ python3 prog.py -h\nusage: prog.py [-h] echo\n\npositional arguments:\n  echo      echo the string you use here\n\noptional arguments:\n  -h, --help  show this help message and exit"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.118,
+            0.288,
+            0.464,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Now, how about doing something even more useful:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.312,
+            0.771,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.116,
+                0.312,
+                0.771,
+                0.382
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", help=\"display a square of a given number\")\nargs = parser.parse_args()\nprint(args.square**2)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.118,
+            0.393,
+            0.393,
+            0.41
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Following is a result of running the code:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.416,
+            0.763,
+            0.487
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.116,
+                0.416,
+                0.763,
+                0.487
+              ],
+              "content": "$ python3 prog.py 4\nTraceback (most recent call last):\n  File \"prog.py\", line 5, in <module>\n    print(args.square**2)\nTypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.498,
+            0.88,
+            0.529
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "That didn’t go so well. That’s because argparse treats the options we give it as strings, unless we tell it otherwise. So, let’s tell argparse to treat that input as an integer:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.536,
+            0.771,
+            0.619
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.115,
+                0.536,
+                0.771,
+                0.619
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", help=\"display a square of a given number\",\n                     type=int)\nargs = parser.parse_args()\nprint(args.square**2)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.118,
+            0.631,
+            0.393,
+            0.647
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Following is a result of running the code:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.115,
+            0.654,
+            0.646,
+            0.725
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.115,
+                0.654,
+                0.646,
+                0.725
+              ],
+              "content": "$ python3 prog.py 4\n16\n$ python3 prog.py four\nusage: prog.py [-h] square\nprog.py: error: argument square: invalid int value: 'four'"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "yaml"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.117,
+            0.735,
+            0.735,
+            0.752
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "That went well. The program now even helpfully quits on bad illegal input before proceeding."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.085,
+            0.511,
+            0.106
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4 Introducing Optional arguments"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.117,
+            0.124,
+            0.803,
+            0.14
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "So far we have been playing with positional arguments. Let us have a look on how to add optional ones:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.147,
+            0.734,
+            0.23
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.116,
+                0.147,
+                0.734,
+                0.23
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"--verbosity\", help=\"increase output verbosity\")\nargs = parser.parse_args()\nif args.verbosity:\n    print(\"verbosity turned on\")"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.119,
+            0.243,
+            0.226,
+            0.257
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And the output:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.265,
+            0.656,
+            0.44
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.115,
+                0.265,
+                0.656,
+                0.44
+              ],
+              "content": "$ python3 prog.py --verbosity 1\nverbosity turned on\n$ python3 prog.py\n$ python3 prog.py --help\nusage: prog.py [-h] [--verbosity VERBOSITY]\n\noptional arguments:\n  -h, --help          show this help message and exit\n  --verbosity VERBOSITY\n    increase output verbosity\n\n$ python3 prog.py --verbosity\nusage: prog.py [-h] [--verbosity VERBOSITY]\nprog.py: error: argument --verbosity: expected one argument"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.118,
+            0.452,
+            0.297,
+            0.467
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Here is what is happening:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.144,
+            0.473,
+            0.881,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The program is written so as to display something when --verbosity is specified and display nothing when not."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.144,
+            0.508,
+            0.882,
+            0.552
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• To show that the option is actually optional, there is no error when running the program without it. Note that by default, if an optional argument isn’t used, the relevant variable, in this case args.verbosity, is given None as a value, which is the reason it fails the truth test of the if statement."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.144,
+            0.559,
+            0.393,
+            0.572
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The help message is a bit different."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.144,
+            0.58,
+            0.728,
+            0.595
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• When using the --verbosity option, one must also specify some value, any value."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.601,
+            0.881,
+            0.631
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The above example accepts arbitrary integer values for --verbosity, but for our simple program, only two values are actually useful, True or False. Let’s modify the code accordingly:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 11,
+          "bbox": [
+            0.116,
+            0.638,
+            0.716,
+            0.734
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 11,
+              "bbox": [
+                0.116,
+                0.638,
+                0.716,
+                0.734
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"--verbose\", help=\"increase output verbosity\",\n                       action=\"store_true\")\nargs = parser.parse_args()\nif args.verbose:\n    print(\"verbosity turned on\")"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.118,
+            0.746,
+            0.227,
+            0.761
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And the output:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 13,
+          "bbox": [
+            0.116,
+            0.769,
+            0.492,
+            0.891
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 13,
+              "bbox": [
+                0.116,
+                0.769,
+                0.492,
+                0.891
+              ],
+              "content": "$ python3 prog.py --verbose\nverbosity turned on\n$ python3 prog.py --verbose 1\nusage: prog.py [-h] [--verbose]\nprog.py: error: unrecognized arguments: 1\n$ python3 prog.py --help\nusage: prog.py [-h] [--verbose]\n\noptional arguments:"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.748,
+            0.891,
+            0.88,
+            0.903
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.102,
+            0.528,
+            0.13
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.135,
+                0.102,
+                0.528,
+                0.13
+              ],
+              "content": "-h, --help show this help message and exit\n--verbose increase output verbosity"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.71,
+            0.087,
+            0.88,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.118,
+            0.145,
+            0.296,
+            0.159
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Here is what is happening:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.144,
+            0.166,
+            0.882,
+            0.224
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The option is now more of a flag than something that requires a value. We even changed the name of the option to match that idea. Note that we now specify a new keyword, action, and give it the value \"store_true\". This means that, if the option is specified, assign the value True to args.verbose. Not specifying it implies False."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.144,
+            0.23,
+            0.674,
+            0.245
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• It complains when you specify a value, in true spirit of what flags actually are."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.144,
+            0.251,
+            0.358,
+            0.265
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Notice the different help text."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.289,
+            0.289,
+            0.307
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4.1 Short options"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.115,
+            0.321,
+            0.881,
+            0.351
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "If you are familiar with command line usage, you will notice that I haven’t yet touched on the topic of short versions of the options. It’s quite simple:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.357,
+            0.77,
+            0.454
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.116,
+                0.357,
+                0.77,
+                0.454
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"-v\", \"--verbose\", help=\"increase output verbosity\",\n                       action=\"store_true\")\nargs = parser.parse_args()\nif args.verbose:\n    print(\"verbosity turned on\")"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.119,
+            0.466,
+            0.222,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And here goes:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 10,
+          "bbox": [
+            0.115,
+            0.489,
+            0.555,
+            0.599
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 10,
+              "bbox": [
+                0.115,
+                0.489,
+                0.555,
+                0.599
+              ],
+              "content": "$ python3 prog.py -v\nverbosity turned on\n$ python3 prog.py --help\nusage: prog.py [-h] [-v]\n\noptional arguments:\n  -h, --help      show this help message and exit\n  -v, --verbose   increase output verbosity"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.118,
+            0.611,
+            0.496,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note that the new ability is also reflected in the help text."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.117,
+            0.653,
+            0.672,
+            0.674
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5 Combining Positional and Optional arguments"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.117,
+            0.693,
+            0.406,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Our program keeps growing in complexity:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 14,
+          "bbox": [
+            0.116,
+            0.716,
+            0.726,
+            0.876
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 14,
+              "bbox": [
+                0.116,
+                0.716,
+                0.726,
+                0.876
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", type=int,\n              help=\"display a square of a given number\")\nparser.add_argument(\"-v\", \"--verbose\", action=\"store_true\",\n              help=\"increase output verbosity\")\nargs = parser.parse_args()\nanswer = args.square**2\nif args.verbose:\n    print(\"the square of {} equals {}\".format(args.square, answer))\nelse:\n    print(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.119,
+            0.889,
+            0.258,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And now the output:"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 16,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.115,
+            0.091,
+            0.664,
+            0.214
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.115,
+                0.091,
+                0.664,
+                0.214
+              ],
+              "content": "$ python3 prog.py\nusage: prog.py [-h] [-v] square\nprog.py: error: the following arguments are required: square\n$ python3 prog.py 4\n16\n$ python3 prog.py 4 --verbose\nthe square of 4 equals 16\n$ python3 prog.py --verbose 4\nthe square of 4 equals 16"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.144,
+            0.225,
+            0.585,
+            0.242
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• We’ve brought back a positional argument, hence the complaint."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.144,
+            0.248,
+            0.399,
+            0.262
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Note that the order does not matter."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.268,
+            0.881,
+            0.297
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "How about we give this program of ours back the ability to have multiple verbosity values, and actually get to use them:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.305,
+            0.726,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.115,
+                0.305,
+                0.726,
+                0.493
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", type=int,\n              help=\"display a square of a given number\")\nparser.add_argument(\"-v\", \"--verbosity\", type=int,\n              help=\"increase output verbosity\")\nargs = parser.parse_args()\nanswer = args.square**2\nif args.verbosity == 2:\n    print(\"the square of {} equals {}\".format(args.square, answer))\nelif args.verbosity == 1:\n    print(\"{}^2 == {}\".format(args.square, answer))\nelse:\n    print(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.119,
+            0.504,
+            0.226,
+            0.52
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And the output:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.528,
+            0.681,
+            0.676
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.115,
+                0.528,
+                0.681,
+                0.676
+              ],
+              "content": "$ python3 prog.py 4\n16\n$ python3 prog.py 4 -v\nusage: prog.py [-h] [-v VERBOSITY] square\nprog.py: error: argument -v/--verbosity: expected one argument\n$ python3 prog.py 4 -v 1\n4^2 == 16\n$ python3 prog.py 4 -v 2\nthe square of 4 equals 16\n$ python3 prog.py 4 -v 3\n16"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.117,
+            0.688,
+            0.881,
+            0.718
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "These all look good except the last one, which exposes a bug in our program. Let’s fix it by restricting the values the --verbosity option can accept:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.116,
+            0.726,
+            0.741,
+            0.914
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.116,
+                0.726,
+                0.741,
+                0.914
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", type=int,\n              help=\"display a square of a given number\")\nparser.add_argument(\"-v\", \"--verbosity\", type=int, choices=[0, 1, 2],\n              help=\"increase output verbosity\")\nargs = parser.parse_args()\nanswer = args.square**2\nif args.verbosity == 2:\n    print(\"the square of {} equals {}\".format(args.square, answer))\nelif args.verbosity == 1:\n    print(\"{}^2 == {}\".format(args.square, answer))\nelse:\n    print(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.493,
+            0.939,
+            0.505,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.119,
+            0.087,
+            0.227,
+            0.102
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And the output:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.116,
+            0.109,
+            0.846,
+            0.285
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.116,
+                0.109,
+                0.846,
+                0.285
+              ],
+              "content": "$ python3 prog.py 4 -v 3\nusage: prog.py [-h] [-v {0,1,2}] square\nprog.py: error: argument -v/--verbosity: invalid choice: 3 (choose from 0, 1, 2)\n$ python3 prog.py 4 -h\nusage: prog.py [-h] [-v {0,1,2}] square\n\npositional arguments:\n    square                 display a square of a given number\n\noptional arguments:\n    -h, --help             show this help message and exit\n    -v {0,1,2}, --verbosity {0,1,2}\n        increase output verbosity"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.117,
+            0.296,
+            0.68,
+            0.311
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note that the change also reflects both in the error message as well as the help string."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.317,
+            0.881,
+            0.347
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Now, let’s use a different approach of playing with verbosity, which is pretty common. It also matches the way the CPython executable handles its own verbosity argument (check the output of python --help):"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.355,
+            0.725,
+            0.542
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.115,
+                0.355,
+                0.725,
+                0.542
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", type=int,\n              help=\"display the square of a given number\")\nparser.add_argument(\"-v\", \"--verbosity\", action=\"count\",\n              help=\"increase output verbosity\")\nargs = parser.parse_args()\nanswer = args.square**2\nif args.verbosity == 2:\n    print(\"the square of {} equals {}\".format(args.square, answer))\nelif args.verbosity == 1:\n    print(\"{}^2 == {}\".format(args.square, answer))\nelse:\n    print(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.553,
+            0.87,
+            0.569
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "We have introduced another action, “count”, to count the number of occurrences of a specific optional arguments:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.576,
+            0.602,
+            0.867
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.115,
+                0.576,
+                0.602,
+                0.867
+              ],
+              "content": "$ python3 prog.py 4\n16\n$ python3 prog.py 4 -v\n4^2 == 16\n$ python3 prog.py 4 -vv\nthe square of 4 equals 16\n$ python3 prog.py 4 --verbosity --verbosity\nthe square of 4 equals 16\n$ python3 prog.py 4 -v 1\nusage: prog.py [-h] [-v] square\nprog.py: error: unrecognized arguments: 1\n$ python3 prog.py 4 -h\nusage: prog.py [-h] [-v] square\n\npositional arguments:\n    square        display a square of a given number\n\noptional arguments:\n    -h, --help     show this help message and exit\n    -v, --verbosity   increase output verbosity\n$ python3 prog.py 4 -vvv\n16"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.143,
+            0.879,
+            0.882,
+            0.909
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Yes, it’s now more of a flag (similar to action=\"store_true\") in the previous version of our script. That should explain the complaint."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.144,
+            0.087,
+            0.458,
+            0.101
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• It also behaves similar to “store_true” action."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.144,
+            0.108,
+            0.875,
+            0.123
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Now here’s a demonstration of what the “count” action gives. You’ve probably seen this sort of usage before."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.144,
+            0.129,
+            0.69,
+            0.144
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• And if you don’t specify the -v flag, that flag is considered to have None value."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.144,
+            0.15,
+            0.763,
+            0.166
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• As should be expected, specifying the long form of the flag, we should get the same output."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.144,
+            0.172,
+            0.881,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Sadly, our help output isn’t very informative on the new ability our script has acquired, but that can always be fixed by improving the documentation for our script (e.g. via the help keyword argument)."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.144,
+            0.207,
+            0.47,
+            0.223
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• That last output exposes a bug in our program."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.228,
+            0.18,
+            0.243
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Let’s fix:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.251,
+            0.725,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.116,
+                0.251,
+                0.725,
+                0.465
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", type=int,\n              help=\"display a square of a given number\")\nparser.add_argument(\"-v\", \"--verbosity\", action=\"count\",\n              help=\"increase output verbosity\")\nargs = parser.parse_args()\nanswer = args.square**2\n\n# bugfix: replace == with >=\nif args.verbosity >= 2:\n    print(\"the square of {} equals {}\".format(args.square, answer))\nelif args.verbosity >= 1:\n    print(\"{}^2 == {}\".format(args.square, answer))\nelse:\n    print(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.119,
+            0.477,
+            0.284,
+            0.492
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And this is what it gives:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.499,
+            0.765,
+            0.622
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 9,
+              "bbox": [
+                0.115,
+                0.499,
+                0.765,
+                0.622
+              ],
+              "content": "$ python3 prog.py 4 -vvv\nthe square of 4 equals 16\n$ python3 prog.py 4 -vvvv\nthe square of 4 equals 16\n$ python3 prog.py 4\nTraceback (most recent call last):\n  File \"prog.py\", line 11, in <module>\n    if args.verbosity >= 2:\nTypeError: '>=' not supported between instances of 'NoneType' and 'int'"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.144,
+            0.634,
+            0.881,
+            0.663
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• First output went well, and fixes the bug we had before. That is, we want any value >= 2 to be as verbose as possible."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.144,
+            0.67,
+            0.333,
+            0.684
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Third output not so good."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.118,
+            0.691,
+            0.237,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Let’s fix that bug:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 13,
+          "bbox": [
+            0.116,
+            0.696,
+            0.727,
+            0.902
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 13,
+              "bbox": [
+                0.116,
+                0.696,
+                0.727,
+                0.902
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"square\", type=int,\n              help=\"display a square of a given number\")\nparser.add_argument(\"-v\", \"--verbosity\", action=\"count\", default=0,\n              help=\"increase output verbosity\")\nargs = parser.parse_args()\nanswer = args.square**2\nif args.verbosity >= 2:\n    print(\"the square of {} equals {}\".format(args.square, answer))\nelif args.verbosity >= 1:\n    print(\"{}^2 == {}\".format(args.square, answer))\nelse:\n    print(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.493,
+            0.939,
+            0.506,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.115,
+            0.086,
+            0.882,
+            0.131
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "We’ve just introduced yet another keyword, default. We’ve set it to 0 in order to make it comparable to the other int values. Remember that by default, if an optional argument isn’t specified, it gets the None value, and that cannot be compared to an int value (hence the TypeError exception)."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.118,
+            0.136,
+            0.156,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "And:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.118,
+            0.159,
+            0.294,
+            0.189
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.118,
+                0.159,
+                0.294,
+                0.189
+              ],
+              "content": "$ python3 prog.py 4\n16"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.202,
+            0.881,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "You can go quite far just with what we’ve learned so far, and we have only scratched the surface. The argparse module is very powerful, and we’ll explore a bit more of it before we end this tutorial."
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.259,
+            0.491,
+            0.28
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6 Getting a little more advanced"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.298,
+            0.711,
+            0.315
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What if we wanted to expand our tiny program to perform other powers, not just squares:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.322,
+            0.77,
+            0.496
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.115,
+                0.322,
+                0.77,
+                0.496
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"x\", type=int, help=\"the base\")\nparser.add_argument(\"y\", type=int, help=\"the exponent\")\nparser.add_argument(\"-v\", \"--verbosity\", action=\"count\", default=0)\nargs = parser.parse_args()\nanswer = args.x**args.y\nif args.verbosity >= 2:\n    print(\"{} to the power {} equals {}\".format(args.x, args.y, answer))\nelif args.verbosity >= 1:\n    print(\"{%^{} == {}\".format(args.x, args.y, answer))\nelse:\n    print(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.507,
+            0.173,
+            0.522
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.115,
+            0.531,
+            0.649,
+            0.73
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.115,
+                0.531,
+                0.649,
+                0.73
+              ],
+              "content": "$ python3 prog.py\nusage: prog.py [-h] [-v] x y\nprog.py: error: the following arguments are required: x, y\n$ python3 prog.py -h\nusage: prog.py [-h] [-v] x y\n\npositional arguments:\n    x                 the base\n    y                 the exponent\n\noptional arguments:\n    -h, --help     show this help message and exit\n    -v, --verbosity\n$ python3 prog.py 4 2 -v\n4^2 == 16"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.743,
+            0.881,
+            0.772
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Notice that so far we’ve been using verbosity level to change the text that gets displayed. The following example instead uses verbosity level to display more text instead:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.781,
+            0.726,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 10,
+              "bbox": [
+                0.116,
+                0.781,
+                0.726,
+                0.904
+              ],
+              "content": "import argparse\nparser = argparse.ArgumentParser()\nparser.add_argument(\"x\", type=int, help=\"the base\")\nparser.add_argument(\"y\", type=int, help=\"the exponent\")\nparser.add_argument(\"-v\", \"--verbosity\", action=\"count\", default=0)\nargs = parser.parse_args()\nanswer = args.x**args.y\nif args.verbosity >= 2:\n    print(\"Running '{}'.format(__file__))"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.748,
+            0.901,
+            0.881,
+            0.914
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continues on next page)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.115,
+            0.1,
+            0.599,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.115,
+                0.1,
+                0.599,
+                0.146
+              ],
+              "content": "if args.verbosity >= 1:\n    print(\"{}^{} == \".format(args.x, args.y), end=\"\")\nprint(answer)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.71,
+            0.087,
+            0.881,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(continued from previous page)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.118,
+            0.157,
+            0.173,
+            0.173
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.115,
+            0.18,
+            0.348,
+            0.276
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.115,
+                0.18,
+                0.348,
+                0.276
+              ],
+              "content": "$ python3 prog.py 4 2\n16\n$ python3 prog.py 4 2 -v\n4^2 == 16\n$ python3 prog.py 4 2 -vv\nRunning 'prog.py'\n4^2 == 16"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.117,
+            0.306,
+            0.341,
+            0.324
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.1 Conflicting options"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.115,
+            0.337,
+            0.882,
+            0.397
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "So far, we have been working with two methods of an argparse.ArgumentParser instance. Let’s introduce a third one, add_mutually_exclusive_group(). It allows for us to specify options that conflict with each other. Let’s also change the rest of the program so that the new functionality makes more sense: we’ll introduce the quiet option, which will be the opposite of the --verbose one:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.115,
+            0.403,
+            0.771,
+            0.629
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.115,
+                0.403,
+                0.771,
+                0.629
+              ],
+              "content": "import argparse\n\nparser = argparse.ArgumentParser()\ngroup = parser.add_mutually_exclusive_group()\ngroup.add_argument(\"-v\", \"--verbose\", action=\"store_true\")\ngroup.add_argument(\"-q\", \"--quiet\", action=\"store_true\")\nparser.add_argument(\"x\", type=int, help=\"the base\")\nparser.add_argument(\"y\", type=int, help=\"the exponent\")\nargs = parser.parse_args()\nanswer = args.x**args.y\n\nif args.quiet:\n    print(answer)\nelif args.verbose:\n    print(\"{} to the power {} equals {}\".format(args.x, args.y, answer))\nelse:\n    print(\"{}^{} == {}\".format(args.x, args.y, answer))"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.641,
+            0.881,
+            0.67
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Our program is now simpler, and we’ve lost some functionality for the sake of demonstration. Anyways, here’s the output:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.115,
+            0.678,
+            0.802,
+            0.84
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.115,
+                0.678,
+                0.802,
+                0.84
+              ],
+              "content": "$ python3 prog.py 4 2\n4^2 == 16\n$ python3 prog.py 4 2 -q\n16\n$ python3 prog.py 4 2 -v\n4 to the power 2 equals 16\n$ python3 prog.py 4 2 -vq\nusage: prog.py [-h] [-v | -q] x y\nprog.py: error: argument -q/--quiet: not allowed with argument -v/--verbose\n$ python3 prog.py 4 2 -v --quiet\nusage: prog.py [-h] [-v | -q] x y\nprog.py: error: argument -q/--quiet: not allowed with argument -v/--verbose"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "shell"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.115,
+            0.852,
+            0.882,
+            0.882
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "That should be easy to follow. I’ve added that last output so you can see the sort of flexibility you get, i.e. mixing long form options with short form ones."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.887,
+            0.882,
+            0.916
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Before we conclude, you probably want to tell your users the main purpose of your program, just in case they don’t know:"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.489,
+            0.939,
+            0.51,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.115,
+            0.091,
+            0.819,
+            0.319
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.115,
+                0.091,
+                0.819,
+                0.319
+              ],
+              "content": "import argparse\n\nparser = argparse.ArgumentParser(description=\"calculate X to the power of Y\")\ngroup = parser.add_mutually_exclusive_group()\ngroup.add_argument(\"-v\", \"--verbose\", action=\"store_true\")\ngroup.add_argument(\"-q\", \"--quiet\", action=\"store_true\")\nparser.add_argument(\"x\", type=int, help=\"the base\")\nparser.add_argument(\"y\", type=int, help=\"the exponent\")\nargs = parser.parse_args()\nanswer = args.x**args.y\n\nif args.quiet:\n    print(answer)\nelif args.verbose:\n    print(\"{} to the power {} equals {}\".format(args.x, args.y, answer))\nelse:\n    print(\"{}^{} == {}\".format(args.x, args.y, answer))"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.116,
+            0.33,
+            0.881,
+            0.36
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note that slight difference in the usage text. Note the [-v | -q], which tells us that we can either use -v or -q, but not both at the same time:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.367,
+            0.557,
+            0.542
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.116,
+                0.367,
+                0.557,
+                0.542
+              ],
+              "content": "$ python3 prog.py --help\nusage: prog.py [-h] [-v | -q] x y\n\ncalculate X to the power of Y\n\npositional arguments:\n  x             the base\n  y             the exponent\n\noptional arguments:\n  -h, --help     show this help message and exit\n  -v, --verbose\n  -q, --quiet"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.117,
+            0.575,
+            0.277,
+            0.594
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7 Conclusion"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.115,
+            0.614,
+            0.881,
+            0.644
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The argparse module offers a lot more than shown here. Its docs are quite detailed and thorough, and full of examples. Having gone through this tutorial, you should easily digest them without feeling overwhelmed."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.489,
+            0.939,
+            0.511,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}
