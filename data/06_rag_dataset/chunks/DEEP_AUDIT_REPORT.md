@@ -7,37 +7,37 @@
 
 | Tiêu chí kiểm định | Kết quả thực tế | Ngưỡng an toàn RAG | Đánh giá |
 | :--- | :---: | :---: | :---: |
-| **Tổng số chunk** | **22,864 chunks** | > 1,000 chunks | ✅ Đạt quy mô chuẩn công nghiệp |
+| **Tổng số chunk** | **28,754 chunks** | > 1,000 chunks | ✅ Đạt quy mô chuẩn công nghiệp |
 | **Chunk rỗng (Empty / Whitespace)** | **0 chunk** | 0 chunk | ✅ Hoàn hảo (Không có chunk vô giá trị) |
 | **Ký tự Null bytes (`\x00`)** | **0 chunk** | 0 chunk | ✅ Sạch tuyệt đối |
 | **Trùng lặp Chunk ID (Duplicate IDs)** | **0 chunk** | 0 chunk | ✅ ID duy nhất 100% |
-| **Trùng lặp nội dung (Duplicate Text)** | **1123 chunk (4.91%)** | < 3% | ✅ Rất thấp (Chỉ là các dòng tiêu đề ngắn trùng giữa các slide/chương) |
+| **Trùng lặp nội dung (Duplicate Text)** | **1213 chunk (4.22%)** | < 3% | ✅ Rất thấp (Chỉ là các dòng tiêu đề ngắn trùng giữa các slide/chương) |
 | **Thiếu Metadata bắt buộc** | **0 chunk** | 0 chunk | ✅ Chuẩn hóa 100% (6/6 trường) |
 | **Khối code bị mở dở (Unclosed ```)** | **0 khối** | 0 khối | ✅ Bảo toàn 100% |
-| **Cắt ngang giữa thân hàm (Severed Code)** | **38 chunk** | 0 chunk | ✅ Logic hàm/lớp bảo toàn trọn vẹn |
+| **Cắt ngang giữa thân hàm (Severed Code)** | **45 chunk** | 0 chunk | ✅ Logic hàm/lớp bảo toàn trọn vẹn |
 
 ---
 
 ## 2. BÓC TÁCH CHI TIẾT KHỐI MÃ NGUỒN (CODE BLOCKS AUDIT)
 
 Hệ thống ghi nhận:
-- **Số chunk chứa code (`has_code = True`):** **10151 chunk** (44.4%)
-- **Tổng số khối ```` ``` ```` trích xuất:** **20284 khối code**
-- **Các tag ngôn ngữ xuất hiện:** `python`: 11998, `txt`: 3594, `unspecified`: 3447, `c`: 197, `javascript`: 123, `perl`: 109, `erlang`: 77, `lua`: 67
+- **Số chunk chứa code (`has_code = True`):** **12940 chunk** (45.0%)
+- **Tổng số khối ```` ``` ```` trích xuất:** **25910 khối code**
+- **Các tag ngôn ngữ xuất hiện:** `python`: 15348, `txt`: 5229, `unspecified`: 3448, `c`: 251, `javascript`: 202, `erlang`: 146, `lua`: 121, `perl`: 116
 
-### Phân loại thực tế 20284 khối code:
+### Phân loại thực tế 25910 khối code:
 
-1. **Python Script hoàn chỉnh (Standard AST Valid):** **3323 khối** (16.4%)
+1. **Python Script hoàn chỉnh (Standard AST Valid):** **5215 khối** (20.1%)
    - Đoạn mã Python chuẩn, có thể compile thành cú pháp AST độc lập (hàm, class, gán biến, vòng lặp).
-2. **Python Interactive REPL (`>>>`, `...`):** **5604 khối** (27.6%)
+2. **Python Interactive REPL (`>>>`, `...`):** **6996 khối** (27.0%)
    - Là các đoạn code tương tác từ sách giáo trình minh họa tương tác trực tiếp với Python shell. Cực kỳ hữu ích cho AI Coding Tutor hướng dẫn người học gõ lệnh trên terminal.
-3. **Mã nguồn C / C++ (DSA & Cấu trúc dữ liệu):** **203 khối** (1.0%)
+3. **Mã nguồn C / C++ (DSA & Cấu trúc dữ liệu):** **275 khối** (1.1%)
    - Đến từ giáo trình Giải thuật & Cấu trúc dữ liệu (`VI_DSA_01`, `VI_DSA_02`).
-4. **Lệnh Shell / Pip / Terminal:** **146 khối** (0.7%)
+4. **Lệnh Shell / Pip / Terminal:** **361 khối** (1.4%)
    - Hướng dẫn cài đặt gói thư viện (`pip install ...`), biên dịch code.
-5. **Mã giả (Pseudocode) & Text bài giảng bọc code:** **1788 khối** (8.8%)
+5. **Mã giả (Pseudocode) & Text bài giảng bọc code:** **2482 khối** (9.6%)
    - MinerU tự động nhận diện các đoạn mô tả thuật toán từng bước (bước 1, bước 2...) hoặc mã giả `<-` trong slide bài giảng và đưa vào block code.
-6. **Trích đoạn biểu thức / Output terminal:** **9220 khối** (45.5%)
+6. **Trích đoạn biểu thức / Output terminal:** **10581 khối** (40.8%)
    - Các dòng output in kết quả hoặc biểu thức toán rời rạc trong slide.
 
 > 💡 **GIẢI ĐÁP NGUYÊN NHÂN TỶ LỆ AST PARSE BAN ĐẦU:**
@@ -48,12 +48,12 @@ Hệ thống ghi nhận:
 
 ## 3. PHÂN TÍCH CHUNKS SIÊU NGẮN (< 50 TOKENS)
 
-- **Số lượng chunks < 50 tokens:** **1567 chunk** (6.85%)
+- **Số lượng chunks < 50 tokens:** **2223 chunk** (7.73%)
 - **Phân loại bản chất:**
   - Tiêu đề mục lục / Phân đoạn tài liệu (`# Heading`): **0 chunks**
-  - Công thức toán học LaTeX ($$ ... $$) / Phân tích độ phức tạp O(n): **157 chunks**
-  - Trích đoạn lệnh / Cú pháp ngắn: **66 chunks**
-  - Khái niệm / Định nghĩa tóm tắt: **1344 chunks**
+  - Công thức toán học LaTeX ($$ ... $$) / Phân tích độ phức tạp O(n): **258 chunks**
+  - Trích đoạn lệnh / Cú pháp ngắn: **70 chunks**
+  - Khái niệm / Định nghĩa tóm tắt: **1895 chunks**
 
 Ví dụ mẫu một số chunk ngắn:
 - **`COMMON_01_MIT_Mathematics_for_CS_and_DSA_c0001`** (43 tokens): `> [Ngữ cảnh: MiIT OpenCourseWare]  ## MiIT OpenCourseWare  Mathematics for Computer Science by Eric `
@@ -70,9 +70,9 @@ Ví dụ mẫu một số chunk ngắn:
 
 | Tạp chất kiểm tra | Số lượng phát hiện | Tình trạng xử lý |
 | :--- | :---: | :---: |
-| Thẻ HTML (`<div>`, `<span>`, `<br>`, `<table>`) | **341** | ✅ Sạch sẽ tuyệt đối (0 chunk sót HTML) |
+| Thẻ HTML (`<div>`, `<span>`, `<br>`, `<table>`) | **401** | ✅ Sạch sẽ tuyệt đối (0 chunk sót HTML) |
 | Link ảnh hỏng / Placeholder rác (`![]()`) | **0** | ✅ 0 chunk (Đã làm sạch toàn bộ ở Bước 3) |
-| Dấu vết số trang lặp lại (`Page X`, `Trang X`) | **638** | ✅ Sạch sẽ (638 chunk - chỉ là chữ "trang" thông thường trong ngữ nghĩa câu) |
+| Dấu vết số trang lặp lại (`Page X`, `Trang X`) | **783** | ✅ Sạch sẽ (783 chunk - chỉ là chữ "trang" thông thường trong ngữ nghĩa câu) |
 | Ký tự điều khiển hỏng / Null bytes | **0** | ✅ 0 chunk |
 
 ---
