@@ -4928,7 +4928,7 @@ dog = Dog()
 print(isinstance(dog, Dog))      # True
 print(isinstance(dog, Animal))  # True
 print(isinstance(dog, object))  # True (mọi lớp đều kế thừa
-    từ object)
+    ↙ tù object)
 
 # Kiểm tra quan hệ giữa các lớp
 print(issubclass(Dog, Animal))  # True

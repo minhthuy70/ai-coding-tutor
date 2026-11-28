@@ -1,6 +1,6 @@
 <!-- page: 1 -->
 
-## PYTHON 1 CO BÁN NEW ....Rt là CO BÁN Bi Vō Duy Tun
+# PYTHON 1 CO BÁN NEW ....Rt là CO BÁN Bi Vō Duy Tun
 
 <!-- page: 2 -->
 
@@ -184,7 +184,7 @@ for iterating_var in sequence:
     statements(s)
 ```
 
-## Ví dụ:
+Ví dụ:
 
 <!-- page: 13 -->
 
@@ -223,7 +223,7 @@ while expression:
     statement(s)
 ```
 
-Ví dụ:
+## Ví dụ:
 
 ```txt
 count = 0
@@ -271,7 +271,7 @@ def sum(a, b):
     return (a+b)
 ```
 
-Cách gọi hàm:
+## Cách gọi hàm:
 
 ```lisp
 sum(1, 2)
@@ -285,7 +285,7 @@ def plus(c, d = 10):
     return (c+d)
 ```
 
-## Nếu gọi hàm trên như sau:
+Nếu gọi hàm trên như sau:
 
 ```lisp
 plus(2)
@@ -368,7 +368,9 @@ Có thể tìm và thay thế trong chuỗi bằng cách gọi phương
 
 <!-- page: 20 -->
 
+```csv
 thức replace(search, replace[, max]) của một chuỗi. Ví dụ:
+```
 
 ```txt
 str = 'Hello world'
@@ -461,7 +463,7 @@ print names[1]
 
 Để biết được số lượng phần tử của 1 List, có thể sử dụng hàm len(array) để lấy số lượng phần tử của mảng tham số truyền vào.
 
-2.7.1. Kiểm tra sự tồn tại của một phần tử
+## 2.7.1. Kiểm tra sự tồn tại của một phần tử
 
 ## 2.7.1.1. Kiểm tra theo Index
 
@@ -827,7 +829,9 @@ import mypack.mymodule1
 
 ## hoặc
 
+```python
 import mypack.mymodule1 as mymodule1
+```
 
 ## hoặc
 
@@ -847,7 +851,7 @@ Lập trình hướng đối tượng là một khái niệm không thể thiế
 
 ## 4.1. Khai báo một Class
 
-## Khai báo một class theo cú pháp sau:
+Khai báo một class theo cú pháp sau:
 
 ```python
 class myclass([parentclass]):
@@ -896,7 +900,7 @@ mydog.go()
 
 <!-- page: 43 -->
 
-## Sau khi thực thi sẽ cho ra kết quả:
+Sau khi thực thi sẽ cho ra kết quả:
 
 ```txt
 My Name is
@@ -1082,9 +1086,7 @@ os.chmod(path, mode) : CHMOD một đường dẫn
 
 os.chown(path, uid, gid) : CHOWN một đường dẫn
 
-```txt
-- os.makedirs(path[, mode]): tạo đường dẫn (có recursive)
-```
+os.makedirs(path[, mode]) : tạo đường dẫn (có recursive)
 
 <!-- page: 51 -->
 
@@ -1100,9 +1102,7 @@ Module os.path hỗ trợ các phương thức giúp thao tác nhanh chóng và 
 
 os.path.exists(path) : kiểm tra 1 đường dẫn có tồn tại hay không
 
-```python
-- os.path.getsize(path): lây file size (byte)
-```
+os.path.getsize(path) : lấy file size (byte)
 
 os.path.isfile(path) : kiểm tra xem có phải là một file thông thường
 
@@ -1202,12 +1202,7 @@ data = json.load(response)
 print data
 ```
 
-```csv
-Ví dụ trên sẽ truy vấn đường dẫn
-https://api.github.com/users/voduytuan/repos để lấy danh
-sách Repository trên Github của mình dưới định dạng
-JSON. Sau đó, sẽ được
-```
+Ví dụ trên sẽ truy vấn đường dẫn [https://api.github.com/users/voduytuan/repos](https://api.github.com/users/voduytuan/repos) để lấy danh sách Repository trên Github của mình dưới định dạng JSON. Sau đó, sẽ được
 
 ## 7.2. Parsing JSON Data
 
@@ -1439,7 +1434,9 @@ Mặc định, cursor sẽ trả về mỗi dòng dữ liệu từ MySQL theo ki
 
 <!-- page: 68 -->
 
+```txt
 kiểu Dictionary thì có thể khai báo:
+```
 
 ```python
 import MySQLdb

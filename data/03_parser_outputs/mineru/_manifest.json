@@ -1,18 +1,18 @@
 {
   "input_root": "/kaggle/input",
-  "mirror_root": "/kaggle/input/datasets",
+  "mirror_root": "/kaggle/input/python-rag-curated-batch2b",
   "tier": "standard",
   "ocr_mode": "auto",
   "gpu_ids": [
     0,
     1
   ],
-  "pdf_count": 5,
-  "markdown_count": 5,
-  "success_marker_count": 5,
+  "pdf_count": 49,
+  "markdown_count": 49,
+  "success_marker_count": 49,
   "pending_jobs": 0,
   "running_jobs": 0,
-  "done_jobs": 5,
+  "done_jobs": 49,
   "failed_jobs": 0,
   "failures": []
 }

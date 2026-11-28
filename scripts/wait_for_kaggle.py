@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Wait for Kaggle MinerU Kernel execution to complete.
+Wait for Kaggle MinerU Batch 2C Kernel execution to complete.
 Polls status every 25 seconds and exits when COMPLETE or FAILED.
 Line-buffered for real-time logging.
 """
@@ -9,17 +9,18 @@ import sys
 from datetime import datetime
 from kaggle.api.kaggle_api_extended import KaggleApi
 
-# Ensure unbuffered output
 try:
     sys.stdout.reconfigure(line_buffering=True)
 except Exception:
     pass
 
+KERNEL_TARGET = "minhthuy70/mineru-batch-2c-final"
+
 def log(msg):
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}", flush=True)
 
 def main():
-    log("Initializing Kaggle API monitor for minhthuy70/mineru...")
+    log(f"Initializing Kaggle API monitor for {KERNEL_TARGET}...")
     api = KaggleApi()
     api.authenticate()
 
@@ -30,7 +31,7 @@ def main():
     while True:
         poll_count += 1
         try:
-            status_obj = api.kernels_status("minhthuy70/mineru")
+            status_obj = api.kernels_status(KERNEL_TARGET)
             status = getattr(status_obj, "status", None)
             failure = getattr(status_obj, "failure_message", None)
             status_str = str(status)
