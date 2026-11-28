@@ -1,0 +1,6130 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.15,
+            0.27,
+            0.368,
+            0.332
+          ],
+          "level": 2,
+          "content": "Lecture 21"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.298,
+            0.396,
+            0.7,
+            0.574
+          ],
+          "level": 2,
+          "content": "Operators and Abstraction"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.212,
+            0.067,
+            0.787,
+            0.135
+          ],
+          "level": 2,
+          "content": "Announcements for Today"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.21,
+            0.4,
+            0.278
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.333,
+            0.365,
+            0.384
+          ],
+          "content": "• A4 still being graded"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.4,
+            0.374,
+            0.445
+          ],
+          "content": "• A5 is due **Tomorrow**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.461,
+            0.459,
+            0.507
+          ],
+          "content": "§ Shorter written assignment"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.519,
+            0.416,
+            0.565
+          ],
+          "content": "§ Will grade it next week"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.581,
+            0.453,
+            0.627
+          ],
+          "content": "• A6 due **Sun, November 15**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.643,
+            0.424,
+            0.687
+          ],
+          "content": "§ Designed to take awhile"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.699,
+            0.465,
+            0.744
+          ],
+          "content": "§ Follow the micro-deadlines"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.759,
+            0.446,
+            0.803
+          ],
+          "content": "§ Should be on **Task 2** now"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.819,
+            0.462,
+            0.864
+          ],
+          "content": "§ **Task 3** can take a few days"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.643,
+            0.208,
+            0.83,
+            0.268
+          ],
+          "level": 2,
+          "content": "Prelim 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.334,
+            0.953,
+            0.389
+          ],
+          "content": "• **Prelim, Nov 17**<strong><sup>th</sup></strong> **at 7:30**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.405,
+            0.892,
+            0.452
+          ],
+          "content": "§ See webpage for rooms"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.464,
+            0.868,
+            0.509
+          ],
+          "content": "§ Review Session **TBA**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.516,
+            0.527,
+            0.889,
+            0.579
+          ],
+          "level": 2,
+          "content": "• Material up to Today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.592,
+            0.959,
+            0.638
+          ],
+          "content": "§ Recursion + Loops + Classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.651,
+            0.927,
+            0.699
+          ],
+          "content": "§ Study guide is now posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.71,
+            0.943,
+            0.755
+          ],
+          "content": "§ See structure of prev exams"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.773,
+            0.89,
+            0.821
+          ],
+          "content": "• **Conflict with Prelim?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.837,
+            0.897,
+            0.883
+          ],
+          "content": "§ Corey has sent out form"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.211,
+            0.067,
+            0.787,
+            0.135
+          ],
+          "level": 2,
+          "content": "Announcements for Today"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.209,
+            0.4,
+            0.278
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.333,
+            0.365,
+            0.383
+          ],
+          "content": "• A4 still being graded"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.399,
+            0.269,
+            0.446
+          ],
+          "content": "• A5 is due To"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.643,
+            0.207,
+            0.831,
+            0.269
+          ],
+          "level": 2,
+          "content": "Prelim 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.46,
+            0.267,
+            0.505
+          ],
+          "content": "§ Shorter wri"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.519,
+            0.259,
+            0.566
+          ],
+          "content": "§ Will grade"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.579,
+            0.261,
+            0.629
+          ],
+          "content": "• A6 due Sun,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.641,
+            0.268,
+            0.688
+          ],
+          "content": "§ Designed to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.699,
+            0.261,
+            0.743
+          ],
+          "content": "§ Follow the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.333,
+            0.953,
+            0.387
+          ],
+          "content": "• **Prelim, Nov 17**<strong><sup>th</sup></strong> **at 7:30**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.345,
+            0.425,
+            0.657,
+            0.489
+          ],
+          "level": 2,
+          "content": "Video Lessons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.55,
+            0.687,
+            0.601
+          ],
+          "content": "• **Videos 23.1-23.7** for today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.615,
+            0.689,
+            0.669
+          ],
+          "content": "• Skip to **Lesson 26** for Tues"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.679,
+            0.677,
+            0.729
+          ],
+          "content": "• **Lessons 27** for next Thurs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.746,
+            0.405,
+            0.892,
+            0.451
+          ],
+          "content": "e for rooms"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.747,
+            0.463,
+            0.869,
+            0.509
+          ],
+          "content": "sion TBA"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.747,
+            0.527,
+            0.889,
+            0.579
+          ],
+          "content": "to Today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.752,
+            0.591,
+            0.959,
+            0.641
+          ],
+          "content": "Loops + Classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.75,
+            0.651,
+            0.928,
+            0.7
+          ],
+          "content": "is now posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.746,
+            0.709,
+            0.944,
+            0.757
+          ],
+          "content": "e of prev exams"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.759,
+            0.444,
+            0.803
+          ],
+          "content": "§ Should be on **Task 2** now"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.818,
+            0.462,
+            0.864
+          ],
+          "content": "§ **Task 3** can take a few days"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.773,
+            0.89,
+            0.821
+          ],
+          "content": "• **Conflict with Prelim?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.836,
+            0.897,
+            0.883
+          ],
+          "content": "§ Corey has sent out form"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.261,
+            0.067,
+            0.738,
+            0.137
+          ],
+          "level": 2,
+          "content": "Case Study: Fractions"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.205,
+            0.451,
+            0.261
+          ],
+          "level": 2,
+          "content": "• Want to add a new type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.28,
+            0.479,
+            0.328
+          ],
+          "content": "§ Values are fractions: ½, ¾"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.351,
+            0.446,
+            0.461
+          ],
+          "content": "Operations are standard multiply, divide, etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.479,
+            0.4,
+            0.527
+          ],
+          "content": "§ **Example**: $1/2^{*3}/4 = 3/8$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.551,
+            0.454,
+            0.605
+          ],
+          "content": "• Can do this with a class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.628,
+            0.484,
+            0.677
+          ],
+          "content": "§ Values are fraction objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.699,
+            0.446,
+            0.749
+          ],
+          "content": "§ Operations are methods"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.772,
+            0.376,
+            0.829
+          ],
+          "level": 2,
+          "content": "• Example: frac1.py"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.199,
+            0.805,
+            0.247
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.262,
+            0.947,
+            0.311
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.326,
+            0.902,
+            0.377
+          ],
+          "content": "\\# INSTANCE ATTRIBUTES:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.391,
+            0.855,
+            0.441
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.455,
+            0.904,
+            0.505
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.572,
+            0.9,
+            0.622
+          ],
+          "content": "def \\_\\_init\\_\\_(self,n=0,d=1):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.579,
+            0.635,
+            0.935,
+            0.685
+          ],
+          "content": "\"\"\"Init: makes a Fraction\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.579,
+            0.701,
+            0.847,
+            0.749
+          ],
+          "content": "self.\\_numerator = n"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.58,
+            0.765,
+            0.869,
+            0.815
+          ],
+          "content": "self.\\_denominator = d"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.261,
+            0.067,
+            0.738,
+            0.137
+          ],
+          "level": 2,
+          "content": "Case Study: Fractions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.452,
+            0.263
+          ],
+          "content": "• Want to add a new **type**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.279,
+            0.48,
+            0.329
+          ],
+          "content": "§ Values are fractions: ½, ¾"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.35,
+            0.198,
+            0.459
+          ],
+          "content": "§ Opera multi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.478,
+            0.197,
+            0.526
+          ],
+          "content": "§ Exam"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.387,
+            0.487,
+            0.571
+          ],
+          "content": "**Reminder**: Hide \\*attributes, use **getters/setters**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.549,
+            0.195,
+            0.605
+          ],
+          "continues_prev": true,
+          "content": "• Can do t"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.627,
+            0.485,
+            0.679
+          ],
+          "content": "§ Values are fraction objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.699,
+            0.447,
+            0.749
+          ],
+          "content": "§ Operations are methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.772,
+            0.377,
+            0.829
+          ],
+          "content": "• **Example**: frac1.py"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.198,
+            0.806,
+            0.249
+          ],
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.261,
+            0.948,
+            0.313
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.325,
+            0.903,
+            0.377
+          ],
+          "content": "\\# INSTANCE ATTRIBUTES:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.39,
+            0.856,
+            0.443
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.454,
+            0.905,
+            0.507
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.571,
+            0.901,
+            0.623
+          ],
+          "content": "def \\_\\_init\\_\\_(self,n=0,d=1):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.579,
+            0.634,
+            0.936,
+            0.687
+          ],
+          "content": "\"\"\"Init: makes a Fraction\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.579,
+            0.699,
+            0.848,
+            0.751
+          ],
+          "content": "self.\\_numerator = n"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.579,
+            0.763,
+            0.87,
+            0.816
+          ],
+          "content": "self.\\_denominator = d"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.13,
+            0.065,
+            0.869,
+            0.141
+          ],
+          "level": 2,
+          "content": "Problem: Doing Math is Unwieldy"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.049,
+            0.189,
+            0.965,
+            0.861
+          ],
+          "sub_type": "algorithm",
+          "content": "What We Want\n$\\left(\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4}\\right) * \\frac{5}{4}$\n>>> p = Fraction(1,2)\n>>> q = Fraction(1,3)\n>>> r = Fraction(1,4)\n>>> s = Fraction(5,4)\n>>> (p.add(q.add(r))).mult(s)\nThis is confusing!",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.95
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.919,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.13,
+            0.065,
+            0.869,
+            0.14
+          ],
+          "level": 2,
+          "content": "Problem: Doing Math is Unwieldy"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.127,
+            0.217,
+            0.4,
+            0.277
+          ],
+          "level": 2,
+          "content": "What We Want"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.113,
+            0.323,
+            0.415,
+            0.475
+          ],
+          "content": "\\left(\\frac {1}{2} + \\frac {1}{3} + \\frac {1}{4}\\right) * \\frac {5}{4}",
+          "image_source": "images/page_6_equation_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.575,
+            0.419,
+            0.793
+          ],
+          "content": "Why not use the standard Python math operations?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.618,
+            0.217,
+            0.858,
+            0.277
+          ],
+          "level": 2,
+          "content": "What We Get"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.51,
+            0.328,
+            0.848,
+            0.396
+          ],
+          "content": "> > > \\mathrm{p} = \\text {Fraction(1,2)}",
+          "image_source": "images/page_6_equation_5.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.51,
+            0.402,
+            0.847,
+            0.471
+          ],
+          "content": "> > > q = \\text {Fraction(1,3)}",
+          "image_source": "images/page_6_equation_6.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.509,
+            0.478,
+            0.846,
+            0.547
+          ],
+          "content": "> > > \\mathrm{r} = \\text {Fraction(1,4)}",
+          "image_source": "images/page_6_equation_7.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.509,
+            0.551,
+            0.846,
+            0.62
+          ],
+          "content": "> > > \\mathrm{s} = \\text {Fraction(5,4)}",
+          "image_source": "images/page_6_equation_8.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.509,
+            0.625,
+            0.958,
+            0.694
+          ],
+          "content": "\\ggg (\\mathrm{p.add} (\\mathrm{q.add} (\\mathrm{r}))). \\text {mult} (\\mathrm{s})",
+          "image_source": "images/page_6_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.637,
+            0.775,
+            0.926,
+            0.843
+          ],
+          "content": "This is confusing!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.919,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.211,
+            0.067,
+            0.786,
+            0.137
+          ],
+          "level": 2,
+          "content": "Special Methods in Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.202,
+            0.383,
+            0.251
+          ],
+          "content": "• Have seen three so far"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.269,
+            0.401,
+            0.317
+          ],
+          "content": "§ \\_\\_init\\_\\_ for initializer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.332,
+            0.332,
+            0.379
+          ],
+          "content": "§ \\_\\_str\\_\\_ for str()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.396,
+            0.361,
+            0.445
+          ],
+          "content": "§ \\_repr\\_\\_ for repr()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.461,
+            0.466,
+            0.51
+          ],
+          "content": "• Start/end with 2 underscores"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.528,
+            0.45,
+            0.576
+          ],
+          "content": "§ This is standard in Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.591,
+            0.465,
+            0.639
+          ],
+          "content": "§ Used in all special methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.656,
+            0.445,
+            0.703
+          ],
+          "content": "§ Also for special attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.723,
+            0.464,
+            0.772
+          ],
+          "content": "• We can **overload operators**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.79,
+            0.47,
+            0.838
+          ],
+          "content": "§ Give new meaning to +, \\*, -"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.198,
+            0.739,
+            0.241
+          ],
+          "content": "class Point3(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.249,
+            0.958,
+            0.294
+          ],
+          "content": "\"\"\"Instances are points in 3D space\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.375,
+            0.883,
+            0.42
+          ],
+          "content": "def \\_\\_init\\_\\_(self,x=0,y=0,z=0):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.427,
+            0.943,
+            0.471
+          ],
+          "content": "\"\"\"Initializer: makes new Point3\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.56,
+            0.757,
+            0.605
+          ],
+          "content": "def \\_\\_str\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.613,
+            0.947,
+            0.659
+          ],
+          "content": "\"\"\"Returns: string with contents\"\"”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.747,
+            0.771,
+            0.793
+          ],
+          "content": "def \\_\\_repr\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.8,
+            0.941,
+            0.847
+          ],
+          "content": "\"\"\"Returns: unambiguous string\"\"”"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.258,
+            0.068,
+            0.743,
+            0.137
+          ],
+          "level": 2,
+          "content": "Operator Overloading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.205,
+            0.873,
+            0.269
+          ],
+          "content": "• Many operators in Python a special symbols"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.285,
+            0.571,
+            0.339
+          ],
+          "content": "§ +, -, /, \\*, \\*\\* for mathematics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.361,
+            0.555,
+            0.416
+          ],
+          "content": "§ ==, !=, <, > for comparisons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.439,
+            0.927,
+            0.505
+          ],
+          "content": "• The meaning of these symbols depends on type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.519,
+            0.487,
+            0.571
+          ],
+          "content": "§ 1 + 2 vs 'Hello' + 'World'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.595,
+            0.487,
+            0.647
+          ],
+          "content": "§ 1 < 2 vs 'Hello' < 'World'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.675,
+            0.916,
+            0.737
+          ],
+          "content": "• Our new type might want to use these symbols"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.758,
+            0.797,
+            0.814
+          ],
+          "content": "§ We overload them to support our new type"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.251,
+            0.067,
+            0.747,
+            0.137
+          ],
+          "level": 2,
+          "content": "Returning to Fractions"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.128,
+            0.221,
+            0.398,
+            0.273
+          ],
+          "level": 2,
+          "content": "What We Want"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.132,
+            0.327,
+            0.397,
+            0.457
+          ],
+          "content": "\\left(\\frac {1}{2} + \\frac {1}{3} + \\frac {1}{4}\\right) * \\frac {5}{4}",
+          "image_source": "images/page_9_equation_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.579,
+            0.418,
+            0.789
+          ],
+          "content": "Why not use the standard Python math operations?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.547,
+            0.221,
+            0.928,
+            0.279
+          ],
+          "level": 2,
+          "content": "Operator Overloading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.333,
+            0.905,
+            0.44
+          ],
+          "content": "• Python has methods that correspond to built-in ops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.45,
+            0.915,
+            0.498
+          ],
+          "content": "§ \\_\\_add\\_\\_ corresponds to +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.507,
+            0.912,
+            0.555
+          ],
+          "content": "§ \\_\\_mul\\_\\_ corresponds to \\*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.573,
+            0.925,
+            0.619
+          ],
+          "content": "§ \\_\\_eq\\_\\_ corresponds to =="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.63,
+            0.949,
+            0.679
+          ],
+          "content": "§ Not implemented by default"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.692,
+            0.914,
+            0.797
+          ],
+          "content": "• To overload operators you implement these methods"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.919,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.92,
+            0.959,
+            0.949
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.089,
+            0.067,
+            0.908,
+            0.138
+          ],
+          "level": 2,
+          "content": "Operator Overloading: Multiplication"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.197,
+            0.261,
+            0.237
+          ],
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.243,
+            0.367,
+            0.285
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.292,
+            0.298,
+            0.335
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.339,
+            0.342,
+            0.383
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.416,
+            0.266,
+            0.458
+          ],
+          "content": "def \\_\\_mul\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.463,
+            0.375,
+            0.507
+          ],
+          "content": "\"\"\"Returns: Product of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.513,
+            0.402,
+            0.555
+          ],
+          "content": "Makes a new Fraction; does not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.561,
+            0.364,
+            0.604
+          ],
+          "content": "modify contents of self or q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.608,
+            0.371,
+            0.651
+          ],
+          "content": "Precondition: q a Fraction\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.657,
+            0.354,
+            0.701
+          ],
+          "content": "assert type(q) == Fraction"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.705,
+            0.446,
+            0.749
+          ],
+          "content": "top= self.\\_numerator\\*q.\\_numerator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.753,
+            0.481,
+            0.797
+          ],
+          "content": "bot= self.\\_denominator\\*q.\\_denominator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.802,
+            0.329,
+            0.844
+          ],
+          "content": "return Fraction(top,bot)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.197,
+            0.8,
+            0.251
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.261,
+            0.799,
+            0.315
+          ],
+          "content": ">>> q = Fraction(3,4)"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.511,
+            0.328,
+            0.675,
+            0.379
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} ^ {*} \\mathrm{q}",
+          "image_source": "images/page_10_equation_16.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.635,
+            0.393,
+            0.764,
+            0.56
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_image_17.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.776,
+            0.427,
+            0.908,
+            0.519
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.583,
+            0.799,
+            0.636
+          ],
+          "content": ">>> r = p. \\_\\_mul\\_\\_(q)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.7,
+            0.918,
+            0.808
+          ],
+          "content": "Operator overloading uses method in object on left."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.148,
+            0.067,
+            0.85,
+            0.137
+          ],
+          "level": 2,
+          "content": "Operator Overloading: Addition"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.047,
+            0.193,
+            0.483,
+            0.85
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Fraction(object):\n    \"\"\"Instance is a fraction n/d\"\"\"\n    # _numerator:  an int\n    # _denominator: an int > 0\n\n    def __add__(self,q):\n        \"\"\"Returns: Sum of self, q\n        Makes a new Fraction\n        Precondition: q a Fraction\"\"\"\n        assert type(q) == Fraction\n        bot= self._denominator*q._denominator\n        top= (self._numerator*q._denominator+\n            self._denominator*q._numerator)\n        return Fraction(top,bot)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.511,
+            0.197,
+            0.8,
+            0.251
+          ],
+          "content": "> > > \\mathrm{p} = \\text {Fraction} (1, 2)",
+          "image_source": "images/page_11_equation_2.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.511,
+            0.261,
+            0.799,
+            0.315
+          ],
+          "content": "> > > \\mathrm{q} = \\text {Fraction} (3, 4)",
+          "image_source": "images/page_11_equation_3.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.512,
+            0.331,
+            0.675,
+            0.379
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p+q}",
+          "image_source": "images/page_11_equation_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.635,
+            0.393,
+            0.764,
+            0.561
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.777,
+            0.427,
+            0.908,
+            0.519
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.583,
+            0.797,
+            0.637
+          ],
+          "content": ">>> r = p. \\_\\_add\\_\\_(q)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.7,
+            0.918,
+            0.809
+          ],
+          "content": "Operator overloading uses method in object on left."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.15,
+            0.067,
+            0.85,
+            0.138
+          ],
+          "level": 2,
+          "content": "Comparing Objects for Equality"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.202,
+            0.466,
+            0.305
+          ],
+          "content": "• Earlier in course, we saw == compare object contents"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.316,
+            0.398,
+            0.361
+          ],
+          "content": "§ This is not the default"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.375,
+            0.402,
+            0.421
+          ],
+          "content": "§ **Default**: folder names"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.435,
+            0.404,
+            0.485
+          ],
+          "content": "• Must implement \\_\\_eq\\_\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.497,
+            0.4,
+            0.545
+          ],
+          "content": "§ Operator overloading!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.557,
+            0.391,
+            0.652
+          ],
+          "content": "§ Not limited to simple attribute comparison"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.664,
+            0.394,
+            0.711
+          ],
+          "content": "§ **Ex**: cross multiplying"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.188,
+            0.715,
+            0.387,
+            0.812
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_8.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.52,
+            0.197,
+            0.968,
+            0.81
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Fraction(object):\n    \"\"\"Instance is a fraction n/d\"\"\"\n    # _numerator:  an int\n    # _denominator: an int > 0\n\n    def __eq__(self,q):\n        \"\"\"Returns: True if self, q equal,\n        False if not, or q not a Fraction\"\"\"\n        if type(q) != Fraction:\n            return False\n        left = self._numerator*q._denominator\n        right = self._denominator*q._numerator\n        return left == right\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.078,
+            0.415,
+            0.462,
+            0.775
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.364,
+            0.068,
+            0.634,
+            0.126
+          ],
+          "level": 2,
+          "content": "is Versus =="
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.045,
+            0.201,
+            0.445,
+            0.256
+          ],
+          "level": 2,
+          "content": "• p is q evaluates to False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.275,
+            0.446,
+            0.323
+          ],
+          "content": "§ Compares folder names"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.337,
+            0.385,
+            0.387
+          ],
+          "content": "§ Cannot change this"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.447,
+            0.102,
+            0.487
+          ],
+          "content": "p"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.434,
+            0.183,
+            0.477
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.52,
+            0.203,
+            0.924,
+            0.256
+          ],
+          "level": 2,
+          "content": "• p == q evaluates to True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.275,
+            0.953,
+            0.378
+          ],
+          "content": "§ But only because method \\_\\_eq\\_\\_ compares contents"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.615,
+            0.434,
+            0.661,
+            0.477
+          ],
+          "content": "**id3**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.736,
+            0.434,
+            0.781,
+            0.477
+          ],
+          "content": "**id3**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.196,
+            0.823,
+            0.809,
+            0.879
+          ],
+          "level": 2,
+          "content": "Always use (x is None) not (x == None)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.394,
+            0.919,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.121,
+            0.067,
+            0.878,
+            0.136
+          ],
+          "level": 2,
+          "content": "Structure of a Proper Python Class"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.195,
+            0.226,
+            0.231
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.06,
+            0.235,
+            0.332,
+            0.274
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.06,
+            0.279,
+            0.273,
+            0.317
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.06,
+            0.321,
+            0.31,
+            0.361
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.06,
+            0.395,
+            0.257,
+            0.433
+          ],
+          "level": 2,
+          "content": "def getNumerator(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.434,
+            0.384,
+            0.473
+          ],
+          "content": "\"\"\"Returns: Numerator of Fraction\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.061,
+            0.517,
+            0.301,
+            0.555
+          ],
+          "level": 2,
+          "content": "def \\_\\_init\\_\\_(self,n=0,d=1):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.559,
+            0.378,
+            0.638
+          ],
+          "content": "\"\"\"Initializer: makes a Fraction\"\"\" …"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.645,
+            0.241,
+            0.683
+          ],
+          "level": 2,
+          "content": "def \\_\\_add\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.685,
+            0.329,
+            0.729
+          ],
+          "content": "\"\"\"Returns: Sum of self, q \"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.061,
+            0.772,
+            0.236,
+            0.811
+          ],
+          "level": 2,
+          "content": "def normalize(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.814,
+            0.392,
+            0.855
+          ],
+          "content": "\"\"\"Puts Fraction in reduced form\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.518,
+            0.2,
+            0.822,
+            0.292
+          ],
+          "content": "Docstring describing class Attributes are all **hidden**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.419,
+            0.784,
+            0.471
+          ],
+          "content": "Getters and Setters."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.53,
+            0.537,
+            0.809,
+            0.635
+          ],
+          "content": "Initializer for the class. Defaults for parameters."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.505,
+            0.672,
+            0.837,
+            0.725
+          ],
+          "content": "Python operator overloading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.793,
+            0.827,
+            0.844
+          ],
+          "content": "Normal method definitions"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.123,
+            0.067,
+            0.875,
+            0.137
+          ],
+          "level": 2,
+          "content": "Recall: Overloading Multiplication"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.197,
+            0.261,
+            0.237
+          ],
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.244,
+            0.366,
+            0.285
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.293,
+            0.297,
+            0.335
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.339,
+            0.341,
+            0.383
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.416,
+            0.266,
+            0.457
+          ],
+          "content": "def \\_\\_mul\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.464,
+            0.375,
+            0.507
+          ],
+          "content": "\"\"\"Returns: Product of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.513,
+            0.401,
+            0.554
+          ],
+          "content": "Makes a new Fraction; does not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.561,
+            0.364,
+            0.604
+          ],
+          "content": "modify contents of self or q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.609,
+            0.369,
+            0.649
+          ],
+          "content": "<u>Precondition: q a Fraction\"\"</u>\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.657,
+            0.352,
+            0.699
+          ],
+          "content": "assert type(q) == Fraction"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.708,
+            0.481,
+            0.844
+          ],
+          "content": "top = self. \\_numerator\\*q.\\_numerator bot= self.\\_denominator\\*q.\\_denominator return Fraction(top,bot)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.197,
+            0.8,
+            0.249
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.263,
+            0.759,
+            0.314
+          ],
+          "content": ">>> q = 2 # an int"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.512,
+            0.329,
+            0.675,
+            0.379
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} ^ {*} \\mathrm{q}",
+          "image_source": "images/page_15_equation_14.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.636,
+            0.393,
+            0.763,
+            0.559
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_15.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.776,
+            0.428,
+            0.908,
+            0.518
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.583,
+            0.926,
+            0.635
+          ],
+          "content": ">>> r = p .\\_\\_mul\\_\\_(q) # ERROR"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.537,
+            0.699,
+            0.919,
+            0.806
+          ],
+          "content": "Can only multiply fractions. But ints “make sense” too."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.067,
+            0.865,
+            0.136
+          ],
+          "level": 2,
+          "content": "Solution: Look at Argument Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.203,
+            0.481,
+            0.261
+          ],
+          "content": "• Overloading use **left** type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.274,
+            0.397,
+            0.323
+          ],
+          "content": "§ $\\mathbf{p}^{*}\\mathbf{q} = >\\mathbf{p}.$ .\\_\\_mul\\_\\_(q)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.337,
+            0.475,
+            0.387
+          ],
+          "content": "§ Done for us automatically"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.402,
+            0.459,
+            0.45
+          ],
+          "content": "§ Looks in class definition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.469,
+            0.469,
+            0.522
+          ],
+          "content": "• What about type on **right**?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.536,
+            0.465,
+            0.584
+          ],
+          "content": "§ Have to handle ourselves"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.601,
+            0.426,
+            0.654
+          ],
+          "content": "• Can implement with ifs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.669,
+            0.478,
+            0.72
+          ],
+          "content": "§ Write helper for each type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.732,
+            0.424,
+            0.781
+          ],
+          "content": "§ Check type in method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.797,
+            0.481,
+            0.848
+          ],
+          "content": "§ Send to appropriate helper"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.514,
+            0.196,
+            0.919,
+            0.837
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Fraction(object):\n    ...\n    def __mul__(self,q):\n        \"\"\"Returns: Product of self, q\n        Precondition: q a Fraction or int\"\"\"\n        if type(q) == Fraction:\n            return self._mulFrac(q)\n        elif type(q) == int:\n            return self._mulInt(q)\n\n    ...\n    def _mulInt(self,q): # Hidden method\n        return Fraction(self._numerator*q,\n                                    self._denominator)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.246,
+            0.067,
+            0.751,
+            0.136
+          ],
+          "level": 2,
+          "content": "A Better Multiplication"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.196,
+            0.26,
+            0.239
+          ],
+          "sub_type": "code",
+          "content": "```txt\nclass Fraction(object):\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.062,
+            0.267,
+            0.43,
+            0.631
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __mul__(self,q):\n    \"\"\"Returns: Product of self, q\n    Precondition: q a Fraction or int\"\"\"\n    if type(q) == Fraction:\n        return self._mulFrac(q)\n    elif type(q) == int:\n        return self._mulInt(q)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.066,
+            0.673,
+            0.438,
+            0.82
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef _mulInt(self,q): # Hidden method\n    return Fraction(self._numerator*q,\n                       self._denominator)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.195,
+            0.8,
+            0.251
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.261,
+            0.759,
+            0.315
+          ],
+          "content": ">>> q = 2 # an int"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.512,
+            0.328,
+            0.675,
+            0.38
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} ^ {*} \\mathrm{q}",
+          "image_source": "images/page_17_equation_6.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.635,
+            0.392,
+            0.763,
+            0.561
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_image_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.777,
+            0.425,
+            0.908,
+            0.52
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.581,
+            0.881,
+            0.637
+          ],
+          "content": ">>> r = p. \\_\\_mul\\_\\_(q) # OK!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.698,
+            0.89,
+            0.809
+          ],
+          "content": "See frac3.py for a full example of this method"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.187,
+            0.949,
+            0.826
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Fraction(object):\n    ...\n    def __mul__(self,q):\n        \"\"\"Returns: Product of self, q\n        Precondition: q a Fraction or int\"\"\"\n        if type(q) == Fraction:\n            return self._mulFrac(q)\n        elif type(q) == int:\n            return self._mulInt(q)\n    ...\n    def _mulInt(self,q): # Hidden method\n        return Fraction(self._numerator*q,\n                self._denominator)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.185,
+            0.066,
+            0.813,
+            0.129
+          ],
+          "level": 2,
+          "content": "What Do We Get This Time?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.184,
+            0.066,
+            0.813,
+            0.129
+          ],
+          "level": 2,
+          "content": "What Do We Get This Time?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.194,
+            0.441,
+            0.828
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Fraction(object):\n    ...\n    def __mul__(self,q):\n        \"\"\"Returns: Product of self, q\n        Precondition: q a Fraction or int\"\"\"\n        if type(q) == Fraction:\n            return self._mulFrac(q)\n        elif type(q) == int:\n            return self._mulInt(q)\n\n    ...\n    def _mulInt(self,q): # Hidden method\n        return Fraction(self._numerator*q,\n                                    self._denominator)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.195,
+            0.801,
+            0.252
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.26,
+            0.76,
+            0.316
+          ],
+          "content": ">>> q = 2 # an int"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.511,
+            0.327,
+            0.675,
+            0.379
+          ],
+          "content": "> > > \\mathbf {r} = \\mathbf {q} ^ {*} \\mathbf {p}",
+          "image_source": "images/page_19_equation_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.583,
+            0.443,
+            0.907,
+            0.539
+          ],
+          "content": "Meaning determined by left. Fraction(2,2)Variable q stores an **int**."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.567,
+            0.547,
+            0.816,
+            0.599
+          ],
+          "content": "B~~: Fraction(1,1)~~"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.601,
+            0.819,
+            0.663
+          ],
+          "content": "C: Fraction(2,4)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.665,
+            0.925,
+            0.725
+          ],
+          "content": "D: Error**CORRECT**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.725,
+            0.82,
+            0.785
+          ],
+          "content": "E: I don’t know"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.919,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.208,
+            0.067,
+            0.79,
+            0.129
+          ],
+          "level": 2,
+          "content": "A Problem with Subclasses"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.198,
+            0.26,
+            0.237
+          ],
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.245,
+            0.458,
+            0.285
+          ],
+          "content": "\"\"\"Instances are normal fractions n/d\"\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.291,
+            0.329,
+            0.333
+          ],
+          "content": "\\# INSTANCE ATTRIBUTES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.341,
+            0.268,
+            0.382
+          ],
+          "content": "\\# \\_numerator: int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.388,
+            0.305,
+            0.431
+          ],
+          "content": "\\# \\_denominator: int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.465,
+            0.368,
+            0.505
+          ],
+          "content": "class FractionalLength(Fraction):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.059,
+            0.51,
+            0.457,
+            0.895
+          ],
+          "sub_type": "code",
+          "content": "```python\n\"\"\"Instances are fractions with units \"\"\"\n# INSTANCE ATTRIBUTES same but\n# _unit: one of 'in', 'ft', 'yd'\ndef __init__(self,n,d,unit):\n    \"\"\"Make length of given units\"\"\"\n    assert unit in ['in', 'ft', 'yd']\n    super().__init__(n,d)\n    self._unit = unit\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.198,
+            0.8,
+            0.249
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.263,
+            0.95,
+            0.313
+          ],
+          "content": ">>> q = FractionalLength(1,2,'ft')"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.512,
+            0.319,
+            0.674,
+            0.367
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} ^ {*} \\mathrm{q}",
+          "image_source": "images/page_20_equation_10.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.636,
+            0.393,
+            0.762,
+            0.559
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_20_image_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.777,
+            0.427,
+            0.908,
+            0.518
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.572,
+            0.926,
+            0.624
+          ],
+          "content": ">>> r = p .\\_\\_mul\\_\\_(q) # ERROR"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.591,
+            0.699,
+            0.915,
+            0.806
+          ],
+          "content": "mul\\_\\_ has precondition type(q) == Fraction"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.774,
+            0.661,
+            0.935,
+            0.833
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_21_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.243,
+            0.068,
+            0.755,
+            0.127
+          ],
+          "level": 2,
+          "content": "The isinstance Function"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.045,
+            0.205,
+            0.41,
+            0.25
+          ],
+          "level": 2,
+          "content": "• isinstance(&lt;obj&gt;,&lt;class&gt;)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.27,
+            0.481,
+            0.367
+          ],
+          "content": "§ True if &lt;obj&gt;’s class is same as or a subclass of &lt;class&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.387,
+            0.32,
+            0.429
+          ],
+          "content": "§ False otherwise"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.453,
+            0.218,
+            0.5
+          ],
+          "level": 2,
+          "content": "Example:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.515,
+            0.492,
+            0.559
+          ],
+          "content": "§ isinstance(e,Executive) is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.578,
+            0.488,
+            0.622
+          ],
+          "content": "§ isinstance(e,Employee) is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.643,
+            0.447,
+            0.687
+          ],
+          "content": "§ isinstance(e,object) is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.706,
+            0.419,
+            0.749
+          ],
+          "content": "§ isinstance(e,str) is False"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.77,
+            0.458,
+            0.819
+          ],
+          "level": 2,
+          "content": "• Generally preferable to type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.832,
+            0.46,
+            0.877
+          ],
+          "content": "§ Works with base types too!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.261,
+            0.568,
+            0.295
+          ],
+          "content": "e"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.261,
+            0.653,
+            0.305
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.39,
+            0.573,
+            0.428
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.606,
+            0.444,
+            0.727,
+            0.482
+          ],
+          "content": "<strong><u>Executive</u></strong>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.537,
+            0.61,
+            0.57
+          ],
+          "content": "name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.637,
+            0.533,
+            0.697,
+            0.568
+          ],
+          "content": "'Fred'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.613,
+            0.607,
+            0.649
+          ],
+          "content": "\\_start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.639,
+            0.61,
+            0.694,
+            0.647
+          ],
+          "content": "2012"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.693,
+            0.618,
+            0.731
+          ],
+          "content": "\\_salary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.648,
+            0.688,
+            0.685,
+            0.723
+          ],
+          "content": "0.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.767,
+            0.615,
+            0.805
+          ],
+          "content": "bonus"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.648,
+            0.763,
+            0.685,
+            0.799
+          ],
+          "content": "0.0"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.772,
+            0.235,
+            0.939,
+            0.396
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_21_image_24.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.83,
+            0.25,
+            0.912,
+            0.293
+          ],
+          "content": "**object**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.796,
+            0.46,
+            0.92,
+            0.504
+          ],
+          "content": "**Employee**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.776,
+            0.446,
+            0.936,
+            0.613
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_21_image_27.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.675,
+            0.92,
+            0.713
+          ],
+          "content": "**Executive**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.227,
+            0.068,
+            0.771,
+            0.128
+          ],
+          "level": 2,
+          "content": "isinstance and Subclasses"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.2,
+            0.461,
+            0.252
+          ],
+          "content": ">>> e = Employee('Bob',2012)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.271,
+            0.434,
+            0.322
+          ],
+          "content": ">>> isinstance(e,Executive)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.339,
+            0.097,
+            0.387
+          ],
+          "content": "???"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.483,
+            0.21,
+            0.535
+          ],
+          "content": "A: True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.545,
+            0.218,
+            0.597
+          ],
+          "content": "B: False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.608,
+            0.219,
+            0.658
+          ],
+          "content": "C: Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.669,
+            0.338,
+            0.722
+          ],
+          "content": "<u>D: I don’t know</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.26,
+            0.568,
+            0.295
+          ],
+          "content": "e"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.26,
+            0.654,
+            0.306
+          ],
+          "content": "**id5**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.389,
+            0.573,
+            0.429
+          ],
+          "content": "**id5**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.605,
+            0.443,
+            0.728,
+            0.486
+          ],
+          "content": "<strong><u>Employee</u></strong>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.537,
+            0.61,
+            0.571
+          ],
+          "content": "\\_name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.641,
+            0.532,
+            0.692,
+            0.569
+          ],
+          "content": "'Bob'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.613,
+            0.607,
+            0.649
+          ],
+          "content": "\\_start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.639,
+            0.61,
+            0.693,
+            0.647
+          ],
+          "content": "2012"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.693,
+            0.618,
+            0.731
+          ],
+          "content": "\\_salary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.645,
+            0.687,
+            0.689,
+            0.723
+          ],
+          "content": "50k"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.83,
+            0.249,
+            0.913,
+            0.294
+          ],
+          "content": "**object**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.796,
+            0.295,
+            0.914,
+            0.389
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_image_19.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.796,
+            0.459,
+            0.921,
+            0.505
+          ],
+          "content": "**Employee**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.798,
+            0.511,
+            0.914,
+            0.605
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_image_21.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.675,
+            0.92,
+            0.714
+          ],
+          "content": "**Executive**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.797,
+            0.724,
+            0.915,
+            0.819
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_image_23.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.921,
+            0.605,
+            0.95
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.227,
+            0.067,
+            0.771,
+            0.129
+          ],
+          "level": 2,
+          "content": "isinstance and Subclasses"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.197,
+            0.462,
+            0.391
+          ],
+          "content": ">>> e = Employee('Bob',2011) >>> isinstance(e,Executive)???"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.481,
+            0.211,
+            0.537
+          ],
+          "content": "A: True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.543,
+            0.381,
+            0.601
+          ],
+          "content": "B: FalseCorrect"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.606,
+            0.221,
+            0.66
+          ],
+          "content": "C: Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.667,
+            0.34,
+            0.724
+          ],
+          "content": "<u>D: I don’t know</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.685,
+            0.203,
+            0.781,
+            0.261
+          ],
+          "content": "object"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.661,
+            0.201,
+            0.819,
+            0.618
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_23_image_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.663,
+            0.557,
+            0.818,
+            0.615
+          ],
+          "content": "Executive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.608,
+            0.675,
+            0.873,
+            0.773
+          ],
+          "content": "→ means “extends” <u>or “is an instance of”</u>"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.269,
+            0.067,
+            0.729,
+            0.138
+          ],
+          "level": 2,
+          "content": "Fixing Multiplication"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.197,
+            0.26,
+            0.237
+          ],
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.245,
+            0.384,
+            0.285
+          ],
+          "content": "\"\"\"Instances are fractions n/d\"\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.293,
+            0.268,
+            0.334
+          ],
+          "content": "\\# \\_numerator: int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.339,
+            0.304,
+            0.383
+          ],
+          "content": "\\# \\_denominator: int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.409,
+            0.266,
+            0.451
+          ],
+          "content": "def \\_\\_mul\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.457,
+            0.374,
+            0.499
+          ],
+          "content": "\"\"\"Returns: Product of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.506,
+            0.401,
+            0.547
+          ],
+          "content": "Makes a new Fraction; does not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.555,
+            0.364,
+            0.596
+          ],
+          "content": "modify contents of self or q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.601,
+            0.369,
+            0.642
+          ],
+          "content": "<u>Precondition: q a Fraction \"\"\"</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.651,
+            0.381,
+            0.691
+          ],
+          "content": "assert isinstance(q, Fraction)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.7,
+            0.425,
+            0.74
+          ],
+          "content": "top = self.numerator\\*q.numerator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.745,
+            0.463,
+            0.787
+          ],
+          "content": "bot = self.denominator\\*q.denominator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.793,
+            0.329,
+            0.834
+          ],
+          "content": "return Fraction(top,bot)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.198,
+            0.8,
+            0.249
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.262,
+            0.95,
+            0.313
+          ],
+          "content": ">>> q = FractionalLength(1,2,'ft')"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.512,
+            0.319,
+            0.674,
+            0.368
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} ^ {*} \\mathrm{q}",
+          "image_source": "images/page_24_equation_16.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.636,
+            0.393,
+            0.762,
+            0.559
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_image_17.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.776,
+            0.427,
+            0.908,
+            0.518
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.572,
+            0.91,
+            0.623
+          ],
+          "content": ">>> r = p .\\_\\_mul\\_\\_(q) # OKAY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.537,
+            0.699,
+            0.92,
+            0.806
+          ],
+          "content": "Can multiply so long as it has numerator, denominator"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.241,
+            0.067,
+            0.757,
+            0.135
+          ],
+          "level": 1,
+          "content": "The Python Data Model"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.212,
+            0.515,
+            0.237
+          ],
+          "content": "Note: Slicing is done exclusively with the following three methods. A call like"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.255,
+            0.144,
+            0.277
+          ],
+          "content": "a[1:2] = b"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.296,
+            0.154,
+            0.319
+          ],
+          "content": "is translated to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.278,
+            0.922,
+            0.328
+          ],
+          "content": "[http://docs.python.org/3/reference/datamodel.html](http://docs.python.org/3/reference/datamodel.html)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.339,
+            0.243,
+            0.362
+          ],
+          "content": "a[slice(1, 2, None)] = b"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.379,
+            0.427,
+            0.404
+          ],
+          "content": "and so forth. Missing slice items are always filled in with None."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.058,
+            0.432,
+            0.267,
+            0.455
+          ],
+          "level": 2,
+          "content": "object.\\_\\_getitem\\_(self, key)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.456,
+            0.942,
+            0.547
+          ],
+          "content": "Called to implement evaluation of self[key]. For sequence types, the accepted keys should be integers and slice objects. Note that the special interpretation of negative indexes (if the class wishes to emulate a sequence type) is up to the getitem () method. If key is of an inappropriate type, TypeError may be raised; if of a value outside the set of indexes for the sequence (after any special interpretation of negative values), IndexError should be raised. For mapping types, if keyis missing (not in the container), KeyError should be raised."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.567,
+            0.846,
+            0.592
+          ],
+          "content": "Note: for loops expect that an IndexError will be raised for illegal indexes to allow proper detection of the end of the sequence."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.058,
+            0.614,
+            0.266,
+            0.638
+          ],
+          "level": 2,
+          "content": "object.\\_\\_missing\\_\\_(self, key)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.078,
+            0.639,
+            0.72,
+            0.663
+          ],
+          "content": "Called by dict.\\_\\_getitem\\_\\_() to implement self[key] for dict subclasses when key is not in the dictionary."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.058,
+            0.678,
+            0.304,
+            0.701
+          ],
+          "level": 2,
+          "content": "object.\\_setitem\\_(self, key, value)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.703,
+            0.942,
+            0.771
+          ],
+          "content": "Called to implement assignment to self[key]. Same note as for \\_\\_getitem\\_(). This should only be implemented for mappings if the objects support changes to the values for keys, or if new keys can be added, or for sequences if elements can be replaced. The same exceptions should be raised for improper key values as for the\\_\\_getitem\\_\\_() method."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.058,
+            0.785,
+            0.267,
+            0.809
+          ],
+          "level": 2,
+          "content": "object.\\_\\_delitem\\_\\_(self, key)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.809,
+            0.943,
+            0.877
+          ],
+          "content": "Called to implement deletion of self[key]. Same note as for\\_\\_getitem\\_(). This should only be implemented for mappings if the objects support removal of keys, or for sequences if elements can be removed from the sequence. The same exceptions should be raised for improper key values as for the\\_\\_getitem\\_\\_()method."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.921,
+            0.104,
+            0.948
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.604,
+            0.95
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.209,
+            0.067,
+            0.79,
+            0.128
+          ],
+          "level": 2,
+          "content": "We Have Come Full Circle"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.786,
+            0.268
+          ],
+          "content": "• On the first day, saw that a **type** is both"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.287,
+            0.427,
+            0.339
+          ],
+          "content": "§ a set of values, and d"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.362,
+            0.488,
+            0.415
+          ],
+          "content": "§ the operations on them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.441,
+            0.674,
+            0.502
+          ],
+          "content": "• In Python, **all values are objects**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.521,
+            0.673,
+            0.578
+          ],
+          "content": "§ Everything has a folder in the heap"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.595,
+            0.751,
+            0.653
+          ],
+          "content": "§ Just ignore it for immutable, basic types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.674,
+            0.782,
+            0.735
+          ],
+          "content": "• In Python, **all operations are methods**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.757,
+            0.84,
+            0.812
+          ],
+          "content": "§ Each operator has a double-underscore helper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.831,
+            0.764,
+            0.887
+          ],
+          "content": "§ Looks at type of object on left to process"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.394,
+            0.92,
+            0.606,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.211,
+            0.067,
+            0.784,
+            0.137
+          ],
+          "level": 2,
+          "content": "Advanced Topic Warning!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.208,
+            0.93,
+            0.287
+          ],
+          "content": "The following will not be on the exam"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.42,
+            0.923,
+            0.5
+          ],
+          "content": "If you ask “Will this be on the Exam”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.308,
+            0.635,
+            0.551,
+            0.707
+          ],
+          "content": "we will be"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.572,
+            0.558,
+            0.75,
+            0.764
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_27_image_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.394,
+            0.92,
+            0.606,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.23,
+            0.067,
+            0.769,
+            0.135
+          ],
+          "level": 2,
+          "content": "Example from A6: Pixels"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.204,
+            0.504,
+            0.26
+          ],
+          "level": 2,
+          "content": "• Image is list of list of RGB"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.28,
+            0.421,
+            0.329
+          ],
+          "content": "§ But this is really slow"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.35,
+            0.458,
+            0.401
+          ],
+          "content": "§ **Faster**: byte buffer (???)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.419,
+            0.45,
+            0.469
+          ],
+          "content": "§ Beyond scope of course"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.494,
+            0.498,
+            0.549
+          ],
+          "level": 2,
+          "content": "• Compromise: Pixels class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.569,
+            0.457,
+            0.618
+          ],
+          "content": "§ Has byte buffer attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.639,
+            0.494,
+            0.688
+          ],
+          "content": "§ Pretends to be list of tuples"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.708,
+            0.48,
+            0.755
+          ],
+          "content": "§ You can slice/iterate/etc…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.782,
+            0.495,
+            0.835
+          ],
+          "content": "• Uses data model to do this"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.613,
+            0.199,
+            0.886,
+            0.739
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_image_10.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.765,
+            0.97,
+            0.811
+          ],
+          "content": "[(255,255,255), (255,255,255), …]"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.23,
+            0.067,
+            0.769,
+            0.135
+          ],
+          "level": 2,
+          "content": "Example from A6: Pixels"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.203,
+            0.504,
+            0.261
+          ],
+          "content": "• Image is list of list of RGB"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.165,
+            0.305,
+            0.836,
+            0.451
+          ],
+          "content": "34Abstraction: Making a type easier to 67use by hiding details from the user"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.492,
+            0.499,
+            0.549
+          ],
+          "content": "• **Compromise**: Pixels class"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.612,
+            0.455,
+            0.84,
+            0.561
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_29_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.569,
+            0.457,
+            0.618
+          ],
+          "content": "§ Has byte buffer attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.639,
+            0.495,
+            0.689
+          ],
+          "content": "§ Pretends to be list of tuples"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.708,
+            0.481,
+            0.754
+          ],
+          "content": "§ You can slice/iterate/etc…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.78,
+            0.561,
+            0.844
+          ],
+          "content": "• Uses data model to do this**lie to you!**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.703,
+            0.585,
+            0.819,
+            0.74
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_29_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.763,
+            0.969,
+            0.812
+          ],
+          "content": "(255,255,255), (255,255,255), …]"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.394,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.067,
+            0.067,
+            0.931,
+            0.135
+          ],
+          "level": 2,
+          "content": "Properties: Invisible Setters and Getters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.197,
+            0.262,
+            0.237
+          ],
+          "content": "**class** Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.244,
+            0.367,
+            0.285
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.292,
+            0.299,
+            0.335
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.34,
+            0.342,
+            0.382
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.391,
+            0.174,
+            0.431
+          ],
+          "content": "@property"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.435,
+            0.268,
+            0.476
+          ],
+          "content": "**def** numerator(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.482,
+            0.396,
+            0.615
+          ],
+          "content": "\"\"\"Numerator value of Fraction Invariant: must be an int\"\"\" return self.\\_numerator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.651,
+            0.256,
+            0.689
+          ],
+          "content": "@numerator.setter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.698,
+            0.325,
+            0.74
+          ],
+          "content": "**def** numerator(self,value):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.745,
+            0.339,
+            0.788
+          ],
+          "content": "assert type(value) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.794,
+            0.331,
+            0.837
+          ],
+          "content": "self.\\_numerator = value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.197,
+            0.801,
+            0.251
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.265,
+            0.791,
+            0.313
+          ],
+          "content": ">>> x = p. .numerator"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.634,
+            0.316,
+            0.765,
+            0.449
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_30_image_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.776,
+            0.341,
+            0.909,
+            0.432
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.457,
+            0.811,
+            0.508
+          ],
+          "content": ">>> x = p. .numerator()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.584,
+            0.79,
+            0.633
+          ],
+          "content": ">>> p.numerator = 2"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.635,
+            0.638,
+            0.764,
+            0.771
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_30_image_18.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.777,
+            0.665,
+            0.909,
+            0.754
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.776,
+            0.777,
+            0.825
+          ],
+          "content": ">>> p.numerator(2)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.068,
+            0.067,
+            0.931,
+            0.134
+          ],
+          "level": 2,
+          "content": "Properties: Invisible Setters and Getters"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.198,
+            0.261,
+            0.237
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.245,
+            0.366,
+            0.285
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.293,
+            0.297,
+            0.335
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.34,
+            0.341,
+            0.381
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.391,
+            0.173,
+            0.431
+          ],
+          "level": 2,
+          "content": "@property"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.436,
+            0.268,
+            0.476
+          ],
+          "level": 2,
+          "content": "def numerator(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.483,
+            0.395,
+            0.621
+          ],
+          "content": "\"\"\"Numerator value of Fraction Invaria<u>nt: must be an i</u>nt\"\"\" return self.\\_numerator"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.651,
+            0.255,
+            0.69
+          ],
+          "level": 2,
+          "content": "@numerator.setter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.699,
+            0.34,
+            0.839
+          ],
+          "content": "**def** numerator(self,value): assert type(value) == int self.\\_numerator = value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.398,
+            0.312,
+            0.736,
+            0.449
+          ],
+          "content": "**Decorator** specifies that next method is **getter** for property of the same name as method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.489,
+            0.894,
+            0.541
+          ],
+          "content": "Docstring describing property"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.484,
+            0.603,
+            0.839,
+            0.653
+          ],
+          "content": "Property uses **hidden** attribute."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.43,
+            0.709,
+            0.803,
+            0.846
+          ],
+          "content": "**Decorator** specifies that next method is the **setter** for property whose name is numerator."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.068,
+            0.067,
+            0.931,
+            0.135
+          ],
+          "level": 2,
+          "content": "Properties: Invisible Setters and Getters"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.197,
+            0.261,
+            0.238
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.244,
+            0.367,
+            0.286
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.292,
+            0.298,
+            0.335
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.339,
+            0.343,
+            0.383
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.39,
+            0.174,
+            0.431
+          ],
+          "level": 2,
+          "content": "@property"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.063,
+            0.435,
+            0.269,
+            0.477
+          ],
+          "level": 2,
+          "content": "def numerator(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.483,
+            0.395,
+            0.566
+          ],
+          "content": "\"\"\"Numerator value of Fraction Invariant: must be an int\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.573,
+            0.322,
+            0.614
+          ],
+          "content": "return self.\\_numerator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.651,
+            0.339,
+            0.857
+          ],
+          "content": "@numerator.setter **def** numerator(self,value): assert type(value) == int self.\\_numerator = value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.488,
+            0.231,
+            0.904,
+            0.403
+          ],
+          "continues_prev": true,
+          "content": "**Goal**: Data Encapsulation Protecting your data from other, “clumsy” users."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.436,
+            0.472,
+            0.754,
+            0.524
+          ],
+          "content": "Only the **getter** is required!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.452,
+            0.612,
+            0.739,
+            0.705
+          ],
+          "content": "If no **setter**, then the attribute is “immutable”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.461,
+            0.777,
+            0.93,
+            0.887
+          ],
+          "content": "Replace **Attributes** w/ **Properties** (Users cannot tell difference)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/5/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.606,
+            0.951
+          ],
+          "content": "Operators and Abstraction"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "33"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 33,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

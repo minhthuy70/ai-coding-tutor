@@ -1,0 +1,3615 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-20",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.886,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/1/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.225,
+            0.124,
+            0.351,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An Application"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.115,
+            0.154,
+            0.44,
+            0.172
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Goal",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Presentation program (e.g. PowerPoint)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.115,
+            0.173,
+            0.421,
+            0.19
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Problem",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": There are many types of content"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.134,
+            0.191,
+            0.398,
+            0.207
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Examples",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": text box, rectangle, image, etc."
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.103,
+            0.332,
+            0.115,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.134,
+            0.207,
+            0.379,
+            0.223
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Have to write code to display each one"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.116,
+            0.224,
+            0.39,
+            0.24
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Solution",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Use object oriented features"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.133,
+            0.241,
+            0.372,
+            0.257
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Define class for every type of content"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.134,
+            0.258,
+            0.36,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Ma"
+            },
+            {
+              "type": "text",
+              "content": "ke sure each has a draw m",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "ethod:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.174,
+            0.274,
+            0.317,
+            0.289
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for x in slide[i].contents:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.185,
+            0.289,
+            0.286,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "x.draw(window)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.549,
+            0.128,
+            0.604,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Abbreviate as SC to right"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 13,
+          "bbox": [
+            0.632,
+            0.125,
+            0.792,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Defining a Subclass"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.526,
+            0.332,
+            0.538,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.54,
+            0.151,
+            0.658,
+            0.208
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class SlideContent(object): \"\"\"Any object on a slide.\"\"\" def __init__(self, x, y, w, h): def draw_frame(self): … def select(self): …"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.54,
+            0.215,
+            0.666,
+            0.237
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class TextBox(SlideContent): \"\"\"An object containing text.\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.663,
+            0.186,
+            0.719,
+            0.212
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Subclass Child class "
+            },
+            {
+              "type": "text",
+              "content": "Derived class",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.546,
+            0.236,
+            0.666,
+            0.26
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self, x, y, text): … def draw(self): …"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 19,
+          "bbox": [
+            0.539,
+            0.265,
+            0.642,
+            0.279
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Image(SlideContent):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.548,
+            0.278,
+            0.611,
+            0.29
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"An image.\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.706,
+            0.148,
+            0.756,
+            0.173
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Superclass Parent class Base class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.547,
+            0.288,
+            0.68,
+            0.311
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self, x, y, image_file): … def draw(self): …"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.739,
+            0.19,
+            0.778,
+            0.202
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TextBox"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.708,
+            0.267,
+            0.771,
+            0.28
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TextBox(SC)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.749,
+            0.223,
+            0.84,
+            0.253
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "__init__(self,x,y,w,h) draw_frame(self) select(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.686,
+            0.281,
+            0.777,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,x,y,text) draw(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.838,
+            0.19,
+            0.869,
+            0.202
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.815,
+            0.209,
+            0.837,
+            0.221
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SC",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.823,
+            0.267,
+            0.88,
+            0.28
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Image(SC)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.785,
+            0.281,
+            0.884,
+            0.305
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,x,y,img_f) draw(self)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 31,
+          "bbox": [
+            0.181,
+            0.405,
+            0.396,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Definition: Revisited"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 32,
+          "bbox": [
+            0.116,
+            0.435,
+            0.284,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class <name>(<superclass>):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.13,
+            0.454,
+            0.258,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Class specification\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.13,
+            0.475,
+            0.246,
+            0.492
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "getters and setters"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.13,
+            0.495,
+            0.255,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "initializer (__init__)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.299,
+            0.46,
+            0.432,
+            0.488
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class type to extend (may need module name)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.129,
+            0.515,
+            0.262,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "definition of operators"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.129,
+            0.535,
+            0.258,
+            0.552
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "definition of methods"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.309,
+            0.507,
+            0.411,
+            0.521
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Every class must"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.13,
+            0.556,
+            0.214,
+            0.574
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "anything else"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.315,
+            0.522,
+            0.412,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "extend something"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.309,
+            0.531,
+            0.421,
+            0.557
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Previous classes all extended object"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "paragraph_title",
+          "index": 43,
+          "bbox": [
+            0.578,
+            0.405,
+            0.845,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "object and the Subclass Hierarcy"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.541,
+            0.435,
+            0.684,
+            0.464
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Subclassing creates a "
+            },
+            {
+              "type": "text",
+              "content": "hierarchy",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of classes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.745,
+            0.436,
+            0.853,
+            0.454
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Kivy Example",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.557,
+            0.465,
+            0.689,
+            0.49
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Each class has its own super class or parent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.715,
+            0.459,
+            0.75,
+            0.474
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.557,
+            0.49,
+            0.694,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Until object at the “top”"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.542,
+            0.505,
+            0.699,
+            0.52
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• object has many features"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.714,
+            0.478,
+            0.848,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "kivy.uix.widge.WidgetBase"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.557,
+            0.52,
+            0.688,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Special built-in fields: __class__, __dict__"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 52,
+          "bbox": [
+            0.558,
+            0.546,
+            0.667,
+            0.571
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Default operators: __str__, __repr__"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.714,
+            0.496,
+            0.828,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "kivy.uix.widget.Widget"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.714,
+            0.515,
+            0.814,
+            0.53
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "kivy.uix.label.Label"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.711,
+            0.533,
+            0.829,
+            0.548
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "kivy.uix.button",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "."
+            },
+            {
+              "type": "text",
+              "content": "Button",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.736,
+            0.556,
+            0.776,
+            0.568
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Module",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.818,
+            0.557,
+            0.848,
+            0.569
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 58,
+          "bbox": [
+            0.178,
+            0.686,
+            0.398,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Name Resolution Revisited"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.116,
+            0.715,
+            0.335,
+            0.731
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• To look up attribute/method name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.425,
+            0.717,
+            0.459,
+            0.73
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "object",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.133,
+            0.732,
+            0.339,
+            0.746
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Look first in instance (object folder)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.379,
+            0.733,
+            0.404,
+            0.745
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "????"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.132,
+            0.747,
+            0.311,
+            0.762
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Then look in the class (folder)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.346,
+            0.752,
+            0.391,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "p.select()",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.116,
+            0.764,
+            0.318,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Subclasses add two more rules:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.402,
+            0.759,
+            0.456,
+            0.77
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SC(object)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.134,
+            0.78,
+            0.273,
+            0.795
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Look in the superclass"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 68,
+          "bbox": [
+            0.134,
+            0.795,
+            0.294,
+            0.81
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Repeat 3. until reach object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.374,
+            0.77,
+            0.457,
+            0.803
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,x,y,w,h) draw_frame(self) select(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 70,
+          "bbox": [
+            0.271,
+            0.814,
+            0.305,
+            0.828
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "p.text",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.236,
+            0.821,
+            0.257,
+            0.833
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id3",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.347,
+            0.815,
+            0.388,
+            0.828
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "p.draw()",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.142,
+            0.84,
+            0.184,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "p "
+            },
+            {
+              "type": "text",
+              "content": "id3",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.397,
+            0.822,
+            0.459,
+            0.834
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TextBox(SC)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.238,
+            0.845,
+            0.3,
+            0.858
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "text 'Hi!'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.374,
+            0.837,
+            0.459,
+            0.857
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "__init__(self,x,y,text) draw(self)"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "paragraph_title",
+          "index": 77,
+          "bbox": [
+            0.631,
+            0.686,
+            0.792,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A Simpler Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 78,
+          "bbox": [
+            0.546,
+            0.715,
+            0.654,
+            0.728
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Employee(object):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.556,
+            0.728,
+            0.705,
+            0.741
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Instance is salaried worker\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 80,
+          "bbox": [
+            0.557,
+            0.742,
+            0.682,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# INSTANCE ATTRIBUTES:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 81,
+          "bbox": [
+            0.808,
+            0.713,
+            0.844,
+            0.725
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "object",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 82,
+          "bbox": [
+            0.557,
+            0.755,
+            0.692,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# _name: full name, a string"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 83,
+          "bbox": [
+            0.776,
+            0.725,
+            0.831,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self) _str__(self) _eq__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.557,
+            0.768,
+            0.682,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# _start: first year hired,"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 85,
+          "bbox": [
+            0.558,
+            0.781,
+            0.692,
+            0.794
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# an int ≥ -1, -1 if unknown"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 86,
+          "bbox": [
+            0.797,
+            0.764,
+            0.847,
+            0.776
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Employee",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 87,
+          "bbox": [
+            0.557,
+            0.794,
+            0.698,
+            0.808
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# _salary: yearly wage, a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 88,
+          "bbox": [
+            0.771,
+            0.778,
+            0.846,
+            0.811
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,n,d,s) _str__(self) _eq__(self)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 89,
+          "bbox": [
+            0.546,
+            0.816,
+            0.672,
+            0.83
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Executive(Employee):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 90,
+          "bbox": [
+            0.556,
+            0.829,
+            0.701,
+            0.843
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"An Employee with a bonus\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 91,
+          "bbox": [
+            0.796,
+            0.819,
+            0.846,
+            0.831
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Executive",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 92,
+          "bbox": [
+            0.558,
+            0.844,
+            0.683,
+            0.857
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# INSTANCE ATTRIBUTES:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 93,
+          "bbox": [
+            0.557,
+            0.857,
+            0.699,
+            0.87
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "#_bonus: annual bonus, a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 94,
+          "bbox": [
+            0.777,
+            0.831,
+            0.846,
+            0.866
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,n,d,b) _str__(self) __eq__(self)"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "page_number",
+          "index": 95,
+          "bbox": [
+            0.102,
+            0.613,
+            0.116,
+            0.628
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 96,
+          "bbox": [
+            0.102,
+            0.894,
+            0.116,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 97,
+          "bbox": [
+            0.526,
+            0.614,
+            0.538,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 98,
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 99,
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.885,
+            0.021,
+            0.961,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/1/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.208,
+            0.124,
+            0.37,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Method Overriding"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.154,
+            0.292,
+            0.169
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Which __str__ do we use?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.385,
+            0.151,
+            0.42,
+            0.163
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "object",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.133,
+            0.17,
+            0.289,
+            0.184
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Start at bottom class folder"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.348,
+            0.163,
+            0.408,
+            0.196
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self) _str__(self) _eq__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.134,
+            0.185,
+            0.295,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Find first method with name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.134,
+            0.2,
+            0.249,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Use that definition"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.372,
+            0.202,
+            0.424,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Employee",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.117,
+            0.217,
+            0.281,
+            0.247
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• New method definitions "
+            },
+            {
+              "type": "text",
+              "content": "override",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " those of parent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.353,
+            0.215,
+            0.424,
+            0.25
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,n,d,s) _str__(self) _eq__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.133,
+            0.247,
+            0.294,
+            0.263
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Access to old version is "
+            },
+            {
+              "type": "text",
+              "content": "lost",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.373,
+            0.257,
+            0.422,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Executive",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.134,
+            0.264,
+            0.282,
+            0.278
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ New version used instead"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.134,
+            0.279,
+            0.251,
+            0.295
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Example",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": __init__"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.354,
+            0.27,
+            0.423,
+            0.282
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "__init__(self,n,d,b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.354,
+            0.281,
+            0.404,
+            0.292
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_str__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.354,
+            0.292,
+            0.4,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_eq__(self)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 18,
+          "bbox": [
+            0.231,
+            0.405,
+            0.346,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "About super()"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.118,
+            0.434,
+            0.265,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• super() is very limited"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.292,
+            0.435,
+            0.46,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Need arguments for more"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.134,
+            0.451,
+            0.263,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Can only go one level"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.308,
+            0.451,
+            0.408,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ super(class,self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.134,
+            0.465,
+            0.26,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "BAD",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": super().super()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.124,
+            0.486,
+            0.165,
+            0.5
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "p "
+            },
+            {
+              "type": "text",
+              "content": "id2",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.309,
+            0.475,
+            0.381,
+            0.489
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The "
+            },
+            {
+              "type": "text",
+              "content": "subclass",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.395,
+            0.469,
+            0.459,
+            0.495
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Object in "
+            },
+            {
+              "type": "text",
+              "content": "the method",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.124,
+            0.514,
+            0.146,
+            0.525
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id2",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.155,
+            0.525,
+            0.185,
+            0.536
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Exec",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 29,
+          "bbox": [
+            0.121,
+            0.511,
+            0.449,
+            0.569
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 29,
+              "bbox": [
+                0.121,
+                0.511,
+                0.449,
+                0.569
+              ],
+              "image_path": "images/page_1_image_29.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.265,
+            0.515,
+            0.378,
+            0.529
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "super(Exec,self).__str__()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.208,
+            0.568,
+            0.47,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "p.__str__() super().__str__() super(Empl,self).__str__()"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 32,
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 33,
+          "bbox": [
+            0.123,
+            0.686,
+            0.453,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Instance Attributes are (Often) Inherited"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 34,
+          "bbox": [
+            0.576,
+            0.124,
+            0.846,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Accessing the “Previous” Method"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.54,
+            0.153,
+            0.709,
+            0.18
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• What if you want to use the original version method?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.723,
+            0.151,
+            0.81,
+            0.164
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Employee(object):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.729,
+            0.163,
+            0.849,
+            0.176
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"An Employee with a salary\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.556,
+            0.18,
+            0.712,
+            0.194
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ New method = original+more"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.729,
+            0.183,
+            0.802,
+            0.195
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __str__(self):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.144,
+            0.855,
+            0.212,
+            0.866
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "self._bonus = b"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.738,
+            0.194,
+            0.821,
+            0.205
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return (self._name +"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.766,
+            0.204,
+            0.871,
+            0.216
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "', year ' + str(self._start) +"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.766,
+            0.216,
+            0.876,
+            0.228
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "', salary ' + str(self._salary))"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.133,
+            0.83,
+            0.251,
+            0.843
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self,n,d,b=0.0):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.558,
+            0.194,
+            0.701,
+            0.217
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Do not want to repeat code from the original version"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.124,
+            0.715,
+            0.222,
+            0.727
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Employee(object):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.54,
+            0.217,
+            0.692,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Use the function super()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.808,
+            0.433,
+            0.845,
+            0.445
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "object",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.144,
+            0.844,
+            0.236,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "super().__init__(n,d)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.132,
+            0.736,
+            0.272,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self,n,d,s=50000.0): self._name = n self._start = d self._salary = s"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.722,
+            0.236,
+            0.825,
+            0.248
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Executive(Employee):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 52,
+          "bbox": [
+            0.556,
+            0.232,
+            0.718,
+            0.245
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ “Converts” type to parent class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.401,
+            0.821,
+            0.453,
+            0.853
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Created in "
+            },
+            {
+              "type": "text",
+              "content": "Executive",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " initializer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 54,
+          "bbox": [
+            0.578,
+            0.406,
+            0.844,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Primary Application: Initializers"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.764,
+            0.445,
+            0.815,
+            0.456
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.317,
+            0.808,
+            0.378,
+            0.821
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_bonus 0.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.125,
+            0.808,
+            0.239,
+            0.821
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Executive(Employee):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.556,
+            0.245,
+            0.709,
+            0.258
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Now methods go to the class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.729,
+            0.247,
+            0.851,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"An Employee with a bonus.\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.764,
+            0.455,
+            0.814,
+            0.466
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_str__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.406,
+            0.748,
+            0.458,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Created in "
+            },
+            {
+              "type": "text",
+              "content": "Employee",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " initializer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.766,
+            0.466,
+            0.811,
+            0.478
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_eq__(self)"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.548,
+            0.435,
+            0.645,
+            0.447
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Employee(object):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.796,
+            0.484,
+            0.847,
+            0.496
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Employee",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.319,
+            0.749,
+            0.383,
+            0.763
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "name 'Fred'"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 66,
+          "bbox": [
+            0.525,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.556,
+            0.457,
+            0.695,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self,n,d,s=50000.0):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 68,
+          "bbox": [
+            0.766,
+            0.497,
+            0.835,
+            0.508
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,n,d,s)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.316,
+            0.766,
+            0.382,
+            0.78
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_start 2012"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 70,
+          "bbox": [
+            0.765,
+            0.508,
+            0.814,
+            0.518
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_str__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.54,
+            0.259,
+            0.668,
+            0.286
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Example",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": super().__str__()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.568,
+            0.471,
+            0.633,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "self._name = n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.568,
+            0.494,
+            0.635,
+            0.505
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "self._salary = s"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.319,
+            0.783,
+            0.386,
+            0.796
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_salary 50000.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.568,
+            0.483,
+            0.632,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "self._start = d"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.582,
+            0.288,
+            0.646,
+            0.308
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In Python 2",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " "
+            },
+            {
+              "type": "text",
+              "content": "self goes here",
+              "styles": [
+                "bold",
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 77,
+          "bbox": [
+            0.729,
+            0.266,
+            0.8,
+            0.279
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __str__(self):"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.766,
+            0.519,
+            0.811,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_eq__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.738,
+            0.279,
+            0.839,
+            0.29
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return (super().__str__()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 80,
+          "bbox": [
+            0.765,
+            0.288,
+            0.882,
+            0.3
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "+ ', bonus ' + str(self._bonus) )"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 81,
+          "bbox": [
+            0.547,
+            0.528,
+            0.662,
+            0.541
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Executive(Employee):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 82,
+          "bbox": [
+            0.556,
+            0.548,
+            0.676,
+            0.586
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self,n,d,b=0.0): super().__init__(n,d) self._bonus = b"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 83,
+          "bbox": [
+            0.796,
+            0.539,
+            0.847,
+            0.551
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Executive",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.758,
+            0.551,
+            0.839,
+            0.585
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "_init__(self,n,d,b) _str__(self) _eq__(self)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 85,
+          "bbox": [
+            0.319,
+            0.72,
+            0.34,
+            0.732
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id4",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 86,
+          "bbox": [
+            0.354,
+            0.731,
+            0.405,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Executive",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 87,
+          "bbox": [
+            0.573,
+            0.686,
+            0.849,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Also Works With Class Attributes"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 88,
+          "bbox": [
+            0.551,
+            0.72,
+            0.865,
+            0.735
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Attribute",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Assigned outside of any method definition"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 89,
+          "bbox": [
+            0.554,
+            0.753,
+            0.699,
+            0.801
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Employee(object): \"\"\"Instance is salaried worker\"\"\" # Class Attribute STD_SALARY = 50000.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 90,
+          "bbox": [
+            0.814,
+            0.748,
+            0.851,
+            0.761
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "object",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 91,
+          "bbox": [
+            0.802,
+            0.786,
+            0.852,
+            0.799
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Employee",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 92,
+          "bbox": [
+            0.555,
+            0.811,
+            0.668,
+            0.823
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Executive(Employee):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 93,
+          "bbox": [
+            0.737,
+            0.805,
+            0.846,
+            0.818
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "STD_SALARY 50000.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 94,
+          "bbox": [
+            0.563,
+            0.823,
+            0.696,
+            0.835
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"An Employee with a bonus.\"\"”"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 95,
+          "bbox": [
+            0.563,
+            0.835,
+            0.639,
+            0.846
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Class Attribute"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 96,
+          "bbox": [
+            0.803,
+            0.831,
+            0.852,
+            0.844
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Executive",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 97,
+          "bbox": [
+            0.562,
+            0.846,
+            0.663,
+            0.859
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "STD_BONUS = 10000.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 98,
+          "bbox": [
+            0.737,
+            0.849,
+            0.844,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "STD_BONUS 10000.0"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 99,
+          "bbox": [
+            0.102,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 100,
+          "bbox": [
+            0.525,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 101,
+          "bbox": [
+            0.945,
+            0.963,
+            0.959,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

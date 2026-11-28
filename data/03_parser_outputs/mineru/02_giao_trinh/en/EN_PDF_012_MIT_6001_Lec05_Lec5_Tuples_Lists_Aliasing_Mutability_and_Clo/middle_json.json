@@ -1,0 +1,4150 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Tuples, Lists, Aliasing, Mutability, Cloning",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:52:27+05:30",
+      "modified_at": "2016-12-19T13:31:36+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 24,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.095,
+            0.17,
+            0.983,
+            0.557
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TUPLES, LISTS, ALIASING, MUTABILITY, CLONING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.097,
+            0.569,
+            0.819,
+            0.625
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(download slides and .py files and follow along!)",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.096,
+            0.655,
+            0.389,
+            0.703
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTU RE 5"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.959,
+            0.547,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.374,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LAST TIME"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.255,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "functions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.356,
+            0.604,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "decomposition – create structure"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.433,
+            0.551,
+            0.481
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "abstraction – suppress details"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.511,
+            0.714,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "from now on will be using functions a lot"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.161,
+            0.278,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TODAY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.94,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "have seen variable types: int, float, bool,string"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.355,
+            0.663,
+            0.405
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "introduce new "
+            },
+            {
+              "type": "text",
+              "content": "compound data types",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.415,
+            0.226,
+            0.46
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• tuples"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.473,
+            0.196,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• lists"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.549,
+            0.337,
+            0.601
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "idea of aliasing"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.088,
+            0.629,
+            0.375,
+            0.678
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "idea of mutability"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.088,
+            0.707,
+            0.333,
+            0.757
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "idea of cloning"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.087,
+            0.41,
+            0.975,
+            0.955
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.087,
+                0.41,
+                0.975,
+                0.955
+              ],
+              "content": "■ represented with parentheses\n    te = ( ) empty tuple\n    t = (2,\"mit\",3)\n    t[0] → evaluates to 2\n    (2,\"mit\",3) + (5,6) → evaluates to (2,\"mit\",3,5,6)\n    t[1:2] → slice tuple, evaluates to (\"mit\",)\n    t[1:3] → slice tuple, evaluates to (\"mit\",3)\n    len(t) → evaluates to 3\n    t[1] = 4 → gives error, can't modify object"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.097,
+            0.16,
+            0.296,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TUPLES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.273,
+            0.89,
+            0.319
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "an ordered sequence of elements, can mix element types"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.339,
+            0.695,
+            0.389
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "cannot change element values, "
+            },
+            {
+              "type": "text",
+              "content": "immutable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.833,
+            0.411,
+            0.905,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.833,
+                0.411,
+                0.905,
+                0.501
+              ],
+              "image_path": "images/page_4_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.097,
+            0.162,
+            0.297,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TUPLES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.272,
+            0.734,
+            0.321
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "conveniently used to "
+            },
+            {
+              "type": "text",
+              "content": "swap",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " variable values"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 3,
+          "bbox": [
+            0.118,
+            0.349,
+            0.211,
+            0.386
+          ],
+          "image_path": "images/page_4_equation_3.jpg",
+          "content": "\\mathrm{x} = \\mathrm{y}"
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.386,
+            0.345,
+            0.528,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.386,
+                0.345,
+                0.528,
+                0.385
+              ],
+              "content": "temp = x"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "equation",
+          "index": 5,
+          "bbox": [
+            0.691,
+            0.344,
+            0.938,
+            0.387
+          ],
+          "image_path": "images/page_4_equation_5.jpg",
+          "content": "(\\mathrm{x}, \\mathrm{y}) = (\\mathrm{y}, \\mathrm{x})"
+        },
+        {
+          "type": "equation",
+          "index": 6,
+          "bbox": [
+            0.118,
+            0.411,
+            0.211,
+            0.447
+          ],
+          "image_path": "images/page_4_equation_6.jpg",
+          "content": "\\mathrm{y} = \\mathrm{x}"
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.238,
+            0.432,
+            0.302,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.238,
+                0.432,
+                0.302,
+                0.512
+              ],
+              "image_path": "images/page_4_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 8,
+          "bbox": [
+            0.385,
+            0.411,
+            0.478,
+            0.448
+          ],
+          "image_path": "images/page_4_equation_8.jpg",
+          "content": "\\mathrm{x} = \\mathrm{y}"
+        },
+        {
+          "type": "equation",
+          "index": 9,
+          "bbox": [
+            0.386,
+            0.47,
+            0.527,
+            0.509
+          ],
+          "image_path": "images/page_4_equation_9.jpg",
+          "content": "\\mathrm{y} = \\mathrm{temp}"
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.086,
+            0.529,
+            0.885,
+            0.577
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "used to "
+            },
+            {
+              "type": "text",
+              "content": "return more than one value",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " from a function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.118,
+            0.602,
+            0.673,
+            0.642
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def quotient_and_remainder (x, y)"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 12,
+          "bbox": [
+            0.184,
+            0.646,
+            0.361,
+            0.721
+          ],
+          "image_path": "images/page_4_equation_12.jpg",
+          "content": "\\mathrm{q} = \\mathrm{x} \\boxed {/ /} \\mathrm{y}"
+        },
+        {
+          "type": "equation",
+          "index": 13,
+          "bbox": [
+            0.185,
+            0.725,
+            0.345,
+            0.765
+          ],
+          "image_path": "images/page_4_equation_13.jpg",
+          "content": "\\mathrm{r} = \\mathrm{x}\\% \\mathrm{y}"
+        },
+        {
+          "type": "equation",
+          "index": 14,
+          "bbox": [
+            0.185,
+            0.787,
+            0.405,
+            0.827
+          ],
+          "image_path": "images/page_4_equation_14.jpg",
+          "content": "\\text {return} (q, r)"
+        },
+        {
+          "type": "code",
+          "index": 15,
+          "bbox": [
+            0.124,
+            0.847,
+            0.804,
+            0.889
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 15,
+              "bbox": [
+                0.124,
+                0.847,
+                0.804,
+                0.889
+              ],
+              "content": "(quot, rem) = quotient_and_remainder(4,5)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.019,
+            0.125,
+            0.997,
+            0.937
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.019,
+                0.125,
+                0.997,
+                0.937
+              ],
+              "content": "aTuple: ( ( ), ( ), ( )) )\n■ can iterate over tuples\ndef get_data(aTuple):\n    nums = ()\n    words = ()\n    for t in aTuple:\n        nums = nums + (t[0],)\n        if t[1] not in words:\n            words = words + (t[1],)\n        min_n = min(nums)\n        max_n = max(nums)\n        unique_words = len(words)\n        return (min_n, max_n, unique_words)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.099,
+            0.053,
+            0.661,
+            0.123
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MANIPULATING TUPLES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 2,
+          "bbox": [
+            0.581,
+            0.116,
+            0.994,
+            0.614
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 2,
+              "bbox": [
+                0.581,
+                0.116,
+                0.994,
+                0.614
+              ],
+              "image_path": "images/page_5_image_2.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.235,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LISTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.903,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ordered sequence",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of information, accessible by index"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.354,
+            0.689,
+            0.405
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a list is denoted by "
+            },
+            {
+              "type": "text",
+              "content": "square brackets",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", []"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.433,
+            0.465,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a list contains "
+            },
+            {
+              "type": "text",
+              "content": "elements",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.491,
+            0.652,
+            0.539
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• usually homogeneous (ie, all integers)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.552,
+            0.668,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• can contain mixed types (not common)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.087,
+            0.629,
+            0.822,
+            0.678
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "list elements can be changed so a list is "
+            },
+            {
+              "type": "text",
+              "content": "mutable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.159,
+            0.741,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "INDICES AND ORDERING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.126,
+            0.257,
+            0.999,
+            0.93
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.126,
+                0.257,
+                0.999,
+                0.93
+              ],
+              "content": "a_list = []\nempty list\nL = [2, 'a', 4, [1,2]]\nlen(L) → evaluates to 4\nL[0] → evaluates to 2\nL[2]+1 → evaluates to 5\nL[3] → evaluates to [1,2], another list!\nL[4] → gives an error\ni = 2\nL[i-1] → evaluates to 'a' since L[1]='a' above"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.898,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.16,
+            0.693,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CHANGING ELEMENTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.277,
+            0.375,
+            0.324
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "lists are "
+            },
+            {
+              "type": "text",
+              "content": "mutable",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.355,
+            0.905,
+            0.406
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "assigning to an element at an index changes the value"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 3,
+          "bbox": [
+            0.127,
+            0.432,
+            0.412,
+            0.483
+          ],
+          "image_path": "images/page_8_equation_3.jpg",
+          "content": "\\mathsf {L} = [ 2, 1, 3 ]"
+        },
+        {
+          "type": "equation",
+          "index": 4,
+          "bbox": [
+            0.128,
+            0.509,
+            0.311,
+            0.559
+          ],
+          "image_path": "images/page_8_equation_4.jpg",
+          "content": "L [ 1 ] = 5"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.086,
+            0.588,
+            0.9,
+            0.639
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "L is now [2, 5, 3], note this is the "
+            },
+            {
+              "type": "text",
+              "content": "same object",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " L"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.167,
+            0.655,
+            0.612,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.167,
+                0.655,
+                0.612,
+                0.952
+              ],
+              "image_path": "images/page_8_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.898,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.161,
+            0.708,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ITERATING OVER A LIST"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.277,
+            0.679,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "compute the "
+            },
+            {
+              "type": "text",
+              "content": "sum of elements",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of a list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.355,
+            0.748,
+            0.406
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "common pattern, iterate over list elements"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.092,
+            0.439,
+            0.518,
+            0.691
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.092,
+                0.439,
+                0.518,
+                0.691
+              ],
+              "content": "total = 0\n    for i in range(len(L)):\n        total += L[i]\n    print total"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.723,
+            0.211,
+            0.766
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "notice"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.106,
+            0.782,
+            0.722,
+            0.828
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• list elements are indexed 0 to len (L) - 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.106,
+            0.848,
+            0.587,
+            0.894
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• range (n) goes from 0 to n-1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.159,
+            0.85,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OPERATIONS ON LISTS - ADD"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.261,
+            0.952,
+            0.311
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "add",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " elements to end of list with L.append(element)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.339,
+            0.36,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "mutates the list!"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.399,
+            0.698,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.121,
+                0.399,
+                0.698,
+                0.597
+              ],
+              "content": "L = [2, 1, 3]\nL.append(5) → L is now [2, 1, 3, 5]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "javascript"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.603,
+            0.355,
+            0.649
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "what is the dot?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.106,
+            0.661,
+            0.913,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• lists are Python objects, everything in Python is an object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.721,
+            0.381,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• objects have data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.107,
+            0.779,
+            0.633,
+            0.825
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• objects have methods and functions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.107,
+            0.841,
+            0.928,
+            0.887
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• access this information by object_name.do_something()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.107,
+            0.898,
+            0.588,
+            0.943
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• will learn more about these later"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.99
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.081,
+            0.551,
+            0.982,
+            0.886
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.081,
+                0.551,
+                0.982,
+                0.886
+              ],
+              "content": "L1 = [2, 1, 3]\nL2 = [4, 5, 6]\nL3 = L1 + L2\nL1.extend([0, 6])\n→ L3 is [2, 1, 3, 4, 5, 6]\nL1, L2 unchanged\n→ mutated L1 to [2, 1, 3, 0, 6]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.097,
+            0.159,
+            0.85,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OPERATIONS ON LISTS - ADD"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.277,
+            0.942,
+            0.38
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "to combine lists together use "
+            },
+            {
+              "type": "text",
+              "content": "concatenation",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", + operator, to give you a new list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.407,
+            0.764,
+            0.46
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "mutate",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " list with L.extend(some_list)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.891,
+            0.968,
+            0.912,
+            0.99
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.069,
+            0.719,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OPERATIONS ON LISTS - REMOVE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.275,
+            0.899,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "delete element at a "
+            },
+            {
+              "type": "text",
+              "content": "specific index",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " with del(L[index])"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.351,
+            0.9,
+            0.444
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "remove element at "
+            },
+            {
+              "type": "text",
+              "content": "end of list",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " with L.pop(), returns the removed element"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.473,
+            0.882,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "remove a "
+            },
+            {
+              "type": "text",
+              "content": "specific element",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " with L.remove(element)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.527,
+            0.602,
+            0.569
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• looks for the element and removes it"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.106,
+            0.583,
+            0.863,
+            0.625
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• if element occurs multiple times, removes first occurrence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.107,
+            0.638,
+            0.576,
+            0.681
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• if element not in list, gives an error"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.015,
+            0.72,
+            0.134,
+            0.9
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Il these anceration mutate the list"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.175,
+            0.711,
+            0.907,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.175,
+                0.711,
+                0.907,
+                0.933
+              ],
+              "content": "L = [2,1,3,6,3,7,0] # do below in order\nL.remove(2) → mutates L = [1,3,6,3,7,0]\nL.remove(3) → mutates L = [1,6,3,7,0]\ndel(L[1]) → mutates L = [1,3,7,0]\nL.pop() → returns 0 and mutates L = [1,3,7]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.067,
+            0.828,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CONVERT LISTS TO STRINGS AND BACK"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.276,
+            0.939,
+            0.371
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "convert "
+            },
+            {
+              "type": "text",
+              "content": "string to list",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " with list(s), returns a list with every character from s an element in L"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.399,
+            0.985,
+            0.495
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can use s.split(), to "
+            },
+            {
+              "type": "text",
+              "content": "split a string on a character",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " parameter, splits on spaces if called without a parameter"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.52,
+            0.977,
+            0.617
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use ''.join(L) to turn a "
+            },
+            {
+              "type": "text",
+              "content": "list of characters into a string",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", can give a character in quotes to add char between every element"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.034,
+            0.635,
+            0.981,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.034,
+                0.635,
+                0.981,
+                0.931
+              ],
+              "content": "s = \"I<3 cs\"          → s is a string\nlist(s)                  → returns ['I', '<', '3', ' ', 'c', 's']\ns.split('<')           → returns ['I', '3 cs']\nL = ['a','b','c']  → L is a list\n''.join(L)               → returns \"abc\"\n''.join(L)               → returns \"a_b_c\""
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.16,
+            0.751,
+            0.237
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OTHER LIST OPERATIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.277,
+            0.5,
+            0.328
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "sort() and sorted()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.356,
+            0.306,
+            0.405
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "reverse()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.431,
+            0.914,
+            0.539
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "and many more! "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://docs.python.org/3/tutorial/datastructures.html",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://docs.python.org/3/tutorial/datastructures.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.083,
+            0.635,
+            1.0,
+            0.929
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.083,
+                0.635,
+                1.0,
+                0.929
+              ],
+              "content": "L=[9, 6, 0, 3]\nsorted(L)          → returns sorted list, does not mutate L\nL.sort()           → mutates L=[0, 3, 6, 9]\nL.reverse()      → mutates L=[9, 6, 3, 0]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.451,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.158,
+            0.938,
+            0.241
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MUTATION, ALIASING, CLONING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.223,
+            0.373,
+            0.507,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "IMPORTANT and TRICKY!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.084,
+            0.704,
+            0.891,
+            0.836
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Again, Python Tutor is your best friend to help sort this out!",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.857,
+            0.71,
+            0.927
+          ],
+          "content": [
+            {
+              "type": "hyperlink",
+              "url": "http://www.pythontutor.com/",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "http://www.pythontutor.com/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.16,
+            0.574,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LISTS IN MEMORY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.362,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "lists are "
+            },
+            {
+              "type": "text",
+              "content": "mutable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.354,
+            0.714,
+            0.405
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "behave differently than immutable types"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.434,
+            0.454,
+            0.483
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "is an object in memory"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.511,
+            0.565,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "variable name points to object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.589,
+            0.788,
+            0.639
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "any variable pointing to that object is affected"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.088,
+            0.666,
+            0.894,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "key phrase to keep in mind when working with lists is "
+            },
+            {
+              "type": "text",
+              "content": "side effects",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.159,
+            0.453,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "AN ANALOGY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.434,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "attributes of a person"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.108,
+            0.336,
+            0.289,
+            0.384
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ singer, rich"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.413,
+            0.53,
+            0.464
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "he is known by many names"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.491,
+            0.696,
+            0.541
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "all nicknames point to the "
+            },
+            {
+              "type": "text",
+              "content": "same person",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.551,
+            0.653,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• add new attribute to "
+            },
+            {
+              "type": "text",
+              "content": "one nickname",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " …"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.221,
+            0.626,
+            0.882,
+            0.69
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Justin Bieber "
+            },
+            {
+              "type": "text",
+              "content": "singer",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " rich "
+            },
+            {
+              "type": "text",
+              "content": "troublemaker",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.107,
+            0.727,
+            0.944,
+            0.775
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• … "
+            },
+            {
+              "type": "text",
+              "content": "all his nicknames",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " refer to old attributes AND all new ones"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.252,
+            0.804,
+            0.378,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Bieb"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.44,
+            0.809,
+            0.529,
+            0.856
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "singer",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.581,
+            0.806,
+            0.637,
+            0.853
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "rich"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.689,
+            0.806,
+            0.881,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "troublemaker",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.265,
+            0.889,
+            0.366,
+            0.937
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "JBeebs"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.441,
+            0.893,
+            0.528,
+            0.939
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "singer",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.581,
+            0.89,
+            0.637,
+            0.935
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "rich"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.689,
+            0.889,
+            0.881,
+            0.937
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "troublemaker",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.16,
+            0.308,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ALIASES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.276,
+            0.893,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "hot is an "
+            },
+            {
+              "type": "text",
+              "content": "alias",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for warm – changing one changes the other!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.407,
+            0.534,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "append() has a side effect"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.015,
+            0.511,
+            0.415,
+            0.88
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.015,
+                0.511,
+                0.415,
+                0.88
+              ],
+              "content": "a = 1\nb = a\nprint(a)\nprint(b)\n\nwarm = ['red', 'yellow', 'orange']\nhot = warm\nhot.append('pink')\nprint(hot)\nprint(warm)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.448,
+            0.509,
+            0.993,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.448,
+                0.509,
+                0.993,
+                0.925
+              ],
+              "image_path": "images/page_18_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.161,
+            0.515,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CLONING A LIST"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.278,
+            0.808,
+            0.377
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "create a new list and copy every element using chill = cool[:]"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.017,
+            0.496,
+            0.389,
+            0.684
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.017,
+                0.496,
+                0.389,
+                0.684
+              ],
+              "content": "cool = ['blue', 'green', 'grey']\nchill = cool[:]\nchill.append('black')\nprint(chill)\nprint(cool)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "lua"
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.408,
+            0.49,
+            1.0,
+            0.901
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.408,
+                0.49,
+                1.0,
+                0.901
+              ],
+              "image_path": "images/page_19_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.422,
+            0.524,
+            0.987,
+            0.95
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.422,
+                0.524,
+                0.987,
+                0.95
+              ],
+              "content": "Global frame\nwarm\nsortedwarm\ncool\nsortedcool\nNone\nlist\n0\n\"orange\"\n1\n\"red\"\n2\n\"yellow\"\nlist\n0\n\"grey\"\n1\n\"green\"\n2\n\"blue\"\nlist\n0\n\"blue\"\n1\n\"green\"\n2\n\"grey\""
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "csv"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.097,
+            0.159,
+            0.486,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SORTING LISTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.276,
+            0.848,
+            0.328
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "calling sort() "
+            },
+            {
+              "type": "text",
+              "content": "mutates",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " the list, returns nothing"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.353,
+            0.383,
+            0.561
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "calling sorted() "
+            },
+            {
+              "type": "text",
+              "content": "does not mutate",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " list, must assign result to a variable"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.422,
+            0.342,
+            0.887,
+            0.507
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.422,
+                0.342,
+                0.887,
+                0.507
+              ],
+              "content": "['orange', 'red', 'yellow']\nNone\n['grey', 'green', 'blue']\n['blue', 'green', 'grey']"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.013,
+            0.578,
+            0.407,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.013,
+                0.578,
+                0.407,
+                0.907
+              ],
+              "content": "warm = ['red', 'yellow', 'orange']\nsortedwarm = warm.sort()\nprint(warm)\nprint(sortedwarm)\n\ncool = ['grey', 'green', 'blue']\nsortedcool = sorted(cool)\nprint(cool)\nprint(sortedcool)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.159,
+            0.85,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LISTS OF LISTS OF LISTS OF…."
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.278,
+            0.42,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can have nested lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.355,
+            0.445,
+            0.458
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "side effects still possible after mutation"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.069,
+            0.575,
+            0.392,
+            0.871
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.069,
+                0.575,
+                0.392,
+                0.871
+              ],
+              "content": "warm = ['yellow', 'orange']\nhot = ['red']\nbrightcolors = [warm]\nbrightcolors.append(hot)\nprint(brightcolors)\nhot.append('pink')\nprint(hot)\nprint(brightcolors)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.462,
+            0.368,
+            0.842,
+            0.466
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.462,
+                0.368,
+                0.842,
+                0.466
+              ],
+              "content": "[['yellow', 'orange'], ['red']]\n['red', 'pink']\n[['yellow', 'orange'], ['red', 'pink']]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.511,
+            0.971,
+            0.946
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.456,
+                0.511,
+                0.971,
+                0.946
+              ],
+              "image_path": "images/page_21_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.066,
+            0.812,
+            0.243
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MUTATION AND ITERATION Try this in Python Tutor!"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.05,
+            0.275,
+            0.718,
+            0.321
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "avoid",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " mutating a list as you are iterating over it"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 2,
+          "bbox": [
+            0.051,
+            0.457,
+            0.112,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 2,
+              "bbox": [
+                0.051,
+                0.457,
+                0.112,
+                0.531
+              ],
+              "image_path": "images/page_22_image_2.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.05,
+            0.328,
+            0.436,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.05,
+                0.328,
+                0.436,
+                0.534
+              ],
+              "content": "def remove_dups(L1, L2):\n    for e in L1:\n        if e in L2:\n            L1.remove(e)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.049,
+            0.562,
+            0.354,
+            0.699
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.049,
+                0.562,
+                0.354,
+                0.699
+              ],
+              "content": "L1 = [1, 2, 3, 4]\nL2 = [1, 2, 5, 6]\nremove_dups(L1, L2)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.535,
+            0.446,
+            0.606,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.535,
+                0.446,
+                0.606,
+                0.535
+              ],
+              "image_path": "images/page_22_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.537,
+            0.324,
+            0.93,
+            0.537
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.537,
+                0.324,
+                0.93,
+                0.537
+              ],
+              "content": "def remove_dups(L1, L2):\n    L1_copy = L1[:]\n    for e in L1_copy:\n        if e in L2:\n            L1.remove(e)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.05,
+            0.719,
+            0.593,
+            0.767
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.05,
+                0.719,
+                0.593,
+                0.767
+              ],
+              "content": "■ L1 is [2, 3, 4] not [3, 4] Why?"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "equation",
+          "index": 8,
+          "bbox": [
+            0.709,
+            0.562,
+            0.945,
+            0.735
+          ],
+          "image_path": "images/page_22_equation_8.jpg",
+          "content": "\\begin{array}{l} \\text {clone list first, note} \\\\ \\text {that L1\\_copy = L1} \\\\ \\text {does NOT clone} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.07,
+            0.775,
+            0.967,
+            0.82
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Python uses an internal counter to keep track of index it is in the loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.07,
+            0.831,
+            0.994,
+            0.875
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• mutating changes the list length but Python doesn’t update the counter"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.07,
+            0.886,
+            0.434,
+            0.929
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• loop never sees element 2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT OpenCourseWare "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For information about citing these materials or our Terms of Use, visit: "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/terms",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu/terms"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

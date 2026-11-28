@@ -1,0 +1,2273 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.403,
+            0.525,
+            0.609
+          ],
+          "level": 2,
+          "content": "Lecture 13: Classification"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.959,
+            0.55,
+            0.977
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.96,
+            0.911,
+            0.979
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.038,
+            0.415,
+            0.093
+          ],
+          "level": 2,
+          "content": "Announcements"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.175,
+            0.226,
+            0.224
+          ],
+          "level": 2,
+          "content": "Reading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.234,
+            0.282,
+            0.279
+          ],
+          "content": "◦ Chapter 24"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.292,
+            0.591,
+            0.34
+          ],
+          "content": "◦ Section 5.3.2 (list comprehension)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.372,
+            0.385,
+            0.417
+          ],
+          "level": 2,
+          "content": "Course evaluations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.429,
+            0.767,
+            0.521
+          ],
+          "content": "◦ Online evaluation now through noon on Friday, December 16"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.968,
+            0.911,
+            0.987
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.484,
+            0.1
+          ],
+          "level": 2,
+          "content": "Supervised Learning"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.177,
+            0.265,
+            0.223
+          ],
+          "level": 2,
+          "content": "Regression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.234,
+            0.864,
+            0.278
+          ],
+          "content": "◦ Predict a real number associated with a feature vector"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.293,
+            0.758,
+            0.34
+          ],
+          "content": "◦ E.g., use linear regression to fit a curve to data"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.371,
+            0.299,
+            0.419
+          ],
+          "level": 2,
+          "content": "Classification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.429,
+            0.884,
+            0.521
+          ],
+          "content": "◦ Predict a discrete value (label) associated with a feature vector"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.812,
+            0.099
+          ],
+          "level": 2,
+          "content": "An Example (similar to earlier lecture)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.131,
+            0.85,
+            0.169
+          ],
+          "content": "Label"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.061,
+            0.193,
+            0.903,
+            0.916
+          ],
+          "content": "| Name | Egg-laying | Scales | Poisonous | Cold-blooded | Number legs | Reptile |\n| --- | --- | --- | --- | --- | --- | --- |\n| Cobra | 1 | 1 | 1 | 1 | 0 | 1 |\n| Rattlesnake | 1 | 1 | 1 | 1 | 0 | 1 |\n| Boa | 0 | 1 | 0 | 1 | 0 | 1 |\n| constrictor |  |  |  |  |  |  |\n| Chicken | 1 | 1 | 0 | 1 | 2 | 0 |\n| Guppy | 0 | 1 | 0 | 0 | 0 | 0 |\n| Dart frog | 1 | 0 | 1 | 0 | 4 | 0 |\n| Zebra | 0 | 0 | 0 | 0 | 4 | 0 |\n| Python | 1 | 1 | 0 | 1 | 0 | 1 |\n| Alligator | 1 | 1 | 0 | 1 | 4 | 1 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_table_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.549,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.969,
+            0.91,
+            0.987
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.035,
+            0.399,
+            0.093
+          ],
+          "level": 2,
+          "content": "Distance Matrix"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.037,
+            0.153,
+            0.949,
+            0.749
+          ],
+          "content": "|  | cobra | rattlesnake | boa constrictor | chicken | guppy | dart frog | zebra | python | alligator |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| cobra | - | 0.0 | 1.414 | 2.236 | 1.732 | 1.732 | 2.236 | 1.0 | 1.414 |\n| rattlesnake | 0.0 | -- | 1.414 | 2.236 | 1.732 | 1.732 | 2.236 | 1.0 | 1.414 |\n| boa constrictor | 1.414 | 1.414 | -- | 2.236 | 1.0 | 2.236 | 1.732 | 1.0 | 1.414 |\n| chicken | 2.236 | 2.236 | 2.236 | -- | 2.449 | 2.0 | 2.0 | 2.0 | 1.0 |\n| guppy | 1.732 | 1.732 | 1.0 | 2.449 | -- | 2.0 | 1.414 | 1.414 | 1.732 |\n| dart frog | 1.732 | 1.732 | 2.236 | 2.0 | 2.0 | -- | 1.414 | 2.0 | 1.732 |\n| zebra | 2.236 | 2.236 | 1.732 | 2.0 | 1.414 | 1.414 | -- | 2.0 | 1.732 |\n| python | 1.0 | 1.0 | 1.0 | 2.0 | 1.414 | 2.0 | 2.0 | -- | 1.0 |\n| alligator | 1.414 | 1.414 | 1.414 | 1.0 | 1.732 | 1.732 | 1.732 | 1.0 | -- |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.269,
+            0.816,
+            0.767,
+            0.864
+          ],
+          "level": 2,
+          "content": "Code for producing this table posted"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.835,
+            0.099
+          ],
+          "level": 2,
+          "content": "Using Distance Matrix for Classification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.177,
+            0.805,
+            0.229
+          ],
+          "content": "Simplest approach is probably nearest neighbor"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.256,
+            0.464,
+            0.305
+          ],
+          "content": "Remember training data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.332,
+            0.757,
+            0.5
+          ],
+          "content": "When predicting the label of a new example ◦ Find the nearest example in the training data ◦ Predict the label associated with that example"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.395,
+            0.507,
+            0.895,
+            0.872
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.968,
+            0.912,
+            0.987
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.036,
+            0.399,
+            0.091
+          ],
+          "level": 2,
+          "content": "Distance Matrix"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.036,
+            0.192,
+            0.971,
+            0.767
+          ],
+          "content": "<table><tr><td></td><td>cobra</td><td>rattlesnake</td><td>boa constrictor</td><td>chicken</td><td>guppy</td><td>dart frog</td><td>zebra</td><td>python</td><td>alligator</td><td>Label</td></tr><tr><td>cobra</td><td>--</td><td>0.0</td><td>1.414</td><td>2.236</td><td>1.732</td><td>1.732</td><td>2.236</td><td>1.0</td><td>1.414</td><td>R</td></tr><tr><td>rattlesnake</td><td>0.0</td><td>--</td><td>1.414</td><td>2.236</td><td>1.732</td><td>1.732</td><td>2.236</td><td>1.0</td><td>1.414</td><td>R</td></tr><tr><td>boa constrictor</td><td>1.414</td><td>1.414</td><td>--</td><td>2.236</td><td>1.0</td><td>2.236</td><td>1.732</td><td>1.0</td><td>1.414</td><td>R</td></tr><tr><td>chicken</td><td>2.236</td><td>2.236</td><td>2.236</td><td>--</td><td>2.449</td><td>2.0</td><td>2.0</td><td>2.0</td><td>1.0</td><td>~R</td></tr><tr><td>guppy</td><td>1.732</td><td>1.732</td><td>1.0</td><td>2.449</td><td>--</td><td>2.0</td><td>1.414</td><td>1.414</td><td>1.732</td><td>~R</td></tr><tr><td>dart frog</td><td>1.732</td><td>1.732</td><td>2.236</td><td>2.0</td><td>2.0</td><td>--</td><td>1.414</td><td>2.0</td><td>1.732</td><td>~R</td></tr><tr><td>zebra</td><td>2.236</td><td>2.236</td><td>1.732</td><td>2.0</td><td>1.414</td><td>1.414</td><td rowspan=\"3\" colspan=\"4\"></td></tr><tr><td>python</td><td>1.0</td><td>1.0</td><td>1.0</td><td>2.0</td><td>1.414</td><td>2.0</td></tr><tr><td>alligator</td><td>1.414</td><td>1.414</td><td>1.414</td><td>1.0</td><td>1.732</td><td>1.732</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.91,
+            0.987
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.034,
+            0.325,
+            0.099
+          ],
+          "level": 2,
+          "content": "An Example"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.134,
+            0.174,
+            0.756,
+            0.732
+          ],
+          "content": "\\begin{array}{ccccccccccccc}0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\ 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\ 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 \\\\ 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 \\\\ 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 \\\\ 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 \\\\ 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 \\\\ 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 \\\\ 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 \\\\ 9 & 9 & 9 & 9 & 9 & 9 & 9 & \\boxed {9} & 9 & 9 & 9 & 9 \\end{array}",
+          "image_source": "images/page_7_equation_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.487,
+            0.099
+          ],
+          "level": 2,
+          "content": "K-nearest Neighbors"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.08,
+            0.251,
+            0.81,
+            0.723
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.034,
+            0.325,
+            0.099
+          ],
+          "level": 2,
+          "content": "An Example"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.134,
+            0.171,
+            0.765,
+            0.733
+          ],
+          "content": "\\begin{array}{ccccccccc}0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\ 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\\\ 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 \\\\ 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 \\\\ 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 \\\\ 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 \\\\ 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 \\\\ 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 \\\\ 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 \\\\ 9 & 9 & 9 & 9 & 9 & 9 & 9 & 9 & 9 & 9 & 9 & 9 \\end{array}",
+          "image_source": "images/page_9_equation_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.912,
+            0.987
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.83,
+            0.1
+          ],
+          "level": 2,
+          "content": "Advantages and Disadvantages of KNN"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.176,
+            0.278,
+            0.223
+          ],
+          "level": 2,
+          "content": "Advantages"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.234,
+            0.574,
+            0.281
+          ],
+          "content": "◦ Learning fast, no explicit training"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.293,
+            0.393,
+            0.339
+          ],
+          "content": "◦ No theory required"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.351,
+            0.603,
+            0.398
+          ],
+          "content": "◦ Easy to explain method and results"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.431,
+            0.319,
+            0.478
+          ],
+          "level": 2,
+          "content": "Disadvantages"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.488,
+            0.874,
+            0.595
+          ],
+          "content": "◦ Memory intensive and predictions can take a long time ◦ Are better algorithms than brute force"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.607,
+            0.868,
+            0.655
+          ],
+          "content": "◦ No model to shed light on process that generated data"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.035,
+            0.472,
+            0.093
+          ],
+          "level": 2,
+          "content": "The Titanic Disaster"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.89,
+            0.381
+          ],
+          "content": "RMS Titanic sank in the North Atlantic the morning of 15 April 1912, after colliding with an iceberg. Of the 1,300 passengers aboard, 812 died. (703 of 918 crew members died.)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.409,
+            0.533,
+            0.458
+          ],
+          "content": "Database of 1046 passengers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.468,
+            0.281,
+            0.511
+          ],
+          "content": "◦ Cabin class"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.126,
+            0.522,
+            0.272,
+            0.566
+          ],
+          "sub_type": "algorithm",
+          "content": "◦ 1 $^{st}$ , 2 $^{nd}$ , 3 $^{rd}$",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.58,
+            0.184,
+            0.625
+          ],
+          "content": "◦ Age"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.637,
+            0.235,
+            0.68
+          ],
+          "content": "◦ Gender"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.465,
+            0.1
+          ],
+          "level": 2,
+          "content": "Is Accuracy Enough"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.764,
+            0.277
+          ],
+          "content": "If we predict “died”, accuracy will be >62% or passenger and >76% for crew members"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.305,
+            0.87,
+            0.411
+          ],
+          "content": "Consider a disease that occurs in 0.1% of population ◦ Predicting disease-free has an accuracy of 0.999"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.367,
+            0.094
+          ],
+          "level": 2,
+          "content": "Other Metrics"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.137,
+            0.173,
+            0.769,
+            0.283
+          ],
+          "content": "s e n s i t i v i t y = \\frac {\\text {true positive}}{\\text {true positive} + \\text {false negative}}",
+          "image_source": "images/page_13_equation_1.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.137,
+            0.33,
+            0.768,
+            0.439
+          ],
+          "content": "s p e c i f i c i t y = \\frac {\\text {true negative}}{\\text {true negative} + \\text {false positive}}",
+          "image_source": "images/page_13_equation_2.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.138,
+            0.497,
+            0.888,
+            0.598
+          ],
+          "content": "p o s i t i v e p r e d i c t i v e v a l u e = \\frac {t r u e p o s i t i v e}{t r u e p o s i t i v e + f a l s e p o s i t i v e}",
+          "image_source": "images/page_13_equation_3.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.137,
+            0.635,
+            0.895,
+            0.73
+          ],
+          "content": "n e g a t i v e p r e d i c t i v e v a l u e = \\frac {t r u e n e g a t i v e}{t r u e n e g a t i v e + f a l s e n e g a t i v e}",
+          "image_source": "images/page_13_equation_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.303,
+            0.769,
+            0.564,
+            0.818
+          ],
+          "content": "sensitivity = recall"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.303,
+            0.823,
+            0.611,
+            0.873
+          ],
+          "content": "specificity = precision"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.551,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.66,
+            0.1
+          ],
+          "level": 2,
+          "content": "Testing Methodology Matters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.179,
+            0.32,
+            0.219
+          ],
+          "content": "Leave-one-out"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.253,
+            0.562,
+            0.303
+          ],
+          "content": "Repeated random subsampling"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.04,
+            0.378,
+            0.092
+          ],
+          "level": 2,
+          "content": "Leave-one-out"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.093,
+            0.173,
+            0.94,
+            0.765
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef leaveOneOut(examples, method, toPrint = True):\n    truePos, falsePos, trueNeg, falseNeg = 0, 0, 0, 0\n    for i in range(len(examples)):\n        testcase = examples[i]\n        trainingData = examples[0:i] + examples[i+1:]\n        results = method(trainingData, [testCase])\n        truePos += results[0]\n        falsePos += results[1]\n        trueNeg += results[2]\n        falseNeg += results[3]\n    if toPrint:\n        getStats(truePos, falsePos, trueNeg, falseNeg)\n    return truePos, falsePos, trueNeg, falseNeg\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.706,
+            0.101
+          ],
+          "level": 2,
+          "content": "Repeated Random Subsampling"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.093,
+            0.171,
+            0.931,
+            0.612
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef split80_20(examples):\n    sampleIndices = random.sample(range(len(examples)),\n                          len(examples)//5)\n    trainingSet, testSet = [], []\n    for i in range(len(examples)):\n        if i in sampleIndices:\n            testSet.append(examples[i])\n        else:\n            trainingSet.append(examples[i])\n    return trainingSet, testSet\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.91,
+            0.987
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.706,
+            0.101
+          ],
+          "level": 2,
+          "content": "Repeated Random Subsampling"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.159,
+            0.929,
+            0.745
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef randomSplits(examples, method, numSplits, toPrint = True):\n    truePos, falsePos, trueNeg, falseNeg = 0, 0, 0, 0\n    random.seed(0)\n    for t in range(numSplits):\n        trainingSet, testSet = split80_20(examples)\n        results = method(trainingSet, testSet)\n        truePos += results[0]\n        falsePos += results[1]\n        trueNeg += results[2]\n        falseNeg += results[3]\n    getStats(truePos/numSplits, falsePos/numSplits,\n            trueNeg/numSplits, falseNeg/numSplits, toPrint)\n    return truePos/numSplits, falsePos/numSplits,\\\n        trueNeg/numSplits, falseNeg/numSplits\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.033,
+            0.349,
+            0.101
+          ],
+          "level": 2,
+          "content": "Let’s Try KNN"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.069,
+            0.153,
+            0.968,
+            0.943
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef KNearestClassify(training, testSet, label, k):\n    \"\"\"Assumes training & testSet lists of examples, k an int\n    Predicts whether each example in testSet has label\n    Returns number of true positives, false positives,\n    true negatives, and false negatives\"\"\"\nknn = lambda training, testSet:\\\n    KNearestClassify(training, testSet,\n        'Survived', 3)\nnumSplits = 10\nprint('Average of', numSplits,\n    '80/20 splits using KNN (k=3)')\ntruePos, falsePos, trueNeg, falseNeg =\\\n    randomSplits(examples, knn, numSplits)\n\nprint('Average of LOO testing using KNN (k=3)')\ntruePos, falsePos, trueNeg, falseNeg =\\\n    leaveOneOut(examples, knn)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.968,
+            0.55,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.236,
+            0.095
+          ],
+          "level": 2,
+          "content": "Results"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.065,
+            0.13,
+            0.692,
+            0.707
+          ],
+          "sub_type": "code",
+          "content": "```txt\nAverage of 10 80/20 splits using KNN (k=3)\nAccuracy = 0.766\nSensitivity = 0.67\nSpecificity = 0.836\nPos. Pred. Val. = 0.747\nAverage of LOO testing using KNN (k=3)\nAccuracy = 0.769\nSensitivity = 0.663\nSpecificity = 0.842\nPos. Pred. Val. = 0.743\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.185,
+            0.758,
+            0.822,
+            0.907
+          ],
+          "content": "Considerably better than 62% Not much difference between experiments"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.55,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.456,
+            0.101
+          ],
+          "level": 2,
+          "content": "Logistic Regression"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.139,
+            0.515,
+            0.185
+          ],
+          "level": 2,
+          "content": "Analogous to linear regression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.212,
+            0.904,
+            0.373
+          ],
+          "content": "Designed explicitly for predicting probability of an event ◦ Dependent variable can only take on a finite set of values ◦ Usually 0 or 1"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.405,
+            0.513,
+            0.449
+          ],
+          "level": 2,
+          "content": "Finds weights for each feature"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.459,
+            0.806,
+            0.551
+          ],
+          "content": "◦ Positive implies variable positively correlated with outcome"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.567,
+            0.83,
+            0.659
+          ],
+          "content": "◦ Negative implies variable negatively correlated with outcome"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.674,
+            0.908,
+            0.721
+          ],
+          "content": "◦ Absolute magnitude related to strength of the correlation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.751,
+            0.844,
+            0.847
+          ],
+          "content": "Optimization problem a bit complex, key is use of a log function—won’t make you look at it"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.968,
+            0.55,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.91,
+            0.988
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.55,
+            0.101
+          ],
+          "level": 2,
+          "content": "Class LogisticRegression"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.209,
+            0.161,
+            0.735,
+            0.213
+          ],
+          "level": 2,
+          "content": "import sklearn.linear\\_model"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.102,
+            0.276,
+            0.828,
+            0.433
+          ],
+          "content": "fit(sequence of feature vectors, sequence of labels) Returns object of type LogisticRegression coef\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.102,
+            0.437,
+            0.564,
+            0.593
+          ],
+          "content": "Returns weights of features predict\\_proba(feature vector) Returns probabilities of labels"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.968,
+            0.911,
+            0.987
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.033,
+            0.418,
+            0.1
+          ],
+          "level": 2,
+          "content": "Building a Model"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.186,
+            0.981,
+            0.607
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef buildModel(examples, toPrint = True):\n    featureVecs, labels = [],[]\n    for e in examples:\n        featureVecs.append(e.getFeatures())\n        labels.append(e.getLabel())\n    LogisticRegression = sklearn.linear_model.LogisticRegression\n    model = LogisticRegression().fit(featureVecs, labels)\n    if toPrint:\n        ...\n    return model\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.399,
+            0.102
+          ],
+          "level": 2,
+          "content": "Applying Model"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.019,
+            0.177,
+            0.92,
+            0.869
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef applyModel(model, testSet, label, prob = 0.5):\n    testFeatureVecs = [e.getFeatures() for e in testSet]\n    probs = model.predict_proba(testFeatureVecs)\n    truePos, falsePos, trueNeg, falseNeg = 0, 0, 0, 0\n    for i in range(len(probs)):\n        if probs[i][1] > prob:\n            if testSet[i].getLabel() == label:\n                truePos += 1\n            else:\n                falsePos += 1\n        else:\n            if testSet[i].getLabel() != label:\n                trueNeg += 1\n            else:\n                falseNeg += 1\n    return truePos, falsePos, trueNeg, falseNeg\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.91,
+            0.987
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.477,
+            0.101
+          ],
+          "level": 2,
+          "content": "List Comprehension"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.098,
+            0.188,
+            0.346,
+            0.241
+          ],
+          "content": "expr **for** id **in** L"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.311,
+            0.897,
+            0.432
+          ],
+          "content": "Creates a list by evaluating expr len(L) times with id in expr replaced by each element of L"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.098,
+            0.497,
+            0.857,
+            0.703
+          ],
+          "sub_type": "code",
+          "content": "```txt\nL = [x*x for x in range(10)]\nprint(L)\nL = [x*x for x in range(10) if x%2 == 0]\nprint(L)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.399,
+            0.102
+          ],
+          "level": 2,
+          "content": "Applying Model"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.073,
+            0.179,
+            0.918,
+            0.81
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef applyModel(model, testSet, label, prob = 0.5):\n    testFeatureVecs = [e.getFeatures() for e in testSet]\n    probs = model.predict_proba(testFeatureVecs)\n    truePos, falsePos, trueNeg, falseNeg = 0, 0, 0, 0\n    for i in range(len(probs)):\n        if probs[i][1] > prob:\n            if testSet[i].getLabel() == label:\n                truePos += 1\n            else:\n                falsePos += 1\n        else:\n            if testSet[i].getLabel() != label:\n                trueNeg += 1\n            else:\n                falseNeg += 1\n    return truePos, falsePos, trueNeg, falseNeg\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.454,
+            0.101
+          ],
+          "level": 2,
+          "content": "Putting It Together"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.049,
+            0.242,
+            0.951,
+            0.768
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef lr(trainingData, testData, prob = 0.5):\n    model = buildModel(trainingData, False)\n    results = applyModel(model, testData, 'Survived', prob)\n    return results\n\nnumSplits = 10\nprint('Average of', numSplits, '80/20 splits LR')\ntruePos, falsePos, trueNeg, falseNeg =\\\n    divide80_20(examples, lr, numSplits)\n\nprint('Average of LOO testing using LR')\ntruePos, falsePos, trueNeg, falseNeg =\\\n    leaveOneOut(examples, lr)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.91,
+            0.987
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.235,
+            0.093
+          ],
+          "level": 2,
+          "content": "Results"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.282,
+            0.212,
+            0.75,
+            0.845
+          ],
+          "sub_type": "code",
+          "content": "```txt\nAverage of 10 80/20 splits LR\nAccuracy = 0.804\nSensitivity = 0.719\nSpecificity = 0.859\nPos. Pred. Val. = 0.767\n\nAverage of LOO testing using LR\nAccuracy = 0.786\nSensitivity = 0.705\nSpecificity = 0.842\nPos. Pred. Val. = 0.754\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.968,
+            0.55,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.987
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.568,
+            0.1
+          ],
+          "level": 2,
+          "content": "Compare to KNN Results"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.03,
+            0.16,
+            0.964,
+            0.633
+          ],
+          "sub_type": "code",
+          "content": "```txt\nAverage of 10 80/20 splits using KNN (k=3) Average of 10 80/20 splits LR\nAccuracy = 0.744 Accuracy = 0.804\nSensitivity = 0.629 Sensitivity = 0.719\nSpecificity = 0.829 Specificity = 0.859\nPos. Pred. Val. = 0.728 Pos. Pred. Val. = 0.767\nAverage of LOO testing using KNN (k=3) Average of LOO testing using LR\nAccuracy = 0.769 Accuracy = 0.786\nSensitivity = 0.663 Sensitivity = 0.705\nSpecificity = 0.842 Specificity = 0.842\nPos. Pred. Val. = 0.743 Pos. Pred. Val. = 0.754\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.236,
+            0.694,
+            0.74,
+            0.808
+          ],
+          "content": "Performance not much difference Logistic regression slightly better"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.837,
+            0.766,
+            0.893
+          ],
+          "content": "Also provides insight about variables"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.55,
+            0.989
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.619,
+            0.102
+          ],
+          "level": 2,
+          "content": "Looking at Feature Weights"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.137,
+            0.951,
+            0.905
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef buildModel(examples, toPrint = True):\n    ...\n    if toPrint:\n        print('model.classes_ =', model.classes_)\n        for i in range(len(model.coef_)):\n            print('For label', model.classes_[1])\n            for j in range(len(model.coef_[0])):\n                print('      ', Passenger.featureNames[j], '=', \n                    model.coef_[0][j])\n    return model\nbuildModel(examples, True)\n    model.classes_ = ['Died' 'Survived']\n    for label Survived\nBe wary of reading too\nmuch into the weights\nFeatures are often\ncorrelated\n    C1 = 1.66761946545\n    C2 = 0.460354552452\n    C3 = -0.50338282535\n    age = -0.0314481062387\n    male gender = -2.39514860929\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.032,
+            0.483,
+            0.102
+          ],
+          "level": 2,
+          "content": "Changing the Cutoff"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.093,
+            0.147,
+            0.956,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```python\nrandom.seed(0)\ntrainingSet, testSet = split80_20(examples)\nmodel = buildModel(trainingSet, False)\nprint('Try p = 0.1')\ntruePos, falsePos, trueNeg, falseNeg =\\\napplyModel(model, testSet, 'Survived', 0.1)\ngetStats(truePos, falsePos, trueNeg, falseNeg)\nprint('Try p = 0.9')\ntruePos, falsePos, trueNeg, falseNeg =\\\napplyModel(model, testSet, 'Survived', 0.9)\ngetStats(truePos, falsePos, trueNeg, falseNeg)\n\nTry p = 0.1\nAccuracy = 0.493\nSensitivity = 0.976\nSpecificity = 0.161\nPos. Pred. Val. = 0.444\nTry p = 0.9\nAccuracy = 0.656\nSensitivity = 0.176\nSpecificity = 0.984\nPos. Pred. Val. = 0.882\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.968,
+            0.55,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.968,
+            0.91,
+            0.988
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.851,
+            0.101
+          ],
+          "level": 2,
+          "content": "ROC (Receiver Operating Characteristic)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.055,
+            0.169,
+            0.954,
+            0.837
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef buildROC(trainingSet, testSet, title, plot = True):\n    model = buildModel(trainingSet, True)\n    xVals, yVals = [], []\n    p = 0.0\n    while p <= 1.0:\n        truePos, falsePos, trueNeg, falseNeg =\\\n            applyModel(model, testSet,\n                'Survived', p)\n        xVals.append(1.0 - specificity(trueNeg, falsePos))\n        yVals.append(sensitivity(truePos, falseNeg))\n        p += 0.01\n    auroc = sklearn.metrics.auc(xVals, yVals, True)\n    if plot:\n        ...|\n    return auroc\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.91,
+            0.987
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.036,
+            0.239,
+            0.099
+          ],
+          "level": 2,
+          "content": "Output"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.181,
+            0.809,
+            0.843
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 13"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.088,
+            0.102,
+            0.237,
+            0.157
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.227,
+            0.573,
+            0.284
+          ],
+          "content": "6.0002 Introduction to Computational Thinking and Data Science Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.357,
+            0.688,
+            0.384
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 13",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "EN-US"
+      ],
+      "created_at": "2016-12-07T15:07:04-05:00",
+      "modified_at": "2017-03-16T09:46:56+05:30",
+      "creator_application": "Acrobat PDFMaker 15 for PowerPoint",
+      "producer_application": "Adobe PDF Library 15.0",
+      "page_count": 34,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

@@ -1,0 +1,2177 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.886,
+            0.02,
+            0.961,
+            0.039
+          ],
+          "content": "11/1/26"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.103,
+            0.332,
+            0.115,
+            0.345
+          ],
+          "content": "1"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.198,
+            0.124,
+            0.378,
+            0.142
+          ],
+          "level": 2,
+          "content": "Case Study: Fractions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.154,
+            0.274,
+            0.169
+          ],
+          "content": "• Want to add a new **type**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.152,
+            0.403,
+            0.166
+          ],
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.17,
+            0.284,
+            0.185
+          ],
+          "content": "§ Values are fractions: ½, ¾"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.302,
+            0.166,
+            0.456,
+            0.18
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.304,
+            0.18,
+            0.44,
+            0.194
+          ],
+          "content": "\\# INSTANCE ATTRIBUTES:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.185,
+            0.271,
+            0.213
+          ],
+          "content": "§ Operations are standard multiply, divide, etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.304,
+            0.195,
+            0.422,
+            0.209
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.213,
+            0.256,
+            0.228
+          ],
+          "content": "§ **Example**: $1/2^{*3}/4 = 3/8$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.304,
+            0.209,
+            0.44,
+            0.223
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.23,
+            0.275,
+            0.245
+          ],
+          "content": "• Can do this with a class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.245,
+            0.286,
+            0.26
+          ],
+          "content": "§ Values are fraction objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.303,
+            0.234,
+            0.439,
+            0.248
+          ],
+          "content": "def \\_\\_init\\_\\_(self,n=0,d=1):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.261,
+            0.272,
+            0.276
+          ],
+          "content": "§ Operations are methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.248,
+            0.451,
+            0.262
+          ],
+          "content": "\"\"\"Init: makes a Fraction\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.277,
+            0.246,
+            0.295
+          ],
+          "content": "• **Example**: frac1.py"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.263,
+            0.418,
+            0.276
+          ],
+          "content": "self.\\_numerator = n"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.316,
+            0.276,
+            0.427,
+            0.291
+          ],
+          "content": "self.\\_denominator = d"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.572,
+            0.123,
+            0.849,
+            0.143
+          ],
+          "level": 2,
+          "content": "Problem: Doing Math is Unwieldy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.571,
+            0.156,
+            0.678,
+            0.173
+          ],
+          "content": "**What We Want**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.568,
+            0.18,
+            0.686,
+            0.215
+          ],
+          "content": "\\left(\\frac {1}{2} + \\frac {1}{3} + \\frac {1}{4}\\right) * \\frac {5}{4}",
+          "image_source": "images/page_0_equation_22.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.752,
+            0.156,
+            0.846,
+            0.173
+          ],
+          "content": "**What We Get**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.331,
+            0.539,
+            0.346
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.233,
+            0.684,
+            0.284
+          ],
+          "content": "Why not use the standard Python math operations?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.713,
+            0.18,
+            0.842,
+            0.197
+          ],
+          "continues_prev": true,
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.714,
+            0.197,
+            0.841,
+            0.214
+          ],
+          "content": ">>> q = Fraction(1,3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.714,
+            0.214,
+            0.841,
+            0.23
+          ],
+          "content": ">>> r = Fraction(1,4)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.714,
+            0.23,
+            0.841,
+            0.245
+          ],
+          "content": ">>> s = Fraction(5,4)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.714,
+            0.246,
+            0.882,
+            0.263
+          ],
+          "content": ">>> (p.add(q.add(r))).mult(s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.761,
+            0.276,
+            0.87,
+            0.294
+          ],
+          "content": "This is confusing!"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.196,
+            0.406,
+            0.38,
+            0.424
+          ],
+          "level": 2,
+          "content": "Operator Overloading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.435,
+            0.429,
+            0.469
+          ],
+          "content": "• Many operators in Python a special symbols § +, -, /, \\*, \\*\\* for mathematics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.47,
+            0.312,
+            0.485
+          ],
+          "content": "==, !=, <, > for comparisons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.486,
+            0.449,
+            0.504
+          ],
+          "content": "• The meaning of these symbols depends on type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.504,
+            0.286,
+            0.519
+          ],
+          "content": "§ 1 + 2 vs 'Hello' + 'World'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.52,
+            0.286,
+            0.535
+          ],
+          "content": "§ 1 < 2 vs 'Hello' < 'World'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.537,
+            0.445,
+            0.555
+          ],
+          "content": "• Our new type might want to use these symbols"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.555,
+            0.402,
+            0.573
+          ],
+          "content": "§ We overload them to support our new type"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.618,
+            0.405,
+            0.805,
+            0.424
+          ],
+          "level": 2,
+          "content": "Returning to Fractions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.572,
+            0.438,
+            0.677,
+            0.455
+          ],
+          "content": "**What We Want**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.574,
+            0.461,
+            0.679,
+            0.493
+          ],
+          "content": "\\left(\\frac {1}{2} + \\frac {1}{3} + \\frac {1}{4}\\right) * \\frac {5}{4}",
+          "image_source": "images/page_0_equation_42.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.515,
+            0.684,
+            0.565
+          ],
+          "content": "Why not use the standard Python math operations?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.727,
+            0.439,
+            0.872,
+            0.455
+          ],
+          "level": 2,
+          "content": "Operator Overloading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.715,
+            0.463,
+            0.863,
+            0.489
+          ],
+          "content": "• Python has methods that correspond to built-in ops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.732,
+            0.489,
+            0.865,
+            0.502
+          ],
+          "content": "§ \\_\\_add\\_\\_ corresponds to +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.733,
+            0.502,
+            0.866,
+            0.515
+          ],
+          "content": "§ \\_\\_mul\\_\\_ corresponds to \\*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.733,
+            0.515,
+            0.871,
+            0.528
+          ],
+          "content": "§ \\_\\_eq\\_\\_ corresponds to =="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.732,
+            0.528,
+            0.878,
+            0.541
+          ],
+          "content": "§ Not implemented by default"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.715,
+            0.541,
+            0.868,
+            0.567
+          ],
+          "content": "• To overload operators you implement these methods"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.613,
+            0.116,
+            0.627
+          ],
+          "content": "3"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.686,
+            0.441,
+            0.705
+          ],
+          "level": 2,
+          "content": "Operator Overloading: Multiplication"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.713,
+            0.202,
+            0.725
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.725,
+            0.241,
+            0.737
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.291,
+            0.714,
+            0.401,
+            0.729
+          ],
+          "content": "> > > \\mathrm{p} = \\text {Fraction} (1, 2)",
+          "image_source": "images/page_0_equation_55.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.736,
+            0.215,
+            0.747
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.291,
+            0.729,
+            0.401,
+            0.742
+          ],
+          "content": "> > > \\mathrm{q} = \\text {Fraction} (3, 4)",
+          "image_source": "images/page_0_equation_57.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.745,
+            0.232,
+            0.757
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.292,
+            0.743,
+            0.355,
+            0.755
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} ^ {*} \\mathrm{q}",
+          "image_source": "images/page_0_equation_59.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.762,
+            0.204,
+            0.775
+          ],
+          "level": 2,
+          "content": "def \\_\\_mul\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.773,
+            0.244,
+            0.784
+          ],
+          "content": "\"\"\"Returns: Product of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.783,
+            0.254,
+            0.795
+          ],
+          "content": "Makes a new Fraction; does not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.794,
+            0.241,
+            0.805
+          ],
+          "content": "modify contents of self or q"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.337,
+            0.757,
+            0.386,
+            0.795
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_64.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.389,
+            0.764,
+            0.44,
+            0.786
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.805,
+            0.242,
+            0.816
+          ],
+          "content": "Precondition: q a Fraction\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.815,
+            0.236,
+            0.826
+          ],
+          "content": "assert type(q) == Fraction"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.291,
+            0.798,
+            0.401,
+            0.812
+          ],
+          "content": "\\ggg \\mathrm{r} = \\mathrm{p._mul_(q)}",
+          "image_source": "images/page_0_equation_68.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.825,
+            0.271,
+            0.837
+          ],
+          "content": "top= self.\\_numerator\\*q.\\_numerator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.837,
+            0.284,
+            0.848
+          ],
+          "content": "bot= self.\\_denominator\\*q.\\_denominator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.847,
+            0.229,
+            0.859
+          ],
+          "content": "return Fraction(top,bot)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.307,
+            0.821,
+            0.444,
+            0.849
+          ],
+          "content": "Operator overloading uses method in object on left."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.579,
+            0.686,
+            0.842,
+            0.705
+          ],
+          "level": 2,
+          "content": "Operator Overloading: Addition"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.539,
+            0.714,
+            0.625,
+            0.725
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.715,
+            0.715,
+            0.824,
+            0.728
+          ],
+          "content": "> > > \\mathrm{p} = \\text {Fraction} (1, 2)",
+          "image_source": "images/page_0_equation_75.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.725,
+            0.665,
+            0.737
+          ],
+          "content": "\"'Instance is a fraction n/d'\""
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.715,
+            0.729,
+            0.824,
+            0.742
+          ],
+          "content": "> > > \\mathrm{q} = \\text {Fraction} (3, 4)",
+          "image_source": "images/page_0_equation_77.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.736,
+            0.639,
+            0.747
+          ],
+          "content": "\\# \\_numerator:  an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.745,
+            0.656,
+            0.757
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.715,
+            0.743,
+            0.778,
+            0.755
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} + \\mathrm{q}",
+          "image_source": "images/page_0_equation_80.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.55,
+            0.763,
+            0.627,
+            0.775
+          ],
+          "content": "\\text {def \\_ add \\_ (self,q):}",
+          "image_source": "images/page_0_equation_81.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.774,
+            0.656,
+            0.785
+          ],
+          "content": "\"\"\"Returns: Sum of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.783,
+            0.644,
+            0.795
+          ],
+          "content": "Makes a new Fraction"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.76,
+            0.757,
+            0.809,
+            0.794
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_84.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.812,
+            0.764,
+            0.864,
+            0.787
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.793,
+            0.666,
+            0.805
+          ],
+          "content": "Precondition: q a Fraction\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.805,
+            0.66,
+            0.817
+          ],
+          "content": "assert type(q) == Fraction"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.715,
+            0.798,
+            0.823,
+            0.812
+          ],
+          "content": "\\ggg \\mathrm{r} = \\mathrm{p._add} (\\mathrm{q})",
+          "image_source": "images/page_0_equation_88.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.815,
+            0.707,
+            0.827
+          ],
+          "content": "bot= self.\\_denominator\\*q.\\_denominator"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.614,
+            0.539,
+            0.627
+          ],
+          "content": "4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.825,
+            0.707,
+            0.838
+          ],
+          "content": "top= (self.\\_numerator\\*q.\\_denominator+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.578,
+            0.836,
+            0.706,
+            0.848
+          ],
+          "content": "self.\\_denominator\\*q.\\_numerator)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.847,
+            0.652,
+            0.859
+          ],
+          "content": "return Fraction(top,bot)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.821,
+            0.866,
+            0.849
+          ],
+          "content": "Operator overloading uses method in object on left."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": "1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.894,
+            0.116,
+            0.907
+          ],
+          "content": "5"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.885,
+            0.021,
+            0.961,
+            0.039
+          ],
+          "content": "11/1/26"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.156,
+            0.124,
+            0.419,
+            0.143
+          ],
+          "level": 2,
+          "content": "Comparing Objects for Equality"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.152,
+            0.279,
+            0.166
+          ],
+          "content": "• Earlier in course, we saw =="
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.292,
+            0.151,
+            0.376,
+            0.164
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.166,
+            0.259,
+            0.18
+          ],
+          "content": "compare object contents"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.3,
+            0.163,
+            0.418,
+            0.175
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.174,
+            0.392,
+            0.185
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.179,
+            0.255,
+            0.192
+          ],
+          "content": "§ This is not the default"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.3,
+            0.184,
+            0.408,
+            0.196
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.191,
+            0.256,
+            0.205
+          ],
+          "content": "§ **Default**: folder names"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.205,
+            0.251,
+            0.218
+          ],
+          "content": "• Must implement \\_\\_eq\\_\\_"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.301,
+            0.204,
+            0.376,
+            0.216
+          ],
+          "level": 2,
+          "content": "def \\_\\_eq\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.218,
+            0.255,
+            0.231
+          ],
+          "content": "§ Operator overloading!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.308,
+            0.215,
+            0.429,
+            0.227
+          ],
+          "content": "\"\"\"Returns: True if self, q equal,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.308,
+            0.225,
+            0.437,
+            0.235
+          ],
+          "content": "False if not, or q not a Fraction\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.232,
+            0.253,
+            0.255
+          ],
+          "content": "§ Not limited to simple attribute comparison"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.309,
+            0.234,
+            0.394,
+            0.246
+          ],
+          "continues_prev": true,
+          "content": "if type(q) != Fraction:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.255,
+            0.252,
+            0.267
+          ],
+          "content": "§ **Ex**: cross multiplying"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.172,
+            0.264,
+            0.251,
+            0.29
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_18.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.316,
+            0.246,
+            0.372,
+            0.256
+          ],
+          "content": "return False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.309,
+            0.255,
+            0.456,
+            0.267
+          ],
+          "content": "left = self.\\_numerator\\*q.\\_denominator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.309,
+            0.266,
+            0.458,
+            0.277
+          ],
+          "content": "rght = self.\\_denominator\\*q.\\_numerator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.309,
+            0.276,
+            0.384,
+            0.287
+          ],
+          "content": "return left == rght"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.147,
+            0.405,
+            0.429,
+            0.424
+          ],
+          "level": 2,
+          "content": "Recall: Overloading Multiplication"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.433,
+            0.202,
+            0.445
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.445,
+            0.242,
+            0.456
+          ],
+          "content": "\"\"\"Instance is a fraction n/d\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.434,
+            0.402,
+            0.448
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.455,
+            0.216,
+            0.466
+          ],
+          "content": "\\# \\_numerator: an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.465,
+            0.233,
+            0.477
+          ],
+          "content": "\\# \\_denominator: an int > 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.448,
+            0.388,
+            0.462
+          ],
+          "content": ">>> q = 2 # an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.463,
+            0.355,
+            0.475
+          ],
+          "content": ">>> r = p\\*q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.483,
+            0.205,
+            0.495
+          ],
+          "content": "def \\_\\_mul\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.493,
+            0.245,
+            0.504
+          ],
+          "content": "\"\"\"Returns: Product of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.503,
+            0.255,
+            0.514
+          ],
+          "content": "Makes a new Fraction; does not"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.513,
+            0.242,
+            0.525
+          ],
+          "content": "modify contents of self or q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.525,
+            0.243,
+            0.536
+          ],
+          "content": "~~Precondition: q a Fraction\"\"~~\""
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.336,
+            0.477,
+            0.386,
+            0.514
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_36.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.388,
+            0.484,
+            0.441,
+            0.506
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.535,
+            0.241,
+            0.547
+          ],
+          "content": "<u>assert type(q) == Fraction</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.517,
+            0.448,
+            0.532
+          ],
+          "content": ">>> r = p.\\_\\_mul\\_\\_(q) # ERROR"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.545,
+            0.274,
+            0.557
+          ],
+          "content": "top = self.\\_numerator\\*q.\\_numerator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.557,
+            0.284,
+            0.568
+          ],
+          "content": "bot= self.\\_denominator\\*q.\\_denominator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.567,
+            0.229,
+            0.579
+          ],
+          "content": "return Fraction(top,bot)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.54,
+            0.445,
+            0.555
+          ],
+          "content": "Can only multiply fractions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.303,
+            0.554,
+            0.442,
+            0.568
+          ],
+          "content": "But ints “make sense” too."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": "8"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": "10"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.658,
+            0.125,
+            0.765,
+            0.141
+          ],
+          "level": 2,
+          "content": "is Versus =="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.595,
+            0.284,
+            0.83,
+            0.302
+          ],
+          "content": "Always use (x is None) **not** (x == None)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.202,
+            0.602,
+            0.218
+          ],
+          "content": "p **id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.152,
+            0.695,
+            0.168
+          ],
+          "content": "• p is q evaluates to False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.169,
+            0.695,
+            0.184
+          ],
+          "content": "§ Compares folder names"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.716,
+            0.153,
+            0.873,
+            0.168
+          ],
+          "content": "• p == q evaluates to True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.183,
+            0.674,
+            0.197
+          ],
+          "content": "§ Cannot change this"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.613,
+            0.201,
+            0.699,
+            0.279
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_54.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.573,
+            0.405,
+            0.848,
+            0.424
+          ],
+          "level": 2,
+          "content": "Solution: Look at Argument Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.169,
+            0.881,
+            0.195
+          ],
+          "content": "§ But only because method \\_\\_eq\\_\\_ compares contents"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.435,
+            0.708,
+            0.45
+          ],
+          "content": "• Overloading use **left** type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.451,
+            0.678,
+            0.465
+          ],
+          "content": "§ p\\*q => p.\\_\\_mul\\_\\_(q)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.716,
+            0.433,
+            0.8,
+            0.445
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.465,
+            0.706,
+            0.479
+          ],
+          "content": "§ Done for us automatically"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.493,
+            0.704,
+            0.522
+          ],
+          "content": "• What about type on **right**? § Have to handle ourselves"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.478,
+            0.701,
+            0.492
+          ],
+          "continues_prev": true,
+          "content": "§ Looks in class definition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.724,
+            0.454,
+            0.803,
+            0.466
+          ],
+          "content": "def \\_\\_mul\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.522,
+            0.688,
+            0.537
+          ],
+          "content": "• Can implement with ifs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.55,
+            0.688,
+            0.565
+          ],
+          "content": "§ Check type in method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.536,
+            0.707,
+            0.551
+          ],
+          "content": "§ Write helper for each type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.564,
+            0.709,
+            0.58
+          ],
+          "content": "§ Send to appropriate helper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.732,
+            0.466,
+            0.843,
+            0.477
+          ],
+          "content": "\"\"\"Returns: Product of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.733,
+            0.475,
+            0.862,
+            0.487
+          ],
+          "content": "Precondition: q a Fraction or int\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.734,
+            0.487,
+            0.82,
+            0.498
+          ],
+          "content": "if type(q) == Fraction:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.767,
+            0.221,
+            0.778
+          ],
+          "content": "if type(q) == Fraction:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.739,
+            0.497,
+            0.834,
+            0.509
+          ],
+          "content": "return self.\\_mulFrac(q)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.733,
+            0.507,
+            0.806,
+            0.519
+          ],
+          "content": "elif type(q) == int:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.74,
+            0.518,
+            0.829,
+            0.531
+          ],
+          "content": "return self.\\_mulInt(q)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.724,
+            0.537,
+            0.864,
+            0.55
+          ],
+          "content": "def \\_mulInt(self,q): # Hidden method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.799,
+            0.231,
+            0.81
+          ],
+          "content": "return self.\\_mulInt(q)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.549,
+            0.865,
+            0.56
+          ],
+          "content": "return Fraction(self.\\_numerator\\*q,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.789,
+            0.56,
+            0.865,
+            0.571
+          ],
+          "content": "self.\\_denominator)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.192,
+            0.686,
+            0.384,
+            0.704
+          ],
+          "level": 2,
+          "content": "A Better Multiplication"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.714,
+            0.202,
+            0.725
+          ],
+          "level": 2,
+          "content": "class Fraction(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.735,
+            0.205,
+            0.747
+          ],
+          "content": "def \\_\\_mul\\_\\_(self,q):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.777,
+            0.236,
+            0.789
+          ],
+          "content": "return self.\\_mulFrac(q)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.746,
+            0.245,
+            0.757
+          ],
+          "content": "\"\"\"Returns: Product of self, q"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.756,
+            0.265,
+            0.767
+          ],
+          "content": "Precondition: q a Fraction or int\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.798,
+            0.432,
+            0.812
+          ],
+          "content": ">>> r = p.\\_mul\\_(q) # OK!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.787,
+            0.206,
+            0.799
+          ],
+          "content": "elif type(q) == int:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.309,
+            0.821,
+            0.436,
+            0.849
+          ],
+          "content": "See frac3.py for a full example of this method"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.291,
+            0.743,
+            0.356,
+            0.755
+          ],
+          "content": "> > > \\mathrm{r} = \\mathrm{p} ^ {*} \\mathrm{q}",
+          "image_source": "images/page_1_equation_88.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.729,
+            0.388,
+            0.742
+          ],
+          "content": ">>> q = 2 # an int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.819,
+            0.266,
+            0.83
+          ],
+          "content": "def \\_mulInt(self,q): # Hidden method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.83,
+            0.268,
+            0.841
+          ],
+          "content": "return Fraction(self.\\_numerator\\*q,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.714,
+            0.402,
+            0.729
+          ],
+          "content": ">>> p = Fraction(1,2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.191,
+            0.841,
+            0.267,
+            0.853
+          ],
+          "content": "self.\\_denominator)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.389,
+            0.764,
+            0.441,
+            0.786
+          ],
+          "content": "Python converts to"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.336,
+            0.757,
+            0.386,
+            0.795
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_95.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.602,
+            0.685,
+            0.821,
+            0.704
+          ],
+          "level": 2,
+          "content": "We Have Come Full Circle"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.716,
+            0.82,
+            0.733
+          ],
+          "content": "• On the first day, saw that a **type** is both"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.734,
+            0.689,
+            0.749
+          ],
+          "content": "§ a set of values, and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.75,
+            0.712,
+            0.765
+          ],
+          "content": "§ the operations on them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.767,
+            0.78,
+            0.784
+          ],
+          "content": "• In Python, **all values are objects**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.785,
+            0.78,
+            0.801
+          ],
+          "content": "§ Everything has a folder in the heap"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.8,
+            0.809,
+            0.817
+          ],
+          "content": "§ Just ignore it for immutable, basic types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.818,
+            0.821,
+            0.835
+          ],
+          "content": "• In Python, **all operations are methods**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.836,
+            0.841,
+            0.852
+          ],
+          "content": "§ Each operator has a double-underscore helper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.852,
+            0.814,
+            0.869
+          ],
+          "content": "§ Looks at type of object on left to process"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": "11"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.963,
+            0.959,
+            0.977
+          ],
+          "content": "2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": "12"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-21-old",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

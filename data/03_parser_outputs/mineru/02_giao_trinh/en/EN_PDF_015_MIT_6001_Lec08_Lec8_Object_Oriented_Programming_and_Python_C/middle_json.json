@@ -1,0 +1,4144 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Object Oriented Programming",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:55:57+05:30",
+      "modified_at": "2016-12-19T15:02:18+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 21,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.277,
+            0.907,
+            0.543
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OBJECT ORIENTED PROGRAMMING"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.097,
+            0.567,
+            0.821,
+            0.625
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(download slides and .py files",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\u0003"
+            },
+            {
+              "type": "text",
+              "content": "ĂŶĚ",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\u0003"
+            },
+            {
+              "type": "text",
+              "content": "follow along!)",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.096,
+            0.655,
+            0.389,
+            0.702
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTU RE 8"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.959,
+            0.547,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.161,
+            0.327,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OBJECTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.778,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python supports many different kinds of data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.355,
+            0.159,
+            0.393
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1234"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.255,
+            0.355,
+            0.376,
+            0.393
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.14159"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.456,
+            0.354,
+            0.575,
+            0.393
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"Hello\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.658,
+            0.355,
+            0.936,
+            0.396
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[1, 5, 7, 11, 13]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.089,
+            0.42,
+            0.805,
+            0.461
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "{\"CA\": \"California\", \"MA\": \"Massachusetts\"}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.087,
+            0.487,
+            0.693,
+            0.536
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "each is an "
+            },
+            {
+              "type": "text",
+              "content": "object",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", and every object has:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.551,
+            0.229,
+            0.592
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• a "
+            },
+            {
+              "type": "text",
+              "content": "type",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.107,
+            0.605,
+            0.903,
+            0.651
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• an internal "
+            },
+            {
+              "type": "text",
+              "content": "data representation",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " (primitive or composite)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.107,
+            0.664,
+            0.821,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• a set of procedures for "
+            },
+            {
+              "type": "text",
+              "content": "interaction",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " with the object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.087,
+            0.743,
+            0.6,
+            0.791
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "an object is an "
+            },
+            {
+              "type": "text",
+              "content": "instance",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of a type"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.107,
+            0.802,
+            0.58,
+            0.845
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• 1234 is an instance of an int"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.107,
+            0.861,
+            0.627,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"hello\" is an instance of a string"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 14,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 15,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.069,
+            0.703,
+            0.243
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OBJECT ORIENTED PROGRAMMING (OOP)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.934,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EVERYTHING IN PYTHON IS AN OBJECT",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " (and has a type)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.357,
+            0.659,
+            0.404
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can "
+            },
+            {
+              "type": "text",
+              "content": "create new objects",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of some type"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.434,
+            0.465,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can "
+            },
+            {
+              "type": "text",
+              "content": "manipulate objects",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.512,
+            0.406,
+            0.559
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can "
+            },
+            {
+              "type": "text",
+              "content": "destroy objects",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.57,
+            0.785,
+            0.617
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• explicitly using del or just “forget” about them"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.629,
+            0.849,
+            0.723
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• python system will reclaim destroyed or inaccessible objects – called “garbage collection”"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.159,
+            0.651,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WHAT ARE OBJECTS?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.278,
+            0.557,
+            0.378
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "objects are "
+            },
+            {
+              "type": "text",
+              "content": "a data abstraction",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " that captures…"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.407,
+            0.532,
+            0.456
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(1) an "
+            },
+            {
+              "type": "text",
+              "content": "internal representation",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.467,
+            0.459,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• through data attributes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.543,
+            0.474,
+            0.646
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(2) an "
+            },
+            {
+              "type": "text",
+              "content": "interface",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for interacting with object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.109,
+            0.656,
+            0.5,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• through methods (aka procedures/functions)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.109,
+            0.762,
+            0.434,
+            0.856
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• defines behaviors but hides implementation"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.223,
+            0.339,
+            0.914,
+            0.497
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.223,
+                0.339,
+                0.914,
+                0.497
+              ],
+              "image_path": "images/page_4_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.099,
+            0.069,
+            0.644,
+            0.245
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE: [1,2,3,4] has type list"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.275,
+            0.854,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "how are lists "
+            },
+            {
+              "type": "text",
+              "content": "represented internally",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "? linked list of cells"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.498,
+            0.45,
+            0.543
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "how to "
+            },
+            {
+              "type": "text",
+              "content": "manipulate",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " lists?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.559,
+            0.379,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• L[i], L[i:j], +"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.106,
+            0.61,
+            0.611,
+            0.648
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• len(), min(), max(), del(L[i])"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.106,
+            0.661,
+            0.801,
+            0.699
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• L.append(),L.extend(),L.count(),L.index(),"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.132,
+            0.711,
+            0.942,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "L.insert(),L.pop(),L.remove(),L.reverse(), L.sort()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.086,
+            0.775,
+            0.671,
+            0.821
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "internal representation should be private"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.086,
+            0.849,
+            0.881,
+            0.944
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "correct behavior may be compromised if you manipulate internal representation directly"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.967,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.16,
+            0.674,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ADVANTAGES OF OOP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.273,
+            0.892,
+            0.367
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "bundle data into packages",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " together with procedures that work on them through well-defined interfaces"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.391,
+            0.617,
+            0.437
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "divide-and-conquer",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " development"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.445,
+            0.86,
+            0.49
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• implement and test behavior of each class separately"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.499,
+            0.7,
+            0.544
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• increased modularity reduces complexity"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.572,
+            0.618,
+            0.617
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "classes make it easy to "
+            },
+            {
+              "type": "text",
+              "content": "reuse",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.625,
+            0.705,
+            0.668
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• many Python modules define new classes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.679,
+            0.873,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• each class has a separate environment (no collision on function names)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.775,
+            0.855,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• inheritance allows subclasses to redefine or extend a selected subset of a superclass’ behavior"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.11,
+            0.005,
+            0.352,
+            0.041
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.691,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.097,
+            0.068,
+            0.844,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CREATING AND USING YOUR OWN TYPES WITH CLASSES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.276,
+            0.819,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "make a distinction between creating a class and using an instance of the class"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.407,
+            0.5,
+            0.454
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "creating",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " the class involves"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.467,
+            0.463,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• defining the class name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.107,
+            0.525,
+            0.465,
+            0.57
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• defining class attributes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.107,
+            0.583,
+            0.929,
+            0.631
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• for example, someone wrote code to implement a list class"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.087,
+            0.662,
+            0.459,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "using the class involves"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.107,
+            0.722,
+            0.595,
+            0.767
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• creating new "
+            },
+            {
+              "type": "text",
+              "content": "instances",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.107,
+            0.781,
+            0.601,
+            0.825
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• doing operations on the instances"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.107,
+            0.839,
+            0.637,
+            0.886
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• for example, "
+            },
+            {
+              "type": "equation_inline",
+              "content": "L = [1,2]"
+            },
+            {
+              "type": "text",
+              "content": " and len (L)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.111,
+            0.005,
+            0.352,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.691,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.1,
+            0.161,
+            0.783,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEFINE YOUR OWN TYPES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.277,
+            0.733,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use the class keyword to define a new type"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.425,
+            0.588,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Coordinate",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "("
+            },
+            {
+              "type": "text",
+              "content": "object",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.167,
+            0.499,
+            0.632,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "#define attributes here"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.086,
+            0.573,
+            0.933,
+            0.667
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "similar to def, indent code to indicate which statements are part of the "
+            },
+            {
+              "type": "text",
+              "content": "class definition",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.086,
+            0.695,
+            0.928,
+            0.789
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "the word object means that Coordinate is a Python object and "
+            },
+            {
+              "type": "text",
+              "content": "inherits",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " all its attributes (inheritance next lecture)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.106,
+            0.798,
+            0.633,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Coordinate is a subclass of object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.106,
+            0.853,
+            0.658,
+            0.896
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• object is a superclass of Coordinate"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.159,
+            0.741,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WHAT ARE ATTRIBUTES?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.802,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "data and procedures that “"
+            },
+            {
+              "type": "text",
+              "content": "belong",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "” to the class"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.357,
+            0.34,
+            0.399
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "data attributes"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.413,
+            0.849,
+            0.459
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• think of data as other objects that make up the class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.473,
+            0.862,
+            0.52
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• for example, a coordinate is made up of two numbers"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.551,
+            0.59,
+            0.599
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "methods (procedural attributes)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.107,
+            0.61,
+            0.943,
+            0.655
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• think of methods as functions that only work with this class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.671,
+            0.563,
+            0.713
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• how to interact with the object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.729,
+            0.892,
+            0.87
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for example you can define a distance between two coordinate objects but there is no meaning to a distance between two list objects"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "chart",
+          "index": 0,
+          "bbox": [
+            0.228,
+            0.603,
+            0.835,
+            0.957
+          ],
+          "content": [
+            {
+              "type": "chart_body",
+              "index": 0,
+              "bbox": [
+                0.228,
+                0.603,
+                0.835,
+                0.957
+              ],
+              "image_path": "images/page_9_chart_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.11,
+            0.005,
+            0.352,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 2,
+          "bbox": [
+            0.691,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "doc_title",
+          "index": 3,
+          "bbox": [
+            0.099,
+            0.068,
+            0.904,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEFINING HOW TO CREATE AN INSTANCE OF A CLASS"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.277,
+            0.883,
+            0.387
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "first have to define "
+            },
+            {
+              "type": "text",
+              "content": "how to create an instance",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.086,
+            0.416,
+            0.842,
+            0.524
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use a special method called init__ to initialize some data attributes ializes a"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.085,
+            0.554,
+            0.549,
+            0.596
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Coordinate(object):"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.111,
+            0.005,
+            0.351,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.691,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.096,
+            0.068,
+            0.733,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ACTUALLY CREATING AN INSTANCE OF A CLASS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "equation",
+          "index": 3,
+          "bbox": [
+            0.082,
+            0.335,
+            0.959,
+            0.691
+          ],
+          "image_path": "images/page_10_equation_3.jpg",
+          "content": "\\begin{array}{l} \\text {c = Coordinate(3,4)} \\\\ \\text {origin = Coordinate(0,0)} \\\\ \\text {print(c.x)} \\\\ \\text {print(origin.x)} \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.692,
+            0.83,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "data attributes of an instance are called "
+            },
+            {
+              "type": "text",
+              "content": "instance variables",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.086,
+            0.799,
+            0.874,
+            0.889
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "don’t provide argument for self, Python does this automatically"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.99
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.16,
+            0.66,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WHAT IS A METHOD?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.882,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "procedural attribute, like a "
+            },
+            {
+              "type": "text",
+              "content": "function that works only with this class",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.407,
+            0.902,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python always passes the object as the first argument"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.106,
+            0.467,
+            0.872,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• convention is to use "
+            },
+            {
+              "type": "text",
+              "content": "self",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " as the name of the first argument of all methods"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.592,
+            0.8,
+            0.64
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "the “.” "
+            },
+            {
+              "type": "text",
+              "content": "operator",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " is used to access any attribute"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.652,
+            0.522,
+            0.695
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• a data attribute of an object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.711,
+            0.442,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• a method of an object"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.11,
+            0.005,
+            0.352,
+            0.041
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.691,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "doc_title",
+          "index": 2,
+          "bbox": [
+            0.097,
+            0.067,
+            0.841,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEFINE A METHOD FOR THE Coordinate CLASS"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.346,
+            0.959,
+            0.797
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.086,
+                0.346,
+                0.959,
+                0.797
+              ],
+              "content": "class Coordinate(object):\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def distance(self, other):\n        x_diff_sq = (self.x-other.x)**2\n        y_diff_sq = (self.y-other.y)**2\n        return (x_diff_sq + y_diff_sq)**0.5"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.813,
+            0.948,
+            0.942
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "other than self and dot notation, methods behave just like functions (take params, do operations, return)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.99
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.111,
+            0.005,
+            0.352,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.692,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.1,
+            0.149,
+            0.756,
+            0.226
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HOW TO USE A METHOD"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.033,
+            0.278,
+            0.471,
+            0.369
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def distance(self, other): # code here"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.034,
+            0.415,
+            0.267,
+            0.467
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.035,
+            0.475,
+            0.324,
+            0.525
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "conventional way"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.032,
+            0.541,
+            0.322,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "c = Coordinate(3,4)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.032,
+            0.601,
+            0.366,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "zero = Coordinate(0,0)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.031,
+            0.653,
+            0.38,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(c.distance(zero))"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "index": 9,
+          "bbox": [
+            0.018,
+            0.717,
+            0.457,
+            0.945
+          ],
+          "content": [
+            {
+              "type": "chart_body",
+              "index": 9,
+              "bbox": [
+                0.018,
+                0.717,
+                0.457,
+                0.945
+              ],
+              "image_path": "images/page_13_chart_9.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 10,
+          "bbox": [
+            0.466,
+            0.472,
+            0.697,
+            0.523
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "equivalent to"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.463,
+            0.547,
+            0.751,
+            0.589
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "c = Coordinate(3,4)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.464,
+            0.607,
+            0.796,
+            0.648
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "zero = Coordinate(0,0)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.463,
+            0.664,
+            0.988,
+            0.712
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(Coordinate.distance(c, zero))"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "index": 14,
+          "bbox": [
+            0.465,
+            0.655,
+            0.997,
+            0.957
+          ],
+          "content": [
+            {
+              "type": "chart_body",
+              "index": 14,
+              "bbox": [
+                0.465,
+                0.655,
+                0.997,
+                0.957
+              ],
+              "image_path": "images/page_13_chart_14.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 16,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.084,
+            0.839,
+            0.288,
+            0.92
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.084,
+                0.839,
+                0.288,
+                0.92
+              ],
+              "content": ">>> print(c)\n<3,4>"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.083,
+            0.275,
+            0.86,
+            0.404
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.083,
+                0.275,
+                0.86,
+                0.404
+              ],
+              "content": ">>> c = Coordinate(3,4)\n>>> print(c)\n<__main__.Coordinate object at 0x7fa918510488>"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "doc_title",
+          "index": 2,
+          "bbox": [
+            0.096,
+            0.067,
+            0.818,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "PRINT REPRESENTATION OF AN OBJECT"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.422,
+            0.791,
+            0.474
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "uninformative",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " print representation by default"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.5,
+            0.677,
+            0.554
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "define a "
+            },
+            {
+              "type": "text",
+              "content": "__str__ method",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for a class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.086,
+            0.578,
+            0.888,
+            0.684
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python calls the __str method when used with print on your class object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.086,
+            0.707,
+            0.857,
+            0.812
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "you choose what it does! Say that when we print a Coordinate object, want to show"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "index": 0,
+          "bbox": [
+            0.11,
+            0.005,
+            0.352,
+            0.041
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.692,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "doc_title",
+          "index": 2,
+          "bbox": [
+            0.099,
+            0.069,
+            0.85,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEFINING YOUR OWN PRINT METHOD"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.089,
+            0.285,
+            0.937,
+            0.946
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.089,
+                0.285,
+                0.937,
+                0.946
+              ],
+              "content": "class Coordinate(object):\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def distance(self, other):\n        x_diff_sq = (self.x-other.x)**2\n        y_diff_sq = (self.y-other.y)**2\n        return (x_diff_sq + y_diff_sq)**0.5\n    def __str__(self):\n        return \"<\"+str(self.x)+\",\"+str(self.y)+\">\""
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.111,
+            0.005,
+            0.352,
+            0.041
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing the class"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.691,
+            0.005,
+            0.847,
+            0.04
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the class"
+            }
+          ]
+        },
+        {
+          "type": "doc_title",
+          "index": 2,
+          "bbox": [
+            0.096,
+            0.068,
+            0.876,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WRAPPING YOUR HEAD AROUND TYPES AND CLASSES"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.268,
+            0.67,
+            0.313
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can ask for the type of an object instance"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.128,
+            0.322,
+            0.57,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.128,
+                0.322,
+                0.57,
+                0.535
+              ],
+              "content": ">>> c = Coordinate(3,4)\n>>> print(c)\n<3,4>\n>>> print(type(c))\n<class __main__.Coordinate>"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.544,
+            0.42,
+            0.586
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "this makes sense since"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.129,
+            0.597,
+            0.585,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.129,
+                0.597,
+                0.585,
+                0.765
+              ],
+              "content": ">>> print(Coordinate)\n<class __main__.Coordinate>\n>>> print(type(Coordinate))\n<type 'type'>"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.593,
+            0.269,
+            0.947,
+            0.759
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.593,
+                0.269,
+                0.947,
+                0.759
+              ],
+              "image_path": "images/page_16_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.086,
+            0.775,
+            0.96,
+            0.909
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use isinstance() to check if an object is a Coordinate >>> print(isinstance(c, Coordinate)) True"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.161,
+            0.635,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SPECIAL OPERATORS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.277,
+            0.725,
+            0.329
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "+, -, ==, <, >, len(), print, and many others"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.084,
+            0.351,
+            0.895,
+            0.395
+          ],
+          "content": [
+            {
+              "type": "hyperlink",
+              "url": "https://docs.python.org/3/reference/datamodel.html#basic-customization",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://docs.python.org/3/reference/datamodel.html#basic-customization"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.419,
+            0.92,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "like print, can override these to work with your class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.496,
+            0.856,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "define them with double underscores before/after"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.105,
+            0.553,
+            0.808,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.105,
+                0.553,
+                0.808,
+                0.855
+              ],
+              "content": "__add__(self, other)    →    self + other\n__sub__(self, other)    →    self - other\n__eq__(self, other)    →    self == other\n__lt__(self, other)    →    self < other\n__len__(self)        →    len(self)\n__str__(self)        →    print self"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.861,
+            0.266,
+            0.901
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "... and others"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.16,
+            0.68,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE: FRACTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.279,
+            0.908,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "create a "
+            },
+            {
+              "type": "text",
+              "content": "new type",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to represent a number as a fraction"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.356,
+            0.687,
+            0.404
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "internal representation",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " is two integers"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.419,
+            0.288,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "numerator"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.474,
+            0.32,
+            0.516
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• denominator"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.551,
+            0.865,
+            0.651
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "interface",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " a.k.a. "
+            },
+            {
+              "type": "text",
+              "content": "methods",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " a.k.a "
+            },
+            {
+              "type": "text",
+              "content": "how to interact",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " with Fraction objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.663,
+            0.322,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• add, subtract"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.723,
+            0.663,
+            0.767
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• print representation, convert to a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.781,
+            0.388,
+            0.824
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• invert the fraction"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.087,
+            0.858,
+            0.811,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "the code for this is in the handout, check it out!"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.16,
+            0.64,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "THE POWER OF OOP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.633,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "bundle together objects",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " that share"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.108,
+            0.338,
+            0.462,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• common attributes and"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.396,
+            0.738,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• procedures that operate on those attributes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.474,
+            0.907,
+            0.576
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use "
+            },
+            {
+              "type": "text",
+              "content": "abstraction",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to make a distinction between how to implement an object vs how to use the object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.603,
+            0.787,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "build "
+            },
+            {
+              "type": "text",
+              "content": "layers",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of object abstractions that inherit behaviors from other classes of objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.087,
+            0.734,
+            0.885,
+            0.831
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "create our "
+            },
+            {
+              "type": "text",
+              "content": "own classes of objects",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " on top of Python’s basic classes"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT OpenCourseWare "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For information about citing these materials or our Terms of Use, visit: "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/terms",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu/terms"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

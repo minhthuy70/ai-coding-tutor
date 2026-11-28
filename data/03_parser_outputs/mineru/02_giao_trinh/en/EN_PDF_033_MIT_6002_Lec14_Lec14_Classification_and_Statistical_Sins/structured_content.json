@@ -1,0 +1,1638 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.288,
+            0.875,
+            0.608
+          ],
+          "level": 2,
+          "content": "Lecture\t14: Classification, Statistical Sins"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.958,
+            0.551,
+            0.977
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.959,
+            0.912,
+            0.979
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.144,
+            0.055,
+            0.471,
+            0.11
+          ],
+          "level": 2,
+          "content": "Announcements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.191,
+            0.278,
+            0.241
+          ],
+          "content": "§Reading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.156,
+            0.251,
+            0.332,
+            0.297
+          ],
+          "content": "◦ Chapter\t21"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.328,
+            0.436,
+            0.375
+          ],
+          "content": "§Course\tevaluations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.155,
+            0.387,
+            0.819,
+            0.481
+          ],
+          "content": "◦ Online evaluation now through noon on Friday, December\t16"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.511,
+            0.963,
+            0.615
+          ],
+          "content": "§Will\tbe\tmaking\tstudy\tcode\tfor\tfinal\texam\tavailable\tlater today"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.451,
+            0.973,
+            0.552,
+            0.991
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.973,
+            0.913,
+            0.993
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.879,
+            0.103
+          ],
+          "level": 2,
+          "content": "Compare\tto\tKNN \tResults\t(from \tMonday)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.03,
+            0.16,
+            0.964,
+            0.633
+          ],
+          "sub_type": "code",
+          "content": "```txt\nAverage of 10 80/20 splits using KNN (k=3) Average of 10 80/20 splits LR\nAccuracy = 0.744 Accuracy = 0.804\nSensitivity = 0.629 Sensitivity = 0.719\nSpecificity = 0.829 Specificity = 0.859\nPos. Pred. Val. = 0.728 Pos. Pred. Val. = 0.767\nAverage of LOO testing using KNN (k=3) Average of LOO testing using LR\nAccuracy = 0.769 Accuracy = 0.786\nSensitivity = 0.663 Sensitivity = 0.705\nSpecificity = 0.842 Specificity = 0.842\nPos. Pred. Val. = 0.743 Pos. Pred. Val. = 0.754\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.236,
+            0.693,
+            0.739,
+            0.808
+          ],
+          "level": 2,
+          "content": "Performance\tnot\tmuch\tdifference Logistic\tregression\tslightly\tbetter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.839,
+            0.872,
+            0.894
+          ],
+          "content": "Logistic\tregression\tprovides\tinsight\tabout\tvariables"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.551,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.968,
+            0.912,
+            0.989
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.628,
+            0.101
+          ],
+          "level": 2,
+          "content": "Looking at\tF eature Weights"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.1,
+            0.16,
+            0.859,
+            0.535
+          ],
+          "sub_type": "code",
+          "content": "```txt\nmodel.classes_ = ['Died' 'Survived']\nFor label Survived\n    C1 = 1.66761946545\n    C2 = 0.460354552452\n    C3 = -0.50338282535\n    age = -0.0314481062387\n    male gender = -2.39514860929\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.601,
+            0.773,
+            0.649
+          ],
+          "content": "L1 regression tends to drive one variable to zero"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.707,
+            0.871,
+            0.757
+          ],
+          "content": "L2 (default) regression spreads weights across variables"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.729,
+            0.099
+          ],
+          "level": 2,
+          "content": "Correlated \tFeatures,\ta n \tExample"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.158,
+            0.955,
+            0.913
+          ],
+          "sub_type": "code",
+          "content": "```python\n■c1 + c2 + c3 = 1\n    - l.e., values are not independent\n    - Is being in 1st class good, or being in the other classes bad?\n\n■Suppose we eliminate c1?\n\n    def __init__(self, pClass, age, gender, survived, name):\n        self.name = name\n        if pClass == 2:\n            self.featureVec = [1, 0, age, gender]\n        elif pClass == 3:\n            self.featureVec = [0, 1, age, gender]\n        else:\n            self.featureVec = [0, 0, age, gender]\n        self.label = survived\n        self.cabinClass = pClass\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.496,
+            0.099
+          ],
+          "level": 2,
+          "content": "Comparative\tResults"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.208,
+            0.972,
+            0.898
+          ],
+          "sub_type": "code",
+          "content": "```txt\nOriginal Features\nAverage of 20 80/20 splits LR\nAccuracy = 0.778\nSensitivity = 0.687\nSpecificity = 0.842\nPos. Pred. Val. = 0.755\nmodel.classes_ = ['Died' 'Survived']\nFor label Survived\nC1 = 1.68864047459\nC2 = 0.390605976351\nC3 = -0.46270349333\nage = -0.0307090135358\nmale gender = -2.41191131088\nModified Features\nAverage of 20 80/20 splits LR\nAccuracy = 0.779\nSensitivity = 0.674\nSpecificity = 0.853\nPos. Pred. Val. = 0.765\nmodel.classes_ = ['Died' 'Survived']\nFor label Survived\nC2 = -1.08356816806\nC3 = -1.92251427055\nage = -0.026056041377\nmale gender = -2.36239279331\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.868,
+            0.969,
+            0.881,
+            0.989
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.489,
+            0.102
+          ],
+          "level": 2,
+          "content": "Changing\tthe\tCu toff"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.094,
+            0.147,
+            0.956,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```txt\nrandom.seed(0)\ntrainingSet, testSet = split80_20(examples)\nmodel = buildModel(trainingSet, False)\nprint('Try p = 0.1')\ntruePos, falsePos, trueNeg, falseNeg =\\\napplyModel(model, testSet, 'Survived', 0.1)\ngetStats(truePos, falsePos, trueNeg, falseNeg)\nprint('Try p = 0.9')\ntruePos, falsePos, trueNeg, falseNeg =\\\napplyModel(model, testSet, 'Survived', 0.9)\ngetStats(truePos, falsePos, trueNeg, falseNeg)\n\nTry p = 0.1\nAccuracy = 0.493\nSensitivity = 0.976\nSpecificity = 0.161\nPos. Pred. Val. = 0.444\n\nTry p = 0.9\nAccuracy = 0.656\nSensitivity = 0.176\nSpecificity = 0.984\nPos. Pred. Val. = 0.882\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.898,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.865,
+            0.101
+          ],
+          "level": 2,
+          "content": "ROC \t \t \t (Receiver Operating Characteristic)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.055,
+            0.169,
+            0.954,
+            0.837
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef buildROC(trainingSet, testSet, title, plot = True):\n    model = buildModel(trainingSet, True)\n    xVals, yVals = [], []\n    p = 0.0\n    while p <= 1.0:\n        truePos, falsePos, trueNeg, falseNeg =\\\n            applyModel(model, testSet,\n                'Survived', p)\n        xVals.append(1.0 - specificity(trueNeg, falsePos))\n        yVals.append(sensitivity(truePos, falseNeg))\n        p += 0.01\n    auroc = sklearn.metrics.auc(xVals, yVals, True)\n    if plot:\n        ...|\n    return auroc\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.969,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.037,
+            0.24,
+            0.099
+          ],
+          "level": 2,
+          "content": "Output"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.182,
+            0.809,
+            0.843
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.898,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.657,
+            0.093
+          ],
+          "level": 2,
+          "content": "There\ta re\tTh ree\tKi nds\tof\tL ies"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.262,
+            0.269,
+            0.786,
+            0.677
+          ],
+          "level": 2,
+          "content": "LIES DAMNED LIES and STATISTICS"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.036,
+            0.525,
+            0.093
+          ],
+          "level": 2,
+          "content": "Humans\t \t and Statistics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.273,
+            0.337,
+            0.32
+          ],
+          "content": "Human\tMind"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.075,
+            0.399,
+            0.434,
+            0.752
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.005,
+                0.761,
+                0.596,
+                0.811
+              ],
+              "content": "Image of brain © source unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+            }
+          ],
+          "image_source": "images/page_10_image_2.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.613,
+            0.273,
+            0.75,
+            0.32
+          ],
+          "level": 2,
+          "content": "Statistics"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.495,
+            0.445,
+            0.896,
+            0.567
+          ],
+          "content": "\\sum_ {i = 0} ^ {i = \\text {len(observed)} - 1} (\\text {observed}[i ] - \\text {predicted}[i ]) ^ {2}",
+          "image_source": "images/page_10_equation_4.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.466,
+            0.577,
+            0.888,
+            0.67
+          ],
+          "content": "1 - (\\frac {n - 1}{n} * \\frac {n - 2}{n} * \\dots * \\frac {n - (K - 1)}{n}",
+          "image_source": "images/page_10_equation_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.036,
+            0.525,
+            0.093
+          ],
+          "level": 2,
+          "content": "Humans and Statistics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.18,
+            0.845,
+            0.445
+          ],
+          "content": "“If you can't prove what you want to prove, demonstrate something else and\tpretend\tthey are the\tsame\tthing.\tIn\tthe\tdaze\tthat\tfollows\tthe\tcollision of statistics with the human mind,\thardly anyone will notice the difference.” – Darrell Huff"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.262,
+            0.527,
+            0.619,
+            0.875
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.881,
+            0.81,
+            0.93
+          ],
+          "content": "Image of brain © source unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.036,
+            0.495,
+            0.093
+          ],
+          "level": 2,
+          "content": "Anscombe’s Quartet"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.175,
+            0.702,
+            0.225
+          ],
+          "level": 2,
+          "content": "§Four\tgroups\teach\tcontaining\t11\tx,\ty\tpairs"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.104,
+            0.251,
+            0.749,
+            0.861
+          ],
+          "content": "| x | y | x | y | x | y | x | y |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 10.0 | 8.04 | 10.0 | 9.14 | 10.0 | 7.46 | 8.0 | 6.58 |\n| 8.0 | 6.95 | 8.0 | 8.14 | 8.0 | 6.77 | 8.0 | 5.76 |\n| 13.0 | 7.58 | 13.0 | 8.74 | 13.0 | 12.74 | 8.0 | 7.71 |\n| 9.0 | 8.81 | 9.0 | 8.77 | 9.0 | 7.11 | 8.0 | 8.84 |\n| 11.0 | 8.33 | 11.0 | 9.26 | 11.0 | 7.81 | 8.0 | 8.47 |\n| 14.0 | 9.96 | 14.0 | 8.10 | 14.0 | 8.84 | 8.0 | 7.04 |\n| 6.0 | 7.24 | 6.0 | 6.13 | 6.0 | 6.08 | 8.0 | 5.25 |\n| 4.0 | 4.26 | 4.0 | 3.10 | 4.0 | 5.39 | 19.0 | 12.50 |\n| 12.0 | 10.84 | 12.0 | 9.13 | 12.0 | 8.15 | 8.0 | 5.56 |\n| 7.0 | 4.82 | 7.0 | 7.26 | 7.0 | 6.42 | 8.0 | 7.91 |\n| 5.0 | 5.68 | 5.0 | 4.74 | 5.0 | 5.73 | 8.0 | 6.89 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_table_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.036,
+            0.466,
+            0.099
+          ],
+          "level": 2,
+          "content": "Summary Statistics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.672,
+            0.223
+          ],
+          "content": "§Summary\tstatistics\tfor\tgroups\tidentical"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.235,
+            0.308,
+            0.277
+          ],
+          "content": "◦ Mean x = 9.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.294,
+            0.308,
+            0.339
+          ],
+          "content": "◦ Mean y = 7.5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.353,
+            0.398,
+            0.396
+          ],
+          "content": "◦ Variance of x = 10.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.41,
+            0.399,
+            0.455
+          ],
+          "content": "◦ Variance of y = 3.75"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.469,
+            0.625,
+            0.516
+          ],
+          "content": "◦ Linear\tregression model: $y = 0.5x + 3$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.547,
+            0.578,
+            0.597
+          ],
+          "content": "§Are\tfour\tdata\tsets\treally\tsimilar?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.451,
+            0.093
+          ],
+          "level": 2,
+          "content": "Let’s Plot\tthe Data"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.189,
+            0.174,
+            0.483,
+            0.481
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_chart_1.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.537,
+            0.175,
+            0.833,
+            0.481
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_chart_2.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.189,
+            0.521,
+            0.484,
+            0.823
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_chart_3.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.536,
+            0.521,
+            0.876,
+            0.824
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_chart_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.822,
+            0.884,
+            0.921
+          ],
+          "content": "**Moral:\tStatistics about the data is not the same as the data Moral:\tUse visualization tools to look at the data itself**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.036,
+            0.46,
+            0.1
+          ],
+          "level": 2,
+          "content": "Lying \t \t with Pictures"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.166,
+            0.17,
+            0.773,
+            0.799
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.894,
+            0.965,
+            0.911,
+            0.985
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.674,
+            0.099
+          ],
+          "level": 2,
+          "content": "Telling the Truth with Pictures"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.171,
+            0.773,
+            0.801
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.135,
+                0.823,
+                0.828,
+                0.87
+              ],
+              "content": "Moral:\tLook carefully\tat the axes labels and scales"
+            }
+          ],
+          "image_source": "images/page_16_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.035,
+            0.46,
+            0.099
+          ],
+          "level": 2,
+          "content": "Lying with Pictures"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.104,
+            0.131,
+            0.897,
+            0.785
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.798,
+            0.924,
+            0.895
+          ],
+          "level": 2,
+          "content": "Moral:\tAsk whether the things being\tcompared are actually comparable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.205,
+            0.898,
+            0.837,
+            0.945
+          ],
+          "content": "Screenshot of Fox News © 20th / 21st Century Fox. All rights reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.893,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.584,
+            0.099
+          ],
+          "level": 2,
+          "content": "Garbage In, Garbage Out"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.23,
+            0.815,
+            0.633
+          ],
+          "content": "“On\ttwo\toccasions I\thave\tbeen\tasked\t[by members\tof\tParliament],\t‘Pray,\tMr.\tBabbage, if\tyou\tput\tinto\tthe\tmachine\twrong\tfigures, will\tthe\tright\tanswers\tcome\tout?’\tI\tam\tnot able\trightly\tto\tapprehend\tthe\tkind\tof confusion\tof\tideas\tthat\tcould\tprovoke\tsuch a question.” – Charles\tBabbage\t(1791-1871)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.893,
+            0.965,
+            0.911,
+            0.985
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.035,
+            0.807,
+            0.097
+          ],
+          "level": 2,
+          "content": "Calhoun’s\tR esponse\tt o\tErrors\ti n \tData"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.202,
+            0.946,
+            0.298
+          ],
+          "content": "“there were so many errors they balanced one another,\tand led to the same conclusion as if they were all correct.”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.323,
+            0.898,
+            0.467
+          ],
+          "content": "Was it the case that the measurement errors are unbiased and independent of each of other,\tand therefore almost identically distributed on either\tside of the mean?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.044,
+            0.493,
+            0.898,
+            0.588
+          ],
+          "content": "No,\tlater\tanalysis showed that the errors were not random but systematic."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.044,
+            0.615,
+            0.939,
+            0.709
+          ],
+          "content": "“it\twas the census that\twas insane and not\tthe colored people.”— James Freeman Clarke"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.044,
+            0.737,
+            0.918,
+            0.785
+          ],
+          "content": "**Moral:\tAnalysis of bad\tdata can\tlead\tto dangerous conclusions.**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.551,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.968,
+            0.912,
+            0.989
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.035,
+            0.279,
+            0.1
+          ],
+          "level": 2,
+          "content": "Sampling"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.885,
+            0.33
+          ],
+          "content": "§All\tstatistical\ttechniques\tare\tbased\tupon\tthe assumption\tthat\tby\tsampling a\tsubset\tof a\tpopulation we\tcan\tinfer\tthings\tabout\tthe\tpopulation\tas a\twhole"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.356,
+            0.889,
+            0.564
+          ],
+          "content": "§As\twe\thave\tseen,\tif\trandom\tsampling\tis\tused,\tone\tcan make\tmeaningful\tmathematical\tstatements\tabout\tthe expected\trelation\tof\tthe\tsample\tto\tthe\tentire population"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.591,
+            0.729,
+            0.641
+          ],
+          "content": "§Easy\tto\tget\trandom\tsamples\tin\tsimulations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.669,
+            0.842,
+            0.771
+          ],
+          "content": "§Not\tso\teasy\tin\tthe\tfield,\twhere\tsome\texamples\tare more\tconvenient\tto\tacquire\tthan\tothers"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.036,
+            0.666,
+            0.1
+          ],
+          "level": 2,
+          "content": "Non-representative Sampling"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.17,
+            0.901,
+            0.313
+          ],
+          "content": "§“Convenience\tsampling”\tnot\tusually\trandom,\te.g., ◦ Survivor\tbias,\te.g.,\tcourse evaluations at end of course or grading\tfinal\texam\tin 6.0002\ton a strict curve"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.32,
+            0.894,
+            0.407
+          ],
+          "content": "◦ Non-response bias,\te.g.,\topinion polls conducted by mail or\tonline"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.435,
+            0.887,
+            0.669
+          ],
+          "content": "§When\tsamples\tnot\trandom\tand\tindependent,\twe\tcan still\tdo\tthings\tlike\tcomputer\tmeans\tand\tstandard deviations,\tbut **we should\tnot draw\tconclusions\tfrom them** using\tthings\tlike\tthe\tempirical\trule\tand central limit\ttheorem."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.693,
+            0.903,
+            0.836
+          ],
+          "content": "§Moral:\tUnderstand\thow\tdata\twas\tcollected,\tand whether\tassumptions\tused\tin\tthe\tanalysis\tare\tsatisfied. If\tnot,\tbe\twary."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 14"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.965,
+            0.911,
+            0.985
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.088,
+            0.102,
+            0.237,
+            0.157
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.227,
+            0.573,
+            0.284
+          ],
+          "content": "6.0002 Introduction to Computational Thinking and Data Science Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.357,
+            0.688,
+            0.384
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 14",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2016-12-13T02:42:44Z",
+      "modified_at": "2017-04-11T14:32:47+05:30",
+      "creator_application": "PowerPoint",
+      "producer_application": "Mac OS X 10.11.6 Quartz PDFContext",
+      "page_count": 23,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

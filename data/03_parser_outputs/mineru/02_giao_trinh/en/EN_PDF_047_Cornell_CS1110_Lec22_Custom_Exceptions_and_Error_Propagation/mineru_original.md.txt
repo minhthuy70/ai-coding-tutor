@@ -1,0 +1,557 @@
+## Lecture 22
+
+## While Loops
+
+## Announcements for Today
+
+## Assignments
+
+• A4 is now graded
+
+§ **Mean**: 93.1 **Median**: 96
+
+§ **Mean**: 8.6 hrs **SDev**: 4.0 hrs
+
+• A5 grades posted tomorrow
+
+• Keep working on A6
+
+§ Follow micro-deadlines
+
+§ Should be on **Vignette** now
+
+§ Start Task 3 **tomorrow**
+
+## Video Lessons
+
+• **Lesson 24** for today
+
+• **Lesson 25** for Thurs/Tues
+
+• But much material is new…
+
+![](images/page_1_image_14.jpg)
+
+## Recall: The For-Loop
+
+\# Create local var x
+
+<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
+$\mathbf{x} = \mathrm{seqn}[0]$
+</div>
+
+```lua
+print(x)
+```
+
+```txt
+x = seqn[1]
+```
+
+print(x)
+
+Not valid Python
+
+x = seqn[len(seqn)-1]
+
+print(x)
+
+\# Write as a for-loop
+
+for x in seqn:
+
+print(x)
+
+## Key Concepts
+
+• **iterable**: seqn
+
+• **loop variable**: x
+
+• **body**: print(x)
+
+## Important Concept in CS: Doing Things Repeatedly
+
+1. Process each item in a sequence
+
+Compute aggregate statistics for such as the mean, median, stand dataset, for x in sequence: eviation, process x
+
+Send everyone in a Facebook gro~~up an appointment tim~~e
+
+2. Perform n trials or get n samples.
+
+§ A4: draw a triangle six times to m
+
+§ Run a protein-folding simulati
+
+3. Do something an unknown number of times
+
+§ CUAUV team, vehicle keeps moving until reached its goal e a hexagonfor x in range(n): 06 time stepsdo next thing
+
+![](images/page_3_image_11.jpg)
+
+## Beyond Sequences: The while-loop
+
+## while &lt;condition&gt;:
+
+statement 1
+
+statement n
+
+**loop** <strong><u>condition</u></strong>
+
+**loop body**
+
+condition
+
+true
+
+body
+
+false
+
+## Vs For-Loop
+
+• Broader notion of loop
+
+§ You define “more to do”
+
+§ Not limited sequences
+
+• Must manage loop var
+
+§ You create it before loop
+
+§ You update it inside loop
+
+§ For-loop automated it
+
+• Trickier to get right
+
+## while Versus for
+
+```python
+def sum_squares(n):
+    """Rets: sum of squares
+    Prec: n is int > 0"""
+    total = 0
+    for x in range(n):
+        total = total + x*x
+    Must remember to increment
+    def sum_squares(n):
+        """Rets: sum of squares
+        Prec: n is int > 0"""
+        total = 0
+        x = 0
+    while x < n:
+        total = total + x*x
+        x = x+1
+```
+
+## The Problem with While-Loops
+
+• Infinite loops are possible
+
+§ Forget to update a loop variable
+
+§ Incorrectly write the boolean expression
+
+• Will hang your program
+
+§ Must type control-C to abort/quit
+
+• But detecting problems is not easy
+
+§ Sometimes your code is just slow
+
+§ Scientific computations can take hours
+
+## • Solution: Traces
+
+## Tracing While-Loops
+
+```python
+print('Before while')
+total = 0
+x = 0
+while x < n:
+    print('Start loop '+str(x))
+    total = total + x*x
+    x = x + 1
+    print('End loop ')
+print('After while')
+Output:
+    Before while
+    Start loop 0
+    End loop
+    Start loop 1
+    End loop
+    Start loop 2
+    End loop
+    After while
+Important
+11/10/26
+While-Loops
+```
+
+## How to Design While-Loops
+
+• Many of the same rules from for-loops
+
+§ Often have an **accumulator variable**
+
+§ Loop body adds to this accumulator
+
+• Differences are loop variable and iterable
+
+§ Typically **do not have iterable**
+
+• Breaks up into three **design patterns**
+
+1. Replacement to range()
+
+2. Explicit goal condition
+
+3. Boolean tracking variable
+
+```python
+def increment_for(seq):
+    """Increments each
+    element of seq list
+    Prec: seq contains ints"""
+    for k in range(len(seq)):
+        seq[k] = seq[k]+1
+
+    Must still remember
+    to increment
+
+    def increment_while(seq):
+        """Increments each
+        element of seq list
+        Prec: seq contains ints"""
+        k = 0
+        while k < len(seq):
+            seq[k] = seq[k]+1
+            k = k + 1
+```
+
+## While Loops and Lists
+
+## Using the Goal as a Condition
+
+def prompt(prompt,valid):
+
+"""Returns: the choice from a given prompt.
+
+This function asks the user a question, and waits for a response. It checks if the response is valid against a list of acceptable answers. If it is not valid, it asks the question again. <u>Otherwise, it return</u>s
+
+the player's answer.
+
+Precondition: prompt is a string
+
+Tells you the stop condition
+
+Precondition: valid is a tuple of strings"""
+
+pass # Stub to be implemented
+
+## Using the Goal as a Condition
+
+def prompt(prompt,valid):
+
+"""Returns: the choice from a given prompt.
+
+```python
+Preconditions: prompt is a string, valid is a tuple of strings"""
+response = input(prompt)
+```
+
+\# Continue to ask while the response is not valid.
+
+```txt
+while not (response in valid):
+```
+
+print('Invalid response. Answer must be one of ')+str(valid)
+
+response = input(prompt)
+
+return response
+
+## Using a Boolean Variable
+
+def roll\_past(goal):
+
+"""Returns: The score from rolling a die until passing goal.
+
+This function starts with a score of 0, and rolls a die, adding the result to the score. Once the score passes goal, it stops and returns the result as the final score.
+
+If the function ever rolls a 1, it stops and <u>the score is 0.</u>
+
+Preconditions: goal is an int > 0""" pass # Stub to be implemented
+
+Condition is too complicated
+
+Introduce a boolean variable. Use it to track condition.
+
+## Using a Boolean Variable
+
+```python
+ef roll_past(goal):
+    """Returns: The score from rolling a die until passing goal."""
+loop = True  # Keep looping until this is false
+score = 0
+while loop:
+    roll = random.randint(1,6)
+    if roll == 1:
+        score = 0; loop = False
+    else:
+        score = score + roll; loop = score < goal
+return score
+```
+
+## Advantages of while vs for
+
+```python
+# table of squares to N
+seq = []
+n = floor(sqrt(N)) + 1
+for k in range(n):
+    seq.append(k*k)
+```
+
+A for-loop requires that you know where to stop the loop **ahead of time**
+
+```txt
+# table of squares to N
+seq = []
+k = 0
+while k*k < N:
+    seq.append(k*k)
+    k = k+1
+```
+
+A while loop can use complex expressions to check if the loop is done
+
+```python
+# Table of n Fibonacci nums
+fib = [1, 1]
+while len(fib) < n:
+    fib.append(fib[-1] + fib[-2])
+```
+
+## Advantages of while vs for
+
+Fibonacci numbers:
+
+$$
+F _ {0} = 1
+$$
+
+$$
+F _ {1} = 1
+$$
+
+$$
+F _ {n} = F _ {n - 1} + F _ {n - 2}
+$$
+
+```python
+# Table of n Fibonacci nums
+fib = [1, 1]
+for k in range(2,n):
+    fib.append(fib[-1] + fib[-2])
+```
+
+```txt
+Sometimes you do not use the loop variable at all
+```
+
+```txt
+Do not need to have a loop variable if you don’t need one
+```
+
+## Difficulties with while
+
+Be careful when you **modify** the loop variable
+
+```python
+def rem3(lst):
+    """Remove all 3's from lst"""
+    i = 0
+    while i < len(lst):
+        # no 3's in lst[0..i-1]
+        if lst[i] == 3:
+            del lst[i]
+        i = i+1
+>>> a = [3, 3, 2]
+>>> rem3(a)
+>>> a
+A: [2]
+B: [3]
+C: [3,2]
+D: []
+E: something else
+```
+
+## Difficulties with while
+
+Be careful when you **modify** the loop variable
+
+```python
+def rem3(lst):
+    """Remove all 3's from lst"""
+    i = 0
+    while i < len(lst):
+        # no 3's in lst[0..i-1]
+        if lst[i] == 3:
+            del lst[i]
+        i = i+1
+>>> a = [3, 3, 2]
+>>> rem3(a)
+>>> a
+A: [2]
+B: [3]
+C: [3,2] Correct
+D: []
+E: something else
+```
+
+```python
+def rem3(lst):
+    """Remove all 3's from lst"""
+    i = 0
+    while i < len(lst):
+        # no 3's in lst[0..i-1]
+        if lst[i] == 3:
+            del lst[i]
+        else:
+            i = i+1
+
+def rem3(lst):
+    """Remove all 3's from lst"""
+    while 3 in lst:
+        lst.remove(3)
+
+The stopping condition is not a numerical counter this time.
+Simplifies code a lot.
+
+Stopping point keeps changing
+```
+
+## Difficulties with while
+
+## Be careful when you modify the loop variable
+
+## Application: Convergence
+
+• How to implement this function? def sqrt(c):
+
+"""Returns the square root of c"""
+
+• Consider the polynomial $\mathrm{f}(x) = x^{2} - \mathrm{c}$
+
+§ Value sqrt(c) is a root of this polynomial
+
+• Suggests a use for **Newton’s Method**
+
+§ **Start with a guess** at the answer
+
+§ Use calculus formula to improve guess
+
+## Example: Sqrt(2)
+
+• Actual answer: 1.414235624
+
+• $x_{n + 1} = x_n / 2 + c / 2x_n$
+
+• $x_{0} = 1$ # Rough guess of sqrt(2)
+
+• $x_{1} = 0.5 + 1 = 1.5$
+
+• $x_{2} = 0.75 + 2 / 3 = 1.41666$
+
+• $x_{3} = 0.7083 + 2 / 2.833 = 1.41425$
+
+## When Do We Stop?
+
+• We don’t know the sqrt(c)
+
+§ This was thing we wanted to compute!
+
+§ So we cannot tell how far off we are
+
+§ But we do know s $\operatorname{sqrt}(\mathbf{c})^2 = \mathbf{c}$
+
+• So square approximation and compare
+
+§ while $\mathbf{X}^{*}\mathbf{X}$ is not close enough to c
+
+§ while abs $(\mathbf{x}^{*}\mathbf{x}-\mathfrak{c})>$ threshold
+
+## When Do We Stop?
+
+• We don’t know the sqrt(c)
+
+§ This was thing we wanted to compute!
+
+§ So we cannot tell how far off we are
+
+§ But we do know s $\mathrm{qrt}(\mathbf{c})^2 = \mathbf{c}$
+
+• So square approximation and compare
+
+While-loop computes until x\*x – c) > thresholdthe answer **converges**
+
+## The Final Result
+
+```python
+def sqrt(c,err=1e-6):
+    """Returns: sqrt of c with given margin of error.
+    Preconditions: c and err are numbers > 0"""
+    x = c/2.0
+
+    while abs(x*x-c) > err:
+        # Get x_{n+1} from x_n
+        x = x/2.0+c/(2.0*x)
+
+    return x
+```
+
+## Using while-loops Instead of for-loops
+
+## Advantages
+
+• Better for **modifying data**
+
+§ More natural than range
+
+§ Works better with deletion
+
+• Better for **convergent tasks**
+
+§ Loop until calculation done
+
+§ Exact steps are unknown
+
+• Easier to **stop early**
+
+§ Just set loop var to False
+
+## Disadvantages
+
+• Performance is **slower**
+
+§ Python optimizes for-loops
+
+§ Cannot optimize while
+
+• **Infinite loops** more likely
+
+§ Easy to forget loop vars
+
+§ Or get stop condition wrong
+
+• **Debugging** is harder
+
+§ Will see why in later lectures

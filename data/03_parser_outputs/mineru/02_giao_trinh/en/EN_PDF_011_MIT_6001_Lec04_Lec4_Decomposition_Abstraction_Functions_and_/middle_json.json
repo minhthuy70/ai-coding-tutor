@@ -1,0 +1,4552 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Decomposition, Abstraction, Functions",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:49:29+05:30",
+      "modified_at": "2016-12-19T13:30:06+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 35,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.169,
+            0.811,
+            0.549
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DECOMPOSITION, ABSTRACTION, FUNCTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.098,
+            0.569,
+            0.541,
+            0.624
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(download slides and .py files Ă"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.097,
+            0.655,
+            0.389,
+            0.702
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTU RE 4"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.606,
+            0.567,
+            0.818,
+            0.624
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ě\u0003follow along!)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.959,
+            0.547,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.374,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LAST TIME"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.461,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "while loops vs for loops"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.354,
+            0.662,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "should know how to write both kinds"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.433,
+            0.578,
+            0.48
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "should know when to use them"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.511,
+            0.784,
+            0.561
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "guess-and-check and approximation methods"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.589,
+            0.703,
+            0.639
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "bisection method to speed up programs"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.161,
+            0.278,
+            0.23
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TODAY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.692,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "structuring programs and hiding details"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.355,
+            0.255,
+            0.401
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "functions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.433,
+            0.316,
+            0.481
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "specifications"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.511,
+            0.557,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "keywords: return vs print"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.597,
+            0.202,
+            0.637
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "scope"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.159,
+            0.825,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HOW DO WE WRITE CODE?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.107,
+            0.337,
+            0.558,
+            0.381
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• covered language mechanisms"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.107,
+            0.395,
+            0.882,
+            0.441
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• know how to write different files for each computation"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.455,
+            0.556,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• each file is some piece of code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.514,
+            0.671,
+            0.559
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• each code is a sequence of instructions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.591,
+            0.538,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "problems with this approach"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.107,
+            0.651,
+            0.541,
+            0.696
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• easy for small-scale problems"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.107,
+            0.71,
+            0.496,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• messy for larger problems"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.768,
+            0.521,
+            0.813
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• hard to keep track of details"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.108,
+            0.827,
+            0.876,
+            0.921
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• how do you know the right info is supplied to the right part of code"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.161,
+            0.714,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "GOOD PROGRAMMING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.278,
+            0.694,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "more code not necessarily a good thing"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.356,
+            0.795,
+            0.455
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "measure good programmers by the amount of functionality"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.485,
+            0.406,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "introduce "
+            },
+            {
+              "type": "text",
+              "content": "functions",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.563,
+            0.915,
+            0.611
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "mechanism to achieve "
+            },
+            {
+              "type": "text",
+              "content": "decomposition",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " and "
+            },
+            {
+              "type": "text",
+              "content": "abstraction",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.16,
+            0.716,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE – PROJECTOR"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.481,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a projector is a black box"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.355,
+            0.481,
+            0.402
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "don’t know how it works"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.432,
+            0.603,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "know the interface: input/output"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.513,
+            0.851,
+            0.611
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "connect any electronic to it that can communicate with that input"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.641,
+            0.906,
+            0.744
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "black box somehow converts image from input source to a wall, magnifying it"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.087,
+            0.771,
+            0.805,
+            0.872
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ABSTRACTION IDEA",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": do not need to know how projector works to use it"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.716,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE – PROJECTOR"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.898,
+            0.38
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "projecting large image for Olympics decomposed into separate tasks for separate projectors"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.408,
+            0.842,
+            0.507
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "each projector takes input and produces separate output"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.537,
+            0.883,
+            0.588
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "all projectors work together to produce larger image"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.615,
+            0.801,
+            0.717
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DECOMPOSITION IDEA",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": different devices work together to achieve an end goal"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.275,
+            0.158,
+            0.91,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "APPLY THESE CONCEPTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.412,
+            0.384,
+            0.908,
+            0.453
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TO PROGRAMMING!"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.9,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.068,
+            0.753,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CREATE STRUCTURE with DECOMPOSITION"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.278,
+            0.681,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "in projector example, separate devices"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.355,
+            0.74,
+            0.404
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "in programming, divide code into "
+            },
+            {
+              "type": "text",
+              "content": "modules",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.415,
+            0.391,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• are "
+            },
+            {
+              "type": "text",
+              "content": "self-contained",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.473,
+            0.446,
+            0.518
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• used to "
+            },
+            {
+              "type": "text",
+              "content": "break up",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " code 7"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.532,
+            0.468,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• intended to be "
+            },
+            {
+              "type": "text",
+              "content": "reusable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.591,
+            0.423,
+            0.637
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• keep code "
+            },
+            {
+              "type": "text",
+              "content": "organized",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.651,
+            0.415,
+            0.695
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "keep code coherent",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.087,
+            0.728,
+            0.859,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "this lecture, achieve decomposition with "
+            },
+            {
+              "type": "text",
+              "content": "functions",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.087,
+            0.806,
+            0.872,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "in a few weeks, achieve decomposition with "
+            },
+            {
+              "type": "text",
+              "content": "classes",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.094,
+            0.067,
+            0.68,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SUPRESS DETAILS with ABSTRACTION"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.913,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "in projector example, instructions for how to use it are sufficient, no need to know how to build one"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.407,
+            0.926,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "in programming, think of a piece of code as a "
+            },
+            {
+              "type": "text",
+              "content": "black box",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.468,
+            0.388,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• cannot see details"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.525,
+            0.494,
+            0.568
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• do not need to see details"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.585,
+            0.494,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• do not want to see details"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.643,
+            0.504,
+            0.688
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• hide tedious coding details"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.088,
+            0.721,
+            0.86,
+            0.823
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "achieve abstraction with function specifications or docstrings"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.412,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "FUNCTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.912,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "write reusable pieces/chunks of code, called "
+            },
+            {
+              "type": "text",
+              "content": "functions",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.355,
+            0.825,
+            0.456
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "functions are not run in a program until they are “"
+            },
+            {
+              "type": "text",
+              "content": "called",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "” or “"
+            },
+            {
+              "type": "text",
+              "content": "invoked",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "” in a program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.485,
+            0.468,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "function characteristics:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.545,
+            0.298,
+            0.587
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• has a "
+            },
+            {
+              "type": "text",
+              "content": "name",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.603,
+            0.514,
+            0.649
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• has "
+            },
+            {
+              "type": "text",
+              "content": "parameters",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " (0 or more)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.662,
+            0.746,
+            0.707
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• has a "
+            },
+            {
+              "type": "text",
+              "content": "docstring",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " (optional but recommended)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.109,
+            0.721,
+            0.29,
+            0.766
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• has a "
+            },
+            {
+              "type": "text",
+              "content": "body",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.783,
+            0.394,
+            0.826
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "returns",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " something"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.067,
+            0.799,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HOW TO WRITE and CALL/INVOKE A FUNCTION"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.075,
+            0.252,
+            0.998,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.075,
+                0.252,
+                0.998,
+                0.933
+              ],
+              "content": "def is_even( i ): parameters or arguments\n    \"\"\"\n    Input: i, a positive int\n    Returns True if i is even, otherwise False\n    \"\"\"\n    print(\"inside is_even\")\n    return i%2 == 0\n\n    is_even(3)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.16,
+            0.737,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "IN THE FUNCTION BODY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.05,
+            0.337,
+            0.865,
+            0.913
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.05,
+                0.337,
+                0.865,
+                0.913
+              ],
+              "content": "def is_even( i ):\n    \"\"\"\n    Input: i, a positive int\n    Returns True if i is even, otherwise False\n    \"\"\"\n    print(\"inside is_even\")\n    return i%2 == 0"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.159,
+            0.539,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VARIABLE SCOPE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.275,
+            0.726,
+            0.371
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "formal parameter",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " gets bound to the value of "
+            },
+            {
+              "type": "text",
+              "content": "actual parameter",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " when function is called"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.398,
+            0.967,
+            0.446
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "new "
+            },
+            {
+              "type": "text",
+              "content": "scope/frame/environment",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " created when enter a function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.472,
+            0.625,
+            0.52
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "scope",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " is mapping of names to objects"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 4,
+          "bbox": [
+            0.033,
+            0.53,
+            0.503,
+            0.761
+          ],
+          "image_path": "images/page_13_equation_4.jpg",
+          "content": "\\begin{array}{l} \\text {def f(\\boxed {x}):} \\\\ \\text {x = x + 1} \\\\ \\text {print('in f(x): x =', x)} \\\\ \\text {return x} \\end{array}"
+        },
+        {
+          "type": "equation",
+          "index": 5,
+          "bbox": [
+            0.032,
+            0.821,
+            0.341,
+            0.942
+          ],
+          "image_path": "images/page_13_equation_5.jpg",
+          "content": "\\begin{array}{r c l} \\mathbf {x} & = & 3 \\\\ \\mathbf {z} & = & f (\\boxed {\\mathbf {x}}) \\end{array} \\quad \\begin{array}{l} \\text {actual} \\\\ \\text {parameter} \\end{array}"
+        },
+        {
+          "type": "chart",
+          "index": 6,
+          "bbox": [
+            0.513,
+            0.529,
+            0.976,
+            0.945
+          ],
+          "content": [
+            {
+              "type": "chart_body",
+              "index": 6,
+              "bbox": [
+                0.513,
+                0.529,
+                0.976,
+                0.945
+              ],
+              "image_path": "images/page_13_chart_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.159,
+            0.539,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VARIABLE SCOPE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.029,
+            0.554,
+            0.958,
+            0.94
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.029,
+                0.554,
+                0.958,
+                0.94
+              ],
+              "content": "def f( x ):\n    x = x + 1\n    print('in f(x): x =', x)\n    return x\n\nx = 3\nz = f( x )\n\nGlobal scope\nf      Some\ncode\nx       3\n\nf scope\nx       3"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.159,
+            0.539,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VARIABLE SCOPE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.029,
+            0.554,
+            0.958,
+            0.94
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.029,
+                0.554,
+                0.958,
+                0.94
+              ],
+              "content": "def f( x ):\n    x = x + 1\n    print('in f(x): x =', x)\n    return x\n\nx = 3\nz = f( x )\n\nGlobal scope\nf      Some\ncode\nx       3\n\nf scope\nx       4"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.159,
+            0.539,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VARIABLE SCOPE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.028,
+            0.554,
+            0.959,
+            0.959
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.028,
+                0.554,
+                0.959,
+                0.959
+              ],
+              "content": "def f( x ):\n    x = x + 1\n    print('in f(x): x =', x)\n    return x\n\nx = 3\nz = f( x )"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.159,
+            0.539,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "VARIABLE SCOPE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.031,
+            0.555,
+            0.724,
+            0.938
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.031,
+                0.555,
+                0.724,
+                0.938
+              ],
+              "content": "def f( x ):\n    x = x + 1\n    print('in f(x): x =', x)\n    return x\n\nx = 3\nz = f( x )"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.068,
+            0.663,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ONE WARNING IF NO return STATEMENT"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.271,
+            0.556,
+            0.712
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.086,
+                0.271,
+                0.556,
+                0.712
+              ],
+              "content": "def is_even( i ):\n    \"\"\"\n    Input: i, a positive int\n    Does not return anything\n    \"\"\"\n    i%2 == 0"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.726,
+            0.88,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python returns the value "
+            },
+            {
+              "type": "text",
+              "content": "None, if no return given",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.805,
+            0.61,
+            0.854
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "represents the absence of a value"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.171,
+            0.336,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.273,
+            0.476,
+            0.368
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return only has meaning "
+            },
+            {
+              "type": "text",
+              "content": "inside",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " a function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.391,
+            0.485,
+            0.487
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "only "
+            },
+            {
+              "type": "text",
+              "content": "one",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " return executed inside a function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.508,
+            0.49,
+            0.65
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "code inside function but after return statement not executed"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.672,
+            0.468,
+            0.814
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "has a value associated with it, "
+            },
+            {
+              "type": "text",
+              "content": "given to function caller",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.646,
+            0.164,
+            0.846,
+            0.245
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.518,
+            0.276,
+            0.923,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print can be used "
+            },
+            {
+              "type": "text",
+              "content": "outside",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " functions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.519,
+            0.409,
+            0.95,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can execute "
+            },
+            {
+              "type": "text",
+              "content": "many",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " print statements inside a function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.518,
+            0.535,
+            0.949,
+            0.691
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "code inside function can be executed after a print statement"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.518,
+            0.717,
+            0.946,
+            0.823
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "has a value associated with it, "
+            },
+            {
+              "type": "text",
+              "content": "outputted",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to the console"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.99
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.159,
+            0.852,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "FUNCTIONS AS ARGUMENTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.034,
+            0.281,
+            0.944,
+            0.943
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.034,
+                0.281,
+                0.944,
+                0.943
+              ],
+              "content": "■ arguments can take on any type, even functions\ndef func_a():\n    print 'inside func_a'\ndef func_b(y):\n    print 'inside func_b'\n    return y\ndef func_c(z):\n    print 'inside func_c'\n    return z()\nprint func_a()\nprint 5 + func_b(2)\nprint func_c(func_a)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "chart",
+          "index": 0,
+          "bbox": [
+            0.427,
+            0.265,
+            0.868,
+            0.955
+          ],
+          "content": [
+            {
+              "type": "chart_body",
+              "index": 0,
+              "bbox": [
+                0.427,
+                0.265,
+                0.868,
+                0.955
+              ],
+              "image_path": "images/page_21_chart_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.099,
+            0.159,
+            0.853,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "FUNCTIONS AS ARGUMENTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.032,
+            0.329,
+            0.413,
+            0.945
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.032,
+                0.329,
+                0.413,
+                0.945
+              ],
+              "content": "def func_a():\n    print 'inside func_a'\ndef func_b(y):\n    print 'inside func_b'\n    return y\ndef func_c(z):\n    print 'inside func_c'\n    return z()\nprint func_a()\nprint 5 + func_b(2)\nprint func_c(func_a)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.159,
+            0.853,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "FUNCTIONS AS ARGUMENTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.032,
+            0.331,
+            0.412,
+            0.943
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.032,
+                0.331,
+                0.412,
+                0.943
+              ],
+              "content": "def func_a():\n    print 'inside func_a'\ndef func_b(y):\n    print 'inside func_b'\n    return y\ndef func_c(z):\n    print 'inside func_c'\n    return z()\nprint func_a()\nprint 5 + func_b(2)\nprint func_c(func_a)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.427,
+            0.265,
+            0.861,
+            0.955
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.427,
+                0.265,
+                0.861,
+                0.955
+              ],
+              "content": "Global scope\nfunc_a\nfunc_b\nfunc_c\nSome code\nSome code\nSome code\nNone\n7\nfunc_b scope\ny\n2\nreturns 2"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.161,
+            0.854,
+            0.236
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "FUNCTIONS AS ARGUMENTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.031,
+            0.331,
+            0.413,
+            0.946
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.031,
+                0.331,
+                0.413,
+                0.946
+              ],
+              "content": "def func_a():\n    print 'inside func_a'\ndef func_b(y):\n    print 'inside func_b'\n    return y\ndef func_c(z):\n    print 'inside func_c'\n    return z()\nprint func_a()\nprint 5 + func_b(2)\nprint func_c(func_a)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "chart",
+          "index": 2,
+          "bbox": [
+            0.427,
+            0.265,
+            0.955,
+            0.955
+          ],
+          "content": [
+            {
+              "type": "chart_body",
+              "index": 2,
+              "bbox": [
+                0.427,
+                0.265,
+                0.955,
+                0.955
+              ],
+              "image_path": "images/page_23_chart_2.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.159,
+            0.538,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.085,
+            0.276,
+            0.921,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "inside a function, "
+            },
+            {
+              "type": "text",
+              "content": "can access",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " a variable defined outside"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.355,
+            0.915,
+            0.459
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "inside a function, "
+            },
+            {
+              "type": "text",
+              "content": "cannot modify",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " a variable defined outside -- can using "
+            },
+            {
+              "type": "text",
+              "content": "global variables",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", but frowned upon"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 3,
+          "bbox": [
+            0.009,
+            0.484,
+            0.312,
+            0.94
+          ],
+          "image_path": "images/page_24_equation_3.jpg",
+          "content": "\\begin{array}{l} \\text {def f(y):} \\\\ \\text {x is re-defined in scope of f} \\quad \\boxed {\\mathrm{x=1}} \\\\ \\text {print(x)} \\\\ \\boxed {\\mathrm{x=5}} \\\\ \\text {f(x)} \\\\ \\text {print(x)} \\end{array}"
+        },
+        {
+          "type": "equation",
+          "index": 4,
+          "bbox": [
+            0.352,
+            0.479,
+            0.665,
+            0.951
+          ],
+          "image_path": "images/page_24_equation_4.jpg",
+          "content": "\\begin{array}{l} \\text {def g(y):} \\\\ \\text {x from outside g print(x) print(x + 1)} \\\\ \\boxed {\\mathrm{x=5}} \\\\ \\text {g(x)} \\\\ \\text {print(x)} \\end{array}"
+        },
+        {
+          "type": "equation",
+          "index": 5,
+          "bbox": [
+            0.778,
+            0.537,
+            0.889,
+            0.577
+          ],
+          "image_path": "images/page_24_equation_5.jpg",
+          "content": "\\mathrm{x} + = 1"
+        },
+        {
+          "type": "equation",
+          "index": 6,
+          "bbox": [
+            0.714,
+            0.623,
+            0.807,
+            0.663
+          ],
+          "image_path": "images/page_24_equation_6.jpg",
+          "content": "\\mathrm{x} = 5"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.713,
+            0.712,
+            0.851,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(x)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.891,
+            0.967,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.159,
+            0.538,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.085,
+            0.276,
+            0.922,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "inside a function, "
+            },
+            {
+              "type": "text",
+              "content": "can access",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " a variable defined outside"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.354,
+            0.915,
+            0.46
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "inside a function, "
+            },
+            {
+              "type": "text",
+              "content": "cannot modify",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " a variable defined outside -- can using "
+            },
+            {
+              "type": "text",
+              "content": "global variables",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", but frowned upon"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 3,
+          "bbox": [
+            0.093,
+            0.483,
+            0.307,
+            0.853
+          ],
+          "image_path": "images/page_25_equation_3.jpg",
+          "content": "\\begin{array}{l} \\text {def f(y):} \\\\ \\quad \\mathrm{x=1} \\\\ \\quad \\mathrm{x+=1} \\\\ \\quad \\text {print(x)} \\\\ \\text {x=5} \\\\ \\text {f(x)} \\\\ \\text {print(x)} \\end{array}"
+        },
+        {
+          "type": "equation",
+          "index": 4,
+          "bbox": [
+            0.701,
+            0.482,
+            0.888,
+            0.763
+          ],
+          "image_path": "images/page_25_equation_4.jpg",
+          "content": "\\begin{array}{l} \\text {def h(y):} \\\\ \\text {x += 1} \\\\ \\text {x = 5} \\\\ \\text {h(x)} \\\\ \\text {print(x)} \\end{array}"
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.158,
+            0.771,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HARDER SCOPE EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.524,
+            0.325,
+            0.74,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "IMPORTANT and TRICKY!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.042,
+            0.597,
+            0.891,
+            0.762
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python Tutor is your best friend to help sort this out!"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.042,
+            0.793,
+            0.816,
+            0.876
+          ],
+          "content": [
+            {
+              "type": "hyperlink",
+              "url": "http://www.pythontutor.com/",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "http://www.pythontutor.com/",
+                  "styles": [
+                    "bold"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.159,
+            0.496,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE DETAILS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.009,
+            0.268,
+            0.756,
+            0.86
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.009,
+                0.268,
+                0.756,
+                0.86
+              ],
+              "content": "def g(x):\n    def h():\n        x = 'abc'\n    x = x + 1\n    print('g: x =', x)\n    h()\n    return x\nx = 3\nz = g(x)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.159,
+            0.496,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE DETAILS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.007,
+            0.279,
+            0.425,
+            0.862
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.007,
+                0.279,
+                0.425,
+                0.862
+              ],
+              "content": "def g(x):\n    def h():\n        x = 'abc'\n    x = x + 1\n    print('g: x =', x)\n    h()\n    return x\n\nx = 3\nz = g(x)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.457,
+            0.263,
+            0.81,
+            0.837
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.457,
+                0.263,
+                0.81,
+                0.837
+              ],
+              "content": "Global scope\ng    Some code\nx    3\nz\n\ng scope\nx    3\nh    Some code"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.159,
+            0.496,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE DETAILS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.007,
+            0.279,
+            0.425,
+            0.862
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.007,
+                0.279,
+                0.425,
+                0.862
+              ],
+              "content": "def g(x):\n    def h():\n        x = 'abc'\n    x = x + 1\n    print('g: x =', x)\n    h()\n    return x\n\nx = 3\nz = g(x)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.457,
+            0.263,
+            0.81,
+            0.837
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.457,
+                0.263,
+                0.81,
+                0.837
+              ],
+              "content": "Global scope\ng    Some code\nx    3\nz\n\ng scope\nx    4\nh    Some code"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.159,
+            0.496,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE DETAILS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.007,
+            0.279,
+            0.426,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.007,
+                0.279,
+                0.426,
+                0.863
+              ],
+              "content": "def g(x):\n    def h():\n        x = 'abc'\n    x = x + 1\n    print('g: x =', x)\n    h()\n    return x\n\nx = 3\nz = g(x)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.263,
+            0.991,
+            0.837
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.456,
+                0.263,
+                0.991,
+                0.837
+              ],
+              "content": "Global scope\ng Some code\nx 3\nz\ng scope\nx 4\nh Some code\nx \"abc\"\nh scope\nx \"abc\"\nreturns None"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "csv"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.891,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.159,
+            0.496,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE DETAILS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.007,
+            0.279,
+            0.426,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.007,
+                0.279,
+                0.426,
+                0.861
+              ],
+              "content": "def g(x):\n    def h():\n        x = 'abc'\n    x = x + 1\n    print('g: x =', x)\n    h()\n    return x\n\nx = 3\nz = g(x)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.263,
+            0.94,
+            0.839
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.456,
+                0.263,
+                0.94,
+                0.839
+              ],
+              "content": "Global scope\ng Some code\nx 3\nz\ng scope\nx 4\nh Some code\nNone\nreturns 4"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.159,
+            0.496,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SCOPE DETAILS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.009,
+            0.265,
+            0.631,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.009,
+                0.265,
+                0.631,
+                0.863
+              ],
+              "content": "def g(x):\n    def h():\n        x = 'abc'\n    x = x + 1\n    print('g: x =', x)\n    h()\n    return x\n\nx = 3\nz = g(x)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.068,
+            0.615,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DECOMPOSITION & ABSTRACTION"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.278,
+            0.384,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "powerful together"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.355,
+            0.82,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "code can be used many times but only has to be debugged once!"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "34"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT OpenCourseWare "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For information about citing these materials or our Terms of Use, visit: "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/terms",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu/terms"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

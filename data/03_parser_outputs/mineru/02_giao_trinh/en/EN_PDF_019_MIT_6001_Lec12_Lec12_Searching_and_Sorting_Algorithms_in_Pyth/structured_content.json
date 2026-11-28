@@ -1,0 +1,4081 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.223,
+            0.737,
+            0.557
+          ],
+          "level": 2,
+          "content": "SEARCHING AND SORTING ALGORITHMS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.568,
+            0.691,
+            0.612
+          ],
+          "content": "(download slides and .py files and follow along!)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.641,
+            0.417,
+            0.682
+          ],
+          "content": "6.0001 LECTURE 12"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.906,
+            0.546,
+            0.924
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.864,
+            0.906,
+            0.875,
+            0.924
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.134,
+            0.204,
+            0.661,
+            0.268
+          ],
+          "level": 2,
+          "content": "SEARCH ALGORITHMS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.302,
+            0.805,
+            0.425
+          ],
+          "content": "§\tsearch\talgorithm\t–\tmethod\tfor\tfinding\tan\titem\tor group\tof\titems\twith\tspecific\tproperAes\twithin\ta collecAon\tof\titems"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.446,
+            0.51,
+            0.488
+          ],
+          "content": "§\tcollecAon\tcould\tbe\timplicit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.494,
+            0.752,
+            0.534
+          ],
+          "content": "◦ example\t–\tfind\tsquare\troot\tas\ta\tsearch\tproblem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.161,
+            0.541,
+            0.436,
+            0.575
+          ],
+          "content": "◦ exhausAve\tenumeraAon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.161,
+            0.583,
+            0.354,
+            0.616
+          ],
+          "content": "◦ bisecAon\tsearch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.161,
+            0.624,
+            0.365,
+            0.658
+          ],
+          "content": "◦ Newton-Raphson"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.682,
+            0.507,
+            0.723
+          ],
+          "level": 2,
+          "content": "§\tcollecAon\tcould\tbe\texplicit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.729,
+            0.826,
+            0.804
+          ],
+          "content": "◦ example\t–\tis\ta\tstudent\trecord\tin\ta\tstored\tcollecAon\tof data?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.864,
+            0.914,
+            0.876,
+            0.932
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.134,
+            0.204,
+            0.751,
+            0.268
+          ],
+          "level": 2,
+          "content": "SEARCHING ALGORITHMS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.306,
+            0.324,
+            0.348
+          ],
+          "content": "§\tlinear\tsearch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.358,
+            0.797,
+            0.399
+          ],
+          "content": "• **brute\tforce**\tsearch\t(aka\tBriAsh\tMuseum\talgorithm)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.411,
+            0.549,
+            0.45
+          ],
+          "content": "• \tlist\tdoes\tnot\thave\tto\tbe\tsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.479,
+            0.369,
+            0.519
+          ],
+          "content": "§\tbisecAon\tsearch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.532,
+            0.701,
+            0.572
+          ],
+          "content": "• \tlist\t**MUST\tbe\tsorted**\tto\tgive\tcorrect\tanswer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.582,
+            0.814,
+            0.624
+          ],
+          "content": "• \tsaw\ttwo\tdifferent\timplementaAons\tof\tthe\talgorithm"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.124,
+            0.782,
+            0.269
+          ],
+          "level": 2,
+          "content": "LINEAR SEARCH ON UNSORTED LIST: RECAP"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.124,
+            0.305,
+            0.727,
+            0.583
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef linear_search(L, e):\n    found = False\n    for i in range(len(L)):\n        if e == L[i]:\n            found = True\n    return found\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.63,
+            0.88,
+            0.672
+          ],
+          "content": "§\tmust\tlook\tthrough\tall\te<u>lements\tto\tdecide\tit’s</u>\tnot\tthere"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.696,
+            0.754,
+            0.746
+          ],
+          "content": "§\tO(len(L))\tfor\tthe\tloop\t\\*\t<u>O(1)\tto\ttest\tif\te\t==\tL[i]</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.766,
+            0.747,
+            0.812
+          ],
+          "content": "§\toverall\tcomplexity\tis\t**O(n)\t–\twhere\tn\tis\tlen(L)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.763,
+            0.672,
+            0.934,
+            0.869
+          ],
+          "content": "mes wemen ssumue elerostan etriev in cone time"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.124,
+            0.705,
+            0.269
+          ],
+          "level": 2,
+          "content": "LINEAR SEARCH ON SORTED LIST: RECAP"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.125,
+            0.307,
+            0.535,
+            0.582
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef search(L, e):\n    for i in range(len(L)):\n        if L[i] == e:\n            return True\n        if L[i] > e:\n            return False\n    return False\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.669,
+            0.833,
+            0.714
+          ],
+          "content": "§\tmust\tonly\tlook\tunAl\treach\ta\tnumber\tgreater\tthan\te"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.736,
+            0.755,
+            0.784
+          ],
+          "content": "§\tO(len(L))\tfor\tthe\tloop\t\\*\tO(1)\tto\ttest\tif\te\t==\tL[i]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.805,
+            0.748,
+            0.852
+          ],
+          "content": "§\toverall\tcomplexity\tis\t**O(n)\t–\twhere\tn\tis\tlen(L)**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.932
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.134,
+            0.123,
+            0.714,
+            0.266
+          ],
+          "level": 2,
+          "content": "USE BISECTION SEARCH: RECAP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.301,
+            0.66,
+            0.343
+          ],
+          "content": "1. Pick\tan\tindex,\ti,\tthat\tdivides\tlist\tin\thalf"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.362,
+            0.419,
+            0.402
+          ],
+          "content": "2. Ask\tif L[i] == e"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.422,
+            0.74,
+            0.465
+          ],
+          "content": "3. If\tnot,\task\tif\tL[i] is\tlarger\tor\tsmaller\tthan\te"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.482,
+            0.891,
+            0.526
+          ],
+          "content": "4. Depending\ton\tanswer,\tsearch\tle\\_\tor\tright\thalf\tof L for e"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.604,
+            0.733,
+            0.646
+          ],
+          "content": "A\tnew\tversion\tof\ta\tdivide-and-conquer\talgorithm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.123,
+            0.664,
+            0.868,
+            0.744
+          ],
+          "content": "Break\tinto\tsmaller\tversion\tof\tproblem\t(smaller\tlist),\tplus some\tsimple\toperaAons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.762,
+            0.866,
+            0.805
+          ],
+          "content": "Answer\tto\tsmaller\tversion\tis\tanswer\tto\toriginal\tproblem"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.932
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.863,
+            0.914,
+            0.876,
+            0.933
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.124,
+            0.761,
+            0.269
+          ],
+          "level": 2,
+          "content": "BISECTION SEARCH IMPLEMENTATION: RECAP"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.125,
+            0.304,
+            0.89,
+            0.873
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef bisect_search2(L, e):\n    def bisect_search_helper(L, e, low, high):\n        if high == low:\n            return L[low] == e\n        mid = (low + high)//2\n        if L[mid] == e:\n            return True\n        elif L[mid] > e:\n            if low == mid: #nothing left to search\n                return False\n            else:\n                return bisect_search_helper(L, e, low, mid - 1)\n        else:\n            return bisect_search_helper(L, e, mid + 1, high)\n    if len(L) == 0:\n        return False\n    else:\n        return bisect_search_helper(L, e, 0, len(L) - 1)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.931
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.134,
+            0.124,
+            0.787,
+            0.266
+          ],
+          "level": 2,
+          "content": "COMPLEXITY OF BISECTION SEARCH: RECAP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.306,
+            0.545,
+            0.349
+          ],
+          "content": "§\t**bisect\\_search2**\tand\tits\thelper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.358,
+            0.54,
+            0.398
+          ],
+          "content": "• \tO(log\tn)\tbisecAon\tsearch\tcalls"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.161,
+            0.409,
+            0.7,
+            0.445
+          ],
+          "content": "• reduce\tsize\tof\tproblem\tby\tfactor\tof\t2\ton\teach\tstep"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.456,
+            0.6,
+            0.495
+          ],
+          "content": "• \tpass\tlist\tand\tindices\tas\tparameters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.508,
+            0.694,
+            0.548
+          ],
+          "content": "• \tlist\tnever\tcopied,\tjust\tre-passed\tas\tpointer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.56,
+            0.54,
+            0.598
+          ],
+          "content": "• \tconstant\twork\tinside\tfuncAon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.611,
+            0.31,
+            0.653
+          ],
+          "content": "• à **O(log\tn)**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.122,
+            0.774,
+            0.274
+          ],
+          "level": 2,
+          "content": "SEARCHING A SORTED LIST -- n is len(L)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.305,
+            0.808,
+            0.351
+          ],
+          "content": "§\tusing\t**linear\tsearch**,\tsearch\tfor\tan\telement\tis\t**O(n)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.374,
+            0.924,
+            0.468
+          ],
+          "content": "§\tusing\t**binary\tsearch**,\tcan\tsearch\tfor\tan\telement\tin\t**O(log\tn)** • \tassumes\tthe\t**list\tis\tsorted**!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.496,
+            0.829,
+            0.538
+          ],
+          "content": "§\twhen\tdoes\tit\tmake\tsense\tto\t**sort\tfirst\tthen\tsearch**?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.546,
+            0.837,
+            0.59
+          ],
+          "content": "\\- SORT + O(log n) < O(n) → SORT < O(n) - O(log n)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.6,
+            0.539,
+            0.642
+          ],
+          "content": "• \twhen\tsorAng\tis\tless\tthan\tO(n)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.669,
+            0.33,
+            0.709
+          ],
+          "level": 2,
+          "content": "NEVER\tTRUE!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.721,
+            0.898,
+            0.802
+          ],
+          "content": "• **to\tsort\ta\tcollecEon\tof\tn\telements\tmust\tlook\tat\teach\tone\tat least\tonce!**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.863,
+            0.914,
+            0.876,
+            0.932
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.123,
+            0.564,
+            0.275
+          ],
+          "level": 2,
+          "content": "AMORTIZED COST -- n is len(L)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.306,
+            0.481,
+            0.351
+          ],
+          "content": "§\twhy\tbother\tsorAng\tfirst?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.376,
+            0.809,
+            0.463
+          ],
+          "content": "§\tin\tsome\tcases,\tmay\t**sort\ta\tlist\tonce**\tthen\tdo\t**many searches**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.49,
+            0.781,
+            0.533
+          ],
+          "content": "§ **AMORTIZE\tcost**\tof\tthe\tsort\tover\tmany\tsearches"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.557,
+            0.558,
+            0.603
+          ],
+          "content": "§\tSORT\t+\tK\\*O(log n)\t<\tK\\*O(n)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.626,
+            0.87,
+            0.718
+          ],
+          "content": "à\tfor\tlarge\tK,\t**SORT\tEme\tbecomes\tirrelevant,**\tif cost\tof\tsorAng\tis\tsmall\tenough"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.205,
+            0.598,
+            0.267
+          ],
+          "level": 2,
+          "content": "SORT ALGORITHMS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.306,
+            0.792,
+            0.396
+          ],
+          "content": "§\tWant\tto\tefficiently\tsort\ta\tlist\tof\tentries\t(typically numbers)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.421,
+            0.809,
+            0.511
+          ],
+          "content": "§\tWill\tsee\ta\trange\tof\tmethods,\tincluding\tone\tthat\tis quite\tefficient"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.492,
+            0.268
+          ],
+          "level": 2,
+          "content": "MONKEY SORT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.306,
+            0.426,
+            0.49
+          ],
+          "content": "§\taka\tbogosort,\tstupid sort, slowsort, permutaAon\tsort, shotgun\tsort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.512,
+            0.448,
+            0.556
+          ],
+          "content": "§\tto\tsort\ta\tdeck\tof\tcards"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.564,
+            0.439,
+            0.605
+          ],
+          "content": "• \tthrow\tthem\tin\tthe\tair"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.616,
+            0.337,
+            0.659
+          ],
+          "content": "• \tpick\tthem\tup"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.668,
+            0.378,
+            0.71
+          ],
+          "content": "• \tare\tthey\tsorted?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.721,
+            0.415,
+            0.763
+          ],
+          "content": "• \trepeat\tif\tnot\tsorted"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.496,
+            0.309,
+            0.882,
+            0.776
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_image_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.856,
+            0.914,
+            0.876,
+            0.933
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.823,
+            0.269
+          ],
+          "level": 2,
+          "content": "COMPLEXITY OF BOGO SORT"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.124,
+            0.309,
+            0.618,
+            0.454
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef bogo_sort(L):\n    while not is_sorted(L):\n        random.shuffle(L)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.544,
+            0.823,
+            0.589
+          ],
+          "content": "§\tbest\tcase:\t**O(n)\twhere\tn\tis\tlen(L)**\tto\tcheck\tif\tsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.614,
+            0.805,
+            0.659
+          ],
+          "content": "§\tworst\tcase:\tO(?)\tit\tis\t**unbounded**\tif\treally\tunlucky"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.136,
+            0.204,
+            0.464,
+            0.268
+          ],
+          "level": 2,
+          "content": "BUBBLE SORT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.304,
+            0.486,
+            0.381
+          ],
+          "content": "§ **compare\tconsecuEve\tpairs** of\telements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.4,
+            0.488,
+            0.48
+          ],
+          "content": "§ **swap\telements**\tin\tpair\tsuch that\tsmaller\tis\tfirst"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.497,
+            0.431,
+            0.578
+          ],
+          "content": "§ when\treach\tend\tof\tlist, **start\tover**\tagain"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.598,
+            0.479,
+            0.675
+          ],
+          "content": "§ stop\twhen\t**no\tmore\tswaps** have\tbeen\tmade"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.692,
+            0.48,
+            0.869
+          ],
+          "content": "§ largest\tunsorted\telement always\tat\tend\ta\\_er\tpass,\tso at\tmost\tn\tpasses CC-BY\tHydrargyrum ttps: commons.w me a.org w /File:Bubble\\_sort\\_animation.gif h // iki di / iki"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.5,
+            0.331,
+            0.885,
+            0.771
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_6.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.863,
+            0.268
+          ],
+          "level": 2,
+          "content": "COMPLEXITY OF BUBBLE SORT"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.124,
+            0.304,
+            0.774,
+            0.642
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef bubble_sort(L):\n    swap = False\n    while not swap:\n        swap = True\n        for j in range(1, len(L)):\n            if L[j-1] > L[j]:\n                swap = False\n                temp = L[j]\n                L[j] = L[j-1]\n                L[j-1] = temp\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.656,
+            0.679,
+            0.699
+          ],
+          "content": "§\tinner\tfor\tloop\tis\tfor\tdoing\tthe\t**comparisons**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.718,
+            0.872,
+            0.796
+          ],
+          "content": "§\touter\twhile\tloop\tis\tfor\tdoing\t**mulEple\tpasses**\tunAl\tno\tmore swaps"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.125,
+            0.814,
+            0.717,
+            0.895
+          ],
+          "sub_type": "algorithm",
+          "content": "- $O(n^{2})$ where n is len(L) to do len(L)-1 comparisons and len(L)-1 passes",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.134,
+            0.204,
+            0.538,
+            0.268
+          ],
+          "level": 2,
+          "content": "SELECTION SORT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.307,
+            0.271,
+            0.35
+          ],
+          "content": "§\tfirst\tstep"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.359,
+            0.502,
+            0.398
+          ],
+          "content": "• \textract\t**minimum\telement**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.411,
+            0.566,
+            0.451
+          ],
+          "content": "• **swap\tit**\twith\telement\tat\t**index\t0**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.48,
+            0.374,
+            0.521
+          ],
+          "content": "§\tsubsequent\tstep"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.532,
+            0.755,
+            0.572
+          ],
+          "content": "• \tin\tremaining\tsublist,\textract\t**minimum\telement**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.582,
+            0.614,
+            0.623
+          ],
+          "content": "• **swap\tit**\twith\tthe\telement\tat\t**index\t1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.651,
+            0.654,
+            0.694
+          ],
+          "content": "§\tkeep\tthe\tle\\_\tporAon\tof\tthe\tlist\tsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.703,
+            0.72,
+            0.743
+          ],
+          "content": "• \tat\ti’th\tstep,\t**first\ti\telements\tin\tlist\tare\tsorted**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.755,
+            0.783,
+            0.797
+          ],
+          "content": "• \tall\tother\telements\tare\tbigger\tthan\tfirst\ti\telements"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.204,
+            0.821,
+            0.269
+          ],
+          "level": 2,
+          "content": "ANALYZING SELECTION SORT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.306,
+            0.339,
+            0.349
+          ],
+          "level": 2,
+          "content": "§\tloop\tinvariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.357,
+            0.827,
+            0.482
+          ],
+          "content": "◦ given\tprefix\tof\tlist\tL[0:i]\tand\tsuffix\tL[i+1:len(L)],\tthen prefix\tis\tsorted\tand\tno\telement\tin\tprefix\tis\tlarger\tthan smallest\telement\tin\tsuffix"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.168,
+            0.494,
+            0.86,
+            0.575
+          ],
+          "content": "1. base\tcase:\tprefix\tempty,\tsuffix\twhole\tlist\t–\tinvariant true"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.167,
+            0.588,
+            0.86,
+            0.716
+          ],
+          "content": "2. inducAon\tstep:\tmove\tminimum\telement\tfrom\tsuffix to\tend\tof\tprefix.\t\tSince\tinvariant\ttrue\tbefore\tmove, prefix\tsorted\ta\\_er\tappend"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.168,
+            0.726,
+            0.875,
+            0.768
+          ],
+          "content": "3. when\texit,\tprefix\tis\tenAre\tlist,\tsuffix\tempty,\tso\tsorted"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.856,
+            0.914,
+            0.876,
+            0.932
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.058,
+            0.306,
+            0.903,
+            0.813
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef selection_sort(L):\n    suffixSt = 0\n    while suffixSt != len(L):\n        for i in range(suffixSt, len(L)):\n            if L[i] < L[suffixSt]:\n                L[suffixSt], L[i] = L[i], L[suffixSt]\n    suffixSt += 1\n\n■ outer loop executes len(L) times\n■ inner loop executes len(L) - i times\n■ complexity of selection sort is O(n²) where n is len(L)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.123,
+            0.795,
+            0.267
+          ],
+          "level": 2,
+          "content": "COMPLEXITY OF SELECTION SORT"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.205,
+            0.454,
+            0.268
+          ],
+          "level": 2,
+          "content": "MERGE SORT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.307,
+            0.634,
+            0.349
+          ],
+          "content": "§\tuse\ta\tdivide-and-conquer\tapproach:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.168,
+            0.358,
+            0.7,
+            0.399
+          ],
+          "content": "1. if\tlist\tis\tof\tlength\t0\tor\t1,\talready\tsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.168,
+            0.409,
+            0.872,
+            0.489
+          ],
+          "content": "2. if\tlist\thas\tmore\tthan\tone\telement,\tsplit\tinto\ttwo\tlists, and\tsort\teach"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.169,
+            0.504,
+            0.491,
+            0.544
+          ],
+          "content": "3. merge\tsorted\tsublists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.554,
+            0.844,
+            0.624
+          ],
+          "content": "1. look\tat\tfirst\telement\tof\teach,\tmove\tsmaller\tto\tend\tof\tthe result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.634,
+            0.75,
+            0.671
+          ],
+          "content": "2. when\tone\tlist\tempty,\tjust\tcopy\trest\tof\tother\tlist"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.911,
+            0.875,
+            0.929
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.454,
+            0.268
+          ],
+          "level": 2,
+          "content": "MERGE SORT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.306,
+            0.409,
+            0.349
+          ],
+          "level": 2,
+          "content": "§\tdivide\tand\tconquer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.437,
+            0.374,
+            0.528,
+            0.405
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.254,
+            0.441,
+            0.344,
+            0.474
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.62,
+            0.442,
+            0.71,
+            0.474
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.165,
+            0.51,
+            0.255,
+            0.542
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.342,
+            0.51,
+            0.433,
+            0.542
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.53,
+            0.509,
+            0.62,
+            0.543
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.707,
+            0.509,
+            0.799,
+            0.542
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.563,
+            0.201,
+            0.622
+          ],
+          "content": "unsor ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.564,
+            0.284,
+            0.623
+          ],
+          "continues_prev": true,
+          "content": "unsor 1 ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.311,
+            0.564,
+            0.376,
+            0.624
+          ],
+          "continues_prev": true,
+          "content": "unsor ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.399,
+            0.562,
+            0.464,
+            0.623
+          ],
+          "continues_prev": true,
+          "content": "unsor ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.492,
+            0.563,
+            0.566,
+            0.623
+          ],
+          "continues_prev": true,
+          "content": "unsor ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.586,
+            0.563,
+            0.65,
+            0.624
+          ],
+          "continues_prev": true,
+          "content": "unsor ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.681,
+            0.563,
+            0.745,
+            0.623
+          ],
+          "continues_prev": true,
+          "content": "unsor ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.765,
+            0.563,
+            0.83,
+            0.623
+          ],
+          "continues_prev": true,
+          "content": "unsor ted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.722,
+            0.196,
+            0.751
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.722,
+            0.29,
+            0.751
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.722,
+            0.369,
+            0.751
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.399,
+            0.722,
+            0.462,
+            0.75
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.497,
+            0.722,
+            0.56,
+            0.75
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.59,
+            0.722,
+            0.654,
+            0.75
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.676,
+            0.722,
+            0.74,
+            0.75
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.77,
+            0.722,
+            0.834,
+            0.75
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.786,
+            0.84,
+            0.831
+          ],
+          "content": "§ **split\tlist\tin\thalf**\tunAl\thave\tsublists\tof\tonly\t1\telement"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.933
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.454,
+            0.268
+          ],
+          "level": 2,
+          "content": "MERGE SORT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.306,
+            0.409,
+            0.349
+          ],
+          "level": 2,
+          "content": "§\tdivide\tand\tconquer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.437,
+            0.373,
+            0.528,
+            0.406
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.441,
+            0.344,
+            0.474
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.62,
+            0.441,
+            0.71,
+            0.475
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.165,
+            0.509,
+            0.255,
+            0.543
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.342,
+            0.509,
+            0.433,
+            0.543
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.529,
+            0.509,
+            0.62,
+            0.543
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.707,
+            0.509,
+            0.799,
+            0.543
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.577,
+            0.19,
+            0.612
+          ],
+          "content": "sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.575,
+            0.277,
+            0.613
+          ],
+          "content": "sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.321,
+            0.576,
+            0.367,
+            0.613
+          ],
+          "content": "sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.408,
+            0.566,
+            0.46,
+            0.615
+          ],
+          "content": "I sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.508,
+            0.576,
+            0.554,
+            0.612
+          ],
+          "continues_prev": true,
+          "content": "sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.597,
+            0.575,
+            0.643,
+            0.612
+          ],
+          "content": "sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.69,
+            0.578,
+            0.735,
+            0.614
+          ],
+          "content": "sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.576,
+            0.824,
+            0.611
+          ],
+          "content": "sort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.188,
+            0.678,
+            0.255,
+            0.71
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.358,
+            0.679,
+            0.423,
+            0.709
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.545,
+            0.679,
+            0.61,
+            0.709
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.733,
+            0.674,
+            0.8,
+            0.706
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.787,
+            0.839,
+            0.832
+          ],
+          "content": "§\tmerge\tsuch\tthat\t**sublists\twill\tbe\tsorted\taQer\tmerge**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.136,
+            0.204,
+            0.453,
+            0.268
+          ],
+          "level": 2,
+          "content": "MERGE SORT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.306,
+            0.409,
+            0.35
+          ],
+          "level": 2,
+          "content": "§\tdivide\tand\tconquer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.437,
+            0.373,
+            0.528,
+            0.406
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.439,
+            0.344,
+            0.475
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.62,
+            0.441,
+            0.71,
+            0.475
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.509,
+            0.244,
+            0.542
+          ],
+          "content": "sorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.509,
+            0.421,
+            0.543
+          ],
+          "content": "sorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.509,
+            0.609,
+            0.543
+          ],
+          "content": "sorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.718,
+            0.508,
+            0.787,
+            0.543
+          ],
+          "content": "sorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.278,
+            0.606,
+            0.343,
+            0.638
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.635,
+            0.613,
+            0.7,
+            0.644
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.719,
+            0.439,
+            0.764
+          ],
+          "content": "§\tmerge\tsorted\tsublists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.786,
+            0.604,
+            0.832
+          ],
+          "content": "§\tsublists\twill\tbe\tsorted\ta\\_er\tmerge"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.932
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.933
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.124,
+            0.355,
+            0.838,
+            0.546
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.136,
+            0.204,
+            0.453,
+            0.268
+          ],
+          "level": 2,
+          "content": "MERGE SORT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.306,
+            0.408,
+            0.349
+          ],
+          "level": 2,
+          "content": "§ divide\tand\tconquer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.438,
+            0.373,
+            0.527,
+            0.406
+          ],
+          "content": "unsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.44,
+            0.332,
+            0.474
+          ],
+          "content": "sorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.631,
+            0.441,
+            0.698,
+            0.474
+          ],
+          "content": "sorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.454,
+            0.548,
+            0.518,
+            0.577
+          ],
+          "content": "merge"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.719,
+            0.438,
+            0.764
+          ],
+          "content": "§ merge\tsorted\tsublists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.786,
+            0.604,
+            0.832
+          ],
+          "content": "§\tsublists\twill\tbe\tsorted\ta\\_er\tmerge"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.136,
+            0.205,
+            0.453,
+            0.267
+          ],
+          "level": 2,
+          "content": "MERGE SORT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.307,
+            0.516,
+            0.349
+          ],
+          "level": 2,
+          "content": "§\tdivide\tand\tconquer\t–\tdone!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.375,
+            0.514,
+            0.404
+          ],
+          "content": "sorted"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.695,
+            0.269
+          ],
+          "level": 2,
+          "content": "EXAMPLE OF MERGING"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.122,
+            0.284,
+            0.882,
+            0.79
+          ],
+          "content": "| Left in list 1 | Left in list 2 | Compare | Result |\n| --- | --- | --- | --- |\n| [1,5,12,18,19,20] | [2,3,4,17] | 1,2 | [] |\n| [5,12,18,19,20] | [2,3,4,17] | 5,2 | [1] |\n| [5,12,18,19,20] | [3,4,17] | 5,3 | [1,2] |\n| [5,12,18,19,20] | [4,17] | 5,4 | [1,2,3] |\n| [5,12,18,19,20] | [17] | 5,17 | [1,2,3,4] |\n| [12,18,19,20] | [17] | 12,17 | [1,2,3,4,5] |\n| [18,19,20] | [17] | 18,17 | [1,2,3,4,5,12] |\n| [18,19,20] | [] | 18,-- | [1,2,3,4,5,12,17] |\n| [] | [] |  | [1,2,3,4,5,12,17,18,19,20] |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.856,
+            0.914,
+            0.876,
+            0.933
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.733,
+            0.268
+          ],
+          "level": 2,
+          "content": "MERGING SUBLISTS STEP"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.123,
+            0.298,
+            0.938,
+            0.87
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef merge(left, right):\n    result = []\n    i,j = 0,0\n    while i < len(left) and j < len(right): - left and right sublists\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    while (i < len(left)):\n        result.append(left[i])\n        i += 1\n    while (j < len(right)):\n        result.append(right[j])\n        j += 1\n    return result\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.124,
+            0.732,
+            0.268
+          ],
+          "level": 2,
+          "content": "COMPLEXITY OF MERGING SUBLISTS STEP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.307,
+            0.615,
+            0.351
+          ],
+          "content": "§\tgo\tthrough\ttwo\tlists,\tonly\tone\tpass"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.375,
+            0.79,
+            0.419
+          ],
+          "content": "§\tcompare\tonly\t**smallest\telements\tin\teach\tsublist**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.443,
+            0.683,
+            0.488
+          ],
+          "content": "§\tO(len(le\\_)\t+\tlen(right))\tcopied\telements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.511,
+            0.565,
+            0.558
+          ],
+          "content": "§\tO(len(longer\tlist))\tcomparisons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.581,
+            0.508,
+            0.624
+          ],
+          "content": "§ **linear\tin\tlength\tof\tthe\tlists**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.122,
+            0.76,
+            0.268
+          ],
+          "level": 2,
+          "content": "MERGE SORT ALGORITHM -- RECURSIVE"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.124,
+            0.314,
+            0.865,
+            0.699
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef merge_sort(L):\n    if len(L) < 2:\n        return L[:]\n    else:\n        middle = len(L)//2\n        left = merge_sort(L[:middle])\n        right = merge_sort(L[middle:])\n        return merge(left, right)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.682,
+            0.605,
+            0.725
+          ],
+          "content": "§ **divide\tlist**\tsuccessively\tinto\thalves"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.751,
+            0.843,
+            0.845
+          ],
+          "content": "§\tdepth-first\tsuch\tthat\t**conquer\tsmallest\tpieces\tdown one\tbranch**\tfirst\tbefore\tmoving\tto\tlarger\tpieces"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.932
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.093,
+            0.091,
+            0.939,
+            0.862
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_image_0.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.906,
+            0.547,
+            0.924
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.856,
+            0.906,
+            0.875,
+            0.924
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.852,
+            0.268
+          ],
+          "level": 2,
+          "content": "COMPLEXITY OF MERGE SORT"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.302,
+            0.449,
+            0.342
+          ],
+          "level": 2,
+          "content": "§\tat\tfirst\trecursion\tlevel"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.348,
+            0.478,
+            0.387
+          ],
+          "content": "n/2 elements\tin\teach\tlist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.394,
+            0.603,
+            0.437
+          ],
+          "content": "$O(n) + O(n) = O(n)$ where\tn\tis\tlen(L)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.461,
+            0.49,
+            0.501
+          ],
+          "level": 2,
+          "content": "§\tat\tsecond\trecursion\tlevel"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.508,
+            0.479,
+            0.547
+          ],
+          "content": "• n/4 elements\tin\teach\tlist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.554,
+            0.627,
+            0.598
+          ],
+          "content": "• \ttwo\tmerges → O(n) where\tn\tis\tlen(L)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.618,
+            0.739,
+            0.664
+          ],
+          "content": "§\teach\trecursion\tlevel\tis\tO(n)\twhere\tn\tis\tlen(L)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.682,
+            0.72,
+            0.725
+          ],
+          "level": 2,
+          "content": "§ dividing\tlist\tin\thalf\twith\teach\trecursive\tcall"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.729,
+            0.487,
+            0.773
+          ],
+          "content": "O(log(n)) where\tn\tis\tlen(L)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.793,
+            0.81,
+            0.84
+          ],
+          "content": "§\toverall\tcomplexity\tis\t**O(n\tlog(n))\twhere\tn\tis\tlen(L)**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.122,
+            0.625,
+            0.274
+          ],
+          "level": 2,
+          "content": "SORTING SUMMARY -- n is len(L)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.302,
+            0.281,
+            0.345
+          ],
+          "content": "§ bogo\tsort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.347,
+            0.526,
+            0.389
+          ],
+          "content": "• \trandomness,\tunbounded\tO()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.413,
+            0.305,
+            0.454
+          ],
+          "content": "§\tbubble\tsort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.458,
+            0.238,
+            0.501
+          ],
+          "content": "$O(n^{2})$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.525,
+            0.333,
+            0.565
+          ],
+          "content": "§\tselecAon\tsort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.619,
+            0.71,
+            0.661
+          ],
+          "content": "• \tguaranteed\tthe\tfirst\ti\telements\twere\tsorted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.688,
+            0.3,
+            0.725
+          ],
+          "content": "§\tmerge\tsort"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.794,
+            0.651,
+            0.838
+          ],
+          "content": "§\tO(n\tlog(n))\tis\tthe\tfastest\ta\tsort\tcan\tbe"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.874,
+            0.932
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.416,
+            0.79,
+            0.599
+          ],
+          "level": 2,
+          "content": "WHAT HAVE WE SEEN IN 6.0001?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.906,
+            0.547,
+            0.924
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.906,
+            0.875,
+            0.924
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.136,
+            0.205,
+            0.406,
+            0.267
+          ],
+          "level": 2,
+          "content": "KEY TOPICS"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.071,
+            0.31,
+            0.115,
+            0.354
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.308,
+            0.718,
+            0.351
+          ],
+          "content": "§\trepresent\tknowledge\twith\t**data structures**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.071,
+            0.373,
+            0.114,
+            0.416
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.375,
+            0.855,
+            0.419
+          ],
+          "content": "§ **iteraEon\tand\trecursion** as\tcomputaAonal\tmetaphors"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.071,
+            0.432,
+            0.115,
+            0.477
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.444,
+            0.706,
+            0.488
+          ],
+          "content": "§ **abstracEon**\tof\tprocedures\tand\tdata\ttypes"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.071,
+            0.508,
+            0.114,
+            0.551
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.512,
+            0.87,
+            0.6
+          ],
+          "content": "§ **organize\tand\tmodularize**\tsystems\tusing\tobject\tclasses and\tmethods"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.071,
+            0.625,
+            0.115,
+            0.668
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.626,
+            0.858,
+            0.672
+          ],
+          "content": "§\tdifferent\tclasses\tof\t**algorithms**,\tsearching\tand\tsorAng"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.071,
+            0.688,
+            0.114,
+            0.731
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.695,
+            0.488,
+            0.739
+          ],
+          "content": "§\t**complexity** of\talgorithms"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.072,
+            0.42,
+            0.116,
+            0.465
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_33_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.204,
+            0.684,
+            0.268
+          ],
+          "level": 2,
+          "content": "OVERVIEW OF COURSE"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.072,
+            0.305,
+            0.116,
+            0.349
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_33_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.306,
+            0.557,
+            0.398
+          ],
+          "content": "§\tlearn\tcomputaAonal\tmodes\tof thinking"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.421,
+            0.556,
+            0.513
+          ],
+          "content": "§\tbegin\tto\tmaster\tthe\tart\tof computaAonal\tproblem\tsolving"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.072,
+            0.534,
+            0.116,
+            0.578
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_33_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.536,
+            0.626,
+            0.624
+          ],
+          "content": "§\tmake\tcomputers\tdo\twhat\tyou\twant them\tto\tdo"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.716,
+            0.636,
+            0.866
+          ],
+          "content": "Hope\twe\thave\tstarted\tyou\tdown\tthe path\tto\tbeing\table\tto\tthink\tand\tact like\ta\tcomputer\tscienAst"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.124,
+            0.665,
+            0.267
+          ],
+          "level": 2,
+          "content": "WHAT DO COMPUTER SCIENTISTS DO?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.306,
+            0.513,
+            0.442
+          ],
+          "content": "§\tthey\tthink\tcomputaAonally ◦ \tabstracAons,\talgorithms, automated\texecuAon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.468,
+            0.594,
+            0.751
+          ],
+          "content": "§\tjust\tlike\tthe\tthree\tr’s:\t\treading, ‘riting,\tand\t‘rithmeAc\t– computaAonal\tthinking\tis becoming\ta\tfundamental\tskill\tthat every\twell-educated\tperson\twill need"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.655,
+            0.284,
+            0.794,
+            0.52
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.667,
+                0.532,
+                0.777,
+                0.563
+              ],
+              "content": "Alan\tTuring"
+            },
+            {
+              "bbox": [
+                0.659,
+                0.572,
+                0.783,
+                0.634
+              ],
+              "content": "Image in the Public [Domain, courtesy of Wikipedia Commons](https://en.wikipedia.org/wiki/Alan_Turing#/media/File:Alan_Turing_Aged_16.jpg)."
+            }
+          ],
+          "image_source": "images/page_34_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.8,
+            0.282,
+            0.942,
+            0.519
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.809,
+                0.532,
+                0.934,
+                0.56
+              ],
+              "content": "Ada\tLovelace"
+            },
+            {
+              "bbox": [
+                0.814,
+                0.57,
+                0.938,
+                0.631
+              ],
+              "content": "Image in the Public [Domain, courtesy of Wikipedia Commons](https://en.wikipedia.org/wiki/Ada_Lovelace#/media/File:Ada_Lovelace.jpg)."
+            }
+          ],
+          "image_source": "images/page_34_image_6.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.314,
+            0.782,
+            0.594,
+            0.891
+          ],
+          "content": "I\t\t\t\t\t\t\t\t\t\t\t6.0001"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.855,
+            0.911,
+            0.872,
+            0.928
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.116,
+            0.808,
+            0.268
+          ],
+          "level": 2,
+          "content": "THE THREE A’S OF COMPUTATIONAL THINKING"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.125,
+            0.299,
+            0.276,
+            0.332
+          ],
+          "level": 2,
+          "content": "§\tabstracAon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.335,
+            0.485,
+            0.369
+          ],
+          "content": "◦ choosing\tthe\tright\tabstracAons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.372,
+            0.596,
+            0.433
+          ],
+          "content": "◦ operaAng\tin\tmulAple\tlayers\tof\tabstracAon simultaneously"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.435,
+            0.686,
+            0.498
+          ],
+          "content": "◦ defining\tthe\trelaAonships\tbetween\tthe\tabstracAon layers"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.713,
+            0.283,
+            0.946,
+            0.481
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_35_image_5.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.519,
+            0.281,
+            0.551
+          ],
+          "level": 2,
+          "content": "§\tautomaAon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.553,
+            0.644,
+            0.587
+          ],
+          "content": "◦ think\tin\tterms\tof\tmechanizing\tour\tabstracAons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.591,
+            0.751,
+            0.683
+          ],
+          "content": "◦ mechanizaAon\tis\tpossible\t–\tbecause\twe\thave\tprecise and\texacAng\tnotaAons\tand\tmodels;\tand\tbecause\tthere\tis some “machine”\tthat\tcan\tinterpret\tour\tnotaAons"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.701,
+            0.27,
+            0.736
+          ],
+          "level": 2,
+          "content": "§\talgorithms"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.736,
+            0.633,
+            0.772
+          ],
+          "content": "◦ language\tfor\tdescribing\tautomated\tprocesses"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.774,
+            0.503,
+            0.807
+          ],
+          "content": "◦ also\tallows\tabstracAon\tof\tdetails"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.811,
+            0.648,
+            0.848
+          ],
+          "content": "◦ language\tfor\tcommunicaAng\tideas\t&\tprocesses"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.768,
+            0.5,
+            0.911,
+            0.757
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_35_image_13.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.65,
+            0.764,
+            0.95,
+            0.901
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef mergeSort(L, compare = operator.lt):\n    if len(L) < 2:\n        return L[:]\n    else:\n        middle = int(len(L)/2)\n        left = mergeSort(L[:middle], compare)\n        right = mergeSort(L[middle:], compare)\n        return merge(left, right, compare)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.855,
+            0.911,
+            0.873,
+            0.928
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.133,
+            0.122,
+            0.855,
+            0.266
+          ],
+          "level": 1,
+          "content": "ASPECTS OF COMPUTATIONAL THINKING"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.301,
+            0.522,
+            0.524
+          ],
+          "content": "§\thow\tdifficult\tis\tthis\tproblem and\thow\tbest\tcan\tI\tsolve\tit? ◦ theoreAcal\tcomputer\tscience gives\tprecise\tmeaning\tto\tthese and\trelated\tquesAons\tand\ttheir answers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.548,
+            0.493,
+            0.778
+          ],
+          "content": "§\tthinking\trecursively reformulaAng\ta\tseemingly difficult\tproblem\tinto\tone which\twe\tknow\thow\tto\tsolve reduction,\tembedding, transformation, \tsimulaAon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.592,
+            0.313,
+            0.818,
+            0.475
+          ],
+          "content": "O(log\tn)\t;\tO(n)\t; O(n\tlog\tn)\t; O(n<sup>2</sup>);\tO(c<sup>n</sup>)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.584,
+            0.498,
+            0.857,
+            0.874
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.565,
+                0.879,
+                0.884,
+                0.899
+              ],
+              "content": "Image Licensed CC-BY, Courtesy of [Robson#](https://www.flickr.com/photos/_robson_/8952213840) on Flickr."
+            }
+          ],
+          "image_source": "images/page_36_image_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": "6.0001\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.855,
+            0.911,
+            0.872,
+            0.928
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.073,
+            0.094,
+            0.208,
+            0.138
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.204,
+            0.546,
+            0.251
+          ],
+          "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.306,
+            0.617,
+            0.33
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Searching and Sorting Algorithms",
+      "authors": [
+        "Grimson, Eric"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2016-11-23T18:57:47+05:30",
+      "modified_at": "2017-01-31T14:04:55+05:30",
+      "creator_application": "PowerPoint",
+      "producer_application": "Adobe Acrobat Pro 11.0.17",
+      "page_count": 38,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 792,
+          "height_pt": 612
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

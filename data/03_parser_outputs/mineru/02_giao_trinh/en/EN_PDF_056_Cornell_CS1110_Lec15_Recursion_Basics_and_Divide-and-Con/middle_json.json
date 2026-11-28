@@ -1,0 +1,1712 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-15",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.875,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/13/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.143,
+            0.124,
+            0.434,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A Mathematical Example: Factorial"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.154,
+            0.305,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Non-recursive definition:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.133,
+            0.173,
+            0.334,
+            0.19
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "n!=n \\times n-1 \\times \\ldots \\times 2 \\times 1"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 4,
+          "bbox": [
+            0.148,
+            0.191,
+            0.325,
+            0.208
+          ],
+          "image_path": "images/page_0_equation_4.jpg",
+          "content": "= \\mathrm{n} (\\mathrm{n-1} \\times \\dots \\times 2 \\times 1)"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.216,
+            0.277,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Recursive definition:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.133,
+            0.235,
+            0.297,
+            0.252
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "n!=n(n-1)!"
+            },
+            {
+              "type": "text",
+              "content": "  for  "
+            },
+            {
+              "type": "equation_inline",
+              "content": "n\\geq0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.316,
+            0.235,
+            0.426,
+            0.251
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recursive case",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.134,
+            0.254,
+            0.181,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "0! = 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.317,
+            0.253,
+            0.392,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Base case",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.156,
+            0.28,
+            0.417,
+            0.299
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What happens if there is no base case?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 11,
+          "bbox": [
+            0.166,
+            0.406,
+            0.41,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Example: Fibonnaci Sequence"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.116,
+            0.43,
+            0.421,
+            0.459
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Sequence of numbers: 1, 1, 2, 3, 5, 8, 13, ... a0 a1 a2 a3 a4 a5 a6"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.135,
+            0.46,
+            0.409,
+            0.476
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Get the next number by adding previous two"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.135,
+            0.476,
+            0.222,
+            0.491
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ What is a8?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.117,
+            0.493,
+            0.276,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Recursive definition:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.134,
+            0.511,
+            0.237,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "a_{n}=a_{n-1}+a_{n-2}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.263,
+            0.51,
+            0.366,
+            0.526
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recursive Case",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.135,
+            0.527,
+            0.188,
+            0.543
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ a0 = 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.264,
+            0.527,
+            0.334,
+            0.542
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Base Case",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.135,
+            0.544,
+            0.188,
+            0.559
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ a1 = 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.264,
+            0.543,
+            0.395,
+            0.559
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(another) Base Case",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.14,
+            0.564,
+            0.432,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Why did we need two base cases this time?"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 23,
+          "bbox": [
+            0.526,
+            0.332,
+            0.538,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 24,
+          "bbox": [
+            0.576,
+            0.124,
+            0.846,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Factorial as a Recursive Function"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.539,
+            0.152,
+            0.633,
+            0.168
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def factorial(n):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.557,
+            0.169,
+            0.704,
+            0.184
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns: factorial of n."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.558,
+            0.185,
+            0.67,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Pre: n ≥ 0 an int\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 28,
+          "bbox": [
+            0.712,
+            0.153,
+            0.829,
+            0.195
+          ],
+          "image_path": "images/page_0_equation_28.jpg",
+          "content": "\\begin{array}{l} \\bullet \\mathrm{n! = n(n - 1)!} \\\\ \\bullet 0! = 1 \\end{array}"
+        },
+        {
+          "type": "equation",
+          "index": 29,
+          "bbox": [
+            0.558,
+            0.202,
+            0.616,
+            0.217
+          ],
+          "image_path": "images/page_0_equation_29.jpg",
+          "content": "\\text {if} \\mathrm{n} = = 0:"
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.574,
+            0.218,
+            0.631,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.697,
+            0.218,
+            0.787,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Base case(s)",
+              "styles": [
+                "bold",
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.558,
+            0.25,
+            0.691,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return n*factorial(n-1)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.135,
+            0.734,
+            0.356,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ fib(n) has a stack that is always ≤ n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.697,
+            0.249,
+            0.806,
+            0.266
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recursive case",
+              "styles": [
+                "bold",
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.136,
+            0.75,
+            0.385,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But fib(n) makes a lot of redundant calls"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.117,
+            0.716,
+            0.326,
+            0.732
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Fibonacci is very inefficient."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.579,
+            0.28,
+            0.839,
+            0.3
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What happens if there is no base case?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 38,
+          "bbox": [
+            0.574,
+            0.406,
+            0.848,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fibonacci as a Recursive Function"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.715,
+            0.435,
+            0.876,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Function that calls itself"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.54,
+            0.435,
+            0.62,
+            0.448
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def fibonacci(n):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.558,
+            0.448,
+            0.696,
+            0.463
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns: Fibonacci no. a"
+            },
+            {
+              "type": "text",
+              "content": "n",
+              "styles": [
+                "subscript"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.558,
+            0.462,
+            0.698,
+            0.476
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: n ≥ 0 an int\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.732,
+            0.451,
+            0.865,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Each call is new frame"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.559,
+            0.475,
+            0.61,
+            0.49
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if n <= 1:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.733,
+            0.465,
+            0.871,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Frames require memory"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.733,
+            0.479,
+            0.854,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ ∞ calls = ∞ memory"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.574,
+            0.49,
+            0.625,
+            0.505
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.558,
+            0.517,
+            0.676,
+            0.547
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return (fibonacci(n-1)+ fibonacci(n-2))"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 49,
+          "bbox": [
+            0.126,
+            0.757,
+            0.465,
+            0.882
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 49,
+              "bbox": [
+                0.126,
+                0.757,
+                0.465,
+                0.882
+              ],
+              "image_path": "images/page_0_image_49.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.765,
+            0.5,
+            0.832,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "fibonacci 3 n 5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.732,
+            0.548,
+            0.865,
+            0.578
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "fibonacci 1 "
+            },
+            {
+              "type": "text",
+              "content": "fibonacci",
+              "styles": [
+                "bold",
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " n 4 n 3"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 52,
+          "bbox": [
+            0.142,
+            0.686,
+            0.433,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fibonacci: # of Frames vs. # of Calls"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 53,
+          "bbox": [
+            0.545,
+            0.686,
+            0.878,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recursion is best for Divide and Conquer"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.539,
+            0.716,
+            0.818,
+            0.733
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Goal",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Solve problem P on a piece of data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.69,
+            0.741,
+            0.736,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "data",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.539,
+            0.764,
+            0.868,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Idea",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Split data into two parts and solve problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.629,
+            0.785,
+            0.692,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "data 1",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.615,
+            0.82,
+            0.811,
+            0.836
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Solve Problem P Solve Problem P"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.662,
+            0.853,
+            0.765,
+            0.87
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Combine Answer!",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 60,
+          "bbox": [
+            0.102,
+            0.613,
+            0.115,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 61,
+          "bbox": [
+            0.103,
+            0.894,
+            0.115,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 62,
+          "bbox": [
+            0.526,
+            0.614,
+            0.538,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 63,
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 64,
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.875,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/13/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.167,
+            0.123,
+            0.409,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Divide and Conquer Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.154,
+            0.358,
+            0.172
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Count the number of 'e's in a string:"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.104,
+            0.115,
+            0.475,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.104,
+                0.115,
+                0.475,
+                0.325
+              ],
+              "image_path": "images/page_1_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.526,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.564,
+            0.123,
+            0.858,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Three Steps for Divide and Conquer"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.539,
+            0.154,
+            0.794,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Decide what to do on “small” data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.558,
+            0.172,
+            0.76,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Some data cannot be broken up"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.557,
+            0.188,
+            0.792,
+            0.204
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Have to compute this answer directly"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.539,
+            0.205,
+            0.792,
+            0.221
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Decide how to break up your data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.557,
+            0.223,
+            0.831,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Both “halves” should be smaller than whole"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.557,
+            0.239,
+            0.833,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Often no wrong way to do this (next lecture)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.539,
+            0.256,
+            0.818,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Decide how to combine your answers"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.558,
+            0.274,
+            0.808,
+            0.29
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Assume the smaller answers are correct"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.558,
+            0.29,
+            0.829,
+            0.307
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Combining them should give bigger answer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 15,
+          "bbox": [
+            0.169,
+            0.405,
+            0.408,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Divide and Conquer Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 16,
+          "bbox": [
+            0.108,
+            0.425,
+            0.475,
+            0.608
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 16,
+              "bbox": [
+                0.108,
+                0.425,
+                0.475,
+                0.608
+              ],
+              "image_path": "images/page_1_image_16.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.314,
+            0.434,
+            0.414,
+            0.508
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "“Short-cut” for if s[0] == 'e’: return 1 else: return 0"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 18,
+          "bbox": [
+            0.205,
+            0.686,
+            0.37,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Minor Optimization"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 19,
+          "bbox": [
+            0.105,
+            0.695,
+            0.473,
+            0.887
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 19,
+              "bbox": [
+                0.105,
+                0.695,
+                0.473,
+                0.887
+              ],
+              "image_path": "images/page_1_image_19.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 20,
+          "bbox": [
+            0.553,
+            0.406,
+            0.871,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Exercise: Remove Blanks from a String"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 21,
+          "bbox": [
+            0.524,
+            0.423,
+            0.892,
+            0.609
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 21,
+              "bbox": [
+                0.524,
+                0.423,
+                0.892,
+                0.609
+              ],
+              "image_path": "images/page_1_image_21.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.742,
+            0.482,
+            0.838,
+            0.497
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Handle small data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.744,
+            0.533,
+            0.838,
+            0.549
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Break up the data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.743,
+            0.564,
+            0.839,
+            0.58
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Combine answers"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 25,
+          "bbox": [
+            0.612,
+            0.686,
+            0.809,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Following the Recursion"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 26,
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 27,
+          "bbox": [
+            0.555,
+            0.706,
+            0.885,
+            0.886
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 27,
+              "bbox": [
+                0.555,
+                0.706,
+                0.885,
+                0.886
+              ],
+              "image_path": "images/page_1_image_27.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 28,
+          "bbox": [
+            0.103,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 29,
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 30,
+          "bbox": [
+            0.945,
+            0.962,
+            0.959,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,2317 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.4,
+            0.856,
+            0.609
+          ],
+          "level": 2,
+          "content": "Lecture 6: Monte Carlo Simulation"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.959,
+            0.547,
+            0.977
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.981,
+            0.992
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.034,
+            0.427,
+            0.099
+          ],
+          "level": 2,
+          "content": "Relevant Reading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.176,
+            0.402,
+            0.22
+          ],
+          "content": "Sections 15-1 ̄ 15.4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.254,
+            0.277,
+            0.301
+          ],
+          "content": "Chapter 16"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.981,
+            0.992
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.034,
+            0.378,
+            0.099
+          ],
+          "level": 2,
+          "content": "A Little History"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.878,
+            0.273
+          ],
+          "content": "Ulam, recovering from an illness, was playing a lot of solitaire"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.304,
+            0.863,
+            0.356
+          ],
+          "content": "Tried to figure out probability of winning, and failed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.382,
+            0.835,
+            0.485
+          ],
+          "content": "Thought about playing lots of hands and counting number of wins, but decided it would take years"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.517,
+            0.853,
+            0.564
+          ],
+          "content": "Asked Von Neumann if he could build a program to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.092,
+            0.569,
+            0.557,
+            0.619
+          ],
+          "content": "simulate many hands on ENIAC"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.571,
+            0.565,
+            0.91,
+            0.867
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.551,
+                0.873,
+                0.924,
+                0.942
+              ],
+              "content": "Image of ENIAC programmers © unknown.This content is excluded from our Creative Commons license. For more information,see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+            }
+          ],
+          "image_source": "images/page_2_image_6.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.55,
+            0.093
+          ],
+          "level": 2,
+          "content": "Monte Carlo Simulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.848,
+            0.279
+          ],
+          "content": "A method of estimating the value of an unknown quantity using the principles of inferential statistics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.305,
+            0.394,
+            0.351
+          ],
+          "content": "Inferential statistics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.364,
+            0.531,
+            0.409
+          ],
+          "content": "◦ Population: a set of examples"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.423,
+            0.674,
+            0.469
+          ],
+          "content": "◦ Sample: a proper subset of a population"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.482,
+            0.841,
+            0.579
+          ],
+          "content": "◦ Key fact: a random sample tends to exhibit the same properties as the population from which it is drawn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.608,
+            0.685,
+            0.657
+          ],
+          "content": "Exactly what we did with random walks"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.982,
+            0.991
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.034,
+            0.324,
+            0.099
+          ],
+          "level": 2,
+          "content": "An Example"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.175,
+            0.894,
+            0.326
+          ],
+          "content": "Given a single coin, estimate fraction of heads you would get if you flipped the coin an infinite number of times"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.357,
+            0.354,
+            0.407
+          ],
+          "content": "Consider one flip"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.132,
+            0.448,
+            0.417,
+            0.831
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.505,
+            0.493,
+            0.917,
+            0.612
+          ],
+          "content": "How confident would you be about answering 1.0?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.496,
+            0.1
+          ],
+          "level": 2,
+          "content": "Flipping a Coin Twice"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.186,
+            0.28,
+            0.783,
+            0.665
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.769,
+            0.881,
+            0.82
+          ],
+          "content": "Do you think that the next flip will come up heads?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.585,
+            0.1
+          ],
+          "level": 2,
+          "content": "Flipping a Coin 100 Times"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.118,
+            0.15,
+            0.659,
+            0.883
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.688,
+            0.376,
+            0.936,
+            0.601
+          ],
+          "content": "Now do you think that the next flip will come up heads?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.981,
+            0.991
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.586,
+            0.101
+          ],
+          "level": 2,
+          "content": "Flipping a Coin 100 Times"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.096,
+            0.151,
+            0.633,
+            0.915
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.158,
+            0.945,
+            0.501
+          ],
+          "content": "Do you think that the probability of the next flip coming up heads is 52/100?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.689,
+            0.547,
+            0.919,
+            0.712
+          ],
+          "content": "Given the data, ϭ̪ϫ̠ ̜͗̍ͅ best estimate"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.69,
+            0.767,
+            0.917,
+            0.876
+          ],
+          "content": "But confidence should be low"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.032,
+            0.763,
+            0.097
+          ],
+          "level": 2,
+          "content": "Why the Difference in Confidence?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.175,
+            0.883,
+            0.224
+          ],
+          "content": "Confidence in our estimate depends upon two things"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.253,
+            0.598,
+            0.302
+          ],
+          "content": "Size of sample (e.g., 100 versus 2)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.33,
+            0.856,
+            0.38
+          ],
+          "content": "Variance of sample (e.g., all heads versus 52 heads)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.409,
+            0.906,
+            0.51
+          ],
+          "content": "As the variance grows, we need larger samples to have the same degree of confidence"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.261,
+            0.092
+          ],
+          "level": 2,
+          "content": "Roulette"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.087,
+            0.182,
+            0.654,
+            0.723
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.06,
+                0.733,
+                0.657,
+                0.779
+              ],
+              "content": "Image of roulette wheel © unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+            },
+            {
+              "bbox": [
+                0.697,
+                0.255,
+                0.929,
+                0.409
+              ],
+              "content": "No need to simulate, since answers obvious"
+            }
+          ],
+          "image_source": "images/page_9_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.696,
+            0.494,
+            0.943,
+            0.756
+          ],
+          "content": "Allows us to compare simulation results to actual probabilities"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.392,
+            0.093
+          ],
+          "level": 2,
+          "content": "Class Definition"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.09,
+            0.171,
+            0.85,
+            0.809
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass FairRoulette():\n    def __init__(self):\n        self.pockets = []\n        for i in range(1,37):\n            self.pockets.append(i)\n        self.ball = None\n        self.pocketOdds = len(self.pockets) - 1\n    def spin(self):\n        self.ball = random.choice(self.pockets)\n    def betPocket(self, pocket, amt):\n        if str(pocket) == str(self.ball):\n            return amt*self.pocketOdds\n        else: return -amt\n    def __str__(self):\n        return 'Fair Roulette'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.55,
+            0.094
+          ],
+          "level": 2,
+          "content": "Monte Carlo Simulation"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.055,
+            0.169,
+            0.923,
+            0.817
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef playRoulette(game, numSpins, pocket, bet):\n    totPocket = 0\n    for i in range(numSpins):\n        game.spin()\n        totPocket += game.betPocket(pocket, bet)\n    if toPrint:\n        print(numSpins, 'spins of', game)\n        print('Expected return betting', pocket, '=',\\\n            str(100*totPocket/numSpins) + '%\\n')\n    return (totPocket/numSpins)\n\ngame = FairRoulette()\nfor numSpins in (100, 1000000):\n    for i in range(3):\n        playRoulette(game, numSpins, 2, 1, True)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.699,
+            0.098
+          ],
+          "level": 2,
+          "content": "100 and 1M Spins of the Wheel"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.089,
+            0.169,
+            0.659,
+            0.899
+          ],
+          "sub_type": "code",
+          "content": "```txt\n100 spins of Fair Roulette\nExpected return betting 2 = -100.0%\n\n100 spins of Fair Roulette\nExpected return betting 2 = 44.0%\n\n100 spins of Fair Roulette\nExpected return betting 2 = -28.0%\n\n1000000 spins of Fair Roulette\nExpected return betting 2 = -0.046%\n\n1000000 spins of Fair Roulette\nExpected return betting 2 = 0.602%\n\n1000000 spins of Fair Roulette\nExpected return betting 2 = 0.7964%\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.525,
+            0.099
+          ],
+          "level": 2,
+          "content": "Law of Large Numbers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.175,
+            0.906,
+            0.437
+          ],
+          "content": "In repeated independent tests with the same actual probability p of a particular outcome in each test, the chance that the fraction of times that outcome occurs differs from p converges to zero as the number of trials goes to infinity"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.348,
+            0.505,
+            0.703,
+            0.823
+          ],
+          "content": "Does this imply that if deviations from expected behavior occur, these deviations are likely to be **evened out** by opposite deviations in the future?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.433,
+            0.099
+          ],
+          "level": 2,
+          "content": "Gambler’s Fallacy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.174,
+            0.893,
+            0.484
+          ],
+          "content": "ϮŎ August 18, 1913, at the casino in Monte Carlo, black came up a record twenty-six times in succession ̐ϭ̆ ̜̍ͅϿή̪̪ή̑Ϩ ϩ ̐ϴϪή̜ή̑ ͑Β̠ Β ̆ήΒ̜-panicky rush to bet on red, beginning about the time black had come up a phenomenal fifteen ̪ϭ̅ή̠Ϩϯ -- Huff and Geis, How to Take a Chance"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.513,
+            0.602,
+            0.562
+          ],
+          "content": "Probability of 26 consecutive reds"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.589,
+            0.388,
+            0.639
+          ],
+          "content": "1/67,108,865"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.668,
+            0.87,
+            0.768
+          ],
+          "content": "Probability of 26 consecutive reds when previous 25 rolls were red"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.797,
+            0.241,
+            0.848
+          ],
+          "content": "1/2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.981,
+            0.993
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.552,
+            0.099
+          ],
+          "level": 2,
+          "content": "Regression to the Mean"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.899,
+            0.277
+          ],
+          "content": "Following an extreme random event, the next random event is likely to be less extreme"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.304,
+            0.904,
+            0.409
+          ],
+          "content": "If you spin a fair roulette wheel 10 times and get 100% reds, that is an extreme event (probability = 1/1024)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.434,
+            0.881,
+            0.534
+          ],
+          "content": "It is likely that in the next 10 spins, you will get fewer than 10 reds"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.545,
+            0.597,
+            0.593
+          ],
+          "content": "◦ But the expected number is only 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.623,
+            0.893,
+            0.778
+          ],
+          "content": "So, if you look at the average of the 20 spins, it will be closer to the expected mean of 50% reds than to the 100% of the first 10 spins"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.03,
+            0.868,
+            0.093
+          ],
+          "level": 2,
+          "content": "Casinos Not in the Business of Being Fair"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.104,
+            0.217,
+            0.89,
+            0.782
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.613,
+            0.095
+          ],
+          "level": 2,
+          "content": "Two Subclasses of Roulette"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.088,
+            0.173,
+            0.8,
+            0.497
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass EuRoulette(FairRoulette):\n    def __init__(self):\n        FairRoulette.__init__(self)\n        self.pockets.append('0')\n    def __str__(self):\n        return 'European Roulette'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.546,
+            0.778,
+            0.869
+          ],
+          "content": "class AmRoulette(EuRoulette): def \\_\\_init\\_\\_(self): EuRoulette.\\_\\_init\\_\\_(self) self.pockets.append('00') def \\_\\_str\\_\\_(self): return 'American Roulette'"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.527,
+            0.101
+          ],
+          "level": 2,
+          "content": "Comparing the Games"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.045,
+            0.138,
+            0.76,
+            0.948
+          ],
+          "sub_type": "code",
+          "content": "```txt\nSimulate 20 trials of 1000 spins each\nExp. return for Fair Roulette = 6.56%\nExp. return for European Roulette = -2.26%\nExp. return for American Roulette = -8.92%\n\nSimulate 20 trials of 10000 spins each\nExp. return for Fair Roulette = -1.234%\nExp. return for European Roulette = -4.168%\nExp. return for American Roulette = -5.752%\n\nSimulate 20 trials of 100000 spins each\nExp. return for Fair Roulette = 0.8144%\nExp. return for European Roulette = -2.6506%\nExp. return for American Roulette = -5.113%\n\nSimulate 20 trials of 1000000 spins each\nExp. return for Fair Roulette = -0.0723%\nExp. return for European Roulette = -2.7329%\nExp. return for American Roulette = -5.212%\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.817,
+            0.1
+          ],
+          "level": 2,
+          "content": "Sampling Space of Possible Outcomes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.892,
+            0.278
+          ],
+          "content": "Never possible to guarantee perfect accuracy through sampling"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.305,
+            0.844,
+            0.355
+          ],
+          "content": "Not to say that an estimate is not precisely correct"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.384,
+            0.306,
+            0.431
+          ],
+          "content": "Key question:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.442,
+            0.894,
+            0.537
+          ],
+          "content": "◦ How many samples do we need to look at before we can have justified confidence on our answer?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.567,
+            0.851,
+            0.619
+          ],
+          "content": "Depends upon variability in underlying distribution"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.645,
+            0.101
+          ],
+          "level": 2,
+          "content": "Quantifying Variation in Data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.154,
+            0.181,
+            0.617,
+            0.311
+          ],
+          "content": "variance $(X) = \\frac{\\sum_{x\\in X}(x - \\mu)^{2}}{|X|}$"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.165,
+            0.326,
+            0.545,
+            0.481
+          ],
+          "content": "\\sigma (X) = \\sqrt {\\frac {1}{| X |} \\sum_ {x \\in X} (x - \\mu) ^ {2}}",
+          "image_source": "images/page_20_equation_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.544,
+            0.817,
+            0.645
+          ],
+          "content": "Standard deviation simply the square root of the variance"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.674,
+            0.53,
+            0.724
+          ],
+          "content": "Outliers can have a big effect"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.752,
+            0.81,
+            0.853
+          ],
+          "content": "Standard deviation should always be considered relative to mean"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.974,
+            0.981,
+            0.993
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.625,
+            0.094
+          ],
+          "level": 2,
+          "content": "For Those Who Prefer Code"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.099,
+            0.209,
+            0.618,
+            0.523
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef getMeanAndStd(X):\n    mean = sum(X)/float(len(X))\n    tot = 0.0\n    for x in X:\n        tot += (x - mean)**2\n    std = (tot/len(X))**0.5\n    return mean, std\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.992
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.697,
+            0.093
+          ],
+          "level": 2,
+          "content": "Confidence Levels and Intervals"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.171,
+            0.908,
+            0.388
+          ],
+          "content": "Instead of estimating an unknown parameter by a single value (e.g., the mean of a set of trials), a confidence interval provides a range that is likely to contain the unknown value and a confidence that the unknown value lays within that range"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.409,
+            0.905,
+            0.539
+          ],
+          "content": "ϮϴϪή ̜ῄ̪̜̆ ̍̆ Οή̪̪ϭ̆Ϡ Β ̙̍Πϼή̪ ϭͼϼ ̪ϭ̅ή̠ ϭ̆ E̜̙̍ͅήΒ̆ roulette is -3.3%. The margin of error is +/- 3.5% with a 95% level of confidenceϨϯ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.563,
+            0.409,
+            0.607
+          ],
+          "content": "What does this mean?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.632,
+            0.894,
+            0.718
+          ],
+          "content": "If I were to conduct an infinite number of trials of 10k bets each,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.725,
+            0.682,
+            0.767
+          ],
+          "content": "◦ My expected average return would be -3.3%"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.775,
+            0.909,
+            0.855
+          ],
+          "content": "◦ My return would be between roughly -6.8% and +0.2% 95% of the time"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.369,
+            0.099
+          ],
+          "level": 2,
+          "content": "Empirical Rule"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.175,
+            0.862,
+            0.401
+          ],
+          "content": "Under some assumptions discussed later ◦ \\~68% of data within one standard deviation of mean ◦ \\~95% of data within 1.96 standard deviations of mean ◦ \\~99.7% of data within 3 standard deviations of mean"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.545,
+            0.102
+          ],
+          "level": 2,
+          "content": "Applying Empirical Rule"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.022,
+            0.144,
+            0.954,
+            0.913
+          ],
+          "sub_type": "code",
+          "content": "```python\nresultDict = {}\ngames = (FairRoulette, EuRoulette, AmRoulette)\nfor G in games:\n    resultDict[G().__str__()] = []\nfor numSpins in (100, 1000, 10000):\n    print('\\nSimulate betting a pocket for', numTrials,\n        'trials of', numSpins, 'spins each')\n    for G in games:\n        pocketReturns = findPocketReturn(G(), 20,\n                                    numSpins, False)\n        mean, std = getMeanAndStd(pocketReturns)\n        resultDict[G().__str__)].append((numSpins,\n                                    100*mean,\n                                    100*std))\n        print('Exp. return for', G(), '=',\n            str(round(100*mean, 3))\n            + '%,', '+/- ' + str(round(100*1.96*std, 3))\n            + '% with 95% confidence')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.235,
+            0.093
+          ],
+          "level": 2,
+          "content": "Results"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.154,
+            0.964,
+            0.325
+          ],
+          "sub_type": "code",
+          "content": "```txt\nSimulate betting a pocket for 20 trials of 1000 spins each\nExp. return for Fair Roulette = 3.68%, +/- 27.189% with 95% confidence\nExp. return for European Roulette = -5.5%, +/- 35.042% with 95% confidence\nExp. return for American Roulette = -4.24%, +/- 26.494% with 95% confidence\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.365,
+            0.966,
+            0.537
+          ],
+          "sub_type": "code",
+          "content": "```txt\nSimulate betting a pocket for 20 trials of 100000 spins each\nExp. return for Fair Roulette = 0.125%, +/- 3.999% with 95% confidence\nExp. return for European Roulette = -3.313%, +/- 3.515% with 95% confidence\nExp. return for American Roulette = -5.594%, +/- 4.287% with 95% confidence\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.063,
+            0.577,
+            0.966,
+            0.747
+          ],
+          "sub_type": "code",
+          "content": "```txt\nSimulate betting a pocket for 20 trials of 1000000 spins each\nExp. return for Fair Roulette = 0.012%, +/- 0.846% with 95% confidence\nExp. return for European Roulette = -2.679%, +/- 0.948% with 95% confidence\nExp. return for American Roulette = -5.176%, +/- 1.214% with 95% confidence\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.034,
+            0.843,
+            0.101
+          ],
+          "level": 2,
+          "content": "Assumptions Underlying Empirical Rule"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.175,
+            0.603,
+            0.223
+          ],
+          "content": "The mean estimation error is zero"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.252,
+            0.805,
+            0.352
+          ],
+          "content": "The distribution of the errors in the estimates is normal"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.074,
+            0.385,
+            0.568,
+            0.909
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_26_chart_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.51,
+            0.1
+          ],
+          "level": 2,
+          "content": "Defining Distributions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.175,
+            0.534,
+            0.225
+          ],
+          "content": "Use a probability distribution"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.253,
+            0.85,
+            0.353
+          ],
+          "content": "Captures notion of relative frequency with which a random variable takes on certain values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.363,
+            0.905,
+            0.409
+          ],
+          "content": "◦ Discrete random variables drawn from finite set of values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.423,
+            0.896,
+            0.519
+          ],
+          "content": "◦ Continuous random variables drawn from reals between two numbers (i.e., infinite set of values)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.548,
+            0.907,
+            0.651
+          ],
+          "content": "For discrete variable, simply list the probability of each value, must add up to 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.679,
+            0.884,
+            0.78
+          ],
+          "content": "C̪̍̆ϭ̠̆̍ͅͅ ΠΒ̠ή ̪̜ϭΠϼϭή̜ϥ ΠΒ̆ϫ̪ ῄ̆̅ή̜Β̪ή ̙̜̍ΟΒΟϭϿϭ̪͗ for each of an infinite set of values"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.203,
+            0.091
+          ],
+          "level": 2,
+          "content": "PDF’s"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.173,
+            0.881,
+            0.277
+          ],
+          "content": "Distributions defined by probability density functions (PDFs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.304,
+            0.858,
+            0.405
+          ],
+          "content": "Probability of a random variable lying between two values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.434,
+            0.905,
+            0.539
+          ],
+          "content": "Defines a curve where the values on the x-axis lie between minimum and maximum value of the variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.564,
+            0.908,
+            0.669
+          ],
+          "content": "Area under curve between two points, is probability of example falling within that range"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.494,
+            0.093
+          ],
+          "level": 2,
+          "content": "Normal Distributions"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.194,
+            0.161,
+            0.573,
+            0.289
+          ],
+          "content": "P (x) = \\frac {1}{\\sigma \\sqrt {2 \\pi}} * e ^ {- \\frac {(x - \\mu) ^ {2}}{2 \\sigma^ {2}}}",
+          "image_source": "images/page_29_equation_1.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.093,
+            0.385,
+            0.543,
+            0.864
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_29_chart_2.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.68,
+            0.239,
+            0.823,
+            0.377
+          ],
+          "content": "e = \\sum_ {n = 0} ^ {\\infty} \\frac {1}{n !}",
+          "image_source": "images/page_29_equation_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.578,
+            0.503,
+            0.927,
+            0.581
+          ],
+          "content": "\\~68% of data within one standard deviation of mean"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.578,
+            0.623,
+            0.933,
+            0.701
+          ],
+          "content": "\\~95% of data within 1.96 standard deviations of mean"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.578,
+            0.743,
+            0.92,
+            0.821
+          ],
+          "content": "\\~99.7% of data within 3 standard deviations of mean"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.088,
+            0.102,
+            0.237,
+            0.157
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.227,
+            0.573,
+            0.284
+          ],
+          "content": "6.0002 Introduction to Computational Thinking and Data Science Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.357,
+            0.688,
+            0.384
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 6",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2017-03-06T14:19:00+05:30",
+      "modified_at": "2017-04-11T12:15:18+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2010",
+      "producer_application": "Microsoft® PowerPoint® 2010",
+      "page_count": 31,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

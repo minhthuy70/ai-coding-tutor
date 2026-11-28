@@ -1,0 +1,5699 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.149,
+            0.268,
+            0.372,
+            0.335
+          ],
+          "level": 2,
+          "content": "Lecture 13"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.353,
+            0.445,
+            0.645,
+            0.535
+          ],
+          "level": 2,
+          "content": "For-Loops"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.143,
+            0.068,
+            0.857,
+            0.129
+          ],
+          "level": 2,
+          "content": "Announcements for This Lecture"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.07,
+            0.208,
+            0.454,
+            0.279
+          ],
+          "level": 2,
+          "content": "(Optional) Videos"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.333,
+            0.446,
+            0.383
+          ],
+          "content": "• **Videos 16.1-16.7** for today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.399,
+            0.359,
+            0.446
+          ],
+          "content": "• **Lesson 18** next time"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.478,
+            0.433,
+            0.528
+          ],
+          "content": "• **Prelim, 10/15 at 7:30 pm**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.54,
+            0.362,
+            0.587
+          ],
+          "content": "§ Material up to **10/1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.598,
+            0.393,
+            0.648
+          ],
+          "content": "§ Study guide is posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.658,
+            0.413,
+            0.708
+          ],
+          "content": "§ Conflicts are notified"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.724,
+            0.43,
+            0.834
+          ],
+          "content": "**Review this Wednesday** § **4:30pm in Warren B25**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.599,
+            0.209,
+            0.874,
+            0.279
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.335,
+            0.835,
+            0.392
+          ],
+          "content": "• A2 is now graded"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.408,
+            0.935,
+            0.457
+          ],
+          "content": "§ Access it in **Gradescope**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.47,
+            0.92,
+            0.521
+          ],
+          "content": "§ Graded out of 50 points"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.535,
+            0.938,
+            0.584
+          ],
+          "content": "§ **Mean**: 45.6, **Median**: 48"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.598,
+            0.951,
+            0.649
+          ],
+          "content": "§ A: 46 (60%), B: 37 (29%)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.516,
+            0.667,
+            0.86,
+            0.724
+          ],
+          "level": 2,
+          "content": "• A3 due this Friday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.736,
+            0.896,
+            0.787
+          ],
+          "content": "§ Will grade over break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.801,
+            0.898,
+            0.85
+          ],
+          "content": "§ But check-in next lab!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.067,
+            0.954,
+            0.136
+          ],
+          "level": 2,
+          "content": "Example: Summing the Elements of a List"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.196,
+            0.328,
+            0.256
+          ],
+          "level": 2,
+          "content": "def sum(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.273,
+            0.851,
+            0.334
+          ],
+          "content": "\"\"\"Returns: the sum of all elements in thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.353,
+            0.829,
+            0.477
+          ],
+          "content": "Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.493,
+            0.613,
+            0.558
+          ],
+          "content": "pass # Stub to be implemented"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.699,
+            0.75,
+            0.836
+          ],
+          "content": "Remember our approach: Outline first; then implement"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.067,
+            0.954,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Summing the Elements of a List"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.196,
+            0.328,
+            0.256
+          ],
+          "level": 2,
+          "content": "def sum(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.273,
+            0.851,
+            0.334
+          ],
+          "content": "\"\"\"Returns: the sum of all elements in thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.353,
+            0.828,
+            0.477
+          ],
+          "content": "Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.493,
+            0.86,
+            0.555
+          ],
+          "content": "\\# Create a variable to hold result (start at 0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.573,
+            0.686,
+            0.633
+          ],
+          "content": "\\# Add each list element to variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.651,
+            0.462,
+            0.711
+          ],
+          "content": "\\# Return the variable"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.067,
+            0.954,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Summing the Elements of a List"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.193,
+            0.852,
+            0.873
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef sum(thelist):\n    \"\"\"Returns: the sum of all elements in thelist\n    Precondition: thelist is a list of all numbers\n    (either floats or ints)\"\"\"\n    result = 0\n    result = result + thelist[0]\n    result = result + thelist[1]\n    ...\n    return result There is a problem here\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.232,
+            0.067,
+            0.767,
+            0.137
+          ],
+          "level": 2,
+          "content": "Working with Sequences"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.208,
+            0.764,
+            0.27
+          ],
+          "content": "• Sequences are potentially **unbounded**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.295,
+            0.821,
+            0.348
+          ],
+          "content": "§ Number of elements inside them is not fixed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.375,
+            0.955,
+            0.431
+          ],
+          "content": "§ Functions must handle sequences of different lengths"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.456,
+            0.883,
+            0.514
+          ],
+          "content": "§ **Example**: sum([1,2,3]) vs. sum([4,5,6,7,8,9,10])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.542,
+            0.843,
+            0.603
+          ],
+          "content": "• Cannot process with **fixed** number of lines"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.631,
+            0.898,
+            0.684
+          ],
+          "content": "§ Each line of code can handle at most one element"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.709,
+            0.793,
+            0.763
+          ],
+          "content": "§ What if # of elements > # of lines of code?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.797,
+            0.691,
+            0.854
+          ],
+          "content": "• We need a new **control structure**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.346,
+            0.065,
+            0.653,
+            0.137
+          ],
+          "level": 2,
+          "content": "The For-Loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.195,
+            0.347,
+            0.259
+          ],
+          "content": "\\# Create local var x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.271,
+            0.215,
+            0.337
+          ],
+          "content": "x = seqn[0]"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.345,
+            0.169,
+            0.413
+          ],
+          "sub_type": "code",
+          "content": "```lua\nprint(x)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.42,
+            0.214,
+            0.485
+          ],
+          "content": "x = seqn[1]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.493,
+            0.167,
+            0.56
+          ],
+          "content": "print(x)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.506,
+            0.373,
+            0.635
+          ],
+          "content": "Not valid Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.647,
+            0.363,
+            0.709
+          ],
+          "content": "x = seqn[len(seqn)-1]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.721,
+            0.166,
+            0.782
+          ],
+          "content": "print(x)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.196,
+            0.827,
+            0.261
+          ],
+          "content": "\\# Write as a for-loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.271,
+            0.722,
+            0.335
+          ],
+          "content": "for x in seqn:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.345,
+            0.682,
+            0.413
+          ],
+          "content": "print(x)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.6,
+            0.496,
+            0.874,
+            0.567
+          ],
+          "level": 2,
+          "content": "Key Concepts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.599,
+            0.778,
+            0.659
+          ],
+          "content": "• **iterable**: seqn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.673,
+            0.819,
+            0.736
+          ],
+          "content": "• **loop variable**: x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.748,
+            0.783,
+            0.811
+          ],
+          "content": "• **body**: print(x)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.919,
+            0.543,
+            0.952
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.262,
+            0.067,
+            0.737,
+            0.138
+          ],
+          "level": 2,
+          "content": "Executing a For-Loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.199,
+            0.257,
+            0.258
+          ],
+          "content": "**The for-loop:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.046,
+            0.286,
+            0.256,
+            0.342
+          ],
+          "content": "**for** x in seqn:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.349,
+            0.221,
+            0.406
+          ],
+          "content": "print(x)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.182,
+            0.797,
+            0.239
+          ],
+          "content": "• **iterable:** seqn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.257,
+            0.835,
+            0.316
+          ],
+          "content": "• **loop variable**: x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.331,
+            0.8,
+            0.39
+          ],
+          "content": "• **body**: print(x)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.079,
+            0.715,
+            0.258,
+            0.841
+          ],
+          "level": 2,
+          "content": "Usually a sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.321,
+            0.621,
+            0.443,
+            0.719
+          ],
+          "content": "seqn has more elts"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.043,
+            0.427,
+            0.732,
+            0.91
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.464,
+            0.609,
+            0.523,
+            0.651
+          ],
+          "content": "True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.392,
+            0.801,
+            0.456,
+            0.844
+          ],
+          "content": "False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.628,
+            0.665,
+            0.72
+          ],
+          "continues_prev": true,
+          "content": "put next elt in x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.554,
+            0.829,
+            0.66,
+            0.881
+          ],
+          "content": "print(x)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.92,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.067,
+            0.954,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Summing the Elements of a List"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.196,
+            0.328,
+            0.256
+          ],
+          "level": 2,
+          "content": "def sum(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.273,
+            0.851,
+            0.334
+          ],
+          "content": "\"\"\"Returns: the sum of all elements in thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.353,
+            0.828,
+            0.477
+          ],
+          "content": "Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.493,
+            0.86,
+            0.555
+          ],
+          "content": "\\# Create a variable to hold result (start at 0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.573,
+            0.686,
+            0.633
+          ],
+          "content": "\\# Add each list element to variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.651,
+            0.462,
+            0.711
+          ],
+          "content": "\\# Return the variable"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.067,
+            0.954,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Summing the Elements of a List"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.196,
+            0.328,
+            0.256
+          ],
+          "content": "def sum(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.273,
+            0.85,
+            0.333
+          ],
+          "content": "\"\"\"Returns: the sum of all elements in thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.353,
+            0.828,
+            0.477
+          ],
+          "content": "Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.493,
+            0.259,
+            0.553
+          ],
+          "content": "result = 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.612,
+            0.347,
+            0.672
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.691,
+            0.448,
+            0.75
+          ],
+          "content": "result = result + x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.808,
+            0.314,
+            0.866
+          ],
+          "content": "return result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.499,
+            0.606,
+            0.824,
+            0.667
+          ],
+          "content": "• **iterable:** thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.499,
+            0.693,
+            0.838,
+            0.756
+          ],
+          "content": "• **loop variable**: x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.499,
+            0.777,
+            0.927,
+            0.841
+          ],
+          "content": "<u>•</u> <strong><u>body</u></strong><u>: result=result+x</u>"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.067,
+            0.954,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Summing the Elements of a List"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.195,
+            0.329,
+            0.257
+          ],
+          "content": "def sum(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.272,
+            0.851,
+            0.335
+          ],
+          "content": "\"\"\"Returns: the sum of all elements in thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.353,
+            0.828,
+            0.476
+          ],
+          "content": "Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.491,
+            0.26,
+            0.555
+          ],
+          "content": "result = 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.37,
+            0.489,
+            0.598,
+            0.543
+          ],
+          "content": "**Accumulator**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.414,
+            0.551,
+            0.553,
+            0.605
+          ],
+          "content": "variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.611,
+            0.348,
+            0.673
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.689,
+            0.45,
+            0.751
+          ],
+          "content": "result = result + x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.807,
+            0.316,
+            0.867
+          ],
+          "content": "return result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.498,
+            0.607,
+            0.826,
+            0.669
+          ],
+          "content": "• **iterable:** thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.498,
+            0.69,
+            0.84,
+            0.757
+          ],
+          "content": "• **loop variable**: x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.498,
+            0.775,
+            0.928,
+            0.841
+          ],
+          "content": "<u>•</u> <strong><u>body</u></strong><u>: result=result+x</u>"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.92,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.309,
+            0.068,
+            0.692,
+            0.127
+          ],
+          "level": 2,
+          "content": "The Accumulator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.206,
+            0.661,
+            0.263
+          ],
+          "content": "• In a slides saw the **accumulator**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.286,
+            0.772,
+            0.341
+          ],
+          "content": "§ Variable to hold a final (numeric) answer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.734,
+            0.417
+          ],
+          "content": "§ For-loop added to variable at each step"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.441,
+            0.669,
+            0.502
+          ],
+          "content": "• This is a common design pattern"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.523,
+            0.651,
+            0.578
+          ],
+          "content": "§ Popular way to compute statistics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.597,
+            0.518,
+            0.653
+          ],
+          "content": "§ Counting, averaging, etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.673,
+            0.643,
+            0.733
+          ],
+          "content": "• It is not just limited to numbers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.758,
+            0.765,
+            0.811
+          ],
+          "content": "§ Works on **every type that can be added**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.831,
+            0.699,
+            0.887
+          ],
+          "content": "§ This means **strings**, **lists** and **tuples**!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.067,
+            0.897,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: String-Based Accumulator"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.203,
+            0.299,
+            0.264
+          ],
+          "level": 2,
+          "content": "def despace(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.273,
+            0.797,
+            0.335
+          ],
+          "content": "\"\"\"Returns: s but with its spaces removed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.344,
+            0.574,
+            0.409
+          ],
+          "content": "Precondition: s is a string\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.429,
+            0.745,
+            0.495
+          ],
+          "content": "\\# Create an empty string accumulator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.515,
+            0.56,
+            0.578
+          ],
+          "content": "\\# For each character x of s"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.601,
+            0.522,
+            0.665
+          ],
+          "content": "\\# Check if x is a space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.685,
+            0.644,
+            0.748
+          ],
+          "content": "\\# Add it to accumulator if not"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.067,
+            0.897,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: String-Based Accumulator"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.201,
+            0.796,
+            0.839
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef despace(s):\n    \"\"\"Returns: s but with its spaces removed\n    Precondition: s is a string\"\"\"\n    result = \"\"\n    for x in s:\n        if x != '':\n            result = result+x\n    return result\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.149,
+            0.066,
+            0.85,
+            0.137
+          ],
+          "level": 2,
+          "content": "Modifying the Contents of a List"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.195,
+            0.4,
+            0.257
+          ],
+          "level": 2,
+          "content": "def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.272,
+            0.934,
+            0.479
+          ],
+          "content": "\"\"\"(Procedure) Adds 1 to every element in the list Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.501,
+            0.347,
+            0.561
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.587,
+            0.266,
+            0.644
+          ],
+          "content": "x = x+1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.56,
+            0.855,
+            0.624
+          ],
+          "content": "**DOES NOT WORK!**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.672,
+            0.483,
+            0.734
+          ],
+          "content": "\\# procedure; no return"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.242,
+            0.625,
+            0.385,
+            0.855
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_0.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.583,
+            0.307,
+            0.884,
+            0.557
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.202,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.195,
+            0.412,
+            0.25
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.264,
+            0.073,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.263,
+            0.464,
+            0.32
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.333,
+            0.071,
+            0.382
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.331,
+            0.48,
+            0.386
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.406,
+            0.366,
+            0.462
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.481,
+            0.072,
+            0.53
+          ],
+          "content": "5."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.172,
+            0.481,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_15_equation_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.665,
+            0.101,
+            0.707
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.186,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.201,
+            0.728,
+            0.256
+          ],
+          "level": 2,
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.6,
+            0.321,
+            0.71,
+            0.365
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.42,
+            0.677,
+            0.463
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.421,
+            0.756,
+            0.461
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.202,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.195,
+            0.412,
+            0.249
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.264,
+            0.073,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.263,
+            0.464,
+            0.32
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.333,
+            0.072,
+            0.382
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.331,
+            0.48,
+            0.386
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.481,
+            0.072,
+            0.531
+          ],
+          "content": "5."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.406,
+            0.366,
+            0.461
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.172,
+            0.481,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_16_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.665,
+            0.101,
+            0.707
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.186,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.242,
+            0.626,
+            0.385,
+            0.855
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ 0 \\quad \\boxed {5} \\\\ 1 \\quad \\boxed {4} \\\\ 2 \\quad \\boxed {7} \\end{array}",
+          "image_source": "images/page_16_equation_12.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.201,
+            0.729,
+            0.256
+          ],
+          "level": 2,
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.321,
+            0.71,
+            0.365
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.582,
+            0.307,
+            0.884,
+            0.555
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_15.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.42,
+            0.676,
+            0.463
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.421,
+            0.756,
+            0.461
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.489,
+            0.744,
+            0.526
+          ],
+          "content": "5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.067,
+            0.797,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.194,
+            0.413,
+            0.251
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.263,
+            0.074,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.262,
+            0.465,
+            0.321
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.332,
+            0.072,
+            0.383
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.331,
+            0.481,
+            0.387
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.405,
+            0.368,
+            0.463
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.48,
+            0.073,
+            0.531
+          ],
+          "content": "5."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.171,
+            0.48,
+            0.296,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_17_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.664,
+            0.102,
+            0.709
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.187,
+            0.702
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.241,
+            0.628,
+            0.385,
+            0.855
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ \\hline 0 & \\boxed {5} \\\\ 1 & \\boxed {4} \\\\ 2 & \\boxed {7} \\end{array}",
+          "image_source": "images/page_17_equation_12.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.199,
+            0.73,
+            0.259
+          ],
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.183,
+            0.954,
+            0.285
+          ],
+          "content": "Loop **back** to l<u>ine 4</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.32,
+            0.711,
+            0.366
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.6,
+            0.419,
+            0.677,
+            0.465
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.419,
+            0.757,
+            0.463
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.489,
+            0.745,
+            0.528
+          ],
+          "content": "6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.58,
+            0.677,
+            0.891,
+            0.793
+          ],
+          "content": "Increments x in **frame** Does not affect folder"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.583,
+            0.307,
+            0.884,
+            0.556
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_18_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.194,
+            0.412,
+            0.25
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.263,
+            0.073,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.262,
+            0.464,
+            0.32
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.332,
+            0.072,
+            0.382
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.331,
+            0.48,
+            0.386
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.405,
+            0.367,
+            0.462
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.171,
+            0.48,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_18_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.664,
+            0.101,
+            0.708
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.186,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.241,
+            0.628,
+            0.385,
+            0.855
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ \\hline 0 & \\boxed {5} \\\\ 1 & \\boxed {4} \\\\ 2 & \\boxed {7} \\end{array}",
+          "image_source": "images/page_18_equation_12.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.201,
+            0.729,
+            0.257
+          ],
+          "level": 2,
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.321,
+            0.71,
+            0.365
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.838,
+            0.32,
+            0.863,
+            0.361
+          ],
+          "content": "5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.419,
+            0.677,
+            0.463
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.42,
+            0.756,
+            0.462
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.561,
+            0.677,
+            0.907,
+            0.793
+          ],
+          "content": "**Next** element stored in x. Previous calculation lost."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.195,
+            0.412,
+            0.25
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.263,
+            0.073,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.262,
+            0.464,
+            0.32
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.332,
+            0.072,
+            0.382
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.331,
+            0.481,
+            0.387
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.405,
+            0.367,
+            0.462
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.481,
+            0.072,
+            0.531
+          ],
+          "content": "5."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.171,
+            0.48,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_19_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.664,
+            0.102,
+            0.708
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.187,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.241,
+            0.626,
+            0.386,
+            0.856
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ 0 \\quad \\boxed {5} \\\\ 1 \\quad \\boxed {4} \\\\ 2 \\quad \\boxed {7} \\end{array}",
+          "image_source": "images/page_19_equation_12.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.2,
+            0.73,
+            0.258
+          ],
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.184,
+            0.954,
+            0.285
+          ],
+          "content": "Loop **back** to l<u>ine 4</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.321,
+            0.71,
+            0.366
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.839,
+            0.321,
+            0.862,
+            0.361
+          ],
+          "content": "4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.6,
+            0.419,
+            0.677,
+            0.464
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.42,
+            0.757,
+            0.462
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.488,
+            0.745,
+            0.527
+          ],
+          "content": "5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.194,
+            0.412,
+            0.25
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.263,
+            0.073,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.262,
+            0.464,
+            0.32
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.332,
+            0.072,
+            0.382
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.331,
+            0.48,
+            0.386
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.405,
+            0.367,
+            0.462
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.171,
+            0.48,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_20_equation_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.664,
+            0.101,
+            0.708
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.186,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.241,
+            0.628,
+            0.385,
+            0.855
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ \\hline 0 & \\boxed {5} \\\\ 1 & \\boxed {4} \\\\ 2 & \\boxed {7} \\end{array}",
+          "image_source": "images/page_20_equation_11.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.201,
+            0.729,
+            0.257
+          ],
+          "level": 2,
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.321,
+            0.71,
+            0.365
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.838,
+            0.32,
+            0.863,
+            0.361
+          ],
+          "content": "5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.419,
+            0.677,
+            0.463
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.42,
+            0.756,
+            0.462
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.561,
+            0.677,
+            0.907,
+            0.793
+          ],
+          "content": "**Next** element stored in x. Previous calculation lost."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.949
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.195,
+            0.412,
+            0.25
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.263,
+            0.073,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.262,
+            0.465,
+            0.32
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.332,
+            0.072,
+            0.382
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.331,
+            0.481,
+            0.387
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.405,
+            0.367,
+            0.462
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.481,
+            0.072,
+            0.531
+          ],
+          "content": "5."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.171,
+            0.48,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_21_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.664,
+            0.102,
+            0.708
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.187,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.241,
+            0.626,
+            0.385,
+            0.856
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ \\hline 0 & \\boxed {5} \\\\ 1 & \\boxed {4} \\\\ 2 & \\boxed {7} \\end{array}",
+          "image_source": "images/page_21_equation_12.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.2,
+            0.73,
+            0.258
+          ],
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.184,
+            0.954,
+            0.285
+          ],
+          "content": "Loop **back** to l<u>ine 4</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.321,
+            0.71,
+            0.365
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.839,
+            0.321,
+            0.862,
+            0.361
+          ],
+          "content": "4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.6,
+            0.42,
+            0.677,
+            0.464
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.42,
+            0.757,
+            0.462
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.488,
+            0.745,
+            0.527
+          ],
+          "content": "8"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.194,
+            0.412,
+            0.25
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.263,
+            0.073,
+            0.315
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.262,
+            0.464,
+            0.321
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.331,
+            0.481,
+            0.387
+          ],
+          "content": "**Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.407,
+            0.072,
+            0.457
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.405,
+            0.367,
+            0.463
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.171,
+            0.479,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_22_equation_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.663,
+            0.102,
+            0.708
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.187,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.241,
+            0.628,
+            0.385,
+            0.855
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ \\hline 0 & \\boxed {5} \\\\ 1 & \\boxed {4} \\\\ 2 & \\boxed {7} \\end{array}",
+          "image_source": "images/page_22_equation_10.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.2,
+            0.729,
+            0.257
+          ],
+          "level": 2,
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.321,
+            0.71,
+            0.366
+          ],
+          "content": "**add\\_one**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.419,
+            0.677,
+            0.464
+          ],
+          "content": "thelist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.419,
+            0.756,
+            0.462
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.488,
+            0.745,
+            0.527
+          ],
+          "content": "8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.585,
+            0.677,
+            0.884,
+            0.795
+          ],
+          "content": "Loop is **completed.** Nothing new put in x."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.067,
+            0.796,
+            0.135
+          ],
+          "level": 2,
+          "content": "For Loops and Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.195,
+            0.412,
+            0.25
+          ],
+          "content": "1. def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.262,
+            0.464,
+            0.321
+          ],
+          "content": "\"\"\"Adds 1 to every elt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.331,
+            0.481,
+            0.386
+          ],
+          "content": "3. **Pre**: thelist all nums\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.406,
+            0.368,
+            0.461
+          ],
+          "content": "4. for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.481,
+            0.072,
+            0.53
+          ],
+          "content": "5."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.171,
+            0.481,
+            0.295,
+            0.533
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + 1",
+          "image_source": "images/page_23_equation_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.664,
+            0.102,
+            0.708
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.659,
+            0.187,
+            0.701
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.241,
+            0.626,
+            0.385,
+            0.855
+          ],
+          "content": "\\begin{array}{c} \\text {id4} \\\\ 0 \\quad \\boxed {5} \\\\ 1 \\quad \\boxed {4} \\\\ 2 \\quad \\boxed {7} \\end{array}",
+          "image_source": "images/page_23_equation_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.2,
+            0.73,
+            0.259
+          ],
+          "content": "add\\_one(seq):"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.558,
+            0.293,
+            0.916,
+            0.57
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_23_chart_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.625,
+            0.693,
+            0.845,
+            0.835
+          ],
+          "content": "No changes to folder"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.921,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.279,
+            0.067,
+            0.719,
+            0.129
+          ],
+          "level": 2,
+          "content": "On The Other Hand"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.195,
+            0.5,
+            0.259
+          ],
+          "content": "def copy\\_add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.273,
+            0.894,
+            0.337
+          ],
+          "content": "\"\"\"Returns: copy with 1 added to every element"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.353,
+            0.828,
+            0.479
+          ],
+          "content": "Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.501,
+            0.561,
+            0.566
+          ],
+          "content": "mycopy = [] # accumulator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.578,
+            0.348,
+            0.64
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.659,
+            0.268,
+            0.718
+          ],
+          "content": "$\\mathbf{x} = \\mathbf{x} + 1$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.469,
+            0.596,
+            0.813,
+            0.719
+          ],
+          "content": "**Accumulator** keeps result from being lost"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.737,
+            0.948,
+            0.881
+          ],
+          "content": "mycopy.append(x) # add to end of accumulator return mycopy"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.92,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.184,
+            0.066,
+            0.812,
+            0.134
+          ],
+          "level": 2,
+          "content": "How Can We Modify A List?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.202,
+            0.443,
+            0.258
+          ],
+          "content": "• **Never** modify iterable!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.276,
+            0.446,
+            0.333
+          ],
+          "content": "• This is an infinite loop:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.388,
+            0.31,
+            0.442
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.461,
+            0.379,
+            0.52
+          ],
+          "content": "thelist.append(1)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.609,
+            0.423,
+            0.748
+          ],
+          "content": "Try in Python Tutor to see what happens"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.203,
+            0.939,
+            0.258
+          ],
+          "continues_prev": true,
+          "content": "• Need a second sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.277,
+            0.956,
+            0.333
+          ],
+          "content": "• How about the positions?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.552,
+            0.387,
+            0.848,
+            0.444
+          ],
+          "sub_type": "code",
+          "content": "```txt\nthelist = [5, 2, 7, 1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.552,
+            0.461,
+            0.849,
+            0.519
+          ],
+          "sub_type": "code",
+          "content": "```hcl\nthepos = [0, 1, 2, 3]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.612,
+            0.788,
+            0.667
+          ],
+          "content": "for x in thepos:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.591,
+            0.685,
+            0.944,
+            0.741
+          ],
+          "content": "\\text {thelist} [ \\mathbf {x} ] = \\text {thelist} [ \\mathbf {x} ] + 1",
+          "image_source": "images/page_25_equation_11.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.184,
+            0.067,
+            0.812,
+            0.134
+          ],
+          "level": 2,
+          "content": "How Can We Modify A List?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.203,
+            0.443,
+            0.257
+          ],
+          "content": "• **Never** modify iterable!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.276,
+            0.446,
+            0.333
+          ],
+          "content": "• This is an infinite loop:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.388,
+            0.31,
+            0.442
+          ],
+          "content": "for x in thelist:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.461,
+            0.379,
+            0.52
+          ],
+          "content": "thelist.append(1)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.61,
+            0.423,
+            0.748
+          ],
+          "content": "Try in Python Tutor to see what happens"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.203,
+            0.939,
+            0.258
+          ],
+          "continues_prev": true,
+          "content": "• Need a second sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.277,
+            0.955,
+            0.333
+          ],
+          "content": "• How about the positions?"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.551,
+            0.387,
+            0.849,
+            0.519
+          ],
+          "content": "\\begin{array}{l} \\text {thelist} = [ 5, 2, 7, 1 ] \\\\ \\text {thepos} = [ 0, 1, 2, 3 ] \\end{array}",
+          "image_source": "images/page_26_equation_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.553,
+            0.612,
+            0.788,
+            0.667
+          ],
+          "content": "for x in thepos:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.591,
+            0.685,
+            0.944,
+            0.741
+          ],
+          "content": "\\text {thelist} [ \\mathbf {x} ] = \\text {thelist} [ \\mathbf {x} ] + 1",
+          "image_source": "images/page_26_equation_10.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.067,
+            0.875,
+            0.129
+          ],
+          "level": 2,
+          "content": "This is the Motivation for Iterables"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.203,
+            0.408,
+            0.257
+          ],
+          "level": 2,
+          "content": "• Iterables are objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.274,
+            0.43,
+            0.322
+          ],
+          "content": "§ Contain data like a list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.339,
+            0.436,
+            0.384
+          ],
+          "content": "§ **But cannot slice them**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.404,
+            0.462,
+            0.461
+          ],
+          "content": "• Have list-like properties"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.477,
+            0.475,
+            0.526
+          ],
+          "content": "§ Can use then in a for-loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.54,
+            0.463,
+            0.587
+          ],
+          "content": "§ Can convert them to lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.603,
+            0.441,
+            0.652
+          ],
+          "content": "mylist = list(myiterable)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.673,
+            0.329,
+            0.727
+          ],
+          "level": 2,
+          "content": "• Example: Files"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.741,
+            0.483,
+            0.791
+          ],
+          "content": "§ Use open() to create object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.808,
+            0.482,
+            0.858
+          ],
+          "content": "§ Makes iterable for reading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.278,
+            0.583,
+            0.317
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.623,
+            0.271,
+            0.666,
+            0.311
+          ],
+          "content": "**id1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.782,
+            0.245,
+            0.83,
+            0.287
+          ],
+          "content": "**id1**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.725,
+            0.303,
+            0.866,
+            0.465
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_27_image_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.583,
+            0.582,
+            0.623
+          ],
+          "content": "alt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.622,
+            0.581,
+            0.668,
+            0.621
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.556,
+            0.825,
+            0.598
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.76,
+            0.616,
+            0.907,
+            0.779
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_27_image_18.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.166,
+            0.067,
+            0.833,
+            0.136
+          ],
+          "level": 2,
+          "content": "Iterables, Lists, and For-Loops"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.06,
+            0.194,
+            0.442,
+            0.617
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> file = open('sample.txt')\n>>> list(file)\n['This is line 1\\n',\n 'This is line 2\\n']\n>>> file = open('sample.txt')\n>>> for line in file:\n...     print(line)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.625,
+            0.268,
+            0.675
+          ],
+          "level": 2,
+          "content": "This is line one"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.742,
+            0.268,
+            0.793
+          ],
+          "content": "This is line two"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.276,
+            0.584,
+            0.319
+          ],
+          "content": "seq"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.349,
+            0.7,
+            0.539,
+            0.863
+          ],
+          "content": "print adds \\n in addition to one from file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.622,
+            0.271,
+            0.666,
+            0.312
+          ],
+          "content": "**id1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.582,
+            0.582,
+            0.624
+          ],
+          "content": "alt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.782,
+            0.243,
+            0.831,
+            0.288
+          ],
+          "content": "**id1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.622,
+            0.58,
+            0.669,
+            0.623
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.555,
+            0.826,
+            0.6
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.744,
+            0.541,
+            0.938,
+            0.799
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_image_11.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.92,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.29,
+            0.067,
+            0.71,
+            0.137
+          ],
+          "level": 2,
+          "content": "The Range Iterable"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.205,
+            0.232,
+            0.264
+          ],
+          "level": 2,
+          "content": "• range(x)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.285,
+            0.419,
+            0.34
+          ],
+          "content": "§ Creates an iterable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.359,
+            0.42,
+            0.417
+          ],
+          "content": "§ Stores $[0,1,\\dots,x-1]$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.436,
+            0.355,
+            0.488
+          ],
+          "content": "§ **But not a list!**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.507,
+            0.45,
+            0.565
+          ],
+          "content": "§ But try list(range(x))"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.587,
+            0.26,
+            0.648
+          ],
+          "level": 2,
+          "content": "• range(a,b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.671,
+            0.388,
+            0.729
+          ],
+          "content": "§ Stores $[a, \\dots, b-1]$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.046,
+            0.749,
+            0.291,
+            0.809
+          ],
+          "content": "• range(a,b,n)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.83,
+            0.455,
+            0.887
+          ],
+          "content": "§ Stores $[a,a+n,\\dots,b-1]$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.202,
+            0.85,
+            0.258
+          ],
+          "content": "• Very versatile tool"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.276,
+            0.944,
+            0.334
+          ],
+          "content": "• Great for processing ints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.704,
+            0.371,
+            0.93,
+            0.425
+          ],
+          "content": "**Accumulator**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.436,
+            0.688,
+            0.489
+          ],
+          "content": "total = 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.55,
+            0.52,
+            0.937,
+            0.641
+          ],
+          "content": "\\# add the squares of ints # in range 2..200 to total"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.69,
+            0.887,
+            0.747
+          ],
+          "content": "for x in range(2,201):"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.609,
+            0.755,
+            0.892,
+            0.807
+          ],
+          "content": "\\text {total} = \\text {total} + \\mathbf {x} ^ {*} \\mathbf {x}",
+          "image_source": "images/page_29_equation_16.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.543,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.149,
+            0.066,
+            0.851,
+            0.137
+          ],
+          "level": 2,
+          "content": "Modifying the Contents of a List"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.195,
+            0.4,
+            0.257
+          ],
+          "level": 2,
+          "content": "def add\\_one(thelist):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.272,
+            0.935,
+            0.337
+          ],
+          "content": "\"\"\"(Procedure) Adds 1 to every element in the list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.352,
+            0.829,
+            0.478
+          ],
+          "content": "Precondition: thelist is a list of all numbers (either floats or ints)\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.499,
+            0.394,
+            0.565
+          ],
+          "content": "size = len(thelist)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.583,
+            0.431,
+            0.65
+          ],
+          "content": "for k in range(size):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.526,
+            0.505,
+            0.748,
+            0.614
+          ],
+          "content": "Iterator of list **positions** (safe)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.667,
+            0.529,
+            0.735
+          ],
+          "content": "thelist[k] = thelist[k]+1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.756,
+            0.485,
+            0.821
+          ],
+          "content": "\\# procedure; no return"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.694,
+            0.846,
+            0.755
+          ],
+          "content": "**WORKS!**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.921,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.298,
+            0.067,
+            0.701,
+            0.137
+          ],
+          "level": 2,
+          "content": "Testing For-Loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.205,
+            0.724,
+            0.268
+          ],
+          "content": "• Once again, we need code coverage"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.29,
+            0.808,
+            0.349
+          ],
+          "content": "• But is automatic from **Rule of Numbers**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.372,
+            0.671,
+            0.427
+          ],
+          "content": "§ **Rule of 1:** Executes loop just once"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.447,
+            0.711,
+            0.503
+          ],
+          "content": "§ **Rule of 2:** Executes loop many times"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.521,
+            0.675,
+            0.579
+          ],
+          "content": "§ **Rule of 0:** Skips over loop entirely"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.599,
+            0.759,
+            0.66
+          ],
+          "content": "• The hard part is what to do about **lists**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.679,
+            0.765,
+            0.735
+          ],
+          "content": "§ What if function is a mutable procedure?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.755,
+            0.831,
+            0.811
+          ],
+          "content": "§ What is the function is accidentally mutable?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.835,
+            0.823,
+            0.898
+          ],
+          "content": "• How do we have to adapt the test scripts?"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.183,
+            0.065,
+            0.815,
+            0.139
+          ],
+          "level": 2,
+          "content": "Testing Immutable For-Loop"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.034,
+            0.195,
+            0.921,
+            0.945
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef copy_add_one(lst):\n    \"\"\"Returns: copy with 1 added to every element\n    Precondition: lst is a list of all numbers\n    (either floats or ints)\"\"\"\n    ...\n\nx = [1,2]\nresult = copy_add_one(x)\nintrocs.assert_equals([2,3],result)\nintrocs.assert_equals([1,2], x)\nVerify the output\n(the return value)\nCheck that it is not\naccidentally mutable\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.211,
+            0.065,
+            0.787,
+            0.139
+          ],
+          "level": 2,
+          "content": "Testing Mutable For-Loop"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.034,
+            0.186,
+            0.976,
+            0.943
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef add_one(lst):\n    \"\"\"(Procedure) Adds 1 to every element in the list\n    Precondition: lst is a list of all numbers\n    (either floats or ints)\"\"\"\n    ...\n\nx = [1,2]\nresult = add_one(x)\nintrocs.assert_equals([2,3],x)\nintrocs.assert equals(None,result)\n\nVerify the output\n(modified argument)\n\nCheck that it is not\naccidentally fruitful\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.217,
+            0.015,
+            0.778,
+            0.166
+          ],
+          "level": 2,
+          "content": "Important Concept in CS: Doing Things Repeatedly"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.045,
+            0.203,
+            0.605,
+            0.256
+          ],
+          "level": 2,
+          "content": "1. Process each item in a sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.277,
+            0.81,
+            0.375
+          ],
+          "content": "Compute aggregate statistics for a dataset, such as the mean, median, standard deviation, etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.391,
+            0.905,
+            0.441
+          ],
+          "content": "Send everyone in a Facebook group an appointment time"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.459,
+            0.623,
+            0.513
+          ],
+          "content": "2. Perform n trials or get n samples."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.53,
+            0.79,
+            0.579
+          ],
+          "content": "**A4**: draw a triangle six times to make a hexagon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.593,
+            0.825,
+            0.643
+          ],
+          "content": "§ Run a protein-folding simulation for $10^{6}$ time steps"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.663,
+            0.526,
+            0.775
+          ],
+          "content": "3. Do something an unknown number of times"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.795,
+            0.534,
+            0.899
+          ],
+          "content": "§ CUAUV team, vehicle keeps moving until reached its goal"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.59,
+            0.654,
+            0.957,
+            0.965
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_image_9.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.457,
+            0.92,
+            0.542,
+            0.951
+          ],
+          "content": "For Loops"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.217,
+            0.015,
+            0.779,
+            0.166
+          ],
+          "level": 2,
+          "content": "Important Concept in CS: Doing Things Repeatedly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.044,
+            0.203,
+            0.606,
+            0.257
+          ],
+          "content": "1. Process each item in a sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.274,
+            0.578,
+            0.376
+          ],
+          "content": "Compute aggregate statistics for such as the mean, median, stand"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.618,
+            0.271,
+            0.856,
+            0.377
+          ],
+          "continues_prev": true,
+          "content": "ataset, for x in sequence: viation, etprocess x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.39,
+            0.907,
+            0.443
+          ],
+          "content": "Send everyone in a Facebook group an appointment time"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.457,
+            0.621,
+            0.514
+          ],
+          "content": "2. Perform n trials or get n samples."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.527,
+            0.59,
+            0.581
+          ],
+          "content": "§ **A4**: draw a triangle six times to m"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.59,
+            0.593,
+            0.645
+          ],
+          "content": "§ Run a protein-folding simulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.661,
+            0.521,
+            0.781
+          ],
+          "content": "3. Do something an unknown number of times"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.793,
+            0.535,
+            0.901
+          ],
+          "content": "§ CUAUV team, vehicle keeps moving until reached its goal"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.619,
+            0.516,
+            0.853,
+            0.622
+          ],
+          "content": "e a hexagonfor x in range(n): 6do next thing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.701,
+            0.886,
+            0.806
+          ],
+          "content": "**Cannot do this yet** Impossible w/ Python for"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.588,
+            0.817,
+            0.957,
+            0.968
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_35_image_12.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.106,
+            0.95
+          ],
+          "content": "10/7/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.456,
+            0.92,
+            0.543,
+            0.952
+          ],
+          "content": "For Loops"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 36,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

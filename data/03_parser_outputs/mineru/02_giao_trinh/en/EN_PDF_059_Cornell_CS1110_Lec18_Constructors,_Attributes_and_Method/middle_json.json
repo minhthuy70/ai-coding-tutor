@@ -1,0 +1,2796 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-18",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "page_number",
+          "index": 0,
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.875,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/25/26"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 2,
+          "bbox": [
+            0.104,
+            0.332,
+            0.115,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.103,
+            0.614,
+            0.115,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.151,
+            0.124,
+            0.424,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recall: Objects as Data in Folders"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.155,
+            0.354,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• An object is like a "
+            },
+            {
+              "type": "text",
+              "content": "manila folder",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.174,
+            0.308,
+            0.189
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• It contains other variables"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.135,
+            0.192,
+            0.331,
+            0.206
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Variables are called "
+            },
+            {
+              "type": "text",
+              "content": "attributes",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.136,
+            0.208,
+            0.344,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Can change values of an attribute (with assignment statements)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.118,
+            0.238,
+            0.331,
+            0.254
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• It has a “tab” that identifies it"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.135,
+            0.255,
+            0.357,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Unique number assigned by Python"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.135,
+            0.272,
+            0.331,
+            0.287
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Fixed for lifetime of the object"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 12,
+          "bbox": [
+            0.362,
+            0.152,
+            0.461,
+            0.289
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 12,
+              "bbox": [
+                0.362,
+                0.152,
+                0.461,
+                0.289
+              ],
+              "image_path": "images/page_0_image_12.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 13,
+          "bbox": [
+            0.172,
+            0.406,
+            0.404,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Name Resolution for Objects"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.117,
+            0.437,
+            0.268,
+            0.452
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• ⟨object⟩.⟨name⟩ means"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.135,
+            0.455,
+            0.269,
+            0.468
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Go the folder for object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.136,
+            0.471,
+            0.29,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Find attribute/method name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.136,
+            0.488,
+            0.299,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ If missing, check "
+            },
+            {
+              "type": "text",
+              "content": "class folder",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.135,
+            0.504,
+            0.281,
+            0.518
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ If not in either, raise error"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.117,
+            0.52,
+            0.293,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• What is in the class folder?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.135,
+            0.539,
+            0.291,
+            0.554
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Data common to "
+            },
+            {
+              "type": "text",
+              "content": "all",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.136,
+            0.555,
+            0.28,
+            0.583
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ First must understand the "
+            },
+            {
+              "type": "text",
+              "content": "class definition",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 22,
+          "bbox": [
+            0.312,
+            0.428,
+            0.466,
+            0.585
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 22,
+              "bbox": [
+                0.312,
+                0.428,
+                0.466,
+                0.585
+              ],
+              "image_path": "images/page_0_image_22.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 23,
+          "bbox": [
+            0.189,
+            0.687,
+            0.387,
+            0.703
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Instances and Attributes"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.116,
+            0.712,
+            0.33,
+            0.726
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Assignments add object attributes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.135,
+            0.727,
+            0.306,
+            0.74
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ <object>.<att> = <expression>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.135,
+            0.785,
+            0.279,
+            0.798
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Example",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Example.a = 29"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.136,
+            0.741,
+            0.244,
+            0.754
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Example",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": e.b = 42"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.118,
+            0.756,
+            0.345,
+            0.782
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Assignments can add class attributes § <class>.<att> = <expression>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.118,
+            0.8,
+            0.332,
+            0.828
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Objects can access class attributes § "
+            },
+            {
+              "type": "text",
+              "content": "Example",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": print e.a"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.136,
+            0.828,
+            0.344,
+            0.842
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But assign"
+            },
+            {
+              "type": "text",
+              "content": "ing it cre",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "ates object attribute"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 31,
+          "bbox": [
+            0.608,
+            0.125,
+            0.815,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Classes Have Folders Too"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 32,
+          "bbox": [
+            0.526,
+            0.332,
+            0.538,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.136,
+            0.843,
+            0.248,
+            0.856
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Example",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": "
+            },
+            {
+              "type": "text",
+              "content": "e.a = 10",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 34,
+          "bbox": [
+            0.526,
+            0.615,
+            0.538,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 35,
+          "bbox": [
+            0.364,
+            0.713,
+            0.462,
+            0.866
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 35,
+              "bbox": [
+                0.364,
+                0.713,
+                0.462,
+                0.866
+              ],
+              "image_path": "images/page_0_image_35.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.117,
+            0.858,
+            0.335,
+            0.873
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Rule",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": check object first, then class"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 37,
+          "bbox": [
+            0.526,
+            0.393,
+            0.895,
+            0.608
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 37,
+              "bbox": [
+                0.526,
+                0.393,
+                0.895,
+                0.608
+              ],
+              "image_path": "images/page_0_image_37.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 38,
+          "bbox": [
+            0.526,
+            0.118,
+            0.893,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 38,
+              "bbox": [
+                0.526,
+                0.118,
+                0.893,
+                0.325
+              ],
+              "image_path": "images/page_0_image_38.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 39,
+          "bbox": [
+            0.618,
+            0.687,
+            0.805,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Class Specification"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.552,
+            0.727,
+            0.864,
+            0.744
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"A class representing a worker in a certain organization Short "
+            },
+            {
+              "type": "text",
+              "content": "summary",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.554,
+            0.75,
+            0.811,
+            0.762
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Instance has basic worker info, but no salary information."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 42,
+          "bbox": [
+            0.528,
+            0.707,
+            0.892,
+            0.884
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 42,
+              "bbox": [
+                0.528,
+                0.707,
+                0.892,
+                0.884
+              ],
+              "image_path": "images/page_0_image_42.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.552,
+            0.805,
+            0.777,
+            0.831
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Attribute ssn: The Social Security number Invariant: ssn is an int in the range 0..999999999"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.551,
+            0.839,
+            0.82,
+            0.866
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Attribute boss: The worker's boss Invariant: boss is an instace of Worker, or None if no boss\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 45,
+          "bbox": [
+            0.103,
+            0.894,
+            0.115,
+            0.906
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 46,
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.875,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/25/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.209,
+            0.124,
+            0.368,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Method Definitions"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.154,
+            0.283,
+            0.169
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Looks like a function def"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.313,
+            0.152,
+            0.401,
+            0.165
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Point3(object):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.134,
+            0.17,
+            0.259,
+            0.184
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Indented inside class"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.322,
+            0.165,
+            0.449,
+            0.177
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Class for points in 3d space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.323,
+            0.176,
+            0.416,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant: x is a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.135,
+            0.183,
+            0.279,
+            0.197
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ First param is always self"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.323,
+            0.188,
+            0.414,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant y is a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.134,
+            0.197,
+            0.271,
+            0.21
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But otherwise the same"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.324,
+            0.2,
+            0.436,
+            0.211
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant z is a float \"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.117,
+            0.212,
+            0.241,
+            0.227
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• In a "
+            },
+            {
+              "type": "text",
+              "content": "method call",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ":"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.324,
+            0.212,
+            0.411,
+            0.223
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def "
+            },
+            {
+              "type": "text",
+              "content": "distance",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "(self,q):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.134,
+            0.227,
+            0.271,
+            0.241
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ One less argument in ()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.334,
+            0.223,
+            0.455,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns dist from self to q"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.134,
+            0.241,
+            0.271,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Obj in front goes to self"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.334,
+            0.234,
+            0.445,
+            0.246
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: q a Point3\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.116,
+            0.255,
+            0.271,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Example",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": a.distance(b)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.334,
+            0.246,
+            0.439,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "assert type(q) == Point3"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.333,
+            0.259,
+            0.445,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "sqrdst = ((self.x-q.x)**2 +"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.334,
+            0.292,
+            0.44,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return math.sqrt(sqrdst)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.295,
+            0.434,
+            0.401,
+            0.447
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. class Point3(object):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.295,
+            0.447,
+            0.449,
+            0.458
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. \"\"\"Class for points in 3d space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.295,
+            0.459,
+            0.415,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Invariant: x is a float"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 24,
+          "bbox": [
+            0.202,
+            0.406,
+            0.374,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Methods and Folders"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 25,
+          "bbox": [
+            0.567,
+            0.247,
+            0.688,
+            0.303
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 25,
+              "bbox": [
+                0.567,
+                0.247,
+                0.688,
+                0.303
+              ],
+              "image_path": "images/page_1_image_25.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.116,
+            0.435,
+            0.268,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Function definitions…"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.296,
+            0.47,
+            0.414,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Invariant y is a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.134,
+            0.451,
+            0.261,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ make a folder in heap"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 29,
+          "bbox": [
+            0.652,
+            0.124,
+            0.772,
+            0.141
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Methods Calls"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.135,
+            0.465,
+            0.271,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ assign name as variable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.296,
+            0.481,
+            0.435,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5. Invariant z is a float \"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.756,
+            0.223,
+            0.878,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns dist from self to q"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.134,
+            0.478,
+            0.271,
+            0.493
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ variable in global space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.541,
+            0.152,
+            0.694,
+            0.167
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Exampl",
+              "styles": [
+                "bold",
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "e",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": a.dist"
+            },
+            {
+              "type": "text",
+              "content": "ance(b)",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.756,
+            0.246,
+            0.861,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "assert type(q) == Point3"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.295,
+            0.493,
+            0.409,
+            0.505
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6. def "
+            },
+            {
+              "type": "text",
+              "content": "distance",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "(self,q):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.757,
+            0.292,
+            0.863,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return math.sqrt(sqrdst)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.117,
+            0.494,
+            0.264,
+            0.508
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Methods are similar..."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.39,
+            0.521,
+            0.425,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Point3",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.645,
+            0.19,
+            0.664,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id3",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.134,
+            0.509,
+            0.272,
+            0.523
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Variable in "
+            },
+            {
+              "type": "text",
+              "content": "class folder",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.134,
+            0.523,
+            0.271,
+            0.536
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But otherwise the same"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.748,
+            0.212,
+            0.834,
+            0.223
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def "
+            },
+            {
+              "type": "text",
+              "content": "distance",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "(self,q):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.116,
+            0.538,
+            0.254,
+            0.553
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Rule of this course",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 45,
+          "bbox": [
+            0.526,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.332,
+            0.547,
+            0.399,
+            0.559
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "distance(self,q)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.134,
+            0.553,
+            0.28,
+            0.567
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Put header in class folder"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.736,
+            0.152,
+            0.823,
+            0.165
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "class Point3(object):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.135,
+            0.567,
+            0.222,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Nothing else!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.748,
+            0.165,
+            0.872,
+            0.177
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Class for points in 3d space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.747,
+            0.176,
+            0.839,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant: x is a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 52,
+          "bbox": [
+            0.747,
+            0.2,
+            0.859,
+            0.212
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant z is a float \"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.747,
+            0.188,
+            0.837,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant y is a float"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 54,
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 55,
+          "bbox": [
+            0.61,
+            0.406,
+            0.795,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Special Method: __init"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.556,
+            0.434,
+            0.702,
+            0.455
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "two underscores w Worker('Whi 1234, None) don’t forget self"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.542,
+            0.458,
+            0.651,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " __init__(self, n, s, b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.742,
+            0.442,
+            0.871,
+            0.456
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Called by the constructor"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.558,
+            0.47,
+            0.675,
+            0.483
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Initializes a Worker object"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.757,
+            0.474,
+            0.778,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id8",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.554,
+            0.49,
+            0.698,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Has last name n, SSN s, and boss b"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.83,
+            0.487,
+            0.869,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Worker",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.758,
+            0.503,
+            0.831,
+            0.516
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "lname 'White'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.764,
+            0.535,
+            0.836,
+            0.55
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "boss None"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.591,
+            0.583,
+            0.708,
+            0.595
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use self to assign attributes"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 66,
+          "bbox": [
+            0.138,
+            0.686,
+            0.437,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Evaluating a Constructor Expression"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 67,
+          "bbox": [
+            0.141,
+            0.714,
+            0.282,
+            0.729
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Worker('White', 1234, None)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 68,
+          "bbox": [
+            0.118,
+            0.733,
+            0.285,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Creates a new object (folder) of the class Worker"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.135,
+            0.759,
+            0.272,
+            0.773
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Instance is initially empty"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 70,
+          "bbox": [
+            0.334,
+            0.754,
+            0.354,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id8",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.116,
+            0.773,
+            0.293,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Puts the folder into heap space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.408,
+            0.768,
+            0.446,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Worker",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.116,
+            0.786,
+            0.28,
+            0.799
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Executes the method __init_"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.335,
+            0.784,
+            0.405,
+            0.795
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "lname 'White'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.135,
+            0.8,
+            0.274,
+            0.814
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Passes folder name to self"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.345,
+            0.8,
+            0.401,
+            0.811
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ssn 1234"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 77,
+          "bbox": [
+            0.135,
+            0.813,
+            0.297,
+            0.826
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Passes other arguments in order"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.135,
+            0.826,
+            0.286,
+            0.849
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Executes the (assignment) commands in initializer body"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.342,
+            0.818,
+            0.402,
+            0.83
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "bossNone"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 80,
+          "bbox": [
+            0.116,
+            0.85,
+            0.302,
+            0.865
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Returns the object (folder) name"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 81,
+          "bbox": [
+            0.594,
+            0.686,
+            0.829,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Making Arguments Optional"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 82,
+          "bbox": [
+            0.541,
+            0.715,
+            0.703,
+            0.74
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• We can assign default values to __init__ arguments"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 83,
+          "bbox": [
+            0.558,
+            0.741,
+            0.685,
+            0.764
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Write as assignments to parameters in definition"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.558,
+            0.764,
+            0.685,
+            0.787
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Parameters with default values are optional"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 85,
+          "bbox": [
+            0.541,
+            0.788,
+            0.616,
+            0.801
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Examples:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 86,
+          "bbox": [
+            0.557,
+            0.801,
+            0.704,
+            0.814
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ p = Point3() # (0,0,0)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 87,
+          "bbox": [
+            0.716,
+            0.715,
+            0.819,
+            0.727
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. class Point3(object):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 88,
+          "bbox": [
+            0.558,
+            0.815,
+            0.704,
+            0.827
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ p = Point3(1,2,3) # (1,2,3)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 89,
+          "bbox": [
+            0.743,
+            0.727,
+            0.868,
+            0.738
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Class for points in 3d space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 90,
+          "bbox": [
+            0.743,
+            0.739,
+            0.834,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant: x is a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 91,
+          "bbox": [
+            0.744,
+            0.785,
+            0.874,
+            0.797
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def __init__(self,x=0,y=0,z=0):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 92,
+          "bbox": [
+            0.558,
+            0.827,
+            0.642,
+            0.84
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ p = Point3(1,2)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 93,
+          "bbox": [
+            0.744,
+            0.75,
+            0.832,
+            0.762
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant y is a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 94,
+          "bbox": [
+            0.744,
+            0.762,
+            0.832,
+            0.773
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Invariant z is a float"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 95,
+          "bbox": [
+            0.755,
+            0.796,
+            0.866,
+            0.807
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Initializes a new Point3"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 96,
+          "bbox": [
+            0.755,
+            0.808,
+            0.88,
+            0.82
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precond: x,y,z are numbers\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 97,
+          "bbox": [
+            0.558,
+            0.84,
+            0.703,
+            0.852
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ p = Point3(y=3) # (0,3,0)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 98,
+          "bbox": [
+            0.558,
+            0.852,
+            0.702,
+            0.865
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ p = Point3(1,z=2) # (1,0,2)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 99,
+          "bbox": [
+            0.756,
+            0.82,
+            0.8,
+            0.832
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "self.x = x"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 100,
+          "bbox": [
+            0.756,
+            0.832,
+            0.799,
+            0.843
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "self.y = y"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 101,
+          "bbox": [
+            0.756,
+            0.843,
+            0.799,
+            0.854
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "self.z = z"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 102,
+          "bbox": [
+            0.103,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 103,
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 104,
+          "bbox": [
+            0.945,
+            0.963,
+            0.959,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

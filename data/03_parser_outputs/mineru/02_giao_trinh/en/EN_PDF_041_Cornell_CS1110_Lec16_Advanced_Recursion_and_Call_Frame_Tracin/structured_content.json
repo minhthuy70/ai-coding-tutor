@@ -1,0 +1,4595 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.149,
+            0.27,
+            0.375,
+            0.333
+          ],
+          "content": "Lecture 16"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.276,
+            0.446,
+            0.722,
+            0.523
+          ],
+          "level": 2,
+          "content": "More Recursion"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.142,
+            0.068,
+            0.857,
+            0.129
+          ],
+          "level": 2,
+          "content": "Announcements for This Lecture"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.176,
+            0.214,
+            0.344,
+            0.271
+          ],
+          "level": 2,
+          "content": "Prelim 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.335,
+            0.347,
+            0.39
+          ],
+          "content": "• Grades are back!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.407,
+            0.324,
+            0.456
+          ],
+          "content": "§ **80+:** A-/A/A+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.475,
+            0.342,
+            0.527
+          ],
+          "content": "§ **60-79:** B-/B/B+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.544,
+            0.342,
+            0.596
+          ],
+          "content": "§ **35-60:** C-/C/C+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.613,
+            0.245,
+            0.662
+          ],
+          "content": "§ **34-:** D/F"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.691,
+            0.373,
+            0.748
+          ],
+          "content": "• Regrades are open"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.767,
+            0.443,
+            0.818
+          ],
+          "content": "§ Handled in Gradescope"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.835,
+            0.465,
+            0.885
+          ],
+          "content": "§ But grades can do **down!**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.546,
+            0.22,
+            0.928,
+            0.278
+          ],
+          "level": 2,
+          "content": "Assignments & Videos"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.336,
+            0.909,
+            0.397
+          ],
+          "content": "• Begin working on A4!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.411,
+            0.946,
+            0.465
+          ],
+          "content": "§ Just reading takes a while"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.481,
+            0.917,
+            0.536
+          ],
+          "content": "§ Slightly longer than A3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.55,
+            0.875,
+            0.602
+          ],
+          "content": "§ Problems are harder"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.621,
+            0.944,
+            0.671
+          ],
+          "content": "**Finish Pt. 1-3 this week!**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.693,
+            0.799,
+            0.747
+          ],
+          "content": "• Lecture Videos"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.765,
+            0.934,
+            0.815
+          ],
+          "content": "§ **Videos 17.1-17.11** today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.829,
+            0.923,
+            0.878
+          ],
+          "content": "§ **Videos 19.1-19.7** Thurs"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.433,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.198,
+            0.067,
+            0.801,
+            0.135
+          ],
+          "level": 2,
+          "content": "Recall: Divide and Conquer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.204,
+            0.783,
+            0.269
+          ],
+          "content": "**Goal**: Solve problem P on a piece of data"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.448,
+            0.321,
+            0.561,
+            0.389
+          ],
+          "level": 2,
+          "content": "data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.427,
+            0.919,
+            0.491
+          ],
+          "content": "**Idea**: Split data into two parts and solve problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.529,
+            0.438,
+            0.602
+          ],
+          "content": "**data 1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.529,
+            0.724,
+            0.602
+          ],
+          "content": "**data 2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.697,
+            0.479,
+            0.751
+          ],
+          "content": "Solve Problem P"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.526,
+            0.697,
+            0.762,
+            0.751
+          ],
+          "content": "Solve Problem P"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.373,
+            0.855,
+            0.637,
+            0.902
+          ],
+          "content": "**Combine Answer!**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.433,
+            0.92,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.19,
+            0.067,
+            0.81,
+            0.138
+          ],
+          "level": 2,
+          "content": "Example: Reversing a String"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.199,
+            0.387,
+            0.303
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef reverse(s):\n    \"\"\"Returns: reverse of s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.07,
+            0.325,
+            0.41,
+            0.534
+          ],
+          "sub_type": "code",
+          "content": "```python\nPrecondition: s a string\"\"\"\n# 1. Handle small data\nif len(s) <= 1:\n    return s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.583,
+            0.405,
+            0.634
+          ],
+          "content": "\\# 2. Break into two parts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.787,
+            0.383,
+            0.836
+          ],
+          "content": "\\# 3. Combine the result"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.536,
+            0.203,
+            0.964,
+            0.883
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.19,
+            0.067,
+            0.81,
+            0.138
+          ],
+          "level": 2,
+          "content": "Example: Reversing a String"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.041,
+            0.199,
+            0.387,
+            0.303
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef reverse(s):\n    \"\"\"Returns: reverse of s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.07,
+            0.325,
+            0.409,
+            0.534
+          ],
+          "sub_type": "code",
+          "content": "```python\nPrecondition: s a string\"\"\"\n# 1. Handle small data\nif len(s) <= 1:\n    return s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.071,
+            0.583,
+            0.404,
+            0.744
+          ],
+          "sub_type": "code",
+          "content": "```txt\n# 2. Break into two parts\nleft = s[0]\nright = reverse(s[1:])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.787,
+            0.382,
+            0.836
+          ],
+          "content": "\\# 3. Combine the result"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.549,
+            0.205,
+            0.963,
+            0.883
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.19,
+            0.067,
+            0.81,
+            0.138
+          ],
+          "level": 2,
+          "content": "Example: Reversing a String"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.041,
+            0.199,
+            0.387,
+            0.303
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef reverse(s):\n    \"\"\"Returns: reverse of s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.07,
+            0.325,
+            0.409,
+            0.535
+          ],
+          "sub_type": "code",
+          "content": "```python\nPrecondition: s a string\"\"\"\n# 1. Handle small data\nif len(s) <= 1:\n    return s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.071,
+            0.583,
+            0.404,
+            0.745
+          ],
+          "sub_type": "code",
+          "content": "```txt\n# 2. Break into two parts\nleft = s[0]\nright = reverse(s[l:])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.072,
+            0.787,
+            0.382,
+            0.89
+          ],
+          "sub_type": "code",
+          "content": "```txt\n# 3. Combine the result\nreturn right+left\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.549,
+            0.205,
+            0.964,
+            0.884
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.19,
+            0.067,
+            0.81,
+            0.138
+          ],
+          "level": 2,
+          "content": "Example: Reversing a String"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.196,
+            0.814,
+            0.951
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef reverse(s):\n    \"\"\"Returns: reverse of s\n    Precondition: s a string\"\"\"\n    # 1. Handle small data\n    if len(s) <= 1:\n        return s\n\n    # 2. Break into two parts\n    left = s[0]\n    right = reverse(s[1:])\n\n\n    # 3. Combine the result\n    return right+left\n\nMore Recursion\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.95
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.07,
+            0.325,
+            0.813,
+            0.897
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.19,
+            0.067,
+            0.81,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Reversing a String"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.198,
+            0.383,
+            0.302
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef reverse(s):\n    \"\"\"Returns: reverse of s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.583,
+            0.216,
+            0.632
+          ],
+          "content": "\\# 2. Break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.525,
+            0.388,
+            0.571
+          ],
+          "content": "Remove"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.579,
+            0.421,
+            0.625
+          ],
+          "content": "nto tw<u>o parts</u>recursive call"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.787,
+            0.384,
+            0.891
+          ],
+          "content": "\\# 3. Combine the result return right+left"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.59,
+            0.441,
+            0.761,
+            0.498
+          ],
+          "content": "Base Case"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.593,
+            0.687,
+            0.757,
+            0.807
+          ],
+          "content": "Recursive Case"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.066,
+            0.067,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.2,
+            0.251,
+            0.247
+          ],
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.257,
+            0.69,
+            0.414
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267' Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.147,
+            0.449,
+            0.374,
+            0.511
+          ],
+          "content": "**Approach 1**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.121,
+            0.549,
+            0.393,
+            0.647
+          ],
+          "sub_type": "code",
+          "content": "```txt\n5 341267\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.043,
+            0.921,
+            0.115,
+            0.948
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.922,
+            0.958,
+            0.946
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.066,
+            0.067,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.2,
+            0.251,
+            0.247
+          ],
+          "level": 2,
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.257,
+            0.691,
+            0.415
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267' Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.146,
+            0.449,
+            0.374,
+            0.512
+          ],
+          "level": 2,
+          "content": "Approach 1"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.118,
+            0.547,
+            0.396,
+            0.869
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.066,
+            0.067,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.2,
+            0.251,
+            0.247
+          ],
+          "level": 2,
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.257,
+            0.691,
+            0.415
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267' Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.147,
+            0.449,
+            0.374,
+            0.511
+          ],
+          "level": 2,
+          "content": "Approach 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.799,
+            0.377,
+            0.849
+          ],
+          "content": "341,267"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.116,
+            0.445,
+            0.399,
+            0.969
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.067,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.199,
+            0.252,
+            0.247
+          ],
+          "level": 2,
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.257,
+            0.691,
+            0.415
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267' Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.146,
+            0.448,
+            0.375,
+            0.512
+          ],
+          "level": 2,
+          "content": "Approach 1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.922,
+            0.301,
+            0.96
+          ],
+          "content": "Always? When?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.067,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.199,
+            0.252,
+            0.247
+          ],
+          "level": 2,
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.256,
+            0.692,
+            0.415
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267' Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.146,
+            0.448,
+            0.375,
+            0.512
+          ],
+          "level": 2,
+          "content": "Approach 1"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.118,
+            0.547,
+            0.396,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.576,
+            0.374,
+            0.626
+          ],
+          "content": "341267"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.274,
+            0.722,
+            0.375,
+            0.76
+          ],
+          "content": "commafy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.796,
+            0.577,
+            0.853,
+            0.625
+          ],
+          "content": "267"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.613,
+            0.577,
+            0.684,
+            0.625
+          ],
+          "content": "5341"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.121,
+            0.771,
+            0.394,
+            0.87
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_10.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.622,
+            0.447,
+            0.851,
+            0.513
+          ],
+          "level": 2,
+          "content": "Approach 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.797,
+            0.378,
+            0.851
+          ],
+          "content": "341,267"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.598,
+            0.773,
+            0.703,
+            0.867
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.067,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.199,
+            0.252,
+            0.247
+          ],
+          "level": 2,
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.257,
+            0.676,
+            0.36
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.365,
+            0.691,
+            0.413
+          ],
+          "content": "Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.146,
+            0.448,
+            0.376,
+            0.512
+          ],
+          "level": 2,
+          "content": "Approach 1"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.118,
+            0.547,
+            0.396,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.274,
+                0.722,
+                0.376,
+                0.76
+              ],
+              "content": "commafy"
+            }
+          ],
+          "image_source": "images/page_13_image_6.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.621,
+            0.447,
+            0.852,
+            0.513
+          ],
+          "level": 2,
+          "content": "Approach 2"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.595,
+            0.549,
+            0.705,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_9.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.781,
+            0.55,
+            0.868,
+            0.646
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_10.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.121,
+            0.771,
+            0.395,
+            0.87
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.599,
+                0.721,
+                0.701,
+                0.761
+              ],
+              "content": "commafy"
+            },
+            {
+              "bbox": [
+                0.131,
+                0.921,
+                0.301,
+                0.961
+              ],
+              "content": "Always? When?"
+            }
+          ],
+          "image_source": "images/page_13_image_11.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.78,
+            0.772,
+            0.87,
+            0.867
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_0.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.118,
+            0.547,
+            0.396,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.274,
+                0.722,
+                0.376,
+                0.76
+              ],
+              "content": "commafy"
+            }
+          ],
+          "image_source": "images/page_14_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.067,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.199,
+            0.252,
+            0.247
+          ],
+          "level": 2,
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.257,
+            0.676,
+            0.36
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.365,
+            0.691,
+            0.413
+          ],
+          "content": "Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.146,
+            0.448,
+            0.375,
+            0.511
+          ],
+          "level": 2,
+          "content": "Approach 1"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.121,
+            0.771,
+            0.395,
+            0.87
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_8.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.621,
+            0.447,
+            0.852,
+            0.512
+          ],
+          "level": 2,
+          "content": "Approach 2"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.595,
+            0.549,
+            0.705,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_10.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.781,
+            0.55,
+            0.868,
+            0.646
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.599,
+                0.721,
+                0.701,
+                0.76
+              ],
+              "content": "commafy"
+            }
+          ],
+          "image_source": "images/page_14_image_11.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.598,
+            0.773,
+            0.703,
+            0.867
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.131,
+                0.921,
+                0.301,
+                0.961
+              ],
+              "content": "Always? When?"
+            }
+          ],
+          "image_source": "images/page_14_image_13.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.796,
+            0.799,
+            0.853,
+            0.847
+          ],
+          "content": "267"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.921,
+            0.302,
+            0.961
+          ],
+          "content": "Always? When?"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.593,
+            0.769,
+            0.872,
+            0.969
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.066,
+            0.932,
+            0.133
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.199,
+            0.252,
+            0.247
+          ],
+          "level": 2,
+          "content": "def commafy(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.256,
+            0.676,
+            0.36
+          ],
+          "content": "\"\"\"Returns: string with commas every 3 digits e.g. commafy('5341267') = '5,341,267'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.364,
+            0.691,
+            0.413
+          ],
+          "content": "Precondition: s represents a non-negative int\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.145,
+            0.447,
+            0.376,
+            0.512
+          ],
+          "level": 2,
+          "content": "Approach 1"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.118,
+            0.546,
+            0.397,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.274,
+                0.721,
+                0.376,
+                0.76
+              ],
+              "content": "commafy"
+            }
+          ],
+          "image_source": "images/page_15_image_7.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.12,
+            0.771,
+            0.395,
+            0.87
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_9.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.621,
+            0.446,
+            0.852,
+            0.513
+          ],
+          "level": 2,
+          "content": "Approach 2"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.594,
+            0.546,
+            0.87,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.599,
+                0.721,
+                0.701,
+                0.76
+              ],
+              "content": "commafy"
+            },
+            {
+              "bbox": [
+                0.433,
+                0.919,
+                0.566,
+                0.951
+              ],
+              "content": "More Recursion"
+            }
+          ],
+          "image_source": "images/page_15_image_11.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.067,
+            0.933,
+            0.134
+          ],
+          "level": 2,
+          "content": "How to Break Up a Recursive Function?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.042,
+            0.195,
+            0.914,
+            0.953
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef commafy(s):\n    \"\"\"Returns: string with commas every 3 digits\n    e.g. commafy('5341267') = '5,341,267'\n    Precondition: s represents a non-negative int\"\"\"\n    # 1. Handle small data.\n    if len(s) <= 3:\n        return s\n    # 2. Break into two parts\n    left = commafy(s[:-3])\n    right = s[-3:] # Small part on RIGHT\n    # 3. Combine the result\n    return left + ',' + right\n    More Recursion\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.192,
+            0.067,
+            0.807,
+            0.136
+          ],
+          "level": 2,
+          "content": "Complex Combination Steps"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.201,
+            0.281,
+            0.243
+          ],
+          "content": "def separate(nums):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.258,
+            0.821,
+            0.304
+          ],
+          "content": "\"\"\"Returns: A tuple separating nums into neg and non-neg parts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.375,
+            0.928,
+            0.54
+          ],
+          "content": "This function returns a tuple (neg,pos). The value neg is a list of all the negative elements of nums (in their order from nums), while pos is a list of all the non-negative elements of nums (in their order from nums)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.609,
+            0.847,
+            0.654
+          ],
+          "content": "Example: separate([1, -1, 2, -5, -3, 0]) returns ([-1, -5, -3], [1, 2, 0])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.669,
+            0.677,
+            0.714
+          ],
+          "content": "Example: separate([-1, -5, -3]) returns ([-1, -5, -3],[])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.728,
+            0.64,
+            0.773
+          ],
+          "content": "Example: separate([1, 2, 0]) returns ([],[1, 2, 0])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.845,
+            0.707,
+            0.889
+          ],
+          "content": "Precond: nums is a (possibly empty) list of integers\"\"\""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.948
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.07,
+            0.49,
+            0.31,
+            0.539
+          ],
+          "sub_type": "code",
+          "content": "```python\nelif len(nums) == 1:\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.07,
+            0.256,
+            0.85,
+            0.306
+          ],
+          "sub_type": "code",
+          "content": "```python\n\"'''Returns: A tuple separating nums into neg and non-neg parts'\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.1,
+            0.548,
+            0.377,
+            0.662
+          ],
+          "sub_type": "code",
+          "content": "```python\nif nums[0] < 0:\n    return ( nums[:], [] )\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.191,
+            0.066,
+            0.807,
+            0.137
+          ],
+          "level": 2,
+          "content": "Complex Combination Steps"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.199,
+            0.281,
+            0.245
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef separate(nums):\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.07,
+            0.371,
+            0.288,
+            0.483
+          ],
+          "sub_type": "code",
+          "content": "```python\nif len(nums) == 0:\n    return ( [], [] )\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.382,
+            0.385,
+            0.618,
+            0.445
+          ],
+          "content": "Nothing in nums"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.505,
+            0.567,
+            0.679,
+            0.623
+          ],
+          "content": "All negative"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.687,
+            0.674,
+            0.743
+          ],
+          "content": "All positive"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.191,
+            0.067,
+            0.807,
+            0.137
+          ],
+          "level": 2,
+          "content": "Complex Combination Steps"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.2,
+            0.281,
+            0.245
+          ],
+          "level": 2,
+          "content": "def separate(nums):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.257,
+            0.85,
+            0.362
+          ],
+          "content": "\"\"\"Returns: A tuple separating nums into neg and non-neg parts\"\"\" # small data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.432,
+            0.296,
+            0.479
+          ],
+          "content": "\\# break up the list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.491,
+            0.37,
+            0.541
+          ],
+          "content": "left = separate(nums[:1])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.489,
+            0.423,
+            0.661,
+            0.531
+          ],
+          "content": "Breaking up is simple"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.551,
+            0.381,
+            0.6
+          ],
+          "content": "rght = separate(nums[1:])"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.191,
+            0.066,
+            0.807,
+            0.137
+          ],
+          "level": 2,
+          "content": "Complex Combination Steps"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.2,
+            0.281,
+            0.245
+          ],
+          "content": "def separate(nums):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.257,
+            0.85,
+            0.305
+          ],
+          "content": "\"\"\"Returns: A tuple separating nums into neg and non-neg parts\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.316,
+            0.225,
+            0.362
+          ],
+          "content": "\\# small data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.432,
+            0.296,
+            0.479
+          ],
+          "content": "\\# break up the list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.491,
+            0.371,
+            0.541
+          ],
+          "content": "left = separate(nums[:1])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.551,
+            0.381,
+            0.6
+          ],
+          "content": "rght = separate(nums[1:])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.669,
+            0.351,
+            0.714
+          ],
+          "content": "\\# combine the answers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.726,
+            0.325,
+            0.777
+          ],
+          "content": "neg = left[0]+right[0]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.784,
+            0.323,
+            0.833
+          ],
+          "content": "pos = left[1]+right[1]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.845,
+            0.27,
+            0.891
+          ],
+          "content": "return (neg,pos)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.489,
+            0.423,
+            0.662,
+            0.531
+          ],
+          "content": "Breaking up is simple"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.479,
+            0.692,
+            0.67,
+            0.8
+          ],
+          "content": "Combining is not so simple"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.254,
+            0.067,
+            0.745,
+            0.135
+          ],
+          "level": 2,
+          "content": "Recursion and Objects"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.203,
+            0.409,
+            0.252
+          ],
+          "level": 2,
+          "content": "• Class Person (person.py)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.269,
+            0.43,
+            0.313
+          ],
+          "content": "§ Objects have 3 attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.327,
+            0.284,
+            0.372
+          ],
+          "content": "name: String"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.385,
+            0.403,
+            0.43
+          ],
+          "content": "§ mom: Person (or None)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.444,
+            0.404,
+            0.489
+          ],
+          "content": "§ dad: Person (or None)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.506,
+            0.463,
+            0.556
+          ],
+          "content": "• Represents the “family tree”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.574,
+            0.456,
+            0.617
+          ],
+          "content": "§ Goes as far back as known"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.637,
+            0.414,
+            0.735
+          ],
+          "content": "§ Attributes mom and dad are None if not known"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.757,
+            0.456,
+            0.803
+          ],
+          "content": "• **Constructor**: Person(n,m,d)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.824,
+            0.48,
+            0.868
+          ],
+          "content": "• Or Person(n) if no mom, dad"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.441,
+            0.214,
+            0.989,
+            0.839
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_21_image_11.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.254,
+            0.067,
+            0.745,
+            0.134
+          ],
+          "level": 2,
+          "content": "Recursion and Objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.199,
+            0.263,
+            0.237
+          ],
+          "content": "def num\\_ancestors(p):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.246,
+            0.419,
+            0.422
+          ],
+          "content": "\"\"\"Returns: num of known ancestors Pre: p is a Person\"\"\" # 1. Handle small data. # No mom or dad (no ancestors)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.494,
+            0.364,
+            0.671
+          ],
+          "content": "\\# 2. Break into two parts # Has mom or dad # Count ancestors of each one # (plus mom, dad themselves)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.813,
+            0.298,
+            0.851
+          ],
+          "content": "\\# 3. Combine the result"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.433,
+            0.215,
+            0.99,
+            0.893
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_image_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.255,
+            0.067,
+            0.745,
+            0.135
+          ],
+          "level": 2,
+          "content": "Recursion and Objects"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.06,
+            0.197,
+            0.427,
+            0.891
+          ],
+          "sub_type": "code",
+          "content": "```python\nef num_ancestors(p):\n    \"\"\"Returns: num of known ancestors\n    Pre: p is a Person\"\"\"\n    # 1. Handle small data.\n    if p.mom == None and p.dad == None:\n        return 0\n\n    # 2. Break into two parts\n    moms = 0\n    if not p.mom == None:\n        moms = 1+num_ancestors(p.mom)\n    dads = 0\n    if not p.dad== None:\n        dads = 1+num_ancestors(p.dad)\n\n    # 3. Combine the result\n    return moms+dads\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.435,
+            0.213,
+            0.99,
+            0.893
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_23_image_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.067,
+            0.907,
+            0.135
+          ],
+          "level": 2,
+          "content": "Is All Recursion Divide and Conquer?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.926,
+            0.267
+          ],
+          "content": "• Divide and conquer implies two halves “equal”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.286,
+            0.758,
+            0.34
+          ],
+          "content": "§ Performing the same check on each half"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.36,
+            0.763,
+            0.415
+          ],
+          "content": "§ With some optimization for small halves"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.441,
+            0.93,
+            0.501
+          ],
+          "content": "• Sometimes we are given a **recursive definition**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.521,
+            0.784,
+            0.575
+          ],
+          "content": "§ Math formula to compute that is recursive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.595,
+            0.782,
+            0.65
+          ],
+          "content": "§ String definition to check that is recursive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.671,
+            0.623,
+            0.723
+          ],
+          "content": "§ Picture to draw that is recursive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.746,
+            0.487,
+            0.801
+          ],
+          "content": "§ **Example**: n! = n (n-1)!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.823,
+            0.943,
+            0.887
+          ],
+          "content": "• In that case, we are just implementing definition"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.433,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.251,
+            0.067,
+            0.744,
+            0.136
+          ],
+          "level": 2,
+          "content": "Example: Palindromes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.877,
+            0.268
+          ],
+          "content": "• String with ≥ 2 characters is a palindrome if:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.286,
+            0.744,
+            0.341
+          ],
+          "content": "§ its first and last characters are equal, and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.36,
+            0.789,
+            0.417
+          ],
+          "content": "§ the rest of the characters form a palindrome"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.441,
+            0.266,
+            0.501
+          ],
+          "content": "• **Example:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.364,
+            0.493,
+            0.638,
+            0.543
+          ],
+          "content": "have to be the same"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.16,
+            0.494,
+            0.834,
+            0.639
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_25_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.348,
+            0.651,
+            0.635,
+            0.695
+          ],
+          "content": "has to be a palindrome"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.701,
+            0.534,
+            0.762
+          ],
+          "content": "• **Function to Implement:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.79,
+            0.389,
+            0.844
+          ],
+          "content": "def ispalindrome(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.865,
+            0.711,
+            0.918
+          ],
+          "content": "\"\"\"Returns: True if s is a palindrome\"\"\""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.432,
+            0.921,
+            0.568,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.069,
+            0.285,
+            0.961,
+            0.897
+          ],
+          "sub_type": "code",
+          "content": "```python\n- its first and last characters are equal, and\n- the rest of the characters form a palindrome\ndef ispalindrome(s):\n    \"\"\"Returns: True if s is a palindrome\"\"\"\n    if len(s) < 2:\n        return True\n    # Halves not the same; not divide and conquer\n    ends = s[0] == s[-1]\n    middle = ispalindrome(s[1:-1])\n    return ends and middle\n    Recursive case\n    Recursive Definition\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.251,
+            0.068,
+            0.744,
+            0.136
+          ],
+          "level": 2,
+          "content": "Example: Palindromes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.204,
+            0.878,
+            0.268
+          ],
+          "content": "• String with ≥ 2 characters is a palindrome if:"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.141,
+            0.067,
+            0.854,
+            0.135
+          ],
+          "level": 2,
+          "content": "Recursive Functions and Helpers"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.066,
+            0.198,
+            0.673,
+            0.677
+          ],
+          "sub_type": "code",
+          "content": "```python\nef ispalindrome2(s):\n    \"\"\"Returns: True if s is a palindrome\n    Case of characters is ignored.\"\"\"\n    if len(s) < 2:\n        return True\n    # Halves not the same; not divide and conquer\n    ends = equals_ignore_case(s[0], s[-1])\n    middle = ispalindrome(s[1:-1])\n    return ends and middle\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.141,
+            0.067,
+            0.853,
+            0.135
+          ],
+          "level": 2,
+          "content": "Recursive Functions and Helpers"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.068,
+            0.199,
+            0.674,
+            0.677
+          ],
+          "sub_type": "code",
+          "content": "```python\nef ispalindrome2(s):\n    \"\"\"Returns: True if s is a palindrome\n    Case of characters is ignored.\"\"\"\n    if len(s) < 2:\n        return True\n    # Halves not the same; not divide and conquer\n    ends = equals_ignore_case(s[0], s[-1])\n    middle = ispalindrome(s[1:-1])\n    return ends and middle\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.921,
+            0.115,
+            0.948
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.141,
+            0.066,
+            0.854,
+            0.135
+          ],
+          "level": 2,
+          "content": "Recursive Functions and Helpers"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.045,
+            0.187,
+            0.955,
+            0.893
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef ispalindrome2(s):\n    \"\"\"Returns: True if s is a palindrome\n    Case of characters is ignored.\"\"\"\n    if len(s) < 2:\n        return True\n    # Halves not the same; not divide and conquer\n    ends = equals_ignore_case(s[0], s[-1])\n    middle = ispalindrome(s[1:-1])\n    return ends and middle\n\ndef equals_ignore_case(a, b):\n    \"\"\"Returns: True if a and b are same ignoring case\"\"\"\n    return a.upper() == b.upper()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.186,
+            0.067,
+            0.807,
+            0.135
+          ],
+          "level": 2,
+          "content": "Example: More Palindromes"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.063,
+            0.195,
+            0.959,
+            0.919
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef ispalindrome3(s):\n    \"\"\"Returns: True if s is a palindrome\n    Case of characters and non-letters ignored.\"\"\"\n    return ispalindrome2(depunct(s))\n\ndef depunct(s):\n    \"\"\"Returns: s with non-letters removed\"\"\"\n    if s == \":\n        return s\n    # Combine left and right\n    if s[0] in string.letters:\n        return s[0]+depunct(s[1:])\n    # Ignore left if it is not a letter\n    return depunct(s[1:])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.176,
+            0.067,
+            0.822,
+            0.135
+          ],
+          "level": 2,
+          "content": "Implicit Recursive Definitions"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.041,
+            0.199,
+            0.641,
+            0.383
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef exp(b, c):\n    \"\"\"Returns: b^c\n    Precondition: b a float, c ≥ 0 an int\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.49,
+            0.722,
+            0.551
+          ],
+          "content": "• Not obviously a recursive definition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.573,
+            0.552,
+            0.623
+          ],
+          "content": "§ $b^{c}=b\\times b\\times\\ldots\\times b\\times b$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.651,
+            0.818,
+            0.71
+          ],
+          "content": "• But remember what we did with factorial"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.732,
+            0.844,
+            0.79
+          ],
+          "content": "§ We can rewrite it recursively (by regrouping)!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.807,
+            0.828,
+            0.862
+          ],
+          "content": "§ This time there is more than one way to do it"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.433,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.175,
+            0.066,
+            0.822,
+            0.135
+          ],
+          "level": 2,
+          "content": "Implicit Recursive Definitions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.201,
+            0.239,
+            0.255
+          ],
+          "content": "def exp(b, c):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.263,
+            0.289,
+            0.315
+          ],
+          "content": "\"\"\"Returns: $b^{c}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.323,
+            0.641,
+            0.38
+          ],
+          "content": "Precondition: b a float, $c \\geq 0$ an int\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.447,
+            0.377,
+            0.512
+          ],
+          "content": "**Approach 1**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.083,
+            0.547,
+            0.443,
+            0.757
+          ],
+          "content": "12^{256} = 12 \\times (12^{255})",
+          "image_source": "images/page_32_equation_5.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.132,
+            0.806,
+            0.384,
+            0.872
+          ],
+          "content": "\\mathsf {b} ^ {\\mathrm{c}} = \\mathsf {b} \\times (\\mathsf {b} ^ {\\mathrm{c-1}})",
+          "image_source": "images/page_32_equation_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.621,
+            0.446,
+            0.853,
+            0.513
+          ],
+          "content": "**Approach 2**"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.525,
+            0.545,
+            0.956,
+            0.757
+          ],
+          "content": "1 2 ^ {2 5 6} = (1 2 ^ {1 2 8}) \\times (1 2 ^ {1 2 8})",
+          "image_source": "images/page_32_equation_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.805,
+            0.932,
+            0.871
+          ],
+          "content": "$\\mathbf{b}^{\\mathrm{c}} = (\\mathbf{b}\\times \\mathbf{b})^{\\mathrm{c / 2}}$ if c even"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.433,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.065,
+            0.867,
+            0.139
+          ],
+          "level": 2,
+          "content": "Raising a Number to an Exponent"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.041,
+            0.213,
+            0.97,
+            0.956
+          ],
+          "sub_type": "code",
+          "content": "```python\nApproach 1\ndef exp(b, c):\n    \"\"\"Returns: b^c\n    Precond: b a float, c ≥ 0 an int\"\"\"\n    # b^0 is 1\n    if c == 0:\n        return 1\n    # b^c = b(b^{c-1})\n    left = b\n    right = exp(b,c-1)\n    return left*right\n\nApproach 2\ndef exp(b, c):\n    \"\"\"Returns: b^c\n    Precond: b a float, c ≥ 0 an int\"\"\"\n    # b^0 is 1\n    if c == 0:\n        return 1\n    # c > 0\n    if c % 2 == 0:\n        return exp(b*b,c//2)\n    return b*exp(b*b,(c-1)//2)\n\n10/20/26\nMore Recursion\n34\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.067,
+            0.867,
+            0.137
+          ],
+          "level": 2,
+          "content": "Raising a Number to an Exponent"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.196,
+            0.496,
+            0.856
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef exp(b, c):\n    \"\"\"Returns: b^c\n    Precond: b a float, c ≥ 0 an int\"\"\"\n    # b^0 is 1\n    if c == 0:\n        return 1\n\n    # c > 0\n    if c % 2 == 0:\n        return exp(b*b,c//2)\n    return b*exp(b*b,(c-1)//2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.6,
+            0.187,
+            0.907,
+            0.673
+          ],
+          "content": "| c | # of calls |\n| --- | --- |\n| 0 | 0 |\n| 1 | 1 |\n| 2 | 2 |\n| 4 | 3 |\n| 8 | 4 |\n| 16 | 5 |\n| 32 | 6 |\n| 2<sup>n</sup> | n + 1 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_table_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.741,
+            0.933,
+            0.849
+          ],
+          "content": "32768 is 215 b<sup>32768</sup> needs only 215 calls!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.565,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.166,
+            0.066,
+            0.833,
+            0.138
+          ],
+          "level": 2,
+          "content": "Example: Space Filling Curves"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.056,
+            0.309,
+            0.94,
+            0.885
+          ],
+          "content": "- Draw a curve that\n- - Starts in the left corner\n- - Ends in the right corner\n- - Touches every grid point\n- - Does not touch or cross\n- itself anywhere\n- - Useful for analysis of\n- 2-dimensional data\n- Starts\n- Here\n- Ends\n- Here"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.65,
+            0.22,
+            0.825,
+            0.279
+          ],
+          "level": 2,
+          "content": "Challenge"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.433,
+            0.919,
+            0.566,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.79,
+            0.189,
+            0.86,
+            0.278
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_36_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.182,
+            0.065,
+            0.818,
+            0.139
+          ],
+          "level": 2,
+          "content": "Hilbert’s Space Filling Curve"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.013,
+            0.215,
+            0.45,
+            0.742
+          ],
+          "content": "\\begin{array}{c} 2 ^ {n} \\\\ \\hline \\end{array}",
+          "image_source": "images/page_36_equation_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.504,
+            0.198,
+            0.659,
+            0.257
+          ],
+          "content": "Hilbert(1):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.505,
+            0.343,
+            0.658,
+            0.403
+          ],
+          "content": "Hilbert(2):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.504,
+            0.587,
+            0.658,
+            0.647
+          ],
+          "content": "Hilbert(n):"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.75,
+            0.333,
+            0.899,
+            0.532
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_36_image_6.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.697,
+            0.583,
+            0.945,
+            0.913
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_36_image_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.433,
+            0.919,
+            0.567,
+            0.95
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.183,
+            0.067,
+            0.817,
+            0.137
+          ],
+          "level": 2,
+          "content": "Hilbert’s Space Filling Curve"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.221,
+            0.276,
+            0.272
+          ],
+          "level": 2,
+          "content": "Basic Idea"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.325,
+            0.275,
+            0.377
+          ],
+          "content": "• Given a box"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.401,
+            0.285,
+            0.52
+          ],
+          "content": "• Draw $2^{n} \\times 2^{n}$ grid in box"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.536,
+            0.327,
+            0.589
+          ],
+          "content": "• Trace the curve"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.615,
+            0.324,
+            0.727
+          ],
+          "content": "• As n goes to ∞, curve fills box"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.358,
+            0.259,
+            0.538,
+            0.499
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_37_image_6.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.571,
+            0.259,
+            0.751,
+            0.499
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_37_image_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.536,
+            0.753,
+            0.779
+          ],
+          "content": "SCS韩车车店强5 HS"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.785,
+            0.259,
+            0.965,
+            0.499
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_37_image_9.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.783,
+            0.536,
+            0.966,
+            0.779
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_37_image_10.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.92,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "38"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.573,
+            0.578,
+            0.902,
+            0.946
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.123,
+            0.066,
+            0.877,
+            0.137
+          ],
+          "level": 2,
+          "content": "“Turtle” Graphics: Assignment A4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.183,
+            0.203,
+            0.293,
+            0.263
+          ],
+          "content": "**Turn**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.197,
+            0.292,
+            0.329,
+            0.477
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.179,
+            0.581,
+            0.295,
+            0.639
+          ],
+          "content": "**Move**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.3,
+            0.634,
+            0.421,
+            0.77
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.091,
+            0.801,
+            0.21,
+            0.943
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.645,
+            0.201,
+            0.862,
+            0.262
+          ],
+          "content": "**Draw Line**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.563,
+            0.202,
+            0.897,
+            0.561
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_image_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.616,
+            0.579,
+            0.893,
+            0.646
+          ],
+          "content": "**Change Color**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.043,
+            0.92,
+            0.115,
+            0.948
+          ],
+          "content": "10/20/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.434,
+            0.921,
+            0.566,
+            0.949
+          ],
+          "content": "More Recursion"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "39"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 39,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

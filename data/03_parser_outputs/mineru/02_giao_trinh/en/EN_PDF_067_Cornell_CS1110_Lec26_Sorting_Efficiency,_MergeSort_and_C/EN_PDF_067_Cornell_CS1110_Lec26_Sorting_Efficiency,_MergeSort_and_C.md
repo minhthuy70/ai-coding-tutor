@@ -1,0 +1,126 @@
+<!-- page: 1 -->
+
+![](images/page_0_image_1.jpg)
+
+## Linear Search
+
+How many entries do we have to look at?
+
+All of them!
+
+## Binary Search
+
+Requires that the data is sorted!
+
+But few checks!
+
+## The Sorting Challenge
+
+• **Given:** A list of numbers
+
+• **Goal:** Sort those numbers using only
+
+§ Iteration (while-loops or for-loops)
+
+§ Comparisons (< or >)
+
+§ Assignment statements
+
+• Why? For proper **analysis**.
+
+§ Methods/functions come with hidden costs
+
+§ Everything above has no hidden costs
+
+§ Each comparison or assignment is “1 step”
+
+## Visualizing Sorting
+
+**Start:** b
+
+**In-Progress:** b
+
+## Horizontal Notation
+
+• Want a pictoral way to visualize this sorting
+
+§ Represent the list as long rectangle
+
+§ We saw this idea in divide-and-conquer
+
+• Do **not** show individual boxes
+
+§ Just dividing lines between regions
+
+§ Label dividing lines with indices
+
+(h+1) – h = 1
+
+§ But index is either left or right of dividing line
+
+## Insertion Sort
+
+![](images/page_0_image_34.jpg)
+
+Remember the restrictions!
+
+<!-- page: 2 -->
+
+## Insertion Sort: Moving into Position
+
+![](images/page_1_image_2.jpg)
+
+## Algorithm “Complexity”
+
+• **Given**: a list of length n and a problem to solve
+
+• **Complexity**: rough number of steps to solve worst case
+
+• Suppose we can compute 1000 operations a second:
+
+| Complexity | n=10 | n=100 | n=1000 |
+| --- | --- | --- | --- |
+| log n | 0.003 s | 0.006 s | 0.01 s |
+| n | 0.01 s | 0.1 s | 1 s |
+| nlog n | 0.016 s | 0.32 s | 4.79 s |
+| n<sup>2</sup> | 0.1 s | 10 s | 16.7 m |
+| n<sup>3</sup> | 1 s | 16.7 m | 11.6 d |
+| 2<sup>n</sup> | 1 s | 4x10<sup>19</sup> y | 3x10<sup>290</sup> y |
+
+## Selection Sort
+
+![](images/page_1_image_9.jpg)
+
+Remember the restrictions!
+
+## Insertion Sort: Performance
+
+• b[0..i-1]: i elements
+
+![](images/page_1_image_15.jpg)
+
+• Pushdown is in a loop
+
+## A New Algorthm
+
+![](images/page_1_image_18.jpg)
+
+First segment always contains smaller values
+
+## What is the Problem?
+
+• Both insertion, selection sort are **nested loops**
+
+§ **Outer loop** over each element to sort
+
+§ **Inner loop** to put next element in place
+
+§ Each loop is n steps. n×n = n<sup>2</sup>
+
+• To do better we must eliminate a loop
+
+§ But how do we do that?
+
+§ What is like a loop? **Recursion!**
+
+§ Will see how to do this next lecture

@@ -1,0 +1,289 @@
+<!-- page: 1 -->
+
+## While-Loops are Fundamental
+
+• They are behind all **long-running applications**
+
+§ Always have a top level while loop
+
+§ And many subtasks are themselves while loops
+
+• The challenge is how these loops fit together
+
+§ Very often you are not writing all of the code
+
+§ Your code has to fit inside “invisible” loops
+
+§ Your code can cause an infinite loop you never saw
+
+• To understand this, we will look at a **case study**
+
+## The Game of Pig: A Random Game
+
+• Play progresses clockwise
+
+• On your turn, throw the die:
+
+§ If roll 1: lose turn, score zero
+
+§ Anything else: add it to score
+
+• Can also roll again (and lose)
+
+![](images/page_0_image_18.jpg)
+
+• If stop, score is “banked”
+
+## Advantage of Class-Based Applications
+
+• First person to 100 wins
+
+• **Function calls** correspond to **call frames**
+
+§ Any work is lost when the game is complete
+
+§ What if you want to keep statistics?
+
+• **Objects** live in the **heap**
+
+§ Any attributes will continue to persist
+
+§ Still have functions (methods) to do stuff
+
+• **Idea**: **Refactor** our function-based apps
+
+§ Turn some local variables into attributes
+
+§ But not all – only those we want to “save”
+
+## Understanding a GUI Application
+
+![](images/page_0_image_33.jpg)
+
+## We Have to Change Our Thinking
+
+## while program\_is\_running:
+
+\# Get information from mouse/keyboard
+
+\# (Handled
+
+/ rar es)Local variables are
+
+**erased** each loop step!
+
+\# Your code goes
+
+application.update()
+
+Draw stuff on the scrIf something needs to
+
+( Handled by OS/GUI libraries)survive multiple steps
+
+it must be an **attribute**
+
+## Attributes = Loop Variables
+
+## Normal Loops
+
+Variables “external”
+
+$\mathbf{x}=0$ to the loop body
+
+$$
+\mathrm{i=2}
+$$
+
+\# x = sum of squares of 2..i-1
+
+## Attributes are the “external” variables
+
+## Application
+
+**while** i <= 5:
+
+while program\_running:
+
+\# Get input
+
+$$
+\mathbf {x} = \mathbf {x} + \mathbf {i} ^ {*} \mathbf {i}
+$$
+
+\# Your code called here
+
+$$
+\mathrm{i=i+1}
+$$
+
+application.update()
+
+\# x = sum of squares of 2..5
+
+\# Draw
+
+<!-- page: 2 -->
+
+## Designing a Game Class: Animation
+
+class Animation(game2d.GameApp):
+
+"""App to animate an ell
+
+See animation.py se in a circle."""Parent class that does hard stuff def start(self):
+
+"""Initializes the game loop."""
+
+def update(self,dt):
+
+Loop initialization Do NOT use \_\_init\_
+
+"""Changes the ellipse position."""
+
+def draw(self): """Draws the ellipse""" …
+
+Loop body
+
+Use method draw() defined in GObject
+
+## Solution: Application State
+
+• **Idea:** Interleave loops
+
+## State STATE\_CIRCLE
+
+§ Write body for each loop
+
+§ Pick right body in update
+
+• **State**: Current loop body
+
+§ Playing game vs. pausing
+
+§ Choice of animation
+
+![](images/page_1_image_22.jpg)
+
+• Add an attribute state
+
+## State STATE\_HORIZONTAL
+
+§ Method update() checks it
+
+![](images/page_1_image_26.jpg)
+
+§ Executes correct helper
+
+See state.py
+
+## Understanding a GUI Application
+
+![](images/page_1_image_31.jpg)
+
+Update
+
+If we write a <u>while-loop here…</u>
+
+## How Do We Represent State?
+
+Draw
+
+• Use an **enumeration**
+
+…it only gets <u>drawn once here</u>
+
+§ List of fixed values
+
+§ Each value a variable
+
+§ Variable is a state name
+
+• In Java/C this is a type
+
+§ But we use int in Python
+
+§ Achieves the same result
+
+• Affects state **invariant**
+
+§ Should not be any int
+
+§ Should be in the list # state before the game has started STATE\_INACTIVE = 0
+
+\# state when loading a new wave
+
+STATE\_LOADING = 1
+
+\# state when the wave is in play STATE\_ACTIVE = 2
+
+\# state when we pause the game STATE\_PAUSED = 3
+
+\# state when the game is complete STATE\_COMPLETE = 5
+
+## When Do We Switch State?
+
+• We switch for one of two reasons
+
+§ Can be the result of an event (e.g. game over)
+
+§ Animated state.py at the beginning
+
+§ Can be the result of an input (e.g. a key press)
+
+• Checks for this at the start or end of update()
+
+§ At the **beginning** if **input driven**
+
+§ Refactored pig3.py is it at the end
+
+§ At the **end** if **event driven**
+
+• **Examples:**
+
+![](images/page_1_image_64.jpg)
+
+## Checking Input
+
+## Keyboard
+
+• is\_key\_down(key)
+
+§ Returns True if key is down
+
+§ key is a string ('a' or 'space')
+
+§ Empty string means any key
+
+• is\_key\_pressed(key)
+
+§ Returns True if key pressed
+
+§ key **not** down prev. frame
+
+• is\_key\_released(key)
+
+§ Returns True if key released
+
+§ key was down prev. frame
+
+## Mouse/Touch
+
+• touch
+
+§ **Attribute** giving a position
+
+§ Stored as a Point2 object
+
+§ But None if no touch
+
+• is\_touch\_pressed()
+
+§ True if touch pressed
+
+§ touch was None prev. frame
+
+• is\_touch\_released()
+
+§ True if touch released
+
+§ touch **not** None prev. frame

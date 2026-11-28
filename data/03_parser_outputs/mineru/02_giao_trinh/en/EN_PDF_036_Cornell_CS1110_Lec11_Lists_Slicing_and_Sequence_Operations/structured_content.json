@@ -1,0 +1,6195 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.15,
+            0.269,
+            0.367,
+            0.333
+          ],
+          "level": 2,
+          "content": "Lecture 11"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.339,
+            0.395,
+            0.658,
+            0.589
+          ],
+          "level": 2,
+          "content": "Asserts and Debugging"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.211,
+            0.067,
+            0.787,
+            0.135
+          ],
+          "level": 2,
+          "content": "Announcements for Today"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.112,
+            0.217,
+            0.413,
+            0.273
+          ],
+          "level": 2,
+          "content": "(Optional) Videos"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.333,
+            0.405,
+            0.385
+          ],
+          "content": "• **Lesson 13, 14** for today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.399,
+            0.451,
+            0.447
+          ],
+          "content": "• **Videos 15.1-15.7** next time"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.499,
+            0.452,
+            0.549
+          ],
+          "content": "• **Prelim, Oct 15**<strong><sup>th</sup></strong> **7:30-9:00**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.561,
+            0.395,
+            0.605
+          ],
+          "content": "§ Material up October 1st"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.614,
+            0.423,
+            0.661
+          ],
+          "content": "§ Study guide is now posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.671,
+            0.462,
+            0.718
+          ],
+          "content": "• **Conflict with Prelim time?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.731,
+            0.439,
+            0.821
+          ],
+          "content": "Submit to Prelim 1 Conflict form sent by Corey"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.829,
+            0.439,
+            0.873
+          ],
+          "content": "§ Do not submit if no conflict"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.629,
+            0.221,
+            0.846,
+            0.278
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.334,
+            0.898,
+            0.395
+          ],
+          "content": "• A2 graded by Sunday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.407,
+            0.918,
+            0.459
+          ],
+          "content": "§ Still taking late submits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.471,
+            0.864,
+            0.522
+          ],
+          "content": "§ Also fill out survey"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.537,
+            0.832,
+            0.595
+          ],
+          "content": "• A3 is now posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.608,
+            0.874,
+            0.659
+          ],
+          "content": "§ Due Fri October 9th"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.672,
+            0.898,
+            0.723
+          ],
+          "content": "§ Just before Fall Break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.736,
+            0.903,
+            0.788
+          ],
+          "content": "§ Graded when get back"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.801,
+            0.871,
+            0.851
+          ],
+          "content": "§ Material is on exam"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.216,
+            0.067,
+            0.781,
+            0.136
+          ],
+          "level": 2,
+          "content": "Using Color Objects in A3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.203,
+            0.383,
+            0.249
+          ],
+          "content": "• New classes in introcs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.269,
+            0.423,
+            0.315
+          ],
+          "content": "§ RGB, CMYK, and HSL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.336,
+            0.442,
+            0.383
+          ],
+          "content": "• Each has its own attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.404,
+            0.395,
+            0.448
+          ],
+          "content": "§ **RGB**: red, blue, green"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.467,
+            0.41,
+            0.564
+          ],
+          "content": "**CMYK**: cyan, magenta, yellow, black"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.583,
+            0.478,
+            0.626
+          ],
+          "content": "1 **HSL**: hue, saturation, lightness"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.648,
+            0.434,
+            0.694
+          ],
+          "content": "• Attributes have invariants"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.715,
+            0.451,
+            0.759
+          ],
+          "content": "§ Limits the attribute values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.777,
+            0.476,
+            0.823
+          ],
+          "content": "§ Example: red is int in 0..255"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.841,
+            0.449,
+            0.885
+          ],
+          "content": "§ Get an error if you violate"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.253,
+            0.545,
+            0.285
+          ],
+          "content": "c"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.593,
+            0.247,
+            0.636,
+            0.285
+          ],
+          "content": "**id1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.773,
+            0.213,
+            0.814,
+            0.25
+          ],
+          "content": "**id1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.857,
+            0.267,
+            0.919,
+            0.303
+          ],
+          "content": "**RGB**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.529,
+            0.339,
+            0.547,
+            0.369
+          ],
+          "content": "r"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.593,
+            0.331,
+            0.639,
+            0.371
+          ],
+          "content": "128"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.756,
+            0.337,
+            0.795,
+            0.372
+          ],
+          "content": "red"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.845,
+            0.334,
+            0.89,
+            0.371
+          ],
+          "content": "128"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.756,
+            0.405,
+            0.818,
+            0.442
+          ],
+          "content": "green"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.857,
+            0.402,
+            0.877,
+            0.437
+          ],
+          "content": "0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.756,
+            0.469,
+            0.803,
+            0.506
+          ],
+          "content": "blue"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.857,
+            0.469,
+            0.877,
+            0.503
+          ],
+          "content": "0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.613,
+            0.738,
+            0.655
+          ],
+          "content": ">>> import introcs"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.511,
+            0.668,
+            0.861,
+            0.713
+          ],
+          "content": "> > > \\mathrm{c} = \\text {introcs.RGB(128,0,0)}",
+          "image_source": "images/page_2_equation_24.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.512,
+            0.729,
+            0.677,
+            0.77
+          ],
+          "content": "> > > \\mathrm{r=c.red}",
+          "image_source": "images/page_2_equation_25.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.786,
+            0.887,
+            0.831
+          ],
+          "content": ">>> c.red = 500 # out of range"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.843,
+            0.944,
+            0.889
+          ],
+          "content": "AssertionError: 500 outside [0,255]"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.216,
+            0.067,
+            0.782,
+            0.137
+          ],
+          "level": 2,
+          "content": "Using Color Objects in A3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.203,
+            0.384,
+            0.25
+          ],
+          "content": "• New classes in introcs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.268,
+            0.424,
+            0.316
+          ],
+          "content": "§ RGB, CMYK, and HSL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.335,
+            0.443,
+            0.384
+          ],
+          "content": "• Each has its own attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.403,
+            0.397,
+            0.449
+          ],
+          "content": "§ **RGB**: red, blue, green"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.467,
+            0.411,
+            0.565
+          ],
+          "content": "**CMYK**: cyan, magenta, yellow, black"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.581,
+            0.478,
+            0.628
+          ],
+          "content": "**HSL**: hue, saturation, lightness"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.647,
+            0.434,
+            0.695
+          ],
+          "content": "• Attributes have invariants"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.714,
+            0.452,
+            0.76
+          ],
+          "content": "§ Limits the attribute values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.776,
+            0.476,
+            0.823
+          ],
+          "content": "§ Example: red is int in 0..255"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.84,
+            0.462,
+            0.886
+          ],
+          "content": "§ Get an error if you violates"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.649,
+            0.423,
+            0.949,
+            0.533
+          ],
+          "content": "Constructor f~~unctio~~n. To make a **ne**<s><strong>w</strong></s> ~~colo~~r."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.611,
+            0.744,
+            0.66
+          ],
+          "content": ">>> import introcs"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.51,
+            0.666,
+            0.862,
+            0.715
+          ],
+          "content": "> > > \\mathrm{c} = \\text {introcs.} \\mathrm{RGB} (1 2 8, 0, 0)",
+          "image_source": "images/page_3_equation_13.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.511,
+            0.728,
+            0.678,
+            0.772
+          ],
+          "content": "> > > \\mathrm{r=c.red}",
+          "image_source": "images/page_3_equation_14.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.511,
+            0.784,
+            0.739,
+            0.831
+          ],
+          "content": "> > > \\text {c.red} = 5 0 0 \\#",
+          "image_source": "images/page_3_equation_15.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.842,
+            0.759,
+            0.889
+          ],
+          "content": "AssertionError: 500"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.776,
+            0.782,
+            0.924,
+            0.885
+          ],
+          "continues_prev": true,
+          "content": "of rangeAccessing utside [0,25Attribute"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.588,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.257,
+            0.068,
+            0.743,
+            0.127
+          ],
+          "level": 2,
+          "content": "Recall: The Call Stack"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.207,
+            0.429,
+            0.256
+          ],
+          "level": 2,
+          "content": "• Functions are stacked"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.283,
+            0.478,
+            0.389
+          ],
+          "content": "§ Cannot remove one above w/o removing one below"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.411,
+            0.495,
+            0.518
+          ],
+          "content": "§ Sometimes draw bottom up (better fits the metaphor)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.544,
+            0.477,
+            0.666
+          ],
+          "content": "• Stack represents memory as a **high water mark**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.687,
+            0.528,
+            0.793
+          ],
+          "content": "§ Must have enough to keep the **entire stack in memory**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.814,
+            0.469,
+            0.859
+          ],
+          "content": "§ Error if cannot hold stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.694,
+            0.283,
+            0.811,
+            0.331
+          ],
+          "content": "Frame 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.695,
+            0.384,
+            0.814,
+            0.43
+          ],
+          "content": "Frame 2"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.638,
+            0.263,
+            0.965,
+            0.743
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.696,
+            0.484,
+            0.812,
+            0.53
+          ],
+          "content": "Frame 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.696,
+            0.584,
+            0.814,
+            0.63
+          ],
+          "content": "Frame 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.695,
+            0.684,
+            0.813,
+            0.73
+          ],
+          "content": "Frame 6  5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.329,
+            0.067,
+            0.67,
+            0.135
+          ],
+          "level": 2,
+          "content": "Error Messages"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.07,
+            0.221,
+            0.454,
+            0.277
+          ],
+          "level": 2,
+          "content": "Not An Error Message"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.33,
+            0.423,
+            0.376
+          ],
+          "content": "ZeroDivisionError: division by zero"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.436,
+            0.396,
+            0.542
+          ],
+          "content": "Everything starting with the Traceback"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.581,
+            0.221,
+            0.893,
+            0.277
+          ],
+          "level": 2,
+          "content": "An Error Message"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.328,
+            0.931,
+            0.861
+          ],
+          "content": "Traceback (most recent call last): File \"error.py\", line 41, in &lt;module&gt; print(function\\_1(1,0)) File \"error.py\", line 16, in function\\_1 return function\\_2(x,y) File \"error.py\", line 26, in function\\_2 return function\\_3(x,y) File \"error.py\", line 36, in function\\_3 return x/y ZeroDivisionError: division by zero"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.222,
+            0.067,
+            0.778,
+            0.128
+          ],
+          "level": 2,
+          "content": "Errors and the Call Stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.198,
+            0.159,
+            0.243
+          ],
+          "content": "\\# error.py"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.301,
+            0.335,
+            0.405
+          ],
+          "content": "def function\\_1(x,y): return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.463,
+            0.334,
+            0.563
+          ],
+          "content": "def function\\_2(x,y): return function\\_3(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.281,
+            0.423,
+            0.349,
+            0.468
+          ],
+          "content": "calls"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.281,
+            0.577,
+            0.348,
+            0.625
+          ],
+          "content": "calls"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.622,
+            0.351,
+            0.727
+          ],
+          "content": "def function\\_3(x,y): return x/y # crash here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.78,
+            0.346,
+            0.885
+          ],
+          "content": "if \\_\\_name\\_\\_ == '\\_\\_main\\_\\_': print(function\\_1(1,0))"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.283,
+            0.182,
+            0.523,
+            0.907
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.7,
+            0.467,
+            0.748
+          ],
+          "content": "calls"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.042,
+            0.621,
+            0.351,
+            0.729
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef function_3(x,y):\n    return x/y # crash here\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.464,
+            0.35,
+            0.851,
+            0.453
+          ],
+          "sub_type": "code",
+          "content": "```txt\nFile \"error.py\", line 20, in <module>\n    print(function_1(1,0))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.222,
+            0.067,
+            0.778,
+            0.128
+          ],
+          "level": 2,
+          "content": "Errors and the Call Stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.197,
+            0.159,
+            0.245
+          ],
+          "content": "\\# error.py"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.042,
+            0.301,
+            0.334,
+            0.406
+          ],
+          "content": "def function\\_1(x,y): return function\\_2(x,y)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.042,
+            0.461,
+            0.334,
+            0.565
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef function_2(x,y):\n    return function_3(x,y)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.778,
+            0.333,
+            0.887
+          ],
+          "content": "if \\_\\_name\\_\\_ == '\\_\\_main\\_ print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.426,
+            0.212,
+            0.912,
+            0.271
+          ],
+          "content": "Crashes produce the call stack:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.294,
+            0.814,
+            0.341
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.465,
+            0.459,
+            0.849,
+            0.56
+          ],
+          "content": "File \"error.py\", line 8, in function\\_1 return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.465,
+            0.563,
+            0.865,
+            0.667
+          ],
+          "content": "File \"error.py\", line 12, in function\\_2 return function\\_3(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.465,
+            0.67,
+            0.866,
+            0.775
+          ],
+          "content": "File \"error.py\", line 16, in function\\_3 return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.821,
+            0.913,
+            0.909
+          ],
+          "content": "Make sure you can see line numbers in Pulsar."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.919,
+            0.587,
+            0.953
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.222,
+            0.067,
+            0.778,
+            0.129
+          ],
+          "level": 2,
+          "content": "Errors and the Call Stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.237,
+            0.322,
+            0.348
+          ],
+          "content": "Script code. ion\\_1(x,y):Global space"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.04,
+            0.19,
+            0.91,
+            0.913
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.042,
+            0.462,
+            0.336,
+            0.566
+          ],
+          "content": "def function\\_2(x,y): return function\\_3(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.042,
+            0.621,
+            0.351,
+            0.726
+          ],
+          "content": "def function\\_3(x,y): return x/y # crash here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.781,
+            0.377,
+            0.893
+          ],
+          "content": "\\_name\\_\\_ == '\\_\\_main\\_\\_':Where error occurred print function\\_1(1,0)(or where was found)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.426,
+            0.211,
+            0.912,
+            0.271
+          ],
+          "content": "Crashes produce the call stack:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.294,
+            0.814,
+            0.339
+          ],
+          "content": "T<u>raceback (most recent call last):</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.463,
+            0.349,
+            0.85,
+            0.453
+          ],
+          "content": "File \"error.py\", line 20, in &lt;module&gt; print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.463,
+            0.46,
+            0.865,
+            0.665
+          ],
+          "content": "File \"error.py\", line 8, in function\\_1 return function\\_2(x,y) File \"error.py\", line 12, in function\\_2 return function\\_3(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.464,
+            0.67,
+            0.867,
+            0.775
+          ],
+          "content": "File \"error.py\", line 16, in function\\_3 return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.651,
+            0.82,
+            0.913,
+            0.909
+          ],
+          "content": "Make sure you can see line numbers in Pulsar."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.152,
+            0.067,
+            0.846,
+            0.139
+          ],
+          "level": 2,
+          "content": "Recall: Assigning Responsibility"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.322,
+            0.288,
+            0.391
+          ],
+          "content": "Developer 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.729,
+            0.322,
+            0.957,
+            0.391
+          ],
+          "content": "Developer 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.599,
+            0.41,
+            0.659
+          ],
+          "content": "**Defines**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.057,
+            0.183,
+            0.956,
+            0.897
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.593,
+            0.757,
+            0.653
+          ],
+          "content": "**Calls**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.32,
+            0.723,
+            0.679,
+            0.88
+          ],
+          "content": "Whose fault is it? Who must fix it?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.411,
+            0.92,
+            0.588,
+            0.953
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.204,
+            0.066,
+            0.795,
+            0.138
+          ],
+          "level": 2,
+          "content": "Determining Responsibility"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.197,
+            0.451,
+            0.307
+          ],
+          "content": "def function\\_1(x,y): \"\"\"Returns: result of function\\_2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.066,
+            0.332,
+            0.425,
+            0.448
+          ],
+          "content": "Precondition: x, y numbers\"\"\" return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.509,
+            0.383,
+            0.624
+          ],
+          "content": "def function\\_2(x,y): \"\"\"Returns: x divided by y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.647,
+            0.422,
+            0.761
+          ],
+          "content": "Precondition: x, y numbers\"\"\" return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.825,
+            0.312,
+            0.877
+          ],
+          "content": "print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.196,
+            0.879,
+            0.244
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.526,
+            0.299,
+            0.793,
+            0.407
+          ],
+          "content": "File \"error1.py\", line 32, print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.819,
+            0.302,
+            0.931,
+            0.349
+          ],
+          "content": "&lt;module&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.526,
+            0.46,
+            0.944,
+            0.567
+          ],
+          "content": "File \"error1.py\", line 18, in function\\_1 return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.618,
+            0.946,
+            0.727
+          ],
+          "content": "File \"error1.py\", line 28, in function\\_2 return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.78,
+            0.658,
+            0.828
+          ],
+          "content": "ZeroDivisionE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.678,
+            0.799,
+            0.945,
+            0.858
+          ],
+          "content": "Where is the error?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.918,
+            0.105,
+            0.95
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.919,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.949
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.151,
+            0.067,
+            0.848,
+            0.139
+          ],
+          "level": 2,
+          "content": "Approaching the Error Message"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.206,
+            0.38,
+            0.265
+          ],
+          "content": "• Start from the top"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.292,
+            0.433,
+            0.35
+          ],
+          "content": "• Look at function call"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.377,
+            0.439,
+            0.433
+          ],
+          "content": "§ Examine arguments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.457,
+            0.453,
+            0.516
+          ],
+          "content": "§ (Print if you have to)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.537,
+            0.453,
+            0.596
+          ],
+          "content": "§ Verify preconditions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.619,
+            0.467,
+            0.678
+          ],
+          "content": "• Violation? Error found"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.707,
+            0.427,
+            0.763
+          ],
+          "content": "§ Else go to next call"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.786,
+            0.471,
+            0.839
+          ],
+          "content": "§ Continue until bottom"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.198,
+            0.878,
+            0.242
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.528,
+            0.303,
+            0.93,
+            0.405
+          ],
+          "content": "<u>File \"error1.py\", line 32, i</u>n &lt;module&gt; print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.528,
+            0.464,
+            0.942,
+            0.564
+          ],
+          "content": "<u>File \"error1.py\", line 18, i</u>n function\\_1 return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.528,
+            0.622,
+            0.945,
+            0.737
+          ],
+          "content": "<u>File \"error1.py\", line 28, i</u>n function\\_2 return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.783,
+            0.899,
+            0.827
+          ],
+          "content": "ZeroDivisionError: division by zero"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.204,
+            0.066,
+            0.795,
+            0.138
+          ],
+          "level": 2,
+          "content": "Determining Responsibility"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.197,
+            0.451,
+            0.307
+          ],
+          "content": "def function\\_1(x,y): \"\"\"Returns: result of function\\_2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.066,
+            0.332,
+            0.425,
+            0.448
+          ],
+          "content": "Precondition: x, y numbers\"\"\" return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.51,
+            0.382,
+            0.623
+          ],
+          "content": "def function\\_2(x,y): \"\"\"Returns: x divided by y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.647,
+            0.422,
+            0.761
+          ],
+          "content": "Precondition: x, y numbers\"\"\" return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.825,
+            0.313,
+            0.877
+          ],
+          "content": "print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.196,
+            0.879,
+            0.243
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.526,
+            0.299,
+            0.793,
+            0.406
+          ],
+          "content": "File \"error1.py\", line 32, print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.526,
+            0.456,
+            0.943,
+            0.567
+          ],
+          "content": "File \"error1.py\", line 18, function\\_1B return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.613,
+            0.946,
+            0.727
+          ],
+          "content": "File \"error1.py\", line 28, in function\\_2C return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.78,
+            0.658,
+            0.828
+          ],
+          "content": "ZeroDivisionE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.679,
+            0.799,
+            0.945,
+            0.858
+          ],
+          "content": "Where is the error?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.918,
+            0.105,
+            0.95
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.919,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.204,
+            0.067,
+            0.795,
+            0.139
+          ],
+          "level": 2,
+          "content": "Determining Responsibility"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.198,
+            0.45,
+            0.305
+          ],
+          "content": "def function\\_1(x,y): \"\"\"Returns: result of function\\_2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.334,
+            0.423,
+            0.446
+          ],
+          "content": "Precondition: x, y numbers\"\"\" return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.511,
+            0.381,
+            0.621
+          ],
+          "content": "def function\\_2(x,y): \"\"\"Returns: x divided by y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.649,
+            0.421,
+            0.759
+          ],
+          "content": "Precondition: x, y numbers\"\"\" return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.827,
+            0.311,
+            0.875
+          ],
+          "content": "print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.197,
+            0.878,
+            0.243
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.302,
+            0.93,
+            0.405
+          ],
+          "content": "File \"error1.py\", line 32, in &lt;module&gt; print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.463,
+            0.942,
+            0.564
+          ],
+          "content": "File \"error1.py\", line 18, in function\\_1 return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.528,
+            0.623,
+            0.944,
+            0.667
+          ],
+          "content": "<u>File \"error1.py\", line 28, i</u>n function\\_2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.679,
+            0.665,
+            0.723
+          ],
+          "content": "return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.862,
+            0.704,
+            0.949,
+            0.753
+          ],
+          "content": "Error!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.783,
+            0.898,
+            0.827
+          ],
+          "content": "ZeroDivisionError: division by zero"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.204,
+            0.066,
+            0.795,
+            0.138
+          ],
+          "level": 2,
+          "content": "Determining Responsibility"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.196,
+            0.283,
+            0.248
+          ],
+          "content": "def function\\_1(x,y):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.253,
+            0.449,
+            0.306
+          ],
+          "content": "\"\"\"Returns: result of function\\_2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.333,
+            0.424,
+            0.386
+          ],
+          "content": "Precondition: x, y numbers\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.392,
+            0.35,
+            0.446
+          ],
+          "content": "return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.509,
+            0.284,
+            0.561
+          ],
+          "content": "def function\\_2(x,y):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.568,
+            0.382,
+            0.622
+          ],
+          "content": "\"\"\"Returns: x divided by y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.647,
+            0.474,
+            0.703
+          ],
+          "content": "Precondition: x, y numbs, y > 0\"\"\"r"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.709,
+            0.207,
+            0.76
+          ],
+          "content": "return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.824,
+            0.314,
+            0.878
+          ],
+          "content": "print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.434,
+            0.183,
+            0.8,
+            0.231
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.449,
+            0.288,
+            0.819,
+            0.394
+          ],
+          "content": "File \"error1.py\", line 32, in <modu print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.447,
+            0.448,
+            0.866,
+            0.55
+          ],
+          "content": "return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.447,
+            0.607,
+            0.866,
+            0.661
+          ],
+          "content": "File \"error1.py\", line 28, in function\\_2C"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.433,
+            0.767,
+            0.657,
+            0.815
+          ],
+          "content": "ZeroDivisionError: d"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.679,
+            0.801,
+            0.945,
+            0.857
+          ],
+          "content": "Where is the error?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.918,
+            0.106,
+            0.95
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.919,
+            0.588,
+            0.953
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.204,
+            0.066,
+            0.795,
+            0.139
+          ],
+          "level": 2,
+          "content": "Determining Responsibility"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.197,
+            0.45,
+            0.306
+          ],
+          "content": "def function\\_1(x,y): \"\"\"Returns: result of function\\_2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.334,
+            0.422,
+            0.445
+          ],
+          "content": "Precondition: x, y numbers\"\"\" return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.511,
+            0.381,
+            0.621
+          ],
+          "content": "def function\\_2(x,y): \"\"\"Returns: x divided by y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.639,
+            0.475,
+            0.759
+          ],
+          "content": "Precondition: x, y numbs, y > 0\"\"\" return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.827,
+            0.311,
+            0.875
+          ],
+          "content": "print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.197,
+            0.878,
+            0.243
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.301,
+            0.93,
+            0.404
+          ],
+          "content": "File \"error1.py\", line 32, in &lt;module&gt; print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.528,
+            0.463,
+            0.941,
+            0.507
+          ],
+          "content": "<u>File \"error1.py\", line 18, i</u>n fu<u>nction\\_1</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.516,
+            0.792,
+            0.563
+          ],
+          "content": "return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.862,
+            0.538,
+            0.949,
+            0.587
+          ],
+          "content": "Error!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.622,
+            0.945,
+            0.724
+          ],
+          "content": "File \"error1.py\", line 28, in function\\_2 return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.783,
+            0.898,
+            0.827
+          ],
+          "content": "ZeroDivisionError: division by zero"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.204,
+            0.067,
+            0.795,
+            0.138
+          ],
+          "level": 2,
+          "content": "Determining Responsibility"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.199,
+            0.28,
+            0.246
+          ],
+          "content": "def function\\_1(x,y):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.255,
+            0.45,
+            0.303
+          ],
+          "content": "\"\"\"Returns: result of function\\_2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.325,
+            0.476,
+            0.445
+          ],
+          "content": "Precondition: x, y numbs, y > 0\"\"\" return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.511,
+            0.281,
+            0.559
+          ],
+          "content": "def function\\_2(x,y):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.571,
+            0.379,
+            0.62
+          ],
+          "content": "\"\"\"Returns: x divided by y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.068,
+            0.649,
+            0.471,
+            0.759
+          ],
+          "content": "Precondition: x, y numbs, y > 0\"\"\" return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.827,
+            0.311,
+            0.875
+          ],
+          "content": "print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.198,
+            0.878,
+            0.242
+          ],
+          "content": "Traceback (most recent call last):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.303,
+            0.929,
+            0.347
+          ],
+          "content": "<u>File \"error1.py\", line 32, i</u>n &lt;module&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.356,
+            0.789,
+            0.403
+          ],
+          "content": "print(function\\_1(1,0))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.862,
+            0.382,
+            0.949,
+            0.431
+          ],
+          "content": "Error!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.463,
+            0.942,
+            0.564
+          ],
+          "content": "File \"error1.py\", line 18, in function\\_1 return function\\_2(x,y)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.527,
+            0.621,
+            0.945,
+            0.724
+          ],
+          "content": "File \"error1.py\", line 28, in function\\_2 return x/y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.783,
+            0.898,
+            0.827
+          ],
+          "content": "ZeroDivisionError: division by zero"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.173,
+            0.067,
+            0.827,
+            0.137
+          ],
+          "level": 2,
+          "content": "This Makes Debugging Tricky"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.207,
+            0.898,
+            0.267
+          ],
+          "content": "• Place error is detected != place error occurred"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.296,
+            0.681,
+            0.349
+          ],
+          "content": "§ It can be further up in the call stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.375,
+            0.712,
+            0.429
+          ],
+          "content": "§ It can even happen earlier in the code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.459,
+            0.753,
+            0.513
+          ],
+          "content": "§ Error messages are not enough to debug"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.541,
+            0.91,
+            0.607
+          ],
+          "content": "• Debugging requires “**stepping-through**” code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.631,
+            0.809,
+            0.685
+          ],
+          "content": "§ You execute each line of code in your mind"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.711,
+            0.824,
+            0.766
+          ],
+          "content": "§ You determine what Python does at that step"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.792,
+            0.792,
+            0.849
+          ],
+          "content": "§ You verify that the two match (if not, bug)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.066,
+            0.865,
+            0.138
+          ],
+          "level": 2,
+          "content": "Debugging Requires Visualization"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.075,
+            0.22,
+            0.45,
+            0.277
+          ],
+          "level": 2,
+          "content": "Can Use Special Tools"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.045,
+            0.341,
+            0.251,
+            0.731
+          ],
+          "content": "<table><tr><td colspan=\"2\">Globals</td></tr><tr><td colspan=\"2\">global</td></tr><tr><td>last_name_first</td><td>id1</td></tr><tr><td colspan=\"2\">Frames</td></tr><tr><td colspan=\"2\">last_name_first</td></tr><tr><td>n</td><td>&quot;Walker White&quot;</td></tr><tr><td>end_first</td><td>6</td></tr><tr><td>first</td><td>&quot;Walker&quot;</td></tr><tr><td>last</td><td>&quot; White&quot;</td></tr><tr><td>Return value</td><td>&quot; White, Walker&quot;</td></tr></table>",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.515,
+                0.757,
+                0.684,
+                0.8
+              ],
+              "content": "' White, Walker'"
+            }
+          ],
+          "image_source": "images/page_18_table_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.312,
+            0.391,
+            0.448,
+            0.437
+          ],
+          "content": "id1:function last\\_name\\_first(n)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.621,
+            0.218,
+            0.854,
+            0.275
+          ],
+          "level": 2,
+          "content": "Can Use print"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.329,
+            0.942,
+            0.699
+          ],
+          "content": ">>> last\\_name\\_first('Walker White') Start last\\_name\\_first('Walker White') end\\_first is \"6\" first is \"Walker\" last is \" White\" result is \" White, Walker\" Finish last\\_name\\_first('Walker White')"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.067,
+            0.865,
+            0.138
+          ],
+          "level": 2,
+          "content": "Debugging Requires Visualization"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.22,
+            0.45,
+            0.278
+          ],
+          "level": 2,
+          "content": "Can Use Special Tools"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.621,
+            0.218,
+            0.855,
+            0.275
+          ],
+          "level": 2,
+          "content": "Can Use print"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.044,
+            0.325,
+            0.944,
+            0.733
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.514,
+                0.756,
+                0.684,
+                0.801
+              ],
+              "content": "' White, Walker'"
+            }
+          ],
+          "image_source": "images/page_19_chart_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.255,
+            0.067,
+            0.744,
+            0.136
+          ],
+          "level": 2,
+          "content": "Case Study: Romanize"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.935,
+            0.263
+          ],
+          "content": "• Roman Numerals use letters instead of numbers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.285,
+            0.773,
+            0.339
+          ],
+          "content": "§ $\\mathrm{I} = 1, \\mathrm{V} = 5, \\mathrm{X} = 10, \\mathrm{L} = 50$ 0, and $\\mathrm{C} = 100$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.36,
+            0.782,
+            0.417
+          ],
+          "content": "§ Can go higher, but will stop there for now"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.441,
+            0.781,
+            0.501
+          ],
+          "content": "• Create other numbers by concatenation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.521,
+            0.335,
+            0.572
+          ],
+          "content": "§ II = 2, III = 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.595,
+            0.45,
+            0.646
+          ],
+          "content": "§ $\\mathrm{LV} = 55, \\mathrm{LVIII} = 53$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.673,
+            0.868,
+            0.733
+          ],
+          "content": "• If a smaller number comes first, we subtract"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.756,
+            0.352,
+            0.806
+          ],
+          "content": "§ IV = 4, IX = 9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.829,
+            0.466,
+            0.882
+          ],
+          "content": "■ VL = 40, XCVL = 94"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.039,
+            0.919,
+            0.106,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.411,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.255,
+            0.067,
+            0.744,
+            0.137
+          ],
+          "level": 2,
+          "content": "Case Study: Romanize"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.193,
+            0.589,
+            0.955
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef romanize(n):\n    \"\"\"\n    Returns the Roman numeral for n\n\nExamples:\n    romanize(14) returns 'XIV'\n    romanize(75) returns 'LXXV'\n    romanize(75) returns 'LXXV'\n\nPrecond: 0 < n < 100 is an int\n\"\"\"\n...\n9/29/26\nAsserts & Debugging\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.781,
+            0.137
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.035,
+            0.194,
+            0.595,
+            0.955
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(14)\nMore than 10\nnumeralX: n = 1\nchoiceX = 'X'\ntens = ''\nromanizelto9: n = 4\nLess than 5\nromanizelto4: n = 4\nchoiceI = 'IV'\nones = 'IV'\n'IV'\n9/29/26\nAsserts & Debugging\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.781,
+            0.137
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.193,
+            0.945,
+            0.889
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(14)\nMore than 10\nnumeralX: n = 1\nchoiceX = 'X'\ntens = ''\nromanizelto9: n = 4\nLess than 5\nromanizelto4: n = 4\nchoiceI = 'IV'\nones = 'IV'\n'IV' Problem here\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.196,
+            0.495,
+            0.89
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(14)\nMore than 10\nnumeralX: n = 1\nchoiceX = 'X'\ntens = \"\"\nRomanize1to9: n = 4\nLess than 5\nromanizelto4: n = 4\nchoiceI = 'IV'\nones = 'IV'\n'IV'\nBut also here\nProblem here\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.781,
+            0.138
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.782,
+            0.139
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.193,
+            0.312,
+            0.896
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(14)\nMore than 10\nnumeralX: n = 1\nchoiceX = 'X'\ntens = ''\nromanizelto9: n = 4\nLess than 5\nromanizelto4: n = 4\nchoiceI = 'IV'\nones = 'IV'\n'IV'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.51,
+            0.191,
+            0.885,
+            0.674
+          ],
+          "sub_type": "code",
+          "content": "```python\nif n >= 50:\n    print('More than 50')\n    tens = numeralL(n//10)\nelif n >= 10:\n    print('More than 10')\n    tems = numeralX(n//10)\nprint('tens = '+repr(tens))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.917,
+            0.106,
+            0.951
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.919,
+            0.587,
+            0.953
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.212,
+            0.066,
+            0.782,
+            0.139
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.035,
+            0.189,
+            0.309,
+            0.955
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(14)\nMore than 10\nnumeralX: n = 1\nchoiceX = 'X'\ntens = ''\nromanizelto9: n = 4\nLess than 5\nromanizelto4: n = 4\nchoiceI = 'IV'\nones = 'IV'\n'IV'\n9/29/26\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.51,
+            0.19,
+            0.879,
+            0.65
+          ],
+          "sub_type": "code",
+          "content": "```python\nif n >= 50:\n    print('More than 50')\n    tens = numeralL(n//10)\nelif n >= 10:\n    print('More than 10')\n    tems = numeralX(n//10)\nprint('tens = '+repr(tens))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.411,
+            0.919,
+            0.588,
+            0.953
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.949
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.035,
+            0.187,
+            0.967,
+            0.953
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> romanize(75)\nExpected:'LXXV'\nMore than 50\nnumeralL: n = 7\nLess than 90\nnumeralX: n = 2\nchoiceX = 'XX'\ntens = 'LXX'\nromanizelto9: n = 5\nBetween 5 and 8\nromanizelto4: n = 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.784,
+            0.139
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #2"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.784,
+            0.138
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.198,
+            0.308,
+            0.881
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> romanize(75)\nExpected:'LXXV'\nMore than 50\nnumeralL: n = 7\nLess than 90\nnumeralX: n = 2\nchoiceX = 'XX'\ntens = 'LXX'\nromanizelto9: n = 5\nBetween 5 and 8\nromanizelto4: n = 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.514,
+            0.197,
+            0.684,
+            0.248
+          ],
+          "sub_type": "code",
+          "content": "```txt\nchoiceI = 'IV'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.514,
+            0.261,
+            0.671,
+            0.311
+          ],
+          "content": "\\textbf{ones} = \\text{'VIV'}",
+          "image_source": "images/page_28_equation_3.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.514,
+            0.325,
+            0.636,
+            0.377
+          ],
+          "sub_type": "code",
+          "content": "```txt\n'LXXVIV'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.79,
+            0.211,
+            0.913,
+            0.317
+          ],
+          "content": "Obvious Problem"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.784,
+            0.138
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.035,
+            0.195,
+            0.676,
+            0.881
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> romanize(75)\nExpected:'LXXV'\nMore than 50\nnumeralL: n = 7\nLess than 90\nnumeralX: n = 2\nchoiceX = 'XX'\ntens = 'LXX'\nromanizelto9: n = 5\nBetween 5 and 8\nromanizelto4: n = 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.79,
+            0.211,
+            0.914,
+            0.317
+          ],
+          "content": "Obvious Problem"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.919,
+            0.588,
+            0.953
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.785,
+            0.138
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.197,
+            0.308,
+            0.885
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> romanize(75)\nExpected:'LXXV'\nMore than 50\nnumeralL: n = 7\nLess than 90\nnumeralX: n = 2\nchoiceX = 'XX'\ntens = 'LXX'\nromanizelto9: n = 5\nBetween 5 and 8\nromanizelto4: n = 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.513,
+            0.194,
+            0.686,
+            0.383
+          ],
+          "sub_type": "code",
+          "content": "```txt\nchoiceI = 'IV'\nones = 'VIV'\n'LXXVIV'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.449,
+            0.747,
+            0.496
+          ],
+          "content": "def romanize1to4(n):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.549,
+            0.693,
+            0.594
+          ],
+          "content": "Returns Rom"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.716,
+            0.528,
+            0.895,
+            0.631
+          ],
+          "content": "Precondition Violation!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.622,
+            0.691,
+            0.665
+          ],
+          "content": "Ex: romanize"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.541,
+            0.695,
+            0.843,
+            0.778
+          ],
+          "sub_type": "code",
+          "content": "```python\nPrecond: 0 < n < 5 is an int\n\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.54,
+            0.802,
+            0.925,
+            0.851
+          ],
+          "sub_type": "code",
+          "content": "```txt\nprint('romanizelto4: n = '+repr(n))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.957,
+            0.949
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.066,
+            0.785,
+            0.139
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.189,
+            0.881,
+            0.956
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(75)\nExpected:'LXXV'\nMore than 50\nnumeralL: n = 7\nLess than 90\nnumeralX: n = 2\nchoiceX = 'XX'\ntens = 'LXX'\nromanizelto9: n = 5\nBetween 5 and 8\nromanizelto4: n = 0\n\nchoiceI = 'IV'\nones = 'VIV'\n'LXXVIV'\n\nif n < 5:\n    print('Less than 5')\n    return romanizelto4(n)\nelif n < 9:\n    print('Between 5 and 8')\n    return 'V'+romanizelto4(n-5)\nelse:\n    print('Equal to 9')\n    return 'IX'\n\n9/29/26\nAsserts & Debugging\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.949
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.784,
+            0.139
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #3"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.034,
+            0.181,
+            0.972,
+            0.963
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(60)\nMore than 50\nnumeralL: n = 6\nLess than 90\nnumeralX: n = 1\nchoiceX = 'X'\ntens = 'LX'\nromanizelto9: n = 0\nLess than 5\nromanizelto4: n = 0\nchoiceI = 'IV'\nones = 'IV'\n'LXIV'\nPrecondition\nViolation\nbugging\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.784,
+            0.139
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #3"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.035,
+            0.189,
+            0.931,
+            0.962
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(60)\nMore than 50\nnumeralL: n = 6\nLess than 90\nnumeralX: n = 1\nchoiceX = 'X'\ntens = 'LX'\nromanizelto9: n = 0\nLess than 5\nromanizelto4: n = 0\nchoiceI = 'IV'\nones = 'IV'\n'LXIV'\ndef romanizelto9(n):\n\"'\"\nReturns the Roman numeral for n\nEx: romanize(5) returns V\nromanize(9) returns IX\nPrecond: 0 < n < 10 is an int\n\"'\"\nprint('romanizelto9: n = '+repr(n))\nbugging\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.949
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.066,
+            0.784,
+            0.139
+          ],
+          "level": 2,
+          "content": "Running the Tests: Bug #3"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.184,
+            0.89,
+            0.957
+          ],
+          "sub_type": "code",
+          "content": "```python\n>>> romanize(60)\nMore than 50\nnumeralL: n = 6\nLess than 90\nnumeralX: n = 1\nchoiceX = 'X'\ntens = 'LX'\nromanizelto9: n = 0\nLess than 5\nromanizelto4: n = 0\nchoiceI = 'IV'\nones = 'IV'\n'LXIV'\nif n >= 50:\n    print('More than 50')\n    tens = numeralL(n//10)\nelif n >= 10:\n    print('More than 10')\n    tems = numeralX(n//10)\n    print('tens = '+repr(tens))\nones = romanizelto9(n % 10)\nprint('ones = '+repr(ones))\nreturn tens+ones\n9/29/26\nAsserts & Debugging\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.129,
+            0.067,
+            0.871,
+            0.133
+          ],
+          "level": 2,
+          "content": "Last Example Was a Nested Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.203,
+            0.666,
+            0.266
+          ],
+          "content": "• Calling romanize1to4(0) is a bug"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.285,
+            0.844,
+            0.339
+          ],
+          "content": "§ But it was caused by a call to romanize1to9(0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.866,
+            0.416
+          ],
+          "content": "§ Making changes to romanize1to9 would be **bad**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.44,
+            0.816,
+            0.503
+          ],
+          "content": "• This type of error causes “**Doom Loops**”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.522,
+            0.759,
+            0.578
+          ],
+          "content": "§ You ask AI to fix a bug in your program"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.595,
+            0.825,
+            0.649
+          ],
+          "content": "§ It finds an immediate bug, but not the source"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.671,
+            0.663,
+            0.727
+          ],
+          "content": "§ Makes changes at the bug it found"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.745,
+            0.839,
+            0.801
+          ],
+          "content": "§ This breaks specification, making code worse"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.821,
+            0.838,
+            0.876
+          ],
+          "content": "§ You now have **more bugs**; repeat the process"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.588,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.156,
+            0.067,
+            0.842,
+            0.137
+          ],
+          "level": 2,
+          "content": "Challenges With Our Approach"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.205,
+            0.836,
+            0.266
+          ],
+          "content": "• This worked because the code was **simple**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.286,
+            0.681,
+            0.339
+          ],
+          "content": "§ We could read and understand it all"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.632,
+            0.416
+          ],
+          "content": "§ We could step through each line"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.44,
+            0.699,
+            0.5
+          ],
+          "content": "• What do we do about **larger files**?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.521,
+            0.768,
+            0.575
+          ],
+          "content": "§ Assignment 7 will be > 500 lines of code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.596,
+            0.663,
+            0.651
+          ],
+          "content": "§ Cannot possibly step through it all"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.673,
+            0.808,
+            0.727
+          ],
+          "content": "§ Too many print statements is hard to follow"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.75,
+            0.561,
+            0.809
+          ],
+          "content": "• **Solution**: Dynamic Search"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.831,
+            0.796,
+            0.887
+          ],
+          "content": "§ Adjust print statements until you find error"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.588,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.271,
+            0.067,
+            0.726,
+            0.137
+          ],
+          "level": 2,
+          "content": "Dynamic Bug Search"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.205,
+            0.869,
+            0.266
+          ],
+          "content": "• Start with a small number of print statement"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.287,
+            0.719,
+            0.34
+          ],
+          "content": "§ Put them in the area you think error is"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.807,
+            0.417
+          ],
+          "content": "§ Leave large sections of code between prints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.44,
+            0.873,
+            0.503
+          ],
+          "content": "• Find the first print statement that is “wrong”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.521,
+            0.854,
+            0.577
+          ],
+          "content": "§ Error is must be before it (and after last print?)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.597,
+            0.723,
+            0.649
+          ],
+          "content": "§ Add more print statements in this area"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.673,
+            0.591,
+            0.727
+          ],
+          "content": "§ Repeat this process as needed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.749,
+            0.887,
+            0.813
+          ],
+          "content": "• Problem is when cannot find anything wrong"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.831,
+            0.855,
+            0.886
+          ],
+          "content": "§ Pick an area that was hard and add more prints"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.588,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "38"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.218,
+            0.067,
+            0.78,
+            0.135
+          ],
+          "level": 2,
+          "content": "Aiding the Search Process"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.207,
+            0.662,
+            0.277
+          ],
+          "content": "• In practice, searching is hard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.3,
+            0.939,
+            0.362
+          ],
+          "content": "§ Errors can go a long time until we catch them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.385,
+            0.841,
+            0.447
+          ],
+          "content": "§ Errors often seen by user, not developer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.473,
+            0.841,
+            0.541
+          ],
+          "content": "• Would be easier if errors just crashed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.566,
+            0.739,
+            0.627
+          ],
+          "content": "§ A crash always gives a stack trace"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.651,
+            0.743,
+            0.715
+          ],
+          "content": "§ The user can just email that to you"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.741,
+            0.78,
+            0.805
+          ],
+          "content": "• We do this with **assert statements**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.833,
+            0.848,
+            0.894
+          ],
+          "content": "§ Crash the program when an error is seen"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.919,
+            0.106,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.411,
+            0.92,
+            0.588,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "39"
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.304,
+            0.069,
+            0.694,
+            0.127
+          ],
+          "level": 2,
+          "content": "Assert Statements"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.205,
+            0.539,
+            0.26
+          ],
+          "level": 2,
+          "content": "• Form 1: assert &lt;boolean&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.287,
+            0.624,
+            0.34
+          ],
+          "content": "§ Does nothing if boolean is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.674,
+            0.413
+          ],
+          "content": "§ Creates an error is boolean is False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.44,
+            0.707,
+            0.499
+          ],
+          "content": "• **Form 2:** assert &lt;boolean&gt;, &lt;string&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.521,
+            0.485,
+            0.575
+          ],
+          "content": "§ Very much like form 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.596,
+            0.707,
+            0.652
+          ],
+          "content": "§ But error message includes the string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.675,
+            0.678,
+            0.733
+          ],
+          "content": "• Statement to **verify a fact is true**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.755,
+            0.768,
+            0.807
+          ],
+          "content": "§ Similar to assert\\_equals used in unit tests"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.83,
+            0.836,
+            0.883
+          ],
+          "content": "§ But more versatile with complete **stack trace**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.411,
+            0.921,
+            0.588,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "40"
+        }
+      ]
+    },
+    {
+      "page_idx": 40,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.343,
+            0.067,
+            0.654,
+            0.135
+          ],
+          "level": 2,
+          "content": "Why Do This?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.202,
+            0.44,
+            0.259
+          ],
+          "content": "• Enforce preconditions!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.275,
+            0.477,
+            0.324
+          ],
+          "content": "§ Put precondition as assert."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.337,
+            0.434,
+            0.443
+          ],
+          "content": "§ If violate precondition, the program crashes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.457,
+            0.405,
+            0.577
+          ],
+          "content": "• Provided code in A3 uses asserts heavily"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.591,
+            0.405,
+            0.639
+          ],
+          "content": "§ First slide of lecture!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.713,
+            0.316,
+            0.76
+          ],
+          "content": "assert &lt;boolean&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.776,
+            0.441,
+            0.824
+          ],
+          "content": "assert &lt;boolean&gt;, &lt;string&gt;"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.511,
+            0.195,
+            0.956,
+            0.493
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef exchange(from_c, to_c, amt)\n    \"\"\"Returns: amt from exchange\n        Precondition: amt a float...\"\n    assert type(amt) == float\n...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.578,
+            0.559,
+            0.892,
+            0.615
+          ],
+          "level": 2,
+          "content": "Will do yourself in A4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.465,
+            0.711,
+            0.908,
+            0.761
+          ],
+          "content": "\\# Creates error if &lt;boolean&gt; false"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.465,
+            0.774,
+            0.906,
+            0.825
+          ],
+          "content": "\\# As above, but displays &lt;String&gt;"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "41"
+        }
+      ]
+    },
+    {
+      "page_idx": 41,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.151,
+            0.067,
+            0.85,
+            0.138
+          ],
+          "level": 2,
+          "content": "Example: Anglicizing an Integer"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.077,
+            0.224,
+            0.322,
+            0.278
+          ],
+          "level": 2,
+          "content": "def anglicize(n):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.304,
+            0.962,
+            0.677
+          ],
+          "sub_type": "code",
+          "content": "```python\n\"'\"\"Returns: the anglicization of int n.\nPrecondition: n an int, 0 < n < 1,000,000\"\"\"\nassert type(n) == int, repr(n)+' is not an int'\nassert 0 < n and n < 1000000, repr(n)+' is out of range'\n# Implement method here...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "42"
+        }
+      ]
+    },
+    {
+      "page_idx": 42,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.151,
+            0.067,
+            0.85,
+            0.138
+          ],
+          "level": 2,
+          "content": "Example: Anglicizing an Integer"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.223,
+            0.323,
+            0.279
+          ],
+          "level": 2,
+          "content": "def anglicize(n):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.306,
+            0.672,
+            0.363
+          ],
+          "content": "\"\"\"Returns: the anglicization of int n."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.393,
+            0.772,
+            0.453
+          ],
+          "sub_type": "code",
+          "content": "```python\nPrecondition: n an int, 0 < n < 1,000,000\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.471,
+            0.789,
+            0.528
+          ],
+          "sub_type": "code",
+          "content": "```python\nassert type(n) == int, repr(n)+' is not an int'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.539,
+            0.96,
+            0.606
+          ],
+          "content": "assert <u>0 < n and n < 1000000</u>, <u>repr(n)+' is out of range'</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.62,
+            0.535,
+            0.676
+          ],
+          "content": "\\# Implement method here…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.721,
+            0.358,
+            0.839
+          ],
+          "content": "Check (part of) the precondition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.596,
+            0.723,
+            0.796,
+            0.837
+          ],
+          "content": "Error message when violated"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "43"
+        }
+      ]
+    },
+    {
+      "page_idx": 43,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.166,
+            0.065,
+            0.834,
+            0.136
+          ],
+          "level": 2,
+          "content": "Aside: Using repr Instead of str"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.203,
+            0.58,
+            0.265
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> msg = str(var)+' is invalid'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.29,
+            0.307,
+            0.352
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print(msg)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.373,
+            0.237,
+            0.433
+          ],
+          "content": "2 is invalid"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.543,
+            0.916,
+            0.609
+          ],
+          "content": "• <u>Looking at this outp</u>ut, what is the type of var?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.623,
+            0.195,
+            0.677
+          ],
+          "content": "A: **int**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.687,
+            0.222,
+            0.741
+          ],
+          "content": "B: **float**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.749,
+            0.193,
+            0.801
+          ],
+          "content": "C: **str**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.81,
+            0.416,
+            0.869
+          ],
+          "content": "<u>D: Impossible to tell</u>"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "44"
+        }
+      ]
+    },
+    {
+      "page_idx": 44,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.166,
+            0.065,
+            0.834,
+            0.136
+          ],
+          "level": 2,
+          "content": "Aside: Using repr Instead of str"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.203,
+            0.58,
+            0.265
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> msg = str(var)+' is invalid'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.29,
+            0.307,
+            0.352
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print(msg)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.373,
+            0.237,
+            0.432
+          ],
+          "content": "2 is invalid"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.543,
+            0.916,
+            0.608
+          ],
+          "content": "• <u>Looking at this outp</u>ut, what is the type of var?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.623,
+            0.195,
+            0.677
+          ],
+          "content": "A: **int**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.687,
+            0.222,
+            0.741
+          ],
+          "content": "B: **float**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.749,
+            0.193,
+            0.801
+          ],
+          "content": "C: **str**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.81,
+            0.416,
+            0.869
+          ],
+          "content": "<u>D: Impossible to tell</u>"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.485,
+            0.816,
+            0.658,
+            0.861
+          ],
+          "level": 2,
+          "content": "CORRECT"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "45"
+        }
+      ]
+    },
+    {
+      "page_idx": 45,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.166,
+            0.065,
+            0.834,
+            0.136
+          ],
+          "level": 2,
+          "content": "Aside: Using repr Instead of str"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.203,
+            0.581,
+            0.265
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> msg = str(var)+' is invalid'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.29,
+            0.307,
+            0.352
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> print(msg)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.373,
+            0.236,
+            0.433
+          ],
+          "content": "2 is invalid"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.544,
+            0.602,
+            0.607
+          ],
+          "sub_type": "code",
+          "content": "```txt\n>>> msg = repr(var)+' is invalid'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.629,
+            0.307,
+            0.693
+          ],
+          "content": ">>> print(msg)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.713,
+            0.253,
+            0.774
+          ],
+          "content": "'2' is invalid"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.418,
+            0.65,
+            0.641,
+            0.759
+          ],
+          "content": "Clear that var is really a string"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "46"
+        }
+      ]
+    },
+    {
+      "page_idx": 46,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.127,
+            0.067,
+            0.871,
+            0.138
+          ],
+          "level": 2,
+          "content": "Enforcing Preconditions is Tricky!"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.223,
+            0.412,
+            0.279
+          ],
+          "level": 2,
+          "content": "def lookup\\_netid(nid):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.306,
+            0.765,
+            0.364
+          ],
+          "content": "\"\"\"Returns: name of student with netid nid."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.395,
+            0.817,
+            0.514
+          ],
+          "content": "Precondition: nid is a string, which consists of 2 or 3 letters and a number\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.531,
+            0.319,
+            0.587
+          ],
+          "content": "assert ?????"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.151,
+            0.663,
+            0.555,
+            0.847
+          ],
+          "content": "Assert use expressions only. Cannot use if-statements. Each one must fit on one line."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.643,
+            0.66,
+            0.919,
+            0.847
+          ],
+          "content": "Sometimes we will only enforce part of the precondition"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "47"
+        }
+      ]
+    },
+    {
+      "page_idx": 47,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.127,
+            0.067,
+            0.871,
+            0.137
+          ],
+          "level": 2,
+          "content": "Enforcing Preconditions is Tricky!"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.223,
+            0.412,
+            0.279
+          ],
+          "level": 2,
+          "content": "def lookup\\_netid(nid):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.306,
+            0.765,
+            0.363
+          ],
+          "content": "\"\"\"Returns: name of student with netid nid."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.395,
+            0.817,
+            0.514
+          ],
+          "sub_type": "code",
+          "content": "```python\nPrecondition: nid is a string, which consists of 2 or 3 letters and a number\"\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.532,
+            0.892,
+            0.665
+          ],
+          "content": "assert type(nid) == str, repr(nid) + ' is not a string assert nid.isalnum(), nid+' is not just letters/digits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.753,
+            0.484,
+            0.871
+          ],
+          "content": "Returns True if s contains only letters, numbers."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.753,
+            0.869,
+            0.869
+          ],
+          "content": "Does this catch all violations?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.105,
+            0.949
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.92,
+            0.587,
+            0.952
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "48"
+        }
+      ]
+    },
+    {
+      "page_idx": 48,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.103,
+            0.225,
+            0.776,
+            0.76
+          ],
+          "sub_type": "code",
+          "content": "```python\nexchange(src, dst, amt):\n    \"\"\"Returns: amount of src received.\nPrecondition: src is a valid currency code\nPrecondition: dst is a valid currency code\nPrecondition: amt is a float\"\"\"\nassert ??????, repr(src) + ' not valid'\nassert ??????, repr(dst) + ' not valid'\nassert type(amt)==float, repr(amt)+' not a float'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.053,
+            0.067,
+            0.946,
+            0.134
+          ],
+          "level": 2,
+          "content": "Using Functions to Enforce Preconditions"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.921,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "49"
+        }
+      ]
+    },
+    {
+      "page_idx": 49,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.053,
+            0.067,
+            0.947,
+            0.134
+          ],
+          "level": 2,
+          "content": "Using Functions to Enforce Preconditions"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.221,
+            0.43,
+            0.273
+          ],
+          "level": 2,
+          "content": "def exchange(src, dst, amt):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.104,
+            0.294,
+            0.774,
+            0.76
+          ],
+          "sub_type": "code",
+          "content": "```python\n\"\"\"Returns: amount of src received.\nPrecondition: src is a valid currency code\nPrecondition: dst is a valid currency code\nPrecondition: amt is a float\"\"\"\nassert is_currency(src), repr(src) + ' not valid'\nassert is_currency(dst), repr(dst) + ' not valid'\nassert type(amt)==float, repr(amt)+' not a float'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.921,
+            0.105,
+            0.948
+          ],
+          "content": "9/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.412,
+            0.921,
+            0.587,
+            0.951
+          ],
+          "content": "Asserts & Debugging"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "50"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 50,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 40,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 41,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 42,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 43,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 44,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 45,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 46,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 47,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 48,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 49,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

@@ -1,0 +1,1716 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.121,
+            0.901,
+            0.555
+          ],
+          "level": 2,
+          "content": "STRING MANIPULATION, GUESS-and-CHECK, APPROXIMATIONS, BISECTION"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.568,
+            0.793,
+            0.625
+          ],
+          "content": "<u>(download slides and .py files ĂŶĚ</u>\u0003<u>follow along!)</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.096,
+            0.655,
+            0.389,
+            0.702
+          ],
+          "content": "6.0001 LECTU RE 3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.959,
+            0.547,
+            0.978
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.161,
+            0.373,
+            0.231
+          ],
+          "level": 2,
+          "content": "LAST TIME"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.279,
+            0.214,
+            0.327
+          ],
+          "content": "strings"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.353,
+            0.446,
+            0.405
+          ],
+          "content": "branching – if/elif/else"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.433,
+            0.284,
+            0.481
+          ],
+          "content": "while loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.511,
+            0.246,
+            0.559
+          ],
+          "content": "for loops"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.161,
+            0.278,
+            0.23
+          ],
+          "level": 2,
+          "content": "TODAY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.277,
+            0.403,
+            0.327
+          ],
+          "content": "string manipulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.355,
+            0.519,
+            0.405
+          ],
+          "content": "guess and check algorithms"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.433,
+            0.445,
+            0.483
+          ],
+          "content": "approximate solutions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.511,
+            0.373,
+            0.558
+          ],
+          "content": "bisection method"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.161,
+            0.326,
+            0.232
+          ],
+          "level": 2,
+          "content": "STRINGS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.853,
+            0.325
+          ],
+          "content": "think of as a **sequence** of case sensitive characters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.359,
+            0.668,
+            0.405
+          ],
+          "content": "can compare strings with ==, >, < etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.433,
+            0.908,
+            0.535
+          ],
+          "content": "len() is a function used to retrieve the **length** of the string in the parentheses"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.13,
+            0.641,
+            0.329,
+            0.685
+          ],
+          "sub_type": "code",
+          "content": "```toml\ns = \"abc\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.131,
+            0.717,
+            0.554,
+            0.767
+          ],
+          "sub_type": "code",
+          "content": "```txt\nlen(s) → evaluates to 3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.161,
+            0.326,
+            0.233
+          ],
+          "level": 2,
+          "content": "STRINGS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.913,
+            0.379
+          ],
+          "content": "square brackets used to perform **indexing** into a string to get the value at a certain index/position"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.117,
+            0.388,
+            0.869,
+            0.956
+          ],
+          "sub_type": "code",
+          "content": "```toml\ns = \"abc\"\nindex: 0 1 2 ← indexing always starts at 0\nindex: -3 -2 -1 ← last element always at index -1\n\ns [0] → evaluates to \"a\"\ns [1] → evaluates to \"b\"\ns [2] → evaluates to \"c\"\ns [3] → trying to index out of bounds, error\ns [-1] → evaluates to \"c\"\ns [-2] → evaluates to \"b\"\ns [-3] → evaluates to \"a\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.162,
+            0.326,
+            0.234
+          ],
+          "level": 2,
+          "content": "STRINGS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.279,
+            0.801,
+            0.327
+          ],
+          "content": "can **slice** strings using [start:stop:step]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.966,
+            0.405
+          ],
+          "content": "if give two numbers, [start:stop], step=1 by default"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.433,
+            0.825,
+            0.483
+          ],
+          "content": "you can also omit numbers and leave just colons"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.506,
+            0.291,
+            0.549
+          ],
+          "sub_type": "code",
+          "content": "```txt\ns = \"abcdefghijklmnopqrstuvwxyz\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.579,
+            0.753,
+            0.623
+          ],
+          "sub_type": "code",
+          "content": "```txt\ns [3:6] → evaluates to \"def\", same as s [3:6:1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.653,
+            0.462,
+            0.695
+          ],
+          "sub_type": "code",
+          "content": "```txt\ns [3:6:2] → evaluates to \"df\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.727,
+            0.929,
+            0.769
+          ],
+          "sub_type": "code",
+          "content": "```txt\ns [::] → evaluates to \"abcdefgh\", same as s [0: len(s): 1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.801,
+            0.993,
+            0.842
+          ],
+          "sub_type": "code",
+          "content": "```txt\ns[::-1] → evaluates to \"hgfedbca\", same as s[-1:-(len(s)+1):-1]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.873,
+            0.466,
+            0.914
+          ],
+          "sub_type": "code",
+          "content": "```txt\ns [4:1:-2] → evaluates to \"ec\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.161,
+            0.326,
+            0.233
+          ],
+          "level": 2,
+          "content": "STRINGS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.275,
+            0.792,
+            0.327
+          ],
+          "content": "strings are “**immutable**” – cannot be modified"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.125,
+            0.355,
+            0.351,
+            0.401
+          ],
+          "sub_type": "code",
+          "content": "```hcl\ns = \"hello\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.125,
+            0.434,
+            0.33,
+            0.485
+          ],
+          "sub_type": "code",
+          "content": "```python\ns [0] = 'y'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.124,
+            0.495,
+            0.507,
+            0.546
+          ],
+          "sub_type": "code",
+          "content": "```javascript\ns = 'y'+s [1:len(s)]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.587,
+            0.433,
+            0.821,
+            0.485
+          ],
+          "content": "gives an error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.587,
+            0.492,
+            0.777,
+            0.543
+          ],
+          "content": "is allowed,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.619,
+            0.549,
+            0.933,
+            0.599
+          ],
+          "content": "s bound to new object"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.122,
+            0.613,
+            0.564,
+            0.916
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_8.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.157,
+            0.549,
+            0.233
+          ],
+          "level": 2,
+          "content": "for LOOPS RECAP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.275,
+            0.956,
+            0.376
+          ],
+          "content": "for loops have a **loop variable** that iterates over a set of values"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.404,
+            0.996,
+            0.551
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor var in range(4):\n    <expressions>\n        → var iterates over values 0,1,2,3\n        → expressions inside loop executed with each value for var\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.087,
+            0.593,
+            0.95,
+            0.691
+          ],
+          "sub_type": "code",
+          "content": "```txt\nfor var in range(4,6): → var iterates over values 4,5 <expressions>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.768,
+            0.999,
+            0.873
+          ],
+          "content": "range is a way to iterate over numbers, but a for loop variable can **iterate over any set of values**, not just numbers!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.898,
+            0.968,
+            0.912,
+            0.99
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.16,
+            0.646,
+            0.233
+          ],
+          "level": 2,
+          "content": "STRINGS AND LOOPS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.273,
+            0.748,
+            0.322
+          ],
+          "content": "these two code snippets do the same thing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.344,
+            0.573,
+            0.393
+          ],
+          "content": "bottom one is more “pythonic”"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.414,
+            0.79,
+            0.896
+          ],
+          "sub_type": "code",
+          "content": "```python\ns = \"abcdefgh\"\nfor index in range(len(s)):\n    if s[index] == 'i' or s[index] == 'u':\n        print(\"There is an i or u\")\n\nfor char in s:\n    if char == 'i' or char == 'u':\n        print(\"There is an i or u\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.084,
+            0.603,
+            0.237
+          ],
+          "level": 2,
+          "content": "CODE EXAMPLE: ROBOT CHEERLEADERS"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.074,
+            0.276,
+            0.969,
+            0.921
+          ],
+          "sub_type": "code",
+          "content": "```python\nan_letters = \"aefhilmnorsxAEFHILMNORSX\"\n\nword = input(\"I will cheer for you! Enter a word: \")\ntimes = int(input(\"Enthusiasm level (1-10): \"))\ni = 0\nwhile i < len(word):\n    char = word[i]\n    if char in an_letters:\n        print(\"Give me an \" + char + \"! \" + char)\n    else:\n        print(\"Give me a \" + char + \"! \" + char)\n    i += 1\nprint(\"What does that spell?\")\nfor i in range(times):\n    print(word, \"!!!!\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.161,
+            0.344,
+            0.236
+          ],
+          "level": 2,
+          "content": "EXERCISE"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.087,
+            0.263,
+            0.912,
+            0.83
+          ],
+          "sub_type": "code",
+          "content": "```python\ns1 = \"mit u rock\"\ns2 = \"i rule mit\"\nif len(s1) == len(s2):\n    for char1 in s1:\n        for char2 in s2:\n            if char1 == char2:\n                print(\"common letter\")\n                break\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.161,
+            0.609,
+            0.231
+          ],
+          "level": 2,
+          "content": "GUESS-AND-CHECK"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.277,
+            0.916,
+            0.325
+          ],
+          "level": 2,
+          "content": "the process below also called exhaustive enumeration"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.433,
+            0.377,
+            0.483
+          ],
+          "content": "given a problem…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.511,
+            0.72,
+            0.561
+          ],
+          "content": "you are able to **guess a value** for solution"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.589,
+            0.793,
+            0.637
+          ],
+          "content": "you are able to **check if the solution is correct**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.667,
+            0.898,
+            0.717
+          ],
+          "content": "keep guessing until find solution or guessed all values"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.069,
+            0.61,
+            0.233
+          ],
+          "level": 2,
+          "content": "GUESS-AND-CHECK – cube root"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.277,
+            0.226,
+            0.312
+          ],
+          "content": "cube = 8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.342,
+            0.54,
+            0.382
+          ],
+          "content": "for guess in range(cube+1):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.408,
+            0.49,
+            0.447
+          ],
+          "content": "if guess\\*\\*3 == cube:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.473,
+            0.887,
+            0.515
+          ],
+          "content": "print(\"Cube root of\", cube, \"is\", guess)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.069,
+            0.61,
+            0.235
+          ],
+          "level": 2,
+          "content": "GUESS-AND-CHECK – cube root"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.271,
+            0.995,
+            0.914
+          ],
+          "sub_type": "code",
+          "content": "```python\ncube = 8\nfor guess in range(abs(cube)+1):\n    if guess**3 >= abs(cube):\n        break\nif guess**3 != abs(cube):\n    print(cube, 'is not a perfect cube')\nelse:\n    if cube < 0:\n        guess = -guess\n    print('Cube root of '+str(cube)+' is '+str(guess))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.16,
+            0.795,
+            0.232
+          ],
+          "level": 2,
+          "content": "APPROXIMATE SOLUTIONS"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.278,
+            0.441,
+            0.327
+          ],
+          "level": 2,
+          "content": "good enough solution"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.903,
+            0.405
+          ],
+          "content": "start with a guess and increment by some **small value**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.434,
+            0.885,
+            0.539
+          ],
+          "content": "keep guessing if |guess<sup>3</sup>-cube| >= epsilon for some **small epsilon**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.645,
+            0.778,
+            0.695
+          ],
+          "content": "decreasing increment size → slower program"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.723,
+            0.38,
+            0.773
+          ],
+          "content": "increasing epsilon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.496,
+            0.721,
+            0.848,
+            0.771
+          ],
+          "content": "less accurate answer"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.068,
+            0.764,
+            0.234
+          ],
+          "level": 2,
+          "content": "APPROXIMATE SOLUTION – cube root"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.28,
+            0.946,
+            0.901
+          ],
+          "sub_type": "code",
+          "content": "```python\ncube = 27\nepsilon = 0.01\nguess = 0.0\nincrement = 0.0001\nnum_guesses = 0\nwhile abs(guess**3 - cube) >= epsilon and guess <= cube :\n    guess += increment\n    num_guesses += 1\nprint('num_guesses =', num_guesses)\nif abs(guess**3 - cube) >= epsilon:\n    print('Failed on cube root of', cube)\nelse:\n    print(guess, 'is close to the cube root of', cube)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.16,
+            0.6,
+            0.231
+          ],
+          "level": 2,
+          "content": "BISECTION SEARCH"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.503,
+            0.325
+          ],
+          "content": "half interval each iteration"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.596,
+            0.405
+          ],
+          "content": "new guess is halfway in between"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.432,
+            0.556,
+            0.483
+          ],
+          "content": "to illustrate, let’s play a game!"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.035,
+            0.507,
+            0.979,
+            0.948
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.069,
+            0.601,
+            0.234
+          ],
+          "level": 2,
+          "content": "BISECTION SEARCH – cube root"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.083,
+            0.274,
+            0.911,
+            0.943
+          ],
+          "sub_type": "code",
+          "content": "```python\ncube = 27\nepsilon = 0.01\nnum_guesses = 0\nlow = 0\nhigh = cube\nguess = (high + low)/2.0\nwhile abs(guess**3 - cube) >= epsilon:\n    if guess**3 < cube :\n        low = guess\n    else:\n        high = guess\n    guess = (high + low)/2.0\n    num_guesses += 1\nprint 'num_guesses=', num_guesses\nprint guess, 'is close to the cube root of', cube\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.069,
+            0.601,
+            0.233
+          ],
+          "level": 2,
+          "content": "BISECTION SEARCH CONVERGENCE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.274,
+            0.305,
+            0.32
+          ],
+          "content": "search space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.325,
+            0.445,
+            0.372
+          ],
+          "content": "◦ first guess: N/2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.379,
+            0.446,
+            0.425
+          ],
+          "content": "◦ second guess: N/4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.432,
+            0.456,
+            0.479
+          ],
+          "content": "◦ kth guess: N/2^k"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.506,
+            0.758,
+            0.558
+          ],
+          "content": "guess converges on the order of $\\log_2N$ steps"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.577,
+            0.889,
+            0.674
+          ],
+          "content": "bisection search works when value of function varies monotonically with input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.695,
+            0.928,
+            0.747
+          ],
+          "content": "code as shown only works for positive cubes > 1 – why?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.766,
+            0.871,
+            0.864
+          ],
+          "content": "challenges   modify to work with negative cubes! modify to work with x < 1!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.163,
+            0.222,
+            0.231
+          ],
+          "level": 2,
+          "content": "x < 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.889,
+            0.378
+          ],
+          "content": "if x < 1, search space is 0 to x but cube root is greater than x and less than 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.407,
+            0.76,
+            0.51
+          ],
+          "content": "modify the code to choose the search space depending on value of x"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_String Manipulation, Guess-and-Check, Approximations, Bisection",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:48:44+05:30",
+      "modified_at": "2016-12-19T13:28:33+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 21,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

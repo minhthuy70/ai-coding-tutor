@@ -1,0 +1,5501 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.15,
+            0.269,
+            0.371,
+            0.333
+          ],
+          "level": 2,
+          "content": "Lecture 23"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.305,
+            0.393,
+            0.696,
+            0.587
+          ],
+          "level": 2,
+          "content": "State-Based Applications I"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.143,
+            0.068,
+            0.857,
+            0.129
+          ],
+          "level": 2,
+          "content": "Announcements for This Lecture"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.14,
+            0.216,
+            0.385,
+            0.278
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.334,
+            0.322,
+            0.383
+          ],
+          "content": "• A5 is now graded"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.395,
+            0.407,
+            0.436
+          ],
+          "content": "**Mean**: 47.2, **Median**: 49"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.448,
+            0.417,
+            0.491
+          ],
+          "content": "§ A: 46 (80%), B: 38 (15%)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.505,
+            0.329,
+            0.553
+          ],
+          "content": "• A6 is due **Sunday**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.565,
+            0.428,
+            0.613
+          ],
+          "content": "§ Worth 8% of your grade"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.625,
+            0.464,
+            0.672
+          ],
+          "content": "§ Remember to fill in Survey"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.686,
+            0.395,
+            0.735
+          ],
+          "content": "• A7 posted **Wednesday**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.747,
+            0.481,
+            0.793
+          ],
+          "content": "§ Due **December 7th** (last day)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.807,
+            0.449,
+            0.853
+          ],
+          "content": "§ Minor extensions possible"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.599,
+            0.215,
+            0.875,
+            0.271
+          ],
+          "level": 2,
+          "content": "Video Lessons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.333,
+            0.83,
+            0.383
+          ],
+          "content": "• **Lesson 25** for today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.399,
+            0.882,
+            0.447
+          ],
+          "content": "• **Lessons 26, 27** for Tues"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.478,
+            0.908,
+            0.529
+          ],
+          "content": "**Prelim, 11/17 at 7:30 pm**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.54,
+            0.84,
+            0.587
+          ],
+          "content": "§ Material up to **11/5**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.598,
+            0.867,
+            0.648
+          ],
+          "content": "§ Study guide is posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.658,
+            0.785,
+            0.705
+          ],
+          "content": "§ Review posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.719,
+            0.904,
+            0.767
+          ],
+          "content": "• **Conflicts are now closed**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.783,
+            0.899,
+            0.834
+          ],
+          "content": "• Only if an emergency"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.069,
+            0.797,
+            0.137
+          ],
+          "level": 2,
+          "content": "Long Running Applications"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.203,
+            0.794,
+            0.258
+          ],
+          "content": "• Think about an application like Assignment 6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.275,
+            0.385,
+            0.323
+          ],
+          "content": "§ Displays a window"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.339,
+            0.44,
+            0.388
+          ],
+          "content": "§ Responds to your input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.403,
+            0.453,
+            0.451
+          ],
+          "content": "§ Continues until you quit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.47,
+            0.474,
+            0.525
+          ],
+          "content": "• How long until you quit?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.542,
+            0.542,
+            0.589
+          ],
+          "content": "§ This is essentially a **while loop**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.577,
+            0.279,
+            0.89,
+            0.519
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.605,
+            0.748,
+            0.652
+          ],
+          "content": "§ Driven by a **goal condition** or a **bool variable**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.704,
+            0.726,
+            0.836
+          ],
+          "content": "while program\\_is\\_running: do something"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.114,
+            0.948
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.068,
+            0.797,
+            0.137
+          ],
+          "level": 2,
+          "content": "Long Running Applications"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.203,
+            0.794,
+            0.259
+          ],
+          "level": 2,
+          "content": "• Think about an application like Assignment 6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.275,
+            0.385,
+            0.323
+          ],
+          "content": "§ Displays a window"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.339,
+            0.441,
+            0.389
+          ],
+          "content": "§ Responds to your input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.403,
+            0.454,
+            0.452
+          ],
+          "content": "§ Continues until you quit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.469,
+            0.474,
+            0.527
+          ],
+          "content": "• How long until you quit?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.541,
+            0.543,
+            0.591
+          ],
+          "content": "§ This is essentially a **while loop**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.604,
+            0.552,
+            0.654
+          ],
+          "content": "§ Driven by a **goal condition** or a"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.576,
+            0.279,
+            0.891,
+            0.52
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_8.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.598,
+            0.541,
+            0.751,
+            0.64
+          ],
+          "level": 2,
+          "content": "Effectively ol variablewhile True:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.704,
+            0.727,
+            0.837
+          ],
+          "content": "while program\\_is\\_running: do something"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.114,
+            0.948
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.169,
+            0.067,
+            0.83,
+            0.135
+          ],
+          "level": 2,
+          "content": "While-Loops are Fundamental"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.207,
+            0.929,
+            0.271
+          ],
+          "content": "• They are behind all **long-running applications**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.296,
+            0.677,
+            0.352
+          ],
+          "content": "§ Always have a top level while loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.375,
+            0.862,
+            0.431
+          ],
+          "content": "§ And many subtasks are themselves while loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.461,
+            0.882,
+            0.523
+          ],
+          "content": "• The challenge is how these loops fit together"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.55,
+            0.835,
+            0.606
+          ],
+          "content": "§ Very often you are not writing all of the code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.631,
+            0.812,
+            0.685
+          ],
+          "content": "§ Your code has to fit inside “invisible” loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.711,
+            0.931,
+            0.765
+          ],
+          "content": "§ Your code can cause an infinite loop you never saw"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.796,
+            0.938,
+            0.857
+          ],
+          "content": "• To understand this, we will look at a **case study**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.067,
+            0.883,
+            0.135
+          ],
+          "level": 2,
+          "content": "The Game of Pig: A Random Game"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.215,
+            0.611,
+            0.285
+          ],
+          "content": "• Play progresses clockwise"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.327,
+            0.644,
+            0.394
+          ],
+          "content": "• On your turn, throw the die:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.435,
+            0.646,
+            0.495
+          ],
+          "content": "§ If roll 1: lose turn, score zero"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.533,
+            0.651,
+            0.596
+          ],
+          "content": "§ Anything else: add it to score"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.629,
+            0.627,
+            0.685
+          ],
+          "content": "• Can also roll again (and lose)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.715,
+            0.567,
+            0.771
+          ],
+          "content": "• If stop, score is “banked”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.811,
+            0.568,
+            0.879
+          ],
+          "content": "• First person to 100 wins"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.683,
+            0.353,
+            0.904,
+            0.676
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_8.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.066,
+            0.883,
+            0.135
+          ],
+          "level": 2,
+          "content": "The Game of Pig: A Random Game"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.214,
+            0.612,
+            0.285
+          ],
+          "content": "• Play progresses clockwise"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.325,
+            0.645,
+            0.395
+          ],
+          "content": "• On your turn, throw the die:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.433,
+            0.442,
+            0.493
+          ],
+          "content": "§ If roll 1: lose turn,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.483,
+            0.776,
+            0.607
+          ],
+          "content": "§ Anyth ing else: add it to score"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.629,
+            0.628,
+            0.686
+          ],
+          "content": "• Can also roll again (and lose)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.715,
+            0.568,
+            0.772
+          ],
+          "content": "• If stop, score is “banked”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.811,
+            0.569,
+            0.88
+          ],
+          "content": "• First person to 100 wins"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.091,
+            0.067,
+            0.906,
+            0.137
+          ],
+          "level": 2,
+          "content": "Designing an AI for Opponent is Easy"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.086,
+            0.208,
+            0.913,
+            0.844
+          ],
+          "content": "| # Throws | Survial | Expected Gain | Expected Value |\n| --- | --- | --- | --- |\n| 1 | 83% | 3.33 | 3.33 |\n| 2 | 69% | 2.78 | 6.11 |\n| 3 | 58% | 2.32 | 8.43 |\n| 4 | 48% | 1.92 | 10.35 |\n| 5 | 40% | 1.61 | 11.96 |\n| 6 | 33% | 1.34 | 13.30 |\n| 7 | 28% | 1.12 | 14.42 |\n| 8 | 23% | .93 | 15.35 |\n| 9 | 19% | .77 | 16.12 |\n| 10 | 16% | .65 | 16.77 |\n| … | … | … | … |\n| 50 | 0.01% | 0.0004 | 19.998 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.091,
+            0.067,
+            0.906,
+            0.137
+          ],
+          "level": 2,
+          "content": "Designing an AI for Opponent is Easy"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.086,
+            0.207,
+            0.913,
+            0.849
+          ],
+          "content": "<table><tr><td># Throws</td><td>Survial</td><td>Expected Gain</td><td>Expected Value</td></tr><tr><td>1</td><td>83%</td><td>3.33</td><td>3.33</td></tr><tr><td>2</td><td>69%</td><td>2.78</td><td>6.11</td></tr><tr><td>3</td><td>58%</td><td>2.32</td><td>8.43</td></tr><tr><td>4</td><td>48%</td><td>1.92</td><td>10.35</td></tr><tr><td>5</td><td>40%</td><td>1.61</td><td>11.96</td></tr><tr><td>6</td><td>33%</td><td>1.34</td><td>13.30</td></tr><tr><td>7</td><td>28%</td><td>1.12</td><td>14.42</td></tr><tr><td>8</td><td>23%</td><td>.93</td><td>15.35</td></tr><tr><td>9</td><td>19%</td><td rowspan=\"2\">Strategy: Bank at 20</td><td>16.12</td></tr><tr><td>10</td><td>16%</td><td>16.77</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>50</td><td>0.01%</td><td>0.0004</td><td>19.998</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.257,
+            0.067,
+            0.741,
+            0.137
+          ],
+          "level": 2,
+          "content": "The Primary Function"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.2,
+            0.288,
+            0.258
+          ],
+          "level": 2,
+          "content": "def play(target):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.273,
+            0.741,
+            0.335
+          ],
+          "content": "\"\"\"Plays a single game of Pig to target score."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.391,
+            0.613,
+            0.45
+          ],
+          "content": "Precondition: target is an int > 0\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.078,
+            0.466,
+            0.416,
+            0.523
+          ],
+          "content": "\\# Initialize the scores"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.078,
+            0.54,
+            0.653,
+            0.598
+          ],
+          "content": "\\# while no one has reached the target"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.616,
+            0.562,
+            0.675
+          ],
+          "content": "\\# Play a round for the player"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.69,
+            0.705,
+            0.749
+          ],
+          "content": "\\# If the player did not reach the target"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.175,
+            0.764,
+            0.661,
+            0.823
+          ],
+          "content": "\\# Play a round for the opponent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.079,
+            0.841,
+            0.4,
+            0.897
+          ],
+          "content": "\\# Display the results"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.301,
+            0.067,
+            0.698,
+            0.137
+          ],
+          "level": 2,
+          "content": "The Player Round"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.199,
+            0.317,
+            0.259
+          ],
+          "level": 2,
+          "content": "def player\\_turn():"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.271,
+            0.669,
+            0.332
+          ],
+          "content": "\"\"\" Runs a single turn for the player.\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.341,
+            0.606,
+            0.402
+          ],
+          "content": "\\# while the player has not stopped"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.409,
+            0.329,
+            0.468
+          ],
+          "content": "\\# Roll the die"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.477,
+            0.275,
+            0.535
+          ],
+          "content": "\\# If is a 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.172,
+            0.547,
+            0.692,
+            0.606
+          ],
+          "content": "\\# Set score to 0 and stop the turn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.616,
+            0.219,
+            0.671
+          ],
+          "content": "\\# else"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.684,
+            0.519,
+            0.741
+          ],
+          "content": "\\# Add the to the score"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.629,
+            0.652,
+            0.862,
+            0.713
+          ],
+          "content": "Prompt helper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.753,
+            0.744,
+            0.812
+          ],
+          "content": "\\# Ask the player whether to continue"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.821,
+            0.373,
+            0.878
+          ],
+          "content": "\\# Return the score"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.265,
+            0.067,
+            0.735,
+            0.137
+          ],
+          "level": 2,
+          "content": "The Opponent Round"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.046,
+            0.197,
+            0.885,
+            0.891
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef roll_past(goal):\n    \"\"\"Returns: The score from rolling a die until passing goal.\"\"\"\n    loop = True  # Keep looping until this is false\n    score = 0\n    while loop:\n        roll = random.randint(1,6)\n        if roll == 1:\n            score = 0; loop = False\n        else:\n            score = score + roll; loop = score < goal\n    return score\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.16,
+            0.067,
+            0.837,
+            0.137
+          ],
+          "level": 2,
+          "content": "Can an Application Be a Class?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.207,
+            0.876,
+            0.271
+          ],
+          "content": "• We think of programming as parts of speech"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.297,
+            0.451,
+            0.347
+          ],
+          "content": "§ **Functions** are **verbs**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.378,
+            0.416,
+            0.427
+          ],
+          "content": "§ **Classes** are **nouns**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.46,
+            0.503,
+            0.522
+          ],
+          "content": "• What is an application?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.549,
+            0.762,
+            0.604
+          ],
+          "content": "§ It does things. Does that make it a verb?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.631,
+            0.699,
+            0.686
+          ],
+          "content": "§ It is something you run. Is it a noun?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.715,
+            0.558,
+            0.772
+          ],
+          "content": "• There is no correct answer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.803,
+            0.75,
+            0.859
+          ],
+          "content": "§ Applications can be functions or classes"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.077,
+            0.067,
+            0.92,
+            0.136
+          ],
+          "level": 2,
+          "content": "Advantage of Class-Based Applications"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.207,
+            0.824,
+            0.265
+          ],
+          "level": 2,
+          "content": "• Function calls correspond to call frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.287,
+            0.82,
+            0.343
+          ],
+          "content": "§ Any work is lost when the game is complete"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.683,
+            0.416
+          ],
+          "content": "§ What if you want to keep statistics?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.441,
+            0.521,
+            0.502
+          ],
+          "level": 2,
+          "content": "• Objects live in the heap"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.521,
+            0.716,
+            0.577
+          ],
+          "content": "§ Any attributes will continue to persist"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.595,
+            0.772,
+            0.649
+          ],
+          "content": "§ Still have functions (methods) to do stuff"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.674,
+            0.795,
+            0.735
+          ],
+          "level": 2,
+          "content": "• Idea: Refactor our function-based apps"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.757,
+            0.756,
+            0.809
+          ],
+          "content": "§ Turn some local variables into attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.832,
+            0.785,
+            0.884
+          ],
+          "content": "§ But not all – only those we want to “save”"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.221,
+            0.066,
+            0.779,
+            0.135
+          ],
+          "level": 2,
+          "content": "The Refactored Pig Game"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.198,
+            0.649,
+            0.865
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Pig(object):\n    \"\"\"An application to play the game pig.\"\"\"\n    # IMMUTABLE ATTRIBUTES (GETTERS, BUT NO SETTERS)\n    # Attribute _target: The goal target for each player\n    # Invariant: _target is an int > 0\n    #\n    # Attribute _bank: The bank strategy for the AI player\n    # Invariant: bank is an int > 0 and <= _target\n    #\n    # Attribute _playerScore: The current score for the player\n    # Invariant: _playerScore is an int >= 0\n    #\n    # Attribute _aibotScore: The current score for the opponent\n    # Invariant: _aibotScore is an int >= 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.196,
+            0.067,
+            0.803,
+            0.134
+          ],
+          "level": 2,
+          "content": "Classes are Popular in GUIs"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.203,
+            0.473,
+            0.257
+          ],
+          "level": 2,
+          "content": "• Graphical User Interface"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.275,
+            0.431,
+            0.325
+          ],
+          "content": "§ These are normal apps"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.339,
+            0.45,
+            0.443
+          ],
+          "content": "§ In contrast to text-based (e.g. runs in Terminal)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.459,
+            0.457,
+            0.515
+          ],
+          "content": "• These are very complex"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.53,
+            0.492,
+            0.577
+          ],
+          "content": "§ No one writes from scratch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.593,
+            0.502,
+            0.642
+          ],
+          "content": "§ We rely on outside modules"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.662,
+            0.475,
+            0.717
+          ],
+          "level": 2,
+          "content": "• Often a library of classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.734,
+            0.48,
+            0.779
+          ],
+          "content": "§ Visual elements are nouns"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.797,
+            0.498,
+            0.844
+          ],
+          "content": "§ Subclass them to customize"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.53,
+            0.199,
+            0.831,
+            0.242
+          ],
+          "level": 2,
+          "content": "class MyApp(kivy.app.App):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.25,
+            0.593,
+            0.275
+          ],
+          "content": "\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.295,
+            0.94,
+            0.375
+          ],
+          "content": "A window with 'Hello World!' inside \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.399,
+            0.958,
+            0.554
+          ],
+          "content": "\\# HIDDEN INSTANCE ATTRIBUTES # Attr \\_label: text display in window # Invar: \\_label is a Label object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.615,
+            0.832,
+            0.656
+          ],
+          "content": "\\# Override this method…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.669,
+            0.719,
+            0.71
+          ],
+          "content": "def build(self):"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.067,
+            0.865,
+            0.138
+          ],
+          "level": 2,
+          "content": "Understanding a GUI Application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.457,
+            0.266,
+            0.64
+          ],
+          "content": "Animates the application, like a movie"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.288,
+            0.313,
+            0.504,
+            0.816
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.067,
+            0.865,
+            0.138
+          ],
+          "level": 2,
+          "content": "Understanding a GUI Application"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.053,
+            0.309,
+            0.901,
+            0.823
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.067,
+            0.865,
+            0.138
+          ],
+          "level": 2,
+          "content": "Understanding a GUI Application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.456,
+            0.267,
+            0.641
+          ],
+          "content": "Animates the application, like a movie"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.362,
+            0.415,
+            0.486,
+            0.477
+          ],
+          "content": "Update"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.377,
+            0.661,
+            0.472,
+            0.715
+          ],
+          "content": "Draw"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.635,
+            0.369,
+            0.876,
+            0.528
+          ],
+          "content": "Check for user input Process user input Update the objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.637,
+            0.638,
+            0.882,
+            0.743
+          ],
+          "content": "Update display/view No change to objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.611,
+            0.78,
+            0.856,
+            0.891
+          ],
+          "content": "Restriction set by graphics cards"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.258,
+            0.067,
+            0.742,
+            0.127
+          ],
+          "level": 2,
+          "content": "The Animation Frame"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.249,
+            0.527,
+            0.759
+          ],
+          "level": 2,
+          "content": "ne frame"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.671,
+            0.249,
+            0.886,
+            0.75
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.748,
+            0.352,
+            0.869,
+            0.409
+          ],
+          "content": "Update"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.761,
+            0.599,
+            0.855,
+            0.646
+          ],
+          "content": "Draw"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.948
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.21,
+            0.067,
+            0.787,
+            0.129
+          ],
+          "level": 2,
+          "content": "How A Frame is Animated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.204,
+            0.51,
+            0.267
+          ],
+          "content": "while program\\_is\\_running:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.286,
+            0.785,
+            0.351
+          ],
+          "content": "\\# Get information from mouse/keyboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.37,
+            0.641,
+            0.438
+          ],
+          "content": "\\# (Handled by OS/GUI libraries)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.506,
+            0.471,
+            0.569
+          ],
+          "content": "\\# Your code goes here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.724,
+            0.554,
+            0.786
+          ],
+          "content": "\\# Draw stuff on the screen"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.809,
+            0.639,
+            0.873
+          ],
+          "content": "\\# (Handled by OS/GUI libraries)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.209,
+            0.066,
+            0.788,
+            0.129
+          ],
+          "level": 2,
+          "content": "How A Frame is Animated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.203,
+            0.511,
+            0.269
+          ],
+          "content": "while program\\_is\\_running:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.19,
+            0.325,
+            0.427,
+            0.451
+          ],
+          "content": "Would like to ndled by OS/G“plug <u>in” code</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.449,
+            0.286,
+            0.788,
+            0.354
+          ],
+          "continues_prev": true,
+          "content": "rom mouse/keyboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.456,
+            0.369,
+            0.631,
+            0.438
+          ],
+          "content": "I libraries)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.505,
+            0.473,
+            0.572
+          ],
+          "content": "\\# Your code goes here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.647,
+            0.531,
+            0.935,
+            0.641
+          ],
+          "content": "Why do we need to write this each time?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.721,
+            0.557,
+            0.789
+          ],
+          "content": "\\# Draw stuff on the screen"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.806,
+            0.642,
+            0.877
+          ],
+          "content": "\\# (Handled by OS/GUI libraries)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.918,
+            0.116,
+            0.95
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.602,
+            0.952
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.933,
+            0.921,
+            0.959,
+            0.949
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.21,
+            0.067,
+            0.788,
+            0.129
+          ],
+          "level": 2,
+          "content": "How A Frame is Animated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.203,
+            0.511,
+            0.269
+          ],
+          "content": "while program\\_is\\_running:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.081,
+            0.285,
+            0.569,
+            0.353
+          ],
+          "content": "\\# Get information from mous"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.367,
+            0.283,
+            0.437
+          ],
+          "content": "\\# (Handled b"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.502,
+            0.291,
+            0.57
+          ],
+          "content": "\\# Your code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.352,
+            0.413,
+            0.532,
+            0.54
+          ],
+          "content": "This is the loop **body**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.591,
+            0.432,
+            0.659
+          ],
+          "content": "application.update()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.722,
+            0.558,
+            0.79
+          ],
+          "content": "\\# Draw stuff on the screen"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.807,
+            0.636,
+            0.876
+          ],
+          "content": "\\# (Handled by OS/GUI libraries)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.599,
+            0.229,
+            0.851,
+            0.352
+          ],
+          "content": "The while-loop eyboardis **external**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.625,
+            0.551,
+            0.909,
+            0.677
+          ],
+          "content": "• Put loop **BODY** in an app class."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.625,
+            0.68,
+            0.915,
+            0.816
+          ],
+          "content": "• OS/GUI handles everything else."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.918,
+            0.115,
+            0.95
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.602,
+            0.952
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.127,
+            0.067,
+            0.873,
+            0.137
+          ],
+          "level": 2,
+          "content": "We Have to Change Our Thinking"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.036,
+            0.204,
+            0.511,
+            0.269
+          ],
+          "content": "while program\\_is\\_running:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.286,
+            0.786,
+            0.351
+          ],
+          "content": "\\# Get information from mouse/keyboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.367,
+            0.284,
+            0.437
+          ],
+          "content": "\\# (Handled"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.31,
+            0.397,
+            0.672,
+            0.524
+          ],
+          "content": "Local variables are **erased** each loop step!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.503,
+            0.299,
+            0.57
+          ],
+          "content": "\\# Your code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.591,
+            0.43,
+            0.656
+          ],
+          "content": "application.update()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.742,
+            0.501,
+            0.931
+          ],
+          "content": "raw s u on e scrIf something needs to Handled by OS/GUI lsurvive multiple steps it must be an **attribute**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.536,
+            0.81,
+            0.64,
+            0.872
+          ],
+          "content": "aries)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.92,
+            0.604,
+            0.953
+          ],
+          "content": "plications"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.101,
+            0.95
+          ],
+          "content": "11/12/2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.195,
+            0.067,
+            0.803,
+            0.135
+          ],
+          "level": 2,
+          "content": "Attributes = Loop Variables"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.138,
+            0.22,
+            0.387,
+            0.278
+          ],
+          "level": 2,
+          "content": "Normal Loops"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.058,
+            0.386,
+            0.133,
+            0.434
+          ],
+          "content": "\\mathbf {x} = 0",
+          "image_source": "images/page_24_equation_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.162,
+            0.328,
+            0.439,
+            0.438
+          ],
+          "content": "Variables “external” to the loop body"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.056,
+            0.445,
+            0.122,
+            0.493
+          ],
+          "content": "\\mathrm{i=2}",
+          "image_source": "images/page_24_equation_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.505,
+            0.439,
+            0.556
+          ],
+          "content": "\\# x = sum of squares of 2..i-1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.564,
+            0.227,
+            0.613
+          ],
+          "content": "**while** i <= 5:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.086,
+            0.623,
+            0.233,
+            0.673
+          ],
+          "content": "\\mathbf {x} = \\mathbf {x} + \\mathbf {i} ^ {*} \\mathbf {i}",
+          "image_source": "images/page_24_equation_7.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.087,
+            0.68,
+            0.19,
+            0.73
+          ],
+          "content": "\\mathbf {i} = \\mathbf {i} + \\mathbf {l}",
+          "image_source": "images/page_24_equation_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.742,
+            0.424,
+            0.793
+          ],
+          "content": "\\# x = sum of squares of 2..5"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.636,
+            0.22,
+            0.838,
+            0.279
+          ],
+          "level": 2,
+          "content": "Application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.333,
+            0.829,
+            0.439
+          ],
+          "content": "**Attributes** are the “external” variables"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.461,
+            0.831,
+            0.513
+          ],
+          "content": "while program\\_running:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.524,
+            0.72,
+            0.576
+          ],
+          "content": "\\# Get input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.588,
+            0.874,
+            0.706
+          ],
+          "content": "\\# Your code called here application.update()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.716,
+            0.67,
+            0.766
+          ],
+          "content": "\\# Draw"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.95
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.919,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.246,
+            0.066,
+            0.753,
+            0.136
+          ],
+          "level": 2,
+          "content": "Variables and the Loop"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.036,
+            0.203,
+            0.51,
+            0.268
+          ],
+          "level": 2,
+          "content": "while program\\_is\\_running:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.285,
+            0.786,
+            0.352
+          ],
+          "content": "\\# Get information from mouse/keyboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.369,
+            0.642,
+            0.439
+          ],
+          "content": "\\# (Handled by OS/GUI libraries)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.503,
+            0.472,
+            0.571
+          ],
+          "content": "\\# Your code goes here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.59,
+            0.43,
+            0.657
+          ],
+          "content": "application.update()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.511,
+            0.591,
+            0.877,
+            0.718
+          ],
+          "content": "Local variables erased. But **attributes** persist."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.723,
+            0.555,
+            0.787
+          ],
+          "content": "\\# Draw stuff on the screen"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.808,
+            0.64,
+            0.875
+          ],
+          "content": "\\# (Handled by OS/GUI libraries)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.246,
+            0.066,
+            0.753,
+            0.137
+          ],
+          "level": 2,
+          "content": "The Actual Game Loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.198,
+            0.263,
+            0.257
+          ],
+          "content": "\\# Constructor"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.27,
+            0.353,
+            0.336
+          ],
+          "content": "game = GameApp(…)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.422,
+            0.536,
+            0.485
+          ],
+          "content": "game.start() #Loop initialization"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.497,
+            0.408,
+            0.559
+          ],
+          "content": "while program\\_running:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.572,
+            0.26,
+            0.633
+          ],
+          "content": "\\# Get input"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.646,
+            0.421,
+            0.708
+          ],
+          "content": "\\# Your code goes here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.415,
+            0.206,
+            0.713,
+            0.317
+          ],
+          "content": "Too early to initialize everything"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.719,
+            0.49,
+            0.783
+          ],
+          "content": "game.update(time\\_elapsed)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.797,
+            0.273,
+            0.857
+          ],
+          "content": "game.draw()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.665,
+            0.372,
+            0.844,
+            0.481
+          ],
+          "content": "Actual loop initialization"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.715,
+            0.833,
+            0.823
+          ],
+          "content": "Separate update() and draw() methods"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.919,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.067,
+            0.887,
+            0.137
+          ],
+          "level": 2,
+          "content": "Designing a Game Class: Animation"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.183,
+            0.606,
+            0.863
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Animation(game2d.GameApp):\n    \"\"\"App to animate an ellipse in a circle.\"\"\"\n\n    def start(self):\n        \"\"\"Initializes the game loop.\"\"\"\n        ...\n\n    def update(self,dt):\n        \"\"\"Changes the ellipse position.\"\"\"\n        ...\n\n    def draw(self):\n        \"\"\"Draws the ellipse\"\"\"\n        ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.217,
+            0.94,
+            0.269
+          ],
+          "content": "See animation.py"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.18,
+            0.963,
+            0.874
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Animation(game2d.GameApp):\n    \"\"\"App to animate an app.\n    def start(self):\n        \"\"\"Initializes the game loop.\"\"\"\n        ...\n    def update(self,dt):\n        \"\"\"Changes the ellipse position.\"\"\"\n        ...\n    def draw(self):\n        \"\"\"Draws the ellipse\"\"\"\n        ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.066,
+            0.887,
+            0.136
+          ],
+          "level": 2,
+          "content": "Designing a Game Class: Animation"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.066,
+            0.887,
+            0.137
+          ],
+          "level": 2,
+          "content": "Designing a Game Class: Animation"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.185,
+            0.504,
+            0.233
+          ],
+          "level": 2,
+          "content": "class Animation(game2d.GameApp):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.234,
+            0.348,
+            0.285
+          ],
+          "content": "\"\"\" App to animate an"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.328,
+            0.267,
+            0.377
+          ],
+          "content": "def start(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.377,
+            0.496,
+            0.429
+          ],
+          "content": "\"\"\"Initializes the game loop. \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.406,
+            0.248,
+            0.635,
+            0.353
+          ],
+          "content": "e n a c rc e. Parent class that does hard stuff"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.709,
+            0.217,
+            0.941,
+            0.271
+          ],
+          "content": "See animation.py"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.522,
+            0.321,
+            0.571
+          ],
+          "level": 2,
+          "content": "def update(self,dt):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.569,
+            0.52,
+            0.619
+          ],
+          "content": "\"\"\"Changes the ellipse position.\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.591,
+            0.449,
+            0.89,
+            0.559
+          ],
+          "content": "Loop initialization Do NOT use \\_\\_init"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.517,
+            0.631,
+            0.673,
+            0.689
+          ],
+          "content": "Loop body"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.065,
+            0.712,
+            0.258,
+            0.761
+          ],
+          "level": 2,
+          "content": "def draw(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.76,
+            0.395,
+            0.813
+          ],
+          "content": "\"\"\"Draws the ellipse\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.473,
+            0.771,
+            0.741,
+            0.881
+          ],
+          "content": "Use method draw() defined in GObject"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.602,
+            0.952
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.861,
+            0.135
+          ],
+          "level": 2,
+          "content": "How Do We Change Animations?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.207,
+            0.732,
+            0.27
+          ],
+          "content": "• Remember the Pig game application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.297,
+            0.799,
+            0.351
+          ],
+          "content": "§ There were two turns: player and opponent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.375,
+            0.705,
+            0.43
+          ],
+          "content": "§ Each of those had its own while loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.461,
+            0.829,
+            0.523
+          ],
+          "content": "• Same for animations: each is its own loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.554,
+            0.723,
+            0.615
+          ],
+          "content": "• But we cannot write our own loops!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.642,
+            0.721,
+            0.695
+          ],
+          "content": "§ We did not write the loop; it is hidden"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.724,
+            0.679,
+            0.779
+          ],
+          "content": "§ We only write the **body** of the loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.803,
+            0.75,
+            0.859
+          ],
+          "content": "§ Writing our own loop “blocks” drawing"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.921,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.135,
+            0.067,
+            0.865,
+            0.138
+          ],
+          "level": 2,
+          "content": "Understanding a GUI Application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.384,
+            0.427,
+            0.443
+          ],
+          "content": "Update"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.32,
+            0.631,
+            0.412,
+            0.68
+          ],
+          "content": "Draw"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.505,
+            0.353,
+            0.751,
+            0.46
+          ],
+          "content": "If we write a while-loop here…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.587,
+            0.743,
+            0.687
+          ],
+          "content": "…it only gets drawn once here"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.208,
+            0.067,
+            0.791,
+            0.137
+          ],
+          "level": 2,
+          "content": "Solution: Application State"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.432,
+            0.26
+          ],
+          "content": "• **Idea:** Interleave loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.281,
+            0.464,
+            0.331
+          ],
+          "content": "§ Write body for each loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.35,
+            0.463,
+            0.401
+          ],
+          "content": "§ Pick right body in update"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.423,
+            0.474,
+            0.481
+          ],
+          "content": "• **State**: Current loop body"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.502,
+            0.47,
+            0.553
+          ],
+          "content": "§ Playing game vs. pausing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.569,
+            0.402,
+            0.617
+          ],
+          "content": "§ Choice of animation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.644,
+            0.422,
+            0.696
+          ],
+          "content": "• Add an attribute state"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.721,
+            0.475,
+            0.769
+          ],
+          "content": "§ Method update() checks it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.791,
+            0.443,
+            0.839
+          ],
+          "content": "§ Executes correct helper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.201,
+            0.846,
+            0.251
+          ],
+          "content": "State STATE\\_CIRCLE"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.649,
+            0.257,
+            0.882,
+            0.541
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.564,
+                0.575,
+                0.917,
+                0.627
+              ],
+              "content": "State STATE\\_HORIZONTAL"
+            }
+          ],
+          "image_source": "images/page_32_image_11.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.596,
+            0.659,
+            0.911,
+            0.718
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_13.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.66,
+            0.79,
+            0.828,
+            0.841
+          ],
+          "content": "See state.py"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.208,
+            0.067,
+            0.791,
+            0.136
+          ],
+          "level": 2,
+          "content": "Solution: Application State"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.432,
+            0.261
+          ],
+          "content": "• **Idea:** Interleave loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.28,
+            0.464,
+            0.331
+          ],
+          "content": "§ Write body for each loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.35,
+            0.462,
+            0.401
+          ],
+          "content": "§ Pick right body in update"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.423,
+            0.474,
+            0.481
+          ],
+          "content": "• **State**: Current loop body"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.501,
+            0.47,
+            0.553
+          ],
+          "content": "§ Playing game vs. pausing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.569,
+            0.402,
+            0.617
+          ],
+          "content": "§ Choice of animation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.643,
+            0.422,
+            0.696
+          ],
+          "content": "• Add an attribute state"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.721,
+            0.475,
+            0.769
+          ],
+          "content": "§ Method update() checks it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.791,
+            0.443,
+            0.839
+          ],
+          "content": "§ Executes correct helper"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.198,
+            0.739,
+            0.241
+          ],
+          "content": "def update(self,dt):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.249,
+            0.868,
+            0.293
+          ],
+          "content": "\"\"\"Animates current state \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.349,
+            0.889,
+            0.447
+          ],
+          "content": "\\# Determine the current state self.\\_determineState()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.509,
+            0.964,
+            0.873
+          ],
+          "content": "\\# Process the states if self.state==STATE\\_CIRCLE: self.\\_animateCircle() elif self.state==STATE\\_HORIZONTAL: self.\\_animateHorizontal() elif self.state==STATE\\_VERTICAL: self.\\_animateVertical()"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.267,
+            0.067,
+            0.733,
+            0.137
+          ],
+          "level": 2,
+          "content": "Aside: Storyboarding"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.205,
+            0.547,
+            0.259
+          ],
+          "level": 2,
+          "content": "• App design uses storyboards"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.275,
+            0.532,
+            0.321
+          ],
+          "content": "§ Illustrations of different views"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.338,
+            0.505,
+            0.386
+          ],
+          "content": "§ Diagrams how views switch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.403,
+            0.446,
+            0.453
+          ],
+          "content": "§ Important for UI design"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.471,
+            0.488,
+            0.523
+          ],
+          "level": 2,
+          "content": "• Each storyboard is a state"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.542,
+            0.507,
+            0.59
+          ],
+          "content": "§ They explain state transition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.605,
+            0.524,
+            0.652
+          ],
+          "content": "§ But each state picture is static"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.671,
+            0.472,
+            0.719
+          ],
+          "content": "§ (But often that Is enough)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.737,
+            0.513,
+            0.791
+          ],
+          "level": 2,
+          "content": "• Purpose of tools like Figma"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.09,
+            0.809,
+            0.452,
+            0.857
+          ],
+          "level": 2,
+          "content": "§ Taught in INFO courses"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.587,
+            0.179,
+            0.877,
+            0.519
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_image_11.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.586,
+            0.552,
+            0.877,
+            0.892
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_image_12.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.179,
+            0.067,
+            0.817,
+            0.135
+          ],
+          "level": 2,
+          "content": "How Do We Represent State?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.205,
+            0.412,
+            0.255
+          ],
+          "level": 2,
+          "content": "• Use an enumeration"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.274,
+            0.389,
+            0.322
+          ],
+          "content": "§ List of fixed values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.337,
+            0.415,
+            0.385
+          ],
+          "content": "§ Each value a variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.403,
+            0.447,
+            0.451
+          ],
+          "content": "§ Variable is a state name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.469,
+            0.44,
+            0.527
+          ],
+          "content": "• In Java/C this is a type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.539,
+            0.459,
+            0.589
+          ],
+          "content": "§ But we use int in Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.604,
+            0.462,
+            0.653
+          ],
+          "content": "§ Achieves the same result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.672,
+            0.448,
+            0.724
+          ],
+          "content": "• Affects state **invariant**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.743,
+            0.416,
+            0.793
+          ],
+          "content": "§ Should not be any int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.807,
+            0.398,
+            0.855
+          ],
+          "content": "§ Should be in the list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.512,
+            0.199,
+            0.943,
+            0.305
+          ],
+          "continues_prev": true,
+          "content": "\\# state before the game has started STATE\\_INACTIVE = 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.339,
+            0.912,
+            0.445
+          ],
+          "content": "\\# state when loading a new wave STATE\\_LOADING = 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.471,
+            0.905,
+            0.579
+          ],
+          "content": "\\# state when the wave is in play STATE\\_ACTIVE = 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.607,
+            0.904,
+            0.654
+          ],
+          "content": "\\# state when we pause the game"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.664,
+            0.777,
+            0.712
+          ],
+          "content": "STATE\\_PAUSED = 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.741,
+            0.928,
+            0.837
+          ],
+          "content": "\\# state when the game is complete STATE\\_COMPLETE = 5"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.187,
+            0.977,
+            0.869
+          ],
+          "sub_type": "code",
+          "content": "```python\n# The state variables\nSTATE_PLAYER = 1\nSTATE_AIBOT = 2\nSTATE_COMPLETE = 3\n\nclass Pig(object):\n    \"\"\"An application to play the game pig.\"\"\"\n\n    def playMove(self):          # The update() method\n        \"\"\"Plays a single game move in the game of Pig\"\"\"\n        if self._state == STATE_PLAYER:\n            self._do_player()\n        elif self._state == STATE_AIBOT:\n            self._do_aibot()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.066,
+            0.866,
+            0.137
+          ],
+          "level": 2,
+          "content": "The Refactored Pig Game (Again)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.133,
+            0.067,
+            0.866,
+            0.136
+          ],
+          "level": 2,
+          "content": "The Refactored Pig Game (Again)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.197,
+            0.271,
+            0.416
+          ],
+          "content": "\\# The state variables STATE\\_PLAYER = 1 STATE\\_AIBOT = 2 STATE\\_COMPLETE = 3 V"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.436,
+            0.208,
+            0.476
+          ],
+          "content": "class Pig(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.336,
+            0.223,
+            0.598,
+            0.287
+          ],
+          "content": "Picks loop body"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.336,
+            0.357,
+            0.598,
+            0.422
+          ],
+          "content": "Stops entire app"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.064,
+            0.484,
+            0.461,
+            0.526
+          ],
+          "content": "\"\"\"An application to play the game pig. \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.579,
+            0.261,
+            0.621
+          ],
+          "content": "def playMove(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.339,
+            0.579,
+            0.569,
+            0.621
+          ],
+          "content": "\\# The update() method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.091,
+            0.628,
+            0.469,
+            0.767
+          ],
+          "content": "\"\"\"Plays a single game move in the gam if self.\\_state == STATE\\_PLAYER: self.\\_do\\_player()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.094,
+            0.769,
+            0.421,
+            0.864
+          ],
+          "content": "elif self.\\_state == STATE\\_AIBOT: self.\\_do\\_aibot()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.483,
+            0.673,
+            0.665,
+            0.737
+          ],
+          "content": "Loop body"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.484,
+            0.789,
+            0.666,
+            0.854
+          ],
+          "content": "Loop body"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "38"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.203,
+            0.067,
+            0.794,
+            0.128
+          ],
+          "level": 2,
+          "content": "When Do We Switch State?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.205,
+            0.683,
+            0.263
+          ],
+          "content": "• We switch for one of two reasons"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.287,
+            0.835,
+            0.343
+          ],
+          "content": "§ Can be the result of an event (e.g. game over)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.843,
+            0.417
+          ],
+          "content": "§ Can be the result of an input (e.g. a key press)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.439,
+            0.875,
+            0.499
+          ],
+          "content": "• Checks for this at the start or end of update()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.522,
+            0.647,
+            0.577
+          ],
+          "content": "§ At the **beginning** if **input driven**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.596,
+            0.543,
+            0.647
+          ],
+          "content": "§ At the **end** if **event driven**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.675,
+            0.282,
+            0.735
+          ],
+          "level": 2,
+          "content": "• Examples:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.755,
+            0.644,
+            0.809
+          ],
+          "content": "§ Refactored pig3.py is it at the end"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.679,
+            0.554,
+            0.904,
+            0.838
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.829,
+            0.669,
+            0.885
+          ],
+          "content": "§ Animated state.py at the beginning"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "39"
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.33,
+            0.067,
+            0.67,
+            0.137
+          ],
+          "level": 2,
+          "content": "Checking Input"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.175,
+            0.221,
+            0.348,
+            0.278
+          ],
+          "level": 2,
+          "content": "Keyboard"
+        },
+        {
+          "type": "index",
+          "bbox": [
+            0.035,
+            0.314,
+            0.95,
+            0.951
+          ],
+          "content": "- - is\\_key\\_down(key)\n- - Returns True if key is down\n- - key is a string ('a' or 'space')\n- - Empty string means any key\n- - is\\_key\\_pressed(key)\n- - Returns True if key pressed\n- - key not down prev. frame\n- - is\\_key\\_released(key)\n- - Returns True if key released\n- - key was down prev. frame\n- - touch\n- - **Attribute** giving a position\n- - Stored as a Point2 object\n- - But None if no touch\n- - is\\_touch\\_pressed()\n- - True if touch pressed\n- - touch was None prev. frame\n- - is\\_touch\\_released()\n- - True if touch released\n- - touch not None prev. frame"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.62,
+            0.22,
+            0.853,
+            0.273
+          ],
+          "level": 2,
+          "content": "Mouse/Touch"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "40"
+        }
+      ]
+    },
+    {
+      "page_idx": 40,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.33,
+            0.067,
+            0.671,
+            0.138
+          ],
+          "level": 2,
+          "content": "Checking Input"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.174,
+            0.219,
+            0.35,
+            0.279
+          ],
+          "level": 2,
+          "content": "Keyboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.328,
+            0.321,
+            0.381
+          ],
+          "content": "• is\\_key\\_down(key)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.391,
+            0.472,
+            0.439
+          ],
+          "content": "§ Returns True if key is down"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.445,
+            0.467,
+            0.494
+          ],
+          "content": "§ key is a string ('a' or 'space')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.503,
+            0.354,
+            0.553
+          ],
+          "content": "§ Empty string mean"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.044,
+            0.559,
+            0.35,
+            0.612
+          ],
+          "content": "• is\\_key\\_pressed(key)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.377,
+            0.516,
+            0.623,
+            0.623
+          ],
+          "level": 2,
+          "content": "any ey All accessed from • is\\_tself.input in App"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.619,
+            0.363,
+            0.667
+          ],
+          "content": "§ Returns True if key"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.676,
+            0.446,
+            0.725
+          ],
+          "content": "§ key **not** down prev. frame"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.044,
+            0.733,
+            0.36,
+            0.785
+          ],
+          "content": "• is\\_key\\_released(key)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.793,
+            0.473,
+            0.841
+          ],
+          "content": "§ Returns True if key released"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.849,
+            0.452,
+            0.897
+          ],
+          "content": "§ key was down prev. frame"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.619,
+            0.218,
+            0.855,
+            0.276
+          ],
+          "level": 2,
+          "content": "Mouse/Touch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.518,
+            0.329,
+            0.633,
+            0.378
+          ],
+          "content": "• touch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.39,
+            0.941,
+            0.441
+          ],
+          "content": "§ **Attribute** giving a position"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.446,
+            0.911,
+            0.494
+          ],
+          "content": "§ Stored as a Point2 object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.646,
+            0.501,
+            0.865,
+            0.55
+          ],
+          "content": "None if no touch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.644,
+            0.559,
+            0.808,
+            0.611
+          ],
+          "content": "h\\_pressed()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.635,
+            0.617,
+            0.862,
+            0.667
+          ],
+          "content": "ue if touch pressed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.676,
+            0.947,
+            0.725
+          ],
+          "content": "§ touch was None prev. frame"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.519,
+            0.733,
+            0.817,
+            0.783
+          ],
+          "content": "• is\\_touch\\_released()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.792,
+            0.871,
+            0.841
+          ],
+          "content": "§ True if touch released"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.849,
+            0.943,
+            0.897
+          ],
+          "content": "§ touch **not** None prev. frame"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.918,
+            0.115,
+            0.95
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.601,
+            0.951
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "41"
+        }
+      ]
+    },
+    {
+      "page_idx": 41,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.147,
+            0.433,
+            0.844,
+            0.503
+          ],
+          "level": 2,
+          "content": "Next Time: Complex User Input"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.921,
+            0.114,
+            0.947
+          ],
+          "content": "11/12/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.95
+          ],
+          "content": "State-Based Applications"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": "42"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 42,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 40,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 41,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

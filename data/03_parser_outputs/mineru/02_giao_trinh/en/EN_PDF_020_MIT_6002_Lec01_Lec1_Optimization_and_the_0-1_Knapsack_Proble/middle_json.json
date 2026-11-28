@@ -1,0 +1,4096 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 1",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2017-03-16T16:38:52+05:30",
+      "modified_at": "2017-03-16T17:19:32+05:30",
+      "creator_application": "PowerPoint",
+      "producer_application": "Acrobat Distiller 9.0.0 (Windows)",
+      "page_count": 31,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 792,
+          "height_pt": 612
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.409,
+            0.824,
+            0.604
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Introduction and Optimization Problems"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.128,
+            0.635,
+            0.298,
+            0.676
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "John Guttag"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.128,
+            0.694,
+            0.761,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT Department of Electrical Engineering and Computer Science"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.866,
+            0.908,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.093,
+            0.501,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 Prerequisites"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.208,
+            0.88,
+            0.301
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Experience writing object-oriented programs in Python\n◦ Preferably in Python 3.5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.121,
+            0.331,
+            0.875,
+            0.376
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Familiarity with concepts of computational complexity"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.12,
+            0.399,
+            0.681,
+            0.444
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Familiarity with some simple algorithms"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.121,
+            0.469,
+            0.368,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■6.0001 sufficient"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.441,
+            0.865,
+            0.548,
+            0.893
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Question 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.865,
+            0.908,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.129,
+            0.092,
+            0.631,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Some Administrative Things"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.119,
+            0.206,
+            0.315,
+            0.246
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Problem sets"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.138,
+            0.254,
+            0.607,
+            0.338
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Programming problems designed to\n  - Improve your programming skills"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.155,
+            0.344,
+            0.587,
+            0.38
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Help you learn the conceptual material"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.12,
+            0.404,
+            0.353,
+            0.444
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Finger exercises"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.137,
+            0.45,
+            0.594,
+            0.57
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Very small programming problems designed to help you learn a single programming concept"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.119,
+            0.592,
+            0.584,
+            0.635
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Reading assignments in textbook"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.137,
+            0.641,
+            0.597,
+            0.756
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Another take on and more details about material covered by lectures and problem sets"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.119,
+            0.781,
+            0.44,
+            0.821
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Exam: based on above"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 9,
+          "bbox": [
+            0.621,
+            0.264,
+            0.908,
+            0.734
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 9,
+              "bbox": [
+                0.621,
+                0.264,
+                0.908,
+                0.734
+              ],
+              "image_path": "images/page_2_image_9.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.653,
+            0.372,
+            0.86,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Introduction to Computation and Programming Using Python"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.865,
+            0.909,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.728,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "How Does It Compare to 6.0001?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.208,
+            0.773,
+            0.348
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Programming assignments a bit easier\n  - Focus more on the problem to be solved than on programming"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.375,
+            0.552,
+            0.416
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Lecture content more abstract"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.442,
+            0.593,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Lectures will be a bit faster paced"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.121,
+            0.513,
+            0.845,
+            0.605
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Less about learning to program, more about dipping your toe into data science"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.865,
+            0.909,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.701,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Honing Your Programming Skills"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.206,
+            0.557,
+            0.252
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ A few additional bits of Python"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.276,
+            0.433,
+            0.322
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Software engineering"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.347,
+            0.349,
+            0.393
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Using packages"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.12,
+            0.416,
+            0.592,
+            0.463
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "How do you get to Carnegie Hall?"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.865,
+            0.909,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.545,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Computational Models"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.118,
+            0.211,
+            0.83,
+            0.299
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Using computation to help understand the world in which we live"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.119,
+            0.325,
+            0.828,
+            0.421
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Experimental devices that help us to understand something that has happened or to predict the future"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.146,
+            0.424,
+            0.35,
+            0.644
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.146,
+                0.424,
+                0.35,
+                0.644
+              ],
+              "image_path": "images/page_5_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.526,
+            0.436,
+            0.834,
+            0.644
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.526,
+                0.436,
+                0.834,
+                0.644
+              ],
+              "image_path": "images/page_5_image_4.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 6,
+              "bbox": [
+                0.446,
+                0.651,
+                0.978,
+                0.692
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.118,
+            0.672,
+            0.421,
+            0.718
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Optimization models"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.741,
+            0.377,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Statistical models"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.81,
+            0.391,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Simulation models"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.865,
+            0.909,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.786,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Relevant Reading for Today's Lecture"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.209,
+            0.308,
+            0.249
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Section 12.1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.275,
+            0.553,
+            0.321
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Section 5.4 (lambda functions)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.866,
+            0.909,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.545,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Computational Models"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.119,
+            0.211,
+            0.83,
+            0.299
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Using computation to help understand the world in which we live"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.119,
+            0.325,
+            0.828,
+            0.421
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Experimental devices that help us to understand something that has happened or to predict the future"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.146,
+            0.424,
+            0.35,
+            0.644
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.146,
+                0.424,
+                0.35,
+                0.644
+              ],
+              "image_path": "images/page_7_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.118,
+            0.672,
+            0.419,
+            0.717
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Optimization models"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.527,
+            0.436,
+            0.834,
+            0.644
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.527,
+                0.436,
+                0.834,
+                0.644
+              ],
+              "image_path": "images/page_7_image_5.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 6,
+              "bbox": [
+                0.446,
+                0.651,
+                0.978,
+                0.692
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.118,
+            0.742,
+            0.377,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Statistical models"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.118,
+            0.81,
+            0.391,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Simulation models"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.865,
+            0.909,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.129,
+            0.091,
+            0.712,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What Is an Optimization Model?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.109,
+            0.209,
+            0.782,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An objective function that is to be maximized or minimized, e.g.,"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.126,
+            0.31,
+            0.85,
+            0.355
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Minimize time spent traveling from New York to Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.109,
+            0.38,
+            0.79,
+            0.471
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ A set of constraints (possibly empty) that must be honored, e.g.,"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.126,
+            0.479,
+            0.522,
+            0.522
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Cannot spend more than \\$100"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.126,
+            0.53,
+            0.572,
+            0.574
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Must be in Boston before 5:00PM"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.596,
+            0.475,
+            0.842,
+            0.803
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.596,
+                0.475,
+                0.842,
+                0.803
+              ],
+              "image_path": "images/page_8_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.451,
+            0.811,
+            0.983,
+            0.852
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.865,
+            0.909,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.092,
+            0.48,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Knapsack Problems"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 1,
+          "bbox": [
+            0.109,
+            0.163,
+            0.945,
+            0.866
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 1,
+              "bbox": [
+                0.109,
+                0.163,
+                0.945,
+                0.866
+              ],
+              "image_path": "images/page_9_image_1.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 2,
+              "bbox": [
+                0.235,
+                0.868,
+                0.767,
+                0.908
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.86,
+            0.909,
+            0.877,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.092,
+            0.461,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Knapsack Problem"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.208,
+            0.805,
+            0.3
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ You have limited strength, so there is a maximum weight knapsack that you can carry"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.324,
+            0.843,
+            0.369
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ You would like to take more stuff than you can carry"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.392,
+            0.847,
+            0.483
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■How do you choose which stuff to take and which to leave behind?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.121,
+            0.51,
+            0.314,
+            0.55
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Two variants"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.14,
+            0.561,
+            0.442,
+            0.603
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ 0/1 knapsack problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.14,
+            0.616,
+            0.7,
+            0.655
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Continuous or fractional knapsack problem"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.175,
+            0.662,
+            0.38,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.175,
+                0.662,
+                0.38,
+                0.861
+              ],
+              "image_path": "images/page_10_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.571,
+            0.654,
+            0.741,
+            0.865
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.571,
+                0.654,
+                0.741,
+                0.865
+              ],
+              "image_path": "images/page_10_image_8.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 9,
+              "bbox": [
+                0.241,
+                0.866,
+                0.773,
+                0.906
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.86,
+            0.909,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.779,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "My Least-favorite Knapsack Problem"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 1,
+          "bbox": [
+            0.093,
+            0.194,
+            0.308,
+            0.359
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 1,
+              "bbox": [
+                0.093,
+                0.194,
+                0.308,
+                0.359
+              ],
+              "image_path": "images/page_11_image_1.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 2,
+          "bbox": [
+            0.67,
+            0.216,
+            0.923,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 2,
+              "bbox": [
+                0.67,
+                0.216,
+                0.923,
+                0.398
+              ],
+              "image_path": "images/page_11_image_2.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.118,
+            0.422,
+            0.341,
+            0.598
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.118,
+                0.422,
+                0.341,
+                0.598
+              ],
+              "image_path": "images/page_11_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.354,
+            0.216,
+            0.649,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.354,
+                0.216,
+                0.649,
+                0.755
+              ],
+              "image_path": "images/page_11_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.7,
+            0.425,
+            0.912,
+            0.602
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.7,
+                0.425,
+                0.912,
+                0.602
+              ],
+              "image_path": "images/page_11_image_5.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.141,
+            0.636,
+            0.298,
+            0.84
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.141,
+                0.636,
+                0.298,
+                0.84
+              ],
+              "image_path": "images/page_11_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.672,
+            0.665,
+            0.911,
+            0.851
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.672,
+                0.665,
+                0.911,
+                0.851
+              ],
+              "image_path": "images/page_11_image_7.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 8,
+              "bbox": [
+                0.238,
+                0.856,
+                0.771,
+                0.898
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.86,
+            0.909,
+            0.877,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.128,
+            0.09,
+            0.75,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0/1 Knapsack Problem, Formalized"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.207,
+            0.879,
+            0.256
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Each item is represented by a pair, <value, weight>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.281,
+            0.875,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■The knapsack can accommodate items with a total weight of no more than w"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.12,
+            0.405,
+            0.844,
+            0.549
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ A vector, L, of length n, represents the set of available items. Each element of the vector is an item"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.12,
+            0.578,
+            0.88,
+            0.728
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A vector, "
+            },
+            {
+              "type": "equation_inline",
+              "content": "V"
+            },
+            {
+              "type": "text",
+              "content": ", of length "
+            },
+            {
+              "type": "equation_inline",
+              "content": "n"
+            },
+            {
+              "type": "text",
+              "content": ", is used to indicate whether or not items are taken. If "
+            },
+            {
+              "type": "equation_inline",
+              "content": "V[i] = 1"
+            },
+            {
+              "type": "text",
+              "content": ", item "
+            },
+            {
+              "type": "equation_inline",
+              "content": "I[i]"
+            },
+            {
+              "type": "text",
+              "content": " is taken. If "
+            },
+            {
+              "type": "equation_inline",
+              "content": "V[i] = 0"
+            },
+            {
+              "type": "text",
+              "content": ", item "
+            },
+            {
+              "type": "equation_inline",
+              "content": "I[i]"
+            },
+            {
+              "type": "text",
+              "content": " is not taken"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.455,
+            0.909,
+            0.544,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.86,
+            0.908,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.128,
+            0.091,
+            0.749,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0/1 Knapsack Problem, Formalized"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.194,
+            0.274,
+            0.606,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Find a V that maximizes"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 2,
+          "bbox": [
+            0.254,
+            0.346,
+            0.552,
+            0.496
+          ],
+          "image_path": "images/page_13_equation_2.jpg",
+          "content": "\\sum_ {i = 0} ^ {n - 1} V [ i ] * I [ i ]. v a l u e"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.263,
+            0.526,
+            0.762,
+            0.576
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "subject to the constraint that"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 4,
+          "bbox": [
+            0.269,
+            0.598,
+            0.655,
+            0.745
+          ],
+          "image_path": "images/page_13_equation_4.jpg",
+          "content": "\\sum_ {i = 0} ^ {n - 1} V [ i ] ^ {*} I [ i ]. w e i g h t \\leq w"
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.909,
+            0.544,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.86,
+            0.909,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.529,
+            0.147
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Brute Force Algorithm"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.208,
+            0.884,
+            0.344
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■1. Enumerate all possible combinations of items. That is to say, generate all subsets of the set of items. This is called the power set."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.369,
+            0.842,
+            0.461
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■2. Remove all of the combinations whose total units exceeds the allowed weight."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.12,
+            0.486,
+            0.85,
+            0.578
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■3. From the remaining combinations choose any one whose value is the largest."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.86,
+            0.908,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.472,
+            0.144
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Often Not Practical"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.208,
+            0.437,
+            0.254
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■How big is power set?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.121,
+            0.276,
+            0.221,
+            0.318
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Recall"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.139,
+            0.328,
+            0.887,
+            0.448
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• A vector, V, of length n, is used to indicate whether or not items are taken. If  "
+            },
+            {
+              "type": "equation_inline",
+              "content": "V[i] = 1"
+            },
+            {
+              "type": "text",
+              "content": " , item I[i] is taken. If  "
+            },
+            {
+              "type": "equation_inline",
+              "content": "V[i] = 0"
+            },
+            {
+              "type": "text",
+              "content": " , item I[i] is not taken"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.12,
+            0.474,
+            0.789,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ How many possible different values can V have?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.139,
+            0.527,
+            0.87,
+            0.61
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- As many different binary numbers as can be represented in "
+            },
+            {
+              "type": "equation_inline",
+              "content": "n"
+            },
+            {
+              "type": "text",
+              "content": " bits"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.12,
+            0.639,
+            0.886,
+            0.784
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ For example, if there are 100 items to choose from, the power set is of size?\n◦ 1,267,650,600,228,229,401,496,703,205,376"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.441,
+            0.864,
+            0.549,
+            0.894
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Question 2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.455,
+            0.909,
+            0.544,
+            0.927
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.86,
+            0.908,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.129,
+            0.092,
+            0.599,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Are We Just Being Stupid?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.209,
+            0.249,
+            0.251
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Alas, no"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.275,
+            0.781,
+            0.322
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■0/1 knapsack problem is inherently exponential"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.346,
+            0.375,
+            0.391
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- But don’t despair"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.86,
+            0.908,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.849,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Greedy Algorithm a Practical Alternative"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.204,
+            0.788,
+            0.285
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■while knapsack not full\nput “best” available item in knapsack"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.121,
+            0.329,
+            0.5,
+            0.371
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ But what does best mean?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.14,
+            0.381,
+            0.343,
+            0.419
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Most valuable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.14,
+            0.435,
+            0.362,
+            0.473
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Least expensive"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.14,
+            0.484,
+            0.407,
+            0.525
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Highest value/units"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.86,
+            0.909,
+            0.878,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.128,
+            0.092,
+            0.346,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.108,
+            0.212,
+            0.513,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ You are about to sit down to a meal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.109,
+            0.328,
+            0.481,
+            0.515
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ You know how much you value different foods, e.g., you like donuts more than apples"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.109,
+            0.538,
+            0.506,
+            0.722
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- But you have a calorie budget, e.g., you don’t want to consume more than 750 calories"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.748,
+            0.469,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Choosing what to eat is a knapsack problem"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.86,
+            0.909,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.129,
+            0.094,
+            0.276,
+            0.144
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A Menu"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 1,
+          "bbox": [
+            0.129,
+            0.239,
+            0.818,
+            0.409
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 1,
+              "bbox": [
+                0.129,
+                0.239,
+                0.818,
+                0.409
+              ],
+              "image_path": "images/page_19_table_1.jpg",
+              "content": "<table><tr><td>Food</td><td>wine</td><td>beer</td><td>pizza</td><td>burger</td><td>fries</td><td>coke</td><td>apple</td><td>donut</td></tr><tr><td>Value</td><td>89</td><td>90</td><td>30</td><td>50</td><td>90</td><td>79</td><td>90</td><td>10</td></tr><tr><td>calories</td><td>123</td><td>154</td><td>258</td><td>354</td><td>365</td><td>150</td><td>95</td><td>195</td></tr></table>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.556,
+            0.88,
+            0.645
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Let’s look at a program that we can use to decide what to order"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.86,
+            0.908,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.091,
+            0.323,
+            0.145
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Food"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.172,
+            0.877,
+            0.897
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.088,
+                0.172,
+                0.877,
+                0.897
+              ],
+              "content": "class Food(object):\n    def __init__(self, n, v, w):\n        self.name = n\n        self.value = v\n        self.calories = w\n\n    def getValue(self):\n        return self.value\n\n    def getCost(self):\n        return self.calories\n\n    def density(self):\n        return self.getValue()/self.cost()\n\n    def __str__(self):\n        return self.name + ':<' + str(self.value)\\n        + ', ' + str(self.calories) + '>'"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.455,
+            0.909,
+            0.544,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.86,
+            0.908,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.505,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Build Menu of Foods"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.09,
+            0.201,
+            0.889,
+            0.605
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.09,
+                0.201,
+                0.889,
+                0.605
+              ],
+              "content": "def buildMenu(names, values, calories):\n    \"\"\"names, values, calories lists of same length.\n      name a list of strings\n      values and calories lists of numbers\n      returns list of Foods\"\"\"\n    menu = []\n    for i in range(len(values)):\n        menu.append(Food(names[i], values[i],\n                             calories[i]))\n    return menu"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.86,
+            0.908,
+            0.877,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.755,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementation of Flexible Greedy"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.09,
+            0.2,
+            0.888,
+            0.746
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.09,
+                0.2,
+                0.888,
+                0.746
+              ],
+              "content": "def greedy(items, maxCost, keyFunction):\n    \"\"\"Assumes items a list, maxCost >= 0,\n        keyFunction maps elements of items to numbers\"\"\"\n    itemCopy = sorted(items, key = keyFunction,\n        reverse = True)\n    result = []\n    totalValue, totalCost = 0.0, 0.0\n\n    for i in range(len(itemsCopy)):\n        if (totalCost+itemCopy[i].getCost()) <= maxCost:\n            result.append(itemsCopy[i])\n            totalCost += itemCopy[i].getCost()\n            totalValue += itemCopy[i].getValue()\n\n    return (result, totalValue)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.86,
+            0.909,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.129,
+            0.091,
+            0.52,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Algorithmic Efficiency"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.063,
+            0.198,
+            0.887,
+            0.677
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.063,
+                0.198,
+                0.887,
+                0.677
+              ],
+              "content": "def greedy(items, maxCost, keyFunction):\n    itemsCopy = sorted(items, key = keyFunction,\n        reverse = True)\n    result = []\n    totalValue, totalCost = 0.0, 0.0\n\n    for i in range(len(itemsCopy)):\n        if (totalCost+itemsCopy[i].getCost()) <= maxCost:\n            result.append(itemsCopy[i])\n            totalCost += itemsCopy[i].getCost()\n            totalValue += itemsCopy[i].getValue()\n\n    return (result, totalValue)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.909,
+            0.544,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.441,
+            0.864,
+            0.549,
+            0.894
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Question 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.86,
+            0.909,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.092,
+            0.368,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using greedy"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.09,
+            0.202,
+            0.859,
+            0.387
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.09,
+                0.202,
+                0.859,
+                0.387
+              ],
+              "content": "def testGreedy(items, constraint, keyFunction):\n    taken, val = greedy(items, constraint, keyFunction)\n    print('Total value of items taken =', val)\n    for item in taken:\n        print('      ', item)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.86,
+            0.909,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.092,
+            0.368,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using greedy"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.079,
+            0.199,
+            0.89,
+            0.673
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.079,
+                0.199,
+                0.89,
+                0.673
+              ],
+              "content": "def testGreedys(maxUnits):\n    print('Use greedy by value to allocate', maxUnits,\n        'calories')\n    testGreedy(foods, maxUnits, Food.getValue)\n    print('\\nUse greedy by cost to allocate', maxUnits,\n        'calories')\n    testGreedy(foods, maxUnits,\n        lambda x: 1/Food.getCost(x))\n    print('\\nUse greedy by density to allocate', maxUnits,\n        'calories')\n    testGreedy(foods, maxUnits, Food.density)\n\ntestGreedys(800)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.91,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.86,
+            0.909,
+            0.878,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.269,
+            0.144
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "lambda"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.118,
+            0.211,
+            0.74,
+            0.254
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- lambda used to create anonymous functions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.136,
+            0.261,
+            0.651,
+            0.306
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- lambda <id₁, id₂, ... idₙ>: <expression>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.137,
+            0.316,
+            0.59,
+            0.358
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Returns a function of n arguments"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.118,
+            0.385,
+            0.502,
+            0.43
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Can be very handy, as here"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.455,
+            0.929,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Possible to write amazing complicated lambda expressions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.118,
+            0.524,
+            0.466,
+            0.568
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Don't—use def instead"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.456,
+            0.91,
+            0.544,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.859,
+            0.908,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.092,
+            0.368,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using greedy"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.2,
+            0.883,
+            0.872
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.08,
+                0.2,
+                0.883,
+                0.872
+              ],
+              "content": "def testGreedys(foods, maxUnits):\n    print('Use greedy by value to allocate', maxUnits,\n        'calories')\n    testGreedy(foods, maxUnits, Food.getValue)\n    print('\\nUse greedy by cost to allocate', maxUnits,\n        'calories')\n    testGreedy(foods, maxUnits,\n        lambda x: 1/Food.cost(x))\n    print('\\nUse greedy by density to allocate', maxUnits,\n        'calories')\n    testGreedy(foods, maxUnits, Food.density)\n\nnames = ['wine', 'beer', 'pizza', 'burger', 'fries',\n        'cola', 'apple', 'donut', 'cake']\nvalues = [89,90,95,100,90,79,50,10]\ncalories = [123,154,258,354,365,150,95,195]\nfoods = buildMenu(names, values, calories)\ntestGreedys(foods, 750)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.86,
+            0.909,
+            0.877,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.129,
+            0.091,
+            0.564,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Why Different Answers?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.211,
+            0.821,
+            0.304
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Sequence of locally “optimal” choices don’t always yield a globally optimal solution"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 2,
+          "bbox": [
+            0.219,
+            0.327,
+            0.707,
+            0.608
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 2,
+              "bbox": [
+                0.219,
+                0.327,
+                0.707,
+                0.608
+              ],
+              "image_path": "images/page_28_image_2.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.119,
+            0.675,
+            0.644,
+            0.772
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Is greedy by density always a winner?\n  - Try testGreedys(foods, 1000)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.456,
+            0.909,
+            0.543,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.86,
+            0.908,
+            0.877,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.129,
+            0.091,
+            0.651,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Pros and Cons of Greedy"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.208,
+            0.393,
+            0.253
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Easy to implement"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.276,
+            0.484,
+            0.322
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Computationally efficient"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.12,
+            0.625,
+            0.772,
+            0.722
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- But does not always yield the best solution\n  - Don’t even know how good the approximation is"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.12,
+            0.748,
+            0.843,
+            0.838
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In the next lecture we'll look at finding truly optimal solutions"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.455,
+            0.909,
+            0.544,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.859,
+            0.908,
+            0.878,
+            0.926
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.08,
+            0.09,
+            0.215,
+            0.138
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT OpenCourseWare\nhttps://ocw.mit.edu"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.2,
+            0.521,
+            0.251
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 Introduction to Computational Thinking and Data Science\nFall 2016"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.079,
+            0.315,
+            0.625,
+            0.339
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For information about citing these materials or our Terms of Use, visit: https://ocw.mit.edu/terms."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

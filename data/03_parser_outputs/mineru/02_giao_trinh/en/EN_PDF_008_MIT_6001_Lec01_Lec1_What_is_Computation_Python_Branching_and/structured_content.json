@@ -1,0 +1,3402 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.431,
+            0.601,
+            0.543
+          ],
+          "level": 2,
+          "content": "WELCOME!"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.571,
+            0.792,
+            0.624
+          ],
+          "level": 2,
+          "content": "(download slides and .py files and follow along!)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.657,
+            0.387,
+            0.701
+          ],
+          "content": "6.0001 LECTU RE 1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.959,
+            0.547,
+            0.977
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.16,
+            0.278,
+            0.232
+          ],
+          "level": 2,
+          "content": "TODAY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.281,
+            0.325
+          ],
+          "content": "course info"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.418,
+            0.405
+          ],
+          "content": "what is computation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.433,
+            0.32,
+            0.484
+          ],
+          "content": "python basics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.51,
+            0.486,
+            0.561
+          ],
+          "content": "mathematical operations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.588,
+            0.512,
+            0.64
+          ],
+          "content": "python variables and types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.665,
+            0.886,
+            0.775
+          ],
+          "content": "NOTE: **slides and code files up before each lecture** o highly encourage you to download them before lecture"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.784,
+            0.674,
+            0.831
+          ],
+          "content": "o take notes and run code files when I do"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.843,
+            0.875,
+            0.893
+          ],
+          "content": "o bring computers to answer **in-class practice exercises!**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.161,
+            0.459,
+            0.231
+          ],
+          "level": 2,
+          "content": "COURSE INFO"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.277,
+            0.226,
+            0.327
+          ],
+          "content": "Grading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.337,
+            0.386,
+            0.381
+          ],
+          "content": "◦ approx. 20% Quiz"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.395,
+            0.389,
+            0.441
+          ],
+          "content": "◦ approx. 40% Final"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.455,
+            0.496,
+            0.5
+          ],
+          "content": "◦ approx. 30% Problem Sets"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.513,
+            0.604,
+            0.56
+          ],
+          "content": "◦ approx. 10% MITx Finger Exercises"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.161,
+            0.56,
+            0.231
+          ],
+          "level": 2,
+          "content": "COURSE POLICIES"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.277,
+            0.316,
+            0.322
+          ],
+          "level": 2,
+          "content": "Collaboration"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.337,
+            0.533,
+            0.382
+          ],
+          "content": "◦ may collaborate with anyone"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.395,
+            0.918,
+            0.487
+          ],
+          "content": "◦ required to write code independently and write names of all collaborators on submission"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.502,
+            0.901,
+            0.551
+          ],
+          "content": "◦ we will be running a code similarity program on all psets"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.582,
+            0.275,
+            0.625
+          ],
+          "level": 2,
+          "content": "Extensions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.641,
+            0.335,
+            0.682
+          ],
+          "content": "◦ **no extensions**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.698,
+            0.681,
+            0.743
+          ],
+          "content": "◦ **late days**, see course website for details"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.757,
+            0.92,
+            0.804
+          ],
+          "content": "◦ **drop and roll** weight of max two psets in final exam grade"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.817,
+            0.576,
+            0.862
+          ],
+          "content": "◦ should be EMERGENCY use only"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.161,
+            0.438,
+            0.231
+          ],
+          "level": 2,
+          "content": "RECITATIONS"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.275,
+            0.329,
+            0.321
+          ],
+          "level": 2,
+          "content": "not mandatory"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.345,
+            0.28,
+            0.39
+          ],
+          "level": 2,
+          "content": "two flavors"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.417,
+            0.73,
+            0.464
+          ],
+          "level": 2,
+          "content": "1) Lecture review: review lecture material"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.471,
+            0.396,
+            0.509
+          ],
+          "content": "o if you missed lecture"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.517,
+            0.72,
+            0.557
+          ],
+          "content": "o if you need a different take on the same concepts"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.563,
+            0.887,
+            0.651
+          ],
+          "level": 2,
+          "content": "2) Problem solving: teach you how to solve programming problems"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.659,
+            0.927,
+            0.7
+          ],
+          "content": "o useful if you don’t know how to set up pseudocode from pset words"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.707,
+            0.591,
+            0.745
+          ],
+          "content": "o we show a couple of harder questions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.753,
+            0.786,
+            0.793
+          ],
+          "content": "o walk you through how to approach solving the problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.801,
+            0.844,
+            0.839
+          ],
+          "content": "brainstorm code solution along with the recitation instructor"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.847,
+            0.426,
+            0.885
+          ],
+          "content": "o will post solutions after"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.16,
+            0.638,
+            0.231
+          ],
+          "level": 2,
+          "content": "FAST PACED COURSE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.277,
+            0.537,
+            0.324
+          ],
+          "content": "Position yourself to succeed!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.337,
+            0.973,
+            0.381
+          ],
+          "content": "◦ **read psets when they come out** and come back to them later"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.397,
+            0.646,
+            0.441
+          ],
+          "content": "◦ use late days in emergency situations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.474,
+            0.941,
+            0.521
+          ],
+          "content": "New to programming? **PRACTICE. PRACTICE? PRACTICE!**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.533,
+            0.749,
+            0.579
+          ],
+          "content": "◦ can’t passively absorb programming as a skill"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.591,
+            0.781,
+            0.637
+          ],
+          "content": "◦ download code before lecture and follow along"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.651,
+            0.468,
+            0.695
+          ],
+          "content": "◦ do MITx finger exercises"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.709,
+            0.747,
+            0.755
+          ],
+          "content": "◦ don’t be afraid to try out Python commands!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.418,
+            0.247,
+            0.54,
+            0.334
+          ],
+          "level": 2,
+          "content": "PROBLEM SOLVING"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.212,
+            0.505,
+            0.379,
+            0.592
+          ],
+          "level": 2,
+          "content": "KNOWLEDGE OF CONCEPTS"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.584,
+            0.505,
+            0.783,
+            0.59
+          ],
+          "level": 2,
+          "content": "PROGRAMMING SKILL"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.96,
+            0.911,
+            0.978
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.161,
+            0.287,
+            0.231
+          ],
+          "level": 2,
+          "content": "TOPICS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.278,
+            0.736,
+            0.327
+          ],
+          "content": "represent knowledge with **data structures**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.887,
+            0.405
+          ],
+          "content": "**iteration and recursion** as computational metaphors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.433,
+            0.723,
+            0.483
+          ],
+          "content": "**abstraction** of procedures and data types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.511,
+            0.903,
+            0.61
+          ],
+          "content": "**organize and modularize** systems using object classes and methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.64,
+            0.891,
+            0.691
+          ],
+          "content": "different classes of **algorithms**, searching and sorting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.719,
+            0.485,
+            0.769
+          ],
+          "content": "**complexity** of algorithms"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.159,
+            0.89,
+            0.232
+          ],
+          "level": 2,
+          "content": "WHAT DOES A COMPUTER DO"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.346,
+            0.326
+          ],
+          "content": "Fundamentally:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.336,
+            0.44,
+            0.381
+          ],
+          "content": "◦ performs **calculations**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.394,
+            0.586,
+            0.441
+          ],
+          "content": "a billion calculations per second!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.455,
+            0.402,
+            0.498
+          ],
+          "content": "◦ **remembers** results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.512,
+            0.532,
+            0.561
+          ],
+          "content": "100s of gigabytes of storage!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.59,
+            0.519,
+            0.639
+          ],
+          "content": "What kinds of calculations?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.651,
+            0.464,
+            0.697
+          ],
+          "content": "◦ **built-in** to the language"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.71,
+            0.692,
+            0.757
+          ],
+          "content": "◦ ones that **you define** as the programmer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.788,
+            0.726,
+            0.838
+          ],
+          "content": "computers only know what you tell them"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.159,
+            0.707,
+            0.231
+          ],
+          "level": 2,
+          "content": "TYPES OF KNOWLEDGE"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.027,
+            0.277,
+            0.713,
+            0.325
+          ],
+          "level": 2,
+          "content": "declarative knowledge is statements of fact."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.047,
+            0.337,
+            0.465,
+            0.429
+          ],
+          "content": "◦ someone will win a Google Cardboard before class ends"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.026,
+            0.461,
+            0.736,
+            0.511
+          ],
+          "level": 2,
+          "content": "imperative knowledge is a recipe or “how-to”."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.046,
+            0.52,
+            0.454,
+            0.567
+          ],
+          "content": "1) Students sign up for raffle"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.046,
+            0.579,
+            0.355,
+            0.626
+          ],
+          "content": "2) Ana opens her IDE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.046,
+            0.637,
+            0.942,
+            0.685
+          ],
+          "content": "3) Ana chooses a random number between 1<sup>st</sup> and n<sup>th</sup> responder"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.046,
+            0.697,
+            0.854,
+            0.745
+          ],
+          "content": "4) Ana finds the number in the responders sheet. Winner!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.159,
+            0.737,
+            0.233
+          ],
+          "level": 2,
+          "content": "A NUMERICAL EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.277,
+            0.896,
+            0.327
+          ],
+          "content": "square root of a number x is y such that $\\mathrm{y}^{*}\\mathrm{y} = \\mathrm{x}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.354,
+            0.887,
+            0.404
+          ],
+          "content": "recipe for deducing square root of a number x (16)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.413,
+            0.443,
+            0.461
+          ],
+          "content": "1) Start with a **guess**, g"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.471,
+            0.837,
+            0.564
+          ],
+          "content": "2) If g\\*g is **close enough** to x, stop and say g is the answer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.579,
+            0.904,
+            0.628
+          ],
+          "content": "3) Otherwise make a **new guess** by averaging g and x / g"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.639,
+            0.913,
+            0.687
+          ],
+          "content": "4) Using the new guess, **repeat** process until close enough"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.165,
+            0.696,
+            0.833,
+            0.912
+          ],
+          "content": "| g | g*g | x/g | (g+x/g)/2 |\n| --- | --- | --- | --- |\n| 3 | 9 | 16/3 | 4.17 |\n| 4.17 | 17.36 | 3.837 | 4.0035 |\n| 4.0035 | 16.0277 | 3.997 | 4.000002 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_table_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.99
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.16,
+            0.569,
+            0.232
+          ],
+          "level": 2,
+          "content": "WHAT IS A RECIPE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.355,
+            0.526,
+            0.405
+          ],
+          "content": "1) sequence of simple **steps**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.432,
+            0.865,
+            0.533
+          ],
+          "content": "2) **flow of control** process that specifies when each step is executed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.563,
+            0.71,
+            0.613
+          ],
+          "content": "3) a means of determining **when to stop**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.719,
+            0.418,
+            0.767
+          ],
+          "content": "1+2+3 = an **algorithm**!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.16,
+            0.855,
+            0.231
+          ],
+          "level": 2,
+          "content": "COMPUTERS ARE MACHINES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.279,
+            0.82,
+            0.325
+          ],
+          "content": "how to capture a recipe in a mechanical process"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.357,
+            0.478,
+            0.403
+          ],
+          "content": "**fixed program** computer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.415,
+            0.275,
+            0.456
+          ],
+          "content": "◦ calculator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.496,
+            0.501,
+            0.541
+          ],
+          "content": "**stored program** computer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.552,
+            0.699,
+            0.595
+          ],
+          "content": "◦ machine stores and executes instructions"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.159,
+            0.939,
+            0.233
+          ],
+          "level": 2,
+          "content": "BASIC MACHINE ARCHITECTURE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.405,
+            0.316,
+            0.592,
+            0.377
+          ],
+          "content": "MEMORY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.547,
+            0.35,
+            0.747
+          ],
+          "content": "CONTROL UNIT program counter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.547,
+            0.759,
+            0.687
+          ],
+          "content": "ARITHMETIC LOGI<u>C UNIT</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.705,
+            0.741,
+            0.744
+          ],
+          "content": "do primitive ops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.866,
+            0.409,
+            0.922
+          ],
+          "content": "INPUT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.493,
+            0.866,
+            0.675,
+            0.922
+          ],
+          "content": "OUTPUT"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.159,
+            0.922,
+            0.233
+          ],
+          "level": 2,
+          "content": "STORED PROGRAM COMPUTER"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.279,
+            0.829,
+            0.383
+          ],
+          "level": 2,
+          "content": "sequence of instructions stored inside computer ◦ built from predefined set of primitive instructions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.394,
+            0.41,
+            0.434
+          ],
+          "content": "1) arithmetic and logic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.445,
+            0.321,
+            0.485
+          ],
+          "content": "2) simple tests"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.497,
+            0.325,
+            0.537
+          ],
+          "content": "3) moving data"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.567,
+            0.758,
+            0.665
+          ],
+          "level": 2,
+          "content": "special program (interpreter) executes each instruction in order"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.679,
+            0.859,
+            0.725
+          ],
+          "content": "◦ use tests to change flow of control through sequence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.739,
+            0.361,
+            0.783
+          ],
+          "content": "◦ stop when done"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.161,
+            0.567,
+            0.231
+          ],
+          "level": 2,
+          "content": "BASIC PRIMITIVES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.914,
+            0.379
+          ],
+          "content": "Turing showed that you can **compute anything** using 6 primitives"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.407,
+            0.759,
+            0.509
+          ],
+          "content": "modern programming languages have more convenient set of primitives"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.538,
+            0.805,
+            0.586
+          ],
+          "content": "can abstract methods to **create new primitives**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.693,
+            0.916,
+            0.797
+          ],
+          "content": "anything computable in one language is computable in any other programming language"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.161,
+            0.59,
+            0.231
+          ],
+          "level": 2,
+          "content": "CREATING RECIPES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.277,
+            0.87,
+            0.378
+          ],
+          "content": "a programming language provides a set of primitive **operations**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.407,
+            0.86,
+            0.511
+          ],
+          "content": "**expressions** are complex but legal combinations of primitives in a programming language"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.537,
+            0.805,
+            0.641
+          ],
+          "content": "expressions and computations have **values** and meanings in a programming language"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.117,
+            0.757,
+            0.189
+          ],
+          "level": 2,
+          "content": "ASPECTS OF LANGUAGES"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.236,
+            0.415,
+            0.282
+          ],
+          "level": 2,
+          "content": "primitive constructs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.294,
+            0.338,
+            0.339
+          ],
+          "content": "◦ English: words"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.353,
+            0.8,
+            0.444
+          ],
+          "content": "◦ programming language: numbers, strings, simple operators"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.449,
+            0.666,
+            0.833
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.002,
+                0.839,
+                0.603,
+                0.887
+              ],
+              "content": "Word Cloud copyright [Michael Twardos](https://www.blogger.com/profile/13059549809775325178), All Right Reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+            }
+          ],
+          "image_source": "images/page_17_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.682,
+            0.443,
+            0.991,
+            0.829
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.66,
+            0.834,
+            0.993,
+            0.93
+          ],
+          "content": "Word Cloud copyright unknown, All Right Reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use](https://ocw.mit.edu/help/faq-fair-use/)/."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.16,
+            0.756,
+            0.232
+          ],
+          "level": 2,
+          "content": "ASPECTS OF LANGUAGES"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.282,
+            0.215,
+            0.325
+          ],
+          "level": 2,
+          "content": "syntax"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.334,
+            0.867,
+            0.384
+          ],
+          "content": "◦ English: \"cat dog boy\"   not syntactically valid"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.393,
+            0.822,
+            0.443
+          ],
+          "content": "\"cat hugs boy\"   syntactically valid"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.453,
+            0.908,
+            0.503
+          ],
+          "content": "◦ programming language: \"hi\"5   not syntactically valid"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.467,
+            0.511,
+            0.858,
+            0.56
+          ],
+          "content": "3.2\\*5   syntactically valid"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.503,
+            0.919,
+            0.613
+          ],
+          "content": "◦ programming language: 3. 2\\*5 → syntactically valid 3+\"hi\"→ static semantic error"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.386,
+            0.911,
+            0.493
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- English: \"I are hungry\" → syntactically valid but static semantic error\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.159,
+            0.756,
+            0.233
+          ],
+          "level": 2,
+          "content": "ASPECTS OF LANGUAGES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.85,
+            0.378
+          ],
+          "content": "**static semantics** is which syntactically valid strings have meaning"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.16,
+            0.756,
+            0.232
+          ],
+          "level": 2,
+          "content": "ASPECTS OF LANGUAGES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.278,
+            0.857,
+            0.428
+          ],
+          "content": "**semantics** is the meaning associated with a syntactically correct string of symbols with no static semantic errors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.44,
+            0.878,
+            0.533
+          ],
+          "content": "◦ English: can have many meanings \"Flying planes can be dangerous\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.547,
+            0.915,
+            0.643
+          ],
+          "content": "programming languages: have only one meaning but may not be what programmer intended"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.159,
+            0.845,
+            0.232
+          ],
+          "level": 2,
+          "content": "WHERE THINGS GO WRONG"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.281,
+            0.348,
+            0.324
+          ],
+          "level": 2,
+          "content": "syntactic errors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.337,
+            0.503,
+            0.382
+          ],
+          "content": "◦ common and easily caught"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.416,
+            0.44,
+            0.459
+          ],
+          "level": 2,
+          "content": "static semantic errors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.473,
+            0.903,
+            0.52
+          ],
+          "content": "◦ some languages check for these before running program"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.533,
+            0.598,
+            0.577
+          ],
+          "content": "◦ can cause unpredictable behavior"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.611,
+            0.89,
+            0.711
+          ],
+          "level": 2,
+          "content": "no semantic errors but different meaning than what programmer intended"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.724,
+            0.567,
+            0.769
+          ],
+          "content": "◦ program crashes, stops running"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.783,
+            0.431,
+            0.826
+          ],
+          "content": "◦ program runs forever"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.84,
+            0.859,
+            0.887
+          ],
+          "content": "◦ program gives an answer but different than expected"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.16,
+            0.644,
+            0.231
+          ],
+          "level": 2,
+          "content": "PYTHON PROGRAMS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.908,
+            0.381
+          ],
+          "content": "a **program** is a sequence of definitions and commands ◦ definitions **evaluated**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.395,
+            0.849,
+            0.443
+          ],
+          "content": "◦ commands **executed** by Python interpreter in a shell"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.474,
+            0.849,
+            0.575
+          ],
+          "content": "**commands** (statements) instruct interpreter to do something"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.603,
+            0.888,
+            0.703
+          ],
+          "content": "can be typed directly in a **shell** or stored in a **file** that is read into the shell and evaluated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.713,
+            0.874,
+            0.761
+          ],
+          "content": "◦ Problem Set 0 will introduce you to these in Anaconda"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.161,
+            0.327,
+            0.23
+          ],
+          "level": 2,
+          "content": "OBJECTS"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.278,
+            0.623,
+            0.327
+          ],
+          "level": 2,
+          "content": "programs manipulate data objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.432,
+            0.863,
+            0.533
+          ],
+          "content": "objects have a **type** that defines the kinds of things programs can do to them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.544,
+            0.828,
+            0.59
+          ],
+          "content": "◦ Ana is a human so she can walk, speak English, etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.602,
+            0.934,
+            0.65
+          ],
+          "content": "◦ Chewbacca is a wookie so he can walk, “mwaaarhrhh”, etc."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.683,
+            0.28,
+            0.729
+          ],
+          "level": 2,
+          "content": "objects are"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.74,
+            0.537,
+            0.785
+          ],
+          "content": "◦ scalar (cannot be subdivided)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.799,
+            0.905,
+            0.845
+          ],
+          "content": "◦ non-scalar (have internal structure that can be accessed)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.16,
+            0.542,
+            0.232
+          ],
+          "level": 2,
+          "content": "SCALAR OBJECTS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.278,
+            0.59,
+            0.326
+          ],
+          "content": "int – represent **integers**, ex. 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.355,
+            0.775,
+            0.403
+          ],
+          "content": "float – represent **real numbers**, ex. 3.27"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.433,
+            0.901,
+            0.482
+          ],
+          "content": "bool – represent **Boolean** values True and False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.511,
+            0.819,
+            0.562
+          ],
+          "content": "NoneType – **special** and has one value, None"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.588,
+            0.792,
+            0.64
+          ],
+          "content": "can use type() to see the type of an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.699,
+            0.324,
+            0.754
+          ],
+          "content": ">>> type (5)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.76,
+            0.158,
+            0.805
+          ],
+          "content": "int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.817,
+            0.366,
+            0.867
+          ],
+          "content": ">>> type(3.0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.875,
+            0.202,
+            0.919
+          ],
+          "content": "float"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.457,
+            0.66,
+            0.663,
+            0.924
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_chart_10.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.158,
+            0.807,
+            0.241
+          ],
+          "level": 2,
+          "content": "TYPE CONVERSIONS (CAST)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.279,
+            0.74,
+            0.325
+          ],
+          "content": "can **convert object of one type to another**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.766,
+            0.402
+          ],
+          "content": "float(3) converts integer 3 to float 3.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.433,
+            0.766,
+            0.481
+          ],
+          "content": "int(3.9) truncates float 3.9 to integer 3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.161,
+            0.709,
+            0.235
+          ],
+          "level": 2,
+          "content": "PRINTING TO CONSOLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.28,
+            0.818,
+            0.389
+          ],
+          "content": "to show output from code to a user, use print command u it's an"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.161,
+            0.454,
+            0.231
+          ],
+          "level": 2,
+          "content": "EXPRESSIONS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.878,
+            0.326
+          ],
+          "content": "**combine objects and operators** to form expressions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.356,
+            0.753,
+            0.405
+          ],
+          "content": "an expression has a **value**, which has a type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.434,
+            0.556,
+            0.481
+          ],
+          "content": "syntax for a simple expression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.493,
+            0.672,
+            0.539
+          ],
+          "content": "&lt;object&gt; &lt;operator&gt; &lt;object&gt;"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.157,
+            0.892,
+            0.237
+          ],
+          "level": 2,
+          "content": "OPERATORS ON ints and floats"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.271,
+            0.383,
+            0.331
+          ],
+          "content": "i+j → the **sum**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.349,
+            0.47,
+            0.409
+          ],
+          "content": "i-j → the **difference**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.427,
+            0.438,
+            0.487
+          ],
+          "content": "i \\* j → the **product**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.504,
+            0.378,
+            0.565
+          ],
+          "content": "i/j →**division**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.567,
+            0.328,
+            0.983,
+            0.413
+          ],
+          "continues_prev": true,
+          "content": "if both are ints, result is int if either or both are floats, result is float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.544,
+            0.523,
+            0.686,
+            0.567
+          ],
+          "content": "result is float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.741,
+            0.808,
+            0.797
+          ],
+          "content": "i%j → the **remainder** when i is divided by j"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.821,
+            0.543,
+            0.875
+          ],
+          "content": "i \\* \\* j → i to the **power** of j"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.16,
+            0.645,
+            0.232
+          ],
+          "level": 2,
+          "content": "SIMPLE OPERATIONS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.277,
+            0.755,
+            0.378
+          ],
+          "content": "parentheses used to tell Python to do these operations first"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.408,
+            0.865,
+            0.693
+          ],
+          "content": "**operator precedence** without parentheses ◦ \\*\\* ◦ \\* ◦ / ◦ + and – executed left to right, as appear in expression"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.068,
+            0.759,
+            0.232
+          ],
+          "level": 2,
+          "content": "BINDING VARIABLES AND VALUES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.276,
+            0.86,
+            0.375
+          ],
+          "content": "equal sign is an **assignment** of a value to a variable name"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.1,
+            0.385,
+            0.427,
+            0.457
+          ],
+          "content": "\\begin{array}{c c} \\text {variable} & \\text {value} \\\\ \\hline \\end{array}",
+          "image_source": "images/page_30_equation_2.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.087,
+            0.461,
+            0.372,
+            0.549
+          ],
+          "content": "\\boxed {\\mathrm{pi}} = \\boxed {3. 1 4 1 5 9}",
+          "image_source": "images/page_30_equation_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.092,
+            0.563,
+            0.446,
+            0.615
+          ],
+          "content": "pi\\_approx = 22/7"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.642,
+            0.617,
+            0.691
+          ],
+          "content": "value stored in computer memory"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.719,
+            0.633,
+            0.767
+          ],
+          "content": "an assignment binds name to value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.797,
+            0.854,
+            0.901
+          ],
+          "content": "retrieve value associated with name or variable by invoking the name, by typing pi"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.16,
+            0.839,
+            0.232
+          ],
+          "level": 2,
+          "content": "ABSTRACTING EXPRESSIONS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.727,
+            0.327
+          ],
+          "content": "why **give names** to values of expressions?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.357,
+            0.601,
+            0.402
+          ],
+          "content": "to **reuse names** instead of values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.433,
+            0.512,
+            0.481
+          ],
+          "content": "easier to change code later"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.51,
+            0.539,
+            0.665
+          ],
+          "sub_type": "code",
+          "content": "```txt\npi = 3.14159\nradius = 2.2\narea = pi*(radius**2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.162,
+            0.774,
+            0.235
+          ],
+          "level": 2,
+          "content": "PROGRAMMING vs MATH"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.715,
+            0.328
+          ],
+          "content": "in programming, you do not “solve for x”"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.353,
+            0.779,
+            0.917
+          ],
+          "sub_type": "code",
+          "content": "```python\npi = 3.14159\nradius = 2.2\n# area of circle\narea = pi*(radius**2)\nradius = radius+1\n\nan assignment * expression on the right, evaluated to a value\n* expression on the left\n* variable name on the left\n* equivalent expression to radius = radius + 1\nis radius += 1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.162,
+            0.671,
+            0.235
+          ],
+          "level": 2,
+          "content": "CHANGING BINDINGS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.278,
+            0.85,
+            0.377
+          ],
+          "content": "can **re-bind** variable names using new assignment statements"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.407,
+            0.905,
+            0.507
+          ],
+          "content": "previous value may still stored in memory but lost the handle for it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.536,
+            0.817,
+            0.64
+          ],
+          "content": "value for area does not change until you tell the computer to do the calculation again"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.085,
+            0.664,
+            0.541,
+            0.876
+          ],
+          "sub_type": "code",
+          "content": "```matlab\npi = 3.14\nradius = 2.2\narea = pi*(radius**2)\nradius = radius+1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.561,
+            0.534,
+            0.999,
+            0.953
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_33_image_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Welcome",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:46:50+05:30",
+      "modified_at": "2017-01-04T15:56:07+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 35,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

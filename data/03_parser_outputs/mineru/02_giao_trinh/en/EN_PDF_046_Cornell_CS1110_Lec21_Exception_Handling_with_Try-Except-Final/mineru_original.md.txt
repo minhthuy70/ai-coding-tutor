@@ -1,0 +1,1058 @@
+## Lecture 21
+
+## Operators and Abstraction
+
+## Announcements for Today
+
+## Assignments
+
+• A4 still being graded
+
+• A5 is due **Tomorrow**
+
+§ Shorter written assignment
+
+§ Will grade it next week
+
+• A6 due **Sun, November 15**
+
+§ Designed to take awhile
+
+§ Follow the micro-deadlines
+
+§ Should be on **Task 2** now
+
+§ **Task 3** can take a few days
+
+## Prelim 2
+
+• **Prelim, Nov 17**<strong><sup>th</sup></strong> **at 7:30**
+
+§ See webpage for rooms
+
+§ Review Session **TBA**
+
+## • Material up to Today
+
+§ Recursion + Loops + Classes
+
+§ Study guide is now posted
+
+§ See structure of prev exams
+
+• **Conflict with Prelim?**
+
+§ Corey has sent out form
+
+## Announcements for Today
+
+## Assignments
+
+• A4 still being graded
+
+• A5 is due To
+
+## Prelim 2
+
+§ Shorter wri
+
+§ Will grade
+
+• A6 due Sun,
+
+§ Designed to
+
+§ Follow the
+
+• **Prelim, Nov 17**<strong><sup>th</sup></strong> **at 7:30**
+
+## Video Lessons
+
+• **Videos 23.1-23.7** for today
+
+• Skip to **Lesson 26** for Tues
+
+• **Lessons 27** for next Thurs
+
+e for rooms
+
+sion TBA
+
+to Today
+
+Loops + Classes
+
+is now posted
+
+e of prev exams
+
+§ Should be on **Task 2** now
+
+§ **Task 3** can take a few days
+
+• **Conflict with Prelim?**
+
+§ Corey has sent out form
+
+## Case Study: Fractions
+
+## • Want to add a new type
+
+§ Values are fractions: ½, ¾
+
+Operations are standard multiply, divide, etc.
+
+§ **Example**: $1/2^{*3}/4 = 3/8$
+
+• Can do this with a class
+
+§ Values are fraction objects
+
+§ Operations are methods
+
+## • Example: frac1.py
+
+## class Fraction(object):
+
+"""Instance is a fraction n/d""""
+
+\# INSTANCE ATTRIBUTES:
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+def \_\_init\_\_(self,n=0,d=1):
+
+"""Init: makes a Fraction"""
+
+self.\_numerator = n
+
+self.\_denominator = d
+
+## Case Study: Fractions
+
+• Want to add a new **type**
+
+§ Values are fractions: ½, ¾
+
+§ Opera multi
+
+§ Exam
+
+**Reminder**: Hide \*attributes, use **getters/setters** • Can do t
+
+§ Values are fraction objects
+
+§ Operations are methods
+
+• **Example**: frac1.py
+
+class Fraction(object):
+
+"""Instance is a fraction n/d"""
+
+\# INSTANCE ATTRIBUTES:
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+def \_\_init\_\_(self,n=0,d=1):
+
+"""Init: makes a Fraction"""
+
+self.\_numerator = n
+
+self.\_denominator = d
+
+## Problem: Doing Math is Unwieldy
+
+<div class="docvortex-algorithm" style="white-space: pre-wrap; font-family:monospace;">
+What We Want
+$\left(\frac{1}{2} + \frac{1}{3} + \frac{1}{4}\right) * \frac{5}{4}$
+&gt;&gt;&gt; p = Fraction(1,2)
+&gt;&gt;&gt; q = Fraction(1,3)
+&gt;&gt;&gt; r = Fraction(1,4)
+&gt;&gt;&gt; s = Fraction(5,4)
+&gt;&gt;&gt; (p.add(q.add(r))).mult(s)
+This is confusing!
+</div>
+
+## Problem: Doing Math is Unwieldy
+
+## What We Want
+
+$$
+\left(\frac {1}{2} + \frac {1}{3} + \frac {1}{4}\right) * \frac {5}{4}
+$$
+
+Why not use the standard Python math operations?
+
+## What We Get
+
+$$
+> > > \mathrm{p} = \text {Fraction(1,2)}
+$$
+
+$$
+> > > q = \text {Fraction(1,3)}
+$$
+
+$$
+> > > \mathrm{r} = \text {Fraction(1,4)}
+$$
+
+$$
+> > > \mathrm{s} = \text {Fraction(5,4)}
+$$
+
+$$
+\ggg (\mathrm{p.add} (\mathrm{q.add} (\mathrm{r}))). \text {mult} (\mathrm{s})
+$$
+
+This is confusing!
+
+## Special Methods in Python
+
+• Have seen three so far
+
+§ \_\_init\_\_ for initializer
+
+§ \_\_str\_\_ for str()
+
+§ \_repr\_\_ for repr()
+
+• Start/end with 2 underscores
+
+§ This is standard in Python
+
+§ Used in all special methods
+
+§ Also for special attributes
+
+• We can **overload operators**
+
+§ Give new meaning to +, \*, -
+
+class Point3(object):
+
+"""Instances are points in 3D space"""
+
+def \_\_init\_\_(self,x=0,y=0,z=0):
+
+"""Initializer: makes new Point3"""
+
+def \_\_str\_\_(self,q):
+
+"""Returns: string with contents""”
+
+def \_\_repr\_\_(self,q):
+
+"""Returns: unambiguous string""”
+
+## Operator Overloading
+
+• Many operators in Python a special symbols
+
+§ +, -, /, \*, \*\* for mathematics
+
+§ ==, !=, <, > for comparisons
+
+• The meaning of these symbols depends on type
+
+§ 1 + 2 vs 'Hello' + 'World'
+
+§ 1 < 2 vs 'Hello' < 'World'
+
+• Our new type might want to use these symbols
+
+§ We overload them to support our new type
+
+## Returning to Fractions
+
+## What We Want
+
+$$
+\left(\frac {1}{2} + \frac {1}{3} + \frac {1}{4}\right) * \frac {5}{4}
+$$
+
+Why not use the standard Python math operations?
+
+## Operator Overloading
+
+• Python has methods that correspond to built-in ops
+
+§ \_\_add\_\_ corresponds to +
+
+§ \_\_mul\_\_ corresponds to \*
+
+§ \_\_eq\_\_ corresponds to ==
+
+§ Not implemented by default
+
+• To overload operators you implement these methods
+
+## Operator Overloading: Multiplication
+
+class Fraction(object):
+
+"""Instance is a fraction n/d""""
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+def \_\_mul\_\_(self,q):
+
+"""Returns: Product of self, q
+
+Makes a new Fraction; does not
+
+modify contents of self or q
+
+Precondition: q a Fraction"""
+
+assert type(q) == Fraction
+
+top= self.\_numerator\*q.\_numerator
+
+bot= self.\_denominator\*q.\_denominator
+
+return Fraction(top,bot)
+
+>>> p = Fraction(1,2)
+
+>>> q = Fraction(3,4)
+
+$$
+> > > \mathrm{r} = \mathrm{p} ^ {*} \mathrm{q}
+$$
+
+![](images/page_10_image_17.jpg)
+
+Python converts to
+
+>>> r = p. \_\_mul\_\_(q)
+
+Operator overloading uses method in object on left.
+
+## Operator Overloading: Addition
+
+```python
+class Fraction(object):
+    """Instance is a fraction n/d"""
+    # _numerator:  an int
+    # _denominator: an int > 0
+
+    def __add__(self,q):
+        """Returns: Sum of self, q
+        Makes a new Fraction
+        Precondition: q a Fraction"""
+        assert type(q) == Fraction
+        bot= self._denominator*q._denominator
+        top= (self._numerator*q._denominator+
+            self._denominator*q._numerator)
+        return Fraction(top,bot)
+```
+
+$$
+> > > \mathrm{p} = \text {Fraction} (1, 2)
+$$
+
+$$
+> > > \mathrm{q} = \text {Fraction} (3, 4)
+$$
+
+$$
+> > > \mathrm{r} = \mathrm{p+q}
+$$
+
+![](images/page_11_image_5.jpg)
+
+Python converts to
+
+>>> r = p. \_\_add\_\_(q)
+
+Operator overloading uses method in object on left.
+
+## Comparing Objects for Equality
+
+• Earlier in course, we saw == compare object contents
+
+§ This is not the default
+
+§ **Default**: folder names
+
+• Must implement \_\_eq\_\_
+
+§ Operator overloading!
+
+§ Not limited to simple attribute comparison
+
+§ **Ex**: cross multiplying
+
+![](images/page_12_image_8.jpg)
+
+```python
+class Fraction(object):
+    """Instance is a fraction n/d"""
+    # _numerator:  an int
+    # _denominator: an int > 0
+
+    def __eq__(self,q):
+        """Returns: True if self, q equal,
+        False if not, or q not a Fraction"""
+        if type(q) != Fraction:
+            return False
+        left = self._numerator*q._denominator
+        right = self._denominator*q._numerator
+        return left == right
+```
+
+![](images/page_13_image_0.jpg)
+
+## is Versus ==
+
+## • p is q evaluates to False
+
+§ Compares folder names
+
+§ Cannot change this
+
+p
+
+**id2**
+
+## • p == q evaluates to True
+
+§ But only because method \_\_eq\_\_ compares contents
+
+**id3**
+
+**id3**
+
+## Always use (x is None) not (x == None)
+
+## Structure of a Proper Python Class
+
+## class Fraction(object):
+
+"""Instance is a fraction n/d"""
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+## def getNumerator(self):
+
+"""Returns: Numerator of Fraction"""
+
+## def \_\_init\_\_(self,n=0,d=1):
+
+"""Initializer: makes a Fraction""" …
+
+## def \_\_add\_\_(self,q):
+
+"""Returns: Sum of self, q """
+
+## def normalize(self):
+
+"""Puts Fraction in reduced form"""
+
+Docstring describing class Attributes are all **hidden**
+
+Getters and Setters.
+
+Initializer for the class. Defaults for parameters.
+
+Python operator overloading
+
+Normal method definitions
+
+## Recall: Overloading Multiplication
+
+class Fraction(object):
+
+"""Instance is a fraction n/d""""
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+def \_\_mul\_\_(self,q):
+
+"""Returns: Product of self, q
+
+Makes a new Fraction; does not
+
+modify contents of self or q
+
+<u>Precondition: q a Fraction""</u>"
+
+assert type(q) == Fraction
+
+top = self. \_numerator\*q.\_numerator bot= self.\_denominator\*q.\_denominator return Fraction(top,bot)
+
+>>> p = Fraction(1,2)
+
+>>> q = 2 # an int
+
+$$
+> > > \mathrm{r} = \mathrm{p} ^ {*} \mathrm{q}
+$$
+
+![](images/page_15_image_15.jpg)
+
+Python converts to
+
+>>> r = p .\_\_mul\_\_(q) # ERROR
+
+Can only multiply fractions. But ints “make sense” too.
+
+## Solution: Look at Argument Type
+
+• Overloading use **left** type
+
+§ $\mathbf{p}^{*}\mathbf{q} = >\mathbf{p}.$ .\_\_mul\_\_(q)
+
+§ Done for us automatically
+
+§ Looks in class definition
+
+• What about type on **right**?
+
+§ Have to handle ourselves
+
+• Can implement with ifs
+
+§ Write helper for each type
+
+§ Check type in method
+
+§ Send to appropriate helper
+
+```python
+class Fraction(object):
+    ...
+    def __mul__(self,q):
+        """Returns: Product of self, q
+        Precondition: q a Fraction or int"""
+        if type(q) == Fraction:
+            return self._mulFrac(q)
+        elif type(q) == int:
+            return self._mulInt(q)
+
+    ...
+    def _mulInt(self,q): # Hidden method
+        return Fraction(self._numerator*q,
+                                    self._denominator)
+```
+
+## A Better Multiplication
+
+```txt
+class Fraction(object):
+```
+
+```python
+def __mul__(self,q):
+    """Returns: Product of self, q
+    Precondition: q a Fraction or int"""
+    if type(q) == Fraction:
+        return self._mulFrac(q)
+    elif type(q) == int:
+        return self._mulInt(q)
+```
+
+```python
+def _mulInt(self,q): # Hidden method
+    return Fraction(self._numerator*q,
+                       self._denominator)
+```
+
+>>> p = Fraction(1,2)
+
+>>> q = 2 # an int
+
+$$
+> > > \mathrm{r} = \mathrm{p} ^ {*} \mathrm{q}
+$$
+
+![](images/page_17_image_7.jpg)
+
+Python converts to
+
+>>> r = p. \_\_mul\_\_(q) # OK!
+
+See frac3.py for a full example of this method
+
+```python
+class Fraction(object):
+    ...
+    def __mul__(self,q):
+        """Returns: Product of self, q
+        Precondition: q a Fraction or int"""
+        if type(q) == Fraction:
+            return self._mulFrac(q)
+        elif type(q) == int:
+            return self._mulInt(q)
+    ...
+    def _mulInt(self,q): # Hidden method
+        return Fraction(self._numerator*q,
+                self._denominator)
+```
+
+## What Do We Get This Time?
+
+## What Do We Get This Time?
+
+```python
+class Fraction(object):
+    ...
+    def __mul__(self,q):
+        """Returns: Product of self, q
+        Precondition: q a Fraction or int"""
+        if type(q) == Fraction:
+            return self._mulFrac(q)
+        elif type(q) == int:
+            return self._mulInt(q)
+
+    ...
+    def _mulInt(self,q): # Hidden method
+        return Fraction(self._numerator*q,
+                                    self._denominator)
+```
+
+>>> p = Fraction(1,2)
+
+>>> q = 2 # an int
+
+$$
+> > > \mathbf {r} = \mathbf {q} ^ {*} \mathbf {p}
+$$
+
+Meaning determined by left. Fraction(2,2)Variable q stores an **int**.
+
+B~~: Fraction(1,1)~~
+
+C: Fraction(2,4)
+
+D: Error**CORRECT**
+
+E: I don’t know
+
+## A Problem with Subclasses
+
+class Fraction(object):
+
+"""Instances are normal fractions n/d""""
+
+\# INSTANCE ATTRIBUTES
+
+\# \_numerator: int
+
+\# \_denominator: int > 0
+
+class FractionalLength(Fraction):
+
+```python
+"""Instances are fractions with units """
+# INSTANCE ATTRIBUTES same but
+# _unit: one of 'in', 'ft', 'yd'
+def __init__(self,n,d,unit):
+    """Make length of given units"""
+    assert unit in ['in', 'ft', 'yd']
+    super().__init__(n,d)
+    self._unit = unit
+```
+
+>>> p = Fraction(1,2)
+
+>>> q = FractionalLength(1,2,'ft')
+
+$$
+> > > \mathrm{r} = \mathrm{p} ^ {*} \mathrm{q}
+$$
+
+![](images/page_20_image_11.jpg)
+
+Python converts to
+
+>>> r = p .\_\_mul\_\_(q) # ERROR
+
+mul\_\_ has precondition type(q) == Fraction
+
+![](images/page_21_image_0.jpg)
+
+## The isinstance Function
+
+## • isinstance(&lt;obj&gt;,&lt;class&gt;)
+
+§ True if &lt;obj&gt;’s class is same as or a subclass of &lt;class&gt;
+
+§ False otherwise
+
+## Example:
+
+§ isinstance(e,Executive) is True
+
+§ isinstance(e,Employee) is True
+
+§ isinstance(e,object) is True
+
+§ isinstance(e,str) is False
+
+## • Generally preferable to type
+
+§ Works with base types too!
+
+e
+
+**id4**
+
+**id4**
+
+<strong><u>Executive</u></strong>
+
+name
+
+'Fred'
+
+\_start
+
+2012
+
+\_salary
+
+0.0
+
+bonus
+
+0.0
+
+![](images/page_21_image_24.jpg)
+
+**object**
+
+**Employee**
+
+![](images/page_21_image_27.jpg)
+
+**Executive**
+
+## isinstance and Subclasses
+
+>>> e = Employee('Bob',2012)
+
+>>> isinstance(e,Executive)
+
+???
+
+A: True
+
+B: False
+
+C: Error
+
+<u>D: I don’t know</u>
+
+e
+
+**id5**
+
+**id5**
+
+<strong><u>Employee</u></strong>
+
+\_name
+
+'Bob'
+
+\_start
+
+2012
+
+\_salary
+
+50k
+
+**object**
+
+![](images/page_22_image_19.jpg)
+
+**Employee**
+
+![](images/page_22_image_21.jpg)
+
+**Executive**
+
+![](images/page_22_image_23.jpg)
+
+## isinstance and Subclasses
+
+>>> e = Employee('Bob',2011) >>> isinstance(e,Executive)???
+
+A: True
+
+B: FalseCorrect
+
+C: Error
+
+<u>D: I don’t know</u>
+
+object
+
+![](images/page_23_image_7.jpg)
+
+Executive
+
+→ means “extends” <u>or “is an instance of”</u>
+
+## Fixing Multiplication
+
+class Fraction(object):
+
+"""Instances are fractions n/d""""
+
+\# \_numerator: int
+
+\# \_denominator: int > 0
+
+def \_\_mul\_\_(self,q):
+
+"""Returns: Product of self, q
+
+Makes a new Fraction; does not
+
+modify contents of self or q
+
+<u>Precondition: q a Fraction """</u>
+
+assert isinstance(q, Fraction)
+
+top = self.numerator\*q.numerator
+
+bot = self.denominator\*q.denominator
+
+return Fraction(top,bot)
+
+>>> p = Fraction(1,2)
+
+>>> q = FractionalLength(1,2,'ft')
+
+$$
+> > > \mathrm{r} = \mathrm{p} ^ {*} \mathrm{q}
+$$
+
+![](images/page_24_image_17.jpg)
+
+Python converts to
+
+>>> r = p .\_\_mul\_\_(q) # OKAY
+
+Can multiply so long as it has numerator, denominator
+
+# The Python Data Model
+
+Note: Slicing is done exclusively with the following three methods. A call like
+
+a[1:2] = b
+
+is translated to
+
+[http://docs.python.org/3/reference/datamodel.html](http://docs.python.org/3/reference/datamodel.html)
+
+a[slice(1, 2, None)] = b
+
+and so forth. Missing slice items are always filled in with None.
+
+## object.\_\_getitem\_(self, key)
+
+Called to implement evaluation of self[key]. For sequence types, the accepted keys should be integers and slice objects. Note that the special interpretation of negative indexes (if the class wishes to emulate a sequence type) is up to the getitem () method. If key is of an inappropriate type, TypeError may be raised; if of a value outside the set of indexes for the sequence (after any special interpretation of negative values), IndexError should be raised. For mapping types, if keyis missing (not in the container), KeyError should be raised.
+
+Note: for loops expect that an IndexError will be raised for illegal indexes to allow proper detection of the end of the sequence.
+
+## object.\_\_missing\_\_(self, key)
+
+Called by dict.\_\_getitem\_\_() to implement self[key] for dict subclasses when key is not in the dictionary.
+
+## object.\_setitem\_(self, key, value)
+
+Called to implement assignment to self[key]. Same note as for \_\_getitem\_(). This should only be implemented for mappings if the objects support changes to the values for keys, or if new keys can be added, or for sequences if elements can be replaced. The same exceptions should be raised for improper key values as for the\_\_getitem\_\_() method.
+
+## object.\_\_delitem\_\_(self, key)
+
+Called to implement deletion of self[key]. Same note as for\_\_getitem\_(). This should only be implemented for mappings if the objects support removal of keys, or for sequences if elements can be removed from the sequence. The same exceptions should be raised for improper key values as for the\_\_getitem\_\_()method.
+
+## We Have Come Full Circle
+
+• On the first day, saw that a **type** is both
+
+§ a set of values, and d
+
+§ the operations on them
+
+• In Python, **all values are objects**
+
+§ Everything has a folder in the heap
+
+§ Just ignore it for immutable, basic types
+
+• In Python, **all operations are methods**
+
+§ Each operator has a double-underscore helper
+
+§ Looks at type of object on left to process
+
+## Advanced Topic Warning!
+
+The following will not be on the exam
+
+If you ask “Will this be on the Exam”
+
+we will be
+
+![](images/page_27_image_4.jpg)
+
+## Example from A6: Pixels
+
+## • Image is list of list of RGB
+
+§ But this is really slow
+
+§ **Faster**: byte buffer (???)
+
+§ Beyond scope of course
+
+## • Compromise: Pixels class
+
+§ Has byte buffer attribute
+
+§ Pretends to be list of tuples
+
+§ You can slice/iterate/etc…
+
+• Uses data model to do this
+
+![](images/page_28_image_10.jpg)
+
+[(255,255,255), (255,255,255), …]
+
+## Example from A6: Pixels
+
+• Image is list of list of RGB
+
+34Abstraction: Making a type easier to 67use by hiding details from the user
+
+• **Compromise**: Pixels class
+
+![](images/page_29_image_4.jpg)
+
+§ Has byte buffer attribute
+
+§ Pretends to be list of tuples
+
+§ You can slice/iterate/etc…
+
+• Uses data model to do this**lie to you!**
+
+![](images/page_29_image_9.jpg)
+
+(255,255,255), (255,255,255), …]
+
+## Properties: Invisible Setters and Getters
+
+**class** Fraction(object):
+
+"""Instance is a fraction n/d"""
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+@property
+
+**def** numerator(self):
+
+"""Numerator value of Fraction Invariant: must be an int""" return self.\_numerator
+
+@numerator.setter
+
+**def** numerator(self,value):
+
+assert type(value) == int
+
+self.\_numerator = value
+
+>>> p = Fraction(1,2)
+
+>>> x = p. .numerator
+
+![](images/page_30_image_14.jpg)
+
+Python converts to
+
+>>> x = p. .numerator()
+
+>>> p.numerator = 2
+
+![](images/page_30_image_18.jpg)
+
+Python converts to
+
+>>> p.numerator(2)
+
+## Properties: Invisible Setters and Getters
+
+## class Fraction(object):
+
+"""Instance is a fraction n/d"""
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+## @property
+
+## def numerator(self):
+
+"""Numerator value of Fraction Invaria<u>nt: must be an i</u>nt""" return self.\_numerator
+
+## @numerator.setter
+
+**def** numerator(self,value): assert type(value) == int self.\_numerator = value
+
+**Decorator** specifies that next method is **getter** for property of the same name as method
+
+Docstring describing property
+
+Property uses **hidden** attribute.
+
+**Decorator** specifies that next method is the **setter** for property whose name is numerator.
+
+## Properties: Invisible Setters and Getters
+
+## class Fraction(object):
+
+"""Instance is a fraction n/d"""
+
+\# \_numerator: an int
+
+\# \_denominator: an int > 0
+
+## @property
+
+## def numerator(self):
+
+"""Numerator value of Fraction Invariant: must be an int"""
+
+return self.\_numerator
+
+@numerator.setter **def** numerator(self,value): assert type(value) == int self.\_numerator = value **Goal**: Data Encapsulation Protecting your data from other, “clumsy” users.
+
+Only the **getter** is required!
+
+If no **setter**, then the attribute is “immutable”
+
+Replace **Attributes** w/ **Properties** (Users cannot tell difference)

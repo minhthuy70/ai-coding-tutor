@@ -1,0 +1,2122 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.103,
+            0.285,
+            0.665,
+            0.549
+          ],
+          "level": 2,
+          "content": "BRANCHING, ITERATION"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.098,
+            0.576,
+            0.474,
+            0.625
+          ],
+          "content": "(download slides and .py files"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.529,
+            0.575,
+            0.711,
+            0.625
+          ],
+          "content": "\u0003follow along!)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.656,
+            0.388,
+            0.701
+          ],
+          "content": "6.0001 LECTU RE 2"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.959,
+            0.547,
+            0.977
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.161,
+            0.373,
+            0.231
+          ],
+          "level": 2,
+          "content": "LAST TIME"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.279,
+            0.428,
+            0.325
+          ],
+          "content": "syntax and semantics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.355,
+            0.317,
+            0.403
+          ],
+          "content": "scalar objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.434,
+            0.38,
+            0.482
+          ],
+          "content": "simple operations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.511,
+            0.6,
+            0.56
+          ],
+          "content": "expressions, variables and values"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.161,
+            0.278,
+            0.231
+          ],
+          "level": 2,
+          "content": "TODAY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.278,
+            0.373,
+            0.327
+          ],
+          "content": "string object type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.354,
+            0.512,
+            0.405
+          ],
+          "content": "branching and conditionals"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.433,
+            0.287,
+            0.48
+          ],
+          "content": "indentation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.511,
+            0.394,
+            0.559
+          ],
+          "content": "iteration and loops"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.163,
+            0.325,
+            0.233
+          ],
+          "level": 2,
+          "content": "STRINGS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.7,
+            0.327
+          ],
+          "content": "letters, special characters, spaces, digits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.767,
+            0.448
+          ],
+          "content": "enclose in **quotation marks or single quotes** hi = \"hello there\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.476,
+            0.406,
+            0.521
+          ],
+          "content": "**concatenate** strings"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.529,
+            0.325,
+            0.564
+          ],
+          "sub_type": "code",
+          "content": "```txt\nname = \"ana\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.609,
+            0.409,
+            0.646
+          ],
+          "sub_type": "code",
+          "content": "```txt\ngreet = hi + name\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.688,
+            0.56,
+            0.727
+          ],
+          "sub_type": "code",
+          "content": "```python\ngreeting = hi + \" \" + name\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.751,
+            0.958,
+            0.845
+          ],
+          "content": "do some **operations** on a string as defined in Python docs silly = hi + \" \" + name \\* 3"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.157,
+            0.728,
+            0.243
+          ],
+          "level": 2,
+          "content": "INPUT/OUTPUT: print"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.572,
+            0.325
+          ],
+          "content": "used to **output** stuff to console"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.389,
+            0.405
+          ],
+          "content": "keyword is print"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.471,
+            0.96,
+            0.771
+          ],
+          "sub_type": "code",
+          "content": "```lua\nx = 1\nprint(x)\nx_str = str(x)\nprint(\"my fav num is\", x, \".\", \"x =\", x)\nprint(\"my fav num is \" + x_str + \". \" + \"x = \" + x_str)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.157,
+            0.816,
+            0.241
+          ],
+          "level": 2,
+          "content": "INPUT/OUTPUT: input(\"\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.273,
+            0.582,
+            0.322
+          ],
+          "content": "prints whatever is in the quotes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.345,
+            0.679,
+            0.394
+          ],
+          "content": "user types in something and hits enter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.417,
+            0.541,
+            0.464
+          ],
+          "content": "binds that value to a variable"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.119,
+            0.491,
+            0.669,
+            0.531
+          ],
+          "sub_type": "code",
+          "content": "```txt\ntext = input(\"Type anything... \")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.118,
+            0.557,
+            0.337,
+            0.596
+          ],
+          "sub_type": "code",
+          "content": "```lisp\nprint(5*text)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.673,
+            0.851,
+            0.767
+          ],
+          "level": 2,
+          "content": "input gives you a string so must cast if working with numbers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.795,
+            0.736,
+            0.834
+          ],
+          "content": "num = int(input(\"Type a number... \"))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.862,
+            0.32,
+            0.9
+          ],
+          "content": "print(5\\*num)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.067,
+            0.886,
+            0.245
+          ],
+          "level": 2,
+          "content": "COMPARISON OPERATORS ON int, float, string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.275,
+            0.52,
+            0.327
+          ],
+          "content": "i and j are variable names"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.355,
+            0.728,
+            0.406
+          ],
+          "content": "comparisons below evaluate to a Boolean"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.427,
+            0.918,
+            0.879
+          ],
+          "sub_type": "code",
+          "content": "```txt\ni > j\ni >= j\ni < j\ni <= j\ni == j → equality test, True if i is the same as j\ni != j → inequality test, True if i not the same as j\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.898,
+            0.968,
+            0.912,
+            0.989
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.158,
+            0.843,
+            0.234
+          ],
+          "level": 2,
+          "content": "LOGIC OPERATORS ON bools"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.275,
+            0.844,
+            0.327
+          ],
+          "content": "a and b are variable names (with Boolean values)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.353,
+            0.628,
+            0.457
+          ],
+          "content": "**not a**   True if a is False False if a is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.483,
+            0.665,
+            0.535
+          ],
+          "content": "**a and b**   True if both are True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.561,
+            0.794,
+            0.613
+          ],
+          "content": "**a or b**   True if either or both are True"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.217,
+            0.638,
+            0.811,
+            0.948
+          ],
+          "content": "| A | B | A and B | A or B |\n| --- | --- | --- | --- |\n| True | True | True | True |\n| True | False | False | True |\n| False | True | False | True |\n| False | False | False | False |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_table_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.162,
+            0.727,
+            0.236
+          ],
+          "level": 2,
+          "content": "COMPARISON EXAMPLE"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.267,
+            0.666,
+            0.771
+          ],
+          "sub_type": "code",
+          "content": "```python\npset_time = 15\nsleep_time = 8\nprint(sleep_time > pset_time)\nderive = True\ndrink = False\nboth = drink and derive\nprint(both)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.988
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.063,
+            0.022,
+            0.194,
+            0.195
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_0.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.314,
+            0.021,
+            0.446,
+            0.195
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.07,
+                0.216,
+                0.22,
+                0.308
+              ],
+              "content": "If right clear, go right"
+            },
+            {
+              "bbox": [
+                0.315,
+                0.21,
+                0.496,
+                0.3
+              ],
+              "content": "If right blocked, go forward"
+            }
+          ],
+          "image_source": "images/page_9_image_1.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.566,
+            0.024,
+            0.699,
+            0.198
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.819,
+            0.022,
+            0.951,
+            0.195
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.572,
+                0.209,
+                0.74,
+                0.343
+              ],
+              "content": "If right and front blocked, go left"
+            },
+            {
+              "bbox": [
+                0.811,
+                0.209,
+                0.977,
+                0.346
+              ],
+              "content": "If right , front, left blocked, go back"
+            }
+          ],
+          "image_source": "images/page_9_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.404,
+            1.0,
+            0.997
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_8.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.159,
+            0.898,
+            0.234
+          ],
+          "level": 2,
+          "content": "CONTROL FLOW - BRANCHING"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.272,
+            0.263,
+            0.421
+          ],
+          "sub_type": "code",
+          "content": "```txt\nif <condition>:\n    <expression>\n    <expression>\n    ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.036,
+            0.45,
+            0.268,
+            0.739
+          ],
+          "sub_type": "code",
+          "content": "```python\nif <condition>:\n    <expression>\n    <expression>\n    ...\nelse:\n    <expression>\n    <expression>\n    ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.635,
+            0.27,
+            0.987,
+            0.74
+          ],
+          "sub_type": "code",
+          "content": "```python\nif <condition>:\n    <expression>\n    <expression>\n    ...\nelif <condition>:\n    <expression>\n    <expression>\n    ...\nelse:\n    <expression>\n    <expression>\n    ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.779,
+            0.725,
+            0.824
+          ],
+          "content": "&lt;condition&gt; has a value True or False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.852,
+            0.953,
+            0.899
+          ],
+          "content": "evaluate expressions in that block if &lt;condition&gt; is True"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.99
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.161,
+            0.461,
+            0.233
+          ],
+          "level": 2,
+          "content": "INDENTATION"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.273,
+            0.811,
+            0.905
+          ],
+          "sub_type": "code",
+          "content": "```python\n■ matters in Python\n■ how you denote blocks of code\nx = float(input(\"Enter a number for x: \"))\ny = float(input(\"Enter a number for y: \"))\nif x == y:\n    print(\"x and y are equal\")\n    if y != 0:\n        print(\"therefore, x / y is\", x/y)\nelif x < y:\n    print(\"x is smaller\")\nelse:\n    print(\"y is smaller\")\nprint(\"thanks!\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.083,
+            0.279,
+            0.975,
+            0.864
+          ],
+          "sub_type": "code",
+          "content": "```python\nx = float(input(\"Enter a number for x: \"))\ny = float(input(\"Enter a number for y: \"))\nif x == y:\n    print(\"x and y are equal\")\n    if y != 0:\n        print(\"therefore, x / y is\", x/y)\nelif x < y:\n    print(\"x is smaller\")\nelse:\n    print(\"y is smaller\")\nprint(\"thanks!\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.001,
+            0.49,
+            0.408
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_0.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.032,
+            0.844,
+            0.133
+          ],
+          "content": "Legend of Zelda – Lost Woods"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.557,
+            0.162,
+            0.886,
+            0.369
+          ],
+          "level": 2,
+          "content": "keep going right, takes you back to this same screen, stuck in a loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.011,
+            0.409,
+            0.587,
+            0.455
+          ],
+          "content": "Image Courtesy Nintendo, All Rights Reserved. This content is excluded from our Creative Commons license. For more information, see [http://ocw.mit.edu/help/faq-fair-use/](http://ocw.mit.edu/help/faq-fair-use/)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.031,
+            0.458,
+            0.248,
+            0.488
+          ],
+          "content": "if &lt;exit right&gt;:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.03,
+            0.487,
+            0.712,
+            0.921
+          ],
+          "sub_type": "code",
+          "content": "```txt\n<set background to woods_background>\nif <exit right>:\n    <set background to woods_background>\n    if <exit right>:\n        <set background to woods_background>\n        and so on and on and on...\n    else:\n        <set background to exit_background>\nelse:\n    <set background to exit_background>\nelse:\n<set background to exit_background>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.959,
+            0.548,
+            0.978
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.038,
+            0.002,
+            0.507,
+            0.425
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_0.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.032,
+            0.844,
+            0.133
+          ],
+          "content": "Legend of Zelda – Lost Woods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.162,
+            0.886,
+            0.369
+          ],
+          "content": "keep going right, takes you back to this same screen, stuck in a loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.009,
+            0.429,
+            0.615,
+            0.476
+          ],
+          "content": "Word Cloud copyright unknown, All Right Reserved. This content is excluded from our Creative Commons license. For more information, see [http://ocw.mit.edu/help/faq-fair-use](http://ocw.mit.edu/help/faq-fair-use/)/."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.029,
+            0.483,
+            0.289,
+            0.514
+          ],
+          "content": "while &lt;exit right&gt;:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.029,
+            0.519,
+            0.571,
+            0.587
+          ],
+          "content": "&lt;set background to woods_background&gt; to &lt;set background to exit_background&gt;"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.959,
+            0.548,
+            0.977
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.959,
+            0.912,
+            0.979
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.068,
+            0.542,
+            0.233
+          ],
+          "level": 2,
+          "content": "CONTROL FLOW: while LOOPS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.284,
+            0.42,
+            0.323
+          ],
+          "content": "while &lt;condition&gt;:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.339,
+            0.388,
+            0.38
+          ],
+          "content": "&lt;expression&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.393,
+            0.388,
+            0.435
+          ],
+          "content": "&lt;expression&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.51,
+            0.662,
+            0.555
+          ],
+          "content": "&lt;condition&gt; evaluates to a Boolean"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.578,
+            0.85,
+            0.665
+          ],
+          "content": "if &lt;condition&gt; is True, do all the steps inside the while code block"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.689,
+            0.513,
+            0.735
+          ],
+          "content": "check &lt;condition&gt; again"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.759,
+            0.648,
+            0.804
+          ],
+          "content": "repeat until &lt;condition&gt; is False"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.162,
+            0.721,
+            0.234
+          ],
+          "level": 2,
+          "content": "while LOOP EXAMPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.277,
+            0.492,
+            0.309
+          ],
+          "content": "You are in the Lost Forest."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.314,
+            0.271,
+            0.334
+          ],
+          "content": "\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.35,
+            0.271,
+            0.37
+          ],
+          "content": "\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.117,
+            0.383,
+            0.143,
+            0.413
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_4.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.422,
+            0.271,
+            0.443
+          ],
+          "content": "\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.458,
+            0.271,
+            0.479
+          ],
+          "content": "\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.493,
+            0.345,
+            0.527
+          ],
+          "content": "Go left or right?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.609,
+            0.245,
+            0.651
+          ],
+          "level": 2,
+          "content": "PROGRAM:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.708,
+            0.914,
+            0.782
+          ],
+          "content": "n = input(\"You're in the Lost Forest. Go left or right? \") while n == \"right\":"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.791,
+            0.971,
+            0.868
+          ],
+          "content": "n = input(\"You're in the Lost Forest. Go left or right? \") print(\"You got out of the Lost Forest!\")"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.068,
+            0.757,
+            0.237
+          ],
+          "level": 2,
+          "content": "CONTROL FLOW: while and for LOOPS"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.282,
+            0.641,
+            0.33
+          ],
+          "level": 2,
+          "content": "iterate through numbers in a sequence"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.085,
+            0.378,
+            0.718,
+            0.872
+          ],
+          "sub_type": "code",
+          "content": "```python\n# more complicated with while loop\nn = 0\nwhile n < 5:\n    print(n)\n    n = n+1\n\n# shortcut with for loop\nfor n in range(5):\n    print(n)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.159,
+            0.866,
+            0.233
+          ],
+          "level": 2,
+          "content": "CONTROL FLOW: for LOOPS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.276,
+            0.752,
+            0.407
+          ],
+          "content": "for &lt;variable&gt; in range(&lt;some_num&gt;): &lt;expression&gt; &lt;expression&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.63,
+            0.963,
+            0.681
+          ],
+          "content": "each time through the loop, &lt;variable&gt; takes a value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.709,
+            0.898,
+            0.757
+          ],
+          "content": "first time, &lt;variable&gt; starts at the smallest value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.787,
+            0.844,
+            0.837
+          ],
+          "content": "next time, &lt;variable&gt; gets the prev value + 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.87,
+            0.171,
+            0.91
+          ],
+          "content": "etc."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.163,
+            0.949,
+            0.244
+          ],
+          "level": 2,
+          "content": "range(start,stop,step)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.265,
+            0.946,
+            0.886
+          ],
+          "sub_type": "code",
+          "content": "```python\n■ default values are start = 0 and step = 1 and optional\n■ loop until value is stop - 1\n\nmysum = 0\nfor i in range(7, 10):\n    mysum += i\nprint(mysum)\n\nmysum = 0\nfor i in range(5, 11, 2):\n    mysum += i\nprint(mysum)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.161,
+            0.625,
+            0.233
+          ],
+          "level": 2,
+          "content": "break STATEMENT"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.272,
+            0.644,
+            0.319
+          ],
+          "content": "immediately exits whatever loop it is in"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.341,
+            0.677,
+            0.387
+          ],
+          "content": "skips remaining expressions in code block"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.41,
+            0.469,
+            0.457
+          ],
+          "content": "exits only innermost loop!"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.545,
+            0.531,
+            0.921
+          ],
+          "sub_type": "code",
+          "content": "```python\nwhile <condition_1>:\n    while <condition_2>:\n        <expression_a>\n        break\n        <expression_b>\n        <expression_c>\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.163,
+            0.625,
+            0.235
+          ],
+          "level": 2,
+          "content": "break STATEMENT"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.085,
+            0.291,
+            0.665,
+            0.709
+          ],
+          "sub_type": "code",
+          "content": "```python\nmysum = 0\nfor i in range(5, 11, 2):\n    mysum += i\n    if mysum == 5:\n        break\n    mysum += 1\nprint(mysum)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.802,
+            0.571,
+            0.853
+          ],
+          "level": 2,
+          "content": "what happens in this program?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.163,
+            0.22,
+            0.234
+          ],
+          "level": 2,
+          "content": "for"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.275,
+            0.247,
+            0.328
+          ],
+          "content": "for loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.353,
+            0.366,
+            0.457
+          ],
+          "content": "**know** number of iterations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.483,
+            0.368,
+            0.585
+          ],
+          "content": "can **end early** via break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.619,
+            0.334,
+            0.664
+          ],
+          "content": "uses a **counter**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.693,
+            0.473,
+            0.797
+          ],
+          "content": "**can rewrite** a for loop using a while loop"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.396,
+            0.157,
+            0.888,
+            0.235
+          ],
+          "level": 2,
+          "content": "VS while LOOPS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.271,
+            0.743,
+            0.323
+          ],
+          "content": "while loops"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.518,
+            0.343,
+            0.888,
+            0.441
+          ],
+          "content": "**unbounded** number of iterations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.518,
+            0.462,
+            0.917,
+            0.515
+          ],
+          "content": "can **end early** via break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.518,
+            0.537,
+            0.946,
+            0.68
+          ],
+          "content": "can use a **counter but must initialize** before loop and increment it inside loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.518,
+            0.701,
+            0.948,
+            0.843
+          ],
+          "content": "**may not be able to rewrite** a while loop using a for loop"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 2"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.99
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Branching, Iteration",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:47:37+05:30",
+      "modified_at": "2017-01-04T16:08:06+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 24,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

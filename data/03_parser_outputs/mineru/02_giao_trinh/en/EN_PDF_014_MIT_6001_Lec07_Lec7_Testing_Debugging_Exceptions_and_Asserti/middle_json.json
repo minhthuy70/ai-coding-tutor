@@ -1,0 +1,6342 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Testing, Debugging, Exceptions, Assertions",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:53:58+05:30",
+      "modified_at": "2016-12-19T14:59:29+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 35,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.02,
+            0.018,
+            0.091,
+            0.119
+          ],
+          "content": []
+        },
+        {
+          "type": "doc_title",
+          "index": 1,
+          "bbox": [
+            0.098,
+            0.349,
+            0.952,
+            0.557
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TESTING, DEBUGGING, EXCEPTIONS, ASSERTIONS"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.097,
+            0.569,
+            0.82,
+            0.624
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(download slides and .py files and follow along!)",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.097,
+            0.656,
+            0.389,
+            0.701
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.916,
+            0.821,
+            0.99,
+            0.92
+          ],
+          "content": []
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.453,
+            0.959,
+            0.547,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.068,
+            0.877,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WE AIM FOR HIGH QUALITY – AN ANALOGY WITH SOUP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.085,
+            0.275,
+            0.877,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "You are making soup but bugs keep falling in from the ceiling. What do you do?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.406,
+            0.407,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "check soup for bugs"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.468,
+            0.236,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• testing"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.543,
+            0.333,
+            0.592
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "keep lid closed"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.604,
+            0.321,
+            0.7
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• defensive programming"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.088,
+            0.729,
+            0.311,
+            0.775
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "clean kitchen"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.109,
+            0.789,
+            0.366,
+            0.883
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• eliminate source of bugs"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.411,
+            0.352,
+            0.962,
+            0.957
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.411,
+                0.352,
+                0.962,
+                0.957
+              ],
+              "image_path": "images/page_1_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.279,
+            0.048,
+            0.708,
+            0.1
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEFENSIVE PROGRAMMING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.105,
+            0.107,
+            0.655,
+            0.16
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Write "
+            },
+            {
+              "type": "text",
+              "content": "specifications",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for functions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.106,
+            0.167,
+            0.493,
+            0.217
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Modularize",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " programs"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.106,
+            0.222,
+            0.869,
+            0.278
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Check "
+            },
+            {
+              "type": "text",
+              "content": "conditions",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " on inputs/outputs (assertions)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.485,
+            0.421,
+            0.542
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TESTING/VALIDATION"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.047,
+            0.547,
+            0.452,
+            0.659
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Compare",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " input/output pairs to specification"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.048,
+            0.661,
+            0.379,
+            0.716
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• “It’s not working!”"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.048,
+            0.719,
+            0.413,
+            0.834
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• “How can I break my program?”"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.632,
+            0.487,
+            0.83,
+            0.54
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEBUGGING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.511,
+            0.546,
+            0.935,
+            0.657
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Study events",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " leading up to an error"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.512,
+            0.659,
+            0.93,
+            0.718
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• “Why is it not working?”"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.513,
+            0.719,
+            0.832,
+            0.835
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• “How can I fix my program?”"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 13,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.068,
+            0.828,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SET YOURSELF UP FOR EASY TESTING AND DEBUGGING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.76,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "from the "
+            },
+            {
+              "type": "text",
+              "content": "start",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", design code to ease this part"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.355,
+            0.855,
+            0.458
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "break program up into "
+            },
+            {
+              "type": "text",
+              "content": "modules",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " that can be tested and debugged individually"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.486,
+            0.625,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "document constraints",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " on modules"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.545,
+            0.632,
+            0.589
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• what do you expect the input to be?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.603,
+            0.653,
+            0.649
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• what do you expect the output to be?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.087,
+            0.681,
+            0.759,
+            0.731
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "document assumptions",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " behind code design"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.068,
+            0.793,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WHEN ARE YOU READY TO TEST?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.28,
+            0.372,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ensure "
+            },
+            {
+              "type": "text",
+              "content": "code runs",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.108,
+            0.341,
+            0.428,
+            0.38
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• remove syntax errors"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.398,
+            0.544,
+            0.439
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• remove static semantic errors"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.454,
+            0.797,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Python interpreter can usually find these for you"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.533,
+            0.558,
+            0.579
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "have a "
+            },
+            {
+              "type": "text",
+              "content": "set of expected results",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.594,
+            0.304,
+            0.635
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• an input set"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.651,
+            0.624,
+            0.696
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• for each input, the expected output"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.16,
+            0.576,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CLASSES OF TESTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.09,
+            0.278,
+            0.309,
+            0.33
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Unit testing"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.108,
+            0.34,
+            0.595,
+            0.391
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• validate each piece of program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.404,
+            0.619,
+            0.454
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "testing each function",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " separately"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.096,
+            0.485,
+            0.414,
+            0.539
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Regression testing"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.547,
+            0.642,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• add test for bugs as you find them"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.107,
+            0.611,
+            0.907,
+            0.662
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "catch reintroduced",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " errors that were previously fixed"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.088,
+            0.695,
+            0.418,
+            0.747
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Integration testing"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.757,
+            0.556,
+            0.805
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• does "
+            },
+            {
+              "type": "text",
+              "content": "overall program",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " work?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.108,
+            0.821,
+            0.47,
+            0.866
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• tend to rush to do this"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.16,
+            0.691,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TESTING APPROACHES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.271,
+            0.893,
+            0.505
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.087,
+                0.271,
+                0.893,
+                0.505
+              ],
+              "content": "■ intuition about natural boundaries to the problem\ndef is_bigger(x, y):\n    \"\"\" Assumes x and y are ints\n    Returns True if y is less than x, else False \"\"\"\n• can you come up with some natural partitions?"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.528,
+            0.832,
+            0.577
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if no natural partitions, might do random testing"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.583,
+            0.908,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• probability that code is correct increases with more tests"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.636,
+            0.427,
+            0.681
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• better options below"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.707,
+            0.37,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "black box testing"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.762,
+            0.619,
+            0.807
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• explore paths through specification"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 7,
+          "bbox": [
+            0.088,
+            0.835,
+            0.364,
+            0.882
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "glass box testing"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.887,
+            0.514,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• explore paths through code"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.627,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BLACK BOX TESTING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.065,
+            0.273,
+            0.854,
+            0.391
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.065,
+                0.273,
+                0.854,
+                0.391
+              ],
+              "content": "def sqrt(x, eps):\n    \"\"\" Assumes x, eps floats, x >= 0, eps > 0\n    Returns res such that x-eps <= res*res <= x+eps \"\"\""
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.066,
+            0.446,
+            0.648,
+            0.496
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "designed without looking at the code"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.066,
+            0.521,
+            0.921,
+            0.622
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can be done by someone other than the implementer to avoid some implementer "
+            },
+            {
+              "type": "text",
+              "content": "biases",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.066,
+            0.651,
+            0.809,
+            0.701
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "testing can be "
+            },
+            {
+              "type": "text",
+              "content": "reused",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " if implementation changes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.067,
+            0.729,
+            0.497,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "paths",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " through specification"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.086,
+            0.787,
+            0.814,
+            0.832
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• build test cases in different natural space partitions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.086,
+            0.846,
+            0.888,
+            0.941
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• also consider boundary conditions (empty lists, singleton list, large numbers, small numbers)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.162,
+            0.628,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BLACK BOX TESTING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.064,
+            0.273,
+            0.312,
+            0.307
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def sqrt(x, eps):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.119,
+            0.306,
+            0.729,
+            0.342
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\" Assumes x, eps floats, x >= 0, eps > 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.118,
+            0.354,
+            0.856,
+            0.389
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Returns res such that x-eps <= res*res <= x+eps \"\"\""
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "index": 4,
+          "bbox": [
+            0.065,
+            0.404,
+            0.959,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 4,
+              "bbox": [
+                0.065,
+                0.404,
+                0.959,
+                0.951
+              ],
+              "image_path": "images/page_8_table_4.jpg",
+              "content": "<table><tbody><tr><td>CASE</td><td>x</td><td>eps</td></tr><tr><td>boundary</td><td>0</td><td>0.0001</td></tr><tr><td>perfect square</td><td>25</td><td>0.0001</td></tr><tr><td>less than 1</td><td>0.05</td><td>0.0001</td></tr><tr><td>irrational square root</td><td>2</td><td>0.0001</td></tr><tr><td>extremes</td><td>2</td><td>1.0/2.0**64.0</td></tr><tr><td>extremes</td><td>1.0/2.0**64.0</td><td>1.0/2.0**64.0</td></tr><tr><td>extremes</td><td>2.0**64.0</td><td>1.0/2.0**64.0</td></tr><tr><td>extremes</td><td>1.0/2.0**64.0</td><td>2.0**64.0</td></tr><tr><td>extremes</td><td>2.0**64.0</td><td>2.0**64.0</td></tr></tbody></table>"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.898,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.16,
+            0.625,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "GLASS BOX TESTING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.277,
+            0.788,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use code",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " directly to guide design of test cases"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.354,
+            0.888,
+            0.455
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "called "
+            },
+            {
+              "type": "text",
+              "content": "path-complete",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " if every potential path through code is tested at least once"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.484,
+            0.839,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "what are some "
+            },
+            {
+              "type": "text",
+              "content": "drawbacks",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of this type of testing?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.106,
+            0.544,
+            0.733,
+            0.591
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• can go through loops arbitrarily many times"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.604,
+            0.327,
+            0.65
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• missing paths"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.088,
+            0.681,
+            0.267,
+            0.731
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "guidelines"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.74,
+            0.266,
+            0.783
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• branches"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.798,
+            0.263,
+            0.845
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• for loops"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.108,
+            0.858,
+            0.297,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• while loops"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.674,
+            0.898,
+            0.726,
+            0.934
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "loop"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.163,
+            0.625,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "GLASS BOX TESTING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.275,
+            0.791,
+            0.556
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.086,
+                0.275,
+                0.791,
+                0.556
+              ],
+              "content": "def abs(x):\n    \"\"\" Assumes x is an int\n    Returns x if x>=0 and -x otherwise \"\"\"\n    if x <-1:\n        return -x\n    else:\n        return x"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.58,
+            0.756,
+            0.63
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a path-complete test suite could "
+            },
+            {
+              "type": "text",
+              "content": "miss a bug",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.657,
+            0.614,
+            0.707
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "path-complete test suite: 2 and -2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.735,
+            0.594,
+            0.785
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "but abs(-1) incorrectly returns -1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.813,
+            0.576,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "should still test boundary cases"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.429,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEBUGGING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.279,
+            0.414,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "steep learning curve"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.355,
+            0.618,
+            0.406
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "goal is to have a bug-free program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.433,
+            0.191,
+            0.478
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "tools"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.491,
+            0.542,
+            0.536
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "built in",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to IDLE and Anaconda"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.553,
+            0.324,
+            0.596
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Python Tutor",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.613,
+            0.389,
+            0.656
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " statement"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.669,
+            0.712,
+            0.716
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• use your brain, be "
+            },
+            {
+              "type": "text",
+              "content": "systematic",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " in your hunt"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.16,
+            0.614,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "PRINT STATEMENTS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.278,
+            0.533,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "good way to test hypothesis"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.356,
+            0.319,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "when to print"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.415,
+            0.336,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• enter function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.478,
+            0.299,
+            0.518
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "parameters"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.108,
+            0.533,
+            0.354,
+            0.576
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• function results"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.088,
+            0.611,
+            0.439,
+            0.655
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use bisection method"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.67,
+            0.48,
+            0.715
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• put print halfway in code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.728,
+            0.777,
+            0.775
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• decide where bug may be depending on values"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.601,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEBUGGING STEPS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.279,
+            0.412,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "study program code"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.108,
+            0.337,
+            0.464,
+            0.381
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• don’t ask what is wrong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.395,
+            0.673,
+            0.44
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• ask how did I get the unexpected result"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.108,
+            0.454,
+            0.409,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• is it part of a family?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.592,
+            0.376,
+            0.636
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "scientific method"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.651,
+            0.41,
+            0.695
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• study available data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.71,
+            0.362,
+            0.754
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• form hypothesis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.771,
+            0.466,
+            0.813
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• repeatable experiments"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.108,
+            0.829,
+            0.557,
+            0.874
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• pick simplest input to test with"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.107,
+            0.801,
+            0.36,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.107,
+                0.801,
+                0.36,
+                0.841
+              ],
+              "content": "a = len([1, 2, 3])"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.509,
+            0.888,
+            0.605
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.087,
+                0.509,
+                0.888,
+                0.605
+              ],
+              "content": "■ referencing a non-existent variable\na → NameError"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.688,
+            0.845,
+            0.919,
+            0.89
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.688,
+                0.845,
+                0.919,
+                0.89
+              ],
+              "content": "→ SyntaxError"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.101,
+            0.161,
+            0.77,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ERROR MESSAGES – EASY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.271,
+            0.904,
+            0.369
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.088,
+                0.271,
+                0.904,
+                0.369
+              ],
+              "content": "■ trying to access beyond the limits of a list\n    test = [1,2,3] then test[4] → IndexError"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.392,
+            0.89,
+            0.487
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.087,
+                0.392,
+                0.89,
+                0.487
+              ],
+              "content": "■ trying to convert an inappropriate type\nint(test) → TypeError"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.087,
+            0.629,
+            0.888,
+            0.723
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.087,
+                0.629,
+                0.888,
+                0.723
+              ],
+              "content": "■ mixing data types without appropriate coercion\n'3'/4 → TypeError"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.087,
+            0.747,
+            0.794,
+            0.798
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "forgetting to close parenthesis, quotation, etc."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.161,
+            0.683,
+            0.23
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LOGIC ERRORS - HARD"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.56,
+            0.324
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "think",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " before writing new code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.356,
+            0.515,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "draw",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " pictures, take a break"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.434,
+            0.401,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "explain",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " the code to"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.11,
+            0.495,
+            0.33,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• someone else"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.11,
+            0.552,
+            0.345,
+            0.595
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• a rubber ducky"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.499,
+            0.442,
+            0.89,
+            0.877
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.499,
+                0.442,
+                0.89,
+                0.877
+              ],
+              "image_path": "images/page_15_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.156,
+            0.277,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DON’T"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.031,
+            0.279,
+            0.287,
+            0.318
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Write entire program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.03,
+            0.321,
+            0.273,
+            0.358
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Test entire program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.03,
+            0.361,
+            0.296,
+            0.399
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Debug entire program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.031,
+            0.657,
+            0.203,
+            0.697
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Change code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.03,
+            0.699,
+            0.343,
+            0.737
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Remember where bug was"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.031,
+            0.739,
+            0.168,
+            0.774
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Test code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.03,
+            0.778,
+            0.458,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Forget where bug was or what change you made"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.032,
+            0.86,
+            0.127,
+            0.895
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Panic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.544,
+            0.278,
+            0.751,
+            0.316
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Write a function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.544,
+            0.319,
+            0.962,
+            0.358
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Test the function, debug the function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.545,
+            0.36,
+            0.751,
+            0.396
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Write a function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.545,
+            0.399,
+            0.962,
+            0.437
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Test the function, debug the function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.544,
+            0.439,
+            0.891,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "*** Do integration testing ***"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.544,
+            0.657,
+            0.715,
+            0.696
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Backup code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.544,
+            0.699,
+            0.717,
+            0.736
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Change code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.544,
+            0.738,
+            0.889,
+            0.815
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Write down potential bug in a comment"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.545,
+            0.819,
+            0.682,
+            0.854
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Test code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.544,
+            0.858,
+            0.895,
+            0.936
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Compare new version with old version"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 20,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.159,
+            0.897,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXCEPTIONS AND ASSERTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.272,
+            0.831,
+            0.367
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "what happens when procedure execution hits an "
+            },
+            {
+              "type": "text",
+              "content": "unexpected condition",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.392,
+            0.716,
+            0.441
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "get an "
+            },
+            {
+              "type": "text",
+              "content": "exception",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "… to what was expected"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.445,
+            0.583,
+            0.491
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• trying to access beyond list limits"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.186,
+            0.499,
+            0.421,
+            0.584
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.186,
+                0.499,
+                0.421,
+                0.584
+              ],
+              "content": "test = [1, 7, 4]\ntest[4]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.694,
+            0.543,
+            0.899,
+            0.584
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "IndexError"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.592,
+            0.66,
+            0.684
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• trying to convert an inappropriate type int(test)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.695,
+            0.643,
+            0.882,
+            0.687
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TypeError"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.692,
+            0.603,
+            0.739
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• referencing a non-existing variable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.187,
+            0.754,
+            0.209,
+            0.781
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.695,
+            0.744,
+            0.882,
+            0.785
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "NameError"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.108,
+            0.792,
+            0.611,
+            0.884
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• mixing data types without coercion 'a'/4"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.695,
+            0.844,
+            0.882,
+            0.889
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TypeError"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.16,
+            0.878,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OTHER TYPES OF EXCEPTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.279,
+            0.621,
+            0.326
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "already seen common error types:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.107,
+            0.338,
+            0.747,
+            0.383
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• SyntaxError: Python can’t parse program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.395,
+            0.746,
+            0.44
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• NameError: local or global name not found"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.454,
+            0.75,
+            0.498
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• AttributeError: attribute reference fails"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.515,
+            0.798,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• TypeError: operand doesn’t have correct type"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.107,
+            0.573,
+            0.856,
+            0.618
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• ValueError: operand type okay, but value is illegal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.107,
+            0.632,
+            0.871,
+            0.724
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• IOError: IO system reports malfunction (e.g. file not found)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.159,
+            0.835,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "DEALING WITH EXCEPTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.834,
+            0.329
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python code can provide "
+            },
+            {
+              "type": "text",
+              "content": "handlers",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for exceptions"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.379,
+            0.916,
+            0.645
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.086,
+                0.379,
+                0.916,
+                0.645
+              ],
+              "content": "try:\n    a = int(input(\"Tell me one number:\"))\n    b = int(input(\"Tell me another number:\"))\n    print(a/b)\nexcept:\n    print(\"Bug in user input.\")"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.741,
+            0.989,
+            0.899
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "exceptions "
+            },
+            {
+              "type": "text",
+              "content": "raised",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " by any statement in body of "
+            },
+            {
+              "type": "text",
+              "content": "try",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " are "
+            },
+            {
+              "type": "text",
+              "content": "handled",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " by the "
+            },
+            {
+              "type": "text",
+              "content": "except",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " statement and execution continues with the body of the except statement"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.967,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.068,
+            0.627,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HANDLING SPECIFIC EXCEPTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.938,
+            0.38
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "have "
+            },
+            {
+              "type": "text",
+              "content": "separate except clauses",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to deal with a particular type of exception"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.076,
+            0.39,
+            0.988,
+            0.941
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.076,
+                0.39,
+                0.988,
+                0.941
+              ],
+              "content": "try:\n    a = int(input(\"Tell me one number: \"))\n    b = int(input(\"Tell me another number: \"))\n    print(\"a/b = \", a/b)\n    print(\"a+b = \", a+b)\nexcept ValueError:\n    print(\"Could not convert to a number.\")\nexcept ZeroDivisionError:\n    print(\"Can't divide by zero\")\nexcept:\n    print(\"Something went very wrong.\")"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.163,
+            0.62,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OTHER EXCEPTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.283,
+            0.234,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "else:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.107,
+            0.335,
+            0.867,
+            0.433
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• body of this is executed when execution of associated try body "
+            },
+            {
+              "type": "text",
+              "content": "completes with no exceptions",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.463,
+            0.28,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "finally:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.521,
+            0.866,
+            0.664
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• body of this is "
+            },
+            {
+              "type": "text",
+              "content": "always executed",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " after try, else and except clauses, even if they raised another error or executed a break, continue or return"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.677,
+            0.868,
+            0.772
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• useful for clean-up code that should be run no matter what else happened (e.g. close a file)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.069,
+            0.606,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WHAT TO DO WITH EXCEPTIONS?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.668,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "what to do when encounter an error?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.355,
+            0.288,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "fail silently:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.107,
+            0.414,
+            0.694,
+            0.459
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• substitute default values or just continue"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.107,
+            0.474,
+            0.561,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• bad idea! user gets no warning"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.552,
+            0.459,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return an “error” value"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.611,
+            0.446,
+            0.653
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• what value to choose?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.107,
+            0.669,
+            0.842,
+            0.716
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• complicates code having to check for a special value"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 8,
+          "bbox": [
+            0.088,
+            0.749,
+            0.665,
+            0.796
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "stop execution, signal error condition"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.108,
+            0.808,
+            0.538,
+            0.85
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• in Python: raise an exception"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.128,
+            0.855,
+            0.865,
+            0.901
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "raise Exception(\"descriptive string\")"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.072,
+            0.601,
+            0.905,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.072,
+                0.601,
+                0.905,
+                0.907
+              ],
+              "content": "raise ValueError(\"something is wrong\")\nkeyword name of error\nyou want to raise\noptional, but typically a\nstring with a message"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.1,
+            0.068,
+            0.776,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXCEPTIONS AS CONTROL FLOW"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.276,
+            0.861,
+            0.38
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "don’t return special values when an error occurred and then check whether ‘error value’ was returned"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.086,
+            0.407,
+            0.905,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "instead, "
+            },
+            {
+              "type": "text",
+              "content": "raise an exception",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " when unable to produce a result consistent with function’s specification"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.541,
+            0.823,
+            0.589
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "raise <exceptionName>(<arguments>)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.1,
+            0.068,
+            0.69,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE: RAISING AN EXCEPTION"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.005,
+            0.277,
+            0.98,
+            0.921
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.005,
+                0.277,
+                0.98,
+                0.921
+              ],
+              "content": "def get_ratios(L1, L2):\n    \"\"\" Assumes: L1 and L2 are lists of equal length of numbers\n    Returns: a list containing L1[i]/L2[i] \"\"\"\n    ratios = []\n    for index in range(len(L1)):\n        try:\n            ratios.append(L1[index]/L2[index])\n        except ZeroDivisionError:\n            ratios.append(float('nan')) #nan = not a number\n        except:\n            raise ValueError('get_ratios called with bad arg')\n    return ratios"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.102,
+            0.159,
+            0.777,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE OF EXCEPTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.858,
+            0.378
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "assume we are "
+            },
+            {
+              "type": "text",
+              "content": "given a class list",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for a subject: each entry is a list of two parts"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.108,
+            0.389,
+            0.679,
+            0.432
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• a list of first and last name for a student"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.448,
+            0.555,
+            0.494
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• a list of grades on assignments"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.097,
+            0.531,
+            0.949,
+            0.609
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.097,
+                0.531,
+                0.949,
+                0.609
+              ],
+              "content": "test_grades = [[['peter', 'parker'], [80.0, 70.0, 85.0]], [['bruce', 'wayne'], [100.0, 80.0, 74.0]]]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.088,
+            0.681,
+            0.843,
+            0.783
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "create a new class list, with name, grades, and an average"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.099,
+            0.804,
+            0.904,
+            0.883
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[[['peter', 'parker'], [80.0, 70.0, 85.0], 78.33333], [['bruce', 'wayne'], [100.0, 80.0, 74.0], 84.666667]]]"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.099,
+            0.068,
+            0.974,
+            0.243
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.099,
+                0.068,
+                0.974,
+                0.243
+              ],
+              "content": "EXAMPLE\nCODE        [['peter', 'parker'], [80.0, 70.0, 85.0]], [['bruce', 'wayne'], [100.0, 80.0, 74.0]]]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.33,
+            0.914,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.086,
+                0.33,
+                0.914,
+                0.709
+              ],
+              "content": "def get_stats(class_list):\n    new_stats = []\n    for elt in class_list:\n        new_stats.append([elt[0], elt[1], avg(elt[1]))])\n    return new_stats\n\ndef avg(grades):\n    return sum(grades)/len(grades)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.067,
+            0.813,
+            0.232
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ERROR IF NO GRADE FOR A STUDENT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.276,
+            0.807,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if one or more students "
+            },
+            {
+              "type": "text",
+              "content": "don’t have any grades",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ", get an error"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.085,
+            0.407,
+            0.975,
+            0.593
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.085,
+                0.407,
+                0.975,
+                0.593
+              ],
+              "content": "test_grades = [[\"['peter', 'parker'], [10.0, 5.0, 85.0]],\n        [[\"bruce', 'wayne'], [10.0, 8.0, 74.0]],\n        [[\"captain', 'america'], [8.0,10.0,96.0]],\n        [[\"deadpool'], []]]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.624,
+            0.856,
+            0.77
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "get ZeroDivisionError: float division by zero because try to return sum(grades)/len(grades)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.067,
+            0.835,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OPTION 1: FLAG THE ERROR BY PRINTING A MESSAGE"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.086,
+            0.267,
+            0.933,
+            0.367
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "decide to "
+            },
+            {
+              "type": "text",
+              "content": "notify",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " that something went wrong with a msg def avg(grades):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.559,
+            0.585,
+            0.607
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "running on some test data gives"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.085,
+            0.619,
+            1.0,
+            0.912
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.085,
+                0.619,
+                1.0,
+                0.912
+              ],
+              "content": "warning: no grades data\n[[['peter', 'parker'], [10.0, 5.0, 85.0], 15.41666666],\n[['bruce', 'wayne'], [10.0, 8.0, 74.0], 13.83333334],\n[['captain', 'america'], [8.0, 10.0, 96.0], 17.5],\n[[['deadpool'], [], None]]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.098,
+            0.159,
+            0.935,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "OPTION 2: CHANGE THE POLICY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.268,
+            0.821,
+            0.317
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "decide that a student with no grades gets a zero"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.325,
+            0.807,
+            0.59
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.086,
+                0.325,
+                0.807,
+                0.59
+              ],
+              "content": "def avg(grades):\n    try:\n        return sum(grades)/len(grades)\n    except ZeroDivisionError:\n        print('warning: no grades data')\n        return 0.0"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.603,
+            0.584,
+            0.651
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "running on some test data gives"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.088,
+            0.663,
+            0.962,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.088,
+                0.663,
+                0.962,
+                0.952
+              ],
+              "content": "warning: no grades data\n[[['peter', 'parker'], [10.0, 5.0, 85.0], 15.41666666],\n[['bruce', 'wayne'], [10.0, 8.0, 74.0], 13.83333334],\n[['captain', 'america'], [8.0, 10.0, 96.0], 17.5],\n[[['deadpool'], [], 0.0]]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.096,
+            0.161,
+            0.425,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ASSERTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.277,
+            0.778,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "want to be sure that "
+            },
+            {
+              "type": "text",
+              "content": "assumptions",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " on state of computation are as expected"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.411,
+            0.903,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use an "
+            },
+            {
+              "type": "text",
+              "content": "assert statement",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to raise an AssertionError exception if assumptions not met"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.537,
+            0.769,
+            0.589
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "an example of good "
+            },
+            {
+              "type": "text",
+              "content": "defensive programming",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.101,
+            0.16,
+            0.35,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXAMPLE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.046,
+            0.325,
+            0.343,
+            0.368
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def avg(grades):"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.093,
+            0.383,
+            0.957,
+            0.643
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.093,
+                0.383,
+                0.957,
+                0.643
+              ],
+              "content": "assert len(grades) != 0, 'no grades data'\nreturn sum(grades)/len(grades)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.046,
+            0.673,
+            0.959,
+            0.783
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "raises an AssertionError if it is given an empty list for grades"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.047,
+            0.811,
+            0.364,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "otherwise runs ok"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.068,
+            0.807,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ASSERTIONS AS DEFENSIVE PROGRAMMING"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.087,
+            0.278,
+            0.808,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "assertions don’t allow a programmer to control response to unexpected conditions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.408,
+            0.861,
+            0.507
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ensure that "
+            },
+            {
+              "type": "text",
+              "content": "execution halts",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " whenever an expected condition is not met"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.537,
+            0.906,
+            0.638
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "typically used to "
+            },
+            {
+              "type": "text",
+              "content": "check inputs",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to functions, but can be used anywhere"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.667,
+            0.87,
+            0.77
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can be used to "
+            },
+            {
+              "type": "text",
+              "content": "check outputs",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of a function to avoid propagating bad values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.087,
+            0.797,
+            0.776,
+            0.847
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "can make it easier to locate a source of a bug"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.097,
+            0.161,
+            0.871,
+            0.233
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WHERE TO USE ASSERTIONS?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.088,
+            0.277,
+            0.875,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "goal is to spot bugs as soon as introduced and make clear where they happened"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.087,
+            0.41,
+            0.569,
+            0.457
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use as a "
+            },
+            {
+              "type": "text",
+              "content": "supplement",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to testing"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.087,
+            0.485,
+            0.825,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "raise "
+            },
+            {
+              "type": "text",
+              "content": "exceptions",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " if users supplies "
+            },
+            {
+              "type": "text",
+              "content": "bad data input",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.566,
+            0.369,
+            0.608
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "use "
+            },
+            {
+              "type": "text",
+              "content": "assertions",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.107,
+            0.623,
+            0.622,
+            0.667
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• check "
+            },
+            {
+              "type": "text",
+              "content": "types",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of arguments or values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.108,
+            0.682,
+            0.794,
+            0.725
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• check that "
+            },
+            {
+              "type": "text",
+              "content": "invariants",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " on data structures are met"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.108,
+            0.741,
+            0.61,
+            0.783
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• check "
+            },
+            {
+              "type": "text",
+              "content": "constraints",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " on return values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.108,
+            0.799,
+            0.899,
+            0.894
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• check for "
+            },
+            {
+              "type": "text",
+              "content": "violations",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " of constraints on procedure (e.g. no duplicates in a list)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 7"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "34"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT OpenCourseWare "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For information about citing these materials or our Terms of Use, visit: "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/terms",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu/terms"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,474 @@
+<!-- page: 1 -->
+
+## Op#miza#on Problems,
+
+John Gu7ag
+
+MIT Department of Electrical Engineering and Computer Science
+
+<!-- page: 2 -->
+
+## Relevant Reading for Today’s Lecture
+
+§Chapter	13
+
+<!-- page: 3 -->
+
+## The Pros and Cons of Greedy
+
+§Easy	to	implement
+
+§Computa<onally	efficient
+
+§But	does	not	always	yield	the	best	solu<on ◦ Don’t	even	know	how	good	the	approxima<on	is
+
+Ques<on	1
+
+<!-- page: 4 -->
+
+## Brute Force Algorithm
+
+§1.	Enumerate	all	possible	combina<ons	of	items.
+
+§2.	Remove	all	of	the	combina<ons	whose	total	units exceeds	the	allowed	weight.
+
+§3.	From	the	remaining	combina<ons	choose	any	one whose	value	is	the	largest.
+
+<!-- page: 5 -->
+
+## Search Tree Implementa#on
+
+§The	tree	is	built	top	down	star<ng	with	the	root
+
+§The	first	element	is	selected	from	the	s<ll	to	be considered	items
+
+◦ If	there	is	room	for	that	item	in	the	knapsack,	a	node	is constructed	that	reflects	the	consequence	of	choosing	to take	that	item.		By	conven<on,	we	draw	that	as	the	leS child
+
+◦ We	also	explore	the	consequences	of	not	taking	that item.	This	is	the	right	child
+
+§The	process	is	then	applied	recursively	to	non-leaf children
+
+§Finally,	chose	a	node	with	the	highest	value	that	meets constraints
+
+<!-- page: 6 -->
+
+![](images/page_5_image_0.jpg)
+
+![](images/page_5_image_1.jpg)
+
+![](images/page_5_image_2.jpg)
+
+![](images/page_5_image_3.jpg)
+
+![](images/page_5_image_4.jpg)
+
+## A Search Tree Enumerates Possibili#es
+
+LeS-first,	depth-first <u>enumera<on</u>
+
+![](images/page_5_image_7.jpg)
+
+Val	=	170
+
+![](images/page_5_image_9.jpg)
+
+Take
+
+Cal	=	766
+
+Don’tTake
+
+![](images/page_5_image_13.jpg)
+
+Val	=	120 Cal	=	766
+
+![](images/page_5_image_15.jpg)
+
+![](images/page_5_image_16.jpg)
+
+![](images/page_5_image_17.jpg)
+
+Val	=	140 Cal	=	508
+
+Val	=	90 Cal	=	145
+
+![](images/page_5_image_20.jpg)
+
+![](images/page_5_image_21.jpg)
+
+![](images/page_5_image_22.jpg)
+
+Val	=	80 Cal	=	612
+
+Val	=	30 Cal	=	258
+
+![](images/page_5_image_25.jpg)
+
+Val	=	0 6	Cal	=	0
+
+<!-- page: 7 -->
+
+![](images/page_6_image_0.jpg)
+
+Image © source unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use](https://ocw.mit.edu/help/faq-fair-use).
+
+<!-- page: 8 -->
+
+## Computa#onal Complexity
+
+§Time	based	on	number	of	nodes	generated
+
+§Number	of	levels	is	number	of	items	to	choose	from
+
+§Number	of	nodes	at	level	i	is $2^{i}$
+
+§So,	if	there	are	n	items	the	number	of	nodes	is ◦ ∑𝑖=0↑𝑖=𝑛▒​2↑𝑖 ◦ I.e.,	O(2↑𝑛+1 )
+
+§An	obvious	op<miza<on:	don’t	explore	parts	of	tree that	violate	constraint	(e.g.,	too	many	calories) ◦ Doesn’t	change	complexity
+
+§Does	this	mean	that	brute	force	is	never	useful? ◦ Let’s	give	it	a	try
+
+<!-- page: 9 -->
+
+## Header for Decision Tree Implementa#on
+
+```python
+def maxVal(toConsider, avail):
+    """Assumes toConsider a list of items,
+        avail a weight
+    Returns a tuple of the total value of a
+    solution to 0/1 knapsack problem and
+    the items of that solution"""
+```
+
+toConsider. Those items that nodes higher up in the tree (corresponding to earlier calls in the recursive call stack) have not yet considered
+
+avail. The amount of space still available
+
+<!-- page: 10 -->
+
+## Body of maxVal (without comments)
+
+```python
+if toConsider == [] or avail == 0:
+    result = (0, ()) 
+elif toConsider[0].getUnits() > avail:
+    result = maxVal(toConsider[1:], avail)
+else:
+    nextItem = toConsider[0]
+    withVal, withToTake = maxVal(toConsider[1:], avail - nextItem.getUnits())
+    avail - nextItem-val() {
+    withVal += nextItem-val() {
+    withoutVal, withoutToTake = maxVal(toConsider[1:], avail)
+    if withVal > withoutVal:
+        result = (withVal, withToTake + (nextItem,))
+    else:
+        result = (withoutVal, withoutToTake)
+return result
+```
+
+oes	not	actually	build	search	treeD Local	variable	result	records	best	solu<on	found	so	far
+
+<!-- page: 11 -->
+
+## Try on Example from Lecture 1
+
+§With	calorie	budget	of	750	calories,	chose	an	op<mal set	of	foods	from	the	menu
+
+| Food | wine | beer | pizza | burger | fries | coke | apple | donut |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Value | 89 | 90 | 30 | 50 | 90 | 79 | 90 | 10 |
+| calories | 123 | 154 | 258 | 354 | 365 | 150 | 95 | 195 |
+
+<!-- page: 12 -->
+
+## Search Tree Worked Great
+
+§Gave	us	a	befer	answer
+
+§Finished	quickly
+
+§But $2^{8}$ is	not	a	large	number
+
+◦ We	should	look	at	what	happens	when	we	have	a	more extensive	menu	to	choose	from
+
+<!-- page: 13 -->
+
+## Code to Try Larger Examples
+
+```python
+def buildLargeMenu(numItems, maxVal, maxCost):
+    items = []
+    for i in range(numItems):
+        items.append(Food(str(i),
+                       random.randint(1, maxVal),
+                       random.randint(1, maxCost)))
+    return items
+```
+
+```python
+for numItems in (5,10,15,20,25,30,35,40,45,50,55,60):
+    items = buildLargeMenu(numItems, 90, 250)
+    testMaxVal(items, 750, False)
+```
+
+<!-- page: 14 -->
+
+## Is It Hopeless?
+
+§In	theory,	yes
+
+§In	prac<ce,	no!
+
+§Dynamic	programming	to	the	rescue
+
+DYOGRAMINGMING DYNAMIC
+
+![](images/page_13_image_5.jpg)
+
+RICHARD BELLMAN
+
+<!-- page: 15 -->
+
+## Dynamic Programming?
+
+## Some<mes	a	name	is	just	a	name
+
+“The	1950s	were	not	good	years	for	mathema<cal research…	I	felt	I	had	to	do	something	to	shield	Wilson and	the	Air	Force	from	the	fact	that	I	was	really	doing mathema<cs...	What	<tle,	what	name,	could	I choose?	...	It's	impossible	to	use	the	word	dynamic	in	a pejora<ve	sense.	Try	thinking	of	some	combina<on	that will	possibly	give	it	a	pejora<ve	meaning.	It's impossible.	Thus,	I	thought	dynamic	programming	was a	good	name.	It	was	something	not	even	a Congressman	could	object	to.	So	I	used	it	as	an umbrella	for	my	ac<vi<es.
+
+--	Richard	Bellman
+
+<!-- page: 16 -->
+
+## Recursive Implementa#on of Fibonnaci
+
+```python
+def fib(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+```
+
+```txt
+fib(120) = 8,670,007,398,507,948,658,051,921
+```
+
+<!-- page: 17 -->
+
+## Call Tree for Recursive Fibonnaci(6) = 13
+
+![](images/page_16_image_1.jpg)
+
+<!-- page: 18 -->
+
+## Clearly a Bad Idea to Repeat Work
+
+§Trade	a	<me	for	space
+
+§Create	a	table	to	record	what	we’ve	done
+
+◦ Before	compu<ng	fib(x),	check	if	value	of	fib(x) already	stored	in	the	table
+
+◦ If	so,	look	it	up
+
+◦ If	not,	compute	it	and	then	add	it	to	table
+
+◦ Called	memoiza<on
+
+<!-- page: 19 -->
+
+## Using a Memo to Compute Fibonnaci
+
+```python
+def fastFib(n, memo = {}):
+    """Assumes n is an int >= 0, memo used only by
+      recursive calls
+    Returns Fibonacci of n"""
+    if n == 0 or n == 1:
+      return 1
+    try:
+      return memo[n]
+    except KeyError:
+      result = fastFib(n-1, memo) +\
+              fastFib(n-2, memo)
+    memo[n] = result
+    return result
+```
+
+<!-- page: 20 -->
+
+## When Does It Work?
+
+§Op<mal	substructure:	a	globally	op<mal	solu<on	can be	found	by	combining	op<mal	solu<ons	to	local subproblems
+
+◦ For	x	>	1,	fib(x)	=	fib(x	-	1)	+	fib(x	–	2)
+
+§Overlapping	subproblems:	finding	an	op<mal	solu<on involves	solving	the	same	problem	mul<ple	<mes ◦ Compute	fib(x)	or	many	<mes
+
+<!-- page: 21 -->
+
+## What About 0/1 Knapsack Problem?
+
+§Do	these	condi<ons	hold?
+
+![](images/page_20_image_2.jpg)
+
+Ques<ons	2	and	3
+
+<!-- page: 22 -->
+
+## Search Tree
+
+## Op<mal	substructure? Overlapping	subproblems?
+
+Don’tTake
+
+![](images/page_21_image_3.jpg)
+
+<!-- page: 23 -->
+
+## A Different Menu
+
+Take
+
+![](images/page_22_image_2.jpg)
+
+Don’t	Take
+
+<!-- page: 24 -->
+
+## Need Not Have Copies of Items
+
+| Item | Value | Calories |
+| --- | --- | --- |
+| a | 6 | 3 |
+| b | 7 | 3 |
+| c | 8 | 2 |
+| d | 9 | 5 |
+
+<!-- page: 25 -->
+
+## Search Tree
+
+§Each	node	=	&lt;taken,	leS,	value,	remaining	calories&gt;
+
+![](images/page_24_image_2.jpg)
+
+| Item | Value | Calories |
+| --- | --- | --- |
+| a | 6 | 3 |
+| b | 7 | 3 |
+| c | 8 | 2 |
+| d | 9 | 5 |
+
+<!-- page: 26 -->
+
+## What Problem is Solved at Each Node?
+
+§Given	remaining	weight,	maximize	value	by	choosing among	remaining	items
+
+§Set	of	previously	chosen	items,	or	even	value	of	that set,	doesn’t	mafer!
+
+<!-- page: 27 -->
+
+## Overlapping Subproblems
+
+![](images/page_26_image_1.jpg)
+
+<!-- page: 28 -->
+
+## Modify maxVal to Use a Memo
+
+§Add	memo	as	a	third	argument ◦ def fastMaxVal(toConsider, avail, memo = {}):
+
+§Key	of	memo	is	a	tuple
+
+◦ (items	leS	to	be	considered,	available	weight)
+
+◦ Items	leS	to	be	considered	represented	by len(toConsider)
+
+§First	thing	body	of	func<on	does	is	check	whether	the op<mal	choice	of	items	given	the	the	available	weight is	already	in	the	memo
+
+§Last	thing	body	of	func<on	does	is	update	the	memo
+
+<!-- page: 29 -->
+
+## Performance
+
+| len(items) | 2**len(items) | Number of calls |
+| --- | --- | --- |
+| 2 | 4 | 7 |
+| 4 | 16 | 25 |
+| 8 | 256 | 427 |
+| 16 | 65,536 | 5,191 |
+| 32 | 4,294,967,296 | 22,701 |
+| 64 | 18,446,744,073,709,551,616 | 42,569 |
+| 128 | Big | 83,319 |
+| 256 | Really Big | 176,614 |
+| 512 | Ridiculously big | 351,230 |
+| 1024 | Absolutely huge | 703,802 |
+
+<!-- page: 30 -->
+
+## How Can This Be?
+
+§Problem	is	exponen<al
+
+§Have	we	overturned	the	laws	of	the	universe?
+
+§Is	dynamic	programming	a	miracle?
+
+§No,	but	computa<onal	complexity	can	be	subtle
+
+§Running	<me	of	fastMaxVal	is	governed	by	number	of dis<nct	pairs,	&lt;toConsider, avail&gt;
+
+◦ Number	of	possible	values	of	toConsider	bounded by	len(items)
+
+◦ Possible	values	of	avail	a	bit	harder	to	characterize
+
+◦ Bounded	by	number	of	dis<nct	sums	of	weights
+
+◦ Covered	in	more	detail	in	assigned	reading
+
+<!-- page: 31 -->
+
+## Summary of Lectures 1-2
+
+§Many	problems	of	prac<cal	importance	can	be formulated	as	op<miza<on	problems
+
+§Greedy	algorithms	oSen	provide	adequate	(though	not necessarily	op<mal)	solu<ons
+
+§Finding	an	op<mal	solu<on	is	usually	exponen<ally hard
+
+§But	dynamic	programming	oSen	yields	good performance	for	a	subclass	of	op<miza<on	problems— those	with	op<mal	substructure	and	overlapping subproblems
+
+◦ Solu<on	always	correct
+
+◦ Fast	under	the	right	circumstances
+
+<!-- page: 32 -->
+
+## The “Roll-over” Op#miza#on Problem
+
+```javascript
+Score = ((60 - (a+b+c+d+e))*F + a*ps1 + b*ps2 + c*ps3 + d*ps4 + e*ps5
+```
+
+## Objec<ve:
+
+Given	values	for	F,	ps1,	ps2,	ps3,	ps4,	ps5
+
+Find	values	for	a,	b,	c,	d,	e	that	maximize	score
+
+## Constraints:
+
+a,	b,	c,	d,	e	are	each	10	or	0
+
+a	+	b	+	c	+	d	+	e	≥	20
+
+<!-- page: 33 -->
+
+6.0002 Introduction to Computational Thinking and Data Science Fall 2016
+
+For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms).

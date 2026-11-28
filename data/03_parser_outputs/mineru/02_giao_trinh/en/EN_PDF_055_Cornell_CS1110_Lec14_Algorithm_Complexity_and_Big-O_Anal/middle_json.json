@@ -1,0 +1,2629 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-14",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.886,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/4/26"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 1,
+          "bbox": [
+            0.104,
+            0.332,
+            0.115,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.238,
+            0.124,
+            0.339,
+            0.141
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nested Lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.116,
+            0.154,
+            0.308,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Lists can hold any objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.117,
+            0.173,
+            0.245,
+            0.19
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Lists are objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.191,
+            0.366,
+            0.207
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Therefore lists can hold other lists!"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 6,
+          "bbox": [
+            0.136,
+            0.22,
+            0.199,
+            0.237
+          ],
+          "image_path": "images/page_0_equation_6.jpg",
+          "content": "\\mathrm{a} = [ 2, 1 ]"
+        },
+        {
+          "type": "equation",
+          "index": 7,
+          "bbox": [
+            0.136,
+            0.237,
+            0.198,
+            0.252
+          ],
+          "image_path": "images/page_0_equation_7.jpg",
+          "content": "\\mathrm{b} = [ 3, 1 ]"
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.303,
+            0.216,
+            0.436,
+            0.248
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.303,
+                0.216,
+                0.436,
+                0.248
+              ],
+              "image_path": "images/page_0_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 9,
+          "bbox": [
+            0.136,
+            0.252,
+            0.212,
+            0.267
+          ],
+          "image_path": "images/page_0_equation_9.jpg",
+          "content": "\\mathrm{c} = [ 1, 4, \\mathrm{b} ]"
+        },
+        {
+          "type": "equation",
+          "index": 10,
+          "bbox": [
+            0.135,
+            0.267,
+            0.228,
+            0.283
+          ],
+          "image_path": "images/page_0_equation_10.jpg",
+          "content": "\\mathbf {x} = [ 1, \\mathrm{a}, \\mathrm{c}, 5 ]"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.269,
+            0.247,
+            0.453,
+            0.264
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "x = [1, [2, 1], [1, 4, [3, 1]], 5]"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.553,
+            0.124,
+            0.869,
+            0.141
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "How Multidimensional Lists are Stored"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.542,
+            0.152,
+            0.681,
+            0.168
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• b = [[9, 6, 4], [5, 7, 7]]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.559,
+            0.209,
+            0.601,
+            0.223
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "b "
+            },
+            {
+              "type": "text",
+              "content": "id1",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 15,
+          "bbox": [
+            0.557,
+            0.171,
+            0.871,
+            0.23
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 15,
+              "bbox": [
+                0.557,
+                0.171,
+                0.871,
+                0.23
+              ],
+              "image_path": "images/page_0_image_15.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.541,
+            0.235,
+            0.783,
+            0.25
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• b holds name of a one-dimensional list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.558,
+            0.25,
+            0.676,
+            0.264
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Has len(b) elements"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 18,
+          "bbox": [
+            0.526,
+            0.332,
+            0.538,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.557,
+            0.264,
+            0.77,
+            0.278
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Its elements are (the names of) 1D lists"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.54,
+            0.279,
+            0.866,
+            0.295
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• b[i] holds the name of a one-dimensional list (of ints)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.557,
+            0.294,
+            0.688,
+            0.309
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Has len(b[i]) elements"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 22,
+          "bbox": [
+            0.196,
+            0.406,
+            0.381,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ragged Lists vs Tables"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.117,
+            0.435,
+            0.452,
+            0.453
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Ragged is 2d uneven list: b = [[17,13,19],[28,95]]"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 24,
+          "bbox": [
+            0.124,
+            0.455,
+            0.443,
+            0.507
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 24,
+              "bbox": [
+                0.124,
+                0.455,
+                0.443,
+                0.507
+              ],
+              "image_path": "images/page_0_image_24.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.117,
+            0.519,
+            0.416,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Table is 2d uniform list: b = [[9,6,4],[5,7,7]]"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 26,
+          "bbox": [
+            0.134,
+            0.539,
+            0.443,
+            0.597
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 26,
+              "bbox": [
+                0.134,
+                0.539,
+                0.443,
+                0.597
+              ],
+              "image_path": "images/page_0_image_26.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.117,
+            0.756,
+            0.301,
+            0.772
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Assign value at row 3, col 2:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.131,
+            0.776,
+            0.195,
+            0.791
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "d[3][2] = 8"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.117,
+            0.797,
+            0.247,
+            0.812
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "An odd symmetry",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.117,
+            0.715,
+            0.301,
+            0.731
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Access value at row 3, col 2:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 31,
+          "bbox": [
+            0.364,
+            0.731,
+            0.45,
+            0.805
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 31,
+              "bbox": [
+                0.364,
+                0.731,
+                0.45,
+                0.805
+              ],
+              "content": "d 0 5 4 7 3\n1 4 8 9 7\n2 5 1 2 3\n3 4 1 2 9\n4 6 7 8 0"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "csv"
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.135,
+            0.816,
+            0.36,
+            0.832
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Number of rows of d: len(d)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 33,
+          "bbox": [
+            0.145,
+            0.686,
+            0.431,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Overview of Two-Dimensional Lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.135,
+            0.837,
+            0.375,
+            0.853
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Number of cols in row r of d: len(d[r])"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 35,
+          "bbox": [
+            0.596,
+            0.405,
+            0.826,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Representing Tables as Lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.584,
+            0.439,
+            0.665,
+            0.455
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Spreadsheet",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.716,
+            0.436,
+            0.865,
+            0.452
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Represent as 2d list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.579,
+            0.468,
+            0.648,
+            0.55
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0 1 2 3 0 5 4 7 3 1 4 8 9 7 2 5 1 2 3 3 4 1 2 9 4 "
+            },
+            {
+              "type": "text",
+              "content": "6 7 8 0",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.66,
+            0.477,
+            0.705,
+            0.5
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Each row, col has a"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.733,
+            0.453,
+            0.869,
+            0.468
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Each table row a list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.734,
+            0.47,
+            0.84,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ List of all rows"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 42,
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.733,
+            0.486,
+            0.859,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Row major order",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.716,
+            0.503,
+            0.872,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Column major exists"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.732,
+            0.52,
+            0.869,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Less common to see"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.734,
+            0.537,
+            0.876,
+            0.565
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Limited to some scientific applications"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 47,
+          "bbox": [
+            0.574,
+            0.565,
+            0.855,
+            0.582
+          ],
+          "image_path": "images/page_0_equation_47.jpg",
+          "content": "\\mathrm{d} = [ [ 5, 4, 7, 3 ], [ 4, 8, 9, 7 ], [ 5, 1, 2, 3 ], [ 4, 1, 2, 9 ], [ 6, 7, 8, 0 ] ]"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 48,
+          "bbox": [
+            0.576,
+            0.686,
+            0.846,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Slices and Multidimensional Lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.54,
+            0.716,
+            0.735,
+            0.731
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Only “top-level” list is copied."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.541,
+            0.732,
+            0.754,
+            0.747
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Contents of the list are not altered"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.542,
+            0.748,
+            0.688,
+            0.763
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• b = [[9, 6], [4, 5], [7, 7]]"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 52,
+          "bbox": [
+            0.547,
+            0.765,
+            0.769,
+            0.842
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 52,
+              "bbox": [
+                0.547,
+                0.765,
+                0.769,
+                0.842
+              ],
+              "image_path": "images/page_0_image_52.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 53,
+          "bbox": [
+            0.806,
+            0.726,
+            0.857,
+            0.741
+          ],
+          "image_path": "images/page_0_equation_53.jpg",
+          "content": "\\mathrm{x} = \\mathrm{b} [: 2 ]"
+        },
+        {
+          "type": "image",
+          "index": 54,
+          "bbox": [
+            0.796,
+            0.749,
+            0.869,
+            0.812
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 54,
+              "bbox": [
+                0.796,
+                0.749,
+                0.869,
+                0.812
+              ],
+              "image_path": "images/page_0_image_54.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 55,
+          "bbox": [
+            0.102,
+            0.614,
+            0.115,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 56,
+          "bbox": [
+            0.102,
+            0.894,
+            0.115,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 57,
+          "bbox": [
+            0.526,
+            0.614,
+            0.538,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 58,
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.886,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/4/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.195,
+            0.124,
+            0.381,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Shallow vs. Deep Copy"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.116,
+            0.154,
+            0.363,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Shallow copy:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Copy top-level list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.134,
+            0.171,
+            0.404,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Happens when slice a multidimensional list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.188,
+            0.404,
+            0.223
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Deep copy:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Copy top and all nested lists § Requires a special function: copy.deepcopy"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.117,
+            0.224,
+            0.206,
+            0.24
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Example:",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.134,
+            0.24,
+            0.234,
+            0.256
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ">>> import copy"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.134,
+            0.255,
+            0.25,
+            0.27
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ">>> a = [[1,2],[2,3]]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.134,
+            0.27,
+            0.206,
+            0.285
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ">>> b = a[:]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.286,
+            0.27,
+            0.378,
+            0.286
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Shallow copy"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.134,
+            0.285,
+            0.365,
+            0.301
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ">>> c = copy.deepcopy(a) # Deep copy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 11,
+          "bbox": [
+            0.599,
+            0.124,
+            0.824,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Functions over Nested Lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.539,
+            0.154,
+            0.852,
+            0.172
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Functions on nested lists similar to lists"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.557,
+            0.174,
+            0.804,
+            0.192
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Go over (nested) list with for-loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.557,
+            0.194,
+            0.824,
+            0.211
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Use accumulator to gather the results"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.541,
+            0.213,
+            0.784,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• But two important differences"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.557,
+            0.232,
+            0.743,
+            0.25
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Need "
+            },
+            {
+              "type": "text",
+              "content": "multiple for-loops",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.558,
+            0.251,
+            0.816,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ One for each part/dimension of loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.558,
+            0.27,
+            0.864,
+            0.287
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ In some cases need "
+            },
+            {
+              "type": "text",
+              "content": "multiple accumulators",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.558,
+            0.288,
+            0.81,
+            0.305
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Latter true when result is new table"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 20,
+          "bbox": [
+            0.185,
+            0.406,
+            0.392,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Functions on Nested Lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 21,
+          "bbox": [
+            0.118,
+            0.435,
+            0.209,
+            0.448
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def all_nums(table):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.128,
+            0.448,
+            0.337,
+            0.461
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns True if table contains only numbers"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.128,
+            0.465,
+            0.335,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: table is a (non-ragged) 2d List\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.128,
+            0.48,
+            0.228,
+            0.492
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "result = True"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.129,
+            0.492,
+            0.226,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Walk through table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.237,
+            0.485,
+            0.32,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Accumulator"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.129,
+            0.505,
+            0.204,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for row in table:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.278,
+            0.506,
+            0.345,
+            0.52
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "First Loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.139,
+            0.518,
+            0.249,
+            0.53
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Walk through the row"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.14,
+            0.53,
+            0.212,
+            0.542
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for item in row:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.269,
+            0.525,
+            0.353,
+            0.54
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Second Loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.152,
+            0.543,
+            0.286,
+            0.555
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if not type(item) in [int,float]:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.161,
+            0.555,
+            0.229,
+            0.569
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "result = False"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.128,
+            0.574,
+            0.191,
+            0.587
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return result"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 35,
+          "bbox": [
+            0.206,
+            0.686,
+            0.371,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A Mutable Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 36,
+          "bbox": [
+            0.118,
+            0.715,
+            0.211,
+            0.728
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def add_ones(table):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.128,
+            0.728,
+            0.311,
+            0.74
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Adds one to every number in the table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.128,
+            0.741,
+            0.274,
+            0.753
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Preconditions: table is a 2d List,"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.128,
+            0.753,
+            0.254,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "all table elements are int\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.129,
+            0.765,
+            0.266,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Walk through table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.129,
+            0.778,
+            0.26,
+            0.791
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for rpos in range(len(table)):"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 42,
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.276,
+            0.762,
+            0.359,
+            0.789
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Do not loop "
+            },
+            {
+              "type": "text",
+              "content": "over the table",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 44,
+          "bbox": [
+            0.394,
+            0.733,
+            0.453,
+            0.766
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 44,
+              "bbox": [
+                0.394,
+                0.733,
+                0.453,
+                0.766
+              ],
+              "image_path": "images/page_1_image_44.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 45,
+          "bbox": [
+            0.526,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.139,
+            0.791,
+            0.269,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Walk through each column"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.139,
+            0.804,
+            0.296,
+            0.817
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for cpos in range(len(table[rpos])):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.146,
+            0.818,
+            0.322,
+            0.831
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "table[rpos][cpos] = table[rpos][cpos]+1"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 49,
+          "bbox": [
+            0.402,
+            0.773,
+            0.444,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 49,
+              "bbox": [
+                0.402,
+                0.773,
+                0.444,
+                0.804
+              ],
+              "image_path": "images/page_1_image_49.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.128,
+            0.842,
+            0.234,
+            0.856
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# No return statement"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 51,
+          "bbox": [
+            0.394,
+            0.81,
+            0.452,
+            0.844
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 51,
+              "bbox": [
+                0.394,
+                0.81,
+                0.452,
+                0.844
+              ],
+              "image_path": "images/page_1_image_51.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 52,
+          "bbox": [
+            0.584,
+            0.406,
+            0.839,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Transpose: A Trickier Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 53,
+          "bbox": [
+            0.54,
+            0.435,
+            0.635,
+            0.447
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def transpose(table):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.551,
+            0.445,
+            0.805,
+            0.458
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns: copy of table with rows and columns swapped"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.551,
+            0.459,
+            0.759,
+            0.472
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: table is a (non-ragged) 2d List\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.551,
+            0.471,
+            0.766,
+            0.483
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "numrows = len(table) # Need number of rows"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 57,
+          "bbox": [
+            0.831,
+            0.448,
+            0.864,
+            0.461
+          ],
+          "image_path": "images/page_1_equation_57.jpg",
+          "content": "\\begin{array}{c c} \\hline 1 & 2 \\\\ \\hline \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.551,
+            0.483,
+            0.792,
+            0.495
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "numcols = len(table[0]) # All rows have same no. cols"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.552,
+            0.497,
+            0.602,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "result = []"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.553,
+            0.51,
+            0.646,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for m in range(num row = []"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.652,
+            0.501,
+            0.735,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Result (new taAccumulator s): for each loop"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 62,
+          "bbox": [
+            0.831,
+            0.466,
+            0.862,
+            0.479
+          ],
+          "image_path": "images/page_1_equation_62.jpg",
+          "content": "3 4"
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.746,
+            0.497,
+            0.806,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "e) accumulator"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.678,
+            0.523,
+            0.798,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ingle row accumulator"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.83,
+            0.484,
+            0.863,
+            0.497
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5 6"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.563,
+            0.535,
+            0.679,
+            0.548
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for n in range(numrows):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.569,
+            0.548,
+            0.788,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "row.append(table[n][m]) # Create a new row list"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 68,
+          "bbox": [
+            0.825,
+            0.502,
+            0.866,
+            0.533
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 68,
+              "bbox": [
+                0.825,
+                0.502,
+                0.866,
+                0.533
+              ],
+              "image_path": "images/page_1_image_68.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.562,
+            0.561,
+            0.776,
+            0.573
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "result.append(row) # Add result to table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 70,
+          "bbox": [
+            0.552,
+            0.574,
+            0.615,
+            0.586
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return result"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 71,
+          "bbox": [
+            0.818,
+            0.537,
+            0.875,
+            0.57
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 71,
+              "bbox": [
+                0.818,
+                0.537,
+                0.875,
+                0.57
+              ],
+              "image_path": "images/page_1_image_71.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 72,
+          "bbox": [
+            0.639,
+            0.686,
+            0.784,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Another Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 73,
+          "bbox": [
+            0.54,
+            0.715,
+            0.629,
+            0.728
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def strip(table,col):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.551,
+            0.728,
+            0.745,
+            0.741
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Removes column col from the given table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.551,
+            0.74,
+            0.754,
+            0.753
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Preconditions: table is a (non-ragged) 2d List,"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.551,
+            0.753,
+            0.639,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "col valid column\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 77,
+          "bbox": [
+            0.551,
+            0.765,
+            0.689,
+            0.778
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Walk through table"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.703,
+            0.763,
+            0.779,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Do not loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.552,
+            0.779,
+            0.683,
+            0.791
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for rpos in range(len(table)):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 80,
+          "bbox": [
+            0.699,
+            0.776,
+            0.782,
+            0.789
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "over the table",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 81,
+          "bbox": [
+            0.816,
+            0.725,
+            0.876,
+            0.771
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 81,
+              "bbox": [
+                0.816,
+                0.725,
+                0.876,
+                0.771
+              ],
+              "image_path": "images/page_1_image_81.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 82,
+          "bbox": [
+            0.562,
+            0.791,
+            0.735,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Modify each row to slice out column"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 83,
+          "bbox": [
+            0.825,
+            0.774,
+            0.868,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 83,
+              "bbox": [
+                0.825,
+                0.774,
+                0.868,
+                0.804
+              ],
+              "image_path": "images/page_1_image_83.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.56,
+            0.804,
+            0.782,
+            0.818
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "table[rpos] = table[rpos][:col] + table[rpos][col+1:]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 85,
+          "bbox": [
+            0.551,
+            0.83,
+            0.658,
+            0.844
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# No return statement"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 86,
+          "bbox": [
+            0.822,
+            0.806,
+            0.871,
+            0.84
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 86,
+              "bbox": [
+                0.822,
+                0.806,
+                0.871,
+                0.84
+              ],
+              "image_path": "images/page_1_image_86.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 87,
+          "bbox": [
+            0.103,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 88,
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 89,
+          "bbox": [
+            0.945,
+            0.962,
+            0.959,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

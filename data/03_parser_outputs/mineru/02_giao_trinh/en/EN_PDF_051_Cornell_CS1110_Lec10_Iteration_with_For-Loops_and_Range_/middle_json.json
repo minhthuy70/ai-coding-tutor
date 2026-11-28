@@ -1,0 +1,3286 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-10",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.294,
+            0.713,
+            0.464,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.294,
+                0.713,
+                0.464,
+                0.861
+              ],
+              "image_path": "images/page_0_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "index": 1,
+          "bbox": [
+            0.885,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9/20/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.163,
+            0.124,
+            0.413,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Three “Areas” of Memory"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.108,
+            0.145,
+            0.469,
+            0.315
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.108,
+                0.145,
+                0.469,
+                0.315
+              ],
+              "image_path": "images/page_0_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 4,
+          "bbox": [
+            0.227,
+            0.406,
+            0.349,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Call Stack"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.116,
+            0.436,
+            0.351,
+            0.452
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The area "
+            },
+            {
+              "type": "text",
+              "content": "where call frames live",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.134,
+            0.455,
+            0.39,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Call frames are created on a function call"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.135,
+            0.472,
+            0.43,
+            0.488
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ May be several frames (functions call functions)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.134,
+            0.49,
+            0.387,
+            0.505
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Each frame deleted as the call completes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.116,
+            0.51,
+            0.374,
+            0.525
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Area of volatile, temporary memory"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.134,
+            0.528,
+            0.348,
+            0.544
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Less permanent than global space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.134,
+            0.545,
+            0.312,
+            0.561
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Think of as “scratch” space"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "index": 12,
+          "bbox": [
+            0.378,
+            0.524,
+            0.454,
+            0.562
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 12,
+              "bbox": [
+                0.378,
+                0.524,
+                0.454,
+                0.562
+              ],
+              "image_path": "images/page_0_table_12.jpg",
+              "content": "<table><tbody><tr><td>incr_x</td><td>2</td></tr><tr><td>q</td><td>id2</td></tr></tbody></table>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.116,
+            0.564,
+            0.342,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Primary focus of Assignment 2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 14,
+          "bbox": [
+            0.656,
+            0.125,
+            0.766,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Global Space"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.541,
+            0.154,
+            0.782,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• This is the "
+            },
+            {
+              "type": "text",
+              "content": "area you “start with”",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 16,
+          "bbox": [
+            0.526,
+            0.332,
+            0.538,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.557,
+            0.173,
+            0.822,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ First memory area you learned to visualize"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.558,
+            0.191,
+            0.775,
+            0.207
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ A place to store “global variables”"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.558,
+            0.208,
+            0.734,
+            0.225
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Lasts until you quit Python"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.54,
+            0.227,
+            0.743,
+            0.244
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• What are "
+            },
+            {
+              "type": "text",
+              "content": "global variables",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.558,
+            0.246,
+            0.84,
+            0.262
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Any assignment not in a function definition",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.558,
+            0.264,
+            0.741,
+            0.28
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Also "
+            },
+            {
+              "type": "text",
+              "content": "modules & functions!",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.558,
+            0.281,
+            0.743,
+            0.297
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Will see more on this in a bit"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 24,
+          "bbox": [
+            0.602,
+            0.406,
+            0.821,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Heap Space or “The Heap”"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.54,
+            0.435,
+            0.71,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Where the “folders” live",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.558,
+            0.452,
+            0.678,
+            0.466
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Stores only folders"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.54,
+            0.466,
+            0.715,
+            0.481
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Can only "
+            },
+            {
+              "type": "text",
+              "content": "access indirectly",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.558,
+            0.483,
+            0.767,
+            0.497
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Must have a variable with identifier"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.558,
+            0.498,
+            0.754,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Can be in global space, call stack"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.541,
+            0.513,
+            0.732,
+            0.528
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• MUST have "
+            },
+            {
+              "type": "text",
+              "content": "variable with id",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.557,
+            0.529,
+            0.748,
+            0.543
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ If no variable has id, it is forgotten"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "index": 32,
+          "bbox": [
+            0.785,
+            0.461,
+            0.868,
+            0.549
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 32,
+              "bbox": [
+                0.785,
+                0.461,
+                0.868,
+                0.549
+              ],
+              "image_path": "images/page_0_table_32.jpg",
+              "content": "<table><tr><td>id2</td><td></td></tr><tr><td></td><td>Point3</td></tr><tr><td>x</td><td>0.0</td></tr><tr><td>y</td><td>0.0</td></tr><tr><td>z</td><td>0.0</td></tr></table>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.558,
+            0.543,
+            0.751,
+            0.557
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Disappears in Tutor immediately"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.558,
+            0.558,
+            0.739,
+            0.572
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But not necessarily in practice"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.558,
+            0.573,
+            0.736,
+            0.588
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Role of the garbage collector"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 36,
+          "bbox": [
+            0.18,
+            0.686,
+            0.395,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Modules and Global Space"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.117,
+            0.718,
+            0.255,
+            0.733
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Importing a module:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 38,
+          "bbox": [
+            0.292,
+            0.715,
+            0.356,
+            0.729
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import math"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.135,
+            0.735,
+            0.275,
+            0.762
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Creates a global variable (same name as module)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.308,
+            0.753,
+            0.364,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Heap Space",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.386,
+            0.748,
+            0.431,
+            0.761
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "math "
+            },
+            {
+              "type": "text",
+              "content": "id5",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.136,
+            0.765,
+            0.275,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Puts contents in a "
+            },
+            {
+              "type": "text",
+              "content": "folder",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.328,
+            0.772,
+            0.346,
+            0.782
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id5",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.153,
+            0.781,
+            0.256,
+            0.795
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Module variables"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.373,
+            0.781,
+            0.412,
+            0.793
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "module",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.152,
+            0.798,
+            0.258,
+            0.812
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Module functions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.35,
+            0.799,
+            0.393,
+            0.81
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3.141592"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.135,
+            0.814,
+            0.275,
+            0.829
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Puts folder id in variable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.117,
+            0.831,
+            0.276,
+            0.864
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "from",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " keyword dumps contents to global space"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 50,
+          "bbox": [
+            0.598,
+            0.686,
+            0.824,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Functions and Global Space"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.541,
+            0.716,
+            0.697,
+            0.73
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• A function "
+            },
+            {
+              "type": "text",
+              "content": "definition",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "…"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 52,
+          "bbox": [
+            0.716,
+            0.719,
+            0.821,
+            0.732
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def to_centigrade(x):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.558,
+            0.733,
+            0.699,
+            0.759
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Creates a global variable (same name as function)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.841,
+            0.726,
+            0.876,
+            0.738
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Body"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.728,
+            0.735,
+            0.828,
+            0.748
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return 5*(x-32)/9.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.558,
+            0.76,
+            0.7,
+            0.774
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Creates a "
+            },
+            {
+              "type": "text",
+              "content": "folder",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for body"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.732,
+            0.755,
+            0.793,
+            0.767
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Global Space",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.558,
+            0.775,
+            0.699,
+            0.789
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Puts folder id in variable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.737,
+            0.77,
+            0.815,
+            0.783
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "to_centigrade "
+            },
+            {
+              "type": "text",
+              "content": "id6",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.541,
+            0.792,
+            0.658,
+            0.807
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Variable vs. Call"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.731,
+            0.791,
+            0.788,
+            0.803
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Heap Space",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.558,
+            0.808,
+            0.639,
+            0.82
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ">>> to_centigrade"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.558,
+            0.82,
+            0.713,
+            0.834
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "<fun to_centigrade at 0x100498de8>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.559,
+            0.846,
+            0.577,
+            0.858
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.558,
+            0.834,
+            0.657,
+            0.846
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ">>> to_centigrade (32)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.751,
+            0.81,
+            0.769,
+            0.82
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id6",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.793,
+            0.82,
+            0.836,
+            0.83
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "function",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 68,
+          "bbox": [
+            0.738,
+            0.808,
+            0.842,
+            0.864
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 68,
+              "bbox": [
+                0.738,
+                0.808,
+                0.842,
+                0.864
+              ],
+              "image_path": "images/page_0_image_68.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 69,
+          "bbox": [
+            0.103,
+            0.894,
+            0.115,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 70,
+          "bbox": [
+            0.102,
+            0.614,
+            0.115,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 71,
+          "bbox": [
+            0.526,
+            0.614,
+            0.538,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 72,
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 73,
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.885,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9/20/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.207,
+            0.124,
+            0.369,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recall: Call Frames"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.118,
+            0.152,
+            0.267,
+            0.167
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Draw a frame for the call"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.302,
+            0.153,
+            0.449,
+            0.168
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Call",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": to_centigrade(50.0)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.116,
+            0.167,
+            0.275,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Assign the argument value to the parameter (in frame)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.307,
+            0.171,
+            0.364,
+            0.184
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "to_centigrade",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.117,
+            0.193,
+            0.278,
+            0.24
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Execute the function body "
+            },
+            {
+              "type": "text",
+              "content": "Look for variables in the f",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "rame If not there, look for global "
+            },
+            {
+              "type": "text",
+              "content": "variables with that name",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.31,
+            0.197,
+            0.374,
+            0.214
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "x 50.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.117,
+            0.24,
+            0.274,
+            0.253
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. Erase the frame for the call"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.291,
+            0.245,
+            0.429,
+            0.26
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What is happening here?",
+              "styles": [
+                "bold",
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.141,
+            0.26,
+            0.251,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " to_centigrade(x):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.151,
+            0.272,
+            0.256,
+            0.286
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return 5*(x-32)/9.0"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.168,
+            0.406,
+            0.409,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Frames and Helper Functions"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.337,
+            0.427,
+            0.464,
+            0.441
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Not done. Do not erase!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.117,
+            0.434,
+            0.254,
+            0.448
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. def last_name_first(s):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.117,
+            0.448,
+            0.132,
+            0.462
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.293,
+            0.435,
+            0.336,
+            0.446
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Call: last_"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.149,
+            0.448,
+            0.275,
+            0.462
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\""
+            },
+            {
+              "type": "text",
+              "content": "Precond",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": s in the form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.118,
+            0.462,
+            0.132,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.326,
+            0.447,
+            0.432,
+            0.462
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "last_name_first 4"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.15,
+            0.462,
+            0.274,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'first-name last-name' \"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.118,
+            0.475,
+            0.132,
+            0.489
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.328,
+            0.47,
+            0.338,
+            0.48
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "s"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.356,
+            0.469,
+            0.418,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'Walker White'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.147,
+            0.476,
+            0.261,
+            0.49
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "first = first_name(s",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ")"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.118,
+            0.49,
+            0.132,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.151,
+            0.49,
+            0.249,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "last = last_name(s)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.118,
+            0.504,
+            0.132,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.15,
+            0.504,
+            0.262,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return last + ',' + first"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.118,
+            0.518,
+            0.132,
+            0.53
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.326,
+            0.515,
+            0.375,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "first_name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.417,
+            0.515,
+            0.433,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.117,
+            0.531,
+            0.231,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8. def first_name(s):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.117,
+            0.545,
+            0.275,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9. \"\"\""
+            },
+            {
+              "type": "text",
+              "content": "Precond",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": see above\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.328,
+            0.536,
+            0.339,
+            0.547
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "s"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.356,
+            0.535,
+            0.418,
+            0.547
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'Walker White'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.118,
+            0.56,
+            0.233,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10. end = s.find(' ')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.118,
+            0.575,
+            0.232,
+            0.589
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11. return s[0:end]"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 38,
+          "bbox": [
+            0.227,
+            0.686,
+            0.349,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Call Stack"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.117,
+            0.716,
+            0.265,
+            0.731
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Functions are "
+            },
+            {
+              "type": "text",
+              "content": "stacked",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.135,
+            0.732,
+            0.282,
+            0.759
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Cannot remove one above w/o removing one below"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.135,
+            0.76,
+            0.289,
+            0.787
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Sometimes draw bottom up (better fits the metaphor)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.358,
+            0.733,
+            0.404,
+            0.745
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Frame 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.117,
+            0.79,
+            0.284,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Stack represents memory"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.359,
+            0.755,
+            0.405,
+            0.766
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Frame 2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.13,
+            0.805,
+            0.263,
+            0.82
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "as a "
+            },
+            {
+              "type": "text",
+              "content": "high water mark",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.359,
+            0.775,
+            0.404,
+            0.788
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Frame 3"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.135,
+            0.82,
+            0.301,
+            0.847
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Must have enough to keep the "
+            },
+            {
+              "type": "text",
+              "content": "entire stack in memory",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.359,
+            0.797,
+            0.405,
+            0.81
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Frame 4"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.135,
+            0.848,
+            0.281,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Error if cannot hold stack"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 50,
+          "bbox": [
+            0.424,
+            0.731,
+            0.461,
+            0.831
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 50,
+              "bbox": [
+                0.424,
+                0.731,
+                0.461,
+                0.831
+              ],
+              "image_path": "images/page_1_image_50.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.359,
+            0.818,
+            0.405,
+            0.83
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Frame 6  5"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 52,
+          "bbox": [
+            0.58,
+            0.124,
+            0.842,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Function Access to Global Space"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.539,
+            0.152,
+            0.696,
+            0.184
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• All function definitions are in some module"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.54,
+            0.185,
+            0.692,
+            0.214
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Call can access global space for "
+            },
+            {
+              "type": "text",
+              "content": "that module",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.761,
+            0.154,
+            0.871,
+            0.179
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Global Space",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " (for globals.py) a 4"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.557,
+            0.215,
+            0.702,
+            0.229
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ math.cos: global for math"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.761,
+            0.188,
+            0.802,
+            0.2
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "change_a",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 58,
+          "bbox": [
+            0.526,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.558,
+            0.23,
+            0.711,
+            0.256
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ temperature.to_centigrade uses global for temperature"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.744,
+            0.234,
+            0.795,
+            0.245
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# globals.py"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.541,
+            0.256,
+            0.712,
+            0.272
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• But "
+            },
+            {
+              "type": "text",
+              "content": "cannot",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " change values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.745,
+            0.246,
+            0.858,
+            0.257
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Show how globals work\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.558,
+            0.273,
+            0.717,
+            0.287
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Makes a new local variable!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.743,
+            0.257,
+            0.826,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a = 4 # global space"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.558,
+            0.288,
+            0.708,
+            0.303
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Why we limit to constants"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.743,
+            0.276,
+            0.81,
+            0.288
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " change_a():"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.758,
+            0.289,
+            0.856,
+            0.3
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a = 3.5 # local variable"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 68,
+          "bbox": [
+            0.591,
+            0.406,
+            0.831,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Frames and Helper Functions"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 69,
+          "bbox": [
+            0.541,
+            0.434,
+            0.678,
+            0.448
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. def last_name_first(s):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 70,
+          "bbox": [
+            0.541,
+            0.448,
+            0.555,
+            0.461
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.716,
+            0.435,
+            0.872,
+            0.446
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Call:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " last_name_first('Walker White'):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.574,
+            0.448,
+            0.698,
+            0.462
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\""
+            },
+            {
+              "type": "text",
+              "content": "Precond",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": s in the form"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.84,
+            0.449,
+            0.855,
+            0.461
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.541,
+            0.462,
+            0.555,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.749,
+            0.449,
+            0.818,
+            0.461
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "last_name_first"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.574,
+            0.462,
+            0.697,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'first-name last-name' \"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 77,
+          "bbox": [
+            0.541,
+            0.476,
+            0.555,
+            0.488
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.574,
+            0.476,
+            0.679,
+            0.49
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "first = first_name(s)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.751,
+            0.469,
+            0.841,
+            0.481
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "s 'Walker White'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 80,
+          "bbox": [
+            0.541,
+            0.49,
+            0.555,
+            0.502
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 81,
+          "bbox": [
+            0.573,
+            0.49,
+            0.672,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "last = last_name(s)",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 82,
+          "bbox": [
+            0.751,
+            0.489,
+            0.775,
+            0.5
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "first"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 83,
+          "bbox": [
+            0.797,
+            0.489,
+            0.833,
+            0.5
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'Walker'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 84,
+          "bbox": [
+            0.541,
+            0.505,
+            0.555,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 85,
+          "bbox": [
+            0.574,
+            0.505,
+            0.684,
+            0.517
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return last + ',' + first"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 86,
+          "bbox": [
+            0.749,
+            0.515,
+            0.795,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "last_name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 87,
+          "bbox": [
+            0.839,
+            0.515,
+            0.858,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 88,
+          "bbox": [
+            0.541,
+            0.532,
+            0.651,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13. def last_name(s):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 89,
+          "bbox": [
+            0.542,
+            0.546,
+            0.559,
+            0.559
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 90,
+          "bbox": [
+            0.751,
+            0.536,
+            0.762,
+            0.547
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "s"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 91,
+          "bbox": [
+            0.576,
+            0.545,
+            0.698,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\""
+            },
+            {
+              "type": "text",
+              "content": "Precond",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": see above\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 92,
+          "bbox": [
+            0.542,
+            0.561,
+            0.559,
+            0.574
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 93,
+          "bbox": [
+            0.779,
+            0.535,
+            0.84,
+            0.547
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'Walker White'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 94,
+          "bbox": [
+            0.542,
+            0.575,
+            0.56,
+            0.588
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 95,
+          "bbox": [
+            0.577,
+            0.561,
+            0.66,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "end = s.rfind(' ')"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 96,
+          "bbox": [
+            0.577,
+            0.575,
+            0.661,
+            0.589
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return s[end+1:]"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 97,
+          "bbox": [
+            0.635,
+            0.686,
+            0.788,
+            0.705
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Anglicize Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 98,
+          "bbox": [
+            0.566,
+            0.712,
+            0.88,
+            0.868
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 98,
+              "bbox": [
+                0.566,
+                0.712,
+                0.88,
+                0.868
+              ],
+              "image_path": "images/page_1_image_98.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 99,
+          "bbox": [
+            0.798,
+            0.78,
+            0.862,
+            0.795
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Call Stack"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 100,
+          "bbox": [
+            0.102,
+            0.613,
+            0.115,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 101,
+          "bbox": [
+            0.103,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 102,
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 103,
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 104,
+          "bbox": [
+            0.945,
+            0.962,
+            0.959,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

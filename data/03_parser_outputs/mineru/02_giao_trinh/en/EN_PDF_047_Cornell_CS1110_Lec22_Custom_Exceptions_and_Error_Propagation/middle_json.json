@@ -1,0 +1,4997 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 25,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.149,
+            0.269,
+            0.372,
+            0.333
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lecture 22"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.324,
+            0.444,
+            0.675,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While Loops"
+            }
+          ],
+          "level": 2
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.212,
+            0.067,
+            0.787,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Announcements for Today"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.124,
+            0.209,
+            0.399,
+            0.278
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Assignments"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.04,
+            0.336,
+            0.322,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• A4 is now graded"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.089,
+            0.403,
+            0.435,
+            0.447
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Mean",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": 93.1 "
+            },
+            {
+              "type": "text",
+              "content": "Median",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": 96"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.089,
+            0.466,
+            0.485,
+            0.51
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Mean",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": 8.6 hrs "
+            },
+            {
+              "type": "text",
+              "content": "SDev",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": 4.0 hrs"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.039,
+            0.533,
+            0.457,
+            0.583
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• A5 grades posted tomorrow"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.039,
+            0.601,
+            0.366,
+            0.651
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Keep working on A6"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.089,
+            0.668,
+            0.42,
+            0.713
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Follow micro-deadlines"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.089,
+            0.733,
+            0.468,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Should be on "
+            },
+            {
+              "type": "text",
+              "content": "Vignette",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " now"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.09,
+            0.797,
+            0.415,
+            0.84
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Start Task 3 "
+            },
+            {
+              "type": "text",
+              "content": "tomorrow",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 10,
+          "bbox": [
+            0.582,
+            0.209,
+            0.891,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Video Lessons"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.514,
+            0.334,
+            0.83,
+            0.383
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Lesson 24",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for today"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.514,
+            0.399,
+            0.907,
+            0.446
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Lesson 25",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " for Thurs/Tues"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.515,
+            0.462,
+            0.931,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• But much material is new…"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 14,
+          "bbox": [
+            0.604,
+            0.528,
+            0.87,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 14,
+              "bbox": [
+                0.604,
+                0.528,
+                0.87,
+                0.861
+              ],
+              "image_path": "images/page_1_image_14.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.447,
+            0.92,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.265,
+            0.066,
+            0.734,
+            0.137
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recall: The For-Loop"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.038,
+            0.195,
+            0.347,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Create local var x"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.037,
+            0.271,
+            0.215,
+            0.337
+          ],
+          "content": [
+            {
+              "type": "algorithm_body",
+              "index": 2,
+              "bbox": [
+                0.037,
+                0.271,
+                0.215,
+                0.337
+              ],
+              "content": [
+                {
+                  "type": "equation_inline",
+                  "content": "\\mathbf{x} = \\mathrm{seqn}[0]"
+                }
+              ]
+            }
+          ],
+          "sub_type": "algorithm"
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.345,
+            0.168,
+            0.413
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.038,
+                0.345,
+                0.168,
+                0.413
+              ],
+              "content": "print(x)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "lua"
+        },
+        {
+          "type": "code",
+          "index": 4,
+          "bbox": [
+            0.037,
+            0.42,
+            0.213,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 4,
+              "bbox": [
+                0.037,
+                0.42,
+                0.213,
+                0.485
+              ],
+              "content": "x = seqn[1]"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.037,
+            0.493,
+            0.167,
+            0.56
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(x)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.215,
+            0.506,
+            0.373,
+            0.635
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Not valid Python"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.037,
+            0.647,
+            0.362,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "x = seqn[len(seqn)-1]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.038,
+            0.721,
+            0.166,
+            0.782
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(x)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.514,
+            0.196,
+            0.827,
+            0.26
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Write as a for-loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.513,
+            0.271,
+            0.722,
+            0.334
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for x in seqn:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.549,
+            0.345,
+            0.681,
+            0.412
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(x)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.601,
+            0.497,
+            0.873,
+            0.567
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Key Concepts"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.514,
+            0.599,
+            0.778,
+            0.659
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "iterable",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": seqn"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.514,
+            0.674,
+            0.819,
+            0.736
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "loop variable",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": x"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.514,
+            0.748,
+            0.782,
+            0.81
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "body",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": print(x)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.95
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 17,
+          "bbox": [
+            0.446,
+            0.919,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 18,
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.217,
+            0.015,
+            0.778,
+            0.166
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Important Concept in CS: Doing Things Repeatedly"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.044,
+            0.203,
+            0.606,
+            0.257
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Process each item in a sequence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.086,
+            0.274,
+            0.568,
+            0.379
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Compute aggregate statistics for such as the mean, median, stand"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.599,
+            0.283,
+            0.834,
+            0.387
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "dataset, for x in sequence: eviation, process x"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.086,
+            0.39,
+            0.906,
+            0.443
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Send everyone in a Facebook gro"
+            },
+            {
+              "type": "text",
+              "content": "up an appointment tim",
+              "styles": [
+                "strikethrough"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "e"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.041,
+            0.457,
+            0.624,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Perform n trials or get n samples."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.086,
+            0.529,
+            0.589,
+            0.58
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ A4: draw a triangle six times to m"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.086,
+            0.591,
+            0.549,
+            0.645
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Run a protein-folding simulati"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.042,
+            0.661,
+            0.527,
+            0.782
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Do something an unknown number of times"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.086,
+            0.794,
+            0.536,
+            0.901
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ CUAUV team, vehicle keeps moving until reached its goal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.621,
+            0.537,
+            0.851,
+            0.644
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "e a hexagonfor x in range(n): 06 time stepsdo next thing"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "image",
+          "index": 11,
+          "bbox": [
+            0.587,
+            0.661,
+            0.957,
+            0.967
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 11,
+              "bbox": [
+                0.587,
+                0.661,
+                0.957,
+                0.967
+              ],
+              "image_path": "images/page_3_image_11.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 12,
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.95
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.446,
+            0.919,
+            0.554,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.138,
+            0.065,
+            0.861,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Beyond Sequences: The while-loop"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.082,
+            0.19,
+            0.367,
+            0.241
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "while <condition>:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.273,
+            0.307,
+            0.327
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "statement 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.12,
+            0.421,
+            0.31,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "statement n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.342,
+            0.253,
+            0.483,
+            0.351
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "loop",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " "
+            },
+            {
+              "type": "text",
+              "content": "condition",
+              "styles": [
+                "bold",
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.356,
+            0.385,
+            0.436,
+            0.489
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "loop body",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.087,
+            0.693,
+            0.2,
+            0.733
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "condition"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.223,
+            0.66,
+            0.276,
+            0.697
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "true"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.326,
+            0.696,
+            0.391,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "body"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.07,
+            0.769,
+            0.132,
+            0.811
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "false"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 10,
+          "bbox": [
+            0.612,
+            0.205,
+            0.862,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Vs For-Loop"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.515,
+            0.335,
+            0.914,
+            0.392
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Broader notion of loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.564,
+            0.407,
+            0.934,
+            0.455
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ You define “more to do”"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.564,
+            0.471,
+            0.9,
+            0.521
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Not limited sequences"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.514,
+            0.539,
+            0.909,
+            0.595
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Must manage loop var"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.564,
+            0.609,
+            0.936,
+            0.661
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ You create it before loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.564,
+            0.674,
+            0.94,
+            0.725
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ You update it inside loop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.564,
+            0.738,
+            0.895,
+            0.787
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ For-loop automated it"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.515,
+            0.805,
+            0.866,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Trickier to get right"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 20,
+          "bbox": [
+            0.447,
+            0.92,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 21,
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.328,
+            0.064,
+            0.672,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "while Versus for"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.038,
+            0.206,
+            0.969,
+            0.897
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.038,
+                0.206,
+                0.969,
+                0.897
+              ],
+              "content": "def sum_squares(n):\n    \"\"\"Rets: sum of squares\n    Prec: n is int > 0\"\"\"\n    total = 0\n    for x in range(n):\n        total = total + x*x\n    Must remember to increment\n    def sum_squares(n):\n        \"\"\"Rets: sum of squares\n        Prec: n is int > 0\"\"\"\n        total = 0\n        x = 0\n    while x < n:\n        total = total + x*x\n        x = x+1"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.042,
+            0.918,
+            0.115,
+            0.95
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.446,
+            0.919,
+            0.554,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.161,
+            0.067,
+            0.839,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Problem with While-Loops"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.04,
+            0.205,
+            0.546,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Infinite loops are possible"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.089,
+            0.287,
+            0.625,
+            0.343
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Forget to update a loop variable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.089,
+            0.361,
+            0.754,
+            0.416
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Incorrectly write the boolean expression"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.04,
+            0.441,
+            0.516,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Will hang your program"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.089,
+            0.522,
+            0.646,
+            0.577
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Must type control-C to abort/quit"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.04,
+            0.6,
+            0.699,
+            0.663
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• But detecting problems is not easy"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.089,
+            0.681,
+            0.651,
+            0.735
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Sometimes your code is just slow"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.089,
+            0.757,
+            0.73,
+            0.811
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Scientific computations can take hours"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.04,
+            0.837,
+            0.387,
+            0.89
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Solution: Traces"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.446,
+            0.92,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.945,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.269,
+            0.067,
+            0.731,
+            0.138
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Tracing While-Loops"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.037,
+            0.197,
+            0.758,
+            0.953
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.037,
+                0.197,
+                0.758,
+                0.953
+              ],
+              "content": "print('Before while')\ntotal = 0\nx = 0\nwhile x < n:\n    print('Start loop '+str(x))\n    total = total + x*x\n    x = x + 1\n    print('End loop ')\nprint('After while')\nOutput:\n    Before while\n    Start loop 0\n    End loop\n    Start loop 1\n    End loop\n    Start loop 2\n    End loop\n    After while\nImportant\n11/10/26\nWhile-Loops"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "page_number",
+          "index": 2,
+          "bbox": [
+            0.945,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.197,
+            0.067,
+            0.801,
+            0.137
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "How to Design While-Loops"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.039,
+            0.205,
+            0.773,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Many of the same rules from for-loops"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.287,
+            0.712,
+            0.339
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Often have an "
+            },
+            {
+              "type": "text",
+              "content": "accumulator variable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.088,
+            0.361,
+            0.689,
+            0.416
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Loop body adds to this accumulator"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.039,
+            0.439,
+            0.822,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Differences are loop variable and iterable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.089,
+            0.522,
+            0.618,
+            0.577
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Typically "
+            },
+            {
+              "type": "text",
+              "content": "do not have iterable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.04,
+            0.6,
+            0.745,
+            0.663
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Breaks up into three "
+            },
+            {
+              "type": "text",
+              "content": "design patterns",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.09,
+            0.681,
+            0.518,
+            0.737
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. Replacement to range()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.086,
+            0.756,
+            0.511,
+            0.812
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. Explicit goal condition"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.088,
+            0.83,
+            0.555,
+            0.885
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. Boolean tracking variable"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.446,
+            0.919,
+            0.554,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.035,
+            0.215,
+            0.967,
+            0.919
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.035,
+                0.215,
+                0.967,
+                0.919
+              ],
+              "content": "def increment_for(seq):\n    \"\"\"Increments each\n    element of seq list\n    Prec: seq contains ints\"\"\"\n    for k in range(len(seq)):\n        seq[k] = seq[k]+1\n\n    Must still remember\n    to increment\n\n    def increment_while(seq):\n        \"\"\"Increments each\n        element of seq list\n        Prec: seq contains ints\"\"\"\n        k = 0\n        while k < len(seq):\n            seq[k] = seq[k]+1\n            k = k + 1"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.257,
+            0.065,
+            0.742,
+            0.138
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While Loops and Lists"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.042,
+            0.917,
+            0.115,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.446,
+            0.919,
+            0.554,
+            0.953
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.935,
+            0.919,
+            0.959,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.179,
+            0.067,
+            0.82,
+            0.133
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the Goal as a Condition"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.039,
+            0.2,
+            0.374,
+            0.248
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def prompt(prompt,valid):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.08,
+            0.264,
+            0.642,
+            0.313
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns: the choice from a given prompt."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.079,
+            0.36,
+            0.952,
+            0.537
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This function asks the user a question, and waits for a response. It checks if the response is valid against a list of acceptable answers. If it is not valid, it asks the question again. "
+            },
+            {
+              "type": "text",
+              "content": "Otherwise, it return",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "s"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.079,
+            0.553,
+            0.345,
+            0.603
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "the player's answer."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.08,
+            0.647,
+            0.499,
+            0.697
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: prompt is a string"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.654,
+            0.561,
+            0.884,
+            0.682
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Tells you the stop condition"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.08,
+            0.712,
+            0.616,
+            0.761
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: valid is a tuple of strings\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.078,
+            0.775,
+            0.481,
+            0.824
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "pass # Stub to be implemented"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.446,
+            0.92,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.179,
+            0.067,
+            0.819,
+            0.134
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using the Goal as a Condition"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.04,
+            0.199,
+            0.373,
+            0.248
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def prompt(prompt,valid):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.081,
+            0.263,
+            0.642,
+            0.313
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns: the choice from a given prompt."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.08,
+            0.359,
+            0.872,
+            0.475
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.08,
+                0.359,
+                0.872,
+                0.475
+              ],
+              "content": "Preconditions: prompt is a string, valid is a tuple of strings\"\"\"\nresponse = input(prompt)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.082,
+            0.519,
+            0.72,
+            0.567
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Continue to ask while the response is not valid."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 5,
+          "bbox": [
+            0.081,
+            0.584,
+            0.461,
+            0.633
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 5,
+              "bbox": [
+                0.081,
+                0.584,
+                0.461,
+                0.633
+              ],
+              "content": "while not (response in valid):"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.12,
+            0.647,
+            0.899,
+            0.697
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print('Invalid response. Answer must be one of ')+str(valid)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.122,
+            0.713,
+            0.457,
+            0.763
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "response = input(prompt)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.081,
+            0.813,
+            0.293,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return response"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.447,
+            0.92,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.227,
+            0.067,
+            0.774,
+            0.134
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using a Boolean Variable"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.039,
+            0.2,
+            0.288,
+            0.248
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def roll_past(goal):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.079,
+            0.263,
+            0.828,
+            0.315
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns: The score from rolling a die until passing goal."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.077,
+            0.36,
+            0.91,
+            0.537
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "This function starts with a score of 0, and rolls a die, adding the result to the score. Once the score passes goal, it stops and returns the result as the final score."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.079,
+            0.552,
+            0.804,
+            0.602
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "If the function ever rolls a 1, it stops and "
+            },
+            {
+              "type": "text",
+              "content": "the score is 0.",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.078,
+            0.646,
+            0.526,
+            0.762
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Preconditions: goal is an int > 0\"\"\" pass # Stub to be implemented"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.616,
+            0.621,
+            0.874,
+            0.744
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Condition is too complicated"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.235,
+            0.802,
+            0.761,
+            0.936
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Introduce a boolean variable. Use it to track condition."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.227,
+            0.067,
+            0.774,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using a Boolean Variable"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.062,
+            0.197,
+            0.858,
+            0.889
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.062,
+                0.197,
+                0.858,
+                0.889
+              ],
+              "content": "ef roll_past(goal):\n    \"\"\"Returns: The score from rolling a die until passing goal.\"\"\"\nloop = True  # Keep looping until this is false\nscore = 0\nwhile loop:\n    roll = random.randint(1,6)\n    if roll == 1:\n        score = 0; loop = False\n    else:\n        score = score + roll; loop = score < goal\nreturn score"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.447,
+            0.919,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.221,
+            0.064,
+            0.778,
+            0.138
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Advantages of while vs for"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.059,
+            0.194,
+            0.457,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.059,
+                0.194,
+                0.457,
+                0.545
+              ],
+              "content": "# table of squares to N\nseq = []\nn = floor(sqrt(N)) + 1\nfor k in range(n):\n    seq.append(k*k)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.07,
+            0.667,
+            0.453,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A for-loop requires that you know where to stop the loop "
+            },
+            {
+              "type": "text",
+              "content": "ahead of time",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 3,
+          "bbox": [
+            0.547,
+            0.193,
+            0.947,
+            0.615
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 3,
+              "bbox": [
+                0.547,
+                0.193,
+                0.947,
+                0.615
+              ],
+              "content": "# table of squares to N\nseq = []\nk = 0\nwhile k*k < N:\n    seq.append(k*k)\n    k = k+1"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.544,
+            0.667,
+            0.934,
+            0.858
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A while loop can use complex expressions to check if the loop is done"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.041,
+            0.918,
+            0.115,
+            0.95
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.446,
+            0.919,
+            0.553,
+            0.952
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.935,
+            0.92,
+            0.959,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.527,
+            0.455,
+            0.963,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.527,
+                0.455,
+                0.963,
+                0.704
+              ],
+              "content": "# Table of n Fibonacci nums\nfib = [1, 1]\nwhile len(fib) < n:\n    fib.append(fib[-1] + fib[-2])"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.222,
+            0.065,
+            0.778,
+            0.136
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Advantages of while vs for"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.361,
+            0.215,
+            0.631,
+            0.265
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Fibonacci numbers:"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 3,
+          "bbox": [
+            0.41,
+            0.27,
+            0.5,
+            0.321
+          ],
+          "image_path": "images/page_15_equation_3.jpg",
+          "content": "F _ {0} = 1"
+        },
+        {
+          "type": "equation",
+          "index": 4,
+          "bbox": [
+            0.411,
+            0.323,
+            0.501,
+            0.375
+          ],
+          "image_path": "images/page_15_equation_4.jpg",
+          "content": "F _ {1} = 1"
+        },
+        {
+          "type": "equation",
+          "index": 5,
+          "bbox": [
+            0.409,
+            0.376,
+            0.629,
+            0.432
+          ],
+          "image_path": "images/page_15_equation_5.jpg",
+          "content": "F _ {n} = F _ {n - 1} + F _ {n - 2}"
+        },
+        {
+          "type": "code",
+          "index": 6,
+          "bbox": [
+            0.043,
+            0.454,
+            0.478,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 6,
+              "bbox": [
+                0.043,
+                0.454,
+                0.478,
+                0.704
+              ],
+              "content": "# Table of n Fibonacci nums\nfib = [1, 1]\nfor k in range(2,n):\n    fib.append(fib[-1] + fib[-2])"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "code",
+          "index": 7,
+          "bbox": [
+            0.084,
+            0.75,
+            0.443,
+            0.86
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 7,
+              "bbox": [
+                0.084,
+                0.75,
+                0.443,
+                0.86
+              ],
+              "content": "Sometimes you do not use the loop variable at all"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "code",
+          "index": 8,
+          "bbox": [
+            0.541,
+            0.75,
+            0.949,
+            0.86
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 8,
+              "bbox": [
+                0.541,
+                0.75,
+                0.949,
+                0.86
+              ],
+              "content": "Do not need to have a loop variable if you don’t need one"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.95
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.447,
+            0.919,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.267,
+            0.065,
+            0.732,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Difficulties with while"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.084,
+            0.222,
+            0.916,
+            0.292
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Be careful when you "
+            },
+            {
+              "type": "text",
+              "content": "modify",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " the loop variable"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.04,
+            0.329,
+            0.925,
+            0.839
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.04,
+                0.329,
+                0.925,
+                0.839
+              ],
+              "content": "def rem3(lst):\n    \"\"\"Remove all 3's from lst\"\"\"\n    i = 0\n    while i < len(lst):\n        # no 3's in lst[0..i-1]\n        if lst[i] == 3:\n            del lst[i]\n        i = i+1\n>>> a = [3, 3, 2]\n>>> rem3(a)\n>>> a\nA: [2]\nB: [3]\nC: [3,2]\nD: []\nE: something else"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.447,
+            0.919,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.267,
+            0.065,
+            0.732,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Difficulties with while"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.084,
+            0.222,
+            0.916,
+            0.292
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Be careful when you "
+            },
+            {
+              "type": "text",
+              "content": "modify",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " the loop variable"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.04,
+            0.329,
+            0.923,
+            0.839
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.04,
+                0.329,
+                0.923,
+                0.839
+              ],
+              "content": "def rem3(lst):\n    \"\"\"Remove all 3's from lst\"\"\"\n    i = 0\n    while i < len(lst):\n        # no 3's in lst[0..i-1]\n        if lst[i] == 3:\n            del lst[i]\n        i = i+1\n>>> a = [3, 3, 2]\n>>> rem3(a)\n>>> a\nA: [2]\nB: [3]\nC: [3,2] Correct\nD: []\nE: something else"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.447,
+            0.919,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.04,
+            0.328,
+            0.955,
+            0.901
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.04,
+                0.328,
+                0.955,
+                0.901
+              ],
+              "content": "def rem3(lst):\n    \"\"\"Remove all 3's from lst\"\"\"\n    i = 0\n    while i < len(lst):\n        # no 3's in lst[0..i-1]\n        if lst[i] == 3:\n            del lst[i]\n        else:\n            i = i+1\n\ndef rem3(lst):\n    \"\"\"Remove all 3's from lst\"\"\"\n    while 3 in lst:\n        lst.remove(3)\n\nThe stopping condition is not a numerical counter this time.\nSimplifies code a lot.\n\nStopping point keeps changing"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.267,
+            0.065,
+            0.732,
+            0.126
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Difficulties with while"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.084,
+            0.222,
+            0.916,
+            0.293
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Be careful when you modify the loop variable"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.447,
+            0.919,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.218,
+            0.067,
+            0.781,
+            0.137
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Application: Convergence"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.04,
+            0.206,
+            0.745,
+            0.358
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• How to implement this function? def sqrt(c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.132,
+            0.381,
+            0.708,
+            0.443
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns the square root of c\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.039,
+            0.472,
+            0.828,
+            0.543
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Consider the polynomial "
+            },
+            {
+              "type": "equation_inline",
+              "content": "\\mathrm{f}(x) = x^{2} - \\mathrm{c}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.089,
+            0.563,
+            0.874,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Value sqrt(c) is a root of this polynomial"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.039,
+            0.656,
+            0.838,
+            0.724
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Suggests a use for "
+            },
+            {
+              "type": "text",
+              "content": "Newton’s Method",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.089,
+            0.749,
+            0.714,
+            0.808
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Start with a guess",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " at the answer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.09,
+            0.833,
+            0.821,
+            0.896
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Use calculus formula to improve guess"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.446,
+            0.919,
+            0.554,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.31,
+            0.066,
+            0.688,
+            0.138
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Example: Sqrt(2)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.037,
+            0.209,
+            0.79,
+            0.285
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Actual answer: 1.414235624"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.038,
+            0.327,
+            0.524,
+            0.417
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "equation_inline",
+              "content": "x_{n + 1} = x_n / 2 + c / 2x_n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.038,
+            0.441,
+            0.887,
+            0.529
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "equation_inline",
+              "content": "x_{0} = 1"
+            },
+            {
+              "type": "text",
+              "content": " # Rough guess of sqrt(2)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.038,
+            0.561,
+            0.511,
+            0.646
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "equation_inline",
+              "content": "x_{1} = 0.5 + 1 = 1.5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.038,
+            0.677,
+            0.713,
+            0.765
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "equation_inline",
+              "content": "x_{2} = 0.75 + 2 / 3 = 1.41666"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.039,
+            0.793,
+            0.878,
+            0.882
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "equation_inline",
+              "content": "x_{3} = 0.7083 + 2 / 2.833 = 1.41425"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.04,
+            0.918,
+            0.116,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.445,
+            0.919,
+            0.554,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.933,
+            0.921,
+            0.958,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.286,
+            0.067,
+            0.712,
+            0.136
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "When Do We Stop?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.038,
+            0.209,
+            0.634,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• We don’t know the sqrt(c)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.088,
+            0.308,
+            0.815,
+            0.371
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ This was thing we wanted to compute!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.089,
+            0.401,
+            0.776,
+            0.46
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ So we cannot tell how far off we are"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.089,
+            0.493,
+            0.65,
+            0.555
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But we do know s "
+            },
+            {
+              "type": "equation_inline",
+              "content": "\\operatorname{sqrt}(\\mathbf{c})^2 = \\mathbf{c}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.039,
+            0.59,
+            0.854,
+            0.662
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• So square approximation and compare"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.089,
+            0.691,
+            0.706,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ while "
+            },
+            {
+              "type": "equation_inline",
+              "content": "\\mathbf{X}^{*}\\mathbf{X}"
+            },
+            {
+              "type": "text",
+              "content": " is not close enough to c"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.09,
+            0.783,
+            0.651,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ while abs "
+            },
+            {
+              "type": "equation_inline",
+              "content": "(\\mathbf{x}^{*}\\mathbf{x}-\\mathfrak{c})>"
+            },
+            {
+              "type": "text",
+              "content": " threshold"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.041,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.446,
+            0.919,
+            0.554,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.286,
+            0.066,
+            0.712,
+            0.136
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "When Do We Stop?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.039,
+            0.209,
+            0.634,
+            0.278
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• We don’t know the sqrt(c)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.089,
+            0.308,
+            0.815,
+            0.372
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ This was thing we wanted to compute!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.089,
+            0.401,
+            0.776,
+            0.461
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ So we cannot tell how far off we are"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.089,
+            0.492,
+            0.65,
+            0.555
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But we do know s "
+            },
+            {
+              "type": "equation_inline",
+              "content": "\\mathrm{qrt}(\\mathbf{c})^2 = \\mathbf{c}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.04,
+            0.591,
+            0.854,
+            0.662
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• So square approximation and compare"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.258,
+            0.717,
+            0.743,
+            0.854
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-loop computes until x*x – c) > thresholdthe answer "
+            },
+            {
+              "type": "text",
+              "content": "converges",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.446,
+            0.92,
+            0.554,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.319,
+            0.067,
+            0.682,
+            0.127
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Final Result"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.04,
+            0.195,
+            0.805,
+            0.896
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.04,
+                0.195,
+                0.805,
+                0.896
+              ],
+              "content": "def sqrt(c,err=1e-6):\n    \"\"\"Returns: sqrt of c with given margin of error.\n    Preconditions: c and err are numbers > 0\"\"\"\n    x = c/2.0\n\n    while abs(x*x-c) > err:\n        # Get x_{n+1} from x_n\n        x = x/2.0+c/(2.0*x)\n\n    return x"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.446,
+            0.919,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.117,
+            0.065,
+            0.884,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using while-loops Instead of for-loops"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.135,
+            0.211,
+            0.389,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Advantages"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.04,
+            0.337,
+            0.435,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Better for "
+            },
+            {
+              "type": "text",
+              "content": "modifying data",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.09,
+            0.405,
+            0.423,
+            0.449
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ More natural than range"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.089,
+            0.466,
+            0.455,
+            0.51
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Works better with deletion"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.04,
+            0.535,
+            0.458,
+            0.58
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Better for "
+            },
+            {
+              "type": "text",
+              "content": "convergent tasks",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.09,
+            0.601,
+            0.465,
+            0.645
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Loop until calculation done"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.089,
+            0.664,
+            0.432,
+            0.707
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Exact steps are unknown"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.04,
+            0.731,
+            0.349,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Easier to "
+            },
+            {
+              "type": "text",
+              "content": "stop early",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.09,
+            0.797,
+            0.429,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Just set loop var to False"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 10,
+          "bbox": [
+            0.58,
+            0.209,
+            0.893,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Disadvantages"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.515,
+            0.337,
+            0.86,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Performance is "
+            },
+            {
+              "type": "text",
+              "content": "slower",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.565,
+            0.404,
+            0.933,
+            0.451
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Python optimizes for-loops"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.565,
+            0.467,
+            0.875,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Cannot optimize while"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.515,
+            0.533,
+            0.907,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Infinite loops",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " more likely"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.565,
+            0.601,
+            0.896,
+            0.647
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Easy to forget loop vars"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.565,
+            0.664,
+            0.948,
+            0.71
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Or get stop condition wrong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.515,
+            0.729,
+            0.838,
+            0.778
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Debugging",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " is harder"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.566,
+            0.796,
+            0.96,
+            0.841
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Will see why in later lectures"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 19,
+          "bbox": [
+            0.042,
+            0.919,
+            0.114,
+            0.949
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11/10/26"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 20,
+          "bbox": [
+            0.447,
+            0.92,
+            0.553,
+            0.951
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "While-Loops"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 21,
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "25"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

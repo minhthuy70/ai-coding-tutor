@@ -1,0 +1,5906 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.15,
+            0.269,
+            0.374,
+            0.333
+          ],
+          "content": "Lecture 20"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.32,
+            0.393,
+            0.677,
+            0.575
+          ],
+          "level": 2,
+          "content": "Subclasses & Inheritance"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.212,
+            0.067,
+            0.787,
+            0.135
+          ],
+          "level": 2,
+          "content": "Announcements for Today"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.21,
+            0.4,
+            0.279
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.335,
+            0.449,
+            0.382
+          ],
+          "content": "• A4 to be graded **next week**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.397,
+            0.364,
+            0.443
+          ],
+          "content": "§ Survey is still open"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.457,
+            0.386,
+            0.507
+          ],
+          "content": "• A5 was posted **Friday**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.52,
+            0.459,
+            0.566
+          ],
+          "content": "§ Shorter written assignment"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.577,
+            0.419,
+            0.624
+          ],
+          "content": "§ Due Friday at Midnight"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.638,
+            0.388,
+            0.688
+          ],
+          "content": "• A6 also posted **Friday**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.7,
+            0.428,
+            0.743
+          ],
+          "content": "§ Due **Sun, November 15**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.759,
+            0.441,
+            0.805
+          ],
+          "content": "§ Designed to take 2 weeks"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.819,
+            0.44,
+            0.862
+          ],
+          "content": "§ Follow **micro-deadlines!**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.643,
+            0.208,
+            0.83,
+            0.268
+          ],
+          "level": 2,
+          "content": "Prelim 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.334,
+            0.953,
+            0.389
+          ],
+          "content": "• **Prelim, Nov 17**<strong><sup>th</sup></strong> **at 7:30**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.405,
+            0.892,
+            0.452
+          ],
+          "content": "§ See webpage for rooms"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.463,
+            0.868,
+            0.509
+          ],
+          "content": "§ Review Session **TBA**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.516,
+            0.527,
+            0.942,
+            0.579
+          ],
+          "level": 2,
+          "content": "• Material up to Thursday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.592,
+            0.959,
+            0.638
+          ],
+          "content": "§ Recursion + Loops + Classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.651,
+            0.927,
+            0.699
+          ],
+          "content": "§ Study guide is now posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.71,
+            0.943,
+            0.755
+          ],
+          "content": "§ See structure of prev exams"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.773,
+            0.89,
+            0.821
+          ],
+          "content": "• **Conflict with Prelim?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.837,
+            0.897,
+            0.883
+          ],
+          "content": "§ Corey has sent out form"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.211,
+            0.067,
+            0.787,
+            0.135
+          ],
+          "level": 2,
+          "content": "Announcements for Today"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.209,
+            0.4,
+            0.279
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.333,
+            0.45,
+            0.383
+          ],
+          "content": "• A4 to be graded **next week**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.643,
+            0.207,
+            0.831,
+            0.27
+          ],
+          "level": 2,
+          "content": "Prelim 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.396,
+            0.264,
+            0.443
+          ],
+          "content": "§ Survey is st"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.457,
+            0.264,
+            0.507
+          ],
+          "content": "• A5 was posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.519,
+            0.264,
+            0.563
+          ],
+          "content": "§ Shorter wri"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.577,
+            0.263,
+            0.623
+          ],
+          "content": "§ Due Friday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.637,
+            0.264,
+            0.687
+          ],
+          "content": "• A6 also posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.333,
+            0.953,
+            0.389
+          ],
+          "content": "• **Prelim, Nov 17**<strong><sup>th</sup></strong> **at 7:30**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.345,
+            0.425,
+            0.658,
+            0.489
+          ],
+          "content": "**Video Lessons**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.551,
+            0.595,
+            0.601
+          ],
+          "content": "• **Lesson 22** for today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.615,
+            0.691,
+            0.667
+          ],
+          "content": "• **Videos 23.1-23.7** for Thurs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.406,
+            0.892,
+            0.451
+          ],
+          "content": "e for rooms"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.462,
+            0.868,
+            0.509
+          ],
+          "content": "sion TBA"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.746,
+            0.526,
+            0.942,
+            0.579
+          ],
+          "content": "to Thursday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.75,
+            0.591,
+            0.959,
+            0.641
+          ],
+          "content": "Loops + Classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.75,
+            0.651,
+            0.927,
+            0.699
+          ],
+          "content": "is now posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.7,
+            0.427,
+            0.744
+          ],
+          "content": "§ Due **Sun, November 15**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.758,
+            0.441,
+            0.805
+          ],
+          "content": "§ Designed to take 2 weeks"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.817,
+            0.441,
+            0.863
+          ],
+          "content": "§ Follow **micro-deadlines!**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.71,
+            0.943,
+            0.755
+          ],
+          "content": "§ See structure of prev exams"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.771,
+            0.891,
+            0.822
+          ],
+          "content": "• **Conflict with Prelim?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.836,
+            0.897,
+            0.883
+          ],
+          "content": "§ Corey has sent out form"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.194,
+            0.068,
+            0.806,
+            0.133
+          ],
+          "level": 2,
+          "content": "Quick Announcement on A6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.208,
+            0.865,
+            0.269
+          ],
+          "content": "• We ask you to use isinstance instead of type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.297,
+            0.754,
+            0.353
+          ],
+          "content": "§ In paragraph on enforcing preconditions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.375,
+            0.541,
+            0.429
+          ],
+          "content": "§ What do we mean by this?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.461,
+            0.689,
+            0.524
+          ],
+          "content": "• **Recall:** Type-based preconditions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.55,
+            0.505,
+            0.601
+          ],
+          "content": "§ **Precondition:** x is a list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.633,
+            0.447,
+            0.685
+          ],
+          "content": "§ assert type(x) == list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.712,
+            0.482,
+            0.763
+          ],
+          "content": "§ assert isinstance(x,list)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.797,
+            0.521,
+            0.853
+          ],
+          "content": "• More on that this lecture"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.603,
+            0.651,
+            0.798,
+            0.75
+          ],
+          "content": "This is almost the same"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.921,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.334,
+            0.068,
+            0.664,
+            0.137
+          ],
+          "level": 2,
+          "content": "An Application"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.205,
+            0.903,
+            0.268
+          ],
+          "content": "• **Goal**: Presentation program (e.g. PowerPoint)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.293,
+            0.847,
+            0.351
+          ],
+          "content": "• **Problem**: There are many types of content"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.374,
+            0.785,
+            0.427
+          ],
+          "content": "**Examples**: text box, rectangle, image, etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.448,
+            0.733,
+            0.501
+          ],
+          "content": "§ Have to write code to display each one"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.525,
+            0.763,
+            0.585
+          ],
+          "content": "• **Solution**: Use object oriented features"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.608,
+            0.714,
+            0.662
+          ],
+          "content": "§ Define class for every type of content"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.681,
+            0.68,
+            0.731
+          ],
+          "content": "§ Make sure each has a draw method:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.196,
+            0.754,
+            0.57,
+            0.875
+          ],
+          "content": "for x in slide[i].contents: x.draw(window)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.948
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.344,
+            0.067,
+            0.657,
+            0.136
+          ],
+          "level": 2,
+          "content": "Sharing Work"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.207,
+            0.802,
+            0.266
+          ],
+          "content": "• These classes will have a lot in common"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.296,
+            0.597,
+            0.349
+          ],
+          "content": "§ Drawing handles for selection"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.375,
+            0.658,
+            0.431
+          ],
+          "content": "§ Background and foreground color"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.457,
+            0.519,
+            0.51
+          ],
+          "content": "§ Current size and position"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.539,
+            0.89,
+            0.594
+          ],
+          "content": "§ And more (see the formatting bar in PowerPoint)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.623,
+            0.643,
+            0.682
+          ],
+          "content": "• **Result**: A lot of repetitive code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.715,
+            0.868,
+            0.772
+          ],
+          "content": "• **Solution**: Create one class with shared code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.804,
+            0.829,
+            0.857
+          ],
+          "content": "§ All content are subclasses of the parent class"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.105,
+            0.948
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.921,
+            0.602,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.077,
+            0.206,
+            0.161
+          ],
+          "content": "Abbreviate as SC to right"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.287,
+            0.065,
+            0.711,
+            0.137
+          ],
+          "level": 2,
+          "content": "Defining a Subclass"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.197,
+            0.324,
+            0.287
+          ],
+          "content": "class SlideContent(object): \"\"\"Any object on a slide.\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.293,
+            0.367,
+            0.433
+          ],
+          "content": "def \\_\\_init\\_\\_(self, x, y, w, h): … def draw\\_frame(self): … def select(self): …"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.482,
+            0.369,
+            0.671
+          ],
+          "content": "class TextBox(SlideContent): \"\"\"An object containing text.\"\"\" def \\_\\_init\\_\\_(self, x, y, text): … def draw(self): …"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.04,
+            0.161,
+            0.977,
+            0.913
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.722,
+            0.411,
+            0.911
+          ],
+          "content": "class Image(SlideContent): \"\"\"An image.\"\"\" def \\_\\_init\\_\\_(self, x, y, image\\_file): def draw(self): …"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.95
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.067,
+            0.785,
+            0.127
+          ],
+          "level": 2,
+          "content": "Class Definition: Revisited"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.201,
+            0.482,
+            0.255
+          ],
+          "level": 2,
+          "content": "class &lt;name&gt;(&lt;superclass&gt;):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.074,
+            0.292,
+            0.435,
+            0.354
+          ],
+          "content": "\"\"\"Class specification\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.387,
+            0.372,
+            0.447
+          ],
+          "content": "getters and setters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.477,
+            0.399,
+            0.54
+          ],
+          "content": "initializer (\\_\\_init\\_\\_)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.573,
+            0.421,
+            0.635
+          ],
+          "content": "definition of operators"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.665,
+            0.405,
+            0.727
+          ],
+          "content": "definition of methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.761,
+            0.287,
+            0.821
+          ],
+          "content": "anything else"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.533,
+            0.322,
+            0.882,
+            0.432
+          ],
+          "content": "Class type to extend (may need module name)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.541,
+            0.834,
+            0.648
+          ],
+          "content": "• Every class must extend something"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.649,
+            0.854,
+            0.755
+          ],
+          "content": "• Previous classes all extended object"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.145,
+            0.067,
+            0.854,
+            0.135
+          ],
+          "level": 2,
+          "content": "object and the Subclass Hierarcy"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.203,
+            0.414,
+            0.321
+          ],
+          "level": 2,
+          "content": "• Subclassing creates a hierarchy of classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.336,
+            0.428,
+            0.441
+          ],
+          "content": "§ Each class has its own super class or parent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.452,
+            0.441,
+            0.503
+          ],
+          "content": "§ Until object at the “top”"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.521,
+            0.461,
+            0.575
+          ],
+          "level": 2,
+          "content": "• object has many features"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.591,
+            0.422,
+            0.695
+          ],
+          "content": "§ Special built-in fields: \\_class\\_\\_, \\_\\_dict\\_\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.71,
+            0.461,
+            0.811
+          ],
+          "content": "§ Special built-in methods: \\_str\\_\\_, \\_\\_repr\\_\\_"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.599,
+            0.205,
+            0.876,
+            0.27
+          ],
+          "level": 2,
+          "content": "Kivy Example"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.515,
+            0.318,
+            0.597,
+            0.368
+          ],
+          "level": 2,
+          "content": "object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.401,
+            0.855,
+            0.455
+          ],
+          "content": "kivy.uix.widge.WidgetBase"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.487,
+            0.807,
+            0.539
+          ],
+          "content": "kivy.uix.widget.Widget"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.572,
+            0.765,
+            0.623
+          ],
+          "content": "kivy.uix.label.Label"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.853,
+            0.305,
+            0.946,
+            0.715
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_12.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.657,
+            0.808,
+            0.707
+          ],
+          "content": "<u>kivy.uix.button</u>.<u>Button</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.577,
+            0.769,
+            0.668,
+            0.81
+          ],
+          "content": "**Module**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.77,
+            0.864,
+            0.809
+          ],
+          "content": "**Class**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.145,
+            0.067,
+            0.854,
+            0.135
+          ],
+          "level": 2,
+          "content": "object and the Subclass Hierarcy"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.203,
+            0.414,
+            0.321
+          ],
+          "level": 2,
+          "content": "• Subclassing creates a hierarchy of classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.337,
+            0.429,
+            0.441
+          ],
+          "content": "§ Each class has its own super class or parent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.453,
+            0.441,
+            0.502
+          ],
+          "content": "§ Until object at the “top”"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.046,
+            0.521,
+            0.461,
+            0.575
+          ],
+          "level": 2,
+          "content": "• object has many features"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.591,
+            0.422,
+            0.695
+          ],
+          "content": "§ Special built-in fields: \\_class\\_\\_, \\_\\_dict\\_\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.71,
+            0.461,
+            0.811
+          ],
+          "content": "§ Special built-in methods: \\_str\\_\\_, \\_\\_repr\\_\\_"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.506,
+            0.205,
+            0.985,
+            0.825
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.208,
+            0.067,
+            0.789,
+            0.128
+          ],
+          "level": 2,
+          "content": "Name Resolution Revisited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.618,
+            0.261
+          ],
+          "content": "• To look up attribute/method name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.279,
+            0.631,
+            0.331
+          ],
+          "content": "1. Look first in instance (object folder)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.35,
+            0.55,
+            0.401
+          ],
+          "content": "2. Then look in the class (folder)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.423,
+            0.573,
+            0.477
+          ],
+          "content": "• Subclasses add two more rules:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.501,
+            0.448,
+            0.549
+          ],
+          "content": "3. Look in the superclass"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.569,
+            0.506,
+            0.62
+          ],
+          "content": "4. Repeat 3. until reach object"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.107,
+            0.613,
+            0.972,
+            0.884
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_image_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.95
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.949
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.208,
+            0.067,
+            0.789,
+            0.128
+          ],
+          "level": 2,
+          "content": "Name Resolution Revisited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.618,
+            0.261
+          ],
+          "content": "• To look up attribute/method name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.279,
+            0.63,
+            0.331
+          ],
+          "content": "1. Look first in instance (object folder)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.35,
+            0.55,
+            0.401
+          ],
+          "content": "2. Then look in the class (folder)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.423,
+            0.572,
+            0.477
+          ],
+          "content": "• Subclasses add two more rules:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.501,
+            0.448,
+            0.55
+          ],
+          "content": "3. Look in the superclass"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.569,
+            0.506,
+            0.619
+          ],
+          "content": "4. Repeat 3. until reach object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.739,
+            0.461,
+            0.957,
+            0.6
+          ],
+          "content": "init\\_\\_(self,x,y,w,h) draw\\_frame(self) select(self)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.106,
+            0.612,
+            0.971,
+            0.883
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_image_8.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.95
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.208,
+            0.067,
+            0.789,
+            0.128
+          ],
+          "level": 2,
+          "content": "Name Resolution Revisited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.618,
+            0.261
+          ],
+          "content": "• To look up attribute/method name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.279,
+            0.63,
+            0.331
+          ],
+          "content": "1. Look first in instance (object folder)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.348,
+            0.546,
+            0.399
+          ],
+          "content": "2. Then look in the class (folder)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.421,
+            0.319,
+            0.476
+          ],
+          "content": "• Subclasses add"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.497,
+            0.164,
+            0.551
+          ],
+          "content": "3. Lo"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.046,
+            0.198,
+            0.972,
+            0.881
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_6.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.95
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.286,
+            0.067,
+            0.713,
+            0.137
+          ],
+          "level": 2,
+          "content": "A Simpler Example"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.056,
+            0.198,
+            0.337,
+            0.247
+          ],
+          "level": 2,
+          "content": "class Employee(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.255,
+            0.473,
+            0.304
+          ],
+          "content": "\"\"\"Instance is salaried worker\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.317,
+            0.413,
+            0.369
+          ],
+          "content": "\\# INSTANCE ATTRIBUTES:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.383,
+            0.439,
+            0.433
+          ],
+          "content": "\\# \\_name: full name, a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.442,
+            0.411,
+            0.493
+          ],
+          "content": "\\# \\_start: first year hired,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.499,
+            0.435,
+            0.549
+          ],
+          "content": "\\# an int ≥ -1, -1 if unknown"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.559,
+            0.452,
+            0.609
+          ],
+          "content": "\\# \\_salary: yearly wage, a float"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.056,
+            0.667,
+            0.384,
+            0.715
+          ],
+          "level": 2,
+          "content": "class Executive(Employee):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.724,
+            0.462,
+            0.773
+          ],
+          "content": "\"\"\"An Employee with a bonus\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.787,
+            0.413,
+            0.837
+          ],
+          "content": "\\# INSTANCE ATTRIBUTES:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.851,
+            0.457,
+            0.899
+          ],
+          "content": "#\\_bonus: annual bonus, a float"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.771,
+            0.189,
+            0.854,
+            0.235
+          ],
+          "level": 2,
+          "content": "object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.671,
+            0.245,
+            0.812,
+            0.286
+          ],
+          "content": "init\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.671,
+            0.293,
+            0.807,
+            0.333
+          ],
+          "content": "\\_\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.67,
+            0.341,
+            0.82,
+            0.383
+          ],
+          "content": "\\_\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.738,
+            0.429,
+            0.863,
+            0.477
+          ],
+          "level": 2,
+          "content": "Employee"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.67,
+            0.492,
+            0.858,
+            0.535
+          ],
+          "content": "init\\_\\_(self,n,d,s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.667,
+            0.542,
+            0.802,
+            0.582
+          ],
+          "content": "\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.667,
+            0.59,
+            0.816,
+            0.631
+          ],
+          "content": "\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.739,
+            0.685,
+            0.862,
+            0.726
+          ],
+          "level": 2,
+          "content": "Executive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.667,
+            0.748,
+            0.859,
+            0.789
+          ],
+          "content": "init\\_\\_(self,n,d,b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.668,
+            0.797,
+            0.803,
+            0.837
+          ],
+          "content": "str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.845,
+            0.816,
+            0.885
+          ],
+          "content": "\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.601,
+            0.95
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.286,
+            0.067,
+            0.714,
+            0.138
+          ],
+          "level": 2,
+          "content": "A Simpler Example"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.056,
+            0.197,
+            0.337,
+            0.247
+          ],
+          "level": 2,
+          "content": "class Employee(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.077,
+            0.252,
+            0.475,
+            0.613
+          ],
+          "content": "\"\"\"Instance is salaried worker\"\"\" # INSTANCE ATTRIBUTES: # \\_name: full name, a string # \\_start: first year hired, # an int ≥ -1, -1 if unknown # \\_salary: yearly wage, a float"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.056,
+            0.667,
+            0.384,
+            0.716
+          ],
+          "level": 2,
+          "content": "class Executive(Employee):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.723,
+            0.462,
+            0.775
+          ],
+          "content": "\"\"\"An Employee with a bonus\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.786,
+            0.414,
+            0.838
+          ],
+          "content": "\\# INSTANCE ATTRIBUTES:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.85,
+            0.458,
+            0.901
+          ],
+          "content": "#\\_bonus: annual bonus, a float"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.77,
+            0.187,
+            0.856,
+            0.235
+          ],
+          "level": 2,
+          "content": "object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.243,
+            0.806,
+            0.384
+          ],
+          "content": "init\\_\\_(self) str\\_\\_(self) \\_repr\\_\\_(self"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.821,
+            0.254,
+            0.968,
+            0.422
+          ],
+          "content": "All double underscore methods are in class object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.737,
+            0.429,
+            0.865,
+            0.477
+          ],
+          "content": "**Employee**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.664,
+            0.491,
+            0.863,
+            0.633
+          ],
+          "content": "init\\_\\_(self,n,d,s) str\\_\\_(self) \\_repr\\_\\_(self)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.738,
+            0.684,
+            0.864,
+            0.728
+          ],
+          "level": 2,
+          "content": "Executive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.667,
+            0.747,
+            0.86,
+            0.791
+          ],
+          "content": "\\_init\\_\\_(self,n,d,b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.668,
+            0.797,
+            0.803,
+            0.838
+          ],
+          "content": "str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.844,
+            0.816,
+            0.887
+          ],
+          "content": "\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.919,
+            0.601,
+            0.95
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.287,
+            0.067,
+            0.712,
+            0.137
+          ],
+          "level": 2,
+          "content": "Method Overriding"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.501,
+            0.26
+          ],
+          "content": "• Which \\_\\_str\\_\\_ do we use?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.28,
+            0.49,
+            0.328
+          ],
+          "content": "§ Start at bottom class folder"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.35,
+            0.508,
+            0.398
+          ],
+          "content": "§ Find first method with name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.419,
+            0.378,
+            0.466
+          ],
+          "content": "§ Use that definition"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.493,
+            0.466,
+            0.619
+          ],
+          "level": 2,
+          "content": "• New method definitions override those of parent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.638,
+            0.504,
+            0.685
+          ],
+          "content": "§ Access to old version is **lost**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.708,
+            0.471,
+            0.755
+          ],
+          "content": "§ New version used instead"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.779,
+            0.383,
+            0.826
+          ],
+          "content": "§ **Example**: \\_\\_init\\_\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.771,
+            0.189,
+            0.855,
+            0.233
+          ],
+          "content": "**object**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.67,
+            0.245,
+            0.813,
+            0.285
+          ],
+          "content": "init\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.67,
+            0.293,
+            0.808,
+            0.333
+          ],
+          "content": "\\_\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.669,
+            0.341,
+            0.82,
+            0.382
+          ],
+          "content": "\\_\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.738,
+            0.431,
+            0.863,
+            0.475
+          ],
+          "content": "**Employee**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.667,
+            0.493,
+            0.858,
+            0.534
+          ],
+          "content": "init\\_\\_(self,n,d,s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.542,
+            0.803,
+            0.581
+          ],
+          "content": "\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.591,
+            0.816,
+            0.629
+          ],
+          "content": "\\_\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.739,
+            0.686,
+            0.862,
+            0.725
+          ],
+          "content": "**Executive**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.749,
+            0.859,
+            0.789
+          ],
+          "content": "\\_\\_init\\_\\_(self,n,d,b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.798,
+            0.803,
+            0.836
+          ],
+          "content": "\\_\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.846,
+            0.816,
+            0.885
+          ],
+          "content": "\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.139,
+            0.067,
+            0.859,
+            0.135
+          ],
+          "level": 2,
+          "content": "Accessing the “Previous” Method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.203,
+            0.485,
+            0.311
+          ],
+          "content": "• What if you want to use the original version method?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.326,
+            0.494,
+            0.371
+          ],
+          "content": "§ New method = original+more"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.386,
+            0.46,
+            0.479
+          ],
+          "content": "§ Do not want to repeat code from the original version"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.494,
+            0.434,
+            0.546
+          ],
+          "content": "• Use the function super()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.561,
+            0.509,
+            0.607
+          ],
+          "content": "§ “Converts” type to parent class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.621,
+            0.481,
+            0.665
+          ],
+          "content": "§ Now methods go to the class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.683,
+            0.23,
+            0.733
+          ],
+          "content": "• **Example**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.095,
+            0.742,
+            0.367,
+            0.797
+          ],
+          "content": "super().\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.16,
+            0.831,
+            0.31,
+            0.912
+          ],
+          "content": "**In Python 2** <strong><u>self goes here</u></strong>"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.772,
+            0.19,
+            0.854,
+            0.233
+          ],
+          "level": 2,
+          "content": "object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.671,
+            0.245,
+            0.812,
+            0.285
+          ],
+          "content": "\\_\\_init\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.67,
+            0.293,
+            0.807,
+            0.333
+          ],
+          "content": "\\_\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.669,
+            0.341,
+            0.801,
+            0.381
+          ],
+          "content": "\\_\\_eq\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.739,
+            0.431,
+            0.863,
+            0.475
+          ],
+          "content": "**Employee**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.667,
+            0.493,
+            0.858,
+            0.534
+          ],
+          "content": "init\\_\\_(self,n,d,s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.542,
+            0.802,
+            0.581
+          ],
+          "content": "\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.591,
+            0.796,
+            0.629
+          ],
+          "content": "\\_\\_eq\\_\\_(self)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.739,
+            0.686,
+            0.862,
+            0.725
+          ],
+          "level": 2,
+          "content": "Executive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.749,
+            0.859,
+            0.789
+          ],
+          "content": "\\_\\_init\\_\\_(self,n,d,b)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.797,
+            0.803,
+            0.837
+          ],
+          "content": "\\_\\_str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.845,
+            0.797,
+            0.885
+          ],
+          "content": "\\_\\_eq\\_\\_(self)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.921,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.139,
+            0.067,
+            0.859,
+            0.135
+          ],
+          "level": 2,
+          "content": "Accessing the “Previous” Method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.202,
+            0.484,
+            0.311
+          ],
+          "content": "• What if you want to use the original version method?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.326,
+            0.493,
+            0.371
+          ],
+          "content": "§ New method = original+more"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.386,
+            0.46,
+            0.479
+          ],
+          "content": "§ Do not want to repeat code from the original version"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.494,
+            0.433,
+            0.545
+          ],
+          "content": "• Use the function super()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.561,
+            0.508,
+            0.607
+          ],
+          "content": "§ “Converts” type to parent class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.621,
+            0.481,
+            0.665
+          ],
+          "content": "§ Now methods go to the class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.683,
+            0.23,
+            0.733
+          ],
+          "content": "• **Example**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.094,
+            0.742,
+            0.366,
+            0.881
+          ],
+          "content": "super().\\_\\_str\\_\\_() **self is implied**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.532,
+            0.197,
+            0.945,
+            0.547
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Employee(object):\n    \"\"\"An Employee with a salary\"\"\"\n    ...\n    def __str__(self):\n        return (self._name +\n            ',year ' + str(self._start) +\n            ',salary ' + str(self._salary))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.58,
+            0.8,
+            0.619
+          ],
+          "content": "class Executive(Employee):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.555,
+            0.692,
+            0.961,
+            0.876
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __str__(self):\n    return (super().__str__()\n        + ', bonus ' + str(self._bonus))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.322,
+            0.065,
+            0.675,
+            0.133
+          ],
+          "level": 2,
+          "content": "What is super()?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.208,
+            0.605,
+            0.263
+          ],
+          "content": "• Like object with class “removed”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.291,
+            0.508,
+            0.341
+          ],
+          "content": "§ Still gives a reference to self"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.365,
+            0.601,
+            0.416
+          ],
+          "content": "§ But bottom-up rule **skips** first class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.446,
+            0.539,
+            0.501
+          ],
+          "content": "• But cannot use it everywhere"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.529,
+            0.618,
+            0.578
+          ],
+          "content": "§ Only allowed in **method definitions**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.365,
+            0.696,
+            0.41,
+            0.739
+          ],
+          "content": "**id3**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.663,
+            0.375,
+            0.769,
+            0.417
+          ],
+          "content": "<u>p.select()</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.602,
+            0.457,
+            0.701,
+            0.501
+          ],
+          "content": "<u>p.draw()</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.669,
+            0.614,
+            0.713
+          ],
+          "content": "**SlideContent**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.437,
+            0.741,
+            0.54,
+            0.789
+          ],
+          "content": "TextB"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.88,
+            0.211,
+            0.963,
+            0.257
+          ],
+          "content": "**object**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.752,
+            0.279,
+            0.81,
+            0.319
+          ],
+          "content": "????"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.445,
+            0.805,
+            0.502,
+            0.847
+          ],
+          "content": "'Hi!'"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.044,
+            0.61,
+            0.972,
+            0.884
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_18_image_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.817,
+            0.399,
+            0.951,
+            0.446
+          ],
+          "content": "**SC(object)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.741,
+            0.46,
+            0.957,
+            0.6
+          ],
+          "content": "init\\_\\_(self,x,y,w,h) draw\\_frame(self) select(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.662,
+            0.667,
+            0.762,
+            0.716
+          ],
+          "content": "p.draw("
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.8,
+            0.699,
+            0.959,
+            0.745
+          ],
+          "content": "**TextBox(SC)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.74,
+            0.769,
+            0.96,
+            0.857
+          ],
+          "content": "init\\_\\_(self,x,y,text) draw(self)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.95
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.322,
+            0.065,
+            0.675,
+            0.133
+          ],
+          "level": 2,
+          "content": "What is super()?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.045,
+            0.201,
+            0.428,
+            0.257
+          ],
+          "content": "• super() is very limited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.274,
+            0.421,
+            0.325
+          ],
+          "content": "§ Can only go one level"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.338,
+            0.411,
+            0.387
+          ],
+          "content": "§ **BAD**: super().super()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.443,
+            0.15,
+            0.49
+          ],
+          "content": "p **id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.203,
+            0.959,
+            0.259
+          ],
+          "content": "• Need arguments for more"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.275,
+            0.818,
+            0.325
+          ],
+          "content": "§ super(class,self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.388,
+            0.743,
+            0.438
+          ],
+          "content": "The **subclass**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.798,
+            0.361,
+            0.957,
+            0.463
+          ],
+          "content": "Object in <u>the method</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.566,
+            0.103,
+            0.607
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.621,
+            0.212,
+            0.661
+          ],
+          "content": "**Exec**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.044,
+            0.603,
+            0.916,
+            0.813
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_image_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.332,
+            0.657,
+            0.414,
+            0.771
+          ],
+          "content": "**Exec** str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.295,
+            0.827,
+            0.429,
+            0.87
+          ],
+          "content": "p.\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.53,
+            0.655,
+            0.641,
+            0.771
+          ],
+          "content": "**Empl** str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.783,
+            0.652,
+            0.908,
+            0.775
+          ],
+          "content": "**object** \\_str\\_\\_()"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.322,
+            0.065,
+            0.675,
+            0.133
+          ],
+          "level": 2,
+          "content": "What is super()?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.045,
+            0.201,
+            0.428,
+            0.257
+          ],
+          "content": "• super() is very limited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.274,
+            0.421,
+            0.325
+          ],
+          "content": "§ Can only go one level"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.338,
+            0.411,
+            0.387
+          ],
+          "content": "§ **BAD**: super().super()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.443,
+            0.15,
+            0.49
+          ],
+          "content": "p **id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.203,
+            0.959,
+            0.259
+          ],
+          "content": "• Need arguments for more"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.275,
+            0.818,
+            0.325
+          ],
+          "content": "§ super(class,self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.388,
+            0.743,
+            0.438
+          ],
+          "content": "The **subclass**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.798,
+            0.361,
+            0.957,
+            0.463
+          ],
+          "content": "Object in <u>the method</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.566,
+            0.103,
+            0.607
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.621,
+            0.212,
+            0.661
+          ],
+          "content": "**Exec**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.044,
+            0.603,
+            0.916,
+            0.813
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_20_image_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.332,
+            0.657,
+            0.414,
+            0.771
+          ],
+          "content": "**Exec** str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.295,
+            0.827,
+            0.429,
+            0.87
+          ],
+          "content": "p.\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.655,
+            0.641,
+            0.771
+          ],
+          "content": "**Empl** str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.783,
+            0.652,
+            0.908,
+            0.775
+          ],
+          "content": "**object** \\_str\\_\\_()"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.949
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.322,
+            0.065,
+            0.675,
+            0.133
+          ],
+          "level": 2,
+          "content": "What is super()?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.045,
+            0.201,
+            0.428,
+            0.258
+          ],
+          "content": "• super() is very limited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.274,
+            0.421,
+            0.325
+          ],
+          "content": "§ Can only go one level"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.338,
+            0.411,
+            0.388
+          ],
+          "content": "§ **BAD**: super().super()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.443,
+            0.15,
+            0.49
+          ],
+          "content": "p **id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.203,
+            0.959,
+            0.259
+          ],
+          "content": "• Need arguments for more"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.275,
+            0.819,
+            0.325
+          ],
+          "content": "§ super(class,self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.388,
+            0.743,
+            0.438
+          ],
+          "content": "The **subclass**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.798,
+            0.361,
+            0.957,
+            0.464
+          ],
+          "content": "Object in <u>the method</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.565,
+            0.103,
+            0.607
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.62,
+            0.212,
+            0.661
+          ],
+          "content": "**Exec**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.312,
+            0.657,
+            0.414,
+            0.772
+          ],
+          "content": "**Exec** str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.827,
+            0.428,
+            0.87
+          ],
+          "content": "p.\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.443,
+            0.578,
+            0.736,
+            0.625
+          ],
+          "content": "super(Exec,self).\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.655,
+            0.641,
+            0.771
+          ],
+          "content": "**Empl** str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.487,
+            0.825,
+            0.686,
+            0.87
+          ],
+          "content": "super().\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.782,
+            0.653,
+            0.909,
+            0.775
+          ],
+          "content": "**object** \\_str\\_\\_()"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.322,
+            0.065,
+            0.675,
+            0.133
+          ],
+          "level": 2,
+          "content": "What is super()?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.045,
+            0.201,
+            0.428,
+            0.258
+          ],
+          "content": "• super() is very limited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.274,
+            0.421,
+            0.325
+          ],
+          "content": "§ Can only go one level"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.338,
+            0.411,
+            0.388
+          ],
+          "content": "§ **BAD**: super().super()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.203,
+            0.959,
+            0.259
+          ],
+          "content": "• Need arguments for more"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.06,
+            0.443,
+            0.151,
+            0.49
+          ],
+          "content": "p **id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.275,
+            0.819,
+            0.325
+          ],
+          "content": "§ super(class,self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.388,
+            0.743,
+            0.438
+          ],
+          "content": "The **subclass**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.798,
+            0.361,
+            0.957,
+            0.464
+          ],
+          "content": "Object in <u>the method</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.565,
+            0.103,
+            0.607
+          ],
+          "content": "**id2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.62,
+            0.213,
+            0.662
+          ],
+          "content": "**Exec**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.443,
+            0.578,
+            0.736,
+            0.625
+          ],
+          "content": "super(Exec,self).\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.658,
+            0.412,
+            0.7
+          ],
+          "content": "**Exec**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.332,
+            0.727,
+            0.413,
+            0.769
+          ],
+          "content": "\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.568,
+            0.657,
+            0.641,
+            0.705
+          ],
+          "content": "**Empl**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.823,
+            0.656,
+            0.906,
+            0.705
+          ],
+          "content": "**object**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.727,
+            0.634,
+            0.77
+          ],
+          "content": "\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.783,
+            0.727,
+            0.889,
+            0.773
+          ],
+          "content": "\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.826,
+            0.428,
+            0.87
+          ],
+          "content": "p.\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.486,
+            0.823,
+            0.989,
+            0.871
+          ],
+          "content": "super().\\_\\_str\\_\\_()super(Empl,self).\\_\\_str\\_\\_()"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.602,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.145,
+            0.067,
+            0.854,
+            0.138
+          ],
+          "level": 2,
+          "content": "Primary Application: Initializers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.197,
+            0.314,
+            0.243
+          ],
+          "content": "class Employee(object):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.086,
+            0.262,
+            0.447,
+            0.521
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __init__(self,n,d,s=50000.0):\n    self._name = n\n    self._start = d\n    self._salary = s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.059,
+            0.62,
+            0.394,
+            0.888
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Executive(Employee):\n    ...\n    def __init__(self,n,d,b=0.0):\n        super().__init__(n,d)\n        self._bonus = b\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.773,
+            0.188,
+            0.854,
+            0.234
+          ],
+          "level": 2,
+          "content": "object"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.631,
+            0.243,
+            0.782,
+            0.385
+          ],
+          "sub_type": "code",
+          "content": "```python\n__init__(self)\n__str__(self)\n__repr__(self)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.739,
+            0.429,
+            0.863,
+            0.476
+          ],
+          "level": 2,
+          "content": "Employee"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.631,
+            0.49,
+            0.827,
+            0.633
+          ],
+          "sub_type": "code",
+          "content": "```txt\n__init__(self,n,d,s)\n__str__(self)\n__repr__(self)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.739,
+            0.685,
+            0.862,
+            0.726
+          ],
+          "level": 2,
+          "content": "Executive"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.632,
+            0.747,
+            0.826,
+            0.791
+          ],
+          "sub_type": "code",
+          "content": "```python\n__init__(self,n,d,b)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.633,
+            0.796,
+            0.77,
+            0.837
+          ],
+          "content": "str\\_\\_(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.654,
+            0.845,
+            0.782,
+            0.885
+          ],
+          "content": "\\_repr\\_\\_(self)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.067,
+            0.939,
+            0.132
+          ],
+          "level": 2,
+          "content": "Instance Attributes are (Often) Inherited"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.197,
+            0.314,
+            0.242
+          ],
+          "content": "class Employee(object):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.248,
+            0.448,
+            0.522
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __init__(self,n,d,s=50000.0):\n    self._name = n\n    self._start = d\n    self._salary = s\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.059,
+            0.621,
+            0.394,
+            0.887
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Executive(Employee):\n    ...\n    def __init__(self,n,d,b=0.0):\n        super().__init__(n,d)\n        self._bonus = b\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.592,
+            0.221,
+            0.634,
+            0.265
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.691,
+            0.274,
+            0.815,
+            0.317
+          ],
+          "content": "<strong><u>Executive</u></strong>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.829,
+            0.349,
+            0.954,
+            0.488
+          ],
+          "content": "Created in **Employee** initializer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.584,
+            0.641,
+            0.658,
+            0.685
+          ],
+          "content": "\\_bonus"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.694,
+            0.637,
+            0.733,
+            0.679
+          ],
+          "content": "0.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.815,
+            0.694,
+            0.94,
+            0.831
+          ],
+          "content": "Created in **Executive** initializer"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.067,
+            0.868,
+            0.128
+          ],
+          "level": 2,
+          "content": "Also Works With Class Attributes"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.069,
+            0.223,
+            0.908,
+            0.274
+          ],
+          "level": 2,
+          "content": "Class Attribute: Assigned outside of any method definition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.376,
+            0.33,
+            0.419
+          ],
+          "content": "class Employee(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.427,
+            0.454,
+            0.471
+          ],
+          "content": "\"\"\"Instance is salaried worker\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.481,
+            0.295,
+            0.524
+          ],
+          "content": "\\# Class Attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.533,
+            0.373,
+            0.577
+          ],
+          "content": "STD\\_SALARY = 50000.0"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.643,
+            0.372,
+            0.685
+          ],
+          "level": 2,
+          "content": "class Executive(Employee):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.694,
+            0.45,
+            0.739
+          ],
+          "content": "\"\"\"An Employee with a bonus. \"\"”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.749,
+            0.295,
+            0.791
+          ],
+          "content": "\\# Class Attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.799,
+            0.359,
+            0.845
+          ],
+          "content": "STD\\_BONUS = 10000.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.789,
+            0.355,
+            0.87,
+            0.401
+          ],
+          "content": "**object**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.756,
+            0.534,
+            0.879,
+            0.579
+          ],
+          "content": "**Employee**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.621,
+            0.712,
+            0.66
+          ],
+          "content": "STD\\_SALARY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.745,
+            0.621,
+            0.848,
+            0.665
+          ],
+          "content": "50000.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.756,
+            0.745,
+            0.878,
+            0.785
+          ],
+          "content": "**Executive**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.829,
+            0.699,
+            0.87
+          ],
+          "content": "STD\\_BONUS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.747,
+            0.829,
+            0.847,
+            0.873
+          ],
+          "content": "10000.0"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.399,
+            0.921,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.043,
+            0.186,
+            0.343,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.259
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.403,
+            0.904,
+            0.459
+          ],
+          "content": "• What is value of a.f()?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.568,
+            0.473,
+            0.856,
+            0.801
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 10  \nB: 14  \nC: 5  \nD: ERROR  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.043,
+            0.185,
+            0.343,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.26
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.403,
+            0.904,
+            0.459
+          ],
+          "content": "• What is value of a.f()?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.571,
+            0.476,
+            0.853,
+            0.801
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 10 CORRECT  \nB: 14  \nC: 5  \nD: ERROR  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.043,
+            0.186,
+            0.343,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.259
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.403,
+            0.904,
+            0.459
+          ],
+          "content": "• What is value of b.f()?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.568,
+            0.473,
+            0.857,
+            0.802
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 10  \nB: 14  \nC: 5  \nD: ERROR  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.186,
+            0.342,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.26
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.403,
+            0.904,
+            0.459
+          ],
+          "content": "• What is value of b.f()?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.569,
+            0.474,
+            0.855,
+            0.801
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 10  \nB: 14 CORRECT  \nC: 5  \nD: ERROR  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.186,
+            0.342,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.259
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.404,
+            0.886,
+            0.457
+          ],
+          "content": "• What is value of b.x?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.567,
+            0.473,
+            0.856,
+            0.801
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 4  \nB: 3  \nC: 42  \nD: ERROR  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.136,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.185,
+            0.342,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.26
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.404,
+            0.886,
+            0.457
+          ],
+          "content": "• What is value of b.x?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.568,
+            0.473,
+            0.855,
+            0.802
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 4  \nB: 3 CORRECT  \nC: 42  \nD: ERROR  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.186,
+            0.342,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.259
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.404,
+            0.884,
+            0.457
+          ],
+          "content": "• What is value of a.z?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.567,
+            0.473,
+            0.856,
+            0.801
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 4  \nB: 3  \nC: 42  \nD: ERROR  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.137,
+            0.067,
+            0.862,
+            0.129
+          ],
+          "level": 2,
+          "content": "Name Resolution and Inheritance"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.186,
+            0.342,
+            0.871
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A(object):\n    x = 3 # Class Attribute\n    y = 5 # Class Attribute\n    def f(self):\n        return self.g()\n    def g(self):\n        return 10\n\nclass B(A):\n    y = 4   # Class Attribute\n    z = 42  # Class Attribute\n    def g(self):\n        return 14\n    def h(self):\n        return 18\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.912,
+            0.259
+          ],
+          "content": "• Execute the following:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.404,
+            0.884,
+            0.457
+          ],
+          "content": "• What is value of a.z?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.568,
+            0.472,
+            0.96,
+            0.803
+          ],
+          "sub_type": "code",
+          "content": "```txt\nA: 4  \nB: 3  \nC: 42  \nD: ERROR CORRECT  \nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.104,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.243,
+            0.068,
+            0.755,
+            0.127
+          ],
+          "level": 2,
+          "content": "The isinstance Function"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.045,
+            0.205,
+            0.41,
+            0.251
+          ],
+          "level": 2,
+          "content": "• isinstance(&lt;obj&gt;,&lt;class&gt;)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.27,
+            0.481,
+            0.367
+          ],
+          "content": "§ True if &lt;obj&gt;’s class is same as or a subclass of &lt;class&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.387,
+            0.32,
+            0.429
+          ],
+          "content": "§ False otherwise"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.453,
+            0.218,
+            0.5
+          ],
+          "level": 2,
+          "content": "Example:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.515,
+            0.492,
+            0.559
+          ],
+          "content": "§ isinstance(e,Executive) is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.578,
+            0.488,
+            0.622
+          ],
+          "content": "§ isinstance(e,Employee) is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.643,
+            0.447,
+            0.687
+          ],
+          "content": "§ isinstance(e,object) is True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.706,
+            0.419,
+            0.749
+          ],
+          "content": "§ isinstance(e,str) is False"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.77,
+            0.457,
+            0.819
+          ],
+          "level": 2,
+          "content": "• Generally preferable to type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.832,
+            0.46,
+            0.877
+          ],
+          "content": "§ Works with base types too!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.261,
+            0.568,
+            0.295
+          ],
+          "content": "e"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.261,
+            0.653,
+            0.305
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.39,
+            0.573,
+            0.428
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.606,
+            0.444,
+            0.727,
+            0.482
+          ],
+          "content": "<strong><u>Executive</u></strong>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.537,
+            0.61,
+            0.57
+          ],
+          "content": "name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.637,
+            0.532,
+            0.697,
+            0.568
+          ],
+          "content": "'Fred'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.613,
+            0.607,
+            0.649
+          ],
+          "content": "\\_start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.639,
+            0.61,
+            0.694,
+            0.647
+          ],
+          "content": "2012"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.693,
+            0.618,
+            0.732
+          ],
+          "content": "\\_salary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.648,
+            0.688,
+            0.685,
+            0.723
+          ],
+          "content": "0.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.767,
+            0.615,
+            0.805
+          ],
+          "content": "bonus"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.648,
+            0.763,
+            0.685,
+            0.799
+          ],
+          "content": "0.0"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.772,
+            0.235,
+            0.939,
+            0.396
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_image_23.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.83,
+            0.25,
+            0.912,
+            0.293
+          ],
+          "content": "**object**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.796,
+            0.46,
+            0.92,
+            0.504
+          ],
+          "content": "**Employee**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.776,
+            0.446,
+            0.936,
+            0.613
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_image_26.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.675,
+            0.92,
+            0.713
+          ],
+          "content": "**Executive**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.775,
+            0.661,
+            0.935,
+            0.833
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_image_28.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.105,
+            0.949
+          ],
+          "content": "11/3/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.398,
+            0.92,
+            0.601,
+            0.949
+          ],
+          "content": "Subclasses & Inheritance"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "35"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 35,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

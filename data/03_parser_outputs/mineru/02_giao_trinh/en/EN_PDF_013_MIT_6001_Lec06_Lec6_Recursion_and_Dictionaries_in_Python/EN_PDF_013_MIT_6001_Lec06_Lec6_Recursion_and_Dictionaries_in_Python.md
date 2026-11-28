@@ -1,0 +1,866 @@
+<!-- page: 1 -->
+
+## RECURSION, DICTIONARIES
+
+<u>(download slides and .py files and follow along!)</u>
+
+6.0001 LECTURE 6
+
+<!-- page: 2 -->
+
+## QUIZ PREP
+
+§ a	paper	and	an	online	component
+
+§ open	book/notes
+
+§ not	open	Internet,	not	open	computer
+
+§	start	prinSng	out	whatever	you	may	want	to	bring
+
+<!-- page: 3 -->
+
+## LAST TIME
+
+§	tuples	-	immutable
+
+§	lists	-	mutable
+
+§	aliasing,	cloning
+
+§	mutability	side	effects
+
+<!-- page: 4 -->
+
+## TODAY
+
+§ recursion	–	divide/decrease	and	conquer
+
+§	dicSonaries	–	another	mutable	object	type
+
+<!-- page: 5 -->
+
+## RECURSION
+
+Recursion	is	the	process	of	repeaSng	items	in	a	self-s imilar	way.
+
+<!-- page: 6 -->
+
+## WHAT IS RECURSION?
+
+§	Algorithmically:	a	way	to	design	soluSons	to	problems by	**divide-and-conquer**	or	**decrease-and-conquer** ◦ reduce	a	problem	to	simpler	versions	of	the	same problem
+
+## §	SemanScally:	a	programming	technique	where	a func0on	calls	itself
+
+◦ 	in	programming,	goal	is	to	NOT	have	infinite	recursion
+
+◦ 	must	have	**1	or	more	base	cases**	that	are	easy	to	solve
+
+◦ 	must	solve	the	same	problem	on	**some	other	input**	with	the	goal of	simplifying	the	larger	problem	input
+
+<!-- page: 7 -->
+
+## ITERATIVE ALGORITHMS SO FAR
+
+§	looping	constructs	(while	and	for	loops)	lead	to **itera0ve** algorithms
+
+§	can	capture	computaSon	in	a	set	of	**state	variables** that	update	on	each	iteraSon	through	loop
+
+<!-- page: 8 -->
+
+## MULTIPLICATION – ITERATIVE SOLUTION
+
+§	“mulSply	a	\*	b”	is	equivalent	to	“add	a	to	itself	b	Smes”
+
+```python
+■ capture state by
+  • an iteration number (i) starts at b
+    i ← i-1 and stop when 0
+  • a current value of computation (result)
+    result ← result + a
+
+def mult_iter(a, b):
+    result = 0
+    while b > 0:
+        result += a
+        b -= 1
+    return result
+```
+
+<!-- page: 9 -->
+
+## MULTIPLICATION – RECURSIVE SOLUTION
+
+## §	recursive	step
+
+• 	think	how	to	reduce problem	to	a	**simpler/ smaller	version**	of same	problem
+
+## base	case
+
+keep	reducing problem	unSl	reach	a simple	case	that	can be	**solved	directly**
+
+• 	when b = 1, a\*b = a
+
+$$
+\begin{array}{l} a ^ {*} b = \underbrace {a + a + a + a + \dots + a} _ {\text {b times}} \\ = a + \underbrace {a + a + a + \dots + a} _ {\text {recursive}} \\ = a + a * (b - 1) \end{array}
+$$
+
+$$
+\begin{array}{l} \text {def mult(a, b):} \\ \boxed {\text {if b == 1:}} \\ \text {return a} \end{array} \quad \text {base case}
+$$
+
+$$
+\begin{array}{c} \text {else:} \\ \text {return a + mult(a, b - 1)} \end{array}
+$$
+
+<!-- page: 10 -->
+
+## FACTORIAL
+
+```txt
+n! = n*(n-1)*(n-2)*(n-3)* ... * 1
+```
+
+§	for	what	n	do	we	know	the	factorial?
+
+$$
+n = 1
+$$
+
+à
+
+$$
+\begin{array}{c} \text {if n == 1:} \\ \text {return 1} \end{array} \quad \text {base case}
+$$
+
+§	how	to	reduce	problem?	Rewrite	in	terms	of something	simpler	to	reach	base	case
+
+$$
+n ^ {*} (n - 1)! \quad \rightarrow \quad \text {else:}
+$$
+
+return n\*factorial(n-1)
+
+<!-- page: 11 -->
+
+## RECURSIVE FUNCTION SCOPE EXAMPLE
+
+Global	scope
+
+fact Some code print(fact(4))
+
+```python
+def fact(n):
+    if n == 1:
+        return 1
+    else:
+        return n*fact(n-1)
+```
+
+<!-- page: 12 -->
+
+## SOME OBSERVATIONS
+
+§	each	recursive	call	to	a	funcSon	creates	its **own	scope/environment**
+
+§ **bindings	of	variables**	in	a	scope	are	not changed	by	recursive	call
+
+§	flow	of	control	passes	back	to	**previous scope**	once	funcSon	call	returns	value
+
+<!-- page: 13 -->
+
+## ITERATION vs.  RECURSION
+
+```python
+def factorial_iter(n):     def factorial(n):
+    prod = 1                     if n == 1:
+    for i in range(1,n+1):      return 1
+        prod *= i                 else:
+    return prod                    return n*factorial(n-1)
+```
+
+§ 	recursion	may	be	simpler,	more	intuiSve
+
+§ recursion	may	be	efficient	from	programmer	POV
+
+recursion	may	not	be	efficient	from	computer	POV
+
+<!-- page: 14 -->
+
+## INDUCTIVE REASONING
+
+§	How	do	we	know	that	our recursive	code	will	work?
+
+§ mult\_iter	terminates because	b	is	iniSally	posiSve, and	decreases	by	1	each	Sme around	loop;	thus	must eventually	become	less	than	1
+
+§ mult	called	with	b	=	1	has	no recursive	call	and	stops
+
+§ mult		called	with	b	>	1	makes a	recursive	call	with	a	smaller version	of	b;	must	eventually reach	call	with	b	=	1
+
+```python
+def mult_iter(a, b):
+    result = 0
+    while b > 0:
+        result += a
+        b -= 1
+    return result
+
+def mult(a, b):
+    if b == 1:
+        return a
+    else:
+        return a + mult(a, b-1)
+```
+
+<!-- page: 15 -->
+
+## MATHEMATICAL INDUCTION
+
+§	To	prove	a	statement	indexed	on	integers	is	true	for	all values	of	n:
+
+◦ Prove	it	is	true	when	n	is	smallest	value	(e.g.	n	=	0	or	n	=	1)
+
+◦ Then	prove	that	if	it	is	true	for	an	arbitrary	value	of	n,	one can	show	that	it	must	be	true	for	n+1
+
+<!-- page: 16 -->
+
+## EXAMPLE OF INDUCTION
+
+■  $0 + 1 + 2 + 3 + \ldots + n = (n(n+1))/2$
+
+§	Proof:
+
+◦ If n = 0, ,	then	LHS	is	0	and	RHS	is $0^{*}1 / 2 = 0,$ ,	so	true
+
+◦ Assume	true	for	some	k,	then	need	to	show	that
+
+$$
+0 + 1 + 2 + \dots + k + (k + 1) = ((k + 1) (k + 2)) / 2
+$$
+
+◦ LHS	is $k(k + 1) / 2 + (k + 1)$ by	assumpSon	that	property	holds	for problem	of	size	k
+
+◦ This	becomes,	by	algebra, ((k+1)(k+2))/2
+
+◦ Hence	expression	holds	for	all n >= 0
+
+<!-- page: 17 -->
+
+## RELEVANCE TO CODE?
+
+```python
+■ Same logic applies
+def mult(a, b):
+    if b == 1:
+        return a
+    else:
+        return a + mult(a, b-1)
+```
+
+§	Base	case,	we	can	show	that	mult must	return	correct	answer
+
+§	For	recursive	case,	we	can	assume	that	mult correctly	returns	an answer	for	problems	of	size	smaller	than	b,	then	by	the	addiSon	step,	it must	also	return	a	correct	answer	for	problem	of	size	b
+
+§	Thus	by	inducSon,	code	correctly	returns	answer
+
+<!-- page: 18 -->
+
+## TOWERS OF HANOI
+
+§ The	story:
+
+◦ 3	tall	spikes
+
+◦ Stack	of	64	different	sized	discs	–	start	on	one	spike
+
+◦ Need	to	move	stack	to	second	spike	(at	which	point universe	ends)
+
+◦ Can	only	move	one	disc	at	a	Sme,	and	a	larger	disc	can never	cover	up	a	small	disc
+
+<!-- page: 19 -->
+
+## TOWERS OF HANOI
+
+§	Having	seen	a	set	of	examples	of	different	sized stacks,	how	would	you	write	a	program	to	print	out	the right	set	of	moves?
+
+§	**Think	recursively!**
+
+◦ Solve	a	smaller	problem
+
+◦ Solve	a	basic	problem
+
+◦ Solve	a	smaller	problem
+
+<!-- page: 20 -->
+
+```python
+def printMove(fr, to):
+    print('move from ' + str(fr) + ' to ' + str(to))
+
+def Towers(n, fr, to, spare):
+    if n == 1:
+        printMove(fr, to)
+    else:
+        Towers(n-1, fr, spare, to)
+        Towers(1, fr, to, spare)
+        Towers(n-1, spare, to, fr)
+```
+
+<!-- page: 21 -->
+
+## RECURSION WITH MULTIPLE BASE CASES
+
+## §	Fibonacci	numbers
+
+◦ Leonardo	of	Pisa	(aka	Fibonacci)	modeled	the	following challenge
+
+◦ Newborn	pair	of	rabbits	(one	female,	one	male)	are	put	in	a	pen
+
+◦ Rabbits	mate	at	age	of	one	month
+
+◦ Rabbits	have	a	one	month	gestaSon	period
+
+◦ Assume	rabbits	never	die,	that	female	always	produces	one	new pair	(one	male,	one	female)	every	month	from	its	second	month on.
+
+◦ How	many	female	rabbits	are	there	at	the	end	of	one	year?
+
+<!-- page: 22 -->
+
+![](images/page_21_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 23 -->
+
+![](images/page_22_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 24 -->
+
+![](images/page_23_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 25 -->
+
+![](images/page_24_image_0.jpg)
+
+![](images/page_24_image_1.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 26 -->
+
+![](images/page_25_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 27 -->
+
+![](images/page_26_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 28 -->
+
+![](images/page_27_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 29 -->
+
+![](images/page_28_image_0.jpg)
+
+<!-- page: 30 -->
+
+![](images/page_29_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 31 -->
+
+![](images/page_30_image_0.jpg)
+
+Demo	courtesy	of	Prof.	Denny	Freeman	and	Adam	Hartz
+
+<!-- page: 32 -->
+
+## FIBONACCI
+
+Ayer	second	month	–	sSll	1	female	(now pregnant)
+
+Ayer	third	month	–	two	females,	one	pregnant, one	not
+
+| Month | Females |
+| --- | --- |
+| 0 | 1 |
+| 1 | 1 |
+| 2 | 2 |
+| 3 | 3 |
+| 4 | 5 |
+| 5 | 8 |
+| 6 | 13 |
+
+◦ Every	female	alive	at	month	n-2	will	produce	one female	in	month	n;
+
+◦ These	can	be	added	those	alive	in	month	n-1	to get	total	alive	in	month	n
+
+<!-- page: 33 -->
+
+## FIBONACCI
+
+§	Base	cases:
+
+Females(0) = 1
+
+◦ Females(1)	=	1
+
+§	Recursive	case
+
+◦ Females(n)	=	Females(n-1)	+	Females(n-2)
+
+<!-- page: 34 -->
+
+## FIBONACCI
+
+```python
+fib(x):
+    """assumes x an int >= 0
+        returns Fibonacci of x"""
+if x == 0 or x == 1:
+    return 1
+else:
+    return fib(x-1) + fib(x-2)
+```
+
+<!-- page: 35 -->
+
+## RECURSION ON NON-NUMERICS
+
+§ how	to	check	if	a	string	of	characters	is	a	palindrome,	i.e., reads	the	same	forwards	and	backwards
+
+◦ “Able	was	I,	ere	I	saw	Elba”	–	avributed	to	Napoleon
+
+◦ “Are	we	not	drawn	onward,	we	few,	drawn	onward	to	new	era?”	– avributed	to	Anne	Michaels
+
+![](images/page_34_image_4.jpg)
+
+Image courtesy of [wikipedia](https://en.wikipedia.org/wiki/Napoleon#/media/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg), in the public domain.
+
+![](images/page_34_image_6.jpg)
+
+By Larth\_Rasnal (Own work) [GFDL ([https://www.gnu.org/licenses/fdl-1.3.en.htm](https://www.gnu.org/licenses/fdl-1.3.en.html)l) or CC BY 3.0 ([https://creativecommons.org/licenses/by/3.0](https://creativecommons.org/licenses/by/3.0))], via Wikimedia Commons.
+
+<!-- page: 36 -->
+
+## SOLVING RECURSIVELY?
+
+§	First,	convert	the	string	to	just	characters,	by	stripping out	punctuaSon,	and	converSng	upper	case	to	lower case
+
+§	Then
+
+◦ Base	case:	a	string	of	length	0	or	1	is	a	palindrome
+
+◦ Recursive	case:
+
+◦ If	first	character	matches	last	character,	then	is	a	palindrome	if middle	secSon	is	a	palindrome
+
+<!-- page: 37 -->
+
+## EXAMPLE
+
+§‘Able	was	I,	ere	I	saw	Elba’	à	‘ablewasiereisawleba’
+
+```txt
+■isPalindrome('ablewasiereisawleba') is same as
+```
+
+```txt
+° 'a' == 'a' and
+isPalindrome('blewasiereisawleb')
+```
+
+<!-- page: 38 -->
+
+```python
+def isPalindrome(s):
+
+    def toChars(s):
+        s = s.lower()
+        ans = ''
+        for c in s:
+            if c in 'abcdefghijklmnopqrstuvwxyz':
+                ans = ans + c
+        return ans
+
+    def isPal(s):
+        if len(s) <= 1:
+            return True
+        else:
+            return s[0] == s[-1] and isPal(s[1:-1])
+
+    return isPal(toChars(s))
+```
+
+<!-- page: 39 -->
+
+## DIVIDE AND CONQUER
+
+§	an	example	of	a	“divide	and	conquer”	algorithm
+
+§	solve	a	hard	problem	by	breaking	it	into	a	set	of	subproblems	such	that:
+
+◦ sub-problems	are	easier	to	solve	than	the	original
+
+◦ soluSons	of	the	sub-problems	can	be	combined	to	solve the	original
+
+<!-- page: 40 -->
+
+## DICTIONARIES
+
+<!-- page: 41 -->
+
+## HOW TO STORE STUDENT INFO
+
+§	so	far,	can	store	using	separate	lists	for	every	info
+
+```txt
+names = ['Ana', 'John', 'Denise', 'Katy']
+grade = ['B', 'A+', 'A', 'A']
+course = [2.00, 6.0001, 20.002, 9.01]
+```
+
+§	a	**separate list** for	each	item
+
+§	each	list	must	have	the	**same	length**
+
+§	info	stored	across	lists	at	**same	index**,	each	index refers	to info	for	a	different	person
+
+<!-- page: 42 -->
+
+# HOW TO UPDATE/RETRIEVE STUDENT INFO
+
+def get\_grade(student, name\_list, grade\_list, course\_list):
+
+i = name\_list.index(student)
+
+grade = grade\_list[i]
+
+course = course\_list[i]
+
+return (course, grade)
+
+§ **messy**	if	have	a	lot	of	different	info	to	keep	track	of
+
+§	must	maintain	**many	lists**	and	pass	them	as	arguments
+
+§	must	**always	index**	using	integers
+
+§	must	remember	to	change	mulSple	lists
+
+<!-- page: 43 -->
+
+## A BETTER AND CLEANER WAY – A DICTIONARY
+
+§	nice	to	**index	item	of	interest	directly**	(not	always	int)
+
+§	nice	to	use	**one	data	structure**,	no	separate	lists
+
+A	list
+
+| 0 | Elem 1 |
+| --- | --- |
+| 1 | Elem 2 |
+| 2 | Elem 3 |
+| 3 | Elem 4 |
+| … | … |
+
+A	dic0onary
+
+| Key 1 | Val 1 |
+| --- | --- |
+| Key 2 | Val 2 |
+| Key 3 | Val 3 |
+| Key 4 | Val 4 |
+| … | … |
+
+index Jemene sustom index by Jabel
+
+Jemen
+
+<!-- page: 44 -->
+
+## A PYTHON DICTIONARY
+
+§	store	pairs	of	data
+
+• 	value
+
+![](images/page_43_chart_3.jpg)
+
+<!-- page: 45 -->
+
+## DICTIONARY LOOKUP
+
+§	similar	to	indexing	into	a	list
+
+§ **looks	up** the	**key**
+
+§	**returns** the	**value**	associated with	the	key
+
+§	if	key	isn’t	found,	get	an	error
+
+| 'Ana' | 'B' |
+| --- | --- |
+| 'Denise' | 'A' |
+| 'John' | 'A+' |
+| 'Katy' | 'A' |
+
+```python
+grades = {'Ana':'B', 'John':'A+', 'Denise':'A', 'Katy':'A'}
+grades['John']          → evaluates to 'A+'
+grades['Sylvan']      → gives a KeyError
+```
+
+<!-- page: 46 -->
+
+<table><tbody><tr><td>DICTIONARY</td><td>'Ana' 'Denise'</td><td>'B' 'A'</td></tr><tr><td rowspan="3">OPERATIONS</td><td>'John'</td><td>'A+'</td></tr><tr><td>'Katy'</td><td>'A'</td></tr><tr><td>'Sylvan'</td><td>'A'</td></tr></tbody></table>
+
+```python
+grades = {'Ana':'B', 'John':'A+', 'Denise':'A', 'Katy':'A'}
+```
+
+## § add an	entry
+
+```txt
+grades['Sylvan'] = 'A'
+```
+
+## § test if	key	in	dicSonary
+
+```txt
+'John' in grades → returns True
+'Daniel' in grades → returns False
+```
+
+## § delete entry
+
+```bazel
+del(grades['Ana'])
+```
+
+<!-- page: 47 -->
+
+DICTIONARY OPERATIONS
+
+| 'Ana' | 'B' |
+| --- | --- |
+| 'Denise' | 'A' |
+| 'John' | 'A+' |
+| 'Katy' | 'A' |
+
+```python
+grades = {'Ana':'B', 'John':'A+', 'Denise':'A', 'Katy':'A'}
+```
+
+§	get	an	**iterable	that	acts	like	a	tuple	of	all	keys**
+
+```javascript
+grades.keys() → returns ['Denise','Katy','John','Ana']
+```
+
+```txt
+■ get an iterable that acts like a tuple of all values
+grades.values() → returns ['A', 'A', 'A+', 'B']
+```
+
+<!-- page: 48 -->
+
+## DICTIONARY KEYS and VALUES
+
+## §	values
+
+• 	any	type	(**immutable	and	mutable**)
+
+• 	can	be	**duplicates**
+
+• 	dicSonary	values	can	be	lists,	even	other	dicSonaries!
+
+## §	keys
+
+• 	must	be	**unique**
+
+• 	**immutable**	type	(int,	float,	string,	tuple,bool)
+
+• actually	need	an	object	that	is	**hashable,**	but	think	of	as	immutable	as	all immutable	types	are	hashable
+
+• 	careful	with	float	type	as	a	key
+
+§ **no	order**	to	keys	or	values!
+
+d = {4:{1:0}, (1,3):"twelve", 'const':[3.14,2.7,8.44]}
+
+<!-- page: 49 -->
+
+## list
+
+§ **ordered**	sequence	of elements
+
+§	look	up	elements	by	an integer	index
+
+§	indices	have	an	**order**
+
+§ index	is	an	**integer**
+
+## dict
+
+§ **matches** “keys”	to “values”
+
+§	look	up	one	item	by another	item
+
+§ **no	order** is	guaranteed
+
+§	key	can	be	any **immutable** type
+
+<!-- page: 50 -->
+
+## EXAMPLE: 3 FUNCTIONS TO ANALYZE SONG LYRICS
+
+1)	create	a	**frequency	dic0onary**	mapping	str:int
+
+2)	find	**word	that	occurs	the	most**	and	how	many	Smes
+
+• 	use	a	list,	in	case	there	is	more	than	one	word
+
+• 	return	a	tuple	(list,int)	for		(words\_list,	highest\_freq)
+
+## 3)	find	the	words	that	occur	at	least	X	0mes
+
+• 	let	user	choose	“at	least	X	Smes”,	so	allow	as	parameter
+
+• 	return	a	list	of	tuples,	each	tuple	is	a	(list, int) containing	the	list	of	words	ordered	by	their	frequency
+
+• 	IDEA:	From	song	dicSonary,	find	most	frequent	word.	Delete most	common	word.	Repeat.	It	works	because	you	are g	dicSonary.mutaSng	the	son
+
+<!-- page: 51 -->
+
+## CREATING A DICTIONARY
+
+```python
+def lyrics_to_frequencies(lyrics):
+    myDict = {}
+    for word in lyrics:
+        if word in myDict:
+            myDict[word] += 1
+        else:
+            myDict[word] = 1
+    return myDict
+```
+
+<!-- page: 52 -->
+
+## USING THE DICTIONARY
+
+```python
+def most_common_words(freqs):
+    values = freqs.values()
+    best = max(values)
+    words = []
+    for k in freqs:
+        if freqs[k] == best:
+            words.append(k)
+    return (words, best)
+```
+
+<!-- page: 53 -->
+
+# LEVERAGING DICTIONARY PROPERTIES
+
+```python
+def words_often(freqs, minTimes):
+    result = []
+    done = False
+    while not done:
+        temp = most_common_words(freqs)
+        if temp[1] >= minTimes:
+            result.append(temp)
+            for w in temp[0]:
+                del(freqs[w])
+        else:
+            done = True
+    return result
+```
+
+```txt
+print(words_often(beatles, 5))
+```
+
+<!-- page: 54 -->
+
+## FIBONACCI RECURSIVE CODE
+
+```python
+def fib(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    else:
+        return fib(n-1) + fib(n-2)
+```
+
+§	two	base	cases
+
+§	calls	itself	twice
+
+§	this	code	is	inefficient
+
+<!-- page: 55 -->
+
+## INEFFICIENT FIBONACCI fib(n) = fib(n-1) + fib(n-2)
+
+![](images/page_54_image_1.jpg)
+
+§ **recalcula0ng** the	same	values	many	Smes!
+
+§	could	keep	**track** of	already	calculated	values
+
+<!-- page: 56 -->
+
+## FIBONACCI WITH A DICTIONARY
+
+```python
+def fib_efficient(n, d):
+    if n in d:
+        return d[n]
+    else:
+        ans = fib_efficient(n-1, d) + fib_efficient(n-2, d)
+        d[n] = ans
+        return ans
+
+d = {1:1, 2:2}
+print(fib_efficient(6, d))
+```
+
+§	do	a	**lookup	first**	in	case	already	calculated	the	value
+
+§ **modify	dic0onary**	as	progress	through	funcSon	calls
+
+<!-- page: 57 -->
+
+## EFFICIENCY GAINS
+
+§ Calling	fib(34)	results	in	11,405,773	recursive	calls	to the	procedure
+
+§ Calling	fib\_efficient(34)	results	in	65	recursive	calls	to the	procedure
+
+§	Using	dicSonaries	to	capture	intermediate	results	can be	very	efficient
+
+§	But	note	that	this	only	works	for	procedures	without side	effects	(i.e.,	the	procedure	will	always	produce	the same	result	for	a	specific	argument	independent	of	any other	computaSons	between	calls)
+
+<!-- page: 58 -->
+
+6.0001 Introduction to Computer Science and Programming in Python Fall 2016
+
+For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms).

@@ -1,0 +1,1878 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.294,
+            0.713,
+            0.464,
+            0.861
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_0.jpg"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.885,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": "9/20/26"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.163,
+            0.124,
+            0.413,
+            0.142
+          ],
+          "level": 2,
+          "content": "The Three “Areas” of Memory"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.108,
+            0.145,
+            0.469,
+            0.315
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_3.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.227,
+            0.406,
+            0.349,
+            0.423
+          ],
+          "level": 2,
+          "content": "The Call Stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.436,
+            0.351,
+            0.452
+          ],
+          "content": "• The area **where call frames live**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.455,
+            0.39,
+            0.47
+          ],
+          "content": "§ Call frames are created on a function call"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.472,
+            0.43,
+            0.488
+          ],
+          "content": "§ May be several frames (functions call functions)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.49,
+            0.387,
+            0.505
+          ],
+          "content": "§ Each frame deleted as the call completes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.51,
+            0.374,
+            0.525
+          ],
+          "content": "• Area of volatile, temporary memory"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.528,
+            0.348,
+            0.544
+          ],
+          "content": "§ Less permanent than global space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.545,
+            0.312,
+            0.561
+          ],
+          "content": "§ Think of as “scratch” space"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.378,
+            0.524,
+            0.454,
+            0.562
+          ],
+          "content": "| incr_x | 2 |\n| --- | --- |\n| q | id2 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_table_12.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.564,
+            0.342,
+            0.582
+          ],
+          "content": "• Primary focus of Assignment 2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.656,
+            0.125,
+            0.766,
+            0.142
+          ],
+          "level": 2,
+          "content": "Global Space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.154,
+            0.782,
+            0.171
+          ],
+          "content": "• This is the **area you “start with”**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.332,
+            0.538,
+            0.345
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.173,
+            0.822,
+            0.188
+          ],
+          "content": "§ First memory area you learned to visualize"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.191,
+            0.775,
+            0.207
+          ],
+          "content": "§ A place to store “global variables”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.208,
+            0.734,
+            0.225
+          ],
+          "content": "§ Lasts until you quit Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.227,
+            0.743,
+            0.244
+          ],
+          "content": "• What are **global variables**?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.246,
+            0.84,
+            0.262
+          ],
+          "content": "§ **Any assignment not in a function definition**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.264,
+            0.741,
+            0.28
+          ],
+          "content": "§ Also **modules & functions!**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.281,
+            0.743,
+            0.297
+          ],
+          "content": "§ Will see more on this in a bit"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.602,
+            0.406,
+            0.821,
+            0.424
+          ],
+          "level": 2,
+          "content": "Heap Space or “The Heap”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.435,
+            0.71,
+            0.45
+          ],
+          "content": "• **Where the “folders” live**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.452,
+            0.678,
+            0.466
+          ],
+          "content": "§ Stores only folders"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.466,
+            0.715,
+            0.481
+          ],
+          "content": "• Can only **access indirectly**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.483,
+            0.767,
+            0.497
+          ],
+          "content": "§ Must have a variable with identifier"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.498,
+            0.754,
+            0.512
+          ],
+          "content": "§ Can be in global space, call stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.513,
+            0.732,
+            0.528
+          ],
+          "content": "• MUST have **variable with id**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.529,
+            0.748,
+            0.543
+          ],
+          "content": "§ If no variable has id, it is forgotten"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.785,
+            0.461,
+            0.868,
+            0.549
+          ],
+          "content": "| id2 |  |\n| --- | --- |\n|  | Point3 |\n| x | 0.0 |\n| y | 0.0 |\n| z | 0.0 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_table_32.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.543,
+            0.751,
+            0.557
+          ],
+          "content": "§ Disappears in Tutor immediately"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.558,
+            0.739,
+            0.572
+          ],
+          "content": "§ But not necessarily in practice"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.573,
+            0.736,
+            0.588
+          ],
+          "content": "§ Role of the garbage collector"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.18,
+            0.686,
+            0.395,
+            0.704
+          ],
+          "level": 2,
+          "content": "Modules and Global Space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.718,
+            0.255,
+            0.733
+          ],
+          "content": "• Importing a module:"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.292,
+            0.715,
+            0.356,
+            0.729
+          ],
+          "level": 2,
+          "content": "import math"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.735,
+            0.275,
+            0.762
+          ],
+          "content": "§ Creates a global variable (same name as module)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.308,
+            0.753,
+            0.364,
+            0.765
+          ],
+          "content": "**Heap Space**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.386,
+            0.748,
+            0.431,
+            0.761
+          ],
+          "content": "math **id5**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.765,
+            0.275,
+            0.779
+          ],
+          "content": "§ Puts contents in a **folder**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.328,
+            0.772,
+            0.346,
+            0.782
+          ],
+          "content": "**id5**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.153,
+            0.781,
+            0.256,
+            0.795
+          ],
+          "content": "• Module variables"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.373,
+            0.781,
+            0.412,
+            0.793
+          ],
+          "content": "**module**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.798,
+            0.258,
+            0.812
+          ],
+          "content": "• Module functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.35,
+            0.799,
+            0.393,
+            0.81
+          ],
+          "content": "3.141592"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.814,
+            0.275,
+            0.829
+          ],
+          "content": "§ Puts folder id in variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.831,
+            0.276,
+            0.864
+          ],
+          "content": "• **from** keyword dumps contents to global space"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.598,
+            0.686,
+            0.824,
+            0.704
+          ],
+          "level": 2,
+          "content": "Functions and Global Space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.716,
+            0.697,
+            0.73
+          ],
+          "content": "• A function **definition**…"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.716,
+            0.719,
+            0.821,
+            0.732
+          ],
+          "level": 2,
+          "content": "def to\\_centigrade(x):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.733,
+            0.699,
+            0.759
+          ],
+          "content": "§ Creates a global variable (same name as function)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.841,
+            0.726,
+            0.876,
+            0.738
+          ],
+          "content": "Body"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.728,
+            0.735,
+            0.828,
+            0.748
+          ],
+          "content": "return 5\\*(x-32)/9.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.76,
+            0.7,
+            0.774
+          ],
+          "content": "§ Creates a **folder** for body"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.732,
+            0.755,
+            0.793,
+            0.767
+          ],
+          "content": "**Global Space**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.775,
+            0.699,
+            0.789
+          ],
+          "content": "§ Puts folder id in variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.737,
+            0.77,
+            0.815,
+            0.783
+          ],
+          "content": "to\\_centigrade **id6**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.792,
+            0.658,
+            0.807
+          ],
+          "content": "• Variable vs. Call"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.791,
+            0.788,
+            0.803
+          ],
+          "content": "**Heap Space**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.808,
+            0.639,
+            0.82
+          ],
+          "content": ">>> to\\_centigrade"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.82,
+            0.713,
+            0.834
+          ],
+          "content": "&lt;fun to_centigrade at 0x100498de8&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.846,
+            0.577,
+            0.858
+          ],
+          "content": "0.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.834,
+            0.657,
+            0.846
+          ],
+          "content": ">>> to\\_centigrade (32)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.751,
+            0.81,
+            0.769,
+            0.82
+          ],
+          "content": "**id6**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.793,
+            0.82,
+            0.836,
+            0.83
+          ],
+          "content": "**function**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.738,
+            0.808,
+            0.842,
+            0.864
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_68.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.103,
+            0.894,
+            0.115,
+            0.907
+          ],
+          "content": "5"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.614,
+            0.115,
+            0.627
+          ],
+          "content": "3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.614,
+            0.538,
+            0.626
+          ],
+          "content": "4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": "6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.885,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": "9/20/26"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.207,
+            0.124,
+            0.369,
+            0.142
+          ],
+          "level": 2,
+          "content": "Recall: Call Frames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.152,
+            0.267,
+            0.167
+          ],
+          "content": "1. Draw a frame for the call"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.302,
+            0.153,
+            0.449,
+            0.168
+          ],
+          "content": "**Call**: to\\_centigrade(50.0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.167,
+            0.275,
+            0.193
+          ],
+          "content": "2. Assign the argument value to the parameter (in frame)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.307,
+            0.171,
+            0.364,
+            0.184
+          ],
+          "content": "**to\\_centigrade**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.193,
+            0.278,
+            0.24
+          ],
+          "content": "3. Execute the function body <u>Look for variables in the f</u>rame If not there, look for global <u>variables with that name</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.31,
+            0.197,
+            0.374,
+            0.214
+          ],
+          "content": "x 50.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.24,
+            0.274,
+            0.253
+          ],
+          "content": "4. Erase the frame for the call"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.245,
+            0.429,
+            0.26
+          ],
+          "content": "<strong><u>What is happening here?</u></strong>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.141,
+            0.26,
+            0.251,
+            0.273
+          ],
+          "content": "**def** to\\_centigrade(x):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.151,
+            0.272,
+            0.256,
+            0.286
+          ],
+          "content": "return 5\\*(x-32)/9.0"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.168,
+            0.406,
+            0.409,
+            0.423
+          ],
+          "level": 2,
+          "content": "Frames and Helper Functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.337,
+            0.427,
+            0.464,
+            0.441
+          ],
+          "content": "Not done. Do not erase!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.434,
+            0.254,
+            0.448
+          ],
+          "content": "1. def last\\_name\\_first(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.448,
+            0.132,
+            0.462
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.293,
+            0.435,
+            0.336,
+            0.446
+          ],
+          "content": "Call: last\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.149,
+            0.448,
+            0.275,
+            0.462
+          ],
+          "content": "\"\"\"**Precond**: s in the form"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.462,
+            0.132,
+            0.475
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.326,
+            0.447,
+            0.432,
+            0.462
+          ],
+          "content": "last\\_name\\_first 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.15,
+            0.462,
+            0.274,
+            0.475
+          ],
+          "content": "'first-name last-name' \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.475,
+            0.132,
+            0.489
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.328,
+            0.47,
+            0.338,
+            0.48
+          ],
+          "content": "s"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.356,
+            0.469,
+            0.418,
+            0.482
+          ],
+          "content": "'Walker White'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.147,
+            0.476,
+            0.261,
+            0.49
+          ],
+          "content": "<u>first = first\\_name(s</u>)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.49,
+            0.132,
+            0.503
+          ],
+          "content": "5."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.151,
+            0.49,
+            0.249,
+            0.503
+          ],
+          "content": "last = last\\_name(s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.504,
+            0.132,
+            0.517
+          ],
+          "content": "6."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.15,
+            0.504,
+            0.262,
+            0.517
+          ],
+          "content": "return last + ',' + first"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.518,
+            0.132,
+            0.53
+          ],
+          "content": "7."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.326,
+            0.515,
+            0.375,
+            0.527
+          ],
+          "content": "first\\_name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.417,
+            0.515,
+            0.433,
+            0.527
+          ],
+          "content": "**10**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.531,
+            0.231,
+            0.545
+          ],
+          "content": "8. def first\\_name(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.545,
+            0.275,
+            0.56
+          ],
+          "content": "9. \"\"\"**Precond**: see above\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.328,
+            0.536,
+            0.339,
+            0.547
+          ],
+          "content": "s"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.356,
+            0.535,
+            0.418,
+            0.547
+          ],
+          "content": "'Walker White'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.56,
+            0.233,
+            0.575
+          ],
+          "content": "10. end = s.find(' ')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.575,
+            0.232,
+            0.589
+          ],
+          "content": "11. return s[0:end]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.227,
+            0.686,
+            0.349,
+            0.704
+          ],
+          "level": 2,
+          "content": "The Call Stack"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.716,
+            0.265,
+            0.731
+          ],
+          "content": "• Functions are **stacked**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.732,
+            0.282,
+            0.759
+          ],
+          "content": "§ Cannot remove one above w/o removing one below"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.76,
+            0.289,
+            0.787
+          ],
+          "content": "§ Sometimes draw bottom up (better fits the metaphor)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.358,
+            0.733,
+            0.404,
+            0.745
+          ],
+          "content": "Frame 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.79,
+            0.284,
+            0.804
+          ],
+          "content": "• Stack represents memory"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.755,
+            0.405,
+            0.766
+          ],
+          "content": "Frame 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.805,
+            0.263,
+            0.82
+          ],
+          "content": "as a **high water mark**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.775,
+            0.404,
+            0.788
+          ],
+          "content": "Frame 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.82,
+            0.301,
+            0.847
+          ],
+          "content": "§ Must have enough to keep the **entire stack in memory**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.797,
+            0.405,
+            0.81
+          ],
+          "content": "Frame 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.848,
+            0.281,
+            0.863
+          ],
+          "content": "§ Error if cannot hold stack"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.424,
+            0.731,
+            0.461,
+            0.831
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_50.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.818,
+            0.405,
+            0.83
+          ],
+          "content": "Frame 6  5"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.58,
+            0.124,
+            0.842,
+            0.142
+          ],
+          "level": 2,
+          "content": "Function Access to Global Space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.152,
+            0.696,
+            0.184
+          ],
+          "content": "• All function definitions are in some module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.185,
+            0.692,
+            0.214
+          ],
+          "content": "• Call can access global space for **that module**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.761,
+            0.154,
+            0.871,
+            0.179
+          ],
+          "content": "**Global Space** (for globals.py) a 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.215,
+            0.702,
+            0.229
+          ],
+          "content": "§ math.cos: global for math"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.761,
+            0.188,
+            0.802,
+            0.2
+          ],
+          "content": "**change\\_a**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": "8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.23,
+            0.711,
+            0.256
+          ],
+          "content": "§ temperature.to\\_centigrade uses global for temperature"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.744,
+            0.234,
+            0.795,
+            0.245
+          ],
+          "content": "\\# globals.py"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.256,
+            0.712,
+            0.272
+          ],
+          "content": "• But **cannot** change values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.745,
+            0.246,
+            0.858,
+            0.257
+          ],
+          "content": "\"\"\"Show how globals work\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.273,
+            0.717,
+            0.287
+          ],
+          "content": "§ Makes a new local variable!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.257,
+            0.826,
+            0.269
+          ],
+          "content": "a = 4 # global space"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.288,
+            0.708,
+            0.303
+          ],
+          "content": "§ Why we limit to constants"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.276,
+            0.81,
+            0.288
+          ],
+          "content": "**def** change\\_a():"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.758,
+            0.289,
+            0.856,
+            0.3
+          ],
+          "content": "a = 3.5 # local variable"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.591,
+            0.406,
+            0.831,
+            0.423
+          ],
+          "level": 2,
+          "content": "Frames and Helper Functions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.434,
+            0.678,
+            0.448
+          ],
+          "content": "1. def last\\_name\\_first(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.448,
+            0.555,
+            0.461
+          ],
+          "content": "2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.716,
+            0.435,
+            0.872,
+            0.446
+          ],
+          "content": "**Call:** last\\_name\\_first('Walker White'):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.448,
+            0.698,
+            0.462
+          ],
+          "content": "\"\"\"**Precond**: s in the form"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.84,
+            0.449,
+            0.855,
+            0.461
+          ],
+          "content": "5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.462,
+            0.555,
+            0.475
+          ],
+          "content": "3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.749,
+            0.449,
+            0.818,
+            0.461
+          ],
+          "content": "last\\_name\\_first"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.462,
+            0.697,
+            0.475
+          ],
+          "content": "'first-name last-name' \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.476,
+            0.555,
+            0.488
+          ],
+          "content": "4."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.476,
+            0.679,
+            0.49
+          ],
+          "content": "first = first\\_name(s)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.751,
+            0.469,
+            0.841,
+            0.481
+          ],
+          "content": "s 'Walker White'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.49,
+            0.555,
+            0.502
+          ],
+          "content": "5."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.573,
+            0.49,
+            0.672,
+            0.503
+          ],
+          "content": "<u>last = last\\_name(s)</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.751,
+            0.489,
+            0.775,
+            0.5
+          ],
+          "content": "first"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.797,
+            0.489,
+            0.833,
+            0.5
+          ],
+          "content": "'Walker'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.505,
+            0.555,
+            0.517
+          ],
+          "content": "6."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.574,
+            0.505,
+            0.684,
+            0.517
+          ],
+          "content": "return last + ',' + first"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.749,
+            0.515,
+            0.795,
+            0.527
+          ],
+          "content": "last\\_name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.839,
+            0.515,
+            0.858,
+            0.527
+          ],
+          "content": "**15**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.532,
+            0.651,
+            0.545
+          ],
+          "content": "13. def last\\_name(s):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.546,
+            0.559,
+            0.559
+          ],
+          "content": "14."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.751,
+            0.536,
+            0.762,
+            0.547
+          ],
+          "content": "s"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.545,
+            0.698,
+            0.56
+          ],
+          "content": "\"\"\"**Precond**: see above\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.561,
+            0.559,
+            0.574
+          ],
+          "content": "15."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.779,
+            0.535,
+            0.84,
+            0.547
+          ],
+          "content": "'Walker White'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.575,
+            0.56,
+            0.588
+          ],
+          "content": "16."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.577,
+            0.561,
+            0.66,
+            0.575
+          ],
+          "content": "end = s.rfind(' ')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.577,
+            0.575,
+            0.661,
+            0.589
+          ],
+          "content": "return s[end+1:]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.635,
+            0.686,
+            0.788,
+            0.705
+          ],
+          "level": 2,
+          "content": "Anglicize Example"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.566,
+            0.712,
+            0.88,
+            0.868
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_98.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.798,
+            0.78,
+            0.862,
+            0.795
+          ],
+          "content": "Call Stack"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.613,
+            0.115,
+            0.627
+          ],
+          "content": "9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.103,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": "11"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": "10"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": "12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.962,
+            0.959,
+            0.977
+          ],
+          "content": "2"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-10",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

@@ -1,0 +1,356 @@
+<!-- page: 1 -->
+
+## Checking Input
+
+## Keyboard
+
+- - is\_key\_down(key)
+- - Returns True if key is down
+- - key is a string ('a' or 'space')
+- - Empty string means any key
+- - is\_key\_pressed(key)
+- - Returns True if key pressed
+- - key not down prev. frame
+- - is\_key\_released(key)
+- - Returns True if key released
+- - key was down prev. frame
+- - touch
+- - **Attribute** giving a position
+- - Stored as a Point2 object
+- - But None if no touch
+- - is\_touch\_pressed()
+- - True if touch pressed
+- - touch was None prev. frame
+- - is\_touch\_released()
+- - True if touch released
+- - touch not None prev. frame
+
+## Mouse/Touch
+
+<!-- page: 2 -->
+
+## Programming Animation
+
+## Intra-Frame
+
+• Computation within frame
+
+§ Only need current frame
+
+• **Example:** Collisions
+
+§ Need current position
+
+§ Use to check for overlap
+
+• Can use **local variables**
+
+§ All lost at update() end
+
+§ But no longer need them
+
+## Inter-Frame
+
+• Computation across frames
+
+§ Use values from last frame
+
+• **Example:** Movement
+
+§ Need old position/velocity
+
+§ Compute next position
+
+• Requires **attributes**
+
+§ Attributes never deleted
+
+§ Remain after update() ends
+
+<!-- page: 3 -->
+
+## Interframe Computation: Touch
+
+• Works like an Etch-a-Sketch
+
+§ User draws by touching
+
+§ Checks position each frame
+
+§ Draws lines between touches
+
+• Uses attribute touch in GInput
+
+§ The mouse press position
+
+§ Or **None** if not pressed
+
+§ Access with self.input.touch
+
+• But we also need last touch!
+
+§ Forgot if we do not store it
+
+§ Purpose of attribute last
+
+Line segment = 2 points
+
+Current Touch
+
+Previous Touch
+
+See touch.py
+
+<!-- page: 4 -->
+
+## Complex Input: Click Types
+
+• Double click = 2 fast clicks
+
+• Count number of fast clicks
+
+§ Add an attribute clicks
+
+§ Reset to 0 if not fast enough
+
+## • Time click speed
+
+§ Add an attribute time
+
+§ Set to 0 when mouse released
+
+§ Increment when not pressed (e.g. in loop method update())
+
+§ Check time when next pressed
+
+Is it fast enough?
+
+![](images/page_3_image_11.jpg)
+
+released
+
+pressed
+
+See touch.py
+
+<!-- page: 5 -->
+
+## Approaching Complex Input
+
+• Look at what you need…
+
+§ From the current animation frame
+
+§ From the previous animation frame
+
+§ From many frames in the past
+
+Requires new attributes
+
+• **Previous frame** is the easiest
+
+§ Set them at the end of update() method
+
+§ Just like updating a loop variable!
+
+• **Longer term** depends on the problem
+
+§ See today’s **optional lab**
+
+<!-- page: 6 -->
+
+## Designing Complex Applications
+
+• Applications can become extremely complex
+
+§ Large classes doing a lot
+
+§ Many states & invariants
+
+§ Specification unreadable
+
+• **Idea**: Break application up into several classes
+
+§ Start with a “main” class
+
+§ Other classes have roles
+
+§ Main class delegates work
+
+MainApp
+
+§ Processes input
+
+§ Determines state
+
+Calls the methods of
+
+Animation
+
+§ Animates (only)
+
+See subcontroller.py
+
+<!-- page: 7 -->
+
+## Model-View-Controller Pattern
+
+Division can apply to classes **or** modules
+
+<u>Model</u>
+
+Defines and manages the data
+
+Responds to the controller requests
+
+<u>Controller</u>
+
+Updates model in response to events
+
+Updates view with model changes
+
+Calls the methods or functions of
+
+<u>View</u>
+
+Displays the model to the app user
+
+Provides user input to the controller
+
+<!-- page: 8 -->
+
+## Models in Assignment 7
+
+• Often subclass of GObject
+
+§ Has built-in draw method
+
+• Includes groups of models
+
+§ **Example**: rockets in pyro.py
+
+§ Each rocket is a model
+
+§ But so is the entire list!
+
+§ update() will change both
+
+• **A7**: Several model classes
+
+§ Ship to animate the player
+
+§ Alien to represent an alien
+
+sparks
+
+![](images/page_7_image_12.jpg)
+
+rocket
+
+See pyro.py
+
+<!-- page: 9 -->
+
+## Models in Assignment 7
+
+• Often subclass of GObject
+
+§ Has built-in draw method
+
+• Includes groups of models
+
+§ **Example**: rockets in pyro.py
+
+§ Each rocket is a model
+
+§ But so is the entire list!
+
+§ update() will change both
+
+• **A7**: Several model classes
+
+§ Ship to animate the player
+
+§ Alien to represent an alien
+
+sparks
+
+![](images/page_8_image_12.jpg)
+
+rocket
+
+See pyro.py
+
+<!-- page: 10 -->
+
+## The Debugging Problem
+
+## • What if there is a bug?
+
+§ Graphic does not display
+
+§ Input does not work right
+
+## • Have to find the bug
+
+§ Isolate bad line of code
+
+§ Requires visualization
+
+§ Typically use print()
+
+## • But this will print a lot!
+
+§ Overwhelmed by output
+
+§ Hard to find anything
+
+![](images/page_9_image_11.jpg)
+
+<!-- page: 11 -->
+
+## Managing Your Diagnostics
+
+• The print() approach has two main problems
+
+§ Prints all the time, even if no problem
+
+§ Lots of prints means it scrolls by very fast
+
+• To control the first problem, **toggle the print**
+
+§ Create **special input** for debugging
+
+§ Use that input to turn on/off as needed
+
+• To control the second, **print to a file**
+
+§ A file can be searched
+
+§ A file can be compared against runs
+
+<!-- page: 12 -->
+
+## Logger: A Class to Support Logging
+
+import debug
+
+tool = debug.Logger()
+
+tool.setFile('log.txt')
+
+Can be None for screen only
+
+tool.log('This is always printed')
+
+tool.debug('This is not printed')
+
+Only prints if verbose is True
+
+tool.setVerbose(True)
+
+tool.log('This is still printed')
+
+tool.debug('This is printed this time')
+
+See firelog.py

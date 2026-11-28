@@ -1,0 +1,4004 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.15,
+            0.268,
+            0.372,
+            0.334
+          ],
+          "content": "Lecture 25"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.283,
+            0.445,
+            0.719,
+            0.537
+          ],
+          "level": 2,
+          "content": "Error Handling"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.143,
+            0.068,
+            0.857,
+            0.128
+          ],
+          "level": 2,
+          "content": "Announcements for This Lecture"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.14,
+            0.217,
+            0.384,
+            0.278
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.336,
+            0.43,
+            0.388
+          ],
+          "content": "• **A6** is on hold right now"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.401,
+            0.451,
+            0.447
+          ],
+          "content": "▪ Will be graded after break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.459,
+            0.413,
+            0.505
+          ],
+          "content": "▪ Quiz is also after break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.523,
+            0.457,
+            0.574
+          ],
+          "content": "• Should be working on **A7**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.587,
+            0.463,
+            0.633
+          ],
+          "content": "▪ OH available this Sun/Mon"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.647,
+            0.403,
+            0.693
+          ],
+          "content": "▪ Lab hours on Tuesday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.705,
+            0.472,
+            0.749
+          ],
+          "content": "▪ OH resume Mon after break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.765,
+            0.474,
+            0.811
+          ],
+          "content": "▪ **Need to get Target moving**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.823,
+            0.418,
+            0.865
+          ],
+          "content": "▪ Due **December 7th/10th**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.579,
+            0.215,
+            0.896,
+            0.271
+          ],
+          "level": 2,
+          "content": "Course Material"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.335,
+            0.878,
+            0.384
+          ],
+          "content": "• Only two **topics** remain"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.397,
+            0.863,
+            0.443
+          ],
+          "content": "▪ One is covered today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.456,
+            0.917,
+            0.501
+          ],
+          "content": "▪ Other is next two lectures"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.517,
+            0.91,
+            0.565
+          ],
+          "content": "• Only two real **labs** remain"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.578,
+            0.897,
+            0.625
+          ],
+          "content": "▪ Today’s topic this week"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.637,
+            0.873,
+            0.683
+          ],
+          "content": "▪ Next topic after break"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.699,
+            0.91,
+            0.746
+          ],
+          "content": "• **All videos** are now posted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.76,
+            0.866,
+            0.805
+          ],
+          "content": "▪ Today: **Videos 25-27**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.819,
+            0.867,
+            0.863
+          ],
+          "content": "▪ Next Time: **Video 28**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.921,
+            0.114,
+            0.95
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.921,
+            0.604,
+            0.952
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.923,
+            0.959,
+            0.949
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.238,
+            0.067,
+            0.761,
+            0.137
+          ],
+          "level": 2,
+          "content": "Recovering from Errors"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.033,
+            0.201,
+            0.959,
+            0.999
+          ],
+          "sub_type": "code",
+          "content": "```python\n• Suppose we have this code:\n    result = input('Number: ')          # get\n    number from user\n    x = float(result)                  #\n    convert string to float\n    print('The next number is '+str(x+1))\n• What if user mistypes?\n    Number: 12a\n    Traceback (most recent call last):\n        File \"prompt.py\", line 13, in\n    <module>\n9/30/25                      Asserts & Error Handling\n       x = float(result)\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.064,
+            0.926,
+            0.137
+          ],
+          "level": 2,
+          "content": "Ideally Would Handle with Conditional"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.194,
+            0.912,
+            0.997
+          ],
+          "sub_type": "code",
+          "content": "```python\nresult = input('Number: ')\nget number from user\nif isfloat(red)\n    Does not Exist\n    x = float(result)\n# convert to float\n    print('The next number is\n'+str(x+1))\nelse:\n    print('That is not a\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.923,
+            0.96,
+            0.95
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.308,
+            0.066,
+            0.695,
+            0.138
+          ],
+          "level": 2,
+          "content": "Using Try-Except"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.045,
+            0.203,
+            0.949,
+            0.901
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    result = input('Number: ')\n# get number\n    x = float(result)\n# convert to float\n    print('The next number is +str(x+1))\nexce\nSimilar to if-else\n■ But always does the try block\n■ Might not do all of the try block\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.921,
+            0.105,
+            0.95
+          ],
+          "content": "9/30/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.604,
+            0.953
+          ],
+          "content": "Asserts & Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.923,
+            0.959,
+            0.949
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.308,
+            0.066,
+            0.695,
+            0.138
+          ],
+          "level": 2,
+          "content": "Using Try-Except"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.047,
+            0.204,
+            0.951,
+            0.905
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    result = input('N'\n# get number\n    x = float(result)\n    # convert to flow\n    print('The next number is\n+str(x+1))\nexcept\nConversion\nmay crash!\nExecute if crashes\nSimilar to if-else\n■ But always does the try block\n■ Might not do all of the try block\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.921,
+            0.105,
+            0.95
+          ],
+          "content": "9/30/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.921,
+            0.604,
+            0.953
+          ],
+          "content": "Asserts & Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.924,
+            0.96,
+            0.949
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.19,
+            0.065,
+            0.809,
+            0.139
+          ],
+          "level": 2,
+          "content": "Try-Except is Very Versatile"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.196,
+            0.9,
+            0.893
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef isfloat(s):\n    \"\"\"Returns: True\n    if string s\n    represents a\n    float\"\"\"\n    try:\n        x = float(s)\n    return True\n    except:\n        return False\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.921,
+            0.106,
+            0.951
+          ],
+          "content": "9/30/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.604,
+            0.953
+          ],
+          "content": "Asserts & Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.946,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.171,
+            0.065,
+            0.83,
+            0.137
+          ],
+          "level": 2,
+          "content": "Try-Except and the Call Stack"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.033,
+            0.186,
+            0.942,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```python\n# recover.py\ndef function_1(x,y):\n    try:\n        return\n        function_2(x,y)\n    except:\n        return\n        float('inf')\ndef function_2(x,y):\n    return\n    function_3(x,y)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.848,
+            0.617,
+            0.938,
+            0.861
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.083,
+            0.973,
+            0.391,
+            1.0
+          ],
+          "content": "return x/y # crash"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.397,
+            0.92,
+            0.605,
+            0.955
+          ],
+          "content": "Asserts & Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.17,
+            0.065,
+            0.83,
+            0.138
+          ],
+          "level": 2,
+          "content": "Try-Except and the Call Stack"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.033,
+            0.182,
+            0.955,
+            0.903
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.72,
+            0.757,
+            0.92,
+            0.816
+          ],
+          "content": "No traceback!"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.256,
+            0.921,
+            0.359,
+            0.961
+          ],
+          "content": "_ 3 (x, y)",
+          "image_source": "images/page_8_equation_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.083,
+            0.973,
+            0.391,
+            1.0
+          ],
+          "content": "return x/y # crash"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.066,
+            0.737,
+            0.137
+          ],
+          "level": 2,
+          "content": "Tracing Control Flow"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.189,
+            0.96,
+            0.991
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef first(x):\n    print('Starting first.')\n    try:\n        second(x)\n    except:\n        print('Caught at first')\n    print('Ending first')\n\ndef second(x):\n    print('Starting second.')\n    try:\n        third(x)\n    except:\n        print('Caught at second')\n\ndef third(x):\n    print('Starting third.')\n    assert x < 1\n    print('Ending third.)\n\nWhat is the output of first(2)?\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.065,
+            0.737,
+            0.137
+          ],
+          "level": 2,
+          "content": "Tracing Control Flow"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.189,
+            0.959,
+            0.997
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef first(x):\n    print('Starting first.')\n    try:\n        second(x)\n    except:\n        print('Caught at first')\n    print('Ending first')\n\ndef second(x):\n    print('Starting second.')\n    try:\n        third(x)\n    except:\n        print('Caught at second')\nprint('Ending second')\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.189,
+            0.961,
+            0.991
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef first(x):\n    print('Starting first.')\n    try:\n        second(x)\n    except:\n        print('Caught at first')\n    print('Ending first')\n\ndef second(x):\n    print('Starting second.')\n    try:\n        third(x)\n    except:\n        print('Caught at second')\n\ndef third(x):\n    print('Starting third.')\n    assert x < 1\n    print('Ending third.)\n\nWhat is the output of first(0)?\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.066,
+            0.737,
+            0.137
+          ],
+          "level": 2,
+          "content": "Tracing Control Flow"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.066,
+            0.737,
+            0.137
+          ],
+          "level": 2,
+          "content": "Tracing Control Flow"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.19,
+            0.959,
+            0.991
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef first(x):\n    print('Starting first.')\n    try:\n        second(x)\n    except:\n        print('Caught at first')\n    print('Ending first')\n\ndef second(x):\n    print('Starting second.')\n    try:\n        third(x)\n    except:\n        print('Caught at second')\n\ndef third(x):\n    print('Starting third.')\n    assert x < 1\n    print('Ending third')\n\nWhat is the output of first(0)?\n'Starting first.'\n'Starting second.'\n'Starting third.'\n'Ending third'\n'Ending third'\n'Ending second'\n'Ending first'\n\n9/30/25 Asserts & Error Handling 13\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.254,
+            0.066,
+            0.746,
+            0.139
+          ],
+          "level": 2,
+          "content": "Error Types in Python"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.028,
+            0.187,
+            0.945,
+            0.783
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    assert 1 == 2,\n    'My error'\n    ...\n>>> foo()\nAssertionError: My\nerror\nClass Names\ndef foo():\n    x = 5 / 0\n    ...\n>>> foo()\nZeroDivisionError:\ninteger division\nor modulo by zero\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.115,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.961,
+            0.95
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.254,
+            0.067,
+            0.745,
+            0.138
+          ],
+          "level": 2,
+          "content": "Error Types in Python"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.035,
+            0.193,
+            0.936,
+            0.782
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    assert 1 == 2,\n    'My error'\n    ...\n>>> foo()\nAssertionError: My\nerror\nClass Names\n>>> foo()\nZeroDivisionError:\ninteger division\nor modulo by zero\nInformation about an error\nis stored inside an object.\nThe error type is the class\nof the error object.\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.921,
+            0.115,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.923,
+            0.96,
+            0.95
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.65,
+            0.419,
+            0.946,
+            0.801
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.255,
+            0.067,
+            0.744,
+            0.137
+          ],
+          "level": 2,
+          "content": "Error Types in Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.183,
+            0.814,
+            0.237
+          ],
+          "content": "• All errors are instances of class BaseException"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.257,
+            0.803,
+            0.313
+          ],
+          "content": "• This allows us to organize them in a hierarchy"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.058,
+            0.355,
+            0.311,
+            0.867
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_4.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.358,
+            0.365,
+            0.59,
+            0.791
+          ],
+          "content": "\\begin{array}{c} \\text {BaseException} \\\\ \\text {Exception} \\\\ \\text {AssertionError} \\\\ \\text {r} \\end{array}",
+          "image_source": "images/page_15_equation_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.697,
+            0.932,
+            0.796
+          ],
+          "content": "→ means “extends” or “is an instance of”"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.07,
+            0.921,
+            0.141,
+            0.95
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.604,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.255,
+            0.067,
+            0.744,
+            0.137
+          ],
+          "level": 2,
+          "content": "Error Types in Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.183,
+            0.814,
+            0.237
+          ],
+          "content": "• All errors are instances of class BaseException"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.257,
+            0.803,
+            0.313
+          ],
+          "content": "• This allows us to organize them in a hierarchy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.366,
+            0.301,
+            0.412
+          ],
+          "content": "**BaseException**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.599,
+            0.295,
+            0.649
+          ],
+          "content": "**Exception(BE)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.755,
+            0.289,
+            0.804
+          ],
+          "content": "**AssError(E)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.366,
+            0.587,
+            0.459
+          ],
+          "content": "BaseException个"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.347,
+            0.483,
+            0.564,
+            0.645
+          ],
+          "content": "All of these are Exceptionactually empty! **Why?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.36,
+            0.701,
+            0.586,
+            0.787
+          ],
+          "content": "AssertionErro r"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.688,
+            0.437,
+            0.732,
+            0.479
+          ],
+          "content": "**id4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.752,
+            0.495,
+            0.941,
+            0.539
+          ],
+          "content": "**AssertionError**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.699,
+            0.573,
+            0.82,
+            0.62
+          ],
+          "content": "'My error'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.666,
+            0.699,
+            0.932,
+            0.795
+          ],
+          "content": "→ means “extends” or “is an instance of”"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.07,
+            0.921,
+            0.141,
+            0.95
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.604,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.175,
+            0.066,
+            0.825,
+            0.138
+          ],
+          "level": 2,
+          "content": "Python Error Type Hierarchy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.185,
+            0.29,
+            0.231
+          ],
+          "content": "BaseException"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.307,
+            0.171,
+            0.352
+          ],
+          "content": "SystemExit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.352,
+            0.309,
+            0.469,
+            0.353
+          ],
+          "content": "Exception"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.178,
+            0.716,
+            0.351
+          ],
+          "content": "~~Argument has~~ wrong **type** (e.g. float([1])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.773,
+            0.177,
+            0.941,
+            0.351
+          ],
+          "content": "~~Argument has~~ wrong **value** (e.g. float('a')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.024,
+            0.431,
+            0.18,
+            0.474
+          ],
+          "content": "AssertionError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.203,
+            0.431,
+            0.356,
+            0.474
+          ],
+          "content": "AttributeError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.38,
+            0.431,
+            0.55,
+            0.473
+          ],
+          "content": "ArithmeticError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.572,
+            0.431,
+            0.661,
+            0.473
+          ],
+          "content": "IOError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.682,
+            0.432,
+            0.793,
+            0.475
+          ],
+          "content": "TypeError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.815,
+            0.431,
+            0.934,
+            0.473
+          ],
+          "content": "ValueError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.272,
+            0.559,
+            0.469,
+            0.603
+          ],
+          "content": "ZeroDivisionError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.49,
+            0.56,
+            0.648,
+            0.603
+          ],
+          "content": "OverflowError"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.705,
+            0.94,
+            0.837
+          ],
+          "content": "http://docs.python.org/Why so many error types? library/exceptions.html"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.921,
+            0.114,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.604,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.225,
+            0.067,
+            0.775,
+            0.137
+          ],
+          "level": 2,
+          "content": "Handling Errors by Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.891,
+            0.261
+          ],
+          "content": "• try-except blocks can be restricted to **specific** errors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.275,
+            0.728,
+            0.324
+          ],
+          "content": "▪ Do except if error is **an instance** of that type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.34,
+            0.642,
+            0.387
+          ],
+          "content": "▪ If error not an instance, do not recover"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.409,
+            0.963,
+            0.961
+          ],
+          "sub_type": "code",
+          "content": "```python\n• Example:\ntry:\n    val = input()          # get number from\n    user\n    x = float(val)         # convert string\n    to float\n    print('The next number is '+str(x+1)).'\nexcept ValueError:\nprint('Hey! That is not a number!')\nMay have\nKeyboardInterrupt\nMay have ValueError\nOnly recovers ValueError.\nOther errors ignored.\n11/18/25\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.225,
+            0.067,
+            0.775,
+            0.137
+          ],
+          "level": 2,
+          "content": "Handling Errors by Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.892,
+            0.261
+          ],
+          "content": "• try-except blocks can be restricted to **specific** errors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.275,
+            0.743,
+            0.324
+          ],
+          "content": "▪ Doe except if error is **an instance** of that type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.339,
+            0.642,
+            0.387
+          ],
+          "content": "▪ If error not an instance, do not recover"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.409,
+            0.965,
+            0.961
+          ],
+          "sub_type": "code",
+          "content": "```txt\n• Example:\ntry:\n    val = input()          # get number from\n    user\n    x = float(val)         # convert string\n    to float\n    print('The next number is '+str(x+1)')\nexcept KeyboardInterrupt:\nprint('Check your keyboard!')\nMay have\nKeyboardInterrupt\nMay have ValueError\nOnly recovers\nKeyboardInterrupt.\nOther errors ignored.\n20\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.225,
+            0.067,
+            0.775,
+            0.138
+          ],
+          "level": 2,
+          "content": "Handling Errors by Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.711,
+            0.261
+          ],
+          "content": "• try-except can put the error in a variable"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.28,
+            0.241,
+            0.335
+          ],
+          "level": 2,
+          "content": "• Example:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.09,
+            0.348,
+            0.946,
+            0.89
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    val = input()          # get number from\n    user\n    x = float(val)         # convert string\n    to float\n    print('The next number i\nexcept ValueError as e:\n    print(e.args[0])\n    print('Hey! That is not a number!')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.921,
+            0.115,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.923,
+            0.959,
+            0.949
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.213,
+            0.066,
+            0.786,
+            0.138
+          ],
+          "level": 2,
+          "content": "Creating Errors in Python"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.203,
+            0.368,
+            0.314
+          ],
+          "level": 2,
+          "content": "• Create errors with raise"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.334,
+            0.452,
+            0.385
+          ],
+          "content": "▪ **Usage**: raise &lt;exp&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.398,
+            0.486,
+            0.449
+          ],
+          "content": "▪ exp evaluates to an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.465,
+            0.468,
+            0.516
+          ],
+          "content": "▪ An instance of Exception"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.533,
+            0.441,
+            0.591
+          ],
+          "content": "• Tailor your error types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.604,
+            0.45,
+            0.653
+          ],
+          "content": "▪ **ValueError**: Bad value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.668,
+            0.425,
+            0.721
+          ],
+          "content": "▪ **TypeError**: Bad type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.735,
+            0.457,
+            0.857
+          ],
+          "content": "• Still prefer **asserts** for preconditions, however"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.869,
+            0.473,
+            0.918
+          ],
+          "content": "▪ Compact and easy to read"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.516,
+            0.199,
+            0.889,
+            0.9
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo(x):\n    assert x < 2,\n    'My error'\n    ...\n    Identical\ndef foo(x):\n    if x >= 2:\n        m = 'My\nerror'\n        err =\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.392,
+            0.907,
+            0.914,
+            0.957
+          ],
+          "content": "AssertionError(m)Advanced Error Handling"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.116,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.961,
+            0.951
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.514,
+            0.2,
+            0.775,
+            0.254
+          ],
+          "sub_type": "code",
+          "content": "```txt\ndef foo(x):\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.214,
+            0.066,
+            0.786,
+            0.138
+          ],
+          "level": 2,
+          "content": "Creating Errors in Python"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.203,
+            0.368,
+            0.314
+          ],
+          "level": 2,
+          "content": "• Create errors with raise"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.334,
+            0.452,
+            0.385
+          ],
+          "content": "▪ **Usage**: raise &lt;exp&gt;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.398,
+            0.486,
+            0.449
+          ],
+          "content": "▪ exp evaluates to an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.465,
+            0.468,
+            0.516
+          ],
+          "content": "▪ An instance of Exception"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.533,
+            0.441,
+            0.591
+          ],
+          "content": "• Tailor your error types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.604,
+            0.45,
+            0.653
+          ],
+          "content": "▪ **ValueError**: Bad value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.668,
+            0.425,
+            0.721
+          ],
+          "content": "▪ **TypeError**: Bad type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.735,
+            0.457,
+            0.857
+          ],
+          "content": "• Still prefer **asserts** for preconditions, however"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.869,
+            0.473,
+            0.918
+          ],
+          "content": "▪ Compact and easy to read"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.517,
+            0.267,
+            0.889,
+            0.896
+          ],
+          "sub_type": "code",
+          "content": "```python\nassert x < 2,\n    'My error'\n    ...\n    Identical\ndef foo(x):\n    if x >= 2:\n        m = 'My\nerror'\n        err =\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.393,
+            0.908,
+            0.823,
+            0.957
+          ],
+          "content": "ValueError(m)Advanced Error Handling"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.04,
+            0.92,
+            0.116,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.922,
+            0.96,
+            0.95
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.24,
+            0.066,
+            0.761,
+            0.138
+          ],
+          "level": 2,
+          "content": "Raising and Try-Except"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.189,
+            0.955,
+            0.852
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    x = 0\n    try:\n        raise\nException()\n        x = 2\n    except Exception:\n        x = 3\n    return x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.115,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.96,
+            0.95
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.24,
+            0.066,
+            0.761,
+            0.138
+          ],
+          "level": 2,
+          "content": "Raising and Try-Except"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.189,
+            0.956,
+            0.852
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    x = 0\n    try:\n        raise\nException()\n        x = 2\n    except Exception:\n        x = 3\n    return x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.115,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.922,
+            0.96,
+            0.949
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.572,
+            0.199,
+            0.949,
+            0.663
+          ],
+          "sub_type": "code",
+          "content": "```txt\n• The value of\nfoo( ) ?\nA: 0\nB: 2\nC: 3\nD: No value. It stops!\nE: I don’t know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.24,
+            0.065,
+            0.761,
+            0.138
+          ],
+          "level": 2,
+          "content": "Raising and Try-Except"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.193,
+            0.409,
+            0.76
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    x = 0\n    try:\n        raise\nException()\n        x = 2\n    except\nBaseException:\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.2,
+            0.773,
+            0.328,
+            0.826
+          ],
+          "content": "\\mathrm{x} = 3",
+          "image_source": "images/page_25_equation_3.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.133,
+            0.852,
+            0.329,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```txt\nreturn x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.115,
+            0.952
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.922,
+            0.96,
+            0.95
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.24,
+            0.065,
+            0.761,
+            0.138
+          ],
+          "level": 2,
+          "content": "Raising and Try-Except"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.039,
+            0.193,
+            0.41,
+            0.76
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    x = 0\n    try:\n        raise\nException()\n        x = 2\n    except\nBaseException:\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.199,
+            0.773,
+            0.329,
+            0.826
+          ],
+          "content": "\\mathrm{x} = 3",
+          "image_source": "images/page_26_equation_2.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.133,
+            0.852,
+            0.329,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```txt\nreturn x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.572,
+            0.2,
+            0.852,
+            0.333
+          ],
+          "content": "• The value of foo()?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.115,
+            0.952
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.922,
+            0.96,
+            0.95
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.037,
+            0.192,
+            0.433,
+            0.763
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    x = 0\n    try:\n        raise\nException()\n        x = 2\n    except\nAssertionError:\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.24,
+            0.065,
+            0.761,
+            0.138
+          ],
+          "level": 2,
+          "content": "Raising and Try-Except"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.2,
+            0.773,
+            0.329,
+            0.826
+          ],
+          "content": "\\mathrm{x} = 3",
+          "image_source": "images/page_27_equation_2.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.133,
+            0.852,
+            0.328,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```txt\nreturn x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.572,
+            0.198,
+            0.949,
+            0.663
+          ],
+          "sub_type": "code",
+          "content": "```txt\n• The value of\nfoo( ) ?\nA: 0\nB: 2\nC: 3\nD: No value. It stops!\nE: I don’t know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.115,
+            0.952
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.96,
+            0.95
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.572,
+            0.197,
+            0.951,
+            0.665
+          ],
+          "sub_type": "code",
+          "content": "```txt\n• The value of\nfoo( ) ?\nA: 0\nB: 2\nC: 3\nD: No value. Correct\nE: I don’t know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.24,
+            0.065,
+            0.761,
+            0.138
+          ],
+          "level": 2,
+          "content": "Raising and Try-Except"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.191,
+            0.441,
+            0.772
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef foo():\n    x = 0\n    try:\n        raise\nException()\n        x = 2\n    except\nAssertionError:\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.199,
+            0.773,
+            0.329,
+            0.827
+          ],
+          "content": "\\mathrm{x} = 3",
+          "image_source": "images/page_28_equation_3.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.132,
+            0.851,
+            0.329,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```txt\nreturn x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.618,
+            0.729,
+            0.906,
+            0.891
+          ],
+          "content": "Python uses isinstance <u>to match Error types</u>"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.92,
+            0.115,
+            0.952
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.395,
+            0.92,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.16,
+            0.067,
+            0.84,
+            0.137
+          ],
+          "level": 2,
+          "content": "Creating Your Own Exceptions"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.198,
+            0.528,
+            0.241
+          ],
+          "level": 2,
+          "content": "class CustomError(Exception):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.249,
+            0.501,
+            0.351
+          ],
+          "content": "\"\"\"An instance is a cust pass"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.421,
+            0.425,
+            0.486
+          ],
+          "level": 2,
+          "content": "This is all you need!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.494,
+            0.415,
+            0.549
+          ],
+          "content": "▪ No extra attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.557,
+            0.406,
+            0.614
+          ],
+          "content": "▪ No extra methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.623,
+            0.381,
+            0.677
+          ],
+          "content": "▪ No constructors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.688,
+            0.411,
+            0.756
+          ],
+          "content": "Inherit everything"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.596,
+            0.278,
+            0.892,
+            0.551
+          ],
+          "content": "Only issues is choice of parent error class. Use Exception if you are unsure what."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.921,
+            0.115,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.921,
+            0.605,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.96,
+            0.95
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.312,
+            0.066,
+            0.687,
+            0.135
+          ],
+          "level": 2,
+          "content": "Case Study: Files"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.207,
+            0.914,
+            0.269
+          ],
+          "content": "• Can read the contents of any file with open()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.296,
+            0.788,
+            0.351
+          ],
+          "content": "▪ Returns a file object with method read()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.377,
+            0.824,
+            0.431
+          ],
+          "content": "▪ Method read() returns contents as a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.458,
+            0.768,
+            0.511
+          ],
+          "content": "▪ Remember to close() file when done"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.542,
+            0.84,
+            0.605
+          ],
+          "content": "• There are **SO** many errors that can happen"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.633,
+            0.815,
+            0.683
+          ],
+          "content": "▪ FileNotFoundError: File does not exit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.713,
+            0.93,
+            0.831
+          ],
+          "content": "▪ PermissionError: You are not allowed to read it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.861,
+            0.798,
+            0.919
+          ],
+          "content": "▪ Other errors possible when processing data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.395,
+            0.921,
+            0.606,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.921,
+            0.115,
+            0.95
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.958,
+            0.949
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.295,
+            0.067,
+            0.704,
+            0.127
+          ],
+          "level": 2,
+          "content": "Recall: JSON Files"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.042,
+            0.187,
+            0.317,
+            0.875
+          ],
+          "sub_type": "code",
+          "content": "```json\n{\n    \"wind\" : {\n        \"speed\" : 13.0,\n        \"crosswind\" : 5.0\n    },\n    \"sky\" : [\n        {\n            \"cover\" : \"clouds\",\n            \"type\" : \"broken\",\n            \"height\" : 1200.0\n        },\n        {\n            \"type\" : \"overcast\",\n            \"height\" : 1800.0\n        }\n    ]\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.199,
+            0.947,
+            0.253
+          ],
+          "content": "• Look like a nested dict"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.275,
+            0.896,
+            0.325
+          ],
+          "content": "▪ But read in as a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.339,
+            0.91,
+            0.386
+          ],
+          "content": "▪ You have to **convert** it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.406,
+            0.87,
+            0.464
+          ],
+          "content": "• Python module json"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.476,
+            0.873,
+            0.577
+          ],
+          "content": "▪ Function loads() Converts str -> dict"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.567,
+            0.593,
+            0.863,
+            0.694
+          ],
+          "content": "▪ Function dumps() Convert dict -> str"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.716,
+            0.92,
+            0.769
+          ],
+          "content": "• Conversion is sensitive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.789,
+            0.901,
+            0.837
+          ],
+          "content": "▪ Stray commas crash it"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.921,
+            0.114,
+            0.951
+          ],
+          "content": "11/18/25"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.921,
+            0.604,
+            0.953
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.959,
+            0.949
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.271,
+            0.065,
+            0.729,
+            0.137
+          ],
+          "level": 2,
+          "content": "Reading a JSON File"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.192,
+            0.329,
+            0.246
+          ],
+          "content": "def read\\_json(fn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.257,
+            0.203,
+            0.304
+          ],
+          "content": "try:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.199,
+            0.313,
+            0.329,
+            0.357
+          ],
+          "content": "file ="
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.361,
+            0.263,
+            0.411
+          ],
+          "content": "open(fname)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.466,
+            0.263,
+            0.515
+          ],
+          "content": "file.read()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.355,
+            0.371,
+            0.512,
+            0.475
+          ],
+          "content": "Close file when done"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.358,
+            0.2,
+            0.509,
+            0.304
+          ],
+          "continues_prev": true,
+          "content": "ame):Open file with name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.525,
+            0.442,
+            0.684
+          ],
+          "content": "file.close() result = json.loads(data)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.197,
+            0.691,
+            0.468,
+            0.739
+          ],
+          "content": "return result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.753,
+            0.249,
+            0.798
+          ],
+          "content": "except"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.798,
+            0.404,
+            0.845
+          ],
+          "content": "FileNotFoundE<u>rror:</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.861,
+            0.311,
+            0.956
+          ],
+          "content": "print +' not found')11/18/25"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.603,
+            0.223,
+            0.89,
+            0.486
+          ],
+          "continues_prev": true,
+          "content": "Note that we can chain excepts like an if-elif statement"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.341,
+            0.854,
+            0.461,
+            0.907
+          ],
+          "content": "nameIf failed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.551,
+            0.708,
+            0.656
+          ],
+          "continues_prev": true,
+          "content": "Could not find file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.53,
+            0.681,
+            0.739,
+            0.783
+          ],
+          "content": "JSON contents are not valid"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.394,
+            0.919,
+            0.606,
+            0.956
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.959,
+            0.949
+          ],
+          "content": "33"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.117,
+            0.969,
+            0.248,
+            1.0
+          ],
+          "content": "except"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.223,
+            0.065,
+            0.777,
+            0.137
+          ],
+          "level": 2,
+          "content": "Reading a File in General"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.034,
+            0.19,
+            0.453,
+            1.0
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef read_foo(fname):\n    try:\n        file =\nopen(fname)\n        data =\nfile.read()\n        file.close()\n        result =\nconvert(data)\n        return result\nexcept\nFileNotFoundError:\n    print(fname\nnot found')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.253,
+            0.86,
+            0.389
+          ],
+          "content": "All the work is in conversion step"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.483,
+            0.495,
+            0.711,
+            0.605
+          ],
+          "content": "Custom helper for this file type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.536,
+            0.679,
+            0.774,
+            0.785
+          ],
+          "content": "Error specific to the file format"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.304,
+            0.067,
+            0.695,
+            0.127
+          ],
+          "level": 2,
+          "content": "Aside: Pathnames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.829,
+            0.266
+          ],
+          "content": "• Files obey the same rule as other modules"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.287,
+            0.801,
+            0.34
+          ],
+          "content": "▪ To read a file, it must be in the same folder"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.361,
+            0.817,
+            0.418
+          ],
+          "content": "▪ Otherwise, you must use a pathname for file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.441,
+            0.889,
+            0.5
+          ],
+          "content": "• **Relative path**: directions from <u>current folder</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.518,
+            0.608,
+            0.573
+          ],
+          "content": "▪ **macOS**: '.../.../lec22/f"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.593,
+            0.605,
+            0.647
+          ],
+          "content": "▪ **Windows**: '...\\...\\lec22\\"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.632,
+            0.523,
+            0.884,
+            0.64
+          ],
+          "content": "le.txt'Like navigating ile.txt'command shell"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.675,
+            0.913,
+            0.738
+          ],
+          "content": "• **Absolute path**: directions that work anywhere"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.758,
+            0.26,
+            0.806
+          ],
+          "content": "▪ **macOS**:"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.123,
+            0.881,
+            0.167,
+            0.924
+          ],
+          "content": "t'",
+          "image_source": "images/page_34_equation_10.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.089,
+            0.959,
+            0.294,
+            1.0
+          ],
+          "content": "▪ Windows:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.395,
+            0.921,
+            0.606,
+            0.954
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.303,
+            0.067,
+            0.696,
+            0.128
+          ],
+          "level": 2,
+          "content": "Aside: Pathnames"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.205,
+            0.829,
+            0.267
+          ],
+          "content": "• Files obey the same rule as other modules"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.286,
+            0.801,
+            0.341
+          ],
+          "content": "▪ To read a file, it must be in the same folder"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.359,
+            0.407,
+            0.418
+          ],
+          "content": "▪ Otherwise, you mus"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.427,
+            0.363,
+            0.656,
+            0.415
+          ],
+          "content": "t use a pathnaNote the change"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.676,
+            0.359,
+            0.818,
+            0.415
+          ],
+          "content": "me for file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.422,
+            0.417,
+            0.662,
+            0.463
+          ],
+          "content": "in slash direction"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.435,
+            0.89,
+            0.507
+          ],
+          "content": "• **Relative path**: direction~~s from~~ <s><u>c</u></s><u>urrent folder</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.518,
+            0.886,
+            0.583
+          ],
+          "content": "▪ **macOS**: '.../.../lec22/f ile.txt'Like navigating Like navigating"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.593,
+            0.606,
+            0.649
+          ],
+          "content": "▪ **Windows**: '...\\...\\lec22\\"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.631,
+            0.522,
+            0.885,
+            0.641
+          ],
+          "content": "ile.txt'command shell"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.675,
+            0.913,
+            0.739
+          ],
+          "content": "• **Absolute path**: directions that work anywhere"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.757,
+            0.261,
+            0.807
+          ],
+          "content": "**macOS**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.815,
+            0.944,
+            0.869
+          ],
+          "content": "'/Users/white/cs1110/lect22/file.tx"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.123,
+            0.88,
+            0.167,
+            0.924
+          ],
+          "content": "t'",
+          "image_source": "images/page_35_equation_14.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.395,
+            0.92,
+            0.606,
+            0.954
+          ],
+          "content": "Advanced Error Handling"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.089,
+            0.959,
+            0.294,
+            1.0
+          ],
+          "content": "▪ Windows:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.923,
+            0.96,
+            0.949
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.208,
+            0.066,
+            0.79,
+            0.135
+          ],
+          "level": 2,
+          "content": "Pathnames are OS Specific"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.647,
+            0.267
+          ],
+          "content": "• This makes reading files harder"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.285,
+            0.832,
+            0.342
+          ],
+          "content": "▪ May work on Windows but crash on macOS!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.361,
+            0.831,
+            0.417
+          ],
+          "content": "▪ Yet another error message we need to handle"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.44,
+            0.686,
+            0.502
+          ],
+          "content": "• **Solution**: Use the module os.path"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.521,
+            0.737,
+            0.579
+          ],
+          "content": "▪ Builds a pathname string for current os"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.597,
+            0.883,
+            0.729
+          ],
+          "content": "• **Example**: os.path('..', 'cs1110', 'lec22', 'file.txt')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.749,
+            0.883,
+            0.804
+          ],
+          "content": "▪ **macOS**: '../cs1110/lec22/file.txt'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.824,
+            0.903,
+            0.879
+          ],
+          "content": "▪ **Windows**: '..\\cs1110\\lec22\\file.txt’"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.905,
+            0.893,
+            0.969
+          ],
+          "content": "• Absolute paths are a little trickier, but similar 11/18/25 Advanced Error Handling"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.96,
+            0.951
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.165,
+            0.066,
+            0.835,
+            0.135
+          ],
+          "level": 2,
+          "content": "Final Word on Error Handling"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.203,
+            0.841,
+            0.339
+          ],
+          "content": "• Versions of try-except exist in most languages"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.358,
+            0.726,
+            0.414
+          ],
+          "content": "▪ Java, C++, C#, Objective-C all have it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.437,
+            0.86,
+            0.499
+          ],
+          "content": "• But those languages try to **minimize** its use"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.518,
+            0.758,
+            0.575
+          ],
+          "content": "▪ Give application a way to crash “nicely”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.595,
+            0.83,
+            0.651
+          ],
+          "content": "▪ Because processing a try-except it quite slow"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.672,
+            0.788,
+            0.735
+          ],
+          "content": "• Python has a very **different** philosophy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.754,
+            0.887,
+            0.809
+          ],
+          "content": "▪ Python is sort-of slow; exceptions are not slower"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.825,
+            0.803,
+            0.881
+          ],
+          "content": "▪ It is okay to use try-except all the time"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.901,
+            0.832,
+            0.956
+          ],
+          "content": "11/18/25▪ Encourages its use as much as Advanced Error Handling <sup>if</sup>-<sup>s</sup>tatements"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.922,
+            0.959,
+            0.95
+          ],
+          "content": "38"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.165,
+            0.065,
+            0.835,
+            0.135
+          ],
+          "level": 2,
+          "content": "Final Word on Error Handling"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.202,
+            0.841,
+            0.34
+          ],
+          "content": "• Versions of try-except exist in most languages"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.357,
+            0.726,
+            0.415
+          ],
+          "content": "▪ Java, C++, C#, Objective-C all have it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.436,
+            0.86,
+            0.5
+          ],
+          "content": "• But those languages try to **minimize** its use"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.517,
+            0.758,
+            0.577
+          ],
+          "content": "▪ Give application a way to crash “nicely”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.595,
+            0.258,
+            0.645
+          ],
+          "content": "▪ Because"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.67,
+            0.263,
+            0.734
+          ],
+          "content": "• Python has"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.753,
+            0.265,
+            0.811
+          ],
+          "content": "▪ Python is"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.823,
+            0.266,
+            0.882
+          ],
+          "content": "▪ It is okay t"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.286,
+            0.649,
+            0.714,
+            0.867
+          ],
+          "content": "Developers refer to coding styles unique to python as **pythonic** programming"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.742,
+            0.594,
+            0.831,
+            0.647
+          ],
+          "content": "te slow"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.736,
+            0.671,
+            0.788,
+            0.737
+          ],
+          "content": "phy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.737,
+            0.754,
+            0.888,
+            0.807
+          ],
+          "content": "not slower"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.901,
+            0.832,
+            0.956
+          ],
+          "content": "11/18/25▪ Encourages its use as much as Advanced Error Handling <sup>if</sup>-<sup>s</sup>tatements"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.922,
+            0.96,
+            0.949
+          ],
+          "content": "39"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Slide 1",
+      "authors": [
+        "Walker White"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2026-11-19T17:53:52+00:00",
+      "modified_at": "2026-11-19T17:53:52+00:00",
+      "page_count": 39,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

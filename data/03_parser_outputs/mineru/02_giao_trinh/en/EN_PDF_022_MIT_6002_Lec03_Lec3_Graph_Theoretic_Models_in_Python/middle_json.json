@@ -1,0 +1,6204 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 3",
+      "authors": [
+        "Grimson, Eric"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2017-04-11T11:57:49+05:30",
+      "modified_at": "2017-04-11T15:25:48+05:30",
+      "creator_application": "PowerPoint",
+      "producer_application": "Acrobat Distiller 11.0 (Windows)",
+      "page_count": 38,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 792,
+          "height_pt": 612
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.518,
+            0.855,
+            0.605
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Graph-theoretic Models"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.133,
+            0.637,
+            0.31,
+            0.676
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Eric Grimson"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.132,
+            0.693,
+            0.76,
+            0.768
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT Department Of Electrical Engineering and Computer Science"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.456,
+            0.906,
+            0.544,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.864,
+            0.907,
+            0.875,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.09,
+            0.779,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Relevant Reading for Today's Lecture"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.123,
+            0.217,
+            0.306,
+            0.258
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Section 12.2"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.092,
+            0.54,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Computational Models"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.216,
+            0.867,
+            0.308
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Programs that help us understand the world and solve practical problems"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.122,
+            0.33,
+            0.82,
+            0.468
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Saw how we could map the informal problem of choosing what to eat into an optimization problem, and how we could design a program to solve it"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.491,
+            0.807,
+            0.536
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Now want to look at class of models called graphs"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.704,
+            0.75,
+            0.781,
+            0.832
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.704,
+                0.75,
+                0.781,
+                0.832
+              ],
+              "image_path": "images/page_3_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.13,
+            0.089,
+            0.429,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What's a Graph?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.121,
+            0.215,
+            0.44,
+            0.261
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Set of nodes (vertices)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.139,
+            0.267,
+            0.71,
+            0.311
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Might have properties associated with them"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.122,
+            0.336,
+            0.838,
+            0.431
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Set of edges (arcs) each consisting of a pair of nodes\n  ◦ Undirected (graph)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.14,
+            0.44,
+            0.39,
+            0.484
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Directed (digraph)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.158,
+            0.489,
+            0.648,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Source (parent) and destination (child) nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.14,
+            0.537,
+            0.472,
+            0.58
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Unweighted or weighted"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.335,
+            0.587,
+            0.64,
+            0.857
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.335,
+                0.587,
+                0.64,
+                0.857
+              ],
+              "image_path": "images/page_3_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.731,
+            0.776,
+            0.752,
+            0.808
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "E"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.456,
+            0.914,
+            0.545,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.09,
+            0.429,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What's a Graph?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.215,
+            0.44,
+            0.26
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Set of nodes (vertices)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.14,
+            0.267,
+            0.71,
+            0.311
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Might have properties associated with them"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.122,
+            0.336,
+            0.837,
+            0.431
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Set of edges (arcs) each consisting of a pair of nodes\n  ◦ Undirected (graph)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.14,
+            0.441,
+            0.39,
+            0.483
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Directed (digraph)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.158,
+            0.489,
+            0.648,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Source (parent) and destination (child) nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.14,
+            0.537,
+            0.472,
+            0.579
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Unweighted or weighted"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 7,
+          "bbox": [
+            0.335,
+            0.586,
+            0.639,
+            0.857
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 7,
+              "bbox": [
+                0.335,
+                0.586,
+                0.639,
+                0.857
+              ],
+              "image_path": "images/page_4_image_7.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 8,
+          "bbox": [
+            0.704,
+            0.751,
+            0.78,
+            0.832
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 8,
+              "bbox": [
+                0.704,
+                0.751,
+                0.78,
+                0.832
+              ],
+              "image_path": "images/page_4_image_8.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.373,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Why Graphs?"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.123,
+            0.218,
+            0.76,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■To capture useful relationships among entities"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.14,
+            0.268,
+            0.607,
+            0.306
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Rail links between Paris and London"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.14,
+            0.321,
+            0.858,
+            0.36
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- How the atoms in a molecule are related to one another"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.14,
+            0.372,
+            0.446,
+            0.411
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Ancestral relationships"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.864,
+            0.915,
+            0.875,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.092,
+            0.712,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Trees: An Important Special Case"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.216,
+            0.832,
+            0.306
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ A special kind of directed graph in which any pair of nodes is connected by a single path"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.14,
+            0.314,
+            0.775,
+            0.397
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Recall the search trees we used to solve knapsack problem"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.293,
+            0.408,
+            0.661,
+            0.764
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.293,
+                0.408,
+                0.661,
+                0.764
+              ],
+              "image_path": "images/page_6_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.091,
+            0.598,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Why Graphs Are So Useful"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.215,
+            0.778,
+            0.261
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■World is full of networks based on relationships"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.139,
+            0.269,
+            0.414,
+            0.309
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Computer networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.139,
+            0.321,
+            0.471,
+            0.362
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Transportation networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.14,
+            0.371,
+            0.398,
+            0.412
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Financial networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.14,
+            0.424,
+            0.476,
+            0.464
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Sewer or water networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.14,
+            0.475,
+            0.386,
+            0.516
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Political networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.14,
+            0.528,
+            0.391,
+            0.568
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Criminal networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.14,
+            0.58,
+            0.36,
+            0.62
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Social networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.141,
+            0.634,
+            0.21,
+            0.671
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ Etc."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.158,
+            0.681,
+            0.413,
+            0.715
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Analysis of “Wizard of Oz”:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.158,
+            0.717,
+            0.547,
+            0.788
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- size of node reflects number of scenes in which character shares dialogue"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.157,
+            0.789,
+            0.502,
+            0.891
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- color of clusters reflects natural interactions with each other but not others"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 13,
+          "bbox": [
+            0.485,
+            0.326,
+            0.9,
+            0.839
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 13,
+              "bbox": [
+                0.485,
+                0.326,
+                0.9,
+                0.839
+              ],
+              "image_path": "images/page_7_image_13.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.522,
+            0.842,
+            0.963,
+            0.901
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Wizard of Oz dialogue map © Mapr.com. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 16,
+          "bbox": [
+            0.864,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.091,
+            0.598,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Why Graphs Are So Useful"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.216,
+            0.863,
+            0.352
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■We will see that not only do graphs capture relationships in connected networks of elements, they also support inference on those structures"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.14,
+            0.359,
+            0.864,
+            0.443
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Finding sequences of links between elements – is there a path from A to B"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.14,
+            0.454,
+            0.856,
+            0.539
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Finding the least expensive path between elements (aka shortest path problem)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.14,
+            0.548,
+            0.836,
+            0.632
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Partitioning the graph into sets of connected elements (aka graph partition problem)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.14,
+            0.642,
+            0.873,
+            0.728
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Finding the most efficient way to separate sets of connected elements (aka the min-cut/max-flow problem)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.092,
+            0.836,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Graph Theory Saves Me Time Every Day"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.219,
+            0.913,
+            0.782
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 1,
+              "bbox": [
+                0.122,
+                0.219,
+                0.913,
+                0.782
+              ],
+              "image_path": "images/page_9_image_1.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.245,
+            0.816,
+            0.79,
+            0.858
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Map image © source unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.091,
+            0.563,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Getting Eric to his Office"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.175,
+            0.575,
+            0.216
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Model road system using a digraph"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.139,
+            0.222,
+            0.656,
+            0.263
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Nodes: points where roads end or meet"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.14,
+            0.275,
+            0.602,
+            0.316
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Edges: connections between points"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.158,
+            0.327,
+            0.473,
+            0.368
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Each edge has a weight"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.175,
+            0.376,
+            0.874,
+            0.412
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Expected time to get from source node to destination node for that edge"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.175,
+            0.419,
+            0.648,
+            0.452
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Distance between source and destination nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.175,
+            0.459,
+            0.785,
+            0.494
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Average speed of travel between source and destination nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.123,
+            0.521,
+            0.581,
+            0.562
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Solve a graph optimization problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.139,
+            0.568,
+            0.87,
+            0.61
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Shortest weighted path between my house and my office"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 10,
+          "bbox": [
+            0.071,
+            0.631,
+            0.436,
+            0.882
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 10,
+              "bbox": [
+                0.071,
+                0.631,
+                0.436,
+                0.882
+              ],
+              "image_path": "images/page_10_image_10.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 11,
+          "bbox": [
+            0.582,
+            0.611,
+            0.9,
+            0.922
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 11,
+              "bbox": [
+                0.582,
+                0.611,
+                0.9,
+                0.922
+              ],
+              "image_path": "images/page_10_image_11.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 12,
+              "bbox": [
+                0.456,
+                0.911,
+                0.545,
+                0.928
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "6.0002 LECTURE 3"
+                }
+              ]
+            },
+            {
+              "type": "image_footnote",
+              "index": 13,
+              "bbox": [
+                0.238,
+                0.943,
+                0.769,
+                0.982
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.091,
+            0.76,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "First Reported Use of Graph Theory"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.101,
+            0.264,
+            0.261,
+            0.4
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Bridges of Königsberg (1735)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.101,
+            0.424,
+            0.342,
+            0.652
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Possible to take a walk that traverses each of the 7 bridges exactly once?"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.367,
+            0.208,
+            0.872,
+            0.831
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.367,
+                0.208,
+                0.872,
+                0.831
+              ],
+              "image_path": "images/page_11_image_3.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 4,
+              "bbox": [
+                0.358,
+                0.845,
+                0.903,
+                0.887
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Map image © source unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.091,
+            0.555,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Leonhard Euler's Model"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.237,
+            0.392,
+            0.283
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Each island a node"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.121,
+            0.306,
+            0.566,
+            0.354
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Each bridge an undirected edge"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.375,
+            0.67,
+            0.421
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Model abstracts away irrelevant details"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.139,
+            0.426,
+            0.339,
+            0.469
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Size of islands"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.139,
+            0.479,
+            0.381,
+            0.524
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Length of bridges"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 6,
+          "bbox": [
+            0.593,
+            0.209,
+            0.925,
+            0.552
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 6,
+              "bbox": [
+                0.593,
+                0.209,
+                0.925,
+                0.552
+              ],
+              "image_path": "images/page_12_image_6.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.121,
+            0.616,
+            0.85,
+            0.708
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Is there a path that contains each edge exactly once?\n◦ No!"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.456,
+            0.914,
+            0.545,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.091,
+            0.692,
+            0.152
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Implementing and using graphs"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.215,
+            0.349,
+            0.262
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Building graphs"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.14,
+            0.267,
+            0.246,
+            0.308
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.14,
+            0.319,
+            0.24,
+            0.363
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Edges"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.139,
+            0.369,
+            0.585,
+            0.415
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Stitching together to make graphs"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.122,
+            0.439,
+            0.316,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Using graphs"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.14,
+            0.491,
+            0.603,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Searching for paths between nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.139,
+            0.543,
+            0.702,
+            0.586
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Searching for optimal paths between nodes"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.092,
+            0.33,
+            0.145
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Node"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.141,
+            0.214,
+            0.725,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.141,
+                0.214,
+                0.725,
+                0.531
+              ],
+              "content": "class Node(object):\n    def __init__(self, name):\n        \"\"\"Assumes name is a string\"\"\"\n        self.name = name\n    def getName(self):\n        return self.name\n    def __str__(self):\n        return self.name"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.32,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Edge"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.101,
+            0.204,
+            0.776,
+            0.682
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.101,
+                0.204,
+                0.776,
+                0.682
+              ],
+              "content": "class Edge(object):\n    def __init__(self, src, dest):\n        \"\"\"Assumes src and dest are nodes\"\"\"\n        self.src = src\n        self.dest = dest\n    def getSource(self):\n        return self.src\n    def getDestination(self):\n        return self.dest\n    def __str__(self):\n        return self.src.getName() + '->'\\n        + self.dest.getName()"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.806,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Common Representations of Digraphs"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.216,
+            0.502,
+            0.262
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Digraph is a directed graph"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.139,
+            0.268,
+            0.56,
+            0.311
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Edges pass in one direction only"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 3,
+          "bbox": [
+            0.122,
+            0.338,
+            0.375,
+            0.381
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Adjacency matrix"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.14,
+            0.39,
+            0.419,
+            0.429
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Rows: source nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.139,
+            0.441,
+            0.51,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Columns: destination nodes"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.139,
+            0.49,
+            0.685,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Cell[s, d] = 1 if there is an edge from s to d"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.268,
+            0.544,
+            0.447,
+            0.584
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "= 0 otherwise"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.14,
+            0.596,
+            0.721,
+            0.639
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Note that in digraph, matrix is not symmetric"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.122,
+            0.666,
+            0.327,
+            0.71
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Adjacency list"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.139,
+            0.717,
+            0.802,
+            0.758
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Associate with each node a list of destination nodes"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 11,
+          "bbox": [
+            0.455,
+            0.914,
+            0.545,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 12,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.495,
+            0.152
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Digraph, part 1"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.13,
+            0.192,
+            0.925,
+            0.869
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.13,
+                0.192,
+                0.925,
+                0.869
+              ],
+              "content": "class Digraph(object):\n    \"\"\"edges is a dict mapping each node to a list of its children\"\"\"\n    def __init__(self):\n        self.edges = {}\n    def addNode(self, node):\n        if node in self.edges:\n            raise ValueError('Duplicate node')\n        else:\n            self.edges[node] = []\n    def addEdge(self, edge):\n        src = edge.getSource()\n        dest = edge.getDestination()\n        if not (src in self.edges and dest in self.edges):\n            raise ValueError('Node not in graph')\n        self.edges[src].append(dest)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.496,
+            0.152
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Digraph, part 2"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.184,
+            0.186,
+            0.892,
+            0.864
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.184,
+                0.186,
+                0.892,
+                0.864
+              ],
+              "content": "def childrenOf(self, node):\n    return self.edges[node]\n\ndef hasNode(self, node):\n    return node in self.edges\n\ndef getNode(self, name):\n    for n in self.edges:\n        if n.getName() == name:\n            return n\n    raise NameError(name)\n\ndef __str__(self):\n    result = ''\n    for src in self.edges:\n        for dest in self.edges[src]:\n            result = result + src.getName() + '->'\\n'\n                + dest.getName() + '\\n'\n    return result[:-1] #omit final newline"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.342,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Class Graph"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.131,
+            0.188,
+            0.93,
+            0.369
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.131,
+                0.188,
+                0.93,
+                0.369
+              ],
+              "content": "class Graph(Digraph):\n    def addEdge(self, edge):\n        Digraph.addEdge(self, edge)\n        rev = Edge(edge.getDestination(), edge.getSource())\n        Digraph.addEdge(self, rev)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.123,
+            0.409,
+            0.87,
+            0.496
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Graph does not have directionality associated with an edge\n◦ Edges allow passage in either direction"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.123,
+            0.521,
+            0.586,
+            0.564
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Why is Graph a subclass of Digraph?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.123,
+            0.587,
+            0.55,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Remember the substitution rule?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.139,
+            0.635,
+            0.846,
+            0.755
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- If client code works correctly using an instance of the supertype, it should also work correctly when an instance of the subtype is substituted for the instance of the supertype"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.123,
+            0.778,
+            0.862,
+            0.863
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Any program that works with a Digraph will also work with a Graph (but not vice versa)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.091,
+            0.802,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A Classic Graph Optimization Problem"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.216,
+            0.515,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Shortest path from n1 to n2"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.14,
+            0.268,
+            0.626,
+            0.308
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Shortest sequence of edges such that"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.158,
+            0.319,
+            0.495,
+            0.354
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Source node of first edge is n1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.158,
+            0.363,
+            0.481,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Destination of last edge is n2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.158,
+            0.408,
+            0.803,
+            0.479
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- For edges, e1 and e2, in the sequence, if e2 follows e1 in the sequence, the source of e2 is the destination of e1"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.123,
+            0.508,
+            0.456,
+            0.551
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Shortest weighted path"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.14,
+            0.558,
+            0.868,
+            0.601
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Minimize the sum of the weights of the edges in the path"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.659,
+            0.145
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Some Shortest Path Problems"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.216,
+            0.679,
+            0.26
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Finding a route from one city to another"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.122,
+            0.286,
+            0.621,
+            0.328
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Designing communication networks"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.123,
+            0.353,
+            0.791,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Finding a path for a molecule through a chemical labyrinth"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 4,
+          "bbox": [
+            0.22,
+            0.535,
+            0.523,
+            0.829
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 4,
+              "bbox": [
+                0.22,
+                0.535,
+                0.523,
+                0.829
+              ],
+              "image_path": "images/page_21_image_4.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 5,
+          "bbox": [
+            0.58,
+            0.462,
+            0.883,
+            0.803
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 5,
+              "bbox": [
+                0.58,
+                0.462,
+                0.883,
+                0.803
+              ],
+              "image_path": "images/page_21_image_5.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 6,
+              "bbox": [
+                0.278,
+                0.846,
+                0.81,
+                0.887
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "Images © sources unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see https://ocw.mit.edu/help/faq-fair-use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.344,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.5,
+            0.243,
+            0.581,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.363,
+            0.346,
+            0.485,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Providence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.643,
+            0.346,
+            0.75,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.383,
+            0.472,
+            0.47,
+            0.51
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.657,
+            0.473,
+            0.74,
+            0.508
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Denver"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.184,
+            0.537,
+            0.366,
+            0.579
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Adjacency List"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.095,
+            0.583,
+            0.475,
+            0.625
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Boston: Providence, New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.095,
+            0.63,
+            0.475,
+            0.672
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Providence: Boston, New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.532,
+            0.621,
+            0.622,
+            0.657
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.095,
+            0.678,
+            0.334,
+            0.72
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "New York: Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.718,
+            0.68,
+            0.846,
+            0.718
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Los Angeles"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.095,
+            0.724,
+            0.419,
+            0.768
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chicago: Denver, Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.095,
+            0.772,
+            0.439,
+            0.814
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Denver: Phoenix, New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.096,
+            0.819,
+            0.35,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Los Angeles: Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.096,
+            0.866,
+            0.209,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Phoenix:"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.133,
+            0.091,
+            0.411,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Build the Graph"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.081,
+            0.215,
+            0.923,
+            0.689
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.081,
+                0.215,
+                0.923,
+                0.689
+              ],
+              "content": "def buildCityGraph(graphType):\n    g = graphType()\n    for name in ('Boston', 'Providence', 'New York', 'Chicago',\n            'Denver', 'Phoenix', 'Los Angeles'): #Create 7 nodes\n        g.addNode(Node(name))\n    g.addEdge(Edge(g.getNode('Boston'), g.getNode('Providence')))\n    g.addEdge(Edge(g.getNode('Boston'), g.getNode('New York')))\n    g.addEdge(Edge(g.getNode('Providence'), g.getNode('Boston')))\n    g.addEdge(Edge(g.getNode('Providence'), g.getNode('New York')))\n    g.addEdge(Edge(g.getNode('New York'), g.getNode('Chicago')))\n    g.addEdge(Edge(g.getNode('Chicago'), g.getNode('Denver')))\n    g.addEdge(Edge(g.getNode('Chicago'), g.getNode('Phoenix')))\n    g.addEdge(Edge(g.getNode('Denver'), g.getNode('Phoenix')))\n    g.addEdge(Edge(g.getNode('Denver'), g.getNode('New York')))\n    g.addEdge(Edge(g.getNode('Los Angeles'), g.getNode('Boston'))))"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.091,
+            0.579,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Finding the Shortest Path"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.215,
+            0.629,
+            0.262
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Algorithm 1, depth-first search (DFS)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.122,
+            0.284,
+            0.86,
+            0.376
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Similar to left-first depth-first method of enumerating a search tree (Lecture 2)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.122,
+            0.399,
+            0.877,
+            0.538
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Main difference is that graph might have cycles, so we must keep track of what nodes we have visited to avoid going in infinite loops"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.079,
+            0.623,
+            0.887,
+            0.808
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note that we are using divide-and-conquer: if we can find a path from a source to an intermediate node, and a path from the intermediate node to the destination, the combination is a path from source to destination"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.092,
+            0.457,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Depth First Search"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.217,
+            0.439,
+            0.258
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Start at an initial node"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.122,
+            0.285,
+            0.835,
+            0.371
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Consider all the edges that leave that node, in some order"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 3,
+          "bbox": [
+            0.064,
+            0.395,
+            0.122,
+            0.514
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 3,
+              "bbox": [
+                0.064,
+                0.395,
+                0.122,
+                0.514
+              ],
+              "image_path": "images/page_25_image_3.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.122,
+            0.398,
+            0.852,
+            0.445
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Follow the first edge, and check to see if at goal node"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.123,
+            0.468,
+            0.692,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "If not, repeat the process from new node"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.123,
+            0.536,
+            0.803,
+            0.625
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Continue until either find goal node, or run out of options"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.14,
+            0.634,
+            0.864,
+            0.719
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- When run out of options, backtrack to the previous node and try the next edge, repeating this process"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.133,
+            0.091,
+            0.559,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Depth First Search (DFS)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.056,
+            0.174,
+            0.92,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.056,
+                0.174,
+                0.92,
+                0.904
+              ],
+              "content": "def DFS(graph, start, end, path, shortest, toPrint = False):\n    path = path + [start]\n    if toPrint:\n        print('Current DFS path:', printPath(path))\n    if start == end:\n        return path\n    for node in graph.childrenOf(start):\n        if node not in path: #avoid cycles\n            if shortest == None or len(path) < len(shortest):\n                newPath = DFS(graph, node, end, path, shortest, toPrint)\n                if newPath != None:\n                    shortest = newPath\n            elif toPrint:\n                print('Already visited', node)\n    return shortest\n\ndef shortestPath(graph, start, end, toPrint = False):\n    return DFS(graph, start, end, [], None, toPrint)\n    DFS called from a wrapper function:\n    shortestPath"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.093,
+            0.283,
+            0.144
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Test DFS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.181,
+            0.884,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.08,
+                0.181,
+                0.884,
+                0.535
+              ],
+              "content": "def testSP(source, destination):\n    g = buildCityGraph(DiGraph)\n    sp = shortestPath(g, g.getNode(source), g.getNode(destination)\n        toPrint = True)\n    if sp != None:\n        print('Shortest path from', source, 'to',\n            destination, 'is', printPath(sp))\n    else:\n        print('There is no path from', source, 'to', destination)\n\ntestSP('Boston', 'Chicago')"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.092,
+            0.344,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "An Example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.5,
+            0.243,
+            0.581,
+            0.277
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.363,
+            0.346,
+            0.485,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Providence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.643,
+            0.346,
+            0.75,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.384,
+            0.472,
+            0.47,
+            0.51
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.657,
+            0.473,
+            0.74,
+            0.508
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Denver"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 6,
+          "bbox": [
+            0.184,
+            0.539,
+            0.366,
+            0.581
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Adjacency List"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.095,
+            0.585,
+            0.475,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Boston: Providence, New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.095,
+            0.631,
+            0.475,
+            0.674
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Providence: Boston, New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.532,
+            0.621,
+            0.622,
+            0.657
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.095,
+            0.679,
+            0.334,
+            0.722
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "New York: Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.718,
+            0.68,
+            0.846,
+            0.718
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Los Angeles"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.095,
+            0.726,
+            0.419,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chicago: Denver, Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.095,
+            0.774,
+            0.439,
+            0.816
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Denver: Phoenix, New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.095,
+            0.82,
+            0.349,
+            0.862
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Los Angeles: Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.096,
+            0.868,
+            0.209,
+            0.905
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Phoenix:"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 16,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 17,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.616,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output (Chicago to Boston)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.516,
+            0.242,
+            0.6,
+            0.278
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.379,
+            0.345,
+            0.503,
+            0.383
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Providence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.66,
+            0.346,
+            0.768,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.4,
+            0.471,
+            0.488,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.675,
+            0.472,
+            0.757,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Denver"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.109,
+            0.572,
+            0.346,
+            0.607
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.109,
+            0.618,
+            0.427,
+            0.652
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Chicago->Denver"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.549,
+            0.621,
+            0.64,
+            0.658
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.11,
+            0.664,
+            0.515,
+            0.698
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Chicago->Denver->Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.11,
+            0.709,
+            0.528,
+            0.744
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Chicago->Denver->New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.735,
+            0.679,
+            0.864,
+            0.719
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Los Angeles"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.109,
+            0.757,
+            0.32,
+            0.791
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Already visited Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.11,
+            0.802,
+            0.435,
+            0.837
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Chicago->Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.109,
+            0.848,
+            0.468,
+            0.883
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "There is no path from Chicago to Boston"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 15,
+          "bbox": [
+            0.456,
+            0.914,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 16,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.091,
+            0.617,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output (Boston to Phoenix)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.209,
+            0.31,
+            0.234
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.121,
+            0.25,
+            0.404,
+            0.274
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->Providence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.292,
+            0.288,
+            0.316
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Already visited Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.121,
+            0.335,
+            0.488,
+            0.359
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->Providence->New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.121,
+            0.378,
+            0.558,
+            0.402
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->Providence->New York->Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.121,
+            0.418,
+            0.625,
+            0.443
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->Providence->New York->Chicago->Denver"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.122,
+            0.461,
+            0.781,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->Providence->New York->Chicago->Denver->Phoenix Found path"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.121,
+            0.504,
+            0.307,
+            0.528
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Already visited New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.121,
+            0.545,
+            0.784,
+            0.571
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->Providence->New York->Chicago->Phoenix Found a shorter path"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.121,
+            0.586,
+            0.394,
+            0.61
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.121,
+            0.629,
+            0.463,
+            0.653
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->New York->Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.121,
+            0.672,
+            0.53,
+            0.696
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->New York->Chicago->Denver"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.121,
+            0.714,
+            0.77,
+            0.739
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->New York->Chicago->Denver->Phoenix Found a “shorter” path"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.121,
+            0.755,
+            0.307,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Already visited New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.121,
+            0.798,
+            0.69,
+            0.822
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current DFS path: Boston->New York->Chicago->Phoenix Found a shorter path"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.12,
+            0.839,
+            0.76,
+            0.865
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Shortest path from Boston to Phoenix is Boston->New York->Chicago->Denver->Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 17,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 18,
+          "bbox": [
+            0.857,
+            0.915,
+            0.874,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.092,
+            0.489,
+            0.145
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Breadth First Search"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.121,
+            0.216,
+            0.439,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Start at an initial node"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 2,
+          "bbox": [
+            0.06,
+            0.287,
+            0.119,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 2,
+              "bbox": [
+                0.06,
+                0.287,
+                0.119,
+                0.501
+              ],
+              "image_path": "images/page_31_image_2.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.123,
+            0.285,
+            0.835,
+            0.374
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Consider all the edges that leave that node, in some order"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.121,
+            0.398,
+            0.852,
+            0.445
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Follow the first edge, and check to see if at goal node"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.121,
+            0.467,
+            0.765,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- If not, try the next edge from the current node"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.122,
+            0.536,
+            0.805,
+            0.625
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Continue until either find goal node, or run out of options"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.14,
+            0.635,
+            0.815,
+            0.718
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- When run out of edge options, move to next node at same distance from start, and repeat"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.14,
+            0.729,
+            0.861,
+            0.815
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- When run out of node options, move to next level in the graph (all nodes one step further from start), and repeat"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.455,
+            0.914,
+            0.545,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.856,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.09,
+            0.814,
+            0.151
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Algorithm 2: Breadth-first Search (BFS)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.091,
+            0.171,
+            0.891,
+            0.748
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.091,
+                0.171,
+                0.891,
+                0.748
+              ],
+              "content": "def BFS(graph, start, end, toPrint = False):\n    initPath = [start]\n    pathQueue = [initPath]\n    while len(pathQueue) != 0:\n        #Get and remove oldest element in pathQueue\n        tmpPath = pathQueue.pop(0)\n        if toPrint:\n            print('Current BFS path:', printPath(tmpPath))\n        lastNode = tmpPath[-1]\n        if lastNode == end:\n            return tmpPath\n        for nextNode in graph.childrenOf(lastNode):\n            if nextNode not in tmpPath:\n                newPath = tmpPath + [nextNode]\n                pathQueue.append(newPath)\n    return None"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.375,
+            0.802,
+            0.901,
+            0.895
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Explore all paths with n hops before exploring any path with more than n hops"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.455,
+            0.914,
+            0.545,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.618,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output (Boston to Phoenix)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.12,
+            0.214,
+            0.362,
+            0.246
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.12,
+            0.268,
+            0.483,
+            0.299
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->Providence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.12,
+            0.322,
+            0.469,
+            0.353
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.12,
+            0.378,
+            0.59,
+            0.408
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->Providence->New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.121,
+            0.432,
+            0.559,
+            0.464
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York->Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.121,
+            0.487,
+            0.68,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->Providence->New York->Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.121,
+            0.541,
+            0.645,
+            0.573
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York->Chicago->Denver"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.121,
+            0.596,
+            0.652,
+            0.628
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York->Chicago->Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.12,
+            0.65,
+            0.857,
+            0.683
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Shortest path from Boston to Phoenix is Boston->New York->Chicago->Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "34"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.131,
+            0.091,
+            0.618,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output (Boston to Pheonix)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.137,
+            0.247,
+            0.271,
+            0.385
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Note that we skip a path that revisits a node"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.517,
+            0.243,
+            0.599,
+            0.276
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.379,
+            0.346,
+            0.502,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Providence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.66,
+            0.346,
+            0.767,
+            0.382
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.4,
+            0.472,
+            0.488,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.675,
+            0.473,
+            0.756,
+            0.508
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Denver"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.081,
+            0.504,
+            0.297,
+            0.535
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.081,
+            0.548,
+            0.404,
+            0.579
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->Providence"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.081,
+            0.592,
+            0.393,
+            0.624
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.081,
+            0.638,
+            0.5,
+            0.669
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->Providence->New York"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.549,
+            0.622,
+            0.64,
+            0.656
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.081,
+            0.682,
+            0.472,
+            0.714
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York->Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.735,
+            0.68,
+            0.864,
+            0.718
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Los Angeles"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.081,
+            0.728,
+            0.58,
+            0.759
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->Providence->New York->Chicago"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.081,
+            0.772,
+            0.55,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York->Chicago->Denver"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.081,
+            0.817,
+            0.555,
+            0.849
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Current BFS path: Boston->New York->Chicago->Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.08,
+            0.861,
+            0.738,
+            0.893
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Shortest path from Boston to Phoenix is Boston->New York->Chicago->Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 18,
+          "bbox": [
+            0.456,
+            0.914,
+            0.545,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 19,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "35"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.13,
+            0.091,
+            0.808,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "What About a Weighted Shortest Path"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.216,
+            0.874,
+            0.306
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■Want to minimize the sum of the weights of the edges, not the number of edges"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.122,
+            0.331,
+            0.632,
+            0.374
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ DFS can be easily modified to do this"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.121,
+            0.399,
+            0.828,
+            0.489
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ BFS cannot, since shortest weighted path may have more than the minimum number of hops"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.094,
+            0.243,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Recap"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.215,
+            0.336,
+            0.256
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Graphs are cool"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.14,
+            0.263,
+            0.69,
+            0.305
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Best way to create a model of many things"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.158,
+            0.315,
+            0.638,
+            0.358
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Capture relationships among objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.14,
+            0.367,
+            0.824,
+            0.454
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Many important problems can be posed as graph optimization problems we already know how to solve"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.123,
+            0.478,
+            0.758,
+            0.562
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■ Depth-first and breadth-first search are important algorithms"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.14,
+            0.569,
+            0.618,
+            0.612
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Can be used to solve many problems"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.456,
+            0.915,
+            0.544,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 LECTURE 3"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.08,
+            0.09,
+            0.215,
+            0.138
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT OpenCourseWare\nhttps://ocw.mit.edu"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.08,
+            0.2,
+            0.521,
+            0.251
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0002 Introduction to Computational Thinking and Data Science\nFall 2016"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.079,
+            0.315,
+            0.625,
+            0.339
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For information about citing these materials or our Terms of Use, visit: https://ocw.mit.edu/terms."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

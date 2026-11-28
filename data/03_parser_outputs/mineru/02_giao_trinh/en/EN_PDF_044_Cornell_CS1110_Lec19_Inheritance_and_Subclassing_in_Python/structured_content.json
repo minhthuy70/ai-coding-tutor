@@ -1,0 +1,6001 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.148,
+            0.268,
+            0.376,
+            0.336
+          ],
+          "content": "Lecture 19"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.158,
+            0.442,
+            0.844,
+            0.535
+          ],
+          "level": 2,
+          "content": "Using Classes Effectively"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.211,
+            0.067,
+            0.787,
+            0.135
+          ],
+          "level": 2,
+          "content": "Announcements for Today"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.209,
+            0.4,
+            0.279
+          ],
+          "level": 2,
+          "content": "Assignments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.334,
+            0.325,
+            0.383
+          ],
+          "content": "• A4 is due **tonight**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.395,
+            0.415,
+            0.443
+          ],
+          "content": "§ The survey is still open"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.457,
+            0.446,
+            0.505
+          ],
+          "content": "• A5 to be posted **tomorrow**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.52,
+            0.435,
+            0.566
+          ],
+          "content": "§ Short written assignment"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.577,
+            0.364,
+            0.623
+          ],
+          "content": "§ Due next Thursday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.639,
+            0.434,
+            0.687
+          ],
+          "content": "• A6 also posted **tomorrow**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.7,
+            0.38,
+            0.744
+          ],
+          "content": "§ Due November 15th"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.759,
+            0.48,
+            0.803
+          ],
+          "content": "§ **Follow the microdeadlines!**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.819,
+            0.389,
+            0.862
+          ],
+          "content": "§ Get started on it **first**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.561,
+            0.207,
+            0.913,
+            0.278
+          ],
+          "level": 2,
+          "content": "Optional Videos"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.333,
+            0.891,
+            0.383
+          ],
+          "content": "• **Videos 20.9-20.10** today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.399,
+            0.901,
+            0.448
+          ],
+          "content": "• Also **Lesson 21** for today"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.465,
+            0.907,
+            0.515
+          ],
+          "content": "• **Lesson 22** for next time"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.607,
+            0.527,
+            0.866,
+            0.874
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_15.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.193,
+            0.065,
+            0.805,
+            0.129
+          ],
+          "level": 2,
+          "content": "Recall: The \\_\\_init\\_\\_ Method"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.029,
+            0.177,
+            0.496,
+            0.886
+          ],
+          "sub_type": "code",
+          "content": "```python\ntwo underscores\nw - worker( Obama', 1234, None)\n\ndef __init__(self, n, s, b):\n    \"\"\"Initializer: creates a Worker\n\n    Has last name n, SSN s, and boss b\n\n    Precondition: n a string,\n    s an int in range 0..999999999,\n    b either a Worker or None.  \"\"\"\n    self.lname = n\n    self.ssn = s\n    self.boss = b\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.585,
+            0.235,
+            0.928,
+            0.292
+          ],
+          "content": "Called by the constructor"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.629,
+            0.377,
+            0.675,
+            0.424
+          ],
+          "level": 2,
+          "content": "id8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.732,
+            0.517,
+            0.811,
+            0.561
+          ],
+          "content": "'White'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.595,
+            0.801,
+            0.638
+          ],
+          "content": "1234"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.675,
+            0.705,
+            0.718
+          ],
+          "content": "boss"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.193,
+            0.065,
+            0.805,
+            0.13
+          ],
+          "level": 2,
+          "content": "Recall: The \\_\\_init\\_\\_ Method"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.03,
+            0.178,
+            0.495,
+            0.883
+          ],
+          "sub_type": "code",
+          "content": "```python\ntwo underscores\nw - worker( Obama', 1234, None)\n\ndef __init__(self, n, s, b):\n    \"\"\"Initializer: creates a Worker\n\n    Has last name n, SSN s, and boss b\n\n    Precondition: n a string,\n    s an int in range 0..999999999,\n    b either a Worker or None.  \"\"\"\n    self.lname = n\n    self.ssn = s\n    self.boss = b\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.597,
+            0.479,
+            0.898,
+            0.69
+          ],
+          "content": "Are there other special methods that we can use?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.079,
+            0.067,
+            0.92,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Converting Values to Strings"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.126,
+            0.219,
+            0.397,
+            0.275
+          ],
+          "level": 2,
+          "content": "str() Function"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.335,
+            0.426,
+            0.386
+          ],
+          "content": "• **Usage**: str(&lt;expression&gt;)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.403,
+            0.43,
+            0.449
+          ],
+          "content": "§ Evaluates the expression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.466,
+            0.418,
+            0.513
+          ],
+          "content": "§ Converts it into a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.533,
+            0.368,
+            0.579
+          ],
+          "content": "• How does it convert?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.599,
+            0.272,
+            0.643
+          ],
+          "content": "§ str(2) → '2'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.663,
+            0.349,
+            0.707
+          ],
+          "content": "§ str(True) → 'True'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.726,
+            0.359,
+            0.77
+          ],
+          "content": "§ str('True') → 'True'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.79,
+            0.482,
+            0.835
+          ],
+          "content": "§ str(Point3()) → '(0.0,0.0,0.0)'"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.586,
+            0.219,
+            0.885,
+            0.276
+          ],
+          "level": 2,
+          "content": "repr() Function"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.335,
+            0.918,
+            0.387
+          ],
+          "content": "• **Usage**: repr(&lt;expression&gt;)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.403,
+            0.906,
+            0.45
+          ],
+          "content": "§ Evaluates the expression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.466,
+            0.893,
+            0.513
+          ],
+          "content": "§ Converts it into a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.532,
+            0.844,
+            0.579
+          ],
+          "content": "• How does it convert?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.599,
+            0.763,
+            0.645
+          ],
+          "content": "§ repr(2) → '2'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.662,
+            0.841,
+            0.708
+          ],
+          "content": "§ repr(True) → 'True'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.725,
+            0.87,
+            0.771
+          ],
+          "content": "§ repr('True') → \"'True'\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.791,
+            0.959,
+            0.889
+          ],
+          "content": "§ repr(Point3()) → \"&lt;class 'Point3'&gt; (0.0,0.0,0.0)\""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.922,
+            0.959,
+            0.947
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.078,
+            0.067,
+            0.92,
+            0.137
+          ],
+          "level": 2,
+          "content": "Example: Converting Values to Strings"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.124,
+            0.219,
+            0.399,
+            0.276
+          ],
+          "level": 2,
+          "content": "str() Function"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.335,
+            0.429,
+            0.387
+          ],
+          "content": "• **Usage**: str(&lt;expression&gt;)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.403,
+            0.432,
+            0.45
+          ],
+          "content": "§ Evaluates the expression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.465,
+            0.419,
+            0.513
+          ],
+          "content": "§ Converts it into a string"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.53,
+            0.3,
+            0.581
+          ],
+          "content": "• How does it conve"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.597,
+            0.273,
+            0.645
+          ],
+          "content": "§ str(2) → '2'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.327,
+            0.547,
+            0.503,
+            0.65
+          ],
+          "continues_prev": true,
+          "content": "rt?What type is this value?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.661,
+            0.344,
+            0.71
+          ],
+          "content": "§ str(True) → 'True'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.725,
+            0.358,
+            0.771
+          ],
+          "content": "§ str('True') → 'True'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.789,
+            0.484,
+            0.837
+          ],
+          "content": "§ str(Point3()) → '(0.0,0.0,0.0)'"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.584,
+            0.217,
+            0.888,
+            0.278
+          ],
+          "level": 2,
+          "content": "repr() Function"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.638,
+            0.329,
+            0.838,
+            0.392
+          ],
+          "content": ": repr(<expresrepr() is for"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.629,
+            0.401,
+            0.844,
+            0.461
+          ],
+          "content": "aluates the expreunambigious"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.621,
+            0.471,
+            0.853,
+            0.527
+          ],
+          "content": "onverts it into a strrepresentation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.536,
+            0.761,
+            0.579
+          ],
+          "content": "How does it co"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.596,
+            0.757,
+            0.649
+          ],
+          "content": "§ repr(2) → '2'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.787,
+            0.569,
+            0.96,
+            0.677
+          ],
+          "content": "The value’s type is clear"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.661,
+            0.731,
+            0.711
+          ],
+          "continues_prev": true,
+          "content": "§ repr(True)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.723,
+            0.871,
+            0.773
+          ],
+          "content": "§ repr('True') → \"'True'\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.789,
+            0.961,
+            0.891
+          ],
+          "content": "§ repr(Point3()) → \"&lt;class 'Point3'&gt; (0.0,0.0,0.0)\""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.147,
+            0.064,
+            0.849,
+            0.134
+          ],
+          "level": 2,
+          "content": "What Does str() Do On Objects?"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.2,
+            0.458,
+            0.251
+          ],
+          "level": 2,
+          "content": "• Does NOT display contents"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.263,
+            0.374,
+            0.313
+          ],
+          "content": ">>> p = Point3(1,2,3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.329,
+            0.231,
+            0.378
+          ],
+          "content": ">>> str(p)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.389,
+            0.498,
+            0.441
+          ],
+          "content": "'&lt;Point3 object at 0x1007a90&gt;'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.455,
+            0.443,
+            0.506
+          ],
+          "content": "• Must add a special method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.518,
+            0.331,
+            0.565
+          ],
+          "content": "§ \\_\\_str\\_\\_ for str()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.577,
+            0.362,
+            0.625
+          ],
+          "content": "§ \\_\\_repr\\_\\_ for repr()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.637,
+            0.475,
+            0.688
+          ],
+          "content": "• Could get away with just one"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.701,
+            0.424,
+            0.747
+          ],
+          "content": "§ repr() requires \\_\\_repr\\_\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.761,
+            0.414,
+            0.854
+          ],
+          "content": "§ str() can use \\_\\_repr\\_\\_ (if \\_\\_str\\_\\_ is not there)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.199,
+            0.738,
+            0.241
+          ],
+          "level": 2,
+          "content": "class Point3(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.249,
+            0.904,
+            0.294
+          ],
+          "content": "\"\"\"Class for points in 3d space\"\"\""
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.549,
+            0.357,
+            0.746,
+            0.401
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __str__(self):\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.41,
+            0.953,
+            0.455
+          ],
+          "content": "\"\"\"Returns: string with contents\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.575,
+            0.463,
+            0.868,
+            0.509
+          ],
+          "content": "return '('+str(self.x) + ',' +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.516,
+            0.868,
+            0.562
+          ],
+          "content": "str(self.y) + ',' +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.687,
+            0.569,
+            0.849,
+            0.614
+          ],
+          "content": "str(self.z) + ')'"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.549,
+            0.653,
+            0.759,
+            0.697
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __repr__(self):\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.706,
+            0.946,
+            0.752
+          ],
+          "content": "\"\"\"Returns: unambiguous string\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.761,
+            0.877,
+            0.805
+          ],
+          "content": "return str(self.\\_\\_class\\_\\_)+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.813,
+            0.749,
+            0.855
+          ],
+          "content": "str(self)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.922,
+            0.958,
+            0.947
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.147,
+            0.064,
+            0.85,
+            0.134
+          ],
+          "level": 2,
+          "content": "What Does str() Do On Objects?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.199,
+            0.459,
+            0.251
+          ],
+          "content": "• Does **NOT** display contents"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.262,
+            0.374,
+            0.314
+          ],
+          "content": ">>> p = Point3(1,2,3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.328,
+            0.231,
+            0.379
+          ],
+          "content": ">>> str(p)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.389,
+            0.498,
+            0.441
+          ],
+          "content": "'&lt;Point3 object at 0x1007a90&gt;'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.455,
+            0.444,
+            0.506
+          ],
+          "content": "• Must add a special method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.518,
+            0.332,
+            0.565
+          ],
+          "content": "§ \\_\\_str\\_\\_ for str()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.577,
+            0.362,
+            0.625
+          ],
+          "content": "§ \\_\\_repr\\_\\_ for repr()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.637,
+            0.475,
+            0.689
+          ],
+          "content": "• Could get away with just one"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.701,
+            0.425,
+            0.747
+          ],
+          "content": "§ repr() requires \\_\\_repr\\_\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.761,
+            0.414,
+            0.855
+          ],
+          "content": "§ str() can use \\_\\_repr\\_\\_ (if \\_\\_str\\_\\_ is not there)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.198,
+            0.739,
+            0.241
+          ],
+          "level": 2,
+          "content": "class Point3(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.249,
+            0.904,
+            0.294
+          ],
+          "content": "\"\"\"Class for points in 3d space\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.357,
+            0.747,
+            0.401
+          ],
+          "content": "def \\_\\_str\\_\\_(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.41,
+            0.953,
+            0.455
+          ],
+          "content": "\"\"\"Returns: string with contents\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.575,
+            0.463,
+            0.868,
+            0.509
+          ],
+          "content": "return '('+str(self.x) + ',' +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.686,
+            0.516,
+            0.868,
+            0.562
+          ],
+          "content": "str(self.y) + ',' +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.687,
+            0.569,
+            0.849,
+            0.613
+          ],
+          "content": "str(self.z) + ')'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.548,
+            0.652,
+            0.76,
+            0.699
+          ],
+          "content": "def \\_\\_repr\\_\\_(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.794,
+            0.63,
+            0.923,
+            0.716
+          ],
+          "content": "Gives the class name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.576,
+            0.707,
+            0.807,
+            0.754
+          ],
+          "continues_prev": true,
+          "content": "\"\"\"Returns: unambigu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.827,
+            0.716,
+            0.923,
+            0.751
+          ],
+          "content": "us string\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.575,
+            0.761,
+            0.877,
+            0.805
+          ],
+          "content": "return str(self.\\_\\_class\\_\\_)+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.813,
+            0.749,
+            0.855
+          ],
+          "content": "str(self)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.773,
+            0.871,
+            0.972,
+            0.96
+          ],
+          "content": "repr\\_\\_ using 8str\\_\\_ as helper"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.603,
+            0.952
+          ],
+          "content": "Using Classes Effectively"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.27,
+            0.065,
+            0.732,
+            0.132
+          ],
+          "level": 2,
+          "content": "Exercise: str and repr"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.191,
+            0.943,
+            0.837
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Example(object):\n    \"\"\"A simple class\"\"\"\n    def __init__(self,x):\n        self.x = x\n    def __str__(self):\n        return 'Value'+str(self.x)\n    def __repr__(self):\n        return 'Example['+str(x)+']'\n>>> a = Example(3)\n>>> str(a) # a.__str()__\nWhat is the result?\nA: '3'\nB: 'Value 3'\nC: 'Example[3]'\nD: Error\nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.944,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.27,
+            0.065,
+            0.732,
+            0.132
+          ],
+          "level": 2,
+          "content": "Exercise: str and repr"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.043,
+            0.19,
+            0.948,
+            0.838
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Example(object):\n    \"\"\"A simple class\"\"\"\n    def __init__(self,x):\n        self.x = x\n    def __str__(self):\n        return 'Value'+str(self.x)\n    def __repr__(self):\n        return 'Example['+str(x)+']'\n>>> a = Example(3)\n>>> str(a)\nWhat is the result?\nA: '3'\nB: 'Value 3'\nC: 'Example[3]'\nD: Error\nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.952
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.269,
+            0.065,
+            0.732,
+            0.133
+          ],
+          "level": 2,
+          "content": "Exercise: str and repr"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.044,
+            0.19,
+            0.946,
+            0.837
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Example(object):\n    \"\"\"A simple class\"\"\"\n    def __init__(self,x):\n        self.x = x\n    def __str__(self):\n        return 'Value'+str(self.x)\n    def __repr__(self):\n        return 'Example['+str(x)+']'\n>>> a = Example(3)\n>>> repr(a)\nWhat is the result?\nA: '3'\nB: 'Value 3'\nC: 'Example[3]'\nD: Error\nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.952
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.27,
+            0.065,
+            0.732,
+            0.132
+          ],
+          "level": 2,
+          "content": "Exercise: str and repr"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.04,
+            0.191,
+            0.951,
+            0.903
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Example(object):\n    \"\"\"A simple class\"\"\"\n    def __init__(self,x):\n        self.x = x\n    def __str__(self):\n        return 'Value'+str(self.x)\n    def __repr__(self):\n        return 'Example['+str(x)+']\nNo self\n>>> a = Example(3)\n>>> repr(a)\nWhat is the result?\nA: '3'\nB: 'Value 3'\nC: 'Example[3]'\nD: Error\nE: I don't know\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.321,
+            0.067,
+            0.677,
+            0.138
+          ],
+          "level": 2,
+          "content": "Designing Types"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.779,
+            0.065,
+            0.953,
+            0.168
+          ],
+          "content": "From first day of class!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.814,
+            0.261
+          ],
+          "content": "• **Type**: set of values and the operations on them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.281,
+            0.619,
+            0.33
+          ],
+          "content": "§ int: (**set**: integers; **ops**: +, -, \\*, //, ...)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.351,
+            0.884,
+            0.401
+          ],
+          "content": "§ Time (**set**: times of day; **ops**: time span, before/after, …)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.419,
+            0.935,
+            0.469
+          ],
+          "content": "§ Worker (**set**: all possible workers; **ops**: hire,pay,promote,…)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.489,
+            0.777,
+            0.539
+          ],
+          "content": "§ Rectangle (**set**: all axis-aligned rectangles in 2D;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.55,
+            0.645,
+            0.597
+          ],
+          "content": "**ops**: contains, intersect, …)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.621,
+            0.948,
+            0.677
+          ],
+          "content": "• To define a class, think of a real type you want to make"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.699,
+            0.837,
+            0.749
+          ],
+          "content": "§ Python gives you the tools, but does not do it for you"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.768,
+            0.721,
+            0.817
+          ],
+          "content": "§ Physically, any object can take on any value"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.837,
+            0.705,
+            0.886
+          ],
+          "content": "§ Discipline is required to get what you want"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.947
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.204,
+            0.067,
+            0.795,
+            0.137
+          ],
+          "level": 2,
+          "content": "Making a Class into a Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.205,
+            0.778,
+            0.258
+          ],
+          "content": "1. Think about what values you want in the set"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.281,
+            0.825,
+            0.329
+          ],
+          "content": "§ What are the attributes? What values can they have?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.355,
+            0.692,
+            0.409
+          ],
+          "content": "2. Think about what operations you want"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.432,
+            0.704,
+            0.481
+          ],
+          "content": "§ This often influences the previous question"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.505,
+            0.765,
+            0.559
+          ],
+          "content": "• To make (1) precise: write a class invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.584,
+            0.925,
+            0.631
+          ],
+          "content": "§ Statement we promise to keep true **after every method call**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.655,
+            0.845,
+            0.71
+          ],
+          "content": "• To make (2) precise: write method specifications"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.733,
+            0.967,
+            0.781
+          ],
+          "content": "§ Statement of what method does/what it expects (preconditions)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.806,
+            0.815,
+            0.859
+          ],
+          "content": "• Write your code to make these statements true!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.485,
+            0.3,
+            0.527,
+            0.386
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.278,
+            0.067,
+            0.721,
+            0.137
+          ],
+          "level": 2,
+          "content": "Planning out a Class"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.189,
+            0.244,
+            0.231
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.066,
+            0.233,
+            0.439,
+            0.278
+          ],
+          "content": "\"\"\"Class to represent times of day."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.066,
+            0.303,
+            0.376,
+            0.383
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.417,
+            0.459,
+            0.543
+          ],
+          "content": "def \\_\\_init\\_\\_(self, hour, min): \"\"\"The time hour:min. Pre: hour in 0..23; min in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.578,
+            0.423,
+            0.708
+          ],
+          "content": "def increment(self, hours, mins): \"\"\"Move time hours and mins into the future."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.093,
+            0.71,
+            0.485,
+            0.755
+          ],
+          "content": "Pre: hours int >= 0; mins in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.067,
+            0.792,
+            0.478,
+            0.881
+          ],
+          "content": "def isPM(self): \"\"\"Returns: True if noon or later.\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.54,
+            0.222,
+            0.769,
+            0.271
+          ],
+          "level": 2,
+          "content": "Class Invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.285,
+            0.914,
+            0.375
+          ],
+          "content": "States what attributes are present and what values they can have."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.385,
+            0.897,
+            0.475
+          ],
+          "content": "A statement that will always be true of any Time instance."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.539,
+            0.6,
+            0.85,
+            0.651
+          ],
+          "level": 2,
+          "content": "Method Specification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.662,
+            0.87,
+            0.707
+          ],
+          "content": "States what the method does."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.717,
+            0.916,
+            0.808
+          ],
+          "content": "Gives preconditions stating what is assumed true of the arguments."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.059,
+            0.521,
+            0.471,
+            0.649
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __init__(self, t, l, b, r):\n    \"\"\"The rectangle [l, r] x [t, b]\n    Pre: args are floats; l <= r; b <= t\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.486,
+            0.702,
+            0.526,
+            0.785
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.278,
+            0.067,
+            0.721,
+            0.136
+          ],
+          "level": 2,
+          "content": "Planning out a Class"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.032,
+            0.178,
+            0.287,
+            0.22
+          ],
+          "level": 2,
+          "content": "class Rectangle(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.223,
+            0.492,
+            0.267
+          ],
+          "content": "\"\"\"Class to represent rectangular region"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.304,
+            0.338,
+            0.344
+          ],
+          "content": "Inv: t (top edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.341,
+            0.338,
+            0.379
+          ],
+          "content": "Inv: l (left edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.377,
+            0.381,
+            0.415
+          ],
+          "content": "Inv: b (bottom edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.412,
+            0.359,
+            0.452
+          ],
+          "content": "Inv: r (right edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.453,
+            0.439,
+            0.497
+          ],
+          "content": "Additional Inv: l <= r and b <= t.\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.672,
+            0.215,
+            0.714
+          ],
+          "level": 2,
+          "content": "def area(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.717,
+            0.461,
+            0.761
+          ],
+          "content": "\"\"\"Return: area of the rectangle. \"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.785,
+            0.366,
+            0.827
+          ],
+          "level": 2,
+          "content": "def intersection(self, other):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.83,
+            0.477,
+            0.906
+          ],
+          "content": "\"\"\"Return: new Rectangle describing intersection of self with other. \"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.54,
+            0.256,
+            0.768,
+            0.304
+          ],
+          "level": 2,
+          "content": "Class Invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.318,
+            0.913,
+            0.409
+          ],
+          "content": "States what attributes are present and what values they can have."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.417,
+            0.895,
+            0.509
+          ],
+          "content": "A statement that will always be true of any Rectangle instance."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.539,
+            0.645,
+            0.85,
+            0.695
+          ],
+          "level": 2,
+          "content": "Method Specification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.707,
+            0.87,
+            0.751
+          ],
+          "content": "States what the method does."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.762,
+            0.915,
+            0.853
+          ],
+          "content": "Gives preconditions stating what is assumed true of the arguments."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.278,
+            0.067,
+            0.721,
+            0.136
+          ],
+          "level": 2,
+          "content": "Planning out a Class"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.03,
+            0.177,
+            0.288,
+            0.221
+          ],
+          "level": 2,
+          "content": "class Rectangle(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.222,
+            0.493,
+            0.267
+          ],
+          "content": "\"\"\"Class to represent rectangular region"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.303,
+            0.339,
+            0.344
+          ],
+          "content": "Inv: t (top edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.341,
+            0.34,
+            0.379
+          ],
+          "content": "Inv: l (left edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.377,
+            0.382,
+            0.414
+          ],
+          "content": "Inv: b (bottom edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.412,
+            0.36,
+            0.452
+          ],
+          "content": "Inv: r (right edge) is a float"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.453,
+            0.439,
+            0.496
+          ],
+          "content": "Additional Inv: l <= r and b <= t.\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.52,
+            0.352,
+            0.565
+          ],
+          "content": "def \\_\\_init\\_\\_(self, t, l, b, r):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.567,
+            0.384,
+            0.609
+          ],
+          "content": "\"\"\"The rectangle [l, r] x [t, b]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.606,
+            0.377,
+            0.648
+          ],
+          "content": "Pre: args are floats; l <= r;"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.671,
+            0.216,
+            0.714
+          ],
+          "level": 2,
+          "content": "def area(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.784,
+            0.367,
+            0.827
+          ],
+          "content": "def intersection(self, other):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.715,
+            0.462,
+            0.761
+          ],
+          "content": "\"\"\"Return: area of the rectangle.\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.539,
+            0.255,
+            0.769,
+            0.305
+          ],
+          "level": 2,
+          "content": "Class Invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.829,
+            0.479,
+            0.907
+          ],
+          "content": "\"\"\" Return: new Rectangle describing intersection of self with other. \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.317,
+            0.914,
+            0.409
+          ],
+          "content": "States what attributes are present and what values they can have."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.408,
+            0.58,
+            0.726,
+            0.629
+          ],
+          "content": "\"\"\"attributes to each other"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.391,
+            0.525,
+            0.744,
+            0.577
+          ],
+          "content": "Special invariant **relating**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.537,
+            0.416,
+            0.896,
+            0.506
+          ],
+          "content": "A statement that will always be <u>true of any Rectan</u>gle instance."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.538,
+            0.647,
+            0.85,
+            0.695
+          ],
+          "level": 2,
+          "content": "Method Specification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.707,
+            0.871,
+            0.752
+          ],
+          "content": "States what the method does."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.761,
+            0.914,
+            0.808
+          ],
+          "content": "Gives preconditions stating what"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.537,
+            0.809,
+            0.917,
+            0.853
+          ],
+          "content": "is assumed true of the arguments."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.278,
+            0.067,
+            0.721,
+            0.137
+          ],
+          "level": 2,
+          "content": "Planning out a Class"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.031,
+            0.189,
+            0.24,
+            0.231
+          ],
+          "level": 2,
+          "content": "class Hand(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.234,
+            0.484,
+            0.277
+          ],
+          "content": "\"\"\"Instances represent a hand in cards."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.057,
+            0.322,
+            0.466,
+            0.44
+          ],
+          "content": "Inv: cards is a list of Card objects. This list is sorted according to the ordering defined by the Card class. \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.059,
+            0.462,
+            0.454,
+            0.587
+          ],
+          "content": "def \\_\\_init\\_\\_(self, deck, n): \"\"\"Draw a hand of n cards. Pre: deck is a list of >= n cards\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.631,
+            0.291,
+            0.672
+          ],
+          "level": 2,
+          "content": "def isFullHouse(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.675,
+            0.473,
+            0.755
+          ],
+          "content": "\"\"\"Return: True if this hand is a full house; False otherwise\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.781,
+            0.38,
+            0.869
+          ],
+          "content": "def discard(self, k): \"\"\"Discard the k-th card.\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.54,
+            0.256,
+            0.769,
+            0.304
+          ],
+          "level": 2,
+          "content": "Class Invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.318,
+            0.913,
+            0.409
+          ],
+          "content": "States what attributes are present and what values they can have."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.418,
+            0.895,
+            0.509
+          ],
+          "content": "A statement that will always be true of any Rectangle instance."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.539,
+            0.631,
+            0.85,
+            0.682
+          ],
+          "level": 2,
+          "content": "Method Specification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.693,
+            0.87,
+            0.737
+          ],
+          "content": "States what the method does."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.748,
+            0.917,
+            0.839
+          ],
+          "content": "Gives preconditions stating what is assumed true of the arguments."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.936,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.067,
+            0.735,
+            0.137
+          ],
+          "level": 2,
+          "content": "Implementing a Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.935,
+            0.266
+          ],
+          "content": "• All that remains is to fill in the methods. (All?!)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.291,
+            0.647,
+            0.354
+          ],
+          "content": "• When **implementing methods**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.373,
+            0.63,
+            0.426
+          ],
+          "content": "1. Assume preconditions are true"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.447,
+            0.737,
+            0.499
+          ],
+          "content": "2. Assume class invariant is true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.521,
+            0.768,
+            0.575
+          ],
+          "content": "3. Ensure method specification is fulfilled"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.595,
+            0.78,
+            0.649
+          ],
+          "content": "4. Ensure class invariant is true when done"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.674,
+            0.592,
+            0.735
+          ],
+          "content": "• Later, when **using the class**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.757,
+            0.947,
+            0.812
+          ],
+          "content": "§ When calling methods, ensure preconditions are true"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.831,
+            0.942,
+            0.884
+          ],
+          "content": "§ If attributes are altered, ensure class invariant is true"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.604,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.202,
+            0.067,
+            0.798,
+            0.137
+          ],
+          "level": 2,
+          "content": "Implementing an Initializer"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.059,
+            0.249,
+            0.955,
+            0.844
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.693,
+            0.324,
+            0.953,
+            0.381
+          ],
+          "content": "This is true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.689,
+            0.488,
+            0.942,
+            0.547
+          ],
+          "content": "You put code here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.692,
+            0.653,
+            0.959,
+            0.763
+          ],
+          "content": "This should be true at the end"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.237,
+            0.065,
+            0.76,
+            0.138
+          ],
+          "level": 2,
+          "content": "Implementing a Method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.243,
+            0.409,
+            0.331
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.372,
+            0.55,
+            0.53
+          ],
+          "content": "def increment(self, hours, mins): \"\"\"Move this time &lt;hours&gt; hours and &lt;mins&gt; minutes into the future. Pre: hours [int] >= 0; mins in 0..59\"\""
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.023,
+            0.166,
+            0.974,
+            0.957
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_20_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.608,
+            0.455,
+            0.698
+          ],
+          "content": "self.min = self.min + mins self.hour = self.hour + hours"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.79,
+            0.408,
+            0.879
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.659,
+            0.264,
+            0.971,
+            0.432
+          ],
+          "content": "This is true to start What we are supposed to accomplish"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.659,
+            0.475,
+            0.981,
+            0.531
+          ],
+          "content": "This is also true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.657,
+            0.663,
+            0.908,
+            0.721
+          ],
+          "content": "You put code here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.659,
+            0.775,
+            0.926,
+            0.883
+          ],
+          "content": "This should be true at the end"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.95
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.957,
+            0.949
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.917,
+            0.605,
+            0.953
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.236,
+            0.065,
+            0.761,
+            0.139
+          ],
+          "level": 2,
+          "content": "Implementing a Method"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.024,
+            0.167,
+            0.971,
+            0.957
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_21_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.243,
+            0.41,
+            0.331
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.372,
+            0.552,
+            0.529
+          ],
+          "content": "def increment(self, hours, mins): \"\"\"Move this time &lt;hours&gt; hours and &lt;mins&gt; minutes into the future. Pre: hours [int] >= 0; mins in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.556,
+            0.486,
+            0.747
+          ],
+          "content": "self.min = self.min + mins self.hour = (self.hour + hours + self.min // 60) self.min = self.min % 60 self.hour = self.hour % 24"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.791,
+            0.409,
+            0.879
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.658,
+            0.331,
+            0.97,
+            0.431
+          ],
+          "content": "What we are supposed to accomplish"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.659,
+            0.475,
+            0.982,
+            0.531
+          ],
+          "content": "This is also true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.656,
+            0.663,
+            0.909,
+            0.722
+          ],
+          "content": "You put code here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.659,
+            0.775,
+            0.926,
+            0.884
+          ],
+          "content": "This should be true at the end"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.117,
+            0.95
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.949
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.244,
+            0.067,
+            0.753,
+            0.137
+          ],
+          "level": 2,
+          "content": "Object Oriented Design"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.183,
+            0.222,
+            0.342,
+            0.272
+          ],
+          "level": 2,
+          "content": "Interface"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.333,
+            0.44,
+            0.384
+          ],
+          "content": "• How the code fits together"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.397,
+            0.461,
+            0.443
+          ],
+          "content": "§ interface btw programmers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.455,
+            0.476,
+            0.503
+          ],
+          "content": "§ interface btw parts of an app"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.516,
+            0.406,
+            0.565
+          ],
+          "content": "• Given by **specifications**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.577,
+            0.437,
+            0.623
+          ],
+          "content": "§ Class spec and invariants"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.637,
+            0.467,
+            0.684
+          ],
+          "content": "§ Method specs and preconds"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.696,
+            0.443,
+            0.74
+          ],
+          "content": "§ Interface is **ALL of these**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.601,
+            0.222,
+            0.872,
+            0.277
+          ],
+          "level": 2,
+          "content": "Implementation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.333,
+            0.934,
+            0.384
+          ],
+          "content": "• What the code actually does"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.397,
+            0.871,
+            0.442
+          ],
+          "content": "§ when create an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.455,
+            0.843,
+            0.5
+          ],
+          "content": "§ when call a method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.515,
+            0.949,
+            0.564
+          ],
+          "content": "• Given by method **definitions**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.577,
+            0.909,
+            0.624
+          ],
+          "content": "§ Must meet specifications"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.637,
+            0.931,
+            0.682
+          ],
+          "content": "§ Must not violate invariants"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.695,
+            0.875,
+            0.74
+          ],
+          "content": "§ But otherwise flexible"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.295,
+            0.776,
+            0.703,
+            0.884
+          ],
+          "level": 2,
+          "content": "Important concept for making large software systems"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.067,
+            0.735,
+            0.137
+          ],
+          "level": 2,
+          "content": "Implementing a Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.204,
+            0.935,
+            0.266
+          ],
+          "content": "• All that remains is to fill in the methods. (All?!)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.291,
+            0.647,
+            0.354
+          ],
+          "content": "• When **implementing methods**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.373,
+            0.63,
+            0.426
+          ],
+          "content": "1. Assume preconditions are true"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.447,
+            0.737,
+            0.499
+          ],
+          "content": "2. Assume class invariant is true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.521,
+            0.768,
+            0.575
+          ],
+          "content": "3. Ensure method specification is fulfilled"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.595,
+            0.78,
+            0.649
+          ],
+          "content": "4. Ensure class invariant is true when done"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.674,
+            0.592,
+            0.735
+          ],
+          "content": "• Later, when **using the class**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.757,
+            0.948,
+            0.812
+          ],
+          "content": "§ When calling methods, ensure preconditions are true"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.831,
+            0.942,
+            0.884
+          ],
+          "content": "§ If attributes are altered, ensure class invariant is true"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.604,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.115,
+            0.47,
+            0.769,
+            0.529
+          ],
+          "sub_type": "code",
+          "content": "```python\nassert type(n) == int, str(n)+' is not an int'\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.057,
+            0.065,
+            0.944,
+            0.127
+          ],
+          "level": 2,
+          "content": "Recall: Enforce Preconditions with assert"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.223,
+            0.323,
+            0.279
+          ],
+          "level": 2,
+          "content": "def anglicize(n):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.305,
+            0.672,
+            0.364
+          ],
+          "content": "\"\"\"Returns: the anglicization of int n."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.393,
+            0.772,
+            0.453
+          ],
+          "sub_type": "code",
+          "content": "```python\nPrecondition: n an int, 0 < n < 1,000,000\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.538,
+            0.96,
+            0.609
+          ],
+          "content": "assert 0 < n and n < 1000000, repr(n)+' is out of range'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.62,
+            0.534,
+            0.676
+          ],
+          "content": "\\# Implement method here…"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.72,
+            0.358,
+            0.839
+          ],
+          "content": "Check (part of) the precondition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.721,
+            0.922,
+            0.841
+          ],
+          "continues_prev": true,
+          "content": "(Optional) Error message when precondition violated"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.448,
+            0.206,
+            0.526,
+            0.292
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_25_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.05,
+            0.065,
+            0.952,
+            0.127
+          ],
+          "level": 2,
+          "content": "Enforce Method Preconditions with assert"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.043,
+            0.174,
+            0.94,
+            0.986
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Time(object):\n    \"\"\"Class to represent times of day.\"\"\"\n    def __init__(self, hour, min):\n        \"\"\"The time hour:min.\n        Pre: hour in 0..23; min in 0..59\"\"\"\n        assert type(hour) == int\n        assert 0 <= hour and hour < 24\n        assert type(min) == int\n        assert 0 <= min and min < 60\n\n    def increment(self, hours, mins):\n        \"\"\"Move this time <hours> hours\n        and <mins> minutes into the future.\n        Pre: hours is int >= 0; mins in 0..59\"\"\"\n        assert type(hour) == int\n        assert type (min) == int\n        assert hour >= 0\n        assert 0 <= min and min < 60\n\n    Inv: hour is an int in 0..23\n    Inv: min is an int in 0..59\"\"\"\n    Initializer creates/initializes all\n    of the instance attributes.\n    Asserts in initializer guarantee the\n    initial values satisfy the invariant.\n\n    Asserts in other methods enforce\n    the method preconditions.\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.181,
+            0.067,
+            0.818,
+            0.135
+          ],
+          "level": 2,
+          "content": "Hiding Methods From Access"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.2,
+            0.304,
+            0.247
+          ],
+          "level": 2,
+          "content": "• Hidden methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.264,
+            0.434,
+            0.307
+          ],
+          "content": "§ start with an **underscore**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.321,
+            0.428,
+            0.369
+          ],
+          "content": "§ do not show up in help()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.383,
+            0.427,
+            0.477
+          ],
+          "content": "§ are meant to be **internal** (e.g. helper methods)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.491,
+            0.447,
+            0.539
+          ],
+          "level": 2,
+          "content": "• But they are not restricted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.551,
+            0.441,
+            0.596
+          ],
+          "content": "§ You can still access them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.61,
+            0.418,
+            0.656
+          ],
+          "content": "§ But this is bad practice!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.669,
+            0.43,
+            0.717
+          ],
+          "content": "§ Like a precond violation"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.731,
+            0.467,
+            0.781
+          ],
+          "level": 2,
+          "content": "• Can do same for attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.797,
+            0.472,
+            0.842
+          ],
+          "content": "§ Underscore makes it hidden"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.855,
+            0.479,
+            0.901
+          ],
+          "content": "§ Only used inside of methods"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.199,
+            0.72,
+            0.24
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.243,
+            0.912,
+            0.287
+          ],
+          "content": "\"\"\"Class to represent times of day."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.541,
+            0.31,
+            0.85,
+            0.393
+          ],
+          "sub_type": "code",
+          "content": "```python\nInv: hour is an int in 0..23\nInv: min is an int in 0..59\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.542,
+            0.443,
+            0.957,
+            0.639
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef _is_minute(self,m):\n    \"\"\"Return: True if m valid minute\"\"\"\n    return (type(m) == int and\n        m >= 0 and m < 60)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.543,
+            0.695,
+            0.94,
+            0.862
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __init__(self, hour, min):\n    \"\"\"The time hour:min.\n    Pre: hour in 0..23; min in 0..59\"\"\"\n    assert self._is_minute(m)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.77,
+            0.881,
+            0.854,
+            0.923
+          ],
+          "content": "Helper"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.541,
+            0.443,
+            0.958,
+            0.641
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef _is_minute(self,m):\n    \"\"\"Return: True if m valid minute\"\"\"\n    return (type(m) == int and\n        m >= 0 and m < 60)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.18,
+            0.067,
+            0.819,
+            0.135
+          ],
+          "level": 2,
+          "content": "Hiding Methods From Access"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.199,
+            0.305,
+            0.249
+          ],
+          "level": 2,
+          "content": "• Hidden methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.263,
+            0.435,
+            0.308
+          ],
+          "content": "§ start with an **underscore**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.321,
+            0.429,
+            0.371
+          ],
+          "content": "§ do not show up in help()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.382,
+            0.428,
+            0.478
+          ],
+          "content": "§ are meant to be **internal** (e.g. helper methods)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.49,
+            0.448,
+            0.539
+          ],
+          "level": 2,
+          "content": "• But they are not restricted"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.551,
+            0.441,
+            0.597
+          ],
+          "content": "§ You can still access them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.609,
+            0.419,
+            0.657
+          ],
+          "content": "§ But this is bad practice!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.669,
+            0.431,
+            0.717
+          ],
+          "content": "§ Like a precond violation"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.038,
+            0.73,
+            0.467,
+            0.783
+          ],
+          "level": 2,
+          "content": "• Can do same for attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.819,
+            0.442,
+            0.871
+          ],
+          "content": "Will come back to this"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.514,
+            0.198,
+            0.721,
+            0.241
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.542,
+            0.693,
+            0.938,
+            0.863
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __init__(self, hour, min):\n    \"\"\"The time hour:min.\n    Pre: hour in 0..23; min in 0..59\"\"\"\n    assert self._is_minute(m)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.77,
+            0.88,
+            0.855,
+            0.923
+          ],
+          "content": "Helper"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.514,
+            0.383,
+            0.839,
+            0.594
+          ],
+          "sub_type": "code",
+          "content": "```python\n• Example:\n    def getHour(self):\n        \"\"\"Returns: the hour\"\"\"\n        return self.hour\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.273,
+            0.067,
+            0.726,
+            0.137
+          ],
+          "level": 2,
+          "content": "Enforcing Invariants"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.199,
+            0.283,
+            0.247
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.255,
+            0.447,
+            0.305
+          ],
+          "content": "\"\"\"Class to repr times of day."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.331,
+            0.42,
+            0.434
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: <u>min is an int in 0..59</u> \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.464,
+            0.433,
+            0.596
+          ],
+          "content": "**Invariants**: Properties that <u>are always true.</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.612,
+            0.423,
+            0.777
+          ],
+          "content": "These are just comments! >>> t = Time(2,30) >>> t.hour = 'Hello"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.793,
+            0.416,
+            0.843
+          ],
+          "content": "• How do we prevent this?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.201,
+            0.921,
+            0.248
+          ],
+          "content": "• **Idea**: Restrict direct access"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.263,
+            0.907,
+            0.309
+          ],
+          "content": "§ Only access via methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.566,
+            0.322,
+            0.94,
+            0.367
+          ],
+          "content": "§ Use asserts to enforce them"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.56,
+            0.629,
+            0.948,
+            0.879
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef setHour (self,value):\n    \"\"\"Sets hour to value\"\"\"\n    assert type(value) == int\n    assert value >= 0 and value < 24\n    self.numerator = value\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.602,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.285,
+            0.067,
+            0.711,
+            0.135
+          ],
+          "level": 2,
+          "content": "Data Encapsulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.205,
+            0.812,
+            0.265
+          ],
+          "content": "• **Idea**: Force the user to only use methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.291,
+            0.779,
+            0.351
+          ],
+          "content": "• Do not allow direct access of attributes"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.122,
+            0.391,
+            0.401,
+            0.447
+          ],
+          "level": 2,
+          "content": "Setter Method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.489,
+            0.449,
+            0.539
+          ],
+          "content": "• Used to change an attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.555,
+            0.429,
+            0.657
+          ],
+          "content": "• Replaces all assignment statements to the attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.672,
+            0.15,
+            0.715
+          ],
+          "content": "• **Bad**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.733,
+            0.268,
+            0.776
+          ],
+          "content": ">>> t.hour = 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.794,
+            0.171,
+            0.838
+          ],
+          "content": "• **Good**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.855,
+            0.295,
+            0.899
+          ],
+          "content": ">>> t.setHour(5)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.594,
+            0.391,
+            0.88,
+            0.447
+          ],
+          "level": 2,
+          "content": "Getter Method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.49,
+            0.915,
+            0.537
+          ],
+          "content": "• Used to access an attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.554,
+            0.895,
+            0.659
+          ],
+          "content": "• Replaces all usage of attribute in an expression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.671,
+            0.625,
+            0.716
+          ],
+          "content": "• **Bad**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.732,
+            0.767,
+            0.777
+          ],
+          "content": ">>> x = 3\\*t.hour"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.793,
+            0.646,
+            0.839
+          ],
+          "content": "• **Good**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.855,
+            0.826,
+            0.901
+          ],
+          "content": ">>> x = 3\\*t.getHour()"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.041,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.604,
+            0.952
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.92,
+            0.959,
+            0.948
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.286,
+            0.067,
+            0.712,
+            0.136
+          ],
+          "level": 2,
+          "content": "Data Encapsulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.198,
+            0.56,
+            0.3
+          ],
+          "content": "class Time(object): \"\"\"Class to repr times of day. \"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.059,
+            0.378,
+            0.159,
+            0.425
+          ],
+          "level": 2,
+          "content": "Getter"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.179,
+            0.383,
+            0.4,
+            0.431
+          ],
+          "level": 2,
+          "content": "def getHour (self):"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.061,
+            0.557,
+            0.155,
+            0.605
+          ],
+          "level": 2,
+          "content": "Setter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.206,
+            0.433,
+            0.548,
+            0.53
+          ],
+          "content": "\"\"\"Returns: hour attribute\"\"\" return self.\\_hour"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.178,
+            0.579,
+            0.421,
+            0.627
+          ],
+          "content": "def setHour(self, h):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.206,
+            0.629,
+            0.516,
+            0.873
+          ],
+          "content": "\"\"\" Sets hour to h Pre: h is an int in 0..23\"\"\" assert type(h) == int assert 0 <= h and h < 24 self.\\_hour = d"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.608,
+            0.198,
+            0.887,
+            0.249
+          ],
+          "level": 2,
+          "content": "NO ATTRIBUTES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.604,
+            0.263,
+            0.891,
+            0.316
+          ],
+          "content": "in class specification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.589,
+            0.411,
+            0.906,
+            0.462
+          ],
+          "content": "**Method specifications**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.597,
+            0.475,
+            0.899,
+            0.525
+          ],
+          "content": "describe the attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.592,
+            0.633,
+            0.903,
+            0.736
+          ],
+          "content": "**Setter precondition** is same as the **invariant**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.957,
+            0.948
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.285,
+            0.067,
+            0.712,
+            0.137
+          ],
+          "level": 2,
+          "content": "Data Encapsulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.197,
+            0.561,
+            0.301
+          ],
+          "content": "class Time(object): \"\"\"Class to repr times of day. \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.603,
+            0.262,
+            0.892,
+            0.317
+          ],
+          "content": "in class specification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.607,
+            0.197,
+            0.888,
+            0.25
+          ],
+          "content": "**NO ATTRIBUTES**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.058,
+            0.377,
+            0.16,
+            0.426
+          ],
+          "content": "**Getter**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.177,
+            0.382,
+            0.552,
+            0.53
+          ],
+          "content": "def getHour (self): \"\"\"Returns: hour attribute\"\"\" return self.\\_hour"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.588,
+            0.41,
+            0.907,
+            0.463
+          ],
+          "content": "**Method specifications**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.596,
+            0.475,
+            0.9,
+            0.526
+          ],
+          "content": "describe the attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.06,
+            0.557,
+            0.156,
+            0.605
+          ],
+          "content": "**Setter**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.178,
+            0.579,
+            0.332,
+            0.627
+          ],
+          "content": "def setHour("
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.629,
+            0.336,
+            0.675
+          ],
+          "content": "\"\"\" Sets ho"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.353,
+            0.587,
+            0.699,
+            0.695
+          ],
+          "content": "h):Hidden attribute user o Setter should **NOT** know about"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.68,
+            0.347,
+            0.724
+          ],
+          "content": "Pre: h is an"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.727,
+            0.466,
+            0.775
+          ],
+          "content": "assert type(h) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.776,
+            0.51,
+            0.823
+          ],
+          "content": "assert 0 <= h and h < 24"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.596,
+            0.707,
+            0.708,
+            0.733
+          ],
+          "content": "same as"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.633,
+            0.904,
+            0.735
+          ],
+          "continues_prev": true,
+          "content": "recondition is the **invariant**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.825,
+            0.384,
+            0.873
+          ],
+          "content": "self.\\_hour = d"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.144,
+            0.066,
+            0.856,
+            0.137
+          ],
+          "level": 2,
+          "content": "Encapsulation and Specifications"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.037,
+            0.201,
+            0.367,
+            0.267
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.273,
+            0.671,
+            0.341
+          ],
+          "content": "\"\"\"Class to represent times of day."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.399,
+            0.623,
+            0.751
+          ],
+          "content": "\\### Hidden attributes # Att \\_hour: hour of the day # Inv: \\_hour is an int in 0..23 # Att \\_min: minute of the hour # Inv: \\_min is an int in 0..59"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.203,
+            0.801,
+            0.456,
+            0.906
+          ],
+          "content": "These comments do not go in help()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.756,
+            0.267,
+            0.939,
+            0.372
+          ],
+          "content": "No attributes <u>in class spec</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.66,
+            0.449,
+            0.917,
+            0.729
+          ],
+          "content": "These comments make it part of the **class invariant** but not part of the (public) **interface**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.116,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.396,
+            0.919,
+            0.603,
+            0.952
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.2,
+            0.067,
+            0.799,
+            0.128
+          ],
+          "level": 2,
+          "content": "Class Invariant vs Interface"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.222,
+            0.394,
+            0.271
+          ],
+          "level": 2,
+          "content": "Class Invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.335,
+            0.48,
+            0.383
+          ],
+          "content": "• List attributes that are present"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.396,
+            0.473,
+            0.44
+          ],
+          "content": "§ Both hidden AND unhidden"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.455,
+            0.458,
+            0.499
+          ],
+          "content": "§ Lists the invariants of each"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.517,
+            0.37,
+            0.563
+          ],
+          "content": "• For the **implementer**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.577,
+            0.454,
+            0.621
+          ],
+          "content": "§ Guide for the initialization"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.637,
+            0.484,
+            0.68
+          ],
+          "content": "§ Guide for method definitions"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.658,
+            0.222,
+            0.817,
+            0.271
+          ],
+          "level": 2,
+          "content": "Interface"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.333,
+            0.939,
+            0.381
+          ],
+          "content": "• Describes what is accessible"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.396,
+            0.92,
+            0.44
+          ],
+          "content": "§ Unhidden methods/attribs"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.453,
+            0.894,
+            0.499
+          ],
+          "content": "§ What is visible in help()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.517,
+            0.959,
+            0.564
+          ],
+          "content": "• For user/**other programmers**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.579,
+            0.93,
+            0.624
+          ],
+          "content": "§ Enough to create an object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.637,
+            0.938,
+            0.683
+          ],
+          "content": "§ Enough to call the methods"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.239,
+            0.719,
+            0.761,
+            0.867
+          ],
+          "level": 2,
+          "content": "Early years of CS1110 confused these two topics"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.948
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.92,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.959,
+            0.947
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.132,
+            0.067,
+            0.867,
+            0.129
+          ],
+          "level": 2,
+          "content": "Mutable vs. Immutable Attributes"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.189,
+            0.222,
+            0.336,
+            0.271
+          ],
+          "level": 2,
+          "content": "Mutable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.339,
+            0.43,
+            0.39
+          ],
+          "content": "• Can change value directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.413,
+            0.388,
+            0.458
+          ],
+          "content": "§ If class invariant met"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.481,
+            0.398,
+            0.527
+          ],
+          "content": "§ **Example:** turtle.color"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.551,
+            0.451,
+            0.6
+          ],
+          "content": "• Has both getters and setters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.625,
+            0.466,
+            0.671
+          ],
+          "content": "§ Setters allow you to change"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.693,
+            0.48,
+            0.737
+          ],
+          "content": "§ Enforce invariants w/ asserts"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.642,
+            0.222,
+            0.832,
+            0.271
+          ],
+          "level": 2,
+          "content": "Immutable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.339,
+            0.926,
+            0.391
+          ],
+          "content": "• Can’t change value directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.412,
+            0.958,
+            0.46
+          ],
+          "content": "§ May change “behind scenes”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.481,
+            0.825,
+            0.528
+          ],
+          "content": "§ **Example:** turtle.x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.516,
+            0.551,
+            0.787,
+            0.601
+          ],
+          "content": "• Has only a getter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.625,
+            0.932,
+            0.67
+          ],
+          "content": "§ No setter means no change"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.693,
+            0.946,
+            0.737
+          ],
+          "content": "§ Getter allows limited access"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.184,
+            0.808,
+            0.831,
+            0.867
+          ],
+          "level": 2,
+          "content": "May ask you to differentiate on the exam"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.92,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.934,
+            0.921,
+            0.958,
+            0.948
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.131,
+            0.067,
+            0.868,
+            0.129
+          ],
+          "level": 2,
+          "content": "Mutable vs. Immutable Attributes"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.189,
+            0.221,
+            0.336,
+            0.273
+          ],
+          "level": 2,
+          "content": "Mutable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.039,
+            0.339,
+            0.431,
+            0.391
+          ],
+          "content": "• Can change value directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.412,
+            0.388,
+            0.459
+          ],
+          "content": "§ If class invariant met"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.481,
+            0.399,
+            0.528
+          ],
+          "content": "**Example:** turtle.color"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.04,
+            0.55,
+            0.452,
+            0.602
+          ],
+          "content": "• Has both getters and setters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.624,
+            0.286,
+            0.669
+          ],
+          "content": "§ Setters allow"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.691,
+            0.292,
+            0.737
+          ],
+          "content": "§ Enforce invari"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.348,
+            0.637,
+            0.468,
+            0.683
+          ],
+          "content": "to change**Where?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.691,
+            0.511,
+            0.741
+          ],
+          "content": "ants w/ asserts<u>Next Thursday</u>"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.641,
+            0.221,
+            0.833,
+            0.272
+          ],
+          "level": 2,
+          "content": "Immutable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.514,
+            0.338,
+            0.926,
+            0.391
+          ],
+          "content": "• Can’t change value directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.411,
+            0.958,
+            0.461
+          ],
+          "content": "§ May change “behind scenes”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.481,
+            0.825,
+            0.529
+          ],
+          "content": "**Example:** turtle.x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.515,
+            0.551,
+            0.788,
+            0.601
+          ],
+          "content": "• Has only a getter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.624,
+            0.933,
+            0.671
+          ],
+          "content": "§ No setter means no change"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.691,
+            0.946,
+            0.737
+          ],
+          "content": "§ Getter allows limited access"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.184,
+            0.807,
+            0.832,
+            0.867
+          ],
+          "content": "May ask you to differentiate on the exam"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.042,
+            0.919,
+            0.115,
+            0.949
+          ],
+          "content": "10/29/26"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.397,
+            0.919,
+            0.603,
+            0.951
+          ],
+          "content": "Using Classes Effectively"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.935,
+            0.921,
+            0.959,
+            0.948
+          ],
+          "content": "36"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 36,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

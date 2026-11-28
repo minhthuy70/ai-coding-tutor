@@ -1,0 +1,405 @@
+## What Does str() Do On Objects?
+
+• Does **NOT** display contents >>> p = Point3(1,2,3) >>> str(p)
+
+class Point3(object):
+
+"""Class for points in 3d space"""
+
+'&lt;Point3 object at 0x1007a90&gt;'
+
+def \_\_str\_\_(self):
+
+"""Returns: string with contents"""
+
+• Must add a special method
+
+return '('+str(self.x) + ',' +
+
+§ \_\_str\_\_ for str()
+
+str(self.y) + ',' +
+
+§ \_\_repr\_\_ for repr()
+
+str(self.z) + ')'
+
+• Could get away with just one
+
+def \_\_repr\_\_(self):
+
+§ repr() requires \_\_repr\_\_
+
+§ str() can use \_\_repr\_
+
+"""Returns: unambiguous string"""
+
+(if \_\_str\_\_ is not there)
+
+return str(self.\_\_class\_\_)+
+
+str(self)
+
+## Making a Class into a Type
+
+1. Think about what values you want in the set
+
+§ What are the attributes? What values can they have?
+
+2. Think about what operations you want
+
+§ This often influences the previous question
+
+• To make (1) precise: write a class invariant
+
+§ Statement we promise to keep true **after every method call**
+
+• To make (2) precise: write method specifications
+
+§ Statement of what method does/what it expects (preconditions)
+
+• Write your code to make these statements true!
+
+## Planning out a Class
+
+## class Time(object):
+
+"""Class to represent times of day.
+
+Inv: hour is an int in 0..23 Inv: min is an int in 0..59"""
+
+## Class Invariant
+
+def \_\_init\_\_(self, hour, min):
+
+States what attributes are present
+
+and what values they can have.
+
+"""The time hour:min.
+
+A statement that will always be <u>true of any Time instance.</u>
+
+Pre: hour in 0..23; min in 0..59"""
+
+def increment(self, hours, mins):
+
+"""Move time hours and mins
+
+into the future.
+
+## Method Specification
+
+Pre: hours int >= 0; mins in 0..59"""
+
+States what the method does.
+
+def isPM(self):
+
+Gives preconditions stating what
+
+"""Returns: True if noon or later."""
+
+<u>is assumed true of the arguments.</u>
+
+Inv: hour is an int in 0..23 Inv: min is an int in 0..59
+
+## Implementing a Method
+
+This is true to start
+
+What we are supposed to accomplish
+
+This is also true to start def increment(self, hours, mins): """Move this time &lt;hours&gt; hours and &lt;mins&gt; minutes into the future. Pre: hours [int] >= 0; mins in 0..59"""
+
+Inv: hour is an int in 0..23 Inv: min is an int in 0..59
+
+## Implementing an Initializer
+
+This is true to start
+
+self.hour = hour self.min = min
+
+You put code here self.min = self.min + mins ? self.hour = self.hour + hours
+
+You put code here
+
+def \_\_init\_\_(self, hour, min):
+
+Pre: hour in 0..23; min in 0..59"""
+
+This should be true at the end
+
+This should be true
+
+Inv: hour is an int in 0..23 Inv: min is an int in 0..59
+
+at the end
+
+## Enforce Method Preconditions with assert
+
+## class Time(object):
+
+"""Class to represent times of day."""
+
+Inv: hour is an int in 0..23 Inv: min is an int in 0..59"""
+
+## def \_\_init\_\_(self, hour, min):
+
+"""The time hour:min. tmie tmm
+
+Pre: hour in 0..23; min in 0..59"""
+
+assert type(hour) == int
+
+Initializer creates/initializes all
+
+assert 0 <= hour and hour < 24
+
+of the instance attributes.
+
+assert type(min) == int
+
+Asserts in initializer guarantee the
+
+assert 0 <= min and min < 60
+
+<u>initial values satisfy the invariant.</u>
+
+def increment(self, hours, mins):
+
+"""Move this time &lt;hours&gt; hours
+
+and &lt;mins&gt; minutes into the future.
+
+Pre: hours is int >= 0; mins in 0..59""”
+
+assert type(hour) == int
+
+assert type (min) == int
+
+assert hour >= 0
+
+Asserts in other methods enforce
+
+<u>the method preconditions.</u>
+
+assert 0 <= min and min < 60
+
+## Hiding Methods From Access
+
+• Hidden methods
+
+## class Time(object):
+
+§ start with an **underscore**
+
+"""Class to represent times of day.
+
+§ do not show up in help()
+
+Inv: hour is an int in 0..23 Inv: min is an int in 0..59"""
+
+§ are meant to be **internal** (e.g. helper methods)
+
+def \_is\_minute(self,m):
+
+• But they are **not restricted**
+
+"""Return: True if m valid minute"""
+
+§ You can still access them
+
+return (type(m) == int and
+
+§ But this is bad practice!
+
+m >= 0 and m < 60)
+
+§ Like a precond violation
+
+def \_\_init\_\_(self, hour, min):
+
+• Can do same for attributes
+
+"""The time hour:min The time hour:min.
+
+§ Underscore makes it hidden
+
+Pre: hour in 0..23; min in 0..59"""
+
+§ Only used inside of methods
+
+assert self.\_is\_minute(m)
+
+Helper
+
+## Enforcing Invariants
+
+class Time(object):
+
+"""Class to repr times of day.
+
+• **Idea**: Restrict direct access
+
+Inv: hour is an int in 0..23 Inv: <u>min is an int in 0..59</u> """
+
+§ Only access via methods
+
+§ Use asserts to enforce them
+
+**Invariants**: Properties that <u>are always true.</u>
+
+• **Example**:
+
+def getHour(self):
+
+• These are just comments! >>> t = Time(2,30) >>> t.hour = 'Hello'
+
+"""Returns: the hour"""
+
+return self.hour
+
+• How do we prevent this?
+
+def setHour (self,value):
+
+"""Sets hour to value"""
+
+assert type(value) == int
+
+assert value >= 0 and value < 24
+
+self.numerator = value
+
+## Data Encapsulation
+
+• **Idea**: Force the user to only use methods
+
+• Do not allow direct access of attributes
+
+**Setter Method**
+
+**Getter Method**
+
+• Used to change an attribute
+
+• Used to access an attribute
+
+• Replaces all assignment statements to the attribute • Replaces all usage of attribute in an expression
+
+• **Bad**: >>> t.hour = 5
+
+• **Bad**:
+
+>>> x = 3\*t.hour
+
+• **Good**:
+
+• **Good**:
+
+>>> f.setHour(5)
+
+>>> x = 3\*t.getHour()
+
+## Data Encapsulation
+
+class Time(object):
+
+"""Class to repr times of day. """
+
+**NO ATTRIBUTES**
+
+in class specification
+
+**Getter**
+
+def getHour (self):
+
+"""Returns: hour attribute""" return self.\_hour
+
+**Method specifications**
+
+**Setter**
+
+describe the attributes
+
+def setHour(self, h):
+
+""" Sets hour to h
+
+Pre: h is an int in 0..23"""
+
+**Setter precondition** is
+
+assert type(h) == int
+
+assert 0 <= h and h < 24
+
+same as the **invariant**
+
+self.\_hour = d
+
+## Encapsulation and Specifications
+
+## class Time(object):
+
+"""Class to represent times of day. """
+
+No attributes <u>in class spec</u>
+
+\### Hidden attributes
+
+These comments
+
+\# Att \_hour: hour of the day
+
+make it part of the
+
+\# Inv: \_hour is an int in 0..23
+
+**class invariant**
+
+\# Att \_min: minute of the hour
+
+but not part of the
+
+\# Inv: \_min is an int in 0..59
+
+(public) **interface**
+
+These comments
+
+<u>do not go in help()</u>
+
+## Mutable vs. Immutable Attributes
+
+**Mutable**
+
+• Can change value directly
+
+**Immutable**
+
+§ If class invariant met
+
+• Can’t change value directly
+
+§ **Example:** turtle.color
+
+§ May change “behind scenes”
+
+• Has both getters and setters
+
+§ **Example:** turtle.x
+
+• Has only a getter
+
+§ Setters allow you to change
+
+§ Enforce invariants w/ asserts
+
+§ No setter means no change
+
+§ Getter allows limited access
+
+May ask you to differentiate on the exam

@@ -1,0 +1,2711 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.101,
+            0.276,
+            0.879,
+            0.545
+          ],
+          "level": 1,
+          "content": "PYTHON CLASSES and INHERITANCE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.569,
+            0.54,
+            0.624
+          ],
+          "content": "(download slides and .py files Ă"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.606,
+            0.568,
+            0.819,
+            0.623
+          ],
+          "content": "Ě\u0003follow along!)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.096,
+            0.655,
+            0.39,
+            0.702
+          ],
+          "content": "6.0001 LECTU RE 9"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.959,
+            0.547,
+            0.977
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.161,
+            0.373,
+            0.231
+          ],
+          "level": 2,
+          "content": "LAST TIME"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.273,
+            0.631,
+            0.321
+          ],
+          "content": "abstract data types through classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.347,
+            0.467,
+            0.392
+          ],
+          "content": "Coordinate example"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.418,
+            0.423,
+            0.465
+          ],
+          "content": "Fraction example"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.505,
+            0.282,
+            0.574
+          ],
+          "level": 2,
+          "content": "TODAY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.618,
+            0.351,
+            0.66
+          ],
+          "content": "more on classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.11,
+            0.671,
+            0.394,
+            0.713
+          ],
+          "content": "• getters and setters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.723,
+            0.393,
+            0.767
+          ],
+          "content": "• information hiding"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.777,
+            0.335,
+            0.818
+          ],
+          "content": "• class variables"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.849,
+            0.283,
+            0.893
+          ],
+          "content": "inheritance"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.087,
+            0.849,
+            0.235
+          ],
+          "level": 2,
+          "content": "IMPLEMENTING USING THE CLASS vs THE CLASS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.278,
+            0.744,
+            0.326
+          ],
+          "content": "write code from two different perspectives"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.371,
+            0.435,
+            0.473
+          ],
+          "content": "**implementing** a new object type with a class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.482,
+            0.356,
+            0.525
+          ],
+          "content": "• **define** the class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.541,
+            0.442,
+            0.635
+          ],
+          "content": "• define **data attributes** (WHAT IS the object)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.648,
+            0.471,
+            0.743
+          ],
+          "content": "• define **methods** (HOW TO use the object)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.526,
+            0.371,
+            0.949,
+            0.469
+          ],
+          "content": "**using** the new object type in code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.483,
+            0.892,
+            0.577
+          ],
+          "content": "• create **instances** of the object type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.589,
+            0.921,
+            0.635
+          ],
+          "content": "• do **operations** with them"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.085,
+            0.902,
+            0.238
+          ],
+          "level": 2,
+          "content": "CLASS DEFINITION INSTANCE OF AN OBJECT TYPE vs OF A CLASS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.032,
+            0.275,
+            0.416,
+            0.368
+          ],
+          "content": "class name is the **type** class Coordinate(object)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.032,
+            0.39,
+            0.45,
+            0.441
+          ],
+          "level": 2,
+          "content": "class is defined generically"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.051,
+            0.448,
+            0.447,
+            0.574
+          ],
+          "content": "• use self to refer to some instance while defining the class"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.059,
+            0.583,
+            0.359,
+            0.623
+          ],
+          "sub_type": "code",
+          "content": "```txt\n(self.x - self.y)**2\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.053,
+            0.629,
+            0.445,
+            0.718
+          ],
+          "content": "• self is a parameter to methods in class definition"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.033,
+            0.783,
+            0.465,
+            0.926
+          ],
+          "level": 2,
+          "content": "class defines data and methods common across all instances"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.52,
+            0.271,
+            0.99,
+            0.364
+          ],
+          "content": "instance is **one specific** object coord = Coordinate(1,2)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.521,
+            0.387,
+            0.925,
+            0.481
+          ],
+          "level": 2,
+          "content": "data attribute values vary between instances"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.538,
+            0.486,
+            0.843,
+            0.526
+          ],
+          "sub_type": "code",
+          "content": "```txt\nc1 = Coordinate(1,2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.539,
+            0.529,
+            0.843,
+            0.567
+          ],
+          "sub_type": "code",
+          "content": "```txt\nc2 = Coordinate(3,4)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.573,
+            0.979,
+            0.749
+          ],
+          "content": "c1 and c2 have different data attribute values c1.x and c2.x because they are different objects"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.52,
+            0.773,
+            0.974,
+            0.867
+          ],
+          "level": 2,
+          "content": "instance has the structure of the class"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.068,
+            0.678,
+            0.233
+          ],
+          "level": 2,
+          "content": "WHY USE OOP AND CLASSES OF OBJECTS?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.277,
+            0.321,
+            0.323
+          ],
+          "content": "• mimic real life"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.355,
+            0.773,
+            0.405
+          ],
+          "content": "• group different objects part of the same type"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.157,
+            0.401,
+            0.328,
+            0.569
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.352,
+            0.424,
+            0.466,
+            0.549
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.569,
+            0.443,
+            0.794,
+            0.643
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.806,
+            0.372,
+            0.914,
+            0.505
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_6.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.866,
+            0.534,
+            0.968,
+            0.658
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_7.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.019,
+            0.774,
+            0.142,
+            0.903
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_8.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.15,
+            0.587,
+            0.289,
+            0.905
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_9.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.306,
+            0.639,
+            0.422,
+            0.868
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_10.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.426,
+            0.615,
+            0.548,
+            0.747
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_11.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.453,
+            0.791,
+            0.562,
+            0.913
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_12.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.563,
+            0.662,
+            0.745,
+            0.863
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_13.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.758,
+            0.662,
+            0.92,
+            0.885
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.005,
+                0.912,
+                0.978,
+                0.955
+              ],
+              "content": "Image Credits, clockwise from top: Image Courtesy [Harald Wehner](https://en.wikipedia.org/wiki/File:Cat-MaineCoon-Cookie.png), in the public Domain. Image Courtesy [MTSOfan](https://www.flickr.com/photos/mtsofan/7393425414/in/photolist-2H2UGg-cgkeMY-7Go2Mx-5GEedL-84ayar-7GrXwA-9RnHdr-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GU), CC-BY-NC-SA. Image Courtesy [Carlos Solana](https://www.flickr.com/photos/lasombraenlapared/3586725904/in/photolist-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GUPni-bTfiPK-frQsn6-8mgNPZ-avEdRy-agYEqz-), license CC-BY-NC-SA. Image Courtesy [Rosemarie Banghart-Kovic](https://www.flickr.com/photos/rosemarie61103/4891530841/in/photolist-8sfnGD-7BoAhV-SRSQD-f3Rr95-6S55ot-7UDhTX-8JGxsa-6KKpr1-4XDTzD-azRUjH-azUyWW-2XXbQT-7wq8gt-8sfnwK-fhUDb-53g43K-4RjBWs-6vN29o-8sfn1X-2ms8TD-4vNmKX-4f856g-2Y2AeN-6p8AZM-8sfnbp-4v72Q), license CC-BY-NC-SA. Image Courtesy [Paul Reynolds](https://en.wikipedia.org/wiki/Kitten#/media/File:Kitten_and_partial_reflection_in_mirror.jpg), license CC-BY. Image Courtesy [Kenny Louie](https://en.wikipedia.org/wiki/File:Kitten_in_Rizal_Park,_Manila.jpg#/media/File:Kitten_in_Rizal_Park,_Manila.jpg), License CC-BY"
+            }
+          ],
+          "image_source": "images/page_4_image_14.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.069,
+            0.677,
+            0.233
+          ],
+          "level": 2,
+          "content": "WHY USE OOP AND CLASSES OF OBJECTS?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.32,
+            0.323
+          ],
+          "content": "• mimic real life"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.355,
+            0.773,
+            0.405
+          ],
+          "content": "• <u>group different objects</u> part of the same type"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.195,
+            0.433,
+            0.366,
+            0.607
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.621,
+            0.444,
+            0.847,
+            0.644
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.172,
+            0.632,
+            0.28,
+            0.875
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.306,
+            0.638,
+            0.422,
+            0.869
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_6.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.562,
+            0.661,
+            0.745,
+            0.865
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_7.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.758,
+            0.661,
+            0.92,
+            0.885
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_8.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.005,
+            0.912,
+            0.977,
+            0.955
+          ],
+          "content": "Image Credits, clockwise from top: Image Courtesy [Harald Wehner](https://en.wikipedia.org/wiki/File:Cat-MaineCoon-Cookie.png), in the public Domain. Image Courtesy [MTSOfan](https://www.flickr.com/photos/mtsofan/7393425414/in/photolist-2H2UGg-cgkeMY-7Go2Mx-5GEedL-84ayar-7GrXwA-9RnHdr-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GU), CC-BY-NC-SA. Image Courtesy [Carlos Solana](https://www.flickr.com/photos/lasombraenlapared/3586725904/in/photolist-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GUPni-bTfiPK-frQsn6-8mgNPZ-avEdRy-agYEqz-), license CC-BY-NC-SA. Image Courtesy [Rosemarie Banghart-Kovic](https://www.flickr.com/photos/rosemarie61103/4891530841/in/photolist-8sfnGD-7BoAhV-SRSQD-f3Rr95-6S55ot-7UDhTX-8JGxsa-6KKpr1-4XDTzD-azRUjH-azUyWW-2XXbQT-7wq8gt-8sfnwK-fhUDb-53g43K-4RjBWs-6vN29o-8sfn1X-2ms8TD-4vNmKX-4f856g-2Y2AeN-6p8AZM-8sfnbp-4v72Q), license CC-BY-NC-SA. Image Courtesy [Paul Reynolds](https://en.wikipedia.org/wiki/Kitten#/media/File:Kitten_and_partial_reflection_in_mirror.jpg), license CC-BY. Image Courtesy [Kenny Louie](https://en.wikipedia.org/wiki/File:Kitten_in_Rizal_Park,_Manila.jpg#/media/File:Kitten_in_Rizal_Park,_Manila.jpg), License CC-BY"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.069,
+            0.806,
+            0.239
+          ],
+          "level": 2,
+          "content": "GROUPS OF OBJECTS HAVE ATTRIBUTES (RECAP)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.278,
+            0.34,
+            0.322
+          ],
+          "level": 2,
+          "content": "data attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.337,
+            0.762,
+            0.382
+          ],
+          "content": "• how can you represent your object with data?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.397,
+            0.27,
+            0.437
+          ],
+          "content": "**what it is**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.454,
+            0.564,
+            0.5
+          ],
+          "content": "• for a coordinate: x and y values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.515,
+            0.483,
+            0.559
+          ],
+          "content": "• for an animal: age, name"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.591,
+            0.909,
+            0.641
+          ],
+          "level": 2,
+          "content": "procedural attributes (behavior/operations/methods)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.651,
+            0.729,
+            0.695
+          ],
+          "content": "• how can someone interact with the object?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.711,
+            0.314,
+            0.751
+          ],
+          "content": "• **what it does**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.769,
+            0.731,
+            0.814
+          ],
+          "content": "• for a coordinate: find distance between two"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.828,
+            0.528,
+            0.873
+          ],
+          "content": "• for an animal: make a sound"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.067,
+            0.759,
+            0.243
+          ],
+          "level": 2,
+          "content": "HOW TO DEFINE A CLASS (RECAP)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.015,
+            0.267,
+            0.86,
+            0.945
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.161,
+            0.932,
+            0.235
+          ],
+          "level": 2,
+          "content": "GETTER AND SETTER METHODS"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.054,
+            0.28,
+            0.906,
+            0.854
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Animal(object):\n    def __init__(self, age):\n        self.age = age\n        self.name = None\n\n    def get_age(self):\n        return self.age\n    def get_name(self):\n        return self.name\n\n    def set_age(self, newage):\n        self.age = newage\n    def set_name(self, newname=\"\"):\n        self.name = newname\n\n    def __str__(self):\n        return \"animal:\"+str(self.name)+\":\"+str(self.age)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.866,
+            0.775,
+            0.959
+          ],
+          "content": "**getters and setters** should be used outside of class to access data attributes"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.068,
+            0.723,
+            0.241
+          ],
+          "level": 2,
+          "content": "AN INSTANCE and DOT NOTATION (RECAP)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.278,
+            0.78,
+            0.325
+          ],
+          "content": "instantiation creates an **instance of an object**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.356,
+            0.387,
+            0.401
+          ],
+          "content": "a = Animal(3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.433,
+            0.894,
+            0.585
+          ],
+          "content": "**dot notation** used to access attributes (data and methods) though it is better to use getters and setters to access data attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.622,
+            0.222,
+            0.665
+          ],
+          "content": "a.age"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.695,
+            0.344,
+            0.744
+          ],
+          "content": "a.get\\_age()"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.16,
+            0.694,
+            0.232
+          ],
+          "level": 2,
+          "content": "INFORMATION HIDING"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.087,
+            0.272,
+            0.822,
+            0.359
+          ],
+          "level": 2,
+          "content": "author of class definition may change data attribute variable names"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.157,
+            0.406,
+            0.366,
+            0.568
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_image_2.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.386,
+            0.369,
+            0.81,
+            0.586
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Animal(object):\n    def __init__(self, age):\n        self.years = age\n    def get_age(self):\n        return self.years\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.603,
+            0.883,
+            0.694
+          ],
+          "content": "if you are **accessing data attributes** outside the class and class **definition changes**, may get errors"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.715,
+            0.698,
+            0.799
+          ],
+          "content": "outside of class, use getters and setters instead use a.get\\_age() NOT a.age"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.802,
+            0.271,
+            0.844
+          ],
+          "content": "• good style"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.853,
+            0.413,
+            0.893
+          ],
+          "content": "• easy to maintain code"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.903,
+            0.317,
+            0.945
+          ],
+          "content": "prevents bugs"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.068,
+            0.711,
+            0.234
+          ],
+          "level": 2,
+          "content": "PYTHON NOT GREAT AT INFORMATION HIDING"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.278,
+            0.912,
+            0.379
+          ],
+          "content": "allows you to **access data** from outside class definition print(a.age)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.404,
+            0.935,
+            0.503
+          ],
+          "content": "allows you to **write to data** from outside class definition a.age = 'infinite'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.53,
+            0.946,
+            0.677
+          ],
+          "content": "allows you to **create data attributes** for an instance from outside class definition a.size = \"tiny\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.755,
+            0.664,
+            0.806
+          ],
+          "content": "it’s **not good style** to do any of these!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.16,
+            0.69,
+            0.231
+          ],
+          "level": 2,
+          "content": "DEFAULT ARGUMENTS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.281,
+            0.93,
+            0.383
+          ],
+          "content": "**default arguments** for formal parameters are used if no actual argument is given"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.087,
+            0.397,
+            0.605,
+            0.49
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef set_name(self, newname=\"\"):\n    self.name = newname\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.508,
+            0.524,
+            0.556
+          ],
+          "content": "default argument used here"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.09,
+            0.571,
+            0.709,
+            0.725
+          ],
+          "sub_type": "code",
+          "content": "```python\na = Animal(3)\na.set_name()\nprint(a.get_name())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.738,
+            0.602,
+            0.787
+          ],
+          "content": "argument passed in is used here"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.105,
+            0.802,
+            0.442,
+            0.953
+          ],
+          "sub_type": "code",
+          "content": "```txt\na = Animal(3)\na.set_name(\"fluffy\")\nprint(a.get_name())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.893,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.103,
+            0.053,
+            0.447,
+            0.118
+          ],
+          "level": 2,
+          "content": "HIERARCHIES"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.221,
+            0.12,
+            0.853,
+            0.395
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_1.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.196,
+            0.425,
+            0.366,
+            0.6
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_2.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.621,
+            0.437,
+            0.846,
+            0.637
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.172,
+            0.625,
+            0.279,
+            0.869
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.306,
+            0.633,
+            0.422,
+            0.861
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.562,
+            0.654,
+            0.744,
+            0.858
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_6.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.759,
+            0.655,
+            0.919,
+            0.878
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_7.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.004,
+            0.895,
+            0.968,
+            0.957
+          ],
+          "content": "Image Credits, clockwise from top: Image Courtesy [Deeeep](https://www.flickr.com/photos/deeeepak/3155185552/in/photolist-5NP9JU-5dfTUn-ajQAm8-raoXgN-EMXo-8YU98Y-HRRUs6-8K4jhn-2gsnA-4yX3D5-dsHLRq-8GvcQg-dCoExJ-8DVZ77-5Cj2bd-2PLPhd-wTvzZ-7NVmQG-4KDtXP-otHzMK-aUXEJP-dmqw39-9Ss2PW-2U4Z9-7ThH2y-858bXB-5NJRHe-), CC-BY-NC. Image Image Courtesy [MTSOfan](https://www.flickr.com/photos/mtsofan/7393425414/in/photolist-2H2UGg-cgkeMY-7Go2Mx-5GEedL-84ayar-7GrXwA-9RnHdr-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GU), CC-BY-NC-SA. Image Courtesy [Carlos Solana](https://www.flickr.com/photos/lasombraenlapared/3586725904/in/photolist-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GUPni-bTfiPK-frQsn6-8mgNPZ-avEdRy-agYEqz-), license CC-BY-NC-SA. Image Courtesy [Rosemarie Banghart-Kovic](https://www.flickr.com/photos/rosemarie61103/4891530841/in/photolist-8sfnGD-7BoAhV-SRSQD-f3Rr95-6S55ot-7UDhTX-8JGxsa-6KKpr1-4XDTzD-azRUjH-azUyWW-2XXbQT-7wq8gt-8sfnwK-fhUDb-53g43K-4RjBWs-6vN29o-8sfn1X-2ms8TD-4vNmKX-4f856g-2Y2AeN-6p8AZM-8sfnbp-4v72Q), license CC-BY-NC-SA. Image Courtesy [Paul Reynolds](https://en.wikipedia.org/wiki/Kitten#/media/File:Kitten_and_partial_reflection_in_mirror.jpg), license CC-BY. Image Courtesy [Kenny Louie](https://en.wikipedia.org/wiki/File:Kitten_in_Rizal_Park,_Manila.jpg#/media/File:Kitten_in_Rizal_Park,_Manila.jpg), License CC-BY. Courtesy [Harald Wehner](https://en.wikipedia.org/wiki/File:Cat-MaineCoon-Cookie.png), in the public Domain."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.987
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.161,
+            0.447,
+            0.231
+          ],
+          "level": 2,
+          "content": "HIERARCHIES"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.279,
+            0.303,
+            0.379
+          ],
+          "level": 2,
+          "content": "parent class (superclass)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.407,
+            0.267,
+            0.509
+          ],
+          "level": 2,
+          "content": "child class (subclass)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.517,
+            0.361,
+            0.66
+          ],
+          "content": "**inherits** all data and behaviors of parent class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.673,
+            0.336,
+            0.716
+          ],
+          "content": "• **add** more **info**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.733,
+            0.404,
+            0.775
+          ],
+          "content": "• **add** more **behavior**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.792,
+            0.387,
+            0.835
+          ],
+          "content": "• **override** behavior"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.607,
+            0.325,
+            0.72,
+            0.375
+          ],
+          "content": "Animal"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.467,
+            0.518,
+            0.575,
+            0.567
+          ],
+          "content": "Person"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.436,
+            0.261,
+            0.966,
+            0.831
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.673,
+            0.519,
+            0.731,
+            0.566
+          ],
+          "content": "Cat"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.831,
+            0.516,
+            0.933,
+            0.567
+          ],
+          "content": "Rabbit"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.49,
+            0.725,
+            0.613,
+            0.775
+          ],
+          "content": "Student"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.069,
+            0.477,
+            0.234
+          ],
+          "level": 2,
+          "content": "INHERITANCE: PARENT CLASS"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.104,
+            0.263,
+            0.939,
+            0.895
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Animal(object):\n    def __init__(self, age):\n        self.age = age\n        self.name = None\n    def get_age(self):\n        return self.age\n    def get_name(self):\n        return self.name\n    def set_age(self, newage):\n        self.age = newage\n    def set_name(self, newname=\"\"):\n        self.name = newname\n    def __str__(self):\n        return \"animal:\"+str(self.name)+\":\"+str(self.age)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.068,
+            0.47,
+            0.234
+          ],
+          "level": 2,
+          "content": "INHERITANCE: SUBCLASS"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.012,
+            0.263,
+            0.957,
+            0.621
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Cat(Animal):\n    def speak(self):\n        print(\"meow\")\n    def __str__(self):\n        return \"cat:\"+str(self.name)+\":\"+str(self.age)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.644,
+            0.662,
+            0.694
+          ],
+          "content": "add new functionality with speak()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.703,
+            0.87,
+            0.749
+          ],
+          "content": "• instance of type Cat can be called with new methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.763,
+            0.922,
+            0.856
+          ],
+          "content": "• instance of type Animal throws error if called with Cat’s new method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.889,
+            0.904,
+            0.943
+          ],
+          "content": "init\\_\\_ is not missing, uses the Animal version"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.99
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.161,
+            0.782,
+            0.234
+          ],
+          "level": 2,
+          "content": "WHICH METHOD TO USE?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.277,
+            0.81,
+            0.378
+          ],
+          "content": "• subclass can have **methods with same name** as superclass"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.406,
+            0.877,
+            0.507
+          ],
+          "content": "• for an instance of a class, look for a method name in **current class definition**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.536,
+            0.884,
+            0.641
+          ],
+          "content": "• if not found, look for method name **up the hierarchy** (in parent, then grandparent, and so on)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.667,
+            0.898,
+            0.767
+          ],
+          "content": "• use first method up the hierarchy that you found with that method name"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.035,
+            0.046,
+            1.0,
+            0.869
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Person(Animal):\n    def __init__(self, name, age):\n        Animal.__init__(self, age)\n        self.set_name(name)\n        self.friends = []\n\n    def get_friends(self):\n        return self.friends\n    def add_friend(self, fname):\n        if fname not in self.friends:\n            self.friends.append(fname)\n    def speak(self):\n        print(\"hello\")\n    def age_diff(self, other):\n        diff = self.age - other.age\n        print(abs(diff), \"year difference\")\n    def __str__(self):\n        return \"person:\"+str(self.name)+\"\"+str(self.age)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.548,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.008,
+            0.028,
+            0.988,
+            0.893
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport random\n\nclass Student(Person):\n    def __init__(self, name, age, major=None):\n        Person.__init__(self, name, age)\n        self.major = major\n\n    def change_major(self, major):\n        self.major = major\n\n    def speak(self):\n        r = random.random()\n        if r < 0.25:\n            print(\"i have homework\")\n        elif 0.25 <= r < 0.5:\n            print(\"i need sleep\")\n        elif 0.5 <= r < 0.75:\n            print(\"i should eat\")\n        else:\n            print(\"i am watching tv\")\n\n    def __str__(self):\n        return \"student:\"+str(self.name)+\":\"+str(self.age)+\":\"+str(self.major)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.067,
+            0.806,
+            0.234
+          ],
+          "level": 2,
+          "content": "CLASS VARIABLES AND THE Rabbit SUBCLASS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.271,
+            0.915,
+            0.365
+          ],
+          "content": "**class variables** and their values are shared between all instances of <u>a class</u>"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.015,
+            0.371,
+            0.95,
+            0.845
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Rabbit(Animal):\n    tag = 1\n    def __init__(self, age, parent1=None, parent2=None):\n        Animal.__init__(self, age)\n        self.parent1 = parent1\n        self.parent2 = parent2\n    self.rid = Rabbit.tag\n    Rabbit.tag += 1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.855,
+            0.93,
+            0.905
+          ],
+          "content": "tag used to give **unique id** to each new rabbit instance"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.988
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.16,
+            0.844,
+            0.233
+          ],
+          "level": 2,
+          "content": "Rabbit GETTER METHODS"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.085,
+            0.274,
+            0.963,
+            0.909
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Rabbit(Animal):\n    tag = 1\n    def __init__(self, age, parent1=None, parent2=None):\n        Animal.__init__(self, age)\n        self.parent1 = parent1\n        self.parent2 = parent2\n        self.rid = Rabbit.tag\n        Rabbit.tag += 1\n    def get_rid(self):\n        return str(self.rid).zfill(3)\n    def get_parent1(self):\n        return self.parent1\n    def get_parent2(self):\n        return self.parent2\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.096,
+            0.067,
+            0.847,
+            0.231
+          ],
+          "level": 1,
+          "content": "WORKING WITH YOUR OWN TYPES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.099,
+            0.274,
+            0.479,
+            0.313
+          ],
+          "content": "def \\_\\_add\\_\\_(self, other):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.203,
+            0.337,
+            0.884,
+            0.375
+          ],
+          "content": "\\# returning object of same type as this class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.204,
+            0.398,
+            0.641,
+            0.437
+          ],
+          "content": "return Rabbit(0, self, other)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.479,
+            0.78,
+            0.517
+          ],
+          "content": "recall Rabbit’s \\_\\_init\\_\\_(self, age, parent1=None, parent2=None)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.541,
+            0.862,
+            0.588
+          ],
+          "level": 2,
+          "content": "define + operator between two Rabbit instances"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.599,
+            0.892,
+            0.692
+          ],
+          "content": "• define what something like this does: r4 = r1 + r2 where r1 and r2 are Rabbit instances"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.707,
+            0.697,
+            0.752
+          ],
+          "content": "• r4 is a new Rabbit instance with age 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.766,
+            0.906,
+            0.811
+          ],
+          "content": "• r4 has self as one parent and other as the other parent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.825,
+            0.984,
+            0.875
+          ],
+          "content": "• in \\_\\_init\\_\\_, **parent1 and parent2 are of type Rabbit**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.548,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.096,
+            0.068,
+            0.799,
+            0.235
+          ],
+          "level": 1,
+          "content": "SPECIAL METHOD TO COMPARE TWO Rabbits"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.276,
+            0.924,
+            0.37
+          ],
+          "content": "decide that two rabbits are equal if they have the **same two parents**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.015,
+            0.38,
+            0.899,
+            0.62
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef __eq__(self, other):\n    parents_same = self.parent1.rid == other.parent1.rid \\\n        and self.parent2.rid == other.parent2.rid\n    parents_opposite = self.parent2.rid == other.parent1.rid \\\n        and self.parent1.rid == other.parent2.rid\n    return parents_same or parents_opposite\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.668,
+            0.941,
+            0.715
+          ],
+          "content": "compare ids of parents since **ids are unique** (due to class var)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.733,
+            0.651,
+            0.779
+          ],
+          "content": "note you can’t compare objects directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.796,
+            0.682,
+            0.836
+          ],
+          "content": "• for ex. with self.parent1 == other.parent1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.853,
+            0.96,
+            0.955
+          ],
+          "content": "• this calls the \\_\\_eq\\_\\_ method over and over until call it on None and gives an AttributeError when it tries to do None.parent1"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.547,
+            0.988
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.099,
+            0.069,
+            0.582,
+            0.232
+          ],
+          "level": 2,
+          "content": "OBJECT ORIENTED PROGRAMMING"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.278,
+            0.638,
+            0.325
+          ],
+          "content": "create your own **collections of data**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.356,
+            0.425,
+            0.403
+          ],
+          "content": "**organize** information"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.433,
+            0.355,
+            0.478
+          ],
+          "content": "**division** of work"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.512,
+            0.738,
+            0.558
+          ],
+          "content": "access information in a **consistent** manner"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.589,
+            0.475,
+            0.638
+          ],
+          "content": "add **layers** of complexity"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.667,
+            0.809,
+            0.771
+          ],
+          "content": "like functions, classes are a mechanism for **decomposition** and **abstraction** in programming"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0001 LECTURE 9"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.08,
+            0.107,
+            0.229,
+            0.155
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu/)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.231,
+            0.602,
+            0.284
+          ],
+          "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.346,
+            0.677,
+            0.375
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Python Classes and Inheritance",
+      "authors": [
+        "Bell, Ana"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2016-11-23T14:56:25+05:30",
+      "modified_at": "2017-01-04T15:48:06+05:30",
+      "creator_application": "Microsoft® PowerPoint® 2013",
+      "producer_application": "Microsoft® PowerPoint® 2013",
+      "page_count": 26,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

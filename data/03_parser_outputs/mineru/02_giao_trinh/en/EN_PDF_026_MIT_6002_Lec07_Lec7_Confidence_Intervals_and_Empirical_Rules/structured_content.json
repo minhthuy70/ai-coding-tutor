@@ -1,0 +1,2627 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.404,
+            0.803,
+            0.601
+          ],
+          "level": 2,
+          "content": "Lecture 7: Confidence Intervals"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.929,
+            0.545,
+            0.947
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.884,
+            0.929,
+            0.895,
+            0.948
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.064,
+            0.844,
+            0.125
+          ],
+          "level": 2,
+          "content": "Assumptions Underlying Empirical Rule"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.195,
+            0.597,
+            0.241
+          ],
+          "content": "■The mean estimation error is zero"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.268,
+            0.791,
+            0.364
+          ],
+          "content": "■The distribution of the errors in the estimates is normal (Gaussian)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.09,
+            0.392,
+            0.564,
+            0.882
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_chart_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.546,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 6"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.884,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.064,
+            0.817,
+            0.127
+          ],
+          "level": 2,
+          "content": "Generating Normally Distributed Data"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.032,
+            0.172,
+            0.907,
+            0.755
+          ],
+          "sub_type": "code",
+          "content": "```python\ndist, numSamples = [], 1000000\n\nfor i in range(numSamples):\n    dist.append(random.gauss(0, 100))\n\nweights = [1/numSamples]*len(dist)\nv = pylab.hist(dist, bins = 100,\n                    weights = [1/numSamples]*len(dist))\npylab.xlabel('x')\npylab.ylabel('Relative Frequency')\n\nprint('Fraction within ~200 of mean =',\n    sum(v[0][30:70]))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.884,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.066,
+            0.251,
+            0.125
+          ],
+          "level": 2,
+          "content": "Output"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.085,
+            0.205,
+            0.855,
+            0.751
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.203,
+                0.816,
+                0.835,
+                0.86
+              ],
+              "content": "Fraction within \\~200 of mean = 0.957147"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_3_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.937,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.883,
+            0.937,
+            0.897,
+            0.956
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.063,
+            0.435,
+            0.126
+          ],
+          "level": 2,
+          "content": "PDF's (recapping)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.194,
+            0.865,
+            0.292
+          ],
+          "content": "■Distributions defined by probability density functions (PDFs)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.315,
+            0.841,
+            0.409
+          ],
+          "content": "■Probability of a random variable lying between two values"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.438,
+            0.888,
+            0.535
+          ],
+          "content": "■Defines a curve where the values on the x-axis lie between minimum and maximum value of the variable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.559,
+            0.89,
+            0.656
+          ],
+          "content": "■ Area under curve between two points, is probability of example falling within that range"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.884,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.064,
+            0.63,
+            0.122
+          ],
+          "level": 2,
+          "content": "PDF for Normal Distribution"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.105,
+            0.233,
+            0.899,
+            0.836
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef gaussian(x, mu, sigma):\n    factor1 = (1.0/(sigma*((2*pylab.pi)**0.5)))\n    factor2 = pylab.e**-(((x-mu)**2)/(2*sigma**2))\n    return factor1*factor2\n\nxVals, yVals = [], []\nmu, sigma = 0, 1\nx = -4\n\nwhile x <= 4:\n    xVals.append(x)\n    yVals.append(gaussian(x, mu, sigma))\n    x += 0.05\n\npylab.plot(xVals, yVals)\npylab.title('Normal Distribution, mu = ' + str(mu)\\n+ ', sigma = ' + str(sigma))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.884,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.066,
+            0.251,
+            0.125
+          ],
+          "level": 2,
+          "content": "Output"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.053,
+            0.228,
+            0.675,
+            0.866
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_chart_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.695,
+            0.263,
+            0.958,
+            0.358
+          ],
+          "content": "Are values on y-axis probabilities?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.7,
+            0.386,
+            0.949,
+            0.632
+          ],
+          "content": "They are densities.\nI.e., derivative of\ncumulative\ndistribution\nfunction."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.703,
+            0.673,
+            0.907,
+            0.818
+          ],
+          "content": "Hence we use integration to interpret a PDF"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.937,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.883,
+            0.936,
+            0.896,
+            0.957
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.065,
+            0.344,
+            0.125
+          ],
+          "level": 2,
+          "content": "A Digression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.194,
+            0.763,
+            0.292
+          ],
+          "content": "■SciPy library contains my useful mathematical functions used by scientists and engineers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.317,
+            0.768,
+            0.364
+          ],
+          "content": "■scipy.integrate.quad has up to four arguments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.374,
+            0.639,
+            0.415
+          ],
+          "content": "\\- a function or method to be integrated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.427,
+            0.882,
+            0.471
+          ],
+          "content": "\\- a number representing the lower limit of the integration,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.482,
+            0.886,
+            0.568
+          ],
+          "content": "\\- a number representing the upper limit of the integration, and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.582,
+            0.823,
+            0.671
+          ],
+          "content": "\\- an optional tuple supplying values for all arguments, except the first, of the function to be integrated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.7,
+            0.621,
+            0.746
+          ],
+          "content": "■scipy.integrate.quad returns a tuple"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.758,
+            0.456,
+            0.798
+          ],
+          "content": "\\- Approximation to result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.811,
+            0.485,
+            0.851
+          ],
+          "content": "\\- Estimate of absolute error"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.885,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.063,
+            0.631,
+            0.126
+          ],
+          "level": 2,
+          "content": "Checking the Empirical Rule"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.09,
+            0.169,
+            0.923,
+            0.849
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport scipy.integrate\n\ndef gaussian(x, mu, sigma)\n\n... def checkEmpirical(numTrials):\n    for t in range(numTrials):\n        mu = random.randint(-10, 10)\n        sigma = random.randint(1, 10)\n        print('For mu =', mu, 'and sigma =', sigma)\n        for numStd in (1, 1.96, 3):\n            area = scipy.integrate.quad(gaussian,\n                                    mu-numStd*sigma,\n                                    mu+numStd*sigma,\n                                    (mu, sigma))[0]\n            print(' Fraction within', numStd,\n              'std =', round(area, 4))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.884,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.065,
+            0.247,
+            0.119
+          ],
+          "level": 2,
+          "content": "Results"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.218,
+            0.525,
+            0.811
+          ],
+          "sub_type": "code",
+          "content": "```txt\nFor mu = 9 and sigma = 6\n    Fraction within 1 std = 0.6827\n    Fraction within 1.96 std = 0.95\n    Fraction within 3 std = 0.9973\nFor mu = -6 and sigma = 5\n    Fraction within 1 std = 0.6827\n    Fraction within 1.96 std = 0.95\n    Fraction within 3 std = 0.9973\nFor mu = 2 and sigma = 6\n    Fraction within 1 std = 0.6827\n    Fraction within 1.96 std = 0.95\n    Fraction within 3 std = 0.9973\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.064,
+            0.806,
+            0.124
+          ],
+          "level": 2,
+          "content": "Everybody Likes Normal Distributions"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.102,
+            0.195,
+            0.285,
+            0.238
+          ],
+          "level": 2,
+          "content": "\\- Occur a lot!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.102,
+            0.269,
+            0.384,
+            0.364
+          ],
+          "content": "■ Nice mathematical properties"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.075,
+            0.424,
+            0.485,
+            0.802
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_3.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.508,
+            0.249,
+            0.91,
+            0.592
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_4.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.54,
+            0.623,
+            0.88,
+            0.917
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.455,
+            0.938,
+            0.545,
+            0.955
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.878,
+            0.939,
+            0.895,
+            0.956
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.064,
+            0.769,
+            0.121
+          ],
+          "level": 2,
+          "content": "But Not All Distribution Are Normal"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.194,
+            0.686,
+            0.241
+          ],
+          "content": "■Empirical works for normal distributions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.268,
+            0.815,
+            0.363
+          ],
+          "content": "\\- But are the outcomes of spins of a roulette wheel normally distributed?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.389,
+            0.601,
+            0.436
+          ],
+          "content": "■No, they are uniformly distributed"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.445,
+            0.62,
+            0.492
+          ],
+          "content": "\\- Each outcome is equally probable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.519,
+            0.728,
+            0.567
+          ],
+          "content": "■So, why does the empirical rule work here?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.109,
+            0.064,
+            0.752,
+            0.124
+          ],
+          "level": 2,
+          "content": "Why Did the Empirical Rule Work?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.197,
+            0.485,
+            0.388
+          ],
+          "content": "■Because we are reasoning not about a single spin, but about the mean of a set of spins"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.414,
+            0.411,
+            0.509
+          ],
+          "content": "■ And the central limit theorem applies"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.5,
+            0.188,
+            0.681,
+            0.423
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_chart_3.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.695,
+            0.188,
+            0.962,
+            0.424
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_chart_4.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.5,
+            0.429,
+            0.683,
+            0.668
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_chart_5.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.695,
+            0.432,
+            0.962,
+            0.668
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_chart_6.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.5,
+            0.674,
+            0.682,
+            0.908
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_chart_7.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.722,
+            0.696,
+            0.947,
+            0.892
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_chart_8.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.878,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.063,
+            0.711,
+            0.124
+          ],
+          "level": 2,
+          "content": "The Central Limit Theorem (CLT)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.195,
+            0.584,
+            0.242
+          ],
+          "content": "■Given a sufficiently large sample:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.249,
+            0.873,
+            0.395
+          ],
+          "content": "1) The means of the samples in a set of samples (the sample means) will be approximately normally distributed,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.406,
+            0.87,
+            0.502
+          ],
+          "content": "2) This normal distribution will have a mean close to the mean of the population, and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.514,
+            0.88,
+            0.654
+          ],
+          "content": "3) The variance of the sample means will be close to the variance of the population divided by the sample size."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.064,
+            0.748,
+            0.124
+          ],
+          "level": 2,
+          "content": "Checking CLT for a Continuous Die"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.073,
+            0.18,
+            0.894,
+            0.812
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef plotMeans(numDice, numRolls, numBins, legend, color, style):\n    means = []\n    for i in range(numRolls//numDice):\n        vals = 0\n        for j in range(numDice):\n            vals += 5*random.random()\n        means.append(vals/float(numDice))\n    pylab.hist(means, numBins, color = color, label = legend,\n        weights = pylab.array(len(means)*[1])/len(means),\n        hatch = style)\n    return getMeanAndStd(means)\n\nmean, std = plotMeans(1, 1000000, 19, '1 die', 'b', '*')\nprint('Mean of rolling 1 die=', str(mean) + ',', 'Std=', std)\nmean, std = plotMeans(50, 1000000, 19, 'Mean of 50 dice', 'r', '//')\nprint('Mean of rolling 50 dice=', str(mean) + ',', 'Std=', std)\npylab.title('Rolling Continuous Dice')\npylab.xlabel('Value')\npylab.ylabel('Probability')\npylab.legend()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.066,
+            0.25,
+            0.125
+          ],
+          "level": 2,
+          "content": "Output"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.194,
+            0.832,
+            0.275
+          ],
+          "content": "Mean of rolling 1 die = 2.49759575528, Std = 1.4439045633\nMean of rolling 50 dice = 2.49985051798, Std = 0.204887274645"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.199,
+            0.336,
+            0.713,
+            0.867
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_chart_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.063,
+            0.438,
+            0.126
+          ],
+          "level": 2,
+          "content": "Try It for Roulette"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.056,
+            0.164,
+            0.889,
+            0.704
+          ],
+          "sub_type": "code",
+          "content": "```python\nnumTrials = 1000000\nnumSpins = 200\ngame = FairRoulette()\n\nmeans = []\nfor i in range(numTrials):\n    means.append(findPocketReturn(game, 1, numSpins,\n                                      False)[0])\n\npylab.hist(means, bins = 19,\n        weights = [1/len(means)]*len(means))\npylab.xlabel('Mean Return')\npylab.ylabel('Probability')\npylab.title('Expected Return Betting a Pocket 200 Times')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.064,
+            0.705,
+            0.124
+          ],
+          "level": 2,
+          "content": "Betting a Pocket in Fair Roulette"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.12,
+            0.152,
+            0.825,
+            0.874
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.065,
+            0.225,
+            0.118
+          ],
+          "level": 2,
+          "content": "Moral"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.194,
+            0.885,
+            0.292
+          ],
+          "content": "\\- It doesn’t matter what the shape of the distribution of values happens to be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.316,
+            0.866,
+            0.415
+          ],
+          "content": "■ If we are trying to estimate the mean of a population using sufficiently large samples"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.438,
+            0.802,
+            0.534
+          ],
+          "content": "■The CLT allows us to use the empirical rule when computing confidence intervals"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.109,
+            0.065,
+            0.152,
+            0.116
+          ],
+          "content": "Pi"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.298,
+            0.179,
+            0.646,
+            0.608
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_chart_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.634,
+            0.894,
+            0.772
+          ],
+          "content": "$\\frac{\\text{circumference}}{\\text{diameter}} = \\Pi$ area $= \\Pi * radius^{2}$"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.937,
+            0.546,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.875,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.063,
+            0.38,
+            0.125
+          ],
+          "level": 2,
+          "content": "Rhind Papyrus"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.055,
+            0.159,
+            0.884,
+            0.821
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.399,
+                0.828,
+                0.598,
+                0.873
+              ],
+              "content": "$4^{*}(8 / 9)^{2} = 3.16$"
+            },
+            {
+              "bbox": [
+                0.25,
+                0.881,
+                0.742,
+                0.905
+              ],
+              "content": "Image of the Rhind Papyrus is in the public domain. Source: Wikimedia Commons."
+            }
+          ],
+          "image_source": "images/page_20_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.378,
+            0.929,
+            0.614,
+            0.966
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.858,
+            0.931,
+            0.892,
+            0.965
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.108,
+            0.066,
+            0.446,
+            0.119
+          ],
+          "content": "\\~1100 Years Later"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.289,
+            0.827,
+            0.614
+          ],
+          "content": "\"And he made a molten sea, ten cubits from the one brim to the other: it was round all about, and his height was five cubits: and a line of thirty cubits did compass it round about.\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.55,
+            0.618,
+            0.837,
+            0.679
+          ],
+          "content": "—1 Kings 7.23"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.109,
+            0.072,
+            0.678,
+            0.133
+          ],
+          "level": 2,
+          "content": "\\~300 Years Later (Archimedes)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.055,
+            0.236,
+            0.9,
+            0.779
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.351,
+                0.83,
+                0.595,
+                0.874
+              ],
+              "content": "223/71 < pi < 22/7"
+            }
+          ],
+          "image_source": "images/page_22_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.134,
+            0.062,
+            0.785,
+            0.125
+          ],
+          "level": 2,
+          "content": "\\~2000 Years Later (Buffon-Laplace)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.077,
+            0.226,
+            0.448,
+            0.644
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_23_image_1.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.57,
+            0.255,
+            0.734,
+            0.302
+          ],
+          "content": "A _ {s} = 2 ^ {*} 2 = 4",
+          "image_source": "images/page_23_equation_2.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.57,
+            0.305,
+            0.728,
+            0.352
+          ],
+          "content": "\\mathsf {A} _ {\\mathrm{c}} = \\pi r ^ {2} = \\pi",
+          "image_source": "images/page_23_equation_3.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.467,
+            0.432,
+            0.909,
+            0.524
+          ],
+          "content": "\\frac {\\text {needles in circle}}{\\text {needles in square}} = \\frac {\\text {area of circle}}{\\text {area of square}}",
+          "image_source": "images/page_23_equation_4.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.249,
+            0.608,
+            0.867,
+            0.698
+          ],
+          "content": "a r e a o f c i r c l e = \\frac {a r e a o f s q u a r e * n e e d l e s i n c i r c l e}{n e e d l e s i n s q u a r e}",
+          "image_source": "images/page_23_equation_5.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.435,
+            0.735,
+            0.884,
+            0.824
+          ],
+          "content": "a r e a o f c i r c l e = \\frac {4 * n e e d l e s i n c i r c l e}{n e e d l e s i n s q u a r e}",
+          "image_source": "images/page_23_equation_6.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.937,
+            0.546,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.066,
+            0.421,
+            0.118
+          ],
+          "level": 2,
+          "content": "\\~200 Years Later"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.019,
+            0.148,
+            0.98,
+            0.754
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.093,
+            0.772,
+            0.878,
+            0.819
+          ],
+          "content": "Crazy archer on closed course. Do not try ANYWHERE."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.208,
+            0.873,
+            0.705,
+            0.908
+          ],
+          "content": "https://www.youtube.com/watch?v=oYM6MIjZ8IY"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.878,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.108,
+            0.064,
+            0.445,
+            0.123
+          ],
+          "level": 2,
+          "content": "Very End of Video"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.103,
+            0.196,
+            0.898,
+            0.774
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_25_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.955
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.109,
+            0.063,
+            0.758,
+            0.125
+          ],
+          "level": 2,
+          "content": "Simulating Buffon-Laplace Method"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.259,
+            0.897,
+            0.631
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef throwNeedles(numNeedles):\n    inCircle = 0\n    for Needles in range(1, numNeedles + 1, 1):\n        x = random.random()\n        y = random.random()\n        if (x*x + y*y)**0.5 <= 1.0:\n            inCircle += 1\n    return 4*(inCircle/float(numNeedles))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.109,
+            0.063,
+            0.873,
+            0.126
+          ],
+          "level": 2,
+          "content": "Simulating Buffon-Laplace Method, cont."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.067,
+            0.248,
+            0.938,
+            0.754
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef getEst(numNeedles, numTrials):\n    estimates = []\n    for t in range(numTrials):\n        piGuess = throwNeedles(numNeedles)\n        estimates.append(piGuess)\n    sDev = stdDev(estimates)\n    curEst = sum(estimates)/len(estimates)\n    print('Est. = ' + str(curEst) +\\\n        ', Std. dev. = ' + str(round(sDev, 6))\\\n        + ', Needles = ' + str(numNeedles))\n    return (curEst, sDev)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.109,
+            0.063,
+            0.873,
+            0.126
+          ],
+          "level": 2,
+          "content": "Simulating Buffon-Laplace Method, cont."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.048,
+            0.298,
+            0.777,
+            0.761
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef estPi(precision, numTrials):\n    numNeedles = 1000\n    sDev = precision\n    while sDev >= precision/2:\n        curEst, sDev = getEst(numNeedles,\n                                    numTrials)\n        numNeedles *= 2\n    return curEst\n\nestPi(0.005, 100)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.066,
+            0.251,
+            0.125
+          ],
+          "level": 2,
+          "content": "Output"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.047,
+            0.209,
+            0.943,
+            0.659
+          ],
+          "sub_type": "code",
+          "content": "```txt\nEst. = 3.1484400000000012, Std. dev. = 0.047886, Needles = 1000\nEst. = 3.13917999999999987, Std. dev. = 0.035495, Needles = 2000\nEst. = 3.14107999999999997, Std. dev. = 0.02713, Needles = 4000\nEst. = 3.141435, Std. dev. = 0.016805, Needles = 8000\nEst. = 3.141355, Std. dev. = 0.0137, Needles = 16000\nEst. = 3.1413137500000006, Std. dev. = 0.008476, Needles = 32000\nEst. = 3.141171874999999, Std. dev. = 0.007028, Needles = 64000\nEst. = 3.1415896874999993, Std. dev. = 0.004035, Needles = 128000\nEst. = 3.1417414062499995, Std. dev. = 0.003536, Needles = 256000\nEst. = 3.14155671875, Std. dev. = 0.002101, Needles = 512000\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.876,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.064,
+            0.706,
+            0.125
+          ],
+          "level": 2,
+          "content": "Being Right is Not Good Enough"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.195,
+            0.687,
+            0.242
+          ],
+          "content": "■ Not sufficient to produce a good answer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.269,
+            0.872,
+            0.315
+          ],
+          "content": "■ Need to have reason to believe that it is close to right"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.341,
+            0.863,
+            0.436
+          ],
+          "content": "In this case, small standard deviation implies that we are close to the true value of  $\\pi$"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.374,
+            0.532,
+            0.576,
+            0.63
+          ],
+          "level": 2,
+          "content": "Right?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.066,
+            0.481,
+            0.119
+          ],
+          "level": 2,
+          "content": "Is it Correct to State"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.194,
+            0.781,
+            0.339
+          ],
+          "content": "■95% of the time we run this simulation, we will estimate that the value of pi is between 3.13743875875 and 3.14567467875?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.364,
+            0.808,
+            0.46
+          ],
+          "content": "■With a probability of 0.95 the actual value of $\\pi$ is between 3.13743875875 and 3.14567467875?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.486,
+            0.479,
+            0.532
+          ],
+          "content": "■ Both are factually correct"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.559,
+            0.869,
+            0.652
+          ],
+          "content": "■ But only one of these statement can be inferred from our simulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.681,
+            0.499,
+            0.727
+          ],
+          "content": "■ statiscally valid ≠ true"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.065,
+            0.41,
+            0.125
+          ],
+          "level": 2,
+          "content": "Introduce a Bug"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.075,
+            0.268,
+            0.907,
+            0.639
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef throwNeedles(numNeedles):\n    inCircle = 0\n    for Needles in range(1, numNeedles + 1, 1):\n        x = random.random()\n        y = random.random()\n        if (x*x + y*y)**0.5 <= 1.0:\n            inCircle += 1\n    return 2*(inCircle/float(numNeedles))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.064,
+            0.622,
+            0.125
+          ],
+          "level": 2,
+          "content": "Generally Useful Technique"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.195,
+            0.665,
+            0.241
+          ],
+          "content": "■ To estimate the area of some region, R"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.252,
+            0.886,
+            0.339
+          ],
+          "content": "\\- Pick an enclosing region, E, such that the area of E is easy to calculate and R lies completely within E"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.352,
+            0.709,
+            0.394
+          ],
+          "content": "\\- Pick a set of random points that lie within E"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.405,
+            0.8,
+            0.448
+          ],
+          "content": "\\- Let $F$ be the fraction of the points that fall within $R$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.461,
+            0.488,
+            0.505
+          ],
+          "content": "\\- Multiply the area of E by F"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.534,
+            0.48,
+            0.581
+          ],
+          "content": "■ Way to estimate integrals"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.956
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.109,
+            0.064,
+            0.216,
+            0.125
+          ],
+          "level": 2,
+          "content": "Sin(x)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.196,
+            0.216,
+            0.785,
+            0.835
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.956
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.896,
+            0.956
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.065,
+            0.395,
+            0.118
+          ],
+          "level": 2,
+          "content": "Random Points"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.197,
+            0.221,
+            0.783,
+            0.831
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_35_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.454,
+            0.938,
+            0.545,
+            0.955
+          ],
+          "content": "6.0002 LECTURE 7"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.877,
+            0.938,
+            0.895,
+            0.955
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.08,
+            0.09,
+            0.215,
+            0.138
+          ],
+          "content": "MIT OpenCourseWare\nhttps://ocw.mit.edu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.2,
+            0.521,
+            0.251
+          ],
+          "content": "6.0002 Introduction to Computational Thinking and Data Science\nFall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.079,
+            0.315,
+            0.625,
+            0.339
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: https://ocw.mit.edu/terms."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 7",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2017-03-15T15:36:02+05:30",
+      "modified_at": "2017-04-28T17:17:16-04:00",
+      "creator_application": "PowerPoint",
+      "producer_application": "Acrobat Distiller 9.0.0 (Windows)",
+      "page_count": 37,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 792,
+          "height_pt": 612
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

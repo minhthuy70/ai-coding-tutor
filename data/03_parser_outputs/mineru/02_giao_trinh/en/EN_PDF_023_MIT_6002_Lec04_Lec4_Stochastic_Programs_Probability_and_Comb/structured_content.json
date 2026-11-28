@@ -1,0 +1,2644 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.285,
+            0.813,
+            0.609
+          ],
+          "level": 2,
+          "content": "Lecture 4: Stochastic Thinking and Random Walks"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.98,
+            0.993
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.034,
+            0.427,
+            0.099
+          ],
+          "level": 2,
+          "content": "Relevant Reading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.175,
+            0.32,
+            0.223
+          ],
+          "content": "Pages 235-238"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.253,
+            0.269,
+            0.301
+          ],
+          "content": "Chapter 14"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.981,
+            0.992
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.723,
+            0.093
+          ],
+          "level": 2,
+          "content": "The World is Hard to Understand"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.535,
+            0.223
+          ],
+          "content": "Uncertainty is uncomfortable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.253,
+            0.601,
+            0.302
+          ],
+          "content": "But certainty is usually unjustified"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.981,
+            0.992
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.524,
+            0.092
+          ],
+          "level": 2,
+          "content": "Newtonian Mechanics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.176,
+            0.455,
+            0.223
+          ],
+          "content": "Every effect has a cause"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.253,
+            0.661,
+            0.301
+          ],
+          "content": "The world can be understood causally"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.981,
+            0.991
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.516,
+            0.099
+          ],
+          "level": 2,
+          "content": "Copenhagen Doctrine"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.838,
+            0.266
+          ],
+          "content": "Copenhagen Doctrine (Bohr and Heisenberg) of causal nondeterminism"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.292,
+            0.805,
+            0.388
+          ],
+          "content": "◦ At its most fundamental level, the behavior of the physical world cannot be predicted."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.414,
+            0.89,
+            0.461
+          ],
+          "content": "◦ Fine to make statements of the form “x is highly likely to"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.473,
+            0.793,
+            0.52
+          ],
+          "content": "◦ occur,” but not of the form “x is certain to occur.”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.551,
+            0.567,
+            0.597
+          ],
+          "content": "Einstein and Schrödinger objected"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.621,
+            0.716,
+            0.667
+          ],
+          "content": "◦ “God does not play dice.” -- Albert Einstein"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.499,
+            0.099
+          ],
+          "level": 2,
+          "content": "Does It Really Matter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.308,
+            0.392,
+            0.55,
+            0.443
+          ],
+          "content": "Did the flips yield"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.357,
+            0.447,
+            0.474,
+            0.493
+          ],
+          "content": "2 heads"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.358,
+            0.5,
+            0.45,
+            0.546
+          ],
+          "content": "2 tails"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.358,
+            0.552,
+            0.606,
+            0.601
+          ],
+          "content": "1 head and 1 tail?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.294,
+            0.092
+          ],
+          "level": 2,
+          "content": "The Moral"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.245,
+            0.644,
+            0.343
+          ],
+          "content": "The world may or may not be inherently unpredictable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.367,
+            0.671,
+            0.511
+          ],
+          "content": "But our lack of knowledge does not allow us to make accurate predictions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.537,
+            0.686,
+            0.681
+          ],
+          "content": "Therefore we might as well treat the world as inherently unpredictable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.708,
+            0.613,
+            0.753
+          ],
+          "content": "Predictive nondeterminism"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.982,
+            0.991
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.035,
+            0.489,
+            0.093
+          ],
+          "level": 2,
+          "content": "Stochastic Processes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.174,
+            0.896,
+            0.271
+          ],
+          "content": "An ongoing process where the next state might depend on both the previous states and some random element"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.083,
+            0.365,
+            0.844,
+            0.473
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef rollDie():\n    \"\"\" returns an int between 1 and 6\"\"\"\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.543,
+            0.785,
+            0.699
+          ],
+          "content": "def rollDie(): \"\"\" returns a randomly chosen int between 1 and 6\"\"\""
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.971,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.074,
+            0.313,
+            0.926,
+            0.765
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef rollDie():\n    \"\"\"returns a random int between 1 and 6\"\"\"\n    return random.choice([1,2,3,4,5,6])\n\ndef testRoll(n = 10):\n    result = ''\n    for i in range(n):\n        result = result + str(rollDie())\n    print(result)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.725,
+            0.101
+          ],
+          "level": 2,
+          "content": "Implementing a Random Process"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.075,
+            0.22,
+            0.322,
+            0.269
+          ],
+          "content": "import random"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.97,
+            0.975,
+            0.982,
+            0.992
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.648,
+            0.097
+          ],
+          "level": 2,
+          "content": "Probability of Various Results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.171,
+            0.512,
+            0.227
+          ],
+          "content": "Consider testRoll(5)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.257,
+            0.668,
+            0.31
+          ],
+          "content": "How probable is the output 11111?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.654,
+            0.101
+          ],
+          "level": 2,
+          "content": "Probability Is About Counting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.175,
+            0.648,
+            0.224
+          ],
+          "content": "Count the number of possible events"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.252,
+            0.9,
+            0.352
+          ],
+          "content": "Count the number of events that have the property of interest"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.382,
+            0.454,
+            0.432
+          ],
+          "content": "Divide one by the other"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.459,
+            0.852,
+            0.695
+          ],
+          "content": "Probability of 11111? ◦ 11111, 11112, 11113, /, 11121, 11122, /, 66666 ◦ 1/(6\\*\\*5) ◦ \\~0.0001286"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.981,
+            0.993
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.767,
+            0.099
+          ],
+          "level": 2,
+          "content": "Three Basic Facts About Probability"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.174,
+            0.799,
+            0.279
+          ],
+          "content": "Probabilities are always in the range 0 to 1. 0 if impossible, and 1 if guaranteed."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.304,
+            0.796,
+            0.409
+          ],
+          "content": "If the probability of an event occurring is p, the probability of it not occurring must be"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.512,
+            0.872,
+            0.721
+          ],
+          "content": "When events are [independent](http://en.wikipedia.org/wiki/Independence_%28probability_theory%29) of each other, the probability of all of the events occurring is equal to a product of the probabilities of each of the events occurring."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.376,
+            0.099
+          ],
+          "level": 2,
+          "content": "Independence"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.176,
+            0.857,
+            0.277
+          ],
+          "content": "Two events are independent if the outcome of one event has no influence on the outcome of the other"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.304,
+            0.788,
+            0.355
+          ],
+          "content": "Independence should not be taken for granted"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.907,
+            0.095
+          ],
+          "level": 2,
+          "content": "Will One of the Patriots and Broncos Lose?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.168,
+            0.868,
+            0.269
+          ],
+          "content": "Patriots have winning percentage of 7/8, Broncos of 6/8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.297,
+            0.892,
+            0.398
+          ],
+          "content": "Probability of both winning next Sunday is 7/8 \\* 6/8 = 42/64"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.427,
+            0.876,
+            0.479
+          ],
+          "content": "Probability of at least one losing is $1 - 42 / 64 = 22 / 64$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.506,
+            0.61,
+            0.555
+          ],
+          "content": "What about Sunday, December 18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.567,
+            0.559,
+            0.611
+          ],
+          "content": "◦ Outcomes are not independent"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.624,
+            0.903,
+            0.717
+          ],
+          "content": "◦ Probability of one of them losing is much closer to 1 than to 22/64!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.6,
+            0.101
+          ],
+          "level": 2,
+          "content": "A Simulation of Die Rolling"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.094,
+            0.168,
+            0.921,
+            0.879
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef runSim(goal, numTrials, txt):\n    total = 0\n    for i in range(numTrials):\n        result = ''\n        for j in range(len(goal)):\n            result += str(rollDie())\n        if result == goal:\n            total += 1\n    print('Actual probability of', txt, '=', round(1/(6**len(goal)), 8))\n    estProbability = round(total/numTrials, 8)\n    print('Estimated Probability of', txt, '=', round(estProbability, 8))\n\nrunSim('11111', 1000, '11111')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.497,
+            0.099
+          ],
+          "level": 2,
+          "content": "Output of Simulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.557,
+            0.224
+          ],
+          "content": "Actual probability = 0.0001286"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.253,
+            0.51,
+            0.301
+          ],
+          "content": "Estimated Probability = 0.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.33,
+            0.557,
+            0.379
+          ],
+          "content": "Actual probability = 0.0001286"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.408,
+            0.509,
+            0.457
+          ],
+          "content": "Estimated Probability = 0.0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.564,
+            0.863,
+            0.613
+          ],
+          "content": "How did I know that this is what would get printed?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.642,
+            0.802,
+            0.693
+          ],
+          "content": "Why did simulation give me the wrong answer?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.776,
+            0.592,
+            0.825
+          ],
+          "content": "<u>Let’s try 1,000,000 trials</u>"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.233,
+            0.093
+          ],
+          "level": 2,
+          "content": "Morals"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.882,
+            0.383
+          ],
+          "content": "Moral 1: It takes a lot of trials to get a good estimate of the frequency of occurrence of a rare event. We’ll talk lots more in later lectures about how to know when we have enough trials."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.408,
+            0.759,
+            0.513
+          ],
+          "content": "Moral 2: One should not confuse the sample probability with the actual probability"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.538,
+            0.89,
+            0.743
+          ],
+          "content": "Moral 3: There was really no need to do this by simulation, since there is a perfectly good closed form answer. We will see many examples where this is not true."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.773,
+            0.582,
+            0.821
+          ],
+          "content": "But simulations are often useful."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.512,
+            0.099
+          ],
+          "level": 2,
+          "content": "The Birthday Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.174,
+            0.823,
+            0.279
+          ],
+          "content": "What’s the probability of at least two people in a group having the same birthday"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.303,
+            0.646,
+            0.355
+          ],
+          "content": "If there are 367 people in the group?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.381,
+            0.554,
+            0.431
+          ],
+          "content": "What about smaller numbers?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.459,
+            0.817,
+            0.599
+          ],
+          "content": "If we assume that each birthdate is equally likely $1 - \\frac{366!}{366^{N}*(366 - N)!}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.623,
+            0.749,
+            0.674
+          ],
+          "content": "Without this assumption, VERY complicated"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.352,
+            0.899,
+            0.63,
+            0.945
+          ],
+          "content": "shoutkey.com/niece"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.967,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.035,
+            0.739,
+            0.102
+          ],
+          "level": 2,
+          "content": "Approximating Using a Simulation"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.057,
+            0.201,
+            0.942,
+            0.547
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef sameDate(numPeople, numSame):\n    possibleDates = range(366)\n    birthdays = [0]*366\n    for p in range(numPeople):\n        birthDate = random.choice(possibleDates)\n        birthdays[birthDate] += 1\n    return max(birthdays) >= numSame\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.034,
+            0.739,
+            0.103
+          ],
+          "level": 2,
+          "content": "Approximating Using a Simulation"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.057,
+            0.137,
+            0.936,
+            0.845
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef birthdayProb(numPeople, numSame, numTrials):\n    numHits = 0\n    for t in range(numTrials):\n        if sameDate(numPeople, numSame):\n            numHits += 1\n    return numHits/numTrials\n\nfor numPeople in [10, 20, 40, 100]:\n    print('For', numPeople,\n        'est. prob. of a shared birthday is',\n        birthdayProb(numPeople, 2, 10000))\n    numerator = math.factorial(366)\n    denom = (366**numPeople)*math.factorial(366-numPeople)\n    print('Actual prob. for N = 100 =',\n        1 - numerator/denom)\n\nSuppose we want the probability of 3 people sharing\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.834,
+            0.101
+          ],
+          "level": 2,
+          "content": "Why 3 Is Much Harder Mathematically"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.844,
+            0.274
+          ],
+          "content": "For 2 the complementary problem is “all birthdays distinct”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.303,
+            0.785,
+            0.407
+          ],
+          "content": "For 3 people, the complementary problem is a complicated disjunct"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.415,
+            0.449,
+            0.461
+          ],
+          "content": "◦ All birthdays distinct or"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.475,
+            0.513,
+            0.521
+          ],
+          "content": "◦ One pair and rest distinct or"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.533,
+            0.524,
+            0.581
+          ],
+          "content": "◦ Two pairs and rest distinct or"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.601,
+            0.156,
+            0.635
+          ],
+          "content": "◦ /"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.671,
+            0.704,
+            0.722
+          ],
+          "content": "But changing the simulation is dead easy"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.974,
+            0.981,
+            0.993
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.033,
+            0.762,
+            0.1
+          ],
+          "level": 2,
+          "content": "But All Dates Are Not Equally Likely"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.06,
+            0.126,
+            0.499,
+            0.899
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.595,
+                0.458,
+                0.883,
+                0.506
+              ],
+              "content": "Are you exceptional?"
+            },
+            {
+              "bbox": [
+                0.016,
+                0.911,
+                0.613,
+                0.957
+              ],
+              "content": "Chart © Matt Stiles / The Daily Viz. All rights reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+            }
+          ],
+          "image_source": "images/page_21_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.621,
+            0.095
+          ],
+          "level": 2,
+          "content": "Another Win for Simulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.566,
+            0.225
+          ],
+          "content": "Adjusting analytic model a pain"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.253,
+            0.583,
+            0.303
+          ],
+          "content": "Adjusting simulation model easy"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.058,
+            0.387,
+            0.947,
+            0.831
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef_sameDate(numPeople, numSame):\n    possibleDates = 4*list(range(0, 57)) + [58]\\\n        + 4*list(range(59, 366))\\\n        + 4*list(range(180, 270))\n    birthdays = [0]*366\n    for p in range(numPeople):\n        birthDate = random.choice(possibleDates)\n        birthdays[birthDate] += 1\n    return max(birthdays) >= numSame\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.988
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.455,
+            0.093
+          ],
+          "level": 2,
+          "content": "Simulation Models"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.175,
+            0.88,
+            0.329
+          ],
+          "content": "A description of computations that provide useful information about the possible behaviors of the system being modeled"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.358,
+            0.49,
+            0.406
+          ],
+          "content": "Descriptive, not prescriptive"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.435,
+            0.553,
+            0.485
+          ],
+          "content": "Only an approximation to reality"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.512,
+            0.932,
+            0.563
+          ],
+          "content": "“All models are wrong, but some are useful.” – George Box"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.974,
+            0.982,
+            0.993
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.609,
+            0.093
+          ],
+          "level": 2,
+          "content": "Simulations Are Used a Lot"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.175,
+            0.89,
+            0.225
+          ],
+          "content": "To model systems that are mathematically intractable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.253,
+            0.653,
+            0.3
+          ],
+          "content": "To extract useful intermediate results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.331,
+            0.798,
+            0.431
+          ],
+          "content": "Lend themselves to development by successive refinement and “what if” questions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.461,
+            0.596,
+            0.511
+          ],
+          "content": "Start by simulating random walks"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.503,
+            0.099
+          ],
+          "level": 2,
+          "content": "Why Random Walks?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.613,
+            0.266
+          ],
+          "content": "Random walks are important in many domains"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.277,
+            0.684,
+            0.325
+          ],
+          "content": "◦ Understanding the stock market (maybe)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.337,
+            0.529,
+            0.383
+          ],
+          "content": "◦ Modeling diffusion processes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.398,
+            0.181,
+            0.439
+          ],
+          "content": "◦ Etc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.475,
+            0.582,
+            0.577
+          ],
+          "content": "Good illustration of how to use simulations to understand things"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.606,
+            0.579,
+            0.706
+          ],
+          "content": "Excuse to cover some important programming topics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.716,
+            0.41,
+            0.759
+          ],
+          "content": "◦ Practice with classes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.775,
+            0.408,
+            0.821
+          ],
+          "content": "◦ More about plotting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.737,
+            0.252,
+            0.932,
+            0.277
+          ],
+          "content": "OVER 1.5 MILLION COPIES SOLD"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.727,
+            0.296,
+            0.942,
+            0.466
+          ],
+          "content": "ARANDOM WALK DOWN Wall Street"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.725,
+            0.472,
+            0.867,
+            0.617
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_25_image_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.875,
+            0.49,
+            0.941,
+            0.616
+          ],
+          "content": "The Time-Tested Strategy for Successful Investing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.722,
+            0.631,
+            0.948,
+            0.667
+          ],
+          "content": "BURTON G.MALKIEL"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.727,
+            0.677,
+            0.94,
+            0.713
+          ],
+          "content": "COMPLETELY REVISED ORd UPDATED"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.033,
+            0.782,
+            0.095
+          ],
+          "level": 2,
+          "content": "Brownian Motion Is a Random Walk"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.061,
+            0.18,
+            0.412,
+            0.591
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_26_image_1.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.427,
+            0.21,
+            0.574,
+            0.506
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.471,
+                0.536,
+                0.568,
+                0.664
+              ],
+              "content": "Robert Brown 1827"
+            }
+          ],
+          "image_source": "images/page_26_image_2.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.585,
+            0.331,
+            0.749,
+            0.656
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.601,
+                0.666,
+                0.733,
+                0.791
+              ],
+              "content": "Louis Bachelier 1900"
+            }
+          ],
+          "image_source": "images/page_26_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.765,
+            0.414,
+            0.95,
+            0.721
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.796,
+                0.744,
+                0.912,
+                0.869
+              ],
+              "content": "Albert Einstein 1905"
+            },
+            {
+              "bbox": [
+                0.427,
+                0.878,
+                0.971,
+                0.943
+              ],
+              "content": "Images of Robert Brown and Albert Einstein are in the public domain. Image of Louis Bachelier © unknown. All rights reserved. This content is excluded from our Creative Commons license. For more information, see [https://ocw.mit.edu/help/faq-fair-use/](https://ocw.mit.edu/help/faq-fair-use/)."
+            }
+          ],
+          "image_source": "images/page_26_image_6.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.968,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.41,
+            0.092
+          ],
+          "level": 2,
+          "content": "Drunkard’s Walk"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.135,
+            0.17,
+            0.803,
+            0.876
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_27_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.53,
+            0.097
+          ],
+          "level": 2,
+          "content": "One Possible First Step"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.415,
+            0.537,
+            0.524,
+            0.689
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.607,
+            0.097
+          ],
+          "level": 2,
+          "content": "Another Possible First Step"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.135,
+            0.175,
+            0.803,
+            0.881
+          ],
+          "content": "<table><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td rowspan=\"2\" colspan=\"2\"><img src=\"images/page_29_table_image_1_1.jpg\"/></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_29_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.034,
+            0.675,
+            0.098
+          ],
+          "level": 2,
+          "content": "Yet Another Possible First Step"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.135,
+            0.166,
+            0.803,
+            0.873
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_30_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.974,
+            0.981,
+            0.993
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.034,
+            0.525,
+            0.098
+          ],
+          "level": 2,
+          "content": "Last Possible First Step"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.135,
+            0.164,
+            0.803,
+            0.869
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_31_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.452,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.753,
+            0.097
+          ],
+          "level": 2,
+          "content": "Possible Distances After Two Steps"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.085,
+            0.167,
+            0.802,
+            0.875
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.964,
+            0.975,
+            0.981,
+            0.993
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.033,
+            0.857,
+            0.098
+          ],
+          "level": 2,
+          "content": "Expected Distance After 100,000 Steps?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.662,
+            0.223
+          ],
+          "content": "Need a different approach to problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.253,
+            0.386,
+            0.299
+          ],
+          "content": "Will use simulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.332,
+            0.531,
+            0.377
+          ],
+          "content": "But not until the next lecture"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.453,
+            0.969,
+            0.547,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.963,
+            0.975,
+            0.982,
+            0.993
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.088,
+            0.102,
+            0.237,
+            0.157
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.227,
+            0.573,
+            0.284
+          ],
+          "content": "6.0002 Introduction to Computational Thinking and Data Science Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.357,
+            0.688,
+            0.384
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 4",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2017-03-06T14:18:37+05:30",
+      "modified_at": "2017-04-28T17:18:05-04:00",
+      "creator_application": "Microsoft® PowerPoint® 2010",
+      "producer_application": "Microsoft® PowerPoint® 2010",
+      "page_count": 35,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

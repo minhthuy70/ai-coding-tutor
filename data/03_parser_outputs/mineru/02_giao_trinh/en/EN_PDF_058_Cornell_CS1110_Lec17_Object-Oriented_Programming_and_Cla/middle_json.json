@@ -1,0 +1,2708 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-17",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.875,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/21/26"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 1,
+          "bbox": [
+            0.103,
+            0.332,
+            0.115,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 2,
+          "bbox": [
+            0.22,
+            0.124,
+            0.356,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Key-Value Pairs"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.115,
+            0.154,
+            0.406,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• The last built-in type: dictionary (or dict)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.133,
+            0.172,
+            0.399,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ One of the most important in all of Python"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.134,
+            0.188,
+            0.376,
+            0.205
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Like a list, but built of key-value pairs"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.116,
+            0.205,
+            0.304,
+            0.222
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Keys:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Unique identifiers"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.133,
+            0.223,
+            0.326,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Think social security number"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.134,
+            0.239,
+            0.333,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ At Cornell we have netids: jrs1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.102,
+            0.613,
+            0.116,
+            0.628
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.256,
+            0.37,
+            0.273
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Values:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Non-unique Python values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.134,
+            0.274,
+            0.321,
+            0.29
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ John Smith (class ’13) is jrs1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.134,
+            0.29,
+            0.321,
+            0.307
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ John Smith (class ’16) is jrs2"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.353,
+            0.275,
+            0.43,
+            0.289
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Idea:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " Lookup"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.351,
+            0.289,
+            0.43,
+            0.302
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "values by keys"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 15,
+          "bbox": [
+            0.168,
+            0.405,
+            0.408,
+            0.425
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Using Dictionaries (Type dict)"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.116,
+            0.435,
+            0.262,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Access elts. like a list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.134,
+            0.45,
+            0.262,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ d['jrs1'] evals to 'John’"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.135,
+            0.465,
+            0.235,
+            0.478
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ d['jrs2'] does too"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.291,
+            0.434,
+            0.447,
+            0.464
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "d = {'js1':'John','js2':'John', 'wmw2':'Walker'}"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 20,
+          "bbox": [
+            0.135,
+            0.478,
+            0.282,
+            0.492
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ d['wmw2'] evals to 'Walker'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 21,
+          "bbox": [
+            0.343,
+            0.473,
+            0.365,
+            0.486
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id8",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 22,
+          "bbox": [
+            0.134,
+            0.492,
+            0.251,
+            0.506
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ d['abc1'] is an "
+            },
+            {
+              "type": "text",
+              "content": "error",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.404,
+            0.487,
+            0.428,
+            0.498
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "dict",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.116,
+            0.507,
+            0.269,
+            0.523
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Can test if a key exists"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.134,
+            0.522,
+            0.266,
+            0.537
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ 'jrs1’ in d evals to True"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.134,
+            0.536,
+            0.272,
+            0.551
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ 'abc1' in d evals to False"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.339,
+            0.516,
+            0.365,
+            0.53
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'jrs2'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.116,
+            0.551,
+            0.276,
+            0.568
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• But cannot slice ranges!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 29,
+          "bbox": [
+            0.332,
+            0.531,
+            0.413,
+            0.544
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "'wmw2' 'Walker'"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 30,
+          "bbox": [
+            0.328,
+            0.552,
+            0.431,
+            0.565
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Key-Value order in"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.322,
+            0.565,
+            0.439,
+            0.579
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "folder is not important"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 32,
+          "bbox": [
+            0.13,
+            0.686,
+            0.445,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dictionaries: Iterable, but not Sliceable"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 33,
+          "bbox": [
+            0.116,
+            0.716,
+            0.272,
+            0.733
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Can loop over a dict"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 34,
+          "bbox": [
+            0.304,
+            0.715,
+            0.361,
+            0.728
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for k in d:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.134,
+            0.734,
+            0.292,
+            0.75
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Only gives you the keys"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.316,
+            0.728,
+            0.419,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Loops over "
+            },
+            {
+              "type": "text",
+              "content": "keys",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.135,
+            0.75,
+            0.29,
+            0.766
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Use key to access value"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.316,
+            0.742,
+            0.415,
+            0.756
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(k) # key"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.316,
+            0.756,
+            0.423,
+            0.77
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(d[k]) # value"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.116,
+            0.785,
+            0.289,
+            0.801
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Can iterate over values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.134,
+            0.802,
+            0.267,
+            0.818
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Method:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " d.values()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.304,
+            0.786,
+            0.445,
+            0.8
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# To loop over values only"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.304,
+            0.8,
+            0.407,
+            0.813
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for v in d.values():"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.135,
+            0.82,
+            0.281,
+            0.836
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ But no way to get key"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.309,
+            0.813,
+            0.424,
+            0.828
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "print(v) # value"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.134,
+            0.836,
+            0.281,
+            0.852
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Values are not unique"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 47,
+          "bbox": [
+            0.526,
+            0.331,
+            0.539,
+            0.346
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 48,
+          "bbox": [
+            0.658,
+            0.124,
+            0.765,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Basic Syntax"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.539,
+            0.154,
+            0.805,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Create with format: {k1:v1, k2:v2, …}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.557,
+            0.172,
+            0.764,
+            0.187
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Both keys and values must exist"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.556,
+            0.187,
+            0.849,
+            0.204
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Ex:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " d={‘jrs1':'John',’jrs2':'John','wmw2':'Walker'}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 52,
+          "bbox": [
+            0.539,
+            0.205,
+            0.746,
+            0.222
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Keys",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " must be "
+            },
+            {
+              "type": "text",
+              "content": "non-mutable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.556,
+            0.223,
+            0.764,
+            0.24
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ ints, floats, bools, strings, tuples"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.557,
+            0.239,
+            0.734,
+            0.255
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Not",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " lists or custom objects"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.556,
+            0.255,
+            0.806,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Changing a key’s contents hurts lookup"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.539,
+            0.271,
+            0.723,
+            0.29
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "Values",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " can be "
+            },
+            {
+              "type": "text",
+              "content": "anything",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 57,
+          "bbox": [
+            0.592,
+            0.405,
+            0.829,
+            0.423
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dictionaries Can be Modified"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.54,
+            0.435,
+            0.684,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Can reassign values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.557,
+            0.452,
+            0.66,
+            0.466
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ d['jrs1'] = 'Jane’"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.557,
+            0.466,
+            0.683,
+            0.482
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Very similar to lists"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.714,
+            0.444,
+            0.881,
+            0.474
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "d = {'jrs1':'John','jrs2':'John', 'wmw2':'Walker'}"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.54,
+            0.484,
+            0.676,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Can add new keys"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.766,
+            0.484,
+            0.788,
+            0.496
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "id8",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 64,
+          "bbox": [
+            0.556,
+            0.499,
+            0.668,
+            0.514
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ d[‘aaa1'] = 'Allen’"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 65,
+          "bbox": [
+            0.556,
+            0.514,
+            0.692,
+            0.53
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Do not think of order"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 66,
+          "bbox": [
+            0.541,
+            0.531,
+            0.661,
+            0.548
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Can delete keys"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 67,
+          "bbox": [
+            0.557,
+            0.547,
+            0.649,
+            0.563
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ del d['wmw2’]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 68,
+          "bbox": [
+            0.557,
+            0.562,
+            0.702,
+            0.578
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Deletes both key, value"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 69,
+          "bbox": [
+            0.57,
+            0.686,
+            0.853,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dictionary Loop with Accumulator"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 70,
+          "bbox": [
+            0.54,
+            0.715,
+            0.659,
+            0.729
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def max_grade(grades):"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 71,
+          "bbox": [
+            0.551,
+            0.728,
+            0.772,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns max grade in the grade dictionary"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 72,
+          "bbox": [
+            0.551,
+            0.747,
+            0.829,
+            0.762
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: grades has netids as keys, ints as values\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 73,
+          "bbox": [
+            0.552,
+            0.763,
+            0.627,
+            0.776
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "maximum = 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 74,
+          "bbox": [
+            0.678,
+            0.763,
+            0.757,
+            0.776
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Accumulator"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 75,
+          "bbox": [
+            0.552,
+            0.777,
+            0.642,
+            0.79
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Loop over keys"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 76,
+          "bbox": [
+            0.553,
+            0.79,
+            0.632,
+            0.804
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for k in grades:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 77,
+          "bbox": [
+            0.564,
+            0.804,
+            0.687,
+            0.819
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if grades[k] > maximum:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 78,
+          "bbox": [
+            0.574,
+            0.819,
+            0.687,
+            0.833
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "maximum = grades[k]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 79,
+          "bbox": [
+            0.552,
+            0.845,
+            0.641,
+            0.86
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return maximum"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 80,
+          "bbox": [
+            0.526,
+            0.614,
+            0.538,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 81,
+          "bbox": [
+            0.102,
+            0.894,
+            0.116,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 82,
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 83,
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.875,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10/21/26"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.142,
+            0.123,
+            0.434,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dictionaries and Mutable Functions"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.115,
+            0.153,
+            0.388,
+            0.173
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Restrictions are different than list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.133,
+            0.176,
+            0.412,
+            0.195
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Okay to loop over dictionary to change"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.134,
+            0.197,
+            0.404,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ You are looping over keys, not values"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.134,
+            0.217,
+            0.338,
+            0.235
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Like looping over positions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.116,
+            0.237,
+            0.429,
+            0.257
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• But you "
+            },
+            {
+              "type": "text",
+              "content": "may not add or remove",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " keys!"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.133,
+            0.26,
+            0.359,
+            0.278
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Any attempt to do this will fail"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.134,
+            0.279,
+            0.419,
+            0.297
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Have to create a key list if you want this"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 9,
+          "bbox": [
+            0.205,
+            0.405,
+            0.371,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nesting Dictionaries"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.116,
+            0.435,
+            0.397,
+            0.473
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Remember, values can be anything § Only restrictions are on the keys"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.115,
+            0.474,
+            0.374,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Values can be lists ("
+            },
+            {
+              "type": "text",
+              "content": "Visualizer",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ") § d = {'a':[1,2], 'b':[3,4]}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.115,
+            0.515,
+            0.421,
+            0.553
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Values can be other dicts ("
+            },
+            {
+              "type": "text",
+              "content": "Visualizer",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ") § d = {'a':{'c':1,'d':2}, 'b':{'e':3,'f':4}}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.115,
+            0.554,
+            0.392,
+            0.573
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Access rules similar to nested lists"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.133,
+            0.574,
+            0.313,
+            0.593
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Example:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " d['a']['d'] = 10"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.134,
+            0.77,
+            0.415,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Often the answer to a recursion, not the input"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.116,
+            0.789,
+            0.358,
+            0.806
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• However, the "
+            },
+            {
+              "type": "text",
+              "content": "key list",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " is sliceable"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.134,
+            0.843,
+            0.393,
+            0.86
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Helper is recursive, not the main function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.134,
+            0.825,
+            0.332,
+            0.842
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ This requires a helper function"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 19,
+          "bbox": [
+            0.134,
+            0.808,
+            0.359,
+            0.824
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Can recurse on key list, not the dict"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 20,
+          "bbox": [
+            0.642,
+            0.124,
+            0.781,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "But This is Okay"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "page_number",
+          "index": 21,
+          "bbox": [
+            0.525,
+            0.331,
+            0.539,
+            0.345
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 22,
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 23,
+          "bbox": [
+            0.539,
+            0.152,
+            0.689,
+            0.167
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def add_bonus(grades,bonus):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 24,
+          "bbox": [
+            0.134,
+            0.752,
+            0.383,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ So rare to be used in recursion by itself"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 25,
+          "bbox": [
+            0.55,
+            0.166,
+            0.767,
+            0.182
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Gives bonus points to everyone in grades"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 26,
+          "bbox": [
+            0.551,
+            0.185,
+            0.819,
+            0.201
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precondition: grades has netids as keys, ints as values."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 27,
+          "bbox": [
+            0.552,
+            0.2,
+            0.648,
+            0.215
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "bonus is an int.\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 28,
+          "bbox": [
+            0.551,
+            0.215,
+            0.744,
+            0.23
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# No accumulator. This is a procedure"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 29,
+          "bbox": [
+            0.552,
+            0.242,
+            0.662,
+            0.256
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "for student in grades:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 30,
+          "bbox": [
+            0.178,
+            0.686,
+            0.398,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dictionaries and Recursion"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 31,
+          "bbox": [
+            0.561,
+            0.256,
+            0.817,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Modifies the dictionary, but does not change keys"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 32,
+          "bbox": [
+            0.133,
+            0.734,
+            0.4,
+            0.751
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Makes it difficult to do divide and conquer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 33,
+          "bbox": [
+            0.628,
+            0.405,
+            0.795,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Example: JSON File"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 34,
+          "bbox": [
+            0.648,
+            0.438,
+            0.698,
+            0.46
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nested Dictionary"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 35,
+          "bbox": [
+            0.562,
+            0.27,
+            0.768,
+            0.285
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "grades[student] = grades[student]+bonus"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 36,
+          "bbox": [
+            0.551,
+            0.44,
+            0.632,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"wind\" : {\"speed\" : 13.0, \"crosswind\" : 5.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 37,
+          "bbox": [
+            0.715,
+            0.435,
+            0.879,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "JSON:",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " File w/ Python dict"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 38,
+          "bbox": [
+            0.729,
+            0.449,
+            0.877,
+            0.462
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Actually, minor differences"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 39,
+          "bbox": [
+            0.116,
+            0.715,
+            0.333,
+            0.733
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Dictionaries are "
+            },
+            {
+              "type": "text",
+              "content": "not sliceable",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 40,
+          "bbox": [
+            0.716,
+            0.463,
+            0.805,
+            0.477
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• weather.json:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 41,
+          "bbox": [
+            0.55,
+            0.47,
+            0.663,
+            0.494
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "}, Nested \"sky\" : List"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 42,
+          "bbox": [
+            0.732,
+            0.478,
+            0.861,
+            0.501
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Weather measurements at Ithaca Airport (2017)"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 43,
+          "bbox": [
+            0.566,
+            0.493,
+            0.644,
+            0.522
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"cover\" : \"clouds\", \"type\" : \"broken\", \"height\" : 1200.0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 44,
+          "bbox": [
+            0.732,
+            0.5,
+            0.867,
+            0.514
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Keys",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Times (Each hour)"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 45,
+          "bbox": [
+            0.732,
+            0.513,
+            0.871,
+            0.527
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "Values",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ": Weather readings"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 46,
+          "bbox": [
+            0.716,
+            0.527,
+            0.856,
+            0.541
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• This is a nested JSON"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 47,
+          "bbox": [
+            0.566,
+            0.537,
+            0.644,
+            0.558
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"type\" : \"overcast\", \"height\" : 1800.0"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 48,
+          "bbox": [
+            0.652,
+            0.554,
+            0.702,
+            0.577
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nested Dictionary"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 49,
+          "bbox": [
+            0.732,
+            0.54,
+            0.878,
+            0.554
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Values are also dictionaries"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 50,
+          "bbox": [
+            0.732,
+            0.553,
+            0.883,
+            0.568
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ Containing more dictionaries"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 51,
+          "bbox": [
+            0.732,
+            0.567,
+            0.865,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ And also containing lists"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 52,
+          "bbox": [
+            0.619,
+            0.686,
+            0.804,
+            0.704
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "The Recursive Version"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 53,
+          "bbox": [
+            0.539,
+            0.715,
+            0.711,
+            0.728
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "def max_grade_helper(netids,grades):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 54,
+          "bbox": [
+            0.55,
+            0.728,
+            0.738,
+            0.741
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "\"\"\"Returns max grade among given netids"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 55,
+          "bbox": [
+            0.55,
+            0.745,
+            0.857,
+            0.759
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Precond: netids a list of keys in grades, grades a dict w/ int values\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 56,
+          "bbox": [
+            0.551,
+            0.757,
+            0.65,
+            0.77
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Process small data"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 57,
+          "bbox": [
+            0.551,
+            0.77,
+            0.641,
+            0.782
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "if len(netids) <= 1:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 58,
+          "bbox": [
+            0.559,
+            0.782,
+            0.784,
+            0.796
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return grades[netids[0]] if len(netids) == 1 else 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 59,
+          "bbox": [
+            0.551,
+            0.8,
+            0.697,
+            0.814
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Break it up into left and right"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 60,
+          "bbox": [
+            0.551,
+            0.814,
+            0.664,
+            0.827
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "left = grades[netids[0]]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 61,
+          "bbox": [
+            0.55,
+            0.826,
+            0.751,
+            0.84
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "right = max_grade_helper(netids[1:],grades)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 62,
+          "bbox": [
+            0.551,
+            0.845,
+            0.662,
+            0.858
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# Combine the answers"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 63,
+          "bbox": [
+            0.551,
+            0.858,
+            0.655,
+            0.872
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "return max(left,right)"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 64,
+          "bbox": [
+            0.103,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 65,
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 66,
+          "bbox": [
+            0.945,
+            0.962,
+            0.959,
+            0.977
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

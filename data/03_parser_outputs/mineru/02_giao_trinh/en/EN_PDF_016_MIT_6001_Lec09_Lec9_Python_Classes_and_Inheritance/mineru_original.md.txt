@@ -1,0 +1,483 @@
+# PYTHON CLASSES and INHERITANCE
+
+(download slides and .py files Ă
+
+Ěfollow along!)
+
+6.0001 LECTU RE 9
+
+## LAST TIME
+
+abstract data types through classes
+
+Coordinate example
+
+Fraction example
+
+## TODAY
+
+more on classes
+
+• getters and setters
+
+• information hiding
+
+• class variables
+
+inheritance
+
+## IMPLEMENTING USING THE CLASS vs THE CLASS
+
+write code from two different perspectives
+
+**implementing** a new object type with a class
+
+• **define** the class
+
+• define **data attributes** (WHAT IS the object)
+
+• define **methods** (HOW TO use the object)
+
+**using** the new object type in code
+
+• create **instances** of the object type
+
+• do **operations** with them
+
+## CLASS DEFINITION INSTANCE OF AN OBJECT TYPE vs OF A CLASS
+
+class name is the **type** class Coordinate(object)
+
+## class is defined generically
+
+• use self to refer to some instance while defining the class
+
+```txt
+(self.x - self.y)**2
+```
+
+• self is a parameter to methods in class definition
+
+## class defines data and methods common across all instances
+
+instance is **one specific** object coord = Coordinate(1,2)
+
+## data attribute values vary between instances
+
+```txt
+c1 = Coordinate(1,2)
+```
+
+```txt
+c2 = Coordinate(3,4)
+```
+
+c1 and c2 have different data attribute values c1.x and c2.x because they are different objects
+
+## instance has the structure of the class
+
+## WHY USE OOP AND CLASSES OF OBJECTS?
+
+• mimic real life
+
+• group different objects part of the same type
+
+![](images/page_4_image_3.jpg)
+
+![](images/page_4_image_4.jpg)
+
+![](images/page_4_image_5.jpg)
+
+![](images/page_4_image_6.jpg)
+
+![](images/page_4_image_7.jpg)
+
+![](images/page_4_image_8.jpg)
+
+![](images/page_4_image_9.jpg)
+
+![](images/page_4_image_10.jpg)
+
+![](images/page_4_image_11.jpg)
+
+![](images/page_4_image_12.jpg)
+
+![](images/page_4_image_13.jpg)
+
+![](images/page_4_image_14.jpg)
+
+Image Credits, clockwise from top: Image Courtesy [Harald Wehner](https://en.wikipedia.org/wiki/File:Cat-MaineCoon-Cookie.png), in the public Domain. Image Courtesy [MTSOfan](https://www.flickr.com/photos/mtsofan/7393425414/in/photolist-2H2UGg-cgkeMY-7Go2Mx-5GEedL-84ayar-7GrXwA-9RnHdr-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GU), CC-BY-NC-SA. Image Courtesy [Carlos Solana](https://www.flickr.com/photos/lasombraenlapared/3586725904/in/photolist-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GUPni-bTfiPK-frQsn6-8mgNPZ-avEdRy-agYEqz-), license CC-BY-NC-SA. Image Courtesy [Rosemarie Banghart-Kovic](https://www.flickr.com/photos/rosemarie61103/4891530841/in/photolist-8sfnGD-7BoAhV-SRSQD-f3Rr95-6S55ot-7UDhTX-8JGxsa-6KKpr1-4XDTzD-azRUjH-azUyWW-2XXbQT-7wq8gt-8sfnwK-fhUDb-53g43K-4RjBWs-6vN29o-8sfn1X-2ms8TD-4vNmKX-4f856g-2Y2AeN-6p8AZM-8sfnbp-4v72Q), license CC-BY-NC-SA. Image Courtesy [Paul Reynolds](https://en.wikipedia.org/wiki/Kitten#/media/File:Kitten_and_partial_reflection_in_mirror.jpg), license CC-BY. Image Courtesy [Kenny Louie](https://en.wikipedia.org/wiki/File:Kitten_in_Rizal_Park,_Manila.jpg#/media/File:Kitten_in_Rizal_Park,_Manila.jpg), License CC-BY
+
+## WHY USE OOP AND CLASSES OF OBJECTS?
+
+• mimic real life
+
+• <u>group different objects</u> part of the same type
+
+![](images/page_5_image_3.jpg)
+
+![](images/page_5_image_4.jpg)
+
+![](images/page_5_image_5.jpg)
+
+![](images/page_5_image_6.jpg)
+
+![](images/page_5_image_7.jpg)
+
+![](images/page_5_image_8.jpg)
+
+Image Credits, clockwise from top: Image Courtesy [Harald Wehner](https://en.wikipedia.org/wiki/File:Cat-MaineCoon-Cookie.png), in the public Domain. Image Courtesy [MTSOfan](https://www.flickr.com/photos/mtsofan/7393425414/in/photolist-2H2UGg-cgkeMY-7Go2Mx-5GEedL-84ayar-7GrXwA-9RnHdr-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GU), CC-BY-NC-SA. Image Courtesy [Carlos Solana](https://www.flickr.com/photos/lasombraenlapared/3586725904/in/photolist-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GUPni-bTfiPK-frQsn6-8mgNPZ-avEdRy-agYEqz-), license CC-BY-NC-SA. Image Courtesy [Rosemarie Banghart-Kovic](https://www.flickr.com/photos/rosemarie61103/4891530841/in/photolist-8sfnGD-7BoAhV-SRSQD-f3Rr95-6S55ot-7UDhTX-8JGxsa-6KKpr1-4XDTzD-azRUjH-azUyWW-2XXbQT-7wq8gt-8sfnwK-fhUDb-53g43K-4RjBWs-6vN29o-8sfn1X-2ms8TD-4vNmKX-4f856g-2Y2AeN-6p8AZM-8sfnbp-4v72Q), license CC-BY-NC-SA. Image Courtesy [Paul Reynolds](https://en.wikipedia.org/wiki/Kitten#/media/File:Kitten_and_partial_reflection_in_mirror.jpg), license CC-BY. Image Courtesy [Kenny Louie](https://en.wikipedia.org/wiki/File:Kitten_in_Rizal_Park,_Manila.jpg#/media/File:Kitten_in_Rizal_Park,_Manila.jpg), License CC-BY
+
+## GROUPS OF OBJECTS HAVE ATTRIBUTES (RECAP)
+
+## data attributes
+
+• how can you represent your object with data?
+
+**what it is**
+
+• for a coordinate: x and y values
+
+• for an animal: age, name
+
+## procedural attributes (behavior/operations/methods)
+
+• how can someone interact with the object?
+
+• **what it does**
+
+• for a coordinate: find distance between two
+
+• for an animal: make a sound
+
+## HOW TO DEFINE A CLASS (RECAP)
+
+![](images/page_7_chart_1.jpg)
+
+## GETTER AND SETTER METHODS
+
+```python
+class Animal(object):
+    def __init__(self, age):
+        self.age = age
+        self.name = None
+
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+
+    def set_age(self, newage):
+        self.age = newage
+    def set_name(self, newname=""):
+        self.name = newname
+
+    def __str__(self):
+        return "animal:"+str(self.name)+":"+str(self.age)
+```
+
+**getters and setters** should be used outside of class to access data attributes
+
+## AN INSTANCE and DOT NOTATION (RECAP)
+
+instantiation creates an **instance of an object**
+
+a = Animal(3)
+
+**dot notation** used to access attributes (data and methods) though it is better to use getters and setters to access data attributes
+
+a.age
+
+a.get\_age()
+
+## INFORMATION HIDING
+
+## author of class definition may change data attribute variable names
+
+![](images/page_10_image_2.jpg)
+
+```python
+class Animal(object):
+    def __init__(self, age):
+        self.years = age
+    def get_age(self):
+        return self.years
+```
+
+if you are **accessing data attributes** outside the class and class **definition changes**, may get errors
+
+outside of class, use getters and setters instead use a.get\_age() NOT a.age
+
+• good style
+
+• easy to maintain code
+
+prevents bugs
+
+## PYTHON NOT GREAT AT INFORMATION HIDING
+
+allows you to **access data** from outside class definition print(a.age)
+
+allows you to **write to data** from outside class definition a.age = 'infinite'
+
+allows you to **create data attributes** for an instance from outside class definition a.size = "tiny"
+
+it’s **not good style** to do any of these!
+
+## DEFAULT ARGUMENTS
+
+**default arguments** for formal parameters are used if no actual argument is given
+
+```python
+def set_name(self, newname=""):
+    self.name = newname
+```
+
+default argument used here
+
+```python
+a = Animal(3)
+a.set_name()
+print(a.get_name())
+```
+
+argument passed in is used here
+
+```txt
+a = Animal(3)
+a.set_name("fluffy")
+print(a.get_name())
+```
+
+## HIERARCHIES
+
+![](images/page_13_image_1.jpg)
+
+![](images/page_13_image_2.jpg)
+
+![](images/page_13_image_3.jpg)
+
+![](images/page_13_image_4.jpg)
+
+![](images/page_13_image_5.jpg)
+
+![](images/page_13_image_6.jpg)
+
+![](images/page_13_image_7.jpg)
+
+Image Credits, clockwise from top: Image Courtesy [Deeeep](https://www.flickr.com/photos/deeeepak/3155185552/in/photolist-5NP9JU-5dfTUn-ajQAm8-raoXgN-EMXo-8YU98Y-HRRUs6-8K4jhn-2gsnA-4yX3D5-dsHLRq-8GvcQg-dCoExJ-8DVZ77-5Cj2bd-2PLPhd-wTvzZ-7NVmQG-4KDtXP-otHzMK-aUXEJP-dmqw39-9Ss2PW-2U4Z9-7ThH2y-858bXB-5NJRHe-), CC-BY-NC. Image Image Courtesy [MTSOfan](https://www.flickr.com/photos/mtsofan/7393425414/in/photolist-2H2UGg-cgkeMY-7Go2Mx-5GEedL-84ayar-7GrXwA-9RnHdr-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GU), CC-BY-NC-SA. Image Courtesy [Carlos Solana](https://www.flickr.com/photos/lasombraenlapared/3586725904/in/photolist-6sWUDN-9V5h2M-9sq2Py-6cjvhR-6Bo7Zc-63BtcB-6wPe7F-3PaYAi-6KMqiS-dKX9H9-4GZ3j1-7daYdW-6n73V5-4GUQwg-cg8Gnj-a2HXNf-nCdtNu-6hXqus-5MB5eH-4GUPni-bTfiPK-frQsn6-8mgNPZ-avEdRy-agYEqz-), license CC-BY-NC-SA. Image Courtesy [Rosemarie Banghart-Kovic](https://www.flickr.com/photos/rosemarie61103/4891530841/in/photolist-8sfnGD-7BoAhV-SRSQD-f3Rr95-6S55ot-7UDhTX-8JGxsa-6KKpr1-4XDTzD-azRUjH-azUyWW-2XXbQT-7wq8gt-8sfnwK-fhUDb-53g43K-4RjBWs-6vN29o-8sfn1X-2ms8TD-4vNmKX-4f856g-2Y2AeN-6p8AZM-8sfnbp-4v72Q), license CC-BY-NC-SA. Image Courtesy [Paul Reynolds](https://en.wikipedia.org/wiki/Kitten#/media/File:Kitten_and_partial_reflection_in_mirror.jpg), license CC-BY. Image Courtesy [Kenny Louie](https://en.wikipedia.org/wiki/File:Kitten_in_Rizal_Park,_Manila.jpg#/media/File:Kitten_in_Rizal_Park,_Manila.jpg), License CC-BY. Courtesy [Harald Wehner](https://en.wikipedia.org/wiki/File:Cat-MaineCoon-Cookie.png), in the public Domain.
+
+## HIERARCHIES
+
+## parent class (superclass)
+
+## child class (subclass)
+
+**inherits** all data and behaviors of parent class
+
+• **add** more **info**
+
+• **add** more **behavior**
+
+• **override** behavior
+
+Animal
+
+Person
+
+![](images/page_14_image_9.jpg)
+
+Cat
+
+Rabbit
+
+Student
+
+## INHERITANCE: PARENT CLASS
+
+```python
+class Animal(object):
+    def __init__(self, age):
+        self.age = age
+        self.name = None
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+    def set_age(self, newage):
+        self.age = newage
+    def set_name(self, newname=""):
+        self.name = newname
+    def __str__(self):
+        return "animal:"+str(self.name)+":"+str(self.age)
+```
+
+## INHERITANCE: SUBCLASS
+
+```python
+class Cat(Animal):
+    def speak(self):
+        print("meow")
+    def __str__(self):
+        return "cat:"+str(self.name)+":"+str(self.age)
+```
+
+add new functionality with speak()
+
+• instance of type Cat can be called with new methods
+
+• instance of type Animal throws error if called with Cat’s new method
+
+init\_\_ is not missing, uses the Animal version
+
+## WHICH METHOD TO USE?
+
+• subclass can have **methods with same name** as superclass
+
+• for an instance of a class, look for a method name in **current class definition**
+
+• if not found, look for method name **up the hierarchy** (in parent, then grandparent, and so on)
+
+• use first method up the hierarchy that you found with that method name
+
+```python
+class Person(Animal):
+    def __init__(self, name, age):
+        Animal.__init__(self, age)
+        self.set_name(name)
+        self.friends = []
+
+    def get_friends(self):
+        return self.friends
+    def add_friend(self, fname):
+        if fname not in self.friends:
+            self.friends.append(fname)
+    def speak(self):
+        print("hello")
+    def age_diff(self, other):
+        diff = self.age - other.age
+        print(abs(diff), "year difference")
+    def __str__(self):
+        return "person:"+str(self.name)+""+str(self.age)
+```
+
+```python
+import random
+
+class Student(Person):
+    def __init__(self, name, age, major=None):
+        Person.__init__(self, name, age)
+        self.major = major
+
+    def change_major(self, major):
+        self.major = major
+
+    def speak(self):
+        r = random.random()
+        if r < 0.25:
+            print("i have homework")
+        elif 0.25 <= r < 0.5:
+            print("i need sleep")
+        elif 0.5 <= r < 0.75:
+            print("i should eat")
+        else:
+            print("i am watching tv")
+
+    def __str__(self):
+        return "student:"+str(self.name)+":"+str(self.age)+":"+str(self.major)
+```
+
+## CLASS VARIABLES AND THE Rabbit SUBCLASS
+
+**class variables** and their values are shared between all instances of <u>a class</u>
+
+```python
+class Rabbit(Animal):
+    tag = 1
+    def __init__(self, age, parent1=None, parent2=None):
+        Animal.__init__(self, age)
+        self.parent1 = parent1
+        self.parent2 = parent2
+    self.rid = Rabbit.tag
+    Rabbit.tag += 1
+```
+
+tag used to give **unique id** to each new rabbit instance
+
+## Rabbit GETTER METHODS
+
+```python
+class Rabbit(Animal):
+    tag = 1
+    def __init__(self, age, parent1=None, parent2=None):
+        Animal.__init__(self, age)
+        self.parent1 = parent1
+        self.parent2 = parent2
+        self.rid = Rabbit.tag
+        Rabbit.tag += 1
+    def get_rid(self):
+        return str(self.rid).zfill(3)
+    def get_parent1(self):
+        return self.parent1
+    def get_parent2(self):
+        return self.parent2
+```
+
+# WORKING WITH YOUR OWN TYPES
+
+def \_\_add\_\_(self, other):
+
+\# returning object of same type as this class
+
+return Rabbit(0, self, other)
+
+recall Rabbit’s \_\_init\_\_(self, age, parent1=None, parent2=None)
+
+## define + operator between two Rabbit instances
+
+• define what something like this does: r4 = r1 + r2 where r1 and r2 are Rabbit instances
+
+• r4 is a new Rabbit instance with age 0
+
+• r4 has self as one parent and other as the other parent
+
+• in \_\_init\_\_, **parent1 and parent2 are of type Rabbit**
+
+# SPECIAL METHOD TO COMPARE TWO Rabbits
+
+decide that two rabbits are equal if they have the **same two parents**
+
+```python
+def __eq__(self, other):
+    parents_same = self.parent1.rid == other.parent1.rid \
+        and self.parent2.rid == other.parent2.rid
+    parents_opposite = self.parent2.rid == other.parent1.rid \
+        and self.parent1.rid == other.parent2.rid
+    return parents_same or parents_opposite
+```
+
+compare ids of parents since **ids are unique** (due to class var)
+
+note you can’t compare objects directly
+
+• for ex. with self.parent1 == other.parent1
+
+• this calls the \_\_eq\_\_ method over and over until call it on None and gives an AttributeError when it tries to do None.parent1
+
+## OBJECT ORIENTED PROGRAMMING
+
+create your own **collections of data**
+
+**organize** information
+
+**division** of work
+
+access information in a **consistent** manner
+
+add **layers** of complexity
+
+like functions, classes are a mechanism for **decomposition** and **abstraction** in programming
+
+6.0001 Introduction to Computer Science and Programming in Python Fall 2016
+
+For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms).

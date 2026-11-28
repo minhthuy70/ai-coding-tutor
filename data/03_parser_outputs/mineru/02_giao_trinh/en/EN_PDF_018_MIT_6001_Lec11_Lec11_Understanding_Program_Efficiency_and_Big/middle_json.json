@@ -1,0 +1,5744 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0001F16_Understanding Program efficiency: 2",
+      "authors": [
+        "Grimson, Eric"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2016-10-17T13:11:43Z",
+      "modified_at": "2016-11-25T11:46:33+05:30",
+      "creator_application": "PowerPoint",
+      "producer_application": "Mac OS X 10.9.5 Quartz PDFContext",
+      "page_count": 40,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 792,
+          "height_pt": 612
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 792,
+          "height_pt": 612
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.138,
+            0.224,
+            0.768,
+            0.556
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "UNDERSTANDING PROGRAM EFFICIENCY: 2"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.134,
+            0.568,
+            0.691,
+            0.612
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(download slides and .py files and follow along!)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.133,
+            0.641,
+            0.416,
+            0.681
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 LECTURE 11"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.454,
+            0.906,
+            0.546,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.865,
+            0.906,
+            0.875,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.205,
+            0.298,
+            0.266
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "TODAY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.126,
+            0.306,
+            0.436,
+            0.349
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tClasses\tof\tcomplexity"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.376,
+            0.64,
+            0.418
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tExamples\tcharacteris;c\tof\teach\tclass"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.454,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.134,
+            0.138,
+            0.85,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "WHY WE WANT TO UNDERSTAND EFFICIENCY OF PROGRAMS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.307,
+            0.823,
+            0.444
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\thow\tcan\twe\treason\tabout\tan\talgorithm\tin\torder\tto predict\tthe\tamount\tof\t;me\tit\twill\tneed\tto\tsolve\ta problem\tof\ta\tpar;cular\tsize?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.466,
+            0.854,
+            0.557
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\thow\tcan\twe\trelate\tchoices\tin\talgorithm\tdesign\tto\tthe;me\tefficiency\tof\tthe\tresul;ng\talgorithm?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.141,
+            0.564,
+            0.849,
+            0.649
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ are\tthere\tfundamental\tlimits\ton\tthe\tamount\tof\t;me\twe will\tneed\tto\tsolve\ta\tpar;cular\tproblem?"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.204,
+            0.833,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ORDERS OF GROWTH: RECAP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.124,
+            0.302,
+            0.206,
+            0.341
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Goals:"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.362,
+            0.897,
+            0.405
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\twant\tto\tevaluate\tprogram’s\tefficiency\twhen\t"
+            },
+            {
+              "type": "text",
+              "content": "input\tis\tvery\tbig",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.424,
+            0.882,
+            0.502
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\twant\tto\texpress\tthe\t"
+            },
+            {
+              "type": "text",
+              "content": "growth\tof\tprogram’s\trun\t5me",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\tas\tinput size\tgrows"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.125,
+            0.522,
+            0.895,
+            0.564
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\twant\tto\tput\tan\t"
+            },
+            {
+              "type": "text",
+              "content": "upper\tbound",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\ton\tgrowth\t–\tas\t;ght\tas\tpossible"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.125,
+            0.581,
+            0.856,
+            0.623
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tdo\tnot\tneed\tto\tbe\tprecise:\t"
+            },
+            {
+              "type": "text",
+              "content": "“order\tof”\tnot\t“exact”",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\tgrowth"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.125,
+            0.642,
+            0.874,
+            0.722
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\twe\twill\tlook\tat\t"
+            },
+            {
+              "type": "text",
+              "content": "largest\tfactors",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\tin\trun\t;me\t(which\tsec;on\tof the\tprogram\twill\ttake\tthe\tlongest\tto\trun?)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.125,
+            0.741,
+            0.868,
+            0.819
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "text",
+              "content": "thus,\tgenerally\twe\twant\t5ght\tupper\tbound\ton\tgrowth,\tas func5on\tof\tsize\tof\tinput,\tin\tworst\tcase",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.204,
+            0.839,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY CLASSES: RECAP"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.126,
+            0.302,
+            0.63,
+            0.348
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§O(1)\tdenotes\tconstant\trunning\t;me"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.364,
+            0.713,
+            0.41
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§O(log\tn)\tdenotes\tlogarithmic\trunning\t;me"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.427,
+            0.591,
+            0.474
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§O(n)\tdenotes\tlinear\trunning\t;me"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.125,
+            0.491,
+            0.713,
+            0.538
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§O(n\tlog\tn)\tdenotes\tlog-linear\trunning\t;me"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.125,
+            0.555,
+            0.76,
+            0.641
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ O(n"
+            },
+            {
+              "type": "text",
+              "content": "c",
+              "styles": [
+                "superscript"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ")\t\tdenotes\tpolynomial\trunning\t;me\t(c\tis\ta constant)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.125,
+            0.659,
+            0.799,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ O(c"
+            },
+            {
+              "type": "text",
+              "content": "n",
+              "styles": [
+                "superscript"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ")\tdenotes\texponen;al\trunning\t;me\t(c\tis\ta constant\tbeing\traised\tto\ta\tpower\tbased\ton\tsize\tof input)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.133,
+            0.121,
+            0.717,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY CLASSES ORDERED LOW TO HIGH"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.212,
+            0.351,
+            0.29,
+            0.401
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O(1)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.212,
+            0.444,
+            0.362,
+            0.499
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O(log n)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.213,
+            0.541,
+            0.29,
+            0.591
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O(n)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.213,
+            0.634,
+            0.413,
+            0.686
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O(n log n):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.214,
+            0.729,
+            0.301,
+            0.778
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "\\mathrm{O(n^{c})}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.1,
+            0.771,
+            0.195,
+            0.852
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "cisa onstan"
+            }
+          ],
+          "continues_prev": true
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.214,
+            0.824,
+            0.3,
+            0.87
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O(c"
+            },
+            {
+              "type": "text",
+              "content": "n",
+              "styles": [
+                "superscript"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ")"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.589,
+            0.354,
+            0.71,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "constant"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 9,
+          "bbox": [
+            0.721,
+            0.301,
+            0.889,
+            0.434
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 9,
+              "bbox": [
+                0.721,
+                0.301,
+                0.889,
+                0.434
+              ],
+              "image_path": "images/page_5_image_9.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 10,
+          "bbox": [
+            0.421,
+            0.421,
+            0.558,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 10,
+              "bbox": [
+                0.421,
+                0.421,
+                0.558,
+                0.531
+              ],
+              "image_path": "images/page_5_image_10.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 12,
+              "bbox": [
+                0.61,
+                0.542,
+                0.691,
+                0.586
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "linear"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.576,
+            0.446,
+            0.729,
+            0.496
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "logarithmic"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 13,
+          "bbox": [
+            0.433,
+            0.604,
+            0.565,
+            0.724
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 13,
+              "bbox": [
+                0.433,
+                0.604,
+                0.565,
+                0.724
+              ],
+              "image_path": "images/page_5_image_13.jpg",
+              "content": ""
+            },
+            {
+              "type": "image_footnote",
+              "index": 16,
+              "bbox": [
+                0.576,
+                0.73,
+                0.723,
+                0.778
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "polynomial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 14,
+          "bbox": [
+            0.721,
+            0.517,
+            0.887,
+            0.631
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 14,
+              "bbox": [
+                0.721,
+                0.517,
+                0.887,
+                0.631
+              ],
+              "image_path": "images/page_5_image_14.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.59,
+            0.635,
+            0.709,
+            0.682
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "loglinear"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 17,
+          "bbox": [
+            0.455,
+            0.788,
+            0.557,
+            0.906
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 17,
+              "bbox": [
+                0.455,
+                0.788,
+                0.557,
+                0.906
+              ],
+              "image_path": "images/page_5_image_17.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 18,
+          "bbox": [
+            0.576,
+            0.824,
+            0.733,
+            0.871
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "exponen;al"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "index": 19,
+          "bbox": [
+            0.73,
+            0.689,
+            0.878,
+            0.826
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 19,
+              "bbox": [
+                0.73,
+                0.689,
+                0.878,
+                0.826
+              ],
+              "image_path": "images/page_5_image_19.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 20,
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 21,
+          "bbox": [
+            0.863,
+            0.913,
+            0.876,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.204,
+            0.68,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY GROWTH"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 1,
+          "bbox": [
+            0.127,
+            0.294,
+            0.876,
+            0.867
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 1,
+              "bbox": [
+                0.127,
+                0.294,
+                0.876,
+                0.867
+              ],
+              "image_path": "images/page_6_table_1.jpg",
+              "content": "<table><tbody><tr><td>CLASS</td><td>n=10</td><td>= 100</td><td>= 1000</td><td>= 1000000</td></tr><tr><td>O(1)</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>O(log n)</td><td>1</td><td>2</td><td>3</td><td>6</td></tr><tr><td>O(n)</td><td>10</td><td>100</td><td>1000</td><td>1000000</td></tr><tr><td>O(n log n)</td><td>10</td><td>200</td><td>3000</td><td>6000000</td></tr><tr><td>O(n^2)</td><td>100</td><td>10000</td><td>1000000</td><td>1000000000000</td></tr><tr><td>O(2^n)</td><td>1024</td><td>1267650600228229401496703205376</td><td>10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376</td><td>Good luck!!</td></tr></tbody></table>"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.454,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.204,
+            0.717,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CONSTANT COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.307,
+            0.603,
+            0.351
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcomplexity\tindependent\tof\tinputs"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.375,
+            0.841,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tvery\tfew\tinteres;ng\talgorithms\tin\tthis\tclass,\tbut\tcan oYen\thave\tpieces\tthat\tfit\tthis\tclass"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.489,
+            0.865,
+            0.581
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcan\thave\tloops\tor\trecursive\tcalls,\tbut\tONLY\tIF\tnumber of\titera;ons\tor\tcalls\tindependent\tof\tsize\tof\tinput"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.864,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.137,
+            0.204,
+            0.799,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LOGARITHMIC COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.307,
+            0.819,
+            0.351
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcomplexity\tgrows\tas\tlog\tof\tsize\tof\tone\tof\tits\tinputs"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.126,
+            0.377,
+            0.275,
+            0.417
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\texample:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.144,
+            0.428,
+            0.366,
+            0.465
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ bisec;on\tsearch"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.143,
+            0.479,
+            0.43,
+            0.519
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ binary\tsearch\tof\ta\tlist"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.863,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.591,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BISECTION SEARCH"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.308,
+            0.832,
+            0.396
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tsuppose\twe\twant\tto\tknow\tif\ta\tpar;cular\telement\tis present\tin\ta\tlist"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.421,
+            0.859,
+            0.511
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tsaw\tlast\t;me\tthat\twe\tcould\tjust\t“walk\tdown”\tthe\tlist, checking\teach\telement"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.535,
+            0.7,
+            0.58
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcomplexity\twas\tlinear\tin\tlength\tof\tthe\tlist"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.126,
+            0.604,
+            0.766,
+            0.693
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tsuppose\twe\tknow\tthat\tthe\tlist\tis\tordered\tfrom smallest\tto\tlargest"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.142,
+            0.701,
+            0.848,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ saw\tthat\tsequen;al\tsearch\twas\ts;ll\tlinear\tin\tcomplexity"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.142,
+            0.755,
+            0.39,
+            0.793
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ can\twe\tdo\tbecer?"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.204,
+            0.592,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BISECTION SEARCH"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.122,
+            0.301,
+            0.66,
+            0.343
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1. pick\tan\tindex,\ti,\tthat\tdivides\tlist\tin\thalf"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.122,
+            0.363,
+            0.416,
+            0.402
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2. ask\tif\tL[i] == e"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.122,
+            0.422,
+            0.739,
+            0.464
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3. if\tnot,\task\tif\tL[i] is\tlarger\tor\tsmaller\tthan\te"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.122,
+            0.483,
+            0.889,
+            0.525
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4. L edepending\ton\tanswer,\tsearch\tleY\tor\tright\thalf\tof for"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.122,
+            0.604,
+            0.734,
+            0.645
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "A\tnew\tversion\tof\ta\tdivide-and-conquer\talgorithm"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.124,
+            0.664,
+            0.867,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "break\tinto\tsmaller\tversion\tof\tproblem\t(smaller\tlist),\tplus some\tsimple\topera;ons"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.124,
+            0.763,
+            0.863,
+            0.805
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ answer\tto\tsmaller\tversion\tis\tanswer\tto\toriginal\tproblem"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 8,
+          "bbox": [
+            0.453,
+            0.914,
+            0.547,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 9,
+          "bbox": [
+            0.856,
+            0.914,
+            0.875,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.123,
+            0.677,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BISECTION SEARCH COMPLEXITY ANALYSIS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 1,
+          "bbox": [
+            0.057,
+            0.293,
+            0.632,
+            0.854
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 1,
+              "bbox": [
+                0.057,
+                0.293,
+                0.632,
+                0.854
+              ],
+              "image_path": "images/page_11_image_1.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.679,
+            0.304,
+            0.882,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tfinish\tlooking through\tlist when"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.705,
+            0.462,
+            0.813,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "1 = n / 2^{i}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.704,
+            0.533,
+            0.854,
+            0.583
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "so\ti\t=\tlog\tn"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.678,
+            0.671,
+            0.916,
+            0.857
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ complexity\tof recursion\tis "
+            },
+            {
+              "type": "text",
+              "content": "O(log\tn)\t– where\tn\tis\tlen(L)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.123,
+            0.618,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BISECTION SEARCH IMPLEMENTATION 1"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.167,
+            0.302,
+            0.919,
+            0.832
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.167,
+                0.302,
+                0.919,
+                0.832
+              ],
+              "content": "bisect_search1(L, e):\n    if L == []:\n        return False\n    elif len(L) == 1:\n        return L[0] == e\n    else:\n        half = len(L)//2\n        if L[half] > e:\n            return bisect_search1( L[:half], e)\n        else:\n            return bisect_search1( L[half:], e)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.124,
+            0.826,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY OF FIRST BISECTION SEARCH METHOD"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.307,
+            0.628,
+            0.349
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ implementa5on\t1\t–\tbisect_search1"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.143,
+            0.358,
+            0.54,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• \tO(log\tn)\tbisec;on\tsearch\tcalls"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.16,
+            0.409,
+            0.841,
+            0.445
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ll,\tsize\tof\trange\tto\tbe\tsearched\tis\tcut\tin\thalf• On\teach\trecursive\tca"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.161,
+            0.454,
+            0.848,
+            0.525
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "size\tn,\tin\tworst\tcase\tdown\tto\trange\tof\tsize\t1• If\toriginal\trange\tis\tof when "
+            },
+            {
+              "type": "equation_inline",
+              "content": "n/(2^{\\wedge}k)=1"
+            },
+            {
+              "type": "text",
+              "content": " when;\tor k = log n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.143,
+            0.535,
+            0.726,
+            0.576
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": ";on\tsearch\tcall\tto\tcopy\tlist• O(n)\tfor\teach\tbisec"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.161,
+            0.585,
+            0.81,
+            0.654
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "up\teach\tcall,\tso\tdo\tthis\tfor\teach\tlevel\tof• This\tis\tthe\tcost\tto\tset recursion"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.143,
+            0.666,
+            0.515,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "(n\tlog\tn)",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\t• O(log\tn)\t*\tO(n)\tà O"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.143,
+            0.719,
+            0.807,
+            0.802
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "eful,\tnote\tthat\tlength\tof\tlist\tto\tbe• \tif\twe\tare\treally\tcar d\ton\teach\trecursive\tcallcopied\tis\talso\thalve"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.16,
+            0.814,
+            0.865,
+            0.884
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "ost\tto\tcopy\tis\t"
+            },
+            {
+              "type": "text",
+              "content": "O(n)",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " and\tthis\tdominates\tthe\tlog• turns\tout\tthat\ttotal\tc ursive\tcallsn\tcost\tdue\tto\tthe\trec"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.133,
+            0.122,
+            0.592,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BISECTION SEARCH ALTERNATIVE"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "image",
+          "index": 1,
+          "bbox": [
+            0.058,
+            0.292,
+            0.639,
+            0.815
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 1,
+              "bbox": [
+                0.058,
+                0.292,
+                0.639,
+                0.815
+              ],
+              "image_path": "images/page_14_image_1.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.677,
+            0.296,
+            0.913,
+            0.397
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\ts;ll\treduce\tsize\tof problem\tby\tfactor of\ttwo\ton\teach\tstep"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.678,
+            0.41,
+            0.91,
+            0.539
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tbut\tjust\tkeep\ttrack of\tlow\tand\thigh por;on\tof\tlist\tto\tbe searched"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.678,
+            0.554,
+            0.901,
+            0.62
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tavoid\tcopying\tthe list"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.677,
+            0.69,
+            0.905,
+            0.822
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcomplexity\tof recursion\tis\tagain "
+            },
+            {
+              "type": "text",
+              "content": "O(log\tn)\t–\twhere\tn is\tlen(L)",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.124,
+            0.618,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BISECTION SEARCH IMPLEMENTATION 2"
+            }
+          ],
+          "level": 1
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.124,
+            0.305,
+            0.957,
+            0.872
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.124,
+                0.305,
+                0.957,
+                0.872
+              ],
+              "content": "def bisect_search2(L, e):\n    def bisect_search_helper(L, e, low, high):\n        if high == low:\n            return L[low] == e\n        mid = (low + high)//2\n        if L[mid] == e:\n            return True\n        elif L[mid] > e:\n            if low == mid: #nothing left to search\n                return False\n            else:\n                return bisect_search_helper(L, e, low, mid - 1)\n        else:\n            return bisect_search_helper(L, e, mid + 1, high)\n    if len(L) == 0:\n        return False\n    else:\n        return bisect_search_helper(L, e, 0, len(L) - 1)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.124,
+            0.825,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY OF SECOND BISECTION SEARCH METHOD"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.307,
+            0.82,
+            0.349
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\timplementa5on\t2\t–\tbisect_search2\tand\tits\thelper"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.143,
+            0.358,
+            0.533,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• O(log\tn)\tbisec;on\tsearch\tcalls"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.16,
+            0.409,
+            0.84,
+            0.445
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• On\teach\trecursive\tcall,\tsize\tof\trange\tto\tbe\tsearched\tis\tcut\tin\thalf"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.161,
+            0.454,
+            0.848,
+            0.525
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• If\toriginal\trange\tis\tof\tsize\tn,\tin\tworst\tcase\tdown\tto\trange\tof\tsize\t1 when "
+            },
+            {
+              "type": "equation_inline",
+              "content": "n/(2^{k}) = 1"
+            },
+            {
+              "type": "text",
+              "content": " ;\tor\twhen\tk\t=\tlog\tn"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.143,
+            0.536,
+            0.594,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• pass\tlist\tand\tindices\tas\tparameters"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.142,
+            0.588,
+            0.708,
+            0.628
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• list\tnever\tcopied,\tjust\tre-passed\tas\ta\tpointer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.142,
+            0.639,
+            0.623,
+            0.679
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• thus\tO(1)\twork\ton\teach\trecursive\tcall"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.143,
+            0.691,
+            0.491,
+            0.734
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• O(log n) * O(1) → O(log n)"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 9,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 10,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.8,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LOGARITHMIC COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.309,
+            0.822,
+            0.754
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.125,
+                0.309,
+                0.822,
+                0.754
+              ],
+              "content": "def intToStr(i):\n    digits = '0123456789'\n    if i == 0:\n        return '0'\n    result = ''\n    while i > 0:\n        result = digits[i%10] + result\n        i = i//10\n    return result"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.8,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LOGARITHMIC COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.071,
+            0.303,
+            0.918,
+            0.743
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.071,
+                0.303,
+                0.918,
+                0.743
+              ],
+              "content": "def intToStr(i):\n    digits = '0123456789'\n    if i == 0:\n        return '0'\n    res = ''\n    while i > 0:\n        res = digits[i%10] + res\n        i = i//10\n    return result"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.454,
+            0.906,
+            0.546,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.905,
+            0.875,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.137,
+            0.205,
+            0.628,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LINEAR COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.126,
+            0.308,
+            0.384,
+            0.347
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tsaw\tthis\tlast\t;me"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.143,
+            0.359,
+            0.787,
+            0.441
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ \tsearching\ta\tlist\tin\tsequence\tto\tsee\tif\tan\telement\tis present"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.143,
+            0.452,
+            0.35,
+            0.492
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ \titera;ve\tloops"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.134,
+            0.201,
+            0.845,
+            0.276
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O() FOR ITERATIVE FACTORIAL"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.123,
+            0.305,
+            0.862,
+            0.794
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.123,
+                0.305,
+                0.862,
+                0.794
+              ],
+              "content": "■ complexity can depend on number of iterative calls\ndef fact_iter(n):\n    prod = 1\n    for i in range(1, n+1):\n        prod *= i\n    return prod\n■ overall O(n) – n times round loop, constant cost each time"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.134,
+            0.121,
+            0.598,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O() FOR RECURSIVE FACTORIAL"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.304,
+            0.643,
+            0.518
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.125,
+                0.304,
+                0.643,
+                0.518
+              ],
+              "content": "def fact_recur(n):\n    \"\"\" assume n >= 0 \"\"\"\n    if n <= 1:\n        return 1\n    else:\n        return n*fact_recur(n - 1)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.534,
+            0.555,
+            0.578
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcomputes\tfactorial\trecursively"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.124,
+            0.596,
+            0.87,
+            0.681
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "t\truns\ta\tbit\tslower\tthan§\tif\tyou\t;me\tit,\tmay\tno;ce\tthat\ti callsitera;ve\tversion\tdue\tto\tfunc;on"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.124,
+            0.7,
+            0.876,
+            0.788
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "f\tfunc;on\tcalls\tis\tlinear§\ts;ll\tO(n) because\tthe\tnumber\to p\tcallin\tn,\tand\tconstant\teffort\tto\tset\tu"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.125,
+            0.806,
+            0.865,
+            0.89
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "l\timplementa;ons\tare§ "
+            },
+            {
+              "type": "text",
+              "content": "itera5ve\tand\trecursive\tfactoria",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": " the\t"
+            },
+            {
+              "type": "text",
+              "content": "same\torder\tof\tgrowth",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.137,
+            0.205,
+            0.716,
+            0.266
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "LOG-LINEAR COMPLEITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.308,
+            0.682,
+            0.351
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tmany\tprac;cal\talgorithms\tare\tlog-linear"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.376,
+            0.88,
+            0.42
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "is\tmerge\tsort§\tvery\tcommonly\tused\tlog-linear\talgorithm"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.126,
+            0.445,
+            0.55,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\twill\treturn\tto\tthis\tnext\tlecture"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.775,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "POLYNOMIAL COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.308,
+            0.843,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tmost\tcommon\tpolynomial\talgorithms\tare\tquadra;c, i.e.,\tcomplexity\tgrows\twith\tsquare\tof\tsize\tof\tinput"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.422,
+            0.802,
+            0.509
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcommonly\toccurs\twhen\twe\thave\tnested\tloops\tor recursive\tfunc;on\tcalls"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.126,
+            0.537,
+            0.383,
+            0.576
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tsaw\tthis\tlast\t;me"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.792,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXPONENTIAL COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.308,
+            0.833,
+            0.395
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\trecursive\tfunc;ons\twhere\tmore\tthan\tone\trecursive call\tfor\teach\tsize\tof\tproblem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.142,
+            0.405,
+            0.37,
+            0.444
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ Towers\tof\tHanoi"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.474,
+            0.861,
+            0.566
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tmany\timportant\tproblems\tare\tinherently\texponen;al ◦ unfortunate,\tas\tcost\tcan\tbe\thigh"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.142,
+            0.578,
+            0.824,
+            0.662
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "◦ will\tlead\tus\tto\tconsider\tapproximate\tsolu;ons\tas\tmay provide\treasonable\tanswer\tmore\tquickly"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 6,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.134,
+            0.122,
+            0.818,
+            0.266
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY OF TOWERS OF HANOI"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.123,
+            0.298,
+            0.58,
+            0.334
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tLet "
+            },
+            {
+              "type": "equation_inline",
+              "content": "t_{n}"
+            },
+            {
+              "type": "text",
+              "content": " denote\t;me\tto\tsolve\ttower\tof\tsize\tn"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.124,
+            0.346,
+            0.27,
+            0.386
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "■  "
+            },
+            {
+              "type": "equation_inline",
+              "content": "t_{n}=2t_{n-1}+1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.123,
+            0.395,
+            0.335,
+            0.436
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "\\quad = 2(2t_{n-2} + 1) + 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.123,
+            0.448,
+            0.308,
+            0.488
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "\\quad = 4t_{n - 2} + 2 + 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.123,
+            0.496,
+            0.371,
+            0.538
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "\\quad = 4(2t_{n-3} + 1) + 2 + 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.123,
+            0.549,
+            0.343,
+            0.588
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= 8\\mathrm{t}_{n - 3} + 4 + 2 + 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.123,
+            0.595,
+            0.455,
+            0.637
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= 2^{k}t_{n - k} + 2^{k - 1} + \\dots +4 + 2 + 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.123,
+            0.646,
+            0.438,
+            0.683
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= 2^{n - 1} + 2^{n - 2} + \\dots +4 + 2 + 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.123,
+            0.699,
+            0.248,
+            0.732
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= 2^{n} - 1"
+            }
+          ]
+        },
+        {
+          "type": "equation",
+          "index": 10,
+          "bbox": [
+            0.509,
+            0.562,
+            0.754,
+            0.668
+          ],
+          "image_path": "images/page_25_equation_10.jpg",
+          "content": "\\begin{array}{l} a = \\quad 2 ^ {n - 1} + \\dots + 2 + 1 \\\\ 2 a = 2 ^ {n} + 2 ^ {n - 1} + \\dots + 2 \\\\ a = 2 ^ {n} \\quad \\quad \\quad \\quad \\quad \\quad - 1 \\end{array}"
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.513,
+            0.493,
+            0.69,
+            0.528
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Geometric\tgrowth"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.123,
+            0.75,
+            0.419,
+            0.786
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ so\torder\tof\tgrowth\tis "
+            },
+            {
+              "type": "equation_inline",
+              "content": "O(2^{n})"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.793,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXPONENTIAL COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.308,
+            0.855,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tgiven\ta\tset\tof\tintegers\t(with\tno\trepeats),\twant\tto generate\tthe\tcollec;on\tof\tall\tpossible\tsubsets\t–\tcalled the\tpower\tset"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.466,
+            0.86,
+            0.606
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\t{1,\t2,\t3,\t4}\twould\tgenerate ◦ {},\t{1},\t{2},\t{3},\t{4},\t{1,\t2},\t{1,\t3},\t{1,\t4},\t{2,\t3},\t{2,\t4},\t{3,\t4}, {1,\t2,\t3},\t{1,\t2,\t4},\t{1,\t3,\t4},\t{2,\t3,\t4},\t{1,\t2,\t3,\t4}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.631,
+            0.851,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\torder\tdoesn’t\tmacer ◦ {},\t{1},\t{2},\t{1,\t2},\t{3},\t{1,\t3},\t{2,\t3},\t{1,\t2,\t3},\t{4},\t{1,\t4},\t{2, 4},\t{1,\t2,\t4},\t{3,\t4},\t{1,\t3,\t4},\t{2,\t3,\t4},\t{1,\t2,\t3,\t4}"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.701,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "POWER SET – CONCEPT"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.299,
+            0.862,
+            0.34
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§we\twant\tto\tgenerate\tthe\tpower\tset\tof\tintegers\tfrom\t1\tto\tn"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.126,
+            0.356,
+            0.848,
+            0.424
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tassume\twe\tcan\tgenerate\tpower\tset\tof\tintegers\tfrom\t1\tto n-1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.442,
+            0.863,
+            0.582
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tthen\tall\tof\tthose\tsubsets\tbelong\tto\tbigger\tpower\tset all\tof\tthose\tsubsets\twith\tn(choosing\tnot\tinclude\tn);\tand long\tto\tthe\tbigger\tpower\tsetadded\tto\teach\tof\tthem\talso\tbe (choosing\tto\tinclude\tn)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.125,
+            0.594,
+            0.874,
+            0.667
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "{},\t{1},\t{2},\t{1,\t2},\t{3},\t{1,\t3},\t{2,\t3},\t{1,",
+              "styles": [
+                "underline"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\t2,\t3},\t{4},\t{1,\t4},\t{2,\t4},\t{1,\t2, 4},\t{3,\t4},\t{1,\t3,\t4},\t{2,\t3,\t4},\t{1,\t2,\t3,\t4}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.125,
+            0.736,
+            0.474,
+            0.777
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tnice\trecursive\tdescrip;on!"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.793,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXPONENTIAL COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.084,
+            0.309,
+            0.914,
+            0.891
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.084,
+                0.309,
+                0.914,
+                0.891
+              ],
+              "content": "def genSubsets(L):\n    res = []\n    if len(L) == 0:\n        return [[]] #list of empty list\n    smaller = genSubsets(L[:-1]) # all subsets without last element\n    extra = L[-1:] # create a list of just last element\n    new = []\n    for small in smaller:\n        new.append(small+extra) # for all smaller solutions, add one with last element\n    return smaller+new # combine those with last element and those without"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.793,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXPONENTIAL COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.065,
+            0.295,
+            0.909,
+            0.723
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.065,
+                0.295,
+                0.909,
+                0.723
+              ],
+              "content": "def genSubsets(L):\n    res = []\n    if len(L) == 0:\n        return [[]]\n    smaller = genSubsets(L[:-1])\n    extra = L[-1:]\n    new = []\n    for small in smaller:\n        new.append(small+extra)\n    return smaller+new"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.906,
+            0.546,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.905,
+            0.875,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.136,
+            0.204,
+            0.793,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXPONENTIAL COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.067,
+            0.292,
+            0.896,
+            0.68
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.067,
+                0.292,
+                0.896,
+                0.68
+              ],
+              "content": "def genSubsets(L):\n    res = []\n    if len(L) == 0:\n        return [[]]\n    smaller = genSubsets(L[:-1])\n    extra = L[-1:]\n    new = []\n    for small in smaller:\n        new.append(small+extra)\n    return smaller+new"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.906,
+            0.546,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.906,
+            0.875,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.204,
+            0.793,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "EXPONENTIAL COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.124,
+            0.306,
+            0.739,
+            0.353
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tlet "
+            },
+            {
+              "type": "equation_inline",
+              "content": "t_{n}"
+            },
+            {
+              "type": "text",
+              "content": " denote\t;me\tto\tsolve\tproblem\tof\tsize\tn"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.124,
+            0.374,
+            0.813,
+            0.422
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tlet "
+            },
+            {
+              "type": "equation_inline",
+              "content": "S_{n}"
+            },
+            {
+              "type": "text",
+              "content": " denote\tsize\tof\tsolu;on\tfor\tproblem\tof\tsize\tn"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.444,
+            0.868,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "t_n = t_{n-1} + s_{n-1} + c"
+            },
+            {
+              "type": "text",
+              "content": " (where\tc\tis\tsome\tconstant\tnumber\tof opera;ons)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.124,
+            0.556,
+            0.371,
+            0.608
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "t_{n}=t_{n-1}+2^{n-1}+c"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.124,
+            0.624,
+            0.494,
+            0.676
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= t_{n - 2} + 2^{n - 2} + c + 2^{n - 1} + c"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.124,
+            0.692,
+            0.514,
+            0.744
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= t_{n-k} + 2^{n-k} + \\dots + 2^{n-1} + kc"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.643,
+            0.665,
+            0.72,
+            0.711
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Thus"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.124,
+            0.761,
+            0.485,
+            0.812
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= t_{0} + 2^{0} + \\dots + 2^{n - 1} + nc"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.643,
+            0.721,
+            0.806,
+            0.769
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "compu;ng"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.644,
+            0.778,
+            0.824,
+            0.822
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "power\tset\tis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.124,
+            0.832,
+            0.354,
+            0.874
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§ "
+            },
+            {
+              "type": "equation_inline",
+              "content": "= 1 + 2^{n} + nc"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.645,
+            0.828,
+            0.725,
+            0.876
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "O(2",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "n",
+              "styles": [
+                "bold",
+                "superscript"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ")",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 13,
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.856,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.204,
+            0.655,
+            0.267
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY CLASSES"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.306,
+            0.794,
+            0.351
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tO(1)\t–\tcode\tdoes\tnot\tdepend\ton\tsize\tof\tproblem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.125,
+            0.375,
+            0.846,
+            0.464
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tO(log\tn)\t–\treduce\tproblem\tin\thalf\teach\t;me\tthrough process"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.125,
+            0.489,
+            0.75,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tO(n)\t–\tsimple\titera;ve\tor\trecursive\tprograms"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.125,
+            0.558,
+            0.55,
+            0.602
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tO(n\tlog\tn)\t–\twill\tsee\tnext\t;me"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.125,
+            0.626,
+            0.653,
+            0.67
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tO(n"
+            },
+            {
+              "type": "text",
+              "content": "c",
+              "styles": [
+                "superscript"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ")\t–\tnested\tloops\tor\trecursive\tcalls"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.125,
+            0.695,
+            0.728,
+            0.739
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tO(c"
+            },
+            {
+              "type": "text",
+              "content": "n",
+              "styles": [
+                "superscript"
+              ]
+            },
+            {
+              "type": "text",
+              "content": ")\t–\tmul;ple\trecursive\tcalls\tat\teach\tlevel"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.132,
+            0.121,
+            0.791,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "SOME MORE EXAMPLES OF ANALYZING COMPLEXITY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "footer",
+          "index": 1,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 2,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "34"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.135,
+            0.123,
+            0.649,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY OF ITERATIVE FIBONACCI"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.126,
+            0.304,
+            0.904,
+            0.869
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.126,
+                0.304,
+                0.904,
+                0.869
+              ],
+              "content": "def fib_iter(n):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        fib_i = 0\n        fib_ii = 1\n        for i in range(n-1):\n            tmp = fib_i\n            fib_i = fib_ii\n            fib_ii = tmp + fib_ii\n        return fib_ii"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.454,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.134,
+            0.124,
+            0.675,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY OF RECURSIVE FIBONACCI"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.123,
+            0.304,
+            0.94,
+            0.887
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.123,
+                0.304,
+                0.94,
+                0.887
+              ],
+              "content": "def fib_recur(n):\n    \"\"\" assumes n an int >= 0 \"\"\"\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fib_recur(n-1) + fib_recur(n-2)\n■ Worst case:\nO(2^n)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 2,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 3,
+          "bbox": [
+            0.857,
+            0.915,
+            0.875,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "image",
+          "index": 0,
+          "bbox": [
+            0.167,
+            0.298,
+            0.746,
+            0.654
+          ],
+          "content": [
+            {
+              "type": "image_body",
+              "index": 0,
+              "bbox": [
+                0.167,
+                0.298,
+                0.746,
+                0.654
+              ],
+              "image_path": "images/page_36_image_0.jpg",
+              "content": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.133,
+            0.121,
+            0.799,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY OF RECURSIVE FIBONACCI"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.479,
+            0.304,
+            0.555,
+            0.337
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "fib(5)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.353,
+            0.398,
+            0.431,
+            0.43
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "fib(4)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.585,
+            0.403,
+            0.665,
+            0.436
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "fib(3)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.123,
+            0.662,
+            0.837,
+            0.763
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tactually\tcan\tdo\ta\tbit\tbecer\tthan "
+            },
+            {
+              "type": "equation_inline",
+              "content": "2^{n}"
+            },
+            {
+              "type": "text",
+              "content": " since\ttree\tof cases\tthins\tout\tto\tright"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.123,
+            0.784,
+            0.636,
+            0.835
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tbut\tcomplexity\tis\ts;ll\texponen;al"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.452,
+            0.914,
+            0.547,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.857,
+            0.914,
+            0.876,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "38"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.137,
+            0.204,
+            0.583,
+            0.268
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "BIG OH SUMMARY"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.125,
+            0.307,
+            0.596,
+            0.35
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tcompare\tefficiency\tof\talgorithms"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.143,
+            0.359,
+            0.557,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• \tnota;on\tthat\tdescribes\tgrowth"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.142,
+            0.411,
+            0.563,
+            0.45
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "lower\torder\tof\tgrowth",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\tis\tbecer"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.143,
+            0.461,
+            0.812,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• \tindependent\tof\tmachine\tor\tspecific\timplementa;on"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 5,
+          "bbox": [
+            0.126,
+            0.584,
+            0.293,
+            0.626
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "§\tuse\tBig\tOh"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.143,
+            0.634,
+            0.48,
+            0.674
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• \tdescribe\torder\tof\tgrowth"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.143,
+            0.689,
+            0.43,
+            0.726
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "asympto5c\tnota5on",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.143,
+            0.741,
+            0.338,
+            0.779
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• "
+            },
+            {
+              "type": "text",
+              "content": "upper\tbound",
+              "styles": [
+                "bold"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.143,
+            0.793,
+            0.411,
+            0.831
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "worst\tcase",
+              "styles": [
+                "bold"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "\tanalysis"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 10,
+          "bbox": [
+            0.453,
+            0.915,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 11,
+          "bbox": [
+            0.857,
+            0.914,
+            0.875,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.134,
+            0.121,
+            0.783,
+            0.269
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "COMPLEXITY OF COMMON PYTHON FUNCTIONS"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.139,
+            0.318,
+            0.422,
+            0.842
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Lists:\tn is\tlen(L) index O(1) store O(1) length O(1) append O(1) == O(n) remove O(n) copy O(n) reverse O(n) itera;on O(n) in\tlist O(n)"
+            }
+          ]
+        },
+        {
+          "type": "index",
+          "index": 2,
+          "bbox": [
+            0.533,
+            0.319,
+            0.885,
+            0.885
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "- Dictionaries: n is len(d)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "- worst case"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - index    O(n)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - store    O(n)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - length    O(n)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - delete    O(n)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - iteration   O(n)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "- average case"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - index    O(1)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - store    O(1)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - delete    O(1)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "  - iteration   O(n)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.453,
+            0.914,
+            0.546,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001\tLECTURE\t11"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 4,
+          "bbox": [
+            0.857,
+            0.914,
+            0.874,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "41"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.073,
+            0.095,
+            0.207,
+            0.138
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MIT OpenCourseWare "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.073,
+            0.204,
+            0.547,
+            0.25
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "6.0001 Introduction to Computer Science and Programming in Python Fall 2016"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.073,
+            0.306,
+            0.617,
+            0.33
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "For information about citing these materials or our Terms of Use, visit: "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://ocw.mit.edu/terms",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "https://ocw.mit.edu/terms"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "content": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

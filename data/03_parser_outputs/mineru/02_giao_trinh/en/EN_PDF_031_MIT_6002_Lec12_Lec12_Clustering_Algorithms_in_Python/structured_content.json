@@ -1,0 +1,2522 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.103,
+            0.517,
+            0.816,
+            0.617
+          ],
+          "level": 2,
+          "content": "Lecture\t12:\tClustering"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.959,
+            0.55,
+            0.977
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.959,
+            0.911,
+            0.978
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.097,
+            0.035,
+            0.255,
+            0.099
+          ],
+          "content": "Reading"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.175,
+            0.267,
+            0.223
+          ],
+          "content": "§Chapter\t23"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.451,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.64,
+            0.1
+          ],
+          "level": 2,
+          "content": "Machine\t Learning Paradigm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.174,
+            0.668,
+            0.224
+          ],
+          "content": "§Observe\tset\tof\texamples: training\tdata"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.252,
+            0.848,
+            0.351
+          ],
+          "content": "§Infer\tsomething\tabout\tprocess\tthat\tgenerated\tthat data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.381,
+            0.859,
+            0.484
+          ],
+          "content": "§Use\tinference\tto\tmake\tpredictions\tabout\tpreviously unseen\tdata: test\tdata"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.513,
+            0.909,
+            0.667
+          ],
+          "content": "§Supervised:\tgiven a\tset\tof\tfeature/label\tpairs,\tfind a rule\tthat\tpredicts\tthe\tlabel\tassociated\twith a\tpreviously unseen\tinput"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.695,
+            0.88,
+            0.797
+          ],
+          "content": "§Unsupervised:\tgiven a\tset\tof\tfeature\tvectors\t(without labels)\tgroup\tthem\tinto\t“natural\tclusters”"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.033,
+            0.828,
+            0.1
+          ],
+          "level": 2,
+          "content": "Clustering\t Is\t an \t \t Optimization Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.137,
+            0.756,
+            0.255
+          ],
+          "content": "variability $(c) = \\sum_{e\\in c}distance(mean(c),e)^{2}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.26,
+            0.7,
+            0.377
+          ],
+          "content": "$dissimilarity(C) = \\sum_{c \\in C} variability(c)$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.407,
+            0.765,
+            0.513
+          ],
+          "content": "§Why\tnot\tdivide\tvariability\tby\tsize\tof\tcluster? ◦ Big\tand\tbad\tworse\tthan\tsmall\tand\tbad"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.527,
+            0.857,
+            0.622
+          ],
+          "content": "§Is\toptimization\tproblem\tfinding a C\tthat\tminimizes dissimilarity(C)?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.633,
+            0.861,
+            0.727
+          ],
+          "content": "◦ No,\totherwise\tcould\tput\teach\texample\tin\tits\town cluster"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.745,
+            0.463,
+            0.793
+          ],
+          "content": "§Need a\tconstraint,\te.g.,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.795,
+            0.68,
+            0.842
+          ],
+          "content": "◦ Minimum\tdistance\tbetween\tclusters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.849,
+            0.429,
+            0.895
+          ],
+          "content": "◦ Number\tof\tclusters"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.525,
+            0.096
+          ],
+          "level": 2,
+          "content": "Two \t \t Popular Methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.175,
+            0.431,
+            0.223
+          ],
+          "content": "§Hierarchical\tclustering"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.254,
+            0.385,
+            0.301
+          ],
+          "content": "§K-means\tclustering"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.451,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.518,
+            0.099
+          ],
+          "level": 2,
+          "content": "Hiearchical Clustering"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.189,
+            0.822,
+            0.345
+          ],
+          "content": "1. Start by assigning each item to a cluster,\tso that if you have N items,\tyou now have N clusters,\teach containing just one item."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.403,
+            0.858,
+            0.556
+          ],
+          "content": "2. Find the closest (most similar) pair\tof clusters and merge them into a single cluster,\tso that now you have one fewer\tcluster."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.616,
+            0.813,
+            0.718
+          ],
+          "content": "3.\tContinue\tthe\tprocess\tuntil\tall\titems\tare\tclustered into a single cluster\tof size N."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.278,
+            0.826,
+            0.65,
+            0.872
+          ],
+          "content": "What does distance mean?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.404,
+            0.099
+          ],
+          "level": 2,
+          "content": "Linkage Metrics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.174,
+            0.893,
+            0.381
+          ],
+          "content": "§Single-linkage: consider\tthe\tdistance\tbetween\tone cluster\tand\tanother\tcluster\tto\tbe\tequal\tto\tthe <u>shortest</u> distance\tfrom\tany\tmember\tof\tone\tcluster\tto\tany member\tof\tthe\tother\tcluster"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.409,
+            0.893,
+            0.616
+          ],
+          "content": "§Complete-linkage:\tconsider\tthe\tdistance\tbetween\tone cluster\tand\tanother\tcluster\tto\tbe\tequal\tto\tthe <u>greatest</u> distance\tfrom\tany\tmember\tof\tone\tcluster\tto\tany member\tof\tthe\tother\tcluster"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.643,
+            0.887,
+            0.849
+          ],
+          "content": "§Average-linkage: consider\tthe\tdistance\tbetween\tone cluster\tand\tanother\tcluster\tto\tbe\tequal\tto\tthe <u>average</u> distance\tfrom\tany\tmember\tof\tone\tcluster\tto\tany member\tof\tthe\tother\tcluster"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.898,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.759,
+            0.101
+          ],
+          "level": 2,
+          "content": "Example\tof\tHierarchical\tClustering"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.093,
+            0.129,
+            0.931,
+            0.929
+          ],
+          "content": "|  | BOS | NY | CHI | DEN | SF | SEA |\n| --- | --- | --- | --- | --- | --- | --- |\n| BOS | 0 | 206 | 963 | 1949 | 3095 | 2979 |\n| NY |  | 0 | 802 | 1771 | 2934 | 2815 |\n| CHI |  |  | 0 | 966 | 2142 | 2013 |\n| DEN |  |  |  | 0 | 1235 | 1307 |\n| SF |  |  |  |  | 0 | 808 |\n| SEA |  |  |  |  |  | 0 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE\t12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.9,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.516,
+            0.1
+          ],
+          "level": 2,
+          "content": "Clustering\tAlgorithms"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.174,
+            0.433,
+            0.223
+          ],
+          "level": 2,
+          "content": "§Hierarchical\tclustering"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.234,
+            0.774,
+            0.281
+          ],
+          "content": "◦ Can select number\tof clusters using dendogram"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.294,
+            0.316,
+            0.337
+          ],
+          "content": "◦ Deterministic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.352,
+            0.653,
+            0.399
+          ],
+          "content": "◦ Flexible with respect to linkage criteria"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.41,
+            0.199,
+            0.453
+          ],
+          "content": "◦ Slow"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.468,
+            0.363,
+            0.509
+          ],
+          "content": "◦ Naïve algorithm $n^{3}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.124,
+            0.519,
+            0.641,
+            0.562
+          ],
+          "content": "◦ $n^{2}$ algorithms exist for some linkage criteria"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.591,
+            0.701,
+            0.64
+          ],
+          "level": 2,
+          "content": "§K-means a\tmuch\tfaster\tgreedy\talgorithm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.651,
+            0.905,
+            0.698
+          ],
+          "content": "◦ Most useful when you know how many clusters\tyou want"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.988
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.47,
+            0.099
+          ],
+          "level": 2,
+          "content": "K-means Algorithm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.099,
+            0.181,
+            0.875,
+            0.269
+          ],
+          "content": "randomly chose k examples as initial centroids while true:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.138,
+            0.27,
+            0.76,
+            0.537
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncreate k clusters by assigning each example to closest centroid compute k new centroids by averaging examples in each cluster if centroids don't change: break\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.102,
+            0.62,
+            0.601,
+            0.669
+          ],
+          "content": "What is complexity of one iteration?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.752,
+            0.865,
+            0.857
+          ],
+          "content": "k\\*n\\*d,\twhere n is number\tof points and d time required to compute the distance between a pair\tof points"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.912,
+            0.989
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.035,
+            0.328,
+            0.099
+          ],
+          "level": 2,
+          "content": "An \tExample"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.199,
+            0.84,
+            0.909
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.519,
+            0.096
+          ],
+          "level": 2,
+          "content": "K\t=\t4, \tInitial \tCentroids"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.193,
+            0.845,
+            0.909
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_11_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.037,
+            0.299,
+            0.092
+          ],
+          "level": 2,
+          "content": "Iteration 1"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.174,
+            0.194,
+            0.87,
+            0.91
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.037,
+            0.299,
+            0.092
+          ],
+          "level": 2,
+          "content": "Iteration 2"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.174,
+            0.192,
+            0.887,
+            0.911
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.037,
+            0.3,
+            0.092
+          ],
+          "level": 2,
+          "content": "Iteration 3"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.174,
+            0.194,
+            0.908,
+            0.911
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.037,
+            0.301,
+            0.092
+          ],
+          "level": 2,
+          "content": "Iteration 4"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.193,
+            0.916,
+            0.91
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.912,
+            0.989
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.037,
+            0.3,
+            0.092
+          ],
+          "level": 2,
+          "content": "Iteration 5"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.193,
+            0.846,
+            0.909
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.487,
+            0.093
+          ],
+          "level": 2,
+          "content": "Issues\t \t with k-means"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.173,
+            0.849,
+            0.225
+          ],
+          "content": "§Choosing\tthe “wrong” k\tcan\tlead\tto strange results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.235,
+            0.324,
+            0.277
+          ],
+          "content": "◦ Consider k = 3"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.42,
+            0.245,
+            0.74,
+            0.593
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_chart_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.624,
+            0.696,
+            0.673
+          ],
+          "content": "§Result\tcan\tdepend\tupon\tinitial\tcentroids"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.683,
+            0.417,
+            0.727
+          ],
+          "content": "◦ Number\tof iterations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.741,
+            0.351,
+            0.786
+          ],
+          "content": "◦ Even final result"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.123,
+            0.8,
+            0.817,
+            0.849
+          ],
+          "content": "◦ Greedy algorithm can find different local optimas"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.551,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.912,
+            0.989
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.432,
+            0.092
+          ],
+          "level": 2,
+          "content": "How\t to Choose\t K"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.768,
+            0.223
+          ],
+          "content": "§A\tpriori knowledge\tabout\tapplication\tdomain"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.234,
+            0.787,
+            0.279
+          ],
+          "content": "◦ There are two kinds of people in the world: k = 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.293,
+            0.758,
+            0.339
+          ],
+          "content": "◦ There are five different types of bacteria: k = 5"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.371,
+            0.39,
+            0.419
+          ],
+          "level": 2,
+          "content": "§Search\tfor a\tgood k"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.43,
+            0.865,
+            0.477
+          ],
+          "content": "◦ Try different values of k and evaluate quality of results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.489,
+            0.732,
+            0.536
+          ],
+          "content": "◦ Run hierarchical clustering on subset of data"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.57,
+            0.098
+          ],
+          "level": 2,
+          "content": "Unlucky \tInitial \tCentroids"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.193,
+            0.845,
+            0.909
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.037,
+            0.368,
+            0.099
+          ],
+          "level": 2,
+          "content": "Converges\tOn"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.175,
+            0.194,
+            0.846,
+            0.909
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_20_chart_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.037,
+            0.881,
+            0.099
+          ],
+          "level": 2,
+          "content": "Mitigating \t \t \t \t Dependence on Initial Centroids"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.219,
+            0.885,
+            0.271
+          ],
+          "content": "Try\tmultiple\tsets\tof\trandomly\tchosen\tinitial\tcentroids"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.104,
+            0.335,
+            0.395,
+            0.384
+          ],
+          "sub_type": "code",
+          "content": "```txt\nSelect “best” result\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.103,
+            0.443,
+            0.861,
+            0.714
+          ],
+          "sub_type": "code",
+          "content": "```python\nbest = kMeans(points)\nfor t in range(numTrials):\n    C = kMeans(points)\n    if dissimilarity(C) < dissimilarity(best):\n        best = C\nreturn best\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.035,
+            0.329,
+            0.099
+          ],
+          "level": 2,
+          "content": "An \tExample"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.084,
+            0.174,
+            0.624,
+            0.223
+          ],
+          "level": 2,
+          "content": "§Many\tpatients\twith 4\tfeatures\teach"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.235,
+            0.544,
+            0.28
+          ],
+          "content": "◦ Heart rate in beats per\tminute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.293,
+            0.53,
+            0.34
+          ],
+          "content": "◦ Number\tof past heart attacks"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.353,
+            0.187,
+            0.4
+          ],
+          "content": "◦ Age"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.408,
+            0.411,
+            0.458
+          ],
+          "content": "◦ ST elevation (binary)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.572,
+            0.227,
+            0.957,
+            0.484
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_image_6.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.084,
+            0.489,
+            0.629,
+            0.537
+          ],
+          "level": 2,
+          "content": "§Outcome\t(death)\tbased\ton\tfeatures"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.547,
+            0.55,
+            0.593
+          ],
+          "content": "◦ Probabilistic,\tnot deterministic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.605,
+            0.868,
+            0.697
+          ],
+          "content": "◦ E.g.,\tolder\tpeople with multiple heart attacks at higher risk"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.083,
+            0.733,
+            0.823,
+            0.832
+          ],
+          "level": 2,
+          "content": "§Cluster,\tand\texamine\tpurity\tof\tclusters\trelative\tto outcomes"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.449,
+            0.967,
+            0.551,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.969,
+            0.912,
+            0.989
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.344,
+            0.098
+          ],
+          "level": 2,
+          "content": "Data Sample"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.112,
+            0.187,
+            0.687,
+            0.899
+          ],
+          "content": "|  | HR | Att | STE | Age | Outcome |\n| --- | --- | --- | --- | --- | --- |\n| P000:[ | 89. | 1. | 0. | 66.]:1 |  |\n| P001:[ | 59. | 0. | 0. | 72.]:0 |  |\n| P002:[ | 73. | 0. | 0. | 73.]:0 |  |\n| P003:[ | 56. | 1. | 0. | 65.]:0 |  |\n| P004:[ | 75. | 1. | 1. | 68.]:1 |  |\n| P005:[ | 68. | 1. | 0. | 56.]:0 |  |\n| P006:[ | 73. | 1. | 0. | 75.]:1 |  |\n| P007:[ | 72. | 0. | 0. | 65.]:0 |  |\n| P008:[ | 73. | 1. | 0. | 64.]:1 |  |\n| P009:[ | 73. | 0. | 0. | 58.]:0 |  |\n| P010:[ | 100. | 0. | 0. | 75.]:0 |  |\n| P011:[ | 79. | 0. | 0. | 31.]:0 |  |\n| P012:[ | 81. | 0. | 0. | 58.]:0 |  |\n| P013:[ | 89. | 1. | 0. | 50.]:1 |  |\n| P014:[ | 81. | 0. | 0. | 70.]:0 |  |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_23_table_1.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.371,
+            0.099
+          ],
+          "level": 2,
+          "content": "Class\tExample"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.064,
+            0.133,
+            0.944,
+            0.792
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Example(object):\n\n    def __init__(self, name, features, label = None):\n        #Assumes features is an array of floats\n        self.name = name\n        self.features = features\n        self.label = label\n\n    ...\n\n    def distance(self, other):\n        return minkowskiDist(self.features,\n                               other.getFeatures(), 2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.344,
+            0.095
+          ],
+          "level": 2,
+          "content": "Class\tCluster"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.011,
+            0.135,
+            0.99,
+            0.988
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Cluster(object):\n\n    def __init__(self, examples):\n        \"\"\"Assumes examples a non-empty list of Examples\"\"\"\n        ...\n\n    def update(self, examples):\n        \"\"\"Assume examples is a non-empty list of Examples\n            Replace examples; return amount centroid has\n            changed\"\"\"\n        ...\n\n    def computeCentroid(self):\n        vals = pylab.array([0.0]*self.examples[0].\\\n                    dimensionality())\n        for e in self.examples: #compute mean\n            vals += e.getFeatures()\n        centroid = Example('centroid', vals/len(self.examples))\n        return centroid\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.033,
+            0.457,
+            0.1
+          ],
+          "level": 2,
+          "content": "Class\tCluster, \tcont."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.03,
+            0.197,
+            0.933,
+            0.653
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef variability(self):\n    totDist = 0\n    for e in self.examples:\n        totDist += (e.distance(self.centroid))**2\n    return totDist\n\ndef members(self):\n    for e in self.examples:\n        yield e\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.537,
+            0.101
+          ],
+          "level": 2,
+          "content": "Evaluating \t \t a Clustering"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.049,
+            0.267,
+            0.959,
+            0.625
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef dissimilarity(clusters):\n    \"\"\"Assumes clusters a list of clusters\n        Returns a measure of the total dissimilarity of the\n        clusters in the list\"\"\"\n    totDist = 0|\n    for c in clusters:\n        totDist += c.variability()\n    return totDist\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.037,
+            0.256,
+            0.093
+          ],
+          "level": 2,
+          "content": "Patients"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.085,
+            0.132,
+            0.806,
+            0.923
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport cluster, pylab, numpy\n\nclass Patient(cluster.Example):\n    pass\n\ndef scaleAttrs(vals):\n    vals = pylab.array(vals)\n    mean = sum(vals)/len(vals)\n    sd = numpy.std(vals)\n    vals = vals - mean\n    return vals/sd\n\ndef getData(toScale = False):\n    #read in data\n    ...\n    if toScale:\n        hrList = scaleAttrs(hrList)\n        ...\n    #Build points\n    ...\n    return points\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.036,
+            0.251,
+            0.092
+          ],
+          "level": 2,
+          "content": "kmeans"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.038,
+            0.134,
+            0.948,
+            0.85
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef kmeans(examples, k, verbose = False):\n    #Get k randomly chosen initial centroids,\n    #create cluster for each\n    ...\n    #Iterate until centroids do not change\n    ...\n        #Associate each example with closest centroid\n        ...\n        for c in newClusters: #Avoid having empty clusters\n            if len(c) == 0:\n                raise ValueError('Empty Cluster')\n\n        #Update each cluster; check if a centroid has changed\n    ...\n\ndef trykmeans(examples, numClusters, numTrials, verbose=False):\n    \"\"\"Calls kmeans numTrials times and returns the result with\n        the lowest dissimilarity\"\"\"\n    ...\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.097,
+            0.035,
+            0.447,
+            0.1
+          ],
+          "level": 2,
+          "content": "Examining Results"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.023,
+            0.143,
+            0.978,
+            0.865
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef printClustering(clustering):\n    \"\"\"Assumes: clustering is a sequence of clusters\n        Prints information about each cluster\n        Returns list of fraction of pos cases in each cluster\"\"\"\n    ...\n\ndef testClustering(patients, numClusters, seed = 0,\n                   numTrials = 5):\n    random.seed(seed)\n    bestClustering = trykmeans(patients, numClusters,\n                              numTrials)\n    posFracs = printClustering(bestClustering)\n    return posFracs\n\npatients = getData()\nfor k in (2,):\n    print('\\n      Test k-means (k = ' + str(k) + ')')\n    posFracs = testClustering(patients, k)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.479,
+            0.1
+          ],
+          "level": 2,
+          "content": "Result \t \t \t of Running It"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.09,
+            0.167,
+            0.871,
+            0.338
+          ],
+          "content": "Test k-means\t(k =\t2) Cluster of\tsize\t118\twith\tfraction\tof\tpositives\t= 0.3305 Cluster of\tsize\t132\twith\tfraction\tof\tpositives =\t0.3333"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.259,
+            0.363,
+            0.366,
+            0.412
+          ],
+          "content": "Like\tit?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.482,
+            0.637,
+            0.535
+          ],
+          "content": "Try\tpatients\t= getData(True)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.11,
+            0.577,
+            0.889,
+            0.749
+          ],
+          "content": "Test k-means\t(k =\t2) Cluster\tof\tsize\t224\twith\tfraction\tof\tpositives\t= 0.2902 Cluster of\tsize\t26\twith\tfraction\tof\tpositives =\t0.6923"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.278,
+            0.813,
+            0.623,
+            0.865
+          ],
+          "content": "Happy\twith\tsensitivity?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.551,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.713,
+            0.1
+          ],
+          "level": 2,
+          "content": "How\t Many \t \t Positives Are\t There?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.065,
+            0.165,
+            0.809,
+            0.362
+          ],
+          "sub_type": "code",
+          "content": "```python\nnumPos = 0\nfor p in patients:\n    if p.getLabel() == 1:\n        numPos += 1\nprint('Total number of positive patients =', numPos)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.092,
+            0.455,
+            0.655,
+            0.508
+          ],
+          "content": "Total\tnumber\tof\tpositive\tpatients =\t83"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.11,
+            0.577,
+            0.889,
+            0.748
+          ],
+          "sub_type": "code",
+          "content": "```txt\nTest k-means (k = 2)\nCluster of size 224 with fraction of positives = 0.2902\nCluster of size 26 with fraction of positives = 0.6923\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.035,
+            0.353,
+            0.1
+          ],
+          "level": 2,
+          "content": "A\tHypothesis"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.898,
+            0.273
+          ],
+          "content": "§Different\tsubgroups\tof\tpositive\tpatients\thave\tdifferent characteristics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.305,
+            0.461,
+            0.353
+          ],
+          "content": "§How\tmight\twe\ttest\tthis?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.382,
+            0.493,
+            0.431
+          ],
+          "content": "§Try\tsome\tother\tvalues\tof k"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.034,
+            0.512,
+            0.777,
+            0.677
+          ],
+          "sub_type": "code",
+          "content": "```python\npatients = getData()\nfor k in (2,4,6):\n    print('\\n      Test k-means (k = ' + str(k) + ')')\n    posFracs = testClustering(patients, k, 2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.033,
+            0.629,
+            0.101
+          ],
+          "level": 2,
+          "content": "Testing Multiple Values of k"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.092,
+            0.143,
+            0.747,
+            0.879
+          ],
+          "sub_type": "code",
+          "content": "```txt\nTest k-means (k = 2)\nCluster of size 224 with fraction of positives = 0.2902\nCluster of size 26 with fraction of positives = 0.6923\n    Test k-means (k = 4)\nCluster of size 26 with fraction of positives = 0.6923\nCluster of size 86 with fraction of positives = 0.0814\nCluster of size 76 with fraction of positives = 0.7105\nCluster of size 62 with fraction of positives = 0.0645\n    Test k-means (k = 6)\nCluster of size 49 with fraction of positives = 0.0204\nCluster of size 26 with fraction of positives = 0.6923\nCluster of size 45 with fraction of positives = 0.0889\nCluster of size 54 with fraction of positives = 0.0926\nCluster of size 36 with fraction of positives = 0.7778\nCluster of size 40 with fraction of positives = 0.675\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.821,
+            0.865,
+            0.936,
+            0.911
+          ],
+          "sub_type": "code",
+          "content": "```txt\nPick a k\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002\tLECTURE 12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.088,
+            0.102,
+            0.237,
+            0.157
+          ],
+          "content": "MIT OpenCourseWare [https://ocw.mit.edu](https://ocw.mit.edu)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.227,
+            0.573,
+            0.284
+          ],
+          "content": "6.0002 Introduction to Computational Thinking and Data Science Fall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.357,
+            0.688,
+            0.384
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms)."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 12",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2016-12-06T16:22:26Z",
+      "modified_at": "2017-03-16T14:14:24+05:30",
+      "creator_application": "PowerPoint",
+      "producer_application": "Mac OS X 10.12.1 Quartz PDFContext",
+      "page_count": 36,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

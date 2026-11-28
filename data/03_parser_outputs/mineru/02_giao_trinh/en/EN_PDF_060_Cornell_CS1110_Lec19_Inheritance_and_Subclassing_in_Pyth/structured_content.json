@@ -1,0 +1,2265 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.875,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": "10/25/26"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.156,
+            0.124,
+            0.419,
+            0.142
+          ],
+          "level": 2,
+          "content": "What Does str() Do On Objects?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.152,
+            0.276,
+            0.195
+          ],
+          "content": "• Does **NOT** display contents >>> p = Point3(1,2,3) >>> str(p)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.153,
+            0.378,
+            0.165
+          ],
+          "content": "class Point3(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.304,
+            0.165,
+            0.44,
+            0.177
+          ],
+          "content": "\"\"\"Class for points in 3d space\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.194,
+            0.291,
+            0.208
+          ],
+          "content": "'&lt;Point3 object at 0x1007a90&gt;'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.304,
+            0.188,
+            0.381,
+            0.2
+          ],
+          "content": "def \\_\\_str\\_\\_(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.312,
+            0.2,
+            0.457,
+            0.212
+          ],
+          "content": "\"\"\"Returns: string with contents\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.209,
+            0.272,
+            0.223
+          ],
+          "content": "• Must add a special method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.312,
+            0.212,
+            0.426,
+            0.224
+          ],
+          "content": "return '('+str(self.x) + ',' +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.223,
+            0.231,
+            0.236
+          ],
+          "content": "§ \\_\\_str\\_\\_ for str()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.223,
+            0.425,
+            0.235
+          ],
+          "content": "str(self.y) + ',' +"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.236,
+            0.242,
+            0.249
+          ],
+          "content": "§ \\_\\_repr\\_\\_ for repr()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.235,
+            0.419,
+            0.246
+          ],
+          "content": "str(self.z) + ')'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.249,
+            0.282,
+            0.263
+          ],
+          "content": "• Could get away with just one"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.252,
+            0.386,
+            0.265
+          ],
+          "content": "def \\_\\_repr\\_\\_(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.263,
+            0.264,
+            0.275
+          ],
+          "content": "§ repr() requires \\_\\_repr\\_\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.275,
+            0.245,
+            0.287
+          ],
+          "content": "§ str() can use \\_\\_repr\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.314,
+            0.264,
+            0.455,
+            0.275
+          ],
+          "content": "\"\"\"Returns: unambiguous string\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.285,
+            0.261,
+            0.299
+          ],
+          "content": "(if \\_\\_str\\_\\_ is not there)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.314,
+            0.275,
+            0.429,
+            0.287
+          ],
+          "content": "return str(self.\\_\\_class\\_\\_)+"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.341,
+            0.288,
+            0.382,
+            0.3
+          ],
+          "content": "str(self)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.6,
+            0.124,
+            0.823,
+            0.143
+          ],
+          "level": 2,
+          "content": "Making a Class into a Type"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.154,
+            0.818,
+            0.169
+          ],
+          "content": "1. Think about what values you want in the set"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.17,
+            0.836,
+            0.185
+          ],
+          "content": "§ What are the attributes? What values can they have?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.186,
+            0.787,
+            0.203
+          ],
+          "content": "2. Think about what operations you want"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.203,
+            0.792,
+            0.218
+          ],
+          "content": "§ This often influences the previous question"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.22,
+            0.814,
+            0.235
+          ],
+          "content": "• To make (1) precise: write a class invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.236,
+            0.872,
+            0.251
+          ],
+          "content": "§ Statement we promise to keep true **after every method call**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.252,
+            0.844,
+            0.269
+          ],
+          "content": "• To make (2) precise: write method specifications"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.554,
+            0.268,
+            0.886,
+            0.284
+          ],
+          "content": "§ Statement of what method does/what it expects (preconditions)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.285,
+            0.833,
+            0.302
+          ],
+          "content": "• Write your code to make these statements true!"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.205,
+            0.406,
+            0.372,
+            0.424
+          ],
+          "level": 2,
+          "content": "Planning out a Class"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.433,
+            0.196,
+            0.444
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.442,
+            0.267,
+            0.454
+          ],
+          "content": "\"\"\"Class to represent times of day."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.458,
+            0.245,
+            0.477
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59\"\"\""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.302,
+            0.44,
+            0.388,
+            0.452
+          ],
+          "level": 2,
+          "content": "Class Invariant"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.483,
+            0.248,
+            0.494
+          ],
+          "content": "def \\_\\_init\\_\\_(self, hour, min):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.454,
+            0.442,
+            0.465
+          ],
+          "content": "States what attributes are present"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.464,
+            0.436,
+            0.475
+          ],
+          "content": "and what values they can have."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.494,
+            0.227,
+            0.503
+          ],
+          "content": "\"\"\"The time hour:min."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.477,
+            0.437,
+            0.497
+          ],
+          "content": "A statement that will always be <u>true of any Time instance.</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.501,
+            0.276,
+            0.511
+          ],
+          "content": "Pre: hour in 0..23; min in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.518,
+            0.264,
+            0.529
+          ],
+          "content": "def increment(self, hours, mins):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.137,
+            0.528,
+            0.26,
+            0.538
+          ],
+          "content": "\"\"\"Move time hours and mins"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.538,
+            0.204,
+            0.548
+          ],
+          "content": "into the future."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.301,
+            0.52,
+            0.42,
+            0.533
+          ],
+          "level": 2,
+          "content": "Method Specification"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.548,
+            0.286,
+            0.559
+          ],
+          "content": "Pre: hours int >= 0; mins in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.3,
+            0.534,
+            0.427,
+            0.546
+          ],
+          "content": "States what the method does."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.564,
+            0.191,
+            0.575
+          ],
+          "content": "def isPM(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.546,
+            0.442,
+            0.558
+          ],
+          "content": "Gives preconditions stating what"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.574,
+            0.283,
+            0.586
+          ],
+          "content": "\"\"\"Returns: True if noon or later.\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.3,
+            0.557,
+            0.444,
+            0.569
+          ],
+          "content": "<u>is assumed true of the arguments.</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.726,
+            0.256,
+            0.745
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.189,
+            0.686,
+            0.387,
+            0.704
+          ],
+          "level": 2,
+          "content": "Implementing a Method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.345,
+            0.729,
+            0.446,
+            0.742
+          ],
+          "content": "This is true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.345,
+            0.744,
+            0.464,
+            0.768
+          ],
+          "content": "What we are supposed to accomplish"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.345,
+            0.774,
+            0.467,
+            0.788
+          ],
+          "content": "This is also true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.136,
+            0.754,
+            0.307,
+            0.788
+          ],
+          "continues_prev": true,
+          "content": "def increment(self, hours, mins): \"\"\"Move this time &lt;hours&gt; hours and &lt;mins&gt; minutes into the future. Pre: hours [int] >= 0; mins in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.144,
+            0.843,
+            0.256,
+            0.862
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.598,
+            0.405,
+            0.824,
+            0.425
+          ],
+          "level": 2,
+          "content": "Implementing an Initializer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.781,
+            0.461,
+            0.88,
+            0.476
+          ],
+          "content": "This is true to start"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.586,
+            0.495,
+            0.661,
+            0.515
+          ],
+          "content": "self.hour = hour self.min = min"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.344,
+            0.813,
+            0.442,
+            0.829
+          ],
+          "content": "You put code here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.804,
+            0.301,
+            0.824
+          ],
+          "continues_prev": true,
+          "content": "self.min = self.min + mins ? self.hour = self.hour + hours"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.778,
+            0.495,
+            0.878,
+            0.512
+          ],
+          "content": "You put code here"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.448,
+            0.692,
+            0.459
+          ],
+          "content": "def \\_\\_init\\_\\_(self, hour, min):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.588,
+            0.463,
+            0.728,
+            0.474
+          ],
+          "content": "Pre: hour in 0..23; min in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.779,
+            0.531,
+            0.882,
+            0.559
+          ],
+          "content": "This should be true at the end"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.345,
+            0.837,
+            0.448,
+            0.852
+          ],
+          "content": "This should be true"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.578,
+            0.536,
+            0.694,
+            0.556
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.345,
+            0.852,
+            0.401,
+            0.865
+          ],
+          "content": "at the end"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.542,
+            0.686,
+            0.88,
+            0.704
+          ],
+          "level": 2,
+          "content": "Enforce Method Preconditions with assert"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.539,
+            0.71,
+            0.617,
+            0.722
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.72,
+            0.692,
+            0.732
+          ],
+          "content": "\"\"\"Class to represent times of day.\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.727,
+            0.719,
+            0.843,
+            0.738
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59\"\"\""
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.614,
+            0.116,
+            0.627
+          ],
+          "content": "3"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.55,
+            0.738,
+            0.666,
+            0.749
+          ],
+          "level": 2,
+          "content": "def \\_\\_init\\_\\_(self, hour, min):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.749,
+            0.646,
+            0.758
+          ],
+          "content": "\"\"\"The time hour:min. tmie tmm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.755,
+            0.691,
+            0.765
+          ],
+          "content": "Pre: hour in 0..23; min in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.765,
+            0.658,
+            0.776
+          ],
+          "content": "assert type(hour) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.762,
+            0.856,
+            0.773
+          ],
+          "content": "Initializer creates/initializes all"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.775,
+            0.685,
+            0.785
+          ],
+          "content": "assert 0 <= hour and hour < 24"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.773,
+            0.831,
+            0.783
+          ],
+          "content": "of the instance attributes."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.783,
+            0.655,
+            0.793
+          ],
+          "content": "assert type(min) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.783,
+            0.869,
+            0.795
+          ],
+          "content": "Asserts in initializer guarantee the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.792,
+            0.679,
+            0.803
+          ],
+          "content": "assert 0 <= min and min < 60"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.724,
+            0.794,
+            0.868,
+            0.805
+          ],
+          "content": "<u>initial values satisfy the invariant.</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.55,
+            0.81,
+            0.681,
+            0.821
+          ],
+          "content": "def increment(self, hours, mins):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.56,
+            0.82,
+            0.689,
+            0.83
+          ],
+          "content": "\"\"\"Move this time &lt;hours&gt; hours"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.83,
+            0.702,
+            0.84
+          ],
+          "content": "and &lt;mins&gt; minutes into the future."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.839,
+            0.708,
+            0.849
+          ],
+          "content": "Pre: hours is int >= 0; mins in 0..59\"\"”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.56,
+            0.848,
+            0.657,
+            0.858
+          ],
+          "content": "assert type(hour) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.56,
+            0.857,
+            0.657,
+            0.867
+          ],
+          "content": "assert type (min) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.56,
+            0.866,
+            0.63,
+            0.876
+          ],
+          "content": "assert hour >= 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.723,
+            0.853,
+            0.865,
+            0.865
+          ],
+          "content": "Asserts in other methods enforce"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.721,
+            0.864,
+            0.835,
+            0.875
+          ],
+          "content": "<u>the method preconditions.</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.875,
+            0.678,
+            0.886
+          ],
+          "content": "assert 0 <= min and min < 60"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": "1"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.894,
+            0.115,
+            0.907
+          ],
+          "content": "5"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.614,
+            0.539,
+            0.627
+          ],
+          "content": "4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.895,
+            0.539,
+            0.907
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.875,
+            0.021,
+            0.961,
+            0.039
+          ],
+          "content": "10/25/26"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.168,
+            0.124,
+            0.408,
+            0.142
+          ],
+          "level": 2,
+          "content": "Hiding Methods From Access"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.152,
+            0.22,
+            0.167
+          ],
+          "content": "• Hidden methods"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.292,
+            0.152,
+            0.372,
+            0.165
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.167,
+            0.268,
+            0.18
+          ],
+          "content": "§ start with an **underscore**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.163,
+            0.443,
+            0.176
+          ],
+          "content": "\"\"\"Class to represent times of day."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.18,
+            0.266,
+            0.194
+          ],
+          "content": "§ do not show up in help()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.178,
+            0.42,
+            0.199
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: min is an int in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.194,
+            0.266,
+            0.216
+          ],
+          "content": "§ are meant to be **internal** (e.g. helper methods)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.207,
+            0.402,
+            0.22
+          ],
+          "content": "def \\_is\\_minute(self,m):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.215,
+            0.273,
+            0.23
+          ],
+          "content": "• But they are **not restricted**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.311,
+            0.219,
+            0.458,
+            0.231
+          ],
+          "content": "\"\"\"Return: True if m valid minute\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.23,
+            0.271,
+            0.244
+          ],
+          "content": "§ You can still access them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.31,
+            0.23,
+            0.427,
+            0.242
+          ],
+          "content": "return (type(m) == int and"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.243,
+            0.263,
+            0.256
+          ],
+          "content": "§ But this is bad practice!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.34,
+            0.24,
+            0.429,
+            0.252
+          ],
+          "content": "m >= 0 and m < 60)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.255,
+            0.266,
+            0.269
+          ],
+          "content": "§ Like a precond violation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.302,
+            0.261,
+            0.424,
+            0.273
+          ],
+          "content": "def \\_\\_init\\_\\_(self, hour, min):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.269,
+            0.28,
+            0.283
+          ],
+          "content": "• Can do same for attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.311,
+            0.272,
+            0.404,
+            0.282
+          ],
+          "content": "\"\"\"The time hour:min The time hour:min."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.283,
+            0.282,
+            0.297
+          ],
+          "content": "§ Underscore makes it hidden"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.311,
+            0.278,
+            0.45,
+            0.29
+          ],
+          "content": "Pre: hour in 0..23; min in 0..59\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.296,
+            0.284,
+            0.31
+          ],
+          "content": "§ Only used inside of methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.311,
+            0.289,
+            0.423,
+            0.3
+          ],
+          "content": "assert self.\\_is\\_minute(m)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.384,
+            0.3,
+            0.421,
+            0.311
+          ],
+          "content": "Helper"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.625,
+            0.124,
+            0.798,
+            0.143
+          ],
+          "level": 2,
+          "content": "Enforcing Invariants"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.152,
+            0.635,
+            0.166
+          ],
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.166,
+            0.695,
+            0.18
+          ],
+          "content": "\"\"\"Class to repr times of day."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.715,
+            0.152,
+            0.87,
+            0.167
+          ],
+          "content": "• **Idea**: Restrict direct access"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.182,
+            0.687,
+            0.208
+          ],
+          "content": "Inv: hour is an int in 0..23 Inv: <u>min is an int in 0..59</u> \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.167,
+            0.865,
+            0.18
+          ],
+          "content": "§ Only access via methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.18,
+            0.876,
+            0.194
+          ],
+          "content": "§ Use asserts to enforce them"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.616,
+            0.211,
+            0.689,
+            0.241
+          ],
+          "content": "**Invariants**: Properties that <u>are always true.</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.716,
+            0.193,
+            0.788,
+            0.207
+          ],
+          "content": "• **Example**:"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.525,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": "8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.729,
+            0.206,
+            0.809,
+            0.218
+          ],
+          "content": "def getHour(self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.242,
+            0.688,
+            0.282
+          ],
+          "content": "• These are just comments! >>> t = Time(2,30) >>> t.hour = 'Hello'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.738,
+            0.217,
+            0.839,
+            0.23
+          ],
+          "content": "\"\"\"Returns: the hour\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.739,
+            0.23,
+            0.812,
+            0.241
+          ],
+          "content": "return self.hour"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.282,
+            0.686,
+            0.298
+          ],
+          "content": "• How do we prevent this?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.246,
+            0.834,
+            0.26
+          ],
+          "content": "def setHour (self,value):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.738,
+            0.259,
+            0.841,
+            0.271
+          ],
+          "content": "\"\"\"Sets hour to value\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.74,
+            0.27,
+            0.847,
+            0.282
+          ],
+          "content": "assert type(value) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.741,
+            0.282,
+            0.877,
+            0.294
+          ],
+          "content": "assert value >= 0 and value < 24"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.741,
+            0.292,
+            0.838,
+            0.304
+          ],
+          "content": "self.numerator = value"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.207,
+            0.405,
+            0.369,
+            0.424
+          ],
+          "level": 2,
+          "content": "Data Encapsulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.435,
+            0.407,
+            0.453
+          ],
+          "content": "• **Idea**: Force the user to only use methods"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.454,
+            0.396,
+            0.471
+          ],
+          "content": "• Do not allow direct access of attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.475,
+            0.255,
+            0.491
+          ],
+          "content": "**Setter Method**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.319,
+            0.475,
+            0.432,
+            0.491
+          ],
+          "content": "**Getter Method**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.495,
+            0.272,
+            0.51
+          ],
+          "content": "• Used to change an attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.495,
+            0.444,
+            0.51
+          ],
+          "content": "• Used to access an attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.51,
+            0.267,
+            0.536
+          ],
+          "content": "• Replaces all assignment statements to the attribute"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.51,
+            0.438,
+            0.536
+          ],
+          "continues_prev": true,
+          "content": "• Replaces all usage of attribute in an expression"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.536,
+            0.207,
+            0.562
+          ],
+          "content": "• **Bad**: >>> t.hour = 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.536,
+            0.339,
+            0.55
+          ],
+          "content": "• **Bad**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.304,
+            0.549,
+            0.391,
+            0.562
+          ],
+          "content": ">>> x = 3\\*t.hour"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.563,
+            0.171,
+            0.576
+          ],
+          "content": "• **Good**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.563,
+            0.348,
+            0.576
+          ],
+          "content": "• **Good**:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.576,
+            0.216,
+            0.59
+          ],
+          "content": ">>> f.setHour(5)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.305,
+            0.576,
+            0.412,
+            0.59
+          ],
+          "content": ">>> x = 3\\*t.getHour()"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.631,
+            0.406,
+            0.792,
+            0.424
+          ],
+          "level": 2,
+          "content": "Data Encapsulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.579,
+            0.435,
+            0.668,
+            0.447
+          ],
+          "content": "class Time(object):"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": "10"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.588,
+            0.445,
+            0.736,
+            0.459
+          ],
+          "content": "\"\"\"Class to repr times of day. \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.748,
+            0.434,
+            0.857,
+            0.448
+          ],
+          "content": "**NO ATTRIBUTES**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.747,
+            0.45,
+            0.858,
+            0.464
+          ],
+          "content": "in class specification"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.472,
+            0.588,
+            0.486
+          ],
+          "content": "**Getter**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.592,
+            0.475,
+            0.678,
+            0.488
+          ],
+          "content": "def getHour (self):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.597,
+            0.485,
+            0.731,
+            0.51
+          ],
+          "content": "\"\"\"Returns: hour attribute\"\"\" return self.\\_hour"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.479,
+            0.863,
+            0.494
+          ],
+          "content": "**Method specifications**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.51,
+            0.586,
+            0.524
+          ],
+          "content": "**Setter**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.745,
+            0.495,
+            0.861,
+            0.509
+          ],
+          "content": "describe the attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.591,
+            0.517,
+            0.686,
+            0.53
+          ],
+          "content": "def setHour(self, h):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.529,
+            0.685,
+            0.54
+          ],
+          "content": "\"\"\" Sets hour to h"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.539,
+            0.721,
+            0.552
+          ],
+          "content": "Pre: h is an int in 0..23\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.526,
+            0.864,
+            0.54
+          ],
+          "content": "**Setter precondition** is"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.551,
+            0.701,
+            0.562
+          ],
+          "content": "assert type(h) == int"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.561,
+            0.718,
+            0.573
+          ],
+          "content": "assert 0 <= h and h < 24"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.743,
+            0.54,
+            0.861,
+            0.554
+          ],
+          "content": "same as the **invariant**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.572,
+            0.672,
+            0.585
+          ],
+          "content": "self.\\_hour = d"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.154,
+            0.686,
+            0.421,
+            0.705
+          ],
+          "level": 2,
+          "content": "Encapsulation and Specifications"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.116,
+            0.716,
+            0.241,
+            0.732
+          ],
+          "level": 2,
+          "content": "class Time(object):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.731,
+            0.374,
+            0.749
+          ],
+          "content": "\"\"\"Class to represent times of day. \"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.379,
+            0.729,
+            0.452,
+            0.755
+          ],
+          "content": "No attributes <u>in class spec</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.759,
+            0.286,
+            0.775
+          ],
+          "content": "\\### Hidden attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.768,
+            0.438,
+            0.781
+          ],
+          "content": "These comments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.775,
+            0.321,
+            0.791
+          ],
+          "content": "\\# Att \\_hour: hour of the day"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.345,
+            0.781,
+            0.444,
+            0.794
+          ],
+          "content": "make it part of the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.791,
+            0.331,
+            0.806
+          ],
+          "content": "\\# Inv: \\_hour is an int in 0..23"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.794,
+            0.431,
+            0.805
+          ],
+          "content": "**class invariant**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.807,
+            0.335,
+            0.822
+          ],
+          "content": "\\# Att \\_min: minute of the hour"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.804,
+            0.443,
+            0.818
+          ],
+          "content": "but not part of the"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.133,
+            0.822,
+            0.324,
+            0.838
+          ],
+          "content": "\\# Inv: \\_min is an int in 0..59"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.818,
+            0.443,
+            0.831
+          ],
+          "content": "(public) **interface**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.177,
+            0.844,
+            0.274,
+            0.856
+          ],
+          "content": "These comments"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.176,
+            0.855,
+            0.274,
+            0.869
+          ],
+          "content": "<u>do not go in help()</u>"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.572,
+            0.685,
+            0.85,
+            0.705
+          ],
+          "level": 2,
+          "content": "Mutable vs. Immutable Attributes"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.594,
+            0.719,
+            0.655,
+            0.735
+          ],
+          "content": "**Mutable**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.744,
+            0.69,
+            0.759
+          ],
+          "content": "• Can change value directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.76,
+            0.719,
+            0.838,
+            0.735
+          ],
+          "content": "**Immutable**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.76,
+            0.675,
+            0.774
+          ],
+          "content": "§ If class invariant met"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.715,
+            0.744,
+            0.871,
+            0.759
+          ],
+          "content": "• Can’t change value directly"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.775,
+            0.678,
+            0.789
+          ],
+          "content": "§ **Example:** turtle.color"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.76,
+            0.882,
+            0.774
+          ],
+          "content": "§ May change “behind scenes”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.791,
+            0.698,
+            0.805
+          ],
+          "content": "• Has both getters and setters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.775,
+            0.835,
+            0.79
+          ],
+          "content": "§ **Example:** turtle.x"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.716,
+            0.791,
+            0.822,
+            0.805
+          ],
+          "content": "• Has only a getter"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.806,
+            0.703,
+            0.821
+          ],
+          "content": "§ Setters allow you to change"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.821,
+            0.707,
+            0.835
+          ],
+          "content": "§ Enforce invariants w/ asserts"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.731,
+            0.806,
+            0.875,
+            0.82
+          ],
+          "content": "§ No setter means no change"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.732,
+            0.821,
+            0.878,
+            0.835
+          ],
+          "content": "§ Getter allows limited access"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.592,
+            0.844,
+            0.836,
+            0.861
+          ],
+          "content": "May ask you to differentiate on the exam"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": "11"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": "12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.963,
+            0.959,
+            0.977
+          ],
+          "content": "2"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-19",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

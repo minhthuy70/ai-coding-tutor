@@ -1,0 +1,1613 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.886,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": "10/4/26"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.104,
+            0.332,
+            0.115,
+            0.345
+          ],
+          "content": "1"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.238,
+            0.124,
+            0.339,
+            0.141
+          ],
+          "level": 2,
+          "content": "Nested Lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.154,
+            0.308,
+            0.171
+          ],
+          "content": "• Lists can hold any objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.173,
+            0.245,
+            0.19
+          ],
+          "content": "• Lists are objects"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.191,
+            0.366,
+            0.207
+          ],
+          "content": "• Therefore lists can hold other lists!"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.136,
+            0.22,
+            0.199,
+            0.237
+          ],
+          "content": "\\mathrm{a} = [ 2, 1 ]",
+          "image_source": "images/page_0_equation_6.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.136,
+            0.237,
+            0.198,
+            0.252
+          ],
+          "content": "\\mathrm{b} = [ 3, 1 ]",
+          "image_source": "images/page_0_equation_7.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.303,
+            0.216,
+            0.436,
+            0.248
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_8.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.136,
+            0.252,
+            0.212,
+            0.267
+          ],
+          "content": "\\mathrm{c} = [ 1, 4, \\mathrm{b} ]",
+          "image_source": "images/page_0_equation_9.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.135,
+            0.267,
+            0.228,
+            0.283
+          ],
+          "content": "\\mathbf {x} = [ 1, \\mathrm{a}, \\mathrm{c}, 5 ]",
+          "image_source": "images/page_0_equation_10.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.247,
+            0.453,
+            0.264
+          ],
+          "content": "x = [1, [2, 1], [1, 4, [3, 1]], 5]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.553,
+            0.124,
+            0.869,
+            0.141
+          ],
+          "level": 2,
+          "content": "How Multidimensional Lists are Stored"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.152,
+            0.681,
+            0.168
+          ],
+          "content": "• b = [[9, 6, 4], [5, 7, 7]]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.209,
+            0.601,
+            0.223
+          ],
+          "content": "b **id1**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.557,
+            0.171,
+            0.871,
+            0.23
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_15.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.235,
+            0.783,
+            0.25
+          ],
+          "content": "• b holds name of a one-dimensional list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.25,
+            0.676,
+            0.264
+          ],
+          "content": "§ Has len(b) elements"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.332,
+            0.538,
+            0.345
+          ],
+          "content": "2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.264,
+            0.77,
+            0.278
+          ],
+          "content": "§ Its elements are (the names of) 1D lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.279,
+            0.866,
+            0.295
+          ],
+          "content": "• b[i] holds the name of a one-dimensional list (of ints)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.294,
+            0.688,
+            0.309
+          ],
+          "content": "§ Has len(b[i]) elements"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.196,
+            0.406,
+            0.381,
+            0.424
+          ],
+          "level": 2,
+          "content": "Ragged Lists vs Tables"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.435,
+            0.452,
+            0.453
+          ],
+          "content": "• Ragged is 2d uneven list: b = [[17,13,19],[28,95]]"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.124,
+            0.455,
+            0.443,
+            0.507
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_24.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.519,
+            0.416,
+            0.535
+          ],
+          "content": "• Table is 2d uniform list: b = [[9,6,4],[5,7,7]]"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.134,
+            0.539,
+            0.443,
+            0.597
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_26.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.756,
+            0.301,
+            0.772
+          ],
+          "content": "• Assign value at row 3, col 2:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.776,
+            0.195,
+            0.791
+          ],
+          "content": "d[3][2] = 8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.797,
+            0.247,
+            0.812
+          ],
+          "content": "• **An odd symmetry**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.715,
+            0.301,
+            0.731
+          ],
+          "content": "• Access value at row 3, col 2:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.364,
+            0.731,
+            0.45,
+            0.805
+          ],
+          "sub_type": "code",
+          "content": "```csv\nd 0 5 4 7 3\n1 4 8 9 7\n2 5 1 2 3\n3 4 1 2 9\n4 6 7 8 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.816,
+            0.36,
+            0.832
+          ],
+          "content": "§ Number of rows of d: len(d)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.145,
+            0.686,
+            0.431,
+            0.704
+          ],
+          "level": 2,
+          "content": "Overview of Two-Dimensional Lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.837,
+            0.375,
+            0.853
+          ],
+          "content": "§ Number of cols in row r of d: len(d[r])"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.596,
+            0.405,
+            0.826,
+            0.424
+          ],
+          "level": 2,
+          "content": "Representing Tables as Lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.584,
+            0.439,
+            0.665,
+            0.455
+          ],
+          "content": "**Spreadsheet**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.716,
+            0.436,
+            0.865,
+            0.452
+          ],
+          "content": "• Represent as 2d list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.579,
+            0.468,
+            0.648,
+            0.55
+          ],
+          "content": "0 1 2 3 0 5 4 7 3 1 4 8 9 7 2 5 1 2 3 3 4 1 2 9 4 <u>6 7 8 0</u>"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.66,
+            0.477,
+            0.705,
+            0.5
+          ],
+          "continues_prev": true,
+          "content": "Each row, col has a"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.733,
+            0.453,
+            0.869,
+            0.468
+          ],
+          "content": "§ Each table row a list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.734,
+            0.47,
+            0.84,
+            0.485
+          ],
+          "content": "§ List of all rows"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.963,
+            0.958,
+            0.977
+          ],
+          "content": "1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.733,
+            0.486,
+            0.859,
+            0.501
+          ],
+          "content": "§ **Row major order**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.716,
+            0.503,
+            0.872,
+            0.519
+          ],
+          "content": "• Column major exists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.732,
+            0.52,
+            0.869,
+            0.535
+          ],
+          "content": "§ Less common to see"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.734,
+            0.537,
+            0.876,
+            0.565
+          ],
+          "content": "§ Limited to some scientific applications"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.574,
+            0.565,
+            0.855,
+            0.582
+          ],
+          "content": "\\mathrm{d} = [ [ 5, 4, 7, 3 ], [ 4, 8, 9, 7 ], [ 5, 1, 2, 3 ], [ 4, 1, 2, 9 ], [ 6, 7, 8, 0 ] ]",
+          "image_source": "images/page_0_equation_47.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.576,
+            0.686,
+            0.846,
+            0.704
+          ],
+          "level": 2,
+          "content": "Slices and Multidimensional Lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.716,
+            0.735,
+            0.731
+          ],
+          "content": "• Only “top-level” list is copied."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.732,
+            0.754,
+            0.747
+          ],
+          "content": "• Contents of the list are not altered"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.542,
+            0.748,
+            0.688,
+            0.763
+          ],
+          "content": "• b = [[9, 6], [4, 5], [7, 7]]"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.547,
+            0.765,
+            0.769,
+            0.842
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_52.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.806,
+            0.726,
+            0.857,
+            0.741
+          ],
+          "content": "\\mathrm{x} = \\mathrm{b} [: 2 ]",
+          "image_source": "images/page_0_equation_53.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.796,
+            0.749,
+            0.869,
+            0.812
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_54.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.614,
+            0.115,
+            0.627
+          ],
+          "content": "3"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.102,
+            0.894,
+            0.115,
+            0.907
+          ],
+          "content": "5"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.614,
+            0.538,
+            0.626
+          ],
+          "content": "4"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.894,
+            0.539,
+            0.907
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.886,
+            0.021,
+            0.96,
+            0.039
+          ],
+          "content": "10/4/26"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.195,
+            0.124,
+            0.381,
+            0.143
+          ],
+          "level": 2,
+          "content": "Shallow vs. Deep Copy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.154,
+            0.363,
+            0.171
+          ],
+          "content": "• **Shallow copy:** Copy top-level list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.171,
+            0.404,
+            0.188
+          ],
+          "content": "§ Happens when slice a multidimensional list"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.188,
+            0.404,
+            0.223
+          ],
+          "content": "• **Deep copy:** Copy top and all nested lists § Requires a special function: copy.deepcopy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.224,
+            0.206,
+            0.24
+          ],
+          "content": "• **Example:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.24,
+            0.234,
+            0.256
+          ],
+          "content": ">>> import copy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.255,
+            0.25,
+            0.27
+          ],
+          "content": ">>> a = [[1,2],[2,3]]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.27,
+            0.206,
+            0.285
+          ],
+          "content": ">>> b = a[:]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.286,
+            0.27,
+            0.378,
+            0.286
+          ],
+          "content": "\\# Shallow copy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.285,
+            0.365,
+            0.301
+          ],
+          "content": ">>> c = copy.deepcopy(a) # Deep copy"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.599,
+            0.124,
+            0.824,
+            0.142
+          ],
+          "level": 2,
+          "content": "Functions over Nested Lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.154,
+            0.852,
+            0.172
+          ],
+          "content": "• Functions on nested lists similar to lists"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.174,
+            0.804,
+            0.192
+          ],
+          "content": "§ Go over (nested) list with for-loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.194,
+            0.824,
+            0.211
+          ],
+          "content": "§ Use accumulator to gather the results"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.213,
+            0.784,
+            0.231
+          ],
+          "content": "• But two important differences"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.232,
+            0.743,
+            0.25
+          ],
+          "content": "§ Need **multiple for-loops**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.251,
+            0.816,
+            0.269
+          ],
+          "content": "§ One for each part/dimension of loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.27,
+            0.864,
+            0.287
+          ],
+          "content": "§ In some cases need **multiple accumulators**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.558,
+            0.288,
+            0.81,
+            0.305
+          ],
+          "content": "§ Latter true when result is new table"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.185,
+            0.406,
+            0.392,
+            0.423
+          ],
+          "level": 2,
+          "content": "Functions on Nested Lists"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.435,
+            0.209,
+            0.448
+          ],
+          "level": 2,
+          "content": "def all\\_nums(table):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.448,
+            0.337,
+            0.461
+          ],
+          "content": "\"\"\"Returns True if table contains only numbers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.465,
+            0.335,
+            0.479
+          ],
+          "content": "Precondition: table is a (non-ragged) 2d List\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.48,
+            0.228,
+            0.492
+          ],
+          "content": "result = True"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.492,
+            0.226,
+            0.504
+          ],
+          "content": "\\# Walk through table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.485,
+            0.32,
+            0.499
+          ],
+          "content": "Accumulator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.505,
+            0.204,
+            0.517
+          ],
+          "content": "for row in table:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.278,
+            0.506,
+            0.345,
+            0.52
+          ],
+          "content": "First Loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.518,
+            0.249,
+            0.53
+          ],
+          "content": "\\# Walk through the row"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.53,
+            0.212,
+            0.542
+          ],
+          "content": "for item in row:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.525,
+            0.353,
+            0.54
+          ],
+          "content": "Second Loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.152,
+            0.543,
+            0.286,
+            0.555
+          ],
+          "content": "if not type(item) in [int,float]:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.161,
+            0.555,
+            0.229,
+            0.569
+          ],
+          "content": "result = False"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.574,
+            0.191,
+            0.587
+          ],
+          "content": "return result"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.206,
+            0.686,
+            0.371,
+            0.704
+          ],
+          "level": 2,
+          "content": "A Mutable Example"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.118,
+            0.715,
+            0.211,
+            0.728
+          ],
+          "level": 2,
+          "content": "def add\\_ones(table):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.728,
+            0.311,
+            0.74
+          ],
+          "content": "\"\"\"Adds one to every number in the table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.741,
+            0.274,
+            0.753
+          ],
+          "content": "Preconditions: table is a 2d List,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.753,
+            0.254,
+            0.765
+          ],
+          "content": "all table elements are int\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.765,
+            0.266,
+            0.777
+          ],
+          "content": "\\# Walk through table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.778,
+            0.26,
+            0.791
+          ],
+          "content": "for rpos in range(len(table)):"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.614,
+            0.548,
+            0.627
+          ],
+          "content": "10"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.762,
+            0.359,
+            0.789
+          ],
+          "content": "Do not loop <u>over the table</u>"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.394,
+            0.733,
+            0.453,
+            0.766
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_44.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.332,
+            0.539,
+            0.345
+          ],
+          "content": "8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.791,
+            0.269,
+            0.804
+          ],
+          "content": "\\# Walk through each column"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.804,
+            0.296,
+            0.817
+          ],
+          "content": "for cpos in range(len(table[rpos])):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.818,
+            0.322,
+            0.831
+          ],
+          "content": "table[rpos][cpos] = table[rpos][cpos]+1"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.402,
+            0.773,
+            0.444,
+            0.804
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_49.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.842,
+            0.234,
+            0.856
+          ],
+          "content": "\\# No return statement"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.394,
+            0.81,
+            0.452,
+            0.844
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_51.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.584,
+            0.406,
+            0.839,
+            0.424
+          ],
+          "level": 2,
+          "content": "Transpose: A Trickier Example"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.54,
+            0.435,
+            0.635,
+            0.447
+          ],
+          "level": 2,
+          "content": "def transpose(table):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.445,
+            0.805,
+            0.458
+          ],
+          "content": "\"\"\"Returns: copy of table with rows and columns swapped"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.459,
+            0.759,
+            0.472
+          ],
+          "content": "Precondition: table is a (non-ragged) 2d List\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.471,
+            0.766,
+            0.483
+          ],
+          "content": "numrows = len(table) # Need number of rows"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.831,
+            0.448,
+            0.864,
+            0.461
+          ],
+          "content": "\\begin{array}{c c} \\hline 1 & 2 \\\\ \\hline \\end{array}",
+          "image_source": "images/page_1_equation_57.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.483,
+            0.792,
+            0.495
+          ],
+          "content": "numcols = len(table[0]) # All rows have same no. cols"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.497,
+            0.602,
+            0.509
+          ],
+          "content": "result = []"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.553,
+            0.51,
+            0.646,
+            0.534
+          ],
+          "content": "for m in range(num row = []"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.501,
+            0.735,
+            0.527
+          ],
+          "content": "\\# Result (new taAccumulator s): for each loop"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.831,
+            0.466,
+            0.862,
+            0.479
+          ],
+          "content": "3 4",
+          "image_source": "images/page_1_equation_62.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.746,
+            0.497,
+            0.806,
+            0.509
+          ],
+          "content": "e) accumulator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.678,
+            0.523,
+            0.798,
+            0.535
+          ],
+          "content": "ingle row accumulator"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.83,
+            0.484,
+            0.863,
+            0.497
+          ],
+          "content": "5 6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.535,
+            0.679,
+            0.548
+          ],
+          "content": "for n in range(numrows):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.548,
+            0.788,
+            0.56
+          ],
+          "content": "row.append(table[n][m]) # Create a new row list"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.825,
+            0.502,
+            0.866,
+            0.533
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_68.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.561,
+            0.776,
+            0.573
+          ],
+          "content": "result.append(row) # Add result to table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.574,
+            0.615,
+            0.586
+          ],
+          "content": "return result"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.818,
+            0.537,
+            0.875,
+            0.57
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_71.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.639,
+            0.686,
+            0.784,
+            0.704
+          ],
+          "level": 2,
+          "content": "Another Example"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.54,
+            0.715,
+            0.629,
+            0.728
+          ],
+          "level": 2,
+          "content": "def strip(table,col):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.728,
+            0.745,
+            0.741
+          ],
+          "content": "\"\"\"Removes column col from the given table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.74,
+            0.754,
+            0.753
+          ],
+          "content": "Preconditions: table is a (non-ragged) 2d List,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.753,
+            0.639,
+            0.765
+          ],
+          "content": "col valid column\"\"\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.765,
+            0.689,
+            0.778
+          ],
+          "content": "\\# Walk through table"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.703,
+            0.763,
+            0.779,
+            0.777
+          ],
+          "content": "Do not loop"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.779,
+            0.683,
+            0.791
+          ],
+          "content": "for rpos in range(len(table)):"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.699,
+            0.776,
+            0.782,
+            0.789
+          ],
+          "content": "<u>over the table</u>"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.816,
+            0.725,
+            0.876,
+            0.771
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_81.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.562,
+            0.791,
+            0.735,
+            0.804
+          ],
+          "content": "\\# Modify each row to slice out column"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.825,
+            0.774,
+            0.868,
+            0.804
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_83.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.56,
+            0.804,
+            0.782,
+            0.818
+          ],
+          "content": "table[rpos] = table[rpos][:col] + table[rpos][col+1:]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.551,
+            0.83,
+            0.658,
+            0.844
+          ],
+          "content": "\\# No return statement"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.822,
+            0.806,
+            0.871,
+            0.84
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_86.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.103,
+            0.894,
+            0.124,
+            0.907
+          ],
+          "content": "11"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.526,
+            0.894,
+            0.548,
+            0.907
+          ],
+          "content": "12"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.945,
+            0.962,
+            0.959,
+            0.977
+          ],
+          "content": "2"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "handout-14",
+      "authors": [
+        "Walker White"
+      ],
+      "creator_application": "PowerPoint",
+      "producer_application": "macOS Version 15.7.7 (Build 24G720) Quartz PDFContext",
+      "page_count": 2,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}
