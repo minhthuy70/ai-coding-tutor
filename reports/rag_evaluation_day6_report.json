@@ -1,74 +1,74 @@
 {
-  "timestamp": "2026-11-28T03:38:08Z",
+  "timestamp": "2026-11-28T08:38:36Z",
   "task": "DAY_06_RAG_RETRIEVAL_EVALUATION_ENHANCED",
   "benchmark_file": "D:\\CNTT2311\\HK9\\DOAN4\\ai-coding-tutor\\data\\04_benchmark\\rag_eval_queries.json",
   "total_queries": 20,
-  "execution_time_seconds": 28.86,
+  "execution_time_seconds": 50.84,
   "latency_stats": {
-    "avg_ms": 1414.8,
-    "p50_ms": 1520.72,
-    "p95_ms": 1629.11
+    "avg_ms": 2499.62,
+    "p50_ms": 2667.65,
+    "p95_ms": 2821.95
   },
   "dod_target_hit_at_3": 0.85,
-  "dod_actual_hit_at_3": 0.95,
+  "dod_actual_hit_at_3": 0.85,
   "dod_status": "PASSED",
   "summary": {
     "baseline_unfiltered": {
       "count": 20,
-      "hit_rate_at_1": 0.8,
-      "hit_rate_at_3": 0.95,
-      "hit_rate_at_5": 0.95,
-      "mrr_at_3": 0.8666666666666666,
-      "mrr_at_5": 0.8666666666666666,
-      "recall_at_5": 0.6916666666666667
+      "hit_rate_at_1": 0.65,
+      "hit_rate_at_3": 0.85,
+      "hit_rate_at_5": 0.85,
+      "mrr_at_3": 0.7333333333333333,
+      "mrr_at_5": 0.7333333333333333,
+      "recall_at_5": 0.55
     },
     "metadata_filtered": {
       "count": 20,
-      "hit_rate_at_1": 0.75,
-      "hit_rate_at_3": 0.9,
-      "hit_rate_at_5": 0.9,
-      "mrr_at_3": 0.8166666666666667,
-      "mrr_at_5": 0.8166666666666667,
-      "recall_at_5": 0.6666666666666667
+      "hit_rate_at_1": 0.6,
+      "hit_rate_at_3": 0.8,
+      "hit_rate_at_5": 0.8,
+      "mrr_at_3": 0.6833333333333333,
+      "mrr_at_5": 0.6833333333333333,
+      "recall_at_5": 0.525
     },
     "hybrid_rerank": {
       "count": 20,
-      "hit_rate_at_1": 0.75,
-      "hit_rate_at_3": 0.9,
-      "hit_rate_at_5": 0.9,
-      "mrr_at_3": 0.825,
-      "mrr_at_5": 0.825,
-      "recall_at_5": 0.5875
+      "hit_rate_at_1": 0.6,
+      "hit_rate_at_3": 0.8,
+      "hit_rate_at_5": 0.8,
+      "mrr_at_3": 0.7,
+      "mrr_at_5": 0.7,
+      "recall_at_5": 0.4958333333333333
     }
   },
   "category_breakdown": {
     "theory": {
       "baseline": {
         "count": 5,
-        "hit_rate_at_1": 1.0,
-        "hit_rate_at_3": 1.0,
-        "hit_rate_at_5": 1.0,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 0.6666666666666666
+        "hit_rate_at_1": 0.8,
+        "hit_rate_at_3": 0.8,
+        "hit_rate_at_5": 0.8,
+        "mrr_at_3": 0.8,
+        "mrr_at_5": 0.8,
+        "recall_at_5": 0.5333333333333333
       },
       "filtered": {
         "count": 5,
-        "hit_rate_at_1": 1.0,
-        "hit_rate_at_3": 1.0,
-        "hit_rate_at_5": 1.0,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 0.6666666666666666
+        "hit_rate_at_1": 0.8,
+        "hit_rate_at_3": 0.8,
+        "hit_rate_at_5": 0.8,
+        "mrr_at_3": 0.8,
+        "mrr_at_5": 0.8,
+        "recall_at_5": 0.5333333333333333
       },
       "hybrid": {
         "count": 5,
-        "hit_rate_at_1": 0.8,
-        "hit_rate_at_3": 1.0,
-        "hit_rate_at_5": 1.0,
-        "mrr_at_3": 0.9,
-        "mrr_at_5": 0.9,
-        "recall_at_5": 0.6666666666666666
+        "hit_rate_at_1": 0.6,
+        "hit_rate_at_3": 0.8,
+        "hit_rate_at_5": 0.8,
+        "mrr_at_3": 0.7,
+        "mrr_at_5": 0.7,
+        "recall_at_5": 0.5333333333333333
       }
     },
     "code": {
@@ -79,7 +79,7 @@
         "hit_rate_at_5": 1.0,
         "mrr_at_3": 1.0,
         "mrr_at_5": 1.0,
-        "recall_at_5": 0.5666666666666667
+        "recall_at_5": 0.4333333333333333
       },
       "filtered": {
         "count": 5,
@@ -88,7 +88,7 @@
         "hit_rate_at_5": 0.8,
         "mrr_at_3": 0.8,
         "mrr_at_5": 0.8,
-        "recall_at_5": 0.4666666666666667
+        "recall_at_5": 0.3333333333333333
       },
       "hybrid": {
         "count": 5,
@@ -97,65 +97,65 @@
         "hit_rate_at_5": 0.8,
         "mrr_at_3": 0.8,
         "mrr_at_5": 0.8,
-        "recall_at_5": 0.4166666666666667
+        "recall_at_5": 0.2833333333333333
       }
     },
     "api": {
       "baseline": {
         "count": 5,
-        "hit_rate_at_1": 0.6,
+        "hit_rate_at_1": 0.4,
         "hit_rate_at_3": 0.8,
         "hit_rate_at_5": 0.8,
-        "mrr_at_3": 0.7,
-        "mrr_at_5": 0.7,
-        "recall_at_5": 0.8
+        "mrr_at_3": 0.5666666666666667,
+        "mrr_at_5": 0.5666666666666667,
+        "recall_at_5": 0.7
       },
       "filtered": {
         "count": 5,
-        "hit_rate_at_1": 0.6,
+        "hit_rate_at_1": 0.4,
         "hit_rate_at_3": 0.8,
         "hit_rate_at_5": 0.8,
-        "mrr_at_3": 0.7,
-        "mrr_at_5": 0.7,
-        "recall_at_5": 0.8
+        "mrr_at_3": 0.5666666666666667,
+        "mrr_at_5": 0.5666666666666667,
+        "recall_at_5": 0.7
       },
       "hybrid": {
         "count": 5,
-        "hit_rate_at_1": 0.6,
+        "hit_rate_at_1": 0.4,
         "hit_rate_at_3": 0.8,
         "hit_rate_at_5": 0.8,
-        "mrr_at_3": 0.7,
-        "mrr_at_5": 0.7,
+        "mrr_at_3": 0.6,
+        "mrr_at_5": 0.6,
         "recall_at_5": 0.7
       }
     },
     "hybrid": {
       "baseline": {
         "count": 5,
-        "hit_rate_at_1": 0.6,
-        "hit_rate_at_3": 1.0,
-        "hit_rate_at_5": 1.0,
-        "mrr_at_3": 0.7666666666666667,
-        "mrr_at_5": 0.7666666666666667,
-        "recall_at_5": 0.7333333333333333
+        "hit_rate_at_1": 0.4,
+        "hit_rate_at_3": 0.8,
+        "hit_rate_at_5": 0.8,
+        "mrr_at_3": 0.5666666666666667,
+        "mrr_at_5": 0.5666666666666667,
+        "recall_at_5": 0.5333333333333333
       },
       "filtered": {
         "count": 5,
-        "hit_rate_at_1": 0.6,
-        "hit_rate_at_3": 1.0,
-        "hit_rate_at_5": 1.0,
-        "mrr_at_3": 0.7666666666666667,
-        "mrr_at_5": 0.7666666666666667,
-        "recall_at_5": 0.7333333333333333
+        "hit_rate_at_1": 0.4,
+        "hit_rate_at_3": 0.8,
+        "hit_rate_at_5": 0.8,
+        "mrr_at_3": 0.5666666666666667,
+        "mrr_at_5": 0.5666666666666667,
+        "recall_at_5": 0.5333333333333333
       },
       "hybrid": {
         "count": 5,
-        "hit_rate_at_1": 0.8,
-        "hit_rate_at_3": 1.0,
-        "hit_rate_at_5": 1.0,
-        "mrr_at_3": 0.9,
-        "mrr_at_5": 0.9,
-        "recall_at_5": 0.5666666666666667
+        "hit_rate_at_1": 0.6,
+        "hit_rate_at_3": 0.8,
+        "hit_rate_at_5": 0.8,
+        "mrr_at_3": 0.7,
+        "mrr_at_5": 0.7,
+        "recall_at_5": 0.4666666666666666
       }
     }
   },
@@ -168,10 +168,10 @@
         "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
         "target_language": "python",
         "ground_truth": [
-          "PY_04_PEP8_Clean_Code_Specification_c2460",
           "PY_04_PEP8_Clean_Code_Specification_c2469",
+          "PY_04_PEP8_Clean_Code_Specification_c2459",
           "PY_04_PEP8_Clean_Code_Specification_c2470",
-          "PY_04_PEP8_Clean_Code_Specification_c2459"
+          "PY_04_PEP8_Clean_Code_Specification_c2460"
         ],
         "retrieved_top5": [
           {
@@ -235,9 +235,9 @@
         "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
         ],
         "retrieved_top5": [
           {
@@ -430,22 +430,13 @@
         "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.3307398557662964
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3071",
             "score": 0.01639344262295082,
             "details": {
@@ -454,16 +445,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_163_Python_3.8_howto-urllib2_c13313",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.382127583026886
+              "qwen_rank": 1,
+              "qwen_dist": 0.8840413093566895
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4434",
             "score": 0.016129032258064516,
             "details": {
@@ -472,22 +463,31 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_163_Python_3.8_howto-urllib2_c23257",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.8840413093566895
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5014",
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3716",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.39972740411758423
+              "jina_rank": 3,
+              "jina_dist": 0.49739694595336914
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 0.6666666666666666,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_06",
@@ -561,8 +561,8 @@
         "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
         "target_language": "python",
         "ground_truth": [
-          "PY_02_DataStructures_and_OOP_Classes_c2062",
           "PY_01_Official_Tutorial_c1850",
+          "PY_02_DataStructures_and_OOP_Classes_c2062",
           "PY_01_Official_Tutorial_c1880"
         ],
         "retrieved_top5": [
@@ -627,8 +627,8 @@
         "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
         "target_language": "python",
         "ground_truth": [
-          "PY_03_Debugging_and_Common_Errors_c2268",
-          "PY_01_Official_Tutorial_c1859"
+          "PY_01_Official_Tutorial_c1859",
+          "PY_03_Debugging_and_Common_Errors_c2268"
         ],
         "retrieved_top5": [
           {
@@ -699,15 +699,6 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2861",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.19407957792282104
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_01_Official_Tutorial_c1877",
             "score": 0.01639344262295082,
             "details": {
@@ -716,16 +707,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2862",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_059_Cornell_CS1110_Lec18_Constructors,_Attributes_and_Method_c2930",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.24436622858047485
+              "qwen_rank": 1,
+              "qwen_dist": 0.9338966608047485
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2863",
             "score": 0.016129032258064516,
             "details": {
@@ -734,12 +725,21 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_059_Cornell_CS1110_Lec18_Constructors,_Attributes_and_Method_c6422",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.9338966608047485
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2060",
+            "chunk_id": "PY_01_Official_Tutorial_c1876",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.30939602851867676
+              "jina_rank": 3,
+              "jina_dist": 0.44453567266464233
             }
           }
         ],
@@ -748,7 +748,7 @@
         "hit_at_5": true,
         "mrr_at_3": 1.0,
         "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
+        "recall_at_5": 0.3333333333333333,
         "first_hit_rank": 1
       },
       {
@@ -889,12 +889,21 @@
         "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5081",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.27828407287597656
+            }
+          },
+          {
+            "rank": 2,
             "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5084",
             "score": 0.01639344262295082,
             "details": {
@@ -903,16 +912,16 @@
             }
           },
           {
-            "rank": 2,
-            "chunk_id": "VI_PDF_045_28Tech_Contest09_Mang_2_Chieu_Ma_Tran_So_Hoc_c17530",
-            "score": 0.01639344262295082,
+            "rank": 3,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+            "score": 0.016129032258064516,
             "details": {
-              "jina_rank": 1,
-              "jina_dist": 0.8899598121643066
+              "jina_rank": 2,
+              "jina_dist": 0.27950161695480347
             }
           },
           {
-            "rank": 3,
+            "rank": 4,
             "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5078",
             "score": 0.016129032258064516,
             "details": {
@@ -921,31 +930,22 @@
             }
           },
           {
-            "rank": 4,
-            "chunk_id": "VI_PDF_045_28Tech_Contest09_Mang_2_Chieu_Ma_Tran_So_Hoc_c23420",
-            "score": 0.016129032258064516,
-            "details": {
-              "jina_rank": 2,
-              "jina_dist": 0.8899598121643066
-            }
-          },
-          {
             "rank": 5,
-            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5085",
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5200",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.3651711344718933
+              "jina_rank": 3,
+              "jina_dist": 0.34112823009490967
             }
           }
         ],
         "hit_at_1": false,
-        "hit_at_3": false,
-        "hit_at_5": false,
-        "mrr_at_3": 0.0,
-        "mrr_at_5": 0.0,
-        "recall_at_5": 0.0,
-        "first_hit_rank": null
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.3333333333333333,
+        "mrr_at_5": 0.3333333333333333,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 3
       },
       {
         "id": "EVAL_13",
@@ -954,8 +954,8 @@
         "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036"
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
         ],
         "retrieved_top5": [
           {
@@ -1024,15 +1024,6 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2865",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.18372052907943726
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c3075",
             "score": 0.01639344262295082,
             "details": {
@@ -1041,16 +1032,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2866",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_001_DigitalOcean_How_to_Code_in_Python_3_Lisa_Tagliaferri_c1916",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.19435131549835205
+              "qwen_rank": 1,
+              "qwen_dist": 0.9332790970802307
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c15460",
             "score": 0.016129032258064516,
             "details": {
@@ -1059,22 +1050,31 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_049_Cornell_CS1110_Lec25_Binary_Search_and_Sorting_Algorithms_c5999",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.9335105419158936
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2867",
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c21350",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.2077164649963379
+              "jina_rank": 3,
+              "jina_dist": 0.860542356967926
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_15",
@@ -1148,9 +1148,9 @@
         "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691"
         ],
         "retrieved_top5": [
           {
@@ -1214,9 +1214,9 @@
         "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3715"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3715",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720"
         ],
         "retrieved_top5": [
           {
@@ -1346,21 +1346,12 @@
         "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__?",
         "target_language": "python",
         "ground_truth": [
-          "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
-          "PY_05_Official_Builtin_Functions_and_Types_c2821"
+          "PY_05_Official_Builtin_Functions_and_Types_c2821",
+          "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2821",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.2360621690750122
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2854",
             "score": 0.01639344262295082,
             "details": {
@@ -1369,16 +1360,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2820",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_068_Python_3.11_c-api_c8480",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.2881202697753906
+              "qwen_rank": 1,
+              "qwen_dist": 0.9003919363021851
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3017",
             "score": 0.016129032258064516,
             "details": {
@@ -1387,22 +1378,31 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_094_Python_3.10_c-api_c12472",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.9003919363021851
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2508",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.2914767265319824
+              "jina_rank": 3,
+              "jina_dist": 0.6733179688453674
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_20",
@@ -1477,10 +1477,10 @@
         "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
         "target_language": "python",
         "ground_truth": [
-          "PY_04_PEP8_Clean_Code_Specification_c2460",
           "PY_04_PEP8_Clean_Code_Specification_c2469",
+          "PY_04_PEP8_Clean_Code_Specification_c2459",
           "PY_04_PEP8_Clean_Code_Specification_c2470",
-          "PY_04_PEP8_Clean_Code_Specification_c2459"
+          "PY_04_PEP8_Clean_Code_Specification_c2460"
         ],
         "retrieved_top5": [
           {
@@ -1544,9 +1544,9 @@
         "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
         ],
         "retrieved_top5": [
           {
@@ -1739,22 +1739,13 @@
         "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.3307398557662964
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3071",
             "score": 0.01639344262295082,
             "details": {
@@ -1763,16 +1754,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_163_Python_3.8_howto-urllib2_c13313",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.382127583026886
+              "qwen_rank": 1,
+              "qwen_dist": 0.8840413093566895
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "VI_PY_03_CTU_Giao_Trinh_Python3_DoThanhNghi_c4434",
             "score": 0.016129032258064516,
             "details": {
@@ -1781,22 +1772,31 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_163_Python_3.8_howto-urllib2_c23257",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.8840413093566895
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5014",
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3716",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.39972740411758423
+              "jina_rank": 3,
+              "jina_dist": 0.49739694595336914
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 0.6666666666666666,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_06",
@@ -1870,8 +1870,8 @@
         "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
         "target_language": "python",
         "ground_truth": [
-          "PY_02_DataStructures_and_OOP_Classes_c2062",
           "PY_01_Official_Tutorial_c1850",
+          "PY_02_DataStructures_and_OOP_Classes_c2062",
           "PY_01_Official_Tutorial_c1880"
         ],
         "retrieved_top5": [
@@ -1936,8 +1936,8 @@
         "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
         "target_language": "python",
         "ground_truth": [
-          "PY_03_Debugging_and_Common_Errors_c2268",
-          "PY_01_Official_Tutorial_c1859"
+          "PY_01_Official_Tutorial_c1859",
+          "PY_03_Debugging_and_Common_Errors_c2268"
         ],
         "retrieved_top5": [
           {
@@ -2008,15 +2008,6 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2861",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.19407957792282104
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_01_Official_Tutorial_c1877",
             "score": 0.01639344262295082,
             "details": {
@@ -2025,16 +2016,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2862",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_059_Cornell_CS1110_Lec18_Constructors,_Attributes_and_Method_c2930",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.24436622858047485
+              "qwen_rank": 1,
+              "qwen_dist": 0.9338966608047485
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2863",
             "score": 0.016129032258064516,
             "details": {
@@ -2043,12 +2034,21 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_059_Cornell_CS1110_Lec18_Constructors,_Attributes_and_Method_c6422",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.9338966608047485
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2060",
+            "chunk_id": "PY_01_Official_Tutorial_c1876",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.30939602851867676
+              "jina_rank": 3,
+              "jina_dist": 0.44453567266464233
             }
           }
         ],
@@ -2057,7 +2057,7 @@
         "hit_at_5": true,
         "mrr_at_3": 1.0,
         "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
+        "recall_at_5": 0.3333333333333333,
         "first_hit_rank": 1
       },
       {
@@ -2198,12 +2198,21 @@
         "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5081",
+            "score": 0.01639344262295082,
+            "details": {
+              "jina_rank": 1,
+              "jina_dist": 0.27828407287597656
+            }
+          },
+          {
+            "rank": 2,
             "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5084",
             "score": 0.01639344262295082,
             "details": {
@@ -2212,16 +2221,16 @@
             }
           },
           {
-            "rank": 2,
-            "chunk_id": "VI_PDF_045_28Tech_Contest09_Mang_2_Chieu_Ma_Tran_So_Hoc_c17530",
-            "score": 0.01639344262295082,
+            "rank": 3,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+            "score": 0.016129032258064516,
             "details": {
-              "jina_rank": 1,
-              "jina_dist": 0.8899598121643066
+              "jina_rank": 2,
+              "jina_dist": 0.27950161695480347
             }
           },
           {
-            "rank": 3,
+            "rank": 4,
             "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5078",
             "score": 0.016129032258064516,
             "details": {
@@ -2230,31 +2239,22 @@
             }
           },
           {
-            "rank": 4,
-            "chunk_id": "VI_PDF_045_28Tech_Contest09_Mang_2_Chieu_Ma_Tran_So_Hoc_c23420",
-            "score": 0.016129032258064516,
-            "details": {
-              "jina_rank": 2,
-              "jina_dist": 0.8899598121643066
-            }
-          },
-          {
             "rank": 5,
-            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5085",
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5200",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.3651711344718933
+              "jina_rank": 3,
+              "jina_dist": 0.34112823009490967
             }
           }
         ],
         "hit_at_1": false,
-        "hit_at_3": false,
-        "hit_at_5": false,
-        "mrr_at_3": 0.0,
-        "mrr_at_5": 0.0,
-        "recall_at_5": 0.0,
-        "first_hit_rank": null
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.3333333333333333,
+        "mrr_at_5": 0.3333333333333333,
+        "recall_at_5": 0.5,
+        "first_hit_rank": 3
       },
       {
         "id": "EVAL_13",
@@ -2263,8 +2263,8 @@
         "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036"
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
         ],
         "retrieved_top5": [
           {
@@ -2333,15 +2333,6 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2865",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.18372052907943726
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c3075",
             "score": 0.01639344262295082,
             "details": {
@@ -2350,16 +2341,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2866",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_001_DigitalOcean_How_to_Code_in_Python_3_Lisa_Tagliaferri_c1916",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.19435131549835205
+              "qwen_rank": 1,
+              "qwen_dist": 0.9332790970802307
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c15460",
             "score": 0.016129032258064516,
             "details": {
@@ -2368,22 +2359,31 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_049_Cornell_CS1110_Lec25_Binary_Search_and_Sorting_Algorithms_c5999",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.9335105419158936
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2867",
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c21350",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.2077164649963379
+              "jina_rank": 3,
+              "jina_dist": 0.860542356967926
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_15",
@@ -2457,9 +2457,9 @@
         "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691"
         ],
         "retrieved_top5": [
           {
@@ -2523,9 +2523,9 @@
         "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3715"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3715",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720"
         ],
         "retrieved_top5": [
           {
@@ -2655,21 +2655,12 @@
         "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__?",
         "target_language": "python",
         "ground_truth": [
-          "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
-          "PY_05_Official_Builtin_Functions_and_Types_c2821"
+          "PY_05_Official_Builtin_Functions_and_Types_c2821",
+          "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2821",
-            "score": 0.01639344262295082,
-            "details": {
-              "qwen_rank": 1,
-              "qwen_dist": 0.2360621690750122
-            }
-          },
-          {
-            "rank": 2,
             "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2854",
             "score": 0.01639344262295082,
             "details": {
@@ -2678,16 +2669,16 @@
             }
           },
           {
-            "rank": 3,
-            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2820",
-            "score": 0.016129032258064516,
+            "rank": 2,
+            "chunk_id": "EN_PDF_068_Python_3.11_c-api_c8480",
+            "score": 0.01639344262295082,
             "details": {
-              "qwen_rank": 2,
-              "qwen_dist": 0.2881202697753906
+              "qwen_rank": 1,
+              "qwen_dist": 0.9003919363021851
             }
           },
           {
-            "rank": 4,
+            "rank": 3,
             "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3017",
             "score": 0.016129032258064516,
             "details": {
@@ -2696,22 +2687,31 @@
             }
           },
           {
+            "rank": 4,
+            "chunk_id": "EN_PDF_094_Python_3.10_c-api_c12472",
+            "score": 0.016129032258064516,
+            "details": {
+              "qwen_rank": 2,
+              "qwen_dist": 0.9003919363021851
+            }
+          },
+          {
             "rank": 5,
-            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2508",
             "score": 0.015873015873015872,
             "details": {
-              "qwen_rank": 3,
-              "qwen_dist": 0.2914767265319824
+              "jina_rank": 3,
+              "jina_dist": 0.6733179688453674
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_20",
@@ -2786,10 +2786,10 @@
         "query": "Quy chuẩn đặt tên biến và hàm theo PEP 8 trong Python là gì?",
         "target_language": "python",
         "ground_truth": [
-          "PY_04_PEP8_Clean_Code_Specification_c2460",
           "PY_04_PEP8_Clean_Code_Specification_c2469",
+          "PY_04_PEP8_Clean_Code_Specification_c2459",
           "PY_04_PEP8_Clean_Code_Specification_c2470",
-          "PY_04_PEP8_Clean_Code_Specification_c2459"
+          "PY_04_PEP8_Clean_Code_Specification_c2460"
         ],
         "retrieved_top5": [
           {
@@ -2863,9 +2863,9 @@
         "query": "Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677",
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3673",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3677"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5011"
         ],
         "retrieved_top5": [
           {
@@ -3088,46 +3088,13 @@
         "query": "Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
           "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704"
+          "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5012"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3703",
-            "score": 1.0092457455204495,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.3307398557662964,
-              "kw_score": 16.0,
-              "combined": 1.0092457455204495
-            }
-          },
-          {
-            "rank": 2,
-            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3704",
-            "score": 0.9647170279206537,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.382127583026886,
-              "kw_score": 17.0,
-              "combined": 0.9647170279206537
-            }
-          },
-          {
-            "rank": 3,
-            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2078",
-            "score": 0.8856403643959979,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.47384750843048096,
-              "kw_score": 19.0,
-              "combined": 0.8856403643959979
-            }
-          },
-          {
-            "rank": 4,
             "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3071",
             "score": 0.8808636176304951,
             "details": {
@@ -3138,24 +3105,57 @@
             }
           },
           {
-            "rank": 5,
-            "chunk_id": "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5014",
-            "score": 0.8765828070417012,
+            "rank": 2,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3729",
+            "score": 0.8641829876474904,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.39972740411758423,
-              "kw_score": 9.0,
-              "combined": 0.8765828070417012
+              "source": "jina_code",
+              "vec_dist": 0.5120763182640076,
+              "kw_score": 22.0,
+              "combined": 0.8641829876474904
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3684",
+            "score": 0.8505611807272067,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.5027714967727661,
+              "kw_score": 18.0,
+              "combined": 0.8505611807272067
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3734",
+            "score": 0.8206066122449456,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.5121040344238281,
+              "kw_score": 15.0,
+              "combined": 0.8206066122449456
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3019",
+            "score": 0.8186534154133931,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.5063126087188721,
+              "kw_score": 14.0,
+              "combined": 0.8186534154133931
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 0.6666666666666666,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_06",
@@ -3239,8 +3239,8 @@
         "query": "Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D",
         "target_language": "python",
         "ground_truth": [
-          "PY_02_DataStructures_and_OOP_Classes_c2062",
           "PY_01_Official_Tutorial_c1850",
+          "PY_02_DataStructures_and_OOP_Classes_c2062",
           "PY_01_Official_Tutorial_c1880"
         ],
         "retrieved_top5": [
@@ -3315,8 +3315,8 @@
         "query": "Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization",
         "target_language": "python",
         "ground_truth": [
-          "PY_03_Debugging_and_Common_Errors_c2268",
-          "PY_01_Official_Tutorial_c1859"
+          "PY_01_Official_Tutorial_c1859",
+          "PY_03_Debugging_and_Common_Errors_c2268"
         ],
         "retrieved_top5": [
           {
@@ -3397,39 +3397,6 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2861",
-            "score": 1.0695873713575252,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.19407957792282104,
-              "kw_score": 8.0,
-              "combined": 1.0695873713575252
-            }
-          },
-          {
-            "rank": 2,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2862",
-            "score": 1.0193007206998714,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.24436622858047485,
-              "kw_score": 8.0,
-              "combined": 1.0193007206998714
-            }
-          },
-          {
-            "rank": 3,
-            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2060",
-            "score": 1.0155699956135884,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.30939602851867676,
-              "kw_score": 14.0,
-              "combined": 1.0155699956135884
-            }
-          },
-          {
-            "rank": 4,
             "chunk_id": "PY_01_Official_Tutorial_c1877",
             "score": 0.9639092144742574,
             "details": {
@@ -3440,14 +3407,47 @@
             }
           },
           {
-            "rank": 5,
-            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2059",
-            "score": 0.897236834921873,
+            "rank": 2,
+            "chunk_id": "PY_01_Official_Tutorial_c1876",
+            "score": 0.8317745384946431,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.419450044631958,
-              "kw_score": 13.0,
-              "combined": 0.897236834921873
+              "source": "jina_code",
+              "vec_dist": 0.44453567266464233,
+              "kw_score": 9.0,
+              "combined": 0.8317745384946431
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2863",
+            "score": 0.8261237614450617,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.42340922355651855,
+              "kw_score": 7.0,
+              "combined": 0.8261237614450617
+            }
+          },
+          {
+            "rank": 4,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2864",
+            "score": 0.7937797364965047,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.48253047466278076,
+              "kw_score": 9.0,
+              "combined": 0.7937797364965047
+            }
+          },
+          {
+            "rank": 5,
+            "chunk_id": "PY_01_Official_Tutorial_c2026",
+            "score": 0.6964297048136701,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.5370795130729675,
+              "kw_score": 6.0,
+              "combined": 0.6964297048136701
             }
           }
         ],
@@ -3456,7 +3456,7 @@
         "hit_at_5": true,
         "mrr_at_3": 1.0,
         "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
+        "recall_at_5": 0.3333333333333333,
         "first_hit_rank": 1
       },
       {
@@ -3617,12 +3617,45 @@
         "query": "Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
-          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080"
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+          "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5081",
+            "score": 0.9853828764043697,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.27828407287597656,
+              "kw_score": 8.0,
+              "combined": 0.9853828764043697
+            }
+          },
+          {
+            "rank": 2,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5080",
+            "score": 0.9301432428136434,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.3461669683456421,
+              "kw_score": 9.0,
+              "combined": 0.9301432428136434
+            }
+          },
+          {
+            "rank": 3,
+            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5079",
+            "score": 0.9136309325372886,
+            "details": {
+              "source": "jina_code",
+              "vec_dist": 0.27950161695480347,
+              "kw_score": 4.0,
+              "combined": 0.9136309325372886
+            }
+          },
+          {
+            "rank": 4,
             "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5084",
             "score": 0.8947108737513532,
             "details": {
@@ -3633,57 +3666,24 @@
             }
           },
           {
-            "rank": 2,
-            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5198",
-            "score": 0.8374710552988215,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.4120619297027588,
-              "kw_score": 7.0,
-              "combined": 0.8374710552988215
-            }
-          },
-          {
-            "rank": 3,
-            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5071",
-            "score": 0.834683095602702,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.39882612228393555,
-              "kw_score": 6.0,
-              "combined": 0.834683095602702
-            }
-          },
-          {
-            "rank": 4,
-            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5078",
-            "score": 0.7341302392581358,
-            "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.3490474224090576,
-              "kw_score": 1.0,
-              "combined": 0.7341302392581358
-            }
-          },
-          {
             "rank": 5,
-            "chunk_id": "VI_PY_08_Python_Co_So_Du_Lieu_SQLite_c5073",
-            "score": 0.7191107570802878,
+            "chunk_id": "VI_PY_Python_Rat_La_Co_Ban_c5200",
+            "score": 0.8738829062124569,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.4740217924118042,
-              "kw_score": 4.0,
-              "combined": 0.7191107570802878
+              "source": "jina_code",
+              "vec_dist": 0.34112823009490967,
+              "kw_score": 5.0,
+              "combined": 0.8738829062124569
             }
           }
         ],
         "hit_at_1": false,
-        "hit_at_3": false,
-        "hit_at_5": false,
-        "mrr_at_3": 0.0,
-        "mrr_at_5": 0.0,
-        "recall_at_5": 0.0,
-        "first_hit_rank": null
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr_at_3": 0.5,
+        "mrr_at_5": 0.5,
+        "recall_at_5": 1.0,
+        "first_hit_rank": 2
       },
       {
         "id": "EVAL_13",
@@ -3692,8 +3692,8 @@
         "query": "Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037",
-          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036"
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5036",
+          "VI_PY_07_Python_Thao_Tac_Xu_Ly_Tep_Tin_JSON_c5037"
         ],
         "retrieved_top5": [
           {
@@ -3772,67 +3772,67 @@
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2865",
-            "score": 0.9481129455607359,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c3151",
+            "score": 0.28763050987308314,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.18372052907943726,
-              "kw_score": 2.0,
-              "combined": 0.9481129455607359
+              "source": "jina_code",
+              "vec_dist": 0.8787248134613037,
+              "kw_score": 3.0,
+              "combined": 0.28763050987308314
             }
           },
           {
             "rank": 2,
-            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2866",
-            "score": 0.9374821591418211,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c15536",
+            "score": 0.28763050987308314,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.19435131549835205,
-              "kw_score": 2.0,
-              "combined": 0.9374821591418211
+              "source": "jina_code",
+              "vec_dist": 0.8787248134613037,
+              "kw_score": 3.0,
+              "combined": 0.28763050987308314
             }
           },
           {
             "rank": 3,
-            "chunk_id": "VI_PY_04_Giao_Trinh_Python_Co_Ban_Dai_Hoc_c4631",
-            "score": 0.8962469619320401,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c21426",
+            "score": 0.28763050987308314,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.4437386393547058,
-              "kw_score": 16.0,
-              "combined": 0.8962469619320401
+              "source": "jina_code",
+              "vec_dist": 0.8787248134613037,
+              "kw_score": 3.0,
+              "combined": 0.28763050987308314
             }
           },
           {
             "rank": 4,
-            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3274",
-            "score": 0.8627863227998923,
+            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c37445",
+            "score": 0.28763050987308314,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.3303462266921997,
-              "kw_score": 4.0,
-              "combined": 0.8627863227998923
+              "source": "jina_code",
+              "vec_dist": 0.8787248134613037,
+              "kw_score": 3.0,
+              "combined": 0.28763050987308314
             }
           },
           {
             "rank": 5,
-            "chunk_id": "PY_02_DataStructures_and_OOP_Classes_c2067",
-            "score": 0.8151880800401877,
+            "chunk_id": "PY_03_Debugging_and_Common_Errors_c2758",
+            "score": 0.26971568323577233,
             "details": {
               "source": "qwen3_text",
-              "vec_dist": 0.3779444694519043,
-              "kw_score": 4.0,
-              "combined": 0.8151880800401877
+              "vec_dist": 0.9452954530715942,
+              "kw_score": 5.0,
+              "combined": 0.26971568323577233
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 1.0,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_15",
@@ -3916,9 +3916,9 @@
         "query": "Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5015",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3689",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3691"
         ],
         "retrieved_top5": [
           {
@@ -3992,9 +3992,9 @@
         "query": "Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn?",
         "target_language": "python",
         "ground_truth": [
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720",
           "VI_PY_06_Python_Lap_Trinh_Huong_Doi_Tuong_OOP_c5020",
-          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3715"
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3715",
+          "VI_PY_02_Ebook_Python_Danh_Cho_Ky_Thuat_c3720"
         ],
         "retrieved_top5": [
           {
@@ -4144,73 +4144,73 @@
         "query": "Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__?",
         "target_language": "python",
         "ground_truth": [
-          "PY_08_Official_Data_Model_and_Magic_Methods_c3118",
-          "PY_05_Official_Builtin_Functions_and_Types_c2821"
+          "PY_05_Official_Builtin_Functions_and_Types_c2821",
+          "PY_08_Official_Data_Model_and_Magic_Methods_c3118"
         ],
         "retrieved_top5": [
           {
             "rank": 1,
-            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2821",
-            "score": 1.0402480420842732,
+            "chunk_id": "PY_06_Official_Collections_and_Data_Structures_c2854",
+            "score": 0.5940987169420432,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.2360621690750122,
-              "kw_score": 9.0,
-              "combined": 1.0402480420842732
+              "source": "jina_code",
+              "vec_dist": 0.5990338325500488,
+              "kw_score": 4.0,
+              "combined": 0.5940987169420432
             }
           },
           {
             "rank": 2,
-            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2822",
-            "score": 1.0005539731921678,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3071",
+            "score": 0.5356771223840876,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.30723994970321655,
-              "kw_score": 12.0,
-              "combined": 1.0005539731921678
+              "source": "jina_code",
+              "vec_dist": 0.7138558626174927,
+              "kw_score": 7.0,
+              "combined": 0.5356771223840876
             }
           },
           {
             "rank": 3,
-            "chunk_id": "PY_09_Official_Type_Hints_and_Typing_System_c3306",
-            "score": 0.9969906134843562,
+            "chunk_id": "PY_01_Official_Tutorial_c1992",
+            "score": 0.5148847400819968,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.30119818449020386,
-              "kw_score": 11.0,
-              "combined": 0.9969906134843562
+              "source": "jina_code",
+              "vec_dist": 0.6782478094100952,
+              "kw_score": 4.0,
+              "combined": 0.5148847400819968
             }
           },
           {
             "rank": 4,
-            "chunk_id": "PY_05_Official_Builtin_Functions_and_Types_c2820",
-            "score": 0.9614127152261897,
+            "chunk_id": "PY_01_Official_Tutorial_c1943",
+            "score": 0.47785273191091526,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.2881202697753906,
-              "kw_score": 7.0,
-              "combined": 0.9614127152261897
+              "source": "jina_code",
+              "vec_dist": 0.7152798175811768,
+              "kw_score": 4.0,
+              "combined": 0.47785273191091526
             }
           },
           {
             "rank": 5,
-            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3117",
-            "score": 0.9433229780279049,
+            "chunk_id": "PY_08_Official_Data_Model_and_Magic_Methods_c3072",
+            "score": 0.4769064352651913,
             "details": {
-              "source": "qwen3_text",
-              "vec_dist": 0.3203439712524414,
-              "kw_score": 8.0,
-              "combined": 0.9433229780279049
+              "source": "jina_code",
+              "vec_dist": 0.7381047010421753,
+              "kw_score": 5.0,
+              "combined": 0.4769064352651913
             }
           }
         ],
-        "hit_at_1": true,
-        "hit_at_3": true,
-        "hit_at_5": true,
-        "mrr_at_3": 1.0,
-        "mrr_at_5": 1.0,
-        "recall_at_5": 0.5,
-        "first_hit_rank": 1
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr_at_3": 0.0,
+        "mrr_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "first_hit_rank": null
       },
       {
         "id": "EVAL_20",

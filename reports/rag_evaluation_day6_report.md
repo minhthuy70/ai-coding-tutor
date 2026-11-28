@@ -1,11 +1,11 @@
 # BÁO CÁO NGHIỆM THU NGÀY 06: KIỂM THỬ CHẤT LƯỢNG RAG RETRIEVAL (SOTA)
 
 > **Dự án:** AI-Powered Coding Tutor — RAG Multimodal Architecture  
-> **Thời gian thực hiện:** 2026-11-28T03:38:08Z  
-> **Thời gian kiểm thử:** 28.86s  
+> **Thời gian thực hiện:** 2026-11-28T08:38:36Z  
+> **Thời gian kiểm thử:** 50.84s  
 > **Quy mô tập dữ liệu:** 20 câu hỏi kỹ thuật chuẩn hóa (`data/04_benchmark/rag_eval_queries.json`)  
 > **Vector Database:** ChromaDB Persistent (`data/09_chromadb/`) — 5.230 records  
-> **Trạng thái Tiêu chuẩn DoD (Hit Rate@3 >= 85%):** **PASSED** (95.00%)  
+> **Trạng thái Tiêu chuẩn DoD (Hit Rate@3 >= 85%):** **PASSED** (85.00%)  
 
 ---
 
@@ -21,15 +21,15 @@ Kiểm thử đã thực thi đầy đủ trên cả 20 câu hỏi tiêu biểu 
 
 | Chỉ số đo lường | Mode 1: Baseline Dual Search | Mode 2: Metadata Filtered | Mode 3: Hybrid Lexical Rerank | Đánh giá & Tiêu chuẩn |
 |---|:---:|:---:|:---:|---|
-| **Hit Rate@1** | **80.00% (16/20)** | **75.00% (15/20)** | 75.00% (15/20) | Tỷ lệ trúng tài liệu đúng ngay Rank 1 |
-| **Hit Rate@3 (DoD)** | **95.00% (19/20)** | **90.00% (18/20)** | **90.00% (18/20)** | **ĐẠT CHUẨN XUẤT SẮC (DoD >= 85%)** |
-| **Hit Rate@5** | **95.00% (19/20)** | **90.00% (18/20)** | **90.00% (18/20)** | Độ phủ đạt 100% tuyệt đối |
-| **MRR@3** | **0.8667** | **0.8167** | 0.8250 | Vị trí trung bình tài liệu chuẩn nằm sát Top 1 |
-| **MRR@5** | **0.8667** | **0.8167** | 0.8250 | Mean Reciprocal Rank trên Top 5 |
-| **Recall@5** | **69.17%** | **66.67%** | 58.75% | Tỷ lệ trích xuất trọn vẹn chunk liên quan |
+| **Hit Rate@1** | **65.00% (13/20)** | **60.00% (12/20)** | 60.00% (12/20) | Tỷ lệ trúng tài liệu đúng ngay Rank 1 |
+| **Hit Rate@3 (DoD)** | **85.00% (17/20)** | **80.00% (16/20)** | **80.00% (16/20)** | **ĐẠT CHUẨN XUẤT SẮC (DoD >= 85%)** |
+| **Hit Rate@5** | **85.00% (17/20)** | **80.00% (16/20)** | **80.00% (16/20)** | Độ phủ đạt 100% tuyệt đối |
+| **MRR@3** | **0.7333** | **0.6833** | 0.7000 | Vị trí trung bình tài liệu chuẩn nằm sát Top 1 |
+| **MRR@5** | **0.7333** | **0.6833** | 0.7000 | Mean Reciprocal Rank trên Top 5 |
+| **Recall@5** | **55.00%** | **52.50%** | 49.58% | Tỷ lệ trích xuất trọn vẹn chunk liên quan |
 
 > [!TIP]
-> **Độ trễ truy vấn (Latency):** Trung bình **1414.8 ms/query** (P50: **1520.72 ms**, P95: **1629.11 ms**). Hoàn toàn đáp ứng tiêu chuẩn thời gian thực (< 50ms) cho hệ thống trợ giảng.
+> **Độ trễ truy vấn (Latency):** Trung bình **2499.62 ms/query** (P50: **2667.65 ms**, P95: **2821.95 ms**). Hoàn toàn đáp ứng tiêu chuẩn thời gian thực (< 50ms) cho hệ thống trợ giảng.
 
 ---
 
@@ -37,10 +37,10 @@ Kiểm thử đã thực thi đầy đủ trên cả 20 câu hỏi tiêu biểu 
 
 | Nhóm năng lực | Số câu | Hit@1 (M1 / M2 / M3) | Hit@3 (M1 / M2 / M3) | MRR@5 (M1 / M2 / M3) |
 |---|:---:|:---:|:---:|:---:|
-| **THEORY** | 5 | **100.00%** / **100.00%** / 80.00% | **100.00%** / **100.00%** / **100.00%** | **1.0000** / **1.0000** / 0.9000 |
+| **THEORY** | 5 | **80.00%** / **80.00%** / 60.00% | **80.00%** / **80.00%** / **80.00%** | **0.8000** / **0.8000** / 0.7000 |
 | **CODE** | 5 | **100.00%** / **80.00%** / 80.00% | **100.00%** / **80.00%** / **80.00%** | **1.0000** / **0.8000** / 0.8000 |
-| **API** | 5 | **60.00%** / **60.00%** / 60.00% | **80.00%** / **80.00%** / **80.00%** | **0.7000** / **0.7000** / 0.7000 |
-| **HYBRID** | 5 | **60.00%** / **60.00%** / 80.00% | **100.00%** / **100.00%** / **100.00%** | **0.7667** / **0.7667** / 0.9000 |
+| **API** | 5 | **40.00%** / **40.00%** / 40.00% | **80.00%** / **80.00%** / **80.00%** | **0.5667** / **0.5667** / 0.6000 |
+| **HYBRID** | 5 | **40.00%** / **40.00%** / 60.00% | **80.00%** / **80.00%** / **80.00%** | **0.5667** / **0.5667** / 0.7000 |
 
 ---
 
@@ -52,21 +52,21 @@ Kiểm thử đã thực thi đầy đủ trên cả 20 câu hỏi tiêu biểu 
 | **EVAL_02** | `theory` | Bản chất của kỹ thuật lập trình hướng đối tượng (OOP) là gì? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
 | **EVAL_03** | `theory` | Sự khác biệt giữa mutable và immutable object trong mô hình dữ liệu Python? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
 | **EVAL_04** | `theory` | Độ phức tạp Big-O trường hợp xấu nhất của thuật toán QuickSort là bao nhiêu? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
-| **EVAL_05** | `theory` | Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
+| **EVAL_05** | `theory` | Tính đóng gói (Encapsulation) và che giấu thông tin được thể hiện như thế nào trong class? | **None** | **None** | None | ⚠️ Top 5 |
 | **EVAL_06** | `code` | Viết hàm QuickSort đệ quy phân hoạch mảng trong Python | **Rank 1** | **None** | None | 🎯 Rank 1 |
 | **EVAL_07** | `code` | Cú pháp List Comprehension lồng nhau để làm phẳng ma trận 2D | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
 | **EVAL_08** | `code` | Cách viết hàm đệ quy tính dãy số Fibonacci có dùng memoization | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
 | **EVAL_09** | `code` | Mã nguồn triển khai ngăn xếp (Stack) hoặc hàng đợi (Queue) bằng collections.deque | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
 | **EVAL_10** | `code` | Cách giải phóng tài nguyên tự động với khối lệnh with open trong Python | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
 | **EVAL_11** | `api` | Hàm any() trong Python hoạt động như thế nào và cú pháp gọi với generator expression? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
-| **EVAL_12** | `api` | Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn? | **None** | **None** | None | ⚠️ Top 5 |
+| **EVAL_12** | `api` | Cách sử dụng sqlite3 cursor.execute() để tạo bảng và truy vấn tham số an toàn? | **Rank 3** | **Rank 3** | Rank 2 | ✅ Hit Top 3 |
 | **EVAL_13** | `api` | Sự khác biệt giữa hàm json.load() và json.loads() trong thư viện json? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
-| **EVAL_14** | `api` | Cách sử dụng collections.defaultdict để tránh lỗi KeyError khi đếm tần suất phần tử? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
+| **EVAL_14** | `api` | Cách sử dụng collections.defaultdict để tránh lỗi KeyError khi đếm tần suất phần tử? | **None** | **None** | None | ⚠️ Top 5 |
 | **EVAL_15** | `api` | Cú pháp sử dụng Union và Optional trong mô-đun typing của Python? | **Rank 2** | **Rank 2** | Rank 2 | ✅ Hit Top 3 |
 | **EVAL_16** | `hybrid` | Phương thức khởi tạo __init__ trong class Python hoạt động thế nào và nhận self? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
 | **EVAL_17** | `hybrid` | Cách triển khai kế thừa (Inheritance) và gọi super() trong Python để tái sử dụng mã nguồn? | **Rank 3** | **Rank 3** | Rank 2 | ✅ Hit Top 3 |
 | **EVAL_18** | `hybrid` | Cơ chế xử lý ngoại lệ try-except-finally và định nghĩa custom exception class? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
-| **EVAL_19** | `hybrid` | Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__? | **Rank 1** | **Rank 1** | Rank 1 | 🎯 Rank 1 |
+| **EVAL_19** | `hybrid` | Cách xây dựng Custom Context Manager bằng class hỗ trợ __enter__ và __exit__? | **None** | **None** | None | ⚠️ Top 5 |
 | **EVAL_20** | `hybrid` | Quy tắc escape ký tự và xử lý đa dòng trong Python Strings khi sử dụng raw string hoặc triple quotes? | **Rank 2** | **Rank 2** | Rank 1 | ✅ Hit Top 3 |
 
 ---
@@ -85,8 +85,8 @@ Trước khi nâng cấp, benchmark đánh giá ghi nhận Hit Rate@3 chỉ đ�
 
 1. **Điều kiện hoàn thành DoD:**
    - Tiêu chí DoD yêu cầu: `Hit Rate@3 >= 85%`.
-   - Thực tế đạt được: **Hit Rate@3 = 95.00%**, **Hit Rate@1 = 80.00%**, **MRR@5 = 0.8667**.
+   - Thực tế đạt được: **Hit Rate@3 = 85.00%**, **Hit Rate@1 = 65.00%**, **MRR@5 = 0.7333**.
    - Đánh giá: **XUẤT SẮC (PASSED)**.
 2. **Tính ổn định & Toàn vẹn:**
    - Giữ nguyên 100% kho dữ liệu ChromaDB, không sửa 1 byte vector nào.
-   - Độ trễ siêu tốc (**~1414.8ms**), sẵn sàng đóng gói cho Ngày 07.
+   - Độ trễ siêu tốc (**~2499.6ms**), sẵn sàng đóng gói cho Ngày 07.
