@@ -1,0 +1,612 @@
+## CS116 – LẬP TRÌNH PYTHON CHO MÁY HỌC
+
+![](images/page_0_image_2.jpg)
+
+**Data validation & EDA application**
+
+**TS. Nguyễn Vinh Tiệp**
+
+## NỘI DUNG
+
+● Outlier detection
+
+● EDA và ứng dụng EDA vào dữ liệu
+
+● Automic EDA tools
+
+## ML Pipeline
+
+![](images/page_2_image_2.jpg)
+
+https://machinelearningcoban.com/tabml\_book/ch\_intro/pipeline.html
+
+![](images/page_3_image_0.jpg)
+
+## Data Validation
+
+1. Phát hiện các ngoại lệ
+
+2. Xử lý các ngoại lệ (ngoại bỏ, thay thế giá trị)
+
+![](images/page_4_chart_0.jpg)
+
+![](images/page_4_image_1.jpg)
+
+## Ngoại lệ: Các kiểu ngoại lệ khác nhau
+
+Lỗi nhập dữ liệu
+
+Lỗi xử lý dữ liệu
+
+Ngoại lệ tự nhiên
+
+Ngoại lệ có chủ đích
+
+Lỗi thử nghiệm Lỗi đo lường Lỗi lấy mẫu
+
+Lỗi của con người xảy ra trong quá trình thu thập, ghi hoặc nhập dữ liệu
+
+Trích xuất dữ liệu từ nhiều nguồn (một số lỗi thao tác hoặc trích xuất)
+
+Lỗi không phải do con người tạo ra
+
+Điều này thường thấy trong các đo lường tự báo cáo liên quan đến dữ liệu nhạy cảm.
+
+Loại ngoại lệ khác
+
+![](images/page_5_image_0.jpg)
+
+## Làm sạch dữ liệu - Ngoại lệ
+
+❏ Có hai loại ngoại lệ:
+
+❏ Các ngoại lệ đơn biến: các điểm dữ liệu **có giá trị nằm ngoài phạm vi giá trị dự kiến**
+
+❏ Các ngoại lệ đa biến: có các ngoại lệ **phụ thuộc** vào **mối tương quan** giữa **hai biến**
+
+```python
+# Drop rows with missing value
+data.dropna(inplace = True)
+
+# Remove duplicates
+data.drop_duplicates()
+
+# Drop unnecessary columns
+data.drop(columns = [list cols], axis = 1)
+
+# Drop/Filter unnecessary rows
+data.drop([0, 1], inplace = True)
+data[data['column_filter'] == 'abc']
+
+# Re indexing
+data.set_index('column', inplace = True)
+data.reset_index(drop = True)
+
+# Re-formatting
+data['column'] = data['column'].astype(int)
+
+# Correcting inconsistent data
+data['column'].replace(old_value, new_value, inplace = True)
+```
+
+![](images/page_6_image_1.jpg)
+
+## Làm sạch dữ liệu: Hướng tiếp cận đơn giản
+
+❏ Một số bước có thể được thực hiện để làm sạch dữ liệu:
+
+❏ Xóa các giá trị bị thiếu, trùng lặp, ngoại lệ và các hàng/cột không cần thiết
+
+❏ Lập lại chỉ mục và định dạng lại dữ liệu
+
+## Dự đoán ngoại lệ như thế nào
+
+## ❏ Phương pháp thống kê:
+
+❏ Phương pháp tính độ lệch chuẩn và trung bình: giới hạn để xác định các giá trị ngoại lệ (Gaussian hoặc Gaussian-like)
+
+❏ Phương pháp Interquartile Range (IQR): một thống kê tốt để tóm tắt mẫu dữ liệu phân phối không phải Gaussian
+
+![](images/page_7_chart_4.jpg)
+
+![](images/page_7_chart_5.jpg)
+
+## Tự động phát hiện ngoại lệ
+
+❏ Tự động phát hiện ngoại lệ:
+
+❏ Yếu tố ngoại lệ cục bộ ([Local Outlier Factor):](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html) Xác định các ngoại lệ là xác định vị trí của các mẫu ở xa mẫu khác
+
+❏ Rừng cách ly ([Isolation Forest)](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html) : Thuật toán phát hiện bất thường dựa trên cây
+
+❏ Xác định hiệp phương sai tối thiểu ([EllipticEnvelope](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.EllipticEnvelope.html)): Tập dữ liệu theo phân phối chuẩn.
+
+[❏ One-class SVM](https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html) : Phát hiện ngoại lệ không được giám sát
+
+## Yếu tố ngoại lệ cục bộ - Local Outlier Factor (LOF)
+
+• Thuật toán yếu tố ngoại lệ cục bộ có thể được chia thành bốn phần
+
+![](images/page_9_image_3.jpg)
+
+K-Distance and K-Neighbors
+
+Reachability Distance
+
+Local Reachability Density
+
+Local Outlier Factor Calculation
+
+Nếu k nhỏ thì thuật toán trở nên nhạy cảm với nhiễu và nếu k lớn, nó có thể không nhận ra được các dị thường cục bộ.
+
+Biểu thị khoảng cách lớn nhất của hai điểm và khoảng cách-k của điểm thứ hai
+
+Đề cập đến việc chúng ta cần đi bao xa từ điểm hiện tại để đến điểm hoặc tập hợp điểm tiếp theo
+
+Mật độ khả năng tiếp cận cục bộ được tìm thấy được so sánh với mật độ khả năng tiếp cận cục bộ của k hàng xóm gần nhất
+
+## LOF: Làm thế nào để phát hiện các ngoại lệ?
+
+Mật độ tương tự như hàng xóm
+
+Mật độ cao hơn hàng xóm (Inlier)
+
+![](images/page_10_chart_4.jpg)
+
+![](images/page_10_chart_5.jpg)
+
+![](images/page_10_chart_6.jpg)
+
+Mật độ thấp hơn so với hàng xóm(Outlier)
+
+![](images/page_10_chart_8.jpg)
+
+## Ví dụ
+
+[❏ Example](https://www.kaggle.com/discussions/general/183478)
+
+[❏ LOF with sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html#sklearn.neighbors.LocalOutlierFactor)
+
+## Cleanlab: Công cụ AI tập trung vào dữ liệu tiêu chuẩn
+
+[❏ github](https://github.com/cleanlab/cleanlab)
+
+![](images/page_12_image_2.jpg)
+
+## Cleanlab: Tìm mẫu OOD (Out-Of-Distribution)
+
+## ❏ Source c[ode](https://github.com/cleanlab/cleanlab/blob/master/cleanlab/internal/outlier.py)
+
+![](images/page_13_image_3.jpg)
+
+cleanlab Star 6,115
+
+APIREFERENCE
+
+outlier
+
+## outlier
+
+Methods for finding out-of-distribution examples in a dataset via scores that quantify how atypical each example is compared to the others.
+
+The underlying algorithms are described in this paper.
+
+## Classes:
+
+| OutOfDistribution ([params]) | Provides scores to detect Out Of Distribution (OOD) examples that are outliers in a dataset. |
+| --- | --- |
+
+class cleanlab.outlier.OutofDistribution(params=None)
+
+Bases: object
+
+Provides scores to detect Out Of Distribution (OOD) examples that are outliers in a dataset.
+
+Each example's OOD score lies in [0,1] with smaller values indicating examples that are less typical under the data distribution. OOD scores may be estimated from either: numeric feature embeddings or predicted probabilities from a trained classifier.
+
+To get indices of examples that are the most severe outliers, call find\_top\_issues function on the returned OOD scores.
+
+## Cleanlab: Tìm vấn đề về nhãn
+
+❏ Phát hiện các vấn đề về dữ liệu: ngoại lệ, trùng lặp, lỗi nhãn,..
+
+```python
+KNN = NearestNeighbors(metric='euclidean')
+KNN.fit(X_processed.values)
+
+knn_graph = KNN.kneighbors_graph(mode="distance")
+
+data = {"X": X_processed.values, "y": labels}
+
+lab = Datalab(data, label_name="y")
+lab.find_issues(pred_probs=pred_probs, knn_graph=knn_graph)
+
+Finding label issues ...
+Finding outlier issues ...
+Finding near_duplicate issues ...
+Audit complete. 357 issues found in the dataset.
+
+lab.report()
+
+Here is a summary of the different kinds of issues found in the data:
+
+    issue_type num_issues
+        label          294
+        outlier         46
+near_duplicate       17
+
+Dataset Information: num_examples: 941, num_classes: 5
+
+-------- label issues ------------------------------
+About this issue:
+    Examples whose given label is estimated to be potentially incorrect
+    (e.g. due to annotation error) are flagged as having label issues.
+```
+
+## Data preparation
+
+• Data fusion
+
+Data cleaning
+
+Data augmentation
+
+Data visualization
+
+• Data splitting
+
+![](images/page_16_image_0.jpg)
+
+## Làm sạch dữ liệu – thiếu giá trị
+
+❏ Bộ dữ liệu chứa các **giá trị bị thiếu**, thường được mã hóa dưới dạng trống, NaN,..
+
+❏ Phương pháp đơn giản:
+
+❏ Bỏ các cột có tỷ lệ thiếu giá trị cao (chẳng hạn như 80%)
+
+❏ Tự động điền giá trị còn thiếu
+
+❏ Phương pháp khác
+
+## EDA
+
+Phân tích các đặc trưng chính của dữ liệu
+
+Mô tả bằng số liệu, biểu đồ thống kê hoặc trực quan hóa dữ liệu
+
+## EDA: Ví dụ về dữ liệu
+
+## [❏ Dataset link](https://www.kaggle.com/competitions/spaceship-titanic)
+
+Getting Started Prediction Competition
+
+Spaceship Titanic
+
+Predict which passengers are transported to an alternate dimension
+
+k Kaggle 2,333 teams·Ongoing
+
+![](images/page_18_image_6.jpg)
+
+Overview Data Code Discussion Leaderboard Rules Team
+
+Evaluation
+
+## Recommended Competition
+
+Frequently Asked Questions
+
+We highly recommend Titanic - Machine Learning from Disaster to get familiar with the basics of machine learning and Kaggle competitions.
+
+Welcome to the year 2912, where your data science skills are needed to solve a cosmic mystery. We've received a transmission from four lightyears away and things aren't looking good.
+
+The Spaceship Titanic was an interstellar passenger liner launched a month ago. With almost 13,000 passengers on board, the vessel set out on its maiden voyage transporting emigrants from our solar system to three newly habitable exoplanets orbiting nearby stars.
+
+While rounding Alpha Centauri en route to its first destination—the torrid 55 Cancri E—the unwary Spaceship Titanic collided with a spacetime anomaly hidden within a dust cloud. Sadly, it met a similar fate as its namesake from 1000 years before. Though the ship stayed intact, almost half of the passengers were transported to an alternate dimension!
+
+## Data loading
+
+## Tải dữ liệu và in ra màn hình các dữ liệu đầu tiên
+
+| PassengerId | Survived | Pclass |  | Name | Sex | Age | SibSp | Parch | Ticket | Fare | Cabin | Embarked |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 0 | 3 | Braund, Mr. Owen Harris | male | 22.0 | 1 | 0 |  | A/5 21171 | 7.2500 | NaN | S |
+| 2 | 1 | 1 | Cumings, Mrs. John Bradley (Florence Briggs Th... | female | 38.0 | 1 | 0 |  | PC 17599 | 71.2833 | C85 | C |
+| 3 | 1 | 3 | Heikkinen, Miss. Laina | female | 26.0 | 0 | 0 |  | STON/O2. 3101282 | 7.9250 | NaN | S |
+| 4 | 1 | 1 | Futrelle, Mrs. Jacques Heath (Lily May Peel) | female | 35.0 | 1 | 0 |  | 113803 | 53.1000 | C123 | S |
+| 5 | 0 | 3 | Allen, Mr. William Henry | male | 35.0 | 0 | 0 |  | 373450 | 8.0500 | NaN | S |
+
+## Các loại dữ liệu
+
+Có 2 loại dữ liệu chính:
+
+**Numerical** data: dữ liệu dạng số
+
+**Categorical** data: dữ liệu dạng phân loại
+
+| PassengerId | Survived | Pclass |  | Name | Sex | Age | SibSp | Parch | Ticket | Fare | Cabin | Embarked |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 0 | 3 | Braund, Mr. Owen Harris | male | 22.0 | 1 | 0 |  | A/5 21171 | 7.2500 | NaN | S |
+| 2 | 1 | 1 | Cumings, Mrs. John Bradley (Florence Briggs Th... | female | 38.0 | 1 | 0 |  | PC 17599 | 71.2833 | C85 | C |
+| 3 | 1 | 3 | Heikkinen, Miss. Laina | female | 26.0 | 0 | 0 |  | STON/O2. 3101282 | 7.9250 | NaN | S |
+| 4 | 1 | 1 | Futrelle, Mrs. Jacques Heath (Lily May Peel) | female | 35.0 | 1 | 0 |  | 113803 | 53.1000 | C123 | S |
+| 5 | 0 | 3 | Allen, Mr. William Henry | male | 35.0 | 0 | 0 |  | 373450 | 8.0500 | NaN | S |
+
+## Kiểm tra các đặc trưng thống kê
+
+1 df\_train.describe()
+
+|  | PassengerId | Survived | Pclass | Age | SibSp | Parch | Fare |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| count | 891.000000 | 891.000000 | 891.000000 | 714.000000 | 891.000000 | 891.000000 | 891.000000 |
+| mean | 446.000000 | 0.383838 | 2.308642 | 29.699118 | 0.523008 | 0.381594 | 32.204208 |
+| std | 257.353842 | 0.486592 | 0.836071 | 14.526497 | 1.102743 | 0.806057 | 49.693429 |
+| min | 1.000000 | 0.000000 | 1.000000 | 0.420000 | 0.000000 | 0.000000 | 0.000000 |
+| 25% | 223.500000 | 0.000000 | 2.000000 | 20.125000 | 0.000000 | 0.000000 | 7.910400 |
+| 50% | 446.000000 | 0.000000 | 3.000000 | 28.000000 | 0.000000 | 0.000000 | 14.454200 |
+| 75% | 668.500000 | 1.000000 | 3.000000 | 38.000000 | 1.000000 | 0.000000 | 31.000000 |
+| max | 891.000000 | 1.000000 | 3.000000 | 80.000000 | 8.000000 | 6.000000 | 512.329200 |
+
+## Đồ thị thống kê
+
+Sử dụng thư viện **matplotlib** hoặc **seaborn** để vẽ đồ thị
+
+![](images/page_22_chart_3.jpg)
+
+![](images/page_22_chart_4.jpg)
+
+![](images/page_22_chart_5.jpg)
+
+![](images/page_23_image_0.jpg)
+
+## Các kiểu phân tích dữ liệu bằng cách thăm dò
+
+❏ Có ba loại EDA chính
+
+❏ Phân tích đơn biến
+
+❏ Phân tích hai biến
+
+❏ Phân tích đa biến
+
+![](images/page_24_image_0.jpg)
+
+## Phân tích đơn biến
+
+❏ Phân tích dữ liệu của chỉ một biến (đặc trưng/cột)
+
+❏ Phân tích đơn biến không dùng biểu đồ
+
+❏ Trung tâm dữ liệu (Central Tendency): đề cập đến giá trị nằm ở vị trí trung tâm hoặc khu vực giữa của dữ liệu (các tham số ước lượng: trung bình, trung vị, mode).
+
+❏ Phạm vi: Sự **khác biệt** giữa giá trị **tối đa** và **tối thiểu** trong dữ liệu
+
+❏ Phương sai và độ lệch chuẩn
+
+![](images/page_25_image_0.jpg)
+
+## Phân tích đơn biến không dùng biểu đồ
+
+❏ Tính trung bình, Độ lệch chuẩn, giá trị nhỏ nhất, lớn nhất và phân vị thứ nhất (first quartile), phân vị thứ ba (third quartile), trung vị của các cột số trong tập dữ liệu.
+
+df\_train[['Survived','Pclass','Age','SibSp','Fare']].describe()
+
+|  | Survived | Pclass | Age | SibSp | Fare |
+| --- | --- | --- | --- | --- | --- |
+| count | 891.000000 | 891.000000 | 714.000000 | 891.000000 | 891.000000 |
+| mean | 0.383838 | 2.308642 | 29.699118 | 0.523008 | 32.204208 |
+| std | 0.486592 | 0.836071 | 14.526497 | 1.102743 | 49.693429 |
+| min | 0.000000 | 1.000000 | 0.420000 | 0.000000 | 0.000000 |
+| 25% | 0.000000 | 2.000000 | 20.125000 | 0.000000 | 7.910400 |
+| 50% | 0.000000 | 3.000000 | 28.000000 | 0.000000 | 14.454200 |
+| 75% | 1.000000 | 3.000000 | 38.000000 | 1.000000 | 31.000000 |
+| max | 1.000000 | 3.000000 | 80.000000 | 8.000000 | 512.329200 |
+
+Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM
+
+![](images/page_26_image_0.jpg)
+
+## Phân tích đơn biến
+
+❏ Phân tích đơn biến sử dụng biểu đồ
+
+❏ Biểu đồ tần suất (Histogram): Biểu đồ dạng thanh trong đó **tần số của dữ liệu** được biểu thị bằng các thanh hình chữ nhật
+
+❏ Biểu đồ mật độ: giống như một phiên bản **mượt mà hơn** của **biểu đồ tần suất**
+
+❏ Box-plot: Ở đây thông tin được thể hiện dưới dạng các hộp (**giá trị nhỏ nhất, phân vị thứ nhất (first quartile), trung vị (median), phân vị thứ ba (third quartile), giá trị lớn nhất**)
+
+## Histogram & Box plot
+
+![](images/page_27_chart_2.jpg)
+
+![](images/page_27_chart_3.jpg)
+
+![](images/page_28_image_0.jpg)
+
+## Ví dụ về phân tích đơn biến
+
+![](images/page_28_chart_2.jpg)
+
+![](images/page_28_chart_3.jpg)
+
+![](images/page_28_chart_4.jpg)
+
+![](images/page_28_chart_5.jpg)
+
+![](images/page_28_chart_6.jpg)
+
+![](images/page_28_chart_7.jpg)
+
+![](images/page_28_chart_8.jpg)
+
+![](images/page_28_chart_9.jpg)
+
+![](images/page_28_chart_10.jpg)
+
+![](images/page_28_chart_11.jpg)
+
+![](images/page_28_chart_12.jpg)
+
+![](images/page_28_chart_13.jpg)
+
+![](images/page_29_image_0.jpg)
+
+## Phân tích hai biến
+
+❏ Phân tích hai biến: xác định xem có tồn tại mối liên hệ thống kê giữa hai biến hay không
+
+❏ Có ba loại chính:
+
+❏ Phân tích dạng số-số
+
+❏ Phân tích dạng số-phân loại
+
+❏ Phân tích dạng phân loại-phân loại
+
+![](images/page_30_image_0.jpg)
+
+## Phân tích dạng số - số
+
+❏ Khi cả hai biến được so sánh đều có dữ liệu số
+
+❏ Một số phương pháp trực quan có thể được sử dụng:
+
+❏ Biểu đồ phân tán (Scatter plot): được sử dụng để thể hiện mọi điểm dữ liệu trong biểu đồ
+
+❏ Biểu đồ cặp (Pair plot)
+
+❏ Ma trận tương quan (Correlation matrix)
+
+![](images/page_30_chart_7.jpg)
+
+Ma trận tương quan kết hợp bản đồ nhiệt
+
+![](images/page_30_chart_9.jpg)
+
+Biểu đồ phân tán giữa tuổi và chi tiêu
+
+![](images/page_31_image_0.jpg)
+
+## Phân tích dạng số - phân loại
+
+❏ Khi một biến có kiểu số và biến khác là biến phân loại
+
+❏ Bạn có thể nhóm lại để sắp xếp dữ liệu thành các nhóm tương tự. Các hàng có cùng giá trị trong một cột cụ thể sẽ được sắp xếp thành một nhóm với nhau
+
+```python
+df_train[['Survived', 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare'\n        ,'Embarked']].groupby(['Survived', 'Embarked']).mean()
+```
+
+|  |  | Pclass | Age | SibSp | Parch | Fare |
+| --- | --- | --- | --- | --- | --- | --- |
+| Survived | Embarked |  |  |  |  |  |
+| 0 | C | 2.200000 | 33.666667 | 0.253333 | 0.253333 | 35.443335 |
+|  | Q | 2.936170 | 30.325000 | 0.510638 | 0.276596 | 13.335904 |
+|  | S | 2.545667 | 30.203966 | 0.611241 | 0.348946 | 20.743987 |
+| 1 | C | 1.634409 | 28.973671 | 0.494624 | 0.451613 | 79.720926 |
+|  | Q | 2.866667 | 22.500000 | 0.300000 | 0.000000 | 13.182227 |
+|  | S | 1.967742 | 28.113184 | 0.493088 | 0.539171 | 39.547081 |
+
+Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM
+
+![](images/page_32_image_0.jpg)
+
+## Phân tích dạng phân loại – phân
+
+## loại
+
+❏ Khi cả hai biến đều có tính phân loại
+
+❏ Một số phương pháp trực quan có thể được sử dụng:
+
+❏ Biểu đồ cột xếp chồng (Stacked Bar Chart hay Segmented Bar Chart)
+
+❏ Biểu đồ cột tạo cụm (Cluster Bar Chart)
+
+![](images/page_32_chart_7.jpg)
+
+Phân bố của giới tính và cảng khởi hành
+
+Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM
+
+## EDA- Age vs Survived
+
+sns.histplot(df\_train, x='Age', hue='Survived', bins=40, kde=True)
+
+![](images/page_33_chart_3.jpg)
+
+![](images/page_34_image_0.jpg)
+
+## Một số công cụ Automatic EDA
+
+[❏ Comparison notebook](https://www.kaggle.com/code/andreshg/automatic-eda-libraries-comparisson)
+
+![](images/page_34_chart_3.jpg)
+
+Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM
+
+![](images/page_35_image_0.jpg)
+
+![](images/page_35_image_1.jpg)
+
+## Ưu điểm của Automatic EDA tools
+
+Hiểu rõ hơn về dữ liệu
+
+Giúp hiểu được cấu trúc cơ bản của dữ liệu, mối tương quan và xu hướng trong dữ liệu.
+
+Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM
+
+## Pandas Profiling
+
+## Overview
+
+<table><tr><td>Overview</td><td>Warnings 14</td><td>Reproduction</td></tr><tr><td colspan="3">Dataset statistics</td></tr><tr><td>Number of variables</td><td colspan="2">12</td></tr><tr><td>Number of observations</td><td colspan="2">891</td></tr><tr><td>Missing cells</td><td colspan="2">866</td></tr><tr><td>Missing cells (%)</td><td colspan="2">8.1%</td></tr><tr><td>Duplicate rows</td><td colspan="2">0</td></tr><tr><td>Duplicate rows (%)</td><td colspan="2">0.0%</td></tr><tr><td>Total size in memory</td><td colspan="2">83.7 KiB</td></tr><tr><td>Average record size in memory</td><td colspan="2">96.1 B</td></tr></table>
+
+## Pandas profiling Tổng quan
+
+## Overview
+
+![](images/page_37_image_3.jpg)
+
+## Pandas profiling Thiếu giá trị
+
+![](images/page_38_chart_2.jpg)
+
+<table><tr><td rowspan="2">AgeReal number (R≥0)</td><td>Distinct</td><td>88</td><td>Mean</td><td>29.69911765</td><td rowspan="7"></td></tr><tr><td>Distinct (%)</td><td>12.3%</td><td>Minimum</td><td>0.42</td></tr><tr><td rowspan="4">MISSING</td><td>Missing</td><td>177</td><td>Maximum</td><td>80</td></tr><tr><td>Missing (%)</td><td>19.9%</td><td>Zeros</td><td>0</td></tr><tr><td>Infinite</td><td>0</td><td>Zeros (%)</td><td>0.0%</td></tr><tr><td>Infinite (%)</td><td>0.0%</td><td>Memory size</td><td>7.1 KiB</td></tr><tr><td>Statistics</td><td>Histogram</td><td>Common values</td><td colspan="2">Extreme values</td></tr><tr><td colspan="3">Quantile statistics</td><td colspan="3">Descriptive statistics</td></tr><tr><td colspan="2">Minimum</td><td>0.42</td><td colspan="2">Standard deviation</td><td>14.52649733</td></tr><tr><td colspan="2">5-th percentile</td><td>4</td><td colspan="2">Coefficient of variation (CV)</td><td>0.4891221855</td></tr><tr><td colspan="2">Q1</td><td>20.125</td><td colspan="2">Kurtosis</td><td>0.1782741536</td></tr><tr><td colspan="2">median</td><td>28</td><td colspan="2">Mean</td><td>29.69911765</td></tr><tr><td colspan="2">Q3</td><td>38</td><td colspan="2">Median Absolute Deviation (MAD)</td><td>9</td></tr><tr><td colspan="2">95-th percentile</td><td>56</td><td colspan="2">Skewness</td><td>0.3891077823</td></tr><tr><td colspan="2">Maximum</td><td>80</td><td colspan="2">Sum</td><td>21205.17</td></tr><tr><td colspan="2">Range</td><td>79.58</td><td colspan="2">Variance</td><td>211.0191247</td></tr><tr><td colspan="2">Interquartile range (IQR)</td><td>17.875</td><td colspan="2">Monotocity</td><td>Not monotonic</td></tr></table>
+
+Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM
+
+## Pandas profiling Sự tương quan
+
+![](images/page_39_chart_2.jpg)
+
+## Pandas profiling Trình thông dịch
+
+## ❏ Thực hiện phân tích và trực quan hóa dữ liệu
+
+![](images/page_40_image_3.jpg)
+
+![](images/page_40_image_4.jpg)
+
+![](images/page_41_image_0.jpg)
+
+## Pandas AI
+
+❏ Pandas AI là một thư viện Python bổ sung các khả năng AI tổng quát cho Pandas
+
+❏ Làm cho Pandas có thể trò chuyện, cho phép bạn đặt câu hỏi về dữ liệu của mình
+
+❏ Github: [link](https://github.com/gventuri/pandas-ai)
+
+## Installation
+
+pip install pandasai
+
+![](images/page_41_image_7.jpg)
+
+![](images/page_42_image_0.jpg)
+
+## HỎI ĐÁP

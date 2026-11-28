@@ -1,0 +1,5063 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.469,
+            0.09,
+            0.53,
+            0.109
+          ],
+          "content": "Ôn Tập"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.4,
+            0.122,
+            0.599,
+            0.14
+          ],
+          "content": "Ngôn ngữ lập trình Python"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.183,
+            0.521,
+            0.202
+          ],
+          "level": 2,
+          "content": "Câu 1: Khẳng định nào sau đây là đúng về Python ?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.215,
+            0.616,
+            0.232
+          ],
+          "content": "Python là một ngôn ngữ thông dịch cấp cao"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.234,
+            0.634,
+            0.251
+          ],
+          "content": "Python là ngôn ngữ lập trình hướng đối tượng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.252,
+            0.548,
+            0.269
+          ],
+          "content": "Python là ngôn ngữ mã nguồn mở"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.27,
+            0.499,
+            0.288
+          ],
+          "content": "Tất cả các đáp án đều đúng"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.3,
+            0.572,
+            0.319
+          ],
+          "level": 2,
+          "content": "Câu 2: Khẳng định nào sau đây là không đúng về Python ?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.332,
+            0.885,
+            0.367
+          ],
+          "content": "Python có thể sử dụng trên nhiều hệ điều hành khác nhau: Unix, Windows,Mac OS, Linux, …"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.369,
+            0.794,
+            0.386
+          ],
+          "content": "Python là một ngôn ngữ không phân biệt kiểu chữ HOA, chữ thường"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.387,
+            0.819,
+            0.405
+          ],
+          "content": "▪ Python hoàn toàn tạo kiểu động và dùng cơ chế cấp phát bộ nhớ tự động"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.405,
+            0.885,
+            0.441
+          ],
+          "content": "Python có tốc độ thực hiện chậm hơn nhiều lần so với các ngôn ngữ biên dịch như C, Java, ..."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.454,
+            0.453,
+            0.472
+          ],
+          "level": 2,
+          "content": "Cau 3: Cho biết kết quả của đoạn code sau"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.483,
+            0.892,
+            0.623
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in range(1,5):\n    print(i,end=' ')\n        if i == 3:\n            break\n\n                ■    IndentationError: expected an indented block\n                ■    1 2 3\n                ■    1 2 3 4\n                ■    1 2\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.636,
+            0.762,
+            0.655
+          ],
+          "level": 2,
+          "content": "Câu 4: Các khối code (khối lệnh của hàm, vòng lặp,...) trong Python được xác định?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.668,
+            0.499,
+            0.686
+          ],
+          "content": "Dấu ngoặc nhọn { }"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.686,
+            0.413,
+            0.702
+          ],
+          "content": "▪ Canh lề"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.705,
+            0.487,
+            0.722
+          ],
+          "content": "Dầu ngoặc đơn ( )"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.724,
+            0.504,
+            0.741
+          ],
+          "content": "Dấu ngoặc vuông [ ]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.754,
+            0.575,
+            0.772
+          ],
+          "level": 2,
+          "content": "Câu 5: Khẳng định nào là đúng về chú thích trong Python?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.785,
+            0.703,
+            0.802
+          ],
+          "content": "Python sử dụng kí tự # để bắt đầu một chú thích"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.805,
+            0.757,
+            0.821
+          ],
+          "content": "Nội dung của chú thích sẽ được trình thông dịch bỏ qua"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.235,
+            0.822,
+            0.885,
+            0.857
+          ],
+          "content": "Python dùng “”” ””” (3 cặp nháy đôi) hoặc ”’ ”'(3 cập nháy đơn) để viết chú thích trên nhiều dòng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.295,
+            0.859,
+            0.518,
+            0.876
+          ],
+          "content": "Tất cả các đáp án trên."
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.255,
+            0.894,
+            0.381
+          ],
+          "sub_type": "code",
+          "content": "```python\nprint(type(type(float)))  \n    <class 'type'>  \n    <class 'float'>  \n    Có xuất hiện lỗi Error  \n    None\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.292,
+            0.657,
+            0.455,
+            0.733
+          ],
+          "sub_type": "code",
+          "content": "```csv\n- x,y,z = 1;2;3\n- x;y;z = 1;2;3\n- x,y,z = 1,2,3\n- x;y;z = 1,2,3\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.113,
+                0.225,
+                0.417,
+                0.245
+              ],
+              "content": "Cau 7: Kết quả của hàm sau đây là gì?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.09,
+            0.575,
+            0.11
+          ],
+          "level": 2,
+          "content": "Câu 6: Khẳng định nào là đúng về chú thích trong Python?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.121,
+            0.709,
+            0.14
+          ],
+          "content": "Python sử dụng kí tự // để bắt đầu một chú thích"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.14,
+            0.713,
+            0.158
+          ],
+          "content": "Python sử dụng kí tự % để bắt đầu một chú thích"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.159,
+            0.704,
+            0.176
+          ],
+          "content": "Python sử dụng kí tự # để bắt đầu một chú thích"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.176,
+            0.886,
+            0.214
+          ],
+          "content": "Python dùng ““ ”” (2 cặp nháy đôi) hoặc ‘‘ ’’(2 cập nháy đơn) để viết chú thích trên nhiều dòng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.39,
+            0.587,
+            0.412
+          ],
+          "content": "**Cau 8: Phép toán nào có thể được dùng để so sánh hai biến ?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.293,
+            0.424,
+            0.378,
+            0.494
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ ===\n■ **\n■ // \n■ =\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.508,
+            0.57,
+            0.529
+          ],
+          "content": "**Câu 9: Câu lệnh nào sau đây in ra kiểu dữ liệu của biến x?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.292,
+            0.54,
+            0.471,
+            0.616
+          ],
+          "sub_type": "code",
+          "content": "```diff\n-     print(type(x))\n-     print(type[x])\n-     print(typeof[x])\n-     print(typeof(x))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.626,
+            0.722,
+            0.646
+          ],
+          "content": "**Cau 10: Câu lệnh nào sau đây được dùng để gán giá trị cho x = 1, y = 2, z = 3 ?**"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.106,
+            0.773,
+            0.892,
+            0.9
+          ],
+          "content": "| print(0b1010) |  |\n| --- | --- |\n| ▪ | 10 |\n| ▪ | 0b1010 |\n| ▪ | 1010 |\n| ▪ | '0b1010' |",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.743,
+                0.425,
+                0.763
+              ],
+              "content": "Câu 11: Kết quả của câu lệnh sau là gì?"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_1_table_14.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.107,
+            0.12,
+            0.892,
+            0.244
+          ],
+          "content": "| print(type(hex(15))) |  |\n| --- | --- |\n| ▪ | &lt;class 'int'> |\n| ▪ | &lt;class 'str'> |\n| ▪ | 0xf |\n| ▪ | '0xf' |",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.09,
+                0.424,
+                0.11
+              ],
+              "content": "Câu 12: Kết quả của câu lệnh sau là gì?"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_2_table_1.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.106,
+            0.285,
+            0.892,
+            0.41
+          ],
+          "content": "| print(bin(4)) |  |\n| --- | --- |\n| ▪ | 100 |\n| ▪ | 0b100 |\n| ▪ | 0o100 |\n| ▪ | 0x100 |",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.256,
+                0.424,
+                0.275
+              ],
+              "content": "Câu 13: Kết quả của câu lệnh sau là gì?"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_2_table_3.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.106,
+            0.451,
+            0.892,
+            0.579
+          ],
+          "content": "| print(float(' -50\\\\n')) |  |\n| --- | --- |\n| ▪ | -50 |\n| ▪ | -50.0 |\n| ▪ | Có xuất hiện lỗi Error |\n| ▪ | -50.0000000000000000 (16 chữ số sau dấu chấm động) |",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.422,
+                0.771,
+                0.442
+              ],
+              "content": "Câu 14: Kết quả của câu lệnh sau là gì? (Lưu ý: số lượng khoảng trắng trước số đó là 5)"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_2_table_5.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.105,
+            0.618,
+            0.894,
+            0.898
+          ],
+          "content": "| print(float('7e+002'))print(float('7e-002')) |  |\n| --- | --- |\n| ▪ | 700.00.07 |\n| ▪ | 7000.07 |\n| ▪ | '7e+002''7e-002' |\n| ▪ | 7e+002 |",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.589,
+                0.424,
+                0.608
+              ],
+              "content": "Câu 15: Kết quả của câu lệnh sau là gì?"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_2_table_7.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.349,
+            0.091,
+            0.406,
+            0.108
+          ],
+          "content": "7e-002"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.121,
+            0.424,
+            0.14
+          ],
+          "content": "Câu 16: Kết quả của câu lệnh sau là gì?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.168,
+            0.281,
+            0.19
+          ],
+          "content": "print(complex('2+8j'))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.23,
+            0.516,
+            0.251
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.251,
+            0.471,
+            0.27
+          ],
+          "content": "complex('2+8j')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.27,
+            0.398,
+            0.287
+          ],
+          "content": "▪ '2+8j'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.288,
+            0.402,
+            0.307
+          ],
+          "content": "▪ (2+8j)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.318,
+            0.676,
+            0.339
+          ],
+          "content": "**Cau 17: Chỉ ra trường hợp không hợp lệ khi đặt tên biến trong python ?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.349,
+            0.44,
+            0.368
+          ],
+          "content": "▪ bien-X = 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.368,
+            0.439,
+            0.386
+          ],
+          "content": "▪ \\_bienX = 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.386,
+            0.439,
+            0.405
+          ],
+          "content": "▪ bien\\_X = 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.405,
+            0.432,
+            0.423
+          ],
+          "content": "▪ bienX = 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.435,
+            0.671,
+            0.455
+          ],
+          "content": "**Câu 18: Qui tắc nào sau đây là đúng khi đặt tên cho biến trong Python?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.465,
+            0.649,
+            0.485
+          ],
+          "content": "Tên biến có thể bắt đầu bằng một chữ số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.485,
+            0.642,
+            0.503
+          ],
+          "content": "Tên biến có thể chứa dấu gạch dưới \"\\_\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.504,
+            0.782,
+            0.521
+          ],
+          "content": "Tên biến có thể có các ký hiệu đặc biệt như !, @, #, \\$, %,..."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.522,
+            0.705,
+            0.54
+          ],
+          "content": "Tên biến có thể trùng với các từ khóa (keyword)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.552,
+            0.512,
+            0.572
+          ],
+          "content": "**Câu 19: Biến L trong đoạn sau là kiểu dữ liệu nào?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.6,
+            0.257,
+            0.62
+          ],
+          "content": "L = \"[5:2,10:[1,2]\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.634,
+            0.473,
+            0.651
+          ],
+          "content": "List (danh sách)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.651,
+            0.503,
+            0.67
+          ],
+          "content": "String (chuỗi ký tự)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.671,
+            0.4,
+            0.688
+          ],
+          "content": "Tuple"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.688,
+            0.5,
+            0.707
+          ],
+          "content": "Dictionary (từ điển)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.719,
+            0.371,
+            0.738
+          ],
+          "content": "**Câu 20: Kết quả của lệnh sau là:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.765,
+            0.409,
+            0.786
+          ],
+          "content": "print(100, 200, \"hello\", \"world\", sep=':')"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.8,
+            0.504,
+            0.817
+          ],
+          "content": "100:200:hello:world"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.818,
+            0.491,
+            0.835
+          ],
+          "content": "▪ 100200helloworld"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.836,
+            0.516,
+            0.854
+          ],
+          "content": "100 200 hello world"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.855,
+            0.515,
+            0.873
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.885,
+            0.639,
+            0.905
+          ],
+          "content": "**Câu 21: Lệnh nào dùng để nhập dữ liệu từ bàn phím trong Python?**"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.09,
+            0.406,
+            0.166
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- cin\n- scanf()\n- input()\n- read()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.27,
+            0.269,
+            0.318
+          ],
+          "sub_type": "code",
+          "content": "```txt\nprint(100 >= 10**2)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.238,
+                0.37,
+                0.258
+              ],
+              "content": "Câu 22: Kết quả của lệnh sau là:"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.348,
+            0.458,
+            0.424
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- 100 >= 10**2\n- True\n- False\n- None\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.435,
+            0.37,
+            0.455
+          ],
+          "content": "**Câu 23: Kết quả của lệnh sau là:**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.11,
+            0.469,
+            0.559,
+            0.591
+          ],
+          "sub_type": "code",
+          "content": "```txt\nprint(10//3,10%3,10/3,sep=\", \")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.603,
+            0.51,
+            0.622
+          ],
+          "content": "**Câu 24: Đâu là output của chương trình dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.631,
+            0.891,
+            0.886
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef Function_1():\n    global n\n    n = 200\n    def Function_2():\n        global n\n        n = 300\n    n = 400\n\nn = 500\nFunction_1()\nprint('n =', n)\n\n▪     n = 400\n▪     n = 500\n▪     n = 200\n▪     n = 300\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.162,
+            0.892,
+            0.303
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in range(1,5):\n    print(i, end=' ')\n    if i == 3:\n        break\n\n        ■    IndentationError: expected an indented block\n        ■    1 2 3\n        ■    1 2 3 4\n        ■    1 2\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.133,
+                0.527,
+                0.152
+              ],
+              "content": "Cau 25: Cho biết kết quả của đoạn chương trình sau"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.315,
+            0.492,
+            0.334
+          ],
+          "content": "**Cau 26: Cho biết kết quả đoạn chương trình sau**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.344,
+            0.893,
+            0.636
+          ],
+          "sub_type": "code",
+          "content": "```python\nif 'toan' in {'cntt': 1, 'toan': 2, 'sinh': 3}:\n    print(1)\n    if 'a' in 'cntt':\n        print(2)\nprint(3)\n\n■ 1\n2\n3\n\n■ 1\n3\n\n■ 1\n2\n\n■ 3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.673,
+            0.491,
+            0.692
+          ],
+          "content": "**Câu 27: Cho biết output đoạn chương trình sau:**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.702,
+            0.891,
+            0.831
+          ],
+          "sub_type": "code",
+          "content": "```python\ni = 0\nx = 0\nwhile i < 5:\n    if i % 2 == 0:\n        x += 1\n    i += 1\nprint(x)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.865,
+            0.374,
+            0.9
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ 3\n■ 10\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.09,
+            0.366,
+            0.126
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ 5\n■ 0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.169,
+            0.892,
+            0.299
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in range(20):\n    if i == 10:\n        break\n    else:\n        print(i,end=\"\")\nelse:\n    print(\"*\")\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.14,
+                0.549,
+                0.159
+              ],
+              "content": "Câu 28: Kết quả nào là output của đoạn code dưới đây?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.169,
+            0.454,
+            0.405
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in range(20):\n    if i == 10:\n        break\n    else:\n        print(i,end=\"\")\nelse:\n    print(\"*\")\n\n▪ 0123456789*\n▪ 123456789\n▪ 0123456789\n▪ 123456789*\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.445,
+            0.892,
+            0.787
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in range(5, 7):\n    print(str(i) * 3)\n\n    ■ 555\n    666\n\n    ■ 15\n    18\n    21\n\n    ■ 15\n    18\n\n    ■ 555\n    666\n    777\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.417,
+                0.548,
+                0.436
+              ],
+              "content": "Câu 29: Kết quả nào là output của đoạn code dưới đây?"
+            },
+            {
+              "bbox": [
+                0.114,
+                0.813,
+                0.642,
+                0.833
+              ],
+              "content": "Câu 30: Điền phần còn thiếu trong đoạn code để được out dưới đây:"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.845,
+            0.181,
+            0.863
+          ],
+          "content": "#output:"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.139,
+            0.394,
+            0.213
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ 0\n■ None\n■ -2\n■ -1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.111,
+            0.107,
+            0.297,
+            0.141
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in range(6, 0,____):\n    print(str(i) * 2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.225,
+            0.493,
+            0.245
+          ],
+          "content": "**Câu 31: Đâu là kết quả của đoạn code dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.255,
+            0.334,
+            0.387
+          ],
+          "sub_type": "code",
+          "content": "```python\nmyList = [1, 2, 3, 4, 5, 5, 1]\n_max = myList[0]\nindex_max = 0\nfor i in range(1, len(myList)):\n    if myList[i] > _max:\n        _max = myList[i]\n        index_max = i\nprint(index_max)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.403,
+            0.365,
+            0.476
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- 0\n- 4\n- 1\n- 5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.49,
+            0.492,
+            0.509
+          ],
+          "content": "**Câu 32: Đâu là kết quả của đoạn code dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.52,
+            0.335,
+            0.651
+          ],
+          "sub_type": "code",
+          "content": "```python\nmyList = [1, 6, 3, 4, 5, 5, 1]\n_max = myList[0]\nindex_max = 0\nfor i in range(1, len(myList)):\n    if myList[i] > _max:\n        _max = myList[i]\n        index_max = i\nprint(index_max)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.65,
+            0.365,
+            0.724
+          ],
+          "sub_type": "code",
+          "content": "```csv\n■ 0\n■ 4\n■ 1\n■ 5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.736,
+            0.492,
+            0.755
+          ],
+          "content": "**Câu 33: Đâu là kết quả của đoạn code dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.767,
+            0.333,
+            0.898
+          ],
+          "sub_type": "code",
+          "content": "```python\nmyList = [1, 6, 3, 4, 5, 5, 1]\n_max = myList[0]\nindex_max = 0\nfor i in range(2, len(myList)):\n    if myList[i] > _max:\n        _max = myList[i]\n        index_max = i\nprint(index_max)\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.402,
+            0.366,
+            0.475
+          ],
+          "sub_type": "code",
+          "content": "```csv\n■ 2\n■ 4\n■ 1\n■ 3\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.09,
+            0.367,
+            0.163
+          ],
+          "sub_type": "code",
+          "content": "```txt\n0\n4\n1\n5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.205,
+            0.891,
+            0.385
+          ],
+          "sub_type": "code",
+          "content": "```python\nx = True\ny = False\nz = False\nif not x or y:\n    print (1)\nelif not x or not y and z:\n    print (2)\nelif not x or y or not y and x:\n    print (3)\nelse:\n    print (4)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.176,
+                0.549,
+                0.195
+              ],
+              "content": "Câu 34: Kết quả nào là output của đoạn code dưới đây?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.489,
+            0.548,
+            0.508
+          ],
+          "content": "**Câu 35: Kết quả nào là output của đoạn code dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.518,
+            0.892,
+            0.771
+          ],
+          "sub_type": "code",
+          "content": "```python\nletter = [\"a\", \"b\"]\nfor i in enumerate(letter):\n    print(i)\n\n    ■ (0, 'a')\n    (1, 'b')\n\n    ■ a\n    b\n\n    ■ 'a'\n    'b'\n\n    ■ 0\n    1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.784,
+            0.548,
+            0.803
+          ],
+          "content": "**Câu 36: Kết quả nào là output của đoạn code dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.813,
+            0.892,
+            0.904
+          ],
+          "sub_type": "code",
+          "content": "```python\nletter = [\"a\", \"b\"]\nfor i, j in enumerate(letter):\n    print(i, j)\n        (0, 'a')\n        (1, 'b')\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.287,
+            0.107,
+            0.398,
+            0.255
+          ],
+          "sub_type": "code",
+          "content": "```prolog\n- a 0\nb 1\n- ('a', 0)\n('b', 1)\n- 0 a\n1 b\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.297,
+            0.892,
+            0.44
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor item in \"HelloWorld\":\n    if item == \"l\":\n        continue\n    print(item,end=\"\")\n    ■ HelloWorld\n    ■ HeloWorld\n    ■ HeoWord\n    ■ HeoWorld\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.268,
+                0.548,
+                0.287
+              ],
+              "content": "Câu 37: Kết quả nào là output của đoạn code dưới đây?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.498,
+            0.892,
+            0.641
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor i in range(1,10):\n    if (i%2!=0):\n        continue\n    print(i, end=\" \")\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.469,
+                0.548,
+                0.488
+              ],
+              "content": "Câu 38: Kết quả nào là output của đoạn code dưới đây?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.736,
+            0.892,
+            0.865
+          ],
+          "sub_type": "code",
+          "content": "```python\nword ='Python'\nword[0] = 'K'\nprint(word[0])\n\n■ P\n■ K\n■ None\n■ Có xuất hiện lỗi Error\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.707,
+                0.548,
+                0.726
+              ],
+              "content": "Câu 39: Kết quả nào là output của đoạn code dưới đây?"
+            }
+          ],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.354,
+            0.892,
+            0.391
+          ],
+          "sub_type": "code",
+          "content": "```lua\nnum = \"1\" * \"5\"\nprint(num)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.09,
+            0.709,
+            0.11
+          ],
+          "content": "**Cau 40: Trong Python, hàm nào được dùng để thay thế một phần của chuỗi?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.122,
+            0.421,
+            0.14
+          ],
+          "content": "replace()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.14,
+            0.416,
+            0.158
+          ],
+          "content": "switch()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.159,
+            0.399,
+            0.177
+          ],
+          "content": "▪ split()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.177,
+            0.464,
+            0.195
+          ],
+          "content": "▪ replaceString()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.207,
+            0.825,
+            0.227
+          ],
+          "content": "**Cau 41: Trong Python, hàm nào được dùng để chuyển đổi các ký tự in thường sang in hoa ?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.239,
+            0.41,
+            0.257
+          ],
+          "content": "▪ upper()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.258,
+            0.441,
+            0.275
+          ],
+          "content": "▪ uppercase()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.276,
+            0.444,
+            0.293
+          ],
+          "content": "▪ upperCase()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.295,
+            0.462,
+            0.312
+          ],
+          "content": "▪ toUpperCase()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.325,
+            0.498,
+            0.344
+          ],
+          "content": "**Câu 42 : Chạy code sau trong Python, kết quả là:**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.42,
+            0.365,
+            0.436
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ 5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.438,
+            0.401,
+            0.455
+          ],
+          "content": "▪ 11111"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.457,
+            0.401,
+            0.474
+          ],
+          "content": "▪ 55555"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.475,
+            0.773,
+            0.494
+          ],
+          "content": "▪ TypeError: can't multiply sequence by non-int of type 'str'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.506,
+            0.494,
+            0.525
+          ],
+          "content": "**Câu 43: Chạy code sau trong Python, kết quả là:**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.537,
+            0.246,
+            0.571
+          ],
+          "sub_type": "code",
+          "content": "```python\nnum = \"1\" + \"5\"\nprint(num)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.601,
+            0.375,
+            0.618
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ 15\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.621,
+            0.366,
+            0.636
+          ],
+          "content": "▪ 6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.639,
+            0.365,
+            0.654
+          ],
+          "content": "▪ 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.656,
+            0.773,
+            0.676
+          ],
+          "content": "TypeError: can't multiply sequence by non-int of type 'str'"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.687,
+            0.498,
+            0.706
+          ],
+          "content": "**Câu 44 : Chạy code sau trong Python, kết quả là:**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.719,
+            0.232,
+            0.752
+          ],
+          "sub_type": "code",
+          "content": "```txt\nnum = \"1\" * 5\nprint(num)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.782,
+            0.402,
+            0.8
+          ],
+          "content": "▪ 55555"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.801,
+            0.401,
+            0.818
+          ],
+          "content": "▪ 11111"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.82,
+            0.366,
+            0.836
+          ],
+          "content": "▪ 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.837,
+            0.773,
+            0.857
+          ],
+          "content": "TypeError: can't multiply sequence by non-int of type 'str'"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.136,
+            0.309,
+            0.159
+          ],
+          "sub_type": "code",
+          "content": "```julia\nprint(\"Hello World\"[::-1])\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.09,
+                0.408,
+                0.11
+              ],
+              "content": "Câu 45: Output của lệnh dưới đây là:"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.2,
+            0.448,
+            0.22
+          ],
+          "content": "▪ dlroW olleH"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.22,
+            0.439,
+            0.238
+          ],
+          "content": "▪ Hello Worl"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.239,
+            0.366,
+            0.255
+          ],
+          "content": "▪ d"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.255,
+            0.515,
+            0.275
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.287,
+            0.574,
+            0.307
+          ],
+          "content": "**Câu 46: Kết quả của chương trình được in ra màn hình là?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.332,
+            0.292,
+            0.39
+          ],
+          "sub_type": "code",
+          "content": "```python\nstring = \"my name is x\"\nfor i in string:\n    print (i, end=\", \")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.431,
+            0.544,
+            0.45
+          ],
+          "sub_type": "code",
+          "content": "```csv\n■ m, y, , n, a, m, e, , i, s, , x,\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.45,
+            0.539,
+            0.469
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ m y, , n, a, m, e, , i, s, , x\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.469,
+            0.472,
+            0.486
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ my, name, is, x,\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.487,
+            0.396,
+            0.505
+          ],
+          "content": "▪ Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.535,
+            0.631,
+            0.555
+          ],
+          "content": "**Cau 47: Trong Python, hàm nào được dùng để kết hợp các chuỗi ?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.566,
+            0.398,
+            0.585
+          ],
+          "content": "▪ join()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.585,
+            0.4,
+            0.604
+          ],
+          "content": "▪ split()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.604,
+            0.42,
+            0.622
+          ],
+          "content": "replace()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.623,
+            0.401,
+            0.64
+          ],
+          "content": "▪ strip()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.652,
+            0.574,
+            0.672
+          ],
+          "content": "**Câu 48: Kết quả của chương trình được in ra màn hình là?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.683,
+            0.441,
+            0.855
+          ],
+          "sub_type": "code",
+          "content": "```python\nstring=\"12345\"\nprint('*'.join(reversed(string)))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.865,
+            0.574,
+            0.885
+          ],
+          "content": "**Câu 49: Kết quả của chương trình được in ra màn hình là?**"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.105,
+            0.266,
+            0.144
+          ],
+          "sub_type": "code",
+          "content": "```txt\nword=\"hello world\"\nprint(word.split('o'))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.173,
+            0.468,
+            0.192
+          ],
+          "content": "▪ ['hello w', 'rld' ]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.192,
+            0.469,
+            0.21
+          ],
+          "content": "▪ ['hell', ' w', 'rld']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.211,
+            0.472,
+            0.229
+          ],
+          "content": "['hello', 'world' ]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.23,
+            0.464,
+            0.248
+          ],
+          "content": "▪ ['hell', 'world' ]"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.278,
+            0.574,
+            0.298
+          ],
+          "level": 2,
+          "content": "Câu 50: Kết quả của chương trình được in ra màn hình là?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.322,
+            0.478,
+            0.363
+          ],
+          "sub_type": "code",
+          "content": "```javascript\nss = \"{1}, {0} va {2}\".format('Hello','Hi','World')\nprint(ss)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.405,
+            0.496,
+            0.423
+          ],
+          "content": "Hi, World va Hello"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.424,
+            0.495,
+            0.441
+          ],
+          "content": "▪ Hello, World va Hi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.443,
+            0.496,
+            0.46
+          ],
+          "content": "Hi, Hello va World"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.461,
+            0.496,
+            0.479
+          ],
+          "content": "Hello, Hi va World"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.581,
+            0.891,
+            0.663
+          ],
+          "sub_type": "code",
+          "content": "```txt\nL = ['a','b','c','d',.', 'e']\nprint (\"\".join(L))\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.551,
+                0.457,
+                0.57
+              ],
+              "content": "Câu 51: Kết quả của đoạn chương trình sau"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.694,
+            0.4,
+            0.712
+          ],
+          "content": "▪ abcde"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.712,
+            0.46,
+            0.731
+          ],
+          "content": "['a','b','c','d','e']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.732,
+            0.404,
+            0.749
+          ],
+          "content": "▪ abcd.e"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.75,
+            0.417,
+            0.767
+          ],
+          "content": "▪ a.b.c.d.e"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.81,
+            0.453,
+            0.83
+          ],
+          "level": 2,
+          "content": "Câu 52: Kiểu dữ liệu nào sau đây là LIST?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.842,
+            0.566,
+            0.861
+          ],
+          "content": "(\"apple\", \"banana\", \"cherry\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.861,
+            0.571,
+            0.879
+          ],
+          "content": "{\"apple\", \"banana\", \"cherry\"}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.88,
+            0.614,
+            0.899
+          ],
+          "content": "{\"name\": \"apple\", \"color\": \"green\"}"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.091,
+            0.566,
+            0.11
+          ],
+          "sub_type": "code",
+          "content": "```json\n■ [\"apple\", \"banana\", \"cherry\"]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.121,
+            0.472,
+            0.14
+          ],
+          "level": 2,
+          "content": "Câu 53: Kiểu dữ liệu nào sau đây là TUPLE?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.153,
+            0.566,
+            0.171
+          ],
+          "content": "▪ (\"apple\", \"banana\", \"cherry\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.171,
+            0.571,
+            0.189
+          ],
+          "content": "{\"apple\", \"banana\", \"cherry\"}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.19,
+            0.614,
+            0.207
+          ],
+          "content": "{\"name\": \"apple\", \"color\": \"green\"}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.208,
+            0.566,
+            0.226
+          ],
+          "content": "[\"apple\", \"banana\", \"cherry\"]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.238,
+            0.446,
+            0.257
+          ],
+          "content": "**Câu 54: Kiểu dữ liệu nào sau đây là SET?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.27,
+            0.566,
+            0.288
+          ],
+          "content": "▪ (\"apple\", \"banana\", \"cherry\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.288,
+            0.57,
+            0.306
+          ],
+          "content": "▪ {\"apple\", \"banana\", \"cherry\"}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.306,
+            0.613,
+            0.325
+          ],
+          "content": "{\"name\": \"apple\", \"color\": \"green\"}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.325,
+            0.566,
+            0.344
+          ],
+          "content": "▪ [\"apple\", \"banana\", \"cherry\"]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.355,
+            0.529,
+            0.374
+          ],
+          "content": "**Câu 55: Kiểu dữ liệu nào sau đây là DICTIONARY?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.387,
+            0.566,
+            0.405
+          ],
+          "content": "▪ (\"apple\", \"banana\", \"cherry\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.405,
+            0.569,
+            0.423
+          ],
+          "content": "{\"apple\", \"banana\", \"cherry\"}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.424,
+            0.614,
+            0.442
+          ],
+          "content": "{\"name\": \"apple\", \"color\": \"green\"}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.442,
+            0.566,
+            0.46
+          ],
+          "content": "[\"apple\", \"banana\", \"cherry\"]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.472,
+            0.885,
+            0.51
+          ],
+          "content": "**Câu 56: Kiểu dữ liệu nào sau đây chứa các phần tử có thứ tự, có thể được thay đổi và cho phép trùng nhau**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.522,
+            0.395,
+            0.54
+          ],
+          "content": "▪ LIST"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.541,
+            0.467,
+            0.558
+          ],
+          "content": "▪ DICTIONARY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.559,
+            0.413,
+            0.575
+          ],
+          "content": "▪ TUPLE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.578,
+            0.389,
+            0.595
+          ],
+          "content": "▪ SET"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.608,
+            0.499,
+            0.628
+          ],
+          "content": "**Câu 57: Kết quả của hàm hiển thị dưới đây là gì?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.655,
+            0.316,
+            0.676
+          ],
+          "sub_type": "code",
+          "content": "```txt\nprint(len([\"hello\", 2, 4, 6]))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.72,
+            0.395,
+            0.793
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- 4\n- 3\n- 8\n- None\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.805,
+            0.886,
+            0.843
+          ],
+          "content": "**Câu 58: Giả sử có một list: l = [\"hello\", 2, 4, 6]. Nếu muốn in list này theo thứ tự ngược lại ta nên sử dụng phương pháp nào sau đây?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.855,
+            0.425,
+            0.873
+          ],
+          "content": "▪ reverse(l)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.874,
+            0.47,
+            0.891
+          ],
+          "content": "▪ list(reverse[(l)])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.893,
+            0.434,
+            0.91
+          ],
+          "content": "▪ reversed(l)"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.832,
+            0.511,
+            0.85
+          ],
+          "sub_type": "code",
+          "content": "```txt\n['a', 'aa', 'aaa', 'b', 'bb']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.484,
+            0.516,
+            0.657
+          ],
+          "sub_type": "code",
+          "content": "```txt\nmylist=[1, 5, 9, int('10')]\nprint(sum(mylist))\n\n■ 25\n■ 15\n■ 10\n■ Có xuất hiện lỗi Error\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.795,
+            0.484,
+            0.813
+          ],
+          "sub_type": "code",
+          "content": "```txt\n[a, aa, aaa, b, bb]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.166,
+            0.325,
+            0.19
+          ],
+          "sub_type": "code",
+          "content": "```txt\nprint(list(enumerate([2, 3])))\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.12,
+                0.498,
+                0.141
+              ],
+              "content": "Câu 59: Kết quả của hàm hiển thị dưới đây là gì?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.231,
+            0.454,
+            0.307
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- [2, 3]\n- [(1, 2), (2, 3)]\n- [(0, 2), (1, 3)]\n- [(2, 3)]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.318,
+            0.494,
+            0.338
+          ],
+          "content": "**Câu 60: Đâu là điểm khác biệt giữa tuple và list?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.349,
+            0.872,
+            0.369
+          ],
+          "content": "Tuple nằm trong dấu ngoặc nhọn {}, list nằm trong dấu ngoặc vuông []."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.368,
+            0.868,
+            0.387
+          ],
+          "content": "Tuple nằm trong dấu ngoặc vuông [], list nằm trong dấu ngoặc nhọn{}."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.386,
+            0.874,
+            0.405
+          ],
+          "content": "Tuple chứa các phần tử có thứ tự, list chứa các phần tử không có thứ tự."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.405,
+            0.885,
+            0.443
+          ],
+          "content": "▪ Dữ liệu thuộc kiểu list có thể thay đổi được, dữ liệu thuộc kiểu tuple không thể thay đổi được."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.454,
+            0.486,
+            0.473
+          ],
+          "content": "**Câu 61: Đâu là output của đoạn code dưới đây?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.667,
+            0.492,
+            0.687
+          ],
+          "content": "**Câu 62: Kết quả của chương trình được in ra là:**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.712,
+            0.373,
+            0.752
+          ],
+          "sub_type": "code",
+          "content": "```python\nmylist=['a', 'aa', 'aaa', 'b', 'bb', 'bbb']\nprint(mylist[:-1])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.813,
+            0.553,
+            0.831
+          ],
+          "sub_type": "code",
+          "content": "```txt\n['a', 'aa', 'aaa', 'b', 'bb', 'bbb']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.85,
+            0.514,
+            0.869
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ [a, aa, aaa, b, bb, bbb]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.88,
+            0.635,
+            0.9
+          ],
+          "content": "**Câu 63: Lệnh print() in ra kết quả nào cho chương trình dưới đây?**"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.09,
+            0.209,
+            0.162
+          ],
+          "sub_type": "code",
+          "content": "```lua\nlist1 = [1, 3]\nlist2 = list1\nlist1[0] = 4\nprint(list2)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.2,
+            0.414,
+            0.278
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- [4, 3]\n- [1, 3]\n- [1, 4]\n- [1, 3, 4]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.288,
+            0.399,
+            0.308
+          ],
+          "content": "**Câu 64: Đâu là giá trị của colors[2]?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.113,
+            0.319,
+            0.573,
+            0.34
+          ],
+          "sub_type": "code",
+          "content": "```txt\ncolors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.435,
+            0.626,
+            0.456
+          ],
+          "content": "**Câu 65 : Đâu không phải là kiểu dữ liệu tiêu chuẩn trong Python?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.467,
+            0.386,
+            0.486
+          ],
+          "content": "▪ List"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.486,
+            0.434,
+            0.505
+          ],
+          "content": "▪ Dictionary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.505,
+            0.398,
+            0.522
+          ],
+          "content": "Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.524,
+            0.399,
+            0.542
+          ],
+          "content": "▪ Tuple"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.553,
+            0.548,
+            0.573
+          ],
+          "content": "**Câu 66: Kết quả nào là output của đoạn code dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.111,
+            0.585,
+            0.413,
+            0.62
+          ],
+          "sub_type": "code",
+          "content": "```python\nlist = [ 'Python', 100, 13.03, 'C++', 33.3 ]\nprint (list[1:3])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.649,
+            0.495,
+            0.668
+          ],
+          "sub_type": "code",
+          "content": "```txt\n['100, 13.03, 'C++']\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.667,
+            0.445,
+            0.686
+          ],
+          "content": "▪ [100, 13.03]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.686,
+            0.474,
+            0.705
+          ],
+          "content": "['Python', 'C++']"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.705,
+            0.511,
+            0.724
+          ],
+          "content": "['Python', 100, 13.03]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.734,
+            0.519,
+            0.755
+          ],
+          "content": "**Câu 67: Đối tượng dưới đây thuộc kiểu dữ liệu nào?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.765,
+            0.274,
+            0.786
+          ],
+          "content": "L = [1, 23, ‘hello’, 1]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.797,
+            0.386,
+            0.815
+          ],
+          "content": "▪ List"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.815,
+            0.433,
+            0.835
+          ],
+          "content": "▪ Dictionary"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.834,
+            0.399,
+            0.852
+          ],
+          "content": "Tuple"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.853,
+            0.38,
+            0.87
+          ],
+          "content": "▪ Set"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.883,
+            0.456,
+            0.903
+          ],
+          "content": "**Câu 68 : Kết quả của đoạn code dưới đây là**"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.089,
+            0.892,
+            0.125
+          ],
+          "sub_type": "code",
+          "content": "```python\nnumbers = [2, 3, 4]\nprint(numbers)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.154,
+            0.413,
+            0.228
+          ],
+          "sub_type": "code",
+          "content": "```csv\n■ 2,3,4\n■ 234\n■ [2,3,4]\n■ [234]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.515,
+            0.892,
+            0.66
+          ],
+          "sub_type": "code",
+          "content": "```txt\ns = set([2,2,2,1,1,3,4,5,5])\nprint(s)\n\n■ [2,2,2,1,1,3,4,5,5]\n■ {1, 2, 3, 4, 5}\n■ [2,1,3,4,5]\n■ {2,2,2,1,1,3,4,5,5}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.269,
+            0.891,
+            0.37
+          ],
+          "sub_type": "code",
+          "content": "```python\na = [1, 4, 20, 2, 5]\nx = a[0]\nfor i in a:\n    if i > x:\n        x = i\nprint(x)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.24,
+                0.612,
+                0.26
+              ],
+              "content": "Câu 69: Theo dõi đoạn code dưới đây và chọn đáp án đúng nhất"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.4,
+            0.569,
+            0.418
+          ],
+          "content": "x là giá trị trung bình của list."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.419,
+            0.557,
+            0.436
+          ],
+          "content": "x là giá trị nhỏ nhất của list."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.437,
+            0.554,
+            0.454
+          ],
+          "content": "x là giá trị lớn nhất của list."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.455,
+            0.587,
+            0.474
+          ],
+          "content": "x là tổng giá trị các số trong list."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.486,
+            0.612,
+            0.505
+          ],
+          "content": "**Câu 70: Theo dõi đoạn code dưới đây và chọn đáp án đúng nhất**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.685,
+            0.612,
+            0.705
+          ],
+          "content": "**Câu 71: Theo dõi đoạn code dưới đây và chọn đáp án đúng nhất**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.112,
+            0.716,
+            0.654,
+            0.737
+          ],
+          "sub_type": "code",
+          "content": "```txt\nprint({1,2,3,2,4,4,5} - {1,1,2,3}, {1,2,3,2,4,4,5,6,6}.difference({1,1,2,3}))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.763,
+            0.574,
+            0.841
+          ],
+          "sub_type": "algorithm",
+          "content": "- $\\{4,5\\}$ $\\{4,5,6\\}$\n- $\\{1,2,3,4,5\\}$ $\\{1,2,3,4,5,6\\}$\n- $\\{4,5\\}$ $\\{1,2,3\\}$\n- $\\{1,2,3\\}$ $\\{4,5,6\\}$",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.868,
+            0.612,
+            0.889
+          ],
+          "content": "**Câu 72: Theo dõi đoạn code dưới đây và chọn đáp án đúng nhất**"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.105,
+            0.089,
+            0.893,
+            0.142
+          ],
+          "sub_type": "code",
+          "content": "```lua\nt = (1, 2, 3)\nt[0] = 42\nprint(t[0])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.17,
+            0.365,
+            0.187
+          ],
+          "content": "▪ 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.189,
+            0.375,
+            0.205
+          ],
+          "content": "▪ 42"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.206,
+            0.515,
+            0.225
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.226,
+            0.366,
+            0.242
+          ],
+          "content": "▪ 0"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.286,
+            0.892,
+            0.339
+          ],
+          "sub_type": "code",
+          "content": "```txt\nT = (1,2,3,4,5)\ndel T[3]\nprint(T)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.256,
+                0.612,
+                0.275
+              ],
+              "content": "Câu 73: Theo dõi đoạn code dưới đây và chọn đáp án đúng nhất"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.368,
+            0.432,
+            0.386
+          ],
+          "content": "▪ (1,2,3,4,5)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.386,
+            0.418,
+            0.404
+          ],
+          "content": "▪ (1,2,4,5)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.404,
+            0.515,
+            0.423
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.424,
+            0.418,
+            0.441
+          ],
+          "content": "▪ (1,2,3,5)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.501,
+            0.891,
+            0.635
+          ],
+          "sub_type": "code",
+          "content": "```lua\nd = dict()\nd[2] = 100\nd[2] = 200\nd[2] = 400\nd[0] = 100\nd[1] = 200\nd[0] = 300\nprint(d)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.472,
+                0.612,
+                0.491
+              ],
+              "content": "Câu 74: Theo dõi đoạn code dưới đây và chọn đáp án đúng nhất"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.663,
+            0.526,
+            0.681
+          ],
+          "content": "▪ {2: 700, 0: 400, 1: 200}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.683,
+            0.514,
+            0.7
+          ],
+          "content": "▪ {400:2, 300:0, 200:1}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.7,
+            0.526,
+            0.718
+          ],
+          "content": "▪ {2: 400, 0: 300, 1: 200}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.719,
+            0.516,
+            0.737
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.779,
+            0.891,
+            0.816
+          ],
+          "sub_type": "code",
+          "content": "```lua\nd = { 1:\"a\", 2:\"b\" }\nprint(d.get(0), d.get(0, 42))\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.75,
+                0.612,
+                0.769
+              ],
+              "content": "Câu 75: Theo dõi đoạn code dưới đây và chọn đáp án đúng nhất"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.845,
+            0.428,
+            0.862
+          ],
+          "content": "None 42"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.863,
+            0.515,
+            0.881
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.883,
+            0.413,
+            0.899
+          ],
+          "content": "▪ None a"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.292,
+            0.092,
+            0.442,
+            0.108
+          ],
+          "content": "None None"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.169,
+            0.892,
+            0.3
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef Find_max(a, b):\n    if a > b:\n        print(a, 'is maximum')\n    elif a == b:\n        print(a, 'is equal to', b)\n    else:\n        print(b, 'is maximum')\nFind_max(30.3, 40)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.14,
+                0.497,
+                0.159
+              ],
+              "content": "Câu 76: Output của chương trình dưới đây là gì?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.33,
+            0.482,
+            0.349
+          ],
+          "content": "30.3 is maximum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.35,
+            0.396,
+            0.366
+          ],
+          "content": "▪ None"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.368,
+            0.469,
+            0.385
+          ],
+          "content": "40 is maximum"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.386,
+            0.502,
+            0.404
+          ],
+          "content": "▪ 30.3 is equal to 30.3"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.446,
+            0.891,
+            0.514
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef say(message, times = 1):\n    print(message * times)\nsay('Hello')\nsay('World', 5)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.417,
+                0.497,
+                0.436
+              ],
+              "content": "Câu 77: Output của chương trình dưới đây là gì?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.544,
+            0.586,
+            0.581
+          ],
+          "content": "▪ Hello WorldWorldWorldWorldWorld"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.6,
+            0.416,
+            0.636
+          ],
+          "content": "Hello World 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.654,
+            0.605,
+            0.692
+          ],
+          "content": "▪ Hello World,World,World,World,World"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.709,
+            0.556,
+            0.747
+          ],
+          "content": "▪ Hello HelloHelloHelloHelloHello"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.091,
+            0.498,
+            0.11
+          ],
+          "content": "**Câu 78: Output của chương trình dưới đây là gì?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.12,
+            0.892,
+            0.204
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef func(a, b=5, c=10):\n    print('a=', a, 'và b=', b, 'và c=', c)\nfunc(3, 7)\nfunc(25, c = 24)\nfunc(c = 50, a = 100)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.288,
+            0.22,
+            0.548,
+            0.465
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- a = 7 và b = 3 và c = 10\na = 25 và b = 5 và c = 24\na = 5 và b = 100 và c = 50\n- a = 3 và b = 7 và c = 10\na = 5 và b = 25 và c = 24\na = 50 và b = 100 và c = 5\n- a = 3 và b = 7 và c = 10\na = 25 và b = 5 và c = 24\na = 100 và b = 5 và c = 50\n- a = 7 và b = 3 và c = 10\na = 25 và b = 5 và c = 24\na = 100 và b = 5 và c = 50\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.491,
+            0.498,
+            0.511
+          ],
+          "content": "**Câu 79: Output của chương trình dưới đây là gì?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.521,
+            0.891,
+            0.653
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef maximum(x, y):\n    if x > y:\n        return x\n    elif x == y:\n        return 'Các số bằng nhau'\n    else:\n        return y\nprint(maximum(20, 30.3))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.681,
+            0.484,
+            0.758
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- 20\n- 30.3\n- Các số bằng nhau\n- None\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.8,
+            0.575,
+            0.819
+          ],
+          "level": 2,
+          "content": "Câu 80: Đâu là lợi thế của việc sử dụng hàm trong Python?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.831,
+            0.824,
+            0.849
+          ],
+          "content": "Tránh việc phải lặp lại code thực thi những tác vụ tương tự nhau."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.85,
+            0.791,
+            0.868
+          ],
+          "content": "Phân tách các vấn đề phức tạp thành các phần đơn giản hơn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.868,
+            0.568,
+            0.885
+          ],
+          "content": "Code rõ ràng, dễ quản lý hơn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.886,
+            0.554,
+            0.904
+          ],
+          "content": "Tất cả các đáp án đều đúng"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.121,
+            0.445,
+            0.14
+          ],
+          "level": 2,
+          "content": "Câu 81: Hàm có thể được khai báo ở đâu?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.153,
+            0.46,
+            0.171
+          ],
+          "content": "Trong module"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.171,
+            0.446,
+            0.189
+          ],
+          "content": "Trong Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.19,
+            0.508,
+            0.207
+          ],
+          "content": "Trong một hàm khác"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.208,
+            0.544,
+            0.226
+          ],
+          "content": "Tất cả các phương án trên"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.239,
+            0.498,
+            0.258
+          ],
+          "level": 2,
+          "content": "Câu 82: Output của chương trình dưới đây là gì?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.107,
+            0.268,
+            0.892,
+            0.337
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef say(s1 = 'Hello World!', s2):\n    print(s1,s2)\nsay(s2 = 'Hi', s1 = 'Hi World')\nsay(s2 =\"Hello Python\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.365,
+            0.449,
+            0.384
+          ],
+          "content": "▪ Hi World Hi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.385,
+            0.554,
+            0.403
+          ],
+          "content": "Hello World! Hello Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.403,
+            0.553,
+            0.439
+          ],
+          "content": "Hi Hi World Hello Python Hello World!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.44,
+            0.449,
+            0.457
+          ],
+          "content": "Hi World Hi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.347,
+            0.457,
+            0.553,
+            0.476
+          ],
+          "content": "Hello Python Hello World!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.476,
+            0.518,
+            0.495
+          ],
+          "content": "Có xuất hiện lỗi Error"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.537,
+            0.525,
+            0.557
+          ],
+          "level": 2,
+          "content": "Câu 83: Từ khóa nào được sử dụng để bắt đầu hàm?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.569,
+            0.384,
+            0.587
+          ],
+          "content": "▪ fun"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.588,
+            0.404,
+            0.605
+          ],
+          "content": "▪ define"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.606,
+            0.384,
+            0.623
+          ],
+          "content": "▪ def"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.625,
+            0.418,
+            0.642
+          ],
+          "content": "function"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.113,
+            0.655,
+            0.76,
+            0.674
+          ],
+          "level": 2,
+          "content": "Câu 84: Chọn đáp án đúng: Phát biểu nào chính xác khi nói về Hàm trong Python?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.686,
+            0.708,
+            0.704
+          ],
+          "content": "Hàm có thể được tái sử dụng trong chương trình."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.705,
+            0.886,
+            0.74
+          ],
+          "content": "Sử dụng hàm không có tác động tích cực gì đến các module trong chương trình."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.741,
+            0.791,
+            0.76
+          ],
+          "content": "Không thể tự tạo các hàm của riêng người viết chương trình."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.76,
+            0.589,
+            0.778
+          ],
+          "content": "Tất cả các đáp án trên đều đúng."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.791,
+            0.581,
+            0.81
+          ],
+          "level": 2,
+          "content": "Câu 85: Hàm nào sau đây là hàm tích hợp sẵn trong Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.822,
+            0.393,
+            0.84
+          ],
+          "content": "▪ cos()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.841,
+            0.396,
+            0.858
+          ],
+          "content": "▪ sqrt()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.859,
+            0.428,
+            0.876
+          ],
+          "content": "▪ factorial()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.878,
+            0.404,
+            0.895
+          ],
+          "content": "▪ print()"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.106,
+            0.286,
+            0.892,
+            0.322
+          ],
+          "content": "| import mathprint(abs(math.sqrt(81))) |\n| --- |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_21_table_0.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.106,
+            0.119,
+            0.894,
+            0.245
+          ],
+          "content": "| print(round(4.567)) |  |\n| --- | --- |\n| ▪ | 4.5 |\n| ▪ | 5 |\n| ▪ | 4 |\n| ▪ | 4.6 |",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.09,
+                0.424,
+                0.11
+              ],
+              "content": "Câu 86: Kết quả của câu lệnh sau là gì?"
+            },
+            {
+              "bbox": [
+                0.114,
+                0.255,
+                0.505,
+                0.275
+              ],
+              "content": "Câu 87: Output của hàm biểu diễn dưới đây là gì?"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_21_table_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.437,
+            0.513,
+            0.455
+          ],
+          "content": "**Câu 88: Mở file với chế độ mode ' a ' có ý nghĩa gì?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.467,
+            0.617,
+            0.486
+          ],
+          "content": "Mở file ở chế độ chỉ được phép đọc."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.486,
+            0.508,
+            0.504
+          ],
+          "content": "Mở file ở chế độ ghi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.504,
+            0.619,
+            0.523
+          ],
+          "content": "Mở file chế độ ghi tiếp vào cuối file."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.524,
+            0.515,
+            0.542
+          ],
+          "content": "Mở file để đọc và ghi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.555,
+            0.448,
+            0.573
+          ],
+          "content": "**Câu 89: Đoạn code dưới đây có ý nghĩa gì?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.585,
+            0.256,
+            0.604
+          ],
+          "content": "f = open(\"test.txt\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.616,
+            0.685,
+            0.634
+          ],
+          "content": "Mở file test.txt được phép đọc và ghi vào file."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.635,
+            0.655,
+            0.652
+          ],
+          "content": "Mở file test.txt và chỉ được phép đọc file."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.653,
+            0.674,
+            0.67
+          ],
+          "content": "Mở file test.txt và được phép ghi đè vào file"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.672,
+            0.686,
+            0.69
+          ],
+          "content": "Mở file test.txt và được phép ghi tiếp vào file."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.702,
+            0.526,
+            0.721
+          ],
+          "level": 2,
+          "content": "Câu 90: Mở file với chế độ mode ' wb ' có ý nghĩa gì?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.733,
+            0.463,
+            0.751
+          ],
+          "content": "Mở file để ghi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.752,
+            0.515,
+            0.769
+          ],
+          "content": "Mở file để đọc và ghi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.77,
+            0.6,
+            0.788
+          ],
+          "content": "Mở file để ghi cho dạng nhị phân."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.789,
+            0.651,
+            0.807
+          ],
+          "content": "Mở file để đọc và ghi cho dạng nhị phân."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.856,
+            0.546,
+            0.875
+          ],
+          "level": 2,
+          "content": "Câu 91: Ý nghĩa của hàm \\_\\_init\\_\\_() trong Python là gì?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.887,
+            0.566,
+            0.906
+          ],
+          "content": "Khởi tạo một lớp để sử dụng."
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.405,
+            0.89,
+            0.505
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Point:\n    def __init__(self, x = 0, y = 0):\n        self.x = x+1\n        self.y = y+1\np1 = Point()\nprint(p1.x, p1.y)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.091,
+            0.699,
+            0.109
+          ],
+          "content": "Được gọi khi một đối tượng mới được khởi tạo."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.109,
+            0.809,
+            0.127
+          ],
+          "content": "Khởi tạo và đưa tất cả các thuộc tính dữ liệu về 0 khi được gọi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.128,
+            0.523,
+            0.146
+          ],
+          "content": "Không có đáp án đúng."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.158,
+            0.455,
+            0.177
+          ],
+          "level": 2,
+          "content": "Câu 92: Cho biết kết quả chương trình sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.189,
+            0.386,
+            0.272
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Foo:\n    def printLine(self, line='Python'):\n        print(line)\no1 = Foo()\no1.printLine('Java')\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.288,
+            0.444,
+            0.364
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- Python\n- line\n- Java\n- Java Python\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.375,
+            0.455,
+            0.394
+          ],
+          "level": 2,
+          "content": "Câu 93: Cho biết kết quả chương trình sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.52,
+            0.439,
+            0.597
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- 0 0\n- 1 1\n- None None\n- x y\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.607,
+            0.444,
+            0.627
+          ],
+          "level": 2,
+          "content": "Câu 94: Khẳng định nào sau đây là đúng?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.67,
+            0.885,
+            0.706
+          ],
+          "content": "▪ Trong Python, một toán tử có thể có hoạt động khác nhau tùy thuộc vào toán hạng được sử dụng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.706,
+            0.794,
+            0.725
+          ],
+          "content": "Bạn có thể thay đổi cách các toán tử hoạt động trong Python."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.725,
+            0.726,
+            0.743
+          ],
+          "content": "\\_add () \\_\\_ được gọi khi toán tử ' + ' được sử dụng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.743,
+            0.567,
+            0.761
+          ],
+          "content": "Tất cả các đáp trên đều đúng."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.774,
+            0.455,
+            0.792
+          ],
+          "level": 2,
+          "content": "Câu 95: Cho biết kết quả chương trình sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.805,
+            0.365,
+            0.902
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Point:\n    def __init__(self, x = 0, y = 0):\n        self.x = x\n        self.y = y\n    def __sub__(self, other):\n        x = self.x + other.x\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.089,
+            0.891,
+            0.189
+          ],
+          "sub_type": "code",
+          "content": "```python\ny = self.y + other.y\n    return Point(x,y)\np1 = Point(3, 4)\np2 = Point(1, 2)\nresult = p1-p2\nprint(result.x, result.y)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.205,
+            0.38,
+            0.279
+          ],
+          "sub_type": "code",
+          "content": "```txt\n■ 22\n■ 46\n■ 00\n■ 11\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.291,
+            0.58,
+            0.311
+          ],
+          "content": "**Câu 96: Khẳng định nào là đúng về chương trình dưới đây?**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.321,
+            0.889,
+            0.485
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A:\n    def __init__(self):\n        self.a = 1\n        self.__b = 1\n    def getY(self):\n        return self.__b\n\nobj = A()\nobj.a = 45\nprint(obj.a)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.515,
+            0.884,
+            0.552
+          ],
+          "content": "▪ Chương trình có lỗi xảy ra vì ' \\_\\_b ' là thuộc tính private, không thể truy cập được từ bên ngoài lớp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.552,
+            0.774,
+            0.57
+          ],
+          "content": "Chương trình chạy bình thường và kết quả được in ra là 1."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.57,
+            0.885,
+            0.606
+          ],
+          "content": "Chương trình có lỗi xảy ra vì ' a ' là thuộc tính private, không thể truy cập được từ bên ngoài lớp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.348,
+            0.607,
+            0.783,
+            0.626
+          ],
+          "content": "Chương trình chạy bình thường và kết quả được in ra là 45."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.106,
+            0.665,
+            0.892,
+            0.896
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n    print(\"throw\")\nexcept:\n    print(\"except\")\nfinally:\n    print(\"finally\")\n\n■ finally\n    throw\n\n■ finally\n    except\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.638,
+                0.548,
+                0.656
+              ],
+              "content": "Câu 97: Kết quả nào là output của đoạn code dưới đây?"
+            }
+          ],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.09,
+            0.404,
+            0.183
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- except finally\n- throw finally\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.195,
+                0.548,
+                0.214
+              ],
+              "content": "Câu 98: Kết quả nào là output của đoạn code dưới đây?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.224,
+            0.891,
+            0.324
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef myfunc():\n    try:\n        print('Monday')\n    finally:\n        print('Tuesday')\nmyfunc()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.469,
+            0.891,
+            0.554
+          ],
+          "sub_type": "code",
+          "content": "```python\ntry:\n# đoạn code có thể gây ra lõi\n    pass\nexcept (TypeError, ZeroDivisionError):\n    print(\"Python Quiz\")\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.44,
+                0.406,
+                0.459
+              ],
+              "content": "Câu 99: Đoạn code sau có ý nghĩa gì?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.603,
+            0.261,
+            0.62
+          ],
+          "content": "gì)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.583,
+            0.885,
+            0.619
+          ],
+          "content": "In ra ' Python Quiz ' nếu có ngoại lệ xảy ra (không quan trọng là ngoại lệ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.62,
+            0.717,
+            0.638
+          ],
+          "content": "In ra ' Python Quiz ' nếu không có ngoại lệ xảy ra."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.639,
+            0.885,
+            0.675
+          ],
+          "content": "In ra ' Python Quiz ' nếu một trong hai ngoại lệ TypeError và ZeroDivisionError xảy ra."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.675,
+            0.886,
+            0.713
+          ],
+          "content": "Chỉ in ra ' Python Quiz ' khi cả hai ngoại lệ TypeError và ZeroDivisionError cùng xảy ra"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.755,
+            0.891,
+            0.854
+          ],
+          "sub_type": "code",
+          "content": "```python\nnumber = 5.0\ntry:\n    r = 10/number\n    print(r)\nexcept:\n    print(\"Oops! Error occurred.\")\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.114,
+                0.725,
+                0.467,
+                0.744
+              ],
+              "content": "Câu 100: Cho biết kết quả chương trình sau?"
+            }
+          ],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.35,
+            0.885,
+            0.512,
+            0.902
+          ],
+          "content": "Oops! Error occurred."
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.09,
+            0.541,
+            0.145
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- 2.0\n- 2.0 Oops! Error occurred.\n- 5.0\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.159,
+            0.344,
+            0.177
+          ],
+          "level": 2,
+          "content": "Câu 101: Cho đoạn code sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.114,
+            0.192,
+            0.426,
+            0.291
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Dog:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.298,
+            0.434,
+            0.316
+          ],
+          "content": "**Cách đúng để khởi tạo lớp Dog ở trên là:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.329,
+            0.522,
+            0.346
+          ],
+          "content": "Dog.create(\"Rufus\", 3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.347,
+            0.538,
+            0.365
+          ],
+          "content": "Dog.\\_\\_init\\_\\_(\"Rufus\", 3)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.366,
+            0.399,
+            0.383
+          ],
+          "content": "Dog()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.384,
+            0.474,
+            0.402
+          ],
+          "content": "Dog(\"Rufus\", 3)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.445,
+            0.464,
+            0.465
+          ],
+          "level": 2,
+          "content": "Câu 102: Cho biết kết quả chương trình sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.475,
+            0.89,
+            0.67
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Dog:\n    def walk(self):\n        return \"*walking*\"\n    def speak(self):\n        return \"Woof!\"\n\nclass JackRussellTerrier(Dog):\n    def speak(self):\n        return \"Arff!\"\n\nbobo = JackRussellTerrier()\nprint(bobo.walk())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.701,
+            0.818,
+            0.719
+          ],
+          "content": "AttributeError: 'JackRussellTerrier' object has no attribute 'walk"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.719,
+            0.403,
+            0.736
+          ],
+          "content": "▪ Woof!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.738,
+            0.393,
+            0.753
+          ],
+          "content": "▪ Arff!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.756,
+            0.431,
+            0.774
+          ],
+          "content": "\\*walking\\*"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.786,
+            0.464,
+            0.805
+          ],
+          "level": 2,
+          "content": "Câu 103: Cho biết kết quả chương trình sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.11,
+            0.818,
+            0.294,
+            0.899
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Dog:\n    def walk(self):\n        return \"*walking*\"\n    def speak(self):\n        return \"Woof!\"\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.092,
+            0.342,
+            0.205
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass JackRussellTerrier(Dog):\n    def speak(self):\n        return \"Arff!\"\n\nbobo = JackRussellTerrier()\nprint(bobo.speak())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.221,
+            0.471,
+            0.295
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- *walking*\n- Arff!\n- Có xuất hiện lỗi\n- Woof!\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.307,
+            0.464,
+            0.327
+          ],
+          "level": 2,
+          "content": "Câu 104: Cho biết kết quả chương trình sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.339,
+            0.419,
+            0.533
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Dog:\n    def walk(self):\n        return \"*walking*\"\n    def speak(self):\n        return \"Woof!\"\n\nclass JackRussellTerrier(Dog):\n    def talk(self):\n        return super().speak()\n\nbobo = JackRussellTerrier()\nprint(bobo.talk())\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.55,
+            0.471,
+            0.625
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- *walking*\n- super\n- Có xuất hiện lỗi\n- Woof!\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.667,
+            0.464,
+            0.686
+          ],
+          "level": 2,
+          "content": "Câu 105: Cho biết kết quả chương trình sau:"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.699,
+            0.441,
+            0.908
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A:\n    def __init__(self, x = 2, y = 3):\n        self.x = x\n        self.y = y\n\n    def __str__(self):\n        return \"A\"\n\n    def __eq__(self, num ):\n        return self.x * self.y == num.x * num.y\n\ndef main():\n    a = A(1, 2)\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.089,
+            0.891,
+            0.157
+          ],
+          "sub_type": "code",
+          "content": "```lua\nb = A(2, 1)\n    print(a == b)\n\nmain()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.289,
+            0.185,
+            0.395,
+            0.26
+          ],
+          "sub_type": "code",
+          "content": "```txt\n- True\n- False\n- 2\n- 1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.272,
+            0.464,
+            0.292
+          ],
+          "content": "**Câu 106: Cho biết kết quả chương trình sau:**"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.301,
+            0.891,
+            0.61
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass A:\n    def __str__(self):\n        return \"A\"\n\nclass B(A):\n    def __init__(self):\n        super().__init__()\nclass C(B):\n    def __init__(self):\n        super().__init__()\ndef main():\n    b = B()\n    a = A()\n    c = C()\n    print(a, b, c)\n\nmain()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.29,
+            0.638,
+            0.404,
+            0.714
+          ],
+          "sub_type": "code",
+          "content": "```diff\n- BBB\n- ABC\n- CBA\n- AAA\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "authors": [
+        "Trinh Tan Dat"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2022-04-15T08:13:52+07:00",
+      "modified_at": "2022-04-15T08:13:52+07:00",
+      "creator_application": "Microsoft® Word 2019",
+      "producer_application": "Microsoft® Word 2019",
+      "page_count": 28,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

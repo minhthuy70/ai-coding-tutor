@@ -1,0 +1,633 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "Python Nhất Nghệ - HIENLTH",
+      "authors": [
+        "Marty Stepp"
+      ],
+      "keywords": [
+        "Python"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2023-04-19T12:11:38+07:00",
+      "modified_at": "2023-04-19T12:11:38+07:00",
+      "creator_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "producer_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "page_count": 5,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.224,
+            0.218,
+            0.759,
+            0.398
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python TM"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.387,
+            0.456,
+            0.615,
+            0.534
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Unit 12"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.251,
+            0.686,
+            0.75,
+            0.787
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Python + MySQL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.395,
+            0.049,
+            0.609,
+            0.136
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "MySQL"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.038,
+            0.201,
+            0.472,
+            0.249
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Free opensource database"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.038,
+            0.263,
+            0.756,
+            0.373
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Simple way to have MySQL is using XAMPP "
+            },
+            {
+              "type": "hyperlink",
+              "url": "https://www.apachefriends.org/download.html",
+              "content": [
+                {
+                  "type": "text",
+                  "content": "– https://www.apachefriends.org/download.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.039,
+            0.387,
+            0.547,
+            0.439
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Working with MySQL in Python:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.087,
+            0.449,
+            0.263,
+            0.497
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "– PyMySQL:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.139,
+            0.505,
+            0.649,
+            0.551
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "https://github.com/PyMySQL/PyMySQL",
+              "styles": [
+                "underline"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.982
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 7,
+          "bbox": [
+            0.603,
+            0.912,
+            0.882,
+            0.987
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HIENLTH"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 8,
+          "bbox": [
+            0.97,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.356,
+            0.049,
+            0.646,
+            0.137
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "PyMySQL"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.038,
+            0.201,
+            0.273,
+            0.254
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "import pymysql"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 2,
+          "bbox": [
+            0.041,
+            0.326,
+            0.946,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 2,
+              "bbox": [
+                0.041,
+                0.326,
+                0.946,
+                0.709
+              ],
+              "content": "# Connect to the database\nconnection = pymysql.connect(host='localhost',\n    user='user',\n    password='passwd',\n    database='db',\n    cursorclass=pymysql.cursors.DictCursor)"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "python"
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.983
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python TM"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.603,
+            0.912,
+            0.883,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HIENLTH"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.98
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.291,
+            0.047,
+            0.71,
+            0.133
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "CUD example"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.037,
+            0.2,
+            0.59,
+            0.318
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "with connection.cursor() as cursor: cursor.execute(sql_statement)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.038,
+            0.391,
+            0.978,
+            0.565
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "# connection is not autocommit by default. So you must commit to save your changes. connection.commit()"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 3,
+          "bbox": [
+            0.0,
+            0.889,
+            0.266,
+            0.983
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python TM"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 4,
+          "bbox": [
+            0.603,
+            0.911,
+            0.882,
+            0.989
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HIENLTH"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 5,
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "index": 0,
+          "bbox": [
+            0.006,
+            0.023,
+            0.142,
+            0.045
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "result = cursor.fetchone()"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.345,
+            0.049,
+            0.656,
+            0.123
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Read data"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.038,
+            0.201,
+            0.59,
+            0.317
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "with connection.cursor() as cursor: cursor.execute(sql_statement)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.138,
+            0.327,
+            0.524,
+            0.381
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "result = cursor.fetchone()"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.138,
+            0.391,
+            0.502,
+            0.445
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "result = cursor.fetchall()"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 5,
+          "bbox": [
+            0.0,
+            0.89,
+            0.266,
+            0.983
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "python"
+            }
+          ]
+        },
+        {
+          "type": "footer",
+          "index": 6,
+          "bbox": [
+            0.603,
+            0.912,
+            0.882,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "HIENLTH"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 7,
+          "bbox": [
+            0.971,
+            0.955,
+            0.985,
+            0.979
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

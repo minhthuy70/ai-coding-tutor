@@ -1,0 +1,874 @@
+<!-- page: 1 -->
+
+# CS116 - LẬP TRÌNH PYTHON CHO MÁY HỌC
+
+## BÀI MỞ ĐẦU
+
+**TS. Nguyễn Vinh Tiệp**
+
+<!-- page: 2 -->
+
+![](images/page_1_image_1.jpg)
+
+## NỘI DUNG
+
+## 1. Giới thiệu môn học
+
+2. Lịch sử và thành tựu của máy học
+
+3. Ôn tập ngôn ngữ lập trình Python
+
+<!-- page: 3 -->
+
+## Giới thiệu môn học
+
+**Tuần 1**
+
+**Tuần 2**
+
+**Tuần 3**
+
+**Tuần 4**
+
+**Tuần 5-6**
+
+June 9, 2023
+
+**Giới thiệu, ML và Python**
+
+**Lập trình Numpy và Matplotlib**
+
+**Quy trình xây dựng mô hình máy học**
+
+**Tiền xử lý dữ liệu và đánh giá mô hình**
+
+**Mô hình học không giám sát**
+
+∗ Lược sử và thành tựu của AI, ML
+
+∗ Ôn tập ngôn ngữ Python
+
+Nguồn: [Nvidia](https://blogs.nvidia.com/blog/2016/07/29/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/)
+
+![](images/page_2_image_16.jpg)
+
+![](images/page_2_image_17.jpg)
+
+Jupyter
+
+![](images/page_2_image_19.jpg)
+
+<!-- page: 4 -->
+
+## Giới thiệu môn học
+
+Tuần 7-10
+
+Mô hình học có giám sát
+
+**Tuần 11-12**
+
+Tối ưu siêu tham số
+
+Tuần 13
+
+Ensemble model: Học tổng hợp
+
+Tuần 14-15
+
+Báo cáo đồ án cuối kỳ Ôn tập
+
+Nguồn: static.javatpoint.com
+
+![](images/page_3_chart_11.jpg)
+
+Classification
+
+![](images/page_3_chart_13.jpg)
+
+Regression
+
+Hyperparameter vs Parameter
+
+![](images/page_3_image_16.jpg)
+
+<!-- page: 5 -->
+
+## Hình thức đánh giá
+
+## Bài tập 30%
+
+• Bài tập lập trình
+
+## Đồ án 30%
+
+• Làm theo nhóm
+
+• Nộp cuối kỳ
+
+## Cuối kỳ 40%
+
+• Thi viết
+
+• Đề đóng
+
+<!-- page: 6 -->
+
+## NỘI DUNG
+
+1. Giới thiệu môn học
+
+**2. Lịch sử và thành tựu của máy học**
+
+3. Ôn tập ngôn ngữ lập trình Python
+
+<!-- page: 7 -->
+
+## Lịch sử hình thành
+
+Machine learning begins to flourish.
+
+![](images/page_6_image_3.jpg)
+
+## LEARNING
+
+<!-- page: 8 -->
+
+![](images/page_7_image_0.jpg)
+
+## Một số thành tựu
+
+![](images/page_7_image_3.jpg)
+
+Robotics
+
+![](images/page_7_image_5.jpg)
+
+Xử lý dữ liệu dạng bảng
+
+![](images/page_7_image_7.jpg)
+
+![](images/page_7_image_8.jpg)
+
+![](images/page_7_image_9.jpg)
+
+![](images/page_7_image_10.jpg)
+
+![](images/page_7_image_11.jpg)
+
+![](images/page_7_image_12.jpg)
+
+![](images/page_7_image_13.jpg)
+
+![](images/page_7_image_14.jpg)
+
+Xử lý ảnh
+
+![](images/page_7_image_16.jpg)
+
+Văn bản
+
+Âm thanh
+
+Xử lý ngôn ngữ tự nhiên
+
+<!-- page: 9 -->
+
+## Thành tựu AI
+
+![](images/page_8_image_2.jpg)
+
+Y sinh, Chăm sóc sức khỏe
+
+![](images/page_8_image_4.jpg)
+
+Tài chính, thương mại điện tử
+
+![](images/page_8_image_6.jpg)
+
+Môi trường “thông minh"
+
+<!-- page: 10 -->
+
+## So sánh
+
+**Lập trình truyền thống**
+
+![](images/page_9_image_3.jpg)
+
+Traditional Programming
+
+![](images/page_9_image_5.jpg)
+
+<!-- page: 11 -->
+
+## NỘI DUNG
+
+1. Giới thiệu môn học
+
+2. Lịch sử và thành tựu của máy học
+
+**3. Ôn tập ngôn ngữ lập trình Python**
+
+<!-- page: 12 -->
+
+## Ôn tập Python
+
+**Python Guido van Rossum 1980s**
+
+**Bậc cao (high-level)**
+
+**Thông dịch (interpreted)**
+
+**Đa năng (generally purposed)**
+
+**Hướng đối tượng (object-oriented)**
+
+<!-- page: 13 -->
+
+## Ôn tập Python
+
+## Top lý do nên học Python
+
+**Đơn giản**
+
+**Rõ ràng**
+
+![](images/page_12_image_5.jpg)
+
+**Dễ học**
+
+**Cộng đồng lớn**
+
+## Những gã khổng lồ dùng Python
+
+![](images/page_12_image_9.jpg)
+
+Python where we can, C++(Go)where we must
+
+![](images/page_12_image_11.jpg)
+
+Python Django Web Framework
+
+![](images/page_12_image_13.jpg)
+
+Multiple services in infrastructure management
+
+![](images/page_12_image_15.jpg)
+
+![](images/page_12_image_16.jpg)
+
+Back-end networking
+
+Server-side data analysis
+
+<!-- page: 14 -->
+
+```groovy
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+## Giới thiệu Python
+
+```cpp
+#include <iostream.h>
+
+int main()
+{
+    std::cout << "Hello, world!";
+    return 0;
+}
+```
+
+C#
+
+```cs
+using System;
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, world!");
+    }
+}
+```
+
+```txt
+Python
+    print("Hello, World!")
+```
+
+<!-- page: 15 -->
+
+## Môi trường lập trình
+
+PyCharm
+
+![](images/page_14_image_3.jpg)
+
+Visual
+
+Studio Code
+
+![](images/page_14_image_6.jpg)
+
+Atom
+
+Sublime Text
+
+![](images/page_14_image_9.jpg)
+
+Vim
+
+![](images/page_14_image_11.jpg)
+
+GNU Emacs
+
+Jupyter
+
+Spyder
+
+![](images/page_14_image_15.jpg)
+
+Eclipse
+
+IntelliJ IDEA
+
+Notepad++
+
+![](images/page_14_image_19.jpg)
+
+![](images/page_14_image_20.jpg)
+
+![](images/page_14_image_21.jpg)
+
+![](images/page_14_image_22.jpg)
+
+![](images/page_14_image_23.jpg)
+
+![](images/page_14_image_24.jpg)
+
+Source: Top 10 Python IDEs and Code editors
+
+<!-- page: 16 -->
+
+## Môi trường lập trình
+
+## Colaboratory chào mùng bn!
+
+Nền tảng miễn phí bởi Google
+
+**Jupyter notebook** bất kỳ đâu
+
+Chia sẻ dễ dàng
+
+Truy cập **Colab** tại địa chỉ:
+
+[colab.research.google.com](https://colab.research.google.com/)
+
+## Co Colaboratory là gì?
+
+Colaboratory (goi tt là "Colab") cho phép bn viêt và thc thi Python trong trình duyt vi các li ích sau:
+
+• Không yêu cu cu hình
+
+•S dng min phí GPU
+
+Cho dù bn là sinh viên, nhà khoa hc d liu hay nhà nghiên cu Al (trí tu nhân to), Colab đu giúp bn Hãy xem phn Hưng dn v Colab đ tìm hiu thêm hoc bt đu ngay  bên dưri!
+
+Tài liu bn đang đc không phi là trang web tīnh, mà là mt môi trưng tương tác đưc gi là s tay trên thc thi mã.
+
+Ví d: sau đây là mt ô cha mã có tp lnh Python ngn tính toán mt giá tri, lưu tr giá tr đó trong mt bi
+
+Đ thc thi mã trong ô trên, hãy nhp đ chn mã đó rồi nhn nút phát  bên trái mã hoc s dng t hp p chinh sa mã này, bn chi cn nhp vào ô đó và bt đu chinh sa.
+
+<!-- page: 17 -->
+
+## Tham khảo
+
+1. Google Colab: [colab.research.google.com](https://colab.research.google.com/), [practice 1](https://colab.research.google.com/notebooks/markdown_guide.ipynb#scrollTo=Lhfnlq1Surtk), [practice 2](https://colab.research.google.com/notebooks/basic_features_overview.ipynb).
+
+2. Sách hay về Python cho người mới bắt đầu
+
+![](images/page_16_image_4.jpg)
+
+![](images/page_16_image_5.jpg)
+
+<!-- page: 18 -->
+
+## Kiểu dữ liệu
+
+| Kiểu dữ liệu | Ý nghĩa | Ví dụ |
+| --- | --- | --- |
+| int | Kiểu số nguyên (không có chứa dấu chấm thập phân) | 11, -15 |
+| float | Kiểu số thực (có chứa dấu chấm thập phân) | 3.14, 4.02 |
+| complex | Kiểu số phúc | 1 + 2j, 3 - 4j |
+| str | Kiểu chuỗi | 'Python' |
+| bool | Kiểu luận lý | TRUE, FALSE |
+
+● Kiểm tra kiểu dữ liệu của biến bằng hàm type()
+
+● Ép kiểu dữ liệu của biến
+
+| Cú pháp | Ý nghĩa |
+| --- | --- |
+| float(x) | chuyển đổi sang kiểu số thực |
+| int(x) | chuyển đổi sang kiểu số |
+| str(x) | chuyển đổi sang dạng chuỗi |
+| complex(x) | chuyển đổi sang kiểu phúc hợp |
+| tuple(x) | chuyển đổi sang kiểu Tuple |
+| dict(x) | chuyển đổi sang kiểu Dictionary |
+| hex(x) | chuyển đổi sang hệ 16 |
+| oct(x) | chuyển đổi sang hệ 8 |
+| chr(x) | chuyển đổi sang dạng ký tự |
+
+Nguồn: [Zootopi](https://zootopi.dev/tutorial/python/foundation)
+
+<!-- page: 19 -->
+
+## Toán tử
+
+| Phép toán | Biểu thức | Ý nghĩa |
+| --- | --- | --- |
+| + | x + y | Phép cộng |
+| - | x - y | Phép trừ |
+| * | x * y | Phép nhân |
+| / | x / y | Phép chia |
+| % | x % y | Phép chia lấy phần dư |
+| // | x // y | Phép chia làm tròn xuống |
+| ** | x ** y | Phép mũ |
+
+| Toán tử | Biểu thức | Ý nghĩa |
+| --- | --- | --- |
+| &lt; | x &lt; y | So sánh giá trị x có nhỏ hơn y hay không |
+| > | x > y | So sánh giá trị x có lớn hơn y hay không |
+| &lt;= | x &lt;= y | So sánh giá trị x có nhỏ hơn hoặc bằng y hay không |
+| >= | x >= y | So sánh giá trị x có lớn hơn hoặc bằng y hay không |
+| == | x == y | So sánh giá trị x có bằng y hay không |
+| != | x != y | So sánh giá trị x có khác y hay không |
+
+Nguồn: [Zootopi](https://zootopi.dev/tutorial/python/foundation)
+
+<!-- page: 20 -->
+
+## Toán tử
+
+| Toán tử | Biểu thức | Ý nghĩa |
+| --- | --- | --- |
+| AND | X and Y | True nếu cà X và Y đều đúng |
+| OR | X or Y | True nếu ít nhất một trong hai về X hoặc Y đúng |
+| NOT | not X | True nếu X sai và False nếu X đúng |
+| XOR | bool(Y) ^ bool(Y) | True nếu X và Y cùng giá trị và False nếu ngược lại |
+
+Thứ tự ưu tiên của các loại toán tử trên tương tự như trong toán học.
+
+<!-- page: 21 -->
+
+## Cấu trúc dữ liệu
+
+**List**
+
+**Tuple**
+
+**List** là một đối tượng dùng để lưu tập các đối tượng khác nhau, có thể thêm, bớt, thay đổi các giá trị và chứa các giá trị trùng nhau.
+
+● Cú pháp: [giá\_trị\_1, giá\_trị\_2, ...]
+
+**Set**
+
+● Ví dụ:
+
+○ Khai báo một list các số tự nhiên từ 1 đến 10.
+
+**Dictionary**
+
+○ Lọc phần tử ở vị trí thứ 5.
+
+○ Lọc lấy 5 phần tử đầu tiên của list.
+
+<!-- page: 22 -->
+
+## Cấu trúc dữ liệu
+
+**List**
+
+**Tuple**
+
+**Set**
+
+**Dictionary**
+
+**Tuple** là một đối tượng dùng để lưu tập các đối tượng khác nhau. Tuple không thể thêm, bớt, thay đổi các giá trị
+
+● Cú pháp: (giá\_trị\_1, giá\_trị\_2,... )
+
+● Ưu điểm:
+
+○ **Bộ nhớ** khi dùng Tuple nhỏ hơn so với List.
+
+○ Tốc độ xử lý khi dùng Tuple nhanh hơn so với List.
+
+<!-- page: 23 -->
+
+## Cấu trúc dữ liệu
+
+**List**
+
+**Tuple**
+
+**Set**
+
+**Dictionary**
+
+**Set** là một đối tượng dùng để lưu tập các đối tượng khác nhau, **không** thể chứa các phần tử **trùng nhau.**
+
+● Cú pháp: {giá\_trị\_1, giá\_trị\_2,... }
+
+Phù hợp xử lý các bài toán về tập hợp: giao, hiệu, phần bù, ...
+
+<!-- page: 24 -->
+
+## Cấu trúc dữ liệu
+
+**List**
+
+**Tuple**
+
+**Dictionary** là một danh sách các phần tử, trong đó mỗi phần tử là một cặp khóa và giá trị. Mỗi khoá thì chỉ ứng với một giá trị duy nhất.
+
+**Set**
+
+**Dictionary**
+
+● Cú pháp:
+
+{khoá\_1 : giá\_trị\_1, khoá\_2 : giá\_trị\_2,... }
+
+● Ví dụ:
+
+○ Khai báo thông tin của một học sinh bằng Dictionary.
+
+<!-- page: 25 -->
+
+## Cấu trúc dữ liệu
+
+|  | List | Tuple | Set | Dictionary |
+| --- | --- | --- | --- | --- |
+| Đặc trưng | Chứa bất kì kiểu dữ liệu nào, CÓ thứ tự, giá trị CÓ thể thay đổi. | Giá trị KHÔNG thể thay đổi, CÓ thứ tự, KHÔNG thể thay đổi. | Giá trị KHÔNG trùng lặp, CÓ thứ tự, CÓ thể thay đổi. | Theo cơ chế khoá: giá trị, khoá KHÔNG trùng lặp. |
+| Cú pháp | [] | () | {} | {Khoá: Giá trị} |
+| Mục đích | Lưu trữ danh sách. | Lưu các tập hợp không bị thay đổi, cho tốc độ nhanh. | Thực hiện các phép toán tập hợp. | Lưu trữ các dữ liệu có cấu trúc. |
+
+**Bảng so sánh các cấu trúc dữ liệu cơ bản trong Python**
+
+<!-- page: 26 -->
+
+## Cấu trúc rẽ nhánh
+
+```txt
+if condition(True/False):
+    business logic
+elif condition(True/False): # --> optional
+    business logic
+elif condition(True/False): # --> optional
+    business logic
+elif condition(True/False): # --> optional
+    business logic
+....
+else:
+    business logic # --> optional
+```
+
+Nếu sinh viên làm bài cuối khoá được hơn 8 điểm, thì học viên qua môn xuất sắc, in ra ‘Excellently Passed'.
+
+Nếu sinh viên làm bài cuối khoá được từ 6 đến 8 điểm, thì học viên qua môn, in ra ‘Well Passed'.
+
+Nếu không, học viên trượt môn, in ra Không Đạt (‘Failed')
+
+<!-- page: 27 -->
+
+## Cấu trúc vòng lặp
+
+```python
+for value in iterable:
+    business logic
+```
+
+```python
+for index in range(len(iterable)):
+    business logic
+```
+
+**while** condition(True/False): business logic
+
+Biết pi = 3.14, tính diện tích hình tròn với danh sách các bán kính như sau
+
+```toml
+radius = [2, 4, 5, 8, 10, 20]
+```
+
+![](images/page_26_image_7.jpg)
+
+<!-- page: 28 -->
+
+## Hàm
+
+**Hàm**
+
+**Bao hàm**
+
+## ● Cú pháp:
+
+**def function\_name(**arg1, arg2, ...**):**
+
+business logic
+
+**return** result
+
+## ● Ưu điểm:
+
+○ Tái sử dụng mã nguồn
+
+○ Dễ dàng quản lý mã nguồn
+
+<!-- page: 29 -->
+
+## Hàm
+
+**Hàm**
+
+**Bao hàm**
+
+## ● Cú pháp:
+
+[expression **for** variable **in** iterable]
+
+{expression **for** variable **in** iterable}
+
+**tuple(**expression **for** variable **in** iterable)
+
+{key:value **for** variable **in** iterable}
+
+● Ưu điểm so với hàm thông thường:
+
+○ Đoạn mã ngắn gọn hơn
+
+○ Tốc độ xử lý nhanh hơn
+
+<!-- page: 30 -->
+
+## Giới thiệu OOP
+
+CLASS
+
+Human
+
+PROPERTIES
+
+Phone No.
+
+Email ID
+
+OBJECTS
+
+Name
+
+METHODS
+
+Send Email
+
+Call a number
+
+<!-- page: 31 -->
+
+## Tính chất OOP
+
+![](images/page_30_image_2.jpg)
+
+<!-- page: 32 -->
+
+## Object
+
+● Python hỗ trợ nhiều kiểu dữ liệu khác nhau: 1234 3.14159 “Hello" [1, 5, 7, 11, 13]
+
+● Mỗi ví dụ trên gọi là một object và mỗi object có:
+
+○ Một kiểu dữ liệu (type)
+
+○ Tập hợp các hàm/thủ tục để tương tác với object
+
+Một object là một instance (thực thể) của một kiểu dữ liệu
+
+○ 1234 là một instance của kiểu số nguyên (int)
+
+○ “Hello" là một instance của kiểu chuỗi (string)
+
+<!-- page: 33 -->
+
+## Object
+
+● Object là dữ liệu trừu tượng bao gồm:
+
+o Dữ liệu nội bộ (internal representation), được truy xuất thông qua thuộc tính dữ liệu
+
+Giao diện (interface) để tương tác với object thông qua các phương thức (method), còn được gọi là hàm/thủ tục (function/procedure)
+
+<!-- page: 34 -->
+
+## Class
+
+● Việc tạo class bao gồm:
+
+○ Định nghĩa **tên class**
+
+○ Định nghĩa **các thuộc tính**
+
+○ Định nghĩa **các phương thức**
+
+● Việc sử dụng class bao gồm:
+
+Tạo một instance mới của class đó
+
+○ Thực hiện các toán tử/phương thức trên instance vừa tạo
+
+<!-- page: 35 -->
+
+## Cài đặt Class
+
+classCoordinate(object) :
+
+#define attributes here
+
+<!-- page: 36 -->
+
+## Cài đặt phương thức \_\_init
+
+• Sử dụng phương thức đặc biệt \_\_init\_\_ để khởi tạo các thuộc
+
+class Coordinate(object) :
+
+def init (self, x, y)
+
+![](images/page_35_chart_5.jpg)
+
+self.x = x
+self.y = y
+
+hai thuc tính d liu cho mi Coordinate object d liu khi to cho Coordinate object
+
+tham s tham chiu đn mt instance ca class
+
+<!-- page: 37 -->
+
+## Tạo và thao tác trên instance
+
+tao mt object mi có kiu Coordinate và truyên 3 và 4 vào phuơng thúc\_init\_
+
+s dng dãu chm "." đ truy cp thuc tính ca instance c
+
+<!-- page: 38 -->
+
+## Phương thức
+
+• Phương thức (method) của class là các hàm chỉ làm việc với class đó
+
+• Sử dụng self làm tham số đầu tiên của tất cả các method
+
+• Toán tử “.” được sử dụng để truy cập các thuộc tính dữ liệu và phương thức của một object
+
+<!-- page: 39 -->
+
+## Phương thức
+
+• Phương thức (method) của class là các hàm chỉ làm việc với class đó
+
+• Sử dụng self làm tham số đầu tiên của tất cả các method
+
+```python
+• Toán tử “.” đực
+class Coordinate(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def distance(self, other):
+        x_diff_sq = (self.x-other.x)**2
+        y_diff_sq = (self.y-other.y)**2
+        return (x_diff_sq + y_diff_sq)**0.5
+```
+
+<!-- page: 40 -->
+
+![](images/page_39_chart_0.jpg)
+
+## Gọi phương thức
+
+```python
+def distance(self, other):
+    # code here
+```
+
+<!-- page: 41 -->
+
+![](images/page_40_image_0.jpg)
+
+## Kế thừa
+
+<!-- page: 42 -->
+
+## Kế thừa
+
+• Lớp cha (parent class hay superclass)
+
+• Lớp con (child class hay subclass)
+
+o Kế thừa tất cả thuộc tính dữ liệu và hành vi/phương thức của lớp cha
+
+o Có thể thêm thuộc tính mới
+
+o Có thể thêm phương thức mới
+
+o Có thể ghi đè (override) phương thức cũ
+
+![](images/page_41_image_8.jpg)
+
+<!-- page: 43 -->
+
+## Kế thừa
+
+• Lớp cha (parent class hay superclass)
+
+```python
+class Animal(object):
+    def __init__(self, age):
+        self.age = age
+        self.name = None
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+    def set_age(self, newage):
+        self.age = newage
+    def set_name(self, newname=""):
+        self.name = newname
+    def __str__(self):
+        return "animal:"+str(self.name)+":"+str(self.age)
+```
+
+<!-- page: 44 -->
+
+## Kế thừa
+
+• Lớp con (child class hay subclass)
+
+![](images/page_43_image_3.jpg)
+
+• Thêm mới phương thức speak(), instance của lớp Cat có thể sử dụng phương thức này trong khi instance của lớp Animal thì không thể
+
+<!-- page: 45 -->
+
+![](images/page_44_image_0.jpg)
+
+## BÀI QUIZ VÀ HỎI ĐÁP

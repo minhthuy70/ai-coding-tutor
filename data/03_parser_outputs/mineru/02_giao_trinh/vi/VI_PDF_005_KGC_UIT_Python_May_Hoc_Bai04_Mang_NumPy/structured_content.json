@@ -1,0 +1,4059 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.0,
+            0.0,
+            0.403,
+            0.123
+          ],
+          "content": "ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.181,
+            0.33,
+            0.816,
+            0.399
+          ],
+          "level": 2,
+          "content": "CS116 – LẬP TRÌNH PYTHON CHO MÁY HỌC"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.098,
+            0.429,
+            0.281,
+            0.808
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.337,
+            0.425,
+            0.661,
+            0.47
+          ],
+          "content": "**Data validation & EDA application**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.425,
+            0.732,
+            0.573,
+            0.767
+          ],
+          "content": "**TS. Nguyễn Vinh Tiệp**"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.407,
+            0.105,
+            0.611,
+            0.184
+          ],
+          "level": 2,
+          "content": "NỘI DUNG"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.24,
+            0.218,
+            0.503,
+            0.28
+          ],
+          "content": "● Outlier detection"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.296,
+            0.744,
+            0.366
+          ],
+          "content": "● EDA và ứng dụng EDA vào dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.379,
+            0.534,
+            0.441
+          ],
+          "content": "● Automic EDA tools"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.127,
+            0.297,
+            0.2
+          ],
+          "level": 2,
+          "content": "ML Pipeline"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.159,
+            0.272,
+            0.759,
+            0.875
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.172,
+                0.896,
+                0.6,
+                0.928
+              ],
+              "content": "https://machinelearningcoban.com/tabml\\_book/ch\\_intro/pipeline.html"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_2_image_2.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.981,
+            0.962,
+            0.996,
+            0.995
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.063,
+            0.418,
+            0.138
+          ],
+          "level": 2,
+          "content": "Data Validation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.279,
+            0.379,
+            0.331
+          ],
+          "content": "1. Phát hiện các ngoại lệ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.339,
+            0.621,
+            0.398
+          ],
+          "content": "2. Xử lý các ngoại lệ (ngoại bỏ, thay thế giá trị)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.958,
+            0.998,
+            0.998
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "chart",
+          "bbox": [
+            0.128,
+            0.365,
+            0.828,
+            0.657
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_chart_0.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.03,
+            0.049,
+            0.08,
+            0.121
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.058,
+            0.845,
+            0.148
+          ],
+          "level": 2,
+          "content": "Ngoại lệ: Các kiểu ngoại lệ khác nhau"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.149,
+            0.493,
+            0.268,
+            0.536
+          ],
+          "content": "Lỗi nhập dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.299,
+            0.476,
+            0.392,
+            0.557
+          ],
+          "content": "Lỗi xử lý dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.435,
+            0.474,
+            0.521,
+            0.551
+          ],
+          "content": "Ngoại lệ tự nhiên"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.569,
+            0.472,
+            0.657,
+            0.552
+          ],
+          "content": "Ngoại lệ có chủ đích"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.693,
+            0.456,
+            0.804,
+            0.577
+          ],
+          "content": "Lỗi thử nghiệm Lỗi đo lường Lỗi lấy mẫu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.67,
+            0.281,
+            0.761
+          ],
+          "content": "Lỗi của con người xảy ra trong quá trình thu thập, ghi hoặc nhập dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.669,
+            0.404,
+            0.787
+          ],
+          "content": "Trích xuất dữ liệu từ nhiều nguồn (một số lỗi thao tác hoặc trích xuất)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.426,
+            0.682,
+            0.533,
+            0.748
+          ],
+          "content": "Lỗi không phải do con người tạo ra"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.665,
+            0.683,
+            0.808
+          ],
+          "content": "Điều này thường thấy trong các đo lường tự báo cáo liên quan đến dữ liệu nhạy cảm."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.669,
+            0.802,
+            0.702
+          ],
+          "content": "Loại ngoại lệ khác"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.327,
+            0.948,
+            0.672,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.96,
+            0.998,
+            0.996
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.031,
+            0.049,
+            0.079,
+            0.119
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.064,
+            0.64,
+            0.147
+          ],
+          "level": 2,
+          "content": "Làm sạch dữ liệu - Ngoại lệ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.094,
+            0.26,
+            0.342,
+            0.314
+          ],
+          "content": "❏ Có hai loại ngoại lệ:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.318,
+            0.908,
+            0.443
+          ],
+          "content": "❏ Các ngoại lệ đơn biến: các điểm dữ liệu **có giá trị nằm ngoài phạm vi giá trị dự kiến**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.132,
+            0.448,
+            0.898,
+            0.571
+          ],
+          "content": "❏ Các ngoại lệ đa biến: có các ngoại lệ **phụ thuộc** vào **mối tương quan** giữa **hai biến**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.959,
+            0.997,
+            0.996
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.134,
+            0.423,
+            0.858,
+            0.826
+          ],
+          "sub_type": "code",
+          "content": "```python\n# Drop rows with missing value\ndata.dropna(inplace = True)\n\n# Remove duplicates\ndata.drop_duplicates()\n\n# Drop unnecessary columns\ndata.drop(columns = [list cols], axis = 1)\n\n# Drop/Filter unnecessary rows\ndata.drop([0, 1], inplace = True)\ndata[data['column_filter'] == 'abc']\n\n# Re indexing\ndata.set_index('column', inplace = True)\ndata.reset_index(drop = True)\n\n# Re-formatting\ndata['column'] = data['column'].astype(int)\n\n# Correcting inconsistent data\ndata['column'].replace(old_value, new_value, inplace = True)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.063,
+            0.878,
+            0.143
+          ],
+          "level": 2,
+          "content": "Làm sạch dữ liệu: Hướng tiếp cận đơn giản"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.239,
+            0.634,
+            0.291
+          ],
+          "content": "❏ Một số bước có thể được thực hiện để làm sạch dữ liệu:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.297,
+            0.847,
+            0.35
+          ],
+          "content": "❏ Xóa các giá trị bị thiếu, trùng lặp, ngoại lệ và các hàng/cột không cần thiết"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.127,
+            0.356,
+            0.529,
+            0.406
+          ],
+          "content": "❏ Lập lại chỉ mục và định dạng lại dữ liệu"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.959,
+            0.999,
+            0.998
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.06,
+            0.692,
+            0.147
+          ],
+          "level": 2,
+          "content": "Dự đoán ngoại lệ như thế nào"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.091,
+            0.205,
+            0.35,
+            0.261
+          ],
+          "level": 2,
+          "content": "❏ Phương pháp thống kê:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.266,
+            0.915,
+            0.378
+          ],
+          "content": "❏ Phương pháp tính độ lệch chuẩn và trung bình: giới hạn để xác định các giá trị ngoại lệ (Gaussian hoặc Gaussian-like)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.382,
+            0.897,
+            0.495
+          ],
+          "content": "❏ Phương pháp Interquartile Range (IQR): một thống kê tốt để tóm tắt mẫu dữ liệu phân phối không phải Gaussian"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.07,
+            0.496,
+            0.441,
+            0.941
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_chart_4.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.503,
+            0.562,
+            0.898,
+            0.933
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_chart_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.329,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.96,
+            0.997,
+            0.996
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.077,
+            0.109,
+            0.58,
+            0.187
+          ],
+          "level": 2,
+          "content": "Tự động phát hiện ngoại lệ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.278,
+            0.431,
+            0.329
+          ],
+          "content": "❏ Tự động phát hiện ngoại lệ:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.336,
+            0.918,
+            0.441
+          ],
+          "content": "❏ Yếu tố ngoại lệ cục bộ ([Local Outlier Factor):](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html) Xác định các ngoại lệ là xác định vị trí của các mẫu ở xa mẫu khác"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.449,
+            0.918,
+            0.552
+          ],
+          "content": "❏ Rừng cách ly ([Isolation Forest)](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html) : Thuật toán phát hiện bất thường dựa trên cây"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.559,
+            0.882,
+            0.666
+          ],
+          "content": "❏ Xác định hiệp phương sai tối thiểu ([EllipticEnvelope](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.EllipticEnvelope.html)): Tập dữ liệu theo phân phối chuẩn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.139,
+            0.674,
+            0.75,
+            0.724
+          ],
+          "content": "[❏ One-class SVM](https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html) : Phát hiện ngoại lệ không được giám sát"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.969,
+            0.997,
+            0.996
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.12
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.099,
+            0.896,
+            0.26
+          ],
+          "level": 2,
+          "content": "Yếu tố ngoại lệ cục bộ - Local Outlier Factor (LOF)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.273,
+            0.834,
+            0.329
+          ],
+          "content": "• Thuật toán yếu tố ngoại lệ cục bộ có thể được chia thành bốn phần"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.116,
+            0.368,
+            0.885,
+            0.508
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.099,
+                0.519,
+                0.218,
+                0.59
+              ],
+              "content": "K-Distance and K-Neighbors"
+            },
+            {
+              "bbox": [
+                0.316,
+                0.553,
+                0.461,
+                0.59
+              ],
+              "content": "Reachability Distance"
+            },
+            {
+              "bbox": [
+                0.529,
+                0.552,
+                0.703,
+                0.591
+              ],
+              "content": "Local Reachability Density"
+            },
+            {
+              "bbox": [
+                0.777,
+                0.518,
+                0.91,
+                0.589
+              ],
+              "content": "Local Outlier Factor Calculation"
+            }
+          ],
+          "image_source": "images/page_9_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.076,
+            0.623,
+            0.253,
+            0.799
+          ],
+          "content": "Nếu k nhỏ thì thuật toán trở nên nhạy cảm với nhiễu và nếu k lớn, nó có thể không nhận ra được các dị thường cục bộ."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.308,
+            0.623,
+            0.469,
+            0.763
+          ],
+          "content": "Biểu thị khoảng cách lớn nhất của hai điểm và khoảng cách-k của điểm thứ hai"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.532,
+            0.623,
+            0.701,
+            0.766
+          ],
+          "content": "Đề cập đến việc chúng ta cần đi bao xa từ điểm hiện tại để đến điểm hoặc tập hợp điểm tiếp theo"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.757,
+            0.623,
+            0.931,
+            0.801
+          ],
+          "content": "Mật độ khả năng tiếp cận cục bộ được tìm thấy được so sánh với mật độ khả năng tiếp cận cục bộ của k hàng xóm gần nhất"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.963,
+            0.999,
+            1.0
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.03,
+            0.049,
+            0.081,
+            0.12
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.099,
+            0.911,
+            0.188
+          ],
+          "level": 2,
+          "content": "LOF: Làm thế nào để phát hiện các ngoại lệ?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.352,
+            0.307,
+            0.44
+          ],
+          "content": "Mật độ tương tự như hàng xóm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.267,
+            0.703,
+            0.395
+          ],
+          "content": "Mật độ cao hơn hàng xóm (Inlier)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.243,
+            0.512,
+            0.372,
+            0.657
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_4.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.393,
+            0.465,
+            0.601,
+            0.724
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_5.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.638,
+            0.456,
+            0.737,
+            0.648
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.195,
+            0.726,
+            0.343,
+            0.855
+          ],
+          "content": "Mật độ thấp hơn so với hàng xóm(Outlier)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.387,
+            0.758,
+            0.494,
+            0.87
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_10_chart_8.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.973,
+            0.956,
+            1.0,
+            1.0
+          ],
+          "content": "O"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.109,
+            0.174,
+            0.187
+          ],
+          "level": 2,
+          "content": "Ví dụ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.279,
+            0.228,
+            0.329
+          ],
+          "content": "[❏ Example](https://www.kaggle.com/discussions/general/183478)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.089,
+            0.34,
+            0.315,
+            0.387
+          ],
+          "content": "[❏ LOF with sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html#sklearn.neighbors.LocalOutlierFactor)"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.107,
+            0.887,
+            0.242
+          ],
+          "level": 2,
+          "content": "Cleanlab: Công cụ AI tập trung vào dữ liệu tiêu chuẩn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.279,
+            0.186,
+            0.326
+          ],
+          "content": "[❏ github](https://github.com/cleanlab/cleanlab)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.099,
+            0.409,
+            0.895,
+            0.665
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_2.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.077,
+            0.106,
+            0.917,
+            0.182
+          ],
+          "level": 2,
+          "content": "Cleanlab: Tìm mẫu OOD (Out-Of-Distribution)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.091,
+            0.282,
+            0.239,
+            0.32
+          ],
+          "level": 2,
+          "content": "❏ Source c[ode](https://github.com/cleanlab/cleanlab/blob/master/cleanlab/internal/outlier.py)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.258,
+            0.361,
+            0.369,
+            0.55
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.564,
+            0.34,
+            0.611
+          ],
+          "content": "cleanlab Star 6,115"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.654,
+            0.311,
+            0.671
+          ],
+          "content": "APIREFERENCE"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.824,
+            0.287,
+            0.841
+          ],
+          "content": "outlier"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.398,
+            0.375,
+            0.451,
+            0.406
+          ],
+          "level": 2,
+          "content": "outlier"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.425,
+            0.765,
+            0.468
+          ],
+          "content": "Methods for finding out-of-distribution examples in a dataset via scores that quantify how atypical each example is compared to the others."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.397,
+            0.479,
+            0.594,
+            0.5
+          ],
+          "content": "The underlying algorithms are described in this paper."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.398,
+            0.511,
+            0.436,
+            0.531
+          ],
+          "level": 2,
+          "content": "Classes:"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.4,
+            0.552,
+            0.761,
+            0.596
+          ],
+          "content": "| OutOfDistribution ([params]) | Provides scores to detect Out Of Distribution (OOD) examples that are outliers in a dataset. |\n| --- | --- |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_13_table_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.401,
+            0.629,
+            0.629,
+            0.648
+          ],
+          "content": "class cleanlab.outlier.OutofDistribution(params=None)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.413,
+            0.654,
+            0.47,
+            0.673
+          ],
+          "content": "Bases: object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.413,
+            0.686,
+            0.742,
+            0.706
+          ],
+          "content": "Provides scores to detect Out Of Distribution (OOD) examples that are outliers in a dataset."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.412,
+            0.717,
+            0.771,
+            0.782
+          ],
+          "content": "Each example's OOD score lies in [0,1] with smaller values indicating examples that are less typical under the data distribution. OOD scores may be estimated from either: numeric feature embeddings or predicted probabilities from a trained classifier."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.412,
+            0.793,
+            0.766,
+            0.835
+          ],
+          "content": "To get indices of examples that are the most severe outliers, call find\\_top\\_issues function on the returned OOD scores."
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.119
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.099,
+            0.627,
+            0.179
+          ],
+          "level": 2,
+          "content": "Cleanlab: Tìm vấn đề về nhãn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.278,
+            0.661,
+            0.325
+          ],
+          "content": "❏ Phát hiện các vấn đề về dữ liệu: ngoại lệ, trùng lặp, lỗi nhãn,.."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.242,
+            0.375,
+            0.695,
+            0.996
+          ],
+          "sub_type": "code",
+          "content": "```python\nKNN = NearestNeighbors(metric='euclidean')\nKNN.fit(X_processed.values)\n\nknn_graph = KNN.kneighbors_graph(mode=\"distance\")\n\ndata = {\"X\": X_processed.values, \"y\": labels}\n\nlab = Datalab(data, label_name=\"y\")\nlab.find_issues(pred_probs=pred_probs, knn_graph=knn_graph)\n\nFinding label issues ...\nFinding outlier issues ...\nFinding near_duplicate issues ...\nAudit complete. 357 issues found in the dataset.\n\nlab.report()\n\nHere is a summary of the different kinds of issues found in the data:\n\n    issue_type num_issues\n        label          294\n        outlier         46\nnear_duplicate       17\n\nDataset Information: num_examples: 941, num_classes: 5\n\n-------- label issues ------------------------------\nAbout this issue:\n    Examples whose given label is estimated to be potentially incorrect\n    (e.g. due to annotation error) are flagged as having label issues.\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.119
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.075,
+            0.127,
+            0.391,
+            0.202
+          ],
+          "level": 2,
+          "content": "Data preparation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.279,
+            0.261,
+            0.329
+          ],
+          "content": "• Data fusion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.343,
+            0.287,
+            0.396
+          ],
+          "content": "Data cleaning"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.406,
+            0.344,
+            0.458
+          ],
+          "content": "Data augmentation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.47,
+            0.33,
+            0.52
+          ],
+          "content": "Data visualization"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.534,
+            0.279,
+            0.587
+          ],
+          "content": "• Data splitting"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.031,
+            0.05,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.1,
+            0.06,
+            0.714,
+            0.147
+          ],
+          "level": 2,
+          "content": "Làm sạch dữ liệu – thiếu giá trị"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.111,
+            0.239,
+            0.776,
+            0.356
+          ],
+          "content": "❏ Bộ dữ liệu chứa các **giá trị bị thiếu**, thường được mã hóa dưới dạng trống, NaN,.."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.365,
+            0.381,
+            0.417
+          ],
+          "content": "❏ Phương pháp đơn giản:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.161,
+            0.422,
+            0.765,
+            0.479
+          ],
+          "content": "❏ Bỏ các cột có tỷ lệ thiếu giá trị cao (chẳng hạn như 80%)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.161,
+            0.483,
+            0.496,
+            0.54
+          ],
+          "content": "❏ Tự động điền giá trị còn thiếu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.549,
+            0.335,
+            0.602
+          ],
+          "content": "❏ Phương pháp khác"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.956,
+            1.0,
+            0.998
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.127,
+            0.164,
+            0.189
+          ],
+          "level": 2,
+          "content": "EDA"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.279,
+            0.598,
+            0.329
+          ],
+          "content": "Phân tích các đặc trưng chính của dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.337,
+            0.842,
+            0.397
+          ],
+          "content": "Mô tả bằng số liệu, biểu đồ thống kê hoặc trực quan hóa dữ liệu"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.956,
+            0.999,
+            0.997
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.057,
+            0.522,
+            0.147
+          ],
+          "level": 2,
+          "content": "EDA: Ví dụ về dữ liệu"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.117,
+            0.193,
+            0.261,
+            0.235
+          ],
+          "level": 2,
+          "content": "[❏ Dataset link](https://www.kaggle.com/competitions/spaceship-titanic)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.191,
+            0.276,
+            0.326,
+            0.306
+          ],
+          "content": "Getting Started Prediction Competition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.19,
+            0.331,
+            0.304,
+            0.365
+          ],
+          "content": "Spaceship Titanic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.191,
+            0.366,
+            0.492,
+            0.395
+          ],
+          "content": "Predict which passengers are transported to an alternate dimension"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.194,
+            0.418,
+            0.331,
+            0.452
+          ],
+          "content": "k Kaggle 2,333 teams·Ongoing"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.178,
+            0.262,
+            0.789,
+            0.992
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_18_image_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.191,
+            0.475,
+            0.441,
+            0.502
+          ],
+          "content": "Overview Data Code Discussion Leaderboard Rules Team"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.191,
+            0.634,
+            0.233,
+            0.656
+          ],
+          "content": "Evaluation"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.302,
+            0.615,
+            0.421,
+            0.639
+          ],
+          "level": 2,
+          "content": "Recommended Competition"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.19,
+            0.668,
+            0.256,
+            0.71
+          ],
+          "content": "Frequently Asked Questions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.314,
+            0.637,
+            0.746,
+            0.683
+          ],
+          "content": "We highly recommend Titanic - Machine Learning from Disaster to get familiar with the basics of machine learning and Kaggle competitions."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.694,
+            0.759,
+            0.742
+          ],
+          "content": "Welcome to the year 2912, where your data science skills are needed to solve a cosmic mystery. We've received a transmission from four lightyears away and things aren't looking good."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.75,
+            0.772,
+            0.801
+          ],
+          "content": "The Spaceship Titanic was an interstellar passenger liner launched a month ago. With almost 13,000 passengers on board, the vessel set out on its maiden voyage transporting emigrants from our solar system to three newly habitable exoplanets orbiting nearby stars."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.807,
+            0.775,
+            0.877
+          ],
+          "content": "While rounding Alpha Centauri en route to its first destination—the torrid 55 Cancri E—the unwary Spaceship Titanic collided with a spacetime anomaly hidden within a dust cloud. Sadly, it met a similar fate as its namesake from 1000 years before. Though the ship stayed intact, almost half of the passengers were transported to an alternate dimension!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.126,
+            0.312,
+            0.2
+          ],
+          "level": 2,
+          "content": "Data loading"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.088,
+            0.276,
+            0.637,
+            0.331
+          ],
+          "level": 2,
+          "content": "Tải dữ liệu và in ra màn hình các dữ liệu đầu tiên"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.059,
+            0.433,
+            0.933,
+            0.799
+          ],
+          "content": "| PassengerId | Survived | Pclass |  | Name | Sex | Age | SibSp | Parch | Ticket | Fare | Cabin | Embarked |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 1 | 0 | 3 | Braund, Mr. Owen Harris | male | 22.0 | 1 | 0 |  | A/5 21171 | 7.2500 | NaN | S |\n| 2 | 1 | 1 | Cumings, Mrs. John Bradley (Florence Briggs Th... | female | 38.0 | 1 | 0 |  | PC 17599 | 71.2833 | C85 | C |\n| 3 | 1 | 3 | Heikkinen, Miss. Laina | female | 26.0 | 0 | 0 |  | STON/O2. 3101282 | 7.9250 | NaN | S |\n| 4 | 1 | 1 | Futrelle, Mrs. Jacques Heath (Lily May Peel) | female | 35.0 | 1 | 0 |  | 113803 | 53.1000 | C123 | S |\n| 5 | 0 | 3 | Allen, Mr. William Henry | male | 35.0 | 0 | 0 |  | 373450 | 8.0500 | NaN | S |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_table_3.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.075,
+            0.126,
+            0.37,
+            0.202
+          ],
+          "level": 2,
+          "content": "Các loại dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.278,
+            0.352,
+            0.33
+          ],
+          "content": "Có 2 loại dữ liệu chính:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.346,
+            0.515,
+            0.398
+          ],
+          "content": "**Numerical** data: dữ liệu dạng số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.417,
+            0.598,
+            0.468
+          ],
+          "content": "**Categorical** data: dữ liệu dạng phân loại"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.058,
+            0.523,
+            0.938,
+            0.909
+          ],
+          "content": "| PassengerId | Survived | Pclass |  | Name | Sex | Age | SibSp | Parch | Ticket | Fare | Cabin | Embarked |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 1 | 0 | 3 | Braund, Mr. Owen Harris | male | 22.0 | 1 | 0 |  | A/5 21171 | 7.2500 | NaN | S |\n| 2 | 1 | 1 | Cumings, Mrs. John Bradley (Florence Briggs Th... | female | 38.0 | 1 | 0 |  | PC 17599 | 71.2833 | C85 | C |\n| 3 | 1 | 3 | Heikkinen, Miss. Laina | female | 26.0 | 0 | 0 |  | STON/O2. 3101282 | 7.9250 | NaN | S |\n| 4 | 1 | 1 | Futrelle, Mrs. Jacques Heath (Lily May Peel) | female | 35.0 | 1 | 0 |  | 113803 | 53.1000 | C123 | S |\n| 5 | 0 | 3 | Allen, Mr. William Henry | male | 35.0 | 0 | 0 |  | 373450 | 8.0500 | NaN | S |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_20_table_5.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.117,
+            0.678,
+            0.202
+          ],
+          "level": 2,
+          "content": "Kiểm tra các đặc trưng thống kê"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.295,
+            0.344,
+            0.336
+          ],
+          "content": "1 df\\_train.describe()"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.148,
+            0.365,
+            0.847,
+            0.87
+          ],
+          "content": "|  | PassengerId | Survived | Pclass | Age | SibSp | Parch | Fare |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| count | 891.000000 | 891.000000 | 891.000000 | 714.000000 | 891.000000 | 891.000000 | 891.000000 |\n| mean | 446.000000 | 0.383838 | 2.308642 | 29.699118 | 0.523008 | 0.381594 | 32.204208 |\n| std | 257.353842 | 0.486592 | 0.836071 | 14.526497 | 1.102743 | 0.806057 | 49.693429 |\n| min | 1.000000 | 0.000000 | 1.000000 | 0.420000 | 0.000000 | 0.000000 | 0.000000 |\n| 25% | 223.500000 | 0.000000 | 2.000000 | 20.125000 | 0.000000 | 0.000000 | 7.910400 |\n| 50% | 446.000000 | 0.000000 | 3.000000 | 28.000000 | 0.000000 | 0.000000 | 14.454200 |\n| 75% | 668.500000 | 1.000000 | 3.000000 | 38.000000 | 1.000000 | 0.000000 | 31.000000 |\n| max | 891.000000 | 1.000000 | 3.000000 | 80.000000 | 8.000000 | 6.000000 | 512.329200 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_21_table_3.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.115,
+            0.364,
+            0.202
+          ],
+          "level": 2,
+          "content": "Đồ thị thống kê"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.274,
+            0.717,
+            0.335
+          ],
+          "content": "Sử dụng thư viện **matplotlib** hoặc **seaborn** để vẽ đồ thị"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.174,
+            0.47,
+            0.453,
+            0.985
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_chart_3.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.501,
+            0.47,
+            0.782,
+            0.991
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_chart_4.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.787,
+            0.461,
+            1.0,
+            1.0
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_22_chart_5.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.03,
+            0.047,
+            0.08,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_23_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.091,
+            0.05,
+            0.946,
+            0.224
+          ],
+          "level": 2,
+          "content": "Các kiểu phân tích dữ liệu bằng cách thăm dò"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.274,
+            0.419,
+            0.337
+          ],
+          "content": "❏ Có ba loại EDA chính"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.164,
+            0.345,
+            0.436,
+            0.413
+          ],
+          "content": "❏ Phân tích đơn biến"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.164,
+            0.421,
+            0.427,
+            0.49
+          ],
+          "content": "❏ Phân tích hai biến"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.164,
+            0.497,
+            0.419,
+            0.567
+          ],
+          "content": "❏ Phân tích đa biến"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.948,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.957,
+            0.999,
+            0.996
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.049,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.055,
+            0.476,
+            0.136
+          ],
+          "level": 2,
+          "content": "Phân tích đơn biến"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.099,
+            0.227,
+            0.757,
+            0.295
+          ],
+          "content": "❏ Phân tích dữ liệu của chỉ một biến (đặc trưng/cột)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.099,
+            0.301,
+            0.628,
+            0.371
+          ],
+          "content": "❏ Phân tích đơn biến không dùng biểu đồ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.148,
+            0.381,
+            0.842,
+            0.676
+          ],
+          "content": "❏ Trung tâm dữ liệu (Central Tendency): đề cập đến giá trị nằm ở vị trí trung tâm hoặc khu vực giữa của dữ liệu (các tham số ước lượng: trung bình, trung vị, mode)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.15,
+            0.685,
+            0.852,
+            0.832
+          ],
+          "content": "❏ Phạm vi: Sự **khác biệt** giữa giá trị **tối đa** và **tối thiểu** trong dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.149,
+            0.84,
+            0.545,
+            0.909
+          ],
+          "content": "❏ Phương sai và độ lệch chuẩn"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.948,
+            0.671,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.998,
+            0.996
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.031,
+            0.049,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_25_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.052,
+            0.823,
+            0.218
+          ],
+          "level": 2,
+          "content": "Phân tích đơn biến không dùng biểu đồ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.224,
+            0.777,
+            0.389
+          ],
+          "content": "❏ Tính trung bình, Độ lệch chuẩn, giá trị nhỏ nhất, lớn nhất và phân vị thứ nhất (first quartile), phân vị thứ ba (third quartile), trung vị của các cột số trong tập dữ liệu."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.246,
+            0.401,
+            0.752,
+            0.443
+          ],
+          "content": "df\\_train[['Survived','Pclass','Age','SibSp','Fare']].describe()"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.24,
+            0.468,
+            0.719,
+            0.945
+          ],
+          "content": "|  | Survived | Pclass | Age | SibSp | Fare |\n| --- | --- | --- | --- | --- | --- |\n| count | 891.000000 | 891.000000 | 714.000000 | 891.000000 | 891.000000 |\n| mean | 0.383838 | 2.308642 | 29.699118 | 0.523008 | 32.204208 |\n| std | 0.486592 | 0.836071 | 14.526497 | 1.102743 | 49.693429 |\n| min | 0.000000 | 1.000000 | 0.420000 | 0.000000 | 0.000000 |\n| 25% | 0.000000 | 2.000000 | 20.125000 | 0.000000 | 7.910400 |\n| 50% | 0.000000 | 3.000000 | 28.000000 | 0.000000 | 14.454200 |\n| 75% | 1.000000 | 3.000000 | 38.000000 | 1.000000 | 31.000000 |\n| max | 1.000000 | 3.000000 | 80.000000 | 8.000000 | 512.329200 |",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.328,
+                0.949,
+                0.671,
+                0.98
+              ],
+              "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+            }
+          ],
+          "image_source": "images/page_25_table_4.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.959,
+            0.998,
+            0.996
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.049,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_26_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.056,
+            0.476,
+            0.135
+          ],
+          "level": 2,
+          "content": "Phân tích đơn biến"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.222,
+            0.497,
+            0.277
+          ],
+          "content": "❏ Phân tích đơn biến sử dụng biểu đồ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.277,
+            0.893,
+            0.391
+          ],
+          "content": "❏ Biểu đồ tần suất (Histogram): Biểu đồ dạng thanh trong đó **tần số của dữ liệu** được biểu thị bằng các thanh hình chữ nhật"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.391,
+            0.887,
+            0.499
+          ],
+          "content": "❏ Biểu đồ mật độ: giống như một phiên bản **mượt mà hơn** của **biểu đồ tần suất**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.504,
+            0.864,
+            0.675
+          ],
+          "content": "❏ Box-plot: Ở đây thông tin được thể hiện dưới dạng các hộp (**giá trị nhỏ nhất, phân vị thứ nhất (first quartile), trung vị (median), phân vị thứ ba (third quartile), giá trị lớn nhất**)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.996
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.05,
+            0.079,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.063,
+            0.526,
+            0.143
+          ],
+          "level": 2,
+          "content": "Histogram & Box plot"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.062,
+            0.148,
+            0.523,
+            0.822
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_27_chart_2.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.614,
+            0.232,
+            0.984,
+            0.742
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_27_chart_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.948,
+            0.671,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.996
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.055,
+            0.645,
+            0.143
+          ],
+          "level": 2,
+          "content": "Ví dụ về phân tích đơn biến"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.1,
+            0.208,
+            0.303,
+            0.409
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_2.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.307,
+            0.208,
+            0.503,
+            0.408
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_3.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.563,
+            0.202,
+            0.744,
+            0.401
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_4.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.753,
+            0.202,
+            0.932,
+            0.401
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_5.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.1,
+            0.413,
+            0.299,
+            0.615
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_6.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.306,
+            0.413,
+            0.499,
+            0.614
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_7.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.563,
+            0.403,
+            0.75,
+            0.603
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_8.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.753,
+            0.403,
+            0.932,
+            0.602
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_9.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.099,
+            0.617,
+            0.295,
+            0.821
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_10.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.305,
+            0.616,
+            0.499,
+            0.821
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_11.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.561,
+            0.606,
+            0.744,
+            0.806
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_12.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.753,
+            0.606,
+            0.932,
+            0.806
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_28_chart_13.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.95,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.962,
+            0.998,
+            0.995
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_29_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.056,
+            0.455,
+            0.135
+          ],
+          "level": 2,
+          "content": "Phân tích hai biến"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.204,
+            0.869,
+            0.324
+          ],
+          "content": "❏ Phân tích hai biến: xác định xem có tồn tại mối liên hệ thống kê giữa hai biến hay không"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.333,
+            0.316,
+            0.382
+          ],
+          "content": "❏ Có ba loại chính:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.16,
+            0.389,
+            0.386,
+            0.44
+          ],
+          "content": "❏ Phân tích dạng số-số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.16,
+            0.447,
+            0.45,
+            0.498
+          ],
+          "content": "❏ Phân tích dạng số-phân loại"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.16,
+            0.505,
+            0.514,
+            0.554
+          ],
+          "content": "❏ Phân tích dạng phân loại-phân loại"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.978
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.996
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.049,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_30_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.052,
+            0.544,
+            0.144
+          ],
+          "level": 2,
+          "content": "Phân tích dạng số - số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.222,
+            0.605,
+            0.279
+          ],
+          "content": "❏ Khi cả hai biến được so sánh đều có dữ liệu số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.286,
+            0.663,
+            0.342
+          ],
+          "content": "❏ Một số phương pháp trực quan có thể được sử dụng:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.167,
+            0.345,
+            0.788,
+            0.443
+          ],
+          "content": "❏ Biểu đồ phân tán (Scatter plot): được sử dụng để thể hiện mọi điểm dữ liệu trong biểu đồ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.167,
+            0.448,
+            0.391,
+            0.496
+          ],
+          "content": "❏ Biểu đồ cặp (Pair plot)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.167,
+            0.502,
+            0.538,
+            0.546
+          ],
+          "content": "❏ Ma trận tương quan (Correlation matrix)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.151,
+            0.563,
+            0.518,
+            0.854
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.173,
+                0.869,
+                0.487,
+                0.916
+              ],
+              "content": "Ma trận tương quan kết hợp bản đồ nhiệt"
+            }
+          ],
+          "image_source": "images/page_30_chart_7.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.531,
+            0.54,
+            0.844,
+            0.853
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.539,
+                0.868,
+                0.827,
+                0.915
+              ],
+              "content": "Biểu đồ phân tán giữa tuổi và chi tiêu"
+            }
+          ],
+          "image_source": "images/page_30_chart_9.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.329,
+            0.948,
+            0.671,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.997,
+            0.996
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.119
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_31_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.058,
+            0.679,
+            0.145
+          ],
+          "level": 2,
+          "content": "Phân tích dạng số - phân loại"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.22,
+            0.592,
+            0.27
+          ],
+          "content": "❏ Khi một biến có kiểu số và biến khác là biến phân loại"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.274,
+            0.788,
+            0.376
+          ],
+          "content": "❏ Bạn có thể nhóm lại để sắp xếp dữ liệu thành các nhóm tương tự. Các hàng có cùng giá trị trong một cột cụ thể sẽ được sắp xếp thành một nhóm với nhau"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.212,
+            0.407,
+            0.72,
+            0.483
+          ],
+          "sub_type": "code",
+          "content": "```python\ndf_train[['Survived', 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare'\\n        ,'Embarked']].groupby(['Survived', 'Embarked']).mean()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.207,
+            0.504,
+            0.714,
+            0.927
+          ],
+          "content": "|  |  | Pclass | Age | SibSp | Parch | Fare |\n| --- | --- | --- | --- | --- | --- | --- |\n| Survived | Embarked |  |  |  |  |  |\n| 0 | C | 2.200000 | 33.666667 | 0.253333 | 0.253333 | 35.443335 |\n|  | Q | 2.936170 | 30.325000 | 0.510638 | 0.276596 | 13.335904 |\n|  | S | 2.545667 | 30.203966 | 0.611241 | 0.348946 | 20.743987 |\n| 1 | C | 1.634409 | 28.973671 | 0.494624 | 0.451613 | 79.720926 |\n|  | Q | 2.866667 | 22.500000 | 0.300000 | 0.000000 | 13.182227 |\n|  | S | 1.967742 | 28.113184 | 0.493088 | 0.539171 | 39.547081 |",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.328,
+                0.949,
+                0.671,
+                0.98
+              ],
+              "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+            }
+          ],
+          "image_source": "images/page_31_table_5.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.96,
+            0.997,
+            0.995
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.049,
+            0.079,
+            0.119
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_32_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.062,
+            0.739,
+            0.145
+          ],
+          "level": 2,
+          "content": "Phân tích dạng phân loại – phân"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.155,
+            0.17,
+            0.219
+          ],
+          "level": 2,
+          "content": "loại"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.222,
+            0.508,
+            0.274
+          ],
+          "content": "❏ Khi cả hai biến đều có tính phân loại"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.279,
+            0.683,
+            0.332
+          ],
+          "content": "❏ Một số phương pháp trực quan có thể được sử dụng:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.167,
+            0.334,
+            0.794,
+            0.442
+          ],
+          "content": "❏ Biểu đồ cột xếp chồng (Stacked Bar Chart hay Segmented Bar Chart)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.167,
+            0.448,
+            0.602,
+            0.501
+          ],
+          "content": "❏ Biểu đồ cột tạo cụm (Cluster Bar Chart)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.198,
+            0.524,
+            0.765,
+            0.876
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.345,
+                0.901,
+                0.655,
+                0.946
+              ],
+              "content": "Phân bố của giới tính và cảng khởi hành"
+            },
+            {
+              "bbox": [
+                0.329,
+                0.948,
+                0.671,
+                0.98
+              ],
+              "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+            }
+          ],
+          "image_source": "images/page_32_chart_7.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.959,
+            0.997,
+            0.995
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.076,
+            0.126,
+            0.488,
+            0.199
+          ],
+          "level": 2,
+          "content": "EDA- Age vs Survived"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.138,
+            0.286,
+            0.728,
+            0.327
+          ],
+          "content": "sns.histplot(df\\_train, x='Age', hue='Survived', bins=40, kde=True)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.21,
+            0.369,
+            0.77,
+            0.914
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_33_chart_3.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.031,
+            0.05,
+            0.08,
+            0.119
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_34_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.057,
+            0.66,
+            0.137
+          ],
+          "level": 2,
+          "content": "Một số công cụ Automatic EDA"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.2,
+            0.343,
+            0.243
+          ],
+          "content": "[❏ Comparison notebook](https://www.kaggle.com/code/andreshg/automatic-eda-libraries-comparisson)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.28,
+            0.285,
+            0.699,
+            0.815
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.328,
+                0.949,
+                0.672,
+                0.98
+              ],
+              "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+            }
+          ],
+          "image_source": "images/page_34_chart_3.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.18,
+            0.171,
+            0.791,
+            0.92
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_35_image_0.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_35_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.055,
+            0.711,
+            0.13
+          ],
+          "level": 2,
+          "content": "Ưu điểm của Automatic EDA tools"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.785,
+            0.429,
+            0.913
+          ],
+          "content": "Hiểu rõ hơn về dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.487,
+            0.79,
+            0.76,
+            0.909
+          ],
+          "content": "Giúp hiểu được cấu trúc cơ bản của dữ liệu, mối tương quan và xu hướng trong dữ liệu."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.328,
+            0.948,
+            0.671,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.119
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.063,
+            0.392,
+            0.135
+          ],
+          "level": 2,
+          "content": "Pandas Profiling"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.107,
+            0.213,
+            0.214,
+            0.263
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.103,
+            0.334,
+            0.469,
+            0.763
+          ],
+          "content": "<table><tr><td>Overview</td><td>Warnings 14</td><td>Reproduction</td></tr><tr><td colspan=\"3\">Dataset statistics</td></tr><tr><td>Number of variables</td><td colspan=\"2\">12</td></tr><tr><td>Number of observations</td><td colspan=\"2\">891</td></tr><tr><td>Missing cells</td><td colspan=\"2\">866</td></tr><tr><td>Missing cells (%)</td><td colspan=\"2\">8.1%</td></tr><tr><td>Duplicate rows</td><td colspan=\"2\">0</td></tr><tr><td>Duplicate rows (%)</td><td colspan=\"2\">0.0%</td></tr><tr><td>Total size in memory</td><td colspan=\"2\">83.7 KiB</td></tr><tr><td>Average record size in memory</td><td colspan=\"2\">96.1 B</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_36_table_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.329,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.001,
+            0.0,
+            0.081,
+            0.121
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.039,
+            0.391,
+            0.171
+          ],
+          "level": 2,
+          "content": "Pandas profiling Tổng quan"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.127,
+            0.261,
+            0.221,
+            0.301
+          ],
+          "level": 2,
+          "content": "Overview"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.114,
+            0.324,
+            0.783,
+            0.894
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_37_image_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.958,
+            0.998,
+            0.996
+          ],
+          "content": "38"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.001,
+            0.0,
+            0.08,
+            0.12
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.04,
+            0.391,
+            0.169
+          ],
+          "level": 2,
+          "content": "Pandas profiling Thiếu giá trị"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.607,
+            0.209,
+            0.7,
+            0.328
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_38_chart_2.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.223,
+            0.187,
+            0.707,
+            0.917
+          ],
+          "content": "<table><tr><td rowspan=\"2\">AgeReal number (R≥0)</td><td>Distinct</td><td>88</td><td>Mean</td><td>29.69911765</td><td rowspan=\"7\"></td></tr><tr><td>Distinct (%)</td><td>12.3%</td><td>Minimum</td><td>0.42</td></tr><tr><td rowspan=\"4\">MISSING</td><td>Missing</td><td>177</td><td>Maximum</td><td>80</td></tr><tr><td>Missing (%)</td><td>19.9%</td><td>Zeros</td><td>0</td></tr><tr><td>Infinite</td><td>0</td><td>Zeros (%)</td><td>0.0%</td></tr><tr><td>Infinite (%)</td><td>0.0%</td><td>Memory size</td><td>7.1 KiB</td></tr><tr><td>Statistics</td><td>Histogram</td><td>Common values</td><td colspan=\"2\">Extreme values</td></tr><tr><td colspan=\"3\">Quantile statistics</td><td colspan=\"3\">Descriptive statistics</td></tr><tr><td colspan=\"2\">Minimum</td><td>0.42</td><td colspan=\"2\">Standard deviation</td><td>14.52649733</td></tr><tr><td colspan=\"2\">5-th percentile</td><td>4</td><td colspan=\"2\">Coefficient of variation (CV)</td><td>0.4891221855</td></tr><tr><td colspan=\"2\">Q1</td><td>20.125</td><td colspan=\"2\">Kurtosis</td><td>0.1782741536</td></tr><tr><td colspan=\"2\">median</td><td>28</td><td colspan=\"2\">Mean</td><td>29.69911765</td></tr><tr><td colspan=\"2\">Q3</td><td>38</td><td colspan=\"2\">Median Absolute Deviation (MAD)</td><td>9</td></tr><tr><td colspan=\"2\">95-th percentile</td><td>56</td><td colspan=\"2\">Skewness</td><td>0.3891077823</td></tr><tr><td colspan=\"2\">Maximum</td><td>80</td><td colspan=\"2\">Sum</td><td>21205.17</td></tr><tr><td colspan=\"2\">Range</td><td>79.58</td><td colspan=\"2\">Variance</td><td>211.0191247</td></tr><tr><td colspan=\"2\">Interquartile range (IQR)</td><td>17.875</td><td colspan=\"2\">Monotocity</td><td>Not monotonic</td></tr></table>",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.329,
+                0.949,
+                0.671,
+                0.98
+              ],
+              "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+            }
+          ],
+          "image_source": "images/page_38_table_3.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.958,
+            0.999,
+            0.996
+          ],
+          "content": "39"
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.0,
+            0.0,
+            0.081,
+            0.12
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.091,
+            0.04,
+            0.392,
+            0.171
+          ],
+          "level": 2,
+          "content": "Pandas profiling Sự tương quan"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.158,
+            0.222,
+            0.786,
+            0.862
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_39_chart_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "40"
+        }
+      ]
+    },
+    {
+      "page_idx": 40,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.0,
+            0.0,
+            0.08,
+            0.12
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.04,
+            0.391,
+            0.171
+          ],
+          "level": 2,
+          "content": "Pandas profiling Trình thông dịch"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.232,
+            0.508,
+            0.278
+          ],
+          "level": 2,
+          "content": "❏ Thực hiện phân tích và trực quan hóa dữ liệu"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.083,
+            0.293,
+            0.554,
+            0.907
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_40_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.57,
+            0.293,
+            0.949,
+            0.798
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_40_image_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.671,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "41"
+        }
+      ]
+    },
+    {
+      "page_idx": 41,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.12
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_41_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.066,
+            0.296,
+            0.134
+          ],
+          "level": 2,
+          "content": "Pandas AI"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.099,
+            0.229,
+            0.81,
+            0.277
+          ],
+          "content": "❏ Pandas AI là một thư viện Python bổ sung các khả năng AI tổng quát cho Pandas"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.28,
+            0.808,
+            0.327
+          ],
+          "content": "❏ Làm cho Pandas có thể trò chuyện, cho phép bạn đặt câu hỏi về dữ liệu của mình"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.101,
+            0.332,
+            0.24,
+            0.376
+          ],
+          "content": "❏ Github: [link](https://github.com/gventuri/pandas-ai)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.101,
+            0.425,
+            0.224,
+            0.472
+          ],
+          "level": 2,
+          "content": "Installation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.552,
+            0.272,
+            0.587
+          ],
+          "content": "pip install pandasai"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.462,
+            0.403,
+            0.829,
+            0.828
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_41_image_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.329,
+            0.949,
+            0.671,
+            0.979
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.957,
+            0.999,
+            0.997
+          ],
+          "content": "42"
+        }
+      ]
+    },
+    {
+      "page_idx": 42,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.433,
+            0.099,
+            0.569,
+            0.294
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_42_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.413,
+            0.427,
+            0.587,
+            0.52
+          ],
+          "level": 2,
+          "content": "HỎI ĐÁP"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.96,
+            0.996,
+            0.994
+          ],
+          "content": "43"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "PowerPoint Presentation",
+      "languages": [
+        "en"
+      ],
+      "created_at": "2024-03-29T10:41:27+07:00",
+      "modified_at": "2024-03-29T10:41:27+07:00",
+      "creator_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "producer_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "page_count": 43,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 40,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 41,
+          "width_pt": 720,
+          "height_pt": 405
+        },
+        {
+          "page_idx": 42,
+          "width_pt": 720,
+          "height_pt": 405
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

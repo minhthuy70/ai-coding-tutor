@@ -1,0 +1,5356 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.0,
+            0.0,
+            0.399,
+            0.121
+          ],
+          "content": "ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH\nTRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.19,
+            0.412,
+            0.823,
+            0.503
+          ],
+          "level": 2,
+          "content": "MÔ HÌNH VÀ BÀI TOÁN MÁY HỌC"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.427,
+            0.652,
+            0.571,
+            0.686
+          ],
+          "content": "TS. Nguyễn Vinh Tiệp"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.197,
+            0.951,
+            0.54,
+            0.977
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.961,
+            0.999,
+            0.998
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.977,
+            0.96,
+            0.999,
+            0.997
+          ],
+          "content": "2"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.405,
+            0.103,
+            0.614,
+            0.185
+          ],
+          "level": 2,
+          "content": "NỘI DUNG"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.187,
+            0.329,
+            0.471,
+            0.4
+          ],
+          "content": "I. Bài toán máy học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.183,
+            0.403,
+            0.78,
+            0.749
+          ],
+          "content": "II. Mô hình máy học\nA. Nền tầng\nB. Bagging and Boosting\nC. Mô hình cây (tree-based)\nIII. Máy học tự động (Auto Machine learning)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.067,
+            0.945,
+            0.141,
+            0.978
+          ],
+          "content": "9 May, 2024"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.327,
+            0.945,
+            0.674,
+            0.979
+          ],
+          "content": "Thực hiện bồi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.047,
+            0.2,
+            0.122
+          ],
+          "level": 2,
+          "content": "Bagging"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.241,
+            0.648,
+            0.281
+          ],
+          "content": "□ Thuộc vào nhóm mô hình học kết hợp (ensemble-based learning)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.281,
+            0.959,
+            0.36
+          ],
+          "content": "□ Các mô hình Weak learners mà chủng học song song và độc lập, kết hợp các mô hình để xác định dự đoán trung bình của mô hình"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.363,
+            0.261,
+            0.399
+          ],
+          "content": "☐ Vd: Random Forest"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.327,
+            0.435,
+            0.781,
+            0.804
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.279,
+                0.853,
+                0.792,
+                0.889
+              ],
+              "content": "https://www.geeksforgeeks.org/bagging-vs-boosting-in-machine-learning/"
+            },
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.67,
+                0.985
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_2_image_5.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.045,
+            0.834,
+            0.123
+          ],
+          "level": 2,
+          "content": "Các bước thực hiện của mô hình Bagging"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.115,
+            0.299,
+            0.88,
+            0.731
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_chart_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.671,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.048,
+            0.332,
+            0.111
+          ],
+          "level": 2,
+          "content": "Random Forest"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.185,
+            0.958,
+            0.265
+          ],
+          "content": "□ Sử dụng Bagging (Bootstrap Aggregating) để huấn luyện từng mô hình Decision Tree trên một tập hợp con dữ liệu ngẫu nhiên khác nhau"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.265,
+            0.818,
+            0.311
+          ],
+          "content": "□ Giảm sự tương quan giữa các cây và làm cho ensemble trở nên mạnh mê hơn"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.271,
+            0.373,
+            0.707,
+            0.829
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.307,
+                0.848,
+                0.619,
+                0.884
+              ],
+              "content": "https://en.wikipedia.org/wiki/Random\\_forest"
+            },
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.67,
+                0.985
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_4_image_4.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.04,
+            0.501,
+            0.121
+          ],
+          "level": 2,
+          "content": "Siêu tham số quan trọng"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.239,
+            0.433,
+            0.321
+          ],
+          "content": "□ Siêu tham số để tăng khả năng dự đoán\n□ Random Forest sklearn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.39,
+            0.251,
+            0.529
+          ],
+          "content": "n\\_estimators\nSố cây trong rừng -\nThe number of trees\nin forest"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.322,
+            0.389,
+            0.448,
+            0.565
+          ],
+          "content": "max\\_features\nSố lượng đặc trưng\ncần xem xét khi tìm\nkiểm sự phân chia\ntốt nhất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.521,
+            0.387,
+            0.668,
+            0.528
+          ],
+          "content": "min\\_samples\\_leaf\nSố lượng mẫu tối\nthiếu cần có ở một nút\nlá"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.728,
+            0.39,
+            0.86,
+            0.531
+          ],
+          "content": "criterion\nChức năng đo lường\nchất lượng của sự\nphân chia"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.647,
+            0.454,
+            0.927
+          ],
+          "content": "max\\_depth\nĐộ sâu tối đa của cây. Nếu Không, thì các nút sẽ được mở rộng cho đến khi tất cả các lá đều thuần túy hoặc cho đến khi tất cả các lá chứa ít hơn min\\_samples\\_split"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.531,
+            0.665,
+            0.673,
+            0.809
+          ],
+          "continues_prev": true,
+          "content": "max\\_leaf\\_nodes\nPhát triển với\nmax\\_leaf\\_nodes theo\ncách tốt nhất đầu tiên"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.947,
+            0.671,
+            0.985
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.037,
+            0.202,
+            0.111
+          ],
+          "level": 2,
+          "content": "U'u điểm"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.142,
+            0.397,
+            0.214,
+            0.44
+          ],
+          "content": "Hiệu quả"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.477,
+            0.26,
+            0.598
+          ],
+          "content": "Được coi là mô hình rất chính xác và mạnh mê và chạy hiệu quả trên tập dữ liệu lớn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.377,
+            0.396,
+            0.534,
+            0.523
+          ],
+          "content": "Xử lý chiều dữ liệu\ncao (high\ndimensionality)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.381,
+            0.553,
+            0.532,
+            0.679
+          ],
+          "content": "Có thể xử lý các tập dữ liệu có số lượng đặc trưng cao và không yêu cầu chia tỷ lệ đặc trưng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.694,
+            0.399,
+            0.811,
+            0.439
+          ],
+          "content": "Tính linh hoạt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.672,
+            0.465,
+            0.835,
+            0.649
+          ],
+          "content": "Có thể được sử dụng cho bài toán hồi quy và phân loại, đồng thời chúng tương đối dễ điều chỉnh vì không yêu cầu điều chỉnh siêu tham số nhiều"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.037,
+            0.202,
+            0.111
+          ],
+          "level": 2,
+          "content": "U'u điểm"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.1,
+            0.398,
+            0.257,
+            0.48
+          ],
+          "content": "Mạnh mê với dữ liệu\noutlier & non-linear"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.098,
+            0.518,
+            0.259,
+            0.701
+          ],
+          "content": "Ít có xu hướng overfitting và mạnh mê đối với các ngoại lệ, cũng như có khả năng mô hình hóa mối quan hệ phi tuyến tính, phức tạp"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.402,
+            0.398,
+            0.511,
+            0.437
+          ],
+          "content": "Parallelizable"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.38,
+            0.471,
+            0.533,
+            0.625
+          ],
+          "content": "Việc huấn luyện các cây\nkhác nhau có thể được\nthực hiện song song vì\nmỗi cây được xây dựng\nđộc lập"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.679,
+            0.401,
+            0.833,
+            0.439
+          ],
+          "content": "Feature Importance"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.671,
+            0.465,
+            0.844,
+            0.649
+          ],
+          "content": "Đưa ra ước tính tốt về những đặc trùng nào là quan trọng trong dữ liệu cơ bản đang được lập mô hình hóa → lựa chọn tính năng"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.037,
+            0.276,
+            0.121
+          ],
+          "level": 2,
+          "content": "Nhược điểm"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.12,
+            0.399,
+            0.237,
+            0.439
+          ],
+          "content": "Interpretability"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.478,
+            0.246,
+            0.54
+          ],
+          "content": "Khó diễn giải so với cây\nquyết định"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.397,
+            0.399,
+            0.513,
+            0.482
+          ],
+          "content": "Computational complexity"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.376,
+            0.511,
+            0.536,
+            0.605
+          ],
+          "content": "Có thể tạo số lượng cây quyết định khá lớn và tổn nhiều bộ nhớ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.674,
+            0.399,
+            0.838,
+            0.476
+          ],
+          "content": "Bias with imbalanced data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.677,
+            0.513,
+            0.836,
+            0.617
+          ],
+          "content": "Có thể có bias đối với lớp\nchiếm đa số khi xử lý các\ntập dữ liệu mất cân bằng"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.04,
+            0.047,
+            0.139,
+            0.12
+          ],
+          "content": "Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.997,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.041,
+            0.211,
+            0.196,
+            0.248
+          ],
+          "content": "Notebook example"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.26,
+            0.321,
+            0.755,
+            0.737
+          ],
+          "sub_type": "code",
+          "content": "```python\nfrom sklearn.ensemble import RandomForestClassifier\n\nrf = RandomForestClassifier(criterion='gini',\n                      n_estimators=700,\n                      min_samples_split=10,\n                      min_samples_leaf=1,\n                      max_features='auto',\n                      oob_score=True,\n                      random_state=1,\n                      n_jobs=-1)\nrf.fit(train.iloc[:, 1:], train.iloc[:, 0])\nprint(\"%.4f\" % rf.oob_score_)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.777,
+            0.33,
+            0.806
+          ],
+          "content": "0.8294"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.047,
+            0.213,
+            0.119
+          ],
+          "level": 2,
+          "content": "Boosting"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.24,
+            0.648,
+            0.281
+          ],
+          "content": "□ Thuộc vào nhóm mô hình học kết hợp (ensemble-based learning)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.281,
+            0.849,
+            0.322
+          ],
+          "content": "☐ Weak learners học tuần tự và thích ứng để cải thiện dự đoán mô hình của thuật toán học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.323,
+            0.44,
+            0.361
+          ],
+          "content": "☐ AdaBoost, XGBoost, LightGBM, CatBoost"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.249,
+            0.433,
+            0.757,
+            0.859
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.253,
+                0.895,
+                0.765,
+                0.93
+              ],
+              "content": "https://www.geeksforgeeks.org/bagging-vs-boosting-in-machine-learning/"
+            }
+          ],
+          "footnotes": [
+            {
+              "bbox": [
+                0.278,
+                0.947,
+                0.67,
+                0.984
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "image_source": "images/page_10_image_5.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.046,
+            0.807,
+            0.121
+          ],
+          "level": 2,
+          "content": "Các bước cài đặt phương pháp Boosting"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.116,
+            0.303,
+            0.961,
+            0.805
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.672,
+                0.985
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "image_source": "images/page_11_chart_2.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.058,
+            0.606,
+            0.128
+          ],
+          "level": 2,
+          "content": "How Gradient Boosting Work?"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.167,
+            0.163,
+            0.747,
+            0.68
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_1.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.683,
+            0.747,
+            0.807
+          ],
+          "content": "where $\\alpha_{i}$, and $r_i$ are the regularization parameters and residuals computed with the $i^{th}$ tree respectfully, and $h_i$ is a function that is trained to predict residuals, $r_i$ using $X$ for the $i^{th}$ tree. To compute $\\alpha_{i}$ we use the residuals computed, $r_i$ and compute the following: $\\arg \\min_{\\alpha} = \\sum_{i=1}^{m} L(Y_i, F_{i-1}(X_i) + \\alpha h_i(X_i, r_{i-1}))$ where $L(Y, F(X))$ is a differentiable loss function."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.196,
+            0.851,
+            0.735,
+            0.886
+          ],
+          "content": "https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost-HowItWorks.html"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.278,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.938,
+            0.01,
+            0.995,
+            0.093
+          ],
+          "content": ""
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.502,
+            0.119
+          ],
+          "level": 2,
+          "content": "Gradient Boosting: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.092,
+            0.25,
+            0.465,
+            0.47
+          ],
+          "content": "Bạn có thể xây dựng mô hình Gradient Boosting để dự đoán mức lương dựa trên số năm kinh nghiệm không?"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.617,
+            0.205,
+            0.883,
+            0.939
+          ],
+          "content": "| Year | Salary (1000 $) |\n| --- | --- |\n| 5 | 82 |\n| 7 | 80 |\n| 12 | 103 |\n| 23 | 118 |\n| 25 | 172 |\n| 28 | 127 |\n| 29 | 204 |\n| 34 | 189 |\n| 35 | 99 |\n| 40 | 166 |",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.277,
+                0.948,
+                0.67,
+                0.984
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "image_source": "images/page_13_table_3.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.502,
+            0.119
+          ],
+          "level": 2,
+          "content": "Gradient Boosting: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.647,
+            0.249
+          ],
+          "content": "□ Bước đầu tiên: mô hình nên được khởi tạo bằng một hàm F0(x)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.247,
+            0.544,
+            0.288
+          ],
+          "content": "□ Tính toán sai số dư cho từng trường hợp (y - F0(x))."
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.18,
+            0.362,
+            0.366,
+            0.437
+          ],
+          "content": "F _ {0} (x) = \\operatorname{argmin} _ {\\gamma} \\sum_ {i = 1} ^ {n} L (y _ {i}, \\gamma)",
+          "image_source": "images/page_14_equation_4.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.129,
+            0.458,
+            0.42,
+            0.535
+          ],
+          "content": "a r g m i n _ {\\gamma} \\sum_ {i = 1} ^ {n} L (y _ {i}, \\gamma) = a r g m i n _ {\\gamma} \\sum_ {i = 1} ^ {n} (y _ {i} - \\gamma) ^ {2}",
+          "image_source": "images/page_14_equation_5.jpg"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.217,
+            0.589,
+            0.307,
+            0.669
+          ],
+          "content": "F _ {0} (x) = \\frac {\\sum_ {i = 1} ^ {n} y _ {i}}{n}",
+          "image_source": "images/page_14_equation_6.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.623,
+            0.311,
+            0.859,
+            0.784
+          ],
+          "content": "| x | y | F0 | y - F0 |\n| --- | --- | --- | --- |\n| 5 | 82 | 134 | -52 |\n| 7 | 80 | 134 | -54 |\n| 12 | 103 | 134 | -31 |\n| 23 | 118 | 134 | -16 |\n| 25 | 172 | 134 | 38 |\n| 28 | 127 | 134 | -7 |\n| 29 | 204 | 134 | 70 |\n| 34 | 189 | 134 | 55 |\n| 35 | 99 | 134 | -35 |\n| 40 | 166 | 134 | 32 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_table_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.529,
+            0.837,
+            0.946,
+            0.909
+          ],
+          "content": "https://www.analyticsvidhya.com/blog/2018/09/an-end-to-end-guide-to-understand-the-math-behind-xgboost/"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.947,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.046,
+            0.502,
+            0.119
+          ],
+          "level": 2,
+          "content": "Gradient Boosting: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.593,
+            0.251
+          ],
+          "content": "□ Sử dụng sai số dư (y - F0(x)) để tạo một bộ học yếu h1(x)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.248,
+            0.451,
+            0.289
+          ],
+          "content": "□ Dự đoán được tính: F1(x) = F0(x) + h1(x)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.14,
+            0.353,
+            0.517,
+            0.769
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_image_4.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.607,
+            0.295,
+            0.931,
+            0.767
+          ],
+          "content": "| x | y | F0 | y-F0 | h1 | F1 |\n| --- | --- | --- | --- | --- | --- |\n| 5 | 82 | 134 | -52 | -38.25 | 95.75 |\n| 7 | 80 | 134 | -54 | -38.25 | 95.75 |\n| 12 | 103 | 134 | -31 | -38.25 | 95.75 |\n| 23 | 118 | 134 | -16 | -38.25 | 95.75 |\n| 25 | 172 | 134 | 38 | 25.50 | 159.50 |\n| 28 | 127 | 134 | -7 | 25.50 | 159.50 |\n| 29 | 204 | 134 | 70 | 25.50 | 159.50 |\n| 34 | 189 | 134 | 55 | 25.50 | 159.50 |\n| 35 | 99 | 134 | -35 | 25.50 | 159.50 |\n| 40 | 166 | 134 | 32 | 25.50 | 159.50 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_table_5.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.047,
+            0.502,
+            0.119
+          ],
+          "level": 2,
+          "content": "Gradient Boosting: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.198,
+            0.572,
+            0.241
+          ],
+          "content": "□ Việc này có thể lặp lại thêm 2 lần để tính toán h2(x) và h3(x)."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.105,
+            0.373,
+            0.907,
+            0.731
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.502,
+            0.119
+          ],
+          "level": 2,
+          "content": "Gradient Boosting: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.997,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.959,
+            0.285
+          ],
+          "content": "☐ MSE cho F0(x), F1(x) và F2(x) lần lượt là 875, 692 và 540 → Xây dựng h4(x), h5(x) .. và so sánh MSE?"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.171,
+            0.339,
+            0.819,
+            0.774
+          ],
+          "content": "| x | y | F0 | y-F0 | h1 | F1 | y-F1 | h2 | F2 | y-F2 | h3 | F3 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 5 | 82 | 134 | -52 | -38.25 | 95.75 | -13.75 | 6.75 | 102.50 | -20.50 | -10.08333 | 92.41667 |\n| 7 | 80 | 134 | -54 | -38.25 | 95.75 | -15.75 | 6.75 | 102.50 | -22.50 | -10.08333 | 92.41667 |\n| 12 | 103 | 134 | -31 | -38.25 | 95.75 | 7.25 | 6.75 | 102.50 | 0.50 | -10.08333 | 92.41667 |\n| 23 | 118 | 134 | -16 | -38.25 | 95.75 | 22.25 | 6.75 | 102.50 | 15.50 | -10.08333 | 92.41667 |\n| 25 | 172 | 134 | 38 | 25.50 | 159.50 | 12.50 | 6.75 | 166.25 | 5.75 | -10.08333 | 156.16667 |\n| 28 | 127 | 134 | -7 | 25.50 | 159.50 | -32.50 | 6.75 | 166.25 | -39.25 | -10.08333 | 156.16667 |\n| 29 | 204 | 134 | 70 | 25.50 | 159.50 | 44.50 | 6.75 | 166.25 | 37.75 | 15.12500 | 181.37500 |\n| 34 | 189 | 134 | 55 | 25.50 | 159.50 | 29.50 | 6.75 | 166.25 | 22.75 | 15.12500 | 181.37500 |\n| 35 | 99 | 134 | -35 | 25.50 | 159.50 | -60.50 | -27.00 | 132.50 | -33.50 | 15.12500 | 147.62500 |\n| 40 | 166 | 134 | 32 | 25.50 | 159.50 | 6.50 | -27.00 | 132.50 | 33.50 | 15.12500 | 147.62500 |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_table_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.047,
+            0.676,
+            0.115
+          ],
+          "level": 2,
+          "content": "Gradient Boosting: Residual Error"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.959,
+            0.29
+          ],
+          "content": "□ Tại giai đoạn mà độ chính xác tối đa được đạt bằng phương pháp boosting, các sai số dư xuất hiện có về được phân bổ ngẫu nhiên mà không có bất kỳ mẫu nào."
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.064,
+            0.324,
+            0.487,
+            0.853
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_18_chart_3.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.525,
+            0.325,
+            0.941,
+            0.846
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.671,
+                0.984
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_18_chart_4.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.045,
+            0.773,
+            0.122
+          ],
+          "level": 2,
+          "content": "Sự khác biệt giữa Bagging và Boosting"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.091,
+            0.299,
+            0.907,
+            0.815
+          ],
+          "content": "| Bagging | Boosting |\n| --- | --- |\n| Giảm sự biến động | Giảm sự thiên vị |\n| Mỗi mô hình được xây dựng độc lập | Các mô hình mới bị ảnh hưởng bởi hiệu suất của các mô hình được xây dựng trước đó |\n| Các mô hình yếu (weak models) được huấn luyện song song | Các mô hình yếu (weak models) được huấn luyện tuần tự |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_table_2.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.046,
+            0.752,
+            0.119
+          ],
+          "level": 2,
+          "content": "XGBoost (Extreme Gradient Boosting)"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.239,
+            0.959,
+            0.281
+          ],
+          "content": "□ Các mô hình XGBoost (regularizing gradient boosting) được sử dụng nhiều ở các cuộc thi Kaggle Competitions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.293,
+            0.301,
+            0.331
+          ],
+          "content": "☐ Documentations & paper"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.229,
+            0.374,
+            0.75,
+            0.859
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.671,
+                0.985
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "image_source": "images/page_20_image_4.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.037,
+            0.619,
+            0.112
+          ],
+          "level": 2,
+          "content": "XGBoost: Tôi vụ hóa & cải tiến"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.192,
+            0.41,
+            0.423,
+            0.47
+          ],
+          "content": "01 Regularization"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.567,
+            0.486,
+            0.625
+          ],
+          "content": "02 Parallelization and Cache block"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.369,
+            0.834,
+            0.506
+          ],
+          "content": "Hợp tác của các mô học yếu → dẫn đến một mô hình rất phức tạp → XGBoost sử dụng cả L1 và L2 để trùng phạt mô hình rất phức tạp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.525,
+            0.82,
+            0.664
+          ],
+          "content": "Chúng ta không thể huấn luyện nhiều cây cùng lúc, nhưng nó có thể tạo ra các nút khác nhau của cây một cách song song → dữ liệu cần được sắp xếp theo thứ tự."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.037,
+            0.619,
+            0.113
+          ],
+          "level": 2,
+          "content": "XGBoost: Tôi vụ hóa & cải tiến"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.409,
+            0.438,
+            0.47
+          ],
+          "content": "03 Sparity Awareness"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.631,
+            0.419,
+            0.691
+          ],
+          "content": "04 Tree Pruning"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.525,
+            0.369,
+            0.831,
+            0.506
+          ],
+          "continues_prev": true,
+          "content": "\\- XGBoost có thể xử lý dữ liệu thừa thốt có thể được tạo ra từ các bước tiền xử lý hoặc giá trị thiếu. Nó sử dụng một thuật toán tìm phân chia đặc biệt."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.523,
+            0.573,
+            0.83,
+            0.745
+          ],
+          "content": "\\- XGBoost sử dụng tham số max\\_depth để xác định điều kiện dùng cho việc chia nhánh và bắt đầu tia cây từ phía sau.\n- Tiếp cận theo chiều sâu này cải thiện đáng kể hiệu suất tính toán."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.037,
+            0.619,
+            0.113
+          ],
+          "level": 2,
+          "content": "XGBoost: Tôi vụ hóa & cải tiến"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.395,
+            0.458,
+            0.454
+          ],
+          "content": "05 In-build Cross Validation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.552,
+            0.463,
+            0.611
+          ],
+          "content": "06 Weighted Quantile Sketch"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.713,
+            0.475,
+            0.787
+          ],
+          "content": "07 Cache awareness and Out-of-core computing"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.535,
+            0.355,
+            0.852,
+            0.493
+          ],
+          "content": "XGBoost có tích hợp tính năng xác thực chéo được thực hiện ở mỗi vòng lập trong quá trình tạo mô hình. Điều này ngăn chặn tình trạng quá khớp khi tập dữ liệu không quá lớn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.536,
+            0.511,
+            0.84,
+            0.649
+          ],
+          "content": "XGBoost tích hợp sẵn thuật toán weighted quantile sketch có tính phân phối, giúp dễ dàng tìm các điểm chia tối ưu trong các tập dữ liệu có trọng số."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.663,
+            0.832,
+            0.837
+          ],
+          "content": "XGBoost tận dụng tài nguyên phần cứng một cách hiệu quả và hợp lý. XGBoost sử dụng tính năng tính toán ngoài bộ nhớ để tối ưu hóa không gian đĩa có sẵn → XGBoost cổ gắng giảm tập dữ liệu bằng cách nén nó."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.291,
+            0.854,
+            0.737,
+            0.931
+          ],
+          "content": "https://xgboost.readthedocs.io/en/stable/tutorials/model.html"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.045,
+            0.937,
+            0.121
+          ],
+          "level": 2,
+          "content": "Hiệu quả của việc chính quy hóa trong XGBoost"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.94,
+            0.009,
+            0.996,
+            0.095
+          ],
+          "content": ""
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.287,
+            0.204,
+            0.499,
+            0.503
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.534,
+            0.204,
+            0.748,
+            0.507
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.288,
+            0.526,
+            0.496,
+            0.793
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.533,
+            0.524,
+            0.745,
+            0.83
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.671,
+                0.985
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_24_image_6.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.039,
+            0.78,
+            0.121
+          ],
+          "level": 2,
+          "content": "Tìm kiểm phân tách nhận biết thưa thốt"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.997,
+            0.094
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.203,
+            0.781,
+            0.274
+          ],
+          "content": "Có nhiều nguyên nhân có thể gây ra tình trạng thưa thốt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.169,
+            0.513,
+            0.294,
+            0.631
+          ],
+          "content": "Sự xuất hiện của các giá trị thiếu trong dữ liệu."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.402,
+            0.494,
+            0.552,
+            0.647
+          ],
+          "content": "Các mục nhập không\nthường xuyên có giá\ntrị bằng không trong\nthống kê."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.68,
+            0.483,
+            0.817,
+            0.635
+          ],
+          "content": "Các hiện tượng tạo ra từ kỹ thuật đặc trưng như mã hóa one-hot."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.276,
+            0.947,
+            0.672,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.037,
+            0.915,
+            0.121
+          ],
+          "level": 2,
+          "content": "XGBoost xử lý các giá trị bị thiếu như thể nào?"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.938,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.066,
+            0.294,
+            0.395,
+            0.663
+          ],
+          "content": "Cải tiến quan trọng là chỉ\nxem xét các mục không bị\nthiếu, xem việc không xuất\nhiện như một giá trị thiểu và\nhọc cách xử lý giá trị thiểu\nmột cách tốt nhất."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.59,
+            0.206,
+            0.902,
+            0.947
+          ],
+          "sub_type": "algorithm",
+          "content": "Algorithm 3: Sparsity-aware Split Finding\nInput: $I$, instance set of current node\nInput: $I_k = \\{i \\in I | x_{ik} \\neq \\text{missing}\\}$\nInput: $d$, feature dimension\nAlso applies to the approximate setting, only collect statistics of non-missing entries into buckets\ngain $\\leftarrow 0$\n$G \\leftarrow \\sum_{i \\in I}, g_i, H \\leftarrow \\sum_{i \\in I} h_i$\nfor $k = 1$ to $m$ do\n    // enumerate missing value goto right\n    $G_L \\leftarrow 0, H_L \\leftarrow 0$\n    for $j$ in sorted($I_k$, ascent order by $\\mathbf{x}_{jk}$) do\n        $G_L \\leftarrow G_L + g_j, H_L \\leftarrow H_L + h_j$\n        $G_R \\leftarrow G - G_L, H_R \\leftarrow H - H_L$\n        score $\\leftarrow \\max(score, \\frac{G_L^2}{H_L + \\lambda} + \\frac{G_R^2}{H_R + \\lambda} - \\frac{G^2}{H + \\lambda})$\n    end\n    // enumerate missing value goto left\n    $G_R \\leftarrow 0, H_R \\leftarrow 0$\n    for $j$ in sorted($I_k$, descent order by $\\mathbf{x}_{jk}$) do\n        $G_R \\leftarrow G_R + g_j, H_R \\leftarrow H_R + h_j$\n        $G_L \\leftarrow G - G_R, H_L \\leftarrow H - H_R$\n        score $\\leftarrow \\max(score, \\frac{G_L^2}{H_L + \\lambda} + \\frac{G_R^2}{H_R + \\lambda} - \\frac{G^2}{H + \\lambda})$\n    end\nend\nOutput: Split and default directions with max gain\nhttps://arxiv.org/pdf/1603.02754.pdf",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.671,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.312,
+            0.853,
+            0.717,
+            0.929
+          ],
+          "content": "https://xgboost.readthedocs.io/en/stable/tutorials/custom\\_metric\\_obj.html"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.045,
+            0.49,
+            0.121
+          ],
+          "level": 2,
+          "content": "Tùy chỉnh hàm mục tiêu"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.063,
+            0.178,
+            0.265,
+            0.559
+          ],
+          "content": "Chúng ta cần tính toán độ đốc (gradient) và ma trận Hessian của hàm mục tiêu (objective function)."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.067,
+            0.585,
+            0.244,
+            0.641
+          ],
+          "sub_type": "algorithm",
+          "content": "$\\frac{1}{2} [log(pred + 1) - log(label + 1)]^2$",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.08,
+            0.692,
+            0.247,
+            0.873
+          ],
+          "content": "https://www.kaggle.com/competitions/m5-forecasting-accuracy/discussion/140564"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.33,
+            0.211,
+            0.693,
+            0.69
+          ],
+          "sub_type": "code",
+          "content": "```python\nimport numpy as np\nimport xgboost as xgb\nfrom typing import Tuple\n\ndef gradient(predt: np.ndarray, dtrain: xgb.DMatrix) -> np.ndarray:\n    '''Compute the gradient squared log error.’''\n    y = dtrain.get_label()\n    return (np.log1p(predt) - np.log1p(y)) / (predt + 1)\n\ndef hessian(predt: np.ndarray, dtrain: xgb.DMatrix) -> np.ndarray:\n    '''Compute the hessian for squared log error.’''\n    y = dtrain.get_label()\n    return ((-np.log1p(predt) + np.log1p(y) + 1) /\n        np.power(predt + 1, 2))\n\ndef squared_log(predt: np.ndarray,\n            dtrain: xgb.DMatrix) -> Tuple[np.ndarray, np.ndarray]:\n    '''Squared Log Error objective. A simplified version for RMSLE used as objective function.\n    '''\n    predt[predt < -1] = -1 + 1e-6\n    grad = gradient(predt, dtrain)\n    hess = hessian(predt, dtrain)\n    return grad, hess\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.331,
+            0.708,
+            0.696,
+            0.819
+          ],
+          "sub_type": "code",
+          "content": "```python\nxgb.train({'tree_method': 'hist', 'seed': 1994},  # any other tree method is fine.\n    dtrain=dtrain,\n    num_boost_round=10,\n    obj=squared_log)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.985
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.045,
+            0.515,
+            0.121
+          ],
+          "level": 2,
+          "content": "Tùy chỉnh độ đo đánh giá"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.959,
+            0.287
+          ],
+          "content": "☐ Sau khi có một hàm mục tiêu mới, chúng ta có thể cần một độ đo tương ứng để theo dõi hiệu suất của mô hình của chúng ta."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.273,
+            0.345,
+            0.72,
+            0.523
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef rmsle(predt: np.ndarray, dtrain: xgb.DMatrix) -> Tuple[str, float]:\n    ''' Root mean squared log error metric.'''\n    y = dtrain.get_label()\n    predt[predt < -1] = -1 + 1e-6\n    elements = np.power(np.log1p(y) - np.log1p(predt), 2)\n    return 'PyRMSLE', float(np.sqrt(np.sum(elements) / len(y)))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.274,
+            0.571,
+            0.725,
+            0.848
+          ],
+          "sub_type": "code",
+          "content": "```python\nxgb.train({'tree_method': 'hist', 'seed': 1994,\n        'disable_default_eval_metric': 1},\n        dtrain=dtrain,\n        num_boost_round=10,\n        obj=squared_log,\n        feval=rmsle,\n        evals=[(dtrain, 'dtrain'), (dtest, 'dtest')],\n        evals_result=results)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.038,
+            0.46,
+            0.112
+          ],
+          "level": 2,
+          "content": "Ưu điểm của XGBoost"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.198,
+            0.412,
+            0.276,
+            0.453
+          ],
+          "content": "Hiệu suất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.163,
+            0.491,
+            0.312,
+            0.647
+          ],
+          "content": "Tạo ra các kết quả chất lượng cao trong các nhiệm vụ học máy đa dạng (ví dụ: Cuộc thi Kaggle)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.411,
+            0.503,
+            0.456
+          ],
+          "content": "Khả năng mở rộng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.352,
+            0.485,
+            0.511,
+            0.671
+          ],
+          "content": "Được thiết kế đề huấn luyện hiệu quả và có khả năng mở rộng của các mô hình học máy, làm cho nó phù hợp cho các tập dữ liệu lớn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.544,
+            0.411,
+            0.694,
+            0.455
+          ],
+          "content": "Khả năng tùy chỉnh"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.536,
+            0.487,
+            0.701,
+            0.657
+          ],
+          "content": "Sự đa dạng các siêu tham\nsố có thể được điều chỉnh\nđề tối ưu hiệu suất, làm\ncho XGBoost có tính tùy\nchình cao"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.747,
+            0.387,
+            0.876,
+            0.467
+          ],
+          "content": "Giải quyết giá trị\nthiếu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.73,
+            0.503,
+            0.892,
+            0.608
+          ],
+          "content": "Hỗ trợ tích hợp sẵn để xử lý giá trị thiếu, giúp làm việc với dữ liệu thực tế dễ dàng."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.038,
+            0.534,
+            0.118
+          ],
+          "level": 2,
+          "content": "Nhược điểm của XGBoost"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.412,
+            0.301,
+            0.492
+          ],
+          "content": "Độ phúc tạp tính toán"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.157,
+            0.521,
+            0.315,
+            0.675
+          ],
+          "content": "Vẫn có thể mất thời gian và đồi hỏi tài nguyên tính toán đáng kể đối với các tập dữ liệu lớn hoặc các mô hình phức tạp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.347,
+            0.415,
+            0.514,
+            0.696
+          ],
+          "content": "Overfitting\nNếu không được điều chỉnh một cách thích hợp hoặc nếu dữ liệu có nhiều, tập dữ liệu huấn luyện nhỏ nhưng sử dụng mô hình phức tạp có thể dẫn đến hiện tượng overfitting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.538,
+            0.412,
+            0.7,
+            0.491
+          ],
+          "content": "Tình chỉnh siêu tham\nsố"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.526,
+            0.696,
+            0.665
+          ],
+          "content": "Yêu cầu hiểu biết tốt về các siêu tham số và việc điều chỉnh và tối ưu hóa cần thận."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.751,
+            0.389,
+            0.87,
+            0.473
+          ],
+          "content": "Lack of Interpretability"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.729,
+            0.503,
+            0.896,
+            0.707
+          ],
+          "content": "Tương tự như nhiều phương pháp hợp tác khác, các dự đoán được thực hiện bởi XGBoost không dễ dàng có thể giải thích."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.035,
+            0.573,
+            0.119
+          ],
+          "level": 2,
+          "content": "Lưu ý về điều chỉnh tham số"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.09,
+            0.175,
+            0.972,
+            0.817
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.672,
+                0.985
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "image_source": "images/page_31_image_2.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.843,
+            0.119
+          ],
+          "level": 2,
+          "content": "XGBoost: Tips for Hyperparameters Tuning"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.201,
+            0.262,
+            0.65,
+            0.305
+          ],
+          "level": 2,
+          "content": "Tuning parameters – expert approach (xgboost)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.207,
+            0.324,
+            0.55,
+            0.351
+          ],
+          "level": 2,
+          "content": "Tuning parameters = experience + intuition + resources at hand"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.207,
+            0.376,
+            0.279,
+            0.399
+          ],
+          "level": 2,
+          "content": "Typical routine:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.41,
+            0.744,
+            0.467
+          ],
+          "content": "1. Set learning rate (eta) parameter 0.1-0.2 (based on dataset size and available resources); all other parameters at default; personal experience: eta does not influence other parameter tuning!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.477,
+            0.592,
+            0.501
+          ],
+          "content": "2. Test maximum tree depth parameter, rule: 6-8-10-12-14; pick best performing on CV"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.511,
+            0.724,
+            0.535
+          ],
+          "content": "3. Introduce regularization on leaf splits (alpha/lambda), rule: $2^{\\wedge}k$; IF it helps on CV, try to tune it as much as possible!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.545,
+            0.772,
+            0.603
+          ],
+          "content": "4. Tune min leaf node size (min\\_child\\_weight), rule: 1-0-5-10-20-50; IF it helps on CV, try to tune it as much as possible; IF it does not help, use value 0 (default = 1 is worse most of the times!); If 3-4 works – repeat step 2."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.613,
+            0.707,
+            0.636
+          ],
+          "content": "5. Tune randomness of each iteration (column/row sampling); Usually 0.7/0.7 is best and rarely needs to be tuned"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.646,
+            0.765,
+            0.704
+          ],
+          "content": "6. Decrease eta to value which you are comfortable with your hardware; 0.025 is typically a good choice; lower values than 0.01 don't provide significant score uplift"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.207,
+            0.714,
+            0.769,
+            0.772
+          ],
+          "content": "7. If training time is reasonable, introduce bagging (num\\_parallel\\_trees) – how many models should be averaged in each training iteration; random forests + gradient boosting 😊 recommended value - up to 5."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.208,
+            0.833,
+            0.771,
+            0.903
+          ],
+          "content": "https://www.slideshare.net/DariusBaruauskas/tips-and-tricks-to-win-kaggle-data-science-competitions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.278,
+            0.949,
+            0.669,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.047,
+            0.231,
+            0.12
+          ],
+          "level": 2,
+          "content": "LightGBM"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.997,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.053,
+            0.208,
+            0.96,
+            0.29
+          ],
+          "content": "□ Tương tự như XGBoost, LightGBM (do Microsoft phát triển) là một framework phân tán hiệu năng cao sử dụng cây quyết định cho nhiệm vụ xếp hạng, phân loại và hồi quy."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.289,
+            0.229,
+            0.323
+          ],
+          "content": "Documentations"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.12,
+            0.364,
+            0.871,
+            0.885
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.276,
+                0.947,
+                0.672,
+                0.985
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "image_source": "images/page_33_chart_4.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.044,
+            0.047,
+            0.661,
+            0.119
+          ],
+          "level": 2,
+          "content": "Leaf-wise (Best-first) Tree growth"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.542,
+            0.251
+          ],
+          "content": "□ Nó sẽ chọn lá có độ lỗi delta tối đa để phát triển."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.249,
+            0.96,
+            0.329
+          ],
+          "content": "□ Giữ nguyên số lá, thuật toán dựa trên lá thường đạt được tỷ lệ mất mát thấp hơn so với thuật toán dựa trên mức."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.329,
+            0.96,
+            0.414
+          ],
+          "content": "□ Dựa trên lá có thể gây ra tình trạng overfiting khi tập dữ liệu nhỏ, vì vậy LightGBM bao gồm tham số max\\_depth để giới hạn độ sâu của câv."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.079,
+            0.464,
+            0.448,
+            0.655
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.169,
+                0.662,
+                0.34,
+                0.699
+              ],
+              "content": "Level-wise tree growth"
+            }
+          ],
+          "image_source": "images/page_34_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.497,
+            0.424,
+            0.963,
+            0.695
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.634,
+                0.705,
+                0.79,
+                0.744
+              ],
+              "content": "Leaf-wise tree growth"
+            }
+          ],
+          "image_source": "images/page_34_image_7.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.046,
+            0.817,
+            0.122
+          ],
+          "level": 2,
+          "content": "Optimization in Speed and Memory usage"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.053,
+            0.226,
+            0.922,
+            0.343
+          ],
+          "content": "□ Nhiều công cụ boosting sử dụng thuật toán dựa trên sắp xếp trước (ví dụ: thuật toán mặc định trong xgboost) để học cây quyết định"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.36,
+            0.898,
+            0.475
+          ],
+          "content": "□ LightGBM sử dụng thuật toán dựa trên biểu đồ histogram → nhóm các giá trị đặc trùng (thuộc tính) liên tục vào các thùng riêng biệt"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.202,
+            0.517,
+            0.355,
+            0.641
+          ],
+          "content": "Reduce cost of calculating the gain for each split"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.201,
+            0.668,
+            0.357,
+            0.73
+          ],
+          "content": "Histogram-based O(bins) > pre-sort based O(data)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.427,
+            0.509,
+            0.553,
+            0.634
+          ],
+          "content": "Use histogram subtraction for further speedup"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.408,
+            0.665,
+            0.573,
+            0.787
+          ],
+          "content": "To get one leaf's histograms in a binary tree, use the histogram subtraction of its parent and its neighbor"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.629,
+            0.518,
+            0.759,
+            0.599
+          ],
+          "content": "Reduce memory usage"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.612,
+            0.633,
+            0.777,
+            0.805
+          ],
+          "content": "No need to store additional information for pre-sorting feature values Use small data type to store data (int8: bins)"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.947,
+            0.671,
+            0.985
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.041,
+            0.893,
+            0.12
+          ],
+          "level": 2,
+          "content": "Phân chia tối ưu cho các đặc trưng hạng mục"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.053,
+            0.225,
+            0.717,
+            0.271
+          ],
+          "content": "☐ Không sử dụng mã hóa one-hot (không tối ưu cho các mô hình học cây)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.289,
+            0.618,
+            0.332
+          ],
+          "content": "□ Sắp xếp các danh mục theo mục tiêu huấn luyện tại mỗi phân chia"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.349,
+            0.959,
+            0.459
+          ],
+          "content": "□ LightGBM sắp xếp biểu đồ (cho một đặc trưng hạng mục) dựa trên giá trị tích lũy của nó (sum\\_gradient / sum\\_hessian) và sau đó tìm điểm chia tốt nhất trên biểu đồ đã được sắp xếp."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.039,
+            0.039,
+            0.68,
+            0.12
+          ],
+          "level": 2,
+          "content": "Điều gì làm cho LightGBM nhanh?"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.055,
+            0.211,
+            0.177,
+            0.248
+          ],
+          "level": 2,
+          "content": "Reference"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.054,
+            0.266,
+            0.429,
+            0.306
+          ],
+          "level": 2,
+          "content": "☐ GOSS (Gradient Based One Side Sampling)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.325,
+            0.952,
+            0.432
+          ],
+          "content": "□ Giữ lại các trường hợp có gradient lớn trong khi thực hiện lấy mẫu ngẫu nhiên trên các trường hợp có độ đốc nhỏ."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.052,
+            0.458,
+            0.41,
+            0.504
+          ],
+          "level": 2,
+          "content": "☐ EFB (Exclusive Feature Bundling)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.103,
+            0.523,
+            0.737,
+            0.57
+          ],
+          "content": "□ Giảm số lượng đặc trưng bằng cách gom các đặc trưng lại với nhau."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.587,
+            0.927,
+            0.697
+          ],
+          "content": "□ Dữ liệu có nhiều đặc trưng mà chúng là đặc trưng độc quyền lẫn nhau, tức là chúng không\nbao giờ có giá trị bằng không cùng một lúc → gom chúng thành một đặc trưng duy nhất."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.039,
+            0.577,
+            0.117
+          ],
+          "level": 2,
+          "content": "Lưu ý khi tinh chỉnh tham số"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.425,
+            0.246,
+            0.503
+          ],
+          "content": "Tốc độ học và số\nLượng ước lượng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.094,
+            0.532,
+            0.259,
+            0.681
+          ],
+          "content": "Tốc độ học thấp →\nthường mang lại kết quả\ntốt hơn nhưng yêu cầu\nnhiều tài nguyên tính toán\nhơn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.316,
+            0.419,
+            0.463,
+            0.592
+          ],
+          "content": "Kiểm soát độ phức\ntạp của các cây.\nmax\\_depth\nnum\\_leaves (<=\n2^max\\_depth)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.428,
+            0.637,
+            0.511
+          ],
+          "content": "Ngăn chặn\nOverfitting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.51,
+            0.543,
+            0.679,
+            0.735
+          ],
+          "content": "min\\_data\\_in\\_leaf\nfeature\\_fraction\n(\\~colsample\\_bytree)\nbagging\\_fraction\nregularization: lambda\\_l1,\nlambda\\_l2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.74,
+            0.429,
+            0.855,
+            0.471
+          ],
+          "content": "Early Stopping"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.724,
+            0.503,
+            0.872,
+            0.569
+          ],
+          "content": "early\\_stopping\\_rounds: 50, 100"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.048,
+            0.22,
+            0.109
+          ],
+          "level": 2,
+          "content": "CatBoost"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.172,
+            0.438,
+            0.213
+          ],
+          "content": "□ Tự động xử lý các đặc trưng hạng mục."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.21,
+            0.708,
+            0.251
+          ],
+          "content": "☐ Cho phép Fast Gradient Boosting trên Cây quyết định bằng cách sử dụng GPU."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.251,
+            0.152,
+            0.285
+          ],
+          "content": "Github"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.289,
+            0.228,
+            0.323
+          ],
+          "content": "Documentations"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.312,
+            0.47,
+            0.638,
+            0.773
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_39_image_6.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 40,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.04,
+            0.072,
+            0.189,
+            0.133
+          ],
+          "level": 2,
+          "content": "AutoML"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.043,
+            0.21,
+            0.74,
+            0.289
+          ],
+          "content": "☐ Quá trình tự động hóa toàn bộ quy trình áp dụng máy học cho các bài toán thực tế.\n☐ AutoML Tools: H2O AutoML, PyCaret, AutoGluon, Auto-sklearn,..."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.219,
+            0.346,
+            0.797,
+            0.781
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_40_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.367,
+            0.709,
+            0.438,
+            0.766
+          ],
+          "content": "Preprocess data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.63,
+            0.455,
+            0.701,
+            0.535
+          ],
+          "content": "Define problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.683,
+            0.632,
+            0.721
+          ],
+          "content": "AutoML"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.947,
+            0.671,
+            0.985
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 41,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.039,
+            0.436,
+            0.119
+          ],
+          "level": 2,
+          "content": "Tại sao cần AutoML?"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.997,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.155,
+            0.503,
+            0.307,
+            0.58
+          ],
+          "content": "Tự động hóa xử lý dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.344,
+            0.503,
+            0.492,
+            0.583
+          ],
+          "content": "Tự động hóa thiết kế\nđặc trung"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.537,
+            0.479,
+            0.66,
+            0.589
+          ],
+          "content": "Tự động hóa tinh\nchình siêu tham\nsố"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.717,
+            0.486,
+            0.841,
+            0.6
+          ],
+          "content": "Tự động hóa việc đánh giá và lựa chọn mô hình."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.276,
+            0.948,
+            0.672,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 42,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.279,
+            0.11
+          ],
+          "level": 2,
+          "content": "H2O AutoML"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.205,
+            0.95,
+            0.287
+          ],
+          "content": "□ Có thể sử dụng để tự động hóa luồng làm việc trong học máy, bao gồm việc tự động huấn luyện và điều chỉnh nhiều mô hình trong một thời gian được người dùng chỉ định."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.286,
+            0.639,
+            0.325
+          ],
+          "content": "□ Đề xuất nhiều phương pháp giải thích mô hình - model explainability"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 43,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.222,
+            0.605,
+            0.655,
+            0.707
+          ],
+          "sub_type": "code",
+          "content": "```txt\n# View the AutoML Leaderboard\nlb = aml.leaderboard\nlb.head(rows=lb.nrows)  # Print all rows instead of default (10 rows)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.047,
+            0.397,
+            0.119
+          ],
+          "level": 2,
+          "content": "H2O AutoML: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.056,
+            0.193,
+            0.244,
+            0.232
+          ],
+          "level": 2,
+          "content": "Example notebook"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.079,
+            0.292,
+            0.202,
+            0.389
+          ],
+          "content": "Nhận diện biến dự đoán và biến phần hồi."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.339,
+            0.26,
+            0.691,
+            0.418
+          ],
+          "sub_type": "code",
+          "content": "```txt\nx = train.columns[:-1]\ny = 'isFraud'\n# For binary classification, response should be a factor\ntrain[y] = train[y].asfactor()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.064,
+            0.469,
+            0.18,
+            0.535
+          ],
+          "level": 2,
+          "content": "Chạy AutoML cho 30 mô hình cơ sở."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.235,
+            0.463,
+            0.688,
+            0.54
+          ],
+          "sub_type": "code",
+          "content": "```python\naml = H2OAutoML(max_models=30, seed=55, max_runtime_secs=30000)\naml.train(x=x, y=y, training_frame=train)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.075,
+            0.642,
+            0.169,
+            0.71
+          ],
+          "level": 2,
+          "content": "Xem bằng xếp hạng AutoML."
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.216,
+            0.765,
+            0.826,
+            0.925
+          ],
+          "content": "| model_id | auc | logloss | mean_per_class_error | rmse | mse |\n| --- | --- | --- | --- | --- | --- |\n| XGBoost_1_AutoML_20200722_023615 | 0.958309 | 0.0586498 | 0.168992 | 0.118115 | 0.0139513 |\n| StackedEnsemble_AllModels_AutoML_20200722_023615 | 0.957977 | 0.0649631 | 0.169127 | 0.118389 | 0.014016 |\n| StackedEnsemble_BestOfFamily_AutoML_20200722_023615 | 0.957977 | 0.0649631 | 0.169127 | 0.118389 | 0.014016 |\n| XGBoost_2_AutoML_20200722_023615 | 0.903715 | 0.110041 | 0.225731 | 0.144857 | 0.0209837 |",
+          "captions": [
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.67,
+                0.984
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_43_table_9.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 44,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.642,
+            0.111
+          ],
+          "level": 2,
+          "content": "H2O AutoML: Giải thích mô hình"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.054,
+            0.209,
+            0.47,
+            0.25
+          ],
+          "level": 2,
+          "content": "□ Hỗ trợ giải thích mô hình đơn và nhiều mô hình"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.041,
+            0.361,
+            0.527,
+            0.793
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_44_chart_3.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.534,
+            0.358,
+            0.981,
+            0.797
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_44_chart_4.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.671,
+            0.985
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 45,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.345,
+            0.12
+          ],
+          "level": 2,
+          "content": "PyCaret AutoML"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.208,
+            0.952,
+            0.287
+          ],
+          "content": "□ PyCaret là thư viện máy học mã nguồn mở, thư viện máy học ngôn ngữ thấp Python cho phép tự động hóa quy trình máy học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.288,
+            0.152,
+            0.321
+          ],
+          "content": "Github"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.326,
+            0.228,
+            0.359
+          ],
+          "content": "Documentations"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.297,
+            0.422,
+            0.363,
+            0.537
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.3,
+                0.548,
+                0.366,
+                0.601
+              ],
+              "content": "Data\nPreparation"
+            }
+          ],
+          "image_source": "images/page_45_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.456,
+            0.421,
+            0.522,
+            0.536
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.471,
+                0.548,
+                0.517,
+                0.601
+              ],
+              "content": "Model\nTraining"
+            }
+          ],
+          "image_source": "images/page_45_image_7.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.634,
+            0.421,
+            0.699,
+            0.536
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.624,
+                0.549,
+                0.714,
+                0.602
+              ],
+              "content": "Hyperparameter\nTuning"
+            }
+          ],
+          "image_source": "images/page_45_image_9.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.3,
+            0.661,
+            0.366,
+            0.774
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.296,
+                0.783,
+                0.374,
+                0.837
+              ],
+              "content": "Analysis & Interpretability"
+            }
+          ],
+          "image_source": "images/page_45_image_11.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.461,
+            0.661,
+            0.526,
+            0.775
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.469,
+                0.785,
+                0.521,
+                0.835
+              ],
+              "content": "Model\nSelection"
+            }
+          ],
+          "image_source": "images/page_45_image_13.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.636,
+            0.662,
+            0.701,
+            0.776
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.64,
+                0.782,
+                0.704,
+                0.836
+              ],
+              "content": "Experiment\nLogging"
+            }
+          ],
+          "image_source": "images/page_45_image_15.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 46,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.453,
+            0.121
+          ],
+          "level": 2,
+          "content": "PyCaret: Xử lý dữ liệu"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.211,
+            0.151,
+            0.248
+          ],
+          "content": "Details"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.14,
+            0.397,
+            0.268,
+            0.439
+          ],
+          "content": "Chuẩn bị dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.125,
+            0.479,
+            0.282,
+            0.628
+          ],
+          "content": "Dữ liệu bị thiếu\nCategorical encoding: One-hot, Label encoder,..\nTarget imbalanced\nRemove outliers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.327,
+            0.397,
+            0.469,
+            0.475
+          ],
+          "content": "Quy mô và chuyển\nđổi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.33,
+            0.516,
+            0.466,
+            0.606
+          ],
+          "content": "Normalization\nFeature Transformation\nTarget Transformation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.513,
+            0.398,
+            0.658,
+            0.439
+          ],
+          "continues_prev": true,
+          "content": "Thiết kế đặc trưng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.522,
+            0.474,
+            0.65,
+            0.608
+          ],
+          "content": "Feature Interaction\nGroup Aggregations\nBinning Feature\nCluster Feature"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.71,
+            0.399,
+            0.862,
+            0.44
+          ],
+          "content": "Lựa chọn đặc trưng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.708,
+            0.473,
+            0.866,
+            0.677
+          ],
+          "content": "Feature Selection\nMethod: univariate,\nsequential,..\nRemove Multicollinearity\nPCA\nIgnore Low Variance"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 47,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.046,
+            0.402,
+            0.121
+          ],
+          "level": 2,
+          "content": "PyCaret: Tính năng"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.211,
+            0.151,
+            0.249
+          ],
+          "content": "Details"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.094,
+            0.368,
+            0.162,
+            0.409
+          ],
+          "content": "Khởi tạo"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.048,
+            0.449,
+            0.208,
+            0.571
+          ],
+          "content": "Tạo ra các pipeline biến đổi đến tất cả tham số đưa vào của hàm\nĐối số yêu cầu: data, target"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.234,
+            0.366,
+            0.395,
+            0.649
+          ],
+          "content": "Huấn luyện\nHuấn luyện và đánh giá hiệu suất của tất cả các bộ uróc lượng có sẵn trong thư viện mô hình bằng cách sử dụng kiểm tra chéo.C\nSo sánh mô hình, tạo mô hình"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.475,
+            0.367,
+            0.529,
+            0.409
+          ],
+          "content": "Tôi ựu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.421,
+            0.441,
+            0.582,
+            0.65
+          ],
+          "content": "Hàm này tinh chính các\nsiêu tham số của mô\nhình.\nTình chính mô hình, tạo\nmô hình kết hợp và tối ưu\nhóa ngưỡng,..."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.656,
+            0.368,
+            0.733,
+            0.408
+          ],
+          "content": "Phân tích"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.611,
+            0.441,
+            0.777,
+            0.615
+          ],
+          "content": "Phân tích và giải thích mô hình\nVẽ đỏ thị mô hình, diễn giải mô hình, kiểm tra tính công bằng,..."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.845,
+            0.367,
+            0.927,
+            0.407
+          ],
+          "content": "Triển khai"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.804,
+            0.442,
+            0.969,
+            0.647
+          ],
+          "content": "Các chức năng triển khai như mô hình dự đoán, lưu mô hình, kiểm tra sự thay đổi dữ liệu, triển khai trên AWS, Azure, Tạo API, Docker"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.947,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 48,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.043,
+            0.047,
+            0.31,
+            0.12
+          ],
+          "level": 2,
+          "content": "PyCaret: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.212,
+            0.246,
+            0.247
+          ],
+          "content": "Notebook example"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.251,
+            0.219,
+            0.286
+          ],
+          "content": "Example github"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.321,
+            0.586,
+            0.349
+          ],
+          "content": "\\- Normalization of the numerical features with Z-Score."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.354,
+            0.614,
+            0.383
+          ],
+          "content": "\\- Feature Selection with permutation importance techniques."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.316,
+            0.388,
+            0.418,
+            0.416
+          ],
+          "content": "\\- Outliers Removal."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.421,
+            0.547,
+            0.45
+          ],
+          "content": "\\- Features Removal based on Multicollinearity."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.316,
+            0.455,
+            0.493,
+            0.485
+          ],
+          "content": "\\- Features Scalling Transformation."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.489,
+            0.49,
+            0.517
+          ],
+          "content": "\\- Ignore low variance on Features."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.523,
+            0.663,
+            0.551
+          ],
+          "content": "• PCA for Dimensionality Reduction, as the dataset has many features."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.557,
+            0.7,
+            0.585
+          ],
+          "content": "\\- Numeric binning on the features MonthlyCharges and TotalCharges."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.316,
+            0.591,
+            0.536,
+            0.617
+          ],
+          "content": "• 70% of samples for Train and 30% for test."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.316,
+            0.624,
+            0.465,
+            0.651
+          ],
+          "content": "• Fix Imbalance with SMOTE."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.265,
+            0.681,
+            0.804,
+            0.859
+          ],
+          "sub_type": "code",
+          "content": "```python\nexp01 = setup(data=data, target=\"Churn\", session_id=RANDOM_SEED, ignore_features=[\"customerID\"],\n        numeric_features=[\"SeniorCitizen\"], normalize=True,\n        feature_selection=True, remove_outliers=True,\n        remove_multicollinearity=True, fix_imbalance=True,\n        transformation=True, ignore_low_variance=True, pca=True,\n        bin_numeric_features=[\"MonthlyCharges\", \"TotalCharges\"],\n        silent=True, experiment_name=\"customer-churn-prediction\",\n        log_experiment=True)\n```",
+          "captions": [
+            {
+              "bbox": [
+                0.277,
+                0.948,
+                0.67,
+                0.983
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 49,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.31,
+            0.121
+          ],
+          "level": 2,
+          "content": "PyCaret: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.901,
+            0.251
+          ],
+          "content": "□ So sánh các mô hình, điều chỉnh siêu tham số, mô hình tập hợp (bagging, boosting, blending)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.251,
+            0.219,
+            0.286
+          ],
+          "content": "Example github"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.084,
+            0.362,
+            0.39,
+            0.453
+          ],
+          "sub_type": "code",
+          "content": "```python\ntop_model = compare_models(fold=K_FOLDS,\n                    sort=\"F1\",\n                    n_select=1,\n                    blacklist=[\"gbc\", \"catboost\"])\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.076,
+            0.469,
+            0.522,
+            0.67
+          ],
+          "content": "<table><tr><td colspan=\"2\"></td><td>Model</td><td>Accuracy</td><td>AUC</td><td>Recall</td><td>Prec.</td><td>F1</td><td>Kappa</td><td>MCC</td><td>TT (Sec)</td></tr><tr><td>0</td><td></td><td>Logistic Regression</td><td>0.7516</td><td>0.8373</td><td>0.7777</td><td>0.5349</td><td>0.6336</td><td>0.4553</td><td>0.4739</td><td>0.0468</td></tr><tr><td>1</td><td></td><td>Ridge Classifier</td><td>0.7416</td><td>0.0000</td><td>0.7897</td><td>0.5216</td><td>0.6279</td><td>0.4424</td><td>0.4653</td><td>0.0136</td></tr><tr><td>2</td><td></td><td>Linear Discriminant Analysis</td><td>0.7414</td><td>0.8358</td><td>0.7897</td><td>0.5213</td><td>0.6277</td><td>0.4421</td><td>0.4650</td><td>0.0485</td></tr><tr><td>3</td><td></td><td>SVM - Linear Kernel</td><td>0.7419</td><td>0.0000</td><td>0.7356</td><td>0.5253</td><td>0.6115</td><td>0.4267</td><td>0.4417</td><td>0.0532</td></tr><tr><td>4</td><td></td><td>Ada Boost Classifier</td><td>0.7464</td><td>0.8042</td><td>0.7004</td><td>0.5313</td><td>0.6040</td><td>0.4226</td><td>0.4316</td><td>1.3652</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_49_table_5.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.082,
+            0.757,
+            0.516,
+            0.842
+          ],
+          "sub_type": "code",
+          "content": "```python\ntuned_model = tune_model(estimator=top_model, fold=K_FOLDS,\n                     optimize=\"F1\", choose_better=True,\n                     verbose=False)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.557,
+            0.365,
+            0.931,
+            0.401
+          ],
+          "sub_type": "code",
+          "content": "```txt\nbagged_model = ensemble_model(tuned_model, fold=K_FOLDS)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.555,
+            0.47,
+            0.943,
+            0.521
+          ],
+          "sub_type": "code",
+          "content": "```python\nboosted_model = ensemble_model(tuned_model, fold=K_FOLDS,\n                          method=\"Boosting\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.558,
+            0.585,
+            0.943,
+            0.637
+          ],
+          "sub_type": "code",
+          "content": "```python\nblended_model = blend_models(estimator_list=[tuned_model, boosted_model],\n                    fold=K_FOLDS)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 50,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.047,
+            0.4,
+            0.11
+          ],
+          "level": 2,
+          "content": "AutoGluon AutoML"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.209,
+            0.637,
+            0.25
+          ],
+          "content": "□ Auto ML cho hình ảnh, văn bản, chuỗi thời gian và dữ liệu dạng bằng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.252,
+            0.229,
+            0.284
+          ],
+          "content": "Documentations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.286,
+            0.423,
+            0.324
+          ],
+          "content": "https://github.com/autogluon/autogluon"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.982
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 51,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.046,
+            0.454,
+            0.117
+          ],
+          "level": 2,
+          "content": "AutoGluon: Tính năng"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.211,
+            0.151,
+            0.248
+          ],
+          "content": "Details"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.399,
+            0.275,
+            0.479
+          ],
+          "content": "Thiết kế đặc trưng\ntùy chỉnh"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.123,
+            0.521,
+            0.283,
+            0.671
+          ],
+          "content": "Giá trị bị mất\nMã hóa phân loại: One-hot,\nMã hóa nhãn,..\nMục tiêu mất cân bằng\nXóa các ngoại lệ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.315,
+            0.398,
+            0.479,
+            0.475
+          ],
+          "content": "Điều chỉnh siêu tham\nsố"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.334,
+            0.514,
+            0.462,
+            0.606
+          ],
+          "content": "Chuẩn hóa\nChuyển đổi đặc trưng\nChuyển đổi mục tiêu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.521,
+            0.397,
+            0.65,
+            0.439
+          ],
+          "content": "Kết hợp mô hình"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.521,
+            0.475,
+            0.65,
+            0.575
+          ],
+          "content": "Bagging\nStacking\nWeighted Ensemble"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.713,
+            0.399,
+            0.859,
+            0.677
+          ],
+          "content": "Khác\nKhả năng giải thích (độ quan trọng của đặc trưng)\nTăng tốc suy luận\nChung cắt mẫu\nHỗ trợ đa dữ liệu: tabular+image+text"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.278,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 52,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.047,
+            0.364,
+            0.119
+          ],
+          "level": 2,
+          "content": "AutoGluon: Ví dụ"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.056,
+            0.212,
+            0.243,
+            0.247
+          ],
+          "level": 2,
+          "content": "Example notebook"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.257,
+            0.309,
+            0.72,
+            0.815
+          ],
+          "sub_type": "code",
+          "content": "```python\n# Fit end-to-end with raw data in under 1 hour, with one line of code\npredictor = TabularPredictor(\n    label=label,\n    eval_metric='log_loss',\n    learner_kwargs={'ignored_columns': ['id']}\n).fit(\n    train_data,\n    presets='best_quality',\n    hyperparameters={\n        KNNRapidsModel: {},\n        LinearRapidsModel: {},\n        'RF': {},\n        'XGB': {'ag_args_fit': {'num_gpus': 1}},\n        'CAT': {'ag_args_fit': {'num_gpus': 1}},\n        'GBM': [{}, {'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, 'GBMLarge'],\n        'NN': {'ag_args_fit': {'num_gpus': 1}},\n        'FASTAI': {'ag_args_fit': {'num_gpus': 1}},\n    },\n)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 53,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.047,
+            0.283,
+            0.111
+          ],
+          "level": 2,
+          "content": "Auto-sklearn"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.009,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.054,
+            0.207,
+            0.903,
+            0.252
+          ],
+          "content": "□ Bộ công cụ máy học tự động và một công cụ thay thế sẵn có cho công cụ ước tính scikit-learn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.251,
+            0.148,
+            0.287
+          ],
+          "content": "github"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.154,
+            0.438,
+            0.869,
+            0.726
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.345,
+                0.786,
+                0.643,
+                0.823
+              ],
+              "content": "https://github.com/automl/auto-sklearn"
+            },
+            {
+              "bbox": [
+                0.277,
+                0.947,
+                0.67,
+                0.984
+              ],
+              "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_53_image_4.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 54,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.041,
+            0.046,
+            0.654,
+            0.118
+          ],
+          "level": 2,
+          "content": "Auto-sklearn: Làm sao sử dụng?"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.294,
+            0.225,
+            0.771,
+            0.587
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_54_image_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.298,
+            0.647,
+            0.782,
+            0.798
+          ],
+          "content": "import autosklearn.classification\ncls = autosklearn.classification.AutoSklearnClassifier()\ncls.fit(X\\_train, y\\_train)\npredictions = cls.predict(X\\_test)"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.947,
+            0.67,
+            0.984
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 55,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.042,
+            0.047,
+            0.385,
+            0.119
+          ],
+          "level": 2,
+          "content": "Tài liệu tham khảo"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.937,
+            0.01,
+            0.996,
+            0.093
+          ],
+          "content": ""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.21,
+            0.502,
+            0.247
+          ],
+          "content": "https://web.stanford.edu/class/stats202/intro.html"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.249,
+            0.76,
+            0.285
+          ],
+          "content": "https://towardsdatascience.com/what-makes-lightgbm-lightning-fast-a27cf0d9785e"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.286,
+            0.709,
+            0.323
+          ],
+          "content": "http://arogozhnikov.github.io/2016/06/24/gradient\\_boosting\\_explained.html"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.324,
+            0.442,
+            0.359
+          ],
+          "content": "https://aman.ai/cs229/ensemble-methods/"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.361,
+            0.626,
+            0.397
+          ],
+          "content": "https://web.stanford.edu/class/stats202/notes/Tree/Boosting.html"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.399,
+            0.425,
+            0.435
+          ],
+          "content": "https://www.geeksforgeeks.org/xgboost/"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.056,
+            0.437,
+            0.453,
+            0.472
+          ],
+          "content": "https://neptune.ai/blog/xgboost-vs-lightgbm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.055,
+            0.473,
+            0.813,
+            0.509
+          ],
+          "content": "☐ Cheat Sheet: https://drive.google.com/drive/folders/1IGiethDMHashf9Gsfx3sPTsJOnl15Zvx"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.277,
+            0.948,
+            0.67,
+            0.983
+          ],
+          "content": "Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)"
+        }
+      ]
+    },
+    {
+      "page_idx": 56,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.434,
+            0.099,
+            0.569,
+            0.293
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_56_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.414,
+            0.428,
+            0.586,
+            0.52
+          ],
+          "level": 2,
+          "content": "HỔI ĐÁP"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.961,
+            0.997,
+            0.995
+          ],
+          "content": "57"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "PowerPoint Presentation",
+      "authors": [
+        "Trần Hoàng Lộc"
+      ],
+      "languages": [
+        "x"
+      ],
+      "created_at": "2024-05-09T11:15:08+07:00",
+      "modified_at": "2024-05-09T11:15:08+07:00",
+      "creator_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "producer_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "page_count": 57,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 40,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 41,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 42,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 43,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 44,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 45,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 46,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 47,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 48,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 49,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 50,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 51,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 52,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 53,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 54,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 55,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 56,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

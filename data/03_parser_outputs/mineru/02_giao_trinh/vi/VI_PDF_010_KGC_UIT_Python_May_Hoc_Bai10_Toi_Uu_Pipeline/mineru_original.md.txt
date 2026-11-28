@@ -1,0 +1,691 @@
+## XÂY DỰNG MÔ HÌNH MÁY HỌC
+
+## NỘI DUNG
+
+## I. Model Selection và Evaluation
+
+A. Holdout Validation
+
+B. Cross Validation
+
+c. Hyper-parameters Optimization
+
+D. Evaluation Metric
+
+## II. Handle Imbalanced Data Method
+
+A. Resampling
+
+B. Cost sensitive learning
+
+c. Tools
+
+## III. Error Analysis Model
+
+![](images/page_1_image_11.jpg)
+
+## Holdout Validation
+
+□ Một phương pháp đơn giản để đánh giá các mô hình trên dữ liệu chưa biết
+
+☐ Chia dư liệu hiện tại thành các tập con riêng biệt để tạo thành tập huấn luyện và tập xác thực (và có thể tập kiểm tra)
+
+![](images/page_2_image_4.jpg)
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Vân đề với Holdout Validation
+
+![](images/page_3_chart_2.jpg)
+
+## Vân đề với Holdout Validation
+
+![](images/page_4_chart_2.jpg)
+
+## Cross Validation là gì?
+
+☐ Cross validation (CV) là một kỹ thuật được sử dụng trong ML và thống kê để đánh giá hiệu suất của mô hình trên dữ liệu chưa nhìn thấy
+
+□ CV là phương pháp lấy mẫu lại sử dụng các phần khác nhau của dữ liệu để kiểm tra và huấn luyện mô hình trên các lần lập khác nhau.
+
+![](images/page_5_image_4.jpg)
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Tại sao chúng ta cần Cross Validation?
+
+Cross Validation
+
+Validation
+
+![](images/page_6_image_3.jpg)
+
+Why CV is often preferred over simple validation strategy?
+
+![](images/page_6_image_5.jpg)
+
+![](images/page_6_image_6.jpg)
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+Đánh giá độ
+ồn định của
+mô hình
+
+## Tại sao Cross Validation?
+
+Sử dụng tốt hơn
+dữ liệu hạn chế
+
+![](images/page_7_chart_4.jpg)
+
+Ít nhạy cảm hơn
+với việc phân
+vùng dữ liệu
+
+Lựa chọn mô hình và điều chỉnh siêu tham số
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## CV: Advantages & Disadvantages
+
+Advantages
+Thường được ưu tiên khi cần
+ước tính chính xác và đáng tin
+cậy hơn về hiệu suất mô hình,
+đặc biệt là để lựa chọn mô hình
+và điều chỉnh siêu tham số
+
+Disadvantages
+Tăng chi phí tính toán do huấn
+luyện và đánh giá mô hình nhiều
+lần
+
+Tập dữ liệu lớn → simple validation strategy có thể thực tế hơn
+
+## Các loại Cross Validation
+
+KFold
+RepeatedKFold
+
+Leave One Out
+
+![](images/page_9_chart_4.jpg)
+
+StratifiedKFold
+
+GroupKFold
+
+## KFold
+
+□ Một mô hình được huấn luyện bằng cách sử dụng (k - 1) số fold làm dữ liệu huấn luyện, một fold gấp để xác thực
+
+□ Kết quả mô hình được đánh giá trên phân dữ liệu còn lại (được sử dụng làm bộ kiểm tra để tính toán độ đo hiệu suất, chẳng hạn như độ chính xác)
+
+<table><tr><td colspan="6">All Data</td></tr><tr><td colspan="5">Training data</td><td>Test data</td></tr><tr><td></td><td>Fold 1</td><td>Fold 2</td><td>Fold 3</td><td>Fold 4</td><td>Fold 5</td></tr><tr><td>Split 1</td><td>Fold 1</td><td>Fold 2</td><td>Fold 3</td><td>Fold 4</td><td>Fold 5</td></tr><tr><td>Split 2</td><td>Fold 1</td><td>Fold 2</td><td>Fold 3</td><td>Fold 4</td><td>Fold 5</td></tr><tr><td>Split 3</td><td>Fold 1</td><td>Fold 2</td><td>Fold 3</td><td>Fold 4</td><td>Fold 5</td></tr><tr><td>Split 4</td><td>Fold 1</td><td>Fold 2</td><td>Fold 3</td><td>Fold 4</td><td>Fold 5</td></tr><tr><td>Split 5</td><td>Fold 1</td><td>Fold 2</td><td>Fold 3</td><td>Fold 4</td><td>Fold 5</td></tr></table>
+
+```python
+>>> import numpy as np
+>>> from sklearn.model_selection import KFold
+
+>>> X = ["a", "b", "c", "d"]
+>>> kf = KFold(n_splits=2)
+>>> for train, test in kf.split(X):
+...     print("%s %s" % (train, test))
+[2 3] [0 1]
+[0 1] [2 3]
+```
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Leave One Out (LOO)
+
+☐ Với n mẫu, có n tập huấn luyện và n tập kiểm tra khác nhau (KFold với k = n) → chi phí tính toán đất, phương sai cao
+
+☐ Theo nguyên tắc chung, hâu hết các nghiên cứu đều cho rằng nên ưu tiên 5 hoặc 10-CV so với LOO (có thể đánh giá quá cao lôi khái quát hóa)
+
+```txt
+Iteration 1: training set test set score1
+    x1 x2 x3 x4 x5 x6
+Iteration 2: training set test set score2
+    x1 x2 x3 x4 x5 x6
+Iteration 3: training set test set training set score3
+    x1 x2 x3 x4 x5 x6
+Iteration 4: training set test set training set score4
+    x1 x2 x3 x4 x5 x6
+Iteration 5: test set training set score5
+    x1 x2 x3 x4 x5 x6
+Iteration 6: test set training set score6
+```
+
+```python
+>>> from sklearn.model_selection import LeaveOneOut
+
+>>> X = [1, 2, 3, 4]
+>>> loo = LeaveOneOut()
+>>> for train, test in loo.split(X):
+...     print("%s %s" % (train, test))
+[1 2 3] [0]
+[0 2 3] [1]
+[0 1 3] [2]
+[0 1 2] [3]
+```
+
+![](images/page_12_image_0.jpg)
+
+## StratifiedKFold
+
+Biến thể của KFold trả về các nếp gấp phân tầng: mỗi bộ chứa khoảng phần trăm mẫu của từng lớp mục tiêu dưới dạng bộ hoàn chỉnh
+
+![](images/page_12_image_4.jpg)
+
+Class Distributions
+
+![](images/page_12_image_6.jpg)
+
+![](images/page_12_image_7.jpg)
+
+Round 1
+
+Round 2
+
+![](images/page_12_image_10.jpg)
+
+Round 3
+
+kf = StratifiedKFold(n\_splits=5,shuffle=True,random\_state=42)
+for fold, (train\_index, val\_index) in enumerate(kf.split(X,y)):
+
+X\_train, X\_val = X.loc[train\_index], X.loc[val\_index]
+y\_train, y\_val = y.loc[train\_index], y.loc[val\_index]
+
+Round 4
+
+Round 5
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## GroupKFold
+
+☐ Biến thể của KFold đảm bảo rằng cùng một nhóm không có mặt trong cả tập huấn luyện và tập kiểm tra
+
+![](images/page_13_chart_3.jpg)
+
+## Tổng hợp các phương pháp chia CV
+
+## Khi nào nên sử dụng các phương pháp?
+
+Việc phân phối dữ liệu là uniform
+
+Dữ liệu không có mất cân bằng giữa các lớp
+
+KFOLD
+
+Dữ liệu là sự mất cân bằng giữa các lớp
+
+Stratified KFOLD
+
+Dữ liệu có cấu trúc nhóm
+
+Đảm bảo rằng mô hình được thử nghiệm trên nhóm chưa từng thấy trước đó, phải tránh overfitting
+
+Group KFOLD
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Sklearn: Splitter Class
+
+## sklearn.model\_selection
+
+<table><tr><td colspan="2">Splitter Classes</td></tr><tr><td>model_selection.GroupKFold([n_splits])</td><td>K-fold iterator variant with non-overlapping groups.</td></tr><tr><td>model_selection.GroupShuffleSplit([...])</td><td>Shuffle-Group(s)-Out cross-validation iterator</td></tr><tr><td>model_selection.KFold([n_splits, shuffle, ...])</td><td>K-Folds cross-validator</td></tr><tr><td>model_selection.LeaveOneGroupOut()</td><td>Leave One Group Out cross-validator</td></tr><tr><td>model_selection.LeavePGroupsOut(n_groups)</td><td>Leave P Group(s) Out cross-validator</td></tr><tr><td>model_selection.LeaveOneOut()</td><td>Leave-One-Out cross-validator</td></tr><tr><td>model_selection.LeavePOut(p)</td><td>Leave-P-Out cross-validator</td></tr><tr><td>model_selection.PredefinedSplit(test_fold)</td><td>Predefined split cross-validator</td></tr><tr><td>model_selection.RepeatedKFold(*[, n_splits, ...])</td><td>Repeated K-Fold cross validator.</td></tr><tr><td>model_selection.RepeatedStratifiedKFold(*[, ...])</td><td>Repeated Stratified K-Fold cross validator.</td></tr><tr><td>model_selection.ShuffleSplit([n_splits, ...])</td><td>Random permutation cross-validator</td></tr><tr><td>model_selection.StratifiedKFold([n_splits, ...])</td><td>Stratified K-Folds cross-validator.</td></tr><tr><td>model_selection.StratifiedShuffleSplit([...])</td><td>Stratified ShuffleSplit cross-validator</td></tr><tr><td>model_selection.StratifiedGroupKFold([...])</td><td>Stratified K-Folds iterator variant with non-overlapping groups.</td></tr><tr><td>model_selection.TimeSeriesSplit([n_splits, ...])</td><td>Time Series cross-validator</td></tr></table>
+
+## Lựa chọn mô hình
+
+□ Lựa chọn mô hình bao gồm việc chọn mô hình dự đoán dự kiến sẽ cung cấp hiệu suất tốt nhất trên dữ liệu trong tương lai.
+
+Xác định tập hợp các mô hình ứng viên cần kiểm tra
+
+Một thực tế phổ biến là xác định một tập hợp các mô hình ngày càng phức tạp
+
+Đánh giá hiệu suất của từng mô hình bằng một phương pháp cross-validation (CV)
+
+CV score cung cấp ước tính về hiệu suất khái quát hóa
+
+![](images/page_16_image_7.jpg)
+
+## Quy trình lựa chọn mô hình
+
+□ Phương pháp tiêu chuẩn bao gồm bốn bước chính:
+
+![](images/page_17_image_3.jpg)
+
+Selection
+
+source:https://fraud-detection-handbook.github.io
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Hyper-parameters Optimization
+
+□ Siêu tham số là cài đặt hoặc cấu hình của mô hình được đặt trước khi quá trình huấn luyện bắt đầu và không thể học trực tiếp từ dữ liệu.
+
+□ Tối ưu hóa siêu tham số là quá trình tìm ra sự kết hợp tốt nhất của các siêu tham số cho một mô hình học máy nhằm tối ưu hóa hiệu suất của nó trên một tác vụ nhất định.
+
+```python
+Hyperparameter_tuning (training_data, validation_data, hp_list):
+    hp_perf = []
+    foreach hp_setting in hp_list:
+        m = train_model(training_data, hp_setting)
+        validation_results = eval_model(m, validation_data)
+        hp_perf.append(validation_results)
+    best_hp_setting = hp_list[max_index(hp_perf)]
+    best_m = train_model(training_data.append(validation_data), best_hp_setting)
+    return (best_hp_setting, best_m)
+```
+
+## pseudo code for Hyper-parameters Optimization
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Cách tìm kiếm siêu tham số?
+
+□ Tìm kiểm bao gồm:
+
+□ mô hình ước tính/ (hồi quy, phân loại,...)
+
+□ Không gian tham số
+
+□ Phương pháp tìm kiếm hoặc lấy mẫu ứng viên
+
+□ Xác thực chéo
+
+□ Hàm tính điểm
+
+![](images/page_19_image_8.jpg)
+
+## Phương pháp
+
+□ Dưới đây là một số phương pháp tối ưu hóa siêu tham số thường được sử dụng trong học máy:
+
+Grid Search
+
+![](images/page_20_chart_4.jpg)
+
+Random Search
+
+Bayesian Optimization
+
+## Grid Search & Random Search
+
+Tìm kiểm lưới: chọn ra một lưới các giá trị siêu tham số, đánh giá từng giá trị trong số chúng và trả về giá trị có hiệu suất cao nhật.
+
+Tìm kiểm ngẫu nhiên là một biến thể nhỏ trên tìm kiếm lưới. Thay vì tìm kiếm trên toàn bộ lưới, tìm kiếm ngẫu nhiên chỉ đánh giá một mẫu điểm ngẫu nhiên trên lưới
+
+![](images/page_21_image_4.jpg)
+
+(a) Standard Grid Search
+
+![](images/page_21_image_6.jpg)
+
+(b) Random Search
+
+```python
+#import all necessary libraries
+import sklearn
+from sklearn.datasets import load_breast_cancer
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.datasets import load_breast_cancer
+from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import train_test_split
+
+#load the dataset and split it into training and testing sets
+dataset = load_breast_cancer()
+X=dataset.data
+Y=dataset.target
+X_train, X_test, y_train, y_test = train_test_split(
+        X,Y,test_size = 0.30, random_state = 101)
+# train the model on train set without using GridSearchCV
+model = SVC()
+model.fit(X_train, y_train)
+
+# print prediction results
+predictions = model.predict(X_test)
+print(classification_report(y_test, predictions))
+
+OUTPUT:
+precision    recall f1-score support
+
+    0      0.95     0.85     0.90     66
+    1      0.91     0.97     0.94     105
+
+    accuracy                     0.92     171
+    macro avg       0.93     0.91     0.92     171
+    weighted avg       0.93     0.92     0.92     171
+
+# defining parameter range
+param_grid = {'C': [0.1, 1, 10, 100],
+              'gamma': [1, 0.1, 0.01, 0.001, 0.0001],
+              'gamma':'scale', 'auto'],
+              'kernel': ['linear']}
+
+grid = GridSearchCV(SVC(), param_grid, refit = True, verbose = 3,n_jobs=-1)
+
+# fitting the model for grid search
+grid.fit(X_train, y_train)
+
+# print best parameter after tuning
+print(grid.best_params )
+grid_predictions = grid.predict(X_test)
+
+# print classification report
+print(classification_report(y_test, grid_predictions))
+
+Output:
+{'C': 100, 'gamma': 'scale', 'kernel': 'linear'}
+           precision   recall f1-score support
+        0      0.97     0.91     0.94     66
+        1      0.94     0.98     0.96     105
+
+        accuracy                     0.95     171
+        macro avg       0.96     0.95     0.95     171
+        weighted avg       0.95     0.95     0.95     171
+```
+
+## Grid Search: Ví dụ
+
+## ☐ Default hyperparams & hyperparams optimize with GridSearchCV
+
+|  | mean radius | mean texture | mean perimeter | mean area | mean smoothness | mean compactness | mean concavity | mean concave points | mean symmetry | mean fractal dimension | ... | worst radius | worst texture | worst perimeter | worst area | wors smoothness |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | 17.99 | 10.38 | 122.80 | 1001.0 | 0.11840 | 0.27760 | 0.3001 | 0.14710 | 0.2419 | 0.07871 | ... | 25.38 | 17.33 | 184.60 | 2019.0 | 0.162 |
+| 1 | 20.57 | 17.77 | 132.90 | 1326.0 | 0.08474 | 0.07864 | 0.0869 | 0.07017 | 0.1812 | 0.05667 | ... | 24.99 | 23.41 | 158.80 | 1956.0 | 0.123 |
+| 2 | 19.69 | 21.25 | 130.00 | 1203.0 | 0.10960 | 0.15990 | 0.1974 | 0.12790 | 0.2069 | 0.05999 | ... | 23.57 | 25.53 | 152.50 | 1709.0 | 0.144 |
+| 3 | 11.42 | 20.38 | 77.58 | 386.1 | 0.14250 | 0.28390 | 0.2414 | 0.10520 | 0.2597 | 0.09744 | ... | 14.91 | 26.50 | 98.87 | 567.7 | 0.209 |
+| 4 | 20.29 | 14.34 | 135.10 | 1297.0 | 0.10030 | 0.13280 | 0.1980 | 0.10430 | 0.1809 | 0.05883 | ... | 22.54 | 16.67 | 152.20 | 1575.0 | 0.137 |
+
+5 rows × 30 columns
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Bayesian Optimization
+
+## Tools
+
+☐ Bayesian Optimization: github
+
+Hyperopt: github
+
+Optuna: github
+
+## Installation
+
+\- PyPI (pip):
+
+\$ pip install bayesian-optimization
+
+\- Conda from conda-forge channel:
+
+\$ conda install -c conda-forge bayesian-optimization
+
+Install hyperopt from PyPI
+
+pip install hyperopt
+
+Optuna is available at the Python Package Index and on Anaconda Cloud.
+
+\# PyPI
+
+\$ pip install optuna
+
+\# Anaconda Cloud
+
+\$ conda install -c conda-forge optuna
+
+Optuna supports Python 3.7 or newer.
+
+## How to Optimize Hyperparameters with Bayesian Optimization TheAiEdge.io
+
+![](images/page_23_image_20.jpg)
+
+Step 2: Split samples and sample from good distribution
+
+![](images/page_23_image_22.jpg)
+
+Step 3: Repeat process until convergence
+
+![](images/page_23_image_24.jpg)
+
+![](images/page_23_chart_25.jpg)
+
+https://newsletter.theaiedqe.io
+
+## Ví dụ: Bước 1
+
+□ Các thông số cần điều chỉnh
+
+□ Lưu ý: các giá trị cho siêu tham số phải có ý nghĩa:
+
+□ ‘num\_leaves' & 'max\_depth' cần phải là một số nguyên
+
+□ 'feature\_fraction' & 'bagging\_fraction' nên từ 0 đến 1
+
+```python
+def lgb_eval(num_leaves, feature_fraction, bagging_fraction, max_depth, lambda_11, lambda_12, min_split_gain, min_child_weight):
+    params = {'application':'binary','num_iterations':4000, 'learning_rate':0.05, 'early_stopping_round':100, 'metric':'auc'}
+    params["num_leaves"] = round(num_leaves)
+    params['feature_fraction'] = max(min(feature_fraction, 1), 0)
+    params['bagging_fraction'] = max(min(bagging_fraction, 1), 0)
+    params['max_depth'] = round(max_depth)
+    params['lambda_11'] = max(lambda_11, 0)
+    params['lambda_12'] = max(lambda_12, 0)
+    params['min_split_gain'] = min_split_gain
+    params['min_child_weight'] = min_child_weight
+    cv_result = lgb.cv(params, train_data, nfold=n_folds, seed=random_seed, stratified=True, verbose_eval =200, metrics=['auc'])
+    return max(cv_result['auc-mean'])
+```
+
+## Ví dụ: Bước 2
+
+□ Đặt phạm vi cho mỗi siêu tham số
+
+□ Cổ gắng làm cho phạm vi càng hẹp càng tốt
+
+```python
+lgbBO = BayesianOptimization(lgb_eval, {'num_leaves': (24, 45),
+                      'feature_fraction': (0.1, 0.9),
+                      'bagging_fraction': (0.8, 1),
+                      'max_depth': (5, 8.99),
+                      'lambda_l1': (0, 5),
+                      'lambda_l2': (0, 3),
+                      'min_split_gain': (0.001, 0.1),
+                      'min_child_weight': (5, 50)}, random_state=0)
+```
+
+## Ví dụ: Bước 3
+
+□ Có rất nhiều thông số bạn có thể dùng để tối đa hóa, tuy nhiên, những thông số quan trọng nhất là:
+
+□ n\_iter: Bạn muốn thực hiện bao nhiêu bước tối ưu hóa bayesian. Càng nhiều bước, bạn càng có nhiều khả năng tìm thấy mức tối đa tốt.
+
+□ init\_points: Bạn muốn thực hiện bao nhiêu bước khám phá ngẫu nhiên. Khám phá ngẫu nhiên có thể giúp bằng cách đa dạng hóa không gian thăm dò.
+
+```python
+# optimize
+lgbBO.maximize(init_points=init_round, n_iter=opt_round)
+
+# output optimization process
+if output_process==True: lgbBO.points_to_csv("bayes_opt_result.csv")
+
+# return best parameters
+return lgbBO.res['max']['max_params']
+
+opt_params = bayes_parameter_opt_lgb(X, y, init_round=5, opt_round=10, n_folds=3, random_seed=6, n_estimators=100, learning_rate=0.05)
+```
+
+## Ví dụ: Kết quả
+
+## Result
+
+<table><tr><td colspan="10">Initialization</td></tr><tr><td colspan="10">Step | Time | Value | bagging_fraction | feature_fraction | lambda_11 | lambda_12 | max_depth | min_child_wei</td></tr><tr><td colspan="10">ght | min_split_gain | num_leaves |</td></tr><tr><td colspan="10">1 | 00m59s | 0.74761 | 0.9583 | 0.6167 | 4.8931 | 1.9198 | 5.3476 | 32.7</td></tr><tr><td colspan="10">936 | 0.0272 | 35.5251 |</td></tr><tr><td colspan="10">2 | 00m59s | 0.74885 | 0.9058 | 0.4501 | 3.9958 | 0.4301 | 5.0807 | 32.5</td></tr><tr><td colspan="10">443 | 0.0776 | 39.0190 |</td></tr><tr><td colspan="10">3 | 01m09s | 0.74990 | 0.9136 | 0.8134 | 2.3074 | 2.8340 | 8.3222 | 32.7</td></tr><tr><td colspan="10">620 | 0.0462 | 36.6580 |</td></tr><tr><td colspan="10">4 | 00m51s | 0.75006 | 0.9851 | 0.8709 | 3.9026 | 1.5655 | 8.1048 | 47.4</td></tr><tr><td colspan="10">687 | 0.0573 | 35.4425 |</td></tr><tr><td colspan="10">5 | 00m35s | 0.75089 | 0.8142 | 0.4068 | 0.5914 | 1.2440 | 8.4713 | 35.6</td></tr><tr><td colspan="10">819 | 0.0029 | 32.8968 |</td></tr><tr><td colspan="10">Bayesian Optimization</td></tr><tr><td colspan="10">Step | Time | Value | bagging_fraction | feature_fraction | lambda_11 | lambda_12 | max_depth | min_child_wei</td></tr><tr><td colspan="10">ght | min_split_gain | num_leaves |</td></tr><tr><td colspan="10">6 | 00m45s | 0.75122 | 0.8824 | 0.2785 | 0.0636 | 2.2423 | 5.8154 | 49.1</td></tr><tr><td colspan="10">417 | 0.0100 | 44.1038 |</td></tr><tr><td colspan="10">7 | 00m58s | 0.75131 | 0.9785 | 0.8560 | 0.2812 | 0.0292 | 8.9339 | 49.9</td></tr><tr><td colspan="10">035 | 0.0821 | 43.8205 |</td></tr><tr><td colspan="10">8 | 00m55s | 0.75166 | 0.9212 | 0.2732 | 0.2660 | 1.9191 | 8.8121 | 5.3</td></tr><tr><td colspan="10">852 | 0.0012 | 44.5129 |</td></tr><tr><td colspan="10">9 | 00m47s | 0.73409 | 0.8018 | 0.1068 | 4.9587 | 2.9412 | 8.6253 | 39.9</td></tr><tr><td colspan="10">238 | 0.0773 | 44.9553 |</td></tr><tr><td colspan="10">10 | 00m46s | 0.74762 | 0.8871 | 0.7749 | 0.3189 | 0.4824 | 5.3296 | 5.3</td></tr><tr><td colspan="10">105 | 0.0562 | 25.0965 |</td></tr><tr><td colspan="10">11 | 00m45s | 0.74755 | 0.9459 | 0.8495 | 0.8824 | 2.9314 | 5.1176 | 49.9</td></tr><tr><td colspan="10">633 | 0.0341 | 24.0223 |</td></tr></table>
+
+## Phương pháp so sánh: Ví dụ
+
+## ☐ Ví dụ đề so sánh: Grid Search, Random Search & HyperOpt
+
+```python
+# Generate dataset with 1000 samples, 100 features and 2 classes
+def gen_dataset(n_samples=1000, n_features=100, n_classes=2, random_state=123):
+    X, y = datasets.make_classification(
+        n_features=n_features,
+        n_samples=n_samples,
+        n_informative=int(0.6 * n_features),    # the number of informative features
+        n_redundant=int(0.1 * n_features),    # the number of redundant features
+        n_classes=n_classes,
+        random_state=random_state)
+    return (X, y)
+X, y = gen_dataset(n_samples=1000, n_features=100, n_classes=2)
+# Train / test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+if optimizer == 'grid_search':
+    grid_obj = GridSearchCV(estimator=pipeline,
+                       param_grid=parameters,
+                       cv=5,
+                       refit=True,
+                       return_train_score=False,
+                       scoring = 'accuracy',
+                       )
+    grid_obj.fit(X_train, y_train,)
+elif optimizer == 'random_search':
+    grid_obj = RandomizedSearchCV(estimator=pipeline,
+                       param_distributions=parameters
+                       cv=5,
+                       n_iter=n_iter,
+                       refit=True,
+                       return_train_score=False,
+                       scoring = 'accuracy',
+                       random_state=1)
+    grid_obj.fit(X_train, y_train,)
+param_gridsearch = {
+    'clf_learning_rate' : [0.01, 0.1, 1],
+    'clf_max_depth' : [5, 10, 15],
+    'clf_n_estimators' : [5, 20, 35],
+    'clf_num_leaves' : [5, 25, 50],
+    'clf_boosting_type' ['gbdt', 'dart'],
+    'clf_colsample_bytree' : [0.6, 0.75, 1],
+    'clf_reg_lambda' [0.01, 0.1, 1],
+}
+
+param_random = {
+    'clf_learning_rate': list(np.logspace(np.log(0.01), np.log(1), num = 500, base=3)),
+    'clf_max_depth': list(range(5, 15)),
+    'clf_n_estimators': list(range(5, 35)),
+    'clf_num_leaves': list(range(5, 50)),
+    'clf_boosting_type': ['gbdt', 'dart'],
+    'clf_colsample_bytree': list(np.linspace(0.6, 1, 500)),
+    'clf_reg_lambda': list(np.linspace(0, 1, 500)),
+    param_hyperopt= {
+        'learning_rate': hp.loguniform('learning_rate', np.log(0.01), np.log(1)),
+        'max_depth': scope.int(hp.quniform('max_depth', 5, 15, 1)),
+        'n_estimators': scope.int(hp.quniform('n_estimators', 5, 35, 1)),
+        'num_leaves': scope.int(hp.quniform('num_leaves', 5, 50, 1)),
+        'boosting_type': hp.choice('boosting_type', ['gbdt', 'dart']),
+        'colsample_bytree': hp.uniform('colsample_by_tree', 0.6, 1.0),
+        'reg_lambda': hp.uniform('reg_lambda', 0.0, 1.0),
+    }
+}
+```
+
+## Phương pháp so sánh: Kết quả
+
+☐ Ví dụ đề so sánh: Grid Search, Random Search & HyperOpt
+
+| Technique | Parameters Evaluated | # of iterations to get to optimum | Overall time taken (sec)* | Cross-Validation Score | Test score |
+| --- | --- | --- | --- | --- | --- |
+| Grid Search | 1451 | 942 | 237 | 0.81 | 0.79 |
+| Random Search | 75 | 48 | 11 | 0.82 | 0.8 |
+| Hyperopt | 75 | 23 | 15 | 0.82 | 0.84 |
+
+\*In case of Grid Search: time taken to iterate over all parameter combinations
+
+\*In case of Random Search / Hyperopt: time taken to go over the predefined number of iterations (75)
+
+https://www.vantage-ai.com
+
+![](images/page_29_chart_7.jpg)
+
+## Tại sao lại là số liệu đánh giá?
+
+![](images/page_30_chart_2.jpg)
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Tại sao Evaluation Metric?
+
+![](images/page_31_chart_2.jpg)
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Tại sao Evaluation Metric?
+
+![](images/page_32_image_2.jpg)
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Chỉ số đánh giá phân loại
+
+□ Một số chỉ số đánh giá phân loại
+
+![](images/page_33_image_3.jpg)
+
+classified (or found) as positive
+
+https://machinelearningcoban.com/2017/08/31/evaluation/
+
+| Metric | Formula | Evaluation Focus |
+| --- | --- | --- |
+| Accuracy | $ACC = \frac{TP+TN}{TP+TN+FP+FN}$ | Overall effectiveness of a classifier |
+| Error rate | $ERR = \frac{FP+FN}{TP+TN+FP+FN}$ | Classification error |
+| Precision | $PRC = \frac{TP}{TP+FP}$ | Class agreement of the data labels with the positive labels given by the classifier |
+| Sensitivity | $SNS = \frac{TP}{TP+FN}$ | Effectiveness of a classifier to identify positive labels |
+| Specificity | $SPC = \frac{TN}{TN+FP}$ | How effectively a classifier identifies negative labels |
+| ROC | $ROC = \frac{\sqrt{SNS^2 + SPC^2}}{\sqrt{2}}$ | Combined metric based on the Receiver Operating Characteristic (ROC) space [53] |
+| $F_1$ score | $F_1 = 2\frac{PRC \cdot SNS}{PRC + SNS}$ | Combination of precision (PRC) and sensitivity (SNS) in a single metric |
+| Geometric Mean | $GM = \sqrt{SNS \cdot SPC}$ | Combination of sensitivity (SNS) and specificity (SPC) in a single metric |
+
+## Số liệu đánh giá cho Imbalanced Classification
+
+## ☐ Imbalanced Classification: Chọn chỉ số phù hợp với trường hợp
+
+![](images/page_34_image_3.jpg)
+
+https://machinelearningmastery.com/tour-of-evaluation-metrics-for-imbalanced-classification/
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Chỉ số cho bài toán hồi quy
+
+## □ Một số chỉ số hồi quy:
+
+<table><tr><td>Example Use Case</td><td>Error Metric</td><td>Formula</td><td>Notes</td></tr><tr><td rowspan="2">Which model best captures the rapid changes in the volatile stock market?</td><td>1.1 Mean squared error (MSE)</td><td> $\frac{1}{n}\sum_{i=1}^{n}(y_i - f(x_i))^2$ </td><td rowspan="2">Weights big differences more</td></tr><tr><td>1.2 Root Mean squared error (RMSE)</td><td> $\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - f(x_i))^2}$ </td></tr><tr><td>Which model best estimates the energy consumption in the long term?</td><td>2. Mean absolute error (MAE)</td><td> $\frac{1}{n}\sum_{i=1}^{n}|y_i - f(x_i)|$ </td><td>Equal weights to all distances</td></tr><tr><td>Are the sales forecasting models for different products equally accurate?</td><td>3. Mean absolute percentage error (MAPE)</td><td> $\frac{1}{n}\sum_{i=1}^{n}\frac{|y_i - f(x_i)|}{|y_i|}$ </td><td>Requires non-zero target column values</td></tr><tr><td>Does a running app provide unrealistic expectations?</td><td>4. Mean signed difference</td><td> $\frac{1}{n}\sum_{i=1}^{n}(y_i - f(x_i))$ </td><td>Only informative about the direction of the error</td></tr><tr><td>How much of our years of education can be explained through access to literature?</td><td>5. R-squared</td><td> $1 - \frac{\sum_{i=1}^{n}(y_i - f(x_i))^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}$ </td><td>Universal range: the closer to 1 the better</td></tr></table>
+
+Trường ĐH CNTT – Lập trình Python cho Máy học (CS116)
+
+## Sklearn: Metrics
+
+## sklearn.metrics
+
+<table><tr><td>Scoring</td><td>Function</td></tr><tr><td colspan="2">Classification</td></tr><tr><td>‘accuracy’</td><td>metrics.accuracy_score</td></tr><tr><td>‘balanced_accuracy’</td><td>metrics.balanced_accuracy_score</td></tr><tr><td>‘top_k_accuracy’</td><td>metrics.top_k_accuracy_score</td></tr><tr><td>‘average_precision’</td><td>metrics.average_precision_score</td></tr><tr><td>‘neg_brier_score’</td><td>metrics.brier_score_loss</td></tr><tr><td>‘f1’</td><td>metrics.f1_score</td></tr><tr><td>‘f1_micro’</td><td>metrics.f1_score</td></tr><tr><td>‘f1_macro’</td><td>metrics.f1_score</td></tr><tr><td>‘f1_weighted’</td><td>metrics.f1_score</td></tr><tr><td>‘f1_samples’</td><td>metrics.f1_score</td></tr><tr><td>‘neg_log_loss’</td><td>metrics.log_loss</td></tr><tr><td>‘precision’ etc.</td><td>metrics.precision_score</td></tr><tr><td>‘recall’ etc.</td><td>metrics.recall_score</td></tr><tr><td>‘jaccard’ etc.</td><td>metrics.jaccard_score</td></tr><tr><td>‘roc_auc’</td><td>metrics.roc_auc_score</td></tr><tr><td>‘roc_auc_ovr’</td><td>metrics.roc_auc_score</td></tr><tr><td>‘roc_auc_ovo’</td><td>metrics.roc_auc_score</td></tr><tr><td>‘roc_auc_ovr_weighted’</td><td>metrics.roc_auc_score</td></tr><tr><td>‘roc_auc_ovo_weighted’</td><td>metrics.roc_auc_score</td></tr></table>
+
+<table><tr><td colspan="2">Regression</td></tr><tr><td>‘explained_variance’</td><td>metrics.explained_variance_score</td></tr><tr><td>‘max_error’</td><td>metrics.max_error</td></tr><tr><td>‘neg_mean_absolute_error’</td><td>metrics.mean_absolute_error</td></tr><tr><td>‘neg_mean_squared_error’</td><td>metrics.mean_squared_error</td></tr><tr><td>‘neg_root_mean_squared_error’</td><td>metrics.mean_squared_error</td></tr><tr><td>‘neg_mean_squared_log_error’</td><td>metrics.mean_squared_log_error</td></tr><tr><td>‘neg_median_absolute_error’</td><td>metrics.median_absolute_error</td></tr><tr><td>‘r2’</td><td>metrics.r2_score</td></tr><tr><td>‘neg_mean_poisson_deviance’</td><td>metrics.mean_poisson_deviance</td></tr><tr><td>‘neg_mean_gamma_deviance’</td><td>metrics.mean_gamma_deviance</td></tr><tr><td>‘neg_mean_absolute_percentage_error’</td><td>metrics.mean_absolute_percentage_error</td></tr><tr><td>‘d2_absolute_error_score’</td><td>metrics.d2_absolute_error_score</td></tr><tr><td>‘d2_pinball_score’</td><td>metrics.d2_pinball_score</td></tr><tr><td>‘d2_tweedie_score’</td><td>metrics.d2_tweedie_score</td></tr></table>
+
+## Tài liệu tham khảo
+
+Pattern Recognition and Machine Learning
+
+https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/
+
+![](images/page_38_image_0.jpg)
+
+## HỔI ĐÁP

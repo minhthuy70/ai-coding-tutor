@@ -1,0 +1,840 @@
+## Python, Jupyter Notebook, Kaggle
+
+**Trịnh Tấn Đạt**
+
+**Khoa CNTT – Đại Học Sài Gòn**
+
+**Email: trinhtandat@sgu.edu.vn**
+
+**Website: https://sites.google.com/site/ttdat88/**
+
+## Cài Đặt
+
+**1. Cài** đặt **Python 3 + IDE Pycharm**
+
+**2. Cài đặt Python 3 dùng bản phân phối Anaconda (RAM > 4GB)** Cài đặt IDE Pycharm
+
+Anaconda hỗ trợ **IDE Spyder**
+
+Jupyter Notebook
+
+**3.** Sử dụng **Google Colab, Kaggle**
+
+## Cài đặt Python 3
+
+Bước 1: Để tải và cài đặt Python 3 hãy truy cập vào trang web chính thức của Python: [**http://www.python.org/downloads/**](http://www.python.org/downloads/) và chọn phiên bản bạn muốn **3.7.\***
+
+![](images/page_2_image_2.jpg)
+
+## Cài đặt Python 3
+
+Bước 2: Sau khi quá trình tải xuống đã hoàn tất, chạy tập tin exe để cài đặt Python. Giờ hãy click vào
+
+**Install Now.**
+
+![](images/page_3_image_3.jpg)
+
+## Python 3.7.3 (32-bit) Setup
+
+## Install Python 3.7.3 (32-bit)
+
+Select Install Now to install Python with default settings, or choose Customize to enable or disable features.
+
+![](images/page_4_image_4.jpg)
+
+Install Now C:\Users\sony\AppData\Local\Programs\Python\Python37-32
+
+Includes IDLE, pip and documentation Creates shortcuts and file associations
+
+Customize installation Choose location and features
+
+## windows
+
+Install auncher for all users (recommended)
+
+Add Python 3.7 to PATH
+
+## Optional Features
+
+![](images/page_4_image_12.jpg)
+
+Decumentation
+
+úp
+
+td/tk and [DLE
+
+Python test suite
+
+Cancel
+
+py launcher for all usars (nequires elevation)
+
+Back
+
+## Python 3.7.3 62-sit) Seh.p
+
+## Advanced Options
+
+![](images/page_4_image_23.jpg)
+
+Install tor al users Assoaate ties wth Python [requres the py launcher) Create shortcuts tor installed applications Add Python to environment variaoles Precompie standard Ibrary Download debugging Eymbols Downloac debug binaries (requires VS 2015 or later)
+
+## Customize install location
+
+Back
+
+Instal
+
+## Cài đặt Python 3
+
+Python 3.7.3 (32-bit) Setup
+
+Setup Progress
+
+Installing:
+
+![](images/page_5_image_4.jpg)
+
+Python 3.7.3 Core Interpreter (32-bit)
+
+windows
+
+## Cài đặt Python 3
+
+Run và kiểm **tra quá trình cài** đặt **thành công**
+
+**1.** Mở **Command Promt (cmd)**
+
+**2. Type : python --version** hoặc **python**
+
+Administrator: Command Prompt - python
+
+Microsoft Windows [Version 6.1.7601] Copyright (c) 2009 Microsoft Corporation. All rights reserved.
+
+![](images/page_7_image_0.jpg)
+
+![](images/page_7_image_1.jpg)
+
+![](images/page_7_image_2.jpg)
+
+## Cài đặt Python 3
+
+**Hoặc dùng Python Shell**
+
+Trên “**Start menu**” **search** “ **idle**” **and run file** “**idle.exe**”
+
+```txt
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] on win
+32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> print("Hello Python3")
+Hello Python3
+>>>
+```
+
+## Cài đặt Python 3
+
+Thực **thi: Python có 2** chế độ thực thi
+
+Chế độ dòng lệnh: chạy từng lệnh một
+
+Chế độ thực thi: chỉ ra chương trình cần thực hiện **(file script \*.py)**
+
+Trình dịch python sẽ nạp, dịch và chạy chương trình đó
+
+## Cài đặt Python 3
+
+Chế độ dòng lệnh**: open cmd -> type python / hoặc open Python Shell**
+
+Lúc này trình thông dịch python sẽ chờ người dùng gõ từng dòng lệnh
+
+Gõ dòng lệnh nào xong, python chạy liền dòng đó
+
+Chấm dứt chế độ này bằng cách gõ lệnh: “**quit()**” hoặc **Ctrl+Z**
+
+Administrator: Command Prompt
+
+```txt
+C:\Users\sony>python
+Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)] :: Ana
+conda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = 10
+>>> b = 20
+>>> a+b
+30
+>>> c = a+b
+>>> print("c= %d" %c)
+c = 30
+>>> quit()
+C:\Users\sony>
+```
+
+## Cài đặt Python 3
+
+Chế độ thực **thi trên file script \*.py**
+
+Ví dụ**: Dùng Notepad (**hoặc **các text editor)** tạo **file test.py (**lưu **file** dưới dạng mở rộng **\*.py)**
+
+Open Command Promt (cmd)
+
+type: python <đường dẫn tới **file test.py>**
+
+Ví dụ**: python C:\Users\sony\Desktop\python\_co\_ban\test\test.py**
+
+## C:\Users\sony>python C:\Users\sony\Desktop\python\_co\_ban\test\test.py Hello world c=3
+
+| test.py |
+| --- |
+| # -*- coding: utf-8 -* print("Hello world")a = 1b = 2c = a+bprint("c=%d" %c) |
+
+**Hoặc di chuyển đến thư mục chứa file cần thực thi Type: cd <** đường dẫn tới thư mục chứa **file > Ví dụ: cd C:\Users\sony\Desktop\python\_co\_ban\test**
+
+**python test.py**
+
+C:\Users\sony>cd C:\Users\sony\Desktop\python\_co\_ban\test C:\Users\sony\Desktop\python\_co\_ban\test>python test.py Hello world c=3
+
+## Cài đặt Python 3
+
+Hạn chế **khi dùng các text editors (notepad, notepad++, wordpad, gedit, vi, ...)**
+
+Không có tính năng tự động nhắc **và** sữa lỗi **cú pháp (**thừa thiếu **space/tab ,** viết **sai tên hàm, sai tên** thư viện, …)
+
+Không có tính năng **debug**
+
+Sử dụng **môi** trường **phát** triển **tích** hợp **(Integrated Development Environment-IDE)**
+
+PyCharm
+
+Spyder
+
+PyDev
+
+Eclipse
+
+…
+
+## Cài đặt Python 3
+
+Cách cài đặt Pycharm IDE **sau khi** đã **cài** đặt **python**
+
+Bước 1: Để tải PyCharm, hãy truy cập vào trang web: [**https://www.jetbrains.com/pycharm/download/**](https://www.jetbrains.com/pycharm/download/)sau đó click vào đường dẫn “**Download**” nằm dưới mục Community:
+
+![](images/page_12_image_3.jpg)
+
+## Cài đặt Python 3
+
+## Cách cài đặt Pycharm IDE sau khi đã cài đặt python
+
+Bước 2: Khi quá trình download đã hoàn tất, chạy tập tin exe để cài đặt **PyCharm.**
+
+![](images/page_13_image_3.jpg)
+
+![](images/page_13_image_4.jpg)
+
+## Cài đặt Python 3
+
+Tạo một chương **trình minh** họa **dùng pycharm**
+
+B1 : Mở **trình** soạn thảo **PyCharm.** Bạn **có** thể thấy **màn hình** giới thiệu **khi** mở **PyCharm.** Để tạo một dự **án** mới, bấm **vào** “**Create New Project**”.
+
+![](images/page_14_image_3.jpg)
+
+B2: Chọn thư mục **và tên** của **project** để lưu **(Location)**
+
+PyCharm sẽ **tìm** thấy **trình thông** dịch **Python** bạn đã **cài** đặt trước đó.
+
+(đường dẫn đến **file python.exe** – **khi** đã **cài** đặt **python)**
+
+Sau đó chọn “**Create**”
+
+![](images/page_15_image_5.jpg)
+
+![](images/page_15_image_6.jpg)
+
+Location: C:\Users\sony\PycharmProjects\test
+
+4 Project Interpreter: Python 3.7
+
+New environment using
+
+Make available to all proiects
+
+## Existing interpreter
+
+Interpreter:
+
+Create
+
+Cancel
+
+## Cài đặt Python
+
+B3: Load package và **update trình thông** dịch **python cho Pycharm.**
+
+Chọn **File -> Settings**…
+
+<table><tr><td colspan="2">New Project...</td></tr><tr><td>New...</td><td>Alt+Insert</td></tr><tr><td>New Scratch File</td><td>Ctrl+Alt+Shift+Insert</td></tr><tr><td>Open...</td><td></td></tr><tr><td>Save As...</td><td></td></tr><tr><td>Open Recent</td><td>&gt;</td></tr><tr><td>Close Project</td><td></td></tr><tr><td>Rename Project...</td><td></td></tr><tr><td>Settings...</td><td>Ctrl+Alt+S</td></tr></table>
+
+## (đường dẫn đến file python.exe – trong thư mục cài đặt python)
+
+| Package | Version | Latest version |
+| --- | --- | --- |
+| ipyw_jab_nb_est_conf | 0.1.0 | 0.1.0 |
+| elabaster | 0.7.12 | 0.7.12 |
+| anaconda | 2018.12 | 2019.03 |
+| anaconda-client | 1.7.2 | 1.7.2 |
+| anaconda-navigator | 1.9.6 | 1.9.7 |
+| anaconda-project | 0.8.2 | 0.8.2 |
+| esnlcrypto | 0.24.0 | 0.24.0 |
+| estroid | 2.1.0 | 2.2.5 |
+| astropy | 3.1 | 3.1.2 |
+| atomviewes | 1.2.1 | 1.3.0 |
+| etirs | 18.2.0 | 19.1.0 |
+| babel | 2.6.0 | 2.6.0 |
+| backcall | 0.1.0 | 0.1.0 |
+| backports | 1.0 | 1.0 |
+| backports.os | 0.1.1 | 0.1.1 |
+| backports.shutil_get_terminal_size | 1.0.0 | 1.0.0 |
+| beautifulsoupd | 4.6.3 | 4.7.1 |
+| bitarray | 0.8.3 | 0.9.3 |
+| bkcharts | 0.2 | 0.2 |
+| bles | 1.0 | 1.0 |
+| blaze | 0.11.3 | 0.11.3 |
+
+## Cài đặt Python 3
+
+Ví dụ**: có** thể **cài** đặt **cùng lúc** nhiều **python version khác nhau và tùy vào project** chọn **trình thông** dịch **và môi** trường **thích** hợp
+
+| Project Interpreter: | 3.6.5 (/opt/anaconda3/bin/python3.6) |
+| --- | --- |
+| Pack | 3.6.5 (/opt/anaconda3/bin/python3.6) |
+| ABBYY | 3.5.2 (/usr/bin/python3.5) |
+| Augmentor | /usr/bin/python2.7 |
+| Babel | Show All |
+| Cython |  |
+
+## Cài đặt Python 3
+
+B4: Vào menu “File” và chọn “New”. Tiếp theo, chọn “Python File”.
+
+![](images/page_18_image_2.jpg)
+
+![](images/page_18_image_3.jpg)
+
+## Cài đặt Python 3
+
+B5: Một cửa sổ mới sẽ xuất hiện. Giờ hãy nhập tên bạn muốn đặt cho tệp
+
+New Python file
+
+Name:
+
+HelloWorld
+
+Kind:
+
+Python file
+
+OK
+
+ancel
+
+## Cài đặt Python 3
+
+B6: Viết một chương **trình** đơn giản
+
+```lua
+print("hello world")
+a = 'string1'
+b = 'string2'
+print(a)
+print(b)
+print(a+b)
+```
+
+<table><tr><td colspan="3">File Edit View Navigate Code Refactor Run Tools VCS Window Help</td></tr><tr><td colspan="3">untitled</td></tr><tr><td>Project</td><td>HelloWorld.py</td><td></td></tr><tr><td colspan="3">untitled ~/dattt/PycharmProjects/untitled</td></tr><tr><td colspan="3">HelloWorld.pyExternal Libraries</td></tr></table>
+
+## Cài đặt Python 3
+
+B7 : Vào menu “Run” và chọn “**Run**” để chạy chương trình của bạn.
+
+| Run |
+| --- |
+| Edit Configurations... |
+| Hello |
+| HelloWorld |
+| Hold Shift to Debug |
+
+<table><tr><td colspan="2">B8: xem kết quả</td></tr></table>
+
+## Cài đặt Python 3 dùng bản phân phối Anaconda
+
+Anaconda là một bản **phân** phối **mã** nguồn mở miễn **phí** của **ngôn** ngữ lập **trình Python (**[**https://www.anaconda.com/distribution/**](https://www.anaconda.com/distribution/)**)**
+
+tích hợp sẵn **các phiên** bản **python.**
+
+phục vụ **cho machine learning, deep learning,** xử lý dữ liệu quy mô lớn, phân tích dự đoán và tính toán khoa học.
+
+được hơn 6 triệu người sử dụng.
+
+Hơn **1,500+ Python/R data science packages**
+
+## Cài đặt Python 3 dùng bản phân phối Anaconda
+
+Cài đặt tương tự như **cài** đặt **python 3**
+
+Download : [**https://www.anaconda.com/**](https://www.anaconda.com/)
+
+<strong><u>https://www.anaconda.com/distribution/</u></strong>
+
+## Anaconda 2019.03 for Windows Installer
+
+Python 2.7 version Downloed
+
+64-Bit Graphical Installer (ü62 MB) 32-Bit (Graphicel Installer (b46 MB)
+
+64-Bit: Graphical Installer Ib8/ MBI 32-Bit GraphIcal Installer (493 MB)
+
+## Cài đặt Python 3 dùng bản phân phối
+
+## Anaconda
+
+Lúc cài đặt lưu ý:
+
+## Anaconda3 5.2.0 (64-bit) Setup
+
+![](images/page_24_image_4.jpg)
+
+## ANACONDA
+
+Advanced Installation Options Customize how Anaconda integrates with Windows
+
+## Anaconda3 (64-bit)
+
+## Anaconda Navigator
+
+Anaconda Prompt
+
+Jupyter Notebook
+
+Reset Spyder Settings
+
+## Advanced Options
+
+## Add Anaconda to my PATH environment variable
+
+Not recommended, Instead, open Anaconda with the Windows Start menu and select "Anaconda (64-bit)", This "add to PATH" option makes Anaconda get found before previously installed software, but may cause problems requiring you to uninstall and reinstall Anaconda.
+
+Spyder
+
+## Register Anaconda as my default Python 3.6
+
+This will allow other programs, such as Python Tools for Visual Studio PyCharm, Wing IDE, PyDev, and MSI binary packages, to automatically detect Anaconda as the primary Python 3.6 on the system.
+
+< Back
+
+Install
+
+Cancel
+
+## Cài đặt Python 3 dùng bản phân phối Anaconda
+
+Kiểm **tra cài** đặt:
+
+Open cmd
+
+Type:
+
+conda list: nếu mọi thứ ok bạn sẽ thấy danh sách những package đã được cài đặt kèm theo version của chúng
+
+python: nếu mọi thứ **ok thì** bạn sẽ thấy **version** của **python kèm theo Anacoda**
+
+Cài đặt **IDE Pycharm dùng Anaconda** tương tự như **cài** đặt **cho python 3** (như **các slide** trước)
+
+## Cài đặt Python 3 dùng bản phân phối Anaconda
+
+Ngoài ra, Anaconda tích hợp sẵn một IDE Spyder
+
+## Anaconda3 (64-bit)
+
+Anaconda Navigator
+
+FF Anaconda Prompt
+
+Jupyter Notebook
+
+Reset Spyder Settings
+
+Spyder
+
+![](images/page_26_image_8.jpg)
+
+## Jupyter Notebook
+
+Là một ứng dụng web mã nguồn mở cho phép bạn trình bày như một quyển vỡ khoa học và cho tương tác trực tiếp với nó
+
+code
+
+mô phỏng
+
+văn bản diễn giải
+
+Là một công cụ tuyệt vời để:
+
+Học về Python
+
+Data processing / transformations
+
+Vẽ biểu đồ
+
+Machine learning
+
+Data science
+
+## Jupyter Notebook
+
+Khởi động: Từ Anaconda Prompt bạn chỉ cần gõ jupyter notebook
+
+## Jupyter Notebook
+
+I 08:41:41.869 NotebookApp] JupyterLab extension loaded from C:\ProgramData\Ana conda3\lib\site-packages\jupyterlab [I 08:41:41.871 NotebookApp] JupyterLab application directory is C:\ProgramData Anaconda3\share\jupyter\lab [I 08:41:41.878 NotebookApp] Serving notebooks from local directory: C:\Users\so 08:41:41.878 NotebookApp] The Jupyter Notebook is running at: 08:41:41.879NotebookApp1http://1ocalhost:8888/?token=c3256b439fdf79c2d7f35b ad928c62a0cd013833e71fad0c [I 08:41:41.879 NotebookApp] Use Control-C to stop this server and shut down al] kernels (twice to skip confirmation) [C 08:41:42.154 NotebookApp]
+
+To access the notebook, open this file in a browser: file:///C:/Users/sony/AppData/Roaming/jupyter/runtime/nbserver-8620-open html Or copy and paste one of these URLs: http://localhost:8888/?token=c3256b439fdf79c2d7f35bad928c62a0cd013833e7ad0c[W 08:41:57.695NotebookApp] 404 GET/static/components/bootstrap/fonts/glyphico ns-halflings-regular.eot?(::1)77.00ms referer=http://localhost:8888/tree?token=c3256b439fdf79c2d7f35bad928c62a0cd013833e71fad0c
+
+## Jupyter Notebook
+
+![](images/page_29_image_1.jpg)
+
+jupyter
+
+Files
+
+Quit
+
+Clusters
+
+Select items to perform actions on them.
+
+Logout
+
+Contacts
+
+Desktop
+
+Upload
+
+New
+
+Name
+
+Last Modified
+
+File size
+
+9 months ago
+
+7 years ago
+
+22 minutes ago
+
+## Jupyter Notebook
+
+## Tạo một notebook python mới
+
+![](images/page_30_image_2.jpg)
+
+jupyter
+
+Quit
+
+Logout
+
+Files
+
+Clusters
+
+Select items to perform actions on them.
+
+Upload New
+
+Contacts
+
+Python 3
+
+Name
+
+Desktop
+
+Documents
+
+Text File Folder Terminal
+
+## Jupyter Notebook
+
+![](images/page_31_image_1.jpg)
+
+## jupyter Untitled2 Last Checkpoint: a few seconds ago (unsaved changes)
+
+N Run
+
+Code
+
+![](images/page_31_image_5.jpg)
+
+Kernel starting, please wait...
+
+Logout
+
+## Jupyter Notebook
+
+Một notebook bao gồm nhiều cell (ô). Khi tạo mới một notebook, bạn luôn được tạo sẵn một cell rỗng đầu tiên.
+
+Cell trên có kiểu là “Code”, điều đó có nghĩa là bạn có thể gõ code Python và thực thi ngay lập tức**. Để thực thi code, bạn có thể nhấn nút Run cell hoặc nhấn Ctrl + Enter**
+
+In [1]: print("hello world")
+
+hello world
+
+## Jupyter Notebook
+
+Bạn có thể chuyển loại cell từ Code thành Markdown để viết những đoạn văn bản giải thích code của bạn chẳng hạn
+
+![](images/page_33_image_2.jpg)
+
+Tim hieu jupyter Notebookl
+
+**nhấn nút Run cell**
+
+## Jupyter Notebook
+
+Checkpoints: Bằng **cách** tạo **các Checkpoints** lưu trạng **thái** hiện tại của **notebook, Jupyter Notebook cho phép** bạn **có** thể **quay** lại thời điểm tạo **Checkpoints** để kiểm **tra** hoặc **hoàn tác** trước đó.
+
+Để tạo **Checkpoint,** chọn File -> Save and Checkpoint. Nếu bạn muốn **xem** lại **các Checkpoints** trước đó **thì** chọn File -> Revert to Checkpoint.
+
+## Jupyter Notebook
+
+Chức năng Export notebook
+
+<table><tr><td>File</td><td>Edit</td><td>View</td><td>Insert</td><td>Cell</td><td>Kernel</td><td>Widgets</td></tr><tr><td colspan="3">New Notebook</td><td>↑</td><td>↓</td><td>Run</td><td>Code</td></tr><tr><td colspan="3">Open...</td><td colspan="4"></td></tr><tr><td colspan="3">Make a Copy...</td><td rowspan="3" colspan="4">&quot;hello world aa&quot;)</td></tr><tr><td colspan="3">Save as...</td></tr><tr><td colspan="3">Rename...</td></tr><tr><td colspan="3">Save and Checkpoint</td><td colspan="4">eu jupyter Notebook</td></tr><tr><td colspan="3">Revert to Checkpoint</td><td rowspan="2" colspan="4">numpy as np # thư viện numpy matplotlib.pyplot as plt # thu đoạn từ -20 đến 20 thành 1000.linspace(-20, 20, 1000)</td></tr><tr><td colspan="3">Print Preview</td></tr><tr><td rowspan="5" colspan="3">Download as</td><td colspan="4">Notebook (.ipynb)</td></tr><tr><td colspan="4">Python (.py)</td></tr><tr><td colspan="4">HTML (.html)</td></tr><tr><td colspan="4">Reveal.js slides (.html)</td></tr><tr><td colspan="4">Markdown (.md)</td></tr></table>
+
+# Dịch Vụ Hỗ Trợ Deep Learning Và Machine Learning
+
+Google Colab
+
+[**https://colab.research.google.com/**](https://colab.research.google.com/)
+
+Welcome To Colaboratory File Edit view Inser Runtime Tools Help
+
+![](images/page_36_image_4.jpg)
+
+## Google Colab
+
+Google Colab is a free tool for training neural network.
+
+Run on any browser (Chrome, Internet Explorer, Firefox, etc.)
+
+Train the model with NVIDIA Tesla K80
+
+[**https://trituenhantao.io/tutorial/lam-quen-voi-google-colab/**](https://trituenhantao.io/tutorial/lam-quen-voi-google-colab/)
+
+**Language program: Python**
+
+**IDE: Jupyter Notebook**
+
+**Train on data uploaded to Google Drive (default 15GB)**
+
+**Maximum time used: 12 hours**
+
+**Maximum RAM: 13GB**
+
+NVIDIA Tesla K80 GPU Accelerator 24gb 2496 Processor 384
+
+Refurbished: lowest price \$1,695.00
+
+![](images/page_37_chart_12.jpg)
+
+## Kaggle
+
+<strong><u>https://www.kaggle.com/</u></strong>
+
+kaggle Search
+
+Tạo tài khoản
+
+a Competitions Datasets Kernels Discussion Courses 中
+
+## Kaggle Competitions
+
+19 Active Competitions
+
+<table><tr><td><img src="images/page_39_table_image_2_1.jpg"/></td><td>Severstal: Steel Defect DetectionCan you detect and classify defects in steel?Featured - Kernels Competition - 3 months to go - manufacturing, image data</td><td>$120,000100 teams</td></tr><tr><td><img src="images/page_39_table_image_2_2.jpg"/></td><td rowspan="2">Two Sigma: Using News to Predict Stock MovementsUse news analytics to predict stock price performanceFeatured - Kernels Competition - 9 days to go - news agencies, time series, finance, money</td><td rowspan="2">$100,0002,927 teams</td></tr><tr><td>TWO SIGMA</td></tr><tr><td><img src="images/page_39_table_image_2_3.jpg"/></td><td>APTOS 2019 Blindness DetectionDetect diabetic retinopathy to stop blindness before it&#x27;s too lateFeatured - Kernels Competition - a month to go - healthcare, medicine, image data, multiclass classi...</td><td>$50,0001,892 teams</td></tr><tr><td><img src="images/page_39_table_image_2_4.jpg"/></td><td>SIIM-ACR Pneumothorax SegmentationIdentify Pneumothorax disease in chest x-raysFeatured - a month to go - image data, object segmentation</td><td>$30,0001,182 teams</td></tr></table>
+
+## Kaggle Datasets
+
+Datasets
+
+Documentation
+
+![](images/page_40_image_3.jpg)
+
+## NYS Environmental Remediation Sites
+
+![](images/page_40_image_5.jpg)
+
+![](images/page_40_image_6.jpg)
+
+## Google-Landmarks Dataset
+
+## New York City Current Job Postings
+
+![](images/page_40_image_9.jpg)
+
+![](images/page_40_image_10.jpg)
+
+## Crimes in Boston
+
+![](images/page_40_image_12.jpg)
+
+![](images/page_41_image_0.jpg)
+
+## Kaggle Kernels
+
+Kaggle Kernels là một **free platform** để chạy **môi** trường **Jupyter notebooks trên trình** duyệt.
+
+Những xử **lý trên notebooks** của bạn được thực hiện **trên server, do** đó sẽ **không** ảnh hưởng tới hiệu năng của **máy tính.**
+
+a Competitions Datasets Kernels Discussion Courses …
+
+Kernels
+
+Documentation
+
+[**https://towardsdatascience.com/introduction-to-kaggle-kernels-2ad754ebf77**](https://towardsdatascience.com/introduction-to-kaggle-kernels-2ad754ebf77)
+
+## Kaggle Kernels
+
+## Script
+
+import numpy as np # linear algebra import pandas as pd # data processing # Input data files are available in th from subprocess import check\_output print(check\_output(["Is", "../input"]) # Any results you write to the current
+
+•Python, R, RMarkdown
+
+• Ideal for fitting a model and competition submissions
+
+• Shares code for review and RMarkdown reports
+
+## Notebook
+
+Introduction
+
+Runs cells of code and Markdown
+
+• Ideal for interactive data exploration and polished analysis
+
+• Shares insights through code & commentary
+
+## Kaggle Kernels
+
+<table><tr><td>Old Resources</td><td>New Resources</td></tr><tr><td><img src="images/page_43_table_image_1_1.jpg"/> 2 CPUs</td><td><img src="images/page_43_table_image_1_2.jpg"/> 4 CPUs</td></tr><tr><td><img src="images/page_43_table_image_1_3.jpg"/> 8 GB RAM</td><td><img src="images/page_43_table_image_1_4.jpg"/> 16 GB RAM</td></tr><tr><td><img src="images/page_43_table_image_1_5.jpg"/> 512 MB Disk Space</td><td><img src="images/page_43_table_image_1_6.jpg"/> 1 GB Disk Space</td></tr><tr><td><img src="images/page_43_table_image_1_7.jpg"/> 20 min execution time</td><td><img src="images/page_43_table_image_1_8.jpg"/> 60 min execution time</td></tr></table>
+
+![](images/page_44_image_1.jpg)
+
+## Kaggle Kernels
+
+Input data filas are avatlable in the /snput/ directory For example, running this (by elarking rur or pressing Shafttkntir) wil1 Iast the files in the tnput directocy
+
+Draft Sess1on CPU 8% RAM 245.6MB/16G8 GPU 0ff Disk 266.3MB/4.9GB
+
+Your Kernel is now running in the cloud. Use the Play button or [Shift+Enter] to eecute the current Iine of your script (or whatever's highlighted). Enter some code at the bottom of this Console tab and press [Enter].
+
+## Kaggle Kernels
+
+ab8 Draft saved
+
+Add Dalaset
+
+Add a Data Source
+
+Upload
+
+x
+
+Datasets Competition Data Kernel Output Files
+
+Sort by Relevance
+
+Mnist
+
+Your Datasets Your Favorites CSV world
+
+![](images/page_45_image_10.jpg)
+
+## Upload a Dataset
+
+Upload local files and create a private or public dataset to begin analyzing it seamlessly in your kernel.
+
+Upload
+
+![](images/page_45_image_14.jpg)
+
+## Fashion MNIST
+
+An MNIST-like dataset of 70,000 28x28 labeled fashion images
+
+clothing
+
+Other
+
+<>642
+
+Zalando Research updated 2 years ago (Version 4)
+
+image data
+
+68.77MB
+
+multiclass ...
+
+Other
+
+©217k
+
+object iden...
+
+\+ 1 more...
+
+333 V
+
+## 3D MNIST
+
+A 3D version of the MNIST database of handwritten digits
+
+David de la Iglesia Castro updated 3 years ago (Version 13)
+
+writing Other</>66
+
+artificial int...153.94MB2
+
+Other 31k
+
+```python
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import os
+print(os.listdir("../input"))
+print("hello world")
+# Any results you write to the current directory are saved as output.
+import tensorflow as tf
+print(tf.__version__)
+data_train_file = "../input/fashion-mnist_train.csv"
+data_test_file = "../input/fashion-mnist_test.csv"
+df_train = pd.read_csv(data_train_file)
+df_test = pd.read_csv(data_test_file)
+df_train.head()
+```
+
+## Kaggle Kernels
+
+<table><tr><td colspan="11">[5 rows x 785 columns][&#x27;fashion-mnist_test.csv&#x27;, &#x27;fashion-mnist_train.csv&#x27;, &#x27;train-images-idx3-ubyte&#x27;, &#x27;t10k-images-idx3-ubyte&#x27;, &#x27;t10k-labels-idx1-ubyte&#x27;, &#x27;train-labels-idx1-ubyte&#x27;]hello world</td></tr><tr><td colspan="11">1.14.0</td></tr><tr><td></td><td>label</td><td>pixel1</td><td>pixel2</td><td>pixel3</td><td>pixel4</td><td>pixel5</td><td>pixel6</td><td>pixel7</td><td>pixel8</td><td>\</td></tr><tr><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr><tr><td>1</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr><tr><td>2</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td></td></tr><tr><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td></td></tr><tr><td>4</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr></table>

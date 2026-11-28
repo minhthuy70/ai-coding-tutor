@@ -1,0 +1,5005 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.033,
+            0.051,
+            0.399,
+            0.121
+          ],
+          "content": "ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN"
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.186,
+            0.331,
+            0.812,
+            0.397
+          ],
+          "level": 1,
+          "content": "CS116 - LẬP TRÌNH PYTHON CHO MÁY HỌC"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.432,
+            0.449,
+            0.567,
+            0.496
+          ],
+          "level": 2,
+          "content": "BÀI MỞ ĐẦU"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.426,
+            0.732,
+            0.572,
+            0.767
+          ],
+          "content": "**TS. Nguyễn Vinh Tiệp**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.197,
+            0.951,
+            0.54,
+            0.977
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.977,
+            0.959,
+            0.999,
+            0.999
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.977,
+            0.959,
+            0.999,
+            0.997
+          ],
+          "content": "2"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.693,
+            0.072,
+            1.0,
+            1.0
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_image_1.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.404,
+            0.103,
+            0.614,
+            0.185
+          ],
+          "level": 2,
+          "content": "NỘI DUNG"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.223,
+            0.407,
+            0.55,
+            0.479
+          ],
+          "level": 2,
+          "content": "1. Giới thiệu môn học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.498,
+            0.726,
+            0.571
+          ],
+          "content": "2. Lịch sử và thành tựu của máy học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.585,
+            0.717,
+            0.666
+          ],
+          "content": "3. Ôn tập ngôn ngữ lập trình Python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.066,
+            0.945,
+            0.145,
+            0.977
+          ],
+          "content": "June 9, 2023"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.327,
+            0.945,
+            0.674,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.119,
+            0.489,
+            0.213
+          ],
+          "level": 2,
+          "content": "Giới thiệu môn học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.261,
+            0.147,
+            0.314
+          ],
+          "content": "**Tuần 1**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.381,
+            0.149,
+            0.435
+          ],
+          "content": "**Tuần 2**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.51,
+            0.149,
+            0.563
+          ],
+          "content": "**Tuần 3**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.639,
+            0.149,
+            0.693
+          ],
+          "content": "**Tuần 4**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.061,
+            0.771,
+            0.159,
+            0.821
+          ],
+          "content": "**Tuần 5-6**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.117,
+            0.947,
+            0.19,
+            0.978
+          ],
+          "content": "June 9, 2023"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.261,
+            0.525,
+            0.319
+          ],
+          "content": "**Giới thiệu, ML và Python**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.386,
+            0.59,
+            0.447
+          ],
+          "content": "**Lập trình Numpy và Matplotlib**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.492,
+            0.561,
+            0.605
+          ],
+          "content": "**Quy trình xây dựng mô hình máy học**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.242,
+            0.622,
+            0.54,
+            0.736
+          ],
+          "content": "**Tiền xử lý dữ liệu và đánh giá mô hình**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.781,
+            0.57,
+            0.839
+          ],
+          "content": "**Mô hình học không giám sát**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.606,
+            0.212,
+            0.949,
+            0.268
+          ],
+          "content": "∗ Lược sử và thành tựu của AI, ML"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.607,
+            0.305,
+            0.871,
+            0.361
+          ],
+          "content": "∗ Ôn tập ngôn ngữ Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.765,
+            0.381,
+            0.842,
+            0.412
+          ],
+          "content": "Nguồn: [Nvidia](https://blogs.nvidia.com/blog/2016/07/29/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.639,
+            0.413,
+            0.97,
+            0.725
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_16.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.669,
+            0.763,
+            0.785,
+            0.976
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_17.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.815,
+            0.826,
+            0.934,
+            0.893
+          ],
+          "content": "Jupyter"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.814,
+            0.74,
+            0.934,
+            0.987
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_image_19.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.328,
+            0.949,
+            0.672,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.961,
+            0.997,
+            0.996
+          ],
+          "content": "3 4"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.05,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.12,
+            0.489,
+            0.213
+          ],
+          "level": 2,
+          "content": "Giới thiệu môn học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.073,
+            0.279,
+            0.186,
+            0.329
+          ],
+          "content": "Tuần 7-10"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.255,
+            0.284,
+            0.539,
+            0.341
+          ],
+          "content": "Mô hình học có giám sát"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.408,
+            0.186,
+            0.459
+          ],
+          "content": "**Tuần 11-12**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.41,
+            0.487,
+            0.465
+          ],
+          "content": "Tối ưu siêu tham số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.095,
+            0.537,
+            0.185,
+            0.587
+          ],
+          "content": "Tuần 13"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.542,
+            0.613,
+            0.601
+          ],
+          "content": "Ensemble model: Học tổng hợp"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.062,
+            0.666,
+            0.186,
+            0.717
+          ],
+          "content": "Tuần 14-15"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.647,
+            0.51,
+            0.758
+          ],
+          "content": "Báo cáo đồ án cuối kỳ Ôn tập"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.694,
+            0.129,
+            0.842,
+            0.156
+          ],
+          "content": "Nguồn: static.javatpoint.com"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.651,
+            0.131,
+            0.783,
+            0.351
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.674,
+                0.359,
+                0.767,
+                0.39
+              ],
+              "content": "Classification"
+            }
+          ],
+          "image_source": "images/page_3_chart_11.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.787,
+            0.158,
+            0.927,
+            0.351
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.827,
+                0.36,
+                0.905,
+                0.392
+              ],
+              "content": "Regression"
+            },
+            {
+              "bbox": [
+                0.688,
+                0.459,
+                0.88,
+                0.616
+              ],
+              "content": "Hyperparameter vs Parameter"
+            }
+          ],
+          "image_source": "images/page_3_chart_13.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.623,
+            0.655,
+            0.994,
+            0.915
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_image_16.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.961,
+            0.998,
+            0.997
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.121,
+            0.493,
+            0.211
+          ],
+          "level": 2,
+          "content": "Hình thức đánh giá"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.223,
+            0.351,
+            0.351,
+            0.408
+          ],
+          "level": 2,
+          "content": "Bài tập 30%"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.199,
+            0.498,
+            0.341,
+            0.542
+          ],
+          "content": "• Bài tập lập trình"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.441,
+            0.349,
+            0.559,
+            0.405
+          ],
+          "level": 2,
+          "content": "Đồ án 30%"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.412,
+            0.456,
+            0.553,
+            0.497
+          ],
+          "content": "• Làm theo nhóm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.412,
+            0.497,
+            0.523,
+            0.542
+          ],
+          "content": "• Nộp cuối kỳ"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.647,
+            0.349,
+            0.778,
+            0.408
+          ],
+          "level": 2,
+          "content": "Cuối kỳ 40%"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.625,
+            0.453,
+            0.702,
+            0.497
+          ],
+          "content": "• Thi viết"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.624,
+            0.497,
+            0.711,
+            0.541
+          ],
+          "content": "• Đề đóng"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.959,
+            0.998,
+            0.997
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.403,
+            0.102,
+            0.615,
+            0.186
+          ],
+          "level": 2,
+          "content": "NỘI DUNG"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.406,
+            0.531,
+            0.48
+          ],
+          "content": "1. Giới thiệu môn học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.497,
+            0.76,
+            0.572
+          ],
+          "content": "**2. Lịch sử và thành tựu của máy học**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.584,
+            0.721,
+            0.666
+          ],
+          "content": "3. Ôn tập ngôn ngữ lập trình Python"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.066,
+            0.945,
+            0.146,
+            0.978
+          ],
+          "content": "June 9, 2023"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.326,
+            0.945,
+            0.675,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.12,
+            0.484,
+            0.211
+          ],
+          "level": 2,
+          "content": "Lịch sử hình thành"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.419,
+            0.487,
+            0.565,
+            0.543
+          ],
+          "content": "Machine learning begins to flourish."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.161,
+            0.265,
+            0.87,
+            0.934
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_6_image_3.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.641,
+            0.497,
+            0.768,
+            0.589
+          ],
+          "level": 2,
+          "content": "LEARNING"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.961,
+            0.998,
+            0.997
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.0,
+            0.666,
+            0.04,
+            0.999
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_0.jpg"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.107,
+            0.448,
+            0.212
+          ],
+          "level": 2,
+          "content": "Một số thành tựu"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.059,
+            0.239,
+            0.329,
+            0.511
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.162,
+                0.519,
+                0.233,
+                0.551
+              ],
+              "content": "Robotics"
+            }
+          ],
+          "image_source": "images/page_7_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.372,
+            0.34,
+            0.485,
+            0.515
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.098,
+                0.858,
+                0.284,
+                0.899
+              ],
+              "content": "Xử lý dữ liệu dạng bảng"
+            }
+          ],
+          "image_source": "images/page_7_image_5.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.189,
+            0.667,
+            0.325,
+            0.829
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_7.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.067,
+            0.634,
+            0.184,
+            0.801
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_8.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.515,
+            0.312,
+            0.655,
+            0.567
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_9.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.835,
+            0.365,
+            0.963,
+            0.473
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_10.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.36,
+            0.592,
+            0.508,
+            0.771
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_11.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.711,
+            0.297,
+            0.841,
+            0.415
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_12.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.845,
+            0.489,
+            0.913,
+            0.613
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_image_13.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.733,
+            0.48,
+            0.822,
+            0.728
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.478,
+                0.858,
+                0.555,
+                0.896
+              ],
+              "content": "Xử lý ảnh"
+            }
+          ],
+          "image_source": "images/page_7_image_14.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.528,
+            0.627,
+            0.661,
+            0.786
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.754,
+                0.741,
+                0.808,
+                0.769
+              ],
+              "content": "Văn bản"
+            },
+            {
+              "bbox": [
+                0.877,
+                0.737,
+                0.94,
+                0.771
+              ],
+              "content": "Âm thanh"
+            },
+            {
+              "bbox": [
+                0.74,
+                0.845,
+                0.93,
+                0.887
+              ],
+              "content": "Xử lý ngôn ngữ tự nhiên"
+            }
+          ],
+          "image_source": "images/page_7_image_16.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.98,
+            0.961,
+            0.997,
+            0.995
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.121,
+            0.376,
+            0.211
+          ],
+          "level": 2,
+          "content": "Thành tựu AI"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.084,
+            0.309,
+            0.324,
+            0.775
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.133,
+                0.821,
+                0.306,
+                0.853
+              ],
+              "content": "Y sinh, Chăm sóc sức khỏe"
+            }
+          ],
+          "image_source": "images/page_8_image_2.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.375,
+            0.274,
+            0.675,
+            0.679
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.426,
+                0.809,
+                0.622,
+                0.844
+              ],
+              "content": "Tài chính, thương mại điện tử"
+            }
+          ],
+          "image_source": "images/page_8_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.708,
+            0.219,
+            0.943,
+            0.803
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.75,
+                0.85,
+                0.92,
+                0.884
+              ],
+              "content": "Môi trường “thông minh\""
+            }
+          ],
+          "image_source": "images/page_8_image_6.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.981,
+            0.962,
+            0.996,
+            0.995
+          ],
+          "content": "9"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.12,
+            0.244,
+            0.2
+          ],
+          "level": 2,
+          "content": "So sánh"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.173,
+            0.253,
+            0.442,
+            0.315
+          ],
+          "content": "**Lập trình truyền thống**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.139,
+            0.345,
+            0.442,
+            0.893
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.804,
+            0.328,
+            0.859
+          ],
+          "content": "Traditional Programming"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.577,
+            0.252,
+            0.89,
+            0.992
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_image_5.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.959,
+            0.998,
+            0.997
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.403,
+            0.102,
+            0.615,
+            0.186
+          ],
+          "level": 2,
+          "content": "NỘI DUNG"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.406,
+            0.531,
+            0.479
+          ],
+          "content": "1. Giới thiệu môn học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.497,
+            0.73,
+            0.571
+          ],
+          "content": "2. Lịch sử và thành tựu của máy học"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.584,
+            0.751,
+            0.667
+          ],
+          "content": "**3. Ôn tập ngôn ngữ lập trình Python**"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.066,
+            0.945,
+            0.146,
+            0.977
+          ],
+          "content": "June 9, 2023"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.326,
+            0.945,
+            0.675,
+            0.98
+          ],
+          "content": "Thực hiện bởi Trường Đại học Công nghệ Thông tin, ĐHQG-HCM"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.081,
+            0.12
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.11,
+            0.392,
+            0.217
+          ],
+          "level": 2,
+          "content": "Ôn tập Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.17,
+            0.507,
+            0.316,
+            0.649
+          ],
+          "content": "**Python Guido van Rossum 1980s**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.54,
+            0.323,
+            0.721,
+            0.373
+          ],
+          "content": "**Bậc cao (high-level)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.463,
+            0.789,
+            0.513
+          ],
+          "content": "**Thông dịch (interpreted)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.544,
+            0.616,
+            0.811,
+            0.668
+          ],
+          "content": "**Đa năng (generally purposed)**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.477,
+            0.769,
+            0.795,
+            0.821
+          ],
+          "content": "**Hướng đối tượng (object-oriented)**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.997,
+            0.995
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.113,
+            0.391,
+            0.215
+          ],
+          "level": 2,
+          "content": "Ôn tập Python"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.145,
+            0.293,
+            0.415,
+            0.345
+          ],
+          "level": 2,
+          "content": "Top lý do nên học Python"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.143,
+            0.445,
+            0.179,
+            0.509
+          ],
+          "content": "**Đơn giản**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.457,
+            0.3,
+            0.525
+          ],
+          "content": "**Rõ ràng**"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.132,
+            0.596,
+            0.317,
+            0.849
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.362,
+            0.56,
+            0.393,
+            0.631
+          ],
+          "content": "**Dễ học**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.378,
+            0.729,
+            0.417,
+            0.825
+          ],
+          "content": "**Cộng đồng lớn**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.582,
+            0.292,
+            0.922,
+            0.345
+          ],
+          "level": 2,
+          "content": "Những gã khổng lồ dùng Python"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.595,
+            0.409,
+            0.643,
+            0.491
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_9.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.649,
+            0.441,
+            0.888,
+            0.467
+          ],
+          "content": "Python where we can, C++(Go)where we must"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.597,
+            0.508,
+            0.643,
+            0.589
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_11.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.649,
+            0.54,
+            0.809,
+            0.567
+          ],
+          "content": "Python Django Web Framework"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.597,
+            0.608,
+            0.643,
+            0.69
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_13.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.649,
+            0.641,
+            0.885,
+            0.666
+          ],
+          "content": "Multiple services in infrastructure management"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.607,
+            0.707,
+            0.633,
+            0.753
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_15.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.597,
+            0.772,
+            0.643,
+            0.852
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_12_image_16.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.65,
+            0.721,
+            0.759,
+            0.748
+          ],
+          "content": "Back-end networking"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.649,
+            0.803,
+            0.778,
+            0.829
+          ],
+          "content": "Server-side data analysis"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.963,
+            0.996,
+            0.993
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.139,
+            0.686,
+            0.47,
+            0.835
+          ],
+          "sub_type": "code",
+          "content": "```groovy\nclass HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.121,
+            0.459,
+            0.214
+          ],
+          "level": 2,
+          "content": "Giới thiệu Python"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.141,
+            0.353,
+            0.4,
+            0.567
+          ],
+          "sub_type": "code",
+          "content": "```cpp\n#include <iostream.h>\n\nint main()\n{\n    std::cout << \"Hello, world!\";\n    return 0;\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.561,
+            0.266,
+            0.59,
+            0.307
+          ],
+          "content": "C#"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.579,
+            0.327,
+            0.9,
+            0.556
+          ],
+          "sub_type": "code",
+          "content": "```cs\nusing System;\nclass Program\n{\n    public static void Main(string[] args)\n    {\n        Console.WriteLine(\"Hello, world!\");\n    }\n}\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.546,
+            0.638,
+            0.824,
+            0.848
+          ],
+          "sub_type": "code",
+          "content": "```txt\nPython\n    print(\"Hello, World!\")\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.997,
+            0.997
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.051,
+            0.08,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.121,
+            0.526,
+            0.213
+          ],
+          "level": 2,
+          "content": "Môi trường lập trình"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.311,
+            0.297,
+            0.347
+          ],
+          "content": "PyCharm"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.208,
+            0.363,
+            0.309,
+            0.54
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.357,
+                0.277,
+                0.408,
+                0.308
+              ],
+              "content": "Visual"
+            },
+            {
+              "bbox": [
+                0.334,
+                0.31,
+                0.431,
+                0.341
+              ],
+              "content": "Studio Code"
+            }
+          ],
+          "image_source": "images/page_14_image_3.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.332,
+            0.363,
+            0.433,
+            0.541
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.298,
+                0.595,
+                0.346,
+                0.627
+              ],
+              "content": "Atom"
+            },
+            {
+              "bbox": [
+                0.456,
+                0.309,
+                0.558,
+                0.342
+              ],
+              "content": "Sublime Text"
+            }
+          ],
+          "image_source": "images/page_14_image_6.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.456,
+            0.363,
+            0.558,
+            0.541
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.613,
+                0.31,
+                0.65,
+                0.341
+              ],
+              "content": "Vim"
+            }
+          ],
+          "image_source": "images/page_14_image_9.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.582,
+            0.364,
+            0.681,
+            0.541
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.708,
+                0.309,
+                0.804,
+                0.343
+              ],
+              "content": "GNU Emacs"
+            },
+            {
+              "bbox": [
+                0.415,
+                0.595,
+                0.476,
+                0.631
+              ],
+              "content": "Jupyter"
+            },
+            {
+              "bbox": [
+                0.168,
+                0.593,
+                0.228,
+                0.63
+              ],
+              "content": "Spyder"
+            }
+          ],
+          "image_source": "images/page_14_image_11.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.705,
+            0.364,
+            0.805,
+            0.539
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.541,
+                0.593,
+                0.598,
+                0.629
+              ],
+              "content": "Eclipse"
+            },
+            {
+              "bbox": [
+                0.647,
+                0.593,
+                0.739,
+                0.628
+              ],
+              "content": "IntelliJ IDEA"
+            },
+            {
+              "bbox": [
+                0.772,
+                0.593,
+                0.86,
+                0.629
+              ],
+              "content": "Notepad++"
+            }
+          ],
+          "image_source": "images/page_14_image_15.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.147,
+            0.646,
+            0.25,
+            0.827
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_19.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.271,
+            0.648,
+            0.373,
+            0.827
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_20.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.395,
+            0.648,
+            0.496,
+            0.826
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_21.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.519,
+            0.647,
+            0.619,
+            0.826
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_22.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.642,
+            0.649,
+            0.742,
+            0.826
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_14_image_23.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.765,
+            0.648,
+            0.866,
+            0.825
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.64,
+                0.849,
+                0.864,
+                0.875
+              ],
+              "content": "Source: Top 10 Python IDEs and Code editors"
+            }
+          ],
+          "image_source": "images/page_14_image_24.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.965,
+            0.997,
+            0.991
+          ],
+          "content": "15"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "footer",
+          "bbox": [
+            0.658,
+            0.945,
+            0.805,
+            0.978
+          ],
+          "content": "P[ractice 1](https://colab.research.google.com/notebooks/markdown_guide.ipynb#scrollTo=Lhfnlq1Surtk), [practice 2](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.12,
+            0.525,
+            0.213
+          ],
+          "level": 2,
+          "content": "Môi trường lập trình"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.415,
+            0.235,
+            0.547,
+            0.261
+          ],
+          "level": 2,
+          "content": "Colaboratory chào mùng bn!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.037,
+            0.39,
+            0.374,
+            0.447
+          ],
+          "content": "Nền tảng miễn phí bởi Google"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.474,
+            0.365,
+            0.527
+          ],
+          "content": "**Jupyter notebook** bất kỳ đâu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.038,
+            0.55,
+            0.231,
+            0.608
+          ],
+          "content": "Chia sẻ dễ dàng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.065,
+            0.706,
+            0.333,
+            0.763
+          ],
+          "content": "Truy cập **Colab** tại địa chỉ:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.065,
+            0.815,
+            0.344,
+            0.867
+          ],
+          "content": "[colab.research.google.com](https://colab.research.google.com/)"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.576,
+            0.36,
+            0.721,
+            0.394
+          ],
+          "level": 2,
+          "content": "Co Colaboratory là gì?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.568,
+            0.406,
+            0.961,
+            0.433
+          ],
+          "content": "Colaboratory (goi tt là \"Colab\") cho phép bn viêt và thc thi Python trong trình duyt vi các li ích sau:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.58,
+            0.437,
+            0.685,
+            0.461
+          ],
+          "content": "• Không yêu cu cu hình"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.58,
+            0.461,
+            0.681,
+            0.485
+          ],
+          "content": "•S dng min phí GPU"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.568,
+            0.513,
+            0.967,
+            0.565
+          ],
+          "content": "Cho dù bn là sinh viên, nhà khoa hc d liu hay nhà nghiên cu Al (trí tu nhân to), Colab đu giúp bn Hãy xem phn Hưng dn v Colab đ tìm hiu thêm hoc bt đu ngay  bên dưri!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.567,
+            0.634,
+            0.968,
+            0.684
+          ],
+          "content": "Tài liu bn đang đc không phi là trang web tīnh, mà là mt môi trưng tương tác đưc gi là s tay trên thc thi mã."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.568,
+            0.688,
+            0.97,
+            0.717
+          ],
+          "content": "Ví d: sau đây là mt ô cha mã có tp lnh Python ngn tính toán mt giá tri, lưu tr giá tr đó trong mt bi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.568,
+            0.837,
+            0.969,
+            0.887
+          ],
+          "content": "Đ thc thi mã trong ô trên, hãy nhp đ chn mã đó rồi nhn nút phát  bên trái mã hoc s dng t hp p chinh sa mã này, bn chi cn nhp vào ô đó và bt đu chinh sa."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.965,
+            0.997,
+            0.994
+          ],
+          "content": "16"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.051,
+            0.079,
+            0.117
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.123,
+            0.322,
+            0.197
+          ],
+          "level": 2,
+          "content": "Tham khảo"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.277,
+            0.824,
+            0.329
+          ],
+          "content": "1. Google Colab: [colab.research.google.com](https://colab.research.google.com/), [practice 1](https://colab.research.google.com/notebooks/markdown_guide.ipynb#scrollTo=Lhfnlq1Surtk), [practice 2](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.069,
+            0.335,
+            0.584,
+            0.388
+          ],
+          "content": "2. Sách hay về Python cho người mới bắt đầu"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.303,
+            0.425,
+            0.505,
+            0.881
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_4.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.517,
+            0.426,
+            0.718,
+            0.883
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_image_5.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.959,
+            0.997,
+            0.997
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.033,
+            0.05,
+            0.079,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.107,
+            0.34,
+            0.211
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.081,
+            0.251,
+            0.615,
+            0.67
+          ],
+          "content": "| Kiểu dữ liệu | Ý nghĩa | Ví dụ |\n| --- | --- | --- |\n| int | Kiểu số nguyên (không có chứa dấu chấm thập phân) | 11, -15 |\n| float | Kiểu số thực (có chứa dấu chấm thập phân) | 3.14, 4.02 |\n| complex | Kiểu số phúc | 1 + 2j, 3 - 4j |\n| str | Kiểu chuỗi | 'Python' |\n| bool | Kiểu luận lý | TRUE, FALSE |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_17_table_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.777,
+            0.583,
+            0.828
+          ],
+          "content": "● Kiểm tra kiểu dữ liệu của biến bằng hàm type()"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.097,
+            0.855,
+            0.355,
+            0.905
+          ],
+          "content": "● Ép kiểu dữ liệu của biến"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.661,
+            0.155,
+            0.951,
+            0.861
+          ],
+          "content": "| Cú pháp | Ý nghĩa |\n| --- | --- |\n| float(x) | chuyển đổi sang kiểu số thực |\n| int(x) | chuyển đổi sang kiểu số |\n| str(x) | chuyển đổi sang dạng chuỗi |\n| complex(x) | chuyển đổi sang kiểu phúc hợp |\n| tuple(x) | chuyển đổi sang kiểu Tuple |\n| dict(x) | chuyển đổi sang kiểu Dictionary |\n| hex(x) | chuyển đổi sang hệ 16 |\n| oct(x) | chuyển đổi sang hệ 8 |\n| chr(x) | chuyển đổi sang dạng ký tự |",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.846,
+                0.869,
+                0.934,
+                0.901
+              ],
+              "content": "Nguồn: [Zootopi](https://zootopi.dev/tutorial/python/foundation)"
+            }
+          ],
+          "image_source": "images/page_17_table_5.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.96,
+            0.997,
+            0.995
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.117
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.123,
+            0.251,
+            0.197
+          ],
+          "level": 2,
+          "content": "Toán tử"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.088,
+            0.277,
+            0.399,
+            0.838
+          ],
+          "content": "| Phép toán | Biểu thức | Ý nghĩa |\n| --- | --- | --- |\n| + | x + y | Phép cộng |\n| - | x - y | Phép trừ |\n| * | x * y | Phép nhân |\n| / | x / y | Phép chia |\n| % | x % y | Phép chia lấy phần dư |\n| // | x // y | Phép chia làm tròn xuống |\n| ** | x ** y | Phép mũ |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_18_table_2.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.433,
+            0.281,
+            0.921,
+            0.829
+          ],
+          "content": "| Toán tử | Biểu thức | Ý nghĩa |\n| --- | --- | --- |\n| &lt; | x &lt; y | So sánh giá trị x có nhỏ hơn y hay không |\n| > | x > y | So sánh giá trị x có lớn hơn y hay không |\n| &lt;= | x &lt;= y | So sánh giá trị x có nhỏ hơn hoặc bằng y hay không |\n| >= | x >= y | So sánh giá trị x có lớn hơn hoặc bằng y hay không |\n| == | x == y | So sánh giá trị x có bằng y hay không |\n| != | x != y | So sánh giá trị x có khác y hay không |",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.823,
+                0.841,
+                0.911,
+                0.872
+              ],
+              "content": "Nguồn: [Zootopi](https://zootopi.dev/tutorial/python/foundation)"
+            }
+          ],
+          "image_source": "images/page_18_table_3.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.961,
+            0.997,
+            0.995
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.122,
+            0.251,
+            0.198
+          ],
+          "level": 2,
+          "content": "Toán tử"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.238,
+            0.339,
+            0.76,
+            0.709
+          ],
+          "content": "| Toán tử | Biểu thức | Ý nghĩa |\n| --- | --- | --- |\n| AND | X and Y | True nếu cà X và Y đều đúng |\n| OR | X or Y | True nếu ít nhất một trong hai về X hoặc Y đúng |\n| NOT | not X | True nếu X sai và False nếu X đúng |\n| XOR | bool(Y) ^ bool(Y) | True nếu X và Y cùng giá trị và False nếu ngược lại |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_19_table_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.091,
+            0.795,
+            0.763,
+            0.843
+          ],
+          "content": "Thứ tự ưu tiên của các loại toán tử trên tương tự như trong toán học."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.995
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.107,
+            0.429,
+            0.211
+          ],
+          "level": 2,
+          "content": "Cấu trúc dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.291,
+            0.282,
+            0.339
+          ],
+          "content": "**List**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.219,
+            0.45,
+            0.293,
+            0.505
+          ],
+          "content": "**Tuple**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.395,
+            0.291,
+            0.936,
+            0.436
+          ],
+          "content": "**List** là một đối tượng dùng để lưu tập các đối tượng khác nhau, có thể thêm, bớt, thay đổi các giá trị và chứa các giá trị trùng nhau."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.483,
+            0.882,
+            0.533
+          ],
+          "content": "● Cú pháp: [giá\\_trị\\_1, giá\\_trị\\_2, ...]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.233,
+            0.612,
+            0.28,
+            0.661
+          ],
+          "content": "**Set**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.397,
+            0.577,
+            0.493,
+            0.623
+          ],
+          "content": "● Ví dụ:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.426,
+            0.642,
+            0.875,
+            0.69
+          ],
+          "content": "○ Khai báo một list các số tự nhiên từ 1 đến 10."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.194,
+            0.771,
+            0.32,
+            0.826
+          ],
+          "content": "**Dictionary**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.427,
+            0.709,
+            0.697,
+            0.757
+          ],
+          "content": "○ Lọc phần tử ở vị trí thứ 5."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.427,
+            0.775,
+            0.774,
+            0.825
+          ],
+          "content": "○ Lọc lấy 5 phần tử đầu tiên của list."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.961,
+            0.997,
+            0.996
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.107,
+            0.429,
+            0.211
+          ],
+          "level": 2,
+          "content": "Cấu trúc dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.291,
+            0.282,
+            0.339
+          ],
+          "content": "**List**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.219,
+            0.449,
+            0.294,
+            0.506
+          ],
+          "content": "**Tuple**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.233,
+            0.611,
+            0.28,
+            0.661
+          ],
+          "content": "**Set**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.771,
+            0.321,
+            0.827
+          ],
+          "content": "**Dictionary**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.287,
+            0.937,
+            0.422
+          ],
+          "content": "**Tuple** là một đối tượng dùng để lưu tập các đối tượng khác nhau. Tuple không thể thêm, bớt, thay đổi các giá trị"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.481,
+            0.882,
+            0.532
+          ],
+          "content": "● Cú pháp: (giá\\_trị\\_1, giá\\_trị\\_2,... )"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.397,
+            0.575,
+            0.526,
+            0.623
+          ],
+          "content": "● Ưu điểm:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.431,
+            0.643,
+            0.853,
+            0.691
+          ],
+          "content": "○ **Bộ nhớ** khi dùng Tuple nhỏ hơn so với List."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.432,
+            0.709,
+            0.917,
+            0.759
+          ],
+          "content": "○ Tốc độ xử lý khi dùng Tuple nhanh hơn so với List."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.961,
+            0.997,
+            0.994
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.107,
+            0.429,
+            0.21
+          ],
+          "level": 2,
+          "content": "Cấu trúc dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.291,
+            0.281,
+            0.339
+          ],
+          "content": "**List**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.219,
+            0.449,
+            0.293,
+            0.505
+          ],
+          "content": "**Tuple**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.233,
+            0.612,
+            0.28,
+            0.661
+          ],
+          "content": "**Set**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.193,
+            0.771,
+            0.321,
+            0.827
+          ],
+          "content": "**Dictionary**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.287,
+            0.936,
+            0.379
+          ],
+          "content": "**Set** là một đối tượng dùng để lưu tập các đối tượng khác nhau, **không** thể chứa các phần tử **trùng nhau.**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.397,
+            0.481,
+            0.883,
+            0.531
+          ],
+          "content": "● Cú pháp: {giá\\_trị\\_1, giá\\_trị\\_2,... }"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.575,
+            0.935,
+            0.667
+          ],
+          "content": "Phù hợp xử lý các bài toán về tập hợp: giao, hiệu, phần bù, ..."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.998,
+            0.995
+          ],
+          "content": "23"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.05,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.107,
+            0.429,
+            0.21
+          ],
+          "level": 2,
+          "content": "Cấu trúc dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.233,
+            0.291,
+            0.281,
+            0.339
+          ],
+          "content": "**List**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.449,
+            0.292,
+            0.505
+          ],
+          "content": "**Tuple**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.396,
+            0.288,
+            0.936,
+            0.422
+          ],
+          "content": "**Dictionary** là một danh sách các phần tử, trong đó mỗi phần tử là một cặp khóa và giá trị. Mỗi khoá thì chỉ ứng với một giá trị duy nhất."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.234,
+            0.612,
+            0.28,
+            0.661
+          ],
+          "content": "**Set**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.194,
+            0.771,
+            0.32,
+            0.826
+          ],
+          "content": "**Dictionary**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.398,
+            0.483,
+            0.521,
+            0.53
+          ],
+          "content": "● Cú pháp:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.406,
+            0.553,
+            0.971,
+            0.601
+          ],
+          "content": "{khoá\\_1 : giá\\_trị\\_1, khoá\\_2 : giá\\_trị\\_2,... }"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.398,
+            0.657,
+            0.493,
+            0.703
+          ],
+          "content": "● Ví dụ:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.432,
+            0.722,
+            0.848,
+            0.813
+          ],
+          "content": "○ Khai báo thông tin của một học sinh bằng Dictionary."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.998,
+            0.995
+          ],
+          "content": "24"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.107,
+            0.429,
+            0.211
+          ],
+          "level": 2,
+          "content": "Cấu trúc dữ liệu"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.081,
+            0.274,
+            0.899,
+            0.831
+          ],
+          "content": "|  | List | Tuple | Set | Dictionary |\n| --- | --- | --- | --- | --- |\n| Đặc trưng | Chứa bất kì kiểu dữ liệu nào, CÓ thứ tự, giá trị CÓ thể thay đổi. | Giá trị KHÔNG thể thay đổi, CÓ thứ tự, KHÔNG thể thay đổi. | Giá trị KHÔNG trùng lặp, CÓ thứ tự, CÓ thể thay đổi. | Theo cơ chế khoá: giá trị, khoá KHÔNG trùng lặp. |\n| Cú pháp | [] | () | {} | {Khoá: Giá trị} |\n| Mục đích | Lưu trữ danh sách. | Lưu các tập hợp không bị thay đổi, cho tốc độ nhanh. | Thực hiện các phép toán tập hợp. | Lưu trữ các dữ liệu có cấu trúc. |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_24_table_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.874,
+            0.806,
+            0.928
+          ],
+          "content": "**Bảng so sánh các cấu trúc dữ liệu cơ bản trong Python**"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.997,
+            0.995
+          ],
+          "content": "25"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.105,
+            0.473,
+            0.202
+          ],
+          "level": 2,
+          "content": "Cấu trúc rẽ nhánh"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.072,
+            0.255,
+            0.544,
+            0.95
+          ],
+          "sub_type": "code",
+          "content": "```txt\nif condition(True/False):\n    business logic\nelif condition(True/False): # --> optional\n    business logic\nelif condition(True/False): # --> optional\n    business logic\nelif condition(True/False): # --> optional\n    business logic\n....\nelse:\n    business logic # --> optional\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.583,
+            0.252,
+            0.964,
+            0.381
+          ],
+          "content": "Nếu sinh viên làm bài cuối khoá được hơn 8 điểm, thì học viên qua môn xuất sắc, in ra ‘Excellently Passed'."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.584,
+            0.503,
+            0.964,
+            0.633
+          ],
+          "content": "Nếu sinh viên làm bài cuối khoá được từ 6 đến 8 điểm, thì học viên qua môn, in ra ‘Well Passed'."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.584,
+            0.757,
+            0.963,
+            0.845
+          ],
+          "content": "Nếu không, học viên trượt môn, in ra Không Đạt (‘Failed')"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.997,
+            0.994
+          ],
+          "content": "26"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.106,
+            0.463,
+            0.214
+          ],
+          "level": 2,
+          "content": "Cấu trúc vòng lặp"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.343,
+            0.353,
+            0.437
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor value in iterable:\n    business logic\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.497,
+            0.483,
+            0.579
+          ],
+          "sub_type": "code",
+          "content": "```python\nfor index in range(len(iterable)):\n    business logic\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.695,
+            0.417,
+            0.775
+          ],
+          "content": "**while** condition(True/False): business logic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.544,
+            0.343,
+            0.937,
+            0.431
+          ],
+          "content": "Biết pi = 3.14, tính diện tích hình tròn với danh sách các bán kính như sau"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.557,
+            0.453,
+            0.922,
+            0.497
+          ],
+          "sub_type": "code",
+          "content": "```toml\nradius = [2, 4, 5, 8, 10, 20]\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.544,
+            0.516,
+            0.927,
+            0.821
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_26_image_7.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.961,
+            0.997,
+            0.994
+          ],
+          "content": "27"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.07,
+            0.119,
+            0.187,
+            0.202
+          ],
+          "level": 2,
+          "content": "Hàm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.411,
+            0.288,
+            0.466
+          ],
+          "content": "**Hàm**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.196,
+            0.569,
+            0.314,
+            0.63
+          ],
+          "content": "**Bao hàm**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.375,
+            0.296,
+            0.502,
+            0.347
+          ],
+          "level": 2,
+          "content": "● Cú pháp:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.446,
+            0.394,
+            0.894,
+            0.45
+          ],
+          "content": "**def function\\_name(**arg1, arg2, ...**):**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.494,
+            0.465,
+            0.687,
+            0.515
+          ],
+          "content": "business logic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.495,
+            0.533,
+            0.674,
+            0.584
+          ],
+          "content": "**return** result"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.38,
+            0.669,
+            0.513,
+            0.722
+          ],
+          "level": 2,
+          "content": "● Ưu điểm:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.413,
+            0.735,
+            0.654,
+            0.792
+          ],
+          "content": "○ Tái sử dụng mã nguồn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.413,
+            0.799,
+            0.694,
+            0.861
+          ],
+          "content": "○ Dễ dàng quản lý mã nguồn"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.995
+          ],
+          "content": "28"
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.07,
+            0.119,
+            0.186,
+            0.201
+          ],
+          "level": 2,
+          "content": "Hàm"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.411,
+            0.288,
+            0.466
+          ],
+          "content": "**Hàm**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.197,
+            0.571,
+            0.313,
+            0.629
+          ],
+          "content": "**Bao hàm**"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.375,
+            0.299,
+            0.501,
+            0.347
+          ],
+          "level": 2,
+          "content": "● Cú pháp:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.414,
+            0.369,
+            0.881,
+            0.414
+          ],
+          "content": "[expression **for** variable **in** iterable]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.413,
+            0.438,
+            0.882,
+            0.483
+          ],
+          "content": "{expression **for** variable **in** iterable}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.41,
+            0.505,
+            0.943,
+            0.553
+          ],
+          "content": "**tuple(**expression **for** variable **in** iterable)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.412,
+            0.573,
+            0.871,
+            0.621
+          ],
+          "content": "{key:value **for** variable **in** iterable}"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.379,
+            0.669,
+            0.746,
+            0.723
+          ],
+          "content": "● Ưu điểm so với hàm thông thường:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.414,
+            0.737,
+            0.664,
+            0.791
+          ],
+          "content": "○ Đoạn mã ngắn gọn hơn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.414,
+            0.803,
+            0.666,
+            0.858
+          ],
+          "content": "○ Tốc độ xử lý nhanh hơn"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.998,
+            0.995
+          ],
+          "content": "29"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.121,
+            0.415,
+            0.212
+          ],
+          "level": 2,
+          "content": "Giới thiệu OOP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.331,
+            0.292,
+            0.37
+          ],
+          "content": "CLASS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.234,
+            0.401,
+            0.296,
+            0.439
+          ],
+          "content": "Human"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.625,
+            0.315,
+            0.663
+          ],
+          "content": "PROPERTIES"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.693,
+            0.306,
+            0.733
+          ],
+          "content": "Phone No."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.775,
+            0.299,
+            0.814
+          ],
+          "content": "Email ID"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.699,
+            0.331,
+            0.772,
+            0.369
+          ],
+          "content": "OBJECTS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.709,
+            0.401,
+            0.761,
+            0.437
+          ],
+          "content": "Name"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.691,
+            0.605,
+            0.779,
+            0.644
+          ],
+          "content": "METHODS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.69,
+            0.673,
+            0.779,
+            0.713
+          ],
+          "content": "Send Email"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.679,
+            0.757,
+            0.79,
+            0.797
+          ],
+          "content": "Call a number"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.961,
+            0.997,
+            0.994
+          ],
+          "content": "30"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.107,
+            0.406,
+            0.2
+          ],
+          "level": 2,
+          "content": "Tính chất OOP"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.285,
+            0.255,
+            0.699,
+            0.908
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_30_image_2.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.961,
+            0.997,
+            0.995
+          ],
+          "content": "31"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.051,
+            0.079,
+            0.117
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.121,
+            0.224,
+            0.211
+          ],
+          "level": 2,
+          "content": "Object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.276,
+            0.903,
+            0.409
+          ],
+          "content": "● Python hỗ trợ nhiều kiểu dữ liệu khác nhau: 1234 3.14159 “Hello\" [1, 5, 7, 11, 13]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.432,
+            0.604,
+            0.486
+          ],
+          "content": "● Mỗi ví dụ trên gọi là một object và mỗi object có:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.51,
+            0.394,
+            0.563
+          ],
+          "content": "○ Một kiểu dữ liệu (type)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.128,
+            0.587,
+            0.656,
+            0.641
+          ],
+          "content": "○ Tập hợp các hàm/thủ tục để tương tác với object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.665,
+            0.695,
+            0.719
+          ],
+          "content": "Một object là một instance (thực thể) của một kiểu dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.743,
+            0.621,
+            0.795
+          ],
+          "content": "○ 1234 là một instance của kiểu số nguyên (int)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.819,
+            0.618,
+            0.873
+          ],
+          "content": "○ “Hello\" là một instance của kiểu chuỗi (string)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.961,
+            0.997,
+            0.995
+          ],
+          "content": "32"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.121,
+            0.225,
+            0.211
+          ],
+          "level": 2,
+          "content": "Object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.288,
+            0.621,
+            0.355
+          ],
+          "content": "● Object là dữ liệu trừu tượng bao gồm:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.122,
+            0.389,
+            0.889,
+            0.527
+          ],
+          "content": "o Dữ liệu nội bộ (internal representation), được truy xuất thông qua thuộc tính dữ liệu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.121,
+            0.56,
+            0.919,
+            0.701
+          ],
+          "content": "Giao diện (interface) để tương tác với object thông qua các phương thức (method), còn được gọi là hàm/thủ tục (function/procedure)"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.997,
+            0.995
+          ],
+          "content": "33"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.123,
+            0.193,
+            0.198
+          ],
+          "level": 2,
+          "content": "Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.279,
+            0.366,
+            0.329
+          ],
+          "content": "● Việc tạo class bao gồm:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.359,
+            0.39,
+            0.407
+          ],
+          "content": "○ Định nghĩa **tên class**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.135,
+            0.436,
+            0.445,
+            0.485
+          ],
+          "content": "○ Định nghĩa **các thuộc tính**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.514,
+            0.479,
+            0.563
+          ],
+          "content": "○ Định nghĩa **các phương thức**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.665,
+            0.416,
+            0.718
+          ],
+          "content": "● Việc sử dụng class bao gồm:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.746,
+            0.524,
+            0.794
+          ],
+          "content": "Tạo một instance mới của class đó"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.134,
+            0.823,
+            0.747,
+            0.873
+          ],
+          "content": "○ Thực hiện các toán tử/phương thức trên instance vừa tạo"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.995
+          ],
+          "content": "34"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.12,
+            0.363,
+            0.213
+          ],
+          "level": 2,
+          "content": "Cài đặt Class"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.556,
+            0.806,
+            0.633
+          ],
+          "content": "classCoordinate(object) :"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.323,
+            0.671,
+            0.858,
+            0.74
+          ],
+          "content": "#define attributes here"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.995
+          ],
+          "content": "35"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.05,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.12,
+            0.663,
+            0.215
+          ],
+          "level": 2,
+          "content": "Cài đặt phương thức \\_\\_init"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.279,
+            0.899,
+            0.346
+          ],
+          "content": "• Sử dụng phương thức đặc biệt \\_\\_init\\_\\_ để khởi tạo các thuộc"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.162,
+            0.399,
+            0.624,
+            0.459
+          ],
+          "content": "class Coordinate(object) :"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.235,
+            0.469,
+            0.695,
+            0.569
+          ],
+          "content": "def init (self, x, y)"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.088,
+            0.476,
+            0.3,
+            0.919
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_35_chart_5.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.309,
+            0.572,
+            0.505,
+            0.805
+          ],
+          "content": "self.x = x\nself.y = y"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.42,
+            0.817,
+            0.666,
+            0.915
+          ],
+          "content": "hai thuc tính d liu cho mi Coordinate object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.718,
+            0.376,
+            0.913,
+            0.475
+          ],
+          "continues_prev": true,
+          "content": "d liu khi to cho Coordinate object"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.719,
+            0.612,
+            0.893,
+            0.759
+          ],
+          "content": "tham s tham chiu đn mt instance ca class"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.999,
+            0.995
+          ],
+          "content": "36"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.081,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.12,
+            0.699,
+            0.212
+          ],
+          "level": 2,
+          "content": "Tạo và thao tác trên instance"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.642,
+            0.263,
+            0.94,
+            0.417
+          ],
+          "content": "tao mt object mi có kiu Coordinate và truyên 3 và 4 vào phuơng thúc\\_init\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.597,
+            0.625,
+            0.822,
+            0.787
+          ],
+          "content": "s dng dãu chm \".\" đ truy cp thuc tính ca instance c"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.977,
+            0.959,
+            0.999,
+            0.997
+          ],
+          "content": "37"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.051,
+            0.079,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.123,
+            0.357,
+            0.212
+          ],
+          "level": 2,
+          "content": "Phương thức"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.282,
+            0.884,
+            0.419
+          ],
+          "content": "• Phương thức (method) của class là các hàm chỉ làm việc với class đó"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.451,
+            0.837,
+            0.517
+          ],
+          "content": "• Sử dụng self làm tham số đầu tiên của tất cả các method"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.545,
+            0.908,
+            0.692
+          ],
+          "content": "• Toán tử “.” được sử dụng để truy cập các thuộc tính dữ liệu và phương thức của một object"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.997,
+            0.995
+          ],
+          "content": "38"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.072,
+            0.122,
+            0.357,
+            0.213
+          ],
+          "level": 2,
+          "content": "Phương thức"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.281,
+            0.885,
+            0.42
+          ],
+          "content": "• Phương thức (method) của class là các hàm chỉ làm việc với class đó"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.451,
+            0.838,
+            0.517
+          ],
+          "content": "• Sử dụng self làm tham số đầu tiên của tất cả các method"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.07,
+            0.539,
+            0.911,
+            0.998
+          ],
+          "sub_type": "code",
+          "content": "```python\n• Toán tử “.” đực\nclass Coordinate(object):\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def distance(self, other):\n        x_diff_sq = (self.x-other.x)**2\n        y_diff_sq = (self.y-other.y)**2\n        return (x_diff_sq + y_diff_sq)**0.5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.999,
+            0.995
+          ],
+          "content": "39"
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "chart",
+          "bbox": [
+            0.217,
+            0.472,
+            0.6,
+            0.992
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_39_chart_0.jpg"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.05,
+            0.08,
+            0.118
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.123,
+            0.445,
+            0.213
+          ],
+          "level": 2,
+          "content": "Gọi phương thức"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.226,
+            0.29,
+            0.609,
+            0.403
+          ],
+          "sub_type": "code",
+          "content": "```python\ndef distance(self, other):\n    # code here\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.961,
+            0.997,
+            0.994
+          ],
+          "content": "40"
+        }
+      ]
+    },
+    {
+      "page_idx": 40,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.235,
+            0.261,
+            0.766,
+            0.931
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_40_image_0.jpg"
+        },
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.051,
+            0.079,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.106,
+            0.25,
+            0.197
+          ],
+          "level": 2,
+          "content": "Kế thừa"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.965,
+            0.995,
+            0.992
+          ],
+          "content": "41"
+        }
+      ]
+    },
+    {
+      "page_idx": 41,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.105,
+            0.251,
+            0.201
+          ],
+          "level": 2,
+          "content": "Kế thừa"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.282,
+            0.594,
+            0.345
+          ],
+          "content": "• Lớp cha (parent class hay superclass)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.375,
+            0.544,
+            0.436
+          ],
+          "content": "• Lớp con (child class hay subclass)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.459,
+            0.589,
+            0.589
+          ],
+          "content": "o Kế thừa tất cả thuộc tính dữ liệu và hành vi/phương thức của lớp cha"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.608,
+            0.442,
+            0.667
+          ],
+          "content": "o Có thể thêm thuộc tính mới"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.688,
+            0.477,
+            0.749
+          ],
+          "content": "o Có thể thêm phương thức mới"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.769,
+            0.586,
+            0.831
+          ],
+          "content": "o Có thể ghi đè (override) phương thức cũ"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.619,
+            0.275,
+            0.966,
+            0.765
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_41_image_8.jpg"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.959,
+            0.998,
+            0.995
+          ],
+          "content": "42"
+        }
+      ]
+    },
+    {
+      "page_idx": 42,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.032,
+            0.051,
+            0.079,
+            0.118
+          ],
+          "content": "G"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.074,
+            0.105,
+            0.25,
+            0.2
+          ],
+          "level": 2,
+          "content": "Kế thừa"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.072,
+            0.283,
+            0.592,
+            0.344
+          ],
+          "content": "• Lớp cha (parent class hay superclass)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.199,
+            0.362,
+            0.817,
+            0.999
+          ],
+          "sub_type": "code",
+          "content": "```python\nclass Animal(object):\n    def __init__(self, age):\n        self.age = age\n        self.name = None\n    def get_age(self):\n        return self.age\n    def get_name(self):\n        return self.name\n    def set_age(self, newage):\n        self.age = newage\n    def set_name(self, newname=\"\"):\n        self.name = newname\n    def __str__(self):\n        return \"animal:\"+str(self.name)+\":\"+str(self.age)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.978,
+            0.96,
+            0.997,
+            0.995
+          ],
+          "content": "43"
+        }
+      ]
+    },
+    {
+      "page_idx": 43,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.031,
+            0.049,
+            0.08,
+            0.119
+          ],
+          "content": ""
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.073,
+            0.104,
+            0.251,
+            0.201
+          ],
+          "level": 2,
+          "content": "Kế thừa"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.071,
+            0.27,
+            0.48,
+            0.327
+          ],
+          "content": "• Lớp con (child class hay subclass)"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.208,
+            0.325,
+            0.734,
+            0.744
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_43_image_3.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.07,
+            0.757,
+            0.873,
+            0.877
+          ],
+          "content": "• Thêm mới phương thức speak(), instance của lớp Cat có thể sử dụng phương thức này trong khi instance của lớp Animal thì không thể"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.977,
+            0.959,
+            0.999,
+            0.997
+          ],
+          "content": "44"
+        }
+      ]
+    },
+    {
+      "page_idx": 44,
+      "blocks": [
+        {
+          "type": "image",
+          "bbox": [
+            0.434,
+            0.1,
+            0.568,
+            0.293
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_44_image_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.285,
+            0.428,
+            0.715,
+            0.525
+          ],
+          "level": 2,
+          "content": "BÀI QUIZ VÀ HỎI ĐÁP"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.979,
+            0.961,
+            0.997,
+            0.995
+          ],
+          "content": "45"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "PowerPoint Presentation",
+      "authors": [
+        "Trần Hoàng Lộc"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2024-02-27T14:07:42+07:00",
+      "modified_at": "2024-02-27T14:07:42+07:00",
+      "creator_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "producer_application": "Microsoft® PowerPoint® for Microsoft 365",
+      "page_count": 45,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 40,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 41,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 42,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 43,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 44,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}
