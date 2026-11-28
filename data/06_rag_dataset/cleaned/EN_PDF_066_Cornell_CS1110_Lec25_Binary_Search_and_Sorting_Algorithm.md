@@ -1,0 +1,259 @@
+## Recovering from Errors
+
+• Suppose we have this code:
+
+result = input('Number: ') # get number from user
+
+x = float(result)
+
+\# convert string to float
+
+print('The next number is '+str(x+1))
+
+• What if user mistypes?
+
+Number: 12a
+
+Traceback (most recent call last):
+
+File "prompt.py", line 13, in &lt;module&gt;
+
+x = float(result)
+
+ValueError: could not convert string to float: '12a'
+
+## Using Try-Except
+
+try:
+
+result = input('Number: ') # get number
+
+x = float(result) # convert to float
+
+print('The next number is '+str(x+1))
+
+except:
+
+print('That is not a number!')
+
+Similar to if-else
+
+§ But always does the try block
+
+§ Might not do **all** of the try block
+
+## Try-Except and the Call Stack
+
+• Error “pops” frames off stack
+
+def function\_1(x,y):
+
+§ Starts from the stack bottom
+
+§ Continues until it sees that current line is in a try-block
+
+§ Jumps to except, and then proceeds as if no error
+
+def function\_2(x,y):
+
+return function\_3(x,y)
+
+line in a try
+
+def function\_3(x,y):
+
+function\_1
+
+return x/y # crash here
+
+function\_2
+
+function\_3
+
+## Error Types in Python
+
+• All errors are instances of class BaseException
+
+• This allows us to organize them in a hierarchy
+
+'My error'
+
+→ means “extends” <u>or “is an instance of”</u>
+
+## Error Types in Python
+
+def foo():
+
+<u>>>> foo()</u>
+
+```python
+>>> foo()
+```
+
+<u>AssertionError</u>: My error
+
+<u>ZeroDivisionError:</u> integer
+
+**Class Names**
+
+division or modulo by zero
+
+## Python Error Type Hierarchy
+
+<u>BaseException</u> Argument has Argument has wrong type wrong value <u>SystemExit Exception</u> (e.g. float([1])) (e.g. float('a')) <u>AssertionError AttributeError ArithmeticError IOError TypeError ValueError ZeroDivisionError OverflowError</u>
+
+http://docs.python.org/<u>library/exceptions.html</u>
+
+Why so many error types?
+
+## Handling Errors by Type
+
+• try-except blocks can be restricted to **specific** errors
+
+§ Doe except if error is **an instance** of that type
+
+§ If error not an instance, do not recover
+
+• **Example**:
+
+May have IOError
+
+try:
+
+val = input()
+
+\# get number from user
+
+x = float(val) # convert string to float
+
+print('The next number is '+str(x+1))
+
+May have ValueError
+
+except ValueError:
+
+Only recovers ValueError. Other errors ignored.
+
+print('Hey! That is not a number!')
+
+## Creating Errors in Python
+
+• Create errors with raise
+
+def foo(x):
+
+§ **Usage**: raise &lt;exp&gt;
+
+§ exp evaluates to an object
+
+assert x < 2, 'My error'
+
+§ An instance of Exception
+
+…
+
+• Tailor your error types
+
+Identical
+
+§ **ValueError**: Bad value
+
+def foo(x):
+
+§ **TypeError**: Bad type
+
+• Still prefer **asserts** for preconditions, however
+
+if x >= 2:
+
+§ Compact and easy to read
+
+m = 'My error'
+
+err = AssertionError(m)
+
+raise err
+
+## Handling Errors by Type
+
+• try-except can put the error in a variable
+
+• **Example**:
+
+try:
+
+val = input() # get number from user
+
+x = float(val) # convert string to float
+
+print('The next number is '+str(x+1))
+
+except ValueError as e:
+
+Some Error subclasses
+
+print(e.args[0])
+
+have more attributes
+
+print('Hey! That is not a number!')
+
+## Creating Your Own Exceptions
+
+class CustomError(Exception):
+
+"""An instance is a custom exception""" pass
+
+This is all you need
+
+§ No extra fields
+
+Only issues is choice of parent error class. Use Exception if you are unsure what.
+
+§ No extra methods
+
+§ No constructors
+
+Inherit everything
+
+## Case Study: Files
+
+• Can read the contents of any file with open()
+
+§ Returns a file object with method read()
+
+§ Method read() returns contents as a string
+
+§ Remember to close() file when done
+
+• There are **SO** many errors that can happen
+
+§ FileNotFoundError: File does not exit
+
+§ PermissionError: You are not allowed to read it
+
+§ Other errors possible when processing data
+
+## Reading a JSON File
+
+Open file <u>with name</u>
+
+Close file <u>when done</u>
+
+Note that we can chain excepts like an if-elif statement
+
+result = json.loads(data)
+
+return result
+
+except FileNotFoundError:
+
+Could not find file
+
+print(fname +' not found')
+
+except JsonDecodeError:
+
+JSON contents are not valid print(fname +' i<u>s invalid')</u>
+
+return None If failed

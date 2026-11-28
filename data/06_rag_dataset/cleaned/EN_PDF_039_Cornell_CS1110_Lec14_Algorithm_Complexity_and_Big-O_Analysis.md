@@ -1,0 +1,855 @@
+## Lecture 14
+
+## Nested Lists
+
+## Announcements for This Lecture
+
+## (Optional) Videos
+
+• **Lesson 18** for today
+
+• **Videos 17.1-17.5** next time
+
+• **Prelim, 10/15 at 7:30 pm**
+
+§ Material up to **10/1**
+
+§ Study guide is posted
+
+• **Conflicts are now closed!**
+
+§ Only honoring emergencies
+
+§ SDS students to be notified
+
+## Assignments/Lab
+
+• Labs this week are special
+
+§ **Lab 13** due **after break**
+
+§ **Lab 14** is **in-class only**
+
+• A3 to be graded before exam
+
+§ Also, remember survey
+
+• A4 after exam and break
+
+§ Longer time to do this one
+
+§ Covers for-loops
+
+§ Also material next week
+
+## Lists of Objects
+
+• List positions are variables
+
+§ Can store base types
+
+§ But cannot store folders
+
+§ Can store folder identifiers
+
+• Folders linking to folders
+
+§ Top folder for the list
+
+§ Other folders for contents
+
+• Example:
+
+$$
+> > > \mathrm{r} = \text {introcs.RGB(255,0,0)}
+$$
+
+$$
+> > > b = \text {introcs.RGB} (0, 0, 2 5 5)
+$$
+
+$$
+> > > g = \text {introcs.RGB} (0, 2 5 5, 0)
+$$
+
+$$
+> > > \mathrm{x} = [ \mathrm{r}, \mathrm{b}, \mathrm{g} ]
+$$
+
+r
+
+g
+
+**id10**
+
+x
+
+**id11**
+
+**id12**
+
+**id13**
+
+**RGB**
+
+**id10**
+
+**id11**
+
+255
+
+0
+
+green
+
+red
+
+red
+
+blue
+
+0
+
+**RGB**
+
+green
+
+blue
+
+0
+
+**list**
+
+**id13**
+
+<strong><u>id10</u></strong>
+
+<strong><u>id12</u></strong>
+
+**id11**
+
+x[0]
+
+0
+
+x[1]
+
+x[2]
+
+255
+
+**id12**
+
+**RGB**
+
+red
+
+0
+
+green
+
+255
+
+blue
+
+0
+
+## Lists of Objects
+
+• List positions are variables
+
+§ Can store base types
+
+§ But cannot store folders
+
+§ Can store folder identifiers
+
+• Folders linking to folders
+
+§ Top folder for the list
+
+§ Other folders for contents
+
+• Example:
+
+$$
+> > > \mathrm{r} = \text {introcs.RGB(255,0,0)}
+$$
+
+$$
+> > > b = \text {introcs.RGB} (0, 0, 2 5 5)
+$$
+
+$$
+> > > g = \text {introcs.RGB} (0, 2 5 5, 0)
+$$
+
+$$
+> > > \mathbf {x} = [ \mathrm{r}, \mathrm{b}, \mathrm{g} ]
+$$
+
+## Nested Lists
+
+• Lists can hold any objects
+
+• Lists are objects
+
+• Therefore lists can hold other lists!
+
+$$
+\mathsf {a} = [ 2, 1 ]
+$$
+
+x[1]
+
+x[2]
+
+x[2][2]
+
+$$
+b = [ 3, 1 ]
+$$
+
+$$
+\mathbf {c} = [ 1, 4, \mathbf {b} ]
+$$
+
+$$
+\mathbf {x} = [ 1, \mathsf {a}, \mathsf {c}, 5 ]
+$$
+
+$$
+\mathbf {x} = [ 1, [ 2, 1 ], [ 1, 4, [ 3, 1 ] ], 5 ]
+$$
+
+x[0]
+
+x[1][1]
+
+x[2][0]
+
+x[2][2][1]
+
+## How Multidimensional Lists are Stored
+
+• b = [[9, 6, 4], [5, 7, 7]]
+
+$$
+\begin{array}{c} \boxed {9 6 4} \\ \boxed {5 7 7} \\ \text {b} \end{array} \quad \begin{array}{c} \text {id1} \\ \text {id2} \\ \text {id3} \end{array} \quad \begin{array}{c} \text {id2} \\ \text {id2} \\ \text {id3} \end{array}
+$$
+
+• b holds name of a two-dimensional list
+
+§ Has len(b) elements
+
+§ Its elements are (the names of) 1D lists
+
+• b[i] holds the name of a one-dimensional list (of ints)
+
+§ Has len(b[i]) elements
+
+## Ragged Lists vs Tables
+
+• Ragged is 2d uneven list: $b = [[17,13,19],[28,95]]$
+
+$$
+b \quad \text {id1} \xrightarrow [ 0, 1 ]{\text {id1}} \text {id2} \xrightarrow [ 0, 1, 2 ]{\text {id2}} \text {id2} \xrightarrow [ 0, 1 ]{\text {id2}} \text {id3}
+$$
+
+• Table is 2d uniform list: $b = [[9,6,4],[5,7,7]]$
+
+$$
+b \quad \text {id1} \quad \begin{array}{c} \text {id1} \\ \text {id2} \\ \text {id3} \end{array} \quad \text {id2} \quad \text {id3}
+$$
+
+## Nested Lists can Represent Tables
+
+## Spreadsheet
+
+$$
+\begin{array}{c c c c c} & 0 & 1 & 2 & 3 \\ \hline 0 & 5 & 4 & 7 & 3 \\ 1 & 4 & 8 & 9 & 7 \\ 2 & 5 & 1 & 2 & 3 \\ 3 & 4 & 1 & 2 & 9 \\ 4 & 6 & 7 & 8 & 0 \end{array}
+$$
+
+## Image
+
+## 0 1 2 3 4 5 6 7 8 9 10 1112 0 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10 11 12
+
+## table.csv
+
+## smile.xlsx
+
+## Representing Tables as Lists
+
+## Spreadsheet
+
+$$
+0 1 2 3
+$$
+
+$$
+\begin{array}{c c c c c} 0 & 5 & 4 & 7 & 3 \\ 1 & 4 & 8 & 9 & 7 \\ 2 & 5 & 1 & 2 & 3 \\ 3 & 4 & 1 & 2 & 9 \\ 4 & 6 & 7 & 8 & 0 \end{array}
+$$
+
+Each row, col has a v<u>alue</u>
+
+• Represent as 2d list
+
+§ Each table row a list
+
+§ List of all rows
+
+§ **Row major order**
+
+• Column major exists
+
+§ Less common to see
+
+§ Limited to some scientific applications
+
+d = [[5,4,7,3],[4,8,9,7],[5,1,2,3],[4,1,2,9],[6,7,8,0]]
+
+## Image Data: 2D Lists of Pixels
+
+**smile.py**
+
+## Overview of Two-Dimensional Lists
+
+• Access value at row 3, col 2: d[3][2]
+
+• Assign value at row 3, col 2: d[3][2] = 8
+
+• **An odd symmetry**
+
+$$
+\begin{array}{c c c c c c} & & 0 & 1 & 2 & 3 \\ \hline \mathsf {d} & 0 & \framebox {5} & 4 & 7 & 3 \\ & 1 & 4 & 8 & 9 & 7 \\ & 2 & 5 & 1 & 2 & 3 \\ & 3 & 4 & 1 & 2 & 9 \\ & 4 & 6 & 7 & 8 & 0 \end{array}
+$$
+
+§ Number of rows of d: len(d)
+
+§ Number of cols in row r of d: len(d[r])
+
+## Slices and Multidimensional Lists
+
+• Only “top-level” list is copied.
+
+• Contents of the list are not altered
+
+$$
+\mathbf {x} = b [: 2 ]
+$$
+
+• b = [[9, 6], [4, 5], [7, 7]]
+
+## Slices and Multidimensional Lists
+
+• Only “top-level” list is copied.
+
+• Contents of the list are not altered
+
+$$
+\mathbf {x} = b [: 2 ]
+$$
+
+• b = [[9, 6], [4, 5], [7, 7]]
+
+## Slices and Multidimensional Lists
+
+• Create a nested list >>> b = [[9,6],[4,5],[7,7]]
+
+• Get a slice >>> x = b[:2]
+
+• Append to a row of x >>> x[1].append(10)
+
+• x now has nested list [[9, 6], [4, 5, 10]]
+
+• What are the contents of the list (with name) b?
+
+A: [[9,6],[4,5],[7,7]] B: [[9,6],[4,5,10]] C: [[9,6],[4,5,10],[7,7]] D: [[9,6],[4,10],[7,7]] <u>E: I don’t know</u>
+
+```javascript
+A: [[9,6],[4,5],[7,7]]
+B: [[9,6],[4,5,10]]
+C: [[9,6],[4,5,10],[7,7]]
+D: [[9,6],[4,10],[7,7]]
+E: I don't know
+```
+
+## Slices and Multidimensional Lists
+
+• Create a nested list >>> b = [[9,6],[4,5],[7,7]]
+
+• Get a slice >>> x = b[:2]
+
+• Append to a row of x >>> x[1].append(10)
+
+• x now has nested list [[9, 6], [4, 5, 10]]
+
+• What are the contents of the list (with name) in b?
+
+## Shallow vs. Deep Copy
+
+• **Shallow copy:** Copy top-level list
+
+§ Happens when slice a multidimensional list
+
+• **Deep copy:** Copy top and all nested lists
+
+§ Requires a special function: copy.deepcopy
+
+• **Example:**
+
+```python
+>>> import copy
+```
+
+```python
+>>> a = [[1,2],[2,3]]
+```
+
+$$
+> > > b = a [: ]
+$$
+
+```python
+>>> c = copy.deepcopy(a)
+```
+
+\# Shallow copy
+
+\# Deep copy
+
+## Functions over Nested Lists
+
+• Functions on nested lists similar to lists
+
+§ Go over (nested) list with for-loop
+
+§ Use accumulator to gather the results
+
+• But two important differences
+
+§ Need **multiple for-loops**
+
+§ One for each part/dimension of loop
+
+§ In some cases need **multiple accumulators**
+
+§ Latter true when result is new table
+
+## Simple Example
+
+def all\_nums(table):
+
+"""Returns True if table contains only numbers
+
+Precondition: table is a (non-ragged) 2d List"""
+
+result = True
+
+\# Walk through table
+
+Accumulator
+
+for row in table:
+
+\# Walk through the row
+
+First Loop
+
+for item in row:
+
+Second Loop
+
+if not type(item) in [int,float]:
+
+result = False
+
+return result
+
+## Transpose: A Trickier Example
+
+## def transpose(table):
+
+"""Returns: copy of table with rows and columns swapped Precondition: table is a (non-ragged) 2d List"""
+
+$$
+\boxed { \begin{array}{c c} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{array} }
+$$
+
+## result = []
+
+\# Result (new table) accumulator
+
+\# Loop over rows in new table (columns in old)
+
+\# Add each row to new table (column in old)
+
+$$
+\boxed { \begin{array}{c c c} 1 & 3 & 5 \\ 2 & 4 & 6 \end{array} }
+$$
+
+## return result
+
+## Transpose: A Trickier Example
+
+## def transpose(table):
+
+"""Returns: copy of table with rows and columns swapped
+
+Precondition: table is a (non-ragged) 2d List"""
+
+## result = []
+
+\# Loop over rows # Add each row # Result (new table) ac table (columns in old)
+
+(column in old)
+
+return result
+
+$$
+\boxed { \begin{array}{c c} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{array} }
+$$
+
+$$
+\boxed { \begin{array}{c c c} 1 & 3 & 5 \\ 2 & 4 & 6 \end{array} }
+$$
+
+## Transpose: A Trickier Example
+
+## def transpose(table):
+
+```python
+"""Returns: copy of table with rows and columns swapped
+Precondition: table is a (non-ragged) 2d List"""
+numrows = len(table)    # Need number of rows
+numcols = len(table[0])  # All rows have same no. cols
+result = []                  # Result (new table) accumulator
+for m in range(numcols): # Columns in old = rows in new
+    # Get the column elements at position m
+    # Make a new list for this column
+    # Add this row to accumulator table
+```
+
+## return result
+
+$$
+\boxed { \begin{array}{c c} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{array} }
+$$
+
+$$
+\boxed { \begin{array}{c c c} 1 & 3 & 5 \\ 2 & 4 & 6 \end{array} }
+$$
+
+## Transpose: A Trickier Example
+
+## def transpose(table):
+
+```python
+"""Returns: copy of table with rows and columns swapped
+Precondition: table is a (non-ragged) 2d List"""
+numrows = len(table)    # Need number of rows
+numcols = len(table[0])  # All rows have same no. cols
+result = []                  # Result (new table) accumulator
+for m in range(numcols): # Columns in old = rows in new
+    row = []                      # Single row accumulator
+    for n in range(numrows):
+        row.append(table[n][m]) # Create a new row list
+    result.append(row)      # Add result to table
+return result
+```
+
+$$
+\boxed { \begin{array}{c c} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{array} }
+$$
+
+$$
+\boxed { \begin{array}{c c c} 1 & 3 & 5 \\ 2 & 4 & 6 \end{array} }
+$$
+
+## Transpose: A Trickier Example
+
+## def transpose(table):
+
+"""Returns: copy of table with rows and columns swapped
+
+Precondition: table is a (non-ragged) 2d List"""
+
+\# Need number of rows
+
+numcols = len(table[0]) # All rows have same no. cols
+
+result = []
+
+for m in range(numc
+
+Accumulator for each loop
+
+for n in range(numrows):
+
+result.append(row)
+
+return result le) accumulator rows in new accumulator
+
+\# Create a new row list # Add result to table
+
+## Mutable Functions on Nested Lists
+
+• Function structure similar to that of lists
+
+§ Do not loop over the list (modifying it)
+
+§ Loop over range of positions instead
+
+§ No accumulator or return statement
+
+• But some important differences
+
+§ May need **multiple for-loops**
+
+§ Depends on if modifying rows or entries
+
+• **Modifying entries**: two loops
+
+• **Modifying rows**: could be one or two
+
+## A Mutable Example
+
+def add\_ones(table):
+
+"""Adds one to every number in the table
+
+Preconditions: table is a 2d List,
+
+all table elements are int"""
+
+\# Walk through table
+
+\# Walk through each column
+
+\# Add 1 to each element
+
+\# No return statement
+
+$$
+\begin{array}{c c c c} \hline 1 & 3 & 5 \\ 2 & 4 & 6 \end{array}
+$$
+
+$$
+\boxed { \begin{array}{c c c} 2 & 4 & 6 \\ 3 & 5 & 7 \end{array} }
+$$
+
+## A Mutable Example
+
+def add\_ones(table):
+
+"""Adds one to every number in the table
+
+Preconditions: table is a 2d List,
+
+all table elements are int"""
+
+\# Walk through table
+
+for rpos in range(len(table)):
+
+\# Walk through each column
+
+for cpos in range(len(table[rpos])):
+
+Do not loop <u>over the table</u>
+
+table[rpos][cpos] = table[rpos][cpos]+1
+
+\# No return statement
+
+$$
+\boxed { \begin{array}{c c c} 1 & 3 & 5 \\ 2 & 4 & 6 \end{array} }
+$$
+
+$$
+\boxed { \begin{array}{c c c} 2 & 4 & 6 \\ 3 & 5 & 7 \end{array} }
+$$
+
+## Another Example
+
+def strip(table,col):
+
+"""Removes column col from the given table Preconditions: table is a (non-ragged) 2d List, col valid column """ # Walk through table
+
+\# Modify each row to slice out column
+
+\# No return statement
+
+## Another Example
+
+def strip(table,col):
+
+"""Removes column col from the given table
+
+Preconditions: table is a (non-ragged) 2d List,
+
+col valid column""" # Walk through table for rpos in range(len(table)):
+
+Do not loop <u>over the table</u>
+
+\# Modify each row to slice out column table[rpos] = table[rpos][:col] + table[rpos][col+1:]
+
+\# No return statement
+
+## Advanced Topic: Reading CSV Files
+
+• **Recall:** CSV (comma-separate-value) files
+
+§ Portable way of representing tables
+
+§ Supported by Excel and other programs
+
+§ Can also be read as a simple text file
+
+• Possible to load them into Python
+
+§ **Hard way:** Using the Python csv module
+
+§ **Easy way:** Using the introcs module
+
+• Will revisit hard way later
+
+## Using the Function introcs.read\_csv
+
+• Returns a table of strings (not numbers)
+
+§ Up to you to convert the data
+
+§ Similar problem to the input function
+
+$$
+0 1 2 3
+$$
+
+$$
+\begin{array}{c c c c c} 0 & 5 & 4 & 7 & 3 \\ 1 & 4 & 8 & 9 & 7 \\ 2 & 5 & 1 & 2 & 3 \\ 3 & 4 & 1 & 2 & 9 \\ 4 & 6 & 7 & 8 & 0 \end{array}
+$$
+
+[['5', '4', '7', '3'],
+ ['4', '8', '9', '7'],
+ ['5', '1', '2', '3'],
+ ['4', '1', '2', '9'],
+ ['6', '7', '8', '0']]
+
+## Using the Function introcs.read\_csv
+
+## • Returns a
+
+§ Up to y
+
+§ Similar
+
+Can use for-loops to convert values!
+
+$$
+\begin{array}{c c c c} 0 & 1 & 2 & 3 \end{array}
+$$
+
+$$
+\begin{array}{c c c c c} 0 & 5 & 4 & 7 & 3 \\ 1 & 4 & 8 & 9 & 7 \\ 2 & 5 & 1 & 2 & 3 \\ 3 & 4 & 1 & 2 & 9 \\ 4 & 6 & 7 & 8 & 0 \end{array}
+$$
+
+[['5', '4', '7', '3'],
+ ['4', '8', '9', '7'],
+ ['5', '1', '2', '3'],
+ ['4', '1', '2', '9'],
+ ['6', '7', '8', '0']]
+
+## Reading Data from a File
+
+## def load\_table(file):
+
+"""Returns: the table stored in the CSV file
+
+Values are converted to float if possible (remain as string if not).
+
+Precondition: file is the name of a CSV file"""
+
+\# Load the file into a table
+
+\# Access each row of the table
+
+\# Access each element in each row
+
+\# Convert to float if possible
+
+\# Return the result
+
+## Reading Data from a File
+
+def load\_table(file):
+
+"""Returns: the table stored in the CSV file
+
+Values are converted to float if possible (remain as string if not).
+
+Precondition: file is the name of a CSV file"""
+
+\# Load the file into a table
+
+result = introcs.read\_csv(file)
+
+\# Access each row of the table
+
+\# Access each element in each row
+
+\# Convert to float if possible
+
+This part is mutable
+
+return result
+
+## Reading Data from a File
+
+```python
+def load_table(file):
+    """Returns: the table stored in the CSV file
+    Values are converted to float if possible (remain as string if not).
+    Precondition: file is the name of a CSV file"""
+    # Load the file into a table
+    result = introcs.read_csv(file)
+    # Access each row of the table
+    for r in range(len(result)):
+        # Access each element in each row
+        for c in range(len(result[r)]):
+            # Convert to float if possible
+            if introcs.is_float(result[r][c]):
+                result[r][c] = float(result[r][c])
+    return result
+```
+
+## Writing to a CSV File
+
+• You can also write a table to a CSV file
+
+**Function:** introcs.write\_csv(table,filename)
+
+§ File is written to your current directory
+
+§ But there are restrictions on the table!
+
+• Table must be a rectangular, 2d-list
+
+• The first row must be the header
+
+§ Header = the titles of each column
+
+§ So all values must be strings!
+
+• Later rows can be any type
+
+§ Function will convert them using str

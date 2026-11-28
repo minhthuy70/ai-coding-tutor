@@ -1,0 +1,533 @@
+## UNDERSTANDING PROGRAM EFFICIENCY: 2
+
+(download slides and .py files and follow along!)
+
+6.0001 LECTURE 11
+
+## TODAY
+
+§	Classes	of	complexity
+
+§	Examples	characteris;c	of	each	class
+
+## WHY WE WANT TO UNDERSTAND EFFICIENCY OF PROGRAMS
+
+§	how	can	we	reason	about	an	algorithm	in	order	to predict	the	amount	of	;me	it	will	need	to	solve	a problem	of	a	par;cular	size?
+
+§	how	can	we	relate	choices	in	algorithm	design	to	the;me	efficiency	of	the	resul;ng	algorithm?
+
+◦ are	there	fundamental	limits	on	the	amount	of	;me	we will	need	to	solve	a	par;cular	problem?
+
+## ORDERS OF GROWTH: RECAP
+
+## Goals:
+
+§	want	to	evaluate	program’s	efficiency	when	**input	is	very	big**
+
+§	want	to	express	the	**growth	of	program’s	run	5me**	as	input size	grows
+
+§	want	to	put	an	**upper	bound**	on	growth	–	as	;ght	as	possible
+
+§	do	not	need	to	be	precise:	**“order	of”	not	“exact”**	growth
+
+§	we	will	look	at	**largest	factors**	in	run	;me	(which	sec;on	of the	program	will	take	the	longest	to	run?)
+
+§ **thus,	generally	we	want	5ght	upper	bound	on	growth,	as func5on	of	size	of	input,	in	worst	case**
+
+## COMPLEXITY CLASSES: RECAP
+
+§O(1)	denotes	constant	running	;me
+
+§O(log	n)	denotes	logarithmic	running	;me
+
+§O(n)	denotes	linear	running	;me
+
+§O(n	log	n)	denotes	log-linear	running	;me
+
+§ O(n<sup>c</sup>)		denotes	polynomial	running	;me	(c	is	a constant)
+
+§ O(c<sup>n</sup>)	denotes	exponen;al	running	;me	(c	is	a constant	being	raised	to	a	power	based	on	size	of input)
+
+## COMPLEXITY CLASSES ORDERED LOW TO HIGH
+
+O(1)
+
+O(log n)
+
+O(n)
+
+O(n log n):
+
+$\mathrm{O(n^{c})}$ cisa onstan
+
+O(c<sup>n</sup>)
+
+constant
+
+linear
+
+logarithmic
+
+polynomial
+
+loglinear
+
+exponen;al
+
+## COMPLEXITY GROWTH
+
+| CLASS | n=10 | = 100 | = 1000 | = 1000000 |
+| --- | --- | --- | --- | --- |
+| O(1) | 1 | 1 | 1 | 1 |
+| O(log n) | 1 | 2 | 3 | 6 |
+| O(n) | 10 | 100 | 1000 | 1000000 |
+| O(n log n) | 10 | 200 | 3000 | 6000000 |
+| O(n^2) | 100 | 10000 | 1000000 | 1000000000000 |
+| O(2^n) | 1024 | 1267650600228229401496703205376 | 10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376 | Good luck!! |
+
+## CONSTANT COMPLEXITY
+
+§	complexity	independent	of	inputs
+
+§	very	few	interes;ng	algorithms	in	this	class,	but	can oYen	have	pieces	that	fit	this	class
+
+§	can	have	loops	or	recursive	calls,	but	ONLY	IF	number of	itera;ons	or	calls	independent	of	size	of	input
+
+## LOGARITHMIC COMPLEXITY
+
+§	complexity	grows	as	log	of	size	of	one	of	its	inputs
+
+§	example:
+
+◦ bisec;on	search
+
+◦ binary	search	of	a	list
+
+## BISECTION SEARCH
+
+§	suppose	we	want	to	know	if	a	par;cular	element	is present	in	a	list
+
+§	saw	last	;me	that	we	could	just	“walk	down”	the	list, checking	each	element
+
+§	complexity	was	linear	in	length	of	the	list
+
+§	suppose	we	know	that	the	list	is	ordered	from smallest	to	largest
+
+◦ saw	that	sequen;al	search	was	s;ll	linear	in	complexity
+
+◦ can	we	do	becer?
+
+## BISECTION SEARCH
+
+1. pick	an	index,	i,	that	divides	list	in	half
+
+2. ask	if	L[i] == e
+
+3. if	not,	ask	if	L[i] is	larger	or	smaller	than	e
+
+4. L edepending	on	answer,	search	leY	or	right	half	of for
+
+A	new	version	of	a	divide-and-conquer	algorithm
+
+break	into	smaller	version	of	problem	(smaller	list),	plus some	simple	opera;ons
+
+§ answer	to	smaller	version	is	answer	to	original	problem
+
+## BISECTION SEARCH COMPLEXITY ANALYSIS
+
+§	finish	looking through	list when
+
+$1 = n / 2^{i}$
+
+so	i	=	log	n
+
+§ complexity	of recursion	is **O(log	n)	– where	n	is	len(L)**
+
+## BISECTION SEARCH IMPLEMENTATION 1
+
+```python
+bisect_search1(L, e):
+    if L == []:
+        return False
+    elif len(L) == 1:
+        return L[0] == e
+    else:
+        half = len(L)//2
+        if L[half] > e:
+            return bisect_search1( L[:half], e)
+        else:
+            return bisect_search1( L[half:], e)
+```
+
+## COMPLEXITY OF FIRST BISECTION SEARCH METHOD
+
+## § implementa5on	1	–	bisect\_search1
+
+• 	O(log	n)	bisec;on	search	calls
+
+ll,	size	of	range	to	be	searched	is	cut	in	half• On	each	recursive	ca
+
+size	n,	in	worst	case	down	to	range	of	size	1• If	original	range	is	of when $n/(2^{\wedge}k)=1$ when;	or k = log n
+
+;on	search	call	to	copy	list• O(n)	for	each	bisec
+
+up	each	call,	so	do	this	for	each	level	of• This	is	the	cost	to	set recursion
+
+**(n	log	n)**	• O(log	n)	\*	O(n)	à O
+
+eful,	note	that	length	of	list	to	be• 	if	we	are	really	car d	on	each	recursive	callcopied	is	also	halve
+
+ost	to	copy	is	**O(n)** and	this	dominates	the	log• turns	out	that	total	c ursive	callsn	cost	due	to	the	rec
+
+## BISECTION SEARCH ALTERNATIVE
+
+§	s;ll	reduce	size	of problem	by	factor of	two	on	each	step
+
+§	but	just	keep	track of	low	and	high por;on	of	list	to	be searched
+
+§	avoid	copying	the list
+
+§	complexity	of recursion	is	again **O(log	n)	–	where	n is	len(L)**
+
+# BISECTION SEARCH IMPLEMENTATION 2
+
+```python
+def bisect_search2(L, e):
+    def bisect_search_helper(L, e, low, high):
+        if high == low:
+            return L[low] == e
+        mid = (low + high)//2
+        if L[mid] == e:
+            return True
+        elif L[mid] > e:
+            if low == mid: #nothing left to search
+                return False
+            else:
+                return bisect_search_helper(L, e, low, mid - 1)
+        else:
+            return bisect_search_helper(L, e, mid + 1, high)
+    if len(L) == 0:
+        return False
+    else:
+        return bisect_search_helper(L, e, 0, len(L) - 1)
+```
+
+## COMPLEXITY OF SECOND BISECTION SEARCH METHOD
+
+## §	implementa5on	2	–	bisect\_search2	and	its	helper
+
+• O(log	n)	bisec;on	search	calls
+
+• On	each	recursive	call,	size	of	range	to	be	searched	is	cut	in	half
+
+• If	original	range	is	of	size	n,	in	worst	case	down	to	range	of	size	1 when $n/(2^{k}) = 1$ ;	or	when	k	=	log	n
+
+• pass	list	and	indices	as	parameters
+
+• list	never	copied,	just	re-passed	as	a	pointer
+
+• thus	O(1)	work	on	each	recursive	call
+
+• O(log n) \* O(1) → O(log n)
+
+## LOGARITHMIC COMPLEXITY
+
+```python
+def intToStr(i):
+    digits = '0123456789'
+    if i == 0:
+        return '0'
+    result = ''
+    while i > 0:
+        result = digits[i%10] + result
+        i = i//10
+    return result
+```
+
+## LOGARITHMIC COMPLEXITY
+
+```python
+def intToStr(i):
+    digits = '0123456789'
+    if i == 0:
+        return '0'
+    res = ''
+    while i > 0:
+        res = digits[i%10] + res
+        i = i//10
+    return result
+```
+
+## LINEAR COMPLEXITY
+
+§	saw	this	last	;me
+
+◦ 	searching	a	list	in	sequence	to	see	if	an	element	is present
+
+◦ 	itera;ve	loops
+
+## O() FOR ITERATIVE FACTORIAL
+
+```python
+■ complexity can depend on number of iterative calls
+def fact_iter(n):
+    prod = 1
+    for i in range(1, n+1):
+        prod *= i
+    return prod
+■ overall O(n) – n times round loop, constant cost each time
+```
+
+## O() FOR RECURSIVE FACTORIAL
+
+```python
+def fact_recur(n):
+    """ assume n >= 0 """
+    if n <= 1:
+        return 1
+    else:
+        return n*fact_recur(n - 1)
+```
+
+§	computes	factorial	recursively
+
+t	runs	a	bit	slower	than§	if	you	;me	it,	may	no;ce	that	i callsitera;ve	version	due	to	func;on
+
+f	func;on	calls	is	linear§	s;ll	O(n) because	the	number	o p	callin	n,	and	constant	effort	to	set	u
+
+l	implementa;ons	are§ **itera5ve	and	recursive	factoria** the	**same	order	of	growth**
+
+## LOG-LINEAR COMPLEITY
+
+§	many	prac;cal	algorithms	are	log-linear
+
+is	merge	sort§	very	commonly	used	log-linear	algorithm
+
+§	will	return	to	this	next	lecture
+
+## POLYNOMIAL COMPLEXITY
+
+§	most	common	polynomial	algorithms	are	quadra;c, i.e.,	complexity	grows	with	square	of	size	of	input
+
+§	commonly	occurs	when	we	have	nested	loops	or recursive	func;on	calls
+
+§	saw	this	last	;me
+
+## EXPONENTIAL COMPLEXITY
+
+§	recursive	func;ons	where	more	than	one	recursive call	for	each	size	of	problem
+
+◦ Towers	of	Hanoi
+
+§	many	important	problems	are	inherently	exponen;al ◦ unfortunate,	as	cost	can	be	high
+
+◦ will	lead	us	to	consider	approximate	solu;ons	as	may provide	reasonable	answer	more	quickly
+
+## COMPLEXITY OF TOWERS OF HANOI
+
+§	Let $t_{n}$ denote	;me	to	solve	tower	of	size	n
+
+■  $t_{n}=2t_{n-1}+1$
+
+$\quad = 2(2t_{n-2} + 1) + 1$
+
+$\quad = 4t_{n - 2} + 2 + 1$
+
+$\quad = 4(2t_{n-3} + 1) + 2 + 1$§$= 8\mathrm{t}_{n - 3} + 4 + 2 + 1$§$= 2^{k}t_{n - k} + 2^{k - 1} + \dots +4 + 2 + 1$§$= 2^{n - 1} + 2^{n - 2} + \dots +4 + 2 + 1$§$= 2^{n} - 1$
+
+$$
+\begin{array}{l} a = \quad 2 ^ {n - 1} + \dots + 2 + 1 \\ 2 a = 2 ^ {n} + 2 ^ {n - 1} + \dots + 2 \\ a = 2 ^ {n} \quad \quad \quad \quad \quad \quad - 1 \end{array}
+$$
+
+Geometric	growth
+
+§ so	order	of	growth	is $O(2^{n})$
+
+## EXPONENTIAL COMPLEXITY
+
+§	given	a	set	of	integers	(with	no	repeats),	want	to generate	the	collec;on	of	all	possible	subsets	–	called the	power	set
+
+§	{1,	2,	3,	4}	would	generate ◦ {},	{1},	{2},	{3},	{4},	{1,	2},	{1,	3},	{1,	4},	{2,	3},	{2,	4},	{3,	4}, {1,	2,	3},	{1,	2,	4},	{1,	3,	4},	{2,	3,	4},	{1,	2,	3,	4}
+
+§	order	doesn’t	macer ◦ {},	{1},	{2},	{1,	2},	{3},	{1,	3},	{2,	3},	{1,	2,	3},	{4},	{1,	4},	{2, 4},	{1,	2,	4},	{3,	4},	{1,	3,	4},	{2,	3,	4},	{1,	2,	3,	4}
+
+## POWER SET – CONCEPT
+
+§we	want	to	generate	the	power	set	of	integers	from	1	to	n
+
+§	assume	we	can	generate	power	set	of	integers	from	1	to n-1
+
+§	then	all	of	those	subsets	belong	to	bigger	power	set all	of	those	subsets	with	n(choosing	not	include	n);	and long	to	the	bigger	power	setadded	to	each	of	them	also	be (choosing	to	include	n)
+
+<u>{},	{1},	{2},	{1,	2},	{3},	{1,	3},	{2,	3},	{1,</u>	2,	3},	{4},	{1,	4},	{2,	4},	{1,	2, 4},	{3,	4},	{1,	3,	4},	{2,	3,	4},	{1,	2,	3,	4}
+
+§	nice	recursive	descrip;on!
+
+## EXPONENTIAL COMPLEXITY
+
+```python
+def genSubsets(L):
+    res = []
+    if len(L) == 0:
+        return [[]] #list of empty list
+    smaller = genSubsets(L[:-1]) # all subsets without last element
+    extra = L[-1:] # create a list of just last element
+    new = []
+    for small in smaller:
+        new.append(small+extra) # for all smaller solutions, add one with last element
+    return smaller+new # combine those with last element and those without
+```
+
+## EXPONENTIAL COMPLEXITY
+
+```python
+def genSubsets(L):
+    res = []
+    if len(L) == 0:
+        return [[]]
+    smaller = genSubsets(L[:-1])
+    extra = L[-1:]
+    new = []
+    for small in smaller:
+        new.append(small+extra)
+    return smaller+new
+```
+
+## EXPONENTIAL COMPLEXITY
+
+```python
+def genSubsets(L):
+    res = []
+    if len(L) == 0:
+        return [[]]
+    smaller = genSubsets(L[:-1])
+    extra = L[-1:]
+    new = []
+    for small in smaller:
+        new.append(small+extra)
+    return smaller+new
+```
+
+## EXPONENTIAL COMPLEXITY
+
+§	let $t_{n}$ denote	;me	to	solve	problem	of	size	n
+
+§	let $S_{n}$ denote	size	of	solu;on	for	problem	of	size	n
+
+§ $t_n = t_{n-1} + s_{n-1} + c$ (where	c	is	some	constant	number	of opera;ons)
+
+§ $t_{n}=t_{n-1}+2^{n-1}+c$§$= t_{n - 2} + 2^{n - 2} + c + 2^{n - 1} + c$§$= t_{n-k} + 2^{n-k} + \dots + 2^{n-1} + kc$
+
+Thus
+
+§ $= t_{0} + 2^{0} + \dots + 2^{n - 1} + nc$
+
+compu;ng
+
+power	set	is
+
+§ $= 1 + 2^{n} + nc$
+
+**O(2**<strong><sup>n</sup></strong>**)**
+
+## COMPLEXITY CLASSES
+
+§	O(1)	–	code	does	not	depend	on	size	of	problem
+
+§	O(log	n)	–	reduce	problem	in	half	each	;me	through process
+
+§	O(n)	–	simple	itera;ve	or	recursive	programs
+
+§	O(n	log	n)	–	will	see	next	;me
+
+§	O(n<sup>c</sup>)	–	nested	loops	or	recursive	calls
+
+§	O(c<sup>n</sup>)	–	mul;ple	recursive	calls	at	each	level
+
+## SOME MORE EXAMPLES OF ANALYZING COMPLEXITY
+
+## COMPLEXITY OF ITERATIVE FIBONACCI
+
+```python
+def fib_iter(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        fib_i = 0
+        fib_ii = 1
+        for i in range(n-1):
+            tmp = fib_i
+            fib_i = fib_ii
+            fib_ii = tmp + fib_ii
+        return fib_ii
+```
+
+## COMPLEXITY OF RECURSIVE FIBONACCI
+
+```python
+def fib_recur(n):
+    """ assumes n an int >= 0 """
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib_recur(n-1) + fib_recur(n-2)
+■ Worst case:
+O(2^n)
+```
+
+## COMPLEXITY OF RECURSIVE FIBONACCI
+
+fib(5)
+
+fib(4)
+
+fib(3)
+
+§	actually	can	do	a	bit	becer	than $2^{n}$ since	tree	of cases	thins	out	to	right
+
+§	but	complexity	is	s;ll	exponen;al
+
+## BIG OH SUMMARY
+
+## §	compare	efficiency	of	algorithms
+
+• 	nota;on	that	describes	growth
+
+• **lower	order	of	growth**	is	becer
+
+• 	independent	of	machine	or	specific	implementa;on
+
+## §	use	Big	Oh
+
+• 	describe	order	of	growth
+
+**asympto5c	nota5on**
+
+• **upper	bound**
+
+**worst	case**	analysis
+
+## COMPLEXITY OF COMMON PYTHON FUNCTIONS
+
+Lists:	n is	len(L) index O(1) store O(1) length O(1) append O(1) == O(n) remove O(n) copy O(n) reverse O(n) itera;on O(n) in	list O(n)
+
+- - Dictionaries: n is len(d)
+- - worst case
+- - index    O(n)
+- - store    O(n)
+- - length    O(n)
+- - delete    O(n)
+- - iteration   O(n)
+- - average case
+- - index    O(1)
+- - store    O(1)
+- - delete    O(1)
+- - iteration   O(n)
+
+6.0001 Introduction to Computer Science and Programming in Python Fall 2016
+
+For information about citing these materials or our Terms of Use, visit: [https://ocw.mit.edu/terms](https://ocw.mit.edu/terms).
