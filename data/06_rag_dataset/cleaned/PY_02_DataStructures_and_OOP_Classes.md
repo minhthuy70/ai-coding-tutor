@@ -192,7 +192,6 @@ For example, assume we want to create a list of squares, like::
    >>> squares = []
    >>> for x in range(10):
    ...     squares.append(x**2)
-   ...
    >>> squares
    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
@@ -225,7 +224,6 @@ and it's equivalent to::
    ...     for y in [3,1,4]:
    ...         if x != y:
    ...             combs.append((x, y))
-   ...
    >>> combs
    [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
 
@@ -296,7 +294,6 @@ equivalent to::
    >>> transposed = []
    >>> for i in range(4):
    ...     transposed.append([row[i] for row in matrix])
-   ...
    >>> transposed
    [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 
@@ -309,7 +306,6 @@ which, in turn, is the same as::
    ...     for row in matrix:
    ...         transposed_row.append(row[i])
    ...     transposed.append(transposed_row)
-   ...
    >>> transposed
    [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 
@@ -628,7 +624,6 @@ retrieved at the same time using the :meth:`~dict.items` method. ::
    >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
    >>> for k, v in knights.items():
    ...     print(k, v)
-   ...
    gallahad the pure
    robin the brave
 
@@ -637,7 +632,6 @@ be retrieved at the same time using the :func:`enumerate` function. ::
 
    >>> for i, v in enumerate(['tic', 'tac', 'toe']):
    ...     print(i, v)
-   ...
    0 tic
    1 tac
    2 toe
@@ -649,7 +643,6 @@ with the :func:`zip` function. ::
    >>> answers = ['lancelot', 'the holy grail', 'blue']
    >>> for q, a in zip(questions, answers):
    ...     print('What is your {0}?  It is {1}.'.format(q, a))
-   ...
    What is your name?  It is lancelot.
    What is your quest?  It is the holy grail.
    What is your favorite color?  It is blue.
@@ -659,7 +652,6 @@ direction and then call the :func:`reversed` function. ::
 
    >>> for i in reversed(range(1, 10, 2)):
    ...     print(i)
-   ...
    9
    7
    5
@@ -672,7 +664,6 @@ returns a new sorted list while leaving the source unaltered. ::
    >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
    >>> for i in sorted(basket):
    ...     print(i)
-   ...
    apple
    apple
    banana
@@ -687,7 +678,6 @@ way to loop over unique elements of the sequence in sorted order. ::
    >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
    >>> for f in sorted(set(basket)):
    ...     print(f)
-   ...
    apple
    banana
    orange
@@ -702,7 +692,6 @@ however, it is often simpler and safer to create a new list instead. ::
    >>> for value in raw_data:
    ...     if not math.isnan(value):
    ...         filtered_data.append(value)
-   ...
    >>> filtered_data
    [56.2, 51.7, 55.3, 52.5, 47.8]
 
@@ -1097,7 +1086,6 @@ are passed on to :meth:`!__init__`.  For example, ::
    ...     def __init__(self, realpart, imagpart):
    ...         self.r = realpart
    ...         self.i = imagpart
-   ...
    >>> x = Complex(3.0, -4.5)
    >>> x.r, x.i
    (3.0, -4.5)
@@ -1266,7 +1254,6 @@ then attribute lookup prioritizes the instance:
 >>> class Warehouse:
 ...    purpose = 'storage'
 ...    region = 'west'
-...
 >>> w1 = Warehouse()
 >>> print(w1.purpose, w1.region)
 storage west
@@ -1639,7 +1626,6 @@ defines :meth:`!__next__`, then :meth:`!__iter__` can just return ``self``::
    <__main__.Reverse object at 0x00A1DB50>
    >>> for char in rev:
    ...     print(char)
-   ...
    m
    a
    p
@@ -1665,7 +1651,6 @@ easy to create::
 
    >>> for char in reverse('golf'):
    ...     print(char)
-   ...
    f
    l
    o

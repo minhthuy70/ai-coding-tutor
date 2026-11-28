@@ -252,7 +252,6 @@ behaviour. An example of this can be found in the "enum" module:
 ...     """A breakfast menu"""
 ...     SPAM = 'spam'
 ...     BACON = 'bacon'
-...
 >>> # Enum classes have a custom metaclass:
 >>> type(Menu)
 <class 'enum.EnumMeta'>

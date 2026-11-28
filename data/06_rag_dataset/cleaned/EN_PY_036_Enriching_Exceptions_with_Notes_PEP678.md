@@ -27,7 +27,6 @@ the order they were added, after the exception.
 ...     e.add_note('Add some information')
 ...     e.add_note('Add some more information')
 ...     raise
-...
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
 TypeError: bad type
@@ -45,7 +44,6 @@ error has occurred.
 ```python
 >>> def f():
 ...     raise OSError('operation failed')
-...
 >>> excs = []
 >>> for i in range(3):
 ...     try:
@@ -53,7 +51,6 @@ error has occurred.
 ...     except Exception as e:
 ...         e.add_note(f'Happened in Iteration {i+1}')
 ...         excs.append(e)
-...
 >>> raise ExceptionGroup('We have some problems', excs)
   + Exception Group Traceback (most recent call last):
   |   File "<stdin>", line 1, in <module>

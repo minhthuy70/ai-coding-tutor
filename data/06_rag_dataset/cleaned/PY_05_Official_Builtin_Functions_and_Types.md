@@ -587,7 +587,6 @@ The complex type is described in :ref:`typesnumeric`.
       >>> class Shape:
       ...     def __dir__(self):
       ...         return ['area', 'perimeter', 'location']
-      ...
       >>> s = Shape()
       >>> dir(s)
       ['area', 'location', 'perimeter']
@@ -1620,10 +1619,8 @@ The following example uses the :ref:`dir_fd <dir_fd>` parameter of the
    >>> dir_fd = os.open('somedir', os.O_RDONLY)
    >>> def opener(path, flags):
    ...     return os.open(path, flags, dir_fd=dir_fd)
-   ...
    >>> with open('spamspam.txt', 'w', opener=opener) as f:
    ...     print('This will be written to somedir/spamspam.txt', file=f)
-   ...
    >>> os.close(dir_fd)  # don't leak a file descriptor
 
 The type of :term:`file object` returned by the :func:`open` function
@@ -2004,8 +2001,6 @@ Sentinels defined in this way can be used in :term:`type hints <type hint>`::
    MISSING = sentinel("MISSING")
 
    def next_value(default: int | MISSING = MISSING):
-       ...
-
 Sentinel objects support the :ref:`| <bitwise>` operator for use in type expressions.
 
 :mod:`Pickling <pickle>` is supported for sentinel objects that are
@@ -2128,8 +2123,6 @@ body and you want to avoid the automatic transformation to instance
 method.  For these cases, use this idiom::
 
    def regular_function():
-       ...
-
    class C:
        method = staticmethod(regular_function)
 
@@ -2300,7 +2293,6 @@ For practical suggestions on how to design cooperative classes using
 
       >>> class X:
       ...     a = 1
-      ...
       >>> X = type('X', (), dict(a=1))
 
    See also:
@@ -2362,7 +2354,6 @@ Example
 
    >>> for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):
    ...     print(item)
-   ...
    (1, 'sugar')
    (2, 'spice')
    (3, 'everything nice')
@@ -2390,8 +2381,11 @@ approaches to dealing with this issue:
 ```
 
 python
+
+```python
 >>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))
 [(0, 'fee'), (1, 'fi'), (2, 'fo')]
+```
 
 ```
 
@@ -2402,8 +2396,11 @@ python
 ```
 
 python
+
+```python
 >>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))
 [('a', 1), ('b', 2), ('c', 3)]
+```
 
 ```python
 
@@ -2412,12 +2409,10 @@ python
 
      >>> for item in zip(range(3), ['fee', 'fi', 'fo', 'fum'], strict=True):  # doctest: +SKIP
      ...     print(item)
-     ...
      (0, 'fee')
      (1, 'fi')
      (2, 'fo')
      Traceback (most recent call last):
-       ...
      ValueError: zip() argument 2 is longer than argument 1
 
   ..
@@ -2450,6 +2445,8 @@ Tips and tricks:
 ```
 
 python
+
+```python
 >>> x = [1, 2, 3]
 >>> y = [4, 5, 6]
 >>> list(zip(x, y))
@@ -2457,6 +2454,7 @@ python
 >>> x2, y2 = zip(*zip(x, y))
 >>> x == list(x2) and y == list(y2)
 True
+```
 
 ```
 
@@ -4939,8 +4937,11 @@ See also :meth:`rfind` and :meth:`index`.
 ```
 
 python
+
+```python
 >>> 'Py' in 'Python'
 True
+```
 
 ### Method: `str.format(*args, **kwargs)`
 
@@ -4991,7 +4992,6 @@ that can be specified in format strings.
    >>> class Default(dict):
    ...     def __missing__(self, key):
    ...         return key
-   ...
    >>> '{name} was born in {country}'.format_map(Default(name='Guido'))
    'Guido was born in country'
 
@@ -5851,8 +5851,11 @@ boundaries, which may not be the desired result:
 ```
 
 python
+
+```python
 >>> "they're bill's friends from the UK".title()
 "They'Re Bill'S Friends From The Uk"
+```
 
 ```
 
@@ -5865,14 +5868,16 @@ expressions:
 ```
 
 python
+
+```python
 >>> import re
 >>> def titlecase(s):
 ...     return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",
 ...                   lambda mo: mo.group(0).capitalize(),
 ...                   s)
-...
 >>> titlecase("they're bill's friends.")
 "They're Bill's Friends."
+```
 
 ```
 
@@ -6796,8 +6801,11 @@ The *suffix* may be any :term:`bytes-like object`.
 ```
 
 python
+
+```python
 >>> b'Py' in b'Python'
 True
+```
 
 ```
 
@@ -7490,8 +7498,11 @@ boundaries, which may not be the desired result:
 ```
 
 python
+
+```python
 >>> b"they're bill's friends from the UK".title()
 b"They'Re Bill'S Friends From The Uk"
+```
 
 ```
 
@@ -7500,15 +7511,17 @@ A workaround for apostrophes can be constructed using regular expressions:
 ```
 
 python
+
+```python
 >>> import re
 >>> def titlecase(s):
 ...     return re.sub(rb"[A-Za-z]+('[A-Za-z]+)?",
 ...                   lambda mo: mo.group(0)[0:1].upper() +
 ...                              mo.group(0)[1:].lower(),
 ...                   s)
-...
 >>> titlecase(b"they're bill's friends.")
 b"They're Bill's Friends."
+```
 
 ```
 
@@ -7923,6 +7936,8 @@ One-dimensional memoryviews of :term:`hashable` (read-only) types with formats
 ```
 
 python
+
+```python
 >>> import array
 >>> a = array.array('I', [1, 2, 3, 4, 5])
 >>> b = array.array('d', [1.0, 2.0, 3.0, 4.0, 5.0])
@@ -7938,6 +7953,7 @@ True
 True
 >>> z.tolist() == c.tolist()
 True
+```
 
 ```
 
@@ -7948,10 +7964,11 @@ True
 ```
 
 python
+
+```python
 >>> from ctypes import BigEndianStructure, c_long
 >>> class BEPoint(BigEndianStructure):
 ...     _fields_ = [("x", c_long), ("y", c_long)]
-...
 >>> point = BEPoint(100, 200)
 >>> a = memoryview(point)
 >>> b = memoryview(point)
@@ -7959,6 +7976,7 @@ python
 False
 >>> a == b
 False
+```
 
 ```
 
@@ -7977,11 +7995,14 @@ False
 ```
 
 python
+
+```python
 >>> m = memoryview(b"abc")
 >>> m.tobytes()
 b'abc'
 >>> bytes(m)
 b'abc'
+```
 
 ```
 
@@ -8006,9 +8027,12 @@ b'abc'
 ```
 
 python
+
+```python
 >>> m = memoryview(b"abc")
 >>> m.hex()
 '616263'
+```
 
 ```
 
@@ -8026,6 +8050,8 @@ python
 ```
 
 python
+
+```python
 >>> memoryview(b'abc').tolist()
 [97, 98, 99]
 >>> import array
@@ -8033,6 +8059,7 @@ python
 >>> m = memoryview(a)
 >>> m.tolist()
 [1.1, 2.2, 3.3]
+```
 
 ```
 
@@ -8049,6 +8076,8 @@ python
 ```
 
 python
+
+```python
 >>> m = memoryview(bytearray(b'abc'))
 >>> mm = m.toreadonly()
 >>> mm.tolist()
@@ -8060,6 +8089,7 @@ TypeError: cannot modify read-only memory
 >>> m[0] = 43
 >>> mm.tolist()
 [43, 98, 99]
+```
 
 ```
 
@@ -8080,12 +8110,15 @@ TypeError: cannot modify read-only memory
 ```
 
 python
+
+```python
 >>> m = memoryview(b'abc')
 >>> m.release()
 >>> m[0]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: operation forbidden on released memoryview object
+```
 
 ```
 
@@ -8095,14 +8128,16 @@ ValueError: operation forbidden on released memoryview object
 ```
 
 python
+
+```python
 >>> with memoryview(b'abc') as m:
 ...     m[0]
-...
 97
 >>> m[0]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: operation forbidden on released memoryview object
+```
 
 ```
 
@@ -8135,6 +8170,8 @@ ValueError: operation forbidden on released memoryview object
 ```
 
 python
+
+```python
 >>> import array
 >>> a = array.array('l', [1,2,3])
 >>> x = memoryview(a)
@@ -8155,22 +8192,25 @@ python
 24
 >>> y.nbytes
 24
+```
 
    Cast 1D/unsigned bytes to 1D/char:
 
+```python
 >>> b = bytearray(b'zyz')
 >>> x = memoryview(b)
 >>> x[0] = b'a'
 Traceback (most recent call last):
-  ...
 TypeError: memoryview: invalid type for format 'B'
 >>> y = x.cast('c')
 >>> y[0] = b'a'
 >>> b
 bytearray(b'ayz')
+```
 
    Cast 1D/bytes to 3D/ints to 1D/signed char:
 
+```python
 >>> import struct
 >>> buf = struct.pack("i"*12, *list(range(12)))
 >>> x = memoryview(buf)
@@ -8194,9 +8234,11 @@ bytearray(b'ayz')
 48
 >>> z.nbytes
 48
+```
 
    Cast 1D/unsigned long to 2D/unsigned long:
 
+```python
 >>> buf = struct.pack("L"*6, *list(range(6)))
 >>> x = memoryview(buf)
 >>> y = x.cast('L', shape=[2,3])
@@ -8206,6 +8248,7 @@ bytearray(b'ayz')
 48
 >>> y.tolist()
 [[0, 1, 2], [3, 4, 5]]
+```
 
 ```
 
@@ -8242,10 +8285,13 @@ There are also several readonly attributes available:
 ```
 
 python
+
+```python
 >>> b  = bytearray(b'xyz')
 >>> m = memoryview(b)
 >>> m.obj is b
 True
+```
 
 ```
 
@@ -8260,6 +8306,8 @@ True
 ```
 
 python
+
+```python
 >>> import array
 >>> a = array.array('i', [1,2,3,4,5])
 >>> m = memoryview(a)
@@ -8274,9 +8322,11 @@ python
 12
 >>> len(y.tobytes())
 12
+```
 
    Multi-dimensional arrays:
 
+```python
 >>> import struct
 >>> buf = struct.pack("d"*12, *[1.5*x for x in range(12)])
 >>> x = memoryview(buf)
@@ -8287,15 +8337,18 @@ python
 3
 >>> y.nbytes
 96
+```
 
    Interpret a flat buffer as a Fortran-contiguous (column-major) array:
 
+```python
 >>> buf = bytes(range(6))
 >>> y = memoryview(buf).cast('B', shape=[3, 2], order='F')
 >>> y.f_contiguous
 True
 >>> y.tolist()
 [[0, 3], [1, 4], [2, 5]]
+```
 
 ```
 
@@ -8326,6 +8379,8 @@ True
 ```
 
 python
+
+```python
 >>> import array, struct
 >>> m = memoryview(array.array('H', [32000, 32001, 32002]))
 >>> m.itemsize
@@ -8334,6 +8389,7 @@ python
 32000
 >>> struct.calcsize('H') == m.itemsize
 True
+```
 
 ```
 
@@ -8753,16 +8809,18 @@ mapping types should support too):
 ```
 
 python
+
+```python
 >>> class Counter(dict):
 ...     def __missing__(self, key):
 ...         return 0
-...
 >>> c = Counter()
 >>> c['red']
 0
 >>> c['red'] += 1
 >>> c['red']
 1
+```
 
 ```python
 
@@ -8884,9 +8942,12 @@ python
 ```
 
 python
+
+```python
 >>> d = {'a': 1}
 >>> d.values() == d.values()
 False
+```
 
 ```
 
@@ -9011,7 +9072,6 @@ An example of dictionary view usage
 >>> n = 0
 >>> for val in values:
 ...     n += val
-...
 >>> print(n)
 504
 
@@ -9250,8 +9310,6 @@ and the value type.  In this example, the function expects a ``dict`` with
 keys of type :class:`str` and values of type :class:`int`::
 
    def send_post_request(url: str, body: dict[str, int]) -> None:
-       ...
-
 ```
 
 The builtin functions `isinstance()` and `issubclass()` do not accept
@@ -9326,7 +9384,6 @@ exception to disallow mistakes like ``dict[str][str]``
 
 >>> dict[str][str]
 Traceback (most recent call last):
-  ...
 TypeError: dict[str] is not a generic class
 
 ```
@@ -9562,7 +9619,6 @@ union objects cannot be checked::
    True
    >>> isinstance([1], int | list[int])
    Traceback (most recent call last):
-     ...
    TypeError: isinstance() argument 2 cannot be a parameterized generic
 
 ```
@@ -9594,10 +9650,8 @@ the default behavior of creating a union:
    >>> class M(type):
    ...     def __or__(self, other):
    ...         return "Hello"
-   ...
    >>> class C(metaclass=M):
    ...     pass
-   ...
    >>> C | int
    'Hello'
    >>> int | C
@@ -9691,7 +9745,6 @@ attribute, you need to explicitly set it on the underlying function object:
 >>> class C:
 ...     def method(self):
 ...         pass
-...
 >>> c = C()
 >>> c.method.whoami = 'my name is method'  # can't set on the method
 Traceback (most recent call last):
@@ -9862,7 +9915,6 @@ When an operation would exceed the limit, a `exc` is raised:
 >>> sys.set_int_max_str_digits(4300)  # Illustrative, this is the default.
 >>> _ = int('2' * 5432)
 Traceback (most recent call last):
-...
 ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 5432 digits; use sys.set_int_max_str_digits() to increase the limit
 >>> i = int('2' * 4300)
 >>> len(str(i))
@@ -9870,7 +9922,6 @@ ValueError: Exceeds the limit (4300 digits) for integer string conversion: value
 >>> i_squared = i*i
 >>> len(str(i_squared))
 Traceback (most recent call last):
-...
 ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit
 >>> len(hex(i_squared))
 7144
@@ -9895,8 +9946,6 @@ Verification:
 >>> msg = int('578966293710682886880994035146873798396722250538762761564'
 ...           '9252925514383915483333812743580549779436104706260696366600'
 ...           '571186405732').to_bytes(53, 'big')
-...
-
 ```
 
 ### Affected APIs

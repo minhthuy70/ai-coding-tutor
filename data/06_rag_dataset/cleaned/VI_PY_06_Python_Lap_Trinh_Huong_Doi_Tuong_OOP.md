@@ -73,8 +73,6 @@ from Diem import *
 p1 = Diem()
 p1.x = 7
 p1.y = -3
-...
-
 # Python objects are dynamic (can add fields any time!)
 p1.name = "Tyler Durden"
 ```
@@ -152,7 +150,6 @@ def **\_\_init\_\_(**self**, parameter, ..., parameter**): **statements**
     def __init__(self, x, y):
       self.x = x
       self.y = y
-    ...
 ```
 
 • How would we make it possible to construct a Diem() with no parameters to get (0, 0)?
@@ -279,7 +276,6 @@ class **name**(**superclass**): **statements**
 - Ví dụ:
   class Diem3D(Diem):    # Diem3D extends Diem
     z = 0
-    ...
 ```
 
 ## • Python also supports multiple inheritance class name(superclass, ..., superclass): statements

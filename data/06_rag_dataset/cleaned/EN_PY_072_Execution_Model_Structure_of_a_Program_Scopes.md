@@ -238,13 +238,11 @@ Example:
 >>> type Alias = 1/0
 >>> Alias.__value__
 Traceback (most recent call last):
-  ...
 ZeroDivisionError: division by zero
 >>> def func[T: 1/0](): pass
 >>> T = func.__type_params__[0]
 >>> T.__bound__
 Traceback (most recent call last):
-  ...
 ZeroDivisionError: division by zero
 
 ```

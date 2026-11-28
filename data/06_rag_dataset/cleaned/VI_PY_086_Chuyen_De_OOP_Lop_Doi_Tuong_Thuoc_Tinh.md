@@ -70,7 +70,6 @@ from Diem import *
 p1 = Diem()
 p1.x = 7
 p1.y = -3
-...
 # Python objects are dynamic (can add fields any time!)
 p1.name = "Tyler Durden"
 
@@ -86,8 +85,6 @@ def dich_chuyen(self, dx, dy):
 self.x += dx
 
 self.y += dy
-...
-
 7
 Exercise Answer
 diem.py
@@ -146,6 +143,5 @@ class Diem:
 def __init__(self, x, y):
 self.x = x
 self.y = y
-...
 • How would we make it possible to construct a
 Diem() with no parameters to get (0, 0)?

@@ -21,7 +21,6 @@ The "break" statement breaks out of the innermost enclosing "for" or
 ...         if n % x == 0:
 ...             print(f"{n} equals {x} * {n//x}")
 ...             break
-...
 4 equals 2 * 2
 6 equals 2 * 3
 8 equals 2 * 4
@@ -38,7 +37,6 @@ loop:
 ...         print(f"Found an even number {num}")
 ...         continue
 ...     print(f"Found an odd number {num}")
-...
 Found an even number 2
 Found an odd number 3
 Found an even number 4
@@ -80,7 +78,6 @@ prime numbers:
 ...     else:
 ...         # loop fell through without finding a factor
 ...         print(n, 'is a prime number')
-...
 2 is a prime number
 3 is a prime number
 4 equals 2 * 2

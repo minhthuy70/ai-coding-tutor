@@ -86,12 +86,13 @@ def validate_all(verbose: bool = False) -> bool:
         page_artifacts = p0 + p1 + p2 + p3
 
         # 5. Dòng mục lục rác (TOC Dot Leaders: .... 15)
-        toc_pat = r"^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9].*?\s*\.{4,}\s*\d+\s*$"
+        toc_pat = r"^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9][^\n]*?\s*\.{4,}\s*\d+\s*$"
         toc_artifacts = len(re.findall(toc_pat, text, flags=re.MULTILINE))
 
-        # 6. Rác thẻ HTML layout
+        # 6. Rác thẻ HTML layout (chỉ kiểm tra ngoài code blocks)
+        code_free_text = re.sub(r'```[\s\S]*?```', '', text)
         html_pat = r"docvortex-page-footnote|</?(?:span|div|small|font|center|noscript)[^>]*>"
-        html_artifacts = len(re.findall(html_pat, text, flags=re.IGNORECASE))
+        html_artifacts = len(re.findall(html_pat, code_free_text, flags=re.IGNORECASE))
 
         # 7. Link ảnh cục bộ rác
         local_images = len(re.findall(r"!\[.*?\]\((?!https?://).*?\)", text))

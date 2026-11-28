@@ -3264,7 +3264,6 @@ behaviour. An example of this can be found in the :mod:`enum` module
 ...     """A breakfast menu"""
 ...     SPAM = 'spam'
 ...     BACON = 'bacon'
-...
 >>> # Enum classes have a custom metaclass:
 >>> type(Menu)
 <class 'enum.EnumMeta'>
@@ -3868,7 +3867,6 @@ exception
 
 >>> class C:
 ...     pass
-...
 >>> c = C()
 >>> c.__len__ = lambda: 5
 >>> len(c)
@@ -3919,14 +3917,12 @@ correctness, implicit special method lookup generally also bypasses the
 ...     def __getattribute__(*args):
 ...         print("Metaclass getattribute invoked")
 ...         return type.__getattribute__(*args)
-...
 >>> class C(object, metaclass=Meta):
 ...     def __len__(self):
 ...         return 10
 ...     def __getattribute__(*args):
 ...         print("Class getattribute invoked")
 ...         return object.__getattribute__(*args)
-...
 >>> c = C()
 >>> c.__len__()                 # Explicit lookup via instance
 Class getattribute invoked
@@ -4073,8 +4069,6 @@ An example of an asynchronous iterable object
 
  class Reader:
      async def readline(self):
-         ...
-
      def __aiter__(self):
          return self
 

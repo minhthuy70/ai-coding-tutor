@@ -1,0 +1,288 @@
+## SET
+
+## 一<1>
+
+**Set** trong Python là một tập hợp các phần duy nhất không có thứ tự. Chúng thường được sử dụng để tính toán các phép toán liên quan tới tập hợp.
+
+## h  h . bd hCác tính chất của Set
+
+**Sets are unordered:** Các phần tử trong set không có thứ tự nhất định nào cả.
+
+**Set items are unique:** Các phần tử trong set là độc nhất, không có 2 phần tử nào trong set trùng nhau.
+
+**Sets are unindexed:** Set không thể truy cập được thông qua chỉ số.
+
+• **Sets are changeable (mutable):** Set có thể thay đổi.
+
+## 1. Tạo set:
+
+Để tạo set bạn để các phần tử trong set phân cách nhau bởi dấu phẩy và đặt trong đóng mở ngoặc tròn.
+
+Set không lưu những giá trị trùng nhau vì thế nếu set của bạn có các phần tử giống nhau nó sẽ tự bị loại bỏ.
+
+```lua
+s = {"28tech", "python", "28tech", "java", "set", "set"}
+print(s)
+t = {1, 2, 3, 1, 2, "abcd"}
+print(t)
+```
+
+## 1. Tạo set:
+
+## CHÚ Ý
+
+Set không thể lưu được những phần tử có thể thay đổi được giá trị (mutable) ví dụ như list.
+
+Các object không thể thay đổi như tuple, str, int… thì có thể n giản để định nghĩa một hàm trong Python. Lambda thường được gọi dưới làm phần tử của list được vì chúng không thể thay đổi.
+
+## 00 EXAMPLE
+
+0
+
+s = {[1, 2], "python", "28tech"}
+print(s)
+
+**OUTPUT**
+
+TypeError: unhashable type: 'list'
+
+## 2. Set constructor:
+
+Bạn có thể tạo set bằng set constructor từ các object khác như list, str, range…
+
+$$
+\begin{array}{l} \text {s = "28techtech"} \\ \text {t = set(s)} \\ \text {print(t)} \\ \text {a = [1, 2, 3, 1, 2]} \\ \text {b = set(a)} \\ \text {print(b)} \end{array}
+$$
+
+**OUTPUT** {'2', 't', '8', 'c', 'e', 'h'} {1, 2, 3}
+
+## 3. Thêm phần tử vào set:
+
+Để thêm phần tử vào set ta sử dụng **hàm add()**, nếu bạn thêm 1 phần tử đã có mặt trong set thì phần tử này sẽ không được thêm vào vì set không lưu giá trị trùng.
+
+## là EXAMPLE
+
+00
+
+s = {"28tech", "abc", "python"} s.add("abc")
+
+s.add(1)
+
+print(s)
+
+**OUTPUT**
+
+{'abc', 1, '28tech', 'python'} Để thêm nhiều phần tử vào set bạn có thể sử dụng **hàm update().**
+
+00 EXAMPLE
+
+00
+
+Lambda thường được gọi dưới cái tên toán tửs = {"28tech", "abc", "python"} da.s.update([100, "abc", "28tech", 113]) print(s)
+
+**OUTPUT**
+
+{'python', 100, 'abc', 113, '28tech'}
+
+## 4. Xóa phần tử khỏi set:
+
+Để xóa phần tử khỏi set ta sử dụng **hàm remove(), discard(), pop(), clear.**
+
+## remove() và discard()
+
+## 00 bda là m
+
+s = {"28tech", "abc", "python", "C++"} s.remove("28tech")
+
+s.discard("abc") print(s)
+
+**OUTPUT**
+
+{'abc', 'python', 'C++'} {'python', 'C++'}
+
+## CHÚ Ý
+
+2 hàm remove và discard đều có chức năng xóa phần tử khỏi set nhưng remove() sẽ sinh ra lỗi Keyerror nếu bạn cố tình xóa một phần tử trong set, ngược lại discar() thì không.
+
+## 4. Xóa phần tử khỏi set:
+
+## pop() và clear()
+
+**pop():** Xóa một phần tử ngẫu nhiên trong set. **clear():** Xóa toàn bộ các phần tử trong set.
+
+## à EXAMPLE
+
+s = {"28tech", "abc", "python", "C++"} s.pop()
+
+print(s)
+
+s.clear() print(s)
+
+**OUTPUT**
+
+{'python', 'C++', '28tech'} set()
+
+## bda thường được gọi dưới cái tên toán tử lambda h
+
+## 5. Hàm len(), duyệt set và toán tử in:
+
+Để tìm số lượng phần tử trong set ta sử dụng **hàm len().**
+
+## 00 EXAMPLE
+
+n giản để định nghĩa print(len(s))
+
+print("NOT FOUND")
+
+**OUTPUT**
+
+4 abc python C++ 28tech FOUND
+
+## 6.Các phép toán trên tập hợp:
+
+**Union:** Phép hợp lấy ra các phần tử thuộc một trong 2 tập hợp, sử dụng **hàm union()** hoặc **phép toán |** để tìm hợp của 2 tập.
+
+00 EXAMPLE
+
+s = {"28tech", "abc", "python"} n đ định nghĩa một hàm tt = {"28tech", ng Python. Lambda thường được g"amazon", "python"}
+
+u = s.union(t)
+
+$$
+\mathrm{v} = \mathrm{s} \mid \mathrm{t}
+$$
+
+print(s)
+
+print(t)
+
+print(u)
+
+print(v)
+
+**OUTPUT**
+
+```jsonl
+{'abc', 'python', '28tech'}
+{'python', 'amazon', '28tech'}
+{'abc', 'python', '28tech', 'amazon'}
+{'abc', 'python', '28tech', 'amazon'}
+```
+
+## 6.Các phép toán trên tập hợp:
+
+**Intersection:** Phép giao lấy ra các phần tử thuộc cả 2 tập, sử dụng **hàm intersection()** hoặc **toán tử &** để tìm giao của 2 tập
+
+00 EXAMPLE
+
+s = {"28tech", "abc", "python"} ản để định nghĩa một hàm trong Python. Lambda thường được ghà l bdt = {"28tech", "amazon", "python"} u = s.intersection(t)
+
+$$
+\texttt {v} = \texttt {s} \& \texttt {t}
+$$
+
+print(s)
+
+print(t)
+
+print(u)
+
+print(v)
+
+## OUTPUT
+
+{'abc', 'python', '28tech'}
+
+{'python', 'amazon', '28tech'}
+
+{'python', '28tech'}
+
+{'python', '28tech'}
+
+## 6.Các phép toán trên tập hợp:
+
+**Difference:** Phép difference của tập A, B lấy ra các phần tử thuộc tập A nhưng không thuộc tập B, bạn có thể sử dụng **hàm difference** hoặc **toán tử -** để tìm difference của 2 tập.
+
+00 EXAMPLE
+
+để định nghĩa một hàm trong Python. Lambda thường đưs = {"28tech", "abc", "python"} hàm lambda.t = {"28tech", "amazon", "python"} u = s.difference(t)
+
+v = s - t
+
+print(s)
+
+## OUTPUT
+
+print(t)
+
+{'abc', 'python', '28tech'}
+
+{'python', 'amazon', '28tech'}
+
+print(u)
+
+{'abc'}
+
+print(v)
+
+{'abc'}
+
+## 6.Các phép toán trên tập hợp:
+
+**Symmetric Difference:** Phép Symmetric Difference của 2 tập A và B lấy ra các phần tử thuộc 1 trong 2 tập nhưng bỏ đi những phần tử thuộc cả 2 tập, bạn có thể sử dụng **hàm symmetric\_difference** hoặc **toán tử ^.**
+
+00 EXAMPLE
+
+để định nghĩa một hàm trong Python. Lambda thường đưs = {"28tech", "abc", "python"} hàm lambda.t = {"28tech", "amazon", "python"} u = s.symmetric\_difference(t)
+
+$v = s ^{t}$
+
+print(s)
+
+**OUTPUT**
+
+print(t)
+
+{'abc', 'python', '28tech'}
+
+{'python', 'amazon', '28tech'}
+
+print(u)
+
+{'abc', 'amazon'}
+
+print(v)
+
+{'abc', 'amazon'}
+
+## 7.Các hàm phổ biến của set:
+
+**isdisjoint():** Xác định xem 2 tập có phần tử chung nào không ?
+
+s = {"28tech", "abc", "python"} ểt = {"28tech", "amazon", "python"} hàm lambda.u = {"BKA", "UET", "HCMUS"} print(s.isdisjoint(t)) print(s.isdisjoint(u))
+
+**OUTPUT**
+
+False
+
+True
+
+## 7.Các hàm phổ biến của set:
+
+**issubset():** Kiểm tra xem tập này có phải là tập con của tập khác không?
+
+s = {"28tech", "abc", "python"} t = {"28tech", "python"} hàm lambda.u = {"BKA", "UET", "28tech"} print(t.issubset(s)) print(u.issubset(s))
+
+**OUTPUT**
+
+True False
+
+## 7.Các hàm phổ biến của set:
+
+**issuperset():** Kiểm tra xem tập này có phải là cha của tập khác không?
+
+s = {"28tech", "abc", "python"} t = {"28tech", "python"} hàm lambda.u = {"BKA", "UET", "28tech"} print(s.issuperset(t)) print(u.issuperset(t))
+
+**OUTPUT**
+
+True False

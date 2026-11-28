@@ -861,7 +861,9 @@ When you type a large integer, you might be tempted to use commas between groups
 
 Figure 2.1: State diagram.
 
+```python
 >>> 1,000,000
+```
 
 (1, 0, 0)
 
@@ -873,9 +875,13 @@ One of the most powerful features of a programming language is the ability to ma
 
 An **assignment statement** creates new variables and gives them values:
 
+```python
 >>> message = 'And now for something completely different'
+```
 
+```python
 >>> pi = 3.1415926535897932
+```
 
 This example makes three assignments. The first assigns a string to a new variable named message; the second gives the integer 17 to n; the third assigns the (approximate) value of π to pi.
 
@@ -965,7 +971,9 @@ In Python 3, the result of this division is a float. The new operator // perform
 
 If either of the operands is a floating-point number, Python performs floating-point division, and the result is a float:
 
+```python
 >>> minute/60.0
+```
 
 0.98333333333333328
 
@@ -989,9 +997,13 @@ One of the benefits of working with an interpreted language is that you can test
 
 For example, if you are using Python as a calculator, you might type
 
+```python
 >>> miles = 26.2
+```
 
+```python
 >>> miles \* 1.61
+```
 
 42.182
 
@@ -1105,7 +1117,9 @@ At this point the syntax error you are most likely to make is an illegal variabl
 
 If you put a space in a variable name, Python thinks it is two operands without an operator:
 
+```python
 >>> bad name = 5
+```
 
 SyntaxError: invalid syntax
 
@@ -1113,9 +1127,13 @@ For syntax errors, the error messages don’t help much. The most common message
 
 The runtime error you are most likely to make is a “use before def;” that is, trying to use a variable before you have assigned a value. This can happen if you spell a variable name wrong:
 
+```python
 >>> principal = 327.68
+```
 
+```python
 >>> interest = principle \* rate
+```
 
 NameError: name 'principle' is not defined
 
@@ -1123,7 +1141,9 @@ Variables names are case sensitive, so LaTeX is not the same as latex.
 
 At this point the most likely cause of a semantic error is the order of operations. For example, to evaluate $\frac{1}{2\pi},$ you might be tempted to write
 
+```python
 >>> 1.0 / 2.0 \* pi
+```
 
 But the division happens first, so you would get π/2, which is not the same thing! There is no way for Python to know what you meant to write, so in this case you don’t get an error message; you just get the wrong answer.
 
@@ -1255,7 +1275,9 @@ This statement creates a **module object** named math. If you print the module o
 
 The module object contains the functions and variables defined in the module. To access one of the functions, you have to specify the name of the module and the name of the function, separated by a dot (also known as a period). This format is called **dot notation**.
 
+```python
 >>> ratio = signal\_power / noise\_power >>> decibels = 10 \* math.log10(ratio)
+```
 
 ```txt
 >>> radians = 0.7
@@ -1334,7 +1356,6 @@ If you type a function definition in interactive mode, the interpreter prints el
 >>> def print_lyrics():
 ...     print "I'm a lumberjack, and I'm okay."
 ...     print "I sleep all night and I work all day."
-...
 To end the function, you have to enter an empty line (this is not necessary in a script).
 Defining a function creates a variable with the same name.
 >>> print print_lyrics
@@ -1515,7 +1536,9 @@ golden = (math.sqrt(5) + 1) / 2
 
 When you call a function in interactive mode, Python displays the result:
 
+```python
 >>> math.sqrt(5)
+```
 
 2.2360679774997898
 
@@ -1527,7 +1550,9 @@ Void functions might display something on the screen or have some other effect, 
 
 The value None is not the same as the string 'None'. It is a special value that has its own type:
 
+```python
 >>> print type(None)
+```
 
 &lt;type 'NoneType'&gt;
 
@@ -2078,13 +2103,19 @@ The **modulus operator** works on integers and yields the remainder when the fir
 >>> quotient = 7 / 3
 ```
 
+```python
 >>> print quotient
+```
 
 2
 
+```python
 >>> remainder = 7 % 3
+```
 
+```python
 >>> print remainder
+```
 
 1
 
@@ -2135,7 +2166,9 @@ Finally, the not operator negates a boolean expression, so not (x > y) is true i
 
 Strictly speaking, the operands of the logical operators should be boolean expressions, but Python is not very strict. Any nonzero number is interpreted as “true.”
 
+```python
 >>> 17 and True
+```
 
 True
 
@@ -2856,7 +2889,9 @@ If you try to follow the flow of execution here, even for fairly small values of
 
 What happens if we call factorial and give it 1.5 as an argument?
 
+```python
 >>> factorial(1.5)
+```
 
 RuntimeError: Maximum recursion depth exceeded
 
@@ -3323,15 +3358,23 @@ The first column is a number, a; the second column is the square root of a compu
 
 **Exercise 7.4.** The built-in function eval takes a string and evaluates it using the Python interpreter. For example:
 
+```python
 >>> eval('1 + 2 \* 3')
+```
 
+```python
 >>> import math
+```
 
+```python
 >>> eval('math.sqrt(5)')
+```
 
 2.2360679774997898
 
+```python
 >>> eval('type(math.pi)')
+```
 
 &lt;type 'float'&gt;
 
@@ -3739,7 +3782,6 @@ Now when I run the program again, I get more information:
 ```txt
 >>> is_reverse('pots', 'stop')
 0 4
-...
 IndexError: string index out of range
 ```
 
@@ -3859,9 +3901,13 @@ For the exercises in this chapter we need a list of English words. There are lot
 
 This file is in plain text, so you can open it with a text editor, but you can also read it from Python. The built-in function open takes the name of the file as a parameter and returns a **file object** you can use to read the file.
 
+```python
 >>> fin = open('words.txt')
+```
 
+```python
 >>> print fin
+```
 
 &lt;open file 'words.txt', mode 'r' at 0xb7f4b380&gt;
 
@@ -3869,7 +3915,9 @@ fin is a common name for a file object used for input. Mode 'r' indicates that t
 
 The file object provides several methods for reading, including readline, which reads characters from the file until it gets to a newline and returns the result as a string:
 
+```python
 >>> fin.readline()
+```
 
 'aa\r\n'
 
@@ -3877,7 +3925,9 @@ The first word in this particular list is “aa,” which is a kind of lava. The
 
 The file object keeps track of where it is in the file, so if you call readline again, you get the next word:
 
+```python
 >>> fin.readline()
+```
 
 'aah\r\n'
 
@@ -4741,29 +4791,41 @@ As an example, we’ll build a dictionary that maps from English to Spanish word
 
 The function dict creates a new dictionary with no items. Because dict is the name of a built-in function, you should avoid using it as a variable name.
 
+```python
 >>> eng2sp = dict()
+```
 
+```python
 >>> print eng2sp
+```
 
 {}
 
 The squiggly-brackets, {}, represent an empty dictionary. To add items to the dictionary, you can use square brackets:
 
+```python
 >>> eng2sp['one'] = 'uno'
+```
 
 This line creates an item that maps from the key ’one’ to the value 'uno'. If we print the dictionary again, we see a key-value pair with a colon between the key and value:
 
+```python
 >>> print eng2sp
+```
 
 {'one': 'uno'}
 
 This output format is also an input format. For example, you can create a new dictionary with three items:
 
+```python
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+```
 
 But if you print eng2sp, you might be surprised:
 
+```python
 >>> print eng2sp
+```
 
 {'one': 'uno', 'three': 'tres', 'two': 'dos'}
 
@@ -5709,9 +5771,13 @@ As usual, you should at least attempt the following exercises before you read my
 
 Hint: The string module provides strings named whitespace, which contains space, tab, newline, etc., and punctuation which contains the punctuation characters. Let’s see if we can make Python swear:
 
+```python
 >>> import string
+```
 
+```python
 >>> print string.punctuation
+```
 
 !"#\$%&'()\*+,-./:;<=>?@[\]^\_\`{|}\~
 
@@ -6312,15 +6378,21 @@ Opening a database is similar to opening other files:
 
 The mode 'c' means that the database should be created if it doesn’t already exist. The result is a database object that can be used (for most operations) like a dictionary. If you create a new item, anydbm updates the database file.
 
+```python
 >>> db['cleese.png'] = 'Photo of John Cleese.'
+```
 
 When you access one of the items, anydbm reads the file:
 
 If you make another assignment to an existing key, anydbm replaces the old value:
 
+```python
 >>> db['cleese.png'] = 'Photo of John Cleese doing a silly walk.'
+```
 
+```python
 >>> print db['cleese.png']
+```
 
 ```txt
 Photo of John Cleese doing a silly walk.
@@ -6804,7 +6876,9 @@ txt
 
 False
 
+```python
 >>> box2.corner is box.corner
+```
 
 True
 
@@ -6818,11 +6892,15 @@ Fortunately, the copy module contains a method named deepcopy that copies not on
 >>> box3 = copy.deepcopy(box)
 ```
 
+```python
 >>> box3 is box
+```
 
 False
 
+```python
 >>> box3.corner is box.corner
+```
 
 False
 
@@ -6838,7 +6916,9 @@ When you start working with objects, you are likely to encounter some new except
 >>> p = Point()
 ```
 
+```python
 >>> print p.z
+```
 
 AttributeError: Point instance has no attribute 'z'
 
@@ -7834,7 +7914,6 @@ Since we invoke join on a newline character, the cards are separated by newlines
 Ace of Clubs
 2 of Clubs
 3 of Clubs
-...
 10 of Spades
 Jack of Spades
 Queen of Spades
@@ -8338,7 +8417,9 @@ entry = g.en(text='Default text.')
 
 The text option allows you to put text into the entry when it is created. The get method returns the contents of the Entry (which may have been changed by the user):
 
+```python
 >>> entry.get()
+```
 
 ```gradle
 'Default text.'
@@ -8366,15 +8447,21 @@ You can also specify a character using a dotted index, like 1.1, which has the l
 
 The get method reads the text in the widget; it takes a start and end index as arguments. The following example returns all the text in the widget, including the newline character:
 
+```python
 >>> text.get(0.0, END)
+```
 
 'Another line of text.\n'
 
 The delete method removes text from the widget; the following example deletes all but the first two characters:
 
+```python
 >>> text.delete(1.2, END)
+```
 
+```python
 >>> text.get(0.0, END)
+```
 
 'An\n'
 
@@ -8399,7 +8486,6 @@ python
 python
 def setup(self):
     self.row()
-    ...
 ```
 
 setup is the function that creates and arranges the widgets. Arranging widgets in a GUI is called **packing**.

@@ -213,7 +213,6 @@ example uses "bisect()" to look up a letter grade for an exam score
 >>> def grade(score, breakpoints=[60, 70, 80, 90], grades='FDCBA'):
 ...     i = bisect(breakpoints, score)
 ...     return grades[i]
-...
 >>> [grade(score) for score in [33, 99, 77, 70, 89, 90, 100]]
 ['F', 'A', 'C', 'C', 'B', 'A', 'A']
 

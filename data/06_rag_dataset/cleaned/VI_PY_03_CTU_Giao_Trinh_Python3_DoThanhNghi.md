@@ -291,11 +291,9 @@ lua
 >>> def func1():
 ...     var1 = "PHP"
 ...     print("In side func1() var1 = ",var1)
-...
 >>> def func2():
 ...     global var1
 ...     print("In side func2() global var1 = ",var1)
-...
 >>> func1()
 In side func1() var1 =  PHP
 >>> func2()
@@ -379,10 +377,7 @@ Cấu trúc điều khiển
 25
 • Cấu trúc lặp while
     while (cond):
-        ...
         loop_body
-        ...
-
         #s = 1 + 2 + ... + n
         n = int(input('n = '))
         s = 0
@@ -397,9 +392,7 @@ Cấu trúc điều khiển
 26
 • Cấu trúc lặp for
     for iter_var in seqence:
-        ...
         loop_body
-        ...
 diff
 • Hàm xây dựng sẵn trong các mô-đun
 >>> import os
@@ -433,7 +426,6 @@ Hàm có thể trả hoặc không trả về kết quả
 ```python
 >>> def hi():
 ...     print('Hi there!')
-...
 >>> hi()
 Hi there!
 >>>
@@ -441,7 +433,6 @@ Hi there!
 ...     print('Dear', name)
 ...     print('It will be a great pleasure')
 ...     print('if you attend the birthday party of Tutu')
-...
 >>> invite()
 Dear Toto
 It will be a great pleasure
@@ -453,10 +444,8 @@ if you attend the birthday party of Tutu
 txt
 >>> def addTwo(a, b):
 ...     return a + b
-...
 >>> def divide(a, b):
 ...     return a/b, a%b
-...
 >>> x = 2
 >>> y = 3
 >>> z = addTwo(x, y)
@@ -473,13 +462,11 @@ python
 ...             else:
 ...                 n = n - m
 ...     return m
-...
 >>> def coPrime(a, b):
 ...     if (gcd(a, b) != 1):
 ...             return
 ...     else:
 ...             print("%d and %d are co-prime" %(a,b))
-...
 >>> x, y = 2, 5
 >>> coPrime(x, y)
 2 and 5 are co-prime
@@ -489,7 +476,6 @@ python
 ...             return 1
 ...     else:
 ...             return n*fact(n-1)
-...
 >>> n = 5
 >>> print('%d! = %d' %(n,fact(n)))
 5! = 120
@@ -876,18 +862,14 @@ name: public, **\_name**: protected, **\_\_name**: private
 >>> class Employee:
 ...     'Common base class for all employees'
 ...     empCount = 0
-...
 ...     def __init__(self, name, salary):
 ...             self.name = name
 ...             self.salary = salary
 ...             Employee.empCount += 1
-...
 ...     def displayCount(self):
 ...         print("Total Employee %d" % Employee.empCount)
-...
 ...     def displayEmployee(self):
 ...         print("Name: ", self.name, ", Salary: ", self.salary)
-...
 >>>
 ```
 
@@ -928,7 +910,9 @@ Traceback (most recent call last):
 AttributeError: 'Employee' object has no attribute 'age'
 ```
 
+```python
 >>> print("Employee.\_\_doc\_\_:", Employee.\_\_doc\_\_) Employee.\_\_doc\_\_: Common base class for all employees >>> print("Employee.\_\_name\_\_:", Employee.\_\_name\_\_ Employee.\_\_name\_\_: Employee >>> print("Employee.\_\_module\_\_:", Employee.\_\_module\_\_) Employee.\_\_module\_\_: \_\_main\_ >>> print("Employee.\_\_bases\_\_:", Employee.\_\_bases\_\_) Employee.\_\_bases\_\_: (&lt;class 'object'&gt;,) >>> print("Employee.\_\_dict\_\_:", Employee.\_\_dict\_\_) Employee.\_\_dict\_\_: {'\_\_module\_\_': '\_\_main\_\_', '\_\_doc\_\_': 'Common base class for all employees', 'empCount': 2, '\_\_init\_\_': &lt;function Employe e.__init__ at 0x7f220d64e3a0&gt;, 'displayCount': &lt;function Employee.disp layCount at 0x7f220d64e430&gt;, 'displayEmployee': &lt;function Employee.dis playEmployee at 0x7f220d64e4c0&gt;, '\_\_dict\_\_': &lt;attribute '__dict__' of 'Employee' objects&gt;, '\_\_weakref\_\_': &lt;attribute '__weakref__' of 'Emplo yee' objects&gt;}
+```
 
 ```python
 >>> class Point:
@@ -938,7 +922,6 @@ AttributeError: 'Employee' object has no attribute 'age'
 ...     def __del__(self):
 ...             class_name = self.__class__.__name__
 ...             print(class_name, "destroyed")
-...
 >>> pt1 = Point()
 >>> pt2 = pt1
 >>> pt3 = pt1
@@ -965,21 +948,16 @@ Hàm super()
 ```python
 >>> class Animal:
 ...     'Common base class for animals'
-...
 ...     def __init__(self, name='no-name'):
 ...             self.name = name
-...
 ...     def say(self):
 ...             print("%s can't say" %self.name)
-...
 >>> class Bird(Animal):
 ...     def say(self):
 ...             print("%s twitter" %self.name)
-...
 >>> class Cat(Animal):
 ...     def say(self):
 ...             print("%s meow" %self.name)
-...
 >>>
 txt
 Kế thừa (đa hình)
@@ -999,7 +977,6 @@ Kitty meow
 python
 >>> class Owl(Bird,Cat):
 ...     pass
-...
 >>> o = Owl('Chic')
 >>> o.say()
 Chic twitter
@@ -1008,7 +985,6 @@ Chic twitter
 ...     def say(self):
 ...             print("owl...")
 ...             Cat.say(self)
-...
 >>> ox =Owlx('ChicX')
 >>> ox.say()
 owl...
@@ -1064,13 +1040,10 @@ str
 ...     def __init__(self, x=0, y=0):
 ...             self.x = x
 ...             self.y = y
-...
 ...     def __str__(self):
 ...         return 'Point2D (%f, %f)' %(self.x, self.y)
-...
 ...     def __add__(self,other):
 ...         return Point2D(self.x + other.x, self.y + other.y)
-...
 >>> p1 = Point2D(2,10)
 >>> p2 = Point2D(5,-2)
 >>> print(p1 + p2)
@@ -1078,11 +1051,9 @@ Point2D (7.000000, 8.000000)
 python
 >>> class JustCounter:
 ...     __secretCount = 0
-...
 ...     def count(self):
 ...             self.__secretCount += 1
 ...             print(self.__secretCount)
-...
 >>> counter = JustCounter()
 >>> counter.count()
 1
@@ -1226,7 +1197,6 @@ This would always be executed.
 >>> def KelvinToFahrenheit(Temperature):
 ...     assert (Temperature >= 0),"Colder than absolute zero!"
 ...     return ((Temperature-273)*1.8)+32
-...
 >>> print(KelvinToFahrenheit(273))
 32.0
 >>> print(int(KelvinToFahrenheit(505.78)))
@@ -1246,7 +1216,6 @@ python
 ...     print("Written content in the file successfully")
 ... finally:
 ...     print("This would always be executed!!")
-...
 Error: can't find file or read data
 This would always be executed!!
 python
@@ -1508,7 +1477,9 @@ s.close()
 
 ## Lấy giờ từ server thời gian trên Internet 89
 
+```python
 >>> import ntplib >>> import time >>> ntp\_client = ntplib.NTPClient() >>> response = ntp\_client.request('pool.ntp.org') >>> print(time.ctime(response.tx\_time)) Mon Apr 18 15:21:10 2022
+```
 
 ```python
 import ftplib

@@ -221,6 +221,7 @@ can get an iterator for it.
 
 You can experiment with the iteration interface manually:
 
+```python
 >>> L = [1, 2, 3]
 >>> it = iter(L)
 >>> it
@@ -236,6 +237,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 StopIteration
 >>>
+```
 
 Python expects iterable objects in several different contexts, the
 most important being the "for" statement.  In the statement "for X in
@@ -254,21 +256,27 @@ for i in obj:
 Iterators can be materialized as lists or tuples by using the "list()"
 or "tuple()" constructor functions:
 
+```python
 >>> L = [1, 2, 3]
 >>> iterator = iter(L)
 >>> t = tuple(iterator)
 >>> t
 (1, 2, 3)
+```
 
 Sequence unpacking also supports iterators: if you know an iterator
 will return N elements, you can unpack them into an N-tuple:
 
+```python
 >>> L = [1, 2, 3]
 >>> iterator = iter(L)
+```
 
+```python
 >>> a, b, c = iterator
 >>> a, b, c
 (1, 2, 3)
+```
 
 Built-in functions such as "max()" and "min()" can take a single
 iterator argument and will return the largest or smallest element.
@@ -329,9 +337,11 @@ iterate over values or key/value pairs, you can explicitly call the
 The "dict()" constructor can accept an iterator that returns a finite
 stream of "(key, value)" tuples:
 
+```python
 >>> L = [('Italy', 'Rome'), ('France', 'Paris'), ('US', 'Washington DC')]
 >>> dict(iter(L))
 {'Italy': 'Rome', 'France': 'Paris', 'US': 'Washington DC'}
+```
 
 Files also support iteration by calling the "readline()" method until
 there are no more lines in the file.  This means you can read each
@@ -340,8 +350,6 @@ line of a file like this:
 ```python
 for line in file:
     # do something for each line
-    ...
-
 ```
 
 Sets can take their contents from an iterable and let you iterate over

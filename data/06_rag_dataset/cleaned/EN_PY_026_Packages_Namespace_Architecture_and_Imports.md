@@ -41,20 +41,16 @@ formats/                  Subpackage for file format conversions
         aiffwrite.py
         auread.py
         auwrite.py
-        ...
 effects/                  Subpackage for sound effects
         __init__.py
         echo.py
         surround.py
         reverse.py
-        ...
 filters/                  Subpackage for filters
         __init__.py
         equalizer.py
         vocoder.py
         karaoke.py
-        ...
-
 ```
 
 When importing the package, Python searches through the directories on

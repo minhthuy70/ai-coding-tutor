@@ -55,7 +55,6 @@ expressions have the form:
              for expr2 in sequence2
              if condition2
              for expr3 in sequence3
-             ...
              if condition3
              for exprN in sequenceN
              if conditionN )
@@ -97,7 +96,6 @@ for expr1 in sequence1:
     for expr2 in sequence2:
         if not (condition2):
             continue   # Skip this element
-        ...
         for exprN in sequenceN:
             if not (conditionN):
                 continue   # Skip this element
@@ -112,12 +110,14 @@ clauses, the length of the resulting output will be equal to the
 product of the lengths of all the sequences.  If you have two lists of
 length 3, the output list is 9 elements long:
 
+```python
 >>> seq1 = 'abc'
 >>> seq2 = (1, 2, 3)
 >>> [(x, y) for x in seq1 for y in seq2]
 [('a', 1), ('a', 2), ('a', 3),
  ('b', 1), ('b', 2), ('b', 3),
  ('c', 1), ('c', 2), ('c', 3)]
+```
 
 To avoid introducing an ambiguity into Python’s grammar, if
 "expression" is creating a tuple, it must be surrounded with
@@ -153,9 +153,11 @@ functions.
 
 Here’s the simplest example of a generator function:
 
+```python
 >>> def generate_ints(N):
 ...    for i in range(N):
 ...        yield i
+```
 
 Any function containing a "yield" keyword is a generator function;
 this is detected by Python’s *bytecode* compiler which compiles the
@@ -172,6 +174,7 @@ method, the function will resume executing.
 
 Here’s a sample usage of the "generate_ints()" generator:
 
+```python
 >>> gen = generate_ints(3)
 >>> gen
 <generator object generate_ints at ...>
@@ -186,6 +189,7 @@ Traceback (most recent call last):
   File "stdin", line 1, in <module>
   File "stdin", line 2, in generate_ints
 StopIteration
+```
 
 You could equally write "for i in generate_ints(5)", or "a, b, c =
 generate_ints(3)".
@@ -285,6 +289,7 @@ def counter(maximum):
 
 And here’s an example of changing the counter:
 
+```python
 >>> it = counter(10)
 >>> next(it)
 0
@@ -292,7 +297,9 @@ And here’s an example of changing the counter:
 1
 >>> it.send(8)
 8
+```
 
+```python
 >>> next(it)
 9
 >>> next(it)
@@ -300,6 +307,7 @@ Traceback (most recent call last):
   File "t.py", line 15, in <module>
     it.next()
 StopIteration
+```
 
 Because "yield" will often be returning "None", you should always
 check for this case.  Don’t just use its value in expressions unless
@@ -366,16 +374,22 @@ list comprehensions.  A **predicate** is a function that returns the
 truth value of some condition; for use with "filter()", the predicate
 must take a single value.
 
+```python
 >>> def is_even(x):
 ...     return (x % 2) == 0
+```
 
+```python
 >>> list(filter(is_even, range(10)))
 [0, 2, 4, 6, 8]
+```
 
 This can also be written as a list comprehension:
 
+```python
 >>> list(x for x in range(10) if is_even(x))
 [0, 2, 4, 6, 8]
+```
 
 "enumerate(iter, start=0)" counts off the elements in the iterable
 returning 2-tuples containing the count (from *start*) and each
@@ -428,6 +442,7 @@ an iterable’s contents.  "any()" returns "True" if any element in the
 iterable is a true value, and "all()" returns "True" if all of the
 elements are true values:
 
+```python
 >>> any([0, 1, 0])
 True
 >>> any([0, 0, 0])
@@ -438,9 +453,12 @@ True
 False
 >>> all([0, 0, 0])
 False
+```
 
+```python
 >>> all([1, 1, 1])
 True
+```
 
 "zip(iterA, iterB, ...)" takes one element from each iterable and
 returns them in a tuple:

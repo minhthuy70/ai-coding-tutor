@@ -167,7 +167,6 @@ Example:
 >>> bytecode = dis.Bytecode(myfunc)
 >>> for instr in bytecode:
 ...     print(instr.opname)
-...
 RESUME
 LOAD_GLOBAL
 LOAD_FAST

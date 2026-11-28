@@ -137,6 +137,46 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
     )
     text = strict_orphaned_pat.sub(r'\n\n```python\n\1\n', text)
 
+    # 3.6. Tự động đóng gói khối Python REPL (>>> ...) ngoài code fence vào ```python
+    def fence_repl_blocks(t: str) -> str:
+        blocks = re.split(r'(```[\s\S]*?```)', t)
+        for idx in range(0, len(blocks), 2):
+            seg = blocks[idx]
+            if '>>>' in seg:
+                lines = seg.splitlines()
+                new_lines = []
+                in_repl = False
+                repl_buffer = []
+                for l in lines:
+                    is_prompt = l.startswith('>>> ') or l.startswith('>>>') or l.startswith('... ') or l.startswith('...')
+                    if is_prompt:
+                        if not in_repl:
+                            in_repl = True
+                        repl_buffer.append(l)
+                    elif in_repl:
+                        if l.strip() == '' or l.startswith('#') or l.startswith('##'):
+                            new_lines.append('```python')
+                            new_lines.extend(repl_buffer)
+                            new_lines.append('```\n')
+                            repl_buffer = []
+                            in_repl = False
+                            new_lines.append(l)
+                        else:
+                            repl_buffer.append(l)
+                    else:
+                        new_lines.append(l)
+                if in_repl and repl_buffer:
+                    new_lines.append('```python')
+                    new_lines.extend(repl_buffer)
+                    new_lines.append('```\n')
+                blocks[idx] = '\n'.join(new_lines)
+        return ''.join(blocks)
+
+    text = fence_repl_blocks(text)
+
+    # 3.7. Xóa các dòng chấm cô lập (Punctuation dots noise: ....)
+    text = re.sub(r'^\s*\.{3,}\s*$\n?', '', text, flags=re.MULTILINE)
+
     # 4. Xóa watermark và tiêu đề lặp lại vô nghĩa
     watermark_pat = r'^\s*(?:DRAFT|CONFIDENTIAL|INTERNAL USE ONLY|BẢN THẢO)\s*$'
     text = re.sub(watermark_pat, '', text, flags=re.MULTILINE | re.IGNORECASE)
@@ -192,7 +232,7 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
 
         # Áp dụng các bộ lọc văn bản chuyên sâu trên phần không phải code:
         # A. Lọc bỏ các dòng Mục lục rác (TOC Dot Leaders: .... 15)
-        toc_pat = r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9].*?\s*\.{4,}\s*\d+\s*$'
+        toc_pat = r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9][^\n]*?\s*\.{4,}\s*\d+\s*$'
         toc_matches = re.findall(toc_pat, pre_text, flags=re.MULTILINE)
         stats["removed_toc_lines"] += len(toc_matches)
         pre_text = re.sub(toc_pat, '', pre_text, flags=re.MULTILINE)
@@ -239,9 +279,9 @@ def clean_markdown_text(raw_text: str) -> Tuple[str, Dict[str, Any]]:
 
     # Xử lý phần văn bản sau khối code cuối cùng
     post_text = text[last_end:]
-    toc_matches = re.findall(r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9].*?\s*\.{4,}\s*\d+\s*$', post_text, flags=re.MULTILINE)
+    toc_matches = re.findall(r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9][^\n]*?\s*\.{4,}\s*\d+\s*$', post_text, flags=re.MULTILINE)
     stats["removed_toc_lines"] += len(toc_matches)
-    post_text = re.sub(r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9].*?\s*\.{4,}\s*\d+\s*$', '', post_text, flags=re.MULTILINE)
+    post_text = re.sub(r'^\s*[-*•]?\s*[a-zA-Zà-ỹÀ-Ỹ0-9][^\n]*?\s*\.{4,}\s*\d+\s*$', '', post_text, flags=re.MULTILINE)
 
     fn_matches = re.findall(r'<small><span class=[\'"]docvortex-page-footnote[\s\S]*?</span></small>\n?', post_text, flags=re.I)
     stats["removed_html_noise"] += len(fn_matches)

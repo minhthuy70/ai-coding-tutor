@@ -1266,7 +1266,6 @@ def running_statistics(iterable):
  >>> amounts = [120.15, 764.05, 823.14]
  >>> for checknum, amount in zip(count(1200), amounts):
  ...     print('Check %d is for $%.2f' % (checknum, amount))
- ...
  Check 1200 is for $120.15
  Check 1201 is for $764.05
  Check 1202 is for $823.14
@@ -1274,7 +1273,6 @@ def running_statistics(iterable):
  >>> import operator
  >>> for cube in map(operator.pow, range(1,4), repeat(3)):
  ...    print(cube)
- ...
  1
  8
  27
@@ -1282,7 +1280,6 @@ def running_statistics(iterable):
  >>> reportlines = ['EuroPython', 'Roster', '', 'alex', '', 'laura', '', 'martin', '', 'walter', '', 'samuele']
  >>> for name in islice(reportlines, 3, None, 2):
  ...    print(name.title())
- ...
  Alex
  Laura
  Martin
@@ -1294,7 +1291,6 @@ def running_statistics(iterable):
  >>> di = sorted(sorted(d.items()), key=itemgetter(1))
  >>> for k, g in groupby(di, itemgetter(1)):
  ...     print(k, list(map(itemgetter(0), g)))
- ...
  1 ['a', 'c', 'e']
  2 ['b', 'd', 'f']
  3 ['g']
@@ -1305,8 +1301,6 @@ def running_statistics(iterable):
  >>> data = [ 1,  4,5,6, 10, 15,16,17,18, 22, 25,26,27,28]
  >>> for k, g in groupby(enumerate(data), lambda t:t[0]-t[1]):
  ...     print(list(map(operator.itemgetter(1), g)))
- ...
-
  [4, 5, 6]
 
  [15, 16, 17, 18]
@@ -1332,7 +1326,6 @@ def running_statistics(iterable):
 
  >>> for _ in loops(5):
  ...     print('hi')
- ...
  hi
  hi
  hi
@@ -1416,7 +1409,6 @@ def running_statistics(iterable):
  [(0, 1, 2, 3), (4, 5, 6, 7), (8, 9, 10, 11)]
  >>> list(reshape(M, 5))
  Traceback (most recent call last):
- ...
  ValueError: batched(): incomplete batch
  >>> list(reshape(M, 6))
  [(0, 1, 2, 3, 4, 5), (6, 7, 8, 9, 10, 11)]
@@ -1532,10 +1524,8 @@ def running_statistics(iterable):
  ...         if item == forbidden_value:
  ...             raise ValueError
  ...         yield item
- ...
  >>> list(iter_index(assert_no_value('AABCADEAF', 'B'), 'A'))
  Traceback (most recent call last):
- ...
  ValueError
  >>> # Verify that both paths can find identical NaN values
  >>> x = float('NaN')
@@ -1660,7 +1650,6 @@ def running_statistics(iterable):
  ... 18, 8, 12, 10, 22, 8, 20, 12, 18, 12, 28, 8, 30, 16, 20, 16, 24, 12, 36, 18,
  ... 24, 16, 40, 12, 42, 20, 24, 22, 46, 16, 42, 20, 32, 24, 52, 18, 40, 24, 36,
  ... 28, 58, 16, 60, 30, 36, 32, 48, 20, 66, 32, 44]  # https://oeis.org/A000010
- ...
  >>> list(map(totient, range(1, 70))) == first_totients
  True
  >>> reference_totient = lambda n: sum(math.gcd(t, n) == 1 for t in range(1, n+1))
@@ -1698,7 +1687,6 @@ def running_statistics(iterable):
  ('d', 'e', 'f')
  >>> next(it)
  Traceback (most recent call last):
-   ...
  ValueError: zip() argument 2 is shorter than argument 1
 
  >>> list(grouper('abcdefg', n=3, incomplete='ignore'))
@@ -1724,13 +1712,11 @@ def running_statistics(iterable):
  ...     list(sliding_window('ABCDEFG', -1))
  ... except ValueError:
  ...     'zero or negative n not supported'
- ...
  'zero or negative n not supported'
  >>> try:
  ...     list(sliding_window('ABCDEFG', 0))
  ... except ValueError:
  ...     'zero or negative n not supported'
- ...
  'zero or negative n not supported'
 
  >>> list(roundrobin('abc', 'd', 'ef'))
@@ -1985,7 +1971,6 @@ def running_statistics(iterable):
  ...         assert nth_combination(population, r, i) == seq[i]
  ...     for i in range(-len(seq), 0):
  ...         assert nth_combination(population, r, i) == seq[i]
- ...
  >>> iterable = 'abcde'
  >>> r = 3
  >>> combos = list(combinations(iterable, r))
@@ -2001,7 +1986,6 @@ def running_statistics(iterable):
 
  >>> def is_odd(x):
  ...     return x % 2 == 1
- ...
  >>> evens, odds = partition(is_odd, range(10))
  >>> list(evens)
  [0, 2, 4, 6, 8]
@@ -2273,12 +2257,16 @@ def get_pep(num):
     except urllib.error.HTTPError:
         return 'Not Found'
 
+```python
 >>> for n in 8, 290, 308, 320, 8, 218, 320, 279, 289, 320, 9991:
 ...     pep = get_pep(n)
 ...     print(n, len(pep))
+```
 
+```python
 >>> get_pep.cache_info()
 CacheInfo(hits=3, misses=8, maxsize=32, currsize=8)
+```
 
 ```
 
@@ -2297,11 +2285,15 @@ def fib(n):
         return n
     return fib(n-1) + fib(n-2)
 
+```python
 >>> [fib(n) for n in range(16)]
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+```
 
+```python
 >>> fib.cache_info()
 CacheInfo(hits=28, misses=16, maxsize=None, currsize=16)
+```
 
 ```
 
@@ -2492,7 +2484,6 @@ Example
    ...         self._alive = bool(state)
    ...     set_alive = partialmethod(set_state, True)
    ...     set_dead = partialmethod(set_state, False)
-   ...
    >>> c = Cell()
    >>> c.alive
    False
@@ -2567,7 +2558,6 @@ Pass the dispatch type to the decorator::
   ...     if verbose:
   ...         print("Strength in numbers, eh?", end=" ")
   ...     print(arg)
-  ...
   >>> @fun.register(list)
   ... def _(arg, verbose=False):
   ...     if verbose:
@@ -2583,8 +2573,6 @@ the dispatch type without an explicit type argument::
   ...     if verbose:
   ...         print("Strength in numbers, eh?", end=" ")
   ...     print(arg)
-  ...
-
 This shortcut uses the first annotation, even if it belongs to another
 parameter or the return value. Annotate the dispatch parameter, or pass the
 dispatch type explicitly if its annotation is not first.
@@ -2596,7 +2584,6 @@ dispatch type explicitly if its annotation is not first.
  ...     if verbose:
  ...         print("Strength in numbers, eh?", end=" ")
  ...     print(arg)
- ...
  >>> from typing import Union
  >>> @fun.register
  ... def _(arg: Union[list, set], verbose=False):
@@ -2604,8 +2591,6 @@ dispatch type explicitly if its annotation is not first.
  ...         print("Enumerate this:")
  ...     for i, elem in enumerate(arg):
  ...         print(i, elem)
- ...
-
 For code that dispatches on a collections type (e.g., ``list``), but wants
 to typehint the items of the collection (e.g., ``list[int]``), the
 dispatch type should be passed explicitly to the decorator itself with the
@@ -2631,7 +2616,6 @@ the :func:`~singledispatch.register` attribute can also be used in a functional 
 
   >>> def nothing(arg, verbose=False):
   ...     print("Nothing.")
-  ...
   >>> fun.register(type(None), nothing)
 
 The :func:`~singledispatch.register` attribute returns the undecorated function. This
@@ -2644,7 +2628,6 @@ of unit tests for each variant independently::
   ...     if verbose:
   ...         print("Half of your number:", end=" ")
   ...     print(arg / 2)
-  ...
   >>> fun_num is fun
   False
 
@@ -2685,7 +2668,6 @@ implementation::
   ...         print("Keys & Values")
   ...     for key, value in arg.items():
   ...         print(key, "=>", value)
-  ...
   >>> fun({"a": "b"})
   a => b
 
@@ -2855,12 +2837,10 @@ For example
    ...         print('Calling decorated function')
    ...         return f(*args, **kwds)
    ...     return wrapper
-   ...
    >>> @my_decorator
    ... def example():
    ...     """Docstring"""
    ...     print('Called example function')
-   ...
    >>> example()
    Calling decorated function
    Called example function

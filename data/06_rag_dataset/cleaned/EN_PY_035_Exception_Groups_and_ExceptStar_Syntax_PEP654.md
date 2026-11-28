@@ -26,7 +26,6 @@ be caught like any other exception.
 >>> def f():
 ...     excs = [OSError('error 1'), SystemError('error 2')]
 ...     raise ExceptionGroup('there were problems', excs)
-...
 >>> f()
   + Exception Group Traceback (most recent call last):
   |   File "<stdin>", line 1, in <module>
@@ -41,7 +40,6 @@ be caught like any other exception.
 ...     f()
 ... except Exception as e:
 ...     print(f'caught {type(e)}: e')
-...
 caught <class 'ExceptionGroup'>: e
 >>>
 
@@ -70,14 +68,12 @@ eventually to be reraised.
 ...             )
 ...         ]
 ...     )
-...
 >>> try:
 ...     f()
 ... except* OSError as e:
 ...     print("There were OSErrors")
 ... except* SystemError as e:
 ...     print("There were SystemErrors")
-...
 There were OSErrors
 There were SystemErrors
   + Exception Group Traceback (most recent call last):
@@ -105,9 +101,6 @@ program, along the following pattern:
 ...         test.run()
 ...     except Exception as e:
 ...         excs.append(e)
-...
 >>> if excs:
 ...    raise ExceptionGroup("Test Failures", excs)
-...
-
 ```

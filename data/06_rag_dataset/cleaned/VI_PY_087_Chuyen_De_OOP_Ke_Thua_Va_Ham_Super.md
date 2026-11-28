@@ -117,12 +117,9 @@ raise ExceptionType("message")
 NameError, SyntaxError, TypeError, ValueError
 – Example:
 class BankAccount:
-...
 def deposit(self, amount):
 if amount < 0:
 raise ValueError("negative amount")
-...
-
 15
 Inheritance (thừa kế)
 class name(superclass):
@@ -131,7 +128,6 @@ statements
 class Diem3D(Diem):   # Diem3D extends Diem
 
 z = 0
-...
 • Python also supports multiple inheritance
 class name(superclass, ..., superclass):
 statements

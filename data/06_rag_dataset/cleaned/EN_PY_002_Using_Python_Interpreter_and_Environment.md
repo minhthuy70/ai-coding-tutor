@@ -55,10 +55,13 @@ a file as standard input, it reads and executes a *script* from that
 file.
 
 A second way of starting the interpreter is "python -c command [arg]
+
+```python
 ...", which executes the statement(s) in *command*, analogous to the
 shell’s "-c" option.  Since Python statements often contain spaces or
 other characters that are special to the shell, it is usually advised
 to quote *command* in its entirety.
+```
 
 Some Python modules are also useful as scripts.  These can be invoked
 using "python -m module [arg] ...", which executes the source file for
@@ -115,7 +118,6 @@ an example, take a look at this "if" statement:
 >>> the_world_is_flat = True
 >>> if the_world_is_flat:
 ...     print("Be careful not to fall off!")
-...
 Be careful not to fall off!
 
 ```

@@ -33,7 +33,6 @@ they can only be used as keywords rather than positional arguments.
 ```python
 >>> def concat(*args, sep="/"):
 ...     return sep.join(args)
-...
 >>> concat("earth", "mars", "venus")
 'earth/mars/venus'
 >>> concat("earth", "mars", "venus", sep=".")
@@ -68,7 +67,6 @@ the "**"-operator:
 ...     print("-- This parrot wouldn't", action, end=' ')
 ...     print("if you put", voltage, "volts through it.", end=' ')
 ...     print("E's", state, "!")
-...
 >>> d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
 >>> parrot(**d)
 -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
@@ -89,7 +87,6 @@ reference variables from the containing scope:
 ```python
 >>> def make_incrementor(n):
 ...     return lambda x: x + n
-...
 >>> f = make_incrementor(42)
 >>> f(0)
 42

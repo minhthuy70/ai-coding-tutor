@@ -411,7 +411,6 @@ Example:
    ...         self._alive = bool(state)
    ...     set_alive = partialmethod(set_state, True)
    ...     set_dead = partialmethod(set_state, False)
-   ...
    >>> c = Cell()
    >>> c.alive
    False
@@ -482,7 +481,6 @@ will infer the type of the first argument automatically:
    ...     if verbose:
    ...         print("Strength in numbers, eh?", end=" ")
    ...     print(arg)
-   ...
    >>> @fun.register
    ... def _(arg: list, verbose=False):
    ...     if verbose:

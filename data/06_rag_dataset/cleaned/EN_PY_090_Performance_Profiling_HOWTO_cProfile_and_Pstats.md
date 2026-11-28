@@ -92,8 +92,6 @@ Then we can use "perf report" to analyze the data:
                            |          |          |                     |--51.67%--_PyEval_EvalFrameDefault
                            |          |          |                     |          |--11.52%--_PyLong_Add
                            |          |          |                     |          |          |--2.97%--_PyObject_Malloc
-   ...
-
 As you can see, the Python functions are not shown in the output, only
 "_PyEval_EvalFrameDefault" (the function that evaluates the Python
 

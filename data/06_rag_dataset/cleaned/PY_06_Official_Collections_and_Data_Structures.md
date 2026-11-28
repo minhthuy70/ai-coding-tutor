@@ -106,10 +106,13 @@ scanning the mappings last to first
 ```
 
 python
+
+```python
 >>> combined = baseline.copy()
 >>> combined.update(adjustments)
 >>> list(combined)
 ['music', 'art', 'opera']
+```
 
 ```
 
@@ -246,7 +249,6 @@ For example
  >>> cnt = Counter()
  >>> for word in ['red', 'blue', 'red', 'green', 'blue', 'blue']:
  ...     cnt[word] += 1
- ...
  >>> cnt
  Counter({'blue': 3, 'red': 2, 'green': 1})
 
@@ -832,7 +834,6 @@ sequence of key-value pairs into a dictionary of lists:
     >>> d = defaultdict(list)
     >>> for k, v in s:
     ...     d[k].append(v)
-    ...
     >>> sorted(d.items())
     [('blue', [2, 4]), ('red', [1]), ('yellow', [1, 3])]
 
@@ -847,7 +848,6 @@ simpler and faster than an equivalent technique using `dict.setdefault()`:
     >>> d = {}
     >>> for k, v in s:
     ...     d.setdefault(k, []).append(v)
-    ...
     >>> sorted(d.items())
     [('blue', [2, 4]), ('red', [1]), ('yellow', [1, 3])]
 
@@ -859,7 +859,6 @@ languages):
     >>> d = defaultdict(int)
     >>> for k in s:
     ...     d[k] += 1
-    ...
     >>> sorted(d.items())
     [('i', 4), ('m', 1), ('p', 2), ('s', 4)]
 
@@ -874,7 +873,6 @@ zero):
 
     >>> def constant_factory(value):
     ...     return lambda: value
-    ...
     >>> d = defaultdict(constant_factory('<missing>'))
     >>> d.update(name='John', action='ran')
     >>> '%(name)s %(action)s to %(object)s' % d
@@ -887,7 +885,6 @@ Setting the :attr:`~defaultdict.default_factory` to `class` makes the
     >>> d = defaultdict(set)
     >>> for k, v in s:
     ...     d[k].add(v)
-    ...
     >>> sorted(d.items())
     [('blue', {2, 4}), ('red', {1, 3})]
 
@@ -1376,7 +1373,6 @@ variants of :deco:`functools.lru_cache`:
 
  >>> def square(x):
  ...     return x * x
- ...
  >>> f = MultiHitLRUCache(square, maxsize=4, maxrequests=6)
  >>> list(map(f, range(10)))  # First requests, don't cache
  [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
@@ -1699,7 +1695,6 @@ time
 ...     for value in iterable:
 ...         heappush(h, value)
 ...     return [heappop(h) for i in range(len(h))]
-...
 >>> heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -2123,7 +2118,6 @@ a 'B', and so on
 >>> def grade(score):
 ...     i = bisect([60, 70, 80, 90], score)
 ...     return "FDCBA"[i]
-...
 >>> [grade(score) for score in [33, 99, 77, 70, 89, 90, 100]]
 ['F', 'A', 'C', 'C', 'B', 'A', 'A']
 
