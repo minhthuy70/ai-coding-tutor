@@ -1,16 +1,18 @@
-# BỘ TÀI LIỆU VÀ GIÁO TRÌNH PYTHON CHÍNH THỐNG (CHUẨN ĐẠI HỌC & PSF)
+# KHO SÁCH & GIÁO TRÌNH PYTHON CHÍNH THỐNG (CHUẨN HỌC THUẬT ĐẠI HỌC & PSF)
 
-> **BÁO CÁO KIỂM ĐỊNH TÀI LIỆU CHÍNH HÃNG:**
-> - **Tổng số tài liệu chính thống:** **60 tài liệu**
-> - **Tổng số trang nội dung:** **13,887 trang**
-> - **Tổng dung lượng thực tế:** **145.70 MB**
-> - **Tiêu chuẩn kiểm định:** 100% tài liệu xuất bản chính thức, giáo trình đại học được giảng dạy thực tế, cẩm nang tra cứu và toàn bộ tài liệu kỹ thuật chuẩn của Python Software Foundation (PSF). Tuyệt đối **KHÔNG có tài liệu tóm tắt tự chế, KHÔNG có file mẫu rác/stub ReportLab**.
+> **BÁO CÁO KIỂM ĐỊNH TÀI LIỆU TOÀN DIỆN:**
+> - **Tổng số sách & giáo trình:** **26 cuốn sách đầy đủ**
+> - **Tổng số trang nội dung:** **13,109 trang** (Trung bình **504 trang/cuốn**)
+> - **Dung lượng thực tế:** **139.03 MB**
+> - **Tiêu chuẩn kiểm duyệt:**
+>   - **100% sách xuất bản nguyên bản, dày từ 92 đến 2,387 trang**.
+>   - **Đã xóa bỏ hoàn toàn:** TẤT CẢ các file rác tự chế, các bài HOWTO ngắn 1-5 trang (như `BOOK_060`), các slide bài giảng và các file trùng lặp.
 
 ---
 
-## BẢNG DANH MỤC CHI TIẾT 60 TÀI LIỆU CHÍNH THỐNG
+## BẢNG DANH MỤC CHI TIẾT 26 CUỐN SÁCH CHÍNH THỐNG
 
-| STT | Mã ID | Tên Sách / Tài Liệu | Tác Giả / Đơn Vị Phát Hành | Thể Loại | Số Trang | Dung Lượng | Công Cụ Xuất Bản Thực |
+| STT | Mã ID | Tên Sách / Giáo Trình | Tác Giả / Đơn Vị Phát Hành | Thể Loại | Số Trang | Dung Lượng | Công Cụ Xuất Bản Thực |
 | :---: | :---: | :--- | :--- | :--- | :---: | :---: | :--- |
 | 1 | `BOOK_001` | [Think Python: How to Think Like a Computer Scientist (2nd Edition)](BOOK_001_Think_Python_How_to_Think_Like_a_Computer_Scientist_Allen_Downey.pdf) | Prof. Allen B. Downey (Green Tea Press / O'Reilly Media) | Giáo trình Python Nhập môn Đại học | **252** | 0.95 MB | `pdfTeX-1.40.28` |
 | 2 | `BOOK_002` | [Giáo trình Lập trình Python 3](BOOK_002_Giao_Trinh_Python3_Do_Thanh_Nghi_Dai_Hoc_Can_Tho.pdf) | PGS.TS. Đỗ Thanh Nghị (Đại học Cần Thơ (CTU)) | Giáo trình Đại học Chính quy Việt Nam | **141** | 4.13 MB | `LibreOffice 6.3` |
@@ -31,51 +33,40 @@
 | 17 | `BOOK_017` | [Matplotlib Official Reference Guide](BOOK_017_Matplotlib_Official_Reference_Guide.pdf) | Matplotlib Development Team (Matplotlib / NumFOCUS) | Cẩm nang Trực quan hóa Dữ liệu Chuyên sâu (1900+ trang) | **1947** | 44.39 MB | `xdvipdfmx (20260113)` |
 | 18 | `BOOK_018` | [Wikibooks: Python Programming Comprehensive Guide](BOOK_018_Wikibooks_Python_Programming_Comprehensive_Guide.pdf) | Wikimedia Contributors (Wikimedia Foundation) | Bách khoa Toàn thư Lập trình Python | **199** | 0.9 MB | `XeTeX 0.99992` |
 | 19 | `BOOK_019` | [Non-Programmer's Tutorial for Python 3](BOOK_019_Non_Programmers_Tutorial_for_Python_3.pdf) | Josh Cogliati (Free Software Foundation / Wikibooks) | Hướng dẫn Lập trình Dành cho Người Mới Bắt đầu | **126** | 0.66 MB | `LuaTeX-1.14.0` |
-| 20 | `BOOK_020` | [Python Nền tảng và Thực hành Cơ bản](BOOK_020_Python_Nen_Tang_Va_Thuc_Hanh_Co_Ban.pdf) | Ban Giảng viên CNTT (Tài liệu Giảng dạy Đại học) | Thực hành Lập trình Căn bản | **12** | 0.85 MB | `www.ilovepdf.com` |
-| 21 | `BOOK_021` | [Python Hướng dẫn Thực hành và Bài tập Lab01](BOOK_021_Python_Huong_Dan_Thuc_Hanh_Va_Bai_Tap_Lab01.pdf) | Bộ môn Kỹ thuật Máy tính (Tài liệu Phòng thí nghiệm Lab CNTT) | Bài tập Thực hành & Phòng thí nghiệm | **3** | 0.19 MB | `Microsoft: Print To PDF` |
-| 22 | `BOOK_022` | [Chuyên đề Lập trình Hướng đối tượng OOP trong Python](BOOK_022_Chuyen_De_OOP_Huong_Doi_Tuong_Python.pdf) | Khoa Công nghệ Thông tin (Tài liệu Bài giảng Đại học) | Lập trình Hướng đối tượng (OOP) | **17** | 0.26 MB | `Microsoft® PowerPoint® for Microsoft 365` |
-| 23 | `BOOK_023` | [Chuyên đề Thao tác Tệp tin và Dữ liệu JSON](BOOK_023_Chuyen_De_Thao_Tac_Tep_Tin_Va_JSON.pdf) | Khoa Công nghệ Thông tin (Tài liệu Bài giảng Đại học) | Xử lý I/O & Cấu trúc Dữ liệu JSON | **32** | 0.92 MB | `Microsoft® PowerPoint® for Microsoft 365` |
-| 24 | `BOOK_024` | [Chuyên đề Tích hợp Cơ sở Dữ liệu SQLite trong Python](BOOK_024_Chuyen_De_Co_So_Du_Lieu_SQLite_Python.pdf) | Bộ môn Hệ thống Thông tin (Tài liệu Bài giảng Đại học) | Cơ sở Dữ liệu & Hệ quản trị SQLite | **22** | 0.47 MB | `Microsoft® PowerPoint® for Microsoft 365` |
-| 25 | `BOOK_025` | [Hướng dẫn Lập trình Giao diện Đồ họa Tkinter GUI](BOOK_025_Huong_Dan_Giao_Dien_Do_Hoa_Tkinter.pdf) | Bộ môn Ứng dụng Phần mềm (Tài liệu Thực hành Đại học) | Giao diện Người dùng (Desktop GUI) | **10** | 0.35 MB | `Microsoft: Print To PDF` |
-| 26 | `BOOK_026` | [Hướng dẫn Kỹ thuật Debugging, Xử lý Ngoại lệ và Tối ưu](BOOK_026_Huong_Dan_Ky_Thuat_Debugging_Va_Ngoai_Le.pdf) | Prof. Allen B. Downey & Cố vấn Kỹ thuật (Green Tea Press & Technical Guide) | Gỡ lỗi & Xử lý Ngoại lệ Chuyên sâu | **252** | 0.95 MB | `pdfTeX-1.40.28` |
-| 27 | `BOOK_027` | [Bảng Tra cứu Độ phức tạp Thuật toán & Cấu trúc Dữ liệu (Big-O Cheat Sheet)](BOOK_027_Bang_Tra_Cuu_Do_Phuc_Tap_Thuat_Toan_Big_O.pdf) | Eric Rowell & Computer Science Faculty (Big-O Algorithms Guide) | Độ phức tạp Thuật toán & Không gian Bộ nhớ | **1** | 0.03 MB | `mPDF 7.1.5` |
-| 28 | `BOOK_028` | [Hướng dẫn Kỹ thuật Bảo mật Phần mềm Microsoft SDL (Security Development Lifecycle)](BOOK_028_Huong_Dan_Ky_Thuat_Bao_Mat_Microsoft_SDL.pdf) | Microsoft Security Engineering Team (Microsoft Corporation) | Bảo mật Mã nguồn & Kỹ thuật Phần mềm Chuẩn | **51** | 0.37 MB | `Acrobat Distiller 6.0 (Windows)` |
-| 29 | `BOOK_029` | [Python 3.12 Official Tutorial](BOOK_029_Python_3_12_Official_Tutorial_PSF.pdf) | Guido van Rossum & Python Community (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Hướng dẫn Nhập môn | **161** | 0.63 MB | `xdvipdfmx (20211117)` |
-| 30 | `BOOK_030` | [Python 3.12 Official Library Reference (Thư viện Chuẩn Toàn diện)](BOOK_030_Python_3_12_Official_Library_Reference_PSF.pdf) | Python Software Foundation (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Toàn bộ Standard Library (2380+ trang) | **2387** | 10.97 MB | `xdvipdfmx (20211117)` |
-| 31 | `BOOK_031` | [Python 3.12 Official Language Reference (Đặc tả Ngôn ngữ Cú pháp)](BOOK_031_Python_3_12_Official_Language_Reference_PSF.pdf) | Guido van Rossum & PSF Team (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Ngữ pháp & Cơ chế Thực thi | **213** | 0.9 MB | `xdvipdfmx (20211117)` |
-| 32 | `BOOK_032` | [Python 3.12 Official C-API Reference Manual](BOOK_032_Python_3_12_Official_C_API_Reference_Manual_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: C-API & CPython Internals | **359** | 1.61 MB | `xdvipdfmx (20211117)` |
-| 33 | `BOOK_033` | [Python 3.12 Extending and Embedding the Interpreter](BOOK_033_Python_3_12_Extending_and_Embedding_Interpreter_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Nhúng & Mở rộng C/C++ | **109** | 0.46 MB | `xdvipdfmx (20211117)` |
-| 34 | `BOOK_034` | [Python 3.12 Frequently Asked Questions (Official FAQ)](BOOK_034_Python_3_12_Frequently_Asked_Questions_FAQ_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Giải đáp Thắc mắc Cốt lõi | **121** | 0.52 MB | `xdvipdfmx (20211117)` |
-| 35 | `BOOK_035` | [Using Python 3.12 Cross-Platform Guide (Windows, Unix, macOS)](BOOK_035_Python_3_12_Using_Python_Cross_Platform_PSF.pdf) | Python Documentation Team (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Quản trị Môi trường Đa nền tảng | **108** | 0.5 MB | `xdvipdfmx (20211117)` |
-| 36 | `BOOK_036` | [Installing and Managing Python Virtual Environments (venv, pip)](BOOK_036_Python_3_12_Installing_and_Virtual_Environments_PSF.pdf) | Python Documentation Team (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Đóng gói & Môi trường Ảo | **54** | 0.21 MB | `xdvipdfmx (20211117)` |
-| 37 | `BOOK_037` | [What's New in Python 3.12 Comprehensive Guide](BOOK_037_Python_3_12_Whats_New_Comprehensive_Guide_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Tính năng Mới & Hiệu năng | **39** | 0.22 MB | `xdvipdfmx (20211117)` |
-| 38 | `BOOK_038` | [HOWTO: Functional Programming Idioms in Python](BOOK_038_Python_HOWTO_Functional_Programming_Idioms_PSF.pdf) | A. M. Kuchling (Python Software Foundation (PSF)) | Chuyên đề PSF: Lập trình Hàm (Functional Programming) | **20** | 0.12 MB | `xdvipdfmx (20211117)` |
-| 39 | `BOOK_039` | [HOWTO: Regular Expressions Guide (regex re module)](BOOK_039_Python_HOWTO_Regular_Expressions_Guide_PSF.pdf) | A. M. Kuchling (Python Software Foundation (PSF)) | Chuyên đề PSF: Biểu thức Chính quy (RegEx) | **18** | 0.12 MB | `xdvipdfmx (20211117)` |
-| 40 | `BOOK_040` | [HOWTO: Logging System Architecture and Basic Tutorial](BOOK_040_Python_HOWTO_Logging_System_Architecture_PSF.pdf) | Vinay Sajip (Python Software Foundation (PSF)) | Chuyên đề PSF: Hệ thống Ghi nhật ký (Logging) | **17** | 0.15 MB | `xdvipdfmx (20211117)` |
-| 41 | `BOOK_041` | [HOWTO: Advanced Logging Cookbook (Production Patterns)](BOOK_041_Python_HOWTO_Advanced_Logging_Cookbook_PSF.pdf) | Vinay Sajip (Python Software Foundation (PSF)) | Chuyên đề PSF: Logging Doanh nghiệp & Production | **68** | 0.29 MB | `xdvipdfmx (20211117)` |
-| 42 | `BOOK_042` | [HOWTO: Descriptor Guide and Attribute Lookup Mechanics](BOOK_042_Python_HOWTO_Descriptor_Guide_and_Attribute_Lookup_PSF.pdf) | Raymond Hettinger (Python Software Foundation (PSF)) | Chuyên đề PSF: Cơ chế Descriptor & OOP Nâng cao | **21** | 0.12 MB | `xdvipdfmx (20211117)` |
-| 43 | `BOOK_043` | [HOWTO: Method Resolution Order (MRO) and C3 Linearization](BOOK_043_Python_HOWTO_Method_Resolution_Order_C3_Linearization_PSF.pdf) | Michele Simionato (Python Software Foundation (PSF)) | Chuyên đề PSF: Thứ tự Kế thừa & C3 Linearization | **10** | 0.08 MB | `xdvipdfmx (20211117)` |
-| 44 | `BOOK_044` | [HOWTO: Sorting Techniques and Timsort Algorithm Guide](BOOK_044_Python_HOWTO_Sorting_Algorithms_and_Timsort_PSF.pdf) | Andrew Dalke & Raymond Hettinger (Python Software Foundation (PSF)) | Chuyên đề PSF: Thuật toán Sắp xếp & Timsort | **7** | 0.06 MB | `xdvipdfmx (20211117)` |
-| 45 | `BOOK_045` | [HOWTO: Unicode Representation in Python (PEP 393)](BOOK_045_Python_HOWTO_Unicode_Representation_PEP393_PSF.pdf) | A. M. Kuchling & Victor Stinner (Python Software Foundation (PSF)) | Chuyên đề PSF: Chuẩn mã hóa Unicode & Bộ nhớ | **12** | 0.09 MB | `xdvipdfmx (20211117)` |
-| 46 | `BOOK_046` | [HOWTO: Socket Programming and Network IPC Communications](BOOK_046_Python_HOWTO_Socket_Programming_Network_IPC_PSF.pdf) | Gordon McMillan (Python Software Foundation (PSF)) | Chuyên đề PSF: Lập trình Mạng Sockets | **6** | 0.06 MB | `xdvipdfmx (20211117)` |
-| 47 | `BOOK_047` | [HOWTO: CLI Argument Parsing with Argparse](BOOK_047_Python_HOWTO_CLI_Argument_Parsing_Argparse_PSF.pdf) | Tshepang Lekhonkhobe (Python Software Foundation (PSF)) | Chuyên đề PSF: Xây dựng Giao diện Dòng lệnh (CLI) | **14** | 0.08 MB | `xdvipdfmx (20211117)` |
-| 48 | `BOOK_048` | [HOWTO: Type Annotations and Static Typing Best Practices](BOOK_048_Python_HOWTO_Type_Annotations_Best_Practices_PSF.pdf) | Łukasz Langa & Jukka Lehtosalo (Python Software Foundation (PSF)) | Chuyên đề PSF: Type Hints & Phân tích Tĩnh (Mypy) | **5** | 0.04 MB | `xdvipdfmx (20211117)` |
-| 49 | `BOOK_049` | [HOWTO: Enumerations and Flags Implementation](BOOK_049_Python_HOWTO_Enumerations_and_Flags_PSF.pdf) | Ethan Furman (Python Software Foundation (PSF)) | Chuyên đề PSF: Kiểu dữ liệu Liệt kê (Enum) | **25** | 0.13 MB | `xdvipdfmx (20211117)` |
-| 50 | `BOOK_050` | [HOWTO: IPv4 and IPv6 Network Address Manipulation (ipaddress)](BOOK_050_Python_HOWTO_IPv4_IPv6_Network_Address_Manipulation_PSF.pdf) | Peter Moody (Python Software Foundation (PSF)) | Chuyên đề PSF: Quản trị Địa chỉ Mạng | **6** | 0.05 MB | `xdvipdfmx (20211117)` |
-| 51 | `BOOK_051` | [HOWTO: Performance Profiling and Optimization (cProfile, timeit)](BOOK_051_Python_HOWTO_Performance_Profiling_and_Optimization_PSF.pdf) | Python Documentation Team (Python Software Foundation (PSF)) | Chuyên đề PSF: Đo lường Hiệu năng & Tối ưu hóa | **6** | 0.04 MB | `xdvipdfmx (20211117)` |
-| 52 | `BOOK_052` | [HOWTO: Isolating Extension Modules (Multi-Phase Initialization PEP 489)](BOOK_052_Python_HOWTO_Isolating_Extension_Modules_PSF.pdf) | Petr Viktorin (Python Software Foundation (PSF)) | Chuyên đề PSF: C-Extension Cách ly & Multi-Phase Init | **9** | 0.07 MB | `xdvipdfmx (20211117)` |
-| 53 | `BOOK_053` | [HOWTO: Terminal User Interfaces with Curses](BOOK_053_Python_HOWTO_Terminal_User_Interface_Curses_PSF.pdf) | A. M. Kuchling & Eric S. Raymond (Python Software Foundation (PSF)) | Chuyên đề PSF: Giao diện Terminal Curses | **8** | 0.07 MB | `xdvipdfmx (20211117)` |
-| 54 | `BOOK_054` | [HOWTO: Debugging CPython with GDB](BOOK_054_Python_HOWTO_Debugging_CPython_with_GDB_PSF.pdf) | David Malcolm & CPython Team (Python Software Foundation (PSF)) | Chuyên đề PSF: Debug CPython C-Level với GDB | **10** | 0.06 MB | `xdvipdfmx (20211117)` |
-| 55 | `BOOK_055` | [HOWTO: Dynamic DTrace and SystemTap Instrumentation in CPython](BOOK_055_Python_HOWTO_Dynamic_DTrace_and_SystemTap_Instrumentation_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Chuyên đề PSF: DTrace & Giám sát Hệ thống | **7** | 0.05 MB | `xdvipdfmx (20211117)` |
-| 56 | `BOOK_056` | [HOWTO: Fetching Internet Resources with urllib Package](BOOK_056_Python_HOWTO_Fetching_Internet_Resources_Urllib_PSF.pdf) | Michael Foord (Python Software Foundation (PSF)) | Chuyên đề PSF: Giao thức Mạng & HTTP Client | **11** | 0.08 MB | `xdvipdfmx (20211117)` |
-| 57 | `BOOK_057` | [HOWTO: Porting Extension Modules to Python 3](BOOK_057_Python_HOWTO_Porting_Extension_Modules_to_Python_3_PSF.pdf) | Benjamin Peterson (Python Software Foundation (PSF)) | Chuyên đề PSF: Di chuyển C-Extension lên Python 3 | **1** | 0.02 MB | `xdvipdfmx (20211117)` |
-| 58 | `BOOK_058` | [HOWTO: Argument Clinic CPython Preprocessing Guide](BOOK_058_Python_HOWTO_Argument_Clinic_CPython_Preprocessing_PSF.pdf) | Larry Hastings (Python Software Foundation (PSF)) | Chuyên đề PSF: CPython Argument Clinic Preprocessor | **1** | 0.01 MB | `xdvipdfmx (20211117)` |
-| 59 | `BOOK_059` | [HOWTO: Python 2 to Python 3 Modernization Guidelines](BOOK_059_Python_HOWTO_Python_2_to_Python_3_Modernization_PSF.pdf) | A. M. Kuchling (Python Software Foundation (PSF)) | Chuyên đề PSF: Chuyển đổi Mã nguồn Hiện đại hóa | **2** | 0.02 MB | `xdvipdfmx (20211117)` |
-| 60 | `BOOK_060` | [HOWTO: Upgrading Legacy Optparse to Argparse Architecture](BOOK_060_Python_HOWTO_Upgrading_Optparse_to_Argparse_PSF.pdf) | Python Documentation Team (Python Software Foundation (PSF)) | Chuyên đề PSF: Kiến trúc CLI Hiện đại | **1** | 0.02 MB | `xdvipdfmx (20211117)` |
+| 20 | `BOOK_020` | [Python 3.12 Official Tutorial](BOOK_020_Python_3_12_Official_Tutorial_PSF.pdf) | Guido van Rossum & Python Community (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Giáo trình Căn bản | **161** | 0.63 MB | `xdvipdfmx (20211117)` |
+| 21 | `BOOK_021` | [Python 3.12 Official Library Reference (Thư viện Chuẩn Toàn diện)](BOOK_021_Python_3_12_Official_Library_Reference_PSF.pdf) | Python Software Foundation (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Toàn bộ Standard Library (2387 trang) | **2387** | 10.97 MB | `xdvipdfmx (20211117)` |
+| 22 | `BOOK_022` | [Python 3.12 Official Language Reference (Đặc tả Ngôn ngữ Cú pháp)](BOOK_022_Python_3_12_Official_Language_Reference_PSF.pdf) | Guido van Rossum & PSF Team (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Cú pháp & Cơ chế Thực thi | **213** | 0.9 MB | `xdvipdfmx (20211117)` |
+| 23 | `BOOK_023` | [Python 3.12 Official C-API Reference Manual](BOOK_023_Python_3_12_Official_C_API_Reference_Manual_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: C-API & CPython Internals | **359** | 1.61 MB | `xdvipdfmx (20211117)` |
+| 24 | `BOOK_024` | [Python 3.12 Extending and Embedding the Interpreter](BOOK_024_Python_3_12_Extending_and_Embedding_Interpreter_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Nhúng & Mở rộng C/C++ | **109** | 0.46 MB | `xdvipdfmx (20211117)` |
+| 25 | `BOOK_025` | [Python 3.12 Frequently Asked Questions (Official FAQ Manual)](BOOK_025_Python_3_12_Frequently_Asked_Questions_FAQ_PSF.pdf) | Python Core Developers (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Cẩm nang Giải đáp Thắc mắc Cốt lõi | **121** | 0.52 MB | `xdvipdfmx (20211117)` |
+| 26 | `BOOK_026` | [Using Python 3.12 Cross-Platform Guide (Windows, Unix, macOS)](BOOK_026_Python_3_12_Using_Python_Cross_Platform_PSF.pdf) | Python Documentation Team (Python Software Foundation (PSF)) | Tài liệu Chính thống PSF: Quản trị Môi trường Đa nền tảng | **108** | 0.5 MB | `xdvipdfmx (20211117)` |
 
 ---
 ### PHÂN NHÓM TÀI LIỆU
 
-1. **Giáo trình Đại học & Sách Xuất bản Quốc tế (BOOK_001 - BOOK_019):** Think Python (Downey), Giáo trình ĐH Cần Thơ (Đỗ Thanh Nghị), Giáo trình ĐH Xây Dựng (Nguyễn Đình Quý), Toán rời rạc & Cấu trúc MIT, ĐHQG TP.HCM (Lê Trọng Nhân), Thống kê Bayes/DSP/Complexity, Python for Everybody (Severance), Scipy Ecosystem, GoalKicker (856 trang), NumPy Manuals (2,800+ trang), Matplotlib (1,947 trang), Wikibooks.
-2. **Chuyên đề & Bài giảng Kỹ thuật Đại học (BOOK_020 - BOOK_028):** Lập trình Hướng đối tượng OOP, Thao tác File & JSON, SQLite Database, Giao diện Tkinter GUI, Kỹ thuật Debugging & Xử lý Ngoại lệ, Bảng tra độ phức tạp Big-O, Kỹ thuật Bảo mật Microsoft SDL.
-3. **Bộ Tài liệu Chuẩn Python Software Foundation (PSF) CPython 3.12 (BOOK_029 - BOOK_060):** Python Tutorial, Thư viện Chuẩn Toàn diện (2,387 trang), Đặc tả Ngôn ngữ, C-API, Extending/Embedding, Logging Cookbook, Descriptors, Regex, Sockets, Type Annotations, Profiling, MRO C3 Linearization, GDB Debugging...
+1. **Giáo trình Đại học Việt Nam & Quốc tế (BOOK_001 - BOOK_014):**
+   - Think Python 2e, Think Stats 2e, Think Complexity 2e, Think DSP, Think Bayes (GS. Allen B. Downey - Green Tea Press / O'Reilly).
+   - Giáo trình Lập trình Python 3 (PGS.TS. Đỗ Thanh Nghị - ĐH Cần Thơ, 141 trang).
+   - Giáo trình Python Kỹ thuật (ThS. Nguyễn Đình Quý - ĐH Xây dựng, 250 trang).
+   - Giáo trình Kỹ thuật Lập trình Python Căn bản (TS. Lê Trọng Nhân - ĐHQG TP.HCM, 138 trang).
+   - Giáo trình Python từ Cơ bản đến Machine Learning (Ngô Hoàng Dũng, Lê Hoàng Ân, 124 trang).
+   - Python Rất Là Cơ Bản (Võ Duy Tuấn, 92 trang).
+   - Mathematics for Computer Science and Discrete Structures (MIT Press / MIT OCW, 920 trang).
+   - Python for Everybody (Dr. Charles Severance - University of Michigan, 247 trang).
+   - Scipy Lecture Notes - Scientific Python Ecosystem (EuroScipy / Inria, 674 trang).
+   - Python Notes for Professionals Compilation (Stack Overflow Community / GoalKicker, 856 trang).
+
+2. **Cẩm nang Chuẩn Khoa học Dữ liệu & Bách khoa Toàn thư (BOOK_015 - BOOK_019):**
+   - NumPy Official User Guide (721 trang) & NumPy Official Reference Manual (2,101 trang).
+   - Matplotlib Official Reference Guide (1,947 trang).
+   - Wikibooks: Python Programming Comprehensive Guide (Wikimedia Foundation, 199 trang).
+   - Non-Programmer's Tutorial for Python 3 (Josh Cogliati, 126 trang).
+
+3. **Bộ Đại Tác Phẩm Cốt Lõi Python Software Foundation - CPython 3.12 (BOOK_020 - BOOK_026):**
+   - Python 3.12 Official Tutorial (161 trang).
+   - Python 3.12 Official Library Reference (2,387 trang - bao gồm toàn bộ Standard Library).
+   - Python 3.12 Official Language Reference (213 trang - đặc tả cú pháp & cơ chế thực thi).
+   - Python 3.12 Official C-API Reference Manual (359 trang).
+   - Extending and Embedding the CPython Interpreter (109 trang).
+   - Python Frequently Asked Questions Official Manual (121 trang).
+   - Using Python Cross-Platform Guide (108 trang).
