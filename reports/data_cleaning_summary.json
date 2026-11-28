@@ -1,12 +1,12 @@
 {
   "benchmark_title": "AI Coding Tutor Data Cleaning QA Scorecard v3.0",
-  "total_documents": 526,
+  "total_documents": 530,
   "overall_status": "PASSED",
-  "total_chars_cleaned": 46422985,
+  "total_chars_cleaned": 67534249,
   "assets_preserved": {
-    "code_blocks": 32026,
-    "latex_formulas": 16469,
-    "tables": 1986
+    "code_blocks": 45826,
+    "latex_formulas": 16723,
+    "tables": 3237
   },
   "standards_checked": [
     "Unicode NFC Normalization",
@@ -1493,6 +1493,22 @@
       "Overall_Status": "PASSED"
     },
     {
+      "File_Name": "EN_PDF_089_Python_3.11_library.md",
+      "NFC_Standard": "ĐẠT",
+      "Control_Chars": 0,
+      "Zero_Width_BOM": 0,
+      "Page_Artifacts": 0,
+      "TOC_Dot_Leaders": 0,
+      "HTML_Noise_Tags": 0,
+      "Local_Dead_Images": 0,
+      "Code_Block_Status": "CÂN BẰNG",
+      "Code_Blocks_Count": 3624,
+      "KaTeX_Math_Integrity": "ĐẠT",
+      "LaTeX_Formulas_Count": 84,
+      "Tables_Count": 261,
+      "Overall_Status": "PASSED"
+    },
+    {
       "File_Name": "EN_PDF_090_Python_3.11_reference.md",
       "NFC_Standard": "ĐẠT",
       "Control_Chars": 0,
@@ -2293,6 +2309,22 @@
       "Overall_Status": "PASSED"
     },
     {
+      "File_Name": "EN_PDF_140_Python_3.9_library.md",
+      "NFC_Standard": "ĐẠT",
+      "Control_Chars": 0,
+      "Zero_Width_BOM": 0,
+      "Page_Artifacts": 0,
+      "TOC_Dot_Leaders": 0,
+      "HTML_Noise_Tags": 0,
+      "Local_Dead_Images": 0,
+      "Code_Block_Status": "CÂN BẰNG",
+      "Code_Blocks_Count": 4267,
+      "KaTeX_Math_Integrity": "ĐẠT",
+      "LaTeX_Formulas_Count": 66,
+      "Tables_Count": 331,
+      "Overall_Status": "PASSED"
+    },
+    {
       "File_Name": "EN_PDF_141_Python_3.9_reference.md",
       "NFC_Standard": "ĐẠT",
       "Control_Chars": 0,
@@ -2674,6 +2706,22 @@
       "KaTeX_Math_Integrity": "ĐẠT",
       "LaTeX_Formulas_Count": 0,
       "Tables_Count": 2,
+      "Overall_Status": "PASSED"
+    },
+    {
+      "File_Name": "EN_PDF_165_Python_3.8_library.md",
+      "NFC_Standard": "ĐẠT",
+      "Control_Chars": 0,
+      "Zero_Width_BOM": 0,
+      "Page_Artifacts": 0,
+      "TOC_Dot_Leaders": 0,
+      "HTML_Noise_Tags": 0,
+      "Local_Dead_Images": 0,
+      "Code_Block_Status": "CÂN BẰNG",
+      "Code_Blocks_Count": 4022,
+      "KaTeX_Math_Integrity": "ĐẠT",
+      "LaTeX_Formulas_Count": 67,
+      "Tables_Count": 328,
       "Overall_Status": "PASSED"
     },
     {
@@ -3890,6 +3938,22 @@
       "KaTeX_Math_Integrity": "ĐẠT",
       "LaTeX_Formulas_Count": 0,
       "Tables_Count": 1,
+      "Overall_Status": "PASSED"
+    },
+    {
+      "File_Name": "EN_PDF_243_Python_2.7.18_library.md",
+      "NFC_Standard": "ĐẠT",
+      "Control_Chars": 0,
+      "Zero_Width_BOM": 0,
+      "Page_Artifacts": 0,
+      "TOC_Dot_Leaders": 0,
+      "HTML_Noise_Tags": 0,
+      "Local_Dead_Images": 0,
+      "Code_Block_Status": "CÂN BẰNG",
+      "Code_Blocks_Count": 1887,
+      "KaTeX_Math_Integrity": "ĐẠT",
+      "LaTeX_Formulas_Count": 37,
+      "Tables_Count": 331,
       "Overall_Status": "PASSED"
     },
     {
