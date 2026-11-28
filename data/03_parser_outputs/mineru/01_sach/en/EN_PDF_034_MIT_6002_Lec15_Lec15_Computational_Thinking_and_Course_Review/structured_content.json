@@ -1,0 +1,1803 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.098,
+            0.4,
+            0.795,
+            0.618
+          ],
+          "level": 2,
+          "content": "Lecture 15: Statistical Sins and Wrapup"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.958,
+            0.55,
+            0.977
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.959,
+            0.911,
+            0.979
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.039,
+            0.42,
+            0.093
+          ],
+          "level": 2,
+          "content": "Announcements"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.175,
+            0.385,
+            0.219
+          ],
+          "level": 2,
+          "content": "■ Course evaluations"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.234,
+            0.766,
+            0.326
+          ],
+          "content": "• Online evaluation now through noon on Friday, December 16"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.36,
+            0.449,
+            0.409
+          ],
+          "level": 2,
+          "content": "■Final exam on Monday!"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.039,
+            0.709,
+            0.103
+          ],
+          "level": 2,
+          "content": "Global Warming, Fact or Fiction"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.034,
+            0.133,
+            0.53,
+            0.475
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.536,
+                0.879,
+                0.88,
+                0.912
+              ],
+              "content": "National Review, December 2015"
+            }
+          ],
+          "footnotes": [
+            {
+              "bbox": [
+                0.035,
+                0.481,
+                0.169,
+                0.506
+              ],
+              "content": "ATLAS | Data: NASA"
+            }
+          ],
+          "image_source": "images/page_2_chart_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.108,
+            0.639,
+            0.349,
+            0.716
+          ],
+          "content": "Which conveys a more accurate impression?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.58,
+            0.259,
+            0.881,
+            0.377
+          ],
+          "content": "On Monday I said, beware of charts where the y-axis doesn’t start at zero"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.459,
+            0.508,
+            0.934,
+            0.865
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_2_chart_6.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.42,
+            0.913,
+            0.986,
+            0.957
+          ],
+          "content": "Graph © National Review. All rights reserved. This content is excluded from our Creative Commons license. For more information, see http://ocw.mit.edu/help/faq-fair-use/"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.971,
+            0.55,
+            0.991
+          ],
+          "content": "6.0002 LECTURE 15"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.434,
+            0.093
+          ],
+          "level": 2,
+          "content": "Fever and the Flu"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.057,
+            0.151,
+            0.477,
+            0.602
+          ],
+          "content": "",
+          "captions": [
+            {
+              "bbox": [
+                0.092,
+                0.666,
+                0.424,
+                0.837
+              ],
+              "content": "Moral: Truncate the y-axis to eliminate preposterous values."
+            }
+          ],
+          "footnotes": [],
+          "image_source": "images/page_3_chart_1.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.506,
+            0.491,
+            0.931,
+            0.943
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_chart_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.663,
+            0.099
+          ],
+          "level": 2,
+          "content": "The Myth of Global Warming"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.027,
+            0.147,
+            0.613,
+            0.491
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_chart_1.jpg"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.029,
+            0.517,
+            0.602,
+            0.912
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.03,
+                0.919,
+                0.183,
+                0.945
+              ],
+              "content": "$\\triangle T L \\triangle S$ | Data: NASA"
+            }
+          ],
+          "image_source": "images/page_4_chart_2.jpg"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.655,
+            0.251,
+            0.909,
+            0.475
+          ],
+          "content": "Moral: Don't\nconfuse\nfluctuations with\ntrends."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.652,
+            0.557,
+            0.916,
+            0.785
+          ],
+          "content": "Chose an interval\nconsistent with\nphenomenon\nbeing considered."
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.034,
+            0.85,
+            0.099
+          ],
+          "level": 2,
+          "content": "But At Least the Arctic Ice Isn't Melting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.079,
+            0.176,
+            0.886,
+            0.441
+          ],
+          "content": "“Yesterday, April 14th, the Arctic had more sea ice than it had on April 14,1989 – 14.511 million square kilometres vs 14.510 million square kilometres, according to the National Snow and Ice Data Center of the United States, an official source.” Lawrence Solomon, Financial Post, April 15, 2013"
+        },
+        {
+          "type": "chart",
+          "bbox": [
+            0.054,
+            0.469,
+            0.583,
+            0.913
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_chart_2.jpg"
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.654,
+            0.515,
+            0.853,
+            0.847
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.591,
+                0.857,
+                0.977,
+                0.922
+              ],
+              "content": "Cherry picking image © source unknown. All rights reserved. This content is excluded from our Creative Commons license. See https://ocw.mit.edu/help/faq-fair-use/."
+            }
+          ],
+          "image_source": "images/page_5_image_3.jpg"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.968,
+            0.912,
+            0.989
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.035,
+            0.519,
+            0.099
+          ],
+          "level": 2,
+          "content": "A Comforting Statistic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.173,
+            0.86,
+            0.277
+          ],
+          "content": "■99.8% of the firearms in the U.S. will not be used to commit a violent crime in any given year"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.303,
+            0.756,
+            0.354
+          ],
+          "content": "■How many privately owned firearms in U.S.?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.381,
+            0.309,
+            0.43
+          ],
+          "content": "■\\~300,000,000"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.459,
+            0.543,
+            0.51
+          ],
+          "content": "■300,000,000\\*0.002 = 600,000"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.898,
+            0.965,
+            0.911,
+            0.984
+          ],
+          "content": "7"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.092,
+            0.035,
+            0.66,
+            0.099
+          ],
+          "level": 2,
+          "content": "A Not So Comforting Statistic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.173,
+            0.907,
+            0.329
+          ],
+          "content": "“Mexican health officials suspect that the swine flu outbreak has caused more than 159 deaths and roughly 2,500 illnesses.” CNN, April 29, 2009"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.083,
+            0.433,
+            0.863,
+            0.487
+          ],
+          "content": "How many deaths per year from seasonal flu in U.S.?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.082,
+            0.589,
+            0.29,
+            0.64
+          ],
+          "content": "About 36,000"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.899,
+            0.965,
+            0.911,
+            0.985
+          ],
+          "content": "8"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.035,
+            0.444,
+            0.093
+          ],
+          "level": 2,
+          "content": "Relative to What?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.173,
+            0.877,
+            0.275
+          ],
+          "content": "■Skipping lectures increases your probability of failing 6.0002 by 50%"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.303,
+            0.349,
+            0.351
+          ],
+          "content": "■ From 0.5 to 0.75"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.381,
+            0.421,
+            0.429
+          ],
+          "content": "■From 0.005 to 0.0075"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.461,
+            0.885,
+            0.561
+          ],
+          "content": "■Moral: Beware of percentage change when you don’t know the denominator"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.036,
+            0.4,
+            0.093
+          ],
+          "level": 2,
+          "content": "Cancer Clusters"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.171,
+            0.497,
+            0.497
+          ],
+          "content": "A cancer cluster is defined by the CDC as “a greater-than-expected number of cancer cases that occurs within a group of people in a geographic area over a period of time”"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.518,
+            0.418,
+            0.707
+          ],
+          "content": "■About 1000 “cancer clusters” per year are reported to health authorities in the U.S."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.731,
+            0.483,
+            0.827
+          ],
+          "content": "■Vast majority are deemed not significant"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.891,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "11"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.035,
+            0.56,
+            0.1
+          ],
+          "level": 2,
+          "content": "A Hypothetical Example"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.172,
+            0.751,
+            0.221
+          ],
+          "content": "■ Massachusetts is about 10,000 square miles"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.251,
+            0.699,
+            0.299
+          ],
+          "content": "■ About 36,000 new cancer cases per year"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.328,
+            0.897,
+            0.487
+          ],
+          "content": "■ Attorney partitioned state into 1000 regions of 10 squares miles each, and looked at distribution of cases\n• Expected number of cases per region: 36"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.517,
+            0.889,
+            0.619
+          ],
+          "content": "■ Discovered that region 111 had 143 new cancer cases over a 3 year period!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.104,
+            0.629,
+            0.648,
+            0.675
+          ],
+          "content": "• More than 32% greater than expected"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.707,
+            0.608,
+            0.755
+          ],
+          "content": "■How worried should residents be?"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.673,
+            0.099
+          ],
+          "level": 2,
+          "content": "How Likely Is it Just Bad Luck?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.09,
+            0.158,
+            0.949,
+            0.921
+          ],
+          "sub_type": "code",
+          "content": "```python\nnumCasesPerYear = 36000\nnumYears = 3\nstateSize = 10000\ncommunitySize = 10\nnumCommunities = stateSize//communitySize\n\nnumTrials = 100\nnumGreater = 0\nfor t in range(numTrials):\n    locs = [0]*numCommunities\n    for i in range(numYears*numCasesPerYear):\n        locs[random.choice(range(numCommunities))] += 1\n    if locs[111] >= 143:\n        numGreater += 1\nprob = round(numGreater/numTrials, 4)\nprint('Est. probability of region 111 having\\\nat least 143 cases =', prob)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.034,
+            0.673,
+            0.099
+          ],
+          "level": 2,
+          "content": "How Likely Is it Just Bad Luck?"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.066,
+            0.17,
+            0.921,
+            0.673
+          ],
+          "sub_type": "code",
+          "content": "```python\nanyRegion = 0\nfor trial in range(numTrials):\n    locs = [0]*numCommunities\n    for i in range(numYears*numCasesPerYear):\n        locs[random.choice(range(numCommunities))] += 1\n    if max(locs) >= 143:\n        anyRegion += 1\nprint(anyRegion)\naProb = round(anyRegion/numTrials, 4)\nprint('Est. probability of some region having\\\nat least 143 cases =', aProb)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.188,
+            0.734,
+            0.672,
+            0.847
+          ],
+          "content": "A variant of cherry picking called multiple hypothesis testing"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "14"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.035,
+            0.419,
+            0.093
+          ],
+          "level": 2,
+          "content": "The Bottom Line"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.173,
+            0.835,
+            0.273
+          ],
+          "content": "■When drawing inferences from data, skepticism is merited."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.303,
+            0.848,
+            0.353
+          ],
+          "content": "■ But remember, skepticism and denial are different."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.381,
+            0.894,
+            0.589
+          ],
+          "content": "■ “Doubt, indulged and cherished, is in danger of becoming denial; but if honest, and bent on thorough investigation, it may soon lead to full establishment of the truth.” – Ambrose Bierce"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "17"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.491,
+            0.099
+          ],
+          "level": 2,
+          "content": "6.0002 Major Topics"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.175,
+            0.444,
+            0.224
+          ],
+          "content": "■ Optimization problems"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.252,
+            0.384,
+            0.301
+          ],
+          "content": "■Stochastic thinking"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.329,
+            0.552,
+            0.379
+          ],
+          "content": "■ Modeling aspects of the world"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.409,
+            0.57,
+            0.457
+          ],
+          "content": "■ Becoming a better programmer"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.468,
+            0.846,
+            0.559
+          ],
+          "content": "\\- Exposure to a few extra features of Python and some useful libraries"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.577,
+            0.488,
+            0.621
+          ],
+          "content": "\\- Practice, practice, practice"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.968,
+            0.911,
+            0.989
+          ],
+          "content": "18"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.095,
+            0.035,
+            0.542,
+            0.098
+          ],
+          "level": 2,
+          "content": "Optimization Problems"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.174,
+            0.781,
+            0.223
+          ],
+          "content": "■Many problems can be formulated in terms of"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.235,
+            0.383,
+            0.28
+          ],
+          "content": "\\- Objective function"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.294,
+            0.368,
+            0.338
+          ],
+          "content": "\\- Set of constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.37,
+            0.563,
+            0.419
+          ],
+          "content": "■ Greedy algorithms often useful"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.431,
+            0.587,
+            0.477
+          ],
+          "content": "\\- But may not find optimal solution"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.507,
+            0.866,
+            0.558
+          ],
+          "content": "■ Many optimization problems inherently exponential"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.568,
+            0.661,
+            0.615
+          ],
+          "content": "\\- But dynamic programming often works"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.627,
+            0.76,
+            0.674
+          ],
+          "content": "\\- And memoization a generally useful technique"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.704,
+            0.889,
+            0.807
+          ],
+          "content": "■Examples: knapsack problems, graph problems, curve fitting, clustering"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.967,
+            0.55,
+            0.987
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.893,
+            0.965,
+            0.911,
+            0.985
+          ],
+          "content": "19"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.094,
+            0.034,
+            0.471,
+            0.099
+          ],
+          "level": 2,
+          "content": "Stochastic Thinking"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.084,
+            0.173,
+            0.749,
+            0.225
+          ],
+          "content": "■The world is (predictably) non-deterministic"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.251,
+            0.803,
+            0.303
+          ],
+          "content": "■Thinking in terms of probabilities is often useful"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.329,
+            0.735,
+            0.431
+          ],
+          "content": "■Randomness is a powerful tool for building computations that model the world"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.086,
+            0.461,
+            0.901,
+            0.56
+          ],
+          "content": "■ Random computations useful even when for problems that do not involve randomness"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.573,
+            0.346,
+            0.619
+          ],
+          "content": "\\- E.g., integration"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "20"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.096,
+            0.033,
+            0.489,
+            0.099
+          ],
+          "level": 2,
+          "content": "Modeling the World"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.167,
+            0.454,
+            0.209
+          ],
+          "level": 2,
+          "content": "■Models always inaccurate"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.211,
+            0.503,
+            0.253
+          ],
+          "content": "\\- Provide abstractions of reality"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.085,
+            0.275,
+            0.733,
+            0.323
+          ],
+          "level": 2,
+          "content": "■ Deterministic models, e.g., graph theoretic"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.341,
+            0.363,
+            0.385
+          ],
+          "level": 2,
+          "content": "■Statistical models"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.389,
+            0.717,
+            0.432
+          ],
+          "content": "\\- Simulation models: Monte Carlo simulation"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.439,
+            0.495,
+            0.483
+          ],
+          "content": "\\- Models based on sampling"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.486,
+            0.524,
+            0.525
+          ],
+          "content": "\\- Characterizing accuracy is critical"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.529,
+            0.404,
+            0.564
+          ],
+          "content": "\\- Central limit theorem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.569,
+            0.321,
+            0.605
+          ],
+          "content": "\\- Empirical rule"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.126,
+            0.609,
+            0.39,
+            0.653
+          ],
+          "content": "\\- Machine learning"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.658,
+            0.488,
+            0.695
+          ],
+          "content": "\\- Unsupervised and supervised"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.086,
+            0.719,
+            0.38,
+            0.759
+          ],
+          "level": 2,
+          "content": "■ Presentation of data"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.107,
+            0.764,
+            0.231,
+            0.805
+          ],
+          "content": "\\- Plotting"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.106,
+            0.808,
+            0.425,
+            0.849
+          ],
+          "content": "\\- Good and bad practices"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "21"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.093,
+            0.034,
+            0.506,
+            0.093
+          ],
+          "level": 2,
+          "content": "What's Next for You?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.169,
+            0.591,
+            0.215
+          ],
+          "content": "■Many of you have worked very hard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.22,
+            0.561,
+            0.263
+          ],
+          "content": "\\- Rest of the staff and I appreciate it"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.289,
+            0.671,
+            0.333
+          ],
+          "content": "■ Only you know your return on investment"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.339,
+            0.54,
+            0.381
+          ],
+          "content": "\\- Take a look at early problem sets"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.105,
+            0.387,
+            0.702,
+            0.433
+          ],
+          "content": "\\- Think about what you’d be willing tackle now"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.459,
+            0.849,
+            0.505
+          ],
+          "content": "■Remember that you can write programs to get answers"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.527,
+            0.809,
+            0.618
+          ],
+          "content": "■There are other CS courses you are prepared to take\n◦ 6.009, 6.005, 6.006, 6.034"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.645,
+            0.461,
+            0.691
+          ],
+          "content": "■Find and interesting UROP"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.715,
+            0.263,
+            0.757
+          ],
+          "content": "■ Minor in CS"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.085,
+            0.783,
+            0.261,
+            0.828
+          ],
+          "content": "■ Major in CS"
+        },
+        {
+          "type": "footer",
+          "bbox": [
+            0.45,
+            0.968,
+            0.55,
+            0.986
+          ],
+          "content": "6.0002 LECTURE 15"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.892,
+            0.969,
+            0.911,
+            0.989
+          ],
+          "content": "22"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "header",
+          "bbox": [
+            0.088,
+            0.102,
+            0.237,
+            0.157
+          ],
+          "content": "MIT OpenCourseWare\nhttps://ocw.mit.edu"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.227,
+            0.573,
+            0.284
+          ],
+          "content": "6.0002 Introduction to Computational Thinking and Data Science\nFall 2016"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.087,
+            0.357,
+            0.688,
+            0.384
+          ],
+          "content": "For information about citing these materials or our Terms of Use, visit: https://ocw.mit.edu/terms."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "MIT6_0002F16_Lecture 15",
+      "authors": [
+        "Guttag, John"
+      ],
+      "languages": [
+        "en"
+      ],
+      "created_at": "2016-12-14T19:53:34Z",
+      "modified_at": "2017-04-28T17:14:01-04:00",
+      "creator_application": "PowerPoint",
+      "producer_application": "Mac OS X 10.12.1 Quartz PDFContext",
+      "page_count": 20,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 720,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 720,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}
