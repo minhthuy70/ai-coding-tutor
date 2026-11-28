@@ -96,7 +96,6 @@ sending mail:
 ...         line = line.decode()             # Convert bytes to a str
 ...         if line.startswith('datetime'):
 ...             print(line.rstrip())         # Remove trailing newline
-...
 datetime: 2022-01-01T01:36:47.689215+00:00
 
 >>> import smtplib
@@ -104,7 +103,6 @@ datetime: 2022-01-01T01:36:47.689215+00:00
 >>> server.sendmail('soothsayer@example.org', 'jcaesar@example.org',
 ... """To: jcaesar@example.org
 ... From: soothsayer@example.org
-...
 ... Beware the Ides of March.
 ... """)
 >>> server.quit()

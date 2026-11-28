@@ -283,19 +283,15 @@ D. Không biết giá trịcủa x vì vòng lặp vô tận
 A.
 1 while True:
 2
-...
-
 The Dariu Foundation
 
 B.
 1 a = [1,2,3]
 2 while a:
 3
-...
 C.
 1 while "0":
 2
-...
 D. Còn phụthuộc vào đoạn lệnh bên trong lệnh while.
 5. Đoạn lệnh bên dưới in ra màn hình bao nhiều lần ký tự"a" và ký tự"b" ?
 1 x = 0

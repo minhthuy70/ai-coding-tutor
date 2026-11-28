@@ -19,8 +19,6 @@ example:
 ```python
 >>> while True:
 ...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
-...
-
 ```
 
 This is commonly used for creating minimal classes:
@@ -28,8 +26,6 @@ This is commonly used for creating minimal classes:
 ```python
 >>> class MyEmptyClass:
 ...     pass
-...
-
 ```
 
 Another place "pass" can be used is as a place-holder for a function
@@ -40,8 +36,6 @@ ignored:
 ```python
 >>> def initlog(*args):
 ...     pass   # Remember to implement this!
-...
-
 ```
 
 4.7. "match" Statements

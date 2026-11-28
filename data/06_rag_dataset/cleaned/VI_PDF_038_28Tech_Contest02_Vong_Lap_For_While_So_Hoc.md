@@ -1,0 +1,752 @@
+## [Vòng lặp Cơ Bản]. Bài 3. Viết vòng lặp
+
+```python
+Problem	Submissions	Discussions
+
+Bài này các bạn sử dụng cả 2 vòng lặp for và while đế code. Lượt 1 sử dụng for, lượt 2 dùng while. Cho số tự nhiên N, nhiệm vụ của bạn in ra các dãy số bằng vòng lặp trên từng dòng, mỗi số cách nhau một dấu cách.
+• Đồng 1. In ra các số từ 1 tới n.
+• Đồng 2 in ra các số từ n về 0.
+• Đồng 3 in ra các số chẩn nhỏ hơn hoặc bằng n.
+• Đồng 4 in ra các số lé nhỏ hơn hoặc bằng n.
+• Đồng 5 in ra các bội số của 4 nhỏ hơn n.
+• Đồng 6 in ra N chữ cải in thường đầu tiên.
+• Đồng 7 in ra N chữ cải in thường cuối cùng theo thứ tự tăng dần.
+
+Input Format
+Dòng duy nhất chứa số nguyên dương N
+Constraints
+S<=N<=26
+Output Format
+In ra 7 đóng theo yêu cầu
+Sample Input 0
+5
+Sample Output 0
+1 2 3 4 5
+5 4 3 2 1 0
+0 2 4
+1 3 5
+0 4
+a b c d e
+v w x y z
+txt
+Problem	Submissions	Discussions
+
+Tính tổng S(n) = 1 + 2 + 3 + ... + n. Công thức tổng quát của đầy : n * (n + 1) / 2. Gọi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giả trị rác), sau đó sinh ra 1 vòng lập chạy từ 1 tới n, mỗi vòng lập thì cộng biến i của vòng lập vào biến tông. In ra biến tông SAU KHI VỒNG LẬP KẾT THỨC
+
+Input Format
+
+Số nguyên dương N
+
+Constraints
+
+1≤N≤10^6
+
+Output Format
+
+Kết quả S(n)
+
+Sample Input 0
+
+6
+
+Sample Output 0
+
+21
+```
+
+## [Vòng lặp]. Bài 1. Tổng tự nhiên liên tiếp
+
+## [Vòng lặp]. Bài 2. Tổng bình phương
+
+```txt
+Problem	Submissions	Discussions
+
+Tính tổng S(n) = 1^2 + 2^2 + 3^2 + 4^2 + ... + n^2.
+
+Gọi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giá trị rác), sau đó sinh ra 1 vòng lập chạy từ 1 tới n, mỗi vòng lập thì giá trị i * i với i là biến của vòng lập vào biến tong. In ra biến tong SAU KHI VỒNG LẬP KẾT THỨC
+
+Input Format
+
+Số nguyên dương n
+
+Constraints
+
+1≤N≤10^5
+
+Output Format
+
+S(n)
+
+Sample Input 0
+
+3
+
+Sample Output 0
+
+14
+txt
+Problem	Submissions	Discussions
+
+Nhập vào giá trị của n không quả 10^6, tính tổng các số nguyên dương không vượt quả n, chia hết cho 3.
+
+Gọi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giá trị rác), sau đó sinh ra 1 vòng lập chạy từ 1 tới n, mỗi vòng lập thì kiểm tra xem i chia hết cho 3 thì cộng biến i của vòng lập vào biến tong. İn ra biến tông SAU KHI VÒNG LẬP KẾT THỨC
+
+Input Format
+
+Số nguyên dương n
+
+Constraints
+
+1≤n≤10^6
+
+Output Format
+
+Kết quả của bài toàn
+
+Sample Input 0
+
+10
+
+Sample Output 0
+
+18
+```
+
+## [Vòng lặp]. Bài 3. Tổng bội của 3
+
+## [Vòng lặp]. Bài 4. Tổng nghịch đảo
+
+```txt
+Problem	Submissions	Discussions
+
+Tính tổng : S=1+1/2+1/3+1/4+....+1/n.
+
+Goi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giá trị rác), sau đó sinh ra 1 vòng lặp chạy từ 1 tới n, mỗi vòng lặp thì cộng giá trị 1 / i của vòng lặp vào biến tong. In ra biến tong SAU KHI VỒNG LẬP KẾT THỨC
+
+Input Format
+
+Số nguyên dương n
+
+Constraints
+
+1≤n≤10^5
+
+Output Format
+
+In ra kết quả lấy độ chỉnh xác 3 số sau dấu phấy.
+
+Sample Input 0
+
+2
+
+Sample Output 0
+
+1.500
+txt
+Tính tổng : S = 1/2 + 1/4 + 1/6 + 1/8 +......+ 1/(2n)
+Input Format
+Số nguyên dương n
+Constraints
+1≤ns≤10^6
+Output Format
+Kết quả S(n) lấy độ chính xác 5 số sau dấu phấy.
+Sample Input 0
+993856
+Sample Output 0
+7.19328
+```
+
+## [Vòng lặp]. Bài 5. Tổng nghịch đảo 2
+
+Problem
+
+Submissions
+
+Discussions
+
+## [Vòng lặp]. Bài 6. Tổng ước
+
+```txt
+Problem	Submissions	Discussions
+
+Tính tổng ước của số nguyên dương n. Bài này duyệt từ 1 tới n sẽ bị quá thời gian cho phép. Gọi ý : Duyệt các
+số i từ 1 tới căn n, nếu i là ước sẽ tính luôn được ước còn lại của n là n / i. Ví dụ n = 60 có các ước 1, 2, 3, 4, 5, 6,
+10, 12, 15, 20, 30, 60. Duyệt các ước từ 1 tới 7 (căn 60) và khi thấy ước là 1 => 60, 2 => 30, 3 => 20, 4 => 15, 5 =>
+12, 6 => 10. Chủ ý trường hợp n là số chính phương sẽ xảy ra cặp i và n / i giống nhau, khi đó chỉ được tỉnh 1
+lần.
+
+Input Format
+
+Số nguyên dương N
+
+Constraints
+
+1≤N≤10^10.
+
+Output Format
+
+Tổng ước của N
+
+Sample Input 0
+
+28
+
+Sample Output 0
+
+56
+```
+
+## [Vòng Lặp]. Bài 7. Liệt kê ước
+
+```txt
+Problem	Submissions	Discussions
+
+Đém số lượng ước và liệt kê các ước theo thử tự tăng dẫn của số nguyên dương N
+Input Format
+Số nguyên dương N không quá
+Constraints
+1≤N≤10^6
+Output Format
+Kết quả của bài toàn
+Sample Input 0
+28
+Sample Output 0
+6
+1 2 4 7 14 28
+```
+
+## [Vòng lặp]. Bài 8. Liệt kê số chính phương
+
+```txt
+Problem	Submissions	Discussions
+
+Liệt kê các số chính phương dương và không vượt quả n
+Ví dụ N = 20 => 1, 4, 9, 16
+Goi ý : Duyệt các số tự nhiên i <= căn N, khi đó i * i sẽ là số chính phương và sẽ <= N.
+Input Format
+Số nguyên dương n
+Constraints
+1≤n≤10^10.
+Output Format
+Liệt kê các số chính phương không vượt quá n
+Sample Input 0
+58
+Sample Output 0
+1 4 9 16 25 36 49
+txt
+Problem	Submissions	Discussions
+
+Tính tích các ước của số tự nhiên N
+Input Format
+Số nguyên dương N
+Constraints
+1≤N≤1000
+Output Format
+Tích các ước số của N
+Sample Input 0
+10
+Sample Output 0
+100
+```
+
+## [Vòng Lặp]. Bài 9. Tích các ước
+
+## [Vòng lặp]. Bài 10. Kiểm tra số 2022
+
+```txt
+Problem	Submissions	Discussions
+
+Nhập vào 1 dãy số có không quá 10000 số nguyên. Hãy xác định trong quá trình nhập có xuất hiện số 2022 hay không?
+
+Goi ý :
+
+int n; cín >> n;
+for(int 1 - 1; 1 <- n; 1++){
+    //Nhập 1 số, nếu số đó là 2022 thi ghi nhận lại
+}
+//Kiểm tra biến ghi nhận
+
+Input Format
+
+Dòng đầu tiên là số lượng số nguyên sẽ nhập : N Đồng thứ 2 là N số viết cách nhau một khoảng trắng.
+
+Constraints
+
+1≤N≤10000; Các số được nhập là số nguyên không quá 10^6.
+
+Output Format
+
+In YES nếu trong các số vừa nhập có số 2022, ngược lại in NO
+
+Sample Input 0
+
+4
+2019 2020 2021 2022
+
+Sample Output 0
+
+YES
+txt
+Problem	Submissions	Discussions
+
+Tính tổng : S= -1 + 2 - 3 + 4 - 5 + ...... + (-1)^n*n
+
+Input Format
+
+Số nguyên dương n
+
+Constraints
+
+1≤n≤10^6
+
+Output Format
+
+Kết quả của bài toán
+
+Sample Input 0
+
+6
+
+Sample Output 0
+
+3
+```
+
+## [Vòng lặp]. Bài 11. Tổng chẩn lẻ
+
+## [Vòng lặp]. Bài 12. Tổng bội 2
+
+```txt
+Problem	Submissions	Discussions
+
+Nhập vào n nguyên dương không quá 10^6, tính và in tổng sau ra màn hình S=2+4+6+8+.....+2*n
+
+Input Format
+
+Số nguyên dương n
+
+Constraints
+
+1≤n≤10^6
+
+Output Format
+
+Kết quả của bãi toàn
+
+Sample Input 0
+
+4
+
+Sample Output 0
+
+20
+```
+
+## [Vòng lặp]. Bài 13. Tổng lẻ
+
+```txt
+Problem	Submissions	Discoussions
+
+Nhập vào n nguyên dương không qua 10^6, tỉnh và in tổng sau ra màn hình. S=1+3+5+7+.....+2*n-1
+Input Format
+Số nguyên dương n
+Constraints
+1≤n≤10^6
+Output Format
+Kết quả của bài toán
+Sample Input 0
+4
+Sample Output 0
+16
+```
+
+## [Vòng lặp]. Bài 14. Tổng lập phương
+
+```txt
+Problem	Submissions	Discussions
+
+Nhập vào n nguyên dương không quả 1000 và tính tổng sau, kết quả in ra màn hình. S=1^3+2^3+3^3+4^3+...... +n^3.
+
+Input Format
+
+Số nguyên dương n
+
+Constraints
+
+1≤n≤10^3
+
+Output Format
+
+Kết quả của bãi toán
+
+Sample Input 0
+
+3
+
+Sample Output 0
+
+36
+```
+
+## [Vòng lặp]. Bài 15. Tính giai thừa
+
+Problem
+
+Submissions
+
+Discussions
+
+120
+
+## [Vòng lặp]. Bài 16. Đếm số lượng chữ số của N
+
+Problem
+
+Submissions
+
+Discussions
+
+Nhập vào n, đếm số lượng chữ số của n và in ra kết quả.
+
+Input Format
+
+Số nguyên không âm n
+
+Constraints
+
+0≤n≤10^18
+
+Output Format
+
+Số lượng chữ số của n
+
+Sample Input 0
+
+123456789
+
+Sample Output 0
+
+9
+
+## [Vòng lặp]. Bài 17. Tính tổng chữ số của N
+
+Problem
+
+Submissions
+
+Discussions
+
+## [Vòng lặp]. Bài 18. Đếm chữ số nguyên tố của số nguyên
+
+Submissions
+
+Discussions
+
+## [Vòng lặp]. Bài 19. Mua bia
+
+Problem
+
+Submissions
+
+Discussions
+
+28techland là vùng đất mà cư dân cực kì thích uống bia, vì thể để tăng số lượng bia bán ra các cửa hàng bia ở đây đưa ra khuyến mại như sau : Cử 3 vỏ chai bia sẽ được đối một chai bia mới. Biết rằng ở 28techland, mỗi chai bia có giá 28 xu, nhiệm vụ của bạn là xác định với N xu cho trước, bạn có thể mua được tối đa bao nhiêu chai bia tính cả việc đối thường bằng vỏ chai?
+
+Gợi ý : Bước 1 : Tính số lượng chai bia mua bằng tiền (n / 28). Sau đó làm 1 vòng lặp while với điều kiện lặp là số lượng vỏ chai mình có >= 3, bên trong vòng lặp thì tính số lượng chia bia đối được và cập nhật vỏ chai.
+
+Input Format
+
+Dòng duy nhất chứa N là số đồng xu ban đầu
+
+Constraints
+
+$1 < = N < = 10^{6}$
+
+Output Format
+
+In ra số lượng chai bia tối đa có thể mua
+
+Sample Input 0
+
+138
+
+Sample Output 0
+
+5
+
+Explanation 0
+
+138 xu có thể mua được 4 chai bia, 4 vỏ chai của chai bia này sẽ đối thêm được 1 chai bia nửa. Kết quả tổng số chai bia có thể mua là 5.
+
+## [Vòng lặp]. Bài 20. Biểu diễn số nguyên
+
+<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan="3">Cho một số nguyên dương n, hãy biểu diễn n dưới dạng tổng của các số nguyên tố sao cho số lượng số hạng trong tổng là lớn nhất có thể.</td></tr><tr><td colspan="3">Input Format</td></tr><tr><td colspan="3">Số nguyên dương N trên 1 dòng</td></tr><tr><td colspan="3">Constraints</td></tr><tr><td colspan="3">1&lt;=N&lt;=10^4</td></tr><tr><td colspan="3">Output Format</td></tr><tr><td colspan="3">Dòng đầu tiên in ra số lượng số hạng trong tổng. Nếu không thể biểu diễn n dưới dạng tổng các số nguyên tố thì in ra -1 cho dòng này và không cần in dòng 2. Dòng 2 in ra các số hạng trong tổng theo thứ tự tăng đàn.</td></tr><tr><td colspan="3">Sample Input 0</td></tr><tr><td colspan="3">6</td></tr><tr><td colspan="3">Sample Output 0</td></tr><tr><td colspan="3">32 2 2</td></tr><tr><td colspan="3">Sample Input 1</td></tr><tr><td colspan="3">1</td></tr><tr><td colspan="3">Sample Output 1</td></tr><tr><td colspan="3">-1</td></tr></table>
+
+## [Vòng lặp]. Bài 21. Vẽ hình 1
+
+```txt
+Problem	Submissions	Discoussions
+Nhập n là một số nguyên không quá 100. In ra các hình tương ứng, mỗi hình cách nhau một dòng trống.
+Input Format
+Số nguyên dương N
+Constraints
+1≤n≤100
+Output Format
+In ra hình sao theo mẫu
+Sample Input 0
+5
+Sample Output 0
+*****
+ ******
+ ******
+ ******
+ ******
+ ******
+ ******
+ *   *
+ *   *
+ *   *
+ ******
+ ******
+ *###*
+ *###*
+ *###*
+ ******
+1 1 1 1 1
+2          2
+3          3
+4          4
+5 5 5 5 5
+c
+Problem	Submissions	Discussions
+Nhập n là một số nguyên không quá 100. In ra các hình tương ứng, mỗi hình cách nhau một đồng trống.
+Input Format
+Số nguyên dương N
+Constraints
+1≤n≤100
+Output Format
+In ra hình sao theo mẫu
+Sample Input 0
+5
+Sample Output 0
+*
+**
+***
+****
+****
+******
+****
+****
+****
+**
+*
+*
+**
+***
+****
+****
+*
+*****
+****
+**
+***
+**
+*
+*
+*
+*
+*
+*****
+```
+
+## [Vòng lặp]. Bài 22. Vẽ hình 2
+
+## [Vòng lặp]. Bài 23. Vẽ hình 3
+
+```csv
+Problem	Submissions	Discussions
+Nhập n là một số nguyên không quá 100. In ra các hình tương ứng, mỗi hình cách nhau một dòng trống.
+Input Format
+Số nguyên dương N
+Constraints
+1≤n≤100
+Output Format
+In ra hình số theo mẫu
+Sample Input 0
+5
+Sample Output 0
+1 2 3 4 5
+6 7 8 9 10
+11 12 13 14 15
+16 17 18 19 20
+21 22 23 24 25
+1 2 3 4 5
+2 3 4 5 6
+3 4 5 6 7
+4 5 6 7 8
+5 6 7 8 9
+~~~~~1
+~~~~~22
+~~~~~333
+~4444
+55555
+1
+2 6
+3 7 10
+4 8 11 13
+5 9 12 14 15
+txt
+Problem	Submissions	Discussions
+Cho 2'số a và b. Nhiêm vụ của bạn là tính ước chung lớn nhất của a giai thừa và b giai thừa
+Input Format
+2 số nguyên không âm a và b.
+Constraints
+0<=a,b<=10^12; 0<=min(a, b)<=12
+Output Format
+In ra kết quả trên 1 dòng
+Sample Input 0
+2:5
+Sample Output 0
+2:
+Explanation 0
+2! = 2; 5! = 120. Uốc chung lớn nhất của 2 và 120 là 2.
+```
+
+## [Vòng lặp]. Bài 24. Ước chung lớn nhất của giai thừa
+
+## [Vòng lặp]. Bài 25. Thương giai thừa
+
+```txt
+Problem	Submissions	Discussions
+
+Cho số nguyên dương N, bạn hấy tính tổng : S(N) = 1/0! + 1/1! + 1/2! + 1/3! + ... + 1/(N - 1)! Trong đó ! là kí hiệu của giai thừa
+
+Input Format
+
+Dòng duy nhất chứa số nguyên dương N
+
+Constraints
+
+2<=N<=15
+
+Output Format
+
+In ra kết quả lấy độ chính xác 4 số đẳng sau dấu thập phân
+
+Sample Input 0
+
+4
+
+Sample Output 0
+
+2.6667
+```
+
+## [Vòng lặp]. Bài 26. Giải phương trình
+
+```txt
+Problem	Submissions	Discussions
+
+Cho 3 số a, b, n. Nhiệm vụ của bạn là xác định xem phương trình ax + by = n có tồn tại cấp nghiệm (x, y) nguyên không âm hay không?
+
+Input Format
+
+1 dòng duy nhất chứa 3 số a, b, n
+
+Constraints
+
+1<=a,b,n<=1000
+
+Output Format
+
+In ra YES nếu tồn tại cấp nghiệm nguyên không âm, ngược lại in ra NO.
+
+Sample Input 0
+
+7 10 16
+
+Sample Output 0
+
+NO
+
+Sample Input 1
+
+5 8 28
+
+Sample Output 1
+
+YES
+```
+
+## [Vòng lặp]. Bài 27. Digital root
+
+Problem
+
+Submissions
+
+Discussions
+
+Cho số nguyên dương không âm N, ở mỗi thao tác bạn thực hiện tính tổng các chữ số của N sau đó gán lại cho N, thao tác này được thực hiện cho tới khi N chỉ còn 1 chữ số. Ví dụ N = 278 -> 17 -> 8, vậy ta có dạng rút gọn của 278 là 8. Nhiệm vụ của bạn là tìm dạn rút gọn của 1 số nguyên không âm N cho trước
+
+## [Vòng lặp]. Bài 28. Tìm tổng giai thừa
+
+```txt
+Problem	Submissions	Discussions
+
+Tính tổng S(n) = 1 + 1.2 + 1.2.3 + 1.2.3.4 + ... + 1.2.3....n
+
+Input Format
+
+Số nguyên dưỡng n
+
+Constraints
+
+1 <= n <= 12
+
+Output Format
+
+In ra kết quả của S(n)
+
+Sample Input 0
+
+5
+
+Sample Output 0
+
+153
+```
+
+## [Vòng lặp]. Bài 29. Tổng chẩn
+
+Problem
+
+Submissions
+
+Discussions
+
+Cho N số nguyên, nhiệm vụ của bạn là tính tổng các số nguyên được nhập là số chắn.
+
+Input Format
+
+Dòng đầu tiên là số nguyên dương N - số lượng số được nhập. Đồng thứ 2 là N số nguyên được nhập, mỗi số cách nhau một khoảng trắng
+
+Constraints
+
+1<=N<=100000; Các số được nhập là số nguyên dương không quả 10^6
+
+Output Format
+
+In ra tổng các số chân được nhập vào.
+
+Sample Input 0
+
+```txt
+8
+8 9 4 1 5 1 6 6
+```
+
+Sample Output 0
+
+## [Vòng lặp]. Bài 30. Kiểm tra nhiều test case
+
+<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan="3">Bài này rất đơn giản, nhiệm vụ của bạn là kiểm tra số nhập vào là chẩn hay lé. Các bạn phải trả lời nhiều trường hợp. (Bài này có nhiệm vụ cho các bạn làm quen với các bài toán mà đề bài cho nhiều test case sau này)</td></tr><tr><td colspan="3">Input Format</td></tr><tr><td colspan="3">Dòng đầu tiên là số lượng trường hợp T; T dòng tiếp theo mỗi dòng là một số nguyên N cần kiểm tra tính chẩn lé.</td></tr><tr><td colspan="3">Constraints</td></tr><tr><td colspan="3">1&lt;=T&lt;=100; Các số cần kiểm tra là số không âm không quả 1000;</td></tr><tr><td colspan="3">Output Format</td></tr><tr><td colspan="3">Đối với mỗi trường hợp, các bạn in kết quả trên 1 dòng, nếu số ở trường hợp đó là chẩn thì in ra &quot;EVEN&quot;, ngược lại in ra &quot;ODD&quot;</td></tr><tr><td colspan="3">Sample Input 0</td></tr><tr><td>3</td><td></td><td></td></tr><tr><td>166</td><td></td><td></td></tr><tr><td>721</td><td></td><td></td></tr><tr><td>665</td><td></td><td></td></tr><tr><td colspan="3">Sample Output 0</td></tr><tr><td>EVEN</td><td></td><td></td></tr><tr><td>ODD</td><td></td><td></td></tr><tr><td>ODD</td><td></td><td></td></tr></table>

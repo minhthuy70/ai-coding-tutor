@@ -132,7 +132,6 @@ line up.
 >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
 >>> for name, phone in table.items():
 ...     print(f'{name:10} ==> {phone:10d}')
-...
 Sjoerd     ==>       4127
 Jack       ==>       4098
 Dcab       ==>       7678
@@ -156,11 +155,13 @@ The "=" specifier can be used to expand an expression to the text of
 the expression, an equal sign, then the representation of the
 evaluated expression:
 
+```python
 >>> bugs = 'roaches'
 >>> count = 13
 >>> area = 'living room'
 >>> print(f'Debugging {bugs=} {count=} {area=}')
 Debugging bugs='roaches' count=13 area='living room'
+```
 
 See self-documenting expressions for more information on the "="
 specifier. For a reference on these format specifications, see the
@@ -249,7 +250,6 @@ columns giving integers and their squares and cubes:
 ```python
 >>> for x in range(1, 11):
 ...     print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
-...
  1   1    1
  2   4    8
  3   9   27
@@ -276,7 +276,6 @@ Here’s the same table of squares and cubes, formatted manually:
 ...     print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
 ...     # Note use of 'end' on previous line
 ...     print(repr(x*x*x).rjust(4))
-...
  1   1    1
  2   4    8
  3   9   27

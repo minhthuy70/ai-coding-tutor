@@ -45,11 +45,9 @@ Here is an example of a multi-line docstring:
 ```python
 >>> def my_function():
 ...     """Do nothing, but document it.
-...
 ...     No, really, it doesn't do anything.
 ...     """
 ...     pass
-...
 >>> print(my_function.__doc__)
 Do nothing, but document it.
 
@@ -79,7 +77,6 @@ annotated:
 ...     print("Annotations:", f.__annotations__)
 ...     print("Arguments:", ham, eggs)
 ...     return ham + ' and ' + eggs
-...
 >>> f('spam')
 Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
 Arguments: spam eggs

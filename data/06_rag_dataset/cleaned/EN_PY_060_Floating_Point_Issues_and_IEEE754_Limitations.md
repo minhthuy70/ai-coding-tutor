@@ -270,7 +270,6 @@ each other out leaving a final sum near zero:
 >>> total = 0.0
 >>> for x in arr:
 ...     total += x                   # Multiple roundings in standard precision
-...
 >>> total                            # Straight addition has no correct digits!
 -0.0051575902860057365
 

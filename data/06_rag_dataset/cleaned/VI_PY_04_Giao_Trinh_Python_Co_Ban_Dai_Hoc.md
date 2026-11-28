@@ -1773,7 +1773,6 @@ D. Không biết giá trị của x vì vòng lặp vô tận
 
 ```python
 while True:
-    ...
 ```
 
 B.
@@ -1781,14 +1780,12 @@ B.
 ```python
 a = [1,2,3]
 while a:
-    ...
 ```
 
 C.
 
 ```python
 while "0":
-    ...
 ```
 
 D. Còn phụ thuộc vào đoạn lệnh bên trong lệnh while.

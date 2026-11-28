@@ -142,12 +142,16 @@ very subtle bugs.  Examples where this happens will be shown later.
 
 Here I give an example of this situation. Consider the hierarchy
 
+```python
 >>> O = object
 >>> class X(O): pass
 >>> class Y(O): pass
+```
 
+```python
 >>> class A(X,Y): pass
 >>> class B(Y,X): pass
+```
 
 which can be represented with the following inheritance graph, where I
 have denoted with O the "object" class, which is the beginning of any
@@ -250,6 +254,7 @@ Examples
 
 First example. Consider the following hierarchy:
 
+```python
 >>> O = object
 >>> class F(O): pass
 >>> class E(O): pass
@@ -257,6 +262,7 @@ First example. Consider the following hierarchy:
 >>> class C(D,F): pass
 >>> class B(D,E): pass
 >>> class A(B,C): pass
+```
 
 In this case the inheritance graph can be drawn as:
 
@@ -327,6 +333,7 @@ inheritance graph).  However, this is not the general case.
 I leave as an exercise for the reader to compute the linearization for
 my second example:
 
+```python
 >>> O = object
 >>> class F(O): pass
 >>> class E(O): pass
@@ -334,6 +341,7 @@ my second example:
 >>> class C(D,F): pass
 >>> class B(E,D): pass
 >>> class A(B,C): pass
+```
 
 The only difference with the previous example is the change B(D,E) –>
 B(E,D); however even such a little modification completely changes the
@@ -370,7 +378,9 @@ A lazy programmer can obtain the MRO directly from Python 2.2, since
 in this case it coincides with the Python 2.3 linearization.  It is
 enough to invoke the "mro()" method of class A:
 
+```python
 >>> A.mro()
+```
 
 [<class 'A'>, <class 'B'>, <class 'E'>,
 <class 'C'>, <class 'D'>, <class 'F'>,
@@ -409,9 +419,11 @@ classes in Python 2.2 are bad.
 It is easier to start with the local precedence ordering.  Consider
 the following example:
 
+```python
 >>> F=type('Food',(),{'remember2buy':'spam'})
 >>> E=type('Eggs',(F,),{'remember2buy':'eggs'})
 >>> G=type('GoodFood',(F,E),{}) # under Python 2.3 this is an error!
+```
 
 with inheritance diagram
 
@@ -430,8 +442,10 @@ therefore we would expect the attribute *G.remember2buy* to be
 inherited by *F.rembermer2buy* and not by *E.remember2buy*:
 nevertheless Python 2.2 gives
 
+```python
 >>> G.remember2buy
 'eggs'
+```
 
 This is a breaking of local precedence ordering since the order in the
 local precedence list, i.e. the list of the parents of G, is not
@@ -445,11 +459,13 @@ superclass of E; nevertheless the breaking of local precedence
 ordering is quite non-intuitive and error prone.  This is particularly
 true since it is a different from old style classes:
 
+```python
 >>> class F: remember2buy='spam'
 >>> class E(F): remember2buy='eggs'
 >>> class G(F,E): pass
 >>> G.remember2buy
 'spam'
+```
 
 In this case the MRO is GFEF and the local precedence ordering is
 preserved.
@@ -485,11 +501,13 @@ On a related note, let me point out that the Python 2.3 algorithm is
 smart enough to recognize obvious mistakes, as the duplication of
 classes in the list of parents:
 
+```python
 >>> class A(object): pass
 >>> class C(A,A): pass # error
 Traceback (most recent call last):
   File "<stdin>", line 1, in ?
 TypeError: duplicate base class A
+```
 
 Python 2.2 (both for classic classes and new style classes) in this
 situation, would not raise any exception.

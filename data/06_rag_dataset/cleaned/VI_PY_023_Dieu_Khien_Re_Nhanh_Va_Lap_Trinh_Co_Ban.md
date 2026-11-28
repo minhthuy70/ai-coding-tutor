@@ -12,10 +12,7 @@
 Cấu trúc điều khiển
 Cấu trúc lặp for
   for iter_var in seqence:
-    ...
     loop_body
-    ...
-
 27
 Hàm
 Hàm xây dựng sẵn trong các mô-đun
@@ -24,9 +21,7 @@ Hàm
 Hàm
 Hàm do lập trình viên định nghĩa
   def function_name ([parameters]):
-    ...
     body_of_the_function
-    ...
 
 ```python
 return ...

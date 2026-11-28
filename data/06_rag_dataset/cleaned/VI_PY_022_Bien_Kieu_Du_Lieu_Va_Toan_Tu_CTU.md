@@ -74,9 +74,5 @@ Biến, kiểu cơ bản, phép toán
 Cấu trúc điều khiển
 Cấu trúc rẽ nhánh if
   if (cond1):
-    ...
   elif (cond2):
-    ...
   else:
-
-    ...

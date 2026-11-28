@@ -23,7 +23,6 @@ arbitrary boundary:
 ...         print(a, end=' ')
 ...         a, b = b, a+b
 ...     print()
-...
 >>> # Now call the function we just defined:
 >>> fib(2000)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
@@ -105,7 +104,6 @@ the Fibonacci series, instead of printing it:
 ...         result.append(a)    # see below
 ...         a, b = b, a+b
 ...     return result
-...
 >>> f100 = fib2(100)    # call it
 >>> f100                # write the result
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]

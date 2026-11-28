@@ -21,7 +21,6 @@ For example:
 ...     raise KeyboardInterrupt
 ... finally:
 ...     print('Goodbye, world!')
-...
 Goodbye, world!
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
@@ -63,7 +62,6 @@ For example:
 ...         return True
 ...     finally:
 ...         return False
-...
 >>> bool_return()
 False
 
@@ -81,7 +79,6 @@ A more complicated example:
 ...         print("result is", result)
 ...     finally:
 ...         print("executing finally clause")
-...
 >>> divide(2, 1)
 result is 2.0
 executing finally clause

@@ -262,7 +262,6 @@ None
 ...     except:
 ...         print(repr(sys.exception()))
 ...     print(repr(sys.exception()))
-...
 TypeError()
 ValueError()
 TypeError()
@@ -292,7 +291,6 @@ matches it.
 ...     print(f'caught {type(e)} with nested {e.exceptions}')
 ... except* OSError as e:
 ...     print(f'caught {type(e)} with nested {e.exceptions}')
-...
 caught <class 'ExceptionGroup'> with nested (TypeError(2),)
 caught <class 'ExceptionGroup'> with nested (OSError(3), OSError(4))
   + Exception Group Traceback (most recent call last):
@@ -318,7 +316,6 @@ group with an empty message string.
 ...     raise BlockingIOError
 ... except* BlockingIOError as e:
 ...     print(repr(e))
-...
 ExceptionGroup('', (BlockingIOError()))
 
 ```
@@ -357,7 +354,6 @@ exception is discarded:
 ...         1/0
 ...     finally:
 ...         return 42
-...
 >>> f()
 42
 
@@ -382,5 +378,4 @@ last one executed:
 ...         return 'try'
 ...     finally:
 ...         return 'finally'
-...
 ```

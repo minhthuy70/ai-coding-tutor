@@ -102,16 +102,12 @@ type Address = tuple[str, int]
 type Server = tuple[Address, ConnectionOptions]
 
 def broadcast_message(message: str, servers: Sequence[Server]) -> None:
-    ...
-
 # The static type checker will treat the previous type signature as
 # being exactly equivalent to this one.
 def broadcast_message(
     message: str,
     servers: Sequence[tuple[tuple[str, int], dict[str, str]]]
 ) -> None:
-    ...
-
 ```
 
 The :keyword:`type` statement is new in Python 3.12. For backwards
@@ -153,8 +149,6 @@ of the original type. This is useful in helping catch logical errors
 ```python
 
 def get_user_name(user_id: UserId) -> str:
-    ...
-
 # passes type checking
 user_a = get_user_name(UserId(42351))
 
@@ -306,13 +300,8 @@ class Combiner(Protocol):
 
 def batch_proc(data: Iterable[bytes], cb_results: Combiner) -> bytes:
     for item in data:
-        ...
-
 def good_cb(*vals: bytes, maxlen: int | None = None) -> list[bytes]:
-    ...
 def bad_cb(*vals: bytes, maxitems: int | None) -> list[bytes]:
-    ...
-
 batch_proc([], good_cb)  # OK
 batch_proc([], bad_cb)   # Error! Argument 2 has incompatible type because of
                          # different name and kind in the callback
@@ -663,8 +652,6 @@ from typing import TypeVar, Generic
 T = TypeVar('T')
 
 class LoggedVar(Generic[T]):
-    ...
-
 ```
 
 Generic classes have `object.__class_getitem__()` methods, meaning they
@@ -688,15 +675,11 @@ A generic type can have any number of type variables. All varieties of
 from typing import TypeVar, Generic, Sequence
 
 class WeirdTrio[T, B: Sequence[bytes], S: (int, str)]:
-    ...
-
 OldT = TypeVar('OldT', contravariant=True)
 OldB = TypeVar('OldB', bound=Sequence[bytes], covariant=True)
 OldS = TypeVar('OldS', int, str)
 
 class OldWeirdTrio(Generic[OldT, OldB, OldS]):
-    ...
-
 ```
 
 Each type variable argument to `class` must be distinct.
@@ -705,16 +688,10 @@ This is thus invalid
 ```python
 
 from typing import TypeVar, Generic
-...
-
 class Pair[M, M]:  # SyntaxError
-    ...
-
 T = TypeVar('T')
 
 class Pair(Generic[T, T]):   # INVALID
-    ...
-
 ```
 
 Generic classes can also inherit from other classes
@@ -724,8 +701,6 @@ Generic classes can also inherit from other classes
 from collections.abc import Sized
 
 class LinkedList[T](Sized):
-    ...
-
 ```
 
 When inheriting from generic classes, some type parameters could be fixed
@@ -735,8 +710,6 @@ When inheriting from generic classes, some type parameters could be fixed
  from collections.abc import Mapping
 
  class MyDict[T](Mapping[str, T]):
-     ...
-
 ```
 
 In this case `MyDict` has a single parameter, `T`.
@@ -752,8 +725,6 @@ not generic but implicitly inherits from `Iterable[Any]`:
 from collections.abc import Iterable
 
 class MyIterable(Iterable): # Same as Iterable[Any]
-    ...
-
 ```
 
 User-defined generic type aliases are also supported. Examples
@@ -766,8 +737,6 @@ type Response[S] = Iterable[S] | int
 
 # Return type here is same as Iterable[str] | int
 def response(query: str) -> Response[str]:
-    ...
-
 type Vec[T] = Iterable[tuple[T, T]]
 
 def inproduct[T: (int, float, complex)](v: Vec[T]) -> T: # Same as Iterable[tuple[T, T]]
@@ -803,7 +772,6 @@ to this is that a list of types can be used to substitute a :class:`ParamSpec`
 ```python
 
 >>> class Z[T, **P]: ...  # T is a TypeVar; P is a ParamSpec
-...
 >>> Z[int, [dict, float]]
 __main__.Z[int, [dict, float]]
 
@@ -819,8 +787,6 @@ from typing import ParamSpec, Generic
 P = ParamSpec('P')
 
 class Z(Generic[P]):
-    ...
-
 ```
 
 Another difference between `class` and `class` is that a
@@ -832,7 +798,6 @@ to the former, so the following are equivalent
 ```python
 
 >>> class X[**P]: ...
-...
 >>> X[int, str]
 __main__.X[[int, str]]
 >>> X[[int, str]]
@@ -876,8 +841,6 @@ def foo(item: Any) -> int:
     # Passes type checking; 'item' could be any type,
     # and that type might have a 'bar' method
     item.bar()
-    ...
-
 ```
 
 Notice that no type checking is performed when assigning a value of type
@@ -892,13 +855,11 @@ implicitly default to using :data:`Any`
 ```python
 
 def legacy_parser(text):
-    ...
     return data
 
 # A static type checker will treat the above
 # as having the same signature as:
 def legacy_parser(text: Any) -> Any:
-    ...
     return data
 
 ```
@@ -920,13 +881,9 @@ it as a return value) of a more specialized type is a type error. For example
 def hash_a(item: object) -> int:
     # Fails type checking; an object does not have a 'magic' method.
     item.magic()
-    ...
-
 def hash_b(item: Any) -> int:
     # Passes type checking
     item.magic()
-    ...
-
 # Passes type checking, since ints and strs are subclasses of object
 hash_a(42)
 hash_a("foo")
@@ -957,7 +914,6 @@ For example, this conforms to :pep:`484`
 from collections.abc import Sized, Iterable, Iterator
 
 class Bucket(Sized, Iterable[int]):
-    ...
     def __len__(self) -> int: ...
     def __iter__(self) -> Iterator[int]: ...
 
@@ -974,7 +930,6 @@ and `Iterable[int]` by static type checkers. This is known as
 from collections.abc import Iterator, Iterable
 
 class Bucket:  # Note: no base classes
-    ...
     def __len__(self) -> int: ...
     def __iter__(self) -> Iterator[int]: ...
 
@@ -1077,8 +1032,6 @@ cases::
 ```python
 
    def run_query(sql: LiteralString) -> None:
-       ...
-
    def caller(arbitrary_string: str, literal_string: LiteralString) -> None:
        run_query("SELECT * FROM students")  # OK
        run_query(literal_string)  # OK
@@ -1161,7 +1114,6 @@ For example
 
    class Foo:
        def return_self(self) -> Self:
-           ...
            return self
 
    class SubclassOfFoo(Foo): pass
@@ -1178,7 +1130,6 @@ albeit in a more succinct fashion::
 
    class Foo:
        def return_self(self: Self) -> Self:
-           ...
            return self
 
 In general, if something returns ``self``, as in the above examples, you
@@ -1349,15 +1300,11 @@ annotation just because it is optional. For example
 ```python
 
    def foo(arg: int = 0) -> None:
-       ...
-
 On the other hand, if an explicit value of ``None`` is allowed, the
 use of ``Optional`` is appropriate, whether the argument is optional
 or not. For example::
 
    def foo(arg: Optional[int] = None) -> None:
-       ...
-
 .. versionchanged:: 3.10
    Optional can now be written as ``X | None``. See
    :ref:`union type expressions<types-union>`.
@@ -1438,12 +1385,8 @@ For example
 ```python
 
    def validate_simple(data: Any) -> Literal[True]:  # always returns True
-       ...
-
    type Mode = Literal['r', 'rb', 'w', 'wb']
    def open_helper(file: str, mode: Mode) -> str:
-       ...
-
    open_helper('/some/path', 'r')      # Passes type check
    open_helper('/other/path', 'typo')  # Error in type checker
 
@@ -1716,13 +1659,15 @@ Pass ``include_extras=True`` to have the metadata preserved:
 ```
 
 python
+
+```python
 >>> from typing import Annotated, get_type_hints
 >>> def func(x: Annotated[int, "metadata"]) -> None: pass
-...
 >>> get_type_hints(func)
 {'x': <class 'int'>, 'return': <class 'NoneType'>}
 >>> get_type_hints(func, include_extras=True)
 {'x': typing.Annotated[int, 'metadata'], 'return': <class 'NoneType'>}
+```
 
 ```
 
@@ -1734,12 +1679,15 @@ retrieved via the :attr:`!__metadata__` attribute:
 ```
 
 python
+
+```python
 >>> from typing import Annotated
 >>> X = Annotated[int, "very", "important", "metadata"]
 >>> X
 typing.Annotated[int, 'very', 'important', 'metadata']
 >>> X.__metadata__
 ('very', 'important', 'metadata')
+```
 
 ```
 
@@ -1751,10 +1699,13 @@ If you want to retrieve the original type wrapped by ``Annotated``, use the
 ```
 
 python
+
+```python
 >>> from typing import Annotated, get_origin
 >>> Password = Annotated[str, "secret"]
 >>> Password.__origin__
 <class 'str'>
+```
 
 ```
 
@@ -1765,8 +1716,11 @@ Note that using :func:`get_origin` will return ``Annotated`` itself:
 ```
 
 python
+
+```python
 >>> get_origin(Password)
 typing.Annotated
+```
 
 ```
 
@@ -1832,11 +1786,8 @@ conditional expression here is sometimes referred to as a "type predicate"
        # "isinstance" type predicate
        if isinstance(val, str):
            # Type of ``val`` is narrowed to ``str``
-           ...
        else:
            # Else, type of ``val`` is narrowed to ``float``.
-           ...
-
 Sometimes it would be convenient to use a user-defined boolean function
 as a type predicate.  Such a function should use ``TypeIs[...]`` or
 :data:`TypeGuard` as its return type to alert static type checkers to
@@ -2026,7 +1977,6 @@ after the class name
 
    class Mapping[KT, VT]:
        def __getitem__(self, key: KT) -> VT:
-           ...
            # Etc.
 
 Such a class implicitly inherits from ``Generic``.
@@ -2054,7 +2004,6 @@ separately::
 
    class Mapping(Generic[KT, VT]):
        def __getitem__(self, key: KT) -> VT:
-           ...
            # Etc.
 
 ```
@@ -2071,8 +2020,6 @@ separately::
 ```python
 
    class Sequence[T]:  # T is a TypeVar
-       ...
-
 This syntax can also be used to create bounded and constrained type
 variables::
 
@@ -2080,8 +2027,6 @@ variables::
        ...                     # we can say that S is "bounded by `str`"
 
    class StrOrBytesSequence[A: (str, bytes)]:  # A is a TypeVar constrained to str or bytes
-       ...
-
 However, if desired, reusable type variables can also be constructed manually, like so::
 
    T = TypeVar('T')  # Can be anything
@@ -2350,7 +2295,6 @@ of ``*args``::
        callback: Callable[[*Ts], None],
        *args: *Ts
    ) -> None:
-       ...
        callback(*args)
 
 In contrast to non-unpacked annotations of ``*args`` - e.g. ``*args: int``,
@@ -2625,9 +2569,12 @@ be decided.
 ```
 
 python
+
+```python
 >>> type Alias = int
 >>> Alias.__name__
 'Alias'
+```
 
 ```
 
@@ -2640,11 +2587,13 @@ python
 ```
 
 python
+
+```python
 >>> class Class:
 ...     type Alias = int
-...
 >>> Class.Alias.__qualname__
 'Class.Alias'
+```
 
 ```
 
@@ -2657,9 +2606,12 @@ python
 ```
 
 python
+
+```python
 >>> type Alias = int
 >>> Alias.__module__
 '__main__'
+```
 
 ```
 
@@ -2679,12 +2631,15 @@ python
 ```
 
 python
+
+```python
 >>> type ListOrSet[T] = list[T] | set[T]
 >>> ListOrSet.__type_params__
 (T,)
 >>> type NotGeneric = int
 >>> NotGeneric.__type_params__
 ()
+```
 
 ```
 
@@ -2699,6 +2654,8 @@ python
 ```
 
 python
+
+```python
 >>> type Mutually = Recursive
 >>> type Recursive = Mutually
 >>> Mutually
@@ -2709,6 +2666,7 @@ Recursive
 Recursive
 >>> Recursive.__value__
 Mutually
+```
 
 ```
 
@@ -2725,18 +2683,19 @@ Mutually
 ```
 
 python
+
+```python
 >>> type Alias = undefined
 >>> Alias.__value__
 Traceback (most recent call last):
-...
 NameError: name 'undefined' is not defined
 >>> from annotationlib import Format, call_evaluate_function
 >>> Alias.evaluate_value(Format.VALUE)
 Traceback (most recent call last):
-...
 NameError: name 'undefined' is not defined
 >>> call_evaluate_function(Alias.evaluate_value, Format.FORWARDREF)
 ForwardRef('undefined')
+```
 
 ```
 
@@ -2906,8 +2865,6 @@ Protocol classes are defined like this
 
    class Proto(Protocol):
        def meth(self) -> int:
-           ...
-
 Such classes are primarily used with static type checkers that recognize
 structural subtyping (static duck-typing), for example::
 
@@ -2930,8 +2887,6 @@ Protocol classes can be generic, for example::
 
    class GenProto[T](Protocol):
        def meth(self) -> T:
-           ...
-
 In code that needs to be compatible with Python 3.11 or older, generic
 Protocols can be written as follows::
 
@@ -2939,8 +2894,6 @@ Protocols can be written as follows::
 
    class GenProto(Protocol[T]):
        def meth(self) -> T:
-           ...
-
 .. versionadded:: 3.8
 
 .. deprecated-removed:: 3.15 3.20
@@ -3223,6 +3176,8 @@ and the following attributes:
 ```
 
 python
+
+```python
 >>> from typing import TypedDict
 >>> class Point2D(TypedDict): pass
 >>> Point2D.__total__
@@ -3233,6 +3188,7 @@ False
 >>> class Point3D(Point2D): pass
 >>> Point3D.__total__
 True
+```
 
 ```python
 
@@ -3267,17 +3223,18 @@ True
 ```
 
 python
+
+```python
 >>> class Point2D(TypedDict, total=False):
 ...     x: int
 ...     y: int
-...
 >>> class Point3D(Point2D):
 ...     z: int
-...
 >>> Point3D.__required_keys__ == frozenset({'z'})
 True
 >>> Point3D.__optional_keys__ == frozenset({'x', 'y'})
 True
+```
 
 ```
 
@@ -3413,8 +3370,6 @@ the lines of an input stream
 
 def read_config(stream: Iterable[str]):
     for line in stream:
-        ...
-
 ```
 
 ### Functions and decorators
@@ -3453,7 +3408,6 @@ python
 def complex_function(arg: object):
     # Do some complex type-narrowing logic,
     # after which we hope the inferred type will be `int`
-    ...
     # Test whether the type checker correctly understands our function
     assert_type(arg, int)
 
@@ -3559,7 +3513,6 @@ communicates intent more clearly.
 
    @dataclass_transform()
    def create_model[T](cls: type[T]) -> type[T]:
-       ...
        return cls
 
    @create_model
@@ -3705,13 +3658,10 @@ See :pep:`681` for more details.
 
    @overload
    def process(response: None) -> None:
-       ...
    @overload
    def process(response: int) -> tuple[int, str]:
-       ...
    @overload
    def process(response: bytes) -> str:
-       ...
    def process(response):
        ...  # actual implementation goes here
 
@@ -3761,17 +3711,11 @@ For example
    class Base:
        @final
        def done(self) -> None:
-           ...
    class Sub(Base):
        def done(self) -> None:  # Error reported by type checker
-           ...
-
    @final
    class Leaf:
-       ...
    class Other(Leaf):  # Error reported by type checker
-       ...
-
 There is no runtime checking of these properties. See :pep:`591` for
 more details.
 
@@ -3813,17 +3757,11 @@ more details.
 
    class Base:
        def log_status(self) -> None:
-           ...
-
    class Sub(Base):
        @override
        def log_status(self) -> None:  # Okay: overrides Base.log_status
-           ...
-
        @override
        def done(self) -> None:  # Error reported by type checker
-           ...
-
 There is no runtime checking of this property.
 
 The decorator will attempt to set an ``__override__`` attribute to ``True`` on
@@ -4187,7 +4125,6 @@ This function only returns true for ``TypedDict`` classes, not for
    >>> class Point(TypedDict):
    ...     x: int
    ...     y: int
-   ...
    >>> Point.__extra_items__ is NoExtraItems
    True
 

@@ -24,7 +24,6 @@ For example, assume we want to create a list of squares, like:
 >>> squares = []
 >>> for x in range(10):
 ...     squares.append(x**2)
-...
 >>> squares
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
@@ -66,7 +65,6 @@ and it’s equivalent to:
 ...     for y in [3,1,4]:
 ...         if x != y:
 ...             combs.append((x, y))
-...
 >>> combs
 [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
 

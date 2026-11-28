@@ -162,12 +162,14 @@ Python can manipulate text (represented by type "str", so-called
 :)"”. They can be enclosed in single quotes ("'...'") or double quotes
 (""..."") with the same result [2].
 
+```python
 >>> 'spam eggs'  # single quotes
 'spam eggs'
 >>> "Paris rabbit got your back :)! Yay!"  # double quotes
 'Paris rabbit got your back :)! Yay!'
 >>> '1975'  # digits and numerals enclosed in quotes are also strings
 '1975'
+```
 
 To quote a quote, we need to “escape” it, by preceding it with "\".
 Alternatively, we can use the other type of quotation marks:

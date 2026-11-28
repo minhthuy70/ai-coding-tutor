@@ -35,7 +35,6 @@ tượng im .
 6.3. Ghi file
 Từ đối tượng Image có thể lưu file xuống máy tính bằng
 phương thức save(path, type) . Ví dụ:
-...
 im.save('photo_new.jpg', 'JPEG')
 6.4. Tạo thumbnail
 Sử dụng phương thức thumbnail như sau:

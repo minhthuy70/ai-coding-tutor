@@ -212,7 +212,6 @@ Continuation lines are needed when entering a multi-line construct. As an exampl
 >>> the_world_is_flat = True
 >>> if the_world_is_flat:
 ...     print("Be careful not to fall off!")
-...
 Be careful not to fall off!
 ```
 
@@ -446,10 +445,8 @@ This only works with two literals though, not with variables or expressions:
 ```python
 >>> prefix = 'Py'
 >>> prefix 'thon'  # can't concatenate a variable and a string literal
-...
 SyntaxError: invalid syntax
 >>> ('un' * 3) 'ium'
-...
 SyntaxError: invalid syntax
 ```
 
@@ -548,10 +545,8 @@ Python strings cannot be changed — they are immutable. Therefore, assigning to
 
 ```txt
 >>> word[0] = 'J'
-  ...
 TypeError: 'str' object does not support item assignment
 >>> word[2:] = 'py'
-  ...
 TypeError: 'str' object does not support item assignment
 ```
 
@@ -698,7 +693,6 @@ Of course, we can use Python for more complicated tasks than adding two and two 
 >>> while a < 10:
 ...     print(a)
 ...     a, b = b, a+b
-...
 0
 1
 1
@@ -731,7 +725,6 @@ The keyword argument end can be used to avoid the newline after the output, or e
 >>> while a < 1000:
 ...     print(a, end=',')
 ...     a, b = b, a+b
-...
 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
 ```
 
@@ -755,7 +748,6 @@ Please enter an integer: 42
 ...     print('Single')
 ... else:
 ...     print('More')
-...
 More
 ```
 
@@ -770,7 +762,6 @@ The for statement in Python differs a bit from what you may be used to in C or P
 ... words = ['cat', 'window', 'defenestrate']
 >>> for w in words:
 ...     print(w, len(w))
-...
 cat 3
 window 6
 defenestrate 12
@@ -780,7 +771,6 @@ defenestrate 12
 >>> for w in words[:]:  # Loop over a slice copy of the entire list.
 ...     if len(w) > 6:
 ...         words.insert(0, w)
-...
 >>> words
 ['defenestrate', 'cat', 'window', 'defenestrate']
 ```
@@ -794,7 +784,6 @@ If you do need to iterate over a sequence of numbers, the built-in function rang
 ```python
 >>> for i in range(5):
 ...     print(i)
-...
 0
 1
 2
@@ -821,7 +810,6 @@ To iterate over the indices of a sequence, you can combine range() and len() as 
 >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
 >>> for i in range(len(a)):
 ...     print(i, a[i])
-...
 0 Mary
 1 had
 2 a
@@ -862,7 +850,6 @@ Loop statements may have an else clause; it is executed when the loop terminates
 ...     else:
 ...         # loop fell through without finding a factor
 ...         print(n, 'is a prime number')
-...
 2 is a prime number
 3 is a prime number
 4 equals 2 * 2
@@ -909,7 +896,6 @@ The pass statement does nothing. It can be used when a statement is required syn
 ```python
 >>> while True:
 ...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
-...
 ```
 
 This is commonly used for creating minimal classes:
@@ -917,7 +903,6 @@ This is commonly used for creating minimal classes:
 ```python
 >>> class MyEmptyClass:
 ...     pass
-...
 ```
 
 Another place pass can be used is as a place-holder for a function or conditional body when you are working on new code, allowing you to keep thinking at a more abstract level. The pass is silently ignored:
@@ -925,7 +910,6 @@ Another place pass can be used is as a place-holder for a function or conditiona
 ```python
 >>> def initlog(*args):
 ...     pass   # Remember to implement this!
-...
 ```
 
 ## 4.6 Defining Functions
@@ -940,7 +924,6 @@ We can create a function that writes the Fibonacci series to an arbitrary bounda
 ...         print(a, end=' ')
 ...         a, b = b, a+b
 ...     print()
-...
 >>> # Now call the function we just defined:
 ... fib(2000)
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
@@ -985,7 +968,6 @@ It is simple to write a function that returns a list of the numbers of the Fibon
 ...         result.append(a)    # see below
 ...         a, b = b, a+b
 ...     return result
-...
 >>> f100 = fib2(100)    # call it
 >>> f100                 # write the result
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
@@ -1110,7 +1092,6 @@ In a function call, keyword arguments must follow positional arguments. All the 
 ```python
 >>> def function(a):
 ...     pass
-...
 >>> function(0, a=0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -1171,7 +1152,6 @@ the \*args parameter are ‘keyword-only’ arguments, meaning that they can onl
 ```python
 >>> def concat(*args, sep="/"):
 ...     return sep.join(args)
-...
 >>> concat("earth", "mars", "venus")
 'earth/mars/venus'
 >>> concat("earth", "mars", "venus", sep=".")
@@ -1197,7 +1177,6 @@ In the same fashion, dictionaries can deliver keyword arguments with the \*\*-op
 ...     print defense This parrot wouldn't", action, end=' ')
 ...     print("if you put", voltage, "volts through it.", end=' ')
 ...     print("E's", state, "!")
-...
 >>> d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
 >>> parrot(**d)
 -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
@@ -1210,7 +1189,6 @@ Small anonymous functions can be created with the lambda keyword. This function 
 ```diff
 >>> def make_incrementor(n):
 ...     return lambda x: x + n
-...
 >>> f = make_incrementor(42)
 >>> f(0)
 42
@@ -1242,11 +1220,9 @@ Here is an example of a multi-line docstring:
 ```python
 >>> def my_function():
 ...     """Do nothing, but document it.
-...
 ...     No, really, it doesn't do anything.
 ...     """
 ...     pass
-...
 >>> print(my_function.__doc__)
 Do nothing, but document it.
 
@@ -1270,7 +1246,6 @@ Annotations are stored in the \_\_annotations\_\_ attribute of the function as a
 (continued from previous page)
 ...     print("Arguments:", ham, eggs)
 ...     return ham + ' and ' + eggs
-...
 >>> f('spam')
 Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
 Arguments: spam eggs
@@ -1435,7 +1410,6 @@ For example, assume we want to create a list of squares, like:
 >>> squares = []
 >>> for x in range(10):
 ...     squares.append(x**2)
-...
 >>> squares
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
@@ -1469,7 +1443,6 @@ and it’s equivalent to:
 ...       for y in [3,1,4]:
 ...             if x != y:
 ...                 combs.append((x, y))
-...
 >>> combs
 [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
 ```
@@ -1550,7 +1523,6 @@ As we saw in the previous section, the nested listcomp is evaluated in the conte
 >>> transposed = []
 >>> for i in range(4):
 ...     transposed.append([row[i] for row in matrix])
-...
 >>> transposed
 [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 ```
@@ -1565,7 +1537,6 @@ which, in turn, is the same as:
 ...     for row in matrix:
 ...         transposed_row.append(row[i])
 ...     transposed.append(transposed_row)
-...
 >>> transposed
 [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 ```
@@ -1690,7 +1661,6 @@ True
 False
 
 >>> # Demonstrate set operations on unique letters from two words
-...
 >>> a = set('abracadabra')
 >>> b = set('alacazam')
 >>> a                          # unique letters in a
@@ -1777,7 +1747,6 @@ When looping through dictionaries, the key and corresponding value can be retrie
 >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 >>> for k, v in knights.items():
 ...     print(k, v)
-...
 gallahad the pure
 robin the brave
 ```
@@ -1787,7 +1756,6 @@ When looping through a sequence, the position index and corresponding value can 
 ```python
 >>> for i, v in enumerate(['tic', 'tac', 'toe]):
 ...     print(i, v)
-...
 0 tic
 1 tac
 2 toe
@@ -1800,7 +1768,6 @@ To loop over two or more sequences at the same time, the entries can be paired w
 >>> answers = ['lancelot', 'the holy grail', 'blue']
 >>> for q, a in zip(questions, answers):
 ...     print('What is your {0}?  It is {1}'.'.format(q, a))
-...
 What is your name?  It is lancelot.
 What is your quest?  It is the holy grail.
 What is your favorite color?  It is blue.
@@ -1811,7 +1778,6 @@ To loop over a sequence in reverse, first specify the sequence in a forward dire
 ```python
 >>> for i in reversed(range(1, 10, 2)):
 ...     print(i)
-...
 9
 7
 5
@@ -1825,7 +1791,6 @@ To loop over a sequence in sorted order, use the sorted() function which returns
 >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 >>> for f in sorted(set(basket)):
 ...     print(f)
-...
 apple
 banana
 orange
@@ -1843,7 +1808,6 @@ It is sometimes tempting to change a list while you are looping over it; however
 >>> for value in raw_data:
 ...     if not math.isnan(value):
 ...         filtered_data.append(value)
-...
 >>> filtered_data
 [56.2, 51.7, 55.3, 52.5, 47.8]
 ```
@@ -2196,19 +2160,16 @@ aiffread.py
     aiffwrite.py
     auread.py
     auwrite.py
-    ...
 effects/                  Subpackage for sound effects
     __init__.py
     echo.py
     surround.py
     reverse.py
-    ...
 filters/                 Subpackage for filters
     __init__.py
     equalizer.py
     vocoder.py
     karaoke.py
-    ...
 ```
 
 When importing the package, Python searches through the directories on sys.path looking for the package subdirectory.
@@ -2380,7 +2341,6 @@ Passing an integer after the ':' will cause that field to be a minimum number of
 >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
 >>> for name, phone in table.items():
 ...     print(f'{name:10} ==> {phone:10d}')
-...
 Sjoerd       ==>        4127
 Jack         ==>        4098
 Dcab         ==>        7678
@@ -2456,7 +2416,6 @@ As an example, the following lines produce a tidily-aligned set of columns givin
 ```python
 >>> for x in range(1, 11):
 ...     print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
-...
 1   1    1
 2   4    8
 3   9    27
@@ -2486,7 +2445,6 @@ Here’s the same table of squares and cubes, formatted manually:
 ...     print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
 ...     # Note use of 'end' on previous line
 ...     print(repr(x*x*x).rjust(4))
-...
 1   1    1
 2   4    8
 3   9    27
@@ -2588,7 +2546,6 @@ f.readline() reads a single line from the file; a newline character (\n) is left
 
 >>> for line in f:
 ...     print(line, end='')
-...
 This is the first line of the file.
 Second line of the file
 ```
@@ -2827,7 +2784,6 @@ instantiate an exception first before raising it and add any attributes to it as
 ...     x, y = inst.args   # unpack args
 ...     print('x =', x)
 ...     print('y =', y)
-...
 <class 'Exception'>
 ('spam', 'eggs')
 ('spam', 'eggs')
@@ -2842,12 +2798,10 @@ Exception handlers don’t just handle exceptions if they occur immediately in t
 ```python
 >>> def this_fails():
 ...     x = 1/0
-...
 >>> try:
 ...     this_fails()
 ... except ZeroDivisionError as err:
 ...     print('Handling run-time error:', err)
-...
 Handling run-time error: division by zero
 ```
 
@@ -2879,7 +2833,6 @@ raise ValueError  # shorthand for 'raise ValueError()'
 ```python
 ...     print('An exception flew by!')
 ...     raise
-...
 An exception flew by!
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
@@ -2937,7 +2890,6 @@ The try statement has another optional clause which is intended to define clean-
 ...     raise KeyboardInterrupt
 ... finally:
 ...     print('Goodbye, world!')
-...
 Goodbye, world!
 KeyboardInterrupt
 Traceback (most recent call last):
@@ -2956,7 +2908,6 @@ A finally clause is always executed before leaving the try statement, whether an
 ...         print("result is", result)
 ...     finally:
 ...         print("executing finally clause")
-...
 >>> divide(2, 1)
 result is 2.0
 executing finally clause
@@ -3162,7 +3113,6 @@ Of course, the \_\_init\_\_() method may have arguments for greater flexibility.
 ...     def __init__(self, realpart, imagpart):
 ...         self.r = realpart
 ...         self.i = imagpart
-...
 >>> x = Complex(3.0, -4.5)
 >>> x.r, x.i
 (3.0, -4.5)
@@ -3502,7 +3452,6 @@ txt
 <__main__.Reverse object at 0x00A1DB50>
 >>> for char in rev:
 ...     print(char)
-...
 m
 a
 p
@@ -3520,7 +3469,6 @@ def reverse(data):
 python
 >>> for char in reverse('golf'):
 ...     print(char)
-...
 f
 l
 o
@@ -3707,7 +3655,6 @@ There are a number of modules for accessing the internet and processing internet
 >>> server.sendmail('soothsayer@example.org', 'jcaesar@example.org',
 ...    """To: jcaesar@example.org
 ...    From: soothsayer@example.org
-...
 ...    Beware the Ides of March.
 ...    """)
 >>> server.quit()
@@ -3842,7 +3789,6 @@ The pprint module offers more sophisticated control over printing both built-in 
 >>> import pprint
 >>> t = [[[['black', 'cyan'], 'white', ['green', 'red']].[['magenta',
 ...     'yellow'], 'blue']])
-...
 >>> pprint.pprint(t, width=30)
 [[[['black', 'cyan'],
     'white',
@@ -3858,7 +3804,6 @@ The textwrap module formats paragraphs of text to fit a given screen width:
 >>> doc = """The wrap() method is just like fill() except that it returns
 ... a list of strings instead of one big string with newlines to separate
 ... the wrapped lines."""
-...
 >>> print(textwrap.fill(doc, width=40))
 The wrap() method is just like fill()
 except that it returns a list of strings
@@ -3901,7 +3846,6 @@ The substitute() method raises a KeyError when a placeholder is not supplied in 
 >>> d = dict(item='unladen swallow')
 >>> t.substitute(d)
 Traceback (most recent call last):
-...
 KeyError: 'owner'
 >>> t.safe_substitute(d)
 'Return the unladen swallow to $owner.'
@@ -4038,7 +3982,6 @@ This approach works fine for most applications but occasionally there is a need 
 ...         self.value = value
 ...     def __repr__(self):
 ...         return str(self.value)
-...
 >>> a = A(10)                  # create a reference
 >>> d = weakref.WeakValueDictionary()
 >>> d['primary'] = a          # does not create a reference
@@ -4200,7 +4143,6 @@ Activating the virtual environment will change your shell’s prompt to show wha
 $ source ~/envs/tutorial-env/bin/activate
 (tutorial-env) $ python
 Python 3.5.1 (default, May 6 2016, 10:59:36)
-...
 >>> import sys
 >>> sys.path
 ['', '/usr/local/lib/python35.zip', ...,
@@ -4219,7 +4161,6 @@ gary              - Galactic astronomy and gravitational dynamics.
 novas             - The United States Naval Observatory NOVAS astronomy library
 astroobs          - Provides astronomy ephemeris to plan telescope observations
 PyAstronomy        - A collection of astronomy related tools for Python.
-...
 ```
 
 pip has a number of subcommands: “search”, “install”, “uninstall”, “freeze”, etc. (Consult the installingindex guide for complete documentation for pip.)
@@ -4302,11 +4243,8 @@ The requirements.txt can then be committed to version control and shipped as par
 ```txt
 (tutorial-env) $ pip install -r requirements.txt
 Collecting novas==3.1.1.3 (from -r requirements.txt (line 1))
-...
 Collecting numpy==1.9.2 (from -r requirements.txt (line 2))
-...
 Collecting requests==2.7.0 (from -r requirements.txt (line 3))
-...
 Installing collected packages: novas, numpy, requests
   Running setup.py install for novas
 Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0
@@ -4761,7 +4699,6 @@ The decorator syntax is merely syntactic sugar, the following two function defin
 
 ```python
 def f(...):
-    ...
 f = staticmethod(f)
 ```
 
@@ -4772,7 +4709,6 @@ f = staticmethod(f)
 ```python
 @staticmethod
 def f(...):
-    ...
 ```
 
 The same concept exists for classes, but is less commonly used there. See the documentation for function definitions and class definitions for more about decorators.
@@ -5044,7 +4980,6 @@ for piece in food:
 ...     class D:
 ...         def meth(self):
 ...             pass
-...
 >>> C.__qualname__
 'C'
 >>> C.D.__qualname__

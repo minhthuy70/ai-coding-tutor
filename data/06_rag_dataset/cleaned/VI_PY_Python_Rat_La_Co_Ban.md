@@ -1,4 +1,4 @@
-## PYTHON 1 CO BÁN NEW ....Rt là CO BÁN Bi Vō Duy Tun
+# PYTHON 1 CO BÁN NEW ....Rt là CO BÁN Bi Vō Duy Tun
 
 ## Giới thiệu
 
@@ -160,7 +160,7 @@ for iterating_var in sequence:
     statements(s)
 ```
 
-## Ví dụ:
+Ví dụ:
 
 ```python
 for letter in 'Python':      # First Example
@@ -195,7 +195,7 @@ while expression:
     statement(s)
 ```
 
-Ví dụ:
+## Ví dụ:
 
 ```python
 count = 0
@@ -239,7 +239,7 @@ def sum(a, b):
     return (a+b)
 ```
 
-Cách gọi hàm:
+## Cách gọi hàm:
 
 ```lisp
 sum(1, 2)
@@ -253,7 +253,7 @@ def plus(c, d = 10):
     return (c+d)
 ```
 
-## Nếu gọi hàm trên như sau:
+Nếu gọi hàm trên như sau:
 
 ```lisp
 plus(2)
@@ -328,9 +328,9 @@ count = len("Hello world")
 
 Có thể tìm và thay thế trong chuỗi bằng cách gọi phương
 
+```csv
 thức replace(search, replace[, max]) của một chuỗi. Ví dụ:
-
-```txt
+txt
 str = 'Hello world'
 newstr = str.replace('Hello', 'Bye')
 print newstr
@@ -413,7 +413,7 @@ print names[1]
 
 Để biết được số lượng phần tử của 1 List, có thể sử dụng hàm len(array) để lấy số lượng phần tử của mảng tham số truyền vào.
 
-2.7.1. Kiểm tra sự tồn tại của một phần tử
+## 2.7.1. Kiểm tra sự tồn tại của một phần tử
 
 ## 2.7.1.1. Kiểm tra theo Index
 
@@ -744,7 +744,9 @@ import mypack.mymodule1
 
 ## hoặc
 
+```python
 import mypack.mymodule1 as mymodule1
+```
 
 ## hoặc
 
@@ -762,7 +764,7 @@ Lập trình hướng đối tượng là một khái niệm không thể thiế
 
 ## 4.1. Khai báo một Class
 
-## Khai báo một class theo cú pháp sau:
+Khai báo một class theo cú pháp sau:
 
 ```python
 class myclass([parentclass]):
@@ -805,7 +807,7 @@ mydog.run()
 mydog.go()
 ```
 
-## Sau khi thực thi sẽ cho ra kết quả:
+Sau khi thực thi sẽ cho ra kết quả:
 
 ```txt
 My Name is
@@ -977,9 +979,9 @@ os.chmod(path, mode) : CHMOD một đường dẫn
 
 os.chown(path, uid, gid) : CHOWN một đường dẫn
 
+os.makedirs(path[, mode]) : tạo đường dẫn (có recursive)
+
 ```txt
-- os.makedirs(path[, mode]): tạo đường dẫn (có recursive)
-txt
 - os.removedirs(path): xóa một đường dẫn (có recursive)
 ```
 
@@ -991,9 +993,7 @@ Module os.path hỗ trợ các phương thức giúp thao tác nhanh chóng và 
 
 os.path.exists(path) : kiểm tra 1 đường dẫn có tồn tại hay không
 
-```python
-- os.path.getsize(path): lây file size (byte)
-```
+os.path.getsize(path) : lấy file size (byte)
 
 os.path.isfile(path) : kiểm tra xem có phải là một file thông thường
 
@@ -1039,7 +1039,6 @@ Sau khi mở file hình thành công thì có thể thao tác trên đối tư�
 Từ đối tượng Image có thể lưu file xuống máy tính bằng phương thức save(path, type) . Ví dụ:
 
 ```txt
-...
 im.save('photo_new.jpg', 'JPEG')
 ```
 
@@ -1079,12 +1078,9 @@ response = urllib2.urlopen('https://api.github.com/users/voduytuan/repos')
 data = json.load(response)
 
 print data
-csv
-Ví dụ trên sẽ truy vấn đường dẫn
-https://api.github.com/users/voduytuan/repos để lấy danh
-sách Repository trên Github của mình dưới định dạng
-JSON. Sau đó, sẽ được
 ```
+
+Ví dụ trên sẽ truy vấn đường dẫn [https://api.github.com/users/voduytuan/repos](https://api.github.com/users/voduytuan/repos) để lấy danh sách Repository trên Github của mình dưới định dạng JSON. Sau đó, sẽ được
 
 ## 7.2. Parsing JSON Data
 
@@ -1198,7 +1194,6 @@ x.price.string
 Tương tự như xml , BeautifulSoup có thể parsing nội dung HTML thông qua hàm khởi tạo và chọn html ở tham số thứ 2.
 
 ```txt
-...
 soup = Soup(websitehtml, 'html')
 ```
 
@@ -1268,7 +1263,6 @@ if db:
 Mặc định kết nối đến MySQL server là charset latin nên khi lấy dữ liệu unicode thì hiển thị Tiếng Việt không đúng, bạn cần phải chọn charset là utf8 khi tạo kết nối. Cú pháp như sau:
 
 ```python
-...
 db = MySQLdb.connect(host = 'localhost', user = 'root', passwd = 'root', db = 'test', charset = 'utf8')
 ```
 
@@ -1290,14 +1284,13 @@ Ví dụ dữ liệu biến myusers là: ((1, 'John'), (2, 'Doe'))
 
 Mặc định, cursor sẽ trả về mỗi dòng dữ liệu từ MySQL theo kiểu tuple , tức là không có key. Nếu bạn muốn trả về
 
-kiểu Dictionary thì có thể khai báo:
-
 ```python
+kiểu Dictionary thì có thể khai báo:
+python
 import MySQLdb
 
 db = MySQLdb.connect(host = 'localhost', user = 'root', passwd = 'root', db = 'mysql')
 cursor = db.cursor(MySQLdb.cursors.DictCursor)
-...
 ```
 
 ## 9.5. Fetch dữ liệu
@@ -1342,10 +1335,8 @@ db.close()
 Prepared statement là kỹ thuật tham số hóa các dữ liệu truyền vào câu truy vấn thay vì nối chuỗi trực tiếp để xây dựng một chuỗi truy vấn dài. Kỹ thuật này được áp dụng nhiều và giúp tăng hiệu quả và tính bảo mật của câu truy vấn. Ví dụ:
 
 ```txt
-...
 cur.execute("UPDATE Writers SET Name = %s WHERE Id
 = %s", ("John", "4"))
-...
 ```
 
 Mỗi tham số truy vấn sẽ được thay thế bằng %s và phương thức execute() sẽ có tham số thứ 2 là một Tuple có giá trị
@@ -1648,9 +1639,6 @@ from sender import Mail, Message, Attachment
 
 mail = Main(...)
 msg = Message(..)
-
-...
-
 # Open attached file and create Attachment object
 with open("photo01.jpg") as f:
     file01 = Attachment("photo01.jpg", "image/jpeg"

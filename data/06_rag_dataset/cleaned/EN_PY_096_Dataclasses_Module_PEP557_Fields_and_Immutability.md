@@ -85,17 +85,11 @@ equivalent:
 
    @dataclass
    class C:
-       ...
-
    @dataclass()
    class C:
-       ...
-
    @dataclass(init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False,
               match_args=True, kw_only=False, slots=False, weakref_slot=False)
    class C:
-       ...
-
 The parameters to "@dataclass" are:
 
 * *init*: If true (the default), a "__init__()" method will be

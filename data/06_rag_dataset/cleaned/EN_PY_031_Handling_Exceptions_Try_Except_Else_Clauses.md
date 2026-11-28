@@ -26,8 +26,6 @@ that a user-generated interruption is signalled by raising the
 ...         break
 ...     except ValueError:
 ...         print("Oops!  That was no valid number.  Try again...")
-...
-
 ```
 
 The "try" statement works as follows.
@@ -116,7 +114,6 @@ explicitly accessing ".args".
 ...     x, y = inst.args     # unpack args
 ...     print('x =', x)
 ...     print('y =', y)
-...
 <class 'Exception'>
 ('spam', 'eggs')
 ('spam', 'eggs')
@@ -194,12 +191,10 @@ example:
 ```python
 >>> def this_fails():
 ...     x = 1/0
-...
 >>> try:
 ...     this_fails()
 ... except ZeroDivisionError as err:
 ...     print('Handling run-time error:', err)
-...
 Handling run-time error: division by zero
 
 ```

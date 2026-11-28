@@ -17,7 +17,6 @@ x.price.string
 Tương tự như xml , BeautifulSoup có thể parsing nội dung
 HTML thông qua hàm khởi tạo và chọn html ở tham số
 thứ 2.
-...
 soup = Soup(websitehtml, 'html')
 
 Chương 9. Kết nối MySQL
@@ -81,9 +80,6 @@ Mặc định kết nối đến MySQL server là charset latin nên
 khi lấy dữ liệu unicode thì hiển thị Tiếng Việt không đúng,
 bạn cần phải chọn charset là utf8 khi tạo kết nối. Cú pháp
 như sau:
-
-...
-
 db = MySQLdb.connect(host = 'localhost', user = 'ro
 ot', passwd = 'root', db = 'test', charset = 'utf8'
 )
@@ -107,7 +103,6 @@ import MySQLdb
 db = MySQLdb.connect(host = 'localhost', user = 'ro
 ot', passwd = 'root', db = 'mysql')
 cursor = db.cursor(MySQLdb.cursors.DictCursor)
-...
 9.5. Fetch dữ liệu
 Có một số cách để fetch dữ liệu thông dụng từ cursor sau
 khi đã exectute(sql) là fetchone() và fetchall() .
@@ -147,9 +142,7 @@ truyền vào câu truy vấn thay vì nối chuỗi trực tiếp để xây
 dựng một chuỗi truy vấn dài. Kỹ thuật này được áp dụng
 nhiều và giúp tăng hiệu quả và tính bảo mật của câu truy
 vấn. Ví dụ:
-...
 cur.execute("UPDATE Writers SET Name = %s WHERE Id
 = %s", ("John", "4"))
-...
 Mỗi tham số truy vấn sẽ được thay thế bằng %s và phương
 thức execute() sẽ có tham số thứ 2 là một Tuple có giá trị

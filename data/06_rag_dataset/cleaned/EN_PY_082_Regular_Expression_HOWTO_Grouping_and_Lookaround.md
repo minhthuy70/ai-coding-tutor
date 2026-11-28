@@ -116,7 +116,6 @@ object instances as an *iterator*:
 <callable_iterator object at 0x...>
 >>> for match in iterator:
 ...     print(match.span())
-...
 (0, 2)
 (22, 24)
 (29, 31)

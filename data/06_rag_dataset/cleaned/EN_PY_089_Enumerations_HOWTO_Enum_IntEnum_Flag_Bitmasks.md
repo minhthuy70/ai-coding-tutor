@@ -216,7 +216,6 @@ And a function to display the chores for a given day:
 ...     for chore, days in chores.items():
 ...         if day in days:
 ...             print(chore)
-...
 >>> show_chores(chores_for_ethan, Weekday.SATURDAY)
 answer SO questions
 
@@ -280,9 +279,7 @@ Having two enum members with the same name is invalid:
 >>> class Shape(Enum):
 ...     SQUARE = 2
 ...     SQUARE = 3
-...
 Traceback (most recent call last):
-...
 TypeError: 'SQUARE' already defined as 2
 
 ```
@@ -301,7 +298,6 @@ member "A":
 ...     DIAMOND = 1
 ...     CIRCLE = 3
 ...     ALIAS_FOR_SQUARE = 2
-...
 >>> Shape.SQUARE
 <Shape.SQUARE: 2>
 >>> Shape.ALIAS_FOR_SQUARE
@@ -332,9 +328,7 @@ decorator:
 ...     TWO = 2
 ...     THREE = 3
 ...     FOUR = 3
-...
 Traceback (most recent call last):
-...
 ValueError: duplicate values found in <enum 'Mistake'>: FOUR -> THREE
 
 ```
@@ -350,7 +344,6 @@ If the exact value is unimportant you can use "auto":
 ...     RED = auto()
 ...     BLUE = auto()
 ...     GREEN = auto()
-...
 >>> [member.value for member in Color]
 [1, 2, 3]
 
@@ -364,13 +357,11 @@ overridden:
 ...     @staticmethod
 ...     def _generate_next_value_(name, start, count, last_values):
 ...         return name
-...
 >>> class Ordinal(AutoName):
 ...     NORTH = auto()
 ...     SOUTH = auto()
 ...     EAST = auto()
 ...     WEST = auto()
-...
 >>> [member.value for member in Ordinal]
 ['NORTH', 'SOUTH', 'EAST', 'WEST']
 
@@ -404,7 +395,6 @@ including the aliases:
 ```python
 >>> for name, member in Shape.__members__.items():
 ...     name, member
-...
 ('SQUARE', <Shape.SQUARE: 2>)
 ('DIAMOND', <Shape.DIAMOND: 1>)
 ('CIRCLE', <Shape.CIRCLE: 3>)
@@ -497,20 +487,15 @@ methods as usual.  If we have this enumeration:
 >>> class Mood(Enum):
 ...     FUNKY = 1
 ...     HAPPY = 3
-...
 ...     def describe(self):
 ...         # self is the member here
 ...         return self.name, self.value
-...
 ...     def __str__(self):
 ...         return 'my custom str! {0}'.format(self.value)
-...
 ...     @classmethod
 ...     def favorite_mood(cls):
 ...         # cls here is the enumeration
 ...         return cls.HAPPY
-...
-
 ```
 
 Then:
@@ -563,9 +548,7 @@ does not define any members.  So this is forbidden:
 ```python
 >>> class MoreColor(Color):
 ...     PINK = 17
-...
 Traceback (most recent call last):
-...
 TypeError: <enum 'MoreColor'> cannot extend <enum 'Color'>
 
 ```
@@ -576,12 +559,9 @@ But this is allowed:
 >>> class Foo(Enum):
 ...     def some_behavior(self):
 ...         pass
-...
 >>> class Bar(Foo):
 ...     HAPPY = 1
 ...     SAD = 2
-...
-
 ```
 
 Allowing subclassing of enums that define members would lead to a
@@ -602,11 +582,9 @@ inherited class’ name.  For example:
 ...     size: str
 ...     legs: int
 ...     tail: bool = field(repr=False, default=True)
-...
 >>> class Creature(CreatureDataMixin, Enum):
 ...     BEETLE = 'small', 6
 ...     DOG = 'medium', 4
-...
 >>> Creature.DOG
 <Creature.DOG: size='medium', legs=4>
 

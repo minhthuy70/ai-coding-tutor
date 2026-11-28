@@ -62,19 +62,13 @@ their corresponding code points:
    0061    'a'; LATIN SMALL LETTER A
    0062    'b'; LATIN SMALL LETTER B
    0063    'c'; LATIN SMALL LETTER C
-   ...
    007B    '{'; LEFT CURLY BRACKET
-   ...
    2167    'Ⅷ'; ROMAN NUMERAL EIGHT
    2168    'Ⅸ'; ROMAN NUMERAL NINE
-   ...
    265E    '♞'; BLACK CHESS KNIGHT
    265F    '♟'; BLACK CHESS PAWN
-   ...
    1F600   '😀'; GRINNING FACE
    1F609   '😉'; WINKING FACE
-   ...
-
 Strictly, these definitions imply that it’s meaningless to say ‘this
 is character "U+265E"’.  "U+265E" is a code point, which represents
 some particular character; in this case, it represents the character
@@ -223,7 +217,6 @@ simply include a Unicode character in a string literal:
 ```python
 try:
     with open('/tmp/input.txt', 'r') as f:
-        ...
 except OSError:
     # 'File not found' error message.
     print("Fichier non trouvé")
@@ -271,7 +264,6 @@ examples show the differences:
 ```python
 >>> b'\x80abc'.decode("utf-8", "strict")
 Traceback (most recent call last):
-    ...
 UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 0:
   invalid start byte
 >>> b'\x80abc'.decode("utf-8", "replace")
@@ -326,7 +318,6 @@ The following example shows the different results:
 b'\xea\x80\x80abcd\xde\xb4'
 >>> u.encode('ascii')
 Traceback (most recent call last):
-    ...
 UnicodeEncodeError: 'ascii' codec can't encode character '\ua000' in
   position 0: ordinal not in range(128)
 >>> u.encode('ascii', 'ignore')

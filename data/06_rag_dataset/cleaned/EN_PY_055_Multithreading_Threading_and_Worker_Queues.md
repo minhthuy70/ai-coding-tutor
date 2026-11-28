@@ -39,7 +39,6 @@ structure:
 >>> import pprint
 >>> t = [[[['black', 'cyan'], 'white', ['green', 'red']], [['magenta',
 ...     'yellow'], 'blue']]]
-...
 >>> pprint.pprint(t, width=30)
 [[[['black', 'cyan'],
    'white',
@@ -57,7 +56,6 @@ width:
 >>> doc = """The wrap() method is just like fill() except that it returns
 ... a list of strings instead of one big string with newlines to separate
 ... the wrapped lines."""
-...
 >>> print(textwrap.fill(doc, width=40))
 The wrap() method is just like fill()
 except that it returns a list of strings
@@ -118,7 +116,6 @@ placeholders unchanged if data is missing:
 >>> d = dict(item='unladen swallow')
 >>> t.substitute(d)
 Traceback (most recent call last):
-  ...
 KeyError: 'owner'
 >>> t.safe_substitute(d)
 'Return the unladen swallow to $owner.'
@@ -135,7 +132,6 @@ number, or file format:
 >>> photofiles = ['img_1074.jpg', 'img_1076.jpg', 'img_1077.jpg']
 >>> class BatchRename(Template):
 ...     delimiter = '%'
-...
 >>> fmt = input('Enter rename style (%d-date %n-seqnum %f-format):  ')
 Enter rename style (%d-date %n-seqnum %f-format):  Ashley_%n%f
 

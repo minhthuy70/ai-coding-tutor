@@ -265,7 +265,6 @@ and generator functions:
 ...                 value = e
 ...     finally:
 ...         print("Don't forget to clean up when 'close()' is called.")
-...
 >>> generator = echo(1)
 >>> print(next(generator))
 Execution starts when 'next()' is called for the first time.

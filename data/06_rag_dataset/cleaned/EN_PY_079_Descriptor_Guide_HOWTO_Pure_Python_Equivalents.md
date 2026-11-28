@@ -101,21 +101,17 @@ The descriptors prevent invalid instances from being created:
 ```python
 >>> Component('Widget', 'metal', 5)      # Blocked: 'Widget' is not all uppercase
 Traceback (most recent call last):
-    ...
 ValueError: Expected <method 'isupper' of 'str' objects> to be true for 'Widget'
 
 >>> Component('WIDGET', 'metle', 5)      # Blocked: 'metle' is misspelled
 Traceback (most recent call last):
-    ...
 ValueError: Expected 'metle' to be one of {'metal', 'plastic', 'wood'}
 
 >>> Component('WIDGET', 'metal', -5)     # Blocked: -5 is negative
 Traceback (most recent call last):
-    ...
 ValueError: Expected -5 to be at least 0
 >>> Component('WIDGET', 'metal', 'V')    # Blocked: 'V' isn't a number
 Traceback (most recent call last):
-    ...
 TypeError: Expected 'V' to be an int or float
 
 >>> c = Component('WIDGET', 'metal', 5)  # Allowed:  The inputs are valid

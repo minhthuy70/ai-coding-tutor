@@ -247,7 +247,6 @@ For example:
 >>> cnt = Counter()
 >>> for word in ['red', 'blue', 'red', 'green', 'blue', 'blue']:
 ...     cnt[word] += 1
-...
 >>> cnt
 Counter({'blue': 3, 'red': 2, 'green': 1})
 
@@ -421,11 +420,13 @@ False
 Unary addition and subtraction are shortcuts for adding an empty
 counter or subtracting from an empty counter.
 
+```python
 >>> c = Counter(a=2, b=-4)
 >>> +c
 Counter({'a': 2})
 >>> -c
 Counter({'b': 4})
+```
 
 Added in version 3.3: Added support for unary plus, unary minus, and
 in-place multiset operations.

@@ -1,0 +1,33 @@
+## NỀN TẢNG CHẤM BÀI HHackerRank
+
+## NHỮNG KẾT QUẢ CHẤM BÀI
+
+| Kết quả | Ý nghĩa | Cách xử lý |
+| --- | --- | --- |
+| Wrong Answer | Kết quả của bạn bị sai | Xem lại code của mình bị sai trong những trường hợp đặc biệt nào |
+| Terminated due to timeout | Chạy quá thời gian | Cải thiện thuật toán để code chạy nhanh hơn |
+| Compilation error | Biên dịch code bị lỗi, thường là do lỗi cú pháp hoặc bạn chưa chọn ngôn ngữ là C++ | Hãy chạy thử trên máy của bạn, nếu nó đúng test mẫu thì hãy submit |
+
+## NHỮNG KẾT QUẢ CHẤM BÀI
+
+| Kết quả | Ý nghĩa | Cách xử lý |
+| --- | --- | --- |
+| Segmentation Fault | Bạn truy cập vào chỉ số của mảng không hợp lệ | Hãy đảm bảo bạn truy cập vào một chỉ số mảng hợp lệ |
+| Accepted | Đúng | Code của bạn đã đúng |
+| Runtime Error | Code của bạn sinh ra lỗi trong quá trình chạy, ví dụ : chia cho số 0 | Tìm trường hợp đặc biệt dẫn tới code của bạn bị sai khi thực thi |
+
+2. Mỗi bài tập sẽ có nhiều trường hợp đầu vào khác nhau Mỗi bài tập đều có nhiều trường hợp (test case), code của bạn có thể đúng trong trường hợp đơn giản nhưng sai trong trường hợp khác, vì thế không có nghĩa bạn code ở máy của bạn đúng là bạn nộp bài cũng sẽ đúng. Code của bạn phải đúng 100% các test case thì mới được coi là đúng, sai ít nhất 1 test case cũng được coi là code sai.
+
+3.Khi đọc xong yêu cầu, hãy chú ý vào giới hạn dữ liệu của biến để chọn kiểu dữ liệu cho phù hợp. Giới hạn của biến có thể biến 1 bài toán đơn giản thành phức tạp chỉ bằng cách làm cho biến có dải giá trị lớn hơn.
+
+4. Hãy chú ý yêu cầu về input ( đầu vào) và output ( đầu ra). Input chính là những gì bạn nhập từ bàn phím và output chính là những gì bạn in ra màn hình. Nếu code của bạn có input và output giống với test mẫu đề bài cho thì hãy nộp bài.
+
+Không in thừa các câu dẫn, ví dụ như : “Nhập a”, “Kết quả là”, “Dữ liệu không hợp lệ”, các câu dẫn này sẽ làm input và output của các bạn không giống như đề bài yêu cầu và sẽ bị máy chấm sai.
+
+Chú ý kết quả in theo mẫu như thế nào thì hãy đảm bảo bạn in ra như vậy, ví dụ họ bắt in ra 2 số trên cùng 1 dòng mà bạn in trên 2 dòng thì sẽ bị đánh sai. Họ yêu cầu bạn in ra 2 số đằng sau dấu thập phân mà bạn in ra 3 số cũng bị đánh sai, họ phân cách nhau giữa 2 số bằng dấu phẩy mà bạn dùng dấu cách thì bị sai
+
+Nhìn chung vì nó là máy, nên bạn muốn đúng hãy đảm bảo sự chính xác tuyệt đối.
+
+## 5. Lập trình sử dụng online judge để chấm bài sẽ làm các bạn có tư duy tốt hơn, sự chính xác cao. Thời gian đầu sẽ hơi ức chế và dễ nản nhưng về lâu dài thì bạn sẽ không còn ngây thơ như lúc đầu nữa.
+
+## KẾT THÚC

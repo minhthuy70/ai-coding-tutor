@@ -25,7 +25,6 @@ For example (no pun intended):
 >>> words = ['cat', 'window', 'defenestrate']
 >>> for w in words:
 ...     print(w, len(w))
-...
 cat 3
 window 6
 defenestrate 12
@@ -65,7 +64,6 @@ progressions:
 ```python
 >>> for i in range(5):
 ...     print(i)
-...
 0
 1
 2
@@ -99,7 +97,6 @@ and "len()" as follows:
 >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
 >>> for i in range(len(a)):
 ...     print(i, a[i])
-...
 0 Mary
 1 had
 2 a
