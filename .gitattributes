@@ -4,3 +4,4 @@
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.pickle filter=lfs diff=lfs merge=lfs -text
 *.tar.gz filter=lfs diff=lfs merge=lfs -text
+data/06_rag_dataset/chunks/all_chunks.json filter=lfs diff=lfs merge=lfs -text
