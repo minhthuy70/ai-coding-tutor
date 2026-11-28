@@ -1,0 +1,208 @@
+<!-- page: 1 -->
+
+| 7. Output cua chuong trinh duoi day la gi? |
+| --- |
+| def say(message, times = 1): print(message * times)say('Hello')say('World', 5) |
+| (a) Hello WorldWorldWorldWorld(b) Hello |
+| (c) Hello World,World,World,World,World(d) Hello HelloHelloHelloHello |
+
+| print(100, 200, "hello", "world", sep=':) |
+| --- |
+
+# ĐỀ KIỂM TRA GIỮA HỌC KỲ Lập trình nâng cao (Python) Đề 4
+
+## Phần A. (3đ)
+
+**1. Khẳng định nào sau đây là đúng về Python?**
+
+(a) Python là một ngôn ngữ thông dịch cấp cao
+
+(b) Python là ngôn ngữ lập trình hướng đối tượng
+
+(c) Python là ngôn ngữ mã nguồn mở
+
+(d) Tất cả các đáp án đều đúng
+
+**2. Câu lệnh nào sau đây in ra kiểu dữ liệu của biến x?**
+
+(a) print(type(x))
+
+(b) print(type[x])
+
+(c) print(typeof[x])
+
+(d) print(typeof(x))
+
+## 3. Kết quả của lệnh sau là:
+
+(b) 100200helloworld
+
+(c) 100 200 hello world
+
+**4. Kiểu dữ liệu nào sau đây là set (tập hợp)?**
+
+(a) ("apple", "banana", "cherry")
+
+print(str.count('wo',-20))
+
+(a) 5
+
+(b) 2
+
+(c) 4
+
+(d) 3
+
+**6. Cho một list L như sau: L = [1, 2, [[3]], None, (), True, {}]. Chiều dài của L (dùng hàm len(L)) là:**
+
+(a) 8
+
+(b) 7
+
+(c) 6
+
+(d) 3
+
+## 7. Output của chương trình dưới đây là gì?
+
+<!-- page: 2 -->
+
+```python
+8. Theo dõi đoạn code dưới đây và chọn đáp án đúng
+nhất t = (1, 2, 3)
+t[0] = 42
+print(t[0])
+(a) 1
+(b) 42
+(c) Có xuất hiện lỗi Error
+(d) 0
+9. Cho biết kết quả chương trình sau:
+class Foo:
+    def printLine(self, line='Python'):
+        print(line)
+o1 = Foo()
+o1.printLine('Java')
+(a) Python
+(b) line
+(c) Java
+(d) Java Python
+```
+
+```python
+10. Output của chương trình dưới dây là
+gì? def maximum(x, y):
+    if x > y:
+        return x
+    elif x == y:
+        return 'Các số bằng
+    nhau' else:
+        return y
+print(maximum(20, 30.3))
+(a) 20
+(b) 30.3
+(c) Các số bằng nhau
+(d) None
+11. Đâu là giá trị của colors[2]:
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+(a) orange
+(b) indigo
+(c) blue
+(d) yellow
+12. Qui tắc nào sau đây là đúng khi đặt tên cho biến trong Python?
+(a) Tên biến có thể bắt đầu bằng một chữ số
+(b) Tên biến có thể chứa dấu gạch dưới "�"
+(c) Tên biến có thể có các ký hiệu đặc biệt như !, @, #, \$, %,...
+(d) Tên biến có thể trùng với các từ khóa (keyword)
+13. Lệnh nào sau đây dùng để tạo tập hợp rỗng?
+(a) S = set()
+(b) S={ }
+(c) S=[]
+(d) S=()
+```
+
+<!-- page: 3 -->
+
+```python
+14. Kết quả nào là output của đoạn code dưới
+dây? def myfunc():
+    try:
+        print('Monday')
+    finally:
+        print('Tuesday')
+myfunc()
+(a) Tuesday
+(b) Monday Tuesday
+(c) Tuesday Monday
+(d) Monday
+15. Cho biết kết quả chương trình sau:
+class A:
+    def __str__(self):
+        return "A"
+class B(A):
+    def __init__(self):
+        super().__init__()
+class C(B):
+    def __init__(self):
+        super().__init__()
+def main():
+    b = B()
+    a = A()
+    c = C()
+    print(a, b, c)
+main()
+(a) B B B
+(b) A B C
+(c) C B A
+(d) A A A
+Phần B. (7d)
+Câu 1 (1d)
+Cho biết kết quả khi thực hiện các lệnh sau đây:
+    def myfunc(n):
+        M = list(range(0,n))
+        L = M
+        print(M)
+        M.insert(1,10)
+        print(L)
+        T = M[:2] + [20,0]
+        print(T)
+        return [L, M, T]
+    print(myfunc(3))
+```
+
+## Câu 2 (1đ)
+
+Nhập vào một chuỗi, đếm số lượng chữ cái in hoa, chữ cái in thường.
+
+<!-- page: 4 -->
+
+**Câu 3 (3đ)** Cho một list chứa các dictionary (mỗi dictionary chứa 3 thành phần (Tên Khoa, số lượng sinh viên, năm thành lập), trong đó Tên Khoa là một chuỗi các chữ cái in hoa, số lượng sinh viên là một số nguyên dương, năm thành lập là dạng chuỗi).
+
+\# Ví dụ: input list như sau:
+
+L = [{ ‘ten’: 'CNTT', ‘soluong’: 700, ‘nam’: '2012'), { ‘ten’: 'LY', ‘soluong’: 300, ‘nam’: '2008'), { ‘ten’:
+
+'HOA', ‘soluong’: 200, ‘nam’: '2010'), { ‘ten’: 'TOAN', ‘soluong’: 500, ‘nam’: '2000')] a) Viết chương trình tạo ra một list chứa số lượng sinh viên của tất cả các Khoa trong list đã cho và được sắp xếp theo thứ tự tăng dần.
+
+#Ví dụ: output như sau: [200, 300, 500, 700]
+
+b) Viết chương trình tìm tên Khoa có thời gian thành lập lâu nhất tính đến nay.
+
+#Ví dụ: output là TOAN
+
+c) Viết chương trình tìm các Khoa có số lượng sinh viên lớn hơn 200. In kết quả các Khoa tìm được ra màn hình theo thứ tự tăng dần theo từ điển.
+
+#Ví dụ: output là CNTT, LY, TOAN
+
+## Câu 4 (2đ)
+
+Viết một class Circle bao gồm thuộc tính và phương thức sau:
+
+\+ Thuộc tính: bán kính r (số thực)
+
+\+ Viết phương thức khởi tạo \_\_init\_
+
+\+ Viết phương thức nhap() cho phép nhập vào bán kính của Circle.
+
+\+ Viết phương thức tính chu vi.
+
+\+ Viết phương thức tính diện tích.

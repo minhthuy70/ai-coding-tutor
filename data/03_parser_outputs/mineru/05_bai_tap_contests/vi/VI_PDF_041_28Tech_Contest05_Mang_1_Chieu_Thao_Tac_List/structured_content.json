@@ -1,0 +1,1932 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.259,
+            0.087,
+            0.686,
+            0.189
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 1. Đếm chẩn lẻ, tổng chẩn lẻ"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.254,
+            0.211,
+            0.739,
+            0.935
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho măng số nguyên A[] gồm N phần tử, nhiệm vụ của bạn là đếm xem trong măng có bao nhiêu số chẩn, bao nhieu số lẻ, tổng các phần tử là số chẩn, tổng các phần tử là số lẻ.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\n\nConstraints\n\n1<=N<=1000; -10^3<=A[i]<=10^3;\n\nOutput Format\n\nDòng đầu tiên in ra số lượng số chẩn. Dòng thứ 2 in ra số lượng số lẻ. Dòng thứ 3 in ra tổng các số chẩn. Dòng thứ 4 in ra tổng các số lẻ.\n\nSample Input 0\n\n6\n-711 327 372 779 451 -864\n\nSample Output 0\n\n2\n4\n-492\n846\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.298,
+            0.079,
+            0.643,
+            0.167
+          ],
+          "level": 2,
+          "content": "[Măng 1 chiều cơ bản]. Bài 2. Trung bình cộng nguyên tố"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.293,
+            0.184,
+            0.703,
+            0.933
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho măng số nguyên A[] gồm N phần tử, nhiệm vụ của ban là tỉnh trung bình cộng của các số là số nguyên tố trong dãy. Dữ liệu đảm bảo có ít nhất 1 phần tử là số nguyên tố trong dãy.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vai khoảng trắng\n\nConstraints\n\n1<=N<=1000; -10^3<=A[i]<=10^3;\n\nOutput Format\n\nIn ra đáp án của bài toàn lấy 3 số sau dấu phấy.\n\nSample Input 0\n\n5\n-911 234 151 347 231\n\nSample Output 0\n\n249.000\n\nSample Input 1\n\n3\n1 2 5\n\nSample Output 1\n\n3.500\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.223,
+            0.077,
+            0.721,
+            0.136
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 3. Số nhỏ nhất"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.217,
+            0.162,
+            0.778,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng số nguyên A[] gồm N phần tử, hây đếm xem trong màng của bạn có bao nhiêu số có cùng giá trị nhỏ nhất. Ví dụ màng A = {1, 2, 1, 3, 5} thì số nhỏ nhất trong màng là 1 xuất hiện 2 lần.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\n\nConstraints\n\n1<=N<=1000; -10^3<=A[i]<=10^3;\n\nOutput Format\n\nIn ra đáp án của bài toán\n\nSample Input 0\n\n5\n-854 600 222 472 207\n\nSample Output 0\n\n1\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.257,
+            0.073,
+            0.655,
+            0.173
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 4. Lớn hơn, nhỏ hơn"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.247,
+            0.195,
+            0.752,
+            0.971
+          ],
+          "sub_type": "code",
+          "content": "```csv\nProblem\tSubmissions\tDiscoussions\n\nCho măng số nguyên A[] gồm N phần tử và số nguyên X, hãy đếm xem trong măng có bao nhiêu số lớn hơn X và bao nhiêu số nhỏ hơn X.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng; Dòng thứ 3 là số nguyên X\n\nConstraints\n\n1<=N<=1000; -10^3<=A[I], X<=10^3;\n\nOutput Format\n\nDòng 1 in ra các số nhỏ hơn X, dòng 2 in ra các số lớn hơn X\n\nSample Input 0\n\n5\n-798 183 434 850 555\n135\n\nSample Output 0\n\n1\n4\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.244,
+            0.163,
+            0.739,
+            0.931
+          ],
+          "sub_type": "code",
+          "content": "```csv\nProblem\tSubmissions\tDiscussions\n\nCho màng số nguyên A[] gồm N phần tử, nhiệm vụ của bạn là in ra các phần tử là số chẩn ở chỉ số chẩn, nếu màng không tồn tại phần tử như vậy thi în ra \"NONE\".\nInput Format\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng;\nConstraints\n1<=N<=1000; -10^3<=A[i]<=10^3;\nOutput Format\nIn ra các số cách nhau một khoảng trắng hoặc in ra NONE nếu không tìm thấy số thỏa mặn điều kiện của đầu bài.\nSample Input 0\n5\n-971 107 458 222 200\nSample Output 0\n458 200\nExplanation 0\nSố 458 là số chẩn và ở chỉ số 2, số 200 là số chẩn ở ở chỉ số 4\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.25,
+            0.083,
+            0.668,
+            0.137
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 5. In phần tử"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.24,
+            0.079,
+            0.669,
+            0.137
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 6. Cặp số 1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.232,
+            0.157,
+            0.772,
+            0.944
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng số nguyên A[] gồm N phần tử, hây đếm xem trong màng A[] tồn tại bao nhiêu cặp số A[i]. A[j] với i khác j sao cho tổng của 2 phần tử này bằng số K cho trước.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vải khoảng trắng; Dòng thứ 3 là số nguyên K\n\nConstraints\n\n1<=N<=1000; 0<=A[i], X<=10^3;\n\nOutput Format\n\nIn ra số lượng cặp thỏa mãn\n\nSample Input 0\n\n5\n1 2 3 1 2\n3\n\nSample Output 0\n\n4\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.238,
+            0.095,
+            0.699,
+            0.159
+          ],
+          "level": 2,
+          "content": "[Măng 1 chiều cơ bản]. Bài 7. Cặp số 2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.232,
+            0.179,
+            0.781,
+            0.923
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscoussions\n\nCho màng số nguyên A[] gồm N phần tử, hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử trong màng.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vải khoảng trăng;\n\nConstraints\n\n1<=N<=1000; 0<=A[i], X<=10^3;\n\nOutput Format\n\nIn ra độ chênh lệch nhỏ nhất giữa 2 phần tử bất kì trong màng\n\nSample Input 0\n\nB\n69 96 93 27 84 32 78 56\n\nSample Output 0\n\n3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.272,
+            0.193,
+            0.725,
+            0.939
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng số nguyên A[] gồm N phần tử, hấy liệt kê các giá trị khác nhau trong mảng theo thứ tự xuất hiện,\nmỗi giá trị chỉ liệt kê 1 lần. Ô thời điểm hiện tại các bạn có thể for trâu để giải bài này, sau này sẽ dùng cách tối\nưu hơn.\n\nGọi ý : Duyệt qua từng chỉ số i của mảng, nếu kiểm tra được đầy là giá trị đầu tiên mà bạn gặp thì sẽ in ra giá\ntrị này, tức là trước đó trong đoạn từ 0 tới chỉ số i - 1 ko có giá trị nào giống A[i], ví dụ mảng A = {1, 1, 3, 1, 5, 1,\n8}, khi bạn xét số 5 bạn sẽ ra nó vì trước nó ko có giá trị nào giống nó cả. Để mà kiểm tra có in ra giá trị A[i] hay\nkhông bạn làm 1 vòng for duyệt từ chỉ số 0 tới chỉ số i - 1 và kiểm tra xem có giá trị nào bằng với A[i] hay ko,\nnếu ko có thì hấy in ra, có thể kiểm tra bằng cách sử dụng 1 biến đánh dấu.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng;\n\nConstraints\n\n1<=N<=1000; 0<=A[i], X<=10^3;\n\nOutput Format\n\nIn ra các giá trị khác nhau theo thứ tự xuất hiện, mỗi giá trị chỉ liệt kê 1 lần.\n\nSample Input 0\n\n9\n1 2 3 4 1 2 3 4 5\n\nSample Output 0\n\n1 2 3 4 5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.279,
+            0.081,
+            0.65,
+            0.174
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 8. Liệt kê các giá trị khác nhau"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.265,
+            0.019,
+            0.653,
+            0.055
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 9. Tần suất"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.259,
+            0.063,
+            0.74,
+            0.99
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\nCho mảng số nguyên A[] gồm N phần tử, hảy liệt kê các giá trị xuất hiện trong máng kèm theo tần suất tương ứng, mỗi giá trị chỉ liệt kê một lần theo thứ tự xuất hiện.\nGọi ý : Xét từng chí số i trong máng, đối với mỗi chỉ số i sẽ duyệt các phần tử đúng trước nó đế xem nó đã xuất hiện trước đó hay chưa, nếu chưa xuất hiện thì tiến hành duyệt các phần tử đúng sau chỉ số i và đếm xem có bao nhiêu phần tử bằng với a[i]\nInput Format\nDòng đầu tiên là số nguyên dương N: Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng;\nConstraints\n1<=N<=1000; 0<=A[i]<=10^3;\nOutput Format\nIn ra nhiều dòng, mỗi dòng gồm giả trị kèm theo tần suất tương ứng\nSample Input 0\n7\n4 2 6 3 9 7 7\nSample Output 0\n4 1\n2 1\n6 1\n3 1\n9 1\n7 2\nSample Input 1\n5\n1 1 1 1 1\nSample Output 1\n1 5\nSample Input 2\n6\n1 2 3 3 3 3\nSample Output 2\n1 1\n2 1\n3 4\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.238,
+            0.093,
+            0.685,
+            0.207
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 10. Cân bằng nguyên tố"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.231,
+            0.227,
+            0.757,
+            0.931
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng số nguyên A[] gồm N phần tử, hãy liệt kê các chỉ số i trong máng thỏa mãn : Tổng các phần tử bên trái i và tổng các phần tử bên phải i là các số nguyên tố\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng;\n\nConstraints\n\n1<=N<=1000; 0<=A[i], X<=10^3;\n\nOutput Format\n\nIn ra các chỉ số thỏa mãn trên một dòng, các số cách nhau một khoảng trắng\n\nSample Input 0\n\n5\n53 5 69 47 19\n\nSample Output 0\n\n3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.246,
+            0.098,
+            0.667,
+            0.203
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 11. Liệt kê và đếm số fibonacci."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.24,
+            0.222,
+            0.748,
+            0.927
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng số nguyên A[] gồm N phần tử, hấy liệt kê các số trong mảng là số Fibonacci.\n\nInput Format\n\nDòng đầu tiên là N : số lượng phần tử trong mảng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống.\n\nConstraints\n\n1<=N<=10^6; 0<=A[i]<=10^18\n\nOutput Format\n\nIn ra các số là số Fibonacci trong đầy theo thứ tự xuất hiện. Nếu trong mảng không tồn tại số Fibonacci nào thì in ra \"NONE\".\n\nSample Input 0\n\n6\n1597 25358 7318 5878 0 2634\n\nSample Output 0\n\n1597 0\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.251,
+            0.085,
+            0.691,
+            0.187
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 12. Vị trí số lớn nhất, nhỏ nhất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.236,
+            0.306,
+            0.26
+          ],
+          "content": "Problem:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.35,
+            0.237,
+            0.407,
+            0.26
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.236,
+            0.501,
+            0.261
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.314,
+            0.741,
+            0.397
+          ],
+          "content": "Cho măng số nguyên A[] gồm N phần tử, hấy tìm vị trí(bắt đầu từ 0) cuối cùng của giả trị nhỏ nhất trong măng và vị trí đầu tiên của giả trị lớn nhất trong măng. Tức là nếu có nhiều số có cùng giả trị nhỏ nhất bạn phải in ra vị trí cuối cùng, và có nhiều số có cùng giả trị lớn nhất trong măng bạn phải in ra vị trí đầu tiên lớn nhất đó."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.41,
+            0.312,
+            0.438
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.45,
+            0.723,
+            0.506
+          ],
+          "content": "Dòng đầu tiên là N : số lượng phản tử trong măng; Dòng thứ 2 gồm N phản tử viết cách nhau một khoảng trống."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.521,
+            0.304,
+            0.547
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.563,
+            0.378,
+            0.591
+          ],
+          "content": "$1<=N<=10^6; 1<=A[i]<=10^6$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.606,
+            0.32,
+            0.633
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.647,
+            0.432,
+            0.677
+          ],
+          "content": "In trên 1 dòng 2 chỉ số mà bạn tìm được."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.691,
+            0.321,
+            0.719
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.751,
+            0.271,
+            0.775
+          ],
+          "content": "9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.771,
+            0.437,
+            0.795
+          ],
+          "content": "936 234 471 168 834 82 280 674 881"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.824,
+            0.329,
+            0.852
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.885,
+            0.28,
+            0.911
+          ],
+          "content": "50"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.253,
+            0.105,
+            0.672,
+            0.209
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 13. Tính tổng và tích các phần tử"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.333,
+            0.737,
+            0.365
+          ],
+          "content": "Cho màng sǒ nguyên A□ gồm N phần tử, hǎy tính tổng, tích của các phần tử trong màng và lấy dư với 10^9+7."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.377,
+            0.315,
+            0.406
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.417,
+            0.721,
+            0.473
+          ],
+          "content": "Dòng đầu tiên là N : số lượng phần tử trong măng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.487,
+            0.307,
+            0.515
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.528,
+            0.379,
+            0.557
+          ],
+          "content": "1<=N<=10^6; 0<=A[i]<=10^6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.571,
+            0.322,
+            0.6
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.611,
+            0.719,
+            0.668
+          ],
+          "content": "Dòng đầu tiên in ra tổng các phần tử trong màng chia dư với 10^9 + 7; Dòng thứ hai în ra tích các phần tử trong màng chia dư với 10^9 + 7;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.681,
+            0.322,
+            0.71
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.741,
+            0.472,
+            0.787
+          ],
+          "content": "6\n997893 995053 997553 996212 998316 992144"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.813,
+            0.33,
+            0.841
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.875,
+            0.312,
+            0.918
+          ],
+          "content": "5977171\n436766709"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.25,
+            0.084,
+            0.676,
+            0.197
+          ],
+          "level": 2,
+          "content": "[Măng 1 chiều cơ bản]. Bài 14. Tìm gcd của mọi phần tử trong mắng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.243,
+            0.309,
+            0.269
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.355,
+            0.243,
+            0.413,
+            0.271
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.459,
+            0.242,
+            0.514,
+            0.271
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.246,
+            0.325,
+            0.739,
+            0.359
+          ],
+          "content": "Cho măng số nguyên A[] gồm N phần tử, tìm số lớn nhất mà mọi số trong măng đều chia hết cho số đó."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.371,
+            0.315,
+            0.403
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.246,
+            0.413,
+            0.748,
+            0.475
+          ],
+          "content": "Dòng đầu tiên là N : số lượng phản tử trong màng; Dòng thứ 2 gồm N phản tử viết cách nhau một khoảng trống."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.489,
+            0.307,
+            0.518
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.533,
+            0.385,
+            0.564
+          ],
+          "content": "1<=N<=10^6; 0<=A[i]<=10^6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.578,
+            0.324,
+            0.609
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.622,
+            0.373,
+            0.654
+          ],
+          "content": "In ra kết quả của bài toán"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.667,
+            0.325,
+            0.699
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.259,
+            0.733,
+            0.707,
+            0.784
+          ],
+          "content": "12\n994626 994448 996097 995790 999692 993222 991401 999038 997163 990016 993004 990549"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.808,
+            0.333,
+            0.84
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.249,
+            0.098,
+            0.684,
+            0.202
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 15. Số lớn thứ nhất và lớn thứ 2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.24,
+            0.225,
+            0.749,
+            0.932
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho măng số nguyên A[] gồm N phần tử, tìm số lớn nhất và lớn thứ 2 trong măng. Chủ ý 2 giả trị này có thể giống nhau\n\nInput Format\n\nDòng đầu tiên là N : số lượng phần tử trong măng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống.\n\nConstraints\n\n2<=N<=10^6; 0<=A[i]<=10^6\n\nOutput Format\n\nIn ra số lớn thứ nhất và lớn thứ 2 trong măng\n\nSample Input 0\n\n4\n996817 993012 990914 996837\n\nSample Output 0\n\n998837 996817\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.291,
+            0.092,
+            0.627,
+            0.139
+          ],
+          "level": 2,
+          "content": "[Măng 1 chiều cơ bản]. Bài 16. Liệt kê"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.286,
+            0.159,
+            0.708,
+            0.925
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng số nguyên A[] gồm N phần tử, hây đếm số lượng các phần tử thỏa mân các yêu cầu sau\n1. Số lượng số nguyên tố trong dãy\n2. Số lượng số thuận nghịch trong dãy\n3. Số lượng số chính phương trong dãy\n4. Số lượng số có tổng chữ số của nó là số nguyên tố.\n\nInput Format\n\nDòng đầu tiên là N : số lượng phần tử trong màng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống.\n\nConstraints\n\n1<=N<=100; 0<=A[j]<=10000;\n\nOutput Format\n\nIn ra 4 dòng số lượng số tương ứng với 4 yêu cầu trên\n\nSample Input 0\n\n6\n4 1682 5972 6331 9872 3956\n\nSample Output 0\n\n0\n1\n1\n4\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.244,
+            0.097,
+            0.679,
+            0.208
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 17. Màng đối xứng"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.239,
+            0.225,
+            0.755,
+            0.924
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan=\"3\">Cho măng số nguyên A[] gồm N phần tử, kiểm tra xem măng có đối xứng hay không?</td></tr><tr><td colspan=\"3\">Input Format</td></tr><tr><td colspan=\"3\">Dòng đầu tiên là N : số lượng phần tử trong măng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống.</td></tr><tr><td colspan=\"3\">Constraints</td></tr><tr><td colspan=\"3\">1&lt;=N&lt;=10^6; 0&lt;=A[i]&lt;=10^6</td></tr><tr><td colspan=\"3\">Output Format</td></tr><tr><td colspan=\"3\">In ra YES hoặc NO tương ứng với măng đối xứng hoặc không.</td></tr><tr><td colspan=\"3\">Sample Input 0</td></tr><tr><td colspan=\"3\">20670 1069 2363 375 2188 6059 6775 495 643 832 832 643 495 6775 6059 2188 375 2363 1069 870</td></tr><tr><td colspan=\"3\">Sample Output 0</td></tr><tr><td colspan=\"3\">YES</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_16_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.237,
+            0.209,
+            0.75,
+            0.923
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng số nguyên A[] gồm N phần tử, hấy liệt kê theo thứ tự xuất hiện các số thỏa mãn có ít nhất 1 số trái đầu với nó đúng cạnh nó.\n\nInput Format\n\nDòng đầu tiên là N : số lượng phần tử trong màng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống.\n\nConstraints\n\n2<=N<=10^6; -10^6<=A[i]<=10^6\n\nOutput Format\n\nIn ra kết quả của bài toán\n\nSample Input 0\n\n9\n-992414 993205 998602 990785 ~993397 990527 995429 991288 -992221\n\nSample Output 0\n\n-992414 993205 990785 -993397 990527 991288 -992221\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.243,
+            0.081,
+            0.694,
+            0.182
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 18. Liên kề trái dấu"
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.247,
+            0.091,
+            0.677,
+            0.194
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 19. Khác biệt nhỏ nhất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.246,
+            0.303,
+            0.271
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.349,
+            0.245,
+            0.406,
+            0.271
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.245,
+            0.502,
+            0.271
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.242,
+            0.326,
+            0.739,
+            0.385
+          ],
+          "content": "Cho màng số nguyên A[] gồm N phần tử, tìm khoảng cách nhỏ nhất giữa 2 phần tử a[i], a[j] khác nhau trong màng(i != j)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.397,
+            0.31,
+            0.427
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.439,
+            0.73,
+            0.497
+          ],
+          "content": "Dòng đầu tiên là N : số lượng phần tử trong màng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.511,
+            0.302,
+            0.539
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.553,
+            0.377,
+            0.584
+          ],
+          "content": "1<=N<=10^3; 0<=A[i]<=10^6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.598,
+            0.318,
+            0.627
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.641,
+            0.366,
+            0.672
+          ],
+          "content": "In ra kết quả của bãi toàn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.685,
+            0.319,
+            0.716
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.749,
+            0.266,
+            0.771
+          ],
+          "content": "9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.768,
+            0.484,
+            0.795
+          ],
+          "content": "8340 4533 1879 7340 1326 1768 357 2015 7779"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.821,
+            0.327,
+            0.852
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.888,
+            0.276,
+            0.911
+          ],
+          "content": "111"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.252,
+            0.092,
+            0.681,
+            0.192
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 20.1. Lớn hơn liên kề"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.244,
+            0.306,
+            0.269
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.351,
+            0.244,
+            0.407,
+            0.269
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.451,
+            0.243,
+            0.502,
+            0.269
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.324,
+            0.747,
+            0.403
+          ],
+          "content": "Cho màng số nguyên A□ gồm N phần tử, nhiệm vụ của bạn là liệt kê các phần tử trong màng thỏa mặn nó lớn hơn cả phần tử đúng trước và phần tử đúng sau nó. 2 phần tử đầu tiên và cuối cùng của màng không được coi là thỏa mặn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.419,
+            0.312,
+            0.447
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.459,
+            0.719,
+            0.491
+          ],
+          "content": "Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vải khoảng trắng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.505,
+            0.305,
+            0.532
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.546,
+            0.382,
+            0.575
+          ],
+          "content": "1<=N<=1000; 0<=A[i]<=10^3;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.59,
+            0.321,
+            0.618
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.631,
+            0.404,
+            0.661
+          ],
+          "content": "In ra các số thỏa mãn trên 1 dòng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.675,
+            0.321,
+            0.705
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.737,
+            0.402,
+            0.783
+          ],
+          "content": "7\n341 607 986 616 131 857 234"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.809,
+            0.33,
+            0.838
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.873,
+            0.301,
+            0.898
+          ],
+          "content": "986 857"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.23,
+            0.099,
+            0.694,
+            0.211
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 21. Đếm phân phối sử dụng màng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.261,
+            0.289,
+            0.287
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.337,
+            0.261,
+            0.396,
+            0.287
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.444,
+            0.261,
+            0.499,
+            0.287
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.226,
+            0.346,
+            0.56,
+            0.377
+          ],
+          "content": "Cho mảng số nguyên A[] gồm N phần tử, hãy thực hiện các yêu cầu :"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.227,
+            0.393,
+            0.647,
+            0.424
+          ],
+          "content": "1. Liệt kê các giá trị xuất hiện trong mảng và tần suất tương ứng theo thứ tự xuất hiện."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.227,
+            0.437,
+            0.667,
+            0.467
+          ],
+          "content": "2. Liệt kê các giá trị xuất hiện trong măng và tần suất tương ứng theo thứ tự từ nhỏ tới lớn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.227,
+            0.48,
+            0.723,
+            0.511
+          ],
+          "content": "3. Tím số có số lần xuất hiện nhiều nhất, nếu có nhiều số có cùng số lần xuất hiện thì chọn số lớn hơn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.227,
+            0.525,
+            0.739,
+            0.58
+          ],
+          "content": "4. Tím số có số lần xuất hiện ít nhất trong mắng, nếu có nhiều số có cùng số lần xuất hiện thì chọn số nhỏ hơn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.226,
+            0.6,
+            0.295,
+            0.629
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.644,
+            0.739,
+            0.703
+          ],
+          "content": "Dòng đầu tiên là N : số lượng phần tử trong màng; Dòng thứ 2 gồm N phần tử viết cách nhau một khoảng trống."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.227,
+            0.72,
+            0.287,
+            0.748
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.228,
+            0.765,
+            0.369,
+            0.794
+          ],
+          "content": "1<=N<=10^3; 0<=A[i]<=1000;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.226,
+            0.811,
+            0.304,
+            0.841
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.226,
+            0.855,
+            0.755,
+            0.916
+          ],
+          "content": "Những dòng đầu in ra yêu cầu 1 sau đó bó cách 1 dòng. Những dòng tiếp theo in ra yêu cầu 2 sau đó bó cách 1 dòng. 2 dòng cuối cùng in ra kết quả yêu cầu 3, 4. Xem ví dụ để rõ hơn về output"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": []
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.306,
+            0.083,
+            0.604,
+            0.128
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 22. Xóa"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.3,
+            0.145,
+            0.706,
+            0.932
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho măng số nguyên A[] gồm N phần tử và số nguyên X, nhiệm vụ của bạn là tìm kiếm xem X có xuất hiện trong măng hay không, nếu X xuất hiện trong măng thì thực hiện xóa vị trí xuất hiện đầu tiên của X trong măng, ngược lai in ra \"NOT FOUND\" nếu X không xuất hiện.\n\nInput Format\n\nDòng đầu tiên là 2 số nguyên dương N, X: Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\n\nConstraints\n\n1<=N<=1000; -10^3<=A[i], X<=10^3;\n\nOutput Format\n\nIn ra măng sau khi xóa hoặc in ra NOT FOUND nếu X không xuất hiện trong măng\n\nSample Input 0\n\n9_212\n359_523_428_952_752_195_613_6_122\n\nSample Output 0\n\nNOT FOUND\n\nSample Input 1\n\n5_3\n1_3_3_2_5\n\nSample Output 1\n\n1_3_2_5\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.228,
+            0.074,
+            0.7,
+            0.181
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 23. Màng cộng dồn"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.246,
+            0.237,
+            0.287,
+            0.263
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.334,
+            0.237,
+            0.394,
+            0.263
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.442,
+            0.237,
+            0.497,
+            0.263
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.321,
+            0.745,
+            0.383
+          ],
+          "content": "Cho màng số nguyên A[] gồm N phần tử, nhiệm vụ của bạn là xây dựng màng F cũng có N phần tử trong đó F[0] = A[0] và F[i] = F[i -1] + A[i] với mọi i >= 1. Như vậy bạn thử nghĩ xem F[i] lưu giá trị gì?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.397,
+            0.294,
+            0.427
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.44,
+            0.731,
+            0.476
+          ],
+          "content": "Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.489,
+            0.285,
+            0.519
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.534,
+            0.367,
+            0.565
+          ],
+          "content": "1<=N<=1000; 0<=A[i]<=10^3;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.581,
+            0.302,
+            0.612
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.626,
+            0.338,
+            0.658
+          ],
+          "content": "In ra màng cộng dòn F"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.672,
+            0.303,
+            0.704
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.741,
+            0.342,
+            0.788
+          ],
+          "content": "5\n124 577 658 919 87"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.816,
+            0.312,
+            0.848
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.885,
+            0.363,
+            0.911
+          ],
+          "content": "124 701 1359 2278 2365"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.312,
+            0.085,
+            0.646,
+            0.127
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 24. Cửa số cỡ K"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.307,
+            0.145,
+            0.682,
+            0.927
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng số nguyên A[] gồm N phần tử và số nguyên K, nhiệm vụ của bạn là tìm tổng của mọi đầy con liên tiếp cổ K của màng A[]\nGơi ý : Duyệt các chỉ số bắt đầu của các đầy con cổ K của màng, chỉ số này chạy từ i = 0, tới i = n - k.\nInput Format\nDòng đầu tiên là 2 số nguyên dương N, K; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\nConstraints\n1<=K<=N<=1000; 0<=A[i]<=10^3;\nOutput Format\nIn ra tổng của các đầy con K phần tử liên tiếp trong màng\nSample Input 0\n7 5\n5 9 4 5 5 8 7\nSample Output 0\n28 31 29\nExplanation 0\n5 + 9 + 4 + 5 + 5 = 28 9 + 4 + 5 + 5 + 8 = 31 4 + 4 + 4 + 8 + 7 = 29\nSample Input 1\n6 3\n3 8 6 8 0 0\nSample Output 1\n17 22 14 8\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.27,
+            0.085,
+            0.685,
+            0.179
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 25. Màng chẩn lẻ"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.261,
+            0.205,
+            0.741,
+            0.973
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng số nguyên A[] có không quá 10000 phần tử. Hây xác định xem mảng là mảng chẩn hay mảng lẻ, \nmàng chẩn được định nghĩa là mảng mà số lượng số chẩn nhiều hơn số lượng số lẻ, ngược lại. Trong trường \nhợp số lượng số chẩn bằng số lượng số lẻ thì mảng được gọi là mảng chẩn lẻ.\n\nInput Format\n\nGồm nhiều dòng, mỗi dòng có nhiều số là các số trong mảng A[]. không biết trước có bao nhiêu số nhưng \nkhông vượt quả 10000 số.\n\nConstraints\n\n1<=A[i]<=1000\n\nOutput Format\n\nIn ra CHAN nếu mảng chẩn, LE nếu mảng lẻ, CHANLE nếu mảng chẩn lẻ\n\nSample Input 0\n\n3\n9 7 9\n7 5 5\n3\n\nSample Output 0\n\nLE\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.305,
+            0.084,
+            0.669,
+            0.17
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 26. Màng đánh dấu 1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.302,
+            0.189,
+            0.695,
+            0.932
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho măng số nguyên A[] gồm N phần tử, hây đếm xem có bao nhiêu giá trị khác nhau trong măng?\nInput Format\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\nConstraints\n1<=N<=1000; 0<=A[i]<=10^6;\nOutput Format\nIn ra số lượng các giá trị khác nhau xuất hiện trong măng\nSample Input 0\n5\n3 9 4 0 9\nSample Output 0\n4\nSample Input 1\n5\n1 7 8 1 7\nSample Output 1\n3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.257,
+            0.078,
+            0.692,
+            0.179
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 27. Màng đánh dấu 2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.252,
+            0.208,
+            0.745,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho măng số nguyên A[] gồm N phần tử, hây liệt kê các giá trị xuất hiện trong măng theo thứ tự từ nhỏ đến lớn kèm theo tần suất của nó\n\nInput Format\n\nDông đầu tiên là số nguyên dương N; Đồng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\n\nConstraints\n\n1<=N<=1000; 0<=A[i]<=10^6;\n\nOutput Format\n\nIn ra nhiều dòng, mỗi dòng gồm giá trị và tần suất viết cách nhau một khoảng trắng\n\nSample Input 0\n\n6\n6 6 4 6 0 8\n\nSample Output 0\n\n0 1\n4 1\n6 3\n8 1\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.274,
+            0.075,
+            0.667,
+            0.165
+          ],
+          "level": 2,
+          "content": "[Măng 1 chiều cơ bản]. Bài 28. Măng đánh dấu 3"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.271,
+            0.189,
+            0.721,
+            0.93
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho máng số nguyên A[] gồm N phần tử, hấy liệt kê các giả trị xuất hiện trong máng theo thứ tự xuất hiện\ntrong máng kèm theo tần suất của nó, mỗi giả trị chỉ liệt kê một lần.\n\nGơi ý : Dùng map hoặc máng đánh dấu để đếm tần suất sau đó thì duyệt máng và gặp a[i] thì in ra a[i] kèm tần\nsuất, sau đó có thể xóa a[i] hoặc reset tần suất a[i] về 0 để tránh in trùng\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\n\nConstraints\n\n1<=N<=1000; 0<=A[i]<=10^6;\n\nOutput Format\n\nIn ra nhiều dòng, mỗi dòng gồm giả trị và tần suất viết cách nhau một khoảng trắng\n\nSample Input 0\n\n9\n1 6 6 9 8 6 4 9 3\n\nSample Output 0\n\n1 1\n6 3\n9 2\n0 1\n4 1\n3 1\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.34,
+            0.073,
+            0.631,
+            0.141
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 29. Màng đánh dấu 4"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.335,
+            0.158,
+            0.661,
+            0.933
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan=\"3\">Cho màng số nguyên A[] gồm N phần tử, hãy tìm giá trị có số lần xuất hiện nhiều nhất trong màng, nếu có nhiều giá trị có cùng số lần xuất hiện thì lấy số có giá trị nhỏ nhất</td></tr><tr><td colspan=\"3\">Input Format</td></tr><tr><td colspan=\"3\">Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng</td></tr><tr><td colspan=\"3\">Constraints</td></tr><tr><td colspan=\"3\">1&lt;=N&lt;=1000; 0&lt;=A[i]&lt;=10^6;</td></tr><tr><td colspan=\"3\">Output Format</td></tr><tr><td colspan=\"3\">In ra giá trị có số lần xuất hiện nhiều nhất kèm theo tần suất của nó</td></tr><tr><td colspan=\"3\">Sample Input 0</td></tr><tr><td colspan=\"3\">59 4 9 4 5</td></tr><tr><td colspan=\"3\">Sample Output 0</td></tr><tr><td colspan=\"3\">4 2</td></tr><tr><td colspan=\"3\">Sample Input 1</td></tr><tr><td colspan=\"3\">51 3 7 7 5</td></tr><tr><td colspan=\"3\">Sample Output 1</td></tr><tr><td colspan=\"3\">7 2</td></tr><tr><td colspan=\"3\">Sample Input 2</td></tr><tr><td colspan=\"3\">51 2 3 4 5</td></tr><tr><td colspan=\"3\">Sample Output 2</td></tr><tr><td colspan=\"3\">1 1</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_29_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.303,
+            0.075,
+            0.663,
+            0.158
+          ],
+          "level": 2,
+          "content": "[Màng 1 chiều cơ bản]. Bài 30. Mắng đánh dấu 5"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.3,
+            0.179,
+            0.694,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho măng số nguyên A[] gồm N phần tử, hãy tìm giá trị có số lần xuất hiện nhiều nhất trong măng, nếu có nhiều giá trị có cùng số lần xuất hiện thì lấy giả trị xuất hiện trước theo thứ tự trong măng\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 gồm N số nguyên viết cách nhau một vài khoảng trắng\n\nConstraints\n\n1<=N<=1000; 0<=A[i]<=10^6;\n\nOutput Format\n\nIn ra giá trị có số lần xuất hiện nhiều nhất kèm theo tàn suất của nó\n\nSample Input 0\n\n6\n7 2 0 3 9 5\n\nSample Output 0\n\n7 1\n\nSample Input 1\n\n4\n1 2 2 1\n\nSample Output 1\n\n1 2\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2024-01-19T12:07:25+00:00",
+      "modified_at": "2024-01-19T12:07:25Z",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 31,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

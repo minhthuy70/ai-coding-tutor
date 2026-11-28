@@ -1,0 +1,1765 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.284,
+            0.077,
+            0.695,
+            0.183
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 1. Các số khác nhau trong màng"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.278,
+            0.206,
+            0.69,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho máng số nguyên gồm N phần tử. Hấy đếm xem máng có bao nhiêu phần tử riêng biệt\nInput Format\nDòng đầu tiên là N Dòng thứ 2 là các phần tử trong máng a1, a2, ... aN\nConstraints\n1≤n≤2.10^5; 1≤a1≤10^9\nOutput Format\nIn ra số lượng phần tử riêng biệt trong máng.\nSample Input 0\n10\n2 2 2 1 3 2 5 1 4 2\nSample Output 0\n5\nExplanation 0\n5 phần tử khác nhau trong máng là 1, 2, 3, 4, 5\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.244,
+            0.078,
+            0.689,
+            0.187
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiếm]. Bài 2. Sắp xếp theo trị tuyệt đối"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.24,
+            0.208,
+            0.754,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng số nguyên A[] có N phần tử, hây sắp xếp các phần tử trong mảng theo thứ tự giá trị tuyệt đối tăng dần. Nếu có 2 số có cùng giá trị tuyệt đối thì số nào xuất hiện trước sẽ được in ra trước\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N. Dòng thứ 2 là N phần tử trong mảng, các phần tử viết cách nhau một dấu cách.\n\nConstraints\n\n1<=N<=10^5; -10^9<=A[i]<=10^9\n\nOutput Format\n\nIn ra các phần tử trong mảng sau khi sắp xếp theo thứ tự tăng dần\n\nSample Input 0\n\n5\n1 -3 2 -5 4\n\nSample Output 0\n\n1 2 -3 4 -5\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.254,
+            0.09,
+            0.682,
+            0.193
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 3. Sắp xếp theo tổng chữ số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.27,
+            0.242,
+            0.309,
+            0.266
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.353,
+            0.242,
+            0.409,
+            0.266
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.453,
+            0.241,
+            0.504,
+            0.266
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.321,
+            0.744,
+            0.376
+          ],
+          "content": "Cho mảng số nguyên A□ có N phần tử, hấy sắp xếp các phần tử trong mảng theo thứ tự tổng chữ số tăng đàn, nếu 2 số có cùng tổng chữ số, thì số nào nhỏ hơn sẽ được in trước."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.391,
+            0.315,
+            0.418
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.431,
+            0.733,
+            0.485
+          ],
+          "content": "Dòng đầu tiên là số nguyên dương N. Dòng thứ 2 là N phần tử trong màng, các phần tử viết cách nhau một dấu cách."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.502,
+            0.307,
+            0.527
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.543,
+            0.381,
+            0.571
+          ],
+          "content": "1<=N<=10^5; 0<=A[i]<=10^9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.586,
+            0.323,
+            0.614
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.627,
+            0.456,
+            0.657
+          ],
+          "content": "In ra các phản tử trong măng sau khi sắp xếp"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.671,
+            0.324,
+            0.699
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.735,
+            0.516,
+            0.777
+          ],
+          "content": "5\n999976710 999982875 999974431 999984407 999972533"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.805,
+            0.331,
+            0.833
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.868,
+            0.515,
+            0.892
+          ],
+          "content": "999974431 999972533 999976710 999984407 999982875"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.239,
+            0.221,
+            0.757,
+            0.97
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng số nguyên A[] có N phần tử, tìm độ chênh lệch nhỏ nhất giữa 2 phần tử A[i] và A[j] trong mảng(i và j khác nhau).\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N. Dòng thứ 2 là N phần tử trong mảng, các phần tử viết cách nhau một dấu cách.\n\nConstraints\n\n1<=N<=10^6; 0<=A[i]<=10^9\n\nOutput Format\n\nIn ra độ lệch nhỏ nhất của 2 phần tử trong mảng\n\nSample Input 0\n\n5\n1 2 7 9 8\n\nSample Output 0\n\n1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.246,
+            0.089,
+            0.683,
+            0.194
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 4. Khoảng cách nhỏ nhất"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.247,
+            0.075,
+            0.685,
+            0.185
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 5. Số xuất hiện nhiều nhất trong màng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.233,
+            0.304,
+            0.257
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.35,
+            0.232,
+            0.408,
+            0.257
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.453,
+            0.231,
+            0.507,
+            0.258
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.313,
+            0.635,
+            0.346
+          ],
+          "content": "Cho mảng số nguyên A□ có N phần tử, hây tìm sõ xuất hiện nhiều nhất trong mảng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.359,
+            0.31,
+            0.389
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.401,
+            0.744,
+            0.459
+          ],
+          "content": "Dòng đầu tiên là số nguyên dương N. Dòng thứ 2 là N phần tử trong màng, các phần tử viết cách nhau một dấu cách."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.474,
+            0.302,
+            0.503
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.517,
+            0.4,
+            0.547
+          ],
+          "content": "1<=N<=10^5; -10^9<=A[i]<=10^9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.562,
+            0.319,
+            0.593
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.603,
+            0.75,
+            0.663
+          ],
+          "content": "In ra số có số lần xuất hiện nhiều nhất và tàn suất tương ứng, nếu có nhiều số có cùng số lần xuất hiện thì in ra số nhỏ nhất."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.677,
+            0.319,
+            0.708
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.743,
+            0.309,
+            0.789
+          ],
+          "content": "5\n1 2 2 1 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.814,
+            0.328,
+            0.846
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.882,
+            0.277,
+            0.907
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.29,
+            0.075,
+            0.646,
+            0.163
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 9. Tìm kiểm nhị phân"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.287,
+            0.184,
+            0.699,
+            0.931
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng số nguyên A[] có N phần tử đã được sắp xếp theo thứ tự giám dàn. Có Q truy vấn, mỗi truy vấn yêu cầu bạn kiểm tra xem phần tử X có xuất hiện trong mảng hay không?\n\nCách 1 : Sắp xếp mảng tăng đàn rời dùng binary_search để tìm kiếm nhanh\n\nCách 2 : Đưa các phần tử trong mảng vào set để tìm kiếm nhanh\n\nMỗi truy vấn chí mất O(logN)\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N. Dòng thứ 2 là N phần tử trong mảng, các phần tử viết cách nhau một đầu cách. Dòng thứ 3 là số lượng truy vấn Q. Q dòng tiếp theo mỗi dòng là một số nguyên dương X.\n\nConstraints\n\n1 <= N <= 10^6; 1 <= Q <= 10^3; 0 <= A[j], X <= 10^9\n\nOutput Format\n\nĐối với truy vấn in ra YES trên 1 dòng nếu X xuất hiện trong mảng, ngược lai in ra NO.\n\nSample Input 0\n\n5\n5 4 3 2 1\n2\n2\n8\n\nSample Output 0\n\nYES\nNO\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.062,
+            0.2,
+            0.804,
+            0.287
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiếm]. Bài 11. Trộn 2 dãy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.088,
+            0.377,
+            0.156,
+            0.416
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.377,
+            0.334,
+            0.417
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.416,
+            0.377,
+            0.506,
+            0.416
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.051,
+            0.52,
+            0.94,
+            0.8
+          ],
+          "content": "Đế sắp xếp tăng dần một mắng A gồm n phần tử a1, a2,..., an, thuật toán sắp xếp trộn (MergeSort) áp dụng chia đôi mắng A thành hai mắng B và C, sắp xếp B, C và sau đó trộn B và C cho ra mắng A tăng dần. Ví dụ minh họa phương pháp trộn: - Mắng B gồm 4 phần tử b1, b2, b3, b4 đã sắp tăng dần: 1 2 4 6 - Mắng C gồm 4 phần tử c1, c2, c3, c4 đã sắp tăng dần: 3 5 8 9 Nếu trộn hai mắng trên theo đầy thứ tự trộn b1, b2, c1, b3, c2, b4, c3, c4 thì có được mắng sắp là 1 2 3 4 5 6 8 9. Cho một mắng B gồm n phần tử và mắng C gồm m phần tử. Hây in ra đầy thứ tự trộn sao cho nếu áp dụng đầy thứ tự trộn trên thì mắng kết quả được sắp xếp tăng dần."
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.148,
+            0.089,
+            0.235,
+            0.122
+          ],
+          "level": 2,
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.143,
+            0.783,
+            0.18
+          ],
+          "content": "\\- Dòng đầu tiên là hai số nguyên n, m cách nhau một khoảng trắng là số phần tử của màng B và màng C."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.145,
+            0.197,
+            0.644,
+            0.235
+          ],
+          "content": "\\- Dòng thứ 2 gồm n số nguyên b1, b2,..., bn, mỗi số cách nhau một khoảng trắng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.146,
+            0.251,
+            0.651,
+            0.29
+          ],
+          "content": "\\- Dòng thứ 3 gồm m số nguyên c1, c2,..., cm, mỗi số cách nhau một khoảng trắng."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.148,
+            0.316,
+            0.223,
+            0.348
+          ],
+          "level": 2,
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.147,
+            0.372,
+            0.355,
+            0.407
+          ],
+          "content": "1<=n,m<=10^6; 0<=b[i],c[i]<=10^6"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.148,
+            0.429,
+            0.246,
+            0.463
+          ],
+          "level": 2,
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.147,
+            0.485,
+            0.811,
+            0.553
+          ],
+          "content": "In ra dây là thứ tự trộn, trong trường hợp trong 2 màng b và c có phần tử có cùng giả trị t in ra phần tử ở màng b trước."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.148,
+            0.577,
+            0.245,
+            0.612
+          ],
+          "level": 2,
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.164,
+            0.66,
+            0.353,
+            0.743
+          ],
+          "content": "5 5\n4760 9724 9798 20124 25974\n3397 9166 13054 18273 30455"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.148,
+            0.781,
+            0.256,
+            0.816
+          ],
+          "level": 2,
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.165,
+            0.863,
+            0.366,
+            0.893
+          ],
+          "content": "c1 b1 c2 b2 b3 c3 c4 b4 b5 c5"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.308,
+            0.089,
+            0.641,
+            0.167
+          ],
+          "level": 1,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 10. Tìm kiểm nhị phân biến đổi"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.305,
+            0.187,
+            0.678,
+            0.931
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan=\"3\">Cho măng số nguyên A[] có N phần tử đã được sắp xếp theo thứ tự tăng dân. Hây viết các hàm sau với độphức tạp O(logN):</td></tr><tr><td colspan=\"3\">1. Tím vị trí xuất hiện đầu tiên của phần tử X trong măng, nếu không tồn tại X in ra -1.</td></tr><tr><td colspan=\"3\">2. Tím vị trí xuất hiện cuối cùng của phần tử X trong măng, nếu không tồn tại X in ra -1.</td></tr><tr><td colspan=\"3\">3. Tím vị trí xuất hiện đầu tiên của phần tử &gt;= X trong măng, nếu không tồn tại phần tử &gt;=X in ra -1.</td></tr><tr><td colspan=\"3\">4. Tím vị trí xuất hiện đầu tiên của phần tử &gt; X trong măng, nếu không tồn tại phần tử &gt;X in ra -1.</td></tr><tr><td colspan=\"3\">5. Tím số lần xuất hiện của phần tử X trong măng sử dụng kết quả của hàm 1 và 2.</td></tr><tr><td colspan=\"3\">Input Format</td></tr><tr><td colspan=\"3\">Dòng đầu tiên là số nguyên dương N và X Dông thứ 2 là N phần tử trong măng, các phần tử viết cách nhau một dấu cách.</td></tr><tr><td colspan=\"3\">Constraints</td></tr><tr><td colspan=\"3\">1&lt;=N&lt;=10^6; 0&lt;=A[i].X&lt;=10^6;</td></tr><tr><td colspan=\"3\">Output Format</td></tr><tr><td colspan=\"3\">In ra 5 dòng tương ứng với 5 kết quả của 5 hàm đề bài yếu cầu.</td></tr><tr><td colspan=\"3\">Sample Input 0</td></tr><tr><td colspan=\"3\">10 116019 1600 2172 2921 3409 4185 4639 6096 6744 9192</td></tr><tr><td colspan=\"3\">Sample Output 0</td></tr><tr><td colspan=\"3\">-1-1110</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_8_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.262,
+            0.094,
+            0.64,
+            0.143
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 12. Khiêu vũ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.189,
+            0.312,
+            0.211
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.356,
+            0.189,
+            0.408,
+            0.211
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.451,
+            0.189,
+            0.499,
+            0.211
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.265,
+            0.726,
+            0.366
+          ],
+          "content": "Trong lớp học có n bạn nam và m bạn nữ. Các bạn nam có chiều cao là a1, a2, ..., an. Các bạn nữ có chiều cao là b1, b2, ..., bm. Nhân dịp lễ tổng kết cuối năm, cả lớp dự định tổ chức buổi khiêu vũ nhưng có điều kiện là trong một đôi khiêu vũ bắt kỳ, bạn nam phải cao hơn bạn nữ. Và mỗi bạn không tham gia quá 1 đôi khiêu vũ. Hấy tính số lượng cặp đôi nhiều nhất thỏa mãn yêu cầu trên."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.381,
+            0.318,
+            0.405
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.419,
+            0.725,
+            0.495
+          ],
+          "content": "Input: gồm 3 dòng - Dòng thứ nhất là hai số n, m mỗi số cách nhau một khoảng trắng. - Dòng thứ hai gồm n số nguyên a1, a2, ..., an là chiều cao các bạn nam. - Dòng thứ ba gồm m số nguyên b1, b2, ..., bm là chiều cao các bạn nữ."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.511,
+            0.31,
+            0.535
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.259,
+            0.552,
+            0.408,
+            0.577
+          ],
+          "content": "1<=n,m<=10^5; 1<=a[i],b[i]<=10^6;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.593,
+            0.325,
+            0.617
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.632,
+            0.475,
+            0.659
+          ],
+          "content": "In ra số lượng cặp khiêu vũ nhiều nhất ghép được."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.674,
+            0.326,
+            0.699
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.268,
+            0.734,
+            0.414,
+            0.793
+          ],
+          "content": "5 5\n2668 2956 20933 21199 24224\n11521 13084 19573 25628 28958"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.821,
+            0.334,
+            0.846
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.27,
+            0.882,
+            0.277,
+            0.899
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.24,
+            0.163,
+            0.76,
+            0.983
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nNam có n viên gạch được đánh số từ 1 đến n. Các viên gạch có độ cứng lần lượt là a1, a2,..., an. Một viên gạch\ncó độ cứng x nghĩa là Nam có thể chồng lên trên viên gạch đó tối đa x viên gạch khác, nếu chồng nhiều hơn thì\nviên gạch đó bị vật. Hôi Nam có thể sắp được chồng gạch cao nhất là bao nhiêu?\n\nInput Format\n• Đồng đầu tiên là số nguyên n - là số viên gạch.\n• Đồng tiếp theo gồm n số nguyên a1, a2,..., an mỗi số cách nhau một khoảng trắng.\n\nConstraints\n1<=n<=10^5; 0≤aí≤10^6\n\nOutput Format\nSố nguyên xác định chiều cao cao nhất của chồng gạch mà Nam sắp được.\n\nSample Input 0\n\n4\n1 2 3 4\n\nSample Output 0\n\n4\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.252,
+            0.091,
+            0.663,
+            0.147
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiếm]. Bài 13. Xếp gạch"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.256,
+            0.086,
+            0.656,
+            0.137
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 14. Vất sữa bò"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.27,
+            0.183,
+            0.307,
+            0.207
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.351,
+            0.183,
+            0.403,
+            0.206
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.447,
+            0.183,
+            0.496,
+            0.206
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.26,
+            0.729,
+            0.388
+          ],
+          "content": "Vào một buổi sáng anh Bo sắp một đàn bỏ gồm n con bỏ để vật sửa. Anh dự kiến là vào sáng hôm đó, con bỏ thứ i có khả năng sẽ vật được ai lít sửa. Tuy nhiên đàn bỏ của anh có đặc tính là cứ mỗi lần vật sửa một con, những con còn lại trồng thấy sợi quả nên sẽ bị giảm sản lượng mỗi con 01 lít sửa. Nếu vật sửa con bỏ thứ nhất, n-1 con còn lại bị giảm sản lượng. Sau đó vật sửa con bỏ thứ hai thì n-2 con còn lại bị giảm sản lượng.... Bạn hầy giúp anh Bo tính xem thứ tự vật sửa bỏ như thể não để số lượng sửa vật được là nhiều nhất nhẹ."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.401,
+            0.313,
+            0.427
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.441,
+            0.471,
+            0.469
+          ],
+          "content": "• Dòng thứ nhất là số nguyên là số lượng con bò."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.48,
+            0.596,
+            0.509
+          ],
+          "content": "\\- Đồng thứ hai gồm n số nguyên a1, a2,..., an là sản lượng sửa của các con bò."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.525,
+            0.306,
+            0.55
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.565,
+            0.375,
+            0.593
+          ],
+          "content": "1<=n<=10^5; 1<=a[i]<=10^6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.606,
+            0.321,
+            0.633
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.646,
+            0.552,
+            0.675
+          ],
+          "content": "Số nguyên xác định số lít sửa nhiều nhất mà anh Bo có thể vật được."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.688,
+            0.322,
+            0.716
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.751,
+            0.302,
+            0.793
+          ],
+          "content": "4\n4 4 4 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.818,
+            0.33,
+            0.847
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.88,
+            0.277,
+            0.901
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.256,
+            0.073,
+            0.653,
+            0.176
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 17. Cặp số có tổng bằng K"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.271,
+            0.221,
+            0.31,
+            0.245
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.352,
+            0.221,
+            0.407,
+            0.245
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.221,
+            0.5,
+            0.245
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.295,
+            0.69,
+            0.329
+          ],
+          "content": "Cho màng a gồm n phần tử và số nguyên dương k. Đếm số lượng cập số ai, aj (i != j) có tổng bằng k."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.339,
+            0.735,
+            0.419
+          ],
+          "content": "Goi ý : Sắp xếp màng tăng đàn sau đó với mỗi phần tử a[i] trong màng tìm xem trong đoạn [i + 1, n - 1] có bao nhiêu phần tử có giả trị là k - a[i], bằng cách tìm vị trí đầu tiên và vị trí cuối cùng của phần tử có giả trị là k - a[i] => Số lượng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.432,
+            0.315,
+            0.461
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.471,
+            0.709,
+            0.505
+          ],
+          "content": "Dòng thứ 1 là số lượng phần tử trong màng và số nguyên dương k; Dòng thứ 2 là n phần tử trong màng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.515,
+            0.307,
+            0.543
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.557,
+            0.439,
+            0.585
+          ],
+          "content": "2<=n<=10^6; 1<=k<=10^6; 0<=a[i]<=10^6;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.599,
+            0.323,
+            0.627
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.638,
+            0.415,
+            0.67
+          ],
+          "content": "In ra số lượng cập số có tổng bằng k"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.681,
+            0.324,
+            0.711
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.812,
+            0.332,
+            0.841
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.266,
+            0.078,
+            0.665,
+            0.183
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 18. Cặp số có tổng nhỏ hơn K"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.258,
+            0.201,
+            0.739,
+            0.985
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng a gồm n phần tử và số nguyên dương k. Đếm số lượng cặp số ai, aj (i != j) có tổng nhỏ hơn k.\n\nInput Format\n\nDòng thứ 1 là số lượng phần tử trong màng và số nguyên dương k: Dòng thứ 2 là n phần tử trong màng\n\nConstraints\n\n2<=n<=10^6;\n\n1<=k<=10^6;\n\n0<=a[i]<=10^6;\n\nOutput Format\n\nIn ra số lượng cặp số có tổng nhỏ hơn k\n\nSample Input 0\n\n4 5\n2 2 2 2\n\nSample Output 0\n\n6\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.253,
+            0.091,
+            0.659,
+            0.199
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 19. Cặp số có tổng lớn hơn k"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.246,
+            0.218,
+            0.75,
+            0.995
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho màng a gồm n phần tử và số nguyên dương k. Đếm số lượng cặp số ai, aj (i != j) có tổng lớn hơn k.\nGoi ý : Sử dụng binary_search, đối với mỗi phần tử a[i] đểm số lượng phần tử trong màng (đã sắp xếp) > k - a[i]\nbằng cách tìm vị trí đầu tiên của phần tử > k - a[i], từ vị trí này tới cuối đầy sẽ đều là các phần tử > k - a[i]\n\nInput Format\n\nDòng thứ 1 là số lượng phần tử trong màng và số nguyên dương k; Đồng thứ 2 là n phần tử trong màng\n\nConstraints\n\n2<=n<=10^6; 1<=k<=10^6; 0<=a[i]<=10^6;\n\nOutput Format\n\nIn ra số lượng cặp số có tổng lớn hơn k\n\nSample Input 0\n\n4 5\n2 3 4 5\n\nSample Output 0\n\n5\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.242,
+            0.201,
+            0.753,
+            0.981
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng A[] gồm n số nguyên dưỡng. Gọi L, R là min và max các phần tử của A[]. Nhiệm vụ của bạn là tìm số phần tử cần thiết cần thêm vào mảng để mảng có đầy đủ các số trong khoảng [L, R]. Ví dụ A[] = {5, 7, 9, 3, 6, 2} ta nhận được kết quả là 2 tương ứng với các số còn thiếu là 4, 8.\n\nInput Format\n\nDòng đầu tiên đưa vào n, tương ứng với số phần tử của mảng A[]; dòng tiếp theo là n số A[i] ; các số được viết cách nhau một vài khoảng trống.\n\nConstraints\n\n1=n<=10^6; 0<=a[i]<=10^6;\n\nOutput Format\n\nIn ra số lượng số còn thiếu\n\nSample Input 0\n\n5\n4 5 3 8 6\n\nSample Output 0\n\n1\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.248,
+            0.078,
+            0.679,
+            0.179
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 20. Điền số còn thiếu"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.249,
+            0.107,
+            0.702,
+            0.215
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 26. Tìm kiểm cặp số có hiệu bằng X"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.243,
+            0.233,
+            0.762,
+            0.924
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho mảng A[] gồm N phần tử và số X. Nhiệm vụ của bạn là tìm cấp phần tử A[i] - A[j] = X. Nếu tồn tại A[i] - A[j] = X đưa ra 1, ngược lại đưa ra -1.\n\nInput Format\n\nDòng thứ nhất là cặp số N, X; Dòng tiếp theo là N số A[i] là các phần tử của mảng A[].\n\nConstraints\n\n1≤ N ≤10^5; 1≤ X, A[i] ≤10^5.\n\nOutput Format\n\nIn ra 1 nếu tìm thấy một cặp số có hiệu bằng X, ngược lại in ra -1.\n\nSample Input 0\n\n5 3\n1 1 2 3 5\n\nSample Output 0\n\n1\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.273,
+            0.087,
+            0.645,
+            0.138
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiếm]. Bài 30. Đèn lỏng"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.266,
+            0.155,
+            0.737,
+            0.931
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nVanya đi bộ vào ban đêm dọc theo một con đường thẳng dài có độ dài l, được thấp sáng bối n chiếc đèn lồng.\nXét hệ trục toa độ với điểm đầu của đường phố tương ứng với điểm 0 và điểm cuối của nó tương ứng với điểm\nl. Khi đó đèn lồng thứ i ở điểm ai. Đèn lồng chiếu sáng tất cả các điểm trên đường phố cách nó nhiều nhất là d,\ntrong đó d là một số dương, chung cho tất cả các đèn lồng. Vanya tự hồi: bán kính ánh sáng tối thiểu d mà\nnhững chiếc đèn lồng phải có để thấp sáng cả con phố?\n\nInput Format\n\nDòng đầu tiên chứa hai số nguyên n, l (1 ≤ n ≤ 10^5, 1 ≤ l ≤ 10^9) - số lượng đèn lồng và chiều dài đường phố\ntương ứng. Dòng tiếp theo chứa n số nguyên ai (0 ≤ ai ≤ l). Nhiều đèn lồng có thể được đặt tại cùng một điểm.\nĐèn lồng có thể nằm ở cuối phố.\n\nConstraints\n\n1 ≤ n ≤ 10^5, 1 ≤ l ≤ 10^9; 0 ≤ ai ≤ l;\n\nOutput Format\n\nIn bán kính ánh sáng tối thiểu d, cần thiết để chiếu sáng cả đường phố. In ra kết quả với độ chính xác là 10 số\nsau dấu phầy\n\nSample Input 0\n\n7 15\n15 5 3 7 9 14 0\n\nSample Output 0\n\n2.5000000000\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.31,
+            0.142,
+            0.683,
+            0.937
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan=\"3\">Kirito đang bị mắc kết ở cấp độ của MMORPG mà anh ấy đang chơi hiện tại. Đế tiếp tục trò chơi, anh ta phải đánh bại tất cả n con ròng sống ở cấp độ này. Kirito và những con ròng có sức mạnh, được biểu thị bằng một số nguyên. Trong cuộc độ sức giữa hai đối thú, kết quả của cuộc độ sức được quyết định bởi sức mạnh của họ. Ban đầu, sức mạnh của Kirito bảng s.Nếu Kirito bắt đầu đầu tay đổi với ròng thứ i (1 ≤ i ≤ n) và sức mạnh của Kirito không lớn hơn sức mạnh của ròng có sức mạnh là xi, thì Kirito thua trận đầu và chết. Nhưng nếu sức mạnh của Kirito lớn hơn sức mạnh của con ròng, thì anh ta sẽ đánh bại con ròng và được tăng thêm sức mạnh theo là yi.Kirito có thể chiến đấu với những con ròng theo bắt kỳ thứ tự nào. Xác định xem liệu anh ta có thể chuyển sang cấp độ tiếp theo của trò chơi hay không, tức là đánh bại tất cả những con ròng mà không bị thua một lần nào.</td></tr><tr><td colspan=\"3\">Input FormatDòng đầu tiên chứa hai số nguyên được phân tách bằng đầu cách n và s (1 ≤ s ≤ 10^6, 1 ≤ n ≤ 10^5).Sau đó n dòng tiếp theo: dòng thứ i chứa các số nguyên được phân tách bằng đầu cách là xi và yi (1 ≤ xi ≤ 10^4, 0 ≤ yi ≤ 10^4) - sức mạnh của con ròng thứ i và sức mạnh được tăng thêm khi đánh bại nó.</td></tr><tr><td colspan=\"3\">Constraints1 ≤ s ≤ 10^6, 1 ≤ n ≤ 10^51 ≤ xi ≤ 10^4, 0 ≤ yi ≤ 10^4</td></tr><tr><td colspan=\"3\">Output FormatTrên một dòng duy nhất in &quot;YES&quot; (không có dấu ngoặc kép), nếu Kirito có thể chuyển sang cấp độ tiếp theo và in &quot;NO&quot; (không có dấu ngoặc kép), nếu anh ta không thể.</td></tr><tr><td colspan=\"3\">Sample Input 0</td></tr><tr><td colspan=\"3\">2 21 99100 0</td></tr><tr><td colspan=\"3\">Sample Output 0</td></tr><tr><td colspan=\"3\">YES</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_18_table_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.317,
+            0.089,
+            0.597,
+            0.129
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 31. Dragon"
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.266,
+            0.881,
+            0.274,
+            0.901
+          ],
+          "content": "3"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.258,
+            0.076,
+            0.649,
+            0.13
+          ],
+          "level": 2,
+          "content": "[Sắp xếp - Tìm Kiếm]. Bài 35. Xếp trẻ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.179,
+            0.313,
+            0.203
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.179,
+            0.415,
+            0.203
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.462,
+            0.179,
+            0.514,
+            0.203
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.261,
+            0.752,
+            0.369
+          ],
+          "content": "Có n đứa trẻ muốn đi đầu quay, và nhiệm vụ của bạn là tìm một chiếc thuyền gondola cho mỗi đứa trẻ. Mỗi chiếc gondola có thể có một hoặc hai người trong đó và ngoài ra, tổng trọng lượng của một chiếc gondola không được vượt quá x. Bạn biết cân nặng của mọi đứa trẻ. Số lượng thuyền gondola tối thiểu cần thiết cho trẻ em là bao nhiêu?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.385,
+            0.319,
+            0.413
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.428,
+            0.741,
+            0.485
+          ],
+          "content": "Dòng nhập đầu tiên chứa hai số nguyên n và x: số đứa trẻ và trọng lượng tối đa cho phép. Dòng tiếp theo chứa n số nguyên p1, p2,..., pn: trọng lượng của mỗi đứa trẻ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.5,
+            0.31,
+            0.527
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.254,
+            0.544,
+            0.418,
+            0.571
+          ],
+          "content": "$1 \\leq n \\leq 2.10^{5}; 1 \\leq x \\leq 10^{9}; 1 \\leq pi \\leq x;$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.254,
+            0.588,
+            0.327,
+            0.616
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.63,
+            0.501,
+            0.661
+          ],
+          "content": "In một số nguyên: số lượng thuyền gondola tối thiểu."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.675,
+            0.327,
+            0.705
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.741,
+            0.307,
+            0.783
+          ],
+          "content": "4 10\n7 2 3 9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.813,
+            0.336,
+            0.842
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.274,
+            0.096,
+            0.648,
+            0.188
+          ],
+          "level": 1,
+          "content": "[Sắp xếp - Tìm Kiểm]. Bài 24. Biểu thức nhỏ nhất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.289,
+            0.237,
+            0.324,
+            0.257
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.366,
+            0.237,
+            0.415,
+            0.257
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.457,
+            0.237,
+            0.504,
+            0.257
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.27,
+            0.309,
+            0.727,
+            0.455
+          ],
+          "content": "Một đầy gồm n số nguyên không âm a1, a2,..., an được viết thành một hàng ngang, giữa hai số liên tiếp có một khoảng trắng, như vậy có tất cả (n-1) khoảng trắng. Người ta muốn đặt k dấu cộng và (n-1-k) dấu trừ vào (n-1) khoảng trắng đó để nhận được một biểu thức có giá trị lớn nhất. Ví dụ, với đầy gồm 5 số nguyên 28, 9, 5, 1, 69 và k = 2 thì cách đặt 28+9-5-1+69 là biểu thức có giá trị lớn nhất. Yêu cầu: Cho đầy gồm n số nguyên không âm a1, a2,..., an và số nguyên dương k, hấy tìm cách đặt k dấu cộng và (n-1-k) dấu trừ vào (n-1) khoảng trắng để nhận được một biểu thức có giá trị lớn nhất."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.271,
+            0.468,
+            0.329,
+            0.493
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.271,
+            0.505,
+            0.674,
+            0.533
+          ],
+          "content": "Dòng đầu chứa hai số nguyên dương n, k; Dòng thứ hai chứa n số nguyên không âm a1, a2,..., an;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.272,
+            0.547,
+            0.322,
+            0.569
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.272,
+            0.585,
+            0.409,
+            0.61
+          ],
+          "content": "1<= k < n ≤ 10^5; 0 <= a[i] ≤ 10^6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.272,
+            0.625,
+            0.337,
+            0.649
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.272,
+            0.663,
+            0.414,
+            0.689
+          ],
+          "content": "In ra giá trị lớn nhất của biểu thức"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.271,
+            0.703,
+            0.337,
+            0.729
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.282,
+            0.761,
+            0.421,
+            0.8
+          ],
+          "content": "6 3\n9560 5571 9008 3649 1473 3782"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.271,
+            0.826,
+            0.345,
+            0.851
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.282,
+            0.885,
+            0.31,
+            0.905
+          ],
+          "content": "22799"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2024-01-19T12:09:22+00:00",
+      "modified_at": "2024-01-19T12:09:22Z",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 21,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

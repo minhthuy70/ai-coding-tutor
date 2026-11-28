@@ -1,0 +1,2456 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2024-01-19T12:02:37+00:00",
+      "modified_at": "2024-01-19T12:02:37Z",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 31,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.321,
+            0.079,
+            0.618,
+            0.12
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp Cơ Bản]. Bài 3. Viết vòng lặp"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.313,
+            0.133,
+            0.683,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.313,
+                0.133,
+                0.683,
+                0.933
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nBài này các bạn sử dụng cả 2 vòng lặp for và while đế code. Lượt 1 sử dụng for, lượt 2 dùng while. Cho số tự nhiên N, nhiệm vụ của bạn in ra các dãy số bằng vòng lặp trên từng dòng, mỗi số cách nhau một dấu cách.\n• Đồng 1. In ra các số từ 1 tới n.\n• Đồng 2 in ra các số từ n về 0.\n• Đồng 3 in ra các số chẩn nhỏ hơn hoặc bằng n.\n• Đồng 4 in ra các số lé nhỏ hơn hoặc bằng n.\n• Đồng 5 in ra các bội số của 4 nhỏ hơn n.\n• Đồng 6 in ra N chữ cải in thường đầu tiên.\n• Đồng 7 in ra N chữ cải in thường cuối cùng theo thứ tự tăng dần.\n\nInput Format\nDòng duy nhất chứa số nguyên dương N\nConstraints\nS<=N<=26\nOutput Format\nIn ra 7 đóng theo yêu cầu\nSample Input 0\n5\nSample Output 0\n1 2 3 4 5\n5 4 3 2 1 0\n0 2 4\n1 3 5\n0 4\na b c d e\nv w x y z"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.214,
+            0.169,
+            0.793,
+            0.973
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.214,
+                0.169,
+                0.793,
+                0.973
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nTính tổng S(n) = 1 + 2 + 3 + ... + n. Công thức tổng quát của đầy : n * (n + 1) / 2. Gọi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giả trị rác), sau đó sinh ra 1 vòng lập chạy từ 1 tới n, mỗi vòng lập thì cộng biến i của vòng lập vào biến tông. In ra biến tông SAU KHI VỒNG LẬP KẾT THỨC\n\nInput Format\n\nSố nguyên dương N\n\nConstraints\n\n1≤N≤10^6\n\nOutput Format\n\nKết quả S(n)\n\nSample Input 0\n\n6\n\n\nSample Output 0\n\n21"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.222,
+            0.086,
+            0.694,
+            0.147
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 1. Tổng tự nhiên liên tiếp"
+            }
+          ],
+          "level": 2
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.248,
+            0.089,
+            0.645,
+            0.146
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 2. Tổng bình phương"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.24,
+            0.165,
+            0.76,
+            0.929
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.24,
+                0.165,
+                0.76,
+                0.929
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nTính tổng S(n) = 1^2 + 2^2 + 3^2 + 4^2 + ... + n^2.\n\nGọi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giá trị rác), sau đó sinh ra 1 vòng lập chạy từ 1 tới n, mỗi vòng lập thì giá trị i * i với i là biến của vòng lập vào biến tong. In ra biến tong SAU KHI VỒNG LẬP KẾT THỨC\n\nInput Format\n\nSố nguyên dương n\n\nConstraints\n\n1≤N≤10^5\n\nOutput Format\n\nS(n)\n\nSample Input 0\n\n3\n\nSample Output 0\n\n14"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.228,
+            0.157,
+            0.775,
+            0.975
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.228,
+                0.157,
+                0.775,
+                0.975
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nNhập vào giá trị của n không quả 10^6, tính tổng các số nguyên dương không vượt quả n, chia hết cho 3.\n\nGọi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giá trị rác), sau đó sinh ra 1 vòng lập chạy từ 1 tới n, mỗi vòng lập thì kiểm tra xem i chia hết cho 3 thì cộng biến i của vòng lập vào biến tong. İn ra biến tông SAU KHI VÒNG LẬP KẾT THỨC\n\nInput Format\n\nSố nguyên dương n\n\nConstraints\n\n1≤n≤10^6\n\nOutput Format\n\nKết quả của bài toàn\n\nSample Input 0\n\n10\n\nSample Output 0\n\n18"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.238,
+            0.078,
+            0.598,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 3. Tổng bội của 3"
+            }
+          ],
+          "level": 2
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.246,
+            0.087,
+            0.625,
+            0.145
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 4. Tổng nghịch đảo"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.237,
+            0.167,
+            0.772,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.237,
+                0.167,
+                0.772,
+                0.978
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nTính tổng : S=1+1/2+1/3+1/4+....+1/n.\n\nGoi ý : Tạo 1 biến kết quả gọi là tong và khởi tạo bằng 0(tránh giá trị rác), sau đó sinh ra 1 vòng lặp chạy từ 1 tới n, mỗi vòng lặp thì cộng giá trị 1 / i của vòng lặp vào biến tong. In ra biến tong SAU KHI VỒNG LẬP KẾT THỨC\n\nInput Format\n\nSố nguyên dương n\n\nConstraints\n\n1≤n≤10^5\n\nOutput Format\n\nIn ra kết quả lấy độ chỉnh xác 3 số sau dấu phấy.\n\nSample Input 0\n\n2\n\nSample Output 0\n\n1.500"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.244,
+            0.315,
+            0.507,
+            0.922
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.244,
+                0.315,
+                0.507,
+                0.922
+              ],
+              "content": "Tính tổng : S = 1/2 + 1/4 + 1/6 + 1/8 +......+ 1/(2n)\nInput Format\nSố nguyên dương n\nConstraints\n1≤ns≤10^6\nOutput Format\nKết quả S(n) lấy độ chính xác 5 số sau dấu phấy.\nSample Input 0\n993856\nSample Output 0\n7.19328"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.25,
+            0.109,
+            0.693,
+            0.174
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 5. Tổng nghịch đảo 2"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.268,
+            0.227,
+            0.314,
+            0.256
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.365,
+            0.225,
+            0.43,
+            0.258
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.483,
+            0.226,
+            0.547,
+            0.259
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.244,
+            0.087,
+            0.539,
+            0.142
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 6. Tổng ước"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.238,
+            0.166,
+            0.764,
+            0.929
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.238,
+                0.166,
+                0.764,
+                0.929
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nTính tổng ước của số nguyên dương n. Bài này duyệt từ 1 tới n sẽ bị quá thời gian cho phép. Gọi ý : Duyệt các\nsố i từ 1 tới căn n, nếu i là ước sẽ tính luôn được ước còn lại của n là n / i. Ví dụ n = 60 có các ước 1, 2, 3, 4, 5, 6,\n10, 12, 15, 20, 30, 60. Duyệt các ước từ 1 tới 7 (căn 60) và khi thấy ước là 1 => 60, 2 => 30, 3 => 20, 4 => 15, 5 =>\n12, 6 => 10. Chủ ý trường hợp n là số chính phương sẽ xảy ra cặp i và n / i giống nhau, khi đó chỉ được tỉnh 1\nlần.\n\nInput Format\n\nSố nguyên dương N\n\nConstraints\n\n1≤N≤10^10.\n\nOutput Format\n\nTổng ước của N\n\nSample Input 0\n\n28\n\nSample Output 0\n\n56"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.27,
+            0.083,
+            0.634,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng Lặp]. Bài 7. Liệt kê ước"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.263,
+            0.172,
+            0.731,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.263,
+                0.172,
+                0.731,
+                0.932
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nĐém số lượng ước và liệt kê các ước theo thử tự tăng dẫn của số nguyên dương N\nInput Format\nSố nguyên dương N không quá\nConstraints\n1≤N≤10^6\nOutput Format\nKết quả của bài toàn\nSample Input 0\n28\nSample Output 0\n6\n1 2 4 7 14 28"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.248,
+            0.081,
+            0.714,
+            0.14
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 8. Liệt kê số chính phương"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.243,
+            0.161,
+            0.654,
+            0.922
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.243,
+                0.161,
+                0.654,
+                0.922
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nLiệt kê các số chính phương dương và không vượt quả n\nVí dụ N = 20 => 1, 4, 9, 16\nGoi ý : Duyệt các số tự nhiên i <= căn N, khi đó i * i sẽ là số chính phương và sẽ <= N.\nInput Format\nSố nguyên dương n\nConstraints\n1≤n≤10^10.\nOutput Format\nLiệt kê các số chính phương không vượt quá n\nSample Input 0\n58\nSample Output 0\n1 4 9 16 25 36 49"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.276,
+            0.194,
+            0.733,
+            0.928
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.276,
+                0.194,
+                0.733,
+                0.928
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nTính tích các ước của số tự nhiên N\nInput Format\nSố nguyên dương N\nConstraints\n1≤N≤1000\nOutput Format\nTích các ước số của N\nSample Input 0\n10\nSample Output 0\n100"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.285,
+            0.109,
+            0.654,
+            0.171
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng Lặp]. Bài 9. Tích các ước"
+            }
+          ],
+          "level": 2
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.286,
+            0.098,
+            0.615,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 10. Kiểm tra số 2022"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.282,
+            0.167,
+            0.709,
+            0.923
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.282,
+                0.167,
+                0.709,
+                0.923
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nNhập vào 1 dãy số có không quá 10000 số nguyên. Hãy xác định trong quá trình nhập có xuất hiện số 2022 hay không?\n\nGoi ý :\n\nint n; cín >> n;\nfor(int 1 - 1; 1 <- n; 1++){\n    //Nhập 1 số, nếu số đó là 2022 thi ghi nhận lại\n}\n//Kiểm tra biến ghi nhận\n\nInput Format\n\nDòng đầu tiên là số lượng số nguyên sẽ nhập : N Đồng thứ 2 là N số viết cách nhau một khoảng trắng.\n\nConstraints\n\n1≤N≤10000; Các số được nhập là số nguyên không quá 10^6.\n\nOutput Format\n\nIn YES nếu trong các số vừa nhập có số 2022, ngược lại in NO\n\nSample Input 0\n\n4\n2019 2020 2021 2022\n\nSample Output 0\n\nYES"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.267,
+            0.191,
+            0.751,
+            0.988
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.267,
+                0.191,
+                0.751,
+                0.988
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nTính tổng : S= -1 + 2 - 3 + 4 - 5 + ...... + (-1)^n*n\n\nInput Format\n\nSố nguyên dương n\n\nConstraints\n\n1≤n≤10^6\n\nOutput Format\n\nKết quả của bài toán\n\nSample Input 0\n\n6\n\nSample Output 0\n\n3"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.276,
+            0.101,
+            0.663,
+            0.167
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 11. Tổng chẩn lẻ"
+            }
+          ],
+          "level": 2
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.241,
+            0.102,
+            0.601,
+            0.167
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 12. Tổng bội 2"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.232,
+            0.189,
+            0.768,
+            0.924
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.232,
+                0.189,
+                0.768,
+                0.924
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nNhập vào n nguyên dương không quá 10^6, tính và in tổng sau ra màn hình S=2+4+6+8+.....+2*n\n\nInput Format\n\nSố nguyên dương n\n\nConstraints\n\n1≤n≤10^6\n\nOutput Format\n\nKết quả của bãi toàn\n\nSample Input 0\n\n4\n\nSample Output 0\n\n20"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.239,
+            0.094,
+            0.561,
+            0.159
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 13. Tổng lẻ"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.232,
+            0.179,
+            0.771,
+            0.928
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.232,
+                0.179,
+                0.771,
+                0.928
+              ],
+              "content": "Problem\tSubmissions\tDiscoussions\n\nNhập vào n nguyên dương không qua 10^6, tỉnh và in tổng sau ra màn hình. S=1+3+5+7+.....+2*n-1\nInput Format\nSố nguyên dương n\nConstraints\n1≤n≤10^6\nOutput Format\nKết quả của bài toán\nSample Input 0\n4\nSample Output 0\n16"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.225,
+            0.106,
+            0.65,
+            0.168
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 14. Tổng lập phương"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.216,
+            0.189,
+            0.789,
+            0.929
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.216,
+                0.189,
+                0.789,
+                0.929
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nNhập vào n nguyên dương không quả 1000 và tính tổng sau, kết quả in ra màn hình. S=1^3+2^3+3^3+4^3+...... +n^3.\n\nInput Format\n\nSố nguyên dương n\n\nConstraints\n\n1≤n≤10^3\n\nOutput Format\n\nKết quả của bãi toán\n\nSample Input 0\n\n3\n\nSample Output 0\n\n36"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.266,
+            0.085,
+            0.68,
+            0.152
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 15. Tính giai thừa"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.285,
+            0.207,
+            0.332,
+            0.237
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.384,
+            0.206,
+            0.453,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.506,
+            0.206,
+            0.57,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.276,
+            0.882,
+            0.3,
+            0.915
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "120"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.249,
+            0.073,
+            0.723,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 16. Đếm số lượng chữ số của N"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.267,
+            0.245,
+            0.312,
+            0.274
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.36,
+            0.245,
+            0.424,
+            0.274
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.474,
+            0.244,
+            0.534,
+            0.275
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.246,
+            0.331,
+            0.534,
+            0.37
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Nhập vào n, đếm số lượng chữ số của n và in ra kết quả."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.247,
+            0.383,
+            0.319,
+            0.417
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Input Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.247,
+            0.43,
+            0.369,
+            0.467
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Số nguyên không âm n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.247,
+            0.479,
+            0.31,
+            0.514
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Constraints"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.246,
+            0.526,
+            0.31,
+            0.563
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "0≤n≤10^18"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.246,
+            0.575,
+            0.328,
+            0.611
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.246,
+            0.621,
+            0.363,
+            0.66
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Số lượng chữ số của n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.246,
+            0.671,
+            0.328,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Input 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.259,
+            0.741,
+            0.317,
+            0.775
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "123456789"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.246,
+            0.801,
+            0.337,
+            0.837
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Output 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.258,
+            0.873,
+            0.271,
+            0.903
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.216,
+            0.09,
+            0.738,
+            0.157
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 17. Tính tổng chữ số của N"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.235,
+            0.211,
+            0.282,
+            0.24
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.334,
+            0.209,
+            0.401,
+            0.241
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.209,
+            0.514,
+            0.241
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.264,
+            0.098,
+            0.732,
+            0.213
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 18. Đếm chữ số nguyên tố của số nguyên"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.37,
+            0.263,
+            0.43,
+            0.292
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.478,
+            0.261,
+            0.535,
+            0.293
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.282,
+            0.087,
+            0.53,
+            0.132
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 19. Mua bia"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.295,
+            0.173,
+            0.328,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.368,
+            0.173,
+            0.415,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.456,
+            0.173,
+            0.499,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.277,
+            0.241,
+            0.711,
+            0.335
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "28techland là vùng đất mà cư dân cực kì thích uống bia, vì thể để tăng số lượng bia bán ra các cửa hàng bia ở đây đưa ra khuyến mại như sau : Cử 3 vỏ chai bia sẽ được đối một chai bia mới. Biết rằng ở 28techland, mỗi chai bia có giá 28 xu, nhiệm vụ của bạn là xác định với N xu cho trước, bạn có thể mua được tối đa bao nhiêu chai bia tính cả việc đối thường bằng vỏ chai?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.277,
+            0.348,
+            0.707,
+            0.396
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Gợi ý : Bước 1 : Tính số lượng chai bia mua bằng tiền (n / 28). Sau đó làm 1 vòng lặp while với điều kiện lặp là số lượng vỏ chai mình có >= 3, bên trong vòng lặp thì tính số lượng chia bia đối được và cập nhật vỏ chai."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.278,
+            0.408,
+            0.334,
+            0.433
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Input Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.278,
+            0.445,
+            0.46,
+            0.47
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dòng duy nhất chứa N là số đồng xu ban đầu"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.279,
+            0.484,
+            0.327,
+            0.507
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Constraints"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.279,
+            0.521,
+            0.332,
+            0.544
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "1 < = N < = 10^{6}"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.279,
+            0.558,
+            0.341,
+            0.583
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.279,
+            0.596,
+            0.439,
+            0.621
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In ra số lượng chai bia tối đa có thể mua"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.278,
+            0.634,
+            0.342,
+            0.659
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Input 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.289,
+            0.688,
+            0.306,
+            0.708
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "138"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.279,
+            0.736,
+            0.349,
+            0.76
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Output 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 15,
+          "bbox": [
+            0.289,
+            0.791,
+            0.297,
+            0.809
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.279,
+            0.838,
+            0.336,
+            0.861
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Explanation 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 17,
+          "bbox": [
+            0.278,
+            0.874,
+            0.715,
+            0.921
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "138 xu có thể mua được 4 chai bia, 4 vỏ chai của chai bia này sẽ đối thêm được 1 chai bia nửa. Kết quả tổng số chai bia có thể mua là 5."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.293,
+            0.084,
+            0.64,
+            0.132
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 20. Biểu diễn số nguyên"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 1,
+          "bbox": [
+            0.287,
+            0.149,
+            0.713,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 1,
+              "bbox": [
+                0.287,
+                0.149,
+                0.713,
+                0.933
+              ],
+              "image_path": "images/page_20_table_1.jpg",
+              "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan=\"3\">Cho một số nguyên dương n, hãy biểu diễn n dưới dạng tổng của các số nguyên tố sao cho số lượng số hạng trong tổng là lớn nhất có thể.</td></tr><tr><td colspan=\"3\">Input Format</td></tr><tr><td colspan=\"3\">Số nguyên dương N trên 1 dòng</td></tr><tr><td colspan=\"3\">Constraints</td></tr><tr><td colspan=\"3\">1&lt;=N&lt;=10^4</td></tr><tr><td colspan=\"3\">Output Format</td></tr><tr><td colspan=\"3\">Dòng đầu tiên in ra số lượng số hạng trong tổng. Nếu không thể biểu diễn n dưới dạng tổng các số nguyên tố thì in ra -1 cho dòng này và không cần in dòng 2. Dòng 2 in ra các số hạng trong tổng theo thứ tự tăng đàn.</td></tr><tr><td colspan=\"3\">Sample Input 0</td></tr><tr><td colspan=\"3\">6</td></tr><tr><td colspan=\"3\">Sample Output 0</td></tr><tr><td colspan=\"3\">32 2 2</td></tr><tr><td colspan=\"3\">Sample Input 1</td></tr><tr><td colspan=\"3\">1</td></tr><tr><td colspan=\"3\">Sample Output 1</td></tr><tr><td colspan=\"3\">-1</td></tr></table>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.322,
+            0.071,
+            0.546,
+            0.112
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 21. Vẽ hình 1"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.317,
+            0.127,
+            0.682,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.317,
+                0.127,
+                0.682,
+                0.933
+              ],
+              "content": "Problem\tSubmissions\tDiscoussions\nNhập n là một số nguyên không quá 100. In ra các hình tương ứng, mỗi hình cách nhau một dòng trống.\nInput Format\nSố nguyên dương N\nConstraints\n1≤n≤100\nOutput Format\nIn ra hình sao theo mẫu\nSample Input 0\n5\nSample Output 0\n*****\n ******\n ******\n ******\n ******\n ******\n ******\n *   *\n *   *\n *   *\n ******\n ******\n *###* \n *###* \n *###* \n ******\n1 1 1 1 1\n2          2\n3          3\n4          4\n5 5 5 5 5"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.331,
+            0.122,
+            0.67,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.331,
+                0.122,
+                0.67,
+                0.933
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\nNhập n là một số nguyên không quá 100. In ra các hình tương ứng, mỗi hình cách nhau một đồng trống.\nInput Format\nSố nguyên dương N\nConstraints\n1≤n≤100\nOutput Format\nIn ra hình sao theo mẫu\nSample Input 0\n5\nSample Output 0\n*\n**\n***\n****\n****\n******\n****\n****\n****\n**\n*\n*\n**\n***\n****\n****\n*\n*****\n****\n**\n***\n**\n*\n*\n*\n*\n*\n*****"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "c"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.337,
+            0.073,
+            0.544,
+            0.11
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 22. Vẽ hình 2"
+            }
+          ],
+          "level": 2
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.323,
+            0.085,
+            0.543,
+            0.125
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 23. Vẽ hình 3"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.318,
+            0.139,
+            0.681,
+            0.927
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.318,
+                0.139,
+                0.681,
+                0.927
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\nNhập n là một số nguyên không quá 100. In ra các hình tương ứng, mỗi hình cách nhau một dòng trống.\nInput Format\nSố nguyên dương N\nConstraints\n1≤n≤100\nOutput Format\nIn ra hình số theo mẫu\nSample Input 0\n5\nSample Output 0\n1 2 3 4 5\n6 7 8 9 10\n11 12 13 14 15\n16 17 18 19 20\n21 22 23 24 25\n1 2 3 4 5\n2 3 4 5 6\n3 4 5 6 7\n4 5 6 7 8\n5 6 7 8 9\n~~~~~1\n~~~~~22\n~~~~~333\n~4444\n55555\n1\n2 6\n3 7 10\n4 8 11 13\n5 9 12 14 15"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "csv"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "code",
+          "index": 0,
+          "bbox": [
+            0.266,
+            0.215,
+            0.735,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 0,
+              "bbox": [
+                0.266,
+                0.215,
+                0.735,
+                0.931
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\nCho 2'số a và b. Nhiêm vụ của bạn là tính ước chung lớn nhất của a giai thừa và b giai thừa\nInput Format\n2 số nguyên không âm a và b.\nConstraints\n0<=a,b<=10^12; 0<=min(a, b)<=12\nOutput Format\nIn ra kết quả trên 1 dòng\nSample Input 0\n2:5\nSample Output 0\n2:\nExplanation 0\n2! = 2; 5! = 120. Uốc chung lớn nhất của 2 và 120 là 2."
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.272,
+            0.089,
+            0.719,
+            0.193
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 24. Ước chung lớn nhất của giai thừa"
+            }
+          ],
+          "level": 2
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.212,
+            0.084,
+            0.644,
+            0.148
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 25. Thương giai thừa"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.204,
+            0.176,
+            0.79,
+            0.939
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.204,
+                0.176,
+                0.79,
+                0.939
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nCho số nguyên dương N, bạn hấy tính tổng : S(N) = 1/0! + 1/1! + 1/2! + 1/3! + ... + 1/(N - 1)! Trong đó ! là kí hiệu của giai thừa\n\nInput Format\n\nDòng duy nhất chứa số nguyên dương N\n\nConstraints\n\n2<=N<=15\n\nOutput Format\n\nIn ra kết quả lấy độ chính xác 4 số đẳng sau dấu thập phân\n\nSample Input 0\n\n4\n\nSample Output 0\n\n2.6667"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.3,
+            0.086,
+            0.636,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 26. Giải phương trình"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.291,
+            0.153,
+            0.714,
+            0.929
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.291,
+                0.153,
+                0.714,
+                0.929
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nCho 3 số a, b, n. Nhiệm vụ của bạn là xác định xem phương trình ax + by = n có tồn tại cấp nghiệm (x, y) nguyên không âm hay không?\n\nInput Format\n\n1 dòng duy nhất chứa 3 số a, b, n\n\nConstraints\n\n1<=a,b,n<=1000\n\nOutput Format\n\nIn ra YES nếu tồn tại cấp nghiệm nguyên không âm, ngược lại in ra NO.\n\nSample Input 0\n\n7 10 16\n\nSample Output 0\n\nNO\n\nSample Input 1\n\n5 8 28\n\nSample Output 1\n\nYES"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.254,
+            0.089,
+            0.57,
+            0.141
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 27. Digital root"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.27,
+            0.188,
+            0.307,
+            0.213
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.352,
+            0.187,
+            0.407,
+            0.213
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.453,
+            0.187,
+            0.504,
+            0.213
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.249,
+            0.267,
+            0.747,
+            0.349
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cho số nguyên dương không âm N, ở mỗi thao tác bạn thực hiện tính tổng các chữ số của N sau đó gán lại cho N, thao tác này được thực hiện cho tới khi N chỉ còn 1 chữ số. Ví dụ N = 278 -> 17 -> 8, vậy ta có dạng rút gọn của 278 là 8. Nhiệm vụ của bạn là tìm dạn rút gọn của 1 số nguyên không âm N cho trước"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.259,
+            0.093,
+            0.718,
+            0.161
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 28. Tìm tổng giai thừa"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.247,
+            0.184,
+            0.751,
+            0.934
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.247,
+                0.184,
+                0.751,
+                0.934
+              ],
+              "content": "Problem\tSubmissions\tDiscussions\n\nTính tổng S(n) = 1 + 1.2 + 1.2.3 + 1.2.3.4 + ... + 1.2.3....n\n\nInput Format\n\nSố nguyên dưỡng n\n\nConstraints\n\n1 <= n <= 12\n\nOutput Format\n\nIn ra kết quả của S(n)\n\nSample Input 0\n\n5\n\nSample Output 0\n\n153"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.229,
+            0.089,
+            0.57,
+            0.15
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 29. Tổng chẩn"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.246,
+            0.202,
+            0.289,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.339,
+            0.202,
+            0.402,
+            0.23
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.451,
+            0.202,
+            0.508,
+            0.231
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.224,
+            0.291,
+            0.656,
+            0.325
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cho N số nguyên, nhiệm vụ của bạn là tính tổng các số nguyên được nhập là số chắn."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.225,
+            0.341,
+            0.296,
+            0.372
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Input Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.223,
+            0.385,
+            0.774,
+            0.449
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dòng đầu tiên là số nguyên dương N - số lượng số được nhập. Đồng thứ 2 là N số nguyên được nhập, mỗi số cách nhau một khoảng trắng"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.225,
+            0.465,
+            0.288,
+            0.495
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Constraints"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.225,
+            0.511,
+            0.585,
+            0.545
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1<=N<=100000; Các số được nhập là số nguyên dương không quả 10^6"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.225,
+            0.561,
+            0.305,
+            0.591
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.225,
+            0.606,
+            0.421,
+            0.64
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In ra tổng các số chân được nhập vào."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.224,
+            0.655,
+            0.306,
+            0.689
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Input 0"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "index": 12,
+          "bbox": [
+            0.237,
+            0.723,
+            0.329,
+            0.776
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 12,
+              "bbox": [
+                0.237,
+                0.723,
+                0.329,
+                0.776
+              ],
+              "content": "8\n8 9 4 1 5 1 6 6"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.224,
+            0.805,
+            0.315,
+            0.838
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Output 0"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.238,
+            0.879,
+            0.254,
+            0.903
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.279,
+            0.098,
+            0.628,
+            0.188
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Vòng lặp]. Bài 30. Kiểm tra nhiều test case"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 1,
+          "bbox": [
+            0.273,
+            0.211,
+            0.718,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 1,
+              "bbox": [
+                0.273,
+                0.211,
+                0.718,
+                0.931
+              ],
+              "image_path": "images/page_30_table_1.jpg",
+              "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan=\"3\">Bài này rất đơn giản, nhiệm vụ của bạn là kiểm tra số nhập vào là chẩn hay lé. Các bạn phải trả lời nhiều trường hợp. (Bài này có nhiệm vụ cho các bạn làm quen với các bài toán mà đề bài cho nhiều test case sau này)</td></tr><tr><td colspan=\"3\">Input Format</td></tr><tr><td colspan=\"3\">Dòng đầu tiên là số lượng trường hợp T; T dòng tiếp theo mỗi dòng là một số nguyên N cần kiểm tra tính chẩn lé.</td></tr><tr><td colspan=\"3\">Constraints</td></tr><tr><td colspan=\"3\">1&lt;=T&lt;=100; Các số cần kiểm tra là số không âm không quả 1000;</td></tr><tr><td colspan=\"3\">Output Format</td></tr><tr><td colspan=\"3\">Đối với mỗi trường hợp, các bạn in kết quả trên 1 dòng, nếu số ở trường hợp đó là chẩn thì in ra &quot;EVEN&quot;, ngược lại in ra &quot;ODD&quot;</td></tr><tr><td colspan=\"3\">Sample Input 0</td></tr><tr><td>3</td><td></td><td></td></tr><tr><td>166</td><td></td><td></td></tr><tr><td>721</td><td></td><td></td></tr><tr><td>665</td><td></td><td></td></tr><tr><td colspan=\"3\">Sample Output 0</td></tr><tr><td>EVEN</td><td></td><td></td></tr><tr><td>ODD</td><td></td><td></td></tr><tr><td>ODD</td><td></td><td></td></tr></table>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

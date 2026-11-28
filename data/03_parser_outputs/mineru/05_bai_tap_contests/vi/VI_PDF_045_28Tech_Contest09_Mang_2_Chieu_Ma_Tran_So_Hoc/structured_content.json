@@ -1,0 +1,1542 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.257,
+            0.108,
+            0.62,
+            0.213
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 1. Liệt kê các số nguyên tố trong màng 2 chiều"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.249,
+            0.229,
+            0.755,
+            0.928
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận cổ NxM gồm N hàng, mỗi hàng M cột. Hây liệt kê các số nguyên tố theo từng hàng trong ma trận.\n\nInput Format\n\nDòng đầu tiên là 2 số N và M. N dòng tiếp theo mỗi dòng có M số.\n\nConstraints\n\n1 sn, ms500; Các phần tử trong ma trận là số dương không quả 10^9.\n\nOutput Format\n\nIn ra các số nguyên tố trong ma trận theo từng dòng\n\nSample Input 0\n\n3 3\n1 2 3\n4 5 6\n7 8 9\n\nSample Output 0\n\n2 3\n5\n7\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.264,
+            0.1,
+            0.695,
+            0.201
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 2. Tổng hàng, tổng cột trên ma trận"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.256,
+            0.221,
+            0.75,
+            0.935
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan=\"3\">Cho ma trận cỡ NxM gồm N hàng, mỗi hàng M cột. Hây tính tổng các phần tử trên từng hàng và tổng các phần tử trên từng cột của ma trận.</td></tr><tr><td colspan=\"3\">Input Format</td></tr><tr><td colspan=\"3\">Dòng đầu tiên là 2 số N và M. N đồng tiếp theo mỗi dòng có M số.</td></tr><tr><td colspan=\"3\">Constraints</td></tr><tr><td colspan=\"3\">1≤n,ms≤200; Các phần tử trong ma trận là số dương không quá 10^9.</td></tr><tr><td colspan=\"3\">Output Format</td></tr><tr><td colspan=\"3\">Dòng đầu tiên, in ra N số là tổng của N hàng. Dông thứ 2 in ra M số là tổng của M cột.</td></tr><tr><td colspan=\"3\">Sample Input 0</td></tr><tr><td colspan=\"3\">3 31 2 34 5 67 8 9</td></tr><tr><td colspan=\"3\">Sample Output 0</td></tr><tr><td colspan=\"3\">6 15 2412 15 18</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_1_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.283,
+            0.093,
+            0.662,
+            0.186
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 3. Số lớn nhất và nhỏ nhất trong ma trận"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.37,
+            0.225,
+            0.419,
+            0.249
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.295,
+            0.716,
+            0.345
+          ],
+          "content": "Cho ma trận cổ NxM gồm N hàng, mỗi hàng M cột. Hãy tìm số nhỏ nhất trong ma trận và số lớn nhất trong ma trận, sau đó liệt kê các vị trí xuất hiện của các phần tử này trong ma trận."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.356,
+            0.336,
+            0.382
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.391,
+            0.541,
+            0.42
+          ],
+          "content": "Dòng đầu tiên là 2 số N và M. N đồng tiếp theo mỗi dòng có M số."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.432,
+            0.329,
+            0.455
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.467,
+            0.552,
+            0.495
+          ],
+          "content": "1≤n,m≤205; Các phần tử trong ma trận là số dương không quá 10^9."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.507,
+            0.343,
+            0.532
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.543,
+            0.704,
+            0.614
+          ],
+          "content": "Dòng đầu tiên in ra số nhỏ nhất trong ma trận, các dòng tiếp theo liệt kê các vị trí của số này trong ma trận. Dòng tiếp theo in ra số lớn nhất trong ma trận, các dòng tiếp theo liệt kê các vị trí của số này trong ma trận. Xem test case mẫu để rõ hơn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.627,
+            0.344,
+            0.652
+          ],
+          "content": "Sample Input 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.28,
+            0.099,
+            0.645,
+            0.195
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 4. Số thuận nghịch trong tam giác dưới."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.274,
+            0.213,
+            0.729,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hây đếm các số thuận nghịch thuộc tam giác dưới của ma trận trên.\n\nInput Format\n\nDòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.\n\nConstraints\n\n1≤n≤205; Các phần tử trong ma trận là số dương không quá 10^9.\n\nOutput Format\n\nIn ra số lượng số thuận nghịch trong ma trận.\n\nSample Input 0\n\n3\n1 2 3\n22 14 56\n76 5 4\n\nSample Output 0\n\n4\n\nExplanation 0\n\n4 số là số thuận nghịch thuộc tam giác dưới là : 1, 22, 4, 5\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.345,
+            0.08,
+            0.626,
+            0.15
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 5. In ra ma trận theo mẫu."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.341,
+            0.164,
+            0.662,
+            0.941
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hây in ra ma trận theo các mẫu dưới đây.\n\nInput Format\n\nDòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.\n\nConstraints\n\n1≤ns≤500; Các phần tử trong ma trận là số dương không quả 10^9.\n\nOutput Format\n\nIn ra ma trận theo mẫu, xem test case để rò hơn.\n\nSample Input 0\n\n5\n510 745 649 186 313\n474 22 168 18 787\n905 958 391 202 625\n477 414 314 824 334\n874 372 159 833 78\n\nSample Output 0\n\nPattern 1:\n510 474 905 477 874\n745 22 958 414 372\n649 168 391 314 159\n186 18 202 824 833\n313 787 625 334 70\nPattern 2:\n78 833 159 372 874\n334 824 314 414 477\n625 202 391 958 905\n787 18 168 22 474\n313 186 649 745 510\nPattern 3:\n313 787 625 334 70\n186 18 202 824 833\n649 168 391 314 159\n745 22 958 414 372\n510 474 905 477 874\nPattern 4:\n313 186 649 745 510\n787 18 168 22 474\n625 202 391 958 905\n334 824 314 414 477\n78 833 159 372 874\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.291,
+            0.16,
+            0.717,
+            0.937
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy hoán vị các phần tử trên 2 đường chéo chính và\nphu của ma trận.\n\nInput Format\n\nDòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.\n\nConstraints\n\n1≤ns≤300: Các phần tử trong ma trận là số dương không quả 10^9.\n\nOutput Format\n\nIn ra ma trận sau khi hoán vị 2 đường chéo\n\nSample Input 0\n\n8\n519 178 774 271 764 669 193 986\n103 481 214 628 803 100 528 626\n544 925 24 973 62 182 4 433\n506 594 726 32 493 143 223 287\n65 901 188 361 414 975 271 171\n236 834 712 761 897 668 286 551\n141 695 696 625 20 126 577 695\n659 303 372 467 679 594 852 485\n\nSample Output 0\n\n986 178 774 271 764 669 193 519\n103 528 214 628 803 100 481 626\n544 925 182 973 62 24 4 433\n506 594 726 493 32 143 223 287\n65 901 188 414 361 975 271 171\n236 834 668 761 897 712 286 551\n141 577 696 625 20 126 695 695\n485 303 372 467 679 594 852 659\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.297,
+            0.096,
+            0.665,
+            0.141
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chièu]. Bài 6. Hoán vị đường chéo"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.279,
+            0.1,
+            0.696,
+            0.199
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 7. Hoán vị 2 hàng của ma trận"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.272,
+            0.221,
+            0.737,
+            0.933
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy hoán vị các phần tử trên 2 hàng của ma trận.\n\nInput Format\n\nDòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số. Dòng tiếp theo là 2 hàng u, v cần hoán vị.\n\nConstraints\n\n1≤n≤300; Các phần tử trong ma trận là số dương không quá 10^9; 1≤u,v≤300\n\nOutput Format\n\nIn ra ma trận sau khi hoán vị 2 hàng.\n\nSample Input 0\n\n3\n1 2 3\n4 5 6\n7 8 9\n1 3\n\nSample Output 0\n\n7 8 9\n4 5 6\n1 2 3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.283,
+            0.089,
+            0.683,
+            0.188
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 8. Hoán vị 2 cột của ma trận"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.279,
+            0.211,
+            0.735,
+            0.925
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy hoán vị các phần tử trên 2 cột của ma trận.\n\nInput Format\n\nDòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số. Dòng tiếp theo là 2 cột u, v cần hoán vị.\n\nConstraints\n\n1≤ns≤200; Các phần tử trong ma trận là số dương không quá 10^9; 1≤u,vs≤200\n\nOutput Format\n\nIn ra ma trận sau khi hoán vị 2 cột.\n\nSample Input 0\n\n3\n1 2 3\n4 5 6\n7 8 9\n1 3\n\nSample Output 0\n\n3 2 1\n6 5 4\n9 8 7\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.301,
+            0.097,
+            0.66,
+            0.228
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 9. Đém các phần tử là số nguyên tố trên đường chéo chính và phụ"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.298,
+            0.244,
+            0.706,
+            0.927
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy đếm các số nguyên tố trên đường chéo chính và đường chéo phụ, mỗi phần tử là số nguyên tố thỏa mãn chỉ đếm 1 lần.\n\nInput Format\n\nDòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.\n\nConstraints\n\n1≤n≤200; Các phần tử trong ma trận là số dương không quả 10^9;\n\nOutput Format\n\nIn ra số lượng số nguyên tố trên đường chéo chính và phụ.\n\nSample Input 0\n\n4\n1 2 3 4\n5 6 7 8\n9 10 1 2\n2 3 5 7\n\nSample Output 0\n\n3\n\nExplanation 0\n\nCác phần tử là số nguyên tố trên đường chéo chính là : 7. Các phần tử là số nguyên tố trên đường chéo phụ là : 2, 7\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.262,
+            0.085,
+            0.673,
+            0.233
+          ],
+          "level": 2,
+          "content": "[Măng 2 Chiều]. Bài 10. Đém các phần tử là số nguyên tố trên đường chéo chính và phụ 2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.256,
+            0.251,
+            0.739,
+            0.93
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy đếm các số nguyên tố trên đường chéo chính và đường chéo phụ, mỗi giá trị là số nguyên tố thỏa mãn chỉ đếm 1 lần.\n\nInput Format\n\nDòng đầu tiên là số N. N đồng tiếp theo mỗi dòng có N số.\n\nConstraints\n\n1≤n≤200; Các phần tử trong ma trận là số dương không quá 10^9;\n\nOutput Format\n\nIn ra số lượng số nguyên tố trên đường chéo chính và phụ.\n\nSample Input 0\n\n3\n1 2 3\n4 5 6\n7 8 9\n\nSample Output 0\n\n3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.262,
+            0.087,
+            0.676,
+            0.187
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiêu]. Bài 11. Sắp xếp các hàng của ma trận"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.256,
+            0.211,
+            0.749,
+            0.926
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cỡ NxN gồm N hàng, mỗi hàng N cột. Hấy sắp xếp các phần tử của từng hàng của ma trận theo thử tự tăng dần.\n\nInput Format\n\nDòng đầu tiên là số N. N đồng tiếp theo mỗi dòng có N số.\n\nConstraints\n\n1≤n≤200; Các phần tử trong ma trận là số dương không quá 10^9;\n\nOutput Format\n\nIn ra ma trận sau khi sắp xếp\n\nSample Input 0\n\n3\n2 7 6\n1 2 3\n9 8 1\n\nSample Output 0\n\n2 6 7\n1 2 3\n1 8 9\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.259,
+            0.085,
+            0.675,
+            0.185
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 12. Sắp xếp các phần tử theo cột"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.252,
+            0.207,
+            0.75,
+            0.924
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy sắp xếp các phần tử trong ma trận theo cột theo thứ tự tăng dần.\n\nInput Format\n\nDòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.\n\nConstraints\n\n1≤n≤200; Các phần tử trong ma trận là số dương không quả 10^9;\n\nOutput Format\n\nIn ra ma trận sau khi đã sắp xếp theo cột tăng dần.\n\nSample Input 0\n\n3\n1 2 3\n5 5 2\n1 4 7\n\nSample Output 0\n\n1 2 2\n1 4 3\n5 5 7\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.271,
+            0.077,
+            0.664,
+            0.131
+          ],
+          "level": 2,
+          "content": "[Măng 2 Chiều]. Bài 13. Nhân 2 ma trận."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.264,
+            0.146,
+            0.734,
+            0.984
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận A cổ NxM, ma trận B cổ MxP. Hầy tính ma trận tích của A và B.\n\nInput Format\n\nDòng đầu tiên là 3 số N, M, P; N đồng tiếp theo, mỗi dòng M của ma trận A; M đồng tiếp theo, mỗi dòng P số của ma trận B.\n\nConstraints\n\n1≤N,M,P≤50; Các phần tử trong ma trận là số dưỡng không quá 100000;\n\nOutput Format\n\nIn ra ma trận tích của A và B\n\nSample Input 0\n\n3 4 5\n1 2 3 4\n5 6 7 8\n9 10 11 12\n1 2 3 4 5\n6 7 8 9 10\n11 12 13 14 15\n16 17 18 19 20\n\nSample Output 0\n\n110 120 130 140 150\n246 272 298 324 350\n382 424 466 508 550\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.262,
+            0.095,
+            0.725,
+            0.158
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiêu]. Bài 14. Ma trận xoáy ốc"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.257,
+            0.185,
+            0.567,
+            0.911
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nXây dựng ma trận xoáy ốc cấp N\nInput Format\nSố nguyên dương N là cấp của ma trận xoáy ốc cần xây dựng.\nConstraints\n1≤N≤100\nOutput Format\nIn ra ma trận xoáy ốc.\nSample Input 0\n3\nSample Output 0\n1 2 3\n8 9 4\n7 6 5\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.278,
+            0.081,
+            0.732,
+            0.191
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiêu]. Bài 15. Ma trận xoáy ốc Fibonacci"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.295,
+            0.246,
+            0.337,
+            0.273
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.385,
+            0.245,
+            0.445,
+            0.273
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.494,
+            0.245,
+            0.551,
+            0.274
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.273,
+            0.326,
+            0.702,
+            0.927
+          ],
+          "sub_type": "code",
+          "content": "```csv\nIn ra ma trận xoáy ốc cấp N, với các số trong ma trận đều là các số trong dãy Fibonacci.\nInput Format\nSố nguyên dương N\nConstraints\n1≤N≤9\nOutput Format\nMa trận xoáy ốc cấp N\nSample Input 0\n3\nSample Output 0\n0 1 1\n13 21 2\n6 5 3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.322,
+            0.086,
+            0.607,
+            0.125
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chièu]. Bài 16. Count Island 1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.315,
+            0.139,
+            0.682,
+            0.93
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận nhi phần gồm N hàng và M cốt chỉ bao gồm các số 0 và 1. Hây đêm số lượng miền các số 1 trong\nma trận, các ô số 1 được coi là cùng miền nếu chủng có chung cạnh.\n\nInput Format\n\nDòng đầu tiên N và M. N dòng tiếp theo mối dòng gồm M phần tử.\n\nConstraints\n\n1≤N,M≤50.\n\nOutput Format\n\nIn ra số lượng miền số 1 trong ma trận.\n\nSample Input 0\n\n4 7\n0 1 1 0 1 1 0\n1 1 1 1 1 1 1\n1 0 0 0 0 1 1\n1 1 0 1 0 0 0\n\nSample Output 0\n\n2\n\nSample Input 1\n\n6 8\n1 1 0 1 1 1 1 0\n0 1 1 1 0 0 0 1\n1 1 0 0 0 0 1 1\n0 1 0 1 0 0 1 1\n1 0 0 1 0 0 0 1\n0 1 0 1 1 1 1 0\n0 0 0 0 1 0 1 1\n1 0 0 0 0 0 0 0\n\nSample Output 1\n\n6\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.236,
+            0.09,
+            0.664,
+            0.145
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiêu]. Bài 17. Count Island 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.196,
+            0.293,
+            0.222
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.342,
+            0.195,
+            0.4,
+            0.223
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.448,
+            0.195,
+            0.503,
+            0.222
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.281,
+            0.759,
+            0.34
+          ],
+          "content": "Cho ma trận nhi phân gồm N hàng và M cột chỉ bao gồm các số 0 và 1. Hây đếm số lượng miền các số 1 trong ma trận, các ô số 1 được coi là cùng miền nếu chủng có chung đỉnh."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.357,
+            0.299,
+            0.385
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.4,
+            0.554,
+            0.431
+          ],
+          "content": "Dòng đầu tiên N và M. N dòng tiếp theo mỗi dòng gồm M phần tử."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.448,
+            0.291,
+            0.475
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.493,
+            0.286,
+            0.521
+          ],
+          "content": "1≤N,M≤50."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.539,
+            0.308,
+            0.568
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.583,
+            0.424,
+            0.615
+          ],
+          "content": "In ra số lượng miền số 1 trong ma trận."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.63,
+            0.309,
+            0.661
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.242,
+            0.693,
+            0.277,
+            0.786
+          ],
+          "content": "3 3\n1 0 1\n0 0 1\n1 1 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.815,
+            0.317,
+            0.846
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.244,
+            0.886,
+            0.253,
+            0.904
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.337,
+            0.083,
+            0.609,
+            0.121
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 18. Số điểm cực đại"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.331,
+            0.13,
+            0.667,
+            0.936
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận A các số nguyên có N hàng và M cột. Điểm được coi là cực đại trong ma trận nếu nó lớn hơn tất\ncác số ở các số ở ô xung quanh mà chung đính với nó. Hây đêm xem trong ma trận có bao nhiều điểm cực đại.\n\nInput Format\n\nDông đầu tiên N và M. N dòng tiếp theo mỗi dòng gồm M phần tử.\n\nConstraints\n\n1≤N,M≤100; 1≤A[1][□]≤10^9\n\nOutput Format\n\nIn ra số lượng các điểm cực đại của ma trận.\n\nSample Input 0\n\n5\t3\n1\t1\t2\n1\t1\t1\n1\t1\t2\n2\t2\t1\n2\t1\t2\n\nSample Output 0\n\n1\n\nExplanation 0\n\nCó 1 điểm cực đại là điểm (1, 3)\n\nSample Input 1\n\n3\t3\n1\t2\t1\n1\t5\t1\n1\t0\t3\n\nSample Output 1\n\n1\n\nExplanation 1\n\nCó 1 điểm cực đại là (2, 2)\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.287,
+            0.094,
+            0.644,
+            0.184
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chièu]. Bài 19. Maximum path sum"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.28,
+            0.203,
+            0.726,
+            0.926
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho ma trận A các số nguyên có N hàng và M cột. Tím đường đi từ ở [1, 1] tới ô [N, M] sao cho tổng các số trên đường đi là lớn nhất có thể, biết rằng ở mỗi bước chỉ có thể đi từ ô hiện tại xuống ô phía dưới hoặc đi sang phải.\n\nInput Format\n\nDòng đầu tiên N và M, N dòng tiếp theo mỗi dòng gồm M phần tử.\n\nConstraints\n\n1≤N,M≤100; 1≤A[i][j]≤10^9\n\nOutput Format\n\nIn ra đường đi có tổng lớn nhất.\n\nSample Input 0\n\n3 3\n1 2 2\n3 10 2\n5 7 2\n\nSample Output 0\n\n2,1\n\nExplanation 0\n\nGiải thích : Đường đi được chọn (1, 1) -> (2, 1) -> (2, 2) -> (3, 2) -> (3, 3)\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.252,
+            0.161,
+            0.752,
+            0.974
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho một ma trận nhị phân có N hàng và M cột, một con chuột bắt đầu từ ô có tọa độ [s, t] và tìm đường đi tới ô [u, v], biết rằng ở mỗi bước con chuột có thể di chuyển từ ô hiện tại sang các ô chung cạnh với ô hiện tại và số ở ô chung cạnh là số 1. Bạn chỉ được đi qua 1 ô đúng 1 lần hấy kiểm tra xem con chuột có thể tìm được đường đi tới ô [u, v] hay không ? Dữ liệu đảm bảo 2 ô [s, t] và ô [u, v] đều bằng 1.\n\nInput Format\n\nDòng đầu tiên N và M. Dòng thứ 2 là 4 số s, t, u , v. N đồng tiếp theo mỗi dòng gồm M phần tử.\n\nConstraints\n\n1≤N,M≤100; 1≤s,u≤N;1≤t,v≤M;\n\nOutput Format\n\nIn YES nếu con chuột có thể tìm được đường đi, ngược lại in NO.\n\nSample Input 0\n\n3 5\n1 1 3 5\n1 0 1 0 0\n0 1 1 1 1\n1 0 0 0 1\n\nSample Output 0\n\nNO\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.261,
+            0.093,
+            0.645,
+            0.144
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 20. Tìm đường đi."
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.309,
+            0.181,
+            0.696,
+            0.932
+          ],
+          "sub_type": "code",
+          "content": "```csv\nProblem\tSubmissions\tDiscussions\n\nCho bàn có vua cỡ N * N, các ô trên bàn cờ có giả trị là 0 hoặc 1. Một con mã xuất phát tử ô (s, t) và muốn di\nchuyển tới ô (u, v), con mã chỉ có thể di chuyển ở các ô mà tại ô đó có giả trị là 1 và nõ có thể di chuyển qua lại\n1 ô nhiều lần. Hây xác định xem con mã có thể tìm được đường đi hay không, dữ liệu đảm bảo ô (s, t) và ô (u,\nv) đều có giả trị là 1.\n\nInput Format\n\nDòng đầu tiên N. Dòng thử 2 là 4 số s, t, u , v. N đồng tiếp theo mỗi dòng gồm N phần tử.\n\nConstraints\n\n1≤N,M≤100; 1≤s,t,u,v≤N; 0≤A[i][j]≤1;\n\nOutput Format\n\nIn YES nếu con mã có thể tìm được đường đi, ngược lại in NO.\n\nSample Input 0\n\n9\n7 5 4 3\n1 0 1 0 1 0 1 1 1\n1 1 1 1 0 0 0 0 1\n1 0 1 1 1 0 1 1 1\n1 0 1 0 1 0 0 0 0\n0 1 1 0 1 1 0 1 1\n1 0 0 0 0 1 1 0 1\n1 0 1 0 1 0 1 1 0\n0 1 1 0 0 0 0 1 1\n0 0 1 1 0 0 0 0 1\n\nSample Output 0\n\nYES\n\nExplanation 0\n\nCon Mã có thể di chuyển tử ô (7, 5) -> (6, 7) -> (5, 5) -> (4, 3)\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.315,
+            0.085,
+            0.611,
+            0.165
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 21. Đường đi của quân Mã"
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.212,
+            0.282,
+            0.587,
+            0.626
+          ],
+          "sub_type": "code",
+          "content": "```txt\nCho ma trận vuông A[N][N]. Hấy in các phần tử thuộc theo hình con rắn.\n10→20→30→40\n50←60←70←80\n27→29→47→48\n32←33←39←50\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.219,
+            0.08,
+            0.577,
+            0.141
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiêu]. Bài 22. Snake"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.236,
+            0.193,
+            0.282,
+            0.223
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.193,
+            0.396,
+            0.225
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.444,
+            0.193,
+            0.504,
+            0.225
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.65,
+            0.289,
+            0.683
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.695,
+            0.696,
+            0.735
+          ],
+          "content": "Dòng đầu tiên đưa vào N là cấp của ma trận A[N][N]; N dòng tiếp mỗi dòng gồm N số nguyên."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.747,
+            0.28,
+            0.779
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.795,
+            0.362,
+            0.83
+          ],
+          "content": "1≤N≤100; 0≤A[i][j]≤1000000"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.845,
+            0.298,
+            0.877
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.892,
+            0.359,
+            0.925
+          ],
+          "content": "In ra ma trận theo yêu cầu."
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.141,
+            0.586,
+            0.371
+          ],
+          "content": "15\n957 275 516 118 593 6 646 52 910 183 702 335 468 704 506\n171 168 428 372 722 683 545 853 409 575 727 930 67 556 753\n5 749 378 996 374 171 159 86 100 657 467 609 406 195 570\n448 679 401 417 81 954 885 685 316 986 95 297 755 934 107\n663 474 203 49 825 440 809 262 463 542 170 929 299 64 473\n481 876 994 896 765 632 734 764 691 94 947 925 213 786 735\n6 616 394 904 199 775 105 935 797 193 138 598 234 398 480\n131 645 527 411 302 627 110 765 880 203 972 445 93 892 746\n140 571 401 810 222 515 932 615 252 679 856 58 552 573 595\n343 896 35 908 967 862 427 738 199 655 961 678 856 475 435\n273 968 573 576 136 274 356 340 263 473 912 819 820 787 576\n44 486 724 324 640 326 799 191 378 788 773 31 289 677 71\n424 676 915 830 422 934 550 654 274 435 450 165 190 833 601\n906 356 74 834 484,892,217,41,625,628,722,801,561,438,816\n768,945,804,545,827,732,375,236,57,199,424,647,212,260,110"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.346,
+            0.391,
+            0.409,
+            0.411
+          ],
+          "level": 2,
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.437,
+            0.588,
+            0.661
+          ],
+          "content": "957 275 516 118 593 6 646 52 910 183 702 335 468 704 506\n753 556 67 930 727 575 409 853 545 683 722 372 428 168 171\n5 749 378 996 374 171 159 86 100 657 467 609 406 195 570\n107 934 755 297 95 986 316 685 885 954 81 417 401 679 448\n663 474 203 49 825 440 809 262 463 542 170 929 299 64 473\n735 786 213 925 947 94 691 764 734 632 765 896 994 876 481\n8 616 394 904 199 775 305 935 797 193 138 598 234 398 480\n746 892 93 445 972 203 880 765 110 627 302 411 527 645 131\n140 571 401 810 222 515 932 615 252 679 856 58 552 573 595\n435 475 856 678 961 655 199 738 427 862 967 908 35 896 343\n273 968 573 576 136 274 356 340 263 473 912 819 820 787 576\n71 677 289 31 773 788.378.191.799.326.640.324.724.486.44\n424.676.915.830.422.934.550.654.274.435.450.165.190.833.601\n816.438.561.801.722.628.625.41.217.892.484.834.74.356.906\n768.945.804.545.827.732.375.236.57.109.424.647.212.260.110"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.681,
+            0.401,
+            0.703
+          ],
+          "content": "Sample Input 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.729,
+            0.381,
+            0.793
+          ],
+          "content": "3\n1 2 3\n4 5 6\n7 8 9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.813,
+            0.407,
+            0.834
+          ],
+          "content": "Sample Output 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.859,
+            0.381,
+            0.908
+          ],
+          "content": "1 2 3   \n6 5 4   \n7 8 9"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.34,
+            0.893,
+            0.401,
+            0.913
+          ],
+          "sub_type": "code",
+          "content": "```txt\n12346789\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.334,
+            0.088,
+            0.655,
+            0.129
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 23. Biên của ma trận"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.346,
+            0.162,
+            0.375,
+            0.183
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.222,
+            0.549,
+            0.246
+          ],
+          "content": "Cho ma trận vuông A[N][N]. Hây in các phần tử thuộc vùng biển."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.441,
+            0.257,
+            0.591,
+            0.502
+          ],
+          "sub_type": "code",
+          "content": "```txt\nInput : 1 2 3 4\n        5 6 7 8\n        1 2 3 4\n        5 6 7 8\nOutput : 1 2 3 4\n        5       8\n        1       4\n        5 6 7 8\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.525,
+            0.379,
+            0.546
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.556,
+            0.648,
+            0.58
+          ],
+          "content": "Dòng đầu tiên đưa vào N là cấp của ma trận A[N][N]; N dòng tiếp mỗi dòng gồm N số nguyên."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.589,
+            0.374,
+            0.609
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.62,
+            0.428,
+            0.643
+          ],
+          "content": "1≤N≤100; 0≤A[i][j]≤1000000"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.332,
+            0.653,
+            0.385,
+            0.675
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.684,
+            0.517,
+            0.707
+          ],
+          "content": "In ra ma trận theo yêu cầu, các số được în trên 1 dòng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.717,
+            0.386,
+            0.739
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.339,
+            0.763,
+            0.364,
+            0.828
+          ],
+          "sub_type": "code",
+          "content": "```csv\n3\n1 2 3\n4 5 6\n7 8 9\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.331,
+            0.847,
+            0.392,
+            0.87
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.268,
+            0.087,
+            0.682,
+            0.188
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiều]. Bài 24. Phần tử xuất hiện ở mọi hàng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.232,
+            0.319,
+            0.255
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.362,
+            0.231,
+            0.414,
+            0.255
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.457,
+            0.231,
+            0.506,
+            0.255
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.307,
+            0.727,
+            0.36
+          ],
+          "content": "Cho ma trận vuông A[N][N]. Hây in ra các số xuất hiện ở moi hàng theo thứ tự từ bé đến lớn, mỗi giá trị xuất hiện chỉ liệt kê 1 lần."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.373,
+            0.325,
+            0.4
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.413,
+            0.667,
+            0.443
+          ],
+          "content": "Dòng đầu tiên đưa vào N là cấp của ma trận A[N][N]; N dòng tiếp mỗi dòng gồm N số nguyên."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.454,
+            0.318,
+            0.481
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.494,
+            0.366,
+            0.523
+          ],
+          "content": "1≤N≤100; 0≤A[i][j]≤100"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.535,
+            0.333,
+            0.563
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.575,
+            0.732,
+            0.628
+          ],
+          "content": "In ra các giả trị xuất hiện trên mọi động của ma trận, các số in cách nhau một dấu cách. Nếu không tồn tại giả trị nào thỏa mặn in ra \"NOT FOUND\"."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.641,
+            0.333,
+            0.669
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.274,
+            0.701,
+            0.315,
+            0.798
+          ],
+          "content": "4   \n1 2 2 3   \n2 1 2 4   \n1 4 5 2   \n2 2 3 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.823,
+            0.341,
+            0.851
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.275,
+            0.884,
+            0.296,
+            0.908
+          ],
+          "content": "12"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.263,
+            0.199,
+            0.755,
+            0.925
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho một ma trận nhi phân cỡ NxM chỉ bao gồm các số 0, 1. Hây xác định vùng nhiều số 1 nhất trên ma trận, biết rằng các ô có chung canh được coi là cùng miền.\n\nInput Format\n\nDòng đầu tiên là N và M tương ứng với số hàng, cột của ma trận. N dòng tiếp theo mỗi dòng có M số\n\nConstraints\n\n1<=N, M <= 500; Các phần tử trong ma trận có giá trị 0 hoặc 1.\n\nOutput Format\n\nIn ra diện tích miền có nhiều số 1 nhất\n\nSample Input 0\n\n5 6\n0 1 0 1 0 1\n0 0 0 1 1 0\n0 1 1 0 1 1\n0 1 1 0 0 0\n0 0 0 0 0 0\n\nSample Output 0\n\n5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.267,
+            0.126,
+            0.602,
+            0.176
+          ],
+          "level": 2,
+          "content": "[Màng 2 Chiêu]. Bài 25. Diện tích"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2024-01-19T12:11:00+00:00",
+      "modified_at": "2024-01-19T12:11:00Z",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 26,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

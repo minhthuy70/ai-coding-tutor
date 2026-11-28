@@ -1,0 +1,238 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.302,
+            0.086,
+            0.637,
+            0.13
+          ],
+          "level": 2,
+          "content": "[QHD Basic]. Bài 1. Giai Thừa Chia Dư"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.294,
+            0.15,
+            0.705,
+            0.934
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nĐề bài rất đơn giản, bạn hây tính N! chia dư cho (10^9 + 7).\nGợi ò : Xây dựng mảng F[], trong đó F[i] lưu il chia dư cho 10^9 + 7, mỗi test nhập n thì chỉ cần in ra F[n].\nInput Format\n• Dòng 1 là số bộ test T\n• T dòng tiếp theo mỗi dòng là 1 số nguyên không âm N\nConstraints\n• 1<=T<=10000\n• 0<=N<=10^6\nOutput Format\nĐưa ra kết quả của mỗi test trên 1 dòng\nSample Input 0\n\n5\n11\n6\n8\n10\n13\n\nSample Output 0\n\n39916800\n720\n40320\n3626800\n227020758\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.283,
+            0.069,
+            0.543,
+            0.113
+          ],
+          "level": 2,
+          "content": "[QHD Basic]. Bài 2. Fibonacci"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.277,
+            0.131,
+            0.72,
+            0.931
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho đầy số Fibonacci với F[0] = 0, F[1] = 1, F[n] = F[n - 1] + F[n - 2] với n >= 2. Hầy tính F[n] chia dư cho 10^9 + 7.\nInput Format\n• Dòng 1 là số bộ test T\n• T dòng tiếp theo mỗi dòng là 1 số nguyên không âm N\nConstraints\n• 1<=T<=10000\n• 0<=N<=10^6\nOutput Format\nĐưa ra kết quả của mỗi test trên 1 dòng\nSample Input 0\n\n6\n5\n13\n10\n14\n8\n11\n\nSample Output 0\n\n5\n233\n55\n377\n21\n89\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.306,
+            0.079,
+            0.556,
+            0.121
+          ],
+          "level": 2,
+          "content": "[QHD Basic]. Bài 3. Tribonacci"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.301,
+            0.137,
+            0.697,
+            0.936
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho d$y$ s$o Tribonacci vói F[0] = 0, F[1] = 0, F[2] = 1, F[n] = F[n - 1] + F[n - 2] + F[n - 3] vói n >= 3. H$ay$ tinh F[n] chia du cho $10^{9} + 7$.\n\nInput Format\n• Dòng 1 là s$o bó test T$\n• T dòng tiếp theo mõi dòng là 1 s$o nguyên kh$ông âm N\n\nConstraints\n• 1<=T<=10000\n• 0<=N<=10^6\n\nOutput Format\n\nĐưa ra kết quả của mõi test trèn 1 dòng\n\nSample Input 0\n\n7\n8\n14\n12\n7\n9\n7\n12\n\nSample Output 0\n\n24\n927\n274\n13\n44\n13\n274\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.313,
+            0.077,
+            0.542,
+            0.119
+          ],
+          "level": 2,
+          "content": "[QHD Basic]. Bài 4. Prime 1"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.306,
+            0.137,
+            0.69,
+            0.935
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho số nguyên dương N, hấy đếm xem trong đoạn từ 0 tới N có bao nhiêu số nguyên tố. Hướng dẫn :\n• Bước 1 : Sàng số nguyên tố\n• Bước 2 : Gọi F[i] là số lượng các số nguyên tố từ 0 tới i, xây dựng màng F[i] sau khi sàng\n\nInput Format\n\n• Dòng 1 là số bộ test T\n• T dòng tiếp theo mỗi dòng là 1 số nguyên không âm N\n\nConstraints\n\n• 1<=T<=10000\n• 0<=N<=10^6\n\nOutput Format\n\nĐưa ra kết quả của mỗi test trên 1 dòng\n\nSample Input 0\n\n5\n39\n68\n26\n87\n6\n\nSample Output 0\n\n12\n19\n9\n23\n3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.321,
+            0.085,
+            0.543,
+            0.124
+          ],
+          "level": 2,
+          "content": "[QHD Basic]. Bài 5. Prime 2"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.313,
+            0.142,
+            0.685,
+            0.934
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tDiscussions\n\nCho 2 số nguyên L, R, hảy đếm xem trong đoạn từ L tới R có bao nhiêu số nguyên tố.\nGọi ý :\n• Bước 1 : Sàng số nguyên tố\n• Bước 2 : Gọi F[i] là số các nguyên tố từ 0 tới i, khi đó số các số nguyên tố từ L tới R là F[R] - F[L - 1]\nInput Format\n• Dòng 1 là số bộ test T\n• T dòng tiếp theo mỗi dòng là 2 số nguyên không âm L, R\nConstraints\n• 1<=T<=10000\n• 0<=L<=R<=10^6\nOutput Format\nĐưa ra kết quả của mỗi test trên 1 đồng\nSample Input 0\n\n5\n3 19\n4 65\n4 44\n1 17\n1 7\n\nSample Output 0\n\n7\n16\n12\n7\n4\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.291,
+            0.097,
+            0.536,
+            0.139
+          ],
+          "level": 2,
+          "content": "[QHD Basic]. Bài 6. Prime 3"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.281,
+            0.161,
+            0.722,
+            0.938
+          ],
+          "sub_type": "code",
+          "content": "```csv\nProblem\tSubmissions\tDiscussions\n\nCho số nguyên dương N, hấy tính tích các số nguyên tố trong đoạn từ 0 đến N. Khi N = 0 hoặc 1 thì đáp án là 0.\n\nInput Format\n• Dòng 1 là số bộ test T\n• T dòng tiếp theo mỗi dòng là 1 số nguyên không âm N\n\nConstraints\n■ 1<=T<=10000\n■ 0<=N<=10^6\n\nOutput Format\nĐưa ra kết quả của mỗi test trên 1 đồng, vì kết quả quả lớn nên hây chia dư cho 10^9 + 7.\n\nSample Input 0\n\n5\n20\n16\n10\n22\n29\n\nSample Output 0\n\n9699690\n30039\n210\n9699690\n469693188\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2024-01-19T12:08:36+00:00",
+      "modified_at": "2024-01-19T12:08:36Z",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 6,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

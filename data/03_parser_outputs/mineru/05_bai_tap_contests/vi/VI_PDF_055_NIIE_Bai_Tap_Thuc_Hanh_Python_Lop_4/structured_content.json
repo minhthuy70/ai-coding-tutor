@@ -1,0 +1,659 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.108,
+            0.666,
+            0.884,
+            0.855
+          ],
+          "content": "| 7. Output cua chuong trinh duoi day la gi? |\n| --- |\n| def say(message, times = 1): print(message * times)say('Hello')say('World', 5) |\n| (a) Hello WorldWorldWorldWorld(b) Hello |\n| (c) Hello World,World,World,World,World(d) Hello HelloHelloHelloHello |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_table_0.jpg"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.109,
+            0.308,
+            0.881,
+            0.352
+          ],
+          "content": "| print(100, 200, \"hello\", \"world\", sep=':) |\n| --- |",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_0_table_1.jpg"
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.389,
+            0.088,
+            0.61,
+            0.134
+          ],
+          "level": 1,
+          "content": "ĐỀ KIỂM TRA GIỮA HỌC KỲ Lập trình nâng cao (Python) Đề 4"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.114,
+            0.133,
+            0.209,
+            0.15
+          ],
+          "level": 2,
+          "content": "Phần A. (3đ)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.148,
+            0.445,
+            0.164
+          ],
+          "content": "**1. Khẳng định nào sau đây là đúng về Python?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.164,
+            0.432,
+            0.179
+          ],
+          "content": "(a) Python là một ngôn ngữ thông dịch cấp cao"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.118,
+            0.178,
+            0.449,
+            0.194
+          ],
+          "content": "(b) Python là ngôn ngữ lập trình hướng đối tượng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.193,
+            0.371,
+            0.208
+          ],
+          "content": "(c) Python là ngôn ngữ mã nguồn mở"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.119,
+            0.207,
+            0.326,
+            0.222
+          ],
+          "content": "(d) Tất cả các đáp án đều đúng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.22,
+            0.493,
+            0.237
+          ],
+          "content": "**2. Câu lệnh nào sau đây in ra kiểu dữ liệu của biến x?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.237,
+            0.231,
+            0.252
+          ],
+          "content": "(a) print(type(x))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.252,
+            0.232,
+            0.267
+          ],
+          "content": "(b) print(type[x])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.266,
+            0.244,
+            0.281
+          ],
+          "content": "(c) print(typeof[x])"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.28,
+            0.245,
+            0.295
+          ],
+          "content": "(d) print(typeof(x))"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.294,
+            0.304,
+            0.309
+          ],
+          "level": 2,
+          "content": "3. Kết quả của lệnh sau là:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.368,
+            0.264,
+            0.383
+          ],
+          "content": "(b) 100200helloworld"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.382,
+            0.284,
+            0.397
+          ],
+          "content": "(c) 100 200 hello world"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.41,
+            0.426,
+            0.426
+          ],
+          "content": "**4. Kiểu dữ liệu nào sau đây là set (tập hợp)?**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.426,
+            0.332,
+            0.441
+          ],
+          "content": "(a) (\"apple\", \"banana\", \"cherry\")"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.515,
+            0.272,
+            0.529
+          ],
+          "content": "print(str.count('wo',-20))"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.116,
+            0.53,
+            0.15,
+            0.544
+          ],
+          "content": "(a) 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.544,
+            0.151,
+            0.558
+          ],
+          "content": "(b) 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.559,
+            0.151,
+            0.573
+          ],
+          "content": "(c) 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.573,
+            0.151,
+            0.587
+          ],
+          "content": "(d) 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.585,
+            0.808,
+            0.604
+          ],
+          "content": "**6. Cho một list L như sau: L = [1, 2, [[3]], None, (), True, {}]. Chiều dài của L (dùng hàm len(L)) là:**"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.602,
+            0.151,
+            0.616
+          ],
+          "content": "(a) 8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.616,
+            0.151,
+            0.63
+          ],
+          "content": "(b) 7"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.632,
+            0.151,
+            0.645
+          ],
+          "content": "(c) 6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.115,
+            0.646,
+            0.152,
+            0.66
+          ],
+          "content": "(d) 3"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.659,
+            0.418,
+            0.675
+          ],
+          "level": 2,
+          "content": "7. Output của chương trình dưới đây là gì?"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.872,
+            0.924,
+            0.884,
+            0.937
+          ],
+          "content": "1"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.108,
+            0.092,
+            0.884,
+            0.36
+          ],
+          "sub_type": "code",
+          "content": "```python\n8. Theo dõi đoạn code dưới đây và chọn đáp án đúng\nnhất t = (1, 2, 3)\nt[0] = 42\nprint(t[0])\n(a) 1\n(b) 42\n(c) Có xuất hiện lỗi Error\n(d) 0\n9. Cho biết kết quả chương trình sau:\nclass Foo:\n    def printLine(self, line='Python'):\n        print(line)\no1 = Foo()\no1.printLine('Java')\n(a) Python\n(b) line\n(c) Java\n(d) Java Python\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.373,
+            0.883,
+            0.799
+          ],
+          "sub_type": "code",
+          "content": "```python\n10. Output của chương trình dưới dây là\ngì? def maximum(x, y):\n    if x > y:\n        return x\n    elif x == y:\n        return 'Các số bằng\n    nhau' else:\n        return y\nprint(maximum(20, 30.3))\n(a) 20\n(b) 30.3\n(c) Các số bằng nhau\n(d) None\n11. Đâu là giá trị của colors[2]:\ncolors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']\n(a) orange\n(b) indigo\n(c) blue\n(d) yellow\n12. Qui tắc nào sau đây là đúng khi đặt tên cho biến trong Python?\n(a) Tên biến có thể bắt đầu bằng một chữ số\n(b) Tên biến có thể chứa dấu gạch dưới \"�\"\n(c) Tên biến có thể có các ký hiệu đặc biệt như !, @, #, \\$, %,...\n(d) Tên biến có thể trùng với các từ khóa (keyword)\n13. Lệnh nào sau đây dùng để tạo tập hợp rỗng?\n(a) S = set()\n(b) S={ }\n(c) S=[]\n(d) S=()\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.871,
+            0.924,
+            0.884,
+            0.937
+          ],
+          "content": "2"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.109,
+            0.092,
+            0.884,
+            0.824
+          ],
+          "sub_type": "code",
+          "content": "```python\n14. Kết quả nào là output của đoạn code dưới\ndây? def myfunc():\n    try:\n        print('Monday')\n    finally:\n        print('Tuesday')\nmyfunc()\n(a) Tuesday\n(b) Monday Tuesday\n(c) Tuesday Monday\n(d) Monday\n15. Cho biết kết quả chương trình sau:\nclass A:\n    def __str__(self):\n        return \"A\"\nclass B(A):\n    def __init__(self):\n        super().__init__()\nclass C(B):\n    def __init__(self):\n        super().__init__()\ndef main():\n    b = B()\n    a = A()\n    c = C()\n    print(a, b, c)\nmain()\n(a) B B B\n(b) A B C\n(c) C B A\n(d) A A A\nPhần B. (7d)\nCâu 1 (1d)\nCho biết kết quả khi thực hiện các lệnh sau đây:\n    def myfunc(n):\n        M = list(range(0,n))\n        L = M\n        print(M)\n        M.insert(1,10)\n        print(L)\n        T = M[:2] + [20,0]\n        print(T)\n        return [L, M, T]\n    print(myfunc(3))\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.851,
+            0.194,
+            0.867
+          ],
+          "level": 2,
+          "content": "Câu 2 (1đ)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.865,
+            0.573,
+            0.883
+          ],
+          "content": "Nhập vào một chuỗi, đếm số lượng chữ cái in hoa, chữ cái in thường."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.871,
+            0.924,
+            0.884,
+            0.937
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.112,
+            0.091,
+            0.885,
+            0.135
+          ],
+          "content": "**Câu 3 (3đ)** Cho một list chứa các dictionary (mỗi dictionary chứa 3 thành phần (Tên Khoa, số lượng sinh viên, năm thành lập), trong đó Tên Khoa là một chuỗi các chữ cái in hoa, số lượng sinh viên là một số nguyên dương, năm thành lập là dạng chuỗi)."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.135,
+            0.296,
+            0.149
+          ],
+          "content": "\\# Ví dụ: input list như sau:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.17,
+            0.148,
+            0.862,
+            0.164
+          ],
+          "content": "L = [{ ‘ten’: 'CNTT', ‘soluong’: 700, ‘nam’: '2012'), { ‘ten’: 'LY', ‘soluong’: 300, ‘nam’: '2008'), { ‘ten’:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.172,
+            0.163,
+            0.745,
+            0.179
+          ],
+          "content": "'HOA', ‘soluong’: 200, ‘nam’: '2010'), { ‘ten’: 'TOAN', ‘soluong’: 500, ‘nam’: '2000')]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.178,
+            0.859,
+            0.207
+          ],
+          "continues_prev": true,
+          "content": "a) Viết chương trình tạo ra một list chứa số lượng sinh viên của tất cả các Khoa trong list đã cho và được sắp xếp theo thứ tự tăng dần."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.207,
+            0.413,
+            0.222
+          ],
+          "content": "#Ví dụ: output như sau: [200, 300, 500, 700]"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.221,
+            0.635,
+            0.237
+          ],
+          "content": "b) Viết chương trình tìm tên Khoa có thời gian thành lập lâu nhất tính đến nay."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.236,
+            0.282,
+            0.25
+          ],
+          "content": "#Ví dụ: output là TOAN"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.113,
+            0.25,
+            0.855,
+            0.28
+          ],
+          "content": "c) Viết chương trình tìm các Khoa có số lượng sinh viên lớn hơn 200. In kết quả các Khoa tìm được ra màn hình theo thứ tự tăng dần theo từ điển."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.28,
+            0.362,
+            0.295
+          ],
+          "content": "#Ví dụ: output là CNTT, LY, TOAN"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.115,
+            0.309,
+            0.194,
+            0.323
+          ],
+          "level": 2,
+          "content": "Câu 4 (2đ)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.323,
+            0.525,
+            0.339
+          ],
+          "content": "Viết một class Circle bao gồm thuộc tính và phương thức sau:"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.338,
+            0.343,
+            0.352
+          ],
+          "content": "\\+ Thuộc tính: bán kính r (số thực)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.353,
+            0.352,
+            0.366
+          ],
+          "content": "\\+ Viết phương thức khởi tạo \\_\\_init\\_"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.367,
+            0.556,
+            0.382
+          ],
+          "content": "\\+ Viết phương thức nhap() cho phép nhập vào bán kính của Circle."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.382,
+            0.328,
+            0.395
+          ],
+          "content": "\\+ Viết phương thức tính chu vi."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.114,
+            0.396,
+            0.343,
+            0.411
+          ],
+          "content": "\\+ Viết phương thức tính diện tích."
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.872,
+            0.939,
+            0.884,
+            0.95
+          ],
+          "content": "4"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "authors": [
+        "Luong Tran Hy Hien"
+      ],
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2023-04-12T15:06:08+07:00",
+      "modified_at": "2023-04-12T15:06:08+07:00",
+      "creator_application": "Microsoft® Word for Microsoft 365",
+      "producer_application": "Microsoft® Word for Microsoft 365",
+      "page_count": 4,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "txt"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 612,
+          "height_pt": 792
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 612,
+          "height_pt": 792
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

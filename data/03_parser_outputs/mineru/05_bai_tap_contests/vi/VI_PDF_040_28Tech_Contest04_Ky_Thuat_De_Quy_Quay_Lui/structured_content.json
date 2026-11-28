@@ -1,0 +1,1799 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.218,
+            0.092,
+            0.559,
+            0.153
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 1. Tính tổng 1."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.209,
+            0.175,
+            0.797,
+            0.931
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nTính tổng hàm S(n) = 1 + 2 + 3 + 4 + .. + n bằng đệ quy. Nếu bạn chưa biết thì S(n) có thể tính nhanh bằng công thức S(n) = n * (n + 1) / 2\n\nInput Format\n\nSố nguyên dương n.\n\nConstraints\n\n0≤n≤1000; Chủ ý các bạn phải code bằng đệ quy nhé.\n\nOutput Format\n\nIn ra S(n).\n\nSample Input 0\n\n773\n\nSample Output 0\n\n299151\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.222,
+            0.089,
+            0.562,
+            0.15
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 2. Tính tổng 2."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.211,
+            0.172,
+            0.789,
+            0.927
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nTính tổng hàm S(n) = 1^2 + 2^2 + 3^2 + 4^2 + .. + n^2 bằng đệ quy. Nếu bạn chưa biết thì S(n) có thể tính\nnhanh bằng công thức S(n) = n * (n + 1) * (2n + 1) / 6\n\nInput Format\n\nSố nguyên dương n.\n\nConstraints\n\n0≤n≤1000; Chú ý các bạn phải code bằng đệ quy nhé.\n\nOutput Format\n\nIn ra kết quả của S(n)\n\nSample Input 0\n\n53\n\nSample Output 0\n\n51039\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.226,
+            0.091,
+            0.57,
+            0.152
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 3. Tính tổng 3."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.206,
+            0.288,
+            0.233
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.34,
+            0.204,
+            0.404,
+            0.235
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.573,
+            0.205,
+            0.632,
+            0.234
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.296,
+            0.768,
+            0.361
+          ],
+          "content": "Tính tổng hàm $S(n) = 1^{3} + 2^{3} + 3^{3} + 4^{3} + .. + n^{3}$ bằng đệ quy. Nếu bạn chưa biết thì $S(n)$ có thể tính nhanh bằng công thức $S(n) = [(n * (n + 1) / 2)]^{2}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.427,
+            0.331,
+            0.462
+          ],
+          "content": "Số nguyên dương n."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.478,
+            0.287,
+            0.509
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.528,
+            0.505,
+            0.562
+          ],
+          "content": "0≤n≤10^3; Chú ý các bạn phải code bằng đệ quy nhé."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.577,
+            0.306,
+            0.611
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.625,
+            0.337,
+            0.66
+          ],
+          "content": "In ra kết quả của S(n)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.677,
+            0.306,
+            0.712
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.813,
+            0.316,
+            0.847
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.236,
+            0.885,
+            0.3,
+            0.911
+          ],
+          "content": "8992728900"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.228,
+            0.085,
+            0.562,
+            0.145
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 4. Tính tổng 4"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.219,
+            0.169,
+            0.788,
+            0.926
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nTính tổng hàm S(n) = -1 + 2 -3 + 4 - 5 + 6 + ... + (-1)^n * n bằng đệ quy. Nếu bạn chưa biết thì S(n) có thể tính\nnhanh bằng công thức Nếu N chẩn thì S(n) = n / 2, còn nếu N lề thì S(n) = (n - 1) / 2 - n\n\nInput Format\n\nSố nguyên dương n.\n\nConstraints\n\n1≤n≤10^3; Chú ý các bạn phải code bằng đệ quy nhé.\n\nOutput Format\n\nIn ra kết quả của S(n)\n\nSample Input 0\n\n919\n\nSample Output 0\n\n-460\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.253,
+            0.179,
+            0.745,
+            0.991
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Tính n giai thừa bằng đê quy.</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">Số nguyên dương N.</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">0≤n≤10;</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">Kết quả của N!</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">6</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">720</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.265,
+            0.09,
+            0.643,
+            0.154
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 5. Tính giai thừa"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.214,
+            0.092,
+            0.563,
+            0.151
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 6. Số fibonacci"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.207,
+            0.175,
+            0.792,
+            0.987
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nDãy số fibonacci là dãy số thỏa mãn : F1=0, F2=1, Fn=Fn-1+Fn-2. Hãy tìm số Fibonacci thứ n sử dụng đệ quy.\nĐộ phức tạp của code đệ quy là O(1.618^n) không thể áp dụng được với n lớn.\n\nInput Format\n\nSố nguyên dương n.\n\nConstraints\n\n1≤n≤15;\n\nOutput Format\n\nIn ra số Fibonacci thứ n.\n\nSample Input 0\n\n1\n\nSample Output 0\n\nθ\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.319,
+            0.075,
+            0.637,
+            0.116
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 7. Tính tổ hợp chập K của N"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.315,
+            0.121,
+            0.679,
+            0.967
+          ],
+          "sub_type": "code",
+          "content": "```go\nProblem\tSubmissions\tLeaderboard\tDiscussions\nCho 2 số nguyên dương N và K. Hây tính tổ hợp chấp K của N. Tiên thế các bạn ôn lại một vai tính chất của tổ hợp chấp K của N nhé.\n\tSô các tổ hợp chấp k của n phần từ:\n\tC_n^k = \\frac{n!}{k!(n-k)!}\n\tQui trốc:\n\tC_n^0 = 1\n\tTính chất:\n\tC_n^0 = C_n^n = 1\n\tC_n^k = C_n^{n-k}\n\tC_n^k = C_{n-1}^{k-1} + C_{n-1}^k\n\tC_n^k = \\frac{n-k+1}{k}C_n^{k-1}\nInput Format\n2 số nguyên dương N và K.\nConstraints\nDksksns10.\nOutput Format\nKết quả của tổ hợp chấp K của N.\nSample Input 0\n10 2\nSample Output 0\n45\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "table",
+          "bbox": [
+            0.239,
+            0.229,
+            0.767,
+            0.956
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Cho 2 số a và b, hấy tính ước chung lớn nhất và bôi chung nhỏ nhất của 2 số a và b. Trong đó hàm UCLN sử dụng đệ quy để tỉnh.</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">2 số nguyên dương a và b.</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">1≤a,b≤10^12:</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">In ra UCLN và BCNN của 2 số. Dữ liệu đảm bảo UCLN của 2 số năm trong khoảng số nguyên 64 bit.</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">10 20</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">10 20</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_table_0.jpg"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.246,
+            0.094,
+            0.699,
+            0.207
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 8. Ước chung lớn nhất, bội chung nhỏ nhất."
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.349,
+            0.506,
+            0.645,
+            0.573
+          ],
+          "content": "We can save the value of  $\\left(\\mathrm{X}\\left[\\frac{\\gamma}{2}\\right]\\bmod\\mathrm{N}\\right)$  to not compute it twice  $O(\\log(n))$"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.333,
+            0.075,
+            0.587,
+            0.113
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 9. Lũy thừa nhị phân."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.33,
+            0.197,
+            0.627,
+            0.237
+          ],
+          "sub_type": "code",
+          "content": "```txt\nCho 2 số nguyên không âm a và b. Hây tính a^b%(10^9+7). Kiến thức bạn cần sử dụng là Binary Exponentiation.\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.334,
+            0.251,
+            0.517,
+            0.283
+          ],
+          "level": 2,
+          "content": "Fast Modular Exponentiation"
+        },
+        {
+          "type": "equation",
+          "bbox": [
+            0.356,
+            0.383,
+            0.645,
+            0.481
+          ],
+          "content": "X ^ {Y} \\bmod N = \\left\\{ \\begin{array}{c} \\left(\\mathrm{X} ^ {\\left| \\frac {Y}{2} \\right|} \\bmod \\mathrm{N}\\right) ^ {2} \\bmod \\mathrm{NifYiseven} \\\\ \\left(\\left(\\mathrm{X} ^ {\\left| \\frac {Y}{2} \\right|} \\bmod \\mathrm{N}\\right) ^ {2} \\bmod \\mathrm{N}\\right) * X \\bmod \\mathrm{NifYisodd} \\end{array} \\right.",
+          "image_source": "images/page_8_equation_4.jpg"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.329,
+            0.595,
+            0.412,
+            0.925
+          ],
+          "sub_type": "code",
+          "content": "```csv\nInput Format\n2 số nguyên dương a, b\nConstraints\n1sa,b≤10^9\nOutput Format\nIn ra kết quả của bài toán.\nSample Input 0\n2 10\nSample Output 0\n1024\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.289,
+            0.088,
+            0.649,
+            0.154
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 10. Tính tổng 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.525,
+            0.207,
+            0.592,
+            0.239
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.644,
+            0.207,
+            0.706,
+            0.239
+          ],
+          "content": "Discussions"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.242,
+            0.087,
+            0.705,
+            0.207
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 11. Chuyển hệ thập phân sang hệ nhị phân"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.354,
+            0.259,
+            0.417,
+            0.288
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.467,
+            0.257,
+            0.531,
+            0.289
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.347,
+            0.633,
+            0.384
+          ],
+          "content": "Cho một số nguyên không âm N, hây in ra dạng biểu diễn nhị phân của số N."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.397,
+            0.312,
+            0.432
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.444,
+            0.362,
+            0.481
+          ],
+          "content": "Số nguyên không âm N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.494,
+            0.303,
+            0.527
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.542,
+            0.302,
+            0.576
+          ],
+          "content": "0≤n≤10^18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.591,
+            0.321,
+            0.625
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.637,
+            0.431,
+            0.675
+          ],
+          "content": "Biểu diễn nhị phân của số nguyên N,"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.686,
+            0.321,
+            0.723
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.817,
+            0.33,
+            0.853
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.261,
+            0.085,
+            0.72,
+            0.203
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 12. Chuyển hệ thập phân sang hệ 16."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.255,
+            0.335,
+            0.643,
+            0.921
+          ],
+          "sub_type": "code",
+          "content": "```txt\nCho một số nguyên không âm N, hây în ra dạng biểu diễn của N dưới hệ 16.\nInput Format\nSố nguyên không âm N\nConstraints\n0≤n≤10^18\nOutput Format\nBiểu diễn hệ 16 của số nguyên N.\nSample Input 0\n995\nSample Output 0\n3E3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.266,
+            0.094,
+            0.704,
+            0.215
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 13. Tính tổng chữ số sử dụng để quy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.263,
+            0.327,
+            0.293
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.376,
+            0.263,
+            0.439,
+            0.294
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.489,
+            0.263,
+            0.551,
+            0.294
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.601,
+            0.262,
+            0.658,
+            0.295
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.352,
+            0.694,
+            0.388
+          ],
+          "content": "Cho một số nguyên không âm N, hây tính tổng chữ số của N sử dụng kỳ thuật đề quy."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.447,
+            0.383,
+            0.484
+          ],
+          "content": "Số nguyên không âm N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.543,
+            0.323,
+            0.577
+          ],
+          "content": "0≤n≤10^18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.592,
+            0.343,
+            0.627
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.637,
+            0.379,
+            0.675
+          ],
+          "content": "Tổng các chữ số của N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.687,
+            0.343,
+            0.723
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.815,
+            0.353,
+            0.851
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.277,
+            0.095,
+            0.731,
+            0.214
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 14. Đếm số lượng chữ số của N sử dụng để quy."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.387,
+            0.262,
+            0.451,
+            0.295
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.499,
+            0.262,
+            0.562,
+            0.295
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.61,
+            0.262,
+            0.67,
+            0.296
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.289,
+            0.888,
+            0.3,
+            0.909
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.26,
+            0.1,
+            0.73,
+            0.214
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 15. Tìm chữ số đầu tiên của số nguyên"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.263,
+            0.32,
+            0.292
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.368,
+            0.263,
+            0.428,
+            0.293
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.477,
+            0.263,
+            0.537,
+            0.293
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.585,
+            0.263,
+            0.641,
+            0.293
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.349,
+            0.579,
+            0.383
+          ],
+          "content": "Cho một số nguyên không âm N, hây in ra chữ số đầu tiên của N."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.397,
+            0.327,
+            0.429
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.441,
+            0.374,
+            0.476
+          ],
+          "content": "Số nguyên không âm N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.491,
+            0.319,
+            0.521
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.536,
+            0.316,
+            0.567
+          ],
+          "content": "0≤n≤10^18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.583,
+            0.336,
+            0.615
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.628,
+            0.396,
+            0.661
+          ],
+          "content": "In ra chữ số đầu tiên của N."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.256,
+            0.675,
+            0.336,
+            0.709
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.743,
+            0.304,
+            0.771
+          ],
+          "content": "56721"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.257,
+            0.799,
+            0.345,
+            0.834
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.27,
+            0.869,
+            0.28,
+            0.897
+          ],
+          "content": "5"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.232,
+            0.095,
+            0.704,
+            0.205
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 16. Chữ số lớn nhất và nhỏ nhất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.261,
+            0.293,
+            0.29
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.341,
+            0.261,
+            0.402,
+            0.291
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.453,
+            0.261,
+            0.514,
+            0.291
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.564,
+            0.261,
+            0.622,
+            0.291
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.349,
+            0.744,
+            0.384
+          ],
+          "content": "Cho một số nguyên không âm N, hấy in ra chữ số lớn nhất và chữ số nhỏ nhất của N. Việt 2 hàm độ quy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.398,
+            0.3,
+            0.43
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.443,
+            0.332,
+            0.477
+          ],
+          "content": "Số nguyên dương N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.493,
+            0.291,
+            0.523
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.539,
+            0.297,
+            0.57
+          ],
+          "content": "10≤n≤10^18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.587,
+            0.309,
+            0.618
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.633,
+            0.409,
+            0.664
+          ],
+          "content": "Chữ số lớn nhất và nhỏ nhất của N."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.681,
+            0.309,
+            0.713
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.749,
+            0.288,
+            0.777
+          ],
+          "content": "1256782"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.807,
+            0.318,
+            0.84
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.242,
+            0.879,
+            0.264,
+            0.903
+          ],
+          "content": "B1"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.243,
+            0.099,
+            0.612,
+            0.156
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 17. In ra số nguyên"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.205,
+            0.301,
+            0.233
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.347,
+            0.205,
+            0.407,
+            0.233
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.456,
+            0.204,
+            0.515,
+            0.233
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.563,
+            0.204,
+            0.619,
+            0.233
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.289,
+            0.765,
+            0.351
+          ],
+          "content": "Cho một số nguyên không âm N, hây in ra N theo thứ tự các chữ số từ trải qua phải và từ phải qua trải. Chủ ý phải sử dụng hàm độ quy cho cả 2 yêu cầu."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.365,
+            0.307,
+            0.396
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.409,
+            0.357,
+            0.443
+          ],
+          "content": "Số nguyên không âm N."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.457,
+            0.299,
+            0.487
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.502,
+            0.297,
+            0.533
+          ],
+          "content": "0≤n≤10^18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.548,
+            0.315,
+            0.579
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.593,
+            0.769,
+            0.654
+          ],
+          "content": "Dòng đầu tiên in ra các chữ số của n theo thứ tự từ trái qua phải. Dòng thứ hai in ra các chữ số của n theo thứ tự từ phải qua trái. Các chữ số được viết cách nhau một dấu cách."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.667,
+            0.316,
+            0.7
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.733,
+            0.283,
+            0.762
+          ],
+          "content": "21218"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.79,
+            0.324,
+            0.823
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.857,
+            0.306,
+            0.908
+          ],
+          "content": "2 1 2 1 8\n8 1 2 1 2"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.245,
+            0.107,
+            0.76,
+            0.172
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 18. Tính tổng chữ số chẩn lẻ."
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.207,
+            0.181,
+            0.798,
+            0.957
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho số nguyên không âm N, hấy kiểm tra xem tất cả các chữ số của N có phải đều là số chẩn hay không?\n\nInput Format\n\nSố nguyên không âm N.\n\nConstraints\n\n0≤ns≤10^18\n\nOutput Format\n\nIn ra YES nếu n toàn chữ số chẩn, ngược lại in ra NO.\n\nSample Input 0\n\n228@820\n\nSample Output 0\n\nYES\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.221,
+            0.093,
+            0.714,
+            0.157
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 19. Kiểm tra chữ số chẩn."
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.257,
+            0.093,
+            0.619,
+            0.145
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 20. Đếm số thao tác."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.25,
+            0.168,
+            0.757,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho số nguyên dương N. Bạn được thực hiện 3 thao tác sau đây: 1. Lấy N chia cho 2 nếu N chia hết cho 2. 2. Lấy N chia hết cho 3 nếu N chia hết cho 3. 3. Giám N đi 1 đơn vị. Hầy đếm số thao tác ít nhất để biến đổi N về 1.\n\nInput Format\n\nSố nguyên dương N.\n\nConstraints\n\n1≤n≤50\n\nOutput Format\n\nIn ra số thao tác tối thiểu cần thực hiện.\n\nSample Input 0\n\n38\n\nSample Output 0\n\n5\n\nExplanation 0\n\nGiải thích test : 1. N = N / 2 = 19 2. N = N - 1 = 18 3. N = N / 3 = 6 4. N = N / 2 = 3 5. N = N / 3 = 1\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.229,
+            0.089,
+            0.706,
+            0.149
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 21. Kiểm tra măng đối xứng."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.223,
+            0.17,
+            0.772,
+            0.935
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho một màng số nguyên A gồm N phần tử, hây kiểm tra xem màng có đối xứng hay không bằng cách sử dụng hàm đệ quy.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong màng được viết cách nhau một dấu cách.\n\nConstraints\n\n1≤n≤1000; 1≤A[i]≤10^6\n\nOutput Format\n\nIn ra YES nếu màng A là màng đối xứng, ngược lại in ra NO.\n\nSample Input 0\n\n5\n1 2 3 2 1\n\nSample Output 0\n\nYES\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.253,
+            0.101,
+            0.531,
+            0.154
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 22. In măng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.268,
+            0.201,
+            0.307,
+            0.226
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.353,
+            0.2,
+            0.408,
+            0.227
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.454,
+            0.2,
+            0.51,
+            0.226
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.556,
+            0.201,
+            0.607,
+            0.227
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.281,
+            0.734,
+            0.337
+          ],
+          "content": "Cho một mảng số nguyên A gồm N phần tử, hấy in ra mảng theo thứ tự từ trái qua phải và từ phải qua trái bằng đề quy."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.351,
+            0.313,
+            0.38
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.393,
+            0.734,
+            0.447
+          ],
+          "content": "Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong máng được viết cách nhau một dấu cách."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.464,
+            0.306,
+            0.492
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.25,
+            0.505,
+            0.359,
+            0.536
+          ],
+          "content": "1≤n≤1000; 1≤A[i]≤10^6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.55,
+            0.321,
+            0.579
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.592,
+            0.735,
+            0.649
+          ],
+          "content": "Dòng đầu tiên in ra các phần tử trong màng theo chiều tử trái qua phải. Đồng thứ 2 în ra các phần tử trong màng theo chiều tử phải qua trái."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.661,
+            0.322,
+            0.693
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.259,
+            0.725,
+            0.314,
+            0.774
+          ],
+          "content": "5 1 2 3 4 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.796,
+            0.33,
+            0.828
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.861,
+            0.313,
+            0.908
+          ],
+          "content": "1 2 3 4 5\n5 4 3 2 1"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.234,
+            0.072,
+            0.657,
+            0.181
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 23. Kiểm tra mắng toàn chẩn."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.226,
+            0.211,
+            0.768,
+            0.971
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho một măng số nguyên A gồm N phần tử, hấy kiểm tra xem măng có phải toàn số chẩn hay không?\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong măng được viết cách nhau một dấu cách.\n\nConstraints\n\n1≤n≤1000; 1≤A[i]≤10^6\n\nOutput Format\n\nIn ra YES nếu măng toàn số chẩn, ngược lại in ra NO.\n\nSample Input 0\n\n4\n2 8 10 20012\n\nSample Output 0\n\nYES\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.305,
+            0.084,
+            0.671,
+            0.131
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 24. Kiểm tra màng tăng dàn."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.3,
+            0.148,
+            0.706,
+            0.932
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho một mảng số nguyên A gồm N phần tử, hãy kiểm tra xem mảng có phải là mảng tăng dần hay không, \nmảng tăng dần được định nghĩa là mảng mà phần tử hiện tại luôn lớn hơn các phần tử đúng trước nó.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong mảng được viết cách nhau một dấu\ncách.\n\nConstraints\n\n1≤n≤1000; 1≤A[i]≤10^6\n\nOutput Format\n\nIn ra YES nếu mảng toàn là mảng tăng dần, ngược lại in ra NO.\n\nSample Input 0\n\n5\n1 1 8 9 20\n\nSample Output 0\n\nNO\n\nSample Input 1\n\n5\n1 1 1 1 1\n\nSample Output 1\n\nNO\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.248,
+            0.093,
+            0.595,
+            0.147
+          ],
+          "level": 2,
+          "content": "[Đệ Quy]. Bài 25. Binary search"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.239,
+            0.169,
+            0.768,
+            0.983
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho một mảng số nguyên A gồm N phần tử đã được sắp xếp giám dân, hấy viết hàm tìm kiếm nhị phân bằng để quy để kiểm tra xem phần tử X có nằm trong mảng hay không.\n\nInput Format\n\nDòng đầu tiên là số nguyên dương N. Dòng thứ 2 là N số nguyên trong mảng được viết cách nhau một dấu cách. Dòng thứ 3 là số nguyên dương X.\n\nConstraints\n\n1≤ns≤1000; 1≤X,A[i]≤10^6\n\nOutput Format\n\nIn ra 1 nếu X xuất hiện trong mảng, ngược lại in ra 0.\n\nSample Input 0\n\n5\n5 5 3 2 1\n3\n\nSample Output 0\n\n1\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2024-01-19T12:06:04+00:00",
+      "modified_at": "2024-01-19T12:06:05Z",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 25,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

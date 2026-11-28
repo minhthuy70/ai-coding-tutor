@@ -1,0 +1,1693 @@
+{
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "languages": [
+        "en-US"
+      ],
+      "created_at": "2024-01-19T12:09:57+00:00",
+      "modified_at": "2024-01-19T12:09:57Z",
+      "creator_application": "Microsoft® PowerPoint® 2016",
+      "producer_application": "www.ilovepdf.com",
+      "page_count": 16,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.252,
+            0.097,
+            0.623,
+            0.147
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 1. Phần tử phân biệt"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.244,
+            0.169,
+            0.754,
+            0.978
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.244,
+                0.169,
+                0.754,
+                0.978
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho dãy số A[] gồm có N phần tử, bạn hãy đếm xem trong màng có bao nhiêu phần tử phân biệt? Chú ý giải bài này với 3 cách : Sử dụng set, map, sắp xếp.\n\nNếu dùng set hoặc map bạn chỉ cần đưa các phần tử vào set hoặc đưa phần tử vào làm key trong map thì nó sẽ tự loại bổ trùng, khi đó size của set và map sẽ là số lượng phần tử khác nhau trong màng A[] ban đầu. 3 cách dùng set, map, sort đều có độ phức tạp là O(NlogN) nên bạn dùng cách nào cũng được\n\nInput Format\n\nDòng đầu tiên là số nguyên N. Dòng tiếp theo gồm N số nguyên A[i]\n\nConstraints\n\n1≤ N ≤ 10^5; -10^9 ≤ A[i] ≤ 10^9\n\nOutput Format\n\nIn ra số lượng phần tử khác nhau trong màng.\n\nSample Input 0\n\n5\n2 1 2 1 3\n\nSample Output 0\n\n3"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.304,
+            0.078,
+            0.641,
+            0.163
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 2. Truy vấn phần tử trong màng."
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.3,
+            0.179,
+            0.703,
+            0.932
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.3,
+                0.179,
+                0.703,
+                0.932
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho đầy số A[] gồm có N phần tử, bạn hấy trả lời các truy vấn đề xác định xem phần tử X nào đó có nằm trong mảng hay không? Bạn hấy thử giải bài này bằng 3 cách : Set, Map, Binary Search.\n\nNếu dùng set, map để lưu mảng A[] mỗi truy vấn tìm kiếm (hàm find) bạn chỉ mất độ phức tạp O(logN) thay vì O(N) như duyệt tuần tự, tương tự bạn có thể sort mảng A[] để áp dụng tìm kiếm nhị phân trên mỗi truy vấn.\n\nInput Format\n• Đồng đầu tiên là số nguyên N.\n• Đồng thứ 2 gồm N số nguyên A[i]\n• Đồng thứ 3 là số lượng truy vấn Q.\n• Q dòng tiếp theo mỗi dòng là một số nguyên X.\n\nConstraints\n1≤ N ≤ 10^5; 0 ≤ A[i]. X ≤ 10^9; 1≤ Q ≤ 1000;\n\nOutput Format\nĐối với mỗi truy vấn in ra YES nếu phần tử X xuất hiện trong mảng, ngược lại in ra NO.\n\nSample Input 0\n\n5\n1 2 1 3 4\n2\n1\n6\n\nSample Output 0\n\nYES\nNO"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.066,
+            0.247,
+            0.715,
+            0.337
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 3. Phần tử riêng biệt."
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 1,
+          "bbox": [
+            0.062,
+            0.374,
+            0.959,
+            0.504
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 1,
+              "bbox": [
+                0.062,
+                0.374,
+                0.959,
+                0.504
+              ],
+              "image_path": "images/page_2_table_1.jpg",
+              "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr></table>"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.057,
+            0.556,
+            0.915,
+            0.653
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cho dây số A□ gồm có N phản tử, bạn hây liệt kê các giá trị xuất hiện trong dây theo thứ tự xuất hiện, mỗi giá trị chỉ liệt kê một lần."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.057,
+            0.676,
+            0.92,
+            0.773
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Goi ÿ : Dùng set dé lùu các phần tử đã được in ra trước đó, gặp phần tử a[i] thì kiểm tra nhanh trong set có giả trị a[i] chưa đế in ra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "page_number",
+          "index": 0,
+          "bbox": [
+            0.127,
+            0.863,
+            0.211,
+            0.899
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1 2 3 4 8"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.106,
+            0.099,
+            0.214,
+            0.143
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Input Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.105,
+            0.168,
+            0.595,
+            0.216
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dòng đầu tiên là số nguyên N. Dòng thử 2 gồm N số nguyên A[i]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.106,
+            0.243,
+            0.2,
+            0.283
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Constraints"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.105,
+            0.313,
+            0.339,
+            0.358
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "1 \\leq N \\leq 10^{5}; 0 \\leq A[i], X \\leq 10^{9};"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.106,
+            0.387,
+            0.228,
+            0.429
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.106,
+            0.456,
+            0.558,
+            0.503
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In ra các giá trị xuất hiện trong mảng theo thứ tự xuất hiện."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.105,
+            0.529,
+            0.228,
+            0.574
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Input 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.126,
+            0.635,
+            0.262,
+            0.709
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "B\n1 2 3 2 1 3 4 8"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.105,
+            0.755,
+            0.242,
+            0.801
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Output 0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "table",
+          "index": 0,
+          "bbox": [
+            0.102,
+            0.248,
+            0.921,
+            0.355
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 0,
+              "bbox": [
+                0.102,
+                0.248,
+                0.921,
+                0.355
+              ],
+              "image_path": "images/page_4_table_0.jpg",
+              "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr></table>"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 1,
+          "bbox": [
+            0.105,
+            0.131,
+            0.699,
+            0.205
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 4. Truy vấn trên mắng"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.097,
+            0.408,
+            0.5,
+            0.446
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cho đầy số A[] gồm có N phần tử, có 3 thao tác như sau :"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.094,
+            0.475,
+            0.405,
+            0.512
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "• Thao tác 1 : Thêm 1 phần tử X vào mắng."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.093,
+            0.541,
+            0.868,
+            0.62
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Thao tác 2 : Xóa 1 phần tử X khởi mắng. Trong trường hợp phần tử X không xuất hiện trong mắng, sẽ không thực hiện xóa, nếu trong mắng có nhiều phần tử X thì chỉ xóa đi 1 phần tử X trong mắng."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.094,
+            0.647,
+            0.628,
+            0.686
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Thao tác 3 : Truy vấn xem phần tử X có xuất hiện trong mắng hay không?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.096,
+            0.719,
+            0.852,
+            0.798
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ban đầu mảng A có N phần tử, với các truy vấn phần tử X trong mảng, in ra YES nếu X xuất hiện trong mảng, ngược lại in ra NO."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.096,
+            0.825,
+            0.871,
+            0.904
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Gọi ý : Bài này vừa muốn xóa nhanh vừa muốn tìm kiếm nhanh lại phải lưu được giá trị trùng nhau => Sử dụng multiset"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.273,
+            0.074,
+            0.331,
+            0.101
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Input Format"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.271,
+            0.113,
+            0.411,
+            0.141
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Dòng đầu tiên là số nguyên N."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.271,
+            0.152,
+            0.426,
+            0.18
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Dòng thứ 2 gồm N số nguyên A[i]."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.271,
+            0.191,
+            0.427,
+            0.219
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Dòng thứ 3 là số lượng thao tác Q."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.27,
+            0.229,
+            0.723,
+            0.28
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "- Q dòng tiếp theo mỗi dòng là thông tin của một thao tác, gồm 2 số, số đầu tiên là loại thao tác, số tiếp theo là phần tử X trong thao tác."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.274,
+            0.298,
+            0.324,
+            0.323
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Constraints"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.274,
+            0.336,
+            0.507,
+            0.364
+          ],
+          "content": [
+            {
+              "type": "equation_inline",
+              "content": "1 \\leq N \\leq 10^{4}; 0 \\leq A[i], X \\leq 10^{9}; 1 \\leq Q \\leq 1000; 0 \\leq X \\leq 10^{9};"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.274,
+            0.375,
+            0.339,
+            0.403
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.273,
+            0.413,
+            0.617,
+            0.442
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Đối với mỗi thao tác loại 3, in ra YES nếu X xuất hiện trong mắng, ngược lại in ra NO."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.273,
+            0.453,
+            0.339,
+            0.481
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Input 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.273,
+            0.664,
+            0.346,
+            0.691
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Output 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.284,
+            0.721,
+            0.302,
+            0.761
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "YES\nNO"
+            }
+          ]
+        },
+        {
+          "type": "paragraph_title",
+          "index": 12,
+          "bbox": [
+            0.274,
+            0.787,
+            0.333,
+            0.813
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Explanation 0"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.272,
+            0.825,
+            0.724,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Ban đầu mảng có 6 phần tử 1, 2, 3, 4, 5, 6. Sau thao tác đầu tiên mảng có thêm 1 phần tử 1 và trở thành mảng (1, 1, 2, 3, 4, 5, 6). Sau thao tác thứ 2, mảng xóa đi 1 phần tử 6 và trở thành mảng (1, 1, 2, 3, 4, 5). Thao tác thứ 3 truy vấn phần tử 1, câu trả lời là YES vì 1 xuất hiện trong mảng. Thao tác thứ 4 truy vấn phần tử 6, câu trả lời là NO vì 6 không xuất hiện trong mảng."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.316,
+            0.083,
+            0.499,
+            0.123
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 9. Union"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.308,
+            0.137,
+            0.69,
+            0.985
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.308,
+                0.137,
+                0.69,
+                0.985
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho máng A[] và B[] lần lượt gồm N và M số nguyên, nhiệm vụ của bạn là tìm hợp của 2 máng này và in theo thứ tự từ lớn về nhỏ.\n\nGoi ý : Đề tìm hợp của 2 máng thì chỉ cần dùng 1 set và lưu mọi phần tử của 2 máng, set sẽ tự loại bỏ các phần tử trùng nhau trong cả 2 máng.\n\nCú pháp duyệt ngược của set như sau:\n\nfor(auto it - se.rbegin(); it != se.rend(); ++it){\n    cout << *it << ' ';\n}\n\nInput Format\n• Dòng 1 gồm N và M\n• Dòng 2 gồm N số trong máng A[]\n• Dòng 3 gồm M số trong máng B[]\nConstraints\n• 1<=N.M<=10^5\n• -10^9<=A[i].B[i]<=10^9\n\nOutput Format\nIn ra tập hợp của 2 máng theo thứ tự giảm đàn\n\nSample Input 0\n\n9 6\n7 9 2 0 0 5 6 4 7\n9 7 3 4 5 7\n\nSample Output 0\n\n9 7 6.5 4 3 2 0"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.318,
+            0.083,
+            0.561,
+            0.123
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 10. Intersection"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.31,
+            0.139,
+            0.691,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.31,
+                0.139,
+                0.691,
+                0.933
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho mảng A[] và B[] lần lượt gồm N và M số nguyên, nhiệm vụ của bạn là tìm giao của 2 mảng này và in theo thứ tự xuất hiện trong mảng A[].\n\nGợi ý：\n\nCách 1 : Dùng 2 set để lưu 2 mảng A, B sau đó duyệt 1 trong 2 mảng và tìm kiếm sự xuất hiện của phần tử đang duyệt trong mảng còn lại.\n\nCách 2 : Dùng 1 map để đánh dấu, duyệt qua các phần tử trong mảng A[] và cho map của từng phần tử trong mảng A[] = 1, duyệt qua mảng B[] thì kiểm tra nếu map của phần tử trong mảng B đã bằng 1 thì chuyển thành 2. Cuối cùng duyệt map và in ra những phần tử được đánh dấu là 2.\n\nInput Format\n\n• Dòng 1 gồm N và M\n• Dòng 2 gồm N số trong mảng A[]\n• Dòng 3 gồm M số trong mảng B[]\n\nConstraints\n\n• 1<=N,M<=10^5\n• -10^9<=A[i],B[i]<=10^9\n\nOutput Format\n\nIn ra tập giao của 2 mảng theo thứ tự xuất hiện trong mảng A[]\n\nSample Input 0\n\n9\t8\n7\t5\t0\t0\t1\t6\t2\t7\t3\n6\t4\t9\t4\t2\t8\t3\t5\n\nSample Output 0\n\n5\t6\t2\t3"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "tsv"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.289,
+            0.085,
+            0.551,
+            0.129
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 11. Difference"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.279,
+            0.151,
+            0.72,
+            0.935
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.279,
+                0.151,
+                0.72,
+                0.935
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho măng A[] và B[] lần lượt gồm N và M số nguyên, nhiệm vụ của bạn là tìm những phần tử xuất hiện trong măng thứ nhất nhưng không xuất hiện trong măng thứ 2, liệt kê theo thứ tự từ bề đến lớn.\n\nGọi ý : Dùng 2 set để lưu măng A, B. Duyệt các phần tử trong set 1 và tìm kiếm nếu phần tử ko nằm trong set 2 thì in ra.\n\nInput Format\n• Dòng 1 gồm N và M\n• Dòng 2 gồm N số trong măng A[]\n• Dòng 3 gồm M số trong măng B[]\nConstraints\n• 1<=N,M<=10^5\n• -10^9<=A[i],B[i]<=10^9\n\nOutput Format\n\nIn ra đáp ăn của bài toán\n\nSample Input 0\n\n6 6\n1 9 3 8 0 7\n3 1 7 3 7 5\n\nSample Output 0\n\n0 0 9"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.285,
+            0.077,
+            0.669,
+            0.129
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 12. Symmetric difference"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.275,
+            0.147,
+            0.724,
+            0.959
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.275,
+                0.147,
+                0.724,
+                0.959
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho măng A[] và B[] lần lượt gồm N và M số nguyên, nhiệm vụ của bạn là tìm những phần tử xuất hiện ở 1 trong 2 măng nhưng không được xuất hiện ở cả 2 măng.\n\nInput Format\n• Dòng 1 gồm N và M\n• Dòng 2 gồm N số trong măng A[]\n• Dòng 3 gồm M số trong măng B[]\nConstraints\n• 1<=N,M<=10^5\n• -10^9<=A[i],B[i]<=10^9\n\nOutput Format\nIn ra đáp án của bài toán theo thứ tự từ bề đến lớn\n\nSample Input 0\n\n9 8\n9 0 2 3 9 7 8 1 4\n1 0 2 1 1 2 0 5\n\nSample Output 0\n\n3 4 5 7 6 9"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.247,
+            0.11,
+            0.535,
+            0.163
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Set Map]. Bài 13. Loại trừ"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.35,
+            0.211,
+            0.408,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.456,
+            0.211,
+            0.512,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Leaderboard"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.56,
+            0.211,
+            0.613,
+            0.239
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.243,
+            0.295,
+            0.735,
+            0.353
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cho mảng A[] và B[] có N và M phần tử là các số nguyên, hây tìm các phần tử xuất hiện trong mảng 1 mà không xuất hiện trong mảng 2."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.243,
+            0.367,
+            0.31,
+            0.397
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Input Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.243,
+            0.41,
+            0.677,
+            0.443
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dòng đầu tiên là N và M; Dòng thứ 2 là N số của màng A[]; Dòng thứ 3 là M số của màng B[];"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.244,
+            0.458,
+            0.302,
+            0.485
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Constraints"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.244,
+            0.503,
+            0.441,
+            0.531
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "1<=N, M<=10^6; -10^9<=A[i], B[i] <= 10^9;"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.244,
+            0.547,
+            0.318,
+            0.575
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.243,
+            0.59,
+            0.746,
+            0.647
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In ra các số xuất hiện trong màng 1 mà không xuất hiện trong màng 2 theo thử tự từ bề đến lớn, mỗi giá trị thỏa mãn chỉ liệt kê 1 lần."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.243,
+            0.663,
+            0.319,
+            0.693
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Input 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.253,
+            0.725,
+            0.298,
+            0.796
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3 4   \n1 2 3   \n1 2 4 5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.244,
+            0.823,
+            0.327,
+            0.855
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Output 0"
+            }
+          ]
+        },
+        {
+          "type": "page_number",
+          "index": 14,
+          "bbox": [
+            0.256,
+            0.891,
+            0.266,
+            0.911
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.288,
+            0.087,
+            0.619,
+            0.135
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Màng 1 Chièu]. Bài 9. Đém tần suất"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.28,
+            0.154,
+            0.72,
+            0.931
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.28,
+                0.154,
+                0.72,
+                0.931
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho mảng các số nguyên không âm gồm n phần tử, thực hiện đếm tàn suất xuất hiện của các phần tử và in theo mẫu.\n\nInput Format\n\nDòng đầu tiên là số lượng phần tử trong mảng. Dòng thứ 2 là N phần tử trong mảng.\n\nConstraints\n\n2≤n≤10^6; 0≤a≤10^7\n\nOutput Format\n\nIn ra tần suất xuất hiện của các phần tử theo thứ tự từ nhỏ tới lớn sau đó bỏ trống 1 dòng và in ra tần suất xuất hiện của các phần tử theo thứ tự xuất hiện trong mảng(mỗi giá trị chỉ liệt kê 1 lần).\n\nSample Input 0\n\n8\n2 1 2 3 4 8 2 3\n\nSample Output 0\n\n1 1\n2 3\n3 2\n4 1\n8 1\n2 3\n1 1\n3 2\n4 1\n8 1"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.283,
+            0.084,
+            0.652,
+            0.179
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Màng 1 Chiêu]. Bài 10. Tîm hợp và giao của 2 màng 1"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.276,
+            0.196,
+            0.724,
+            0.933
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.276,
+                0.196,
+                0.724,
+                0.933
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho 2 mảng số nguyên a và b gồm n và m phần tử. Goi mảng c và d lần lượt là mảng chỉ bao gồm các phần tử khác nhau của a và b. Hây tìm mảng giao và hợp của mảng c và d và liệt kê theo thứ tự tăng dần.\n\nHướng dẫn tìm giao : Dùng 1 map để đánh dấu những giá trị xuất hiện trong mảng a, Dùng 1 map để đánh dấu những giá trị xuất hiện trong mảng b. Duyệt 1 trong 2 map và kiểm tra xem phần tử của map hiện tại có nằm trong map thứ 2 hay không => giao. Tìm hợp : Đưa các phần tử trong 2 mảng vào 1 cải set\n\nInput Format\n\nDòng đầu tiên là số lượng phần tử của 2 đầy n và m. Dòng thứ 2 là n phần tử trong đầy số 1. Dòng thứ 3 là m phần tử trong đầy thứ 2.\n\nConstraints\n\n1≤n,m≤10^6; 0≤a≤10^7\n\nOutput Format\n\nDòng đầu tiên in ra giao của 2 mảng c và d. Dòng thứ 2 in ra hợp của 2 mảng c và d.\n\nSample Input 0\n\n5 6\n1 2 1 2 7\n1 2 3 4 5 6\n\nSample Output 0\n\n1 2\n1 2 3 4 5 6 7"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.257,
+            0.079,
+            0.665,
+            0.183
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Màng 1 Chiều]. Bài 11. Tìm hợp và giao của 2 màng 2"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "code",
+          "index": 1,
+          "bbox": [
+            0.252,
+            0.202,
+            0.75,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "code_body",
+              "index": 1,
+              "bbox": [
+                0.252,
+                0.202,
+                0.75,
+                0.925
+              ],
+              "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho 2 mảng số nguyên a và b gồm n và m phần tử, các phần tử trong mảng là đôi một khác nhau, các phần tử trong 2 mảng đã được sắp xếp theo thứ tự tăng dần. Hấy tìm mảng giao và mảng hợp của 2 mảng.\n\nInput Format\n\nDòng đầu tiên là số lượng phần tử của 2 đầy n và m. Đồng thứ 2 là n phần tử trong đầy số 1. Đồng thứ 3 là m phần tử trong đầy thứ 2.\n\nConstraints\n\n1≤n,m≤10^7; -10^7≤s≤10^7\n\nOutput Format\n\nDòng đầu tiên in ra mảng hợp của 2 mảng Dòng thứ 2 in ra mảng giao của 2 mảng\n\nSample Input 0\n\n4 5\n1 2 3 4\n2 3 5 6 7\n\nSample Output 0\n\n1 2 3 4 5 6 7\n2 3"
+            }
+          ],
+          "sub_type": "code",
+          "guess_lang": "txt"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.249,
+            0.091,
+            0.679,
+            0.198
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Màng 1 Chiêu]. Bài 12. Đém tần suất số nguyên tố"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "text",
+          "index": 1,
+          "bbox": [
+            0.264,
+            0.245,
+            0.304,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Problem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 2,
+          "bbox": [
+            0.35,
+            0.244,
+            0.407,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Submissions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 3,
+          "bbox": [
+            0.452,
+            0.245,
+            0.508,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Leaderboard"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 4,
+          "bbox": [
+            0.555,
+            0.245,
+            0.607,
+            0.271
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Discussions"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 5,
+          "bbox": [
+            0.244,
+            0.326,
+            0.744,
+            0.384
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Cho một đầy số nguyên chưa biết trước số lượng phần tử, hấy đếm tàn xuất hiện của các số nguyên tố trong đầy và in ra theo thứ tự xuất hiện trong đầy"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 6,
+          "bbox": [
+            0.245,
+            0.397,
+            0.31,
+            0.427
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Input Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 7,
+          "bbox": [
+            0.245,
+            0.439,
+            0.465,
+            0.471
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Gồm nhiều dòng chưa các số nguyên trong dãy"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 8,
+          "bbox": [
+            0.245,
+            0.484,
+            0.303,
+            0.513
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Constraints"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 9,
+          "bbox": [
+            0.244,
+            0.525,
+            0.712,
+            0.558
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Dây không quá 10000 số nguyên không âm. Các số trong dây là số nguyên không âm không quá 10^9"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 10,
+          "bbox": [
+            0.245,
+            0.571,
+            0.319,
+            0.601
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Output Format"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 11,
+          "bbox": [
+            0.245,
+            0.611,
+            0.519,
+            0.645
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "In ra các số nguyên tố trong dây kèm theo tần suất của nó."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 12,
+          "bbox": [
+            0.245,
+            0.657,
+            0.319,
+            0.689
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Input 0"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 13,
+          "bbox": [
+            0.258,
+            0.721,
+            0.331,
+            0.749
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "2353251"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 14,
+          "bbox": [
+            0.245,
+            0.775,
+            0.328,
+            0.805
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "Sample Output 0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "index": 0,
+          "bbox": [
+            0.257,
+            0.097,
+            0.653,
+            0.149
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "[Màng 1 Chiêu]. Bài 14. Liệt kê và đếm"
+            }
+          ],
+          "level": 2
+        },
+        {
+          "type": "table",
+          "index": 1,
+          "bbox": [
+            0.25,
+            0.169,
+            0.75,
+            0.925
+          ],
+          "content": [
+            {
+              "type": "table_body",
+              "index": 1,
+              "bbox": [
+                0.25,
+                0.169,
+                0.75,
+                0.925
+              ],
+              "image_path": "images/page_15_table_1.jpg",
+              "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Cho một đầy các số nguyên dương không quá 9 chữ số, mỗi số cách nhau vài khoảng trống, có thể xuống dòng. Hây tìm các số không giảm (các chữ số theo thứ tự từ trái qua phải tạo thành đầy không giảm) và đếm số lần xuất hiện của các số đó.</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">Gồm 1 đầy các số nguyên dương không quá 9 chữ số</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">Dầy không quá 100000 số. Các số đều nguyên dương và không quá 9 chữ số.</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">Ghi ra các số không giám kèm theo số lần xuất hiện. Các số được liệt kê theo thứ tự sắp xếp số lần xuất hiện giám dản. Trong trường hợp có nhiều số có cùng số lần xuất hiện thì thì số nhỏ hơn sẽ xếp trước.</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">888 289 123321 54 888</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">688 2123 1289 1</td></tr></table>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "is_full_document": true,
+  "schema": "docvortex.middle",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,649 @@
+<!-- page: 1 -->
+
+## [Đệ Quy]. Bài 1. Tính tổng 1.
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Tính tổng hàm S(n) = 1 + 2 + 3 + 4 + .. + n bằng đệ quy. Nếu bạn chưa biết thì S(n) có thể tính nhanh bằng công thức S(n) = n * (n + 1) / 2
+
+Input Format
+
+Số nguyên dương n.
+
+Constraints
+
+0≤n≤1000; Chủ ý các bạn phải code bằng đệ quy nhé.
+
+Output Format
+
+In ra S(n).
+
+Sample Input 0
+
+773
+
+Sample Output 0
+
+299151
+```
+
+<!-- page: 2 -->
+
+## [Đệ Quy]. Bài 2. Tính tổng 2.
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Tính tổng hàm S(n) = 1^2 + 2^2 + 3^2 + 4^2 + .. + n^2 bằng đệ quy. Nếu bạn chưa biết thì S(n) có thể tính
+nhanh bằng công thức S(n) = n * (n + 1) * (2n + 1) / 6
+
+Input Format
+
+Số nguyên dương n.
+
+Constraints
+
+0≤n≤1000; Chú ý các bạn phải code bằng đệ quy nhé.
+
+Output Format
+
+In ra kết quả của S(n)
+
+Sample Input 0
+
+53
+
+Sample Output 0
+
+51039
+```
+
+<!-- page: 3 -->
+
+## [Đệ Quy]. Bài 3. Tính tổng 3.
+
+Problem
+
+Submissions
+
+Discussions
+
+Tính tổng hàm $S(n) = 1^{3} + 2^{3} + 3^{3} + 4^{3} + .. + n^{3}$ bằng đệ quy. Nếu bạn chưa biết thì $S(n)$ có thể tính nhanh bằng công thức $S(n) = [(n * (n + 1) / 2)]^{2}$
+
+Số nguyên dương n.
+
+Constraints
+
+0≤n≤10^3; Chú ý các bạn phải code bằng đệ quy nhé.
+
+Output Format
+
+In ra kết quả của S(n)
+
+Sample Input 0
+
+Sample Output 0
+
+8992728900
+
+<!-- page: 4 -->
+
+## [Đệ Quy]. Bài 4. Tính tổng 4
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Tính tổng hàm S(n) = -1 + 2 -3 + 4 - 5 + 6 + ... + (-1)^n * n bằng đệ quy. Nếu bạn chưa biết thì S(n) có thể tính
+nhanh bằng công thức Nếu N chẩn thì S(n) = n / 2, còn nếu N lề thì S(n) = (n - 1) / 2 - n
+
+Input Format
+
+Số nguyên dương n.
+
+Constraints
+
+1≤n≤10^3; Chú ý các bạn phải code bằng đệ quy nhé.
+
+Output Format
+
+In ra kết quả của S(n)
+
+Sample Input 0
+
+919
+
+Sample Output 0
+
+-460
+```
+
+<!-- page: 5 -->
+
+<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan="4">Tính n giai thừa bằng đê quy.</td></tr><tr><td colspan="4">Input Format</td></tr><tr><td colspan="4">Số nguyên dương N.</td></tr><tr><td colspan="4">Constraints</td></tr><tr><td colspan="4">0≤n≤10;</td></tr><tr><td colspan="4">Output Format</td></tr><tr><td colspan="4">Kết quả của N!</td></tr><tr><td colspan="4">Sample Input 0</td></tr><tr><td colspan="4">6</td></tr><tr><td colspan="4">Sample Output 0</td></tr><tr><td colspan="4">720</td></tr></table>
+
+## [Đệ Quy]. Bài 5. Tính giai thừa
+
+<!-- page: 6 -->
+
+## [Đệ Quy]. Bài 6. Số fibonacci
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Dãy số fibonacci là dãy số thỏa mãn : F1=0, F2=1, Fn=Fn-1+Fn-2. Hãy tìm số Fibonacci thứ n sử dụng đệ quy.
+Độ phức tạp của code đệ quy là O(1.618^n) không thể áp dụng được với n lớn.
+
+Input Format
+
+Số nguyên dương n.
+
+Constraints
+
+1≤n≤15;
+
+Output Format
+
+In ra số Fibonacci thứ n.
+
+Sample Input 0
+
+1
+
+Sample Output 0
+
+θ
+```
+
+<!-- page: 7 -->
+
+## [Đệ Quy]. Bài 7. Tính tổ hợp chập K của N
+
+```go
+Problem	Submissions	Leaderboard	Discussions
+Cho 2 số nguyên dương N và K. Hây tính tổ hợp chấp K của N. Tiên thế các bạn ôn lại một vai tính chất của tổ hợp chấp K của N nhé.
+	Sô các tổ hợp chấp k của n phần từ:
+	C_n^k = \frac{n!}{k!(n-k)!}
+	Qui trốc:
+	C_n^0 = 1
+	Tính chất:
+	C_n^0 = C_n^n = 1
+	C_n^k = C_n^{n-k}
+	C_n^k = C_{n-1}^{k-1} + C_{n-1}^k
+	C_n^k = \frac{n-k+1}{k}C_n^{k-1}
+Input Format
+2 số nguyên dương N và K.
+Constraints
+Dksksns10.
+Output Format
+Kết quả của tổ hợp chấp K của N.
+Sample Input 0
+10 2
+Sample Output 0
+45
+```
+
+<!-- page: 8 -->
+
+<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan="4">Cho 2 số a và b, hấy tính ước chung lớn nhất và bôi chung nhỏ nhất của 2 số a và b. Trong đó hàm UCLN sử dụng đệ quy để tỉnh.</td></tr><tr><td colspan="4">Input Format</td></tr><tr><td colspan="4">2 số nguyên dương a và b.</td></tr><tr><td colspan="4">Constraints</td></tr><tr><td colspan="4">1≤a,b≤10^12:</td></tr><tr><td colspan="4">Output Format</td></tr><tr><td colspan="4">In ra UCLN và BCNN của 2 số. Dữ liệu đảm bảo UCLN của 2 số năm trong khoảng số nguyên 64 bit.</td></tr><tr><td colspan="4">Sample Input 0</td></tr><tr><td colspan="4">10 20</td></tr><tr><td colspan="4">Sample Output 0</td></tr><tr><td colspan="4">10 20</td></tr></table>
+
+## [Đệ Quy]. Bài 8. Ước chung lớn nhất, bội chung nhỏ nhất.
+
+<!-- page: 9 -->
+
+We can save the value of  $\left(\mathrm{X}\left[\frac{\gamma}{2}\right]\bmod\mathrm{N}\right)$  to not compute it twice  $O(\log(n))$
+
+## [Đệ Quy]. Bài 9. Lũy thừa nhị phân.
+
+```txt
+Cho 2 số nguyên không âm a và b. Hây tính a^b%(10^9+7). Kiến thức bạn cần sử dụng là Binary Exponentiation.
+```
+
+## Fast Modular Exponentiation
+
+$$
+X ^ {Y} \bmod N = \left\{ \begin{array}{c} \left(\mathrm{X} ^ {\left| \frac {Y}{2} \right|} \bmod \mathrm{N}\right) ^ {2} \bmod \mathrm{NifYiseven} \\ \left(\left(\mathrm{X} ^ {\left| \frac {Y}{2} \right|} \bmod \mathrm{N}\right) ^ {2} \bmod \mathrm{N}\right) * X \bmod \mathrm{NifYisodd} \end{array} \right.
+$$
+
+```csv
+Input Format
+2 số nguyên dương a, b
+Constraints
+1sa,b≤10^9
+Output Format
+In ra kết quả của bài toán.
+Sample Input 0
+2 10
+Sample Output 0
+1024
+```
+
+<!-- page: 10 -->
+
+## [Đệ Quy]. Bài 10. Tính tổng 5
+
+Leaderboard
+
+Discussions
+
+<!-- page: 11 -->
+
+## [Đệ Quy]. Bài 11. Chuyển hệ thập phân sang hệ nhị phân
+
+Submissions
+
+Leaderboard
+
+Cho một số nguyên không âm N, hây in ra dạng biểu diễn nhị phân của số N.
+
+Input Format
+
+Số nguyên không âm N
+
+Constraints
+
+0≤n≤10^18
+
+Output Format
+
+Biểu diễn nhị phân của số nguyên N,
+
+Sample Input 0
+
+Sample Output 0
+
+<!-- page: 12 -->
+
+## [Đệ Quy]. Bài 12. Chuyển hệ thập phân sang hệ 16.
+
+```txt
+Cho một số nguyên không âm N, hây în ra dạng biểu diễn của N dưới hệ 16.
+Input Format
+Số nguyên không âm N
+Constraints
+0≤n≤10^18
+Output Format
+Biểu diễn hệ 16 của số nguyên N.
+Sample Input 0
+995
+Sample Output 0
+3E3
+```
+
+<!-- page: 13 -->
+
+## [Đệ Quy]. Bài 13. Tính tổng chữ số sử dụng để quy
+
+Problem
+
+Submissions
+
+Leaderboard
+
+Discussions
+
+Cho một số nguyên không âm N, hây tính tổng chữ số của N sử dụng kỳ thuật đề quy.
+
+Số nguyên không âm N
+
+0≤n≤10^18
+
+Output Format
+
+Tổng các chữ số của N
+
+Sample Input 0
+
+Sample Output 0
+
+<!-- page: 14 -->
+
+## [Đệ Quy]. Bài 14. Đếm số lượng chữ số của N sử dụng để quy.
+
+Submissions
+
+Leaderboard
+
+Discussions
+
+<!-- page: 15 -->
+
+## [Đệ Quy]. Bài 15. Tìm chữ số đầu tiên của số nguyên
+
+Problem
+
+Submissions
+
+Leaderboard
+
+Discussions
+
+Cho một số nguyên không âm N, hây in ra chữ số đầu tiên của N.
+
+Input Format
+
+Số nguyên không âm N
+
+Constraints
+
+0≤n≤10^18
+
+Output Format
+
+In ra chữ số đầu tiên của N.
+
+Sample Input 0
+
+56721
+
+Sample Output 0
+
+5
+
+<!-- page: 16 -->
+
+## [Đệ Quy]. Bài 16. Chữ số lớn nhất và nhỏ nhất
+
+Problem
+
+Submissions
+
+Leaderboard
+
+Discussions
+
+Cho một số nguyên không âm N, hấy in ra chữ số lớn nhất và chữ số nhỏ nhất của N. Việt 2 hàm độ quy
+
+Input Format
+
+Số nguyên dương N
+
+Constraints
+
+10≤n≤10^18
+
+Output Format
+
+Chữ số lớn nhất và nhỏ nhất của N.
+
+Sample Input 0
+
+1256782
+
+Sample Output 0
+
+B1
+
+<!-- page: 17 -->
+
+## [Đệ Quy]. Bài 17. In ra số nguyên
+
+Problem
+
+Submissions
+
+Leaderboard
+
+Discussions
+
+Cho một số nguyên không âm N, hây in ra N theo thứ tự các chữ số từ trải qua phải và từ phải qua trải. Chủ ý phải sử dụng hàm độ quy cho cả 2 yêu cầu.
+
+Input Format
+
+Số nguyên không âm N.
+
+Constraints
+
+0≤n≤10^18
+
+Output Format
+
+Dòng đầu tiên in ra các chữ số của n theo thứ tự từ trái qua phải. Dòng thứ hai in ra các chữ số của n theo thứ tự từ phải qua trái. Các chữ số được viết cách nhau một dấu cách.
+
+Sample Input 0
+
+21218
+
+Sample Output 0
+
+2 1 2 1 8
+8 1 2 1 2
+
+<!-- page: 18 -->
+
+## [Đệ Quy]. Bài 18. Tính tổng chữ số chẩn lẻ.
+
+<!-- page: 19 -->
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Cho số nguyên không âm N, hấy kiểm tra xem tất cả các chữ số của N có phải đều là số chẩn hay không?
+
+Input Format
+
+Số nguyên không âm N.
+
+Constraints
+
+0≤ns≤10^18
+
+Output Format
+
+In ra YES nếu n toàn chữ số chẩn, ngược lại in ra NO.
+
+Sample Input 0
+
+228@820
+
+Sample Output 0
+
+YES
+```
+
+## [Đệ Quy]. Bài 19. Kiểm tra chữ số chẩn.
+
+<!-- page: 20 -->
+
+## [Đệ Quy]. Bài 20. Đếm số thao tác.
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Cho số nguyên dương N. Bạn được thực hiện 3 thao tác sau đây: 1. Lấy N chia cho 2 nếu N chia hết cho 2. 2. Lấy N chia hết cho 3 nếu N chia hết cho 3. 3. Giám N đi 1 đơn vị. Hầy đếm số thao tác ít nhất để biến đổi N về 1.
+
+Input Format
+
+Số nguyên dương N.
+
+Constraints
+
+1≤n≤50
+
+Output Format
+
+In ra số thao tác tối thiểu cần thực hiện.
+
+Sample Input 0
+
+38
+
+Sample Output 0
+
+5
+
+Explanation 0
+
+Giải thích test : 1. N = N / 2 = 19 2. N = N - 1 = 18 3. N = N / 3 = 6 4. N = N / 2 = 3 5. N = N / 3 = 1
+```
+
+<!-- page: 21 -->
+
+## [Đệ Quy]. Bài 21. Kiểm tra măng đối xứng.
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Cho một màng số nguyên A gồm N phần tử, hây kiểm tra xem màng có đối xứng hay không bằng cách sử dụng hàm đệ quy.
+
+Input Format
+
+Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong màng được viết cách nhau một dấu cách.
+
+Constraints
+
+1≤n≤1000; 1≤A[i]≤10^6
+
+Output Format
+
+In ra YES nếu màng A là màng đối xứng, ngược lại in ra NO.
+
+Sample Input 0
+
+5
+1 2 3 2 1
+
+Sample Output 0
+
+YES
+```
+
+<!-- page: 22 -->
+
+## [Đệ Quy]. Bài 22. In măng.
+
+Problem
+
+Submissions
+
+Leaderboard
+
+Discussions
+
+Cho một mảng số nguyên A gồm N phần tử, hấy in ra mảng theo thứ tự từ trái qua phải và từ phải qua trái bằng đề quy.
+
+Input Format
+
+Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong máng được viết cách nhau một dấu cách.
+
+Constraints
+
+1≤n≤1000; 1≤A[i]≤10^6
+
+Output Format
+
+Dòng đầu tiên in ra các phần tử trong màng theo chiều tử trái qua phải. Đồng thứ 2 în ra các phần tử trong màng theo chiều tử phải qua trái.
+
+Sample Input 0
+
+5 1 2 3 4 5
+
+Sample Output 0
+
+1 2 3 4 5
+5 4 3 2 1
+
+<!-- page: 23 -->
+
+## [Đệ Quy]. Bài 23. Kiểm tra mắng toàn chẩn.
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Cho một măng số nguyên A gồm N phần tử, hấy kiểm tra xem măng có phải toàn số chẩn hay không?
+
+Input Format
+
+Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong măng được viết cách nhau một dấu cách.
+
+Constraints
+
+1≤n≤1000; 1≤A[i]≤10^6
+
+Output Format
+
+In ra YES nếu măng toàn số chẩn, ngược lại in ra NO.
+
+Sample Input 0
+
+4
+2 8 10 20012
+
+Sample Output 0
+
+YES
+```
+
+<!-- page: 24 -->
+
+## [Đệ Quy]. Bài 24. Kiểm tra màng tăng dàn.
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Cho một mảng số nguyên A gồm N phần tử, hãy kiểm tra xem mảng có phải là mảng tăng dần hay không, 
+mảng tăng dần được định nghĩa là mảng mà phần tử hiện tại luôn lớn hơn các phần tử đúng trước nó.
+
+Input Format
+
+Dòng đầu tiên là số nguyên dương N; Dòng thứ 2 là N số nguyên trong mảng được viết cách nhau một dấu
+cách.
+
+Constraints
+
+1≤n≤1000; 1≤A[i]≤10^6
+
+Output Format
+
+In ra YES nếu mảng toàn là mảng tăng dần, ngược lại in ra NO.
+
+Sample Input 0
+
+5
+1 1 8 9 20
+
+Sample Output 0
+
+NO
+
+Sample Input 1
+
+5
+1 1 1 1 1
+
+Sample Output 1
+
+NO
+```
+
+<!-- page: 25 -->
+
+## [Đệ Quy]. Bài 25. Binary search
+
+```txt
+Problem	Submissions	Leaderboard	Discussions
+
+Cho một mảng số nguyên A gồm N phần tử đã được sắp xếp giám dân, hấy viết hàm tìm kiếm nhị phân bằng để quy để kiểm tra xem phần tử X có nằm trong mảng hay không.
+
+Input Format
+
+Dòng đầu tiên là số nguyên dương N. Dòng thứ 2 là N số nguyên trong mảng được viết cách nhau một dấu cách. Dòng thứ 3 là số nguyên dương X.
+
+Constraints
+
+1≤ns≤1000; 1≤X,A[i]≤10^6
+
+Output Format
+
+In ra 1 nếu X xuất hiện trong mảng, ngược lại in ra 0.
+
+Sample Input 0
+
+5
+5 5 3 2 1
+3
+
+Sample Output 0
+
+1
+```

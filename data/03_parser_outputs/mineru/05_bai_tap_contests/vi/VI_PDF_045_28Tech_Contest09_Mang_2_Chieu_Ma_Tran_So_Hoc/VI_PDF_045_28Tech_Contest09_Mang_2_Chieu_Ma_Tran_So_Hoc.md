@@ -1,0 +1,957 @@
+<!-- page: 1 -->
+
+## [Màng 2 Chiều]. Bài 1. Liệt kê các số nguyên tố trong màng 2 chiều
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận cổ NxM gồm N hàng, mỗi hàng M cột. Hây liệt kê các số nguyên tố theo từng hàng trong ma trận.
+
+Input Format
+
+Dòng đầu tiên là 2 số N và M. N dòng tiếp theo mỗi dòng có M số.
+
+Constraints
+
+1 sn, ms500; Các phần tử trong ma trận là số dương không quả 10^9.
+
+Output Format
+
+In ra các số nguyên tố trong ma trận theo từng dòng
+
+Sample Input 0
+
+3 3
+1 2 3
+4 5 6
+7 8 9
+
+Sample Output 0
+
+2 3
+5
+7
+```
+
+<!-- page: 2 -->
+
+## [Màng 2 Chiều]. Bài 2. Tổng hàng, tổng cột trên ma trận
+
+<table><tr><td>Problem</td><td>Submissions</td><td>Discussions</td></tr><tr><td colspan="3">Cho ma trận cỡ NxM gồm N hàng, mỗi hàng M cột. Hây tính tổng các phần tử trên từng hàng và tổng các phần tử trên từng cột của ma trận.</td></tr><tr><td colspan="3">Input Format</td></tr><tr><td colspan="3">Dòng đầu tiên là 2 số N và M. N đồng tiếp theo mỗi dòng có M số.</td></tr><tr><td colspan="3">Constraints</td></tr><tr><td colspan="3">1≤n,ms≤200; Các phần tử trong ma trận là số dương không quá 10^9.</td></tr><tr><td colspan="3">Output Format</td></tr><tr><td colspan="3">Dòng đầu tiên, in ra N số là tổng của N hàng. Dông thứ 2 in ra M số là tổng của M cột.</td></tr><tr><td colspan="3">Sample Input 0</td></tr><tr><td colspan="3">3 31 2 34 5 67 8 9</td></tr><tr><td colspan="3">Sample Output 0</td></tr><tr><td colspan="3">6 15 2412 15 18</td></tr></table>
+
+<!-- page: 3 -->
+
+## [Màng 2 Chiều]. Bài 3. Số lớn nhất và nhỏ nhất trong ma trận
+
+Submissions
+
+Cho ma trận cổ NxM gồm N hàng, mỗi hàng M cột. Hãy tìm số nhỏ nhất trong ma trận và số lớn nhất trong ma trận, sau đó liệt kê các vị trí xuất hiện của các phần tử này trong ma trận.
+
+Input Format
+
+Dòng đầu tiên là 2 số N và M. N đồng tiếp theo mỗi dòng có M số.
+
+Constraints
+
+1≤n,m≤205; Các phần tử trong ma trận là số dương không quá 10^9.
+
+Output Format
+
+Dòng đầu tiên in ra số nhỏ nhất trong ma trận, các dòng tiếp theo liệt kê các vị trí của số này trong ma trận. Dòng tiếp theo in ra số lớn nhất trong ma trận, các dòng tiếp theo liệt kê các vị trí của số này trong ma trận. Xem test case mẫu để rõ hơn.
+
+Sample Input 0
+
+<!-- page: 4 -->
+
+## [Màng 2 Chiều]. Bài 4. Số thuận nghịch trong tam giác dưới.
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hây đếm các số thuận nghịch thuộc tam giác dưới của ma trận trên.
+
+Input Format
+
+Dòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.
+
+Constraints
+
+1≤n≤205; Các phần tử trong ma trận là số dương không quá 10^9.
+
+Output Format
+
+In ra số lượng số thuận nghịch trong ma trận.
+
+Sample Input 0
+
+3
+1 2 3
+22 14 56
+76 5 4
+
+Sample Output 0
+
+4
+
+Explanation 0
+
+4 số là số thuận nghịch thuộc tam giác dưới là : 1, 22, 4, 5
+```
+
+<!-- page: 5 -->
+
+## [Màng 2 Chiều]. Bài 5. In ra ma trận theo mẫu.
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hây in ra ma trận theo các mẫu dưới đây.
+
+Input Format
+
+Dòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.
+
+Constraints
+
+1≤ns≤500; Các phần tử trong ma trận là số dương không quả 10^9.
+
+Output Format
+
+In ra ma trận theo mẫu, xem test case để rò hơn.
+
+Sample Input 0
+
+5
+510 745 649 186 313
+474 22 168 18 787
+905 958 391 202 625
+477 414 314 824 334
+874 372 159 833 78
+
+Sample Output 0
+
+Pattern 1:
+510 474 905 477 874
+745 22 958 414 372
+649 168 391 314 159
+186 18 202 824 833
+313 787 625 334 70
+Pattern 2:
+78 833 159 372 874
+334 824 314 414 477
+625 202 391 958 905
+787 18 168 22 474
+313 186 649 745 510
+Pattern 3:
+313 787 625 334 70
+186 18 202 824 833
+649 168 391 314 159
+745 22 958 414 372
+510 474 905 477 874
+Pattern 4:
+313 186 649 745 510
+787 18 168 22 474
+625 202 391 958 905
+334 824 314 414 477
+78 833 159 372 874
+```
+
+<!-- page: 6 -->
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy hoán vị các phần tử trên 2 đường chéo chính và
+phu của ma trận.
+
+Input Format
+
+Dòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.
+
+Constraints
+
+1≤ns≤300: Các phần tử trong ma trận là số dương không quả 10^9.
+
+Output Format
+
+In ra ma trận sau khi hoán vị 2 đường chéo
+
+Sample Input 0
+
+8
+519 178 774 271 764 669 193 986
+103 481 214 628 803 100 528 626
+544 925 24 973 62 182 4 433
+506 594 726 32 493 143 223 287
+65 901 188 361 414 975 271 171
+236 834 712 761 897 668 286 551
+141 695 696 625 20 126 577 695
+659 303 372 467 679 594 852 485
+
+Sample Output 0
+
+986 178 774 271 764 669 193 519
+103 528 214 628 803 100 481 626
+544 925 182 973 62 24 4 433
+506 594 726 493 32 143 223 287
+65 901 188 414 361 975 271 171
+236 834 668 761 897 712 286 551
+141 577 696 625 20 126 695 695
+485 303 372 467 679 594 852 659
+```
+
+## [Màng 2 Chièu]. Bài 6. Hoán vị đường chéo
+
+<!-- page: 7 -->
+
+## [Màng 2 Chiều]. Bài 7. Hoán vị 2 hàng của ma trận
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy hoán vị các phần tử trên 2 hàng của ma trận.
+
+Input Format
+
+Dòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số. Dòng tiếp theo là 2 hàng u, v cần hoán vị.
+
+Constraints
+
+1≤n≤300; Các phần tử trong ma trận là số dương không quá 10^9; 1≤u,v≤300
+
+Output Format
+
+In ra ma trận sau khi hoán vị 2 hàng.
+
+Sample Input 0
+
+3
+1 2 3
+4 5 6
+7 8 9
+1 3
+
+Sample Output 0
+
+7 8 9
+4 5 6
+1 2 3
+```
+
+<!-- page: 8 -->
+
+## [Màng 2 Chiều]. Bài 8. Hoán vị 2 cột của ma trận
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy hoán vị các phần tử trên 2 cột của ma trận.
+
+Input Format
+
+Dòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số. Dòng tiếp theo là 2 cột u, v cần hoán vị.
+
+Constraints
+
+1≤ns≤200; Các phần tử trong ma trận là số dương không quá 10^9; 1≤u,vs≤200
+
+Output Format
+
+In ra ma trận sau khi hoán vị 2 cột.
+
+Sample Input 0
+
+3
+1 2 3
+4 5 6
+7 8 9
+1 3
+
+Sample Output 0
+
+3 2 1
+6 5 4
+9 8 7
+```
+
+<!-- page: 9 -->
+
+## [Màng 2 Chiều]. Bài 9. Đém các phần tử là số nguyên tố trên đường chéo chính và phụ
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy đếm các số nguyên tố trên đường chéo chính và đường chéo phụ, mỗi phần tử là số nguyên tố thỏa mãn chỉ đếm 1 lần.
+
+Input Format
+
+Dòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.
+
+Constraints
+
+1≤n≤200; Các phần tử trong ma trận là số dương không quả 10^9;
+
+Output Format
+
+In ra số lượng số nguyên tố trên đường chéo chính và phụ.
+
+Sample Input 0
+
+4
+1 2 3 4
+5 6 7 8
+9 10 1 2
+2 3 5 7
+
+Sample Output 0
+
+3
+
+Explanation 0
+
+Các phần tử là số nguyên tố trên đường chéo chính là : 7. Các phần tử là số nguyên tố trên đường chéo phụ là : 2, 7
+```
+
+<!-- page: 10 -->
+
+## [Măng 2 Chiều]. Bài 10. Đém các phần tử là số nguyên tố trên đường chéo chính và phụ 2
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy đếm các số nguyên tố trên đường chéo chính và đường chéo phụ, mỗi giá trị là số nguyên tố thỏa mãn chỉ đếm 1 lần.
+
+Input Format
+
+Dòng đầu tiên là số N. N đồng tiếp theo mỗi dòng có N số.
+
+Constraints
+
+1≤n≤200; Các phần tử trong ma trận là số dương không quá 10^9;
+
+Output Format
+
+In ra số lượng số nguyên tố trên đường chéo chính và phụ.
+
+Sample Input 0
+
+3
+1 2 3
+4 5 6
+7 8 9
+
+Sample Output 0
+
+3
+```
+
+<!-- page: 11 -->
+
+## [Màng 2 Chiêu]. Bài 11. Sắp xếp các hàng của ma trận
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cỡ NxN gồm N hàng, mỗi hàng N cột. Hấy sắp xếp các phần tử của từng hàng của ma trận theo thử tự tăng dần.
+
+Input Format
+
+Dòng đầu tiên là số N. N đồng tiếp theo mỗi dòng có N số.
+
+Constraints
+
+1≤n≤200; Các phần tử trong ma trận là số dương không quá 10^9;
+
+Output Format
+
+In ra ma trận sau khi sắp xếp
+
+Sample Input 0
+
+3
+2 7 6
+1 2 3
+9 8 1
+
+Sample Output 0
+
+2 6 7
+1 2 3
+1 8 9
+```
+
+<!-- page: 12 -->
+
+## [Màng 2 Chiều]. Bài 12. Sắp xếp các phần tử theo cột
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận vuông cổ NxN gồm N hàng, mỗi hàng N cột. Hấy sắp xếp các phần tử trong ma trận theo cột theo thứ tự tăng dần.
+
+Input Format
+
+Dòng đầu tiên là số N. N dòng tiếp theo mỗi dòng có N số.
+
+Constraints
+
+1≤n≤200; Các phần tử trong ma trận là số dương không quả 10^9;
+
+Output Format
+
+In ra ma trận sau khi đã sắp xếp theo cột tăng dần.
+
+Sample Input 0
+
+3
+1 2 3
+5 5 2
+1 4 7
+
+Sample Output 0
+
+1 2 2
+1 4 3
+5 5 7
+```
+
+<!-- page: 13 -->
+
+## [Măng 2 Chiều]. Bài 13. Nhân 2 ma trận.
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận A cổ NxM, ma trận B cổ MxP. Hầy tính ma trận tích của A và B.
+
+Input Format
+
+Dòng đầu tiên là 3 số N, M, P; N đồng tiếp theo, mỗi dòng M của ma trận A; M đồng tiếp theo, mỗi dòng P số của ma trận B.
+
+Constraints
+
+1≤N,M,P≤50; Các phần tử trong ma trận là số dưỡng không quá 100000;
+
+Output Format
+
+In ra ma trận tích của A và B
+
+Sample Input 0
+
+3 4 5
+1 2 3 4
+5 6 7 8
+9 10 11 12
+1 2 3 4 5
+6 7 8 9 10
+11 12 13 14 15
+16 17 18 19 20
+
+Sample Output 0
+
+110 120 130 140 150
+246 272 298 324 350
+382 424 466 508 550
+```
+
+<!-- page: 14 -->
+
+## [Màng 2 Chiêu]. Bài 14. Ma trận xoáy ốc
+
+```txt
+Problem	Submissions	Discussions
+
+Xây dựng ma trận xoáy ốc cấp N
+Input Format
+Số nguyên dương N là cấp của ma trận xoáy ốc cần xây dựng.
+Constraints
+1≤N≤100
+Output Format
+In ra ma trận xoáy ốc.
+Sample Input 0
+3
+Sample Output 0
+1 2 3
+8 9 4
+7 6 5
+```
+
+<!-- page: 15 -->
+
+## [Màng 2 Chiêu]. Bài 15. Ma trận xoáy ốc Fibonacci
+
+Problem
+
+Submissions
+
+Discussions
+
+```csv
+In ra ma trận xoáy ốc cấp N, với các số trong ma trận đều là các số trong dãy Fibonacci.
+Input Format
+Số nguyên dương N
+Constraints
+1≤N≤9
+Output Format
+Ma trận xoáy ốc cấp N
+Sample Input 0
+3
+Sample Output 0
+0 1 1
+13 21 2
+6 5 3
+```
+
+<!-- page: 16 -->
+
+## [Màng 2 Chièu]. Bài 16. Count Island 1
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận nhi phần gồm N hàng và M cốt chỉ bao gồm các số 0 và 1. Hây đêm số lượng miền các số 1 trong
+ma trận, các ô số 1 được coi là cùng miền nếu chủng có chung cạnh.
+
+Input Format
+
+Dòng đầu tiên N và M. N dòng tiếp theo mối dòng gồm M phần tử.
+
+Constraints
+
+1≤N,M≤50.
+
+Output Format
+
+In ra số lượng miền số 1 trong ma trận.
+
+Sample Input 0
+
+4 7
+0 1 1 0 1 1 0
+1 1 1 1 1 1 1
+1 0 0 0 0 1 1
+1 1 0 1 0 0 0
+
+Sample Output 0
+
+2
+
+Sample Input 1
+
+6 8
+1 1 0 1 1 1 1 0
+0 1 1 1 0 0 0 1
+1 1 0 0 0 0 1 1
+0 1 0 1 0 0 1 1
+1 0 0 1 0 0 0 1
+0 1 0 1 1 1 1 0
+0 0 0 0 1 0 1 1
+1 0 0 0 0 0 0 0
+
+Sample Output 1
+
+6
+```
+
+<!-- page: 17 -->
+
+## [Màng 2 Chiêu]. Bài 17. Count Island 2
+
+Problem
+
+Submissions
+
+Discussions
+
+Cho ma trận nhi phân gồm N hàng và M cột chỉ bao gồm các số 0 và 1. Hây đếm số lượng miền các số 1 trong ma trận, các ô số 1 được coi là cùng miền nếu chủng có chung đỉnh.
+
+Input Format
+
+Dòng đầu tiên N và M. N dòng tiếp theo mỗi dòng gồm M phần tử.
+
+Constraints
+
+1≤N,M≤50.
+
+Output Format
+
+In ra số lượng miền số 1 trong ma trận.
+
+Sample Input 0
+
+3 3
+1 0 1
+0 0 1
+1 1 0
+
+Sample Output 0
+
+<!-- page: 18 -->
+
+## [Màng 2 Chiều]. Bài 18. Số điểm cực đại
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận A các số nguyên có N hàng và M cột. Điểm được coi là cực đại trong ma trận nếu nó lớn hơn tất
+các số ở các số ở ô xung quanh mà chung đính với nó. Hây đêm xem trong ma trận có bao nhiều điểm cực đại.
+
+Input Format
+
+Dông đầu tiên N và M. N dòng tiếp theo mỗi dòng gồm M phần tử.
+
+Constraints
+
+1≤N,M≤100; 1≤A[1][□]≤10^9
+
+Output Format
+
+In ra số lượng các điểm cực đại của ma trận.
+
+Sample Input 0
+
+5	3
+1	1	2
+1	1	1
+1	1	2
+2	2	1
+2	1	2
+
+Sample Output 0
+
+1
+
+Explanation 0
+
+Có 1 điểm cực đại là điểm (1, 3)
+
+Sample Input 1
+
+3	3
+1	2	1
+1	5	1
+1	0	3
+
+Sample Output 1
+
+1
+
+Explanation 1
+
+Có 1 điểm cực đại là (2, 2)
+```
+
+<!-- page: 19 -->
+
+## [Màng 2 Chièu]. Bài 19. Maximum path sum
+
+```txt
+Problem	Submissions	Discussions
+
+Cho ma trận A các số nguyên có N hàng và M cột. Tím đường đi từ ở [1, 1] tới ô [N, M] sao cho tổng các số trên đường đi là lớn nhất có thể, biết rằng ở mỗi bước chỉ có thể đi từ ô hiện tại xuống ô phía dưới hoặc đi sang phải.
+
+Input Format
+
+Dòng đầu tiên N và M, N dòng tiếp theo mỗi dòng gồm M phần tử.
+
+Constraints
+
+1≤N,M≤100; 1≤A[i][j]≤10^9
+
+Output Format
+
+In ra đường đi có tổng lớn nhất.
+
+Sample Input 0
+
+3 3
+1 2 2
+3 10 2
+5 7 2
+
+Sample Output 0
+
+2,1
+
+Explanation 0
+
+Giải thích : Đường đi được chọn (1, 1) -> (2, 1) -> (2, 2) -> (3, 2) -> (3, 3)
+```
+
+<!-- page: 20 -->
+
+```txt
+Problem	Submissions	Discussions
+
+Cho một ma trận nhị phân có N hàng và M cột, một con chuột bắt đầu từ ô có tọa độ [s, t] và tìm đường đi tới ô [u, v], biết rằng ở mỗi bước con chuột có thể di chuyển từ ô hiện tại sang các ô chung cạnh với ô hiện tại và số ở ô chung cạnh là số 1. Bạn chỉ được đi qua 1 ô đúng 1 lần hấy kiểm tra xem con chuột có thể tìm được đường đi tới ô [u, v] hay không ? Dữ liệu đảm bảo 2 ô [s, t] và ô [u, v] đều bằng 1.
+
+Input Format
+
+Dòng đầu tiên N và M. Dòng thứ 2 là 4 số s, t, u , v. N đồng tiếp theo mỗi dòng gồm M phần tử.
+
+Constraints
+
+1≤N,M≤100; 1≤s,u≤N;1≤t,v≤M;
+
+Output Format
+
+In YES nếu con chuột có thể tìm được đường đi, ngược lại in NO.
+
+Sample Input 0
+
+3 5
+1 1 3 5
+1 0 1 0 0
+0 1 1 1 1
+1 0 0 0 1
+
+Sample Output 0
+
+NO
+```
+
+## [Màng 2 Chiều]. Bài 20. Tìm đường đi.
+
+<!-- page: 21 -->
+
+```csv
+Problem	Submissions	Discussions
+
+Cho bàn có vua cỡ N * N, các ô trên bàn cờ có giả trị là 0 hoặc 1. Một con mã xuất phát tử ô (s, t) và muốn di
+chuyển tới ô (u, v), con mã chỉ có thể di chuyển ở các ô mà tại ô đó có giả trị là 1 và nõ có thể di chuyển qua lại
+1 ô nhiều lần. Hây xác định xem con mã có thể tìm được đường đi hay không, dữ liệu đảm bảo ô (s, t) và ô (u,
+v) đều có giả trị là 1.
+
+Input Format
+
+Dòng đầu tiên N. Dòng thử 2 là 4 số s, t, u , v. N đồng tiếp theo mỗi dòng gồm N phần tử.
+
+Constraints
+
+1≤N,M≤100; 1≤s,t,u,v≤N; 0≤A[i][j]≤1;
+
+Output Format
+
+In YES nếu con mã có thể tìm được đường đi, ngược lại in NO.
+
+Sample Input 0
+
+9
+7 5 4 3
+1 0 1 0 1 0 1 1 1
+1 1 1 1 0 0 0 0 1
+1 0 1 1 1 0 1 1 1
+1 0 1 0 1 0 0 0 0
+0 1 1 0 1 1 0 1 1
+1 0 0 0 0 1 1 0 1
+1 0 1 0 1 0 1 1 0
+0 1 1 0 0 0 0 1 1
+0 0 1 1 0 0 0 0 1
+
+Sample Output 0
+
+YES
+
+Explanation 0
+
+Con Mã có thể di chuyển tử ô (7, 5) -> (6, 7) -> (5, 5) -> (4, 3)
+```
+
+## [Màng 2 Chiều]. Bài 21. Đường đi của quân Mã
+
+<!-- page: 22 -->
+
+```txt
+Cho ma trận vuông A[N][N]. Hấy in các phần tử thuộc theo hình con rắn.
+10→20→30→40
+50←60←70←80
+27→29→47→48
+32←33←39←50
+```
+
+## [Màng 2 Chiêu]. Bài 22. Snake
+
+Problem
+
+Submissions
+
+Discussions
+
+Input Format
+
+Dòng đầu tiên đưa vào N là cấp của ma trận A[N][N]; N dòng tiếp mỗi dòng gồm N số nguyên.
+
+Constraints
+
+1≤N≤100; 0≤A[i][j]≤1000000
+
+Output Format
+
+In ra ma trận theo yêu cầu.
+
+<!-- page: 23 -->
+
+15
+957 275 516 118 593 6 646 52 910 183 702 335 468 704 506
+171 168 428 372 722 683 545 853 409 575 727 930 67 556 753
+5 749 378 996 374 171 159 86 100 657 467 609 406 195 570
+448 679 401 417 81 954 885 685 316 986 95 297 755 934 107
+663 474 203 49 825 440 809 262 463 542 170 929 299 64 473
+481 876 994 896 765 632 734 764 691 94 947 925 213 786 735
+6 616 394 904 199 775 105 935 797 193 138 598 234 398 480
+131 645 527 411 302 627 110 765 880 203 972 445 93 892 746
+140 571 401 810 222 515 932 615 252 679 856 58 552 573 595
+343 896 35 908 967 862 427 738 199 655 961 678 856 475 435
+273 968 573 576 136 274 356 340 263 473 912 819 820 787 576
+44 486 724 324 640 326 799 191 378 788 773 31 289 677 71
+424 676 915 830 422 934 550 654 274 435 450 165 190 833 601
+906 356 74 834 484,892,217,41,625,628,722,801,561,438,816
+768,945,804,545,827,732,375,236,57,199,424,647,212,260,110
+
+## Sample Output 0
+
+957 275 516 118 593 6 646 52 910 183 702 335 468 704 506
+753 556 67 930 727 575 409 853 545 683 722 372 428 168 171
+5 749 378 996 374 171 159 86 100 657 467 609 406 195 570
+107 934 755 297 95 986 316 685 885 954 81 417 401 679 448
+663 474 203 49 825 440 809 262 463 542 170 929 299 64 473
+735 786 213 925 947 94 691 764 734 632 765 896 994 876 481
+8 616 394 904 199 775 305 935 797 193 138 598 234 398 480
+746 892 93 445 972 203 880 765 110 627 302 411 527 645 131
+140 571 401 810 222 515 932 615 252 679 856 58 552 573 595
+435 475 856 678 961 655 199 738 427 862 967 908 35 896 343
+273 968 573 576 136 274 356 340 263 473 912 819 820 787 576
+71 677 289 31 773 788.378.191.799.326.640.324.724.486.44
+424.676.915.830.422.934.550.654.274.435.450.165.190.833.601
+816.438.561.801.722.628.625.41.217.892.484.834.74.356.906
+768.945.804.545.827.732.375.236.57.109.424.647.212.260.110
+
+Sample Input 1
+
+3
+1 2 3
+4 5 6
+7 8 9
+
+Sample Output 1
+
+1 2 3   
+6 5 4   
+7 8 9
+
+<!-- page: 24 -->
+
+```txt
+12346789
+```
+
+## [Màng 2 Chiều]. Bài 23. Biên của ma trận
+
+Problem
+
+Cho ma trận vuông A[N][N]. Hây in các phần tử thuộc vùng biển.
+
+```txt
+Input : 1 2 3 4
+        5 6 7 8
+        1 2 3 4
+        5 6 7 8
+Output : 1 2 3 4
+        5       8
+        1       4
+        5 6 7 8
+```
+
+Input Format
+
+Dòng đầu tiên đưa vào N là cấp của ma trận A[N][N]; N dòng tiếp mỗi dòng gồm N số nguyên.
+
+Constraints
+
+1≤N≤100; 0≤A[i][j]≤1000000
+
+Output Format
+
+In ra ma trận theo yêu cầu, các số được în trên 1 dòng.
+
+Sample Input 0
+
+```csv
+3
+1 2 3
+4 5 6
+7 8 9
+```
+
+Sample Output 0
+
+<!-- page: 25 -->
+
+## [Màng 2 Chiều]. Bài 24. Phần tử xuất hiện ở mọi hàng.
+
+Problem
+
+Submissions
+
+Discussions
+
+Cho ma trận vuông A[N][N]. Hây in ra các số xuất hiện ở moi hàng theo thứ tự từ bé đến lớn, mỗi giá trị xuất hiện chỉ liệt kê 1 lần.
+
+Input Format
+
+Dòng đầu tiên đưa vào N là cấp của ma trận A[N][N]; N dòng tiếp mỗi dòng gồm N số nguyên.
+
+Constraints
+
+1≤N≤100; 0≤A[i][j]≤100
+
+Output Format
+
+In ra các giả trị xuất hiện trên mọi động của ma trận, các số in cách nhau một dấu cách. Nếu không tồn tại giả trị nào thỏa mặn in ra "NOT FOUND".
+
+Sample Input 0
+
+4   
+1 2 2 3   
+2 1 2 4   
+1 4 5 2   
+2 2 3 1
+
+Sample Output 0
+
+12
+
+<!-- page: 26 -->
+
+```txt
+Problem	Submissions	Discussions
+
+Cho một ma trận nhi phân cỡ NxM chỉ bao gồm các số 0, 1. Hây xác định vùng nhiều số 1 nhất trên ma trận, biết rằng các ô có chung canh được coi là cùng miền.
+
+Input Format
+
+Dòng đầu tiên là N và M tương ứng với số hàng, cột của ma trận. N dòng tiếp theo mỗi dòng có M số
+
+Constraints
+
+1<=N, M <= 500; Các phần tử trong ma trận có giá trị 0 hoặc 1.
+
+Output Format
+
+In ra diện tích miền có nhiều số 1 nhất
+
+Sample Input 0
+
+5 6
+0 1 0 1 0 1
+0 0 0 1 1 0
+0 1 1 0 1 1
+0 1 1 0 0 0
+0 0 0 0 0 0
+
+Sample Output 0
+
+5
+```
+
+## [Màng 2 Chiêu]. Bài 25. Diện tích

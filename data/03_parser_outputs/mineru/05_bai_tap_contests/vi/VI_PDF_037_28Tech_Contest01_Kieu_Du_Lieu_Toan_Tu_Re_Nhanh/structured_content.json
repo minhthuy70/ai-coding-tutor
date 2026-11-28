@@ -1,0 +1,4426 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.236,
+            0.084,
+            0.711,
+            0.194
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 1. Tính toán giá trị của biểu thức"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.452,
+            0.248,
+            0.511,
+            0.273
+          ],
+          "content": "Leaderboard"
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.241,
+            0.101,
+            0.728,
+            0.213
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 2. Tính toán giá trị biểu thức 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.269,
+            0.302,
+            0.296
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.352,
+            0.269,
+            0.412,
+            0.297
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.463,
+            0.269,
+            0.524,
+            0.297
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.575,
+            0.269,
+            0.631,
+            0.297
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.356,
+            0.57,
+            0.388
+          ],
+          "content": "Yêu cầu: Cho ba số nguyên a, b và c, hãy tính $S = a^{*}(b+c)+b^{*}(a+c)$."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.405,
+            0.309,
+            0.437
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.453,
+            0.357,
+            0.485
+          ],
+          "content": "3 số a, b, c trên 1 dòng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.502,
+            0.3,
+            0.532
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.239,
+            0.548,
+            0.33,
+            0.579
+          ],
+          "content": "-10^8≤a,b,c≤10^8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.598,
+            0.318,
+            0.629
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.645,
+            0.369,
+            0.677
+          ],
+          "content": "In ra giá trị của biểu thức."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.694,
+            0.318,
+            0.726
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.763,
+            0.284,
+            0.788
+          ],
+          "content": "1 2 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.238,
+            0.824,
+            0.327,
+            0.855
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.253,
+            0.895,
+            0.266,
+            0.914
+          ],
+          "content": "13"
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.214,
+            0.095,
+            0.693,
+            0.152
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 3. Đối nhiệt độ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.207,
+            0.273,
+            0.232
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.323,
+            0.206,
+            0.384,
+            0.233
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.435,
+            0.206,
+            0.496,
+            0.232
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.207,
+            0.603,
+            0.233
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.208,
+            0.294,
+            0.765,
+            0.384
+          ],
+          "content": "Công thức chuyển đơn vị đo nhiệt độ từ C sang F như sau: $F = (C * 9 / 5) + 32$. Viết chương trình cho phép nhập vào nhiệt độ đo theo độ C là số nguyên dương không quá $10^{6}$, thực hiện chuyển sang đơn vị đo độ F và in ra màn hình. (Lưu ý luôn lấy 2 chữ số thập phân sau dấu chấm phấy)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.209,
+            0.401,
+            0.28,
+            0.431
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.209,
+            0.447,
+            0.437,
+            0.479
+          ],
+          "content": "Nhiệt độ ở độ C là một số nguyên không âm."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.21,
+            0.497,
+            0.271,
+            0.525
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.21,
+            0.544,
+            0.264,
+            0.573
+          ],
+          "content": "$0 \\leq n \\leq 10^{6}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.209,
+            0.593,
+            0.289,
+            0.623
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.21,
+            0.639,
+            0.362,
+            0.671
+          ],
+          "content": "Kết quả đổi từ độ C sang độ F"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.209,
+            0.689,
+            0.289,
+            0.72
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.759,
+            0.238,
+            0.781
+          ],
+          "content": "24"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.209,
+            0.819,
+            0.299,
+            0.849
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.888,
+            0.255,
+            0.911
+          ],
+          "content": "75.20"
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.229,
+            0.099,
+            0.706,
+            0.205
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 4. Chu vi và diện tích hình tròn"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.22,
+            0.234,
+            0.775,
+            0.969
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Cho bán kính R của hình tròn. Yêu cầu tính chu vi và diện tích của hình tròn đó. Lấy PI = 3.14. Công thức tính chu vi = 2 * PI * R, diện tích = PI * R * R</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">1 dòng chứa bán kính R là số nguyên dương.</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">1≤R≤1000</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">In ra chu vi và diện tích trên 1 dòng, kết quả lấy độ chính xác 4 số sau dấu phầy.</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">10</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">62.8000 314.0000</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_3_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.252,
+            0.099,
+            0.695,
+            0.201
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 5. Khoảng cách Euclid."
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.245,
+            0.227,
+            0.761,
+            0.979
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCó nhiều khoảng cách giữa 2 điểm trong hệ toa độ ví dụ như khoảng cách Manhattan, Euclid, Minkowski.\nNhưng trong chương trình toán phổ thông các bạn sử dụng nhiều nhất là khoảng cách Euclid. Vi vậy bạn hãy\ntính khoảng cách Euclid giữa 2 điểm trong hệ toa độ Oxy\n\nInput Format\n\nTọa độ của 2 điểm (x1, y1) và (x2, y2) là các số nguyên\n\nConstraints\n\n-10^6≤xi,yi≤10^6\n\nOutput Format\n\nIn ra khoảng cách giữa 2 điểm, lấy độ chính xác 2 số sau dấu phấy.\n\nSample Input 0\n\n1 4 4 8\n\nSample Output 0\n\n5.00\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.226,
+            0.103,
+            0.728,
+            0.214
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 6. Luyện tập viết câu điều kiện"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.272,
+            0.286,
+            0.297
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.337,
+            0.272,
+            0.397,
+            0.297
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.449,
+            0.272,
+            0.51,
+            0.297
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.561,
+            0.272,
+            0.617,
+            0.297
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.359,
+            0.705,
+            0.389
+          ],
+          "content": "Cho một số nguyên không âm N.Bạn hãy thực hiện viết câu lệnh để kiểm tra các điều kiện sau :"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.407,
+            0.552,
+            0.437
+          ],
+          "content": "1. N có phải là số chẩn? (Kiểm tra số dư của N với 2 và so sánh 0)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.455,
+            0.676,
+            0.485
+          ],
+          "content": "2. N có phải là số vừa chia hết cho 3 vừa chia hết cho 5? (Kết hợp 2 điều kiện sử dụng &&)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.504,
+            0.682,
+            0.534
+          ],
+          "content": "3. N có phải là số chia hết 3 nhưng không chia hết cho 7? (Kết hợp 2 điều kiện sử dụng &&)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.552,
+            0.593,
+            0.582
+          ],
+          "content": "4. N có phải là số chia hết cho 3 hoặc 7? (Kết hợp 2 điều kiện sử dụng ||)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.601,
+            0.58,
+            0.63
+          ],
+          "content": "5. N là số lớn hơn 30 và nhỏ hơn 50? (Kết hợp 2 điều kiện sử dụng &&)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.648,
+            0.772,
+            0.706
+          ],
+          "content": "6. N có phải là số không nhỏ hơn 30 và chia hết cho ít nhất một trong 3 số 2, 3, 5? (Lớn hơn hoặc bằng 30 && (chia hết ...."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.725,
+            0.772,
+            0.785
+          ],
+          "content": "7. N có phải là số có 2 chữ số có chữ tận cùng là một số nguyên tố? (>= 10, <= 99, kiểm tra chữ số tận cùng là 2, 3, 5, 7)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.803,
+            0.517,
+            0.833
+          ],
+          "content": "8. N có phải là số không vượt quá 100 và chia hết cho 23?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.852,
+            0.388,
+            0.881
+          ],
+          "content": "9. N không thuộc đoạn [10, 20]?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.219,
+            0.899,
+            0.425,
+            0.928
+          ],
+          "content": "10. N có chữ số tận cùng là bội số của 3?"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.103,
+            0.298,
+            0.136
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.155,
+            0.333,
+            0.188
+          ],
+          "content": "Số nguyên dương N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.209,
+            0.288,
+            0.239
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.261,
+            0.294,
+            0.29
+          ],
+          "content": "$1 < = N < = 10^{6}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.311,
+            0.308,
+            0.345
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.363,
+            0.802,
+            0.429
+          ],
+          "content": "In ra 10 dòng, mỗi dòng là \"YES\" hoặc \"NO\" tương ứng với 10 điều kiện. Nếu N thỏa mãn điều kiện thứ i thì dòng i in ra YES, ngược lại in ra NO."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.22,
+            0.447,
+            0.308,
+            0.481
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.236,
+            0.522,
+            0.258,
+            0.549
+          ],
+          "content": "263"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.221,
+            0.589,
+            0.318,
+            0.621
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "index",
+          "bbox": [
+            0.371,
+            0.067,
+            0.641,
+            0.935
+          ],
+          "content": "- Sample Input 1\n- 380\n- Sample Output 1\n- YES\n- NO\n- NO\n- NO\n- NO\n- YES\n- NO\n- NO\n- YES\n- YES\n- Sample Input 2\n- 52\n- Sample Output 2\n- YES\n- NO\n- NO\n- NO\n- NO\n- YES\n- YES\n- NO\n- YES\n- NO"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.295,
+            0.079,
+            0.652,
+            0.165
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 7. Số lớn nhất và nhỏ nhất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.308,
+            0.208,
+            0.341,
+            0.228
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.379,
+            0.208,
+            0.426,
+            0.227
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.464,
+            0.208,
+            0.51,
+            0.227
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.549,
+            0.208,
+            0.591,
+            0.228
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.275,
+            0.699,
+            0.321
+          ],
+          "content": "Cho 2 số nguyên a và b. Bạn hãy tìm 2 số sau, số thứ 1 là số lớn nhất <= a mà chia hết cho b, số thứ 2 là số nhỏ nhất >=a mà chia hết cho b. Chủ ý các bạn không được dùng vòng lặp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.293,
+            0.334,
+            0.391,
+            0.357
+          ],
+          "content": "Gọi ý : Số thứ 1 : a / b \\* b"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.293,
+            0.369,
+            0.395,
+            0.393
+          ],
+          "content": "Số thứ 2 : (a + b - 1) / b \\* b"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.406,
+            0.509,
+            0.43
+          ],
+          "content": "Hoặc các bạn có thể if else cũng được, ko dùng vòng lặp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.443,
+            0.635,
+            0.467
+          ],
+          "content": "Số thứ 2 nếu dùng if else thì check a chia hết cho b đáp án là a, còn ko thì là (a / b + 1) \\* b."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.293,
+            0.479,
+            0.423,
+            0.503
+          ],
+          "content": "Các phép chia đều là chia nguyên"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.552,
+            0.379,
+            0.576
+          ],
+          "content": "1 dòng chứa 2 số a, b."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.293,
+            0.588,
+            0.34,
+            0.611
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.697,
+            0.564,
+            0.721
+          ],
+          "content": "Dòng đầu tiên in ra số thứ 1 cần tìm. Dòng thứ 2 in ra số thứ 2 cần tìm."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.733,
+            0.354,
+            0.758
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.303,
+            0.786,
+            0.336,
+            0.805
+          ],
+          "content": "717 689"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.292,
+            0.832,
+            0.361,
+            0.855
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.303,
+            0.885,
+            0.323,
+            0.919
+          ],
+          "content": "689\n1378"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.324,
+            0.086,
+            0.624,
+            0.165
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 8. Tổng, hiệu, tích, thương"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.32,
+            0.18,
+            0.687,
+            0.927
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Nhập vào 2 số nguyên, in ra tổng, hiệu, tích, thương(lấy độ chính xác với 4 chữ số) của 2 số đó. Bài này có thể bị sai do 2 nguyên nhân : 1. Khi tính tích bị tràn số, 2. Độ chính xác của thương.</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">2 số nguyên a, b trên 1 dòng.</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">-10^8≤a,b≤10^8</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">In ra tổng, hiệu, tích, thương trên từng dòng. Nếu trường hợp không thể tìm được thương của 2 số thì sẽ in ra &quot;INVALID&quot; cho dòng kết quả của thương.</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">7769 0</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">776977690INVALID</td></tr><tr><td colspan=\"4\">Sample Input 1</td></tr><tr><td colspan=\"4\">9794 1282</td></tr><tr><td colspan=\"4\">Sample Output 1</td></tr><tr><td colspan=\"4\">110768512125559087.6396</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_9_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.227,
+            0.087,
+            0.704,
+            0.2
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 9.Kiểm tra năm nhuận"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.254,
+            0.285,
+            0.28
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.336,
+            0.255,
+            0.394,
+            0.28
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.445,
+            0.255,
+            0.504,
+            0.279
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.255,
+            0.61,
+            0.28
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.222,
+            0.339,
+            0.764,
+            0.401
+          ],
+          "content": "Năm nhuận là năm chia hết cho 400 hoặc (chia hết cho 4 và không chia hết cho 100). Nhập vào N là một năm và kiểm tra xem N có phải là năm nhuận hay không?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.416,
+            0.293,
+            0.447
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.463,
+            0.327,
+            0.495
+          ],
+          "content": "Số nguyên dương N."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.511,
+            0.285,
+            0.539
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.225,
+            0.557,
+            0.29,
+            0.586
+          ],
+          "content": "$1 < = N < = 5000$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.605,
+            0.302,
+            0.635
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.223,
+            0.652,
+            0.469,
+            0.683
+          ],
+          "content": "In ra YES nếu N là năm nhuận, ngược lại in ra NO."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.699,
+            0.302,
+            0.731
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.769,
+            0.263,
+            0.792
+          ],
+          "content": "2020"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.224,
+            0.829,
+            0.311,
+            0.858
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.896,
+            0.257,
+            0.919
+          ],
+          "content": "YES"
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.256,
+            0.082,
+            0.667,
+            0.188
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 10. Tam giác hợp lệ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.271,
+            0.235,
+            0.31,
+            0.26
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.356,
+            0.235,
+            0.411,
+            0.26
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.457,
+            0.235,
+            0.513,
+            0.259
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.559,
+            0.235,
+            0.61,
+            0.26
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.251,
+            0.315,
+            0.754,
+            0.371
+          ],
+          "content": "Cho 3 cạnh a, b, c là độ dài 3 cạnh của tam giác, kiểm tra xem a, b, c có thể tạo thành một tam giác hợp lệ hay không?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.385,
+            0.749,
+            0.441
+          ],
+          "content": "Gợi ý : Tam giác hợp lệ là tam giác có 3 cạnh đều dương, và tổng hai cạnh luôn lớn hơn cạnh còn lại => Cần 6 điều kiện và kết hợp toán tử &&"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.456,
+            0.317,
+            0.484
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.499,
+            0.364,
+            0.529
+          ],
+          "content": "1 dòng chứa 3 số a, b, c."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.543,
+            0.309,
+            0.57
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.253,
+            0.587,
+            0.347,
+            0.614
+          ],
+          "content": "-10^6<=a,b,c<=10^6"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.631,
+            0.325,
+            0.659
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.674,
+            0.576,
+            0.704
+          ],
+          "content": "In ra YES nếu a, b, c là 3 cạnh của 1 tam giác hợp lệ, ngược lại in ra NO."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.718,
+            0.325,
+            0.747
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.782,
+            0.294,
+            0.805
+          ],
+          "content": "3 4 5"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.838,
+            0.333,
+            0.866
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.901,
+            0.283,
+            0.921
+          ],
+          "content": "YES"
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.337,
+            0.084,
+            0.636,
+            0.157
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 11. Kiểm tra tam giác"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.334,
+            0.169,
+            0.664,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho 3 cạnh a, b, c của một tam giác, nếu tam giác đã cho là tam giác đều thì in ra 1, tam giác cần thì in ra 2, tam giác vuông thì in ra 3, tam giác thường in ra 4, trường hợp tam giác nhập vào không hợp lệ thì in ra \"INVALID\".\n\nif(tam giác hợp lệ){\n\t//TH1 : kiểm tra đều\n\t//TH2 : Kiểm tra cần (3 trường hợp)\n\t//TH3 : Kiểm tra vuông (3 trường hợp)\n\t//else : Tam giác thường\n}\nelse{\n\tcout << \"INVALID\\n\";\n}\n\nInput Format\n\n1 dòng chứa 3 số a, b, c.\n\nConstraints\n\n0<=a,b,c<=10^3\n\nOutput Format\n\nIn ra kết quả tương ứng.\n\nSample Input 0\n\n8 8 8\n\nSample Output 0\n\n1\n\nSample Input 1\n\n8 8 6\n\nSample Output 1\n\n2\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.297,
+            0.183,
+            0.694,
+            0.927
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho biết tháng và năm, hãy in ra số ngày tương ứng có trong tháng đó. Chú ý tháng 2 của năm nhuận có 29 ngày. Năm nhuận là năm chia hết cho 400 hoặc (chia hết cho 4 và không chia hết cho 100)\n\nif(năm và tháng hợp lệ){\n\t//Trong này kiểm tra tháng đó có bao nhiêu ngày\n\t//TH1 : Tháng 1, 3, 5, 7, 8, 10, 12 => 31\n\t//TH2 : Tháng 4, 6, 9, 11 => 30\n\tif(tháng == 2){\n\t\t//Kiểm tra năm nhuận hay không?\n\t}\n}\nelse{\n\tcout << \"INVALID\\n\";\n}\n\nInput Format\n\n2 số nguyên t và n tương ứng với tháng và năm.\n\nConstraints\n\n0<=t<=100; 0<=n<=5000;\n\nOutput Format\n\nNếu tháng là hợp lệ(tháng 1 tối 12) và năm là hợp lệ (lớn hơn 0) thì in ra số ngày tương ứng của năm đó, ngược lại in ra \"INVALID\".\n\nSample Input 0\n\n11_2021\n\nSample Output 0\n\n30\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.3,
+            0.079,
+            0.642,
+            0.165
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 12. Số ngày của tháng"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.244,
+            0.071,
+            0.701,
+            0.192
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 13. Đối ngày sang năm, tuần, ngày"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.244,
+            0.307,
+            0.27
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.358,
+            0.243,
+            0.42,
+            0.271
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.473,
+            0.243,
+            0.536,
+            0.271
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.588,
+            0.243,
+            0.646,
+            0.271
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.24,
+            0.333,
+            0.733,
+            0.367
+          ],
+          "content": "Cho trước N ngày, hây đối N thành số năm, số tuần và số ngày. Biết rắng một năm có 365 ngày."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.385,
+            0.314,
+            0.417
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.433,
+            0.365,
+            0.466
+          ],
+          "content": "Số nguyên không âm N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.483,
+            0.305,
+            0.513
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.533,
+            0.33,
+            0.562
+          ],
+          "content": "$0 < = N < = 1000000$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.581,
+            0.324,
+            0.613
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.63,
+            0.484,
+            0.663
+          ],
+          "content": "In ra số năm, tuần, ngày tương ứng với N ngày"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.68,
+            0.324,
+            0.713
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.255,
+            0.751,
+            0.277,
+            0.777
+          ],
+          "content": "373"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.241,
+            0.813,
+            0.333,
+            0.846
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.255,
+            0.885,
+            0.289,
+            0.911
+          ],
+          "content": "1 1 1"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.305,
+            0.077,
+            0.65,
+            0.157
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 14. Xếp loại học sinh"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.298,
+            0.179,
+            0.702,
+            0.935
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Yêu cầu: Cho biết điểm kiểm tra Tin học của 1 em học sinh (2 con điểm hệ số 1, 1 con điểm hệ số 2, 1 con điểm hệ số 3). In ra Kết quả học tập môn Tin học của em đó. Nếu điểm tổng kết &gt;=8 đạt kết quả Giỏi, &lt;8 và &gt;=6,5 đạt kết quả Khá, &lt;6,5 và &gt;=5 đạt kết quả Trung Bình, &lt;5 đạt kết quả Yếu.</td></tr><tr><td colspan=\"4\">Gợi ý : ĐTB = tổng (điểm * hệ số) / (tổng hệ số)</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">Một dòng chứa 4 số điểm của học sinh.</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">Điểm là số thực từ 0 tới 10.</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">Kết quả học tập môn Tin học của em học sinh ở dạng in hoa không dấu</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">9 8 7 8.5</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">GIOI</td></tr><tr><td colspan=\"4\">Sample Input 1</td></tr><tr><td colspan=\"4\">5 7 6.5 5</td></tr><tr><td colspan=\"4\">Sample Output 1</td></tr><tr><td colspan=\"4\">TRUNG BINH</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 16,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.266,
+            0.083,
+            0.642,
+            0.127
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 15. Mua nước"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.174,
+            0.313,
+            0.193
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.355,
+            0.174,
+            0.405,
+            0.193
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.447,
+            0.174,
+            0.497,
+            0.193
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.539,
+            0.174,
+            0.585,
+            0.193
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.247,
+            0.716,
+            0.366
+          ],
+          "content": "28tech muốn nấu một món súp. Đế làm điều đó, anh ta cần mua chính xác n lít nước. Chỉ có hai loại chai nước trong cửa hàng gần đó - chai 1 lít và chai 2 lít. Có vô số chai của hai loại này trong cửa hàng. Chai loại thứ nhất có gía a burles và chai loại thứ hai có giá tương ứng b burles. 28tech muốn chi cảng ít tiền cảng tốt. Nhiệm vụ của bạn là tìm ra số tiền tối thiểu (bằng burles) 28tech cần mua chính xác n lít nước ở cửa hàng gần đó nếu chai loại thứ nhất có giá a burles và chai loại thứ hai có giá b burles."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.26,
+            0.381,
+            0.717,
+            0.453
+          ],
+          "content": "Gọi ý : Kiểm tra xem chai nào rè hơn (giá tiền 1 Lit) thì sẽ ưu tiên mua chai đó, nếu chai 1l rè hơn thì mua toàn bộ n chai 1l, còn chai 2 lit rè hơn thì chia làm 2 trường hợp. N chẩn thì mua n / 2 chai 2l, n lẻ thì phải mua thêm 1 chai 1l vì không được mua thừa."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.469,
+            0.319,
+            0.491
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.507,
+            0.358,
+            0.53
+          ],
+          "content": "3 số n,a,b là số nguyên"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.548,
+            0.312,
+            0.569
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.587,
+            0.383,
+            0.608
+          ],
+          "content": "1<=n<=10^12; 1<=a,b<=1000"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.626,
+            0.327,
+            0.649
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.665,
+            0.715,
+            0.711
+          ],
+          "content": "Số tiền ít nhất để mua được n lit nước. Chủ ý bạn phải mua chính xác n lít nước, không mua thiếu cũng không mua thừa."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.728,
+            0.327,
+            0.753
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.785,
+            0.304,
+            0.805
+          ],
+          "content": "10 1 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.835,
+            0.335,
+            0.859
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.274,
+            0.893,
+            0.285,
+            0.91
+          ],
+          "content": "10"
+        }
+      ]
+    },
+    {
+      "page_idx": 17,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.333,
+            0.069,
+            0.627,
+            0.107
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 16. Kí tự kế tiếp"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.33,
+            0.121,
+            0.672,
+            0.945
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho ký tự là chữ cái in hoa hoặc in thường, in ra ký tự kế tiếp sau nó trong bảng chữ cái ở dạng in thường, tức là\nkí tự nhập vào ở dạng in hoa hay in thường thì bạn đều in ra ký tự kế tiếp nó nhưng ở dạng in thường. Coi ký tự\nkế tiếp của của chữ Z là chữ A.\n\nif(kí tự là z hoặc Z){\n\t//in ra a\n}\nelse if(in hoa){\n\t//chuyến thành in thường\n\t// + thêm 1 đơn vị\n\t// in\n}\nelse{\n\t// + thêm 1 đơn vị\n\t// in\n}\n\nInput Format\n\n1 dòng chứa kí tự c\n\nConstraints\n\nc là chữ cái in hoa hoặc in thường\n\nOutput Format\n\nIn ra chữ cái kế tiếp ở dạng in thường\n\nSample Input 0\n\nA\n\nSample Output 0\n\nb\n\nSample Input 1\n\nz\n\nSample Output 1\n\na\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 18,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.316,
+            0.074,
+            0.646,
+            0.153
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 17. Kiểm tra chữ cái"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.311,
+            0.171,
+            0.685,
+            0.97
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho một kí tự, bạn hây kiểm tra kí tự nhập vào là chữ cái in hoa, in thường, chữ số hay kí tự đặc biệt(các kí tự không phải là chữ cái và chữ số)\n\nif(in hoa){\n\t\"UPPER\";\n}\nelse if(in thường){\n\t\"LOWER\";\n}\nelse if(chữ số){\n\t\"DIGIT\";\n}\nelse{\n\t\"SPECIAL\";\n}\n\nInput Format\n1 dòng chứa kí tự c\nConstraints\nc là chữ in hoa, in thường, chữ số hoặc kí tự đặc biệt\nOutput Format\nNếu c là chữ cái in hoa in ra \"UPPER\". Nếu c là chữ cái in thường in ra \"LOWER\". Nếu c là chữ số in ra \"DIGIT\". Nếu c là kí tự đặc biệt in ra \"SPECIAL\".\nSample Input 0\n\nz\n\nSample Output 0\n\nUPPER\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 19,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.339,
+            0.083,
+            0.62,
+            0.154
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 18. Chuyển đổi in hoa in thường"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.334,
+            0.167,
+            0.67,
+            0.931
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho kí tự c, nếu kí tự c là chữ cái in thường thì chuyển nó thành chữ cái in hoa tương ứng và ngược lại nếu c là chữ cái in hoa thì chuyển nó thành chữ cái in thường tương ứng. Trường hợp kí tự nhập vào không phải là chữ cái thì không thay đổi nó.\n\nGợi ý:\n\nif(c là in hoa){\n}\nelse if(c là in thường){\n}\ncout << c << endl;\n\nInput Format\n\n1 dòng chứa kí tự c\n\nConstraints\n\nc có thể là chữ in hoa, in thường, chữ số hoặc kí tự đặc biệt.\n\nOutput Format\n\nIn ra kết quả theo yêu cầu\n\nSample Input 0\n\ne\n\nSample Output 0\n\nE\n\nSample Input 1\n\n\\$\nSample Output 1\n\\$\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 20,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.327,
+            0.071,
+            0.593,
+            0.107
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 19. Domino"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.321,
+            0.123,
+            0.67,
+            0.933
+          ],
+          "sub_type": "code",
+          "content": "```csv\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nBạn được cung cấp một bảng hình chữ nhật có kích thước M × N hình vuông đơn vị. Ngoài ra, bạn được cung cấp một số lượng không giới hạn các mảnh domino tiêu chuẩn kích thước 2 × 1. Bạn được phép xoay các mảnh domino. Bạn được yêu cầu đặt càng nhiều domino càng tốt trên bảng để đáp ứng các điều kiện sau:\n1. Mỗi domino hoàn toàn bao gồm hai hình vuông đơn vị.\n2. Không có hai domino trùng nhau.\n3. Mỗi domino nằm hoàn toàn bên trong bảng. Nó được phép chạm vào các cạnh\ncủa bảng. Tím số lượng domino tối đa thỏa mặn điều kiện trên.\nGợi ý : Tính xem mỗi cột cần đặt bao nhiêu thanh domino (đặt đọc) => nhân với số cột là ra số thanh domino.\nTrong trường hợp số hàng của HCN là số chẩn thì số domino trên 1 cột sẽ là m / 2, còn trong trường hợp hàng\nlẻ thì bạn tính số domino của HCN (m - 1) * n trước rời xét hàng cuối cùng (đặt ngang)\nInput Format\n2 số nguyên dương M và N.\nConstraints\n1<=M,N<=10^9\nOutput Format\nIn ra số thanh domino cần thiết.\nSample Input 0\n3 3\nSample Output 0\n4\nSample Input 1\n2 4\nSample Output 1\n4\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 21,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.279,
+            0.073,
+            0.669,
+            0.165
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 20. Lát đá quảng trường"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.205,
+            0.327,
+            0.226
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.367,
+            0.205,
+            0.414,
+            0.225
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.455,
+            0.205,
+            0.502,
+            0.225
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.543,
+            0.205,
+            0.586,
+            0.225
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.275,
+            0.709,
+            0.345
+          ],
+          "content": "Quảng trường Nhà hát ở thủ đô Berland có hình chữ nhật với kích thước n × m mét. Nhân díp ký niệm thành phố, một quyết định đã được đưa ra để lát Quảng trường bằng những viên bằng đá granit vuông. Mỗi viên đá hình vuông có kích thước a × a."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.358,
+            0.709,
+            0.429
+          ],
+          "content": "Số lượng viên đá ít nhất cần thiết để lát Quảng trường là bao nhiêu? Nó được phép che phủ bề mặt lớn hơn Quảng trường Nhà hát. Nó không được phép phá vỡ các viên đá. Các cạnh của viên đá phải song song với các cạnh của Quảng trường."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.441,
+            0.706,
+            0.488
+          ],
+          "content": "Gọi ý : Tính xem cần bao nhiêu viên đã để phù kín chiều rộng, chiều dài của HCN rời đem nhân vs nhau sẽ ra số viên đá cần, chú ý trường hợp n và m chia hết cho a hoặc ko chia hết."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.501,
+            0.332,
+            0.525
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.539,
+            0.386,
+            0.563
+          ],
+          "content": "3 số nguyên dương n, m, a."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.577,
+            0.326,
+            0.599
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.278,
+            0.614,
+            0.345,
+            0.636
+          ],
+          "content": "1<=n,m,a<=10^9"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.653,
+            0.339,
+            0.675
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.689,
+            0.495,
+            0.714
+          ],
+          "content": "Viết số lượng viên đá cần thiết để lát kín quảng trường."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.727,
+            0.34,
+            0.751
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.288,
+            0.781,
+            0.313,
+            0.801
+          ],
+          "content": "6 6 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.829,
+            0.347,
+            0.853
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.288,
+            0.885,
+            0.295,
+            0.899
+          ],
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "page_idx": 22,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.261,
+            0.896,
+            0.268,
+            0.915
+          ],
+          "content": "8"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.253,
+            0.087,
+            0.595,
+            0.137
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 21. Frog"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.183,
+            0.304,
+            0.205
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.348,
+            0.184,
+            0.4,
+            0.205
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.446,
+            0.183,
+            0.498,
+            0.205
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.543,
+            0.184,
+            0.592,
+            0.205
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.261,
+            0.733,
+            0.388
+          ],
+          "content": "Một con ếch hiện đang ở điểm 0 trên trực tọa độ Ox. Nó nhảy theo thuật toán sau: bước nhảy thứ nhất là a đơn vị về bên phải, bước nhảy thứ hai là b đơn vị về bên trái, bước nhảy thứ ba là a đơn vị bên phải, bước nhảy thứ tư là b đơn vị bên trái, v.v. .Nếu con ếch đã nhảy một số lần chẩn (trước lần nhảy hiện tại), nó nhảy từ vị trí hiện tại x sang vị trí x + a, mặt khác, nó nhảy từ vị trí hiện tại x sang vị trí x - b. Nhiệm vụ của bạn là tính toán vị trí của ếch sau k bước nhảy"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.247,
+            0.403,
+            0.704,
+            0.457
+          ],
+          "content": "Gọi ý : Tìm số bước nhầy của Frog sang bên trái và bên phải, gọi là t và p, khi đó vị trí của Frog sẽ là tổng khoảng cách nhầy sang phải - tổng khoảng cách nhầy sang trái."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.471,
+            0.31,
+            0.497
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.512,
+            0.431,
+            0.539
+          ],
+          "content": "3 số trên cùng một dòng tương ứng a,b,k"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.555,
+            0.302,
+            0.579
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.596,
+            0.321,
+            0.621
+          ],
+          "content": "$1 < = a, b, k < = 10^{9}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.249,
+            0.637,
+            0.318,
+            0.663
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.679,
+            0.402,
+            0.706
+          ],
+          "content": "Vị trí của con éch sau k bước nhầy."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.721,
+            0.318,
+            0.748
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.259,
+            0.782,
+            0.289,
+            0.803
+          ],
+          "content": "5 2 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.248,
+            0.835,
+            0.327,
+            0.861
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 23,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.247,
+            0.087,
+            0.644,
+            0.139
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 22. Đồng xu"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.237,
+            0.161,
+            0.763,
+            0.971
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nBạn có số lượng xu không giới hạn với các giá trị 1,2,3,......n (từ 1 tới n). Bạn muốn chọn một số bộ tiền có tổng giá trị S. Nó được phép có nhiều đồng tiền có cùng giá trị trong tập hợp. Số lượng đồng xu tối thiểu cần thiết để có được tổng S là bao nhiêu?\n\nGợi ý : S = 31, 32, 33, 34, n = 5 => Cần 7 đồng\n\nS = 35, n => Cần 7 đồng\n\nInput Format\n\nDòng duy nhất của đầu vào chứa hai số nguyên n và S\n\nConstraints\n\n1<=n<=10^6; 1<=5<=10^12\n\nOutput Format\n\nIn chính xác một số nguyên - số lượng xu tối thiểu cần thiết để có được tổng S.\n\nSample Input 0\n\n5 11\n\nSample Output 0\n\n3\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 24,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.266,
+            0.077,
+            0.675,
+            0.173
+          ],
+          "level": 1,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 23. Doremon leo cầu thang"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.217,
+            0.315,
+            0.237
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.357,
+            0.217,
+            0.407,
+            0.237
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.45,
+            0.217,
+            0.501,
+            0.237
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.543,
+            0.217,
+            0.589,
+            0.237
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.29,
+            0.717,
+            0.364
+          ],
+          "content": "Doremon muốn leo lên một cầu thang gồm n bước. Anh ta có thể leo 1 hoặc 2 bước mỗi lần di chuyển. Doremon muốn số lần di chuyển là bội số của một số nguyên m. Số lượng di chuyển tối thiểu làm cho anh ta leo lên định cầu thang thỏa mãn điều kiện của anh ta là gì?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.378,
+            0.715,
+            0.453
+          ],
+          "content": "Gọi ý : Tìm số bước di chuyển tối thiểu (n / 2 ?) để lên cầu thang và số bước di chuyển tối đa (n) cần lên cầu thang n bậc. Gọi lần lượt là x và y, bài toán quay về tìm số nhỏ nhất >= x và <= y chia hết cho m. Có thể dùng công thức (x + m - 1) / m \\* m để tìm nhanh kết quả rời so sánh với y."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.465,
+            0.321,
+            0.49
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.504,
+            0.456,
+            0.53
+          ],
+          "content": "Dòng đơn chứa hai số nguyên cách nhau n, m"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.545,
+            0.314,
+            0.569
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.264,
+            0.585,
+            0.328,
+            0.608
+          ],
+          "content": "$1 < = n, m < = 10^{9}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.623,
+            0.329,
+            0.649
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.261,
+            0.663,
+            0.725,
+            0.713
+          ],
+          "content": "In một số nguyên duy nhất - số lượng di chuyển tối thiểu là bội số của m. Nếu không có cách nào anh ta có thể leo lên thỏa mãn điều kiện in - 1."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.262,
+            0.727,
+            0.329,
+            0.753
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.274,
+            0.785,
+            0.297,
+            0.805
+          ],
+          "content": "10 2"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.263,
+            0.835,
+            0.337,
+            0.859
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.274,
+            0.894,
+            0.282,
+            0.911
+          ],
+          "content": "6"
+        }
+      ]
+    },
+    {
+      "page_idx": 25,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.271,
+            0.089,
+            0.64,
+            0.183
+          ],
+          "level": 1,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 24. Đường đi ngắn nhất"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.227,
+            0.32,
+            0.248
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.361,
+            0.228,
+            0.411,
+            0.249
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.453,
+            0.227,
+            0.503,
+            0.249
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.227,
+            0.592,
+            0.249
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.266,
+            0.3,
+            0.724,
+            0.492
+          ],
+          "content": "Hôm nay Patrick chờ đợi một chuyển thăm từ người bạn SpPal của mình. Đề chuẩn bị cho chuyển thăm, Patrick cần mua một số quả tặng ở hai cửa hàng gần nhà. Có một con đường dài d1 mét giữa nhà anh ta và cửa hàng đầu tiên và một con đường dài d2 mét giữa nhà anh ta và cửa hàng thứ hai. Ngoài ra, có một con đường dài d3 kết nối trực tiếp hai cửa hàng này với nhau. Giúp Patrick tính toán khoảng cách tối thiểu mà anh ta cần đi bộ để đến cả hai cửa hàng và trở về nhà. Patrick luôn bắt đầu tại nhà của mình. Anh ta nên ghế thăm cả hai cửa hàng chỉ di chuyển đọc theo ba con đường hiện có và trở về nhà của anh ta. Anh ta không ngại ghế thăm cùng một cửa hàng hoặc đi qua cùng một con đường nhiều lần. Mục tiêu duy nhất là giảm thiểu tổng quãng đường đã đi."
+        },
+        {
+          "type": "image",
+          "bbox": [
+            0.276,
+            0.505,
+            0.711,
+            0.879
+          ],
+          "content": "",
+          "captions": [],
+          "footnotes": [
+            {
+              "bbox": [
+                0.268,
+                0.901,
+                0.576,
+                0.925
+              ],
+              "content": "Gọi ý : Có 4 cách đi tất cả, tìm quãng đường di chuyển của cả 4 rời tìm min"
+            }
+          ],
+          "image_source": "images/page_25_image_6.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 26,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.171,
+            0.083,
+            0.26,
+            0.118
+          ],
+          "level": 2,
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.17,
+            0.141,
+            0.703,
+            0.177
+          ],
+          "content": "Dòng đầu tiên của đầu vào chứa ba số nguyên d1, d2, d3 - độ dài của các đường dẫn."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.201,
+            0.596,
+            0.237
+          ],
+          "content": "d1 là chiều dài của con đường nối nhà Patrick và cửa hàng đầu tiên;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.259,
+            0.589,
+            0.295
+          ],
+          "content": "d2 là chiều dài của con đường nối nhà Patrick và cửa hàng thứ hai;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.319,
+            0.512,
+            0.355
+          ],
+          "content": "d3 là chiều dài của đường dẫn kết nối cả hai cửa hàng."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.171,
+            0.379,
+            0.249,
+            0.413
+          ],
+          "level": 2,
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.172,
+            0.437,
+            0.3,
+            0.472
+          ],
+          "content": "$1 < = d1, d2, d3 < = 10^8$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.497,
+            0.271,
+            0.533
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.555,
+            0.807,
+            0.594
+          ],
+          "content": "In khoảng cách tối thiểu mà Patrick sẽ phải đi bộ để ghé thăm cả hai cửa hàng và trở về nhà của mình."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.171,
+            0.615,
+            0.271,
+            0.652
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.188,
+            0.7,
+            0.264,
+            0.731
+          ],
+          "content": "832 56 273"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.171,
+            0.776,
+            0.283,
+            0.813
+          ],
+          "level": 2,
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.189,
+            0.864,
+            0.214,
+            0.887
+          ],
+          "content": "658"
+        }
+      ]
+    },
+    {
+      "page_idx": 27,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.247,
+            0.076,
+            0.636,
+            0.125
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 25. Đối tiền"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.238,
+            0.151,
+            0.758,
+            0.944
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\n28tech có rất nhiều tiền :v. Anh ta có n đô la trong ngân hàng. Vì lý do bảo mật, anh ta muốn rút tiền mật (chúng tôi sẽ không tiết lộ lý do tại đây). Các mệnh giá cho tờ đô la là 1, 5, 10, 20, 100. Số tờ tiền tối thiểu mà 28tech có thể nhận được sau khi rút toàn bộ số dư của mình là bao nhiêu?\n\nGọi ý : Xét đồng mệnh giá cao nhất tới mệnh giá thấp nhất, ở mỗi tờ tiền thì số tiền sẽ bằng lượng tiền có chia nguyên cho mệnh giá, ví dụ có 567 đô mà xét tờ 100 thì đối được 5 tờ và dư 67 đô tiếp tục xét với mệnh giá nhỏ hơn\n\nInput Format\n\nSố nguyên dương n\n\nConstraints\n\n1<=n<=10^9\n\nOutput Format\n\nIn ra số tờ tiền tối thiểu để rút được n đô la\n\nSample Input 0\n\n3455\n\nSample Output 0\n\n38\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 28,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.247,
+            0.079,
+            0.737,
+            0.197
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 26. Số lớn nhất nhỏ nhất trong 4 số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.265,
+            0.251,
+            0.308,
+            0.277
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.359,
+            0.251,
+            0.42,
+            0.277
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.472,
+            0.25,
+            0.534,
+            0.277
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.585,
+            0.25,
+            0.642,
+            0.277
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.337,
+            0.622,
+            0.371
+          ],
+          "content": "Cho 4 số nguyên a, b, c, d. Hãy tìm số lớn nhất và nhỏ nhất trong 4 số này."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.387,
+            0.316,
+            0.419
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.243,
+            0.434,
+            0.541,
+            0.467
+          ],
+          "content": "4 số a, b, c, d viết trên 1 dòng và cách nhau một dấu cách."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.485,
+            0.308,
+            0.515
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.245,
+            0.531,
+            0.344,
+            0.563
+          ],
+          "content": "$1 < = a, b, c, d < = 10^{18}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.581,
+            0.326,
+            0.614
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.628,
+            0.397,
+            0.661
+          ],
+          "content": "In ra số lớn nhất và nhỏ nhất."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.678,
+            0.325,
+            0.711
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.748,
+            0.348,
+            0.774
+          ],
+          "content": "546 272 839 508"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.809,
+            0.335,
+            0.841
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.258,
+            0.879,
+            0.303,
+            0.904
+          ],
+          "content": "839 272"
+        }
+      ]
+    },
+    {
+      "page_idx": 29,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.221,
+            0.097,
+            0.732,
+            0.156
+          ],
+          "level": 2,
+          "content": "Kiểu dữ liệu-IF ELSE]. Bài 27. Làm tròn số"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.211,
+            0.185,
+            0.79,
+            0.928
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho một số thực a, hãy tìm số nguyên gần a nhất. Trong trường hợp phần thực của a = 0.5 thì làm tròn lên\n\nInput Format\n\nSố thực a\n\nConstraints\n\n0<=a<=10^6\n\nOutput Format\n\nSố nguyên gần với a nhất\n\nSample Input 0\n\n15.2\n\nSample Output 0\n\n15\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 30,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.219,
+            0.083,
+            0.731,
+            0.144
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 28. Cấp số cộng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.236,
+            0.199,
+            0.28,
+            0.227
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.333,
+            0.199,
+            0.396,
+            0.227
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.448,
+            0.199,
+            0.512,
+            0.227
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.565,
+            0.199,
+            0.624,
+            0.227
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.213,
+            0.289,
+            0.789,
+            0.353
+          ],
+          "content": "Cho cấp số cộng có n phần tử, cho biết phần tử đầu tiên trong dãy là u1 và công sai d. Hãy tính tổng các phần tử của cấp số cộng này."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.371,
+            0.288,
+            0.403
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.419,
+            0.364,
+            0.453
+          ],
+          "content": "1 dòng chưa 3 số n, u1 và d."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.471,
+            0.279,
+            0.502
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.52,
+            0.379,
+            0.552
+          ],
+          "content": "2<=n<=10000; 1<=u1,d<=10^6;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.571,
+            0.297,
+            0.603
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.619,
+            0.355,
+            0.655
+          ],
+          "content": "In ra tổng của cấp số cộng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.671,
+            0.297,
+            0.704
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.228,
+            0.743,
+            0.303,
+            0.771
+          ],
+          "content": "3646 662 114"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.806,
+            0.307,
+            0.839
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.88,
+            0.286,
+            0.905
+          ],
+          "content": "759924842"
+        }
+      ]
+    },
+    {
+      "page_idx": 31,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.229,
+            0.169,
+            0.768,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho 4 số a, b, c, d. Hãy kiểm tra xem 4 số này có thể theo thứ tự tạo thành 1 cấp số nhân với công bội nguyên theo đúng thứ tự a, b, c, d hay không?\n\nGọi ý : Tìm công bội (b / a) nếu b chia hết cho a, sau đó lấy b nhân công bội và so sánh vs c, c nhân công bội và so sánh vs d.\n\nInput Format\n\n1 dòng chứa 4 số a, b, c, d.\n\nConstraints\n\n1<=a,b,c,d<=10^6\n\nOutput Format\n\nIn ra YES nếu 4 số a, b, c, d tạo thành 1 cấp số nhân, ngược lại in ra NO.\n\nSample Input 0\n\n92 92 92 92\n\nSample Output 0\n\nYES\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.237,
+            0.087,
+            0.706,
+            0.141
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 29. Cấp số nhân"
+        }
+      ]
+    },
+    {
+      "page_idx": 32,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.224,
+            0.232,
+            0.777,
+            0.939
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nTrong lớp có n sinh viên, muốn chọn ra 2 bạn sinh viên để tham gia cuộc thi khiêu vũ, hồi có bao nhiêu cách?\n\nInput Format\n\nSố lượng sinh viên trong lớp N.\n\nConstraints\n\n1<=N<=10^6\n\nOutput Format\n\nIn ra kết quả của bài toán\n\nSample Input 0\n\n4\n\nSample Output 0\n\n6\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.231,
+            0.086,
+            0.724,
+            0.196
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 30. Tổ hợp chấp 2"
+        }
+      ]
+    },
+    {
+      "page_idx": 33,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.137,
+            0.095,
+            0.745,
+            0.244
+          ],
+          "level": 1,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 31. Bizon the Champion"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.159,
+            0.319,
+            0.216,
+            0.351
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.282,
+            0.319,
+            0.363,
+            0.352
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.43,
+            0.318,
+            0.51,
+            0.351
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.578,
+            0.319,
+            0.652,
+            0.352
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.129,
+            0.435,
+            0.869,
+            0.744
+          ],
+          "content": "Bizon the Champion gần đây đã có một món quả - một tử kính mới với n kê và anh quyết định đặt tất cả những món quả của mình ở đó. Tất cả các món quả có thể được chia thành hai loại: huy chương và cúp. Bizon the Champion có a1 cúp giải nhất, a2 cúp giải nhì và a3 cúp giải ba. Bên cạnh đó, anh có b1 huy chương giải nhất, b2 huy chương giải nhì và b3 huy chương giải ba. Dương nhiên, phần thưởng trong tử phải sắp xếp cho thật đẹp, đó là lý do Bizon the Champion quyết định tuân theo các quy tắc: bắt kỳ kê nào cũng không thể chứa cả cúp và huy chương cùng một lúc; không có kê có thể chứa nhiều hơn 5 cúp; không có kê có thể có hơn 10 huy chương. Giúp Bizon the Champion tìm hiểu xem có thể đặt tất cả các phần thưởng để tất cả các điều kiện được đáp ứng hay không."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.765,
+            0.837,
+            0.806
+          ],
+          "content": "Gọi ý : Tính tổng số cúp => tìm số kê đựng cúp (chia hết cho 5 hay ko), ví dụ 12 cúp => 3 kê, 10 cúp => 2 kê"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.13,
+            0.829,
+            0.649,
+            0.869
+          ],
+          "content": "Tính tổng số huy chương => tìm kê đựng huy chương (chia hết cho 10 hay ko)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.131,
+            0.892,
+            0.316,
+            0.93
+          ],
+          "content": "Nếu tổng kê <= n thì in YES"
+        }
+      ]
+    },
+    {
+      "page_idx": 34,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.078,
+            0.208,
+            0.115
+          ],
+          "level": 2,
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.143,
+            0.848,
+            0.224
+          ],
+          "content": "Dòng đầu tiên chứa các số nguyên a1, a2 và a3. Dòng thứ hai chứa các số nguyên b1, b2 và b3 (0 ≤ b1, b2, b3 <= 100). Dòng thứ ba chứa số nguyên n. Các số trong các dòng được phân tách bằng khoảng trắng đơn."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.251,
+            0.195,
+            0.285
+          ],
+          "level": 2,
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.11,
+            0.317,
+            0.35,
+            0.352
+          ],
+          "content": "0 ≤ a1, a2, a3 <= 100; 1 <= n <= 100;"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.383,
+            0.22,
+            0.421
+          ],
+          "level": 2,
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.109,
+            0.447,
+            0.865,
+            0.529
+          ],
+          "content": "In \"YES\" (không có dấu ngoặc kép) nếu tất cả các phần thường có thể được đưa lên kê theo cách được mô tả. Nếu không, hãy in \"NO\" (không có dấu ngoặc kép)."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.11,
+            0.555,
+            0.22,
+            0.593
+          ],
+          "level": 2,
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.129,
+            0.65,
+            0.267,
+            0.712
+          ],
+          "sub_type": "code",
+          "content": "```solidity\n46 76 52 40 60 67\n11\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.111,
+            0.764,
+            0.234,
+            0.802
+          ],
+          "level": 2,
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.13,
+            0.863,
+            0.15,
+            0.889
+          ],
+          "content": "NO"
+        }
+      ]
+    },
+    {
+      "page_idx": 35,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.273,
+            0.077,
+            0.641,
+            0.125
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 32. Ghép số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.287,
+            0.169,
+            0.321,
+            0.19
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.363,
+            0.17,
+            0.413,
+            0.191
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.456,
+            0.169,
+            0.505,
+            0.191
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.547,
+            0.169,
+            0.594,
+            0.191
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.268,
+            0.241,
+            0.724,
+            0.364
+          ],
+          "content": "Gàn đây Anton tìm thấy một hộp có chữ số trong phòng của mình. Có k2 chữ số 2, k3 chữ số 3, k5 chữ số 5 và k6 chữ số 6. Số nguyên yêu thích của Anton là 32 và 256. Anh quyết định soạn số nguyên này từ các chữ số anh có. Anh ta muốn làm cho tổng của các số nguyên này càng lớn càng tốt. Giúp anh ta giải quyết nhiệm vụ này! Mỗi chữ số có thể được sử dụng không quá một lần, tức là các số nguyên tổng hợp nên chứa không quá k2 chữ số 2, k3 chữ số 3, v.v. Tất nhiên, các chữ số không sử dụng không được tính vào tổng."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.377,
+            0.475,
+            0.402
+          ],
+          "content": "Gọi ý : Tìm số 256 trước => k256 = min(k2, k5, k6)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.416,
+            0.442,
+            0.44
+          ],
+          "content": "Tim số 32 sau => k32 = min(k3, k2 - k256)"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.457,
+            0.328,
+            0.482
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.495,
+            0.677,
+            0.522
+          ],
+          "content": "Dòng duy nhất của đầu vào chứa bốn số nguyên k2, k3, k5 và k6 - số chữ số 2, 3, 5 và 6 tương ứng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.536,
+            0.321,
+            0.56
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.574,
+            0.377,
+            0.599
+          ],
+          "content": "$0 \\leq k2, k3, k5, k6 <= 10^{9}$."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.615,
+            0.335,
+            0.64
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.268,
+            0.653,
+            0.717,
+            0.704
+          ],
+          "content": "In một số nguyên - tổng số tối đa có thể có của các số nguyên yêu thích của Anton có thể được tạo bằng các chữ số từ hộp."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.718,
+            0.336,
+            0.743
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.279,
+            0.776,
+            0.317,
+            0.795
+          ],
+          "content": "5 1 3 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.269,
+            0.826,
+            0.343,
+            0.851
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.884,
+            0.298,
+            0.903
+          ],
+          "content": "800"
+        }
+      ]
+    },
+    {
+      "page_idx": 36,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.28,
+            0.081,
+            0.64,
+            0.125
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 33. Chia tiền"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.169,
+            0.327,
+            0.189
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.367,
+            0.169,
+            0.415,
+            0.189
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.456,
+            0.169,
+            0.504,
+            0.189
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.169,
+            0.59,
+            0.189
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.275,
+            0.239,
+            0.721,
+            0.403
+          ],
+          "content": "Polycarp có ba chỉ em: Alice, Barbara và Cerene. Hộ đang thu thập tiền xu. Hiện tại, Alice có một đồng tiền, Barbara có tiền xu và Cerene có tiền xu. Gần đầy Polycarp đã trở về từ chuyển đi vòng quanh thể giới và mang theo n xu. Anh ta muốn phân phối tất cả n xu này giữa các chỉ em của mình theo cách mà số lượng tiền Alice có bằng số lượng tiền mà Barbara có và bằng với số lượng tiền mà Cerene có. Nói cách khác, nếu Polycarp đưa A xu cho Alice, B xu cho Barbara và C xu cho Cerene (A + B + C = n), thì a + A = b + B = c + C. Lưu ý rằng A, B hoặc C (số lượng tiền mà Polycarp đưa cho Alice, Barbara và Cerene tương ứng) có thể là 0. Nhiệm vụ của bạn là tìm hiểu xem có thể phân phối tất cả n xu giữa các chỉ em theo cách được mô tả ở trên không."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.415,
+            0.478,
+            0.439
+          ],
+          "content": "Gọi ý : Điều kiện cần : (a + b + c + n) chia hết cho 3"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.275,
+            0.453,
+            0.716,
+            0.502
+          ],
+          "content": "Điều kiện đủ : Sau khi chia thì mỗi người có lượng tiền >= lượng tiền ban đầu của họ. Ví dụ test 1 1 9 1 dù chia hết cho 3 nhưng ko thỏa mãn vì khi đó phải lấy tiền của 3 người đưa cho nhau."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.276,
+            0.515,
+            0.333,
+            0.538
+          ],
+          "level": 2,
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.553,
+            0.64,
+            0.577
+          ],
+          "content": "4 số nguyên trên 1 dòng a, b, c, n. a, b, c là số tiền ban đầu mà Alice, Barbara và Cerene có."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.591,
+            0.326,
+            0.613
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.629,
+            0.349,
+            0.652
+          ],
+          "content": "1<=a,b,c,n<=10^8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.668,
+            0.34,
+            0.691
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.706,
+            0.663,
+            0.731
+          ],
+          "content": "In \"YES\" nếu Polycarp có thể phân phối tất cả n xu giữa các chỉ em của mình và \"NO\" nếu không."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.276,
+            0.745,
+            0.34,
+            0.768
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.287,
+            0.8,
+            0.323,
+            0.819
+          ],
+          "content": "5 3 2 8"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.277,
+            0.849,
+            0.348,
+            0.873
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.288,
+            0.904,
+            0.304,
+            0.921
+          ],
+          "content": "YES"
+        }
+      ]
+    },
+    {
+      "page_idx": 37,
+      "blocks": [
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.288,
+            0.071,
+            0.622,
+            0.159
+          ],
+          "level": 1,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 34. Sự hào phóng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.301,
+            0.2,
+            0.334,
+            0.219
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.374,
+            0.2,
+            0.42,
+            0.219
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.46,
+            0.199,
+            0.507,
+            0.219
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.546,
+            0.2,
+            0.59,
+            0.219
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.267,
+            0.713,
+            0.382
+          ],
+          "content": "Có năm người chơi một trò chơi gọi là \"Sự hào phóng\". Mỗi người đưa ra một số lượng tiền xu khác không b như một lần đặt cược ban đầu. Sau khi tất cả người chơi đặt cược tiền xu của họ, thao tác sau được lập lại nhiều lần: một đồng xu được chuyển từ người chơi này sang người chơi khác. Nhiệm vụ của bạn là viết một chương trình có thể, với số lượng xu mà mỗi người chơi có vào cuối trò chơi, xác định kích thước b của lần đặt cược ban đầu hoặc chỉ ra rằng kết quả của trò chơi không thể đạt được."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.395,
+            0.641,
+            0.418
+          ],
+          "content": "Gọi ý : Điều kiện cần (c1 + c2 + c3 + c4 + c5) chia hết cho 5, vì tổng lượng tiền ko hệ thay đổi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.431,
+            0.565,
+            0.454
+          ],
+          "content": "Điều kiện đủ là (c1 + c2 + c3 + c4 + c5) / 5 phải khác 0 vì b họ cho khác 0"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.285,
+            0.47,
+            0.34,
+            0.492
+          ],
+          "level": 2,
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.506,
+            0.703,
+            0.552
+          ],
+          "content": "Đầu vào bao gồm một dòng duy nhất chứa năm số nguyên c1, c2, c3, c4 và c5 - số lượng đồng xu mà người chơi thứ nhất, thứ hai, thứ ba, thứ tư và thứ năm có ở cuối trò chơi"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.566,
+            0.333,
+            0.587
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.604,
+            0.391,
+            0.625
+          ],
+          "content": "$0 \\leq c1, c2, c3, c4, c5 \\leq 100$"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.285,
+            0.641,
+            0.347,
+            0.663
+          ],
+          "level": 2,
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.677,
+            0.708,
+            0.724
+          ],
+          "content": "In dòng duy nhất chứa một số nguyên dương b duy nhất - số xu trong đặt cược ban đầu của mỗi người chơi. Nếu không có giá trị b như vậy, thì hấy in giá trị duy nhất \"-1\"."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.737,
+            0.348,
+            0.761
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.295,
+            0.791,
+            0.339,
+            0.809
+          ],
+          "content": "2 5 4 0 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.838,
+            0.354,
+            0.861
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "page_number",
+          "bbox": [
+            0.295,
+            0.893,
+            0.303,
+            0.908
+          ],
+          "content": "3"
+        }
+      ]
+    },
+    {
+      "page_idx": 38,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.236,
+            0.087,
+            0.631,
+            0.139
+          ],
+          "level": 2,
+          "content": "[Kiểu dữ liệu-IF ELSE]. Bài 35. HPNY"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.193,
+            0.291,
+            0.216
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.34,
+            0.193,
+            0.396,
+            0.216
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.446,
+            0.192,
+            0.504,
+            0.216
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.193,
+            0.605,
+            0.216
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.229,
+            0.275,
+            0.761,
+            0.36
+          ],
+          "content": "Năm mới sắp đến và bạn rất hào hứng muốn biết còn lại bao nhiêu phút trước Tết. Bạn biết rằng hiện tại đồng hồ hiển thị h giờ và m phút, trong đó 0≤hh <24 và 0≤mm <60. Chúng tôi sử dụng định dạng thời gian 24 giờ! Nhiệm vụ của bạn là tìm số phút trước Tết. Bạn biết rằng năm mới đến khi đồng hồ hiển thị 0 giờ và 0 phút."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.376,
+            0.564,
+            0.406
+          ],
+          "content": "Gọi ý : lấy số phút trong 1 ngày - số phút đã troi qua tới h giờ, m phút"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.421,
+            0.298,
+            0.449
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.467,
+            0.381,
+            0.496
+          ],
+          "content": "2 số nguyên không âm h và m."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.513,
+            0.291,
+            0.539
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.559,
+            0.323,
+            0.585
+          ],
+          "content": "$0 \\leq h < 24$; $0 \\leq m < 60$;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.604,
+            0.307,
+            0.632
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.65,
+            0.354,
+            0.677
+          ],
+          "content": "In ra đáp án của bài toán"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.694,
+            0.308,
+            0.724
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.244,
+            0.761,
+            0.27,
+            0.783
+          ],
+          "content": "23 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.819,
+            0.316,
+            0.847
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.245,
+            0.885,
+            0.258,
+            0.905
+          ],
+          "content": "60"
+        }
+      ]
+    },
+    {
+      "page_idx": 39,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.277,
+            0.089,
+            0.505,
+            0.132
+          ],
+          "level": 2,
+          "content": "[C++ Test 1]. Problem E"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.29,
+            0.179,
+            0.325,
+            0.201
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.368,
+            0.179,
+            0.418,
+            0.201
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.461,
+            0.179,
+            0.512,
+            0.201
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.555,
+            0.179,
+            0.601,
+            0.201
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.272,
+            0.252,
+            0.565,
+            0.277
+          ],
+          "content": "Cho phương trình ax^2 + bx + c = 0. Hãy giải phương trình bậc 2 trên."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.293,
+            0.504,
+            0.318
+          ],
+          "content": "\\- Nếu phương trình vô nghiệm thì in ra \"VO NGHIEM\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.332,
+            0.531,
+            0.357
+          ],
+          "content": "\\- Nếu phương trình vô số nghiệm thì in ra \"VO SO NGHIEM\""
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.272,
+            0.373,
+            0.726,
+            0.423
+          ],
+          "content": "\\- Nếu phương trình có 1 nghiệm hoặc nghiệm kép thì in ra 1 nghiệm duy nhất đó, trường hợp có 2 nghiệm thì in ra nghiệm nhỏ hơn trước. Các nghiệm được in ra với 2 số sau dấu phầy."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.441,
+            0.437,
+            0.467
+          ],
+          "content": "Chú ý chia ra 2 trường hợp a = 0, a != 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.481,
+            0.332,
+            0.506
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.521,
+            0.408,
+            0.547
+          ],
+          "content": "Dòng duy nhất chứa 3 số a, b, c"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.561,
+            0.325,
+            0.585
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.601,
+            0.355,
+            0.625
+          ],
+          "content": "-100<=a, b, c<=100"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.641,
+            0.34,
+            0.667
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.681,
+            0.381,
+            0.707
+          ],
+          "content": "In ra đáp án của bài toán"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.721,
+            0.34,
+            0.747
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.778,
+            0.312,
+            0.799
+          ],
+          "content": "3 8 4"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.273,
+            0.829,
+            0.348,
+            0.854
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.887,
+            0.34,
+            0.908
+          ],
+          "content": "-2.00 -0.67"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "PowerPoint Presentation",
+      "authors": [
+        "Nhat Anh Khoi"
+      ],
+      "languages": [
+        "EN-US"
+      ],
+      "created_at": "2024-01-19T19:01:36+07:00",
+      "modified_at": "2024-01-19T19:01:37+07:00",
+      "creator_application": "Acrobat PDFMaker 19 for PowerPoint",
+      "producer_application": "Adobe PDF Library 19.21.79",
+      "page_count": 40,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 16,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 17,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 18,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 19,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 20,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 21,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 22,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 23,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 24,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 25,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 26,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 27,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 28,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 29,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 30,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 31,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 32,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 33,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 34,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 35,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 36,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 37,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 38,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 39,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}

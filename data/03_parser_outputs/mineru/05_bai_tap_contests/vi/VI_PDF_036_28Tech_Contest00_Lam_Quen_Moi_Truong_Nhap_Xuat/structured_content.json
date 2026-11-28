@@ -1,0 +1,1161 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.314,
+            0.096,
+            0.648,
+            0.172
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 1. Print Hello World !"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.31,
+            0.191,
+            0.687,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nNhiệm vụ của bạn ở bài tập này rất đơn giản, bạn hây nhập vào 1 số nguyên x và in ra 3 dòng : Dòng 1 là số x bạn vừa nhập từ bàn phím, Dòng 2 in ra dòng chữ \"Hello World !\" và dòng 3 in ra \"28tech C++ programming !\"\nGợi ý : Bạn cần nhập 1 số rời in ra số đó chữ ko phải in ra số 5, 5 chỉ là 1 trường hợp cụ thể. Chủ ý in sao cho đúng từng dấu cách dấu !\nMã nguồn bạn triển khai như sau :\n\nint main(){\n\t//khai bao va nhap n tu bạn phím\n\t//in ra n\n\t//In ra hello world\n\t//In ra 28tech C++ programming\n}\n\nInput Format\n1 dòng duy nhất chứa số nguyên x\nConstraints\n1<=x<=1000;\nOutput Format\nIn ra 3 dòng theo yêu cầu\nSample Input 0\n\n5\n\nSample Output 0\n\n5\nHello World !\n28tech C++ programming !\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 1,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.324,
+            0.078,
+            0.616,
+            0.117
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 2. Print number"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.321,
+            0.131,
+            0.68,
+            0.93
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nĐề bài yêu cầu bạn nhập : Dòng 1 là số nguyên X, dòng 2 là số nguyên Y, dòng 3 là kí tự C, dòng 4 là số thực float F, dòng 5 là số thực double D. Nhiệm vụ của bạn là in ra 5 dòng. Dòng 1 in X, dòng 2 in Y, dòng 3 in C, dòng 4 in F với 2 số đẳng sau dấu phấy, dòng 5 in D với 9 số sau dấu phấy.\n\nGợi ý : Chú ý dùng fixed vs setprecision để in ra F và D cho chính xác, Y cần là số long long nếu không sẽ bị trần dữ liệu và không lưu được.\n\nint main(){\n\t//Khai báo 5 biến x y c f d\n\t//In ra x\n\t//In ra y\n\t//In ra c\n\t//In ra f sử dụng fixed và setprecision\n\t//In ra d sử dụng fixed và setprecision\n}\n\nInput Format\n\n5 dòng lần lượt là X, Y, C, F, D\n\nConstraints\n\n-10^9<=X<=10^9; -10^18<=Y<=10^18; C là kí tự in hoa hoặc in thường; -10^6<=F<=10^6; -10^9<=D<=10^9;\n\nOutput Format\n\nIn ra 5 dòng theo yêu cầu\n\nSample Input 0\n\n614\n999999999999990528\nG\n19.088\n2.9648\n\nSample Output 0\n\n614\n999999999999990528\nG\n19.09\n2.964800000\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 2,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.271,
+            0.096,
+            0.674,
+            0.145
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 3. Print expression"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.264,
+            0.167,
+            0.734,
+            0.94
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho 4 số X, Y, Z, T là số nguyên được nhập từ bàn phím. Bạn hấy in ra 3 dòng, dòng 1 lần lượt 4 số Y,Z,X,T mỗi số cách nhau một đầu phấy, dòng 2 in ra tổng 4 số, dòng 3 in ra giá trị của biểu thứ X - Y + Z * T. (Chú ý giá trị của tích Z * T và giá trị của tổng 4 số có thể tràn kiểu dữ liệu int)\n\nGọi ý : Tổng 4 số có thể bị tràn nên cần ép kiểu long long tong = (long long) x + y + z + t; Khi tính X - Y + Z * T thì cần ép kiểu Z * T vì nó sẽ bị tràn.\n\nNếu không muốn ép kiểu thì bạn khai báo luôn 4 biến x, y, z, t là long long.\n\nInput Format\n\n1 dòng chứa 4 số X, Y, Z, T\n\nConstraints\n\n1<=X, Y, Z, T <= 10^9\n\nOutput Format\n\nIn ra theo yêu cầu đầu bài\n\nSample Input 0\n\n93 9 93 98\n\nSample Output 0\n\n9,93,93,98\n293\n9198\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 3,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.33,
+            0.083,
+            0.583,
+            0.121
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 4. Hàm pow"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.325,
+            0.135,
+            0.676,
+            0.929
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho 2 số x, y. Nhiệm vụ của bạn là tính x ^ y\nGoi ý : x^y sẽ không có phần lẻ thập phân vì x, y đều nguyên. Hàm pow trả về double nên bạn không được in ra luôn cout << pow(x, y). Với kết quả nhỏ thì không sao nhưng nếu kết quả lớn nó sẽ in ra dạng số thực, bạn thử cout << pow(10, 10) để xem thử kết quả. Cách làm đó là ép pow sang long long trước khi in hoặc lưu pow(x, y) vào 1 số nguyên long long rời in ra.\n\nint main(){\n\t//Nhap x y\n\t//Khai bao bien số nguyên kq = pow(x, y)\n\t//In ra biến kq\n}\n\nInput Format\n1 dòng chứa 2 số nguyên dương x, y viết cách nhau một dấu cách\nConstraints\n1<=x,y<=12;\nOutput Format\nIn ra x^y, nếu x^y có phần thập phân thì in ra 2 số sau dấu phấy, nếu không có phần thập phân thì không cần in.\nSample Input 0\n\n2 2\n\nSample Output 0\n\n4\n\nSample Input 1\n\n4 1\n\nSample Output 1\n\n4\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 4,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.285,
+            0.101,
+            0.658,
+            0.147
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 5. Hàm sqrt và cbrt"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.277,
+            0.164,
+            0.725,
+            0.923
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Cho số nguyên dương N, nhiệm vụ của bạn là tính căn bậc 2 và căn bậc 3 của N.</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">Dòng duy nhất chứa số nguyên dương N</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">1&lt;=N&lt;=10^9;</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">Dòng 1 in ra căn bậc 2 của n với 2 số sau dấu phấy; Dòng 2 in ra căn bậc 3 của n với 3 số sau dấu phấy;</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">65</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">8.064.021</td></tr><tr><td colspan=\"4\">Sample Input 1</td></tr><tr><td colspan=\"4\">15</td></tr><tr><td colspan=\"4\">Sample Output 1</td></tr><tr><td colspan=\"4\">3.872.466</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_4_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 5,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.33,
+            0.091,
+            0.62,
+            0.161
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 6. Hàm ceil, floor, round"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.327,
+            0.179,
+            0.685,
+            0.922
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Hàm ceil : làm tròn lên số nguyên gần nhất, floor : làm tròn xuống số nguyên gần nhất, round : làm tròn số nguyên phụ thuộc vào phần thập phần. Cho số thực X nhiệm vụ của bạn là sử dụng 3 hàm trên để tim số nguyên nhớ hơn gần X nhất, số nguyên lớn hơn gần X nhất, số nguyên gần X nhất.</td></tr><tr><td colspan=\"4\">Nên nhớ hàm ceil, floor, round trả về số double, các bạn in ra kết luôn hàm ceil, round, floor đối với số nhớ thì không vấn đề gì nhưng với số lớn nó có thể xuất hiện số 0 ở sau. Ví dụ cout &lt;&lt; ceil(1000000) &lt;&lt; endl; kết quả in ra sẻ là 1000000.0</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">Dòng duy nhất chứa số thực X</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">1&lt;=X&lt;=10^6;</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">In ra 3 số trên 3 dòng</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">3.59</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">344</td></tr><tr><td colspan=\"4\">Sample Input 1</td></tr><tr><td colspan=\"4\">5.58</td></tr><tr><td colspan=\"4\">Sample Output 1</td></tr><tr><td colspan=\"4\">566</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_5_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 6,
+      "blocks": [
+        {
+          "type": "code",
+          "bbox": [
+            0.306,
+            0.179,
+            0.709,
+            0.926
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho nguyên dương N, bạn hãy sử dụng phép chia dư để lấy ra chữ số cuối cùng và 2 chữ số cuối cùng của N.\nGợi ý : Đế lấy chữ số cuối cùng của N bạn chỉ cần lấy N chia dư cho 10. Ví dụ N = 1234 % 10 = 4. Tương tự để\nlấy 2 chữ số cuối cùng của N bạn chỉ cần lấy N chia dư cho 100. Ví dụ N = 1234 % 100 = 34. ....\n\nLưu ý chọn kiểu dữ liệu của N cho phù hợp\n\nint main(){\n\t//Khai báo biến nguyên n\n\t//Nhập n từ bàn phím\n\t//In ra n % 10\n\t//In ra n % 100\n}\n\nInput Format\n\n1 dòng duy nhất chứa số nguyên dương N\n\nConstraints\n\n100<=N<=10^18\n\nOutput Format\n\nDòng 1 in ra chữ số cuối cùng; Dòng 2 in ra 2 chữ số cuối cùng, nếu 2 chữ số cuối cùng của N có số 0 ở đầu thì\nban bò đi số 0 đó và chỉ in ra số cuối cùng.\n\nSample Input 0\n\n1005\n\nSample Output 0\n\n5\n5\n```",
+          "captions": [],
+          "footnotes": []
+        },
+        {
+          "type": "doc_title",
+          "bbox": [
+            0.31,
+            0.079,
+            0.664,
+            0.161
+          ],
+          "level": 1,
+          "content": "[Làm quen với OJ]. Bài 7. Chữ số cuối cùng và 2 chữ số cuối cùng"
+        }
+      ]
+    },
+    {
+      "page_idx": 7,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.318,
+            0.091,
+            0.587,
+            0.13
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 8. Phép chia"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.313,
+            0.149,
+            0.682,
+            0.93
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Trong ngôn ngữ lập trình như C, C++, Java khi bạn sử dụng 2 số nguyên để chia cho nhau thì kết quả của phép chia đó chỉ dữ lại phần nguyên cho dù bạn có để kết quả ở số thực như float hay double. Ví dụ a = 10, b = 3 thì phép chia a / b sẽ có kết quả là 3 thay vì 3.3333, để lấy được phần thập phân khi chia 2 số nguyên cho nhau bạn cần thực hiện ép kiểu a hoặc b, hoặc cả 2 và b sang dạng số thực trước khi chia. Ví dụ float c = (float) a / b thì khi đó c = 3.3333</td></tr><tr><td colspan=\"4\">Gợi ý : Bạn nên sử dụng số double khi chia thập phân để kết quả có độ chính xác tốt hơn</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">1 dòng duy nhất chứa lần lượt 2 số nguyên b và a;</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">1&lt;=a,b&lt;=1000;</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">Dòng 1 in ra thương của a / b khi sử dụng phép chia nguyên; Dòng 2 in ra thương của a / b khi sử dụng phép chia lấy phần thập phân với độ chính xác 2 số sau dấu phấy.</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td colspan=\"4\">30 70</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td colspan=\"4\">22.33</td></tr><tr><td colspan=\"4\">Sample Input 1</td></tr><tr><td colspan=\"4\">39 259</td></tr><tr><td colspan=\"4\">Sample Output 1</td></tr><tr><td colspan=\"4\">66.64</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_7_table_1.jpg"
+        }
+      ]
+    },
+    {
+      "page_idx": 8,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.236,
+            0.089,
+            0.596,
+            0.142
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 9. Xóa số"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.252,
+            0.194,
+            0.293,
+            0.217
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.342,
+            0.193,
+            0.4,
+            0.218
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.449,
+            0.193,
+            0.508,
+            0.217
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.557,
+            0.194,
+            0.61,
+            0.217
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.23,
+            0.278,
+            0.768,
+            0.391
+          ],
+          "content": "Cho số nguyên dương N có ít nhất 5 chữ số, nhiệm vụ của bạn là xóa đi 3 chữ số cuối cùng của N và in ra những chữ số còn lại. Ví dụ N = 12345 sau khi xóa đi 3 chữ số cuối cùng thì N = 12. Gọi ý, đối với phép chia nguyên nếu bạn muốn xóa đi 1 chữ số cuối cùng chỉ cần lấy N chia nguyên cho 10, ví dụ N = 12345 / 10 = 1234, tương tự N = 12345 / 100 = 123, N = 12345 / 1000 = 12...."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.231,
+            0.409,
+            0.3,
+            0.438
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.454,
+            0.432,
+            0.485
+          ],
+          "content": "Dòng duy nhất chứa số nguyên dương N"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.501,
+            0.291,
+            0.528
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.233,
+            0.548,
+            0.327,
+            0.574
+          ],
+          "content": "10000<=N<=10^18"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.593,
+            0.309,
+            0.622
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.639,
+            0.429,
+            0.667
+          ],
+          "content": "In ra N sau khi xóa đi 3 chữ số cuối cùng"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.686,
+            0.309,
+            0.715
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.245,
+            0.753,
+            0.346,
+            0.776
+          ],
+          "content": "999999999999993728"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.232,
+            0.811,
+            0.318,
+            0.84
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.245,
+            0.878,
+            0.33,
+            0.9
+          ],
+          "content": "999999999999993"
+        }
+      ]
+    },
+    {
+      "page_idx": 9,
+      "blocks": [
+        {
+          "type": "page_number",
+          "bbox": [
+            0.229,
+            0.878,
+            0.249,
+            0.899
+          ],
+          "content": "201"
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.22,
+            0.09,
+            0.684,
+            0.145
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 10. Phép chia dư"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.237,
+            0.199,
+            0.279,
+            0.224
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.329,
+            0.199,
+            0.388,
+            0.224
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.44,
+            0.199,
+            0.501,
+            0.223
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.552,
+            0.199,
+            0.607,
+            0.224
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.214,
+            0.286,
+            0.759,
+            0.373
+          ],
+          "content": "Khi bạn chia dư 1 số cho số nguyên N thì số dư của phép chia đó sẽ là các số từ 0 tới N - 1. Ví dụ khi bạn chia cho 5 thì phép chia có số dư có thể là 0, 1, 2, 3, 4. Bài toán này yêu cầu các bạn nhập 2 số a và b sau đó tim phép dư khi chia a cho b."
+        },
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.215,
+            0.393,
+            0.286,
+            0.421
+          ],
+          "level": 2,
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.439,
+            0.549,
+            0.469
+          ],
+          "content": "Dòng duy nhất chứa 2 số nguyên a, b, giữa a và b chứa 5 dấu cách"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.489,
+            0.277,
+            0.515
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.535,
+            0.292,
+            0.562
+          ],
+          "content": "$1<=a,b<=10^6;$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.584,
+            0.294,
+            0.612
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.215,
+            0.631,
+            0.353,
+            0.658
+          ],
+          "content": "In ra số dư khi chia a cho b"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.679,
+            0.295,
+            0.709
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.228,
+            0.747,
+            0.25,
+            0.771
+          ],
+          "content": "806"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.216,
+            0.809,
+            0.304,
+            0.837
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 10,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.286,
+            0.091,
+            0.626,
+            0.135
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 11. Nhân chia"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.28,
+            0.155,
+            0.727,
+            0.925
+          ],
+          "sub_type": "algorithm",
+          "content": "Problem\tSubmissions\tLeaderboard\tDiscussions\n\nCho số nguyên N hãy in ra kết quả của những phép toán sau : Dòng 1. In ra 2 lần số N, Dòng 2. In ra 10 lần số N, Dòng 3. In ra kết quả của phép chia nguyên của N với 2, Dòng 4. In ra kết quả của phép chia lấy phần thập phân của N với 2, in ra 3 chữ số phần thập phân.\n\nGợi ý : Khi nhân N với 10 có thể bị tràn, vì N tối đa là $10^{9} => 10 * N = 10^{10}$ vượt giới hạn số int nên bạn cần xử lý tràn chỗ đó.\n\nInput Format\n\nDòng duy nhất chứa số nguyên dương N\n\nConstraints\n\n$1<=N<=10^{9}$\n\nOutput Format\n\nIn ra 4 dòng theo yêu cầu, mỗi kết quả cách nhau thêm 1 dòng trống, xem output để rõ hơn yêu cầu.\n\nSample Input 0\n\n570\n\nSample Output 0\n\n1140\n5700\n285\n285.000",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 11,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.243,
+            0.091,
+            0.664,
+            0.144
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 12. Hàm F(x, y)"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.235,
+            0.168,
+            0.773,
+            0.964
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho F(x, y) = 5 * x + 2 * y + x * y, với x, y được nhập từ bàn phím hãy in ra kết quả của F(x, y). Mỗi khi tính toán kết quả phải chú ý tới giới hạn của bài toán, để xác định xem kết quả của bài toán sẽ nằm tới ngưỡng nào để lựa chọn kiểu dữ liệu cho phù hợp.\n\nGợi ý : Chú ý x * y có thể bị tràn\n\nInput Format\n\nDòng duy nhất chứa 2 số x, y trên 1 dòng.\n\nConstraints\n\nx, y là số nguyên; 1<=x, y<=10^6;\n\nOutput Format\n\nIn ra kết quả của hàm F(x, y)\n\nSample Input 0\n\n6 3\n\nSample Output 0\n\n54\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 12,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.328,
+            0.08,
+            0.619,
+            0.151
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 13. Lớn nhất, nhỏ nhất"
+        },
+        {
+          "type": "code",
+          "bbox": [
+            0.323,
+            0.168,
+            0.675,
+            0.933
+          ],
+          "sub_type": "code",
+          "content": "```txt\nProblem\tSubmissions\tLeaderboard\tDiscussions\n\nCho 4 số nguyên x, y, z, t. Như bạn đã biết, để tìm số lớn nhất và nhỏ nhất trong 2 số ta có thể sử dụng hàm max, min của thư viện math. Ngoài ra để tìm max, min của nhiều số bạn có thể sử dụng hàm max, min của thư viện , ví dụ để tìm max của a, b, c có thể dùng max({a, b, c}), chú ý đặt các biến vào trong ngoại nhọn nếu muốn tìm max, min của 3 số trở lên. Bài toán yêu cầu bạn tìm những số sau : Dòng 1 in ra số lớn hơn trong 2 số x, y. Dòng 2 in ra số nhỏ hơn trong 2 số z, t. Dòng 3 in ra số lớn nhất trong 3 số x, y, z. Dòng 4 in ra số nhỏ nhất trong 4 số x, y, z, t. Ví dụ tìm max, min của 3 số :\n\n#include <algorithm>\nint a = 20, b = 30, c = 40;\ncout << max({a, b, c}) << endl;\ncout << mín({a, b, c}) << endl;\n\nNếu dùng devC++ mà không chạy được hàm max, min với 3 số trở lên thì bạn cần chạy với chuẩn C++11 trở lên mới hỗ trợ. Vào devc => tool => compiler option => setting => code generation => language standard => GNUC++11 => OK\n\nInput Format\n\n4 số x, y, z, t lần lượt trên 4 dòng.\n\nConstraints\n\n1<=x, y, z, t <= 1000;\n\nOutput Format\n\nIn ra 4 dòng theo yêu cầu.\n\nSample Input 0\n\n586\n617\n778\n37\n\nSample Output 0\n\n617\n37\n778\n37\n```",
+          "captions": [],
+          "footnotes": []
+        }
+      ]
+    },
+    {
+      "page_idx": 13,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.27,
+            0.115,
+            0.697,
+            0.227
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 14. Number in range"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.286,
+            0.279,
+            0.328,
+            0.304
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.378,
+            0.279,
+            0.436,
+            0.305
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.487,
+            0.279,
+            0.546,
+            0.305
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.597,
+            0.279,
+            0.651,
+            0.305
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.266,
+            0.363,
+            0.65,
+            0.395
+          ],
+          "content": "Cho 2 số a và b, nhiệm vụ của bạn là in ra số lượng số nguyên tính từ a đến b."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.266,
+            0.412,
+            0.336,
+            0.443
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.266,
+            0.458,
+            0.467,
+            0.49
+          ],
+          "content": "Dòng duy nhất chứa 2 số nguyên a và b."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.507,
+            0.327,
+            0.535
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.552,
+            0.355,
+            0.58
+          ],
+          "content": "$1 < = a < = b < = 10^{12}$"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.601,
+            0.345,
+            0.63
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.266,
+            0.646,
+            0.395,
+            0.676
+          ],
+          "content": "In ra kết quả của bài toán"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.266,
+            0.694,
+            0.345,
+            0.725
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.28,
+            0.762,
+            0.311,
+            0.785
+          ],
+          "content": "14 19"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.267,
+            0.821,
+            0.354,
+            0.851
+          ],
+          "content": "Sample Output 0"
+        }
+      ]
+    },
+    {
+      "page_idx": 14,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.286,
+            0.077,
+            0.591,
+            0.122
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 15. Mua vỏ"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.299,
+            0.161,
+            0.332,
+            0.182
+          ],
+          "content": "Problem"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.37,
+            0.162,
+            0.416,
+            0.182
+          ],
+          "content": "Submissions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.456,
+            0.162,
+            0.502,
+            0.182
+          ],
+          "content": "Leaderboard"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.541,
+            0.162,
+            0.584,
+            0.182
+          ],
+          "content": "Discussions"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.229,
+            0.706,
+            0.297
+          ],
+          "content": "28tech đi mua vỏ, anh ta có N đồng, mỗi quyền vỏ có giá X đồng. Hồi anh ta mua được tối đa bao nhiêu quyền vỏ? Ví dụ anh ta có 15 đồng và mỗi quyền vỏ có giá 6 đồng thì anh ta mua được 2 quyền, vậy trong lập trình bạn tính như thế nào?"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.31,
+            0.337,
+            0.335
+          ],
+          "content": "Input Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.346,
+            0.445,
+            0.371
+          ],
+          "content": "1 dòng duy nhất chứa 2 số nguyên N và X"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.383,
+            0.331,
+            0.405
+          ],
+          "content": "Constraints"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.285,
+            0.42,
+            0.393,
+            0.443
+          ],
+          "content": "1<=X<=1000; 0<=N<=10^12;"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.456,
+            0.345,
+            0.481
+          ],
+          "content": "Output Format"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.492,
+            0.689,
+            0.517
+          ],
+          "content": "In ra số lượng số sách mua được kèm theo 1 số lời dẫn và dấu chấm than. Xem output để rõ hơn yêu cầu."
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.529,
+            0.345,
+            0.555
+          ],
+          "content": "Sample Input 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.583,
+            0.323,
+            0.603
+          ],
+          "content": "142 43"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.629,
+            0.352,
+            0.654
+          ],
+          "content": "Sample Output 0"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.681,
+            0.413,
+            0.703
+          ],
+          "content": "SO VO MUA DUOC LA : 3 !!!!!"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.284,
+            0.728,
+            0.343,
+            0.753
+          ],
+          "content": "Sample Input 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.781,
+            0.323,
+            0.801
+          ],
+          "content": "487 12"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.283,
+            0.827,
+            0.351,
+            0.851
+          ],
+          "content": "Sample Output 1"
+        },
+        {
+          "type": "text",
+          "bbox": [
+            0.294,
+            0.879,
+            0.417,
+            0.899
+          ],
+          "content": "SO VO MUA DUOC LA : 40 !!!!!"
+        }
+      ]
+    },
+    {
+      "page_idx": 15,
+      "blocks": [
+        {
+          "type": "paragraph_title",
+          "bbox": [
+            0.337,
+            0.084,
+            0.555,
+            0.119
+          ],
+          "level": 2,
+          "content": "[Làm quen với OJ]. Bài 16. Cout"
+        },
+        {
+          "type": "table",
+          "bbox": [
+            0.33,
+            0.131,
+            0.669,
+            0.931
+          ],
+          "content": "<table><tr><td>Problem</td><td>Submissions</td><td>Leaderboard</td><td>Discussions</td></tr><tr><td colspan=\"4\">Bài tập này rất đơn giản, bạn được yêu cầu nhập vào 4 số x, y, z, t và in ra theo mẫu. Dòng 1 : In ra x, y, z, t mỗi số cách nhau 2 khoảng trắng. Dòng 2 in ra y, z, x, t mỗi số cách nhau 2 dấu gạch giữa. Dòng 3 in ra 2 * x, 3 * y, 4 * z, 5 * t cách nhau 1 dấu phấy. Dòng 4 in ra &quot;KET THUC !!&quot;. Giữa các dòng có 1 dòng trống</td></tr><tr><td colspan=\"4\">Chú ý in ra đúng thứ tự đề bài yêu cầu.</td></tr><tr><td colspan=\"4\">Input Format</td></tr><tr><td colspan=\"4\">1 dòng duy nhất chứa 4 số nguyên x, y, z, t viết cách nhau 10 dấu cách (Thực ra thì cin nó bó qua tất cả mọi dấu cách nên 10 hay 1 dấu cách thì bạn vẫn nhập như bình thường)</td></tr><tr><td colspan=\"4\">Constraints</td></tr><tr><td colspan=\"4\">1&lt;=x,y,z,t&lt;=10^9;</td></tr><tr><td colspan=\"4\">Output Format</td></tr><tr><td colspan=\"4\">In ra kết quả của bài toán</td></tr><tr><td colspan=\"4\">Sample Input 0</td></tr><tr><td>8</td><td>9</td><td>2</td><td>10</td></tr><tr><td colspan=\"4\">Sample Output 0</td></tr><tr><td>8</td><td>9</td><td>2</td><td>10</td></tr><tr><td colspan=\"4\">9--2--8--10</td></tr><tr><td colspan=\"4\">16,27,8,50</td></tr><tr><td colspan=\"4\">KET THUC !!</td></tr><tr><td colspan=\"4\">Sample Input 1</td></tr><tr><td>2</td><td>2</td><td>9</td><td>9</td></tr><tr><td colspan=\"4\">Sample Output 1</td></tr><tr><td>2</td><td>2</td><td>9</td><td>9</td></tr><tr><td colspan=\"4\">2--9--2--9</td></tr><tr><td colspan=\"4\">4,6,36,45</td></tr><tr><td colspan=\"4\">KET THUC !!</td></tr></table>",
+          "captions": [],
+          "footnotes": [],
+          "image_source": "images/page_15_table_1.jpg"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "file_suffix": "pdf",
+    "producer": {
+      "name": "mineru",
+      "version": "4.2.3"
+    },
+    "document": {
+      "title": "PowerPoint Presentation",
+      "authors": [
+        "Nhat Anh Khoi"
+      ],
+      "languages": [
+        "EN-US"
+      ],
+      "created_at": "2024-01-19T18:53:13+07:00",
+      "modified_at": "2024-01-19T18:53:16+07:00",
+      "creator_application": "Acrobat PDFMaker 19 for PowerPoint",
+      "producer_application": "Adobe PDF Library 19.21.79",
+      "page_count": 16,
+      "page_count_kind": "physical"
+    }
+  },
+  "extensions": {
+    "mineru": {
+      "tier": "standard",
+      "parse_mode": "ocr"
+    },
+    "docvortex_layout": {
+      "version": 1,
+      "pages": [
+        {
+          "page_idx": 0,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 1,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 2,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 3,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 4,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 5,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 6,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 7,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 8,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 9,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 10,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 11,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 12,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 13,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 14,
+          "width_pt": 960,
+          "height_pt": 540
+        },
+        {
+          "page_idx": 15,
+          "width_pt": 960,
+          "height_pt": 540
+        }
+      ]
+    }
+  },
+  "is_full_document": true
+}
